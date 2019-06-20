@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 076a3df69245cb269593e1a2298f18c9266ab217
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980325"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @table_name = ] 'table\_name'` Est le nom de table d’une ou deux parties pour laquelle les informations sur les index de recherche en texte intégral sont demandées. *table_name* est **nvarchar (517)**, avec NULL comme valeur par défaut. Si *table_name* est omis, informations de colonne d’index de recherche en texte intégral sont récupérées pour chaque table indexée en texte intégral.  
+`[ @table_name = ] 'table\_name'` Est le nom de table d’une ou deux parties pour laquelle les informations sur les index de recherche en texte intégral sont demandées. *table_name* est **nvarchar (517)** , avec NULL comme valeur par défaut. Si *table_name* est omis, informations de colonne d’index de recherche en texte intégral sont récupérées pour chaque table indexée en texte intégral.  
   
 `[ @column_name = ] 'column\_name'` Est le nom de la colonne pour laquelle les métadonnées de l’index de recherche en texte intégral sont demandées. *column_name* est **sysname**, avec NULL comme valeur par défaut. Si *column_name* est omis ou a la valeur NULL, les informations de colonne de recherche en texte intégral sont retournées pour chaque colonne indexée en texte intégral de *table_name*. Si *table_name* est également omis ou a la valeur NULL, informations de colonne d’index de recherche en texte intégral sont retournées pour chaque colonne indexée en texte intégral pour toutes les tables dans la base de données.  
   

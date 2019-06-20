@@ -30,10 +30,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a024e2fc4cb7afaecdc6e84ae6dba4f3a2700d8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035418"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag (utilitaire)
@@ -123,7 +123,7 @@ ms.locfileid: "63035418"
   
  1 = utilise la compression NTFS  
   
- **/B** [**+**]*heure_début*  
+ **/B** [ **+** ]*heure_début*  
  Spécifie la date et l'heure de début de la collecte des données de diagnostics dans le format suivant :  
   
  AAAAMMJJ_HH:MM:SS  
@@ -138,7 +138,7 @@ ms.locfileid: "63035418"
   
  Notez que **SQLdiag** utilise l’heure locale sur l’ordinateur sur lequel l’utilitaire s’exécute.  
   
- **/E** [**+**]*heure_fin*  
+ **/E** [ **+** ]*heure_fin*  
  Spécifie la date et l'heure d'arrêt de la collecte des données de diagnostics dans le format suivant :  
   
  AAAAMMJJ_HH:MM:SS  
@@ -308,7 +308,7 @@ sqldiag /B +01:00:00 /E +03:00:00
 sqldiag /B +01:00:00 /E 08:30:00  
 ```  
   
- Si l'heure actuelle est 08:00, l'heure de fin arrive avant que ne commence la collecte du diagnostic. Comme **SQLDiag** règle automatiquement les dates de début et de fin au jour suivant quand elles se produisent dans le passé, dans cet exemple la collecte des diagnostics commence à 09:00 aujourd’hui (une heure de début relative a été spécifiée avec **+**) et se poursuit jusqu’à 08:30 le lendemain matin.  
+ Si l'heure actuelle est 08:00, l'heure de fin arrive avant que ne commence la collecte du diagnostic. Comme **SQLDiag** règle automatiquement les dates de début et de fin au jour suivant quand elles se produisent dans le passé, dans cet exemple la collecte des diagnostics commence à 09:00 aujourd’hui (une heure de début relative a été spécifiée avec **+** ) et se poursuit jusqu’à 08:30 le lendemain matin.  
   
 ### <a name="stopping-and-restarting-sqldiag-to-collect-daily-diagnostics"></a>Arrêt et redémarrage de SQLdiag pour collecter des diagnostics quotidiennement  
  Pour collecter un ensemble de diagnostics sur une base quotidienne sans devoir démarrer et arrêter manuellement **SQLdiag**, utilisez l’argument **/L** . L’argument **/L** force **SQLdiag** à s’exécuter de façon continue en redémarrant automatiquement après un arrêt programmé. Quand vous spécifiez l’option **/L** et que **SQLdiag** s’arrête car il a atteint l’heure de fin définie avec l’argument **/E** , ou qu’il s’arrête car il s’exécute en mode d’instantané avec l’argument **/X** , **SQLdiag** redémarre au lieu de se fermer.  

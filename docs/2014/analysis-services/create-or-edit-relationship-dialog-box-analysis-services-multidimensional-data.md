@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086774"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Créer/Modifier une relation (Analysis Services - Données multidimensionnelles)
@@ -38,7 +38,7 @@ ms.locfileid: "66086774"
  Sélectionnez la table ou la requête nommée qui contient la référence à une ou plusieurs colonnes de la table de destination.  
   
  **Table de destination (clé primaire)**  
- Sélectionnez la table qui contient une ou plusieurs colonnes référencées par la table source. Pour les jointures réflexives, sélectionnez la même table que celle sélectionnée dans **Table source (clé étrangère)**.  
+ Sélectionnez la table qui contient une ou plusieurs colonnes référencées par la table source. Pour les jointures réflexives, sélectionnez la même table que celle sélectionnée dans **Table source (clé étrangère)** .  
   
  **Colonnes sources**  
  Sélectionnez les colonnes qui font référence à des colonnes de la table de destination.  

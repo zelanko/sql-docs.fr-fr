@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b071494697d21a37f4420889a8f60cc35fe3d8b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049885"
 ---
 # <a name="deferred-buffers"></a>Mémoires tampons différées
@@ -26,7 +26,7 @@ Un *tampon différée* est celle dont la valeur est utilisée à un moment *apr�
   
  Tampons d’entrée et de sortie peuvent être différées. Le tableau suivant résume les utilisations des mémoires tampons différées. Notez que les mémoires tampons différées liés à des colonnes de jeu de résultats sont spécifiés avec **SQLBindCol**, et les mémoires tampons différées liés aux paramètres d’instruction SQL sont spécifiés avec **SQLBindParameter**.  
   
-|Utilisation de la mémoire tampon|Type|Spécifié avec|Utilisée par|  
+|Utilisation de la mémoire tampon|type|Spécifié avec|Utilisée par|  
 |----------------|----------|--------------------|-------------|  
 |Envoi de données pour les paramètres d’entrée|Entrée différée|**SQLBindParameter**|**SQLExecute**<br /> **SQLExecDirect**|  
 |Envoi de données à mettre à jour ou insérer une ligne dans un résultat défini|Entrée différée|**SQLBindCol**|**SQLSetPos**|  

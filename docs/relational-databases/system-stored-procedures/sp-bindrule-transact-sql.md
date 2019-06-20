@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebec67611b043d59eb73e9946b9fef020197fc3d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62995675"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
@@ -46,9 +46,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @rulename = ] 'rule'` Est le nom d’une règle créée par l’instruction CREATE RULE. *règle* est **nvarchar(776)**, sans valeur par défaut.  
+`[ @rulename = ] 'rule'` Est le nom d’une règle créée par l’instruction CREATE RULE. *règle* est **nvarchar(776)** , sans valeur par défaut.  
   
-`[ @objname = ] 'object_name'` Est la table et colonne ou le type de données alias auquel la règle doit être lié. Une règle ne peut pas être liée à un type **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, à un type CLR défini par l’utilisateur, ou à une colonne **timestamp**. Enfin, une règle ne peut pas être liée à une colonne calculée.  
+`[ @objname = ] 'object_name'` Est la table et colonne ou le type de données alias auquel la règle doit être lié. Une règle ne peut pas être liée à un type **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, à un type CLR défini par l’utilisateur, ou à une colonne **timestamp**. Enfin, une règle ne peut pas être liée à une colonne calculée.  
   
  *object_name* est **nvarchar(776)** sans valeur par défaut. Si *object_name* est un nom d’une seule partie, il est résolu comme un type de données alias. S'il s'agit d'un nom en deux ou trois parties, il est d'abord résolu en tant que table et colonne. Si la résolution échoue, il est résolu en tant que type de données d'alias. Par défaut, les colonnes existantes du type de données alias héritent *règle* , sauf si une règle a été liée directement à la colonne.  
   

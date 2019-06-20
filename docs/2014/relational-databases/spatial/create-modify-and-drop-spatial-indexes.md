@@ -17,10 +17,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014265"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Créer, modifier et supprimer les index spatiaux
@@ -62,7 +62,7 @@ ms.locfileid: "66014265"
   
 11. Dans la page **Spatial** , spécifiez les valeurs que vous souhaitez utiliser pour les propriétés spatiales de l'index.  
   
-     Lorsque vous créez un index sur une `geometry` colonne de type, vous devez spécifier le **(*`X-min`*,*`Y-min`*)** et **(*`X-max`*,*`Y-max`*)** coordonnées du rectangle englobant. Pour un index sur une `geography` colonne de type, les champs de la zone englobante deviennent en lecture seule après avoir spécifié le **grille géographique** schéma de pavage, car le pavage de grille géographique n’utilise pas un cadre englobant.  
+     Lorsque vous créez un index sur une `geometry` colonne de type, vous devez spécifier le **( *`X-min`* , *`Y-min`* )** et **( *`X-max`* , *`Y-max`* )** coordonnées du rectangle englobant. Pour un index sur une `geography` colonne de type, les champs de la zone englobante deviennent en lecture seule après avoir spécifié le **grille géographique** schéma de pavage, car le pavage de grille géographique n’utilise pas un cadre englobant.  
   
      Si vous le souhaitez, vous pouvez spécifier des valeurs autres que les valeurs par défaut pour le champ **Cellules par objet** et pour la densité de grille à tout niveau du schéma de pavage. La quantité par défaut de cellules par objet est 16 pour [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou 8 pour [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou les versions supérieures, et la densité de grille par défaut est **Moyenne** pour [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

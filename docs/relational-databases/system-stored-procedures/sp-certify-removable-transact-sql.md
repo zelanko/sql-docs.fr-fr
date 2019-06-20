@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994396"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
@@ -46,7 +46,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>Arguments  
 `[ @dbname = ] 'dbname'` Spécifie la base de données à vérifier. *dbname* est **sysname**.  
   
-`[ @autofix = ] 'auto'` Donne la propriété de la base de données et tous les objets de base de données à l’administrateur système et supprime les utilisateurs de base de données créés par l’utilisateur et les autorisations de non défini par défaut. *Auto* est **nvarchar (4)**, avec NULL comme valeur par défaut.  
+`[ @autofix = ] 'auto'` Donne la propriété de la base de données et tous les objets de base de données à l’administrateur système et supprime les utilisateurs de base de données créés par l’utilisateur et les autorisations de non défini par défaut. *Auto* est **nvarchar (4)** , avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6883fac2772e69a0e3939de970f436827f2cdf5d
-ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
+ms.openlocfilehash: 6dfe3516a36fa0ee6e8644b46b5caeb2a7cca92b
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67166359"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263439"
 ---
 # <a name="calculation-groups-preview"></a>Groupes de calcul (version préliminaire)
  
@@ -64,7 +64,7 @@ Avant de rentrer dans les détails, nous allons présenter certaines nouvelles f
 
 [ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) - utilisés par des expressions pour les éléments de calcul déterminer la mesure qui se trouve dans le contexte est spécifiée dans une liste de mesures.
 
-[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) - utilisés par des expressions pour les éléments de calcul récupérer la chaîne de format de la mesure qui se trouve dans le contexte.
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) - utilisés par des expressions pour les éléments de calcul récupérer la chaîne de format de la mesure qui se trouve dans le contexte.
 
 ### <a name="time-intelligence-example"></a>Exemple d’analyse décisionnelle de temps
 
@@ -251,7 +251,7 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
-L’expression de chaîne de format doit renvoyer une chaîne scalaire. Il utilise le nouveau [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) (fonction) pour rétablir la chaîne de format de mesure de base s’il existe plusieurs devises dans le contexte de filtre.
+L’expression de chaîne de format doit renvoyer une chaîne scalaire. Il utilise le nouveau [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) (fonction) pour rétablir la chaîne de format de mesure de base s’il existe plusieurs devises dans le contexte de filtre.
 
 L’animation suivante montre la conversion de devise format dynamique de la **Sales** mesure dans un rapport.
 

@@ -24,10 +24,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f82087cc2549871147d0a85d6c36e9d8d211979
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013479"
 ---
 # <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "63013479"
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**Int**|Id numérique unique associé au nœud. Clé pour cette vue.|Unique sur le cluster de montée en puissance, quel que soit le type.|  
 |type|**nvarchar(32)**|Type du nœud.|« COMPUTE », « PRINCIPAL »|  
-|NAME|**nvarchar(32)**|Nom logique du nœud.|N’importe quelle chaîne de longueur appropriée.|  
+|name|**nvarchar(32)**|Nom logique du nœud.|N’importe quelle chaîne de longueur appropriée.|  
 |address|**nvarchar(32)**|Adresse IP de ce nœud.|Plage d’adresses IP|  
   
 ## <a name="see-also"></a>Voir aussi  

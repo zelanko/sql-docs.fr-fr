@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f3d98314bf142340d97d218b93670a14c9f56e3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62923009"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Sauvegarder des fichiers et des groupes de fichiers (SQL Server)
@@ -151,20 +151,20 @@ ms.locfileid: "62923009"
   
      BACKUP DATABASE *database*  
   
-     { FILE **=**_nom_fichier_logique_ | FILEGROUP **=**_nom_groupe_fichiers_logique_ } [ **,**...*f* ]  
+     { FILE **=** _nom_fichier_logique_ | FILEGROUP **=** _nom_groupe_fichiers_logique_ } [ **,** ...*f* ]  
   
-     TO *unité_sauvegarde* [ **,**...*n* ]  
+     TO *unité_sauvegarde* [ **,** ...*n* ]  
   
-     [ WITH *options_with* [ **,**...*o* ] ] ;  
+     [ WITH *options_with* [ **,** ...*o* ] ] ;  
   
     |Option|Description|  
     |------------|-----------------|  
     |*database*|Correspond à la base de données à partir de laquelle va être opérée la sauvegarde du journal des transactions, c'est à dire la sauvegarde complète ou partielle.|  
-    |FILE **=**_nom_fichier_logique_|Indique le nom logique d'un fichier à inclure dans la sauvegarde de fichiers.|  
-    |FILEGROUP **=**_nom_groupe_fichiers_logique_|Indique le nom logique d'un groupe de fichiers à inclure dans la sauvegarde de fichiers. En mode de récupération simple, la sauvegarde d'un groupe de fichiers n'est autorisée que pour un groupe de fichiers en lecture seule.|  
-    |[ **,**...*f* ]|Espace réservé indiquant qu'il est possible de spécifier plusieurs fichiers et groupes de fichiers. Le nombre de fichiers ou de groupes de fichiers est illimité.|  
-    |*unité_sauvegarde* [ **,**...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=**_nom_unité_sauvegarde_physique_<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
-    |WITH *options_with* [ **,**...*o* ]|Spécifie, éventuellement, une ou plusieurs options supplémentaires telles que DIFFERENTIAL.<br /><br /> Remarque : Une sauvegarde différentielle de fichiers requiert une sauvegarde complète de fichiers comme base. Pour plus d’informations, consultez [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).|  
+    |FILE **=** _nom_fichier_logique_|Indique le nom logique d'un fichier à inclure dans la sauvegarde de fichiers.|  
+    |FILEGROUP **=** _nom_groupe_fichiers_logique_|Indique le nom logique d'un groupe de fichiers à inclure dans la sauvegarde de fichiers. En mode de récupération simple, la sauvegarde d'un groupe de fichiers n'est autorisée que pour un groupe de fichiers en lecture seule.|  
+    |[ **,** ...*f* ]|Espace réservé indiquant qu'il est possible de spécifier plusieurs fichiers et groupes de fichiers. Le nombre de fichiers ou de groupes de fichiers est illimité.|  
+    |*unité_sauvegarde* [ **,** ...*n* ]|Spécifie une liste de 1 à 64 unités de sauvegarde à utiliser pour l'opération de sauvegarde. Vous pouvez spécifier une unité de sauvegarde physique ou une unité de sauvegarde logique correspondante, si celle-ci est déjà définie. Pour spécifier une unité de sauvegarde physique, utilisez l'option DISK ou TAPE :<br /><br /> { DISK &#124; TAPE } **=** _nom_unité_sauvegarde_physique_<br /><br /> Pour plus d’informations, consultez [Unités de sauvegarde &#40;SQL Server&#41;](backup-devices-sql-server.md).|  
+    |WITH *options_with* [ **,** ...*o* ]|Spécifie, éventuellement, une ou plusieurs options supplémentaires telles que DIFFERENTIAL.<br /><br /> Remarque : Une sauvegarde différentielle de fichiers requiert une sauvegarde complète de fichiers comme base. Pour plus d’informations, consultez [Créer une sauvegarde différentielle de base de données &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md).|  
   
 2.  En mode de restauration complète, vous devez aussi sauvegarder le journal des transactions. Pour utiliser un jeu complet de sauvegardes de fichiers complètes afin de restaurer une base de données, vous devez aussi disposer de suffisamment de sauvegardes de journal pour couvrir toutes les sauvegardes de fichiers depuis la première sauvegarde de fichiers. Pour plus d’informations, consultez [Sauvegarder un journal des transactions &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md).  
   

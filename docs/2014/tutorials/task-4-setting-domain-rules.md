@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489076"
 ---
 # <a name="task-4-setting-domain-rules"></a>Tâche 4 : Définition de règles de domaine
-  Dans cette tâche, vous créez une règle pour le **adresse E-mail de Contact** afin de vérifier si l’adresse de messagerie se termine par **@adventure-works.com**. Consultez [création d’une règle de domaine](https://msdn.microsoft.com/library/hh510397.aspx) rubrique pour plus d’informations sur la page.  
+  Dans cette tâche, vous créez une règle pour le **adresse E-mail de Contact** afin de vérifier si l’adresse de messagerie se termine par **@adventure-works.com** . Consultez [création d’une règle de domaine](https://msdn.microsoft.com/library/hh510397.aspx) rubrique pour plus d’informations sur la page.  
   
 1.  Cliquez sur **adresse E-mail de Contact** dans le **liste des domaines**.  
   

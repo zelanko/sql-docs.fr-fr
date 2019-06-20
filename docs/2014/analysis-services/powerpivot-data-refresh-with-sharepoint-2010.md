@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04dea4a32303e06d7f0e6c015eef38ba6d267a30
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070850"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>Actualisation des données PowerPivot avec SharePoint 2010
@@ -204,7 +204,7 @@ ms.locfileid: "66070850"
   
  Si vous voyez **Integrated Security = SSPI** dans la chaîne de connexion, vous ne pouvez pas remplacer les informations d’identification dans la chaîne de connexion. La connexion utilisera toujours l'utilisateur actuel. Toutes les informations d'identification que vous spécifiées sont ignorées.  
   
- Si vous voyez **Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*, UserID =\<userlogin >**, puis vous avez une chaîne de connexion qui accepte les substitutions d’informations d’identification. Les informations d'identification qui s'affichent dans une chaîne de connexion (comme UserID et Password) ne sont pas des informations d'identification Windows, mais plutôt des connexions à une base de données ou d'autres comptes d'ouverture de session qui sont valides pour la source de données cible.  
+ Si vous voyez **Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*, UserID =\<userlogin >** , puis vous avez une chaîne de connexion qui accepte les substitutions d’informations d’identification. Les informations d'identification qui s'affichent dans une chaîne de connexion (comme UserID et Password) ne sont pas des informations d'identification Windows, mais plutôt des connexions à une base de données ou d'autres comptes d'ouverture de session qui sont valides pour la source de données cible.  
   
  **Procédure de remplacement des informations d’identification dans la chaîne de connexion**  
   

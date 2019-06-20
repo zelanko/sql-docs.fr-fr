@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a404c18f47fb13464d01f5be6af9869fd10292cc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078624"
 ---
 # <a name="defining-a-referenced-relationship"></a>Définition d'une relation référencée
@@ -46,7 +46,7 @@ ms.locfileid: "66078624"
   
      Notez que la dimension de cube **Geography** n’a actuellement aucune relation avec le groupe de mesures **Internet Sales** ou **Reseller Sales** .  
   
-8.  Cliquez sur le bouton de sélection (**...** ) dans le **nom complet** cellule à l’intersection de la **client** dimension et le **Internet Sales** groupe de mesures.  
+8.  Cliquez sur le bouton de sélection ( **...** ) dans le **nom complet** cellule à l’intersection de la **client** dimension et le **Internet Sales** groupe de mesures.  
   
      Dans la boîte de dialogue **Définir une relation** , notez qu’une relation **régulière** est définie entre la table de dimension **DimCustomer** et le groupe de mesures **FactInternetSales** , et qu’elle est basée sur la colonne **CustomerKey** dans chacune de ces tables. Toutes les relations que vous avez définies jusqu'à présent dans ce didacticiel sont des relations régulières.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66078624"
   
 9. Cliquez sur **Annuler**.  
   
-10. Cliquez sur le bouton de sélection (**...** ) dans la cellule sans nom à l’intersection de la **Geography** dimension et le **Reseller Sales** groupe de mesures.  
+10. Cliquez sur le bouton de sélection ( **...** ) dans la cellule sans nom à l’intersection de la **Geography** dimension et le **Reseller Sales** groupe de mesures.  
   
      Dans la boîte de dialogue **Définir une relation** , notez qu’aucune relation n’est actuellement définie entre la dimension de cube Geography et le groupe de mesures Reseller Sales. Vous ne pouvez pas définir une relation régulière car il n'existe pas de relation directe entre la table de dimension de la dimension Geography et la table de faits du groupe de mesures Reseller Sales.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66078624"
   
      L'attribut Geography Key de la dimension Reseller sera utilisé uniquement pour lier la dimension Geography à la table de faits Reseller Sales. Étant donné que la hiérarchie d'attributs ne sera pas utilisée pour des recherches, cela ne présente pas d'intérêt de la définir comme hiérarchie visible. En outre, le classement et l'optimisation de la hiérarchie d'attributs nuit aux performances. Toutefois, l'attribut doit être activé pour servir de lien entre les deux dimensions.  
   
-4.  Affichez le Concepteur de Cube pour le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube du didacticiel, cliquez sur le **utilisation de la Dimension** onglet, puis cliquez sur le bouton de sélection (**...** ) à l’intersection de la **Reseller Sales** groupe de mesures et les **Geography** dimension de cube.  
+4.  Affichez le Concepteur de Cube pour le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube du didacticiel, cliquez sur le **utilisation de la Dimension** onglet, puis cliquez sur le bouton de sélection ( **...** ) à l’intersection de la **Reseller Sales** groupe de mesures et les **Geography** dimension de cube.  
   
 5.  Dans la liste **Sélectionnez un type de relation** , sélectionnez **Référence**.  
   

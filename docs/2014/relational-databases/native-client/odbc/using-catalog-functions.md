@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 263df9986df0297c8bf1afdb35d70841835cef4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667377"
 ---
 # <a name="using-catalog-functions"></a>Utilisation des fonctions de catalogue
@@ -43,7 +43,7 @@ ms.locfileid: "62667377"
   
      Retourne la liste des catalogues contenus dans un serveur lié.  
   
- Une fois que vous avez un nom de serveur lié et un nom de catalogue, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge l’obtention des informations à partir du catalogue à l’aide d’un nom en deux parties de _linked_server_name_**.** _catalogue_ pour *CatalogName* fonctions de catalogue sur ODBC suivante :  
+ Une fois que vous avez un nom de serveur lié et un nom de catalogue, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge l’obtention des informations à partir du catalogue à l’aide d’un nom en deux parties de _linked_server_name_ **.** _catalogue_ pour *CatalogName* fonctions de catalogue sur ODBC suivante :  
   
 -   **SQLColumnPrivileges**  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62667377"
   
 -   **SQLTables**  
   
- Les deux parties _linked_server_name_**.** _catalogue_ est également pris en charge pour *FKCatalogName* et *PKCatalogName* sur [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
+ Les deux parties _linked_server_name_ **.** _catalogue_ est également pris en charge pour *FKCatalogName* et *PKCatalogName* sur [SQLForeignKeys](../../native-client-odbc-api/sqlforeignkeys.md).  
   
  L'utilisation de SQLLinkedServers et SQLLinkedCatalogs requiert les fichiers suivants :  
   

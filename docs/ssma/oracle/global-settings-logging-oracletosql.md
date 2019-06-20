@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: abe73fd789a74d358c0573b6c0778a15612532a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192392"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Paramètres globaux (Journalisation) (OracleToSQL)
@@ -52,7 +52,7 @@ Pour chaque option sous **au niveau des Messages**, configurez l’un des niveau
 |**Débogage**|Écrire tous les messages, y compris les messages, dans le journal de débogage.|  
   
 **Chemin du fichier journal**  
-Le chemin d’accès de fichier et le nom des fichiers journaux SSMA. Pour spécifier un nom différent, cliquez sur le chemin d’accès actuel, puis cliquez sur le bouton de navigation (**...** ) bouton.  
+Le chemin d’accès de fichier et le nom des fichiers journaux SSMA. Pour spécifier un nom différent, cliquez sur le chemin d’accès actuel, puis cliquez sur le bouton de navigation ( **...** ) bouton.  
   
 **Taille du fichier journal**  
 La taille maximale du fichier journal en Ko. La taille minimale est de 10 Ko. La taille par défaut est 10 240 Ko.  

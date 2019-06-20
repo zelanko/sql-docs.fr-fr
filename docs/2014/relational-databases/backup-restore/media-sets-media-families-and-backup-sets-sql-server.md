@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876247"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Jeux de supports, familles de supports et jeux de sauvegarde (SQL Server)
@@ -140,7 +140,7 @@ WITH
   
  ![Deuxième jeu de sauvegarde réparti sur 3 bandes de supports de sauvegarde](../../database-engine/media/bnr-mediaset-appendedto.gif "Deuxième jeu de sauvegarde réparti sur 3 bandes de supports de sauvegarde")  
   
- Au cours de la restauration de sauvegardes, vous pouvez utiliser l'option FILE pour spécifier les sauvegardes à utiliser. L’exemple suivant illustre l’utilisation des clauses FILE **=**_backup_set_file_number_ lors de la restauration d’une sauvegarde complète de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] suivie d’une sauvegarde différentielle sur le même jeu de supports. Le jeu de supports fait appel à trois bandes de sauvegardes qui figurent sur les lecteurs de bande `\\.\tape0`, `tape1`, et `tape2`.  
+ Au cours de la restauration de sauvegardes, vous pouvez utiliser l'option FILE pour spécifier les sauvegardes à utiliser. L’exemple suivant illustre l’utilisation des clauses FILE **=** _backup_set_file_number_ lors de la restauration d’une sauvegarde complète de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] suivie d’une sauvegarde différentielle sur le même jeu de supports. Le jeu de supports fait appel à trois bandes de sauvegardes qui figurent sur les lecteurs de bande `\\.\tape0`, `tape1`, et `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  

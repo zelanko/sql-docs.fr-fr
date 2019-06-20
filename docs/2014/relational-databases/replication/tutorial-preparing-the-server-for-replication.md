@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c9b8ed6778a087c2200012c6df1409b187b39329
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63199070"
 ---
 # <a name="tutorial-preparing-the-server-for-replication"></a>Tutoriel : Préparation du serveur à la réplication
@@ -41,7 +41,7 @@ ms.locfileid: "63199070"
   
 -   [Leçon 1 : Windows de création de comptes pour la réplication](lesson-1-creating-windows-accounts-for-replication.md)  
   
--   [Leçon 2 : Préparation du dossier d’instantané](lesson-2-preparing-the-snapshot-folder.md)  
+-   [Leçon 2 : Préparation du dossier d’instantané](lesson-2-preparing-the-snapshot-folder.md)  
   
 -   [Leçon 3 : Configuration de la Distribution](lesson-3-configuring-distribution.md)  
   

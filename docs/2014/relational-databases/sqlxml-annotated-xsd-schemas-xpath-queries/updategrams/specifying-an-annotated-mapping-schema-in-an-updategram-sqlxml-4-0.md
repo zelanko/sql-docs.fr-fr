@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014662"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Spécification d'un schéma de mappage annoté dans un code de mise à jour (updategram) (SQLXML 4.0)
@@ -64,7 +64,7 @@ ms.locfileid: "66014662"
 </xsd:schema>  
 ```  
   
- Le code de mise à jour suivant insère un enregistrement dans la table Sales.Customer et compte sur le schéma de mappage précédent pour mapper correctement ces données à la table. Notez que la mise à jour utilise le même nom d’élément,  **\<client >**, tel que défini dans le schéma. C'est absolument essentiel dans la mesure où le code de mise à jour spécifie un schéma particulier.  
+ Le code de mise à jour suivant insère un enregistrement dans la table Sales.Customer et compte sur le schéma de mappage précédent pour mapper correctement ces données à la table. Notez que la mise à jour utilise le même nom d’élément,  **\<client >** , tel que défini dans le schéma. C'est absolument essentiel dans la mesure où le code de mise à jour spécifie un schéma particulier.  
   
 ##### <a name="to-test-the-updategram"></a>Pour tester le code de mise à jour  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66014662"
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. Insertion d'un enregistrement à l'aide de la relation parent-enfant spécifiée dans le schéma de mappage  
  Les éléments du schéma peuvent être liés. Le  **\<SQL : Relationship >** élément spécifie la relation parent-enfant entre les éléments de schéma. Ces informations sont utilisées pour mettre à jour les tables correspondantes qui ont une relation clé primaire/clé étrangère.  
   
- Le schéma de mappage suivant (SampleSchema.xml) se compose de deux éléments,  **\<ordre >** et  **\<OD >**:  
+ Le schéma de mappage suivant (SampleSchema.xml) se compose de deux éléments,  **\<ordre >** et  **\<OD >** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
