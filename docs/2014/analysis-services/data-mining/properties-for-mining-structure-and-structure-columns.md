@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083062"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propriétés des colonnes de structure et des structure d'exploration de données
@@ -67,8 +67,8 @@ ms.locfileid: "66083062"
 |**ModelingFlags**|Spécifie des paramètres supplémentaires rendus disponibles par l'algorithme.|  
 |`Name`|Nom de la colonne.|  
 |**NameColumn**|Identifie la colonne qui fournit le nom de l'élément parent.|  
-|**Source**|Affiche la source de la colonne.<br /><br /> Pour les sources de données relationnelles, la valeur est toujours **(aucun)**.<br /><br /> Pour les structures basées sur un cube OLAP, la valeur est l'instruction MDX qui définit la coupe utilisée comme source pour la table imbriquée.|  
-|**SourceMeasureGroup**|Affiche la source du groupe de mesures.<br /><br /> Pour les sources de données relationnelles, la valeur est toujours **(aucun)**.<br /><br /> Pour les structures basées sur un cube OLAP, la valeur est l'instruction MDX qui définit la coupe utilisée comme source pour la table imbriquée.|  
+|**Source**|Affiche la source de la colonne.<br /><br /> Pour les sources de données relationnelles, la valeur est toujours **(aucun)** .<br /><br /> Pour les structures basées sur un cube OLAP, la valeur est l'instruction MDX qui définit la coupe utilisée comme source pour la table imbriquée.|  
+|**SourceMeasureGroup**|Affiche la source du groupe de mesures.<br /><br /> Pour les sources de données relationnelles, la valeur est toujours **(aucun)** .<br /><br /> Pour les structures basées sur un cube OLAP, la valeur est l'instruction MDX qui définit la coupe utilisée comme source pour la table imbriquée.|  
 |**Type**|Type de données pour le contenu de la colonne.|  
   
  Pour plus d’informations sur la définition ou la modification des propriétés, consultez [Tâches de la structure d’exploration de données et procédures](mining-structure-tasks-and-how-tos.md).  

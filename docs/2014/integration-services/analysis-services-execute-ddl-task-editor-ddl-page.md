@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2b57ad76be3811352bbfb8774fb56c748efa1ac8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061605"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-ddl-page"></a>Éditeur de tâche DDL d'exécution d'Analysis Services (page DDL)
@@ -45,7 +45,7 @@ ms.locfileid: "66061605"
   
 ### <a name="sourcetype--direct-input"></a>SourceType = Entrée directe  
  **Source**  
- Tapez les instructions DDL ou cliquez sur le bouton représentant des points de suspension **(...)**, puis tapez les instructions dans la boîte de dialogue **Instructions DDL**.  
+ Tapez les instructions DDL ou cliquez sur le bouton représentant des points de suspension **(...)** , puis tapez les instructions dans la boîte de dialogue **Instructions DDL**.  
   
 ### <a name="sourcetype--file-connection"></a>SourceType = Connexion de fichiers  
  **Source**  

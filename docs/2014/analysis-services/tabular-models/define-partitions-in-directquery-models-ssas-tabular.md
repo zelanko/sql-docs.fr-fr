@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067308"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Partitions et mode DirectQuery (SSAS Tabulaire)
@@ -42,7 +42,7 @@ ms.locfileid: "66067308"
   
  Il existe deux options de traitement pour la partition DirectQuery. Pour définir cette propriété, utilisez le **Gestionnaire de partitions** de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis sélectionnez la propriété **Option de traitement** . Le tableau suivant répertorie les valeurs de cette propriété, et décrit les effets de chaque valeur lorsqu'elle est associée à la propriété DirectQueryUsage sur la chaîne de connexion :  
   
-|**DirectQueryUsage** propriété|Propriété**Option de traitement** |Remarques|  
+|**DirectQueryUsage** propriété|Propriété**Option de traitement**|Remarques|  
 |-----------------------------------|------------------------------------|-----------|  
 |DirectQuery|Ne jamais traiter cette partition|Lorsque le modèle utilise DirectQuery uniquement, le traitement n'est jamais nécessaire.<br /><br /> Dans les modèles hybrides, vous pouvez configurer la partition DirectQuery de façon à ce qu'elle ne soit jamais traitée. Par exemple, si vous effectuez une opération sur un jeu de données très volumineux et vous ne souhaitez pas que les résultats complets soient ajoutés dans le cache, vous pouvez spécifier que la partition DirectQuery inclut l'union des résultats pour toutes les autres partitions dans la table, et ne jamais traiter l'union. Les requêtes transmises à la source relationnelle ne sont pas affectées, et les requêtes sur des données en mémoire cache associent les données des autres partitions.|  
 |InMemory avec DirectQuery|Autoriser le traitement de la partition|Si le modèle utilise le mode hybride, vous devez utiliser la même partition pour les requêtes sur InMemory et les requêtes sur la source de données DirectQuery.|  

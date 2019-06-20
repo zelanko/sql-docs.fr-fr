@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62505163"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
@@ -47,7 +47,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ## <a name="remarks"></a>Notes  
  Si vous ne spécifiez pas **MINING MODEL** ou **STRUCTURE d’exploration de données**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] recherche le type d’objet en fonction du nom et traite l’objet correct. Si le serveur contient une structure d'exploration de données et un modèle d'exploration de données portant le même nom, une erreur est retournée.  
   
- À l’aide de la deuxième forme de syntaxe, INSERT INTO*\<objet >*. COLUMN_VALUES, vous pouvez insérer des données directement dans les colonnes du modèle sans l’apprentissage du modèle. Cette méthode permet d'insérer des données de colonnes dans le modèle d'une manière concise et organisée, ce qui est utile lorsque vous utilisez des datasets contenant des hiérarchies ou des colonnes triées.  
+ À l’aide de la deuxième forme de syntaxe, INSERT INTO *\<objet >* . COLUMN_VALUES, vous pouvez insérer des données directement dans les colonnes du modèle sans l’apprentissage du modèle. Cette méthode permet d'insérer des données de colonnes dans le modèle d'une manière concise et organisée, ce qui est utile lorsque vous utilisez des datasets contenant des hiérarchies ou des colonnes triées.  
   
  Si vous utilisez **INSERT INTO** avec un modèle d’exploration de données ou d’une structure d’exploration et de laisser désactivé le \<mappé les colonnes du modèle > et \<requête de source de données > arguments, l’instruction se comporte comme  **ProcessDefault**, à l’aide de liaisons qui existent déjà. Si les liaisons n'existent pas, l'instruction retourne une erreur. Pour plus d’informations sur **ProcessDefault**, consultez [les Options de traitement et de paramètres &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). L’exemple suivant montre la syntaxe :  
   
@@ -61,11 +61,11 @@ INSERT INTO [MINING MODEL] <model>
   
 |.|État des objets|Résultat|  
 |---------------|----------------------|------------|  
-|INSERT INTO MINING MODEL*\<modèle >*|La structure d'exploration de données est traitée.|Le modèle d'exploration de données est traité.|  
+|INSERT INTO MINING MODEL *\<modèle >*|La structure d'exploration de données est traitée.|Le modèle d'exploration de données est traité.|  
 ||La structure d'exploration de données n'est pas traitée.|Le modèle et la structure d'exploration de données sont traités.|  
 ||La structure d'exploration de données contient des modèles d'exploration de données supplémentaires.|Échec du traitement. Vous devez retraiter la structure et les modèles d'exploration de données associés.|  
-|INSERT INTO MINING STRUCTURE*\<structure >*|La structure d'exploration de données est traitée ou non.|La structure d'exploration de données et les modèles d'exploration de données associés sont traités.|  
-|INSERT INTO MINING MODEL*\<modèle >* qui contient une requête source<br /><br /> ou Gestionnaire de configuration<br /><br /> INSERT INTO MINING STRUCTURE*\<structure >* qui contient une requête source|La structure ou le modèle contient déjà du contenu.|Échec du traitement. Vous devez supprimer les objets avant d’effectuer cette opération, à l’aide de [supprimer &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSERT INTO MINING STRUCTURE *\<structure >*|La structure d'exploration de données est traitée ou non.|La structure d'exploration de données et les modèles d'exploration de données associés sont traités.|  
+|INSERT INTO MINING MODEL *\<modèle >* qui contient une requête source<br /><br /> ou Gestionnaire de configuration<br /><br /> INSERT INTO MINING STRUCTURE *\<structure >* qui contient une requête source|La structure ou le modèle contient déjà du contenu.|Échec du traitement. Vous devez supprimer les objets avant d’effectuer cette opération, à l’aide de [supprimer &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Mapped Model Columns  
  À l’aide de la \<mappé les colonnes du modèle > élément, vous pouvez mapper les colonnes à partir de la source de données aux colonnes dans votre modèle d’exploration de données. Le \<mappé les colonnes du modèle > élément a la forme suivante :  

@@ -8,10 +8,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: fa0d9d4ed647a6616c525533e696960784d09290
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63142311"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>Événements étendus pour le monitoring d’instructions PREDICT
@@ -34,7 +34,7 @@ Les événements étendus suivants sont disponibles dans toutes les versions de 
 
 L’instruction T-SQL prédire a été introduite dans SQL Server 2017. 
 
-|NAME |object_type|description| 
+|name |object_type|description| 
 |----|----|----|
 |predict_function_completed |événement  |Répartition du temps d’exécution Builtin|
 |predict_model_cache_hit |événement|Se produit lorsqu’un modèle est récupéré du cache du modèle de fonction PREDICT. Utilisez cet événement avec d’autres événements predict_model_cache_ * pour résoudre les problèmes provoqués par le cache de modèle de fonction PREDICT.|

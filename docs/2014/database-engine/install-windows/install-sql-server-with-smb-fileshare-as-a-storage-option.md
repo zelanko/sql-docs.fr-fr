@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775332"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installer SQL Server avec le partage de fichiers SMB en tant qu'option de stockage
@@ -98,11 +98,11 @@ ms.locfileid: "62775332"
     > [!NOTE]  
     >  Les autorisations de partage FULL CONTROL et les autorisations NTFS sur les dossiers de partage SMB doivent être limitées : au compte de service de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , au compte de service de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux utilisateurs Windows avec des rôles de serveur admin.  
   
-     Il est recommandé d'utiliser le compte de domaine en tant que compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le compte système est utilisé comme compte de service, accordez les autorisations pour le compte d’ordinateur au format suivant : _<nom_domaine>_**\\**_<nom_ordinateur>_**$**.  
+     Il est recommandé d'utiliser le compte de domaine en tant que compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si le compte système est utilisé comme compte de service, accordez les autorisations pour le compte d’ordinateur au format suivant : _<nom_domaine>_ **\\** _<nom_ordinateur>_ **$** .  
   
     > [!NOTE]  
     >  -   Pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez spécifier le compte de domaine en tant que compte de service si le partage de fichiers SMB est indiqué comme option de stockage. Avec le partage de fichiers SMB, le compte système peut être spécifié comme compte de service après l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-    > -   Les comptes virtuels ne peuvent pas être authentifiés sur un emplacement distant. Tous les comptes virtuels utilisent l'autorisation de compte d'ordinateur. Configurez le compte d’ordinateur au format _<nom_domaine>_**\\**_<nom_ordinateur>_**$**.  
+    > -   Les comptes virtuels ne peuvent pas être authentifiés sur un emplacement distant. Tous les comptes virtuels utilisent l'autorisation de compte d'ordinateur. Configurez le compte d’ordinateur au format _<nom_domaine>_ **\\** _<nom_ordinateur>_ **$** .  
   
 -   Le compte utilisé pour installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit avoir des autorisations FULL CONTROL sur le dossier de partage de fichiers SMB utilisé comme répertoire de données, ou tous les autres dossiers de données (répertoire de base de données utilisateur, répertoire du journal de la base de données utilisateur, répertoire TempDB, répertoire du journal TempDB, répertoire de sauvegarde) pendant la configuration des clusters.  
   

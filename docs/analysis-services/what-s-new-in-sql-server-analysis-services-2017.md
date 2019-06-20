@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 711b577b737b48012e1bed0a52ba599cf17b3d8f
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 1f322b395f897780f3693d1186767aeef7dbfd4a
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685756"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263266"
 ---
 # <a name="whats-new-in-sql-server-2017-analysis-services"></a>Quelles sont les nouveautés dans SQL Server 2017 Analysis Services
 [!INCLUDE[ssas-appliesto-sql2017](../includes/ssas-appliesto-sql2017.md)]
@@ -38,7 +38,7 @@ Dans SSDT, vous pouvez sélectionner le nouveau niveau de compatibilité 1400 lo
 ![AS_NewTabular1400Project](../analysis-services/media/as-newtabular1400project.png)
 
 
-Pour mettre à niveau un modèle tabulaire existant dans SSDT, dans l’Explorateur de solutions, cliquez sur **Model.bim**, puis dans **propriétés**, définissez le **niveau de compatibilité** propriété  **SQL Server 2017 (1400)**. 
+Pour mettre à niveau un modèle tabulaire existant dans SSDT, dans l’Explorateur de solutions, cliquez sur **Model.bim**, puis dans **propriétés**, définissez le **niveau de compatibilité** propriété  **SQL Server 2017 (1400)** . 
 
 ![AS_Model_Properties](../analysis-services/media/as-model-properties.png)
 
@@ -111,7 +111,7 @@ La propriété **Expression de lignes de détails** pour les mesures permet aux 
 
 ![AS_Detail_Rows_Expression_Property](../analysis-services/media/as-detail-rows-expression-property.png)
 
-Le [SELECTCOLUMNS](https://msdn.microsoft.com/library/mt761759.aspx) DAX fonction est couramment utilisée dans une Expression de lignes de détail. L’exemple suivant définit les colonnes à renvoyer pour les lignes dans la table des ventes sur Internet, dans l’exemple de modèle tabulaire Adventure Works :
+Le [SELECTCOLUMNS](/dax/selectcolumns-function-dax) DAX fonction est couramment utilisée dans une Expression de lignes de détail. L’exemple suivant définit les colonnes à renvoyer pour les lignes dans la table des ventes sur Internet, dans l’exemple de modèle tabulaire Adventure Works :
 
 ```
 SELECTCOLUMNS(
@@ -179,9 +179,9 @@ Cette version inclut les améliorations apportées à [vues de gestion dynamique
 [MDSCHEMA_MEASUREGROUP_DIMENSIONS](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset) améliorations sont incluses pour cette vue DMV, qui est utilisée par les outils clients différents pour afficher la dimensionnalité de mesure. Par exemple, la fonctionnalité Explorer dans les tableaux croisés dynamiques Excel permet à l’utilisateur à cross-extraction des dimensions associées pour les mesures sélectionnées. Cette version corrige les colonnes de cardinalité, qui ont été précédemment montrant les valeurs incorrectes.
 
 ## <a name="dax-enhancements"></a>Améliorations DAX
-Cette version inclut la prise en charge des fonctionnalités et de nouvelles fonctions DAX. Pour tirer parti, vous devez utiliser la dernière version de SSDT. Pour plus d’informations, consultez [fonctions DAX nouvelle](https://msdn.microsoft.com/library/mt704075.aspx).
+Cette version inclut la prise en charge des fonctionnalités et de nouvelles fonctions DAX. Pour tirer parti, vous devez utiliser la dernière version de SSDT. Pour plus d’informations, consultez [fonctions DAX nouvelle](/dax/new-dax-functions).
 
-Un des éléments plus importants de nouvelles fonctionnalités DAX est la nouvelle [opérateur IN / fonction CONTAINSROW](https://msdn.microsoft.com/library/mt842621.aspx) pour les expressions DAX. Elle est similaire à l’opérateur [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) couramment utilisé pour spécifier plusieurs valeurs dans une clause `WHERE` .
+Un des éléments plus importants de nouvelles fonctionnalités DAX est la nouvelle [opérateur IN / fonction CONTAINSROW](/dax/in-operator-containsrow-function) pour les expressions DAX. Elle est similaire à l’opérateur [`TSQL IN`](https://msdn.microsoft.com/library/ms177682.aspx) couramment utilisé pour spécifier plusieurs valeurs dans une clause `WHERE` .
 
 Auparavant, il était courant de spécifier des filtres à valeurs multiples à l’aide de l’opérateur `OR` logique comme dans l’expression de mesure suivante :
 

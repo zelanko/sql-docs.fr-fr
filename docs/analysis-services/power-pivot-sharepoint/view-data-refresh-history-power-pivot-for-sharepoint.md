@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509938"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Afficher l’historique d’actualisation des données (Power Pivot pour SharePoint)
@@ -45,7 +45,7 @@ ms.locfileid: "62509938"
   
 2.  Sélectionnez le classeur, puis cliquez sur la flèche orientée vers le bas qui s'affiche à droite.  
   
-3.  Sélectionnez **Gérer l’actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+3.  Sélectionnez **Gérer l’actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
  Cette opération affiche la page d’historique contenant des informations complètes sur l’ensemble de l’activité d’actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] du classeur Excel actif.  
   

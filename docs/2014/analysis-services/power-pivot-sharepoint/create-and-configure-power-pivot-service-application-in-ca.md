@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071581"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>Créer et configurer une application de service PowerPivot dans l'Administration centrale
@@ -137,9 +137,9 @@ ms.locfileid: "66071581"
   
 3.  Cliquez sur **Connexions de service**.  
   
-4.  Dans **Modifier le groupe d’associations suivant**, sélectionnez **par défaut** ou **[personnalisé]**.  
+4.  Dans **Modifier le groupe d’associations suivant**, sélectionnez **par défaut** ou **[personnalisé]** .  
   
-5.  Pour **[personnalisé]**, cochez la case à côté de chaque connexion d’application de service que vous souhaitez utiliser. Si vous avez plusieurs applications de service PowerPivot (indiqué par la valeur de Type `PowerPivot Service Application Proxy`), veillez à choisir un seul.  
+5.  Pour **[personnalisé]** , cochez la case à côté de chaque connexion d’application de service que vous souhaitez utiliser. Si vous avez plusieurs applications de service PowerPivot (indiqué par la valeur de Type `PowerPivot Service Application Proxy`), veillez à choisir un seul.  
   
 6.  Cliquez sur **OK**.  
   

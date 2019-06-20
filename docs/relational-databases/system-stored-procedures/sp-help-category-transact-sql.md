@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62797813"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -43,7 +43,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @class = ] 'class'` La classe sur laquelle les informations sont demandées. *classe* est **varchar(8)**, avec une valeur par défaut **travail**. *classe* peut prendre l’une des valeurs suivantes.  
+`[ @class = ] 'class'` La classe sur laquelle les informations sont demandées. *classe* est **varchar(8)** , avec une valeur par défaut **travail**. *classe* peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -51,7 +51,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |**ALERTE**|Fournit des informations sur une catégorie d'alertes.|  
 |**OPÉRATEUR**|Fournit des informations sur une catégorie d'opérateurs.|  
   
-`[ @type = ] 'type'` Le type de catégorie pour laquelle les informations sont demandées. *type* est **varchar(12)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` Le type de catégorie pour laquelle les informations sont demandées. *type* est **varchar(12)** , avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  

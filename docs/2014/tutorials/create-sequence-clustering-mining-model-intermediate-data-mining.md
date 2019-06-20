@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273480"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Création d'une structure de modèle d'exploration de données Sequence Clustering (Didacticiel intermédiaire sur l'exploration de données)
@@ -32,7 +32,7 @@ ms.locfileid: "63273480"
   
 3.  Sur le **sélectionner la méthode de définition** page, vérifiez que **à partir de l’entrepôt de données ou de la base de données relationnelle existant** est sélectionnée, puis cliquez sur **suivant**.  
   
-4.  Sur le **créer la Structure d’exploration de données** page, vérifiez que l’option **créer la structure d’exploration de données avec un modèle d’exploration de données** est sélectionné. Ensuite, cliquez sur la liste déroulante pour l’option, **quelle technique d’exploration de données voulez-vous utiliser ?**, puis sélectionnez **Microsoft Sequence Clustering**. Cliquer sur **Suivant**.  
+4.  Sur le **créer la Structure d’exploration de données** page, vérifiez que l’option **créer la structure d’exploration de données avec un modèle d’exploration de données** est sélectionné. Ensuite, cliquez sur la liste déroulante pour l’option, **quelle technique d’exploration de données voulez-vous utiliser ?** , puis sélectionnez **Microsoft Sequence Clustering**. Cliquer sur **Suivant**.  
   
      Le **sélectionner une vue de Source de données** page s’affiche. Sous **vues de sources de données disponibles**, sélectionnez `Orders`.  
   

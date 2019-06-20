@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b4458f8fe198ba3d052bcb21bef38975738b2c23
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767461"
 ---
 # <a name="step-1-copying-the-lesson-2-package"></a>Étape 1 : Copie du package de la leçon 2
@@ -38,7 +38,7 @@ ms.locfileid: "62767461"
   
 7.  Dans la fenêtre Propriétés, mettez à jour le `Name` propriété `Lesson 3`.  
   
-8.  Cliquez sur la zone pour le **ID** propriété, puis, dans la liste, cliquez sur  **\<générer un nouvel ID >**.  
+8.  Cliquez sur la zone pour le **ID** propriété, puis, dans la liste, cliquez sur  **\<générer un nouvel ID >** .  
   
 ### <a name="to-add-the-completed-lesson2-package"></a>Pour ajouter le package final de la leçon 2  
   
