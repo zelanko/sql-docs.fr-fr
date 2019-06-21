@@ -12,12 +12,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ab544235e842e38024ce98763094c300bb06275
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067228"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284874"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>Mode DirectQuery (SSAS Tabulaire)
   Analysis Services vous permet de récupérer des données et de créer des rapports à partir d'un modèle tabulaire en récupérant des données et des agrégats directement à partir d'un système de base de données relationnelle, à l'aide du *mode DirectQuery*. Cette rubrique présente les différences entre les modèles tabulaires standard qui résident uniquement en mémoire et les modèles tabulaires qui peuvent interroger une source de données relationnelle, et explique comment créer et déployer un modèle utilisable en mode DirectQuery.  
@@ -82,7 +82,7 @@ ms.locfileid: "66067228"
   
 -   **Restrictions client :** Lorsqu’un modèle est en mode DirectQuery, il ne peut être interrogé à l’aide de DAX. Vous ne pouvez pas utiliser MDX pour créer des requêtes. Cela signifie que vous ne pouvez pas utiliser le client de tableau croisé dynamique Excel, car Excel utilise MDX.  
   
-     Toutefois, vous pouvez créer des requêtes sur un modèle DirectQuery dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] si vous utilisez une requête de table DAX dans le cadre d’une instruction XMLA Execute, pour plus d’informations, consultez [référence syntaxique des requêtes DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+     Toutefois, vous pouvez créer des requêtes sur un modèle DirectQuery dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] si vous utilisez une requête de table DAX dans le cadre d’une instruction XMLA Execute, pour plus d’informations, consultez [référence syntaxique des requêtes DAX] (/ / dax-référence syntaxique de dax
   
  Lorsque vous avez résolu tous les problèmes de conception et testé votre modèle, vous êtes prêt pour le déploiement. À ce stade, vous pouvez définir la méthode recommandée pour répondre aux requêtes sur le modèle. Voulez-vous que les utilisateurs aient accès au cache, ou utilisent toujours uniquement la source de données relationnelle ?  
   

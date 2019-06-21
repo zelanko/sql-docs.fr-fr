@@ -10,12 +10,12 @@ ms.assetid: e1011278-556d-4984-b01d-a37f8a33b304
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0ad2e89a8862c4b51856d70ddb1dfd3b1e1fdb17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066574"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284891"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Colonnes calculées (SSAS Tabulaire)
   Les colonnes calculées, dans les modèles tabulaires, vous permettent d'ajouter de nouvelles données à votre modèle. Au lieu de coller ou importer des valeurs dans la colonne, vous créez une formule DAX qui définit les valeurs de niveau de ligne de la colonne. La colonne calculée peut alors être utilisée dans un rapport, un tableau croisé dynamique ou un graphique croisé dynamique comme toute autre colonne.  
@@ -60,7 +60,7 @@ ms.locfileid: "66066574"
   
 -   Lorsque vous renommez une colonne calculée, toutes les formules qui s'appuient sur la colonne doivent être mises à jour manuellement. À moins que vous ne soyez en mode de mise à jour manuel, la mise à jour des résultats des formules a lieu automatiquement. Toutefois, cette opération peut prendre quelque temps.  
   
--   Certains caractères ne peuvent pas être utilisés dans les noms de colonnes. Pour plus d'informations, consultez « Exigences concernant l'affectation des noms » dans [DAX Syntax Specification for PowerPivot](https://msdn.microsoft.com/library/ee634217(v=sql.120).aspx).  
+-   Certains caractères ne peuvent pas être utilisés dans les noms de colonnes. Pour plus d'informations, consultez « Exigences concernant l'affectation des noms » dans [DAX Syntax Specification for PowerPivot](/dax/dax-syntax-reference).  
   
 ##  <a name="bkmk_perf"></a> Performances des colonnes calculées  
  La formule d'une colonne calculée peut solliciter beaucoup plus de ressources que la formule utilisée pour une mesure. L'une des raisons en est que le résultat d'une colonne calculée est toujours calculé pour chaque ligne d'une table, alors qu'une mesure est calculée uniquement pour les cellules définies par le filtre utilisé dans le rapport, le tableau croisé dynamique ou le graphique croisé dynamique. Par exemple, une table d'un million de lignes aura toujours une colonne calculée avec un million de résultats et les conséquences que cela implique en termes de performances. Toutefois, un tableau croisé dynamique filtre généralement les données en appliquant des titres de lignes et de colonnes ; par conséquent, une mesure est calculée uniquement pour le sous-ensemble de données dans chaque cellule du tableau croisé dynamique.  

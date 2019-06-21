@@ -13,12 +13,12 @@ ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: b51cfde7e4d23d734a86955b3d639fab3e4625e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b5cc194306a4baecb2c5fa5478bf4733d1386af
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65482692"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284981"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>Table de mise en lots des relations (Master Data Services)
   Utilisez la table de mise en lots des relations (stg.name_Relationship) dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] pour modifier l’emplacement des membres dans une hiérarchie explicite, en fonction de la relation que les membres entretiennent les uns par rapport aux autres.  
@@ -40,7 +40,7 @@ ms.locfileid: "65482692"
 |**ErrorCode**|Affiche un code d'erreur. Pour tous les enregistrements dont la valeur **ImportStatus_ID** est **2**, consultez [Erreurs du processus de mise en lots &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déplacer des membres de hiérarchie explicite à l’aide du processus de site &#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [Déplacer des membres de hiérarchie explicite à l’aide du processus de site &#40;Master Data Services&#41;](add-update-and-delete-data-master-data-services.md)   
  [Importation de données &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [Afficher les erreurs qui se produisent pendant le processus de mise en lots &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [Erreurs du processus de mise en lots &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  

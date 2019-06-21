@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37d0edcabdb0171c8ca83c79080d59fdd8aafb76
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62831908"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284954"
 ---
 # <a name="execute-package-task"></a>Tâche d'exécution de package
   La tâche d'exécution de package étend les fonctionnalités d'entreprise de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en permettant à des packages d'exécuter d'autres packages au sein d'un flux de travail.  
@@ -112,12 +112,8 @@ ms.locfileid: "62831908"
   
 -   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
-## <a name="related-tasks"></a>Tâches associées  
-  
 ## <a name="related-content"></a>Contenu associé  
-  
--   Entrée de blog, [SSIS : Doit s’exécuter des packages enfants in-process ou out-of-process ? ](https://go.microsoft.com/fwlink/?LinkId=220819), sur le site Web consultingblogs.emc.com.  
-  
--   Entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), sur andyleonard.blog. 
+
+Entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), sur andyleonard.blog. 
   
   

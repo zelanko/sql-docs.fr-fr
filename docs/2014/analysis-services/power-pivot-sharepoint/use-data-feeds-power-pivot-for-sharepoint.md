@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070904"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Utiliser des flux de données (PowerPivot pour SharePoint)
@@ -37,7 +37,7 @@ ms.locfileid: "66070904"
 ##  <a name="prereq"></a> Conditions préalables  
  Vous devez disposer de PowerPivot pour Excel pour importer un flux de données dans Excel 2010.  
   
- Vous devez disposer d'un service Web ou d'un service de données qui fournit des données au format Atom 1.0.  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et SharePoint 2010 peuvent fournir des données à ce format.  
+ Vous devez disposer d'un service Web ou d'un service de données qui fournit des données au format Atom 1.0. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et SharePoint 2010 peuvent fournir des données à ce format.  
   
  Avant de pouvoir exporter une liste SharePoint sous forme de flux de données, vous devez installer ADO.NET Data Services sur le serveur SharePoint. Pour plus d’informations, voir [Installation d’ADO.NET Data Services pour prendre en charge les exportations de flux de données des listes SharePoint](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   

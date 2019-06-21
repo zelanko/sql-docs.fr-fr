@@ -10,12 +10,12 @@ ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a39cbc319b7b0a62f31b55ded8adfe60a49314b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066557"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284880"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Spécifier la marque comme table de dates pour l'utiliser avec Time Intelligence (SSAS - Tabulaire)
   Pour utiliser des fonctions Time Intelligence dans les formules DAX, vous devez spécifier une table de dates et une colonne (datetime) d'identification unique pour le type de données Date. Une fois qu'une colonne dans la table de dates est spécifiée comme identificateur unique, vous pouvez créer des relations entre les colonnes de cette table et de toutes les tables de faits.  
@@ -52,6 +52,6 @@ ms.locfileid: "66066557"
   
 ## <a name="see-also"></a>Voir aussi  
  [Calculs &#40;SSAS Tabulaire&#41;](calculations-ssas-tabular.md)   
- [Fonctions Time Intelligence &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
+ [Fonctions Time Intelligence &#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
   
   

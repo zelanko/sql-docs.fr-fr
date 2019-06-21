@@ -10,12 +10,12 @@ ms.assetid: 92993f7b-7243-4aec-906d-0b0379798242
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 585ce68402e8922f6c9629d8f4e8cd517218106f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067276"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284929"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Types de données pris en charge (SSAS Tabulaire)
   Cet article décrit les types de données qui peuvent être utilisés dans des modèles tabulaires et aborde la conversion implicite de types de données lorsque des données sont calculées ou utilisées dans une formule DAX (Data Analysis Expressions).  
@@ -68,7 +68,7 @@ ms.locfileid: "66067276"
 >  Vous ne pouvez pas importer à partir d’une colonne **varchar(max)** qui contient une chaîne de plus de 131 072 caractères.  
   
 ### <a name="table-data-type"></a>Type de données table  
- En outre, DAX utilise un type de données *table* . Ce type de données est utilisé par DAX dans de nombreuses fonctions, comme les agrégations et les calculs Time Intelligence. Certaines fonctions requièrent une référence à une table ; d'autres retournent une table qui peut ensuite être utilisée en entrée pour d'autres fonctions. Dans certaines fonctions qui requièrent une table en entrée, vous pouvez spécifier une expression qui donne une table ; pour d'autres, une référence à une table de base est obligatoire. Pour plus d'informations sur les exigences de fonctions spécifiques, voir [Référence des fonctions DAX](https://msdn.microsoft.com/library/ee634396.aspx).  
+ En outre, DAX utilise un type de données *table* . Ce type de données est utilisé par DAX dans de nombreuses fonctions, comme les agrégations et les calculs Time Intelligence. Certaines fonctions requièrent une référence à une table ; d'autres retournent une table qui peut ensuite être utilisée en entrée pour d'autres fonctions. Dans certaines fonctions qui requièrent une table en entrée, vous pouvez spécifier une expression qui donne une table ; pour d'autres, une référence à une table de base est obligatoire. Pour plus d'informations sur les exigences de fonctions spécifiques, voir [Référence des fonctions DAX](/dax/dax-function-reference).  
   
 ##  <a name="bkmk_implicit"></a> Conversion implicite et explicite de types de données dans les formules DAX  
  Chaque fonction DAX a des exigences spécifiques en ce qui concerne les types des données utilisés comme entrées et sorties. Par exemple, certaines fonctions requièrent des entiers pour certains arguments et des dates pour les autres ; d'autres fonctions requièrent du texte ou des tables.  
@@ -188,7 +188,7 @@ ms.locfileid: "66067276"
 |BLANK OR BLANK|Vide|Error|  
 |BLANK AND BLANK|Vide|Error|  
   
- Pour plus d’informations sur la façon dont une fonction ou un opérateur spécifique gèrent les valeurs vides, voir les rubriques relatives à la fonction DAX concernée dans la section [Référence des fonctions DAX](https://msdn.microsoft.com/library/ee634396.aspx).  
+ Pour plus d’informations sur la façon dont une fonction ou un opérateur spécifique gèrent les valeurs vides, voir les rubriques relatives à la fonction DAX concernée dans la section [Référence des fonctions DAX](/dax/dax-function-reference).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sources de données &#40;SSAS Tabulaire&#41;](../data-sources-ssas-tabular.md)   

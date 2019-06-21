@@ -10,17 +10,17 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 003b950e908abab7e385836e761b5c230caa7fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3eaaace0d8ae5924305024e6ee67f7f3fefb415c
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107874"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285036"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportation vers Microsoft Word (Générateur de rapports et SSRS)
   L'extension de rendu Word effectue le rendu de rapports au format natif de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Il s'agit du format Office Open XML.  
   
- Le convertisseur Word est compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, ainsi qu'avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 moyennant l'installation préalable du Module de compatibilité pour formats de fichiers [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Word, Excel et PowerPoint. Pour plus d'informations sur le module de compatibilité, consultez [Module de compatibilité pour formats de fichiers Microsoft Office Word, Excel et PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
+ Le convertisseur Word est compatible avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, ainsi qu'avec [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 moyennant l'installation préalable du Module de compatibilité pour formats de fichiers [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Word, Excel et PowerPoint. 
   
  Le type de contenu des fichiers générés par ce convertisseur est **application/vnd.openxmlformats-officedocument.wordprocessingml.document** et l'extension des fichiers est .docx.  
   

@@ -10,12 +10,12 @@ ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066627"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284853"
 ---
 # <a name="roles-ssas-tabular"></a>Rôles (SSAS Tabulaire)
   Les rôles, dans les modèles tabulaires, définissent des autorisations de membre pour un modèle. Chaque rôle contient des membres, par nom d'utilisateur Windows ou par groupe Windows, ainsi que des autorisations (lecture, traitement, administrateur). Les membres du rôle peuvent effectuer des actions sur le modèle, comme défini par l'autorisation du rôle. Les rôles définis avec des autorisations de lecture peuvent également fournir une sécurité supplémentaire au niveau de la ligne grâce à l'utilisation de filtres au niveau de la ligne.  
@@ -75,7 +75,7 @@ ms.locfileid: "66066627"
   
  Les filtres de lignes peuvent être définis uniquement pour les rôles avec des autorisations de lecture et de lecture et de traitement. Par défaut, si un filtre de lignes n'est pas défini pour une table particulière, les membres d'un rôle disposant de l'autorisation de lecture ou de lecture et traitement peuvent interroger toutes les lignes de la table, sauf si le filtrage croisé s'applique à partir d'une autre table.  
   
- Une fois qu'un filtre de lignes est défini pour une table particulière, une formule DAX, qui doit correspondre à une valeur TRUE/FALSE, définit les lignes qui peuvent être interrogées par les membres de ce rôle particulier. Les lignes non incluses dans la formule DAX ne peuvent pas être interrogées. Par exemple, pour les membres du rôle Sales, la table Customers avec la ligne suivante expression de filtres, *= Customers [Country] = « USA »*, les membres du rôle Sales pourront uniquement voir les clients aux États-Unis.  
+ Une fois qu'un filtre de lignes est défini pour une table particulière, une formule DAX, qui doit correspondre à une valeur TRUE/FALSE, définit les lignes qui peuvent être interrogées par les membres de ce rôle particulier. Les lignes non incluses dans la formule DAX ne peuvent pas être interrogées. Par exemple, pour les membres du rôle Sales, la table Customers avec la ligne suivante expression de filtres, *= Customers [Country] = « USA »* , les membres du rôle Sales pourront uniquement voir les clients aux États-Unis.  
   
  Les filtres de lignes s'appliquent aux lignes spécifiées ainsi qu'aux lignes connexes. Lorsqu'une table contient plusieurs relations, les filtres appliquent la sécurité de la relation qui est active. Les filtres de lignes se croisent avec d'autres filtres de ligne définis pour les tables associées, par exemple :  
   
@@ -96,8 +96,8 @@ ms.locfileid: "66066627"
   
 |Fonction|Description|  
 |--------------|-----------------|  
-|[Fonction USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|Retourne le domaine\nom d'utilisateur de l'utilisateur actuellement connecté.|  
-|[Fonction CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|Retourne la propriété CustomData dans une chaîne de connexion.|  
+|[Fonction USERNAME &#40;DAX&#41;](/dax/username-function-dax)|Retourne le domaine\nom d'utilisateur de l'utilisateur actuellement connecté.|  
+|[Fonction CUSTOMDATA &#40;DAX&#41;](/dax/customdata-function-dax)|Retourne la propriété CustomData dans une chaîne de connexion.|  
   
  Vous pouvez utiliser la fonction LOOKUPVALUE pour retourner les valeurs d'une colonne dans laquelle le nom d'utilisateur Windows est le même que le nom d'utilisateur retourné par la fonction USERNAME ou une chaîne retournée par la fonction CustomData. Les requêtes peuvent ensuite être restreintes de sorte que les valeurs retournées par LOOKUPVALUE correspondent aux valeurs de la même table ou de la table associée.  
   
@@ -140,8 +140,8 @@ ms.locfileid: "66066627"
 ## <a name="see-also"></a>Voir aussi  
  [Perspectives &#40;SSAS Tabulaire&#41;](perspectives-ssas-tabular.md)   
  [Analyser dans Excel &#40;SSAS Tabulaire&#41;](analyze-in-excel-ssas-tabular.md)   
- [Fonction USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [La fonction LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [Fonction CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [Fonction USERNAME &#40;DAX&#41;](/dax/username-function-dax)   
+ [La fonction LOOKUPVALUE &#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [Fonction CUSTOMDATA &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

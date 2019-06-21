@@ -10,12 +10,12 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2136c162846b31c4d221d7aaad6476ba70508287
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62732471"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284958"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilité des formules DAX en mode DirectQuery (SSAS 2014)
 Le langage Data Analysis expressions (DAX) peut être utilisé pour créer des mesures et autres formules personnalisées pour une utilisation dans les modèles tabulaires Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] les modèles de données dans des classeurs Excel et les modèles de données Power BI Desktop. Dans bien des égards, les modèles que vous créez dans ces environnements sont identiques, et vous pouvez utiliser les mesures de même, les relations et les indicateurs de performance clés, etc. Toutefois, si vous créez un modèle tabulaire Analysis Services et le déployez en mode DirectQuery, il existe certaines restrictions sur les formules que vous pouvez utiliser. Cette rubrique fournit une vue d’ensemble de ces différences, répertorie les fonctions qui ne sont pas pris en charge dans le modèle de tabulars SQL Server 2014 Analysis Services au niveau de compatibilité 1100 ou 1103 et en mode DirectQuery, et répertorie les fonctions qui sont prises en charge, mais peut retourner des résultats différents.  
@@ -85,7 +85,7 @@ Les conversions en type de données booléen d'une autre chaîne génèrent une 
 **Conversion d'une chaîne en date/heure**  
 En mode DirectQuery, les conversions des représentations sous forme de chaîne des dates et heures en valeurs **datetime** réelles se comportent de la même façon que dans SQL Server.  
   
-Pour plus d’informations sur les règles régissant les conversions de chaîne à **datetime** des types de données dans [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modèles, consultez le [référence syntaxique de DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+Pour plus d’informations sur les règles régissant les conversions de chaîne à **datetime** des types de données dans [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modèles, consultez [référence syntaxique de DAX] (/ / dax-référence syntaxique de dax
   
 Les modèles qui utilisent la banque de données en mémoire utilisent une plage plus limitée de formats de texte pour les dates que les formats de chaîne pour les dates prises en charge par SQL Server. Toutefois, DAX prend en charge les formats de date et d'heure personnalisés.  
   
@@ -133,7 +133,7 @@ SQL Server gère les valeurs Null et les espaces différemment du moteur xVeloci
   
 Les mêmes limitations s’appliquent aux autres fonctions logarithmiques : LOG10 et LN.  
   
-Pour plus d’informations sur le type de données **blank** dans DAX, consultez [Spécification de syntaxe DAX pour PowerPivot](https://msdn.microsoft.com/library/ee634217.aspx).  
+Pour plus d’informations sur la **vide** type de données dans DAX, consultez [référence syntaxique de DAX] (/ / dax-référence syntaxique de dax
   
 **Division par 0 et division par un espace**  
 En mode DirectQuery, la division par zéro (0) ou la division par BLANK aura toujours pour résultat une erreur. SQL Server ne prend pas en charge la notion d'infini, et comme le résultat naturel de toute division par 0 est l'infini, le résultat est une erreur. Toutefois, SQL Server prend en charge la division par des valeurs Null, et le résultat doit toujours être égal à une valeur Null.  

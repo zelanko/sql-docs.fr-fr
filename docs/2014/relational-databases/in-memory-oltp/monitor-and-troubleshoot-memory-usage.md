@@ -10,12 +10,12 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 17819c4c2a1d74c8ca4cc5d4875a67c6fb236639
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63c877d9b9275ef482591f6345715569a25c5e2a
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63073874"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285011"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] utilise la mémoire selon des modèles différents pour les tables sur disque. Analysez la quantité de mémoire allouée et utilisée par les tables et les index optimisés en mémoire dans votre base de données à l'aide des DMV ou des compteurs de performance fournis pour la mémoire et le sous-système de garbage collection.  Vous aurez ainsi la visibilité au niveau du système et de la base de données, et vous pourrez prévenir les problèmes liés à l'insuffisance de mémoire.  
@@ -196,7 +196,7 @@ PGPOOL: 64K               0                    0                    0
 PGPOOL:  4K               0                    0                    0  
 ```  
 
- Pour plus d’informations, consultez [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql.md).  
+ Pour plus d’informations, consultez [sys.dm_xtp_system_memory_consumers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
 
   
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>Consommation de mémoire à l'exécution lors de l'accès aux tables optimisées en mémoire  

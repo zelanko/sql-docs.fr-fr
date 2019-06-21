@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7881df645a02e70948d81baa6fd8a029d06ea1b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066457"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284864"
 ---
 # <a name="tabular-model-data-access"></a>Accès aux données de modèle tabulaire
   Les bases de données model tabulaires dans Analysis Services sont accessibles par la plupart des mêmes clients, interfaces et langues que vous utilisez pour récupérer les données ou les métadonnées d'un modèle multidimensionnel. Pour plus d’informations, consultez [Accès aux données de modèles multidimensionnels &#40;Analysis Services - Données multidimensionnelles &#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "66066457"
   
  En outre, vous pouvez utiliser des expressions DAX dans le contexte d'une instruction de commande XMLA EXECUTE pour envoyer des requêtes à un modèle tabulaire déployé en mode DirectQuery.  
   
- Pour obtenir des exemples de requêtes sur un modèle tabulaire utilisant DAX, voir [Référence syntaxique des requêtes DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+ Pour obtenir des exemples de requêtes sur un modèle tabulaire utilisant DAX, consultez [référence syntaxique des requêtes DAX] (/ / dax-référence syntaxique de dax
   
 ### <a name="mdx"></a>MDX  
  Vous pouvez utiliser MDX pour créer des requêtes sur des modèles tabulaires qui utilisent le cache en mémoire comme méthode de requête par défaut (autrement dit, les modèles qui n'ont pas été déployés en mode DirectQuery). Bien que les clients tels que [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] utilisent DAX pour créer des agrégations et pour interroger le modèle comme source de données, si vous êtes familiarisé avec MDX, il sera plus rapide de créer des exemples de requêtes dans MDX. Consultez [Génération de mesures dans une expression MDX](../multidimensional-models/mdx/mdx-building-measures.md).  
