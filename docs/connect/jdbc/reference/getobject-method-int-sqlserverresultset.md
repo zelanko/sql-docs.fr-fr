@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 69ea6db0c79840f1bcdea0605611cdfa853055a2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66787674"
 ---
 # <a name="getobject-method-int-sqlserverresultset"></a>getObject, méthode (int) (SQLServerResultSet)
@@ -47,7 +47,7 @@ public java.lang.Object getObject(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getObject est spécifiée par la méthode getObject de l’interface java.sql.CallableStatement.  
+ Cette méthode getObject est spécifiée par la méthode getObject de l’interface java.sql.ResultSet.  
   
  Cette méthode retourne la valeur de la colonne fournie en tant qu'objet Java. Le type de l'objet Java sera le type d'objet Java par défaut correspondant au type SQL de la colonne, en suivant le mappage pour les types intégrés indiqué dans la spécification JDBC. Si la valeur est SQL NULL, le pilote retourne une valeur Java NULL.  
   

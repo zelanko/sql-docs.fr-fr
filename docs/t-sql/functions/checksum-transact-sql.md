@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ee40f9b7632a388cb9b0889f40ee510c39ba34b
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: c96654d1e16a3b730aa3f2a09f14da4c91971b9d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65946488"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145498"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -59,7 +59,7 @@ Un autre type de données incomparable est **sql_variant** avec l’un des types
 ## <a name="return-types"></a>Types de retour
  **Int**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `CHECKSUM` calcule une valeur de hachage, appelée somme de contrôle, sur sa liste d’arguments. Utilisez cette valeur de hachage pour générer des index de hachage. Un index de hachage est obtenu si la fonction `CHECKSUM` a des arguments de colonne et qu’un index est créé sur la valeur `CHECKSUM` calculée. qui peut être utilisé dans des recherches d'égalité sur les colonnes.
   
 La fonction `CHECKSUM` a les propriétés d’une fonction de hachage : quand `CHECKSUM` est appliqué à deux listes d’expressions, la même valeur est retournée si les éléments correspondants dans les deux listes sont du même type de données et ont une valeur égale lorsqu’ils sont comparés à l’aide de l’opérateur d’égalité (=). Les valeurs NULL d’un type spécifié sont définies comme ayant une valeur de comparaison égale dans le cadre de la fonction `CHECKSUM`. Si au moins l’une des valeurs de la liste d’expressions change, la somme de contrôle de liste est susceptible de changer aussi. Toutefois, cela n’est pas garanti. Par conséquent, nous conseillons d’utiliser `CHECKSUM` pour vérifier si des valeurs ont changé uniquement si votre application peut accepter une modification parfois manquée. Sinon, envisagez d’utiliser `HASHBYTES` à la place. Avec un algorithme de hachage MD5 spécifié, la probabilité que `HASHBYTES` retourne le même résultat pour deux entrées différentes est beaucoup plus faible par rapport à `CHECKSUM`.
@@ -68,6 +68,8 @@ L’ordre des expressions affecte la valeur `CHECKSUM` calculée. L’ordre des 
   
 La valeur de `CHECKSUM` dépend du classement. La même valeur stockée avec un autre classement retourne une valeur `CHECKSUM` différente.
   
+`CHECKSUM ()` ne garantit pas des résultats uniques.
+
 ## <a name="examples"></a>Exemples  
 Ces exemples illustrent l’utilisation de `CHECKSUM` pour générer des index de hachage.
   

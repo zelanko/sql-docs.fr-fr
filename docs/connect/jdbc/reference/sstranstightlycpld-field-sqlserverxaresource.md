@@ -1,5 +1,5 @@
 ---
-title: SSTRANSTIGHTLYCPLD Field (SQLServerXAResource) | Microsoft Docs
+title: Champ SSTRANSTIGHTLYCPLD (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 860e670a74b3882662ae1c48609ef5f95609102d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797562"
 ---
 # <a name="sstranstightlycpld-field-sqlserverxaresource"></a>Champ SSTRANSTIGHTLYCPLD (SQLServerXAResource)

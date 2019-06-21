@@ -17,10 +17,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66778047"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Utilisation d’ADO avec OLE DB Driver pour SQL Server
@@ -42,7 +42,7 @@ ms.locfileid: "66778047"
 
 -   `DataTypeCompatibility=80`  
 
- Pour plus d’informations sur les mots clés de chaîne de connexion dans le pilote OLE DB pour SQL Server, voir [Utiliser des mots clés de chaîne de connexion avec le pilote OLE DB pour SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Pour plus d’informations sur les mots clés de chaîne de connexion ADO pris en charge dans le pilote OLE DB pour SQL Server, voir [Utiliser des mots clés de chaîne de connexion avec le pilote OLE DB pour SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
  Voici un exemple d’établissement d’une chaîne de connexion ADO entièrement compatible avec OLE DB Driver pour SQL Server, dont l’activation de la fonctionnalité MARS :  
 

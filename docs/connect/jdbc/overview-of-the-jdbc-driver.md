@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e90dc3c4996fc9dc412a28849df2283ec9495ebd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9e9e7c7c6c29847fef54ac3e484e7ed7b1821f4d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597137"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801800"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Présentation du pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "47597137"
 |[Forum aux Questions &#40;FAQ&#41; pour le pilote JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Forum aux questions sur le pilote Microsoft JDBC.|  
 |[Dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server.|
 
-## <a name="see-also"></a> Voir aussi  
- [Référentiel GitHub de pilote JDBC](https://github.com/microsoft/mssql-jdbc)  
+## <a name="see-also"></a>Voir aussi  
+ [Référentiel GitHub du pilote JDBC](https://github.com/microsoft/mssql-jdbc)  
  [Informations de référence sur l'API du pilote JDBC](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

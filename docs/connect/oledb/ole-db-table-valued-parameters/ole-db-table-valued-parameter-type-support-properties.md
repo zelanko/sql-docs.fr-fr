@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (properties)
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 90240caba9bbba0539c2b827d9471b4318592ba6
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+manager: jroth
+ms.openlocfilehash: 336ef7d2bf0f81994bbd004f60062d98df91eb54
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801142"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Prise en charge du type de paramètre table OLE DB (Propriétés)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "51559617"
 |DBPROP_STRONGIDENTITY|VARIANT_TRUE|  
 |DBPROP_TRANSACTEDOBJECT|VARIANT_FALSE|  
 |DBPROP_UNIQUEROWS|VARIANT_FALSE|  
-|DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &AMP;#124; DBPROPVAL_UP_DELETE &AMP;#124; DBPROPVAL_UP_INSERT|  
+|DBPROP_UPDATABILITY|DBPROPVAL_UP_CHANGE &#124; DBPROPVAL_UP_DELETE &#124; DBPROPVAL_UP_INSERT|  
   
 ## <a name="property-sets"></a>Jeux de propriétés  
  Les jeux de propriétés suivants prennent en charge les paramètres table.  
@@ -98,7 +98,7 @@ ms.locfileid: "51559617"
 |SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|Lecture/écriture : lecture/écriture<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type : VT_UI2 &#124; VT_ARRAY<br /><br /> Description : les consommateurs utilisent cette propriété pour spécifier quelles colonnes dans l'ensemble de lignes seront traitées en tant que valeurs par défaut. Aucune valeur ne sera envoyée pour ces colonnes. Au moment d'extraire des données de l'objet d'ensemble de lignes du consommateur, le fournisseur n'exige aucune liaison pour ces colonnes.<br /><br /> Chaque élément du tableau doit désigner l'ordinal d'une colonne dans l'objet d'ensemble de lignes. Les ordinaux non valides génèrent des erreurs lors de l'exécution des commandes.|  
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|Lecture/écriture : lecture/écriture<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type : VT_UI2 &#124; VT_ARRAY<br /><br /> Description : cette propriété est utilisée par le consommateur pour indiquer au serveur l'ordre de tri des données des colonnes. Le fournisseur n'effectue aucune validation et part du principe que le consommateur agit conformément à la spécification fournie. Le serveur utilise cette propriété pour procéder à des optimisations.<br /><br /> Les informations d'ordre des colonnes pour chaque colonne sont représentées par une paire d'éléments dans le tableau. Le premier élément dans la paire correspond au numéro de la colonne. Le deuxième élément dans la paire sera 1 pour l'ordre croissant ou 2 pour l'ordre décroissant.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge des types de paramètre table OLE DB](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   
  [Utiliser les paramètres table &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

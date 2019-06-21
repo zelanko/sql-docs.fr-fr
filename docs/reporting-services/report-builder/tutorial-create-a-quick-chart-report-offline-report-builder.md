@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 429ee4c7dcd0b6d58b2cbb3e223e8f7407339327
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571768"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67037958"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Didacticiel : créer un rapport de graphique rapide en mode hors connexion (Générateur de rapports)
 
@@ -105,7 +105,7 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
     </Query>  
     ```  
   
-11. (Facultatif) Cliquez sur le bouton **Exécuter** (**!**) pour voir les données sur lesquelles votre graphique sera basé.  
+11. (Facultatif) Cliquez sur le bouton **Exécuter** ( **!** ) pour voir les données sur lesquelles votre graphique sera basé.  
   
      ![Générateur de rapports - Conception d’une requête](../../reporting-services/report-builder/media/rb-designquery.png "Générateur de rapports - Conception d’une requête")  
   
@@ -169,7 +169,7 @@ Vous pouvez effectuer ce didacticiel de deux façons différentes. Les deux mét
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName   
     ```  
   
-8.  (Facultatif) Cliquez sur le bouton Exécuter (**!**) pour voir les données sur lesquelles votre graphique sera basé.  
+8.  (Facultatif) Cliquez sur le bouton Exécuter ( **!** ) pour voir les données sur lesquelles votre graphique sera basé.  
   
 9. Cliquez sur **Suivant**.  
   
@@ -207,7 +207,7 @@ Notez que l’aire de conception s’agrandit lorsque vous faites glisser.
   
 2.  Cliquez avec le bouton droit sur les étiquettes et sélectionnez **Propriétés de l’étiquette de la série**. La boîte de dialogue **Propriétés de l'étiquette de la série** s'affiche.  
   
-3.  Dans la zone **Données de l’étiquette**, tapez **#PERCENT{P0}**.  
+3.  Dans la zone **Données de l’étiquette**, tapez **#PERCENT{P0}** .  
   
      **{P0}** indique le pourcentage sans décimales. Si vous tapez simplement **#PERCENT**, vos nombres comporteront deux décimales. **#PERCENT** est un mot clé qui effectue un calcul ou une fonction pour vous. Il en existe de nombreux autres.  
      
@@ -226,7 +226,7 @@ Notez que l’aire de conception s’agrandit lorsque vous faites glisser.
   
  Pour finir, afin d'enregistrer vos rapports sur un serveur de rapports ou un site SharePoint intégré à un serveur de rapports, il vous faut posséder l'URL et les autorisations nécessaires. Vous pouvez créer les rapports que vous créez directement à partir de votre ordinateur, mais les rapports procurent davantage de fonctionnalités lorsqu'ils sont exécutés à partir du serveur de rapports ou d'un site SharePoint. Vous devez disposer des autorisations nécessaires pour exécuter vos rapports (ou d'autres rapports) à partir du serveur de rapports ou du site SharePoint sur lequel ils sont publiés. Pour obtenir ces autorisations, contactez votre administrateur système.  
   
- Avant de continuer, il peut être utile de lire certains documents relatifs à certains concepts et termes. Consultez [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Il est également conseillé d'accorder un peu de temps à la planification avant de créer votre premier rapport. Ce temps consacré vous sera utile. Voir [Planification d’un rapport (Générateur de rapports)](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ Avant de continuer, il peut être utile de lire certains documents relatifs à certains concepts et termes. Voir [Concepts de Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md). Il est également conseillé d'accorder un peu de temps à la planification avant de créer votre premier rapport. Ce temps consacré vous sera utile. Voir [Planification d’un rapport (Générateur de rapports)](../../reporting-services/report-design/planning-a-report-report-builder.md).  
 
 ## <a name="next-steps"></a>Étapes suivantes
 

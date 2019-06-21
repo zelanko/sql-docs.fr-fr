@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 85fc9956e8e88398703adf283c91517972aa7e77
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797069"
 ---
 # <a name="retrieving-data"></a>Récupération de données
@@ -76,7 +76,7 @@ Vous pouvez voir le nombre de lignes dans un jeu de résultats si vous spécifie
 |[Utilisation de paramètres directionnels](../../connect/php/using-directional-parameters.md)|Décrit comment utiliser les paramètres directionnels lors de l’appel d’une procédure stockée.|  
 |[Spécification d’un type de curseur et sélection de lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Montre comment créer un jeu de résultats avec les lignes auxquelles vous pouvez accéder dans n’importe quel ordre.|  
 |[Procédure : récupérer des types date et heure sous forme de chaînes à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Décrit comment récupérer des types date et heure sous forme de chaînes à l’aide du pilote SQLSRV.|  
-|[Procédure : récupérer des types date et heure sous forme d’objets DateHeure PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Procédure : récupérer des types date et heure sous forme d’objets DateHeure PHP à l’aide du pilote PDO_SQLSRV|  
+|[Procédure : récupérer des types date et heure sous forme d’objets DateHeure PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Décrit comment récupérer des types date et heure sous forme d’objets à l’aide du pilote PDO_SQLSRV.|  
 |[Mise en forme de chaînes décimales avec le pilote SQLSRV](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Montre comment mettre en forme des valeurs décimales ou argent à l’aide du pilote SQLSRV.|  
 |[Mise en forme de chaînes décimales avec le pilote PDO_SQLSRV](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Montre comment mettre en forme les valeurs de décimale ou argent en utilisant le pilote PDO_SQLSRV.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Constructeur de SQLServerException (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean) | Microsoft Docs
+title: SQLServerException, constructeur (java.lang.Object, java.lang.String, java.lang.String, StreamError, booléen) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,13 +13,13 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 89d156ca5024ed49cbc3b5256266c393c897ae12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 33b5d593cfc5ac4b46fdfe7dcf7a845f754d5f3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756387"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800918"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-streamerror-boolean"></a>SQLServerException, constructeur (java.lang.Object, java.lang.String, java.lang.String, StreamError, booléen)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -60,7 +60,7 @@ public SQLServerException(java.lang.Object obj,
   
  Valeur booléenne qui indique si la trace de pile doit être générée.
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerException, constructeurs](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   
  [SQLServerException, membres](../../../connect/jdbc/reference/sqlserverexception-members.md)   
  [SQLServerException, classe](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: Bien démarrer avec les pilotes Microsoft pour PHP pour SQL Server
+title: Bien démarrer avec les pilotes Microsoft pour PHP pour SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 0c09cd551932eb9297112a7436111cdab18232f9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66796164"
 ---
 # <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>Bien démarrer avec les pilotes Microsoft pour PHP pour SQL Server

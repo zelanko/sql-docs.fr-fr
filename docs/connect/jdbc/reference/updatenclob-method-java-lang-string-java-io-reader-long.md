@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 76271038cab9fbf46194b2f6d1302f30ecbd26ac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798377"
 ---
 # <a name="updatenclob-method-javalangstring-javaioreader-long"></a>Méthode updateNClob (java.lang.String, java.io.Reader, long)
@@ -49,7 +49,7 @@ public void updateNClob(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getNClob est spécifiée par la méthode getNClob de l’interface java.sql.ResultSet.  
+ Cette méthode updateNClob est spécifiée par la méthode updateNClob de l’interface java.sql.ResultSet.  
   
  Cette méthode est prise en charge uniquement sur **nvarchar (max)** , **ntext**, et **xml** colonnes. L'utilisation de cette méthode sur n'importe quel autre type de données entraîne la levée d'une exception.  
   

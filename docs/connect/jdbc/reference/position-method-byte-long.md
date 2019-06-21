@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3844d294c72539e752f944b604409b4967a8c166
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e6056412f6ab2726112d5286f2f52c83ff6691cf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603931"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802464"
 ---
 # <a name="position-method-byte-long"></a>position, méthode (byte, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,10 +51,10 @@ public long position(byte[] bPattern,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode de position est spécifiée par la méthode de position dans l’interface java.sql.Blob.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthode position &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   
  [SQLServerBlob, méthodes](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [SQLServerBlob, membres](../../../connect/jdbc/reference/sqlserverblob-members.md)   

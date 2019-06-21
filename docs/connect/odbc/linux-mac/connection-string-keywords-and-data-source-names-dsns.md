@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 1f3e311b0f7d27b6a0ca2d12ae510960859ae80d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797512"
 ---
 # <a name="connecting-to-sql-server"></a>Connexion à SQL Server
@@ -87,8 +87,8 @@ Le protocole SSL utilise la bibliothèque OpenSSL. Le tableau suivant présente 
 
 |Plateforme|Version OpenSSL minimale|Emplacement du magasin d’approbations de certificat par défaut|  
 |------------|---------------------------|--------------------------------------------|
-|Debian :|1.1.0|/etc/ssl/certs|
-|Debian : |1.0.1|/etc/ssl/certs|
+|Debian 9|1.1.0|/etc/ssl/certs|
+|Debian 8.71 |1.0.1|/etc/ssl/certs|
 |macOS 10.13|1.0.2|/usr/local/etc/openssl/certs|
 |macOS 10.12|1.0.2|/usr/local/etc/openssl/certs|
 |OS X 10.11|1.0.2|/usr/local/etc/openssl/certs|

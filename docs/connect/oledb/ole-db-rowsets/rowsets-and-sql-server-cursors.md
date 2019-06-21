@@ -16,13 +16,13 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6c2783969aacb7a7dfd86a677d28eb3a4ea1de92
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 503e0f8fcc7cac9a3001ec00fb872642c1fcecd8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537292"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803787"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Ensembles de lignes et curseurs SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -155,7 +155,7 @@ ms.locfileid: "52537292"
   
  Quelle que soit la méthode utilisée pour remplir l'ensemble de lignes et former le bloc de curseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], celui-ci est actif jusqu'à ce que la méthode d'extraction de ligne suivante soit exécutée sur l'ensemble de lignes.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ensembles de lignes](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 0546eb03b89512bbd7b52ef33ca44ac60fb426a9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798807"
 ---
 # <a name="updatenull-method-javalangstring"></a>Méthode updateNull (java.lang.String)
@@ -44,7 +44,7 @@ public void updateNull(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode wasNull est spécifiée par la méthode wasNull de l’interface java.sql.ResultSet.  
+ Cette méthode updateNull est spécifiée par la méthode updateNull de l’interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthode updateNull &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)   

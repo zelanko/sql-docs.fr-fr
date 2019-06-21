@@ -16,24 +16,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3cfe93e513d9f60933b9e774979495dc29e2779e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657147"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63037345"
 ---
 # <a name="change-the-ip-address-of-a-failover-cluster-instance"></a>Modifier l'adresse IP d'une instance de cluster de basculement
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment modifier la ressource d’adresse IP d’une instance de cluster de basculement (FCI) Always On à l’aide du composant logiciel enfichable Gestionnaire du cluster de basculement. Le composant logiciel enfichable Gestionnaire du cluster de basculement est l'application de gestion du service de cluster de basculement Windows Server (WSFC).  
   
--   **Before you begin:**  [Security](#Security)  
+-   **Avant de commencer :**  [Sécurité](#Security)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
- Avant de commencer, consultez la rubrique [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Avant l’installation du clustering de basculement [dans la documentation en ligne de](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
+ Avant de commencer, consultez la rubrique suivante dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] : [Before Installing Failover Clustering](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md).  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour maintenir ou mettre à jour une FCI, vous devez être un administrateur local et disposer des autorisations requises pour vous connecter en tant que service sur tous les nœuds de la FCI.  
   
 ##  <a name="WSFC"></a> Utilisation du composant logiciel enfichable Gestionnaire du cluster de basculement  

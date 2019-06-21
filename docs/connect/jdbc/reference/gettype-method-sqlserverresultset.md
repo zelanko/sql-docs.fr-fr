@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 38cc11c791666ebefadf71a412ea5a5858c03f34
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66786153"
 ---
 # <a name="gettype-method-sqlserverresultset"></a>getType, méthode (SQLServerResultSet)
@@ -48,7 +48,7 @@ public int getType()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getTime est spécifiée par la méthode getTime de l’interface java.sql.ResultSet.  
+ Cette méthode getType est spécifiée par la méthode getType de l’interface java.sql.ResultSet.  
   
  Cette méthode peut être utilisée pour déterminer le type du curseur réel. Si l'application a sélectionné TYPE_FORWARD_ONLY ou utilisé un type de curseur par défaut, TYPE_FORWARD_ONLY sera retourné.  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdea6926543bd95fa66c4b73a48736a3b685859e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 26c1630042b4f33230f37ec979de7bfa643b283b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802612"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>Méthode getTablePrivileges (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,15 +56,15 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
- Cette méthode getTablePrivileges est spécifiée par la méthode getTablePrivileges dans l’interface java.sql.DatabaseMetaData.  
+## <a name="remarks"></a>Notes  
+ Cette méthode getTablePrivileges est spécifiée par la méthode getTablePrivileges de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getTablePrivileges contiendra les informations suivantes :  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Nom du catalogue.|  
-|TABLE_SCHEM|**String**|Le nom de schéma de table.|  
+|TABLE_SCHEM|**String**|Le nom du schéma de la table.|  
 |TABLE_NAME|**String**|Le nom de la table.|  
 |GRANTOR|**String**|Objet octroyant l'accès.|  
 |GRANTEE|**String**|Objet bénéficiant de l'accès.|  
@@ -74,7 +74,7 @@ public java.sql.ResultSet getTablePrivileges(java.lang.String catalog,
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getTablePrivileges, consultez la rubrique « sp_table_privileges (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant montre comment utiliser la méthode getTablePrivileges pour retourner les droits d’accès pour la table Person.Contact dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal_md.md)].  
   
 ```  
@@ -100,7 +100,7 @@ public static void executeGetTablePrivileges(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [SQLServerDatabaseMetaData, membres](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [SQLServerDatabaseMetaData, classe](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

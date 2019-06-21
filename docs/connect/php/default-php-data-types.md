@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b2677e5614fd8e50c34084624dda19c3ced54d6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600329"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801476"
 ---
 # <a name="default-php-data-types"></a>Types de données PHP par défaut
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ Le tableau suivant répertorie le type de données SQL Server (type des données
 |bit|Entier|Caractère 8 bits<sup>1</sup>|  
 |char|String|Caractère 8 bits<sup>1</sup>|  
 |date<sup>4</sup>|DATETIME|Non applicable|  
-|date/heure<sup>4</sup>|DATETIME|Non applicable|  
+|datetime<sup>4</sup>|DATETIME|Non applicable|  
 |datetime2<sup>4</sup>|DATETIME|Non applicable|  
 |datetimeoffset<sup>4</sup>|DATETIME|Non applicable|  
 |Décimal|String|Caractère 8 bits<sup>1</sup>|  
@@ -59,7 +59,7 @@ Le tableau suivant répertorie le type de données SQL Server (type des données
 |SMALLINT|Entier|Caractère 8 bits<sup>1</sup>|  
 |SMALLMONEY|String|Caractère 8 bits<sup>1</sup>|  
 |sql_variant<sup>7</sup>|String|Caractère 8 bits<sup>1</sup>|  
-|texte<sup>8</sup>|Flux<sup>2</sup>|Caractère 8 bits<sup>1</sup>|  
+|text<sup>8</sup>|Flux<sup>2</sup>|Caractère 8 bits<sup>1</sup>|  
 |time<sup>4</sup>|DATETIME|Non applicable|  
 |TIMESTAMP|String|Caractère 8 bits<sup>1</sup>|  
 |TINYINT|Entier|Caractère 8 bits<sup>1</sup>|  
@@ -90,7 +90,7 @@ Le tableau suivant répertorie le type de données SQL Server (type des données
   
 9.  Les UNIQUEIDENTIFIER sont des GUID représentés par l’expression régulière suivante :  
   
-    [0-9 a-fA-F] {8}-[0-9 a-fA-F]{4}-[0-9 a-fA-f]{4}-[0-9 a-fA-f]{4}-[0-9 a-fA-F]{12}  
+    [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>Autres nouveaux types et fonctionnalités SQL Server 2008  
@@ -98,17 +98,17 @@ Les types de données qui sont nouveaux dans SQL Server 2008 et qui existent en
   
 |Fonctionnalité|Prise en charge PHP|  
 |-----------|---------------|  
-|Paramètre table|non|  
+|Paramètre table|Non|  
 |Colonnes éparses|Partielle|  
 |Compression de bits Null|Oui|  
 |Types CLR volumineux définis par l’utilisateur (UDT)|Oui|  
-|Nom de principal du service|non|  
+|Nom de principal du service|Non|  
 |MERGE|Oui|  
 |FILESTREAM|Partielle|  
   
 Une prise en charge partielle des types signifie que vous ne pouvez pas interroger par programme le type de la colonne.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Converting Data Types](../../connect/php/converting-data-types.md)

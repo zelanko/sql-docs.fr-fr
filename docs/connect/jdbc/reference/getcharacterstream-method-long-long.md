@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 2881f3a9e0d3a4179334256aa7d2917917cf97f3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66781330"
 ---
 # <a name="getcharacterstream-method-long-long"></a>Méthode getCharacterStream (long, long)
@@ -41,7 +41,7 @@ public java.io.Reader getCharacterStream(long pos,
  Un **long** qui indique la longueur en caractères de la valeur partielle à récupérer.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Objet Reader contenant les données **NCLOB**.  
+ Objet Reader contenant les données **Clob**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

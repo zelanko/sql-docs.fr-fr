@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4fbe9123-7365-4a8f-bbd5-dc2b16f1b231
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f38e59a9724838b3ceaab8e09a843ec1cedc6fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b1ba26a22d3ee06041b6a6db051ad6363fa393b7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833817"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66804249"
 ---
 # <a name="updatedate-method-javalangstring-javasqldate"></a>Méthode updateDate (java.lang.String, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,10 +48,10 @@ public void updateDate(java.lang.String columnName,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
- Cette méthode updateDate est spécifiée par la méthode updateDate dans l’interface java.sql.ResultSet.  
+## <a name="remarks"></a>Notes  
+ Cette méthode updateDate est spécifiée par la méthode updateDate de l’interface java.sql.ResultSet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthode updateDate &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

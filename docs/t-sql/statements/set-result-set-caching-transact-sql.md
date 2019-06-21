@@ -15,14 +15,14 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 7e2c9ee878b49065a040865bc32d62837e8b8e25
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 561e92512ded10b06926f5b23f0f5d40540e3d2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826864"
 ---
-# <a name="set-result-set-caching-transact-sql-preview-for-azure-sql-data-warehouse-gen2"></a>SET RESULT SET CACHING (Transact-SQL) (Préversion pour Azure SQL Data Warehouse Gen2)
+# <a name="set-result-set-caching-transact-sql-applies-to-azure-sql-data-warehouse-gen2-only-preview"></a>SET RESULT SET CACHING (Transact-SQL) Appliqué uniquement à Azure SQL Data Warehouse Gen2 (préversion)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -36,7 +36,7 @@ Entraine la mise en cache des jeux de résultats de requête par Azure SQL Data 
 SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 
 > [!Note]
 > Bien que cette fonctionnalité soit déployée dans toutes les régions, vérifiez la version déployée sur votre instance et les dernières [notes de publication sur Azure SQL DW](/azure/sql-data-warehouse/release-notes-10-0-10106-0) pour savoir si vous disposez de cette fonctionnalité.

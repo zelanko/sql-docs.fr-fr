@@ -41,11 +41,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e16bca2aabbf35c3bd75dd7a0c75e81c13efcfbd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127659"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999517"
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +155,7 @@ ms.locfileid: "54127659"
  Tapez l'adresse de messagerie à utiliser pour les réponses aux messages électroniques envoyés à partir de ce compte. L'adresse Répondre au courrier est facultative. Par exemple, les réponses envoyées vers un compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peuvent être adressées à l’administrateur de base de données, dont l’adresse est danw@Adventure-Works.com.  
   
  **Nom du serveur**  
- Tapez le nom ou l'adresse IP du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, son format est semblable à celui-ci : **smtp.**_<votre_société>_**.com**. Pour plus d'informations, contactez l'administrateur de messagerie.  
+ Tapez le nom ou l'adresse IP du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, son format est semblable à celui-ci : **smtp.** _<votre_société>_ **.com**. Pour plus d'informations, contactez l'administrateur de messagerie.  
   
  **Numéro de port**  
  Tapez le numéro de port du serveur SMTP de ce compte. La plupart des serveurs SMTP utilisent le port 25.  
@@ -196,13 +196,13 @@ ms.locfileid: "54127659"
  Permet d'afficher ou de modifier la description du compte. Cette description est facultative.  
   
  **Adresse de messagerie**  
- Affichez ou modifiez l'adresse de messagerie du compte. C'est à partir de cette adresse qu'est envoyé le courrier électronique. Par exemple, un compte du service SQL Server Agent Microsoft peut envoyer du courrier électronique à partir de l’adresse **SqlAgent@Adventure-Works.com**.  
+ Affichez ou modifiez l'adresse de messagerie du compte. C'est à partir de cette adresse qu'est envoyé le courrier électronique. Par exemple, un compte du service SQL Server Agent Microsoft peut envoyer du courrier électronique à partir de l’adresse **SqlAgent@Adventure-Works.com** .  
   
  **Nom complet**  
  Affichez ou modifiez le nom qui apparaîtra sur le courrier électronique envoyé à partir de ce compte. Le nom affiché est facultatif. C'est le nom qui sera affiché dans les messages envoyés à partir de ce compte. Par exemple, un compte du service SQL Server Agent peut afficher le nom **SQL Server Agent Automated Mailer** sur les messages électroniques.  
   
  **Répondre au courrier**  
- Affichez ou modifiez l'adresse de messagerie qui sera utilisée pour répondre au courrier électronique envoyé à partir de ce compte. L'adresse Répondre au courrier est facultative. Par exemple, les réponses envoyées vers un compte du service SQL Server Agent peuvent être adressées à l’administrateur de base de données, dont l’adresse est **danw@Adventure-Works.com**.  
+ Affichez ou modifiez l'adresse de messagerie qui sera utilisée pour répondre au courrier électronique envoyé à partir de ce compte. L'adresse Répondre au courrier est facultative. Par exemple, les réponses envoyées vers un compte du service SQL Server Agent peuvent être adressées à l’administrateur de base de données, dont l’adresse est **danw@Adventure-Works.com** .  
   
  **Nom du serveur**  
  Affichez ou modifiez le nom du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, son format est semblable à celui-ci : **smtp.<votre_société>.com**. Pour plus d'informations, contactez l'administrateur de messagerie.  
@@ -393,7 +393,7 @@ ms.locfileid: "54127659"
  Taille maximale d'une pièce jointe, en octets.  
   
  **Extensions de fichiers joints interdites**  
- Liste séparée par des virgules des extensions qui ne peuvent pas être envoyées en pièces jointes dans un message électronique. Cliquez sur le bouton Parcourir (**...**) pour ajouter d’autres extensions.  
+ Liste séparée par des virgules des extensions qui ne peuvent pas être envoyées en pièces jointes dans un message électronique. Cliquez sur le bouton Parcourir ( **...** ) pour ajouter d’autres extensions.  
   
  **Durée de vie minimale de l'exécutable de la messagerie de base de données (secondes)**  
  Durée minimale (en secondes) pendant laquelle le processus de messagerie externe reste actif. Le processus demeure actif aussi longtemps qu'il reste des messages dans la file d'attente de la messagerie de base de données. Ce paramètre spécifie le délai pendant lequel le processus demeure actif s'il n'y a pas de messages à traiter.  
@@ -420,7 +420,7 @@ ms.locfileid: "54127659"
  [Assistant Configuration de la messagerie de base de données](#DBWizard)  
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Utilisez la page **Envoyer un message électronique de test à partir de**_<nom_instance>_ pour envoyer un message électronique en utilisant le profil de messagerie de base de données spécifié. Seuls les membres du rôle serveur fixe **sysadmin** peuvent envoyer des messages électroniques de test avec cette page.  
+ Utilisez la page **Envoyer un message électronique de test à partir de** _<nom_instance>_ pour envoyer un message électronique en utilisant le profil de messagerie de base de données spécifié. Seuls les membres du rôle serveur fixe **sysadmin** peuvent envoyer des messages électroniques de test avec cette page.  
   
  **Profil de messagerie de base de données**  
  Sélectionnez un profil de messagerie de base de données dans la liste. Ce champ est obligatoire. Si aucun profil ne s'affiche, soit il n'en existe pas, soit vous n'avez pas d'autorisation sur ces profils. Utilisez l' **Assistant Configuration de la messagerie de base de données** pour créer et configurer des profils. Si aucun profil n'est répertorié, utilisez l'Assistant Configuration de la messagerie de base de données pour créer un profil pour votre propre usage.  

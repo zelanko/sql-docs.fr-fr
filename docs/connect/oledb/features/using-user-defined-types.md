@@ -21,13 +21,13 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1cab9f8d7810216fff9e56fc9bab99cf1b58c92e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: efc2c82f047beca82f1daeda6318f16803499f86
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396353"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802860"
 ---
 # <a name="using-user-defined-types"></a>Utilisation des types définis par l'utilisateur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,11 +51,11 @@ ms.locfileid: "52396353"
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Prise en charge<sup>6</sup>|Erreur<sup>1</sup>|Prise en charge<sup>6</sup>|Erreur<sup>5</sup>|  
 |DBTYPE_BYTES|Prise en charge<sup>6</sup>|N/A<sup>2</sup>|Prise en charge<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|Prise en charge<sup>3,6</sup>|N/A<sup>2</sup>|Prise en charge<sup>4,6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|Prise en charge<sup>3,6</sup>|N/A<sup>2</sup>|Prise en charge<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|Prise en charge<sup>3,6</sup>|N/A<sup>2</sup>|Prise en charge<sup>4,6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_WSTR|Prise en charge<sup>3,6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4.6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_BSTR|Prise en charge<sup>3,6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_STR|Prise en charge<sup>3,6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4.6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|Non pris en charge|N/A<sup>2</sup>|Non pris en charge|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Prise en charge<sup>6</sup>|N/A<sup>2</sup>|Prise en charge<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Prise en charge<sup>6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4</sup>|N/A<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Prise en charge<sup>3,6</sup>|N/A<sup>2</sup>|Néant|N/A<sup>2</sup>|  
   
  <sup>1</sup>Si un type de serveur autre que DBTYPE_UDT est spécifié avec **ICommandWithParameters::SetParameterInfo** et si le type d’accesseur est DBTYPE_UDT, une erreur se produit lors de l’exécution de l’instruction (DB_E_ERRORSOCCURRED, l’état du paramètre est DBSTATUS_E_BADACCESSOR). Sinon, les données sont envoyées au serveur, mais le serveur retourne une erreur indiquant qu'il n'existe pas de conversion implicite entre l'UDT et le type de données du paramètre.  
@@ -142,7 +142,7 @@ ms.locfileid: "52396353"
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERPARAMETER  
  Pour permettre la prise en charge des types UDT via OLE DB, OLE DB Driver pour SQL Server implémente le nouveau jeu de propriétés DBPROPSET_SQLSERVERPARAMETER qui contient les valeurs suivantes :  
   
-|Nom   |Type|Description|  
+|Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|Identificateur de nom en trois parties.<br /><br /> Pour les paramètres UDT, cette propriété est une chaîne qui spécifie le nom du catalogue dans lequel le type défini par l'utilisateur est défini.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|Identificateur de nom en trois parties.<br /><br /> Pour les paramètres UDT, cette propriété est une chaîne qui spécifie le nom du schéma dans lequel le type défini par l'utilisateur est défini.|  
@@ -153,7 +153,7 @@ ms.locfileid: "52396353"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERCOLUMN  
  Pour prendre en charge la création de tables dans l’interface **ITableDefinition**, OLE DB Driver pour SQL Server ajoute les trois nouvelles colonnes suivantes au jeu de propriétés DBPROPSET_SQLSERVERCOLUMN.  
   
-|Nom   |Description|Type|Description|  
+|Créer une vue d’abonnement|Description|Type|Description|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Pour les colonnes de type DBTYPE_UDT, cette propriété est une chaîne qui spécifie le nom du catalogue dans lequel le type défini par l'utilisateur (UDT) est défini.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Pour les colonnes de type DBTYPE_UDT, cette propriété est une chaîne qui spécifie le nom du schéma dans lequel le type défini par l'utilisateur (UDT) est défini.|  
@@ -194,7 +194,7 @@ ms.locfileid: "52396353"
  Vous pouvez différencier une colonne UDT de serveur d’autres types binaires quand DBCOLUMN_TYPE a la valeur DBTYPE_UDT en consultant les métadonnées UDT ajoutées spécifiées dans le tableau précédent. Si ces données sont partiellement complètes, le type de serveur est un type défini par l'utilisateur (UDT). Pour les types serveur autres que des types définis par l'utilisateur (UDT), ces colonnes sont toujours retournées comme NULL.  
  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

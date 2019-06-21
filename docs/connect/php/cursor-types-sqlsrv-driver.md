@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f435b3f2308557654259395e296c07956a2c337
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 6452fc506814cdfdeee4f61085ec9a1ee0cededa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676137"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801491"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Types de curseurs (pilote SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -122,9 +122,9 @@ sqlsrv_close( $conn );
 ## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>Les curseurs côté client et le pilote SQLSRV  
 Les curseurs côté client sont une fonctionnalité ajoutée dans la version 3.0 de la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] qui vous permet de mettre en cache un ensemble de résultats en mémoire. Nombre de lignes est disponible une fois que la requête est exécutée lors de l’utilisation d’un curseur côté client.  
   
-Les curseurs côté client doivent être utilisés pour les jeux de résultats de petites à moyennes. Utilisez les curseurs côté serveur pour les jeux de résultats volumineux.  
+Les curseurs côté client doivent être utilisés pour les jeux de résultats petits à moyens. Utilisez les curseurs côté serveur pour les jeux de résultats volumineux.  
   
-Une requête retourne false si la mémoire tampon n’est pas suffisamment grande pour contenir le jeu de résultats entier. Vous pouvez augmenter la taille de mémoire tampon jusqu'à la limite de mémoire PHP.  
+Une requête retourne false si la mémoire tampon n’est pas suffisamment grande pour contenir le jeu de résultats entier. Vous pouvez augmenter la taille de la mémoire tampon jusqu’à la limite de mémoire PHP.  
   
 À l’aide du pilote SQLSRV, vous pouvez configurer la taille de la mémoire tampon qui contient le jeu de résultats avec le paramètre ClientBufferMaxKBSize pour [sqlsrv_configure](../../connect/php/sqlsrv-configure.md). [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) retourne la valeur de ClientBufferMaxKBSize. Vous pouvez également définir la taille maximale de mémoire tampon dans le fichier php.ini avec sqlsrv. ClientBufferMaxKBSize (par exemple, sqlsrv. ClientBufferMaxKBSize = 1024).  
   
@@ -225,6 +225,6 @@ if ($row ) {
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Spécification d’un type de curseur et sélection de lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)  
   

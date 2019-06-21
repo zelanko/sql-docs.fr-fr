@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 9681ddf0946627306a64c099d2df1c242d95bcbe
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66762806"
 ---
 # <a name="getnstring-method-javalangstring-sqlserverresultset"></a>Méthode getNString (java.lang.String) (SQLServerResultSet)
@@ -42,7 +42,7 @@ public java.lang.String getNString(java.lang.String columnLabel)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getNString est spécifiée par la méthode getNString de l’interface java.sql.CallableStatement.  
+ Cette méthode getNString est spécifiée par la méthode getNString de l’interface java.sql.SQLServerResultSet.  
   
  Cette méthode peut être utilisée pour récupérer la valeur d’un **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**, ou **xml** colonne dans la ligne actuelle de ce [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objet. Si vous essayez d'utiliser cette méthode pour récupérer les valeurs d'autres types de données, une exception est levée.  
   

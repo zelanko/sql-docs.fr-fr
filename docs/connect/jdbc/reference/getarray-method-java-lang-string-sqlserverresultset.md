@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6cab84fd4ea0ae1e22ff175da1cd198e45a1b3a3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800077"
 ---
 # <a name="getarray-method-javalangstring-sqlserverresultset"></a>getArray, méthode (java.lang.String) (SQLServerResultSet)
@@ -41,16 +41,16 @@ public java.sql.Array getArray(java.lang.String colName)
  Valeur **String** qui contient le nom de la colonne.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Tableau d'objets.  
+ Un objet Array.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getArray est spécifiée par la méthode getArray de l’interface java.sql.CallableStatement.  
+ Cette méthode getArray est spécifiée par la méthode getArray de l’interfacejava.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [updateArray, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   
+ [Méthode getArray &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getarray-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

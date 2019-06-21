@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: ce3df0755799e907bb286e10f5711a58a48135bb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66782473"
 ---
 # <a name="using-spatial-datatypes"></a>Utilisation des types de données spatiales
@@ -116,9 +116,9 @@ Il s’agit des nouvelle API publiques qui ont été introduites avec cet ajout,
 |byte[] serialize()| Retourne les octets qui représentent un format interne SQL Server de type Geometry.
 |hasM() booléenne| Retourne si l’objet contient une valeur M (mesure).
 |hasZ() booléenne| Retourne si l’objet contient une valeur Z (élévation).
-|Double getZ()| Retourne la valeur de coordonnée X.
-|Double getZ()| Retourne la valeur de coordonnée Y.
-|Double getZ()| Retourne la valeur M (mesure) de l’objet.
+|Double getX()| Retourne la valeur de coordonnée X.
+|Double getY()| Retourne la valeur de coordonnée Y.
+|Double getM()| Retourne la valeur M (mesure) de l’objet.
 |Double getZ()| Retourne la valeur Z (élévation) de l’objet.
 |int getSrid()| Retourne la valeur d’identificateur de référence spatiale (SRID).
 |isNull() booléenne| Retourne si l’objet Geometry est null.
@@ -143,7 +143,7 @@ Il s’agit des nouvelle API publiques qui ont été introduites avec cet ajout,
 |hasZ() booléenne| Retourne si l’objet contient une valeur Z (élévation).
 |Double getLatitude()| Retourne la valeur de latitude.
 |Double getLongitude()| Retourne la valeur de longitude.
-|Double getZ()| Retourne la valeur M (mesure) de l’objet.
+|Double getM()| Retourne la valeur M (mesure) de l’objet.
 |Double getZ()| Retourne la valeur Z (élévation) de l’objet.
 |int getSrid()| Retourne la valeur d’identificateur de référence spatiale (SRID).
 |isNull() booléenne| Retourne si l’objet Geography est null.

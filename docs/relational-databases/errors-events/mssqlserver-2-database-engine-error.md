@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b53ff4ae1449cf0aba42ba61aa3e864d38fb15e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761247"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028860"
 ---
 # <a name="mssqlserver2"></a>MSSQLSERVER_2
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47761247"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique||  
-|Texte du message|Une erreur s'est produite lors de l'établissement d'une connexion au serveur.  Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur de canaux nommés, erreur : 40 - Impossible d'ouvrir une connexion à SQL Server) (Fournisseur de données SqlClient .Net)|  
+|Texte du message|Une erreur s'est produite lors de l'établissement d'une connexion au serveur.  Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur de canaux nommés, erreur : 40 - Impossible d’ouvrir une connexion à SQL Server) (Fournisseur de données SqlClient .Net).|  
   
 ## <a name="explanation"></a>Explication  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’a pas répondu à la demande du client parce que le serveur n’a probablement pas été démarré.  
@@ -41,7 +41,7 @@ ms.locfileid: "47761247"
 ## <a name="user-action"></a>Action de l'utilisateur  
 Assurez-vous que le serveur a été démarré.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Gérer les services du moteur de base de données](~/database-engine/configure-windows/manage-the-database-engine-services.md)  
 [Configurer des protocoles clients](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Protocoles réseau et bibliothèques réseau](~/sql-server/install/network-protocols-and-network-libraries.md)  

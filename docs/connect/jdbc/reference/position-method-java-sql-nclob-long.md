@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf58493fcf9e4f8a5f55baecc2b38114dc6a5a31
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 35d8a3903cc18ce371b2d6c333747710ac6efc7e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802421"
 ---
 # <a name="position-method-javasqlnclob-long"></a>Méthode position (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,10 +46,10 @@ long position(java.sql.NClob searchstr,
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode de position est spécifiée par la méthode de position dans l’interface java.sql.NClob.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthode position &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
  [SQLServerNClob, méthodes](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob, membres](../../../connect/jdbc/reference/sqlservernclob-members.md)   

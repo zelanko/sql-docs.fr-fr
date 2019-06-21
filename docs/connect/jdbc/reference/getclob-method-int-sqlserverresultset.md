@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: e5650d900cd4cf4bcbb8a33501ad49c3f1a8607c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66763790"
 ---
 # <a name="getclob-method-int-sqlserverresultset"></a>getClob, méthode (int) (SQLServerResultSet)
@@ -47,7 +47,7 @@ public java.sql.Clob getClob(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getNClob est spécifiée par la méthode getNClob de l’interface java.sql.ResultSet.  
+ Cette méthode getClob est spécifiée par la méthode getClob de l’interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [getClob, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getclob-method-sqlserverresultset.md)   

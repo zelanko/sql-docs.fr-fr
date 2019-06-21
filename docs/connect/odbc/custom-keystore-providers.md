@@ -9,19 +9,19 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: 59a1458c98fb12f2f053bfd71649f40ddc5d1e4e
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 84e729cd60a28ff8a58760bd3810ec538a327007
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55047213"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800488"
 ---
 # <a name="custom-keystore-providers"></a>Fournisseurs de magasins de clés personnalisés
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
-## <a name="overview"></a>Vue d'ensemble
+## <a name="overview"></a>Vue d’ensemble
 
 La fonctionnalité de chiffrement de colonne de SQL Server 2016 exige que les chiffré colonne clés de chiffrement (ECEKs) stockés sur le serveur récupéré par le client et puis déchiffrées aux clés de chiffrement de colonne (clés cek) afin d’accéder aux données stockées dans des colonnes chiffrées. ECEKs sont chiffrés par clés principales de colonne (clés CMK), et la sécurité de la clé CMK est importante de la sécurité du chiffrement de colonne. Par conséquent, la clé principale de colonne doivent être stockées dans un emplacement sécurisé ; un fournisseur de magasin de clés de chiffrement de colonne vise à fournir une interface pour permettre le pilote ODBC pour accéder à ces en toute sécurité stockées clés CMK. Pour les utilisateurs avec leur propres le stockage sécurisé, l’Interface de fournisseur de magasin de clés personnalisé fournit une infrastructure pour l’implémentation de l’accès pour sécuriser le stockage de la clé CMK pour le pilote ODBC, qui peut ensuite être utilisé pour effectuer le chiffrement de clé CEK et le déchiffrement.
 
@@ -83,7 +83,7 @@ typedef struct CEKeystoreProvider {
 
 |Nom du champ|Description|
 |:--|:--|
-|`Name`|Le nom du fournisseur de magasin de clés. Il ne doit pas être identique à n’importe quel autre fournisseur de magasin de clés précédemment chargé par le pilote ou présent dans cette bibliothèque. Se terminant par null, large-chaîne de caractères.|
+|`Name`|Le nom du fournisseur de magasin de clés. Il ne doit pas être identique à n’importe quel autre fournisseur de magasin de clés précédemment chargé par le pilote ou présent dans cette bibliothèque. Chaîne à caractères larges* se terminant par le caractère Null.|
 |`Init`|Fonction d’initialisation. Si une fonction d’initialisation n’est pas obligatoire, ce champ peut être null.|
 |`Read`|Fournisseur de lire la fonction. Peut être null si non requis.|
 |`Write`|Fonction d’écriture fournisseur. Obligatoire si lecture n’est pas null. Peut être null si non requis.|
@@ -140,8 +140,8 @@ Nom d’espace réservé pour une fonction définie par le fournisseur de déchi
 |:--|:--|
 |`ctx`|[Entrée] Contexte d’opération.|
 |`onError`|[Entrée] Fonction de signalement d’erreurs.|
-|`keyPath`|[Entrée] La valeur de la [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) attribut de métadonnées pour la clé principale de colonne référencé par l’ECEK donné. Se terminant par null large-chaîne de caractères. Cela vise à identifier une clé CMK gérée par ce fournisseur.|
-|`alg`|[Entrée] La valeur de la [algorithme](../../t-sql/statements/create-column-encryption-key-transact-sql.md) attribut de métadonnées pour l’ECEK donné. Se terminant par null large-chaîne de caractères. Cela vise à identifier l’algorithme de chiffrement utilisé pour chiffrer l’ECEK donné.|
+|`keyPath`|[Entrée] La valeur de la [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) attribut de métadonnées pour la clé principale de colonne référencé par l’ECEK donné. Chaîne à caractères larges* se terminant par le caractère Null. Cela vise à identifier une clé CMK gérée par ce fournisseur.|
+|`alg`|[Entrée] La valeur de la [algorithme](../../t-sql/statements/create-column-encryption-key-transact-sql.md) attribut de métadonnées pour l’ECEK donné. Chaîne à caractères larges* se terminant par le caractère Null. Cela vise à identifier l’algorithme de chiffrement utilisé pour chiffrer l’ECEK donné.|
 |`ecek`|[Entrée] Pointeur vers l’ECEK à déchiffrer.|
 |`ecekLen`|[Entrée] Longueur de l’ECEK.|
 |`cekOut`|[Sortie] Le fournisseur doit allouer de mémoire pour l’ECEK déchiffrée et écrire son adresse dans le pointeur vers lequel pointé cekOut. Il doit être possible pour ce bloc de mémoire à l’aide de libérer le [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) ou gratuit (fonction) (Linux/Mac). Si aucune mémoire n’a été allouée en raison d’une erreur ou dans le cas contraire, le fournisseur est la valeur * cekOut à un pointeur null.|
@@ -157,8 +157,8 @@ Nom d’espace réservé pour une fonction définis par le fournisseur de chiffr
 |:--|:--|
 |`ctx`|[Entrée] Contexte d’opération.|
 |`onError`|[Entrée] Fonction de signalement d’erreurs.|
-|`keyPath`|[Entrée] La valeur de la [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) attribut de métadonnées pour la clé principale de colonne référencé par l’ECEK donné. Se terminant par null large-chaîne de caractères. Cela vise à identifier une clé CMK gérée par ce fournisseur.|
-|`alg`|[Entrée] La valeur de la [algorithme](../../t-sql/statements/create-column-encryption-key-transact-sql.md) attribut de métadonnées pour l’ECEK donné. Se terminant par null large-chaîne de caractères. Cela vise à identifier l’algorithme de chiffrement utilisé pour chiffrer l’ECEK donné.|
+|`keyPath`|[Entrée] La valeur de la [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) attribut de métadonnées pour la clé principale de colonne référencé par l’ECEK donné. Chaîne à caractères larges* se terminant par le caractère Null. Cela vise à identifier une clé CMK gérée par ce fournisseur.|
+|`alg`|[Entrée] La valeur de la [algorithme](../../t-sql/statements/create-column-encryption-key-transact-sql.md) attribut de métadonnées pour l’ECEK donné. Chaîne à caractères larges* se terminant par le caractère Null. Cela vise à identifier l’algorithme de chiffrement utilisé pour chiffrer l’ECEK donné.|
 |`cek`|[Entrée] Pointeur vers la clé CEK à chiffrer.|
 |`cekLen`|[Entrée] Longueur de la clé CEK.|
 |`ecekOut`|[Sortie] Le fournisseur doit allouer de mémoire pour la clé CEK chiffrée et écrire son adresse dans le pointeur vers lequel pointé ecekOut. Il doit être possible pour ce bloc de mémoire à l’aide de libérer le [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) ou gratuit (fonction) (Linux/Mac). Si aucune mémoire n’a été allouée en raison d’une erreur ou dans le cas contraire, le fournisseur est la valeur * ecekOut à un pointeur null.|
@@ -187,10 +187,10 @@ Le **onError** paramètre pointe vers une fonction de signalement d’erreurs, a
 |Argument|Description|
 |:--|:--|
 |`ctx`|[Entrée] Contexte à créer des rapports sur l’erreur.|
-|`msg`|[Entrée] Le message d’erreur à signaler. Chaîne à caractères larges se terminant par null. Pour permettre à des informations paramétrables à présent, cette chaîne peut contenir des séquences de mise en forme insert au format accepté par le [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) (fonction). Fonctionnalités étendues peuvent être spécifiée par ce paramètre, comme décrit ci-dessous.|
+|`msg`|[Entrée] Le message d’erreur à signaler. Chaîne à caractères larges se terminant par le caractère Null. Pour permettre à des informations paramétrables à présent, cette chaîne peut contenir des séquences de mise en forme insert au format accepté par le [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) (fonction). Fonctionnalités étendues peuvent être spécifiée par ce paramètre, comme décrit ci-dessous.|
 |...|[Entrée] Paramètres supplémentaires variadic pour tenir les spécificateurs de format dans msg, comme il convient.|
 
-Pour signaler lorsqu’une erreur s’est produite, l’onError d’appels de fournisseur, en fournissant le paramètre de contexte transmis à la fonction de fournisseur par le pilote et un message d’erreur avec des paramètres facultatifs supplémentaires à mettre en forme qu’il contient. Le fournisseur peut appeler cette fonction plusieurs fois pour publier plusieurs messages d’erreur consécutivement au sein de l’appel d’un fournisseur-fonction. Exemple :
+Pour signaler lorsqu’une erreur s’est produite, l’onError d’appels de fournisseur, en fournissant le paramètre de contexte transmis à la fonction de fournisseur par le pilote et un message d’erreur avec des paramètres facultatifs supplémentaires à mettre en forme qu’il contient. Le fournisseur peut appeler cette fonction plusieurs fois pour publier plusieurs messages d’erreur consécutivement au sein de l’appel d’un fournisseur-fonction. Par exemple :
 
 ```
     if (!doSomething(...))
@@ -233,7 +233,7 @@ void *stmtCtx;
 Chacun de ces contextes est une valeur opaque qui, pendant que le handle ODBC correspondant, peut servir comme identificateur unique pour le handle : si gérer *X* est associé avec la valeur de contexte *Y*, puis Aucun autres environnement, de connexion ou d’instruction poignées existent simultanément en même temps que *X* aura une valeur de contexte de *Y*, et aucune autre valeur de contexte ne sera associé gérer *X*. Si l’opération de fournisseur est réalisée ne dispose pas d’un contexte de handle spécifique (par exemple, les appels de SQLSetConnectAttr pour charger et configurer les fournisseurs, dans laquelle il n’existe aucun descripteur d’instruction) correspondant dans la structure de valeur de contexte est null.
 
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ### <a name="keystore-provider"></a>Fournisseur de magasin de clés
 
@@ -635,6 +635,6 @@ FoundProv:
 
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Utilisation d’Always Encrypted avec ODBC Driver](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md)

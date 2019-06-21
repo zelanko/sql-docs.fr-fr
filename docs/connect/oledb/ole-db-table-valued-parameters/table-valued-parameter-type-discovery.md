@@ -12,13 +12,13 @@ helpviewer_keywords:
 - table-valued parameters, type discovery
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: aab78327d575858675ade3bbc5d652cce5db12a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: c45b5f6b00c15dee35d263447f5b95c8e31b986f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506247"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801107"
 ---
 # <a name="table-valued-parameter-type-discovery"></a>Découverte du type de paramètre table
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52506247"
   
  Une fois le nom du type connu, pour récupérer les informations de chaque colonne, le consommateur doit appeler IOpenRowset::OpenRowsetor ou obtenir l’ensemble de lignes DBSCHEMA_TABLE_TYPE_COLUMNS en spécifiant le nom du type de paramètre table comme nom de table.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Paramètres table &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   
  [Utiliser les paramètres table &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   

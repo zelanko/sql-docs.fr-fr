@@ -16,20 +16,20 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 597b0e7d39d178eb2ed6f8ede8db5a1852117dcd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856315"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63018654"
 ---
 # <a name="modify-a-stored-procedure"></a>Modifier une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
     
 ##  <a name="Top"></a> Cette rubrique explique comment modifier une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [Sécurité](#Security)  
+-   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [sécurité](#Security)  
   
--   **Pour modifier une procédure, à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Pour modifier une procédure avec :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -40,7 +40,7 @@ ms.locfileid: "47856315"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER PROCEDURE sur la procédure.  
   
 ##  <a name="Procedures"></a> Pour modifier une procédure stockée  
@@ -148,7 +148,7 @@ ms.locfileid: "47856315"
   
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  
   
   

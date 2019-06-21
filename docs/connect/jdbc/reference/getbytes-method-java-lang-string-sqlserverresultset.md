@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ff617165-47f8-41c1-9c51-37ffc7714923
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b8ac216e31755a8d60989699dec248ba17f4dde3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6ad7f9ee6fc5250ac2bc349ccadb8909fc0e3cbe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841427"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66804032"
 ---
 # <a name="getbytes-method-javalangstring-sqlserverresultset"></a>Méthode getBytes (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,14 +46,14 @@ public byte[] getBytes(java.lang.String columnName)
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="remarks"></a>Notes   
- Cette méthode getBytes est spécifiée par la méthode getBytes dans l’interface java.sql.ResultSet.  
+## <a name="remarks"></a>Notes  
+ Cette méthode getBytes est spécifiée par la méthode getBytes de l’interface java.sql.ResultSet.  
   
  Cette méthode prend en charge la récupération de toutes les colonnes sous forme d'une lecture brute d'octets à partir du serveur. Elle retourne un tableau d'octets directement à partir du serveur, au format stocké sur le serveur.  
   
  Dans la version précédente du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], vous pouviez utiliser SQLServerResultSet.getBytes pour convertir des valeurs entre des tableaux d’octets et le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **date**, **time**, **datetime2** ou **datetimeoffset**. À présent, l'utilisation de cette méthode avec ces types de données lève une exception indiquant que la conversion n'est pas prise en charge.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [getBytes, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

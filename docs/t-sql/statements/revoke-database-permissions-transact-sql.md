@@ -19,11 +19,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e746730f0a2da408bc838e9074b9049d748a1682
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034246"
 ---
 # <a name="revoke-database-permissions-transact-sql"></a>REVOKE – révocation d'autorisations de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -60,7 +60,7 @@ permission | ALL [ PRIVILEGES ]
  Spécifie une autorisation qui peut être refusée sur une base de données. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
  ALL  
- Cette option ne révoque pas toutes les autorisations possibles. La révocation complète, ALL, équivaut à révoquer les autorisations suivantes : BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, et CREATE VIEW.  
+ Cette option ne révoque pas toutes les autorisations possibles. La révocation complète, ALL, équivaut à révoquer les autorisations suivantes : BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE et CREATE VIEW.  
   
  PRIVILEGES  
  Inclus pour la conformité aux normes ISO. Ne change pas le comportement de l'option ALL.  
@@ -113,7 +113,7 @@ permission | ALL [ PRIVILEGES ]
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'instruction échoue si l'option CASCADE n'est pas spécifiée lors de la révocation d'une autorisation pour un principal auquel cette autorisation a été accordée avec l'option GRANT OPTION.  
   
  Une base de données est un élément sécurisable contenu par le serveur qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de révoquer sur une base de données sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
@@ -198,7 +198,7 @@ permission | ALL [ PRIVILEGES ]
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Le principal qui exécute cette instruction (ou le principal spécifié avec l'option AS) doit posséder l'autorisation CONTROL sur la base de données ou une autorisation plus élevée qui implique l'autorisation CONTROL sur la base de données.  
   
  Si vous utilisez l'option AS, le principal spécifié doit être propriétaire de la base de données.  
@@ -216,7 +216,7 @@ REVOKE CREATE CERTIFICATE FROM MelanieK;
 GO  
 ```  
   
-### <a name="b-revoking-references-permission-from-an-application-role"></a>b. Révocation d'une autorisation REFERENCES à partir d'un rôle d'application  
+### <a name="b-revoking-references-permission-from-an-application-role"></a>B. Révocation d'une autorisation REFERENCES à partir d'un rôle d'application  
  Dans l'exemple ci-dessous, l'autorisation `REFERENCES` sur la base de données `AdventureWorks2012` est révoquée du rôle d'application `AuditMonitor`.  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
@@ -236,7 +236,7 @@ REVOKE VIEW DEFINITION FROM CarmineEs CASCADE;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [GRANT - Octroyer des autorisations sur une base de données &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)   

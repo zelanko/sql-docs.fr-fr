@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 190ca60df1dc1376188eea2584b351b31d4db642
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798987"
 ---
 # <a name="free-method-sqlservernclob"></a>Méthode free (SQLServerNClob)
@@ -34,7 +34,7 @@ public void free()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode free est spécifiée par la méthode free de l’interface java.sql.Clob.  
+ Cette méthode free est spécifiée par la méthode free de l’interface java.sql.NClob.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerNClob, méthodes](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

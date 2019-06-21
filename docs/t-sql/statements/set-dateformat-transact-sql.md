@@ -29,11 +29,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9262ca6e0f2dce018ae925b05e306cc43753a0b7
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759972"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638317"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,10 +51,10 @@ SET DATEFORMAT { format | @format_var }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *format* | **@**_format_var_  
+ *format* |  **@** _format_var_  
  Ordre des parties de la date. Les paramètres valides sont **mdy**, **dmy**, **ymd**, **ydm**, **myd** et **dym**. Il peut s'agir du format Unicode ou d'un jeu de caractères codés sur deux octets (DBCS) converti en Unicode. La valeur par défaut pour l’anglais des États-Unis est **mdy**. Pour connaître le paramètre DATEFORMAT par défaut de toutes les langues prises en charge, consultez [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le paramètre DATEFORMAT **ydm** n’est pas pris en charge pour les types de données **date**, **datetime2** et **datetimeoffset**.  
   
  Le paramètre DATEFORMAT peut interpréter des chaînes de caractères différemment pour les types de données de date, en fonction de leur format de chaîne. Par exemple, les interprétations **datetime** et **smalldatetime** peuvent ne pas correspondre à **date**, **datetime2** ou  **datetimeoffset**. Le paramètre DATEFORMAT affecte l’interprétation des chaînes de caractères quand elles sont converties en valeurs de date pour la base de données. Il n’affecte pas l’affichage des valeurs du type de données Date ni leur format de stockage dans la base de données.  
@@ -65,7 +65,7 @@ SET DATEFORMAT { format | @format_var }
   
  SET DATEFORMAT remplace le paramètre de format de date implicite de [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -89,6 +89,6 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
 

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: a5a640a1-6e7d-452e-8b66-850a4dc2ce89
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b03669df3fdfadec0f06f5bd964a16827d1aff2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e328e3b90c12b26162ea352e995eb603bae73090
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604231"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802259"
 ---
 # <a name="sqlsrvfetch"></a>sqlsrv_fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -64,8 +64,8 @@ Pour plus d’informations sur ces valeurs, consultez [Spécification d’un typ
 ## <a name="return-value"></a>Valeur retournée  
 Si la ligne suivante du jeu de résultats a été récupérée avec succès, la valeur **true** est retournée. S’il n’existe plus aucun résultat dans le jeu de résultats, la valeur **null** est retournée. Si une erreur s’est produite, la valeur **false** est retournée.  
   
-## <a name="example"></a> Exemple  
-L’exemple suivant utilise **sqlsrv_fetch** pour récupérer une ligne de données contenant une évaluation de produit et le nom du réviseur. Pour récupérer les données du jeu de résultats, on utilise [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md). L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a>Exemple  
+L’exemple suivant utilise **sqlsrv_fetch** pour récupérer une ligne de données contenant une évaluation de produit et le nom du réviseur. Pour récupérer les données du jeu de résultats, on utilise [sqlsrv_get_field](../../connect/php/sqlsrv-get-field.md). L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -123,7 +123,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)  
 
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  

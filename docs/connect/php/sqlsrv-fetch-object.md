@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4ce2df2c-083a-4a4d-a1e2-e866e63707d5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40a2cdd68017ff4b3e232fba1d6b63e46a3aa103
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a82dec9fe68eb4220710d773d700c43751b7f18d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770867"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802267"
 ---
 # <a name="sqlsrvfetchobject"></a>sqlsrv_fetch_object
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -67,7 +67,7 @@ Objet PHP avec des propriétés qui correspondent à des noms de champ du jeu de
   
 Le type de données d’une valeur dans l’objet retourné correspond au type de données PHP par défaut. Pour plus d’informations sur les types de données PHP par défaut, consultez [Default PHP Data Types](../../connect/php/default-php-data-types.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Si un nom de classe est spécifié avec le paramètre *$className* facultatif, un objet de ce type de classe est instancié. Si la classe a des propriétés dont les noms correspondent aux noms de champ du jeu de résultats, les valeurs du jeu de résultats correspondantes sont appliquées aux propriétés. Si un nom de champ du jeu de résultats ne correspond pas à une propriété de classe, une propriété avec le nom de champ du jeu de résultats est ajoutée à l’objet et la valeur de jeu de résultats est appliquée à la propriété.  
   
 Les règles suivantes s’appliquent lors de la spécification d’une classe avec le paramètre *$className* :  
@@ -89,8 +89,8 @@ Si les résultats retournés par cette requête sont récupérés avec **sqlsrv_
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## <a name="example"></a> Exemple  
-L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la forme d’un objet PHP. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a>Exemple  
+L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la forme d’un objet PHP. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -128,7 +128,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la forme d’une instance de la classe *Product* définie dans le script. L’exemple récupère, à partir des tables *Purchasing.PurchaseOrderDetail* et *Production.Product* de la base de données AdventureWorks, les informations sur les produits qui ont une date d’échéance spécifique (*DueDate*), et dont la quantité en stock (*StockQty*) est inférieure à la valeur spécifiée. L’exemple met en évidence certaines des règles qui s’appliquent durant la spécification d’une classe dans un appel à **sqlsrv_fetch_object**:  
   
 -   La variable *$product* est une instance de la classe *Product* , car Product a été spécifié avec le paramètre *$className* et la classe *Product* existe.  
@@ -139,7 +139,7 @@ L’exemple suivant récupère chaque ligne d’un jeu de résultats sous la for
   
 -   La propriété privée *UnitPrice* est renseignée avec la valeur du champ *UnitPrice* .  
   
-L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -242,7 +242,7 @@ Si les résultats retournés par cette requête sont récupérés avec **sqlsrv_
   
 `SELECT SCOPE_IDENTITY() AS PictureID`  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)  
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  

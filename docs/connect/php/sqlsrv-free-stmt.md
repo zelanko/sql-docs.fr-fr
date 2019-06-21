@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3c71f432-36ad-41e1-8ac7-587c82539448
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7188935f0466a58c444f72e02ce541a646e1b41f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fe1471d41bf7b510c52f584b538fde03d6c0c084
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610745"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802812"
 ---
 # <a name="sqlsrvfreestmt"></a>sqlsrv_free_stmt
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -45,8 +45,8 @@ Valeur booléenne **true** sauf si la fonction est appelée avec un paramètre n
 > [!NOTE]  
 > **Null** est un paramètre valide pour cette fonction. Ainsi, la fonction peut être appelée plusieurs fois dans un script. Par exemple, si vous libérez une instruction dans une condition d’erreur et que vous la libérez à nouveau à la fin du script, le deuxième appel à **sqlsrv_free_stmt** retourne **true** car le premier appel à **sqlsrv_free_stmt** (dans la condition d’erreur) affecte la valeur **null** à la ressource d’instruction.  
   
-## <a name="example"></a> Exemple  
-L’exemple suivant crée une ressource d’instruction, exécute une requête simple et appelle **sqlsrv_free_stmt** pour libérer toutes les ressources associées à l’instruction. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local.  Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
+## <a name="example"></a>Exemple  
+L’exemple suivant crée une ressource d’instruction, exécute une requête simple et appelle **sqlsrv_free_stmt** pour libérer toutes les ressources associées à l’instruction. L’exemple part du principe que SQL Server et la base de données [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) sont installés sur l’ordinateur local. Toute la sortie est écrite dans la console quand l’exemple est exécuté à partir de la ligne de commande.  
   
 ```  
 <?php  
@@ -82,7 +82,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [À propos des exemples de code dans la documentation](../../connect/php/about-code-examples-in-the-documentation.md)  

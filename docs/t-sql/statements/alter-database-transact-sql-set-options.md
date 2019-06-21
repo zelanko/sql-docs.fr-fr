@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: bee1497ec928f1ac3abcd39ca052301ad5b6bfc9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e3b0e53dfbbe03fd723edb4d4c941e3395a0b1e5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785114"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826926"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL)
 
@@ -54,7 +54,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 > |||||
 > |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+> |** _\* SQL Server \*_ ** &nbsp;|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -395,7 +395,7 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne is_au
 
 Pour plus d’informations sur l’utilisation des mises à jour de statistiques synchrones ou asynchrones, consultez la section « Utilisation des options de statistiques à l’échelle de la base de données » dans [Statistiques](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)])
 
 Active ou désactive l’option d’`FORCE_LAST_GOOD_PLAN` [optimisation automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -409,7 +409,7 @@ S’il existe des gains de performances, le [!INCLUDE[ssde_md](../../includes/ss
 OFF         
 Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] signale les régressions des performances de requêtes potentielles dues à des changements de plan SQL dans la vue [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md). Toutefois, ces recommandations ne sont pas appliquées automatiquement. L’utilisateur peut superviser les recommandations actives et résoudre les problèmes identifiés en appliquant les scripts [!INCLUDE[tsql-md](../../includes/tsql-md.md)] qui sont affichés dans la vue. Il s'agit de la valeur par défaut.
 
-**\<change_tracking_option> ::=**         
+**\<change_tracking_option> ::=**          
 **S’applique à :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
 
 Contrôle les options de suivi des modifications. Vous pouvez activer le suivi des modifications, définir des options, modifier des options et désactiver le suivi des modifications. Vous trouverez des exemples dans la section Exemples plus loin dans cet article.
@@ -435,7 +435,7 @@ La période de rétention par défaut est 2 jours. La période de rétention min
 OFF         
 Désactive le suivi des modifications pour la base de données. Désactivez le suivi des modifications sur toutes les tables avant de le désactiver sur la base de données.
 
-**\<containment_option> ::=**         
+**\<containment_option> ::=**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Contrôle des options de la relation contenant-contenu de la base de données.
@@ -479,12 +479,12 @@ Le curseur n'est libéré implicitement qu'au moment de la déconnexion. Pour pl
 
 Vous pouvez déterminer l’état de cette option en consultant la colonne is_local_cursor_default de l’affichage catalogue sys.databases. Vous pouvez également déterminer l’état en consultant la propriété IsLocalCursorsDefault de la fonction DATABASEPROPERTYEX.
 
-**\<database_mirroring>**         
+**\<database_mirroring>**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Pour une description des arguments, voir [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md).
 
-**\<date_correlation_optimization_option> ::=**        
+**\<date_correlation_optimization_option> ::=**         
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Contrôle l'option date_correlation_optimization.
@@ -525,7 +525,7 @@ Lorsque le chiffrement est activé au niveau de la base de données, tous les gr
 
 Vous pouvez voir l’état du chiffrement de la base de données et l’état de l’analyse du chiffrement en utilisant la vue de gestion dynamique [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md).
 
-**\<db_state_option> ::=**         
+**\<db_state_option> ::=**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Contrôle l'état de la base de données.
@@ -591,7 +591,7 @@ Tous les utilisateurs qui bénéficient des autorisations appropriées peuvent s
 
 Vous pouvez déterminer l’état de cette option en consultant la colonne user_access de l’affichage catalogue sys.databases. Vous pouvez également déterminer l’état en consultant la propriété UserAccess de la fonction DATABASEPROPERTYEX.
 
-**\<delayed_durability_option> ::=**         
+**\<delayed_durability_option> ::=**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Contrôle si les transactions sont validées de manière entièrement durable ou durable différée.
@@ -605,7 +605,7 @@ Toutes les transactions suivant SET ALLOWED sont soit entièrement durables, soi
 FORCED         
 Toutes les transactions suivant SET FORCED sont durables différées. Toutes les options de durabilité définies dans une instruction de validation ou de bloc atomique sont ignorées.
 
-**\<external_access_option> ::=**         
+**\<external_access_option> ::=**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Contrôle si des ressources externes, par exemple des objets d'une autre base de données, peuvent accéder à la base de données.
@@ -669,7 +669,7 @@ TWO_DIGIT_YEAR_CUTOFF
 
 Spécifie un entier compris entre 1 753 et 9 999 qui représente l'année de coupure permettant d'interpréter les années à deux chiffres comme des années à quatre chiffres. Cette option est autorisée uniquement lorsque CONTAINMENT a été défini sur PARTIAL. Si CONTAINMENT est défini sur NONE, des erreurs se produiront.
 
-**\<FILESTREAM_option> ::=**         
+**\<FILESTREAM_option> ::=**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Contrôle les paramètres des FileTables.
@@ -684,15 +684,15 @@ Les données FILESTREAM dans les FileTables de cette base de données peuvent ê
 FULL         
 Active l’accès non transactionnel complet aux données FILESTREAM dans les FileTables.
 
-DIRECTORY_NAME = *\<directory_name>*         
+DIRECTORY_NAME = *\<directory_name>*          
 Nom de répertoire compatible avec Windows. Ce nom doit être unique parmi tous les noms de répertoire au niveau de la base de données dans cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La comparaison d'unicité n'est pas sensible à la casse, indépendamment des paramètres de classement. Cette option doit être définie avant de créer un FileTable dans cette base de données.
 
-**\<HADR_options> ::=**         
+**\<HADR_options> ::=**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Voir [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md).
 
-**\<mixed_page_allocation_option> ::=**         
+**\<mixed_page_allocation_option> ::=**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Contrôle si la base de données peut créer des pages initiales à l’aide d’une extension mixte pour les huit premières pages d’une table ou d’un index.
@@ -719,7 +719,7 @@ FORCED
 
 Vous pouvez déterminer la valeur actuelle de cette option en consultant la colonne is_parameterization_forced de l'affichage catalogue sys.databases.
 
-**\<query_store_options> ::=**         
+**\<query_store_options> ::=**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 ON | OFF | CLEAR [ ALL ]         
@@ -791,7 +791,7 @@ QUERY_CAPTURE_MODE est de type **nvarchar**.
 max_plans_per_query         
 Définit le nombre maximal de plans gérés pour chaque requête. La valeur par défaut est 200. MAX_PLANS_PER_QUERY est de type **int**.
 
-**\<query_capture_policy_option_list> :: =**         
+**\<query_capture_policy_option_list> :: =**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0)
 
 Contrôle les options de stratégie de capture du magasin des requêtes. Sauf pour STALE_CAPTURE_POLICY_THRESHOLD, ces options définissent dans la valeur de la durée de validité de la stratégie de capture les conditions OR qui doivent intervenir pour que les requêtes soient capturées.
@@ -808,7 +808,7 @@ Définit le temps UC de compilation écoulé total utilisé par une requête pen
 TOTAL_EXECUTION_CPU_TIME_MS         
 Définit le temps UC d’exécution écoulé total utilisé par une requête pendant la période d’évaluation. La valeur par défaut est 100 ; ainsi, pour la durée de validité par défaut de la stratégie de capture, une requête doit avoir un total d’au moins 100 ms de temps UC écoulé pendant l’exécution dans une journée pour être rendue persistante dans le Magasin des requêtes. TOTAL_EXECUTION_CPU_TIME_MS est de type **int**.
 
-**\<recovery_option> ::=**         
+**\<recovery_option> ::=**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Contrôle les options de récupération de base de données et la vérification des erreurs d'E/S disque.
@@ -877,7 +877,7 @@ Pour plus d’informations sur les messages d’erreur 823, 824 et 825, consulte
 
 Vous pouvez déterminer l’état de cette option en consultant la colonne *page_verify_option* de la vue de catalogue [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) ou la propriété *IsTornPageDetectionEnabled* de la fonction [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md).
 
-**\<remote_data_archive_option> ::=**         
+**\<remote_data_archive_option> ::=**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Active ou désactive Stretch Database pour la base de données. Pour plus d'informations, consultez [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
@@ -911,7 +911,7 @@ Vous pouvez uniquement désactiver Stretch Database pour une base de données un
 
 La désactivation de Stretch ne supprime pas la base de données distante. Si vous souhaitez supprimer la base de données distante, vous devrez utiliser le Portail Azure.
  
-**\<service_broker_option> ::=**         
+**\<service_broker_option> ::=**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Contrôle les options [!INCLUDE[ssSB](../../includes/sssb-md.md)] suivantes : active ou désactive la remise de messages, définit un nouvel identificateur [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou définit les priorités de conversation sur ON ou OFF.
@@ -1135,7 +1135,7 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne is_re
 
 Vous pouvez déterminer l'état de cette option en consultant la colonne is_recursive_triggers_on de l'affichage catalogue sys.databases ou la propriété IsRecursiveTriggersEnabled de la fonction DATABASEPROPERTYEX.
 
-**\<target_recovery_time_option> ::=**         
+**\<target_recovery_time_option> ::=**          
 **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Spécifie la fréquence des points de contrôle indirects en fonction de chaque base de données. À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la valeur par défaut pour les nouvelles bases de données est une minute, ce qui signifie que la base de données utilise les points de contrôle indirects. Pour les versions antérieures, la valeur par défaut est 0, ce qui indique que la base de données utilise les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande une valeur d’une minute pour la plupart des systèmes.
@@ -1375,7 +1375,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
@@ -1396,7 +1396,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* Pool élastique/base de données unique<br />SQL Database \*_** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|** _\* Pool élastique/base de données unique<br />SQL Database \*_ ** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1623,7 +1623,7 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne is_au
 
 Pour plus d’informations sur l’utilisation des mises à jour de statistiques synchrones ou asynchrones, consultez la section « Utilisation des options de statistiques à l’échelle de la base de données » dans [Statistiques](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
 **S'applique à**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
 
 Contrôle les options automatiques pour le [réglage automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -2030,7 +2030,7 @@ Vous pouvez déterminer l'état de cette option en consultant la colonne is_recu
 
 Spécifie la fréquence des points de contrôle indirects en fonction de chaque base de données. Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la valeur par défaut pour les nouvelles bases de données est une minute, ce qui signifie que la base de données utilise les points de contrôle indirects. Pour les versions antérieures, la valeur par défaut est 0, ce qui indique que la base de données utilise les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande une valeur d’une minute pour la plupart des systèmes.
 
-TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }         
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
 *target_recovery_time*         
 Spécifie la limite maximale de durée de récupération de la base de données spécifiée en cas de plantage.
 
@@ -2167,7 +2167,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
@@ -2187,7 +2187,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* Instance managée<br />SQL Database \*_** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |** _\* Instance managée<br />SQL Database \*_ ** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2397,7 +2397,7 @@ Vous pouvez déterminer l’état de cette option en consultant la colonne is_au
 
 Pour plus d’informations sur l’utilisation des mises à jour de statistiques synchrones ou asynchrones, consultez la section « Utilisation des options de statistiques à l’échelle de la base de données » dans [Statistiques](../../relational-databases/statistics/statistics.md).
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
 **S'applique à**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
 
 Active ou désactive l’option d’`FORCE_LAST_GOOD_PLAN` [optimisation automatique](../../relational-databases/automatic-tuning/automatic-tuning.md).
@@ -2763,7 +2763,7 @@ Vous pouvez déterminer l'état de cette option en consultant la colonne is_recu
 
 Spécifie la fréquence des points de contrôle indirects en fonction de chaque base de données. Depuis [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la valeur par défaut pour les nouvelles bases de données est une minute, ce qui signifie que la base de données utilise les points de contrôle indirects. Pour les versions antérieures, la valeur par défaut est 0, ce qui indique que la base de données utilise les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande une valeur d’une minute pour la plupart des systèmes.
 
-TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }         
+TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
 *target_recovery_time*         
 Spécifie la limite maximale de durée de récupération de la base de données spécifiée en cas de plantage.
 
@@ -2871,7 +2871,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Niveau de compatibilité ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
 - [Mise en miroir de bases de données ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)
@@ -2891,7 +2891,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[Pool élastique/base de données unique<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[Instance managée<br />SQL Database](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_ ** &nbsp;||||
 
 &nbsp;
 
@@ -2934,7 +2934,7 @@ Le propriétaire de la base de données ne peut pas modifier la base de données
 > [!Note]
 > Bien que cette fonctionnalité soit déployée dans toutes les régions, vérifiez la version déployée sur votre instance et les dernières [notes de publication sur Azure SQL DW](/azure/sql-data-warehouse/release-notes-10-0-10106-0) pour savoir si vous disposez de cette fonctionnalité.
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | {OFF } (Préversion pour Azure SQL Data Warehouse Gen2). Cette commande doit être exécutée quand vous êtes connecté à la base de données master.  La modification de ce paramètre de base de données prend effet immédiatement.  Des coûts de stockage sont facturés en mettant en cache des jeux de résultats de requête. Après avoir désactivé la mise en cache de résultats pour une base de données, le cache de résultats rendu persistant auparavant sera immédiatement supprimé depuis le stockage Azure SQL Data Warehouse. Une nouvelle colonne nommée is_result_set_caching_on est introduite dans les sys.databases pour afficher le paramètre de mise en cache de résultats pour une base de données.  
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | {OFF } S’applique uniquement à Azure SQL Data Warehouse Gen2 (préversion). Cette commande doit être exécutée quand vous êtes connecté à la base de données master.  La modification de ce paramètre de base de données prend effet immédiatement.  Des coûts de stockage sont facturés en mettant en cache des jeux de résultats de requête. Après avoir désactivé la mise en cache de résultats pour une base de données, le cache de résultats rendu persistant auparavant sera immédiatement supprimé depuis le stockage Azure SQL Data Warehouse. Une nouvelle colonne nommée is_result_set_caching_on est introduite dans les sys.databases pour afficher le paramètre de mise en cache de résultats pour une base de données.  
 
 ACTIF Spécifie que les jeux de résultats de requête retournés à partir de cette base de données seront mis en cache dans le stockage Azure SQL Data Warehouse.
 

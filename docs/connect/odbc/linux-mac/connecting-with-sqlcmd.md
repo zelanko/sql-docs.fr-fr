@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 48e4771b8d538775ae2e2faec053f0263bd6d653
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66789889"
 ---
 # <a name="connecting-with-sqlcmd"></a>Connexion avec sqlcmd
@@ -65,7 +65,7 @@ Dans la version actuelle, les options suivantes sont disponibles :
 - -k Supprimer ou remplacer des caractères de contrôle.  
   
 - **-K**_application\_intent_  
-Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si vous ne spécifiez pas **-K**, `sqlcmd` ne prend pas en charge la connectivité à un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [Prise en charge par le pilote ODBC pour Linux de la haute disponibilité et de la reprise d’activité](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Déclare le type de la charge de travail de l'application lors de la connexion à un serveur. La seule valeur actuellement prise en charge est **ReadOnly**. Si vous ne spécifiez pas **-K**, `sqlcmd` ne prend pas en charge la connectivité à un réplica secondaire dans un groupe de disponibilité AlwaysOn. Pour plus d’informations, consultez [Prise en charge par le pilote ODBC pour Linux et macOS de la haute disponibilité et de la reprise d’activité](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > L’option **-K** n’est pas prise en charge dans le CTP pour SUSE Linux. Vous pouvez toutefois spécifier le mot clé **ApplicationIntent=ReadOnly** dans un fichier DSN passé à `sqlcmd`. Pour plus d’informations, consultez « Prise en charge du nom de source de données dans `sqlcmd` et `bcp` » à la fin de cette rubrique.  

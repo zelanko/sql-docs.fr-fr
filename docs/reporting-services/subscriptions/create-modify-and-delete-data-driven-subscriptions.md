@@ -1,6 +1,6 @@
 ---
 title: Créer, modifier ou supprimer des abonnements pilotés par les données | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: subscriptions
@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: dc07797030f18527178c2041ccfd8c8732d8d47c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: b385e04cf2efa103dba4a66d4e794a7984814fb4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65578251"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140266"
 ---
 # <a name="create-modify-and-delete-data-driven-subscriptions"></a>Créer, modifier ou supprimer des abonnements pilotés par les données
   Un abonnement piloté par les données est un abonnement qui a recours à une requête pour obtenir les valeurs de données qui seront utilisées dans le traitement de l'abonnement au moment de l'exécution. Lorsque l'abonnement est déclenché, une requête est traitée pour récupérer des informations récentes sur les destinataires, les options de remise de rapport, les formats de rendu et les valeurs de paramètre. Les résultats de la requête sont combinées à la définition de l'abonnement pour créer un abonnement dynamique utilisant les données que vous avez conservées dans une base de données employés, une base de données clients ou dans toute autre base de données contenant des informations utilisables comme données d'abonnés.  
   
- Pour créer un abonnement piloté par les données ou modifier un abonnement existant, recourez aux pages Créer un abonnement piloté par les données dans le Gestionnaire de rapports. Ces pages vous guident tout au long du processus de création ou de modification d'un abonnement. Pour accéder à un abonnement après qu'il a été créé, utilisez la page Mes abonnements et la liste Abonnements d'un rapport. Pour savoir comment créer un abonnement piloté par les données, consultez [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
+ Pour créer un nouvel abonnement piloté par les données ou modifier un abonnement existant, utilisez la **gérer** > **abonnements** page dans le portail web. Le **abonnements** page vous guide à travers de chaque étape de la création ou modification d’un abonnement. Pour accéder à un abonnement après qu'il a été créé, utilisez la page **Mes abonnements** et la liste Abonnements d'un rapport. Pour savoir comment créer un abonnement piloté par les données, consultez [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md).  
   
- Dans cette rubrique :  
+ Contenu de cet article :  
   
 -   [Gestion et suppression d'un abonnement piloté par les données](#bkmk_manage_and_delete)  
   
@@ -36,47 +36,47 @@ ms.locfileid: "65578251"
 -   [Exécution de l'abonnement](#bkmk_run_subscription)  
   
 ##  <a name="bkmk_manage_and_delete"></a> Gestion et suppression d'un abonnement piloté par les données  
- Un abonnement piloté par les données en cours d'exécution ne peut pas être arrêté ou supprimé via la page Gérer les travaux du Gestionnaire de rapports. Par conséquent, il est préférable d'utiliser une planification partagée pour déclencher l'abonnement piloté par les données. Si vous voulez empêcher temporairement l'exécution d'un abonnement, vous pouvez suspendre la planification qui le déclenche. Pour plus d’informations, consultez [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b).  
+ Un abonnement piloté par les données qui est en cours d’exécution ne peut pas être arrêté ou supprimé via le portail web. Par conséquent, il est préférable d'utiliser une planification partagée pour déclencher l'abonnement piloté par les données. Si vous voulez empêcher temporairement l'exécution d'un abonnement, vous pouvez suspendre la planification qui le déclenche. Pour plus d’informations, consultez [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md).  
   
- Pour supprimer un abonnement piloté par les données, sélectionnez-le dans la page Mes abonnements ou dans la page Abonnements d’un rapport, puis cliquez sur **Supprimer**.  
+ Pour supprimer un abonnement piloté par les données, sélectionnez la case à cocher en regard du rapport sur le **abonnements** page, puis sélectionnez **supprimer**.  
   
  Pour obtenir des instructions sur l’annulation d’un abonnement piloté par les données, consultez [Gérer un processus en cours d’exécution](../../reporting-services/subscriptions/manage-a-running-process.md).  
   
 ##  <a name="bkmk_create_and_modify"></a> Création et modification d'un abonnement piloté par les données  
  Pour créer un abonnement piloté par les données, sélectionnez un rapport qui utilise des informations d'identification stockées ou aucune information d'identification. Lorsque vous créez l'abonnement piloté par les données, nous vous conseillons d'utiliser une convention d'affectation de noms pour le champ de description, afin de pouvoir différencier facilement les abonnements standard des abonnements pilotés par les données.  
   
-#### <a name="to-create-a-data-driven-subscription-native-mode"></a>Pour créer un abonnement piloté par les données (mode natif)  
+### <a name="to-create-a-data-driven-subscription-native-mode"></a>Pour créer un abonnement piloté par les données (mode natif)  
   
-1.  Dans le Gestionnaire de rapports, naviguez jusqu'au dossier qui contient le rapport, pointez sur le rapport, ouvrez le menu d'options et cliquez sur **Gérer**.  
+1. Dans le portail web, accédez au dossier qui contient le rapport, cliquez sur le rapport et sélectionnez **gérer** dans le menu déroulant.  
   
-2.  Cliquez sur l'onglet **Abonnements** .  
+2. Sélectionnez l'onglet **Abonnements** .  
   
-3.  Cliquez sur le bouton **Nouvel abonnement piloté par les données** .  
+3. Sélectionnez **+ nouvel abonnement** sur le **abonnements** page.  
   
-#### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>Pour créer un abonnement piloté par les données (mode SharePoint)  
+### <a name="to-create-a-data-driven-subscription-sharepoint-mode"></a>Pour créer un abonnement piloté par les données (mode SharePoint)  
   
-1.  Dans la bibliothèque de documents SharePoint, pointez sur le rapport, ouvrez le menu d'options et cliquez sur **Gérer les abonnements**.  
+1. Dans la bibliothèque de documents SharePoint, pointez sur le rapport, ouvrez le menu d'options et cliquez sur **Gérer les abonnements**.  
   
-2.  Cliquez sur **Ajouter un abonnement piloté par les données**.  
+2. Cliquez sur **Ajouter un abonnement piloté par les données**.  
   
-#### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>Pour modifier un abonnement piloté par les données existant (mode natif)  
+### <a name="to-modify-an-existing-data-driven-subscription-native-mode"></a>Pour modifier un abonnement piloté par les données existant (mode natif)  
   
-1.  Dans le Gestionnaire de rapports, naviguez jusqu'au dossier qui contient le rapport, pointez sur le rapport, ouvrez le menu d'options et cliquez sur **Gérer**.  
+1. Dans le portail web, accédez au dossier qui contient le rapport, cliquez sur le rapport et sélectionnez **gérer** dans le menu déroulant.  
   
-2.  Cliquez sur l'onglet **Abonnements** . Vous pouvez également cliquer sur le lien **Mes abonnements** situé en haut du gestionnaire de rapports.  
+2. Sélectionnez l'onglet **Abonnements** .  
   
-3.  Sélectionnez l'abonnement à modifier. L’icône suivante indique un abonnement piloté par les données : ![Icône Abonnement piloté par les données](../../reporting-services/subscriptions/media/hlp-16subscriptiondd.gif "Icône Abonnement piloté par les données")  
+3. Activez la case à cocher en regard de l’abonnement que vous souhaitez modifier, puis sélectionnez **modifier**. Abonnements pilotés par des données aura la valeur « Data-driven » le **Type** colonne.  
   
-#### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>Pour modifier un abonnement piloté par les données existant (mode SharePoint)  
+### <a name="to-modify-an-existing-data-driven-subscription-sharepoint-mode"></a>Pour modifier un abonnement piloté par les données existant (mode SharePoint)  
   
 1.  Dans la bibliothèque de documents SharePoint, pointez sur le rapport, ouvrez le menu d'options et cliquez sur **Gérer les abonnements**.  
   
 2.  Sélectionnez l'abonnement à modifier.  
   
-> [!NOTE]  
->  Vous pouvez modifier n'importe quelle valeur déjà spécifiée. Toutes les valeurs sont présentées comme elles ont été créées, à l'exception du mot de passe qui est utilisé pour accéder à la banque de données des abonnés. Vous devez retaper le mot de passe chaque fois que vous modifiez des valeurs dans la deuxième page ou dans les pages suivantes.  
+    > [!NOTE]  
+    > Vous pouvez modifier n'importe quelle valeur déjà spécifiée. Toutes les valeurs sont présentées comme elles ont été créées, à l'exception du mot de passe qui est utilisé pour accéder à la banque de données des abonnés. Vous devez retaper le mot de passe chaque fois que vous modifiez des valeurs dans la deuxième page ou dans les pages suivantes.  
   
- Avant de créer un abonnement piloté par les données, assurez-vous que les conditions suivantes sont remplies :  
+  Avant de créer un abonnement piloté par les données, assurez-vous que les conditions suivantes sont remplies :  
   
 -   **Conditions requises liées au rapport**. Le rapport doit utiliser des informations d'identification stockées ou ne pas en utiliser du tout pour être en mesure d'extraire les données au moment de l'exécution. Vous ne pouvez pas vous abonner à un rapport qui utilise des informations d'identification déléguées ou empruntées pour vous connecter à une source de données externe ; les informations d'identification de l'utilisateur qui crée ou possède l'abonnement ne seront pas disponibles lorsque l'abonnement sera traité. Les informations d'identification stockées peuvent être un compte Windows ou un compte d'utilisateur de base de données. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
@@ -98,12 +98,10 @@ ms.locfileid: "65578251"
 ##  <a name="bkmk_run_subscription"></a> Exécution de l'abonnement  
  Vous devez indiquer les conditions du traitement de l'abonnement. Vous pouvez spécifier une planification ou déclencher l'abonnement de façon à ce qu'il coïncide avec la mise à jour de l'instantané d'exécution de rapport. Le traitement des abonnements pilotés par les données est identique au traitement des abonnements standard.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
- [Page Abonnements &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/cf3a6bd0-e0b2-4875-a532-63ef34cfa860)   
- [Page Mes abonnements &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/491a85a3-f323-4155-a0a8-de2779899995)  
-  
-  
+ [Le portail web d’un serveur de rapports (Mode natif SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)   
+ [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](create-and-manage-subscriptions-for-native-mode-report-servers.md)   
+ [Utilisation des abonnements (portail web)](../../reporting-services/working-with-subscriptions-web-portal.md) [utiliser mes abonnements (serveur de rapports en Mode natif)](../../reporting-services/subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ 

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 789046b7df230b88ca1761d1d89cc147074e12a9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+manager: jroth
+ms.openlocfilehash: adf71b7f701d96ddf56f5070475fb853f89042ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663115"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801724"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Utilisation d’Azure Active Directory avec ODBC Driver
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -34,7 +34,7 @@ Le `Authentication` mot clé peut être utilisé lors de la connexion avec une s
 
 |Créer une vue d’abonnement|Valeurs|Valeur par défaut|Description|
 |-|-|-|-|
-|`Authentication`|(non défini), (chaîne vide), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(non défini)|Contrôle le mode d’authentification.<table><tr><th>Valeur<th>Description<tr><td>(non défini)<td>Mode d’authentification déterminé par les autres mots clés (options de connexion hérité existant).<tr><td>(chaîne vide)<td>La chaîne de connexion est « {0} » Remplacer et annuler la définition une `Authentication` valeur ensemble dans la source de données.<tr><td>`SqlPassword`<td>S’authentifier directement à une instance de SQL Server à l’aide d’un nom d’utilisateur et le mot de passe.<tr><td>`ActiveDirectoryPassword`<td>S’authentifier avec une identité Azure Active Directory à l’aide d’un nom d’utilisateur et le mot de passe.<tr><td>`ActiveDirectoryIntegrated`<td>_Pilote Windows uniquement_. S’authentifier avec une identité Azure Active Directory à l’aide de l’authentification intégrée.<tr><td>`ActiveDirectoryInteractive`<td>_Pilote Windows uniquement_. S’authentifier avec une identité Azure Active Directory à l’aide de l’authentification interactive.<tr><td>`ActiveDirectoryMsi`<td>S’authentifier avec l’identité Azure Active Directory à l’aide de l’authentification de managed service identity. Pour l’identité affectée à l’utilisateur, UID est défini sur l’ID d’objet de l’identité de l’utilisateur.</table>|
+|`Authentication`|(non défini), (chaîne vide), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(non défini)|Contrôle le mode d’authentification.<table><tr><th>Valeur<th>Description<tr><td>(non défini)<td>Mode d’authentification déterminé par les autres mots clés (options de connexion hérité existant).<tr><td>(chaîne vide)<td>Chaîne de connexion Remplacer et annuler la définition une `Authentication` valeur ensemble dans la source de données.<tr><td>`SqlPassword`<td>S’authentifier directement à une instance de SQL Server à l’aide d’un nom d’utilisateur et le mot de passe.<tr><td>`ActiveDirectoryPassword`<td>S’authentifier avec une identité Azure Active Directory à l’aide d’un nom d’utilisateur et le mot de passe.<tr><td>`ActiveDirectoryIntegrated`<td>_Pilote Windows uniquement_. S’authentifier avec une identité Azure Active Directory à l’aide de l’authentification intégrée.<tr><td>`ActiveDirectoryInteractive`<td>_Pilote Windows uniquement_. S’authentifier avec une identité Azure Active Directory à l’aide de l’authentification interactive.<tr><td>`ActiveDirectoryMsi`<td>S’authentifier avec l’identité Azure Active Directory à l’aide de l’authentification de managed service identity. Pour l’identité attribuée par l’utilisateur, UID est défini sur l’ID d’objet de l’identité d’utilisateur.</table>|
 |`Encrypt`|(non défini), `Yes`, `No`|(voir description)|Contrôle le chiffrement pour une connexion. Si la valeur d’attribut avant le `Authentication` paramètre n’est pas _aucun_ dans la source de données ou chaîne de connexion, la valeur par défaut est `Yes`. Sinon, la valeur par défaut est `No`. Si l’attribut `SQL_COPT_SS_AUTHENTICATION` remplace la valeur d’attribut préliminaire `Authentication`explicitement définir la valeur de chiffrement dans la source de données ou la chaîne de connexion ou l’attribut de connexion. La valeur d’attribut préalable de chiffrement est `Yes` si la valeur est définie sur `Yes` dans la chaîne de la source de données ou de la connexion.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>Attributs de connexion nouveaux et/ou modifiés
@@ -105,7 +105,7 @@ Ces options correspondent aux cinq mêmes disponibles dans la configuration du D
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
-8. Utilise l’authentification AAD Managed Service Identity attribué par le système ou l’identité affectée par l’utilisateur pour l’authentification configurer la connexion. Pour l’identité affectée à l’utilisateur, UID est défini sur l’ID d’objet de l’identité de l’utilisateur.<br>
+8. Utilise l’authentification AAD Managed Service Identity attribué par le système ou l’identité affectée par l’utilisateur pour l’authentification configurer la connexion. Pour l’identité attribuée par l’utilisateur, UID est défini sur l’ID d’objet de l’identité d’utilisateur.<br>
 Pour l'identité affectée par le système,<br>
 `server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
 Pour l’identité d’affectée à l’utilisateur avec l’ID d’objet est égal à myObjectId,<br>
@@ -168,7 +168,7 @@ Voici un exemple de chaîne de connexion pour une utilisation avec l’authentif
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~
-Voici un exemple de chaîne de connexion pour une utilisation avec Azure Active Directory Managed Service Identity Authentication. Notez que UID est définie sur l’ID d’objet de l’identité de l’utilisateur pour l’identité affectée à l’utilisateur.
+Voici un exemple de chaîne de connexion pour une utilisation avec Azure Active Directory Managed Service Identity Authentication. Notez que l’UID est défini sur l’ID d’objet de l’identité attribuée par d’utilisateur.
 ~~~
 // For system-assigned identity,
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi"
@@ -177,6 +177,6 @@ SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};A
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myObjectId;Authentication=ActiveDirectoryMsi"
 ~~~
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Prise en charge de l’authentification basée sur le jeton de base de données SQL Azure à l’aide de l’authentification Azure AD](https://blogs.msdn.microsoft.com/sqlsecurity/2016/02/09/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)
 

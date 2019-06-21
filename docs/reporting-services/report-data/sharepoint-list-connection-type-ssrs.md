@@ -9,10 +9,10 @@ ms.assetid: 2c4adf2f-e9c4-4fae-bd3c-97fe64436caf
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b4ac7074d89b0e187d18c6cee79840c2a6ab61e8
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499981"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Type de connexion de liste SharePoint (SSRS)
@@ -71,7 +71,7 @@ Utilisez les informations de cette rubrique pour générer une source de donnée
   
  Pour plus d'informations sur la prise en charge de l'authentification par revendications dans la pile Microsoft BI, consultez [Utilisation de l'authentification par revendications dans la pile Microsoft BI](https://social.technet.microsoft.com/wiki/contents/articles/15274.using-claims-authentication-across-the-microsoft-bi-stack.aspx).  
   
- Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Spécifier des informations d’identification dans le Générateur de rapports](specify-credential-and-connection-information-for-report-data-sources.md) et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
+ Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md), [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](specify-credential-and-connection-information-for-report-data-sources.md) et [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
   
 ##  <a name="Query"></a> Requêtes  
  Pour concevoir une requête, créez un dataset selon la source de données, puis ouvrez le concepteur de requêtes associé. Pour plus d’informations, consultez [Créer un dataset partagé ou incorporé &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md).  

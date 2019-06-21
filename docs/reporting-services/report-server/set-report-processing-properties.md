@@ -1,6 +1,6 @@
 ---
 title: Définir les propriétés de traitement d’un rapport | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f12b5734d0ea3715c93a8c346023743be44eda4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577716"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140396"
 ---
 # <a name="set-report-processing-properties"></a>Définir les propriétés de traitement d'un rapport
   Les propriétés d'exécution d'un rapport déterminent la façon dont le traitement du rapport s'effectue. Elles doivent être définies individuellement pour chaque rapport.  
   
- Pour définir les propriétés d'exécution d'un rapport, ouvrez le rapport dans le Gestionnaire de rapports, puis accédez à la page des propriétés d'exécution. Pour plus d’informations, consultez [Page de propriétés Options de traitement &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). Vous pouvez également définir des propriétés via [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Consultez [Page de propriétés Options de traitement &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ Pour définir les propriétés de l’exécution de rapports, accédez au rapport dans le portail web, cliquez sur le rapport, puis sélectionnez **gérer** dans le menu déroulant.
   
 ## <a name="report-execution-modes"></a>Modes d'exécution d'un rapport  
  Vous pouvez exécuter un rapport à la demande ou en tant qu'instantané. La section suivante décrit chaque méthode.  
   
-### <a name="running-reports-on-demand"></a>Exécution de rapports à la demande  
+### <a name="running-reports-on-demand"></a>Exécution de rapports à la demande 
  Vous pouvez spécifier qu'un rapport interroge une source de données chaque fois qu'un utilisateur exécute le rapport, ce qui produit des rapports à la demande contenant des données actualisées. Une nouvelle instance du rapport est créée pour chaque utilisateur qui ouvre ou demande le rapport, de sorte que chaque nouvelle instance contient les résultats d'une nouvelle requête. Avec cette méthode, si dix utilisateurs ouvrent le rapport en même temps, dix requêtes sont envoyées à la source de données en vue d'un traitement.  
   
-### <a name="running-reports-on-demand-from-cache"></a>Exécution de rapports à la demande à partir du cache  
+### <a name="running-reports-on-demand-from-cache"></a>Exécution de rapports à la demande à partir du cache 
  Afin d'améliorer les performances, vous pouvez spécifier qu'un rapport (et ses données) soit temporairement mis en cache lorsqu'un utilisateur l'exécute. La copie mise en cache est ensuite mise à la disposition des autres utilisateurs qui accèdent à ce même rapport. Avec cette méthode, si dix utilisateurs ouvrent le rapport, seule la première requête formulée aboutit au traitement du rapport. Le rapport est ensuite placé dans la mémoire cache pour être affiché par les neuf autres utilisateurs.  
   
  Les rapports mis en cache sont supprimés du cache aux intervalles que vous définissez. Vous pouvez spécifier des intervalles en minutes ou planifier une date et une heure spécifiques auxquelles vider le cache. Pour plus d’informations, consultez [Mise en cache de rapports &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
@@ -53,11 +53,9 @@ ms.locfileid: "65577716"
   
  Lorsque ces conditions sont réunies, le serveur de rapports désactive l'abonnement dès qu'une planification prévoit son exécution. Pour réactiver l'abonnement, ouvrez-le, puis enregistrez-le. Lorsque vous ouvrez l'abonnement, le serveur de rapports met à jour les valeurs de paramètre de l'abonnement en utilisant celles spécifiées pour l'instantané. Pour plus d’informations sur les abonnements, consultez [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Configurer les propriétés d’exécution d’un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Concepts de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Procédure : ajouter un instantané à un historique de rapport](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Créer, modifier et supprimer des instantanés dans l'historique de rapport](create-modify-and-delete-snapshots-in-report-history.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapports](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
-  
   

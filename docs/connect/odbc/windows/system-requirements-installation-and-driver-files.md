@@ -11,12 +11,12 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 6ff03713555f73a26e48f9760f87cb281b4a98ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
-ms.translationtype: HT
+ms.openlocfilehash: 9b48188cbc1eb25774bc127246514d82ca5ef475
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797719"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66841085"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Configuration système requise, installation et fichiers de pilote
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,9 @@ ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 ODBC Driver 13 et 13.1 pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], outre les précautions ci-dessus, prend en charge de SQL Server 2016. 
 
 La version 17 du pilote ODBC pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge toutes celles ci-dessus et également SQL Server 2017.
-  
+
+La version 17 du pilote ODBC pour SQL Server prend en charge SQL Server 2019 en commençant par la version du pilote 17.3.
+
 Le nom du pilote que vous spécifiez dans une chaîne de connexion est `ODBC Driver 11 for SQL Server` ou `ODBC Driver 13 for SQL Server` (pour 13 et 13.1) ou `ODBC Driver 17 for SQL Server`.
   
 ## <a name="supported-operating-systems"></a>Systèmes d'exploitation pris en charge

@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: cbc97de598e05d6045a5f7f142a67b39dcb9dd05
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66791560"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Extraire des colonnes avec IRow::GetColumns (OLE DB)
@@ -53,7 +53,7 @@ ms.locfileid: "66791560"
   
 -   Comment accéder deux fois à une colonne : la première fois au moment de l'obtention de la largeur de colonne réelle, puis ultérieurement, au moment de l'accès aux données effectives.  
   
- Dans la structure DBCOLUMNACCESS, si pData a la valeur NULL et que cbMaxLen est défini sur 0, l’appel à IRow>GetColumns() retourne seulement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler IRow->GetColumns() sur la même colonne pour extraire les données réelles. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
+ Dans la structure DBCOLUMNACCESS, si pData a la valeur NULL et que cbMaxLen est défini sur 0, l’appel à IRow>GetColumns retourne seulement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler IRow->GetColumns sur la même colonne pour extraire les données réelles. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   

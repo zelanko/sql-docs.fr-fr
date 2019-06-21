@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 500e9e48d541c3f518dc6dec0e779b90c896ee9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b8844ad89a8f0e7c1663bc8aadf8479764987b31
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640619"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802373"
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,10 +39,10 @@ sqlsrv_num_rows( resource $stmt )
 ## <a name="return-value"></a>Valeur retournée  
 **false** en cas d’erreur de calcul du nombre de lignes. Sinon, retourne le nombre de lignes dans le jeu de résultats.  
   
-## <a name="remarks"></a>Notes   
-sqlsrv_num_rows nécessite un curseur côté client, statique ou de jeu de clés, et retourne **false** si vous utilisez un curseur avant ou un curseur dynamique. (Par défaut, il s’agit d’un curseur avant). Pour plus d’informations sur les curseurs, consultez [sqlsrv_query](../../connect/php/sqlsrv-query.md) et [Types de curseurs &#40;pilote SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
+## <a name="remarks"></a>Notes  
+sqlsrv_num_rows nécessite un curseur côté client, statique ou de jeu de clés, et retourne **false** si vous utilisez un curseur avant ou un curseur dynamique. (Par défaut, il s’agit d’un curseur avant.) Pour plus d’informations sur les curseurs, consultez [sqlsrv_query](../../connect/php/sqlsrv-query.md) et [Types de curseurs &#40;pilote SQLSRV&#41;](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 <?php  
@@ -93,6 +93,6 @@ echo "\nRow count for second result set = $row_count\n";
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

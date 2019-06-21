@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66770269"
 ---
 # <a name="building-the-connection-url"></a>Création de l'URL de connexion
@@ -104,7 +104,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  Si vous exécutez une machine virtuelle Java (JVM) 32 bits, utilisez le fichier sqljdbc_auth.dll dans le dossier x86, même si la version du système d'exploitation est x64. Si vous exécutez une machine virtuelle Java (JVM) 64 bits sur un processeur x64, utilisez le fichier sqljdbc_auth.dll dans le dossier x64.  
   
- Vous pouvez également définir la propriété système java.libary.path afin de spécifier le répertoire du fichier sqljdbc_auth.dll. Par exemple, si le pilote JDBC est installé dans le répertoire par défaut, vous pouvez spécifier l'emplacement de la DLL à l'aide de l'argument de machine virtuelle suivant lors du démarrage de l'application Java :  
+ Vous pouvez également définir la propriété système java.library.path afin de spécifier le répertoire du fichier sqljdbc_auth.dll. Par exemple, si le pilote JDBC est installé dans le répertoire par défaut, vous pouvez spécifier l'emplacement de la DLL à l'aide de l'argument de machine virtuelle suivant lors du démarrage de l'application Java :  
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   

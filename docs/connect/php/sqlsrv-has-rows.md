@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4da7f640-cf12-409f-9e00-95b30a8d5e17
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9cc449b6aa47024d9d38af1870dfa370f8a59896
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9b4604184ed457552f8873d03d4995b72d32c152
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772767"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802251"
 ---
 # <a name="sqlsrvhasrows"></a>sqlsrv_has_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ sqlsrv_has_rows( resource $stmt )
 ## <a name="return-value"></a>Valeur retournée  
 S’il existe des lignes dans le jeu de résultats, la valeur de retour est **true**. En l’absence de lignes, ou si l’appel de fonction échoue, la valeur de retour est **false**.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 <?php  
@@ -59,6 +59,6 @@ S’il existe des lignes dans le jeu de résultats, la valeur de retour est **tr
 ?>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   
