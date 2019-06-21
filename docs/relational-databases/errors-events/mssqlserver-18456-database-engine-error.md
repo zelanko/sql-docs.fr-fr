@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 627af74608a462cd336c6bb3775511bd5920eb11
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673588"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028890"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51673588"
 |Texte du message|Échec de la connexion pour l’utilisateur '%.*ls'.%.\*ls|  
   
 ## <a name="explanation"></a>Explication  
-Lorsqu'une tentative de connexion est refusée en raison d'un échec d'authentification dû à un mot de passe ou un nom d'utilisateur incorrect, un message semblable au suivant est retourné sur le client : « Échec de la connexion pour l'utilisateur '<nom_utilisateur>'. (Microsoft SQL Server, erreur : 18456)  
+Lorsqu'une tentative de connexion est refusée en raison d’un échec d’authentification dû à un mot de passe ou un nom d’utilisateur incorrect, un message semblable au suivant est retourné sur le client :  Échec de la connexion pour l'utilisateur '<nom_utilisateur>'. (Microsoft SQL Server, erreur : 18456)".  
   
 Le client reçoit également les informations supplémentaires suivantes :  
   
@@ -46,7 +46,7 @@ Le client reçoit également les informations supplémentaires suivantes :
   
 « Numéro d’erreur : 18456 »  
   
-« Gravité : 14 »  
+« Gravité : 14 »  
   
 « État : 1 »  
   
@@ -100,7 +100,7 @@ Dans cet exemple, l'état d'erreur d'authentification est 8. Cela indique que le
 |2007-12-05 20:12:56.34|Connexion|Échec de la connexion pour l'utilisateur '<nom_utilisateur>'. [CLIENT : <ip address>]|  
   
 > [!NOTE]  
-> Quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé avec le mode d’authentification Windows et modifié ultérieurement pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le mode d’authentification Windows, la connexion **sa** est initialement désactivée. Cela provoque l'erreur d'état 7 : « Échec de la connexion pour l'utilisateur 'sa'. ». Pour activer la connexion **sa**, consultez [Modifier le mode d’authentification du serveur](~/database-engine/configure-windows/change-server-authentication-mode.md).  
+> Quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé avec le mode d’authentification Windows et modifié ultérieurement pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le mode d’authentification Windows, la connexion **sa** est initialement désactivée. Cela provoque l’erreur d’état 7 : « Échec de la connexion de l’utilisateur 'sa'. » Pour activer la connexion **sa**, consultez [Modifier le mode d’authentification du serveur](~/database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
 Si vous essayez de vous connecter à l'aide de l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vérifiez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré en mode Authentification mixte.  
@@ -115,5 +115,5 @@ Si vous essayez de vous connecter avec vos informations d’identification d’a
   
 Si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] prend en charge les bases de données autonomes, vérifiez que la connexion n’a pas été supprimée suite à la migration vers un utilisateur de base de données autonome.  
   
-Lors de la connexion locale à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les connexions d’autres services qui s’exécutent également sous **NT AUTHORITY\NETWORK SERVICE** doivent s’authentifier à l’aide du nom de domaine complet des ordinateurs. Pour plus d’informations, consultez [Guide pratique pour utiliser le compte de service réseau pour accéder à des ressources dans ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
+Lors de la connexion locale à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les connexions d’autres services qui s’exécutent également sous **NT AUTHORITY\NETWORK SERVICE** doivent s’authentifier à l’aide du nom de domaine complet des ordinateurs. Pour plus d’informations, consultez [Guide pratique pour Utiliser le compte de service réseau pour accéder à des ressources dans ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8847ec6b3ab65b4ad028be82e1b016a88cb084e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797129"
 ---
 # <a name="mssqlserver7932"></a>MSSQLSERVER_7932
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47630376"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_ROWSET_IN_WRONG_FILEGROUP|  
-|Texte du message|Erreur de table : l'ID de répertoire FILESTREAM correspondant à l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, figure dans le groupe de fichiers FG_ID1, alors qu'il devrait être dans le groupe de fichiers FG_ID2.|  
+|Texte du message|Erreur de table, l’ID de répertoire FILESTREAM correspondant à l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, figure dans le groupe de fichiers FG_ID1, alors qu'il devrait être dans le groupe de fichiers FG_ID2.|  
   
 ## <a name="explanation"></a>Explication  
 Au cours de l'exécution de DBCC CHECKDB, le stockage FILESTREAM de l'objet spécifié a été détecté dans le mauvais groupe de fichiers. Il peut s'agir d'une altération dans les métadonnées de l'objet.  

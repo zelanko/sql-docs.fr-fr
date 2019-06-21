@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 625eccb976c500dcacaa5612ca41bac8b638fbed
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516227"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "58434443"
   
 -   **Sauvegardes d’instantanés de fichiers pour les fichiers de base de données dans le stockage d’objets blob Azure** Les sauvegardes d’instantanés de fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournissent, via l’utilisation d’instantanés Azure, des sauvegardes et des restaurations quasi instantanées des fichiers de base de données stockés à l’aide du service de stockage d’objets blob Azure. Cette fonctionnalité vous permet de simplifier vos stratégies de sauvegarde et de restauration et prend en charge la limite de restauration dans le temps. Pour plus d’informations, consultez [Sauvegarde d’instantanés de fichiers pour les fichiers de base de données dans Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Cette fonctionnalité est disponible dans SQL Server 2016 ou version ultérieure.  
   
--   **Laisser SQL Server gérer les sauvegardes dans Microsoft Azure :** configurez SQL Server pour qu'il gère la stratégie de sauvegarde et planifie les sauvegardes d'une seule ou de plusieurs bases de données, ou définissez les valeurs par défaut au niveau de l'instance. Cette fonctionnalité s’appelle **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Pour plus d’informations, consultez [Sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Cette fonctionnalité est disponible dans SQL Server 2014 ou version ultérieure.  
+-   **Laisser SQL Server gérer les sauvegardes dans Microsoft Azure :** configurez SQL Server pour qu'il gère la stratégie de sauvegarde et planifie les sauvegardes d’une seule ou de plusieurs bases de données, ou définissez les valeurs par défaut au niveau de l’instance. Cette fonctionnalité s’appelle **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** . Pour plus d’informations, consultez [Sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Cette fonctionnalité est disponible dans SQL Server 2014 ou version ultérieure.  
   
 ## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Avantages de l’utilisation du service d’objets blob Microsoft Azure pour les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
@@ -58,17 +58,17 @@ ms.locfileid: "58434443"
   
  La [Calculatrice Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=277060) peut vous aider à évaluer les coûts.  
   
- **Stockage :** les tarifs sont basés sur l'espace utilisé et sont calculés sur une échelle graduée en fonction du niveau de redondance. Pour plus d’informations, consultez la section **Gestion des données** de l’article [Détails de la tarification](https://go.microsoft.com/fwlink/?LinkId=277059) .  
+ **Stockage :** les tarifs sont basés sur l’espace utilisé et sont calculés sur une échelle graduée en fonction du niveau de redondance. Pour plus d’informations, consultez la section **Gestion des données** de l’article [Détails de la tarification](https://go.microsoft.com/fwlink/?LinkId=277059) .  
   
  **Transferts de données :** Les transferts de données entrants vers Microsoft Azure sont gratuits. Les transferts sortants sont facturés en fonction de l'utilisation de la bande passante et calculés selon une échelle graduée spécifique à la région. Pour plus d'informations, consultez la section [Transferts de données](https://go.microsoft.com/fwlink/?LinkId=277061) de l'article Détails de la tarification.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
 [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)   
 
 [Sauvegarde et restauration des bases de données système &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
 
-[Didacticiel : Utilisation du service Stockage Blob Microsoft Azure avec des bases de données SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
+[Tutoriel : Utilisation du service Stockage Blob Microsoft Azure avec des bases de données SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)
 
 [Sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url.md)  
   

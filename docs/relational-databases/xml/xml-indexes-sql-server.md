@@ -35,11 +35,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ed342b2176d7803092d389b88e95a11f34752ac
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62704117"
 ---
 # <a name="xml-indexes-sql-server"></a>Index XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "58512376"
   
 -   Index XML secondaires  
   
- Le premier index portant sur la colonne de type **xml** est obligatoirement l'index XML primaire. Par le biais de l'index XML primaire, les trois types d'index secondaires suivants sont pris en charge : PATH, VALUE et PROPERTY. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
+ Le premier index portant sur la colonne de type **xml** est obligatoirement l'index XML primaire. Par le biais de l’index XML primaire, les trois types d’index secondaires suivants sont pris en charge : PATH, VALUE et PROPERTY. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas créer ou modifier d'index XML à moins que les options de base de données ne soient définies correctement pour utiliser le type de données **xml** . Pour plus d’informations, consultez [Utiliser la recherche en texte intégral avec des colonnes XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
@@ -99,7 +99,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   `//ContactRecord/PhoneNumber` , où seuls les deux derniers niveaux sont connus ;  
   
- - ou -  
+ \- ou -  
   
 -   `/Book/*/Title` où le caractère générique (`*`) est mentionné au milieu de l’expression.  
   
@@ -143,7 +143,7 @@ USE AdventureWorks2012;SELECT InstructionsFROM Production.ProductModel WHERE Pro
   
 -   `/root/Location` , n'indiquant que son chemin d'accès ;  
   
- - ou -  
+ \- ou -  
   
 -   `/root/Location/@LocationID[.="10"]` , où le chemin et la valeur du nœud sont précisés.  
   
@@ -215,7 +215,7 @@ WHERE ProductModelID = 19
   
  L’espace utilisé par les index XML figure dans la fonction table [sys.dm_db_index_physical_stats](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md), qui fournit des informations telles que le nombre de pages disque occupées, la taille moyenne des lignes en octets et le nombre d'enregistrements, pour tous les types d'index. Vous y trouvez également les index XML. Ces informations sont disponibles pour chaque partition de la base de données. Les index XML utilisent le même schéma et la même fonction de partitionnement que la table de base.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

@@ -15,12 +15,12 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c80985d6c69cc1f62e82ae26cbf4bc841501e9d
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 4aa32fb8859df9fdc7c6d85cb43e93425dfa895b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590384"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145470"
 ---
 # <a name="nodes-method-xml-data-type"></a>Méthode nodes() (type de données xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ Chaque instance de type de données **xml** possède un nœud de contexte fourni
   
 Le résultat de la méthode **nodes()** est un ensemble de lignes qui contient des copies logiques des instances XML d’origine. Dans ces copies logiques, le nœud de contexte de chaque instance de ligne correspond à l’un des nœuds identifiés avec l’expression de requête. Ainsi, les requêtes ultérieures peuvent naviguer par rapport à ces nœuds de contexte.  
   
-Vous pouvez extraire plusieurs valeurs de l'ensemble de lignes. Par exemple, vous pouvez appliquer la méthode **value()** à l’ensemble de lignes renvoyé par **nodes()**, puis extraire plusieurs valeurs de l’instance XML d’origine. Appliquée à l’instance XML, la méthode **value()** ne retourne qu’une seule valeur.  
+Vous pouvez extraire plusieurs valeurs de l'ensemble de lignes. Par exemple, vous pouvez appliquer la méthode **value()** à l’ensemble de lignes renvoyé par **nodes()** , puis extraire plusieurs valeurs de l’instance XML d’origine. Appliquée à l’instance XML, la méthode **value()** ne retourne qu’une seule valeur.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +47,7 @@ Littéral de chaîne, représentant une expression XQuery. Si l'expression de re
 *Table*(*Column*)  
 Nom de table et nom de colonne de l'ensemble de lignes obtenu.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Prenons par exemple la table suivante :  
   
 ```sql
@@ -78,15 +78,15 @@ Un appel de la méthode `nodes()` avec l'expression de requête `/root/Location`
 Product  
 ModelID      Instructions  
 ----------------------------------  
-1       <root>  
+1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
-  
+             <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
-             </root>  
+             <Location LocationID="30" .../></root>  
 ```  
   
 Vous pouvez alors interroger cet ensemble de lignes à l’aide de méthodes de type de données **xml**. La requête suivante extrait la sous-arborescence de l'élément de contexte pour chaque ligne générée :  
@@ -107,7 +107,7 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
-L’ensemble de lignes retourné a conservé les informations de type. Vous pouvez appliquer des méthodes de type de données **xml**, comme **query()**, **value()**, **exist()** et **nodes()**, au résultat d’une méthode **nodes()**. Toutefois, vous ne pouvez pas appliquer la méthode **modify()** pour modifier l’instance XML.  
+L’ensemble de lignes retourné a conservé les informations de type. Vous pouvez appliquer des méthodes de type de données **xml**, comme **query()** , **value()** , **exist()** et **nodes()** , au résultat d’une méthode **nodes()** . Toutefois, vous ne pouvez pas appliquer la méthode **modify()** pour modifier l’instance XML.  
   
 En outre, le nœud de contexte figurant dans l’ensemble de lignes ne peut pas être matérialisé. Vous ne pouvez donc pas l’utiliser dans une instruction SELECT. Toutefois, vous pouvez l'utiliser dans IS NULL et COUNT(*).  
   
@@ -147,7 +147,7 @@ GO
 ## <a name="examples"></a>Exemples  
   
 ### <a name="using-nodes-method-against-a-variable-of-xml-type"></a>Utilisation de la méthode nodes() par rapport à une variable de type xml  
-L’exemple suivant montre un document XML qui possède un élément de niveau supérieur <`Root`> et trois éléments enfants <`row`>. La requête utilise la méthode `nodes()` pour définir un nœud de contexte distinct par élément <`row`>. La méthode `nodes()` renvoie un ensemble de lignes composé de trois lignes. Chaque ligne possède une copie logique du document XML d'origine et chaque nœud de contexte identifie un élément <`row`> distinct de ce document.  
+L’exemple suivant montre un document XML qui possède un élément de niveau supérieur <`Root`> et trois éléments enfants <`row`>. La requête utilise la méthode `nodes()` pour définir un nœud de contexte distinct par élément <`row`>. La méthode `nodes()` renvoie un ensemble de lignes composé de trois lignes. Chaque ligne possède une copie logique du document XML d’origine et chaque nœud de contexte identifie un élément <`row`> distinct de ce document.  
   
 La requête renvoie ensuite le nœud de contexte depuis chaque ligne :  
   
@@ -171,7 +171,7 @@ Dans l’exemple suivant, la méthode de requête retourne l’élément de cont
 <row id="3"/>  
 ```  
   
-L'application de l'accesseur parent aux nœuds de contexte renvoie l'élément <`Root`> pour les trois lignes :  
+L’application de l’accesseur parent aux nœuds de contexte renvoie l’élément <`Root`> pour les trois lignes :  
   
 ```sql
 SELECT T.c.query('..') AS result  
@@ -204,11 +204,11 @@ Cet exemple utilise les instructions de fabrication de vélo, stockées dans la 
   
 Dans l’exemple suivant, la méthode `nodes()` est spécifiée par rapport à la colonne `Instructions` de type **xml** de la table `ProductModel`.  
   
-La méthode `nodes()` définit les éléments <`Location`> en tant que nœuds de contexte en spécifiant le chemin d'accès `/MI:root/MI:Location`. L'ensemble de lignes obtenu comprend une copie logique du document d'origine par nœud <`Location`> du document et le nœud de contexte a pour valeur l'élément <`Location`>. Par conséquent, la fonction `nodes()` fournit un ensemble de nœuds de contexte <`Location`>.  
+La méthode `nodes()` définit les éléments <`Location`> en tant que nœuds de contexte en spécifiant le chemin d’accès `/MI:root/MI:Location`. L’ensemble de lignes obtenu comprend une copie logique du document d’origine par nœud <`Location`> du document et le nœud de contexte a pour valeur l’élément <`Location`>. Par conséquent, la fonction `nodes()` fournit un ensemble de nœuds de contexte <`Location`>.  
   
 La méthode `query()` appliquée à cet ensemble de lignes demande `self::node` et renvoie l’élément `<Location>` de chaque ligne.  
   
-Dans cet exemple, la requête définit chaque élément <`Location`> en tant que nœud de contexte du document d'instructions de fabrication d'un modèle de produit spécifique. Ces nœuds de contexte vous permettent d’effectuer les opérations d’extraction suivantes :  
+Dans cet exemple, la requête définit chaque élément <`Location`> en tant que nœud de contexte du document d’instructions de fabrication d’un modèle de produit spécifique. Ces nœuds de contexte vous permettent d’effectuer les opérations d’extraction suivantes :  
   
 - Rechercher les ID d’emplacement dans chaque élément <`Location`>  
   
@@ -299,7 +299,7 @@ WHERE ProductModelID=7
 GO    
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
 [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
 [Méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)  

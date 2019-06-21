@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: fae8d782dfcc4fd5e3c653cf5ac37f1323ebf59e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b5e4ba32dd96186a05df55ac57cadb31fa522ebe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213588"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62510328"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configurer un écouteur Always On pour un groupe de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,51 +30,9 @@ ms.locfileid: "53213588"
 > [!IMPORTANT]  
 >  Pour créer le premier écouteur d’un groupe de disponibilité, nous vous recommandons vivement d’utiliser [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Évitez de créer un écouteur directement dans le cluster WSFC, sauf si cela s'avère nécessaire, par exemple, pour créer un écouteur supplémentaire.  
   
--   **Avant de commencer :**  
-  
-     [Existe-t-il déjà un écouteur pour ce groupe de disponibilité ?](#DoesListenerExist)  
-  
-     [Limitations et restrictions](#Restrictions)  
-  
-     [Recommandations](#Recommendations)  
-  
-     [Conditions préalables](#Prerequisites)  
-  
-     [Conditions requises pour le nom DNS d'un écouteur de groupe de disponibilité](#DNSnameReqs)  
-  
-     [Autorisations Windows](#WinPermissions)  
-  
-     [Autorisations SQL Server](#SqlPermissions)  
-  
--   **Pour créer ou configurer un écouteur de groupe de disponibilité à l'aide de :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Dépannage**  
-  
-     [Échec de création d'un écouteur de groupe de disponibilité en raison de quotas Active Directory](#ADQuotas)  
-  
--   **Suivi : après la création d’un écouteur de groupe de disponibilité**  
-  
-     [Mot clé MultiSubnetFailover et fonctionnalités associées](#MultiSubnetFailover)  
-  
-     [Paramètre RegisterAllProvidersIP](#RegisterAllProvidersIP)  
-  
-     [Paramètre HostRecordTTL](#HostRecordTTL)  
-  
-     [Exemple de script PowerShell pour désactiver RegisterAllProvidersIP et réduire TTL](#SampleScript)  
-  
-     [Recommandations de suivi](#FollowUpRecommendations)  
-  
-     [Créer un écouteur supplémentaire pour un groupe de disponibilité (facultatif)](#CreateAdditionalListener)  
-  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="DoesListenerExist"></a> Existe-t-il déjà un écouteur pour ce groupe de disponibilité ?  
+ 
+##  <a name="DoesListenerExist"></a> Existe-t-il déjà un écouteur pour ce groupe de disponibilité ?  
+
  **Pour déterminer si un écouteur existe déjà pour le groupe de disponibilité**  
   
 -   [Afficher les propriétés d’écouteur de groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-listener-properties-sql-server.md)  
@@ -82,14 +40,14 @@ ms.locfileid: "53213588"
 > [!NOTE]  
 >  Si un écouteur existe déjà et que vous souhaitez créer un écouteur supplémentaire, consultez [Pour créer un écouteur supplémentaire pour un groupe de disponibilité (facultatif)](#CreateAdditionalListener), plus loin dans cette rubrique.  
   
-###  <a name="Restrictions"></a> Limitations et restrictions  
+##  <a name="Restrictions"></a> Limitations et restrictions  
   
 -   Vous ne pouvez créer qu'un seul écouteur par groupe de disponibilité via [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En général, chaque groupe de disponibilité nécessite un seul écouteur. Toutefois, certains scénarios de client requièrent plusieurs écouteurs pour un groupe de disponibilité.   Après la création d'un écouteur par SQL Server, vous pouvez utiliser Windows PowerShell pour les clusters de basculement ou le gestionnaire de cluster de basculement WSFC pour crée des écouteurs supplémentaires. Pour plus d’informations, consultez [Pour créer un écouteur supplémentaire pour un groupe de disponibilité (facultatif)](#CreateAdditionalListener), plus loin dans cette rubrique.  
   
-###  <a name="Recommendations"></a> Recommandations  
+##  <a name="Recommendations"></a> Recommandations  
  L'utilisation d'une adresse IP statique est recommandée, mais n'est pas obligatoire, en cas de configurations de plusieurs sous-réseaux.  
   
-###  <a name="Prerequisites"></a> Conditions préalables  
+##  <a name="Prerequisites"></a> Conditions préalables  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal.  
   
@@ -106,19 +64,19 @@ ms.locfileid: "53213588"
 > [!IMPORTANT]  
 >  NetBIOS identifie les 15 premiers caractères du nom_dns. Si vous avez deux clusters WSFC qui sont contrôlés par le même annuaire Active Directory et que vous tentez de créer des écouteurs de groupe de disponibilité dans les deux clusters à l'aide de noms contenant plus de 15 caractères et un préfixe identique de 15 caractères, vous obtenez une erreur signalant que la ressource de nom de réseau virtuel ne peut pas être mise en ligne. Pour plus d'informations sur les règles de préfixe des noms DNS, consultez [Attribution de noms de domaine](https://technet.microsoft.com/library/cc731265\(WS.10\).aspx).  
   
-###  <a name="WinPermissions"></a> Autorisations Windows  
+##  <a name="WinPermissions"></a> Autorisations Windows  
   
-|Permissions|Lien|  
+|Autorisations|Lien|  
 |-----------------|----------|  
-|Le nom d’objet cluster (CNO) du cluster WSFC qui héberge le groupe de disponibilité doit disposer de l’autorisation de **création d’objets ordinateur** .<br /><br /> Dans Active Directory, un CNO ne dispose pas par défaut explicitement de l’autorisation de **création d’objets ordinateur** et peut créer 10 objets ordinateur virtuel (VCO). Une fois les 10 VCO créés, la création de VCO supplémentaires échoue. Vous pouvez éviter cela en accordant l’autorisation explicite au CNO du cluster WSFC. Notez que les VCO des groupes de disponibilité que vous avez supprimé ne sont pas supprimés automatiquement dans Active Directory et sont pris en compte dans le nombre maximal par défaut de 10 VCO, sauf s'ils sont supprimés manuellement.<br /><br /> Remarque : Dans certaines organisations, la stratégie de sécurité interdit d’accorder l’autorisation de **création d’objets ordinateur** aux comptes d’utilisateur individuels.|*Étapes pour configurer le compte de la personne qui installe le cluster* dans le [Guide pas à pas du cluster de basculement : Configuration des comptes dans Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Étapes de préconfiguration du nom du compte de cluster* dans le [Guide pas à pas du cluster de basculement : Configuration des comptes dans Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
+|Le nom d’objet cluster (CNO) du cluster WSFC qui héberge le groupe de disponibilité doit disposer de l’autorisation de **création d’objets ordinateur** .<br /><br /> Dans Active Directory, un CNO ne dispose pas par défaut explicitement de l’autorisation de **création d’objets ordinateur** et peut créer 10 objets ordinateur virtuel (VCO). Une fois les 10 VCO créés, la création de VCO supplémentaires échoue. Vous pouvez éviter cela en accordant l’autorisation explicite au CNO du cluster WSFC. Notez que les VCO des groupes de disponibilité que vous avez supprimé ne sont pas supprimés automatiquement dans Active Directory et sont pris en compte dans le nombre maximal par défaut de 10 VCO, sauf s'ils sont supprimés manuellement.<br /><br /> Remarque : Dans certaines organisations, la stratégie de sécurité interdit d’accorder l’autorisation de **création d’objets ordinateur** aux comptes d’utilisateur individuels.|*Étapes pour configurer le compte de la personne qui installe le cluster* dans le [Guide pas à pas du cluster de basculement : Configuration des comptes dans Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_installer)<br /><br /> *Étapes de préconfiguration du nom du compte de cluster* dans le [Guide pas à pas du cluster de basculement : Configuration des comptes dans Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating)|  
 |Si votre organisation requiert la préconfiguration du compte d’ordinateur pour un nom de réseau virtuel d’écouteur, vous devrez être membre du groupe **Opérateur de compte** ou vous aurez besoin de l’aide de l’administrateur de domaine.|*Étapes de préconfiguration d’un compte pour un service cluster ou une application*  dans le [Guide pas à pas du cluster de basculement : Configuration des comptes dans Active Directory](https://technet.microsoft.com/library/cc731002\(WS.10\).aspx#BKMK_steps_precreating2).|  
   
 > [!TIP]  
 >  En général, il est plus simple de ne pas préconfigurer le compte d'ordinateur pour un nom de réseau virtuel d'écouteur. Si vous le pouvez, laissez le compte être créé et configuré automatiquement lorsque vous exécutez l'Assistant WSFC haute disponibilité.  
   
-###  <a name="SqlPermissions"></a> Autorisations SQL Server  
+##  <a name="SqlPermissions"></a> Autorisations SQL Server  
   
-|Tâche|Permissions|  
+|Tâche|Autorisations|  
 |----------|-----------------|  
 |Pour créer un écouteur de groupe de disponibilité|Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.|  
 |Pour modifier un écouteur de groupe de disponibilité existant|Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.|  
@@ -253,7 +211,7 @@ ms.locfileid: "53213588"
   
 -   [Quotas Active Directory](https://technet.microsoft.com/library/cc904295\(WS.10\).aspx)  
   
-##  <a name="FollowUp"></a> Suivi : Après la création d'un écouteur de groupe de disponibilité  
+##  <a name="FollowUp"></a> Suivi : Après la création d’un écouteur de groupe de disponibilité  
   
 ###  <a name="MultiSubnetFailover"></a> Mot clé MultiSubnetFailover et fonctionnalités associées  
  **MultiSubnetFailover** est un nouveau mot clé de chaîne de connexion utilisé pour permettre un basculement plus rapide avec les groupes de disponibilité Always On et les instances de cluster de basculement Always On dans SQL Server 2012. Les trois sous-fonctionnalités suivantes sont activées lorsque `MultiSubnetFailover=True` est défini dans la chaîne de connexion :  
@@ -270,9 +228,9 @@ ms.locfileid: "53213588"
   
  **MultiSubnetFailover=True non pris en charge par NET Framework 3.5 ou OLEDB**  
   
- **Problème :** Si votre groupe de disponibilité ou votre instance de cluster de basculement comporte un nom d'écouteur (également appelé « nom de réseau » ou « point d'accès client » dans le gestionnaire de cluster WSFC) qui dépend de plusieurs adresses IP de plusieurs sous-réseaux, et si vous utilisez soit ADO.NET avec .NET Framework 3.5SP1, soit SQL Native Client 11.0 OLEDB, 50 % de vos demandes de connexion client à l'écouteur du groupe de disponibilité sont susceptibles de dépasser le délai de connexion.  
+ **Problème :** Si votre groupe de disponibilité ou votre instance de cluster de basculement comporte un nom d’écouteur (également appelé « nom de réseau » ou « point d’accès client » dans le gestionnaire de cluster WSFC) qui dépend de plusieurs adresses IP de plusieurs sous-réseaux, et si vous utilisez soit ADO.NET avec .NET Framework 3.5SP1, soit SQL Native Client 11.0 OLEDB, 50 % de vos demandes de connexion client à l’écouteur du groupe de disponibilité sont susceptibles de dépasser le délai de connexion.  
   
- **Solutions de contournement :** nous vous recommandons d'effectuer l'une des tâches suivantes.  
+ **Solutions de contournement :** nous vous recommandons d’effectuer l’une des tâches suivantes.  
   
 -   Si vous n'êtes pas autorisé à manipuler les ressources de cluster, définissez le délai de connexion à 30 secondes (cette valeur correspond au délai TCP de 20 secondes plus un tampon de 10 secondes).  
   
@@ -282,7 +240,7 @@ ms.locfileid: "53213588"
   
 -   Si vous disposez d'une autorisation vous permettant de manipuler les ressources du cluster, l'approche privilégiée consiste à définir le nom du réseau de votre écouteur de groupe de disponibilité en tant que `RegisterAllProvidersIP=0`. Pour plus d’informations, consultez « Paramètre RegisterAllProvidersIP » plus loin dans cette section.  
   
-     **Avantages** : vous n'avez pas besoin d'augmenter la valeur du délai de connexion du client.  
+     **Avantages** : vous n'avez pas besoin d’augmenter la valeur du délai de connexion du client.  
   
      **Inconvénients :** en cas de basculement entre sous-réseaux, la durée de récupération du client peut être de 15 minutes ou plus, en fonction de votre paramètre **HostRecordTTL** et du paramètre de votre planification de la réplication DNS/AD intersites.  
   
@@ -302,7 +260,7 @@ ms.locfileid: "53213588"
     >   
     >  Veuillez ignorer ce message.  
   
--   Chaînes de connexion qui n'affectent pas la valeur True à **MultiSubnetFailover**   
+-   Chaînes de connexion qui n'affectent pas la valeur True à **MultiSubnetFailover**  
   
      Lorsque `RegisterAllProvidersIP = 1`, tous les clients dont les chaînes de connexion n'utilisent pas `MultiSubnetFailover = True`rencontreront des connexions à latence élevée. Cela est dû au fait que les clients essaient de se connecter à toutes les adresses IP de manière séquentielle. En revanche, si **RegisterAllProvidersIP** est changé en 0, l'adresse IP active est enregistrée dans le point d'accès client du cluster WSFC, ce qui réduit la latence pour les clients hérités. Par conséquent, si vous possédez des clients hérités qui doivent se connecter à un écouteur du groupe de disponibilité et ne peuvent pas utiliser la propriété **MultiSubnetFailover** , nous vous recommandons de changer **RegisterAllProvidersIP** en 0.  
   
@@ -375,7 +333,7 @@ Start-ClusterResource yourListenerName
   
 -   [Blog de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Clustering de sous-réseaux multiples SQL Server &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md)  

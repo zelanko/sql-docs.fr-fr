@@ -15,11 +15,11 @@ ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 1a45ddf4920f693db928dddd30256c20f36ebe4a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524339"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63037254"
 ---
 # <a name="sql-server-2008-r2-sp2-release-notes"></a>Notes de publication de SQL Server 2008 R2 SP2
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,13 +56,13 @@ Utilisez le tableau suivant pour déterminer le fichier à télécharger et inst
 |Aucune installation version 64 bits de SQL Server 2008 R2 Management Studio|Installez SQL Server 2008 R2 Management Studio, y compris le SP2|SQLManagementStudio_x64_ENU.exe à partir d' [ici](https://go.microsoft.com/fwlink/p/?LinkId=251791) pour installer la version gratuite de SQL Server 2008 R2 SP2 Management Studio Express Edition.|  
   
 ### <a name="22-setup-might-fail-if-sqagtresdll-is-locked-by-another-process"></a>2.2 Le programme d'installation peut échouer si SQAGTRES.dll est verrouillé par un autre processus  
-**Problème**: une opération d’installation de SQL peut échouer avec cette erreur : `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` L’origine du problème est que C:\Windows\system32\SQAGTRES.DLL étant verrouillé par un autre processus, le programme d’installation n’a pas pu le mettre à jour.  
+**Problème** : Une opération d’installation de SQL Server peut échouer avec cette erreur : `Upgrading of cluster resource C:\Program Files\Microsoft SQL Server\MSSQL10_50.<Instance name>\MSSQL\Binn\SQAGTRES.DLL on machine <Computer name> failed with Win32Exception. Please look at inner exception for details.` l’origine du problème est que C:\Windows\system32\SQAGTRES.DLL est verrouillé par un autre processus et le programme d’installation n'a pas pu le mettre à jour.  
   
-**Solution de contournement**: renommez C:\Windows\system32\SQAGTRES.DLL en un nom temporaire, tel que C:\Windows\system32\SQAGTRES_old.DLL, puis sélectionnez l'option de nouvelle tentative dans le message d'erreur d'installation. Ainsi, le programme d'installation continue. Après un redémarrage, supprimez le fichier temporaire C:\Windows\system32\SQAGTRES_old.DLL.  
+**Solution de contournement**: renommez C:\Windows\system32\SQAGTRES.DLL en un nom temporaire, tel que C:\Windows\system32\SQAGTRES_old.DLL, puis sélectionnez l’option de nouvelle tentative dans le message d’erreur d’installation. Ainsi, le programme d'installation continue. Après un redémarrage, supprimez le fichier temporaire C:\Windows\system32\SQAGTRES_old.DLL.  
   
 ## <a name="30-known-issues-fixed-in-this-service-pack"></a>3.0 Problèmes connus résolus dans ce Service Pack  
 Pour obtenir la liste des bogues et problèmes connus corrigés dans ce Service Pack, consultez l' [article principal de la Base de connaissances](https://support.microsoft.com/kb/2630455).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Comment déterminer la version et l'édition de SQL Server](https://support.microsoft.com/kb/321185)  
   

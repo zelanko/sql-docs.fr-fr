@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 31eda87e2a1934c5f18d73540a502880590445e8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207658"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051503"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -111,7 +111,7 @@ Spécifie le chemin d'accès local ou l'emplacement sur le réseau où se trouve
   
  Pour plus d’informations sur les jeux d’autorisations des assemblys, consultez [Conception d’assemblys](../../relational-databases/clr-integration/assemblies-designing.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  CREATE ASSEMBLY télécharge un assembly préalablement compilé sous forme d'un fichier .dll à partir de code managé pour l'utilisation dans une instance de SQL Server.  
  
 Quand elle est activée, l’option `PERMISSION_SET` dans les instructions `CREATE ASSEMBLY` et `ALTER ASSEMBLY` est ignorée au moment de l’exécution, mais les options `PERMISSION_SET` sont conservées dans les métadonnées. Ignorer cette option réduit les risques de rupture des instructions de code existantes.
@@ -129,7 +129,7 @@ Lors d’une tentative d’accès à l’assembly spécifié dans \<client_assem
   
 -   Le fichier assembly binaire se compose de métadonnées et de segments de code valides et ces segments de code contiennent des instructions MSIL (Microsoft Intermediate language) valides.  
   
--   Le jeu d'assemblys système qu'il référence est l'un des assemblys suivants pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll et System.Xml.Linq.dll. D'autres assemblys système peuvent être référencés, mais ils doivent être inscrits explicitement dans la base de données.  
+-   Le jeu d’assemblys système qu'il référence est l’un des assemblys suivants pris en charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : Microsoft.Visualbasic.dll, Mscorlib.dll, System.Data.dll, System.dll, System.Xml.dll, Microsoft.Visualc.dll, Custommarshallers.dll, System.Security.dll, System.Web.Services.dll, System.Data.SqlXml.dll, System.Core.dll et System.Xml.Linq.dll. D'autres assemblys système peuvent être référencés, mais ils doivent être inscrits explicitement dans la base de données.  
   
 -   Pour les assemblys créés à l'aide des ensembles d'autorisations SAFE ou EXTERNAL ACCESS :  
   
@@ -149,7 +149,7 @@ Lors d’une tentative d’accès à l’assembly spécifié dans \<client_assem
   
  Pour plus d’informations, consultez [Conception d’assemblys](../../relational-databases/clr-integration/assemblies-designing.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CREATE ASSEMBLY.  
   
  Si PERMISSION_SET = EXTERNAL_ACCESS est spécifié, nécessite l’autorisation **EXTERNAL ACCESS ASSEMBLY** sur le serveur. Si PERMISSION_SET = UNSAFE est spécifié, nécessite l’autorisation **UNSAFE ASSEMBLY** sur le serveur.  
@@ -168,7 +168,7 @@ Les autorisations suivantes sont requises pour créer un assembly CLR quand `CLR
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="example-a-creating-an-assembly-from-a-dll"></a>Exemple A : création d'un assembly à partir d'une dll  
+### <a name="example-a-creating-an-assembly-from-a-dll"></a>Exemple A : création d’un assembly à partir d’une dll  
   
 **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -183,7 +183,7 @@ WITH PERMISSION_SET = SAFE;
 > [!IMPORTANT]
 > Azure SQL Database ne prend pas en charge la création d’un assembly à partir d’un fichier.
   
-### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemple B : création d'un assembly à partir de bits d'assembly  
+### <a name="example-b-creating-an-assembly-from-assembly-bits"></a>Exemple B : création d’un assembly à partir de bits d’assembly  
   
 **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -195,7 +195,7 @@ CREATE ASSEMBLY HelloWorld
 WITH PERMISSION_SET = SAFE;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)   
  [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   

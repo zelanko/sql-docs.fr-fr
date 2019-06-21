@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6e09eae93b2b6a2f7c50dfc2d65370a23dc8d55d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205938"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025441"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Créer un instantané de base de données (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +77,7 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-#### <a name="Limiting_Number"></a> Bonne pratique : Limitation du nombre d'instantanés de base de données  
+#### <a name="Limiting_Number"></a> Bonne pratique : Limitation du nombre d’instantanés de base de données  
  La création d'une série d'instantanés dans le temps fournit des instantanés consécutifs de la base de données source. Chaque instantané est conservé jusqu'à ce qu'il soit explicitement supprimé. Chaque instantané continuant à grandir au fur et à mesure que les pages d'origine sont mises à jour, vous voudrez peut-être conserver de l'espace disque en supprimant un instantané plus ancien après en avoir créé un nouveau.  
   
 
@@ -88,7 +88,7 @@ AdventureWorks_snapshot_evening
   
 
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Tout utilisateur ayant la possibilité de créer une base de données peut également créer un instantané de base de données. Toutefois, pour créer un instantané d’une base de données miroir, vous devez être membre du rôle serveur fixe **sysadmin** .  
   
 ##  <a name="TsqlProcedure"></a> Comment créer un instantané de base de données (en utilisant Transact-SQL)  
@@ -130,7 +130,7 @@ AdventureWorks_snapshot_evening
   
 -   A. [Création d'un instantané sur la base de données AdventureWorks](#Creating_on_AW)  
   
--   b. [Création d'un instantané sur la base de données Sales (Ventes)](#Creating_on_Sales)  
+-   B. [Création d'un instantané sur la base de données Sales (Ventes)](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Création d'un instantané sur la base de données AdventureWorks  
  Cet exemple montre comment créer un instantané de base de données sur la base de données `AdventureWorks` . Le nom de l'instantané, `AdventureWorks_dbss_1800`, et le nom de son fichier partiellement alloué, `AdventureWorks_data_1800.ss`, précisent l'heure de création, 6H00 du soir (18 heures).  
@@ -174,7 +174,7 @@ GO
   
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   

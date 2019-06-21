@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8bc77d9539eb56b36493ccfdecc39c4bc319e0f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707067"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045295"
 ---
 # <a name="mssqlserver2533"></a>MSSQLSERVER_2533
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47707067"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_PAGE_WAS_NOT_SEEN|  
-|Texte du message|Erreur de table : la page P_ID assignée à l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE) n'a pas été affichée. La page n'est peut-être pas valide ou comporte un ID d'unité d'allocation incorrect dans son en-tête.|  
+|Texte du message|Erreur de table, la page P_ID assignée à l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID d’unité d’allocation A_ID (type TYPE) n'a pas été affichée. La page n'est peut-être pas valide ou comporte un ID d'unité d'allocation incorrect dans son en-tête.|  
   
 ## <a name="explanation"></a>Explication  
 Une page est allouée à l’ID d’unité d’allocation *A_ID*, mais cet ID d’unité d’allocation ne figure pas dans l’en-tête de la page. L'en-tête a un ID d'unité d'allocation différent. Si l'ID d'unité d'allocation de l'en-tête de la page n'est pas un objet valide, la page peut avoir une erreur de correspondance MSSQLEngine_2534.  
@@ -62,6 +62,6 @@ REPAIR désalloue la page. Si la page venait d'une unité d'allocation de donné
 > [!CAUTION]  
 > Cette réparation peut entraîner une perte de données.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [MSSQLSERVER_2534](~/relational-databases/errors-events/mssqlserver-2534-database-engine-error.md)  
   

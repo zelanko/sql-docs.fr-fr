@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 31eb77b8223c13de9fe5a7e098a42462ed4fd915
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591753"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716106"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>Actions et groupes d’actions SQL Server Audit
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,8 +82,8 @@ ms.locfileid: "53591753"
 |DATABASE_CHANGE_GROUP|Cet événement est déclenché lors de la création, de la modification ou de la suppression d'une base de données. Cet événement est déclenché chaque fois qu'une base de données est créée, modifiée ou supprimée. Équivaut à la [classe d’événements Audit Database Management](../../../relational-databases/event-classes/audit-database-management-event-class.md).|  
 |DATABASE_LOGOUT_GROUP|Cet événement est déclenché lorsqu'un utilisateur de base de données autonome se déconnecte d'une base de données. Équivalent à la classe d'événements Audit Database Logout.|  
 |DATABASE_MIRRORING_LOGIN_GROUP|Cet événement est déclenché pour signaler des messages d'audit relatifs à la sécurité du transport de la mise en miroir de bases de données. Équivaut à la [classe d’événements Audit Database Mirroring Login](../../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).|  
-|DATABASE_OBJECT_ACCESS_GROUP|Cet événement est déclenché à chaque accès à des objets de base de données tels qu'un type de message, un assembly ou un contrat. Cet événement est déclenché pour tout accès à toute base de données. Remarque : Cela peut générer des enregistrements d’audit volumineux.<br /><br /> Équivaut à la [classe d’événements Audit Database Object Access](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
-|DATABASE_OBJECT_CHANGE_GROUP|Cet événement est déclenché lorsqu'une instruction CREATE, ALTER ou DROP est exécutée sur des objets de base de données, tels que des schémas. Cet événement est déclenché chaque fois qu'un objet de base de données est créé, modifié ou supprimé. Remarque : Cela peut générer une très grande quantité d'enregistrements d'audit.<br /><br /> Équivaut à la [classe d’événements Audit Database Object Management](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
+|DATABASE_OBJECT_ACCESS_GROUP|Cet événement est déclenché à chaque accès à des objets de base de données tels qu'un type de message, un assembly ou un contrat. Cet événement est déclenché pour tout accès à toute base de données. Remarque : Cela peut générer des enregistrements d’audit volumineux.<br /><br /> Équivaut à la [classe d’événements Audit Database Object Access](../../../relational-databases/event-classes/audit-database-object-access-event-class.md).|  
+|DATABASE_OBJECT_CHANGE_GROUP|Cet événement est déclenché lorsqu'une instruction CREATE, ALTER ou DROP est exécutée sur des objets de base de données, tels que des schémas. Cet événement est déclenché chaque fois qu'un objet de base de données est créé, modifié ou supprimé. Remarque : Cela peut générer une très grande quantité d’enregistrements d’audit.<br /><br /> Équivaut à la [classe d’événements Audit Database Object Management](../../../relational-databases/event-classes/audit-database-object-management-event-class.md).|  
 |DATABASE_OBJECT_OWNERSHIP_CHANGE_GROUP|Cet événement est déclenché lorsqu'une modification de propriétaire pour des objets dans l'étendue de la base de données a lieu. Cet événement est déclenché pour toute modification de propriétaire d'objet dans une base de données sur le serveur. Équivaut à la [classe d’événements Audit Database Object Take Ownership](../../../relational-databases/event-classes/audit-database-object-take-ownership-event-class.md).|  
 |DATABASE_OBJECT_PERMISSION_CHANGE_GROUP|Cet événement est déclenché lorsqu'une instruction GRANT, REVOKE ou DENY a été émise pour des objets de base de données, tels que des assemblys et des schémas. Cet événement est déclenché pour toute modification d'autorisation d'objet pour une base de données sur le serveur. Équivaut à la [classe d’événements Audit Database Object GDR](../../../relational-databases/event-classes/audit-database-object-gdr-event-class.md).|  
 |DATABASE_OPERATION_GROUP|Cet événement est déclenché lorsque des opérations dans une base de données, telles qu'un point de contrôle ou une notification de requête d'abonnement, se produisent. Cet événement est déclenché sur toute opération de base de données sur toute base de données. Équivaut à la [classe d’événements Audit Database Operation](../../../relational-databases/event-classes/audit-database-operation-event-class.md).|  

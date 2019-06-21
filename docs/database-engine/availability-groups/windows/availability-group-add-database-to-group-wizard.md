@@ -16,12 +16,12 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 80c63fa27f1ba85882b18f47910f38c06dd09f51
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db9c48686a6292f4a2fcd6ef85501fb1b715241d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140651"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Ajouter une base de données à un groupe de disponibilité Always On avec « l’Assistant Groupe de disponibilité »
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,6 +66,10 @@ ms.locfileid: "66800140"
      Si la base de données contient une clé principale de base de données, entrez le mot de passe de la clé principale de base de données dans la colonne **Mot de passe** .  
   
 5.  Sur la page **Sélectionner la synchronisation de données initiale** , choisissez comment vous souhaitez que vos nouvelles bases de données secondaires soient créées et jointes au groupe de disponibilité. Choisissez l'une des options suivantes :  
+
+    - **Amorçage automatique**
+      
+      Sélectionnez cette option pour utiliser l’amorçage automatique. L’amorçage automatique utilise le transport de flux de journaux pour transmettre en continu la sauvegarde à l’aide de VDI vers le réplica secondaire pour chaque base de données du groupe de disponibilité, en utilisant les points de terminaison configurés. Cette opération restaure la sauvegarde de la base de données sur le réplica secondaire, ce qui évite d’avoir à le faire manuellement. Pour plus d’informations sur l’amorçage automatique, voir [Amorçage automatique](automatic-seeding-secondary-replicas.md).
   
     -   **Complet**  
   

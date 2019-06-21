@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 569b085d28a0339927049fca0d758286dd1b6e8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737247"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686099"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Classe d'événements CPU Threshold Exceeded
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "47737247"
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |Unité centrale|**Int**|Utilisation de l'UC en millisecondes.|18|Oui|  
-|EventClass|**Int**|214|27|non|  
+|EventClass|**Int**|214|27|Non|  
 |EventSubClass|**Int**|Violation de la limite de l'UC.|21|Oui|  
 |GroupID|**Int**|ID de groupe où la violation s'est produite.|66|Oui|  
 |OwnerID|**Int**|SPID du processus qui a provoqué la violation.|58|Oui|  
-|SPID|**Int**|ID du processus serveur qui déclenche cet événement.<br /><br /> Remarque : il peut être différent du SPID de l’utilisateur réel si un thread système valide l’utilisation de l’UC comme une tâche en arrière-plan.|12|Oui|  
+|SPID|**Int**|ID du processus serveur qui déclenche cet événement.<br /><br /> Remarque : Il peut être différent du SPID de l’utilisateur réel si un thread système valide l’utilisation de l’UC comme une tâche en arrière-plan.|12|Oui|  
 |StartTime|**datetime**|Heure de déclenchement de cet événement.|14|Oui|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

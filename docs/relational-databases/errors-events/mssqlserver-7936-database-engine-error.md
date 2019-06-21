@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ea3c26affaac50e791a9d18d68911850a1ac53f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688617"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797143"
 ---
 # <a name="mssqlserver7936"></a>MSSQLSERVER_7936
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47688617"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_ORPHANED_COLUMN_DIRECTORY|  
-|Texte du message|Erreur de table : le répertoire FileStream existe pour l'ID de colonne C_ID de l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, mais cette colonne n'est pas une colonne FileStream.|  
+|Texte du message|Erreur de table, le répertoire FileStream existe pour l’ID de colonne C_ID de l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, mais cette colonne n'est pas une colonne FileStream.|  
   
 ## <a name="explanation"></a>Explication  
 Au cours de l’exécution de DBCC CHECKDB, un répertoire FILESTREAM a été trouvé pour la colonne spécifiée ; toutefois, la colonne n’est pas de type **FILESTREAM**.  

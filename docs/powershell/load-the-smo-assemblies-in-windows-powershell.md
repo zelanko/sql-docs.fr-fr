@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 390a406196b0de0ca49940a53ef819c19b0120d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685977"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672562"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Charger les assemblys SMO dans Windows PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ Il existe deux cas dans lesquels vous pouvez être amené à charger les assembl
   
 -   Vous souhaitez porter du code SMO à partir d'un autre langage, par exemple C# ou Visual Basic, qui n'utilise pas le fournisseur ou les applets de commande.  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>Exemple : chargement d'objets SMO (SQL Server Management Object)  
+## <a name="example-loading-the-sql-server-management-objects"></a>Exemple : chargement d’objets SMO (SQL Server Management Object)  
  Le code suivant charge les assemblys SMO :  
   
 ```  
@@ -92,7 +92,7 @@ update-FormatData -prependpath SQLProvider.Format.ps1xml
 Pop-Location  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

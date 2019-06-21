@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0a208baaf237987c9f3e544da4d02dca72b191f9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021450"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62857317"
 ---
 # <a name="value-method-xml-data-type"></a>value(), méthode (Type de données xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ value (XQuery, SQLType)
  La méthode **value()** utilise l’opérateur [!INCLUDE[tsql](../../includes/tsql-md.md)] CONVERT de manière implicite et essaie de convertir le résultat de l’expression de requête Xml, la représentation de chaîne sérialisée, du type XSD vers le type SQL correspondant spécifié par la conversion [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour plus d’informations sur les règles de conversion de type pour CONVERT, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 > [!NOTE]  
->  Pour des raisons de performances, au lieu d’utiliser la méthode **value()** dans un prédicat pour effectuer une comparaison avec une valeur relationnelle, utilisez **exist()** avec **sql:column()**. L'exemple D vous en donne l'illustration.  
+>  Pour des raisons de performances, au lieu d’utiliser la méthode **value()** dans un prédicat pour effectuer une comparaison avec une valeur relationnelle, utilisez **exist()** avec **sql:column()** . L'exemple D vous en donne l'illustration.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -73,7 +73,7 @@ SELECT @ProdID
   
  Bien qu'il n'y ait qu'un seul attribut `ProductID` dans l'instance XML, les règles de types statiques exigent que vous spécifiiez de manière explicite que l'expression de chemin d'accès retourne un singleton. Par conséquent, le `[1]` supplémentaire est spécifié à la fin de l'expression de chemin d'accès. Pour plus d’informations sur les types statiques, consultez [Requête Xml et typage statique](../../xquery/xquery-and-static-typing.md).  
   
-### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>b. Utilisation de la méthode value() pour récupérer une valeur à partir d'une colonne de type xml  
+### <a name="b-using-the-value-method-to-retrieve-a-value-from-an-xml-type-column"></a>B. Utilisation de la méthode value() pour récupérer une valeur à partir d'une colonne de type xml  
  La requête suivante porte sur une colonne de type **xml** (`CatalogDescription`) dans la base de données `AdventureWorks`. La requête récupère des valeurs d'attributs `ProductModelID` à partir de chaque instance XML stockée dans la colonne.  
   
 ```  
@@ -103,7 +103,7 @@ ORDER BY Result desc
 ### <a name="c-using-the-value-and-exist-methods-to-retrieve-values-from-an-xml-type-column"></a>C. Utilisation des méthodes value() et exist() pour récupérer des valeurs à partir d'une colonne de type xml  
  L’exemple suivant illustre l’utilisation de la méthode `value()` et de la [méthode exist() ](../../t-sql/xml/exist-method-xml-data-type.md) du type de données **xml**. La méthode `value()` est utilisée pour récupérer des valeurs d'attributs `ProductModelID` à partir du code XML. La méthode `exist()` de la clause `WHERE` est utilisée pour filtrer les lignes de la table.  
   
- La requête récupère des ID de modèle de produit à partir d'instances XML qui incluent des informations de garantie (l'élément <`Warranty`>) comme caractéristiques. La condition de la clause `WHERE` utilise la méthode `exist()` pour récupérer uniquement les lignes qui satisfont cette condition.  
+ La requête récupère des ID de modèle de produit à partir d’instances XML qui incluent des informations de garantie (l’élément <`Warranty`>) comme caractéristiques. La condition de la clause `WHERE` utilise la méthode `exist()` pour récupérer uniquement les lignes qui satisfont cette condition.  
   
 ```  
 SELECT CatalogDescription.value('  
@@ -121,7 +121,7 @@ WHERE CatalogDescription.exist('
   
 -   La colonne `CatalogDescription` est une colonne XML typée. Cela signifie qu'une collection de schémas lui est associée. Dans le [prologue de la requête Xml](../../xquery/modules-and-prologs-xquery-prolog.md), la déclaration de l’espace de noms permet de définir le préfixe utilisé ultérieurement dans le corps de la requête.  
   
--   Si la méthode `exist()` retourne un `1` (True), cela indique que l'instance XML contient l'élément enfant <`Warranty`> comme caractéristique.  
+-   Si la méthode `exist()` retourne un `1` (True), cela indique que l’instance XML contient l’élément enfant <`Warranty`> comme caractéristique.  
   
 -   La méthode `value()` de la clause `SELECT` récupère ensuite les valeurs d'attributs `ProductModelID` comme entiers.  
   
@@ -136,7 +136,7 @@ Result
 ```  
   
 ### <a name="d-using-the-exist-method-instead-of-the-value-method"></a>D. Utilisation de la méthode exist() au lieu de la méthode value()  
- Pour des raisons de performances, au lieu d'utiliser la méthode `value()` dans un prédicat pour comparer avec une valeur relationnelle, utilisez `exist()` avec `sql:column()`. Exemple :  
+ Pour des raisons de performances, au lieu d'utiliser la méthode `value()` dans un prédicat pour comparer avec une valeur relationnelle, utilisez `exist()` avec `sql:column()`. Par exemple :  
   
 ```  
 CREATE TABLE T (c1 int, c2 varchar(10), c3 xml)  
@@ -157,7 +157,7 @@ WHERE c3.exist( '/root[@a=sql:column("c1")]') = 1
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   

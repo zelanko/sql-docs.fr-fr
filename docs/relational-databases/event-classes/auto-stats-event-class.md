@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 462b14902e9a0a5e830e3359d3db4474a150fd5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827348"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686845"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,9 +34,9 @@ ms.locfileid: "47827348"
 |**Duration**|**bigint**|Temps (en microsecondes) pris par l'événement.|13|Oui|  
 |**EndTime**|**datetime**|Heure de fin de l'événement.|15|Oui|  
 |**Erreur**|**Int**|Numéro d'erreur d'un événement donné. Il s’agit souvent du numéro d’erreur stocké dans l’affichage catalogue **sys.messages** .|31|Oui|  
-|**EventClass**|**Int**|Type d’événement = 58|27|non|  
-|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|non|  
-|**EventSubClass**|**Int**|Type de sous-classe d'événements.<br /><br /> 1 : Statistiques créées/mises à jour de façon synchrone ; la colonne **TextData** indique de quelles statistiques il s’agit et la nature de l’opération exécutée, création ou mise à jour.<br /><br /> 2 : Mise à jour asynchrone des statistiques ; mise en file d’attente du travail.<br /><br /> 3 : Mise à jour asynchrone des statistiques ; démarrage du travail.<br /><br /> 4 : Mise à jour asynchrone des statistiques ; fin du travail.|21|Oui|  
+|**EventClass**|**Int**|Type d’événement = 58|27|Non|  
+|**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
+|**EventSubClass**|**Int**|Type de sous-classe d'événements.<br /><br /> 1 : Statistiques créées/mises à jour de façon synchrone ; la colonne **TextData** indique de quelles statistiques il s’agit et la nature de l’opération exécutée, création ou mise à jour<br /><br /> 2 : Mise à jour asynchrone des statistiques ; mise en file d’attente du travail.<br /><br /> 3 : Mise à jour asynchrone des statistiques ; démarrage du travail.<br /><br /> 4 : Mise à jour asynchrone des statistiques ; fin du travail.|21|Oui|  
 |**GroupID**|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IndexID**|**Int**|ID de l'entrée index/statistiques sur l'objet affecté par l'événement. Pour déterminer l’ID d’index d’un objet, utilisez la colonne **index_id** de l’affichage catalogue **sys.indexes** .|24|Oui|  
@@ -49,16 +49,16 @@ ms.locfileid: "47827348"
 |**NTUserName**|**nvarchar**|Nom d'utilisateur Windows.|6|Oui|  
 |**ObjectID**|**Int**|ID affecté à l'objet par le système.|22|Oui|  
 |**RequestID**|**Int**|ID de la demande contenant l'instruction.|49|Oui|  
-|**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|**ServerName**|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |**SessionLoginName**|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moyen de Login1 et que vous exécutez une commande en tant que Login2, **SessionLoginName** affiche Login1 et **LoginName** affiche Login2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|64|Oui|  
 |**SPID**|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |**Réussi**|**Int**|0 = erreur<br /><br /> 1 = réussite.<br /><br /> 2 = ignoré en raison de l'accélération du serveur (MSDE).|23|Oui|  
-|**TextData**|**ntext**|Le contenu de cette colonne dépend si les statistiques sont mises à jour de façon synchrone (**EventSubClass** 1) ou asynchrone (**EventSubClass** 2, 3 ou 4) :<br /><br /> 1 : Affiche les statistiques qui ont été mises à jour/créées.<br /><br /> 2, 3 ou 4 : NULL ; la colonne **IndexID** contient les ID d’index ou de statistiques des statistiques mises à jour.|1|Oui|  
+|**TextData**|**ntext**|Le contenu de cette colonne dépend si les statistiques sont mises à jour de façon synchrone (**EventSubClass** 1) ou asynchrone (**EventSubClass** 2, 3 ou 4) :<br /><br /> 1 : Affiche les statistiques qui ont été mises à jour/créées<br /><br /> 2, 3 ou 4 : NULL ; la colonne **IndexID** contient les ID d’index ou de statistiques des statistiques mises à jour.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
 |**Type**|**Int**|Type du travail.|57|Oui|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

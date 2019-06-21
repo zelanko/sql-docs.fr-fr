@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 17c42f4c43245e8a39251d765f29c378d8cf9d19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788007"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046342"
 ---
 # <a name="mssqlserver2579"></a>MSSQLSERVER_2579
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,10 +31,10 @@ ms.locfileid: "47788007"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_EXTENT_OUT_OF_RANGE|  
-|Texte du message|Erreur de table : l'extension P_ID, ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE) est en dehors des limites de cette base de données.|  
+|Texte du message|Erreur de table, l’extension P_ID, ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID d’unité d’allocation A_ID (type TYPE) est en dehors des limites de cette base de données.|  
   
 ## <a name="explanation"></a>Explication  
-*P_ID* est un ID de page de la forme *(filenum:pageinfile)*. La valeur de *pageinfile* de cette extension est supérieure à la taille physique du fichier (*filenum*) de la base de données. L'extension est marquée comme étant allouée dans une page IAM pour l'ID d'unité d'allocation indiquée.  
+*P_ID* est un ID de page de la forme *(filenum:pageinfile)* . La valeur de *pageinfile* de cette extension est supérieure à la taille physique du fichier (*filenum*) de la base de données. L'extension est marquée comme étant allouée dans une page IAM pour l'ID d'unité d'allocation indiquée.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
   

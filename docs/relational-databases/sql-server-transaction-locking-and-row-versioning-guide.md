@@ -18,11 +18,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980555"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663348"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -284,14 +284,14 @@ GO
 |Lecture non validée|Le niveau d'isolement le plus bas et suffisant pour s'assurer que les données physiquement corrompues ne sont pas lues. À ce niveau, les lectures de modifications sont autorisées. Ainsi, une transaction peut afficher les modifications qui ne sont pas encore validées apportées par d'autres transactions.|  
 |Lecture validée|Permet à une transaction de lire des données lues auparavant (non modifiées) par une autre transaction, sans attendre la fin de la première transaction. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] conserve les verrous d'écriture (acquis sur les données sélectionnées) jusqu'à la fin de la transaction, mais les verrous le lecture sont libérés dès que l'opération SELECT est terminée. C'est le niveau par défaut du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)].|  
 |Lecture renouvelable|Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] conserve les verrous de lecture et d'écriture acquis sur les données sélectionnées jusqu'à la fin de la transaction. Cependant, étant donné que les verrous d'étendus ne sont pas gérés, des lectures fantômes peuvent se produire.|  
-|Sérialisable|Niveau le plus élevé, dans lequel les transactions sont totalement isolées les unes des autres. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] conserve les verrous de lecture et d'écriture acquis sur les données sélectionnées de façon à les libérer à la fin de la transaction. Les verrous d'étendues sont acquis lorsqu'une opération SELECT utilise une clause WHERE, plus particulièrement pour éviter les lectures fantômes.<br /><br /> **Remarque :** Les opérations DDL et les transactions sur les tables répliquées peuvent échouer lorsque le niveau d'isolation sérialisable est demandé. Cela est dû au fait que les requêtes de réplication utilisent des indicateurs qui peuvent être incompatibles avec le niveau d'isolation sérialisable.|  
+|Sérialisable|Niveau le plus élevé, dans lequel les transactions sont totalement isolées les unes des autres. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] conserve les verrous de lecture et d'écriture acquis sur les données sélectionnées de façon à les libérer à la fin de la transaction. Les verrous d'étendues sont acquis lorsqu'une opération SELECT utilise une clause WHERE, plus particulièrement pour éviter les lectures fantômes.<br /><br /> **Remarque :** Les opérations DDL et les transactions sur les tables répliquées peuvent échouer lorsque le niveau d’isolation sérialisable est demandé. Cela est dû au fait que les requêtes de réplication utilisent des indicateurs qui peuvent être incompatibles avec le niveau d'isolation sérialisable.|  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend également en charge deux niveaux d'isolement de la transaction supplémentaires qui utilisent le contrôle de version de ligne. Le premier est une implémentation de l'isolement read committed, et le deuxième est un niveau d'isolement, l'instantané.  
   
 |Niveau d'isolement basé sur le contrôle de version de ligne|Définition|  
 |------------------------------------|----------------|  
 |Instantané read committed|Lorsque l'option de base de données READ_COMMITTED_SNAPSHOT a la valeur ON, le niveau d'isolation read committed utilise le contrôle de version de ligne pour procurer une lecture cohérente au niveau des instructions. Les opérations de lecture ont besoin uniquement de verrous de table SCH-S, et pas de verrous de page ni de ligne. À savoir, le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] utilise le contrôle de version de ligne pour présenter à chaque instruction un instantané cohérent des données (du point de vue transactionnel) telles qu’elles étaient au début de l’instruction. Les verrous ne sont pas utilisés pour protéger les données des mises à jour par d'autres transactions. Une fonction définie par l'utilisateur peut retourner des données qui ont été validées après l'heure de début de l'instruction contenant cette fonction.<br /><br /> Si l’option de base de données `READ_COMMITTED_SNAPSHOT` a la valeur OFF (valeur par défaut), l’isolation read committed utilise des verrous partagés pour empêcher d’autres transactions de modifier des lignes pendant que la transaction active exécute une opération de lecture. Les verrous partagés empêchent également l'instruction de lire des lignes modifiées par d'autres transactions, tant que celles-ci ne sont pas terminées. Les deux variantes sont conformes à la définition de l'isolation read committed de l'ISO.|  
-|Snapshot|Le niveau d'isolation d'instantané utilise le contrôle de version de ligne pour assurer la cohérence des lectures au niveau de la transaction. Les opérations de lecture ont besoin uniquement de verrous de table SCH-S, et pas de verrous de page ni de ligne. Lorsque l'opération de lecture lit des lignes modifiées par une autre transaction, elle récupère la version de la ligne du début de la transaction. Vous pouvez utiliser l’isolation d’instantané pour une base de données uniquement quand la valeur ON est attribuée à l’option de base de données `ALLOW_SNAPSHOT_ISOLATION`. Par défaut, cette option est désactivée (OFF) pour les bases de données utilisateur.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge le contrôle de version des métadonnées. Pour cette raison, il existe des restrictions sur les opérations DDL pouvant être effectuées dans une transaction explicite exécutée avec le niveau d'isolement d'instantané. Les instructions DDL suivantes ne sont pas autorisées en isolement d'instantanée après une instruction BEGIN TRANSACTION : ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou toute instruction DDL CLR (Common Language Runtime). Ces instructions sont autorisées lorsque vous avez recours à l'isolation d'instantané au sein des transactions implicites. Par définition, une transaction implicite est une instruction unique qui permet d'appliquer la sémantique de l'isolation d'instantané, même avec des instructions DDL. Tout manquement à ce principe peut provoquer l’erreur 3961 : `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
+|Snapshot|Le niveau d'isolation d'instantané utilise le contrôle de version de ligne pour assurer la cohérence des lectures au niveau de la transaction. Les opérations de lecture ont besoin uniquement de verrous de table SCH-S, et pas de verrous de page ni de ligne. Lorsque l'opération de lecture lit des lignes modifiées par une autre transaction, elle récupère la version de la ligne du début de la transaction. Vous pouvez utiliser l’isolation d’instantané pour une base de données uniquement quand la valeur ON est attribuée à l’option de base de données `ALLOW_SNAPSHOT_ISOLATION`. Par défaut, cette option est désactivée (OFF) pour les bases de données utilisateur.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge le contrôle de version des métadonnées. Pour cette raison, il existe des restrictions sur les opérations DDL pouvant être effectuées dans une transaction explicite exécutée avec le niveau d'isolement d'instantané. Les instructions DDL suivantes ne sont pas autorisées en isolement d’instantanée après une instruction BEGIN TRANSACTION : ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou toute instruction DDL CLR (Common Language Runtime). Ces instructions sont autorisées lorsque vous avez recours à l'isolation d'instantané au sein des transactions implicites. Par définition, une transaction implicite est une instruction unique qui permet d'appliquer la sémantique de l'isolation d'instantané, même avec des instructions DDL. Tout manquement à ce principe peut provoquer l’erreur 3961 : `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
  Le tableau suivant répertorie les effets secondaires de la concurrence provoqués par les différents niveaux d'isolation.  
   
@@ -453,7 +453,7 @@ GO
   
  Le verrouillage d'étendues de clés empêche les lectures fantômes. La protection des étendues de clés entre les lignes permet également d'empêcher les insertions fantômes dans un jeu d'enregistrements auquel une transaction accède.  
   
- Un verrou d'étendues de clés est placé sur un index, spécifiant une valeur de clé de début et de fin. Ce verrou bloque toute tentative d'insertion, de mise à jour ou de suppression de ligne possédant une valeur de clé comprise dans cette étendue, car ces opérations doivent d'abord acquérir un verrou sur l'index. Par exemple, une transaction sérialisable peut émettre une instruction SELECT qui lit toutes les lignes dont les valeurs de clés sont comprises entre **'** AAA **'** et **'** CZZ **'**. Un verrou de groupes de clés sur les valeurs de clés comprises entre **'** AAA **'** et **'** CZZ **'** empêche les autres transactions d’insérer des lignes possédant des valeurs de clés comprises dans ce groupe, telles que **'** ADG **'**, **'** BBD **'** ou **'** CAL **'**.  
+ Un verrou d'étendues de clés est placé sur un index, spécifiant une valeur de clé de début et de fin. Ce verrou bloque toute tentative d'insertion, de mise à jour ou de suppression de ligne possédant une valeur de clé comprise dans cette étendue, car ces opérations doivent d'abord acquérir un verrou sur l'index. Par exemple, une transaction sérialisable peut émettre une instruction SELECT qui lit toutes les lignes dont les valeurs de clés sont comprises entre **'** AAA **'** et **'** CZZ **'** . Un verrou de groupes de clés sur les valeurs de clés comprises entre **'** AAA **'** et **'** CZZ **'** empêche les autres transactions d’insérer des lignes possédant des valeurs de clés comprises dans ce groupe, telles que **'** ADG **'** , **'** BBD **'** ou **'** CAL **'** .  
   
 #### <a name="key_range_modes"></a> Modes de verrouillage d'étendues de clés  
  Les verrous d'étendues de clés comprennent un composant étendue et un composant ligne, au format étendue-ligne :  
@@ -509,7 +509,7 @@ GO
  Les conditions suivantes doivent être satisfaites pour qu'un verrouillage d'étendues de clés puisse se produire :  
   
 -   Le niveau d'isolement de la transaction doit être défini sur SERIALIZABLE.  
--   Le processeur de requêtes doit utiliser un index pour implémenter le prédicat de filtre de l'étendue. Par exemple, la clause WHERE dans une instruction SELECT peut établir une condition d'étendue avec le prédicat suivant : ColonneX BETWEEN N **’** AAA **’** AND N **’** CZZ **’**. Un verrou de groupes de clés ne peut être acquis que si **ColumnX** est couvert par une clé d’index.  
+-   Le processeur de requêtes doit utiliser un index pour implémenter le prédicat de filtre de l'étendue. Par exemple, la clause WHERE dans une instruction SELECT peut établir une condition d’étendue avec le prédicat suivant : ColonneX BETWEEN N **’** AAA **’** AND N **’** CZZ **’** . Un verrou de groupes de clés ne peut être acquis que si **ColumnX** est couvert par une clé d’index.  
   
 #### <a name="examples"></a>Exemples  
  La table et l'index suivants sont utilisés comme base pour les exemples de verrouillage d'étendues de clés ci-dessous.  
@@ -578,14 +578,14 @@ INSERT mytable VALUES ('Dan');
  Dans [!INCLUDE[ssKatmai](../includes/ssKatmai-md.md)] et versions ultérieures, le comportement d’escalade de verrous a changé avec l’introduction de l’option `LOCK_ESCALATION`. Pour plus d’informations, consultez l’option `LOCK_ESCALATION` de l’instruction [ALTER TABLE](../t-sql/statements/alter-table-transact-sql.md).  
   
 ### <a name="deadlocks"></a> Interblocage  
- Un interblocage se produit lorsque deux tâches ou plus se bloquent mutuellement de façon permanente. Dans ce cas, chaque tâche place un verrou sur une ressource que la ou les autres tâches essaient de verrouiller. Exemple :  
+ Un interblocage se produit lorsque deux tâches ou plus se bloquent mutuellement de façon permanente. Dans ce cas, chaque tâche place un verrou sur une ressource que la ou les autres tâches essaient de verrouiller. Par exemple :  
   
 -   La transaction A obtient un verrou partagé sur la ligne 1.  
 -   La transaction B obtient un verrou partagé sur la ligne 2.  
 -   La transaction A demande un verrou exclusif sur la ligne 2, mais elle est bloquée jusqu'à la fin de la transaction B qui libérera le verrou partagé sur la ligne 2.  
 -   La transaction B demande un verrou exclusif sur la ligne 1, mais elle est bloquée jusqu'à la fin de la transaction A qui libérera le verrou partagé sur la ligne 1.  
   
- La transaction A ne peut pas se terminer tant que la transaction B n'est pas terminée, mais la transaction B est bloquée par la transaction A. Il s'agit d'une dépendance cyclique : La transaction A est dépendante de la transaction B, mais celle-ci ne peut pas s'exécuter car elle est dépendante de la transaction A.  
+ La transaction A ne peut pas se terminer tant que la transaction B n'est pas terminée, mais la transaction B est bloquée par la transaction A. Il s’agit d’une dépendance cyclique : La transaction A est dépendante de la transaction B, mais celle-ci ne peut pas s’exécuter, car elle est dépendante de la transaction A.  
   
  Les deux transactions en interblocage attendent indéfiniment que la situation soit débloquée par un processus externe. Le moniteur d’interblocage du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] recherche périodiquement les tâches d’interblocage. S'il détecte une situation de dépendance cyclique, il désigne une des tâches comme victime et met fin à sa transaction avec un message d'erreur. Cela permet à l'autre tâche de terminer sa transaction. L'application qui exécutait la transaction abandonnée peut effectuer une nouvelle tentative qui réussit en général une fois que l'autre transaction est terminée.  
   
@@ -623,7 +623,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **Ressources liées à l’exécution de requêtes parallèles**. Les threads de coordination, production ou consommation associées à un port d’échange peuvent se bloquer mutuellement et provoquer un interblocage qui se produit généralement lors de l’introduction d’au moins un autre processus étranger à la requête parallèle. De même, quand commence l'exécution d'une requête parallèle, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] détermine le degré de parallélisme, ou le nombre de threads de travail, en fonction de la charge de travail en cours. Si la charge de travail change de façon inattendue, par exemple si de nouvelles requêtes commencent à s'exécuter sur le serveur ou que le système se trouve à court de threads de travail, il peut s'ensuivre un blocage.  
   
--   **Ressources MARS (Multiple Active Result Sets)**. Ces ressources servent à contrôler l'entrelacement de plusieurs demandes actives sous MARS. Pour plus d’informations, consultez [Utilisation de MARS (Multiple Active Result Sets)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+-   **Ressources MARS (Multiple Active Result Sets)** . Ces ressources servent à contrôler l'entrelacement de plusieurs demandes actives sous MARS. Pour plus d’informations, consultez [Utilisation de MARS (Multiple Active Result Sets)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
     -   **Ressource utilisateur**. Lorsqu'un thread est en attente d'une ressource potentiellement contrôlée par une application d'utilisateur, la ressource est considérée comme étant une ressource externe ou utilisateur et est traitée comme un verrou.  
   
@@ -1021,7 +1021,7 @@ BEGIN TRANSACTION
   
  Session 1 :  
   
- L'instruction `SELECT` suivante est exécutée sous la transaction qui est encore active sous la session 1. En raison de l'indicateur de verrou de table exclusif (X), la transaction va essayer d'acquérir un verrou exclusif X sur la table. Toutefois, le verrou S qui est maintenu par la transaction de la session 2 bloquera le verrou X au niveau de la partition ID 0.   
+ L'instruction `SELECT` suivante est exécutée sous la transaction qui est encore active sous la session 1. En raison de l'indicateur de verrou de table exclusif (X), la transaction va essayer d'acquérir un verrou exclusif X sur la table. Toutefois, le verrou S qui est maintenu par la transaction de la session 2 bloquera le verrou X au niveau de la partition ID 0.  
   
 ```sql  
 SELECT col1  
@@ -1045,7 +1045,7 @@ BEGIN TRANSACTION
   
  Session 2 :  
   
- Une instruction `SELECT` est exécutée sous une transaction. En raison de l'indicateur de verrou `TABLOCKX`, la transaction essaie d'acquérir un verrou exclusif (X) sur la table. Souvenez-vous que le verrou X doit être acquis sur toutes les partitions à partir de la partition ID 0. Le verrou X sera acquis sur toutes les partitions, de l'ID 0 à 5, mais il sera bloqué par le verrou IS acquis sur la partition ID 6.   
+ Une instruction `SELECT` est exécutée sous une transaction. En raison de l'indicateur de verrou `TABLOCKX`, la transaction essaie d'acquérir un verrou exclusif (X) sur la table. Souvenez-vous que le verrou X doit être acquis sur toutes les partitions à partir de la partition ID 0. Le verrou X sera acquis sur toutes les partitions, de l'ID 0 à 5, mais il sera bloqué par le verrou IS acquis sur la partition ID 6.  
   
  Sur les ID de partition de 7 à 15 que le verrou X n'a pas encore atteint, d'autres transactions peuvent continuer d'acquérir des verrous.  
   
@@ -1236,7 +1236,7 @@ BEGIN TRANSACTION
 ##### <a name="performance-counters"></a>Compteurs de performances  
  Les compteurs de performance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] fournissent des informations sur les performances système affectées par les processus de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les compteurs de performances suivants contrôlent tempdb et le magasin de versions, ainsi que les transactions utilisant le contrôle de version de ligne. Les compteurs de performances se trouvent dans l'objet de performances SQLServer:Transactions.  
   
- **Espace disponible dans tempdb (Ko)**. Contrôle la quantité, en kilooctets (Ko), d'espace libre dans la base de données tempdb. tempdb doit disposer d'un espace libre suffisant pour gérer le magasin de versions prenant en charge l'isolement d'instantané.  
+ **Espace disponible dans tempdb (Ko)** . Contrôle la quantité, en kilooctets (Ko), d'espace libre dans la base de données tempdb. tempdb doit disposer d'un espace libre suffisant pour gérer le magasin de versions prenant en charge l'isolement d'instantané.  
   
  La formule ci-dessous vous donne une estimation grossière de la taille du magasin de versions. Pour estimer la taille du magasin de versions en ce qui concerne les transactions longues, il peut s'avérer utile de contrôler les taux de génération et de nettoyage.  
   
@@ -1244,7 +1244,7 @@ BEGIN TRANSACTION
   
  Le délai le plus long d'exécution de transaction ne doit pas inclure les constructions d'un index en ligne. Étant donné que ces dernières opérations peuvent prendre un certain temps pour les tables volumineuses, elles utilisent un autre magasin de versions. La taille approximative du magasin de versions utilisé pour les constructions d'un index en ligne équivaut à la quantité de données modifiées dans la table, y compris tous les index, pendant toute la durée d'activité de la construction de l'index en ligne.  
   
- **Taille de la banque des versions (Ko)**. Contrôle la taille en Ko de tous les magasins de versions. Cette information permet de déterminer la quantité d'espace nécessaire dans la base de données tempdb pour le magasin de versions. Le contrôle de ce compteur sur une période de temps fournit une estimation utile de l'espace supplémentaire requis pour tempdb.  
+ **Taille de la banque des versions (Ko)** . Contrôle la taille en Ko de tous les magasins de versions. Cette information permet de déterminer la quantité d'espace nécessaire dans la base de données tempdb pour le magasin de versions. Le contrôle de ce compteur sur une période de temps fournit une estimation utile de l'espace supplémentaire requis pour tempdb.  
   
  `Version Generation rate (KB/s)`. Contrôle le taux de génération de version en Ko par seconde pour tous les magasins de versions.  
   
@@ -1373,7 +1373,7 @@ ROLLBACK TRANSACTION
 GO  
 ```  
   
-#### <a name="b-working-with-read-committed-using-row-versioning"></a>b. Utilisation d'une transaction validée en lecture à l'aide du contrôle de version de ligne  
+#### <a name="b-working-with-read-committed-using-row-versioning"></a>B. Utilisation d'une transaction validée en lecture à l'aide du contrôle de version de ligne  
  Dans cet exemple, une transaction validée en lecture à l'aide du contrôle de version de ligne est exécutée en même temps qu'une autre transaction. La transaction validée en lecture se comporte différemment de la transaction d'instantané. À l'instar d'une transaction d'instantané, la transaction validée en lecture lit les lignes avec version même après la modification des données effectuée par l'autre transaction. Toutefois, contrairement à une transaction d'instantané, la transaction validée en lecture :  
   
 -   lit les données modifiées une fois que l'autre transaction a validé les modifications de données ;  

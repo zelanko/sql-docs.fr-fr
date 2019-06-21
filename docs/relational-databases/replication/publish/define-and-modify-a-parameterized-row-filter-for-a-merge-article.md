@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a768ac49603a05a9d1878bd3e64564a040d8e4a9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817724"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62507753"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>Définir et modifier un filtre de lignes paramétrable pour un article de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment définir et modifier un filtre de lignes paramétrable dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
- Lorsque vous créez des articles de table, vous pouvez utiliser des filtres de lignes paramétrables. Ces filtres utilisent une clause [WHERE](../../../t-sql/queries/where-transact-sql.md) pour sélectionner les données appropriées à publier. Plutôt que de spécifier une valeur littérale dans la clause (comme dans un filtre de lignes statique), vous spécifiez l'une des deux fonctions système suivantes ou les deux : [SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) et [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md). Pour plus d'informations, consultez [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Lorsque vous créez des articles de table, vous pouvez utiliser des filtres de lignes paramétrables. Ces filtres utilisent une clause [WHERE](../../../t-sql/queries/where-transact-sql.md) pour sélectionner les données appropriées à publier. Au lieu de spécifier une valeur littérale dans la clause (comme c'est le cas avec un filtre de lignes statique), vous spécifiez l’une des deux fonctions système suivantes ou les deux : [SUSER_SNAME](../../../t-sql/functions/suser-sname-transact-sql.md) et [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md). Pour plus d'informations, voir [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Dans cette rubrique**  
   
@@ -55,11 +55,11 @@ ms.locfileid: "47817724"
 -   Pour des raisons de performance, il est recommandé de ne pas appliquer de fonctions aux noms de colonne dans les clauses des filtres de lignes paramétrables, telles que `LEFT([MyColumn]) = SUSER_SNAME()`. Si vous utilisez HOST_NAME dans une clause de filtrage puis en remplacez la valeur, il peut s'avérer judicieux de convertir les types de données avec la fonction CONVERT. Pour plus d'informations sur la conduite à adopter dans cette situation, consultez la section « Substitution de la valeur de HOST_NAME » de la rubrique [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Définissez, modifiez et supprimez des filtres de lignes paramétrables dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Définissez, modifiez et supprimez des filtres de lignes paramétrables dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](../../../relational-databases/replication/publish/create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-define-a-parameterized-row-filter"></a>Pour définir un filtre de lignes paramétrable  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication, ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **Ajouter**, puis sur **Ajouter un filtre**.  
+1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication, ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **Ajouter**, puis sur **Ajouter un filtre**.  
   
 2.  Dans la boîte de dialogue **Ajouter un filtre** , sélectionnez une table à filtrer dans la zone de liste déroulante.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "47817724"
         SELECT <published_columns> FROM [tableowner].[tablename] WHERE  
         ```  
   
-    -   Le texte par défaut ne peut pas être modifié ; tapez la clause du filtre après le mot clé WHERE en utilisant la syntaxe SQL standard. Un filtrage paramétrable comprend un appel à la fonction système **HOST_NAME()** et/ou **SUSER_SNAME()**, ou bien une fonction définie par l'utilisateur qui référence une de ces fonctions ou les deux. Voici un exemple de clause de filtrage complète pour un filtre de lignes paramétrable :  
+    -   Le texte par défaut ne peut pas être modifié ; tapez la clause du filtre après le mot clé WHERE en utilisant la syntaxe SQL standard. Un filtrage paramétrable comprend un appel à la fonction système **HOST_NAME()** et/ou **SUSER_SNAME()** , ou bien une fonction définie par l'utilisateur qui référence une de ces fonctions ou les deux. Voici un exemple de clause de filtrage complète pour un filtre de lignes paramétrable :  
   
         ```  
         SELECT <published_columns> FROM [HumanResources].[Employee] WHERE LoginID = SUSER_SNAME()  
@@ -89,11 +89,11 @@ ms.locfileid: "47817724"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-6.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
+6.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 #### <a name="to-modify-a-parameterized-row-filter"></a>Pour modifier un filtre de lignes paramétrable  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
+1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Modifier**.  
   
 2.  Dans la boîte de dialogue **Modifier le filtre** , modifiez le filtre.  
   
@@ -101,14 +101,14 @@ ms.locfileid: "47817724"
   
 #### <a name="to-delete-a-parameterized-row-filter"></a>Pour supprimer un filtre de lignes paramétrable  
   
-1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**.  
+1.  Dans la page **Filtrer les lignes de la table** de l’Assistant Nouvelle publication ou dans la page **Filtrer les lignes** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez un filtre dans le volet **Tables filtrées**, puis cliquez sur **Supprimer**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  Les filtres de lignes paramétrables peuvent être créés et modifiés par programme en utilisant des procédures stockées de réplication.  
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Pour définir un filtre de lignes paramétrable pour un article dans une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Spécifiez **@publication**, le nom de l'article pour **@article**, la table qui est publiée pour **@source_object**, la clause WHERE qui définit le filtre paramétrable pour **@subset_filterclause** (sans `WHERE`) et affectez l'une des valeurs suivantes à **@partition_options**, qui décrit le type de partitionnement qui résultera de l'application du filtre de lignes paramétrable :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Spécifiez **@publication** , le nom de l'article pour **@article** , la table qui est publiée pour **@source_object** , la clause WHERE qui définit le filtre paramétrable pour **@subset_filterclause** (sans `WHERE`) et affectez l'une des valeurs suivantes à **@partition_options** , qui décrit le type de partitionnement qui résultera de l'application du filtre de lignes paramétrable :  
   
     -   **0** - le filtrage de l'article est statique ou ne génère pas un sous-ensemble unique de données pour chaque partition (partition avec chevauchement).  
   
@@ -120,9 +120,9 @@ ms.locfileid: "47817724"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>Pour modifier un filtre de lignes paramétrable pour un article dans une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Spécifiez **@publication**, **@article**, affectez la valeur **subset_filterclause** à **@property**, l'expression qui définit le filtre paramétrable à **@value** (sans `WHERE`) et la valeur **1** à **@force_invalidate_snapshot** et **@force_reinit_subscription**.  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Spécifiez **@publication** , **@article** , affectez la valeur **subset_filterclause** à **@property** , l'expression qui définit le filtre paramétrable à **@value** (sans `WHERE`) et la valeur **1** à **@force_invalidate_snapshot** et **@force_reinit_subscription** .  
   
-2.  Si cette modification conduit à un comportement de partitionnement différent, exécutez de nouveau [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Spécifiez **@publication**, **@article**, affectez la valeur **partition_options** à **@property**et l'option de partitionnement la plus appropriée à **@value**, qui peut être l'une des suivantes :  
+2.  Si cette modification conduit à un comportement de partitionnement différent, exécutez de nouveau [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) . Spécifiez **@publication** , **@article** , affectez la valeur **partition_options** à **@property** et l'option de partitionnement la plus appropriée à **@value** , qui peut être l'une des suivantes :  
   
     -   **0** - le filtrage de l'article est statique ou ne génère pas un sous-ensemble unique de données pour chaque partition (partition avec chevauchement).  
   
@@ -137,10 +137,10 @@ ms.locfileid: "47817724"
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../relational-databases/replication/codesnippet/tsql/define-and-modify-a-para_1.sql)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Définir et modifier un filtre de jointure entre des articles de fusion](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Modifier les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [Join Filters](../../../relational-databases/replication/merge/join-filters.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Changer les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Filtres de jointure](../../../relational-databases/replication/merge/join-filters.md)   
+ [Filtres de lignes paramétrés](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

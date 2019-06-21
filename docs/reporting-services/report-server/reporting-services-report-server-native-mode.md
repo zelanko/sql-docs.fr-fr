@@ -1,6 +1,6 @@
 ---
 title: Serveur de rapports Reporting Services (mode natif) | Microsoft Docs
-ms.date: 03/15/2017
+ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,21 +12,21 @@ helpviewer_keywords:
 ms.assetid: fa0d84e2-4c21-432c-aa7c-23517da75253
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 47ac37f217cb49cd676cc822618e5395c029256f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 4a0e3f521549bb309fcbd69fc7905746be09d84b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581358"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826896"
 ---
 # <a name="reporting-services-report-server-native-mode"></a>Serveur de rapports Reporting Services (mode natif)
   Un serveur de rapports configuré en mode natif s’exécute comme un serveur d’applications qui fournit toutes les fonctions de traitement et de gestion exclusivement par le biais de composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- Vous pouvez utiliser soit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , soit le Gestionnaire de rapports pour gérer des rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Utilisez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour gérer un serveur de rapports en mode natif.  
+ Vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou le portail web pour gérer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] rapports. Utilisez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour gérer un serveur de rapports en mode natif.  
   
  Si le serveur de rapports est configuré pour le mode SharePoint, vous devez utiliser les pages de gestion du contenu du site SharePoint pour gérer les rapports, les sources de données partagées et les autres éléments du serveur de rapports.  
   
- Cette rubrique contient les informations suivantes :  
+ Cet article contient les informations suivantes :  
   
 -   [Récapitulatif du mode natif](#bkmk_sum)  
   
@@ -77,7 +77,7 @@ ms.locfileid: "65581358"
   
  L'autorisation d'effectuer des tâches de gestion est accordée via deux rôles prédéfinis : **Administrateur système** et **Gestionnaire de contenu**. Pour permettre une gestion efficace du contenu du serveur de rapports, ces deux rôles doivent vous être attribués. Pour plus d’informations sur ces rôles prédéfinis, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md).  
   
- Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou le gestionnaire de rapports. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] vous permet de définir des valeurs par défaut et d'activer des fonctionnalités. Le Gestionnaire de rapports permet d'accorder aux utilisateurs l'accès à des éléments et opérations du serveur de rapports, d'afficher et utiliser des rapports, ou d'autres types de contenu, ainsi que d'afficher et utiliser toutes les fonctionnalités relatives aux éléments partagés et à la distribution de rapports.  
+ Les outils de gestion du contenu d'un serveur de rapports sont [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] ou le portail web. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] vous permet de définir des valeurs par défaut et d'activer des fonctionnalités. Le portail web permet d'accorder aux utilisateurs l'accès à des éléments et opérations du serveur de rapports, d'afficher et utiliser des rapports, ou d'autres types de contenu, ainsi que d'afficher et utiliser toutes les fonctionnalités relatives aux éléments partagés et à la distribution de rapports.  
   
 ##  <a name="bkmk_manageresources"></a> Sécurisation et gestion d'une ressource  
  Une ressource est un élément géré qui est stocké sur un serveur de rapports, mais qui n'est pas traité sur ce dernier. En règle générale, une ressource fournit du contenu externe aux utilisateurs des rapports. Il peut s'agir, par exemple, d'une image dans un fichier .jpg ou d'un fichier HTML qui décrit les règles d'entreprise utilisées dans un rapport. Le fichier JPG ou HTML est stocké sur le serveur de rapports ; toutefois, le serveur de rapports passe ce fichier directement au navigateur au lieu de le traiter en premier.  
@@ -86,10 +86,10 @@ ms.locfileid: "65581358"
   
 |Opération|Type de fichier|  
 |---------------|---------------|  
-|Télécharger|Tous les fichiers sont téléchargés en tant que ressources, sauf les fichiers de définitions de rapports (.rdl) et les fichiers de modèles de rapports (.smdl).<br /><br /> Pour télécharger une ressource, vous devez utiliser le Gestionnaire de rapports si le serveur de rapports s'exécute en mode natif, ou une page d'application sur un site SharePoint si le serveur s'exécute en mode intégré SharePoint. Pour plus d’informations, consultez [Charger un fichier ou un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Charger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
+|Télécharger|Tous les fichiers sont téléchargés en tant que ressources, sauf les fichiers de définitions de rapports (.rdl) et les fichiers de modèles de rapports (.smdl).<br /><br /> Pour télécharger une ressource, vous devez utiliser le portail web si le serveur de rapports s'exécute en mode natif, ou une page d'application sur un site SharePoint si le serveur s'exécute en mode intégré SharePoint. Pour plus d’informations, consultez [Charger un fichier ou un rapport dans le serveur de rapports](../../reporting-services/reports/upload-a-file-or-report-report-manager.md) ou [Charger des documents vers une bibliothèque SharePoint &#40;Reporting Services en mode SharePoint&#41;](../../reporting-services/report-server-sharepoint/upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode.md).|  
 |Publier|Tous les fichiers d'un projet sont téléchargés en tant que ressources, sauf les fichiers de source de données .rdl, .smdl et .rds. Pour publier une ressource, ajoutez un élément existant à un projet dans le Concepteur de rapports, puis publiez le projet sur un serveur de rapports.|  
   
- Toutes les ressources ont pour origine des fichiers situés sur un système de fichiers. Ceux-ci sont ensuite téléchargés vers un serveur de rapports. À l'exception de la limitation de la taille de fichier par défaut à 4 mégaoctets, imposée par ASP.NET, il n'y a pas de restrictions sur les types de fichiers que vous pouvez télécharger. Cependant, lorsqu'ils sont publiés sur un serveur de rapports en tant que ressources, les types de fichiers ayant des types MIME équivalents offrent une utilisation plus optimale que d'autres. Par exemple, les ressources basées sur des fichiers HTML et JPG s'ouvrent dans une fenêtre de navigateur lorsque l'utilisateur clique sur la ressource choisie ; le fichier HTML est rendu sous forme de page Web et le fichier JPG sous forme d'image à l'intention de l'utilisateur. En revanche, les ressources qui ne disposent pas de types MIME équivalents, par exemple les fichiers d'application de bureau, risquent de ne pas être rendues dans la fenêtre du navigateur.  
+ Toutes les ressources ont pour origine des fichiers situés sur un système de fichiers. Ceux-ci sont ensuite téléchargés vers un serveur de rapports. Il n’existe aucune restriction sur les types de fichiers que vous pouvez charger, les fichiers de taille jusqu'à 1 Go. Cependant, lorsqu'ils sont publiés sur un serveur de rapports en tant que ressources, les types de fichiers ayant des types MIME équivalents offrent une utilisation plus optimale que d'autres. Par exemple, les ressources basées sur des fichiers HTML et JPG s'ouvrent dans une fenêtre de navigateur lorsque l'utilisateur clique sur la ressource choisie ; le fichier HTML est rendu sous forme de page Web et le fichier JPG sous forme d'image à l'intention de l'utilisateur. En revanche, les ressources qui ne disposent pas de types MIME équivalents, par exemple les fichiers d'application de bureau, risquent de ne pas être rendues dans la fenêtre du navigateur.  
   
  La visualisation ou non d'une ressource par les utilisateurs d'un rapport dépend des possibilités d'affichage du navigateur. Dans la mesure où les ressources ne sont pas traitées par le serveur de rapports, le navigateur doit fournir la fonctionnalité d'affichage qui permet d'obtenir le rendu d'un type MIME spécifique. Si le navigateur ne peut pas effectuer le rendu du contenu, les utilisateurs qui affichent la ressource ne voient que ses propriétés générales.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "65581358"
   
  Pour utiliser une ressource de type image dans un rapport, ajoutez le fichier image au projet et publiez-le avec le rapport. Une fois l'image publiée, vous pouvez mettre à jour la référence de l'image dans le rapport, de sorte qu'elle pointe vers la ressource du serveur de rapports ; il vous suffit ensuite de publier à nouveau le rapport pour enregistrer vos modifications. Vous pouvez désormais mettre à jour l'image indépendamment du rapport en publiant à nouveau la ressource. Le rapport utilise la version la plus actuelle de l'image disponible sur le serveur de rapports.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer et administrer un serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
  [Dépanner une installation de Reporting Services](../../reporting-services/install-windows/troubleshoot-a-reporting-services-installation.md)  
   

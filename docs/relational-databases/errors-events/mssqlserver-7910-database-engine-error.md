@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e22a2555f3a7b2e062b370085710e4ba21e74078
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669447"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694587"
 ---
 # <a name="mssqlserver7910"></a>MSSQLSERVER_7910
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47669447"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_REPAIR_PAGE_ALLOCATED|  
-|Texte du message|Réparation : la page P_ID a été allouée à l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE).|  
+|Texte du message|Réparation : la page P_ID a été allouée à l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, ID d’unité d’allocation A_ID (type TYPE).|  
   
 ## <a name="explanation"></a>Explication  
 Uniquement fourni à titre d'information à partir de REPAIR, ce message indique qu'une page a été allouée au tableau d'emplacements de page unique d'une page IAM (Index Allocation Map).  

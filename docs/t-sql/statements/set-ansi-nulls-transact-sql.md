@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: aef2847aa8e6aed4504359bcc3bd5e0c21c3d8c7
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265256"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638672"
 ---
 # <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -57,10 +57,10 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## <a name="remarks"></a>Notes   
-Quand ANSI_NULLS a la valeur ON, une instruction SELECT qui utilise la clause WHERE *nom_colonne* = **NULL** ne retourne aucune ligne, même si *nom_colonne* comporte des valeurs Null. Une instruction SELECT qui utilise la clause WHERE *nom_colonne* <> **NULL** ne retourne aucune ligne, même si *nom_colonne* comporte des valeurs non Null.   
+## <a name="remarks"></a>Notes  
+Quand ANSI_NULLS a la valeur ON, une instruction SELECT qui utilise la clause WHERE *nom_colonne* = **NULL** ne retourne aucune ligne, même si *nom_colonne* comporte des valeurs Null. Une instruction SELECT qui utilise la clause WHERE *nom_colonne* <> **NULL** ne retourne aucune ligne, même si *nom_colonne* comporte des valeurs non Null.  
   
-Quand ANSI_NULLS a la valeur OFF, les opérateurs de comparaison Égal à (=) et Différent de (<>) ne sont pas conformes à la norme ISO. Une instruction SELECT qui utilise la clause WHERE *nom_colonne* = **NULL** retourne les lignes qui ont des valeurs Null dans *nom_colonne*.  Une instruction SELECT qui utilise la clause WHERE *nom_colonne* <> **NULL** retourne les lignes qui ont des valeurs non Null dans la colonne. De plus, une instruction SELECT utilisant WHERE *nom_colonne* <> *valeur_XYZ* retourne toutes les lignes qui ne contiennent ni *valeur_XYZ*, ni la valeur Null.   
+Quand ANSI_NULLS a la valeur OFF, les opérateurs de comparaison Égal à (=) et Différent de (<>) ne sont pas conformes à la norme ISO. Une instruction SELECT qui utilise la clause WHERE *nom_colonne* = **NULL** retourne les lignes qui ont des valeurs Null dans *nom_colonne*. Une instruction SELECT qui utilise la clause WHERE *nom_colonne* <> **NULL** retourne les lignes qui ont des valeurs non Null dans la colonne. De plus, une instruction SELECT utilisant WHERE *nom_colonne* <> *valeur_XYZ* retourne toutes les lignes qui ne contiennent ni *valeur_XYZ*, ni la valeur Null.  
   
 Quand ANSI_NULLS a la valeur ON, toutes les comparaisons effectuées sur une valeur Null retournent la valeur UNKNOWN. Lorsque la valeur de SET ANSI_NULLS a la valeur OFF, les comparaisons de toutes les données par rapport à une valeur Null sont vraies (TRUE) si la valeur des données est Null. Si SET ANSI_NULLS n'est pas spécifié, le paramètre de l'option ANSI_NULLS de la base de données actuelle s'applique. Pour plus d’informations sur l’option de base de données ANSI_NULLS, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
 
@@ -104,7 +104,7 @@ IF ( (32 & @@OPTIONS) = 32 ) SET @ANSI_NULLS = 'ON';
 SELECT @ANSI_NULLS AS ANSI_NULLS;   
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -183,7 +183,7 @@ GO
 DROP TABLE dbo.t1;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SESSIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/sessionproperty-transact-sql.md)   
  [= &#40;Equals&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/equals-transact-sql.md)   

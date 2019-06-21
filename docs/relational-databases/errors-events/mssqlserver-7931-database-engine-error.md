@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 330ea355feb3d200173a727c8308ac66cddb6591
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729327"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797209"
 ---
 # <a name="mssqlserver7931"></a>MSSQLSERVER_7931
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47729327"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_DOUBLE_ROWSET_ACTUAL_FACT|  
-|Texte du message|Erreur de base de données : l'ID de répertoire FileStream F_ID pour une partition a été détecté deux fois.|  
+|Texte du message|Erreur de base de données : l’ID de répertoire FileStream F_ID pour une partition a été détecté deux fois.|  
   
 ## <a name="explanation"></a>Explication  
 Le même ID de partition d'un répertoire Filestream a été trouvé deux fois dans les métadonnées.  

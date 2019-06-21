@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0df401128a5aa8de1dd885780b3a36a2438afd41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613597"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62797151"
 ---
 # <a name="mssqlserver7934"></a>MSSQLSERVER_7934
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47613597"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_MISSING_ROWSET_DIRECTORY|  
-|Texte du message|Erreur de table : l'ID de répertoire FILESTREAM F_ID correspondant à l'ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, est introuvable.|  
+|Texte du message|Erreur de table, l’ID de répertoire FILESTREAM F_ID correspondant à l’ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, est introuvable.|  
   
 ## <a name="explanation"></a>Explication  
 Au cours de l'exécution de DBCC CHECKDB, une partition a été trouvée, mais son répertoire d'ensemble de lignes FILESTREAM correspondant dans l'espace de données FILESTREAM reste introuvable.  
@@ -51,6 +51,6 @@ Si le problème n'est pas matériel et si une restauration réputée en bon éta
 ### <a name="run-dbcc-checkdb"></a>Exécuter DBCC CHECKDB  
 Non applicable. Cette erreur ne peut pas être réparée automatiquement. Si vous ne pouvez pas restaurer la base de données à partir d'une sauvegarde, contactez le service clientèle et le support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   

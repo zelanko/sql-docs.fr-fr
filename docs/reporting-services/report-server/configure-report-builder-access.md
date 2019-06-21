@@ -7,13 +7,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.date: 03/14/2017
-ms.openlocfilehash: 50703b76ddd67ca4d41cc42625eb6cd0e5ac993b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.date: 06/06/2019
+ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826905"
 ---
 # <a name="configure-report-builder-access"></a>Configurer l'accès au Générateur de rapports
 Le Générateur de rapports est un outil de génération d’états ad hoc qui s’installe avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré pour le mode natif ou pour le mode intégré SharePoint.  
@@ -28,29 +28,29 @@ L'accès au Générateur de rapports dépend des facteurs suivants :
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
-Le Générateur de rapports n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
+Le Générateur de rapports n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0 doit être installé sur l’ordinateur client. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournit l’infrastructure permettant d’exécuter les applications [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
+L’ordinateur client doit avoir le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 ou 4.6.1 installé respectivement de SSRS 2016 et 2017. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournit l’infrastructure permettant d’exécuter les applications [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
 
-Vous devez utiliser [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 ou version ultérieure.  
+Vous devez utiliser [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 ou version ultérieure, ou un autre navigateur modern.  
 
 Le Générateur de rapports s'exécute toujours en confiance totale ; vous ne pouvez pas le configurer pour qu'il s'exécute en confiance partielle. Dans les versions antérieures, il était possible d'exécuter le Générateur de rapports en mode de confiance partielle, mais cette option n'est pas prise en charge dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>Activation et désactivation du Générateur de rapports  
 
-Le Générateur de rapports est activé par défaut. Les administrateurs du serveur de rapports peuvent désactiver la fonctionnalité du Générateur de rapports en définissant la propriété système **EnableReportDesignClientDownload** de ce serveur sur la valeur **false**. Les téléchargements du Générateur de rapports effectués pour ce serveur de rapports sont ainsi désactivés.  
+Le Générateur de rapports est activé par défaut. Les administrateurs du serveur de rapports ont la possibilité de désactiver la fonctionnalité du Générateur de rapports en définissant la propriété système **ShowDownloadMenu** de ce serveur sur la valeur **false**. Définition de cette propriété désactive Générateur de rapports, éditeur de rapports mobiles, et Power BI Mobile téléchargements pour ce serveur de rapports.  
 
-Pour définir les propriétés système du serveur de rapports, vous pouvez utiliser Management Studio ou un script :  
+ Pour définir les propriétés système du serveur de rapports, vous pouvez utiliser Management Studio ou un script :   
 
-- Pour utiliser Management Studio, connectez-vous au serveur de rapports et utilisez la page de propriétés avancées du serveur pour définir **EnableReportDesignClientDownload** sur **false**. Pour plus d’informations sur l’ouverture de cette page, consultez [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+ - Pour utiliser Management Studio, connectez-vous au serveur de rapports et utilisez la page de propriétés avancées du serveur pour affecter **ShowDownloadMenu** à **false**. Pour plus d’informations sur l’ouverture de cette page, consultez [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).      
 
-- Pour voir un exemple de script qui définit une propriété du serveur de rapports, consultez [Écrire des scripts pour les tâches d’administration et de déploiement](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
+ - Pour voir un exemple de script qui définit une propriété du serveur de rapports, consultez [Écrire des scripts pour les tâches d’administration et de déploiement](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
 
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Attributions de rôles qui octroient l'accès au Générateur de rapports sur un serveur de rapports en mode natif  
 
 Sur un serveur de rapports en mode natif, créez des attributions de rôles d'utilisateur qui incluent des tâches pour l'utilisation du Générateur de rapports. Vous devez être Gestionnaire de contenu et Administrateur système pour créer ou modifier des définitions de rôles et des attributions de rôles sur les éléments et au niveau du site.  
 
-Les instructions suivantes supposent que vous utilisez des rôles prédéfinis. Si vous avez modifié les définitions de rôle ou si vous avez effectué une mise à niveau de SQL Server 2000, examinez les rôles pour vérifier s'ils contiennent les tâches nécessaires. Pour plus d’informations sur la création d’attributions de rôles, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+Les instructions suivantes supposent que vous utilisez des rôles prédéfinis. Si vous avez modifié les définitions de rôle ou si vous avez effectué une mise à niveau de SQL Server 2000, examinez les rôles pour vérifier s'ils contiennent les tâches nécessaires. Pour plus d’informations sur la création d’attributions de rôles, consultez [Accorder à un utilisateur l'accès à un serveur de rapports](../../reporting-services/security/grant-user-access-to-a-report-server.md).
 
 Une fois les attributions de rôles créées, les utilisateurs seront autorisés à effectuer les opérations suivantes :  
 
@@ -100,7 +100,7 @@ Une fois les attributions de rôles créées, les utilisateurs seront autorisés
 
     3. Dans Nom, tapez **Générateur de rapports**.  
 
-    4. Dans Description, entrez une description du rôle afin que les utilisateurs du Gestionnaire de rapports connaissent la fonction du rôle.  
+    4. Dans Description, entrez une description du rôle afin que les utilisateurs du portail web connaissent la fonction du rôle.  
 
     5. Ajoutez les tâches suivantes : **Lire les rapports**, **Afficher les rapports**, **Afficher les modèles**, **Afficher les ressources**, **Afficher les dossiers**et **Gérer les abonnements individuels**.  
 
@@ -108,9 +108,10 @@ Une fois les attributions de rôles créées, les utilisateurs seront autorisés
 
 #### <a name="to-create-role-assignments-that-grant-access-to-report-builder"></a>Pour créer des attributions de rôles qui octroient l'accès au Générateur de rapports  
 
-1. Démarrez le Gestionnaire de rapports.  
+1. Démarrer le portail web.  
 
-2. Cliquez sur **Paramètres du site**.  
+2. Cliquez sur l’icône d’engrenage dans le coin supérieur droit de la page d’accueil portail web et sélectionnez **paramètres du Site** dans le menu déroulant.  
+![l’icône d’engrenage portail web et un menu](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Cliquez sur **Sécurité**.  
 
@@ -150,5 +151,6 @@ Le tableau suivant décrit les types d'authentifications pris en charge par le s
 - [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md)
 - [Prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 - [Démarrer le Générateur de rapports](../../reporting-services/report-builder/start-report-builder.md)
-- [Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)- [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [Le portail web d’un serveur de rapports (Mode natif SSRS)](../web-portal-ssrs-native-mode.md)
+- [Se connecter à un serveur de rapports dans Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
 - [Propriétés système du serveur de rapports](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)

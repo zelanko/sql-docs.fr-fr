@@ -12,11 +12,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6315784a4092f73f9243c49902eb40ea905edcf4
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63009084"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Boîte de dialogue Créer une nouvelle stratégie ou Ouvrir une stratégie, page Description
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,13 +29,13 @@ ms.locfileid: "51512614"
  **Description**  
  Tapez une description de la stratégie.  
   
- **Lien hypertexte d'aide supplémentaire : Texte à afficher**  
+ **Lien hypertexte d’aide supplémentaire : Texte à afficher**  
  Lors de l’exécution de stratégies, le lien hypertexte d’aide supplémentaire est affiché dans la page **Vue détaillée des résultats** . Tapez le texte à afficher en tant que lien hypertexte.  
   
- **Lien hypertexte d'aide supplémentaire : Adresse**  
+ **Lien hypertexte d’aide supplémentaire : Adresse**  
  Tapez le lien hypertexte d’une page web à ouvrir lorsque les utilisateurs cliquent sur le texte du lien hypertexte qui apparaît dans la page **Vue détaillée des résultats** .  
   
- **Lien hypertexte d'aide supplémentaire : Lien de test**  
+ **Lien hypertexte d’aide supplémentaire : Lien de test**  
  Cliquez pour ouvrir le lien hypertexte afin de tester la validité du lien.  
   
  **Date de création**  
@@ -50,7 +50,7 @@ ms.locfileid: "51512614"
  **Modifié par**  
  Connexion ayant apporté la modification la plus récente à la stratégie.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

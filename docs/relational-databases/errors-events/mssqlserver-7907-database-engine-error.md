@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a32b7c56eeeef071319e1e08010113e5924ae6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838417"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694394"
 ---
 # <a name="mssqlserver7907"></a>MSSQLSERVER_7907
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47838417"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_INVALID_COLUMN_DIRECTORY|  
-|Texte du message|Erreur de table : le répertoire 'DIRECTORY' dans l'ID de partition PN_ID n'est pas un répertoire Filestream valide.|  
+|Texte du message|Erreur de table, le répertoire 'DIRECTORY' dans l'ID de partition PN_ID n'est pas un répertoire Filestream valide.|  
   
 ## <a name="explanation"></a>Explication  
 Le nom d'un répertoire de colonne correspond à l'ID de colonne du moteur relationnel de la partition. Si un nom de répertoire de colonne ne peut pas être converti en ID de colonne, le répertoire n'est pas un répertoire de colonne valide.  

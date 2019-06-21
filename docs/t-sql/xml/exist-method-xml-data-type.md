@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b13091d9b43a371a629d4f3d929e66ffffd368
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927684"
 ---
 # <a name="exist-method-xml-data-type"></a>Méthode exist() (type de données xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,10 +44,10 @@ exist (XQuery)
  XQuery  
  Expression XQuery, représentant un littéral de chaîne.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 > [!NOTE]  
->  La méthode **exist()** retourne 1 pour l’expression de requête Xml qui retourne un résultat non vide. Si vous spécifiez les fonctions **true()** ou **false()** au sein de la méthode **exist()**, la méthode **exist()** retourne 1, car les fonctions **true()** et **false()** retournent respectivement les valeurs booléennes True et False. De fait, elles retournent un résultat non vide. Par conséquent, la méthode **exist()** retourne 1 (True), comme l’illustre l’exemple suivant :  
+>  La méthode **exist()** retourne 1 pour l’expression de requête Xml qui retourne un résultat non vide. Si vous spécifiez les fonctions **true()** ou **false()** au sein de la méthode **exist()** , la méthode **exist()** retourne 1, car les fonctions **true()** et **false()** retournent respectivement les valeurs booléennes True et False. De fait, elles retournent un résultat non vide. Par conséquent, la méthode **exist()** retourne 1 (True), comme l’illustre l’exemple suivant :  
   
 ```  
 declare @x xml;  
@@ -56,10 +56,10 @@ select @x.exist('true()');
 ```  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants montrent comment spécifier la méthode **exist()**.  
+ Les exemples suivants montrent comment spécifier la méthode **exist()** .  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>Exemple : Spécification de la méthode exist() par rapport à une variable de type xml  
- Dans l’exemple suivant, @x est une variable de type **xml** (xml non typé) et @f est une variable de type entier qui stocke la valeur renvoyée par la méthode **exist()**. La méthode **exist()** renvoie True (1) si la valeur de date stockée dans l’instance XML est `2002-01-01`.  
+ Dans l’exemple suivant, @x est une variable de type **xml** (xml non typé) et @f est une variable de type entier qui stocke la valeur renvoyée par la méthode **exist()** . La méthode **exist()** renvoie True (1) si la valeur de date stockée dans l’instance XML est `2002-01-01`.  
   
 ```  
 declare @x xml;  
@@ -75,9 +75,9 @@ select @f;
   
 -   La valeur de l’attribut **@Somedate** est non typée. Lorsqu’elle est comparée, elle est implicitement castée en type indiqué à droite de la comparaison, en l’occurrence le type **xs:date**.  
   
--   Au lieu de **caster en tant que xs:date()**, vous pouvez utiliser la fonction constructeur **xs:date()**. Pour plus d’informations, consultez [Fonctions constructeurs &#40;requête Xml&#41;](../../xquery/constructor-functions-xquery.md).  
+-   Au lieu de **caster en tant que xs:date()** , vous pouvez utiliser la fonction constructeur **xs:date()** . Pour plus d’informations, consultez [Fonctions constructeurs &#40;requête Xml&#41;](../../xquery/constructor-functions-xquery.md).  
   
- L'exemple suivant est similaire au précédent, sauf qu'il possède un élément <`Somedate`>.  
+ L’exemple suivant est similaire au précédent, sauf qu'il possède un élément <`Somedate`>.  
   
 ```  
 DECLARE @x xml;  
@@ -112,7 +112,7 @@ SELECT @f;
 ```  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>Exemple : Spécification de la méthode exist() par rapport à une colonne de type xml  
- La requête suivante extrait les ID de modèle de produit dont les descriptions de catalogue ne comprennent pas les spécifications, en l'occurrence l'élément <`Specifications`> :  
+ La requête suivante extrait les ID de modèle de produit dont les descriptions de catalogue ne comprennent pas les spécifications, en l’occurrence l’élément <`Specifications`> :  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -153,7 +153,7 @@ WHERE CatalogDescription.exist('
     ) = 1;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   

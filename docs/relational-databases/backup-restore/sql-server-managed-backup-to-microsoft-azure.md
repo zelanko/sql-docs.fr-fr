@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5c041ee4a56b2df2190eabb0da0ef472f0b8ee49
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397052"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63008558"
 ---
 # <a name="sql-server-managed-backup-to-microsoft-azure"></a>Sauvegarde managée SQL Server sur Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52397052"
 |**Compte Microsoft Azure**|Vous pouvez commencer à utiliser Azure avec une [version d’évaluation gratuite](https://azure.microsoft.com/pricing/free-trial/) avant d’explorer les [options d’achat](https://azure.microsoft.com/pricing/purchase-options/).|  
 |**Compte de stockage Azure**|Les sauvegardes sont stockées dans le stockage d’objets blob Azure associé à un compte de stockage Azure. Pour obtenir des instructions détaillées sur la création d’un compte de stockage, consultez [À propos des comptes de stockage Azure](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/).|  
 |**Conteneur d’objets blob**|Les objets blob sont organisés dans des conteneurs. Vous spécifiez le conteneur cible pour les fichiers de sauvegarde. Vous pouvez créer un conteneur dans le [portail de gestion Azure](https://manage.windowsazure.com/)ou vous pouvez utiliser la commande **New-AzureStorageContainer**[Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/) .|  
-|**Signature d’accès partagé (SAS)**|L’accès au conteneur cible est contrôlé par une signature d’accès partagé (SAS). Pour une vue d’ensemble de SAS, consultez [Signatures d’accès partagé, partie 1 : présentation du modèle SAS](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Vous pouvez créer un jeton SAS dans le code ou avec la commande PowerShell **New-AzureStorageContainerSASToken** . Pour obtenir un script PowerShell qui simplifie ce processus, consultez [Simplification de la création d’informations d’identification SQL avec des jetons de signature d’accès partagé (SAS) sur le stockage Azure avec Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx). Le jeton SAS peut être stocké dans des **informations d’identification SQL** pour une utilisation avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|**Signature d’accès partagé (SAS)**|L’accès au conteneur cible est contrôlé par une signature d’accès partagé (SAS). Pour une vue d’ensemble de SAS, consultez [Signatures d’accès partagé, partie 1 : présentation du modèle SAP](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/). Vous pouvez créer un jeton SAS dans le code ou avec la commande PowerShell **New-AzureStorageContainerSASToken** . Pour obtenir un script PowerShell qui simplifie ce processus, consultez [Simplification de la création d’informations d’identification SQL avec des jetons de signature d’accès partagé (SAS) sur le stockage Azure avec Powershell](https://blogs.msdn.com/b/sqlcat/archive/2015/03/21/simplifying-creation-sql-credentials-with-shared-access-signature-sas-keys-on-azure-storage-containers-with-powershell.aspx). Le jeton SAS peut être stocké dans des **informations d’identification SQL** pour une utilisation avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |**Agent SQL Server**|L’Agent SQL Server doit être en cours d’exécution pour que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] fonctionne. Envisagez de définir l’option de démarrage sur automatique.|  
   
 ## <a name="components"></a>Components  
@@ -75,7 +75,7 @@ ms.locfileid: "52397052"
  Vous pouvez spécifier une planification de sauvegarde personnalisée à l’aide de la procédure stockée système [managed_backup.sp_backup_config_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md). Si vous ne spécifiez pas de planification personnalisée, le type des sauvegardes planifiées et leur fréquence sont déterminés en fonction de la charge de travail de la base de données. Les paramètres de période de rétention sont utilisés pour déterminer la période pendant laquelle un fichier de sauvegarde doit être retenu dans le stockage et la capacité à restaurer une base de données à un point précis dans le temps au cours de la période de rétention.  
   
 ### <a name="backup-file-naming-conventions"></a>Conventions d’affectation de noms aux fichiers de sauvegarde  
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] utilise le conteneur que vous spécifiez, donc vous pouvez contrôler le nom du conteneur. Les fichiers de sauvegarde des bases de données autres que des bases de données de disponibilité sont nommés en utilisant les 40 premiers caractères du nom de la base de données, le GUID de la base de données sans le symbole « - » et l’horodateur. Le caractère de soulignement est inséré entre les segments comme délimiteurs. L'extension **.bak** est utilisée pour le fichier en cas de sauvegarde complète et l'extension **.log** est utilisée pour les sauvegardes de journal. Pour les bases de données d'un groupe de disponibilité, en plus de la convention d'attribution de noms décrite ci-dessus, le GUID de la base de données du groupe de disponibilité est ajouté après les 40 caractères du nom de la base de données. La valeur du GUID de la base de données du groupe de disponibilité est la valeur de group_database_id dans sys.databases.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] utilise le conteneur que vous spécifiez, donc vous pouvez contrôler le nom du conteneur. Pour les fichiers de sauvegarde, les bases de données autres que des bases de données de disponibilité sont nommées selon la convention suivante : le nom est créé à l’aide des 40 premiers caractères du nom de la base de données, le GUID de la base de données sans ‘-‘, et l’horodatage. Le caractère de soulignement est inséré entre les segments comme délimiteurs. L'extension **.bak** est utilisée pour le fichier en cas de sauvegarde complète et l'extension **.log** est utilisée pour les sauvegardes de journal. Pour les bases de données d'un groupe de disponibilité, en plus de la convention d'attribution de noms décrite ci-dessus, le GUID de la base de données du groupe de disponibilité est ajouté après les 40 caractères du nom de la base de données. La valeur du GUID de la base de données du groupe de disponibilité est la valeur de group_database_id dans sys.databases.  
   
 ### <a name="full-database-backup"></a>Sauvegarde de base de données complète  
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] planifie une sauvegarde de base de données complète si l'une des conditions suivantes est vraie.  
@@ -100,7 +100,7 @@ ms.locfileid: "52397052"
 -   Lorsque la sauvegarde du journal des transactions traîne derrière une sauvegarde complète de la base de données. Le but est de conserver la séquence de journaux de transactions consécutifs avant la sauvegarde complète.  
   
 ## <a name="retention-period-settings"></a>Paramètres de période de rétention  
- Lorsque vous configurez la sauvegarde, vous devez définir la période de rétention en jours : 1 jour au minimum et 30 jours au maximum.  
+ Lorsque vous configurez la sauvegarde, vous devez définir la période de rétention en jours : 1 jour minimum et 30 jours maximum.  
   
  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] , en fonction des paramètres de la période de rétention, évalue la capacité à restaurer une base de données à un point précis dans le temps au cours de la période de rétention pour déterminer quels sont les fichiers de sauvegarde à conserver et quels sont ceux à supprimer. Le paramètre backup_finish_date de la sauvegarde est utilisé pour déterminer et vérifier la durée spécifiée dans les paramètres de la période de rétention.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "52397052"
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] peut avoir d'autres limitations lorsqu'elle est configurée avec d'autres technologies prenant en charge la sauvegarde, la haute disponibilité ou la récupération d'urgence.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 - [Activation de la sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)   
 - [Configurer les options avancées pour la sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)   
 - [Désactivation de la sauvegarde managée SQL Server sur Microsoft Azure](../../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md)

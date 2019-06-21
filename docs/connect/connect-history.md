@@ -3,18 +3,18 @@ title: Historique des pilotes pour Microsoft SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2018
 ms.prod: sql
-ms.reviewer: genemi
+ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
+author: MightyPen
+ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 5c312421c7934690c947dbe0bf23b6404afaf56f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
-ms.translationtype: HT
+ms.openlocfilehash: f8a0c12939882602f21a849d2fb3ec7d829df92b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822769"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Historique des pilotes pour Microsoft SQL Server
 
@@ -22,7 +22,7 @@ Cette page décrit les technologies de connexion de données d’historique de M
 
 ## <a name="odbc"></a>ODBC
 
-Il existe trois générations distinctes de fournisseurs OLE DB Microsoft pour SQL Server. Le premier pilote ODBC de « SQL Server » est toujours fourni dans le cadre de [Windows Data Access Components](#microsoft-or-windows-data-access-components). Il n’est pas recommandé d’utiliser ce pilote pour un nouveau développement. À compter de SQL Server 2005, le [SQL Server Native Client](#sql-server-native-client) inclut une interface ODBC et le pilote ODBC fourni avec SQL Server 2005 via SQL Server 2012. Il n’est pas recommandé d’utiliser ce pilote pour un nouveau développement. Après SQL Server 2012, le [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server) est le pilote est mis à jour avec les fonctionnalités du serveur les plus récentes à l’avenir.
+Il existe trois générations distinctes de fournisseurs ODBC Microsoft pour SQL Server. Le premier pilote ODBC de « SQL Server » est toujours fourni dans le cadre de [Windows Data Access Components](#microsoft-or-windows-data-access-components). Il n’est pas recommandé d’utiliser ce pilote pour un nouveau développement. À compter de SQL Server 2005, le [SQL Server Native Client](#sql-server-native-client) inclut une interface ODBC et le pilote ODBC fourni avec SQL Server 2005 via SQL Server 2012. Il n’est pas recommandé d’utiliser ce pilote pour un nouveau développement. Après SQL Server 2012, le [Microsoft ODBC Driver for SQL Server](#microsoft-odbc-driver-for-sql-server) est le pilote est mis à jour avec les fonctionnalités du serveur les plus récentes à l’avenir.
 
 ### <a name="sql-server-native-client"></a>SQL Server Native Client
 
@@ -36,7 +36,7 @@ Après SQL Server 2012, principal ODBC driver for SQL Server a été développé
 
 ## <a name="ole-db"></a>OLE DB
 
-Il existe trois générations distinctes de fournisseurs OLE DB Microsoft pour SQL Server. Le [Fournisseur Microsoft OLE DB pour SQL Server](#microsoft-or-windows-data-access-components) (SQLOLEDB) est toujours fourni dans le cadre de Windows Data Access Components. Ce fournisseur n’est pas mis à jour avec de nouvelles fonctionnalités et il n’est pas recommandé d’utiliser ce pilote pour un nouveau développement. À compter de SQL Server 2005, le [SQL Server Native Client](#sql-server-native-client) inclut une interface de fournisseur OLE DB (SQLNCLI) et est le fournisseur OLE DB livrés avec SQL Server 2005 à SQL Server 2017. Sa [dépréciation a été annoncée en 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/), et nous vous déconseillons d’utiliser ce pilote pour un nouveau développement. En 2017, technologie d’accès aux données OLE DB a été par la suite [annuler la dépréciation et une nouvelle version planifiée a été annoncée](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) pour 2018. Le nouveau fournisseur OLE DB est appelé le « Microsoft OLE DB Driver pour SQL Server » (MSOLEDBSQL) et est actuellement géré et pris en charge.
+Il existe trois générations distinctes de fournisseurs OLE DB Microsoft pour SQL Server. Le premier Fournisseur Microsoft OLE DB pour SQL Server (SQLOLEDB) est toujours fourni dans le cadre de [Windows Data Access Components](#microsoft-or-windows-data-access-components). Ce fournisseur n’est pas mis à jour avec de nouvelles fonctionnalités et il n’est pas recommandé d’utiliser ce pilote pour un nouveau développement. À compter de SQL Server 2005, le [SQL Server Native Client](#sql-server-native-client) inclut une interface de fournisseur OLE DB (SQLNCLI) et est le fournisseur OLE DB livrés avec SQL Server 2005 à SQL Server 2017. Sa [dépréciation a été annoncée en 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/), et nous vous déconseillons d’utiliser ce pilote pour un nouveau développement. En 2017, technologie d’accès aux données OLE DB a été par la suite [annuler la dépréciation et une nouvelle version planifiée a été annoncée](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) pour 2018. Le nouveau fournisseur OLE DB est appelé le « Microsoft OLE DB Driver pour SQL Server » (MSOLEDBSQL) et est actuellement géré et pris en charge.
 
 ## <a name="adonet"></a>ADO.NET
 
