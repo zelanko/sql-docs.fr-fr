@@ -13,18 +13,18 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658075"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62751617"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tables temporelles avec version gérée par le système avec tables optimisées en mémoire
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Les tables temporelles à système par version pour les [tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md) sont conçues pour fournir une solution rentable dans des scénarios où [l’audit de données et l’analyse à un moment donné](https://msdn.microsoft.com/library/mt631669.aspx) sont nécessaires sur des données collectées à l’aide de charges de travail OLTP en mémoire. Elles offrent un débit transactionnel élevé et une simultanéité sans verrouillage, ainsi que la possibilité de stocker un grand nombre de données d’historique pouvant être interrogées facilement.  
   
-## <a name="overview"></a>Vue d'ensemble  
+## <a name="overview"></a>Vue d’ensemble  
  Les tables temporelles à système par version conservent automatiquement un historique complet des modifications apportées aux données et exposent des extensions Transact-SQL utiles pour l’analyse à un moment donné. Dans un scénario classique, l’historique des données est conservé pendant très longtemps (plusieurs mois, voire années), même s’il n’est pas régulièrement interrogé.  
   
  L’audit de données et l’analyse à un moment donné peuvent être exigés dans différents environnements, notamment dans les systèmes OLTP qui traitent un grand nombre de requêtes et où la technologie OLTP en mémoire est mise en œuvre. Toutefois, l’utilisation de tables optimisées en mémoire dans des scénarios temporels est complexe, car une grande quantité de données d’historique générées excède généralement la limite de mémoire RAM disponible. Pourtant, stocker dans la RAM des données d’historique en lecture seule qui sont moins sollicitées avec le temps n’est pas une solution optimale.  
@@ -55,13 +55,13 @@ ms.locfileid: "51658075"
 -   Les opérations**ALTER TABLE** qui modifient le schéma de la table en interne doivent effectuer un vidage de données, ce qui peut allonger la durée de l’opération.  
   
 ## <a name="the-internal-memory-optimized-staging-table"></a>La table de mise en lots interne optimisée en mémoire  
- La table de mise en lots interne optimisée en mémoire est un objet interne créé par le système pour optimiser les opérations DML.  
+ La table de mise en lots interne optimisée en mémoire est un objet interne créé par le système pour optimiser les opérations DML.  
   
--   Le nom de la table est généré au format suivant : **Memory_Optimized_History_Table_<ID_objet>**, où *<ID_objet>* est l’identificateur de la table temporelle actuelle.  
+-   Le nom de la table est généré au format suivant : **Memory_Optimized_History_Table_<ID_objet>** , où *<ID_objet>* est l’identificateur de la table temporelle actuelle.  
   
 -   La table réplique le schéma de la table temporelle actuelle et une colonne BIGINT. Cette colonne supplémentaire garantit l’unicité des lignes déplacées vers la mémoire tampon de l’historique interne.  
   
--   Le nom de la colonne supplémentaire est au format suivant : **Change_ID[_<suffixe>]**, où *_\<suffixe>* est également ajouté dans les cas où la table contient déjà une colonne *Change_ID*.  
+-   La colonne supplémentaire est au format suivant : **Change_ID[_<suffixe>]** , où *_\<suffixe>* est également ajouté dans les cas où la table contient déjà une colonne *Change_ID*.  
   
 -   La taille de ligne maximale pour une table à système par version optimisée en mémoire est réduite de 8 octets en raison de la colonne BIGINT supplémentaire dans la table de mise en lots. La nouvelle valeur maximale est désormais 8 052 octets.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "51658075"
  Le vidage de données supprime tous les enregistrements de la mémoire tampon interne en mémoire antérieurs à la plus ancienne des transactions en cours d’exécution et les déplace vers la table d’historique sur disque.  
   
  Vous pouvez appliquer un vidage des données en appelant [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) et en spécifiant le schéma et le nom de la table :   
-**sys.sp_xtp_flush_temporal_history  @schema_name, @object_name**. Cette commande exécutée par l’utilisateur fait appel au même processus de déplacement de données que lorsque la tâche de vidage de données est appelée par le système selon la planification interne.  
+**sys.sp_xtp_flush_temporal_history  @schema_name, @object_name** . Cette commande exécutée par l’utilisateur fait appel au même processus de déplacement de données que lorsque la tâche de vidage de données est appelée par le système selon la planification interne.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
  [Prise en main des tables temporelles de contrôle de version du système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Scénarios d’utilisation de table temporelle](../../relational-databases/tables/temporal-table-usage-scenarios.md)   

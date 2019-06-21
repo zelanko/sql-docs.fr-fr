@@ -16,11 +16,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 43268755a3de5cf3a8a84547bafe5dc66ad1ac48
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134079"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62751673"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Réplication SQL Server, boîte de dialogue Propriétés de l’abonnement 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ La boîte de dialogue **Propriétés de l'abonnement** de l'abonné permet d'aff
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Options du serveur de publication pour tous les abonnements  
  **Sécurité**  
- Cliquez sur la ligne **Compte de processus de l'agent** , puis sur le bouton des propriétés (**...**) pour modifier le compte sous lequel l'Agent de distribution ou de fusion s'exécute sur le serveur de distribution. Pour modifier le compte sous lequel l'Agent de distribution ou de fusion établit les connexions avec l'abonné, cliquez sur **Connexion de l'Abonné**, puis sur le bouton des propriétés (**...**).  
+ Cliquez sur la ligne **Compte de processus de l'agent** , puis sur le bouton des propriétés ( **...** ) pour modifier le compte sous lequel l'Agent de distribution ou de fusion s'exécute sur le serveur de distribution. Pour modifier le compte sous lequel l'Agent de distribution ou de fusion établit les connexions avec l'abonné, cliquez sur **Connexion de l'Abonné**, puis sur le bouton des propriétés ( **...** ).  
   
  Pour plus d'informations sur les autorisations indispensables pour chaque agent, consultez [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -64,7 +64,7 @@ La boîte de dialogue **Propriétés de l'abonnement** de l'abonné permet d'aff
   
 ## <a name="publisher-options-for-merge-subscriptions"></a>Options du serveur de publication pour les abonnements de fusion  
  **Définition de la partition (HOST_NAME)**  
- Pour une publication qui utilise des filtres paramétrés, la publication de fusion évalue une des deux fonctions système (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu'un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()**. Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()**, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Pour une publication qui utilise des filtres paramétrés, la publication de fusion évalue une des deux fonctions système (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu'un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()** . Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()** , consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Type d'abonnement** et **Priorité**  
  Indique si l'abonnement est un abonnement de client ou de serveur (cette option n'est pas modifiable après la création de l'abonnement). Les abonnements de serveur peuvent republier les données vers d'autres abonnés. Il est possible de leur affecter une priorité pour la résolution des conflits.  
@@ -97,13 +97,13 @@ La boîte de dialogue **Propriétés de l'abonnement** de l'abonné permet d'aff
  Détermine s'il est possible de synchroniser l'abonnement à l'aide du Gestionnaire de synchronisation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Sécurité**  
- Cliquez sur la ligne **Compte de processus de l'agent** , puis sur le bouton des propriétés (**...**) pour modifier le compte sous lequel l'Agent de distribution ou de fusion s'exécute sur l'Abonné. Les options de sécurité des connexions dépendent du type d'abonnement :  
+ Cliquez sur la ligne **Compte de processus de l'agent** , puis sur le bouton des propriétés ( **...** ) pour modifier le compte sous lequel l'Agent de distribution ou de fusion s'exécute sur l'Abonné. Les options de sécurité des connexions dépendent du type d'abonnement :  
   
--   Pour les abonnements à une publication transactionnelle : pour modifier le compte sous lequel l'Agent de distribution établit les connexions au serveur de distribution, cliquez sur **Connexion du serveur de distribution**, puis sur le bouton des propriétés (**...**).  
+-   Pour les abonnements à une publication transactionnelle : pour modifier le compte sous lequel l'Agent de distribution établit les connexions au serveur de distribution, cliquez sur **Connexion du serveur de distribution**, puis sur le bouton des propriétés ( **...** ).  
   
--   Pour les abonnements avec mise à jour immédiate à une publication transactionnelle : outre la connexion au serveur de distribution décrite ci-dessus, vous pouvez modifier la méthode utilisée pour propager les modifications de l'Abonné au serveur de publication : cliquez sur **Connexion du serveur de publication**, puis sur le bouton des propriétés (**...**).  
+-   Pour les abonnements avec mise à jour immédiate à une publication transactionnelle : outre la connexion au serveur de distribution décrite ci-dessus, vous pouvez modifier la méthode utilisée pour propager les modifications de l'Abonné au serveur de publication : cliquez sur **Connexion du serveur de publication**, puis sur le bouton des propriétés ( **...** ).  
   
--   Pour les abonnements aux publications de fusion, cliquez **Connexion du serveur de publication**, puis sur le bouton des propriétés (**...**).  
+-   Pour les abonnements aux publications de fusion, cliquez **Connexion du serveur de publication**, puis sur le bouton des propriétés ( **...** ).  
   
  Pour plus d'informations sur les autorisations indispensables pour chaque agent, consultez [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -113,7 +113,7 @@ La boîte de dialogue **Propriétés de l'abonnement** de l'abonné permet d'aff
   
 ## <a name="options-for-merge-subscriptions"></a>Options des abonnements de fusion  
  **Définition de la partition (HOST_NAME)**  
- Pour une publication qui utilise des filtres paramétrés, la publication de fusion évalue une des deux fonctions système (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu'un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()**. Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()**, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Pour une publication qui utilise des filtres paramétrés, la publication de fusion évalue une des deux fonctions système (ou les deux si le filtre fait référence aux deux) pendant la synchronisation pour déterminer les données qu'un abonné doit recevoir : **SUSER_SNAME()** ou **HOST_NAME()** . Par défaut, **HOST_NAME()** retourne le nom de l'ordinateur sur lequel s'exécute l'Agent de fusion, mais vous pouvez l'ignorer dans l'Assistant Nouvel abonnement. Pour plus d'informations sur les filtres paramétrés et l'annulation de la fonction **HOST_NAME()** , consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Type d'abonnement** et **Priorité**  
  Indique si l'abonnement est un abonnement de client ou de serveur (cette option n'est pas modifiable après la création de l'abonnement). Les abonnements de serveur peuvent republier les données vers d'autres abonnés. Il est possible de leur affecter une priorité pour la résolution des conflits.  
@@ -129,13 +129,13 @@ La boîte de dialogue **Propriétés de l'abonnement** de l'abonné permet d'aff
  Si vous sélectionnez la valeur **True** pour l'option **Utiliser la synchronisation Web**:  
   
 -   Entrez l'adresse complète du serveur IIS dans le champ **Adresse du serveur Web**.    
--   Cliquez sur la ligne **Connexion du serveur Web** , puis sur le bouton de propriétés (**...**) pour définir le compte sous lequel l'abonné se connecte au serveur IIS.    
+-   Cliquez sur la ligne **Connexion du serveur Web** , puis sur le bouton de propriétés ( **...** ) pour définir le compte sous lequel l'abonné se connecte au serveur IIS.    
 -   Modifiez la valeur **Délai d'attente du serveur Web** si nécessaire. Ce délai d'attente représente le temps (en secondes) écoulé avant l'expiration d'une demande de synchronisation Web. 
 
  
 Pour plus d'informations sur la configuration, consultez [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md). 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [Afficher et modifier les propriétés d’un abonnement par émission de données](../../relational-databases/replication/view-and-modify-push-subscription-properties.md)   
  [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)   

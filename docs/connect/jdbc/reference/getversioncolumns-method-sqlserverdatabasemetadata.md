@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8c098106fc3961e0248d638356df70527739203b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66779995"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>Méthode getVersionColumns (SQLServerDatabaseMetaData)
@@ -57,7 +57,7 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getColumns est spécifiée par la méthode getColumns de l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getVersionColumns est spécifiée par la méthode getVersionColumns de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getVersionColumns contient les informations suivantes :  
   

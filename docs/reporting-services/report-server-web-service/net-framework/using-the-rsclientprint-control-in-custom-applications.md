@@ -11,14 +11,14 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a12d08348a88529efdd84fd1ae5dab3c64d7d1c1
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b0da6d086754b63a2d796c4f7ff8e1b7fd2d2cad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249810"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilisation du contrôle RSClientPrint dans les applications personnalisées
   Le contrôle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** permet une impression côté client des rapports affichés dans la Visionneuse HTML. À partir de la boîte de dialogue **Imprimer** de ce contrôle, un utilisateur peut démarrer un travail d’impression, afficher l’aperçu d’un rapport, spécifier les pages à imprimer et modifier les marges. Lors d'une impression côté client, le serveur de rapports génère le rendu du rapport dans l'extension de rendu (EMF) d'image, puis utilise les fonctionnalités d'impression du système d'exploitation afin de créer le travail d'impression et de l'envoyer à une imprimante.  
@@ -39,7 +39,7 @@ ms.locfileid: "51814182"
   
 -   Consultez les rubriques de la documentation en ligne en matière de rendu d'image (EMF) pour comprendre la façon dont les pages sont rendues lors de l'aperçu avant impression et de la sortie.  
   
-## <a name="rsprintclient-overview"></a>Présentation de RSPrintClient   
+## <a name="rsprintclient-overview"></a>Présentation de RSPrintClient  
  Le contrôle affiche une boîte de dialogue d'impression personnalisée qui prend en charge les fonctionnalités communes aux autres boîtes de dialogue d'impression, notamment l'aperçu avant impression, les options de pages pour les choix spécifiques liés aux pages, aux plages, aux marges des pages et à l'orientation. Le contrôle est créé sous forme de package désigné en tant que fichier CAB. Le texte de la boîte de dialogue**Imprimer** est localisé dans toutes les langues prises en charge dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le contrôle ActiveX **RSPrintClient** utilise l’extension de rendu d’image (EMF) pour imprimer le rapport. Les informations de périphérique EMF suivantes sont utilisées : StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight et PageWidth. Les autres paramètres d'informations de périphérique pour le rendu d'image ne sont pas pris en charge.  
   
 ### <a name="language-support"></a>Prise en charge de la langue  
@@ -106,7 +106,7 @@ ms.locfileid: "51814182"
 |ReportPathParameters|Dans|String|Spécifie le nom complet du rapport, ainsi que les paramètres, dans l'espace de noms de dossier du serveur de rapports. Les rapports sont extraits via une URL. Par exemple : "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
 |ReportName|Dans|String|Nom court du rapport (dans l'exemple ci-dessus, le nom court est Employee Sales Summary). Il s'affiche dans la boîte de dialogue Imprimer ainsi que dans la file d'attente à l'impression.|  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  L’exemple HTML suivant montre comment spécifier le fichier .cab, la méthode **Print** et les propriétés dans JavaScript :  
   
  `<BODY onload="Print()">`  
@@ -139,7 +139,7 @@ ms.locfileid: "51814182"
   
  `</BODY>`  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Imprimer des rapports à partir d’un navigateur à l’aide du contrôle d’impression &#40;Générateur de rapports et SSRS&#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Paramètres d’informations de périphérique pour l’image](../../../reporting-services/image-device-information-settings.md)  

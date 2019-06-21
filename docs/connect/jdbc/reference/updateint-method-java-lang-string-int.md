@@ -1,5 +1,5 @@
 ---
-title: prepareStatement, méthode (java.lang.String, int[]) | Microsoft Docs
+title: Méthode updateInt (java.lang.String, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c612b90db5a699df0b7e23c8591de8b6f79163d7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797162"
 ---
 # <a name="updateint-method-javalangstring-int"></a>Méthode updateInt (java.lang.String, int)
@@ -49,7 +49,7 @@ public void updateInt(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getInt est spécifiée par la méthode getInt de l’interface java.sql.ResultSet.  
+ Cette méthode updateInt est spécifiée par la méthode updateInt de l’interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthode updateInt &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)   

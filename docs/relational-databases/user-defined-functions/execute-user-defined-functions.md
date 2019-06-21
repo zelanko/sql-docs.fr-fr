@@ -16,18 +16,18 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 74a14c0f28b7353a4d09eb531678450f0b26f3fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774769"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034734"
 ---
 # <a name="execute-user-defined-functions"></a>Exécuter des fonctions définies par l’utilisateur
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
   Exécuter une fonction définie par l’utilisateur à l’aide de Transact-SQL
   
 
-> **Remarque :** Consultez la rubrique de la  [fonction définie par l’utilisateur](user-defined-functions.md) et [Créer une fonction (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) pour en savoir plus sur les fonctions définies par l’utilisateur. 
+> **Remarque :** Consultez la rubrique de la [fonction définie par l’utilisateur](user-defined-functions.md) et [Créer une fonction (Transact SQL)](../../t-sql/statements/create-function-transact-sql.md) pour en savoir plus sur les fonctions définies par l’utilisateur. 
   
  
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
@@ -41,7 +41,7 @@ ms.locfileid: "47774769"
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
-### <a name="example"></a> Exemple 
+### <a name="example"></a>Exemple 
   
 Cet exemple utilise la fonction scalaire `ufnGetSalesOrderStatusText` disponible dans la plupart des éditions de `AdventureWorks`.  L’objectif de la fonction est de retourner une valeur de texte pour l’état des ventes à partir d’un entier donné.  Faites varier l’exemple en passant des nombres entiers de 1 à 7 au paramètre **\@Status** .
   

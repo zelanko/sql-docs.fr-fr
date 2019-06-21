@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 88f175d5d3658a61964ab7d7daba1be88438e2cd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130569"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639776"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>Réplication de fusion avancée - Détection et résolution des conflits
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ Résoudre les conflits de réplication de fusion [!INCLUDE[appliesto-ss-xxxx-xxx
   
  L'Outil de résolution des conflits affiche des informations issues de trois tables système :  
   
--   La réplication crée une table de conflits pour chaque table d’un article de fusion, dont le nom se présente sous la forme **MSmerge_conflict_\<nom_publication>_\<nom_article>**.  
+-   La réplication crée une table de conflits pour chaque table d’un article de fusion, dont le nom se présente sous la forme **MSmerge_conflict_\<nom_publication>_\<nom_article>** .  
   
      Les tables de conflits possèdent la même structure que les tables sur lesquelles elles sont basées. Une ligne de l'une de ces tables se compose de la version perdante d'une ligne conflictuelle (la version gagnante de la ligne réside dans la table utilisateur réelle).  
   
@@ -149,7 +149,7 @@ Résoudre les conflits de réplication de fusion [!INCLUDE[appliesto-ss-xxxx-xxx
   
 -   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de réplication : [Afficher les informations relatives aux conflits pour les publications de fusion &#40;programmation Transact-SQL de la réplication&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Synchroniser les données](../../../relational-databases/replication/synchronize-data.md)  
   
   

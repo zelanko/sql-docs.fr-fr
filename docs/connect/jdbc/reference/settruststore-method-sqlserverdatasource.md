@@ -1,5 +1,5 @@
 ---
-title: getXopenStates, méthode (SQLServerDataSource) | Microsoft Docs
+title: Méthode setTrustStore (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: a38bbf56613f0b06f874b5db4e4de03f0064492f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66783546"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>Méthode setTrustStore (SQLServerDataSource)
@@ -45,9 +45,9 @@ public void setTrustStore(java.lang.String trustStore)
   
 -   1. Un fichier spécifié par la propriété système de machine virtuelle Java (JVM) « javax.net.ssl.trustStore ».  
   
--   2. "\<java-home>/lib/security/jssecacerts" file.  
+-   2. Fichier « \<java-home>/lib/security/jssecacerts ».  
   
--   3. Fichier « \<java-home/lib/security/cacerts ».  
+-   3. Fichier « \<java-home>/lib/security/cacerts ».  
   
  Pour plus d'informations, consultez la documentation d'interface SunX509 TrustManager sur le site Web de Sun Microsystems.  
   

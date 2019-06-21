@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 2a3f536c180106ed29ae5758433d2f59bb7a8b47
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66763392"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>Méthode getColumns (SQLServerDatabaseMetaData)
@@ -69,7 +69,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Nom du catalogue.|  
-|TABLE_SCHEM|**String**|Schéma de la table.|  
+|TABLE_SCHEM|**String**|Le nom du schéma de la table.|  
 |TABLE_NAME|**String**|Le nom de la table.|  
 |COLUMN_NAME|**String**|Nom de la colonne.|  
 |DATA_TYPE|**smallint**|Type de données SQL de java.sql.Types.|  

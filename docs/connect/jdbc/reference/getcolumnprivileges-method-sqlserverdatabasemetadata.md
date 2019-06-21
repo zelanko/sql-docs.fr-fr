@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 934a230e295532231f52ac3ed787b6a4de366d54
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66763382"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>Méthode getColumnPrivileges (SQLServerDatabaseMetaData)
@@ -69,7 +69,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 |Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Nom du catalogue.|  
-|TABLE_SCHEM|**String**|Schéma de la table.|  
+|TABLE_SCHEM|**String**|Le nom du schéma de la table.|  
 |TABLE_NAME|**String**|Le nom de la table.|  
 |COLUMN_NAME|**String**|Nom de la colonne.|  
 |GRANTOR|**String**|Objet octroyant l'accès.|  

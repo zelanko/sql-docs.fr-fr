@@ -1,5 +1,5 @@
 ---
-title: getTypeInfo Method (SQLServerDatabaseMetaData) | Microsoft Docs
+title: Méthode getTypeInfo (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 246f38d757015dbc2a27bea8f9d783b4fbb1d545
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66788632"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Méthode getTypeInfo (SQLServerDatabaseMetaData)
@@ -42,7 +42,7 @@ public java.sql.ResultSet getTypeInfo()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getTables est spécifiée par la méthode getTables de l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getTypeInfo est spécifiée par la méthode getTypeInfo de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getTypeInfo contient les informations suivantes :  
   

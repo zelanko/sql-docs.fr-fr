@@ -16,17 +16,17 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75c372af16b9a982fb5924fbc1ef4fd7668d0c0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759643"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62935325"
 ---
-# <a name="tutorial-writing-transact-sql-statements"></a>Didacticiel : écriture d'instructions Transact-SQL
+# <a name="tutorial-writing-transact-sql-statements"></a>Tutoriel : Écriture d’instructions Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 Bienvenue dans le didacticiel d'écriture d'instructions [!INCLUDE[tsql](../includes/tsql-md.md)] . Ce didacticiel s'adresse aux utilisateurs qui débutent dans l'écriture d'instructions SQL. Il permet aux nouveaux utilisateurs de débuter en passant en revue certaines instructions de base destinées à créer des tables et à insérer des données. Ce didacticiel utilise [!INCLUDE[tsql](../includes/tsql-md.md)], l'implémentation [!INCLUDE[msCoName](../includes/msconame-md.md)] de la norme SQL. Ce didacticiel constitue une brève introduction au langage [!INCLUDE[tsql](../includes/tsql-md.md)] mais ne remplace pas un cours de formation sur [!INCLUDE[tsql](../includes/tsql-md.md)] . Les instructions de ce didacticiel sont volontairement simples et n'ont pas pour objectif de traduire la complexité propre à une base de données de production type.  
   
->**REMARQUE :** Si vous êtes débutant, utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pourrait vous sembler plus facile que d’écrire des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] .  
+>**REMARQUE :** Si vous êtes débutant, utiliser [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pourrait vous sembler plus facile que d’écrire des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
 ## <a name="finding-more-information"></a>Sources d'informations complémentaires  
 Pour plus d’informations sur une instruction particulière, recherchez le nom de l’instruction dans la documentation en ligne de SQL Server ou utilisez le Sommaire pour parcourir les 1 800 éléments de langage répertoriés par ordre alphabétique sous [Référence Transact-SQL &#40;moteur de base de données&#41;](../t-sql/transact-sql-reference-database-engine.md). Une autre stratégie efficace permettant de rechercher des informations consiste à rechercher des mots clés liés à la rubrique qui vous intéresse. Par exemple, si vous souhaitez savoir comment retourner un élément d’une date (le mois, par exemple), recherchez **dates [SQL Server]** dans l’index, puis sélectionnez **dateparts**. Vous accédez ainsi à la rubrique [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md). À titre d’autre exemple, pour savoir comment utiliser des chaînes, recherchez **fonctions de chaîne**. Vous accédez ainsi à la rubrique [Fonctions de chaîne &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md).  
@@ -36,13 +36,13 @@ Ce didacticiel vous explique comment créer un base de données, une table dans 
   
 Ce didacticiel est divisé en trois leçons :  
   
-[Leçon 1 : Création des objets de base de données](../t-sql/lesson-1-creating-database-objects.md)  
+[Leçon 1 : Création des objets de base de données](../t-sql/lesson-1-creating-database-objects.md)  
 Dans cette leçon, vous allez créer une base de données, créer une table dans la base de données, insérer des données dans la table, mettre à jour et lire les données.  
   
-[Leçon 2 : Configuration des autorisations sur des objets de base de données](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
+[Leçon 2 : Configuration des autorisations sur des objets de base de données](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
 Dans cette leçon, vous allez créer une connexion et un utilisateur. Vous allez également créer une vue et une procédure stockée, puis octroyer à l'utilisateur l'autorisation sur la procédure stockée.  
   
-[Leçon 3 : Suppression des objets de base de données](../t-sql/lesson-3-deleting-database-objects.md)  
+[Leçon 3 : Suppression des objets de base de données](../t-sql/lesson-3-deleting-database-objects.md)  
 Dans cette leçon, vous allez supprimer l'accès aux données, supprimer des données d'une table, supprimer la table, puis supprimer la base de données.  
   
 ## <a name="requirements"></a>Spécifications  

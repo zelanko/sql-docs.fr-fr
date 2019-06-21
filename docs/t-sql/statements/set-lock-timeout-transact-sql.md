@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df2683d7a0c580624dd56aa8d35e183ab7ac6bbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630147"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62942798"
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ SET LOCK_TIMEOUT timeout_period
   
  Si le délai d'attente avant la libération d'un verrou est supérieur au délai d'expiration spécifié, une erreur est renvoyée. Une valeur égale à 0 signifie que l'instruction n'attend pas et qu'elle retourne un message dès qu'elle rencontre un verrou.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Au début d'une connexion, la valeur de ce paramètre est -1 Une fois celle-ci modifiée, le nouveau paramètre reste en vigueur pour le reste de la durée de la connexion.  
   
  L'option SET LOCK_TIMEOUT est appliquée lors de l'exécution, et non pas lors de l'analyse.  
@@ -61,7 +61,7 @@ SET LOCK_TIMEOUT timeout_period
   
  Les instructions CREATE DATABASE, ALTER DATABASE et DROP DATABASE ignorent le paramètre SET LOCK_TIMEOUT.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -89,7 +89,7 @@ SET LOCK_TIMEOUT -1;
 SET LOCK_TIMEOUT 1800;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

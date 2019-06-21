@@ -26,11 +26,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11e155be4678c2cb57b9b551b412570e4578eb46
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516657"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715850"
 ---
 # <a name="create-a-database-user"></a>Créer un utilisateur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "52516657"
   
  En tant que principal de sécurité, il est possible d'accorder des autorisations à des utilisateurs. L'étendue d'un utilisateur est la base de données. Pour se connecter à une base de données spécifique sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un compte de connexion doit être mappé à un utilisateur de base de données. Les autorisations dans la base de données sont accordées et refusées à l'utilisateur de la base de données, pas au compte de connexion.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation **ALTER ANY USER** sur la base de données.  
   
 ##  <a name="SSMSProcedure"></a> Créer un utilisateur avec SSMS  
@@ -74,7 +74,7 @@ ms.locfileid: "52516657"
   
 2.  Développez la base de données où créer le nouvel utilisateur de base de données.  
   
-3.  Cliquez avec le bouton droit sur le dossier **Sécurité**, pointez sur **Nouveau**, puis sélectionnez **Utilisateur...**.  
+3.  Cliquez avec le bouton droit sur le dossier **Sécurité**, pointez sur **Nouveau**, puis sélectionnez **Utilisateur...** .  
   
 4.  Dans la boîte de dialogue **Nouvel utilisateur de base de données**, dans la page **Général**, sélectionnez un des types d’utilisateurs suivants à partir de la liste **Type d’utilisateur** :  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52516657"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Options supplémentaires  
- La boîte de dialogue **Nouvel utilisateur de base de données** offre également des options dans quatre pages supplémentaires : **Schémas appartenant à un rôle**, **Appartenance**, **Éléments sécurisables** et **Propriétés étendues**.  
+ La boîte de dialogue **Utilisateur de base de données - Nouveau** offre également des options sur quatre pages supplémentaires : **schémas détenus**, **appartenance**, **éléments sécurisables** et **propriétés étendues**.  
   
 -   La page **Schémas appartenant à un rôle** répertorie tous les schémas possibles qui peuvent être détenus par le nouvel utilisateur de base de données. Pour ajouter des schémas à un utilisateur de base de données ou lui en supprimer, sous **Schémas appartenant à cet utilisateur**, activez ou désactivez les cases à cocher en regard de ces schémas.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52516657"
   
  Pour plus d’informations, consultez [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) qui contient beaucoup d’autres exemples [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Principaux &#40;moteur de base de données&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Créer un compte de connexion](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  

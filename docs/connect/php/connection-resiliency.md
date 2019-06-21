@@ -10,11 +10,11 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305917"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62522040"
 ---
 # <a name="idle-connection-resiliency"></a>Résilience des connexions inactives
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,12 +25,12 @@ Résilience des connexions est implémentée avec les deux mots clés de connexi
 
 |Mot clé|Valeurs|Valeur par défaut|Description|
 |-|-|-|-|
-|**ConnectRetryCount**| Entier compris entre 0 et 255 (inclus)|1|Le nombre maximal de tentatives de rétablissement d’une connexion interrompue avant d’abandonner. Par défaut, une seule tentative pour rétablir la connexion lorsque le rompu. Une valeur de 0 signifie qu’aucune reconnexion ne sera tentée.|
-|**ConnectRetryInterval**| Entier compris entre 1 et 60 (inclus)|1| Durée, en secondes, entre les tentatives de rétablir une connexion. L’application tente de se reconnecter immédiatement lors de la détection d’une connexion interrompue et qu’il attendra puis **ConnectRetryInterval** secondes avant de réessayer. Ce mot clé est ignoré si **ConnectRetryCount** est égal à 0.
+|**ConnectRetryCount**| Entier compris entre 0 et 255 (inclus)|1|Le nombre maximal de tentatives de rétablissement d’une connexion interrompue avant d’abandonner. Par défaut, une seule tentative pour rétablir la connexion lorsque le rompu. Une valeur de 0 signifie qu’aucune reconnexion ne sera tentée.|
+|**ConnectRetryInterval**| Entier compris entre 1 et 60 (inclus)|1| Durée, en secondes, entre les tentatives de rétablir une connexion. L’application tente de se reconnecter immédiatement lors de la détection d’une connexion interrompue et qu’il attendra puis **ConnectRetryInterval** secondes avant de réessayer. Ce mot clé est ignoré si **ConnectRetryCount** est égal à 0.
 
 Si le produit de **ConnectRetryCount** multipliée par **ConnectRetryInterval** est supérieure à **LoginTimeout**, puis le client cesse d’une tentative de connexion une fois  **LoginTimeout** est atteinte ; sinon, il continuera à essayer de vous reconnecter jusqu'à ce que **ConnectRetryCount** est atteinte.
 
-#### <a name="remarks"></a>Notes 
+#### <a name="remarks"></a>Notes
 
 Résilience des connexions s’applique lorsque la connexion est inactive. Les défaillances qui se produisent pendant l’exécution d’une transaction, par exemple, ne déclenche pas les tentatives de reconnexion - elles échoue comme prévu. Les cas suivants, appelés des États de session non récupérable, ne déclenchent pas les tentatives de reconnexion :
 
@@ -43,7 +43,7 @@ Résilience des connexions s’applique lorsque la connexion est inactive. Les d
 * Handles XML préparés
 * Indicateurs de trace
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Le code suivant se connecte à une base de données et exécute une requête. La connexion est interrompue par l’arrêt de la session et qu’une nouvelle requête est tentée à l’aide de la connexion interrompue. Cet exemple utilise l’exemple de base de données [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx).
 
@@ -130,5 +130,5 @@ Statement 2 successful.
 16 rows in result set.
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Résilience de connexion du pilote ODBC Windows](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)

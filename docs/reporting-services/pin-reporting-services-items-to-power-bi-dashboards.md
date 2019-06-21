@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500031"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Épingler des éléments de rapport paginé Reporting Services à des tableaux de bord dans Power BI
@@ -40,7 +40,7 @@ Vous pouvez épingler un élément de rapport paginé de [!INCLUDE[ssRSnoversion
   
 -   Vous devez configurer les rapports pour les informations d’identification stockées si vous voulez que l’élément épinglé s’actualise.  Quand vous épinglez un élément, un abonnement [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] est automatiquement créé pour gérer l’actualisation des données de l’élément sur le tableau de bord.  Si le rapport n’utilise pas d’informations d’identification stockées, une fois l’abonnement actif, la page **Mes abonnements** affiche un message d’erreur similaire à celui-ci.  
   
-    Erreur de remise Power BI : tableau de bord : IT Spend Analysis Sample, élément visuel : Chart2, erreur : Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou ce dataset partagé. Elles ne sont pas stockées dans... »
+    "Erreur de remise Power BI : tableau de bord : IT Spend Analysis Sample, élément visuel : Chart2, erreur : Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou ce dataset partagé. Elles ne sont pas stockées dans... »
  
     Consultez la section « Configurer des informations d’identification stockées pour une source de données propre à un rapport (mode natif) » dans [Stocker les informations d’identification dans une source de données Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
@@ -96,7 +96,7 @@ Dans le tableau de bord [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , l�
   
 ##  <a name="bkmk-troubleshoot"></a> Résoudre les problèmes  
   
--   **Aucun bouton [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dans la barre d’outils de la visionneuse de rapports :** cela indique que le serveur de rapports n’a pas été intégré à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Pour plus d’informations, consultez [Intégration du serveur de rapports Power BI &#40;Gestionnaire de configuration&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **Aucun bouton [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] dans la barre d’outils de la visionneuse de rapports :** Ce message indique que le serveur de rapports n’a pas été intégré à [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Pour plus d’informations, consultez [Intégration du serveur de rapports Power BI &#40;Gestionnaire de configuration&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
 - **Impossible d’épingler**: quand vous tentez d’épingler un élément, le message d’erreur suivant s’affiche. Consultez la section [Éléments que vous pouvez épingler](#bkmk_supported_items).  
   

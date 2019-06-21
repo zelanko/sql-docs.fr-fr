@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: eae7dfb2a198cf7cb3b1563f8f5b35c5fbb0b4eb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515985"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>Création d’une table temporelle avec gestion de version du système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -58,11 +58,11 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   Une table de l’historique anonyme est créée automatiquement sur le même schéma que la table en cours ou temporelle.  
   
--   Le nom de la table de l’historique anonyme a le format suivant : *MSSQL_TemporalHistoryFor_<ID_objet_table_temporelle_actuelle>_ [suffixe]*. Le suffixe est facultatif. Il est ajouté uniquement si la première partie du nom de la table n’est pas unique.  
+-   Le nom de la table de l’historique anonyme a le format suivant : *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* . Le suffixe est facultatif. Il est ajouté uniquement si la première partie du nom de la table n’est pas unique.  
   
 -   La table de l’historique est créée en tant que table rowstore. Un compression de page est appliquée si possible. Autrement, la table de l’historique est décompressée. Par exemple, certaines configurations de table, telles des colonnes fragmentées, n’autorisent pas la compression.  
   
--   Un index cluster par défaut est créé pour la table de l’historique avec un nom généré automatiquement au format *IX_<nom_table_historique>*. L’index cluster contient les colonnes **PERIOD** (début, fin).  
+-   Un index cluster par défaut est créé pour la table de l’historique avec un nom généré automatiquement au format *IX_<nom_table_historique>* . L’index cluster contient les colonnes **PERIOD** (début, fin).  
   
 -   Pour créer la table actuelle comme table optimisée en mémoire, consultez [Tables temporelles à système par version avec tables optimisées en mémoire](../../relational-databases/tables/system-versioned-temporal-tables-with-memory-optimized-tables.md).  
   
@@ -211,7 +211,7 @@ ALTER TABLE ProjectTaskCurrent
 -   Il est vivement recommandé de définir **SYSTEM_VERSIONING** avec **DATA_CONSISTENCY_CHECK = ON** pour appliquer les vérifications de cohérence des données sur les données existantes.  
   
  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
  [Prise en main des tables temporelles avec versions gérées par le système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système](../../relational-databases/tables/manage-retention-of-historical-data-in-system-versioned-temporal-tables.md)   

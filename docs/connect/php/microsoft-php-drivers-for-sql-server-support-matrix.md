@@ -11,11 +11,11 @@ author: David-Engel
 ms.author: genemi
 manager: ''
 ms.openlocfilehash: 0790d2cc0497ef2912f96cd4679e4541fc9b2262
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645501"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63180275"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Pilotes Microsoft PHP pour SQL Server Support Matrix
 
@@ -31,24 +31,24 @@ Les options de support étendu et personnalisé ne sont pas disponibles pour les
 
 Les pilotes Microsoft PHP suivants bénéficient d’un support jusqu’à la date de fin de support indiquée.
 
-|Nom du pilote|Version de package du pilote|Fin du Support standard|
+|Nom du pilote|Version de package du pilote|Fin du support standard|
 |-|:-:|-|
-|Pilotes Microsoft PHP 5.6 pour SQL Server|5.6|21 février 2024|
-|Pilotes Microsoft PHP 5.3 pour SQL Server|5.3|20 juillet 2023|
-|Pilotes Microsoft PHP 5.2 pour SQL Server|5.2|9 février 2023|
-|4.3 les pilotes Microsoft PHP pour SQL Server|4.3|6 juillet 2022|
-|Pilotes Microsoft PHP 4.0 pour SQL Server|4.0|11 juillet 2021|
-|Pilotes Microsoft PHP 3.2 pour SQL Server|3.2|9 mars 2020|
-|3.1 les pilotes Microsoft PHP pour SQL Server|3.1|12 décembre 2019|
+|Microsoft PHP Drivers 5.6 pour SQL Server|5.6|21 février 2024|
+|Microsoft PHP Drivers 5.3 pour SQL Server|5.3|20 juillet 2023|
+|Microsoft PHP Drivers 5.2 pour SQL Server|5.2|9 février 2023|
+|Microsoft PHP Drivers 4.3 pour SQL Server|4.3|6 juillet 2022|
+|Microsoft PHP Drivers 4.0 pour SQL Server|4.0|11 juillet 2021|
+|Microsoft PHP Drivers 3.2 pour SQL Server|3.2|9 mars 2020|
+|Microsoft PHP Drivers 3.1 pour SQL Server|3.1|12 décembre 2019|
 | &nbsp; | &nbsp; | &nbsp; |
 
 Les pilotes Microsoft PHP suivants ne sont plus supportés.
 
-|Nom du pilote|Version de package du pilote|Fin du Support standard|
+|Nom du pilote|Version de package du pilote|Fin du support standard|
 |-|:-:|-|
 |Microsoft PHP Drivers 3.0 pour SQL Server|3|6 mars 2017|
-|Pilotes Microsoft PHP 2.0 pour SQL Server|2|10 août 2015|
-|Pilotes Microsoft PHP 1.0 pour SQL Server|1.0|28 avril 2014|
+|Microsoft PHP Drivers 2.0 pour SQL Server|2|10 août 2015|
+|Microsoft PHP Drivers 1.0 pour SQL Server|1.0|28 avril 2014|
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>Certifié de compatibilité de la Version de SQL Server
@@ -128,7 +128,7 @@ Linux et Mac versions (64 bits uniquement) des système d’exploitation suivant
 |macOS El Capitan (64 bits)           |   |O  |O  |O  |   |   |   |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Notes de publication](../../connect/php/release-notes-php-sql-driver.md)
 

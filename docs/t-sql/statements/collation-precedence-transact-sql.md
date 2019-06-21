@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0fd55a9b0b6dd98a00ce7d826611845e8597170c
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960773"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051564"
 ---
 # <a name="collation-precedence"></a>Priorité de classement
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -146,7 +146,7 @@ Msg 448, Level 16, State 9, Line 2
 Cannot resolve collation conflict between 'Latin1_General_CS_AS' and 'Greek_CI_AS' in equal to operation.  
 ```  
   
-#### <a name="explicit-label-vs-implicit-label"></a>Étiquettes Explicite et étiquette Implicite  
+#### <a name="explicit-label-vs-implicit-label"></a>étiquettes Explicite et étiquette Implicite  
  Dans la requête suivante, le prédicat est analysé dans le classement `greek_ci_as`, car l'expression de droite comporte l'étiquette Explicite. Celle-ci est prioritaire par rapport à l'étiquette Implicite de l'expression de gauche.  
   
 ```sql  
@@ -239,7 +239,7 @@ Les fonctions CAST, CONVERT et COLLATE respectent le classement pour les types d
 |LOWER|SUBSTRING|  
 |PATINDEX|UPPER|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [Conversion de type de données &#40;moteur de base de données&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

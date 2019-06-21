@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 81cb6429cbf1c3f1dd1d97a0aee9458fff637f15
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66779070"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>Méthode getTables (SQLServerDatabaseMetaData)
@@ -69,9 +69,9 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Nom de la base de données qui contient la table spécifiée.|  
-|TABLE_SCHEM|**String**|Schéma de la table.|  
+|TABLE_SCHEM|**String**|Le nom du schéma de la table.|  
 |TABLE_NAME|**String**|Le nom de la table.|  
-|TABLE_TYPE|**String**|TT = Type de table|  
+|TABLE_TYPE|**String**|Le type de table.|  
 |REMARKS|**String**|Description de la table.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
 |TYPE_CAT|**String**|Non pris en charge par le pilote JDBC.|  
 |TYPE_SCHEM|**String**|Non pris en charge par le pilote JDBC.|  

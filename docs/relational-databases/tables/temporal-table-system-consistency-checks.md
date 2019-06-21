@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 187a333da1f38cc89f8783b48e0c171630339c9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766178"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034836"
 ---
 # <a name="temporal-table-system-consistency-checks"></a>Vérifications de cohérence système des tables temporelles
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "47766178"
 10. La table de l’historique n’est pas configurée pour le suivi des modifications ou la capture des modifications de données.  
   
 ### <a name="data-consistency-check"></a>Vérification de cohérence des données  
- Avant que **SYSTEM_VERSIONING** soit défini sur **ON** et dans le cadre d’une opération DML, le système effectue la vérification suivante : **SysEndTime** ≥**SysStartTime**  
+ Avant que **SYSTEM_VERSIONING** soit défini sur **ON** et dans le cadre d’une opération DML, le système effectue la vérification suivante : **SysEndTime** ≥**SysStartTime**  
   
  Lorsque vous créez un lien vers une table de l’historique existante, vous pouvez choisir d’effectuer une vérification de cohérence des données. Cette vérification de cohérence des données garantit que les enregistrements existants ne se chevauchent pas et que les spécifications temporelles sont satisfaites pour chaque enregistrement individuel. La vérification de cohérence des données est effectuée par défaut. En général, l’exécution de la vérification de cohérence des données est recommandée chaque fois que les données des tables en cours et des tables de l’historique risquent d’être désynchronisées, comme lorsque vous incorporez une table de l’historique existante remplie avec des données d’historique.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "47766178"
 ## <a name="dbcc-checkconstraints"></a>DBCC CHECKCONSTRAINTS  
  La commande **DBCC CHECKCONSTRAINTS** inclut des vérifications de cohérence des données temporelles. Pour plus d’informations, consultez [DBCC CHECKCONSTRAINTS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
- [Prise en main des tables temporelles avec versions gérées par le système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
+ [Prise en main des tables temporelles de contrôle de version du système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Partitionnement des tables temporelles](../../relational-databases/tables/partitioning-with-temporal-tables.md)   
  [Considérations et limitations liées aux tables temporelles](../../relational-databases/tables/temporal-table-considerations-and-limitations.md)   
  [Sécurité de la table temporelle](../../relational-databases/tables/temporal-table-security.md)   

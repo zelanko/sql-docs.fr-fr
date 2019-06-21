@@ -12,21 +12,21 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cf0b0008efb05d15f7e34827ab0f80855fb526d
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506576"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurer la mémoire disponible pour les applications du serveur de rapports
  Bien que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] puisse utiliser toute la mémoire disponible, vous pouvez substituer le comportement par défaut en configurant une limite supérieure pour la quantité totale des ressources de mémoire allouées aux applications serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous pouvez également définir des seuils qui obligent le serveur de rapports à modifier son mode de traitement des requêtes et leur classement par ordre de priorité, selon que la sollicitation de la mémoire est faible, moyenne ou élevée. Face à de faibles niveaux de sollicitation de la mémoire, le serveur de rapports répond en donnant une priorité légèrement supérieure au traitement de rapport interactif ou à la demande. Face à des niveaux élevés de sollicitation de la mémoire, le serveur de rapports utilise plusieurs techniques pour rester opérationnel en utilisant les ressources limitées dont il dispose.  
   
- Cette rubrique décrit les paramètres de configuration que vous pouvez spécifier, ainsi que la façon dont le serveur répond quand la sollicitation de la mémoire devient un facteur de traitement des requêtes.  
+ Cet article décrit les paramètres de configuration que vous pouvez spécifier, ainsi que la façon dont le serveur répond quand la sollicitation de la mémoire devient un facteur de traitement des requêtes.  
   
 ## <a name="memory-management-policies"></a>Stratégies de gestion de la mémoire  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] répond aux limitations des ressources système en ajustant la quantité de mémoire allouée en fonction des applications et des types de requêtes de traitement. Les applications qui s'exécutent dans le service Report Server et qui sont soumises à la gestion de la mémoire sont les suivantes :  
   
--   Gestionnaire de rapports, une application Web frontale pour le serveur de rapports ;  
+-   Le portail web, une application web frontale pour le serveur de rapports ;  
   
 -   service Web Report Server, pour les requêtes de traitement de rapport interactif et à la demande ;  
   

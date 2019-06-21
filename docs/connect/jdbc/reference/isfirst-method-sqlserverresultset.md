@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: c27320c78db2bd04ec9747079beb4b306446bab4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66796541"
 ---
 # <a name="isfirst-method-sqlserverresultset"></a>isFirst, méthode (SQLServerResultSet)
@@ -42,7 +42,7 @@ public boolean isFirst()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode first est spécifiée par la méthode first de l’interface java.sql.ResultSet.  
+ Cette méthode isFirst est spécifiée par la méthode isFirst de l’interface java.sql.ResultSet.  
   
  Si cette méthode est utilisée avec les curseurs avant et dynamiques, une exception est levée.  
   

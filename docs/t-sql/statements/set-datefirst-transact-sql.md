@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8b369aafc68c7bf06ca56e325c036ffa0c7e4341
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515143"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639354"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *number* | **@**_number_var_  
+ *number* |  **@** _number_var_  
  Nombre entier indiquant le premier jour de la semaine. Il peut avoir l’une des valeurs suivantes.  
   
 |Valeur|Le premier jour de la semaine est|  
@@ -70,14 +70,14 @@ SET DATEFIRST 7 ;
 |**6**|Samedi|  
 |**7** (valeur par défaut, anglais des États-Unis)|Dimanche|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour afficher la valeur actuelle de SET DATEFIRST, utilisez la fonction [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md).  
   
  L'option SET DATEFIRST est définie lors de l'exécution, et non pas durant l'analyse.  
   
  La spécification SET DATEFIRST n'a aucun effet sur DATEDIFF. DATEDIFF utilise toujours Dimanche comme le premier jour de la semaine pour que la fonction soit déterministe.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  
@@ -103,7 +103,7 @@ SELECT CAST('1999-1-1' AS datetime2) AS SelectDate
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

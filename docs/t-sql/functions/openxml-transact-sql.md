@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac5e76c2d6e93bb8eb2fe334f38a22325e74d37f
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331589"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62520705"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Peut être combiné (à l'aide de l'opérateur logique OR) avec XML_ATTRIBUTES ou XML_ELEMENTS. Dans un contexte d'extraction, cet indicateur spécifie que les données consommées ne doivent pas être copiées sur la propriété de dépassement **\@mp:xmltext**.|  
   
  _SchemaDeclaration_  
- Définition de schéma du formulaire : _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
+ Définition de schéma du formulaire : _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
   
  _ColName_  
  Nom de la colonne dans l'ensemble de lignes.  
@@ -81,7 +81,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  *TableName*  
  Nom de la table qui peut être fourni (à la place de *SchemaDeclaration*) si une table comportant le schéma souhaité existe déjà et qu’aucun modèle de colonne n’est requis.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La clause WITH fournit un format d’ensemble de lignes (et d’autres informations de mappage pertinentes) en utilisant *SchemaDeclaration* ou en spécifiant un *TableName* existant. Si la clause WITH facultative n’est pas spécifiée, les résultats sont retournés au format de table **edge**. Les tables edge représentent la structure à granularité fine des documents XML (par exemple, les noms d'élément/d'attribut, la hiérarchie du document, les espaces de noms, les instructions de traitement, etc.) dans une seule table.  
   
  Le tableau suivant décrit la structure de la table **edge**.  
@@ -155,7 +155,7 @@ NULL       NULL
 NULL       NULL  
 ```  
   
-### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>b. Spécification de ColPattern pour le mappage des colonnes aux attributs XML  
+### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>B. Spécification de ColPattern pour le mappage des colonnes aux attributs XML  
  La requête suivante retourne différents attributs à partir du document XML : ID client, date de commande, ID produit et quantité. *rowpattern* identifie les éléments `<OrderDetails>`. `ProductID` et `Quantity` sont les attributs de l'élément `<OrderDetails>`. Toutefois, `OrderID`, `CustomerID` et `OrderDate` sont les attributs de l'élément parent (`<Orders>`).  
   
  Le paramètre facultatif *ColPattern* est spécifié pour les mappages suivants :  
@@ -245,6 +245,6 @@ EXEC sp_xml_removedocument @idoc;
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemples : utilisation de OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
   

@@ -13,11 +13,11 @@ ms.author: jodebrui
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 96c8f204f1be7775dbf77490e3fd3749c40e6a3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531629"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047713"
 ---
 # <a name="faster-temp-table-and-table-variable-by-using-memory-optimization"></a>Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ OLTP en mémoire fournit les objets suivants qui peuvent être utilisés pour l�
     - `DECLARE @mytablevariable my_type;`.  
   
   
-## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Scénario : Remplacer la table temporaire globale &#x23;&#x23;tempGlobalB  
+## <a name="b-scenario-replace-global-tempdb-x23x23table"></a>B. Scénario : Remplacer la table temporaire globale &#x23;&#x23;tempGlobalB  
   
 Le remplacement d’une table temporaire globale par une table SCHEMA_ONLY à mémoire optimisée est assez simple. La plus grande différence est de créer la table au moment du déploiement, et non de l’exécution. La création de tables à mémoire optimisée est plus longue que la création de tables traditionnelles en raison des optimisations au moment de la compilation. La création et la suppression de tables à mémoire optimisée dans le cadre de la charge de travail en ligne impactent les performances de la charge de travail, ainsi que les performances de restauration par progression sur les bases de données secondaires AlwaysOn et la récupération des bases de données.
 
@@ -105,7 +105,7 @@ La conversion de la table temporaire globale en SCHEMA_ONLY s’effectue comme s
 3. Dans votre code T-SQL, remplacez toutes les mentions de **&#x23;&#x23;tempGlobalB** par **dbo.soGlobalB**.  
   
   
-## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. Scénario : Remplacer la table temporaire de session &#x23;tempSessionC  
+## <a name="c-scenario-replace-session-tempdb-x23table"></a>C. Scénario : Remplacer la table temporaire de session &#x23;tempSessionC  
   
 Les tâches de préparation pour remplacer une table temporaire de session impliquent plus de code T-SQL que pour le scénario de table temporaire globale précédent. Heureusement, le code T-SQL supplémentaire n’implique pas plus de travail pour effectuer la conversion.  
 
@@ -125,7 +125,7 @@ CREATE TABLE #tempSessionC
   
   
   
-Tout d’abord, créez la fonction table suivante pour filtrer sur **@@spid**. La fonction sera utilisable par toutes les tables SCHEMA_ONLY que vous convertissez à partir des tables temporaires de session.  
+Tout d’abord, créez la fonction table suivante pour filtrer sur **@@spid** . La fonction sera utilisable par toutes les tables SCHEMA_ONLY que vous convertissez à partir des tables temporaires de session.  
   
   
   
@@ -191,7 +191,7 @@ Troisièmement, dans votre code T-SQL général :
   
   
   
-## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. Scénario : Une variable de table peut afficher MEMORY_OPTIMIZED=ON  
+## <a name="d-scenario-table-variable-can-be-memoryoptimizedon"></a>D. Scénario : Une variable de table peut afficher MEMORY_OPTIMIZED=ON  
   
   
 Une variable de table classique représente une table dans la base de données tempdb. Pour des performances beaucoup plus rapides, vous pouvez optimiser votre variable de table en mémoire.  
@@ -212,7 +212,7 @@ DECLARE @tvTableD TABLE
   
 La syntaxe précédente permet de créer la variable de table *inline*. La syntaxe inline ne prend pas en charge l’optimisation en mémoire. C’est pourquoi nous allons convertir la syntaxe inline en syntaxe explicite pour TYPE.  
   
-*Étendue :* la définition TYPE créée par le premier lot délimité par une commande go est conservée même après l’arrêt et le redémarrage du serveur. Toutefois, après le premier délimiteur go, la table déclarée @tvTableC est conservée uniquement jusqu’à ce que le délimiteur go suivant soit atteint et que le lot se termine.  
+*Étendue :* la définition TYPE créée par le premier lot délimité par une commande go est conservée même après l’arrêt et le redémarrage du serveur. Toutefois, après le premier délimiteur go, la table déclarée @tvTableC est conservée uniquement jusqu’à ce que le délimiteur go suivant soit atteint et que le lot se termine.  
   
   
   
@@ -270,7 +270,7 @@ Dans Microsoft SQL Server, pour utiliser les fonctionnalités optimisées en mé
 - La base de données SQL Azure ne nécessite pas la création de ce groupe de fichiers.  
   
   
-*Condition préalable :* le code Transact-SQL suivant pour un groupe de fichiers est requis pour les exemples de code T-SQL longs dans les sections ultérieures de cet article.  
+*Condition préalable :* le code Transact-SQL suivant pour un groupe de fichiers est requis pour les exemples de code T-SQL longs dans les sections ultérieures de cet article.  
   
 1. Vous devez utiliser SSMS.exe ou un autre outil qui peut envoyer du code T-SQL.  
 2. Collez l’exemple de code T-SQL de groupe de fichiers dans SSMS.  
@@ -314,7 +314,7 @@ Cette section fournit le code Transact-SQL que vous pouvez exécuter pour tester
   
 Le test de comparaison dure environ 7 secondes. Pour exécuter l’exemple :  
   
-1. *Condition préalable :* vous devez déjà avoir exécuté le code T-SQL de groupe de fichiers de la section précédente.  
+1. *Condition préalable :* vous devez déjà avoir exécuté le code T-SQL de groupe de fichiers de la section précédente.  
 2. Exécutez le script T-SQL INSERT-DELETE suivant.  
   - Notez l’instruction « GO 5001 », qui renvoie le code T-SQL 5001 fois. Vous pouvez ajuster le nombre et l’exécuter à nouveau.  
   
@@ -420,8 +420,8 @@ Batch execution completed 5001 times.
   
 Vous pouvez apprendre à prévoir les besoins en mémoire active de vos tables optimisées en mémoire avec les ressources suivantes :  
   
-- [Estimer les besoins en mémoire des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
-- [Taille de la table et des lignes dans les tables optimisées en mémoire : exemple de calcul](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
+- [Estimer les besoins en mémoire des tables mémoire optimisées](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md)  
+- [Taille de la table et des lignes dans les tables à mémoire optimisée : Exemple de calcul](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  
   
 Pour les variables de table plus importantes, les index non cluster utilisent plus de mémoire que pour les *tables*optimisées en mémoire. Plus le nombre de lignes et la clé d’index sont importants, plus la différence augmente.  
   

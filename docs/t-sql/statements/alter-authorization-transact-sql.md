@@ -28,11 +28,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026105"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -155,7 +155,7 @@ ALTER AUTHORIZATION ON
  *principal_name* | SCHEMA OWNER    
  Nom du principal de sécurité qui possède l'entité. Les objets de bases de données doivent appartenir à un principal de base de données, un utilisateur de base de données ou un rôle. Les objets serveur (par exemple les bases de données) doivent appartenir à un principal serveur (un identifiant de connexion). Spécifiez **SCHEMA OWNER** comme *principal_name* pour indiquer que l’objet doit appartenir au principal qui est propriétaire du schéma de l’objet.    
     
-## <a name="remarks"></a>Notes     
+## <a name="remarks"></a>Notes    
  ALTER AUTHORIZATION peut s'utiliser pour modifier la propriété d'une entité qui a un propriétaire. La propriété d'entités contenues dans une base de données peut être transférée à n'importe quel principal de niveau base de données. La propriété d'entités de niveau serveur peut être transférée à n'importe quel principal de niveau serveur.    
     
 > [!IMPORTANT]    
@@ -195,7 +195,7 @@ ALTER AUTHORIZATION ON
 ## <a name="AlterDB"></a> ALTER AUTHORIZATION pour les bases de données  
 **S’APPLIQUE À** : [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>Pour SQL Server :  
-**Conditions requises pour le nouveau propriétaire :**   
+**Conditions requises pour le nouveau propriétaire :**    
 Le nouveau principal de propriétaire doit être l’un des éléments suivants :  
 
 -   Un compte de connexion d’authentification SQL Server.  
@@ -206,7 +206,7 @@ Le nouveau principal de propriétaire doit être l’un des éléments suivants�
 Si vous n’êtes pas membre du rôle serveur fixe **sysadmin**, vous devez disposer au moins de l’autorisation TAKE OWNERSHIP sur la base de données et vous devez disposer de l’autorisation IMPERSONATE sur le nouveau compte de connexion de propriétaire.   
 
 ### <a name="for-azure-sql-database"></a>Pour Azure SQL Database :  
-**Conditions requises pour le nouveau propriétaire :**   
+**Conditions requises pour le nouveau propriétaire :**    
 Le nouveau principal de propriétaire doit être l’un des éléments suivants :  
 
 -   Un compte de connexion d’authentification SQL Server.  
@@ -261,11 +261,11 @@ Au lieu d’utiliser des utilisateurs Azure AD comme propriétaires individuels
   ```    
   ALTER AUTHORIZATION ON database::testdb TO DisabledLogin;  
   ```    
-2.  Créez un groupe Azure AD qui doit être propriétaire de la base de données, puis ajoutez-le comme utilisateur à la base de données utilisateur. Exemple :  
+2.  Créez un groupe Azure AD qui doit être propriétaire de la base de données, puis ajoutez-le comme utilisateur à la base de données utilisateur. Par exemple :  
   ```    
   CREATE USER [mydbogroup] FROM EXTERNAL PROVIDER;  
   ```    
-3.  Dans la base de données utilisateur, ajoutez l’utilisateur qui représente le groupe Azure AD au rôle de base de données fixe **db_owner**. Exemple :  
+3.  Dans la base de données utilisateur, ajoutez l’utilisateur qui représente le groupe Azure AD au rôle de base de données fixe **db_owner**. Par exemple :  
   ```    
   ALTER ROLE db_owner ADD MEMBER mydbogroup;  
   ```    
@@ -283,7 +283,7 @@ SELECT IS_MEMBER ('db_owner');
 La valeur de retour 1 indique que l’utilisateur est membre du rôle.  
    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>Autorisations    
  Il faut obligatoirement l'autorisation TAKE OWNERSHIP sur l'entité. Si le nouveau propriétaire n'est pas l'utilisateur qui exécute cette instruction, il faut aussi soit 1) l'autorisation IMPERSONATE sur le nouveau propriétaire s'il s'agit d'un utilisateur ou d'une connexion, soit 2) si le nouveau propriétaire est un rôle, l'appartenance à ce rôle ou l'autorisation ALTER sur le rôle, soit 3) si le nouveau propriétaire est un rôle d'application, l'autorisation ALTER sur le rôle d'application.    
     
 ## <a name="examples"></a>Exemples    
@@ -303,14 +303,14 @@ ALTER AUTHORIZATION ON Parts.Sprockets TO MichikoOsada;
 GO    
 ```    
     
- Si le schéma d’objets n’est pas inclus en même temps que l’instruction, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] recherche l’objet dans le schéma par défaut des utilisateurs. Exemple :    
+ Si le schéma d’objets n’est pas inclus en même temps que l’instruction, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] recherche l’objet dans le schéma par défaut des utilisateurs. Par exemple :    
     
 ```    
 ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;    
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
     
-### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>b. Transfert de la propriété d'une vue au propriétaire du schéma    
+### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>B. Transfert de la propriété d'une vue au propriétaire du schéma    
  L'exemple suivant transfère la propriété de la vue `ProductionView06` au propriétaire du schéma qui la contient. La vue se trouve dans le schéma `Production`.    
     
 ```    
@@ -364,7 +364,7 @@ ALTER AUTHORIZATION ON database::targetDB TO [rachel@cqclinic.onmicrosoft.com];
  Notez que les crochets autour du nom d’utilisateur doivent être utilisés pour les utilisateurs Azure AD.  
   
     
-## <a name="see-also"></a> Voir aussi    
+## <a name="see-also"></a>Voir aussi    
  [OBJECTPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/objectproperty-transact-sql.md)     
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)     
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)    

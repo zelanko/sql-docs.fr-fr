@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 40293fa341856cd03e4b827bcf78e91282025be3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766075"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63048569"
 ---
 # <a name="mssqlserver10061"></a>MSSQLSERVER_10061
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47766075"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique||  
-|Texte du message|Une erreur s'est produite lors de l'établissement d'une connexion au serveur.  Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur TCP, erreur : 0 - Aucune connexion n’a pu être établie, car l’ordinateur cible l’a expressément refusée.) (Microsoft SQL Server, Error: 10061)|  
+|Texte du message|Une erreur s'est produite lors de l'établissement d'une connexion au serveur.  Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur TCP, erreur : 0 - Aucune connexion n’a pu être établie, car l’ordinateur cible l’a expressément refusée.) (Microsoft SQL Server, Erreur: 10061)|  
   
 ## <a name="explanation"></a>Explication  
 Le serveur n'a pas répondu à la demande du client. Cette erreur s'est peut-être produite parce que le serveur n'a pas été démarré.  
@@ -41,7 +41,7 @@ Le serveur n'a pas répondu à la demande du client. Cette erreur s'est peut-êt
 ## <a name="user-action"></a>Action de l'utilisateur  
 Assurez-vous que le serveur a été démarré.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Gérer les services du moteur de base de données](~/database-engine/configure-windows/manage-the-database-engine-services.md)  
 [Configurer des protocoles clients](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Protocoles réseau et bibliothèques réseau](~/sql-server/install/network-protocols-and-network-libraries.md)  

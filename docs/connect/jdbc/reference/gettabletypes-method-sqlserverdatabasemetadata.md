@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6795a84a042a7abaa52fe83f562911c934709f81
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66779060"
 ---
 # <a name="gettabletypes-method-sqlserverdatabasemetadata"></a>Méthode getTableTypes (SQLServerDatabaseMetaData)
@@ -42,13 +42,13 @@ public java.sql.ResultSet getTableTypes()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getTables est spécifiée par la méthode getTables de l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getTableTypes est spécifiée par la méthode getTableTypes de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getTableTypes contient les informations suivantes :  
   
 |Créer une vue d’abonnement|Type|Description|  
 |----------|----------|-----------------|  
-|TABLE_TYPE|**String**|TT = Type de table|  
+|TABLE_TYPE|**String**|Le type de table.|  
   
 > [!NOTE]  
 >  Pour plus d’informations sur les données retournées par la méthode getTableTypes, consultez « sp_tables (Transact-SQL) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

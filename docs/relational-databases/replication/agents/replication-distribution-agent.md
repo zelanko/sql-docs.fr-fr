@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1b43a2c739de3ae0f23871c7bc023b3f215b4ce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 4c436c6c9b0c20d99e5de168aa375f66f2e76999
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126639"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665497"
 ---
 # <a name="replication-distribution-agent"></a>Agent de distribution de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,14 +92,14 @@ distrib [-?]
  **-?**  
  Imprime tous les paramètres disponibles.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- Nom du serveur de publication. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_**\\**_instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Nom du serveur de publication. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
   
  **-PublisherDB** _publisher_database_  
  Nom de la base de données du serveur de publication.  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- Nom de l'Abonné. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_**\\**_instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ Nom de l'Abonné. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
   
  **-SubscriberDB** _subscriber_database_  
  Nom de la base de données de l'Abonné.  
@@ -111,10 +111,10 @@ distrib [-?]
  Nombre de lignes à envoyer dans une opération de copie en bloc. Lorsque vous effectuez une opération **bcp in** , la taille du lot correspond au nombre de lignes à envoyer au serveur en une transaction, mais aussi au nombre de lignes à envoyer avant que l'Agent de distribution ne journalise un message de progression **bcp** . Lorsque vous effectuez une opération **bcp out** , une taille de lot fixe de **1000** est utilisée.  
   
  **-CommitBatchSize** _commit_batch_size_  
- Nombre de transactions à délivrer à l'Abonné avant l'émission d'une instruction COMMIT. La valeur par défaut est 100.  
+ Nombre de transactions à délivrer à l'Abonné avant l'émission d'une instruction COMMIT. La valeur par défaut est 100 et la valeur maximale est 10 000.
   
  **-CommitBatchThreshold**  _commit_batch_threshold_  
- Nombre de commandes de réplication à délivrer à l'Abonné avant l'émission d'une instruction COMMIT. La valeur par défaut est 1000.  
+ Nombre de commandes de réplication à délivrer à l'Abonné avant l'émission d'une instruction COMMIT. La valeur par défaut est 1 000 et la valeur maximale est 10 000. 
   
  **-Continuous**  
  Spécifie si l'agent tente d'interroger les transactions répliquées de manière continue. S'il est spécifié, l'Agent interroge les transactions répliquées de la source à des fréquences d'interrogation définies, même s'il n'y a pas de transactions en attente.  
@@ -233,7 +233,7 @@ distrib [-?]
  **-QuotedIdentifier** _quoted_identifier_  
  Spécifie le caractère de l'identificateur entre guillemets à utiliser. Le premier caractère de la valeur indique la valeur utilisée par l'Agent de distribution. Si **QuotedIdentifier** est utilisé sans valeur, l’Agent de distribution utilise un espace. Si **QuotedIdentifier** n’est pas utilisé, l’Agent de distribution utilise n’importe quel identificateur entre guillemets pris en charge par l’Abonné.  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  Liste séparée par des virgules spécifiant les numéros d'erreur à ignorer par cet agent.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
@@ -287,7 +287,7 @@ distrib [-?]
  **-UseOledbStreaming**  
  S'il est spécifié, active la liaison des données des objets blob sous la forme d'un flux. Utilisez **-OledbStreamThreshold** pour spécifier la taille, en octets, au-dessus de laquelle un flux sera utilisé. **UseOledbStreaming** est activé par défaut. **UseOledbStreaming** écrit dans le dossier **C:\Program Files\Microsoft SQL Server\\<version\>\COM**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]  
 >  Si vous avez installé l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour s'exécuter sous un compte système local plutôt que sous un compte d'utilisateur de domaine (paramètre par défaut), le service peut uniquement accéder à l'ordinateur local. Si l'Agent de distribution qui s'exécute sous l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configuré pour utiliser le mode d'authentification Windows lorsqu'il se connecte à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'Agent de distribution échoue. Le paramètre par défaut est l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d'informations sur la modification des comptes de sécurité, consultez [View and Modify Replication Security Settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
@@ -300,7 +300,7 @@ distrib [-?]
 |---------------------|  
 |Ajout du paramètre **ExtendedEventConfigFile** .|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Administration de l’Agent de réplication](../../../relational-databases/replication/agents/replication-agent-administration.md)  
   
   

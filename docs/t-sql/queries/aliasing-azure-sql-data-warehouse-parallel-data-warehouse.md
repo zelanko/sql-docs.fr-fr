@@ -12,11 +12,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 70120434ac93becbb0a51c22369164f59b1f00c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746017"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62936869"
 ---
 # <a name="aliasing-azure-sql-data-warehouse-parallel-data-warehouse"></a>Alias (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ object_source [ AS ] alias
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  L’exemple suivant montre une requête contenant plusieurs jointures. Il illustre des alias de table et de colonne.  
   
--   Alias de colonne : dans cet exemple, les colonnes et les expressions référençant des colonnes dans la liste de sélection ont des alias. `SalesTerritoryRegion AS SalesTR` présente un alias de colonne simple. `Sum(SalesAmountQuota) AS TotalSales` montre  
+-   Alias de colonne : dans cet exemple, les colonnes et les expressions référençant des colonnes dans la liste de sélection ont des alias. `SalesTerritoryRegion AS SalesTR` présente un alias de colonne simple. `Sum(SalesAmountQuota) AS TotalSales` montre  
   
 -   Alias de table : `dbo.DimSalesTerritory AS st` illustre la création de l’alias `st` pour la table `dbo.DimSalesTerritory`.  
   
@@ -75,7 +75,7 @@ WHERE SalesPersonFlag = 1 AND SalesTerritoryRegion != N'NA'
 GROUP BY LastName, SalesTerritoryRegion;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  

@@ -12,11 +12,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0fe8886c5c826a6535a7d9898ad7d6f30756effd
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419910"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047740"
 ---
 # <a name="durability-for-memory-optimized-tables"></a>Durabilité pour les tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52419910"
   
  Lorsqu'une ligne est supprimée ou mise à jour, elle n'est pas supprimée ou modifiée sur place dans le fichier de données, mais les lignes supprimées sont suivies dans un autre type de fichier : le fichier delta. Les opérations de mise à jour sont traitées comme un tuple d'opérations de suppression et d'insertion pour chaque ligne. Cela supprime les E/S aléatoires dans le fichier de données.  
  
-   Taille : chaque fichier de données a une taille d’environ 128 Mo pour les ordinateurs avec une capacité de mémoire supérieure à 16 Go, et à 16 Mo pour les ordinateurs avec une capacité de mémoire inférieure ou égale à 16 Go. Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , SQL Server peut utiliser le mode de point de contrôle de grande taille s’il juge le sous-système de stockage assez rapide. En mode de point de contrôle de grande taille, les fichiers de données sont dimensionnés à 1 Go. Cela permet une plus grande efficacité du sous-système de stockage pour les charges de travail à débit élevé.  
+   Taille : Chaque fichier de données a une taille d'environ 128 Mo pour les ordinateurs avec une capacité de mémoire supérieure à 16 Go, et à 16 Mo pour les ordinateurs avec une capacité de mémoire inférieure ou égale à 16 Go. Dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , SQL Server peut utiliser le mode de point de contrôle de grande taille s’il juge le sous-système de stockage assez rapide. En mode de point de contrôle de grande taille, les fichiers de données sont dimensionnés à 1 Go. Cela permet une plus grande efficacité du sous-système de stockage pour les charges de travail à débit élevé.  
    
 ### <a name="the-delta-file"></a>Fichier delta  
  Chaque fichier de données est couplé à un fichier delta ayant la même plage de transactions et effectue le suivi des lignes supprimées insérées par les transactions dans cette plage. Ces données et ce fichier delta sont appelés « paire de fichiers de point de contrôle » (CFP, Checkpoint File Pair). Il s'agit de l'unité d'allocation et de désallocation, ainsi que de l'unité pour les opérations de fusion. Par exemple, un fichier delta correspondant à la plage de transaction (100, 200) enregistre les lignes supprimées qui avaient été insérées par les transactions de la plage (100, 200). Comme pour les fichiers de données, le fichier delta est accessible de manière séquentielle.  
@@ -50,7 +50,7 @@ ms.locfileid: "52419910"
  Lorsqu'une ligne est supprimée, elle n'est pas supprimée du fichier de données mais une référence à la ligne est ajoutée au fichier delta associé à la plage de transaction où la ligne de données a été insérée. Étant donné que la ligne à supprimer existe déjà dans le fichier de données, le fichier delta stocke uniquement les informations de référence sur `{inserting_tx_id, row_id, deleting_tx_id }` et suit l'ordre des opérations de suppression ou de mise à jour d'origine du journal des transactions.  
   
 
- Taille : chaque fichier delta a une taille d’environ 16 Mo pour les ordinateurs avec une capacité de mémoire supérieure à 16 Go, et à 1 Mo pour les ordinateurs avec une capacité de mémoire inférieure ou égale à 16 Go. À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , SQL Server peut utiliser le mode de point de contrôle volumineux s’il juge le sous-système de stockage est assez rapide. En mode de point de contrôle de grande taille, les fichiers delta sont dimensionnés à 128 Mo.  
+ Taille : chaque fichier delta a une taille d’environ 16 Mo pour les ordinateurs avec une capacité de mémoire supérieure à 16 Go, et à 1 Mo pour les ordinateurs avec une capacité de mémoire inférieure ou égale à 16 Go. À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] , SQL Server peut utiliser le mode de point de contrôle volumineux s’il juge le sous-système de stockage est assez rapide. En mode de point de contrôle de grande taille, les fichiers delta sont dimensionnés à 128 Mo.  
  
 ## <a name="populating-data-and-delta-files"></a>Remplissage des fichiers de données et des fichiers delta  
  Les fichiers de données et delta sont remplis en fonction des enregistrements du journal des transactions générés par les transactions validées sur les tables optimisées en mémoire ; des informations concernant les lignes insérées et supprimées sont ajoutées dans les fichiers de données et delta appropriés. Contrairement aux tables sur disque où les pages de données/index sont vidées avec des E/S aléatoires lorsque le point de contrôle est effectué, la persistance de la table optimisée en mémoire est une opération en arrière-plan continue. Plusieurs fichiers delta sont accédés car une transaction peut supprimer ou mettre à jour toute ligne ayant été insérée par une transaction précédente. Les informations de suppression sont toujours ajoutées à la fin du fichier delta. Par exemple, une transaction avec un horodateur de validation de 600 insère une nouvelle ligne et supprime les lignes insérées par les transactions ayant un horodateur de validation de 150, 250 et 450, comme le montre l'illustration ci-après. Les quatre opérations d'E/S de fichier (trois pour les lignes supprimées et une pour les nouvelles lignes insérées) sont des opérations Append-Only sur les fichiers de données et delta correspondants.  
@@ -109,7 +109,7 @@ ms.locfileid: "52419910"
   
  Vous pouvez forcer manuellement le point de contrôle suivi de la sauvegarde du journal pour accélérer le garbage collection. Dans les scénarios de production, les points de contrôle automatiques et les sauvegardes de fichier journal effectuées dans le cadre de la stratégie de sauvegarde basculent sans problème les paires de fichiers de point de contrôle vers ces phases sans aucune intervention manuelle. L'impact du processus de garbage collection est le suivant : les bases de données avec des tables mémoire optimisées peuvent avoir une plus grande taille de stockage comparée à leur taille en mémoire. Sans le point de contrôle et les sauvegardes de journaux, l’encombrement sur le disque des fichiers de point de contrôle continue de croître.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création et gestion du stockage des objets mémoire optimisés](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

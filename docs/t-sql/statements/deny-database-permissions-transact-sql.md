@@ -20,11 +20,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c18ceba0be4237cc6b4a0ae824af9021631861c1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828459"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62643755"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY – refus d'autorisations de base de données (Transact-SQL)
 
@@ -59,9 +59,9 @@ DENY <permission> [ ,...n ]
 
 *permission* spécifie une autorisation qui peut être refusée sur une base de données. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.
 
-L’option ALL n’interdit pas toutes les autorisations possibles. Cette option revient à interdire les autorisations suivantes : BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, et CREATE VIEW.
+L’option ALL n’interdit pas toutes les autorisations possibles. Cette option revient à interdire les autorisations suivantes : BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE et CREATE VIEW.
 
-PRIVILEGES inclus pour la conformité aux normes ISO. Ne change pas le comportement de l'option ALL.
+PRIVILEGES Inclus pour la conformité aux normes ISO. Ne change pas le comportement de l'option ALL.
 
 CASCADE indique que l’autorisation sera également refusée aux principaux auxquels le principal spécifié l’a accordée.
 
@@ -86,7 +86,7 @@ Spécifie un rôle d'application.
 
 *Database_user_with_no_login* spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Une base de données est un élément sécurisable contenu par le serveur qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de refuser sur une base de données sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.
 
@@ -170,7 +170,7 @@ Une base de données est un élément sécurisable contenu par le serveur qui es
 |VIEW DATABASE STATE|CONTROL|VIEW SERVER STATE|
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Le principal qui exécute cette instruction (ou le principal spécifié avec l'option AS) doit posséder l'autorisation CONTROL sur la base de données ou une autorisation plus élevée qui implique l'autorisation CONTROL sur la base de données.
 
@@ -188,7 +188,7 @@ DENY CREATE CERTIFICATE TO MelanieK;
 GO
 ```
 
-### <a name="b-denying-references-permission-to-an-application-role"></a>b. Refus d'une autorisation REFERENCES à un rôle d'application
+### <a name="b-denying-references-permission-to-an-application-role"></a>B. Refus d'une autorisation REFERENCES à un rôle d'application
 
 Dans l'exemple ci-dessous, l'autorisation `REFERENCES` sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est refusée au rôle d'application `AuditMonitor`.
 
@@ -210,7 +210,7 @@ DENY VIEW DEFINITION TO CarmineEs CASCADE;
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)
 - [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)

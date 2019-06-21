@@ -10,11 +10,11 @@ author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
 ms.openlocfilehash: 5c82c32922712b377fd732b6745b1761e9f32a82
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55890000"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126765"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Utilisation d’Always Encrypted avec Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "55890000"
  
 ## <a name="introduction"></a>Introduction
 
-Cet article fournit des informations sur la façon de développer des applications PHP avec [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) et [pilotes PHP pour SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md).
+Cet article fournit des informations sur la façon de développer des applications PHP à l’aide d’[Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) et de [PHP Drivers for SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md).
 
 Always Encrypted permet aux applications clientes de chiffrer des données sensibles et de ne jamais révéler les données ou les clés de chiffrement à SQL Server ou Azure SQL Database. Un pilote compatible avec Always Encrypted, comme ODBC Driver for SQL Server, chiffre et déchiffre de manière transparente les données sensibles dans l’application cliente. Le pilote détermine automatiquement les paramètres de requêtes qui correspondent aux colonnes de base de données sensibles (protégées avec Always Encrypted) et chiffre les valeurs de ces paramètres avant de transmettre les données à SQL Server ou Azure SQL Database. De même, il déchiffre de manière transparente les données récupérées dans les colonnes de base de données chiffrées, qui figurent dans les résultats de la requête. Pour plus d’informations, consultez [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Les pilotes PHP pour SQL Server utilisent le pilote ODBC pour SQL Server chiffrer les données sensibles.
 
@@ -33,7 +33,7 @@ Always Encrypted permet aux applications clientes de chiffrer des données sensi
  -   Configurez Always Encrypted dans votre base de données. Pour cela, vous devez mettre en service des clés Always Encrypted et configurer le chiffrement pour les colonnes de base de données sélectionnées. Si vous n’avez pas déjà une base de données dans laquelle est configuré Always Encrypted, suivez les instructions de [Prise en main d’Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). En particulier, votre base de données doit contenir les définitions de métadonnées pour une clé principale de colonne (CMK), une clé de chiffrement de colonne (CEK) et une table contenant une ou plusieurs colonnes chiffrées à l’aide de cette clé CEK.
  -   Assurez-vous que le pilote ODBC pour SQL Server version 17 ou ultérieure est installé sur votre ordinateur de développement. Pour plus d’informations, consultez [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
 
-## <a name="enabling-always-encrypted-in-a-php-application"></a>Activer le chiffrement intégral dans une Application PHP
+## <a name="enabling-always-encrypted-in-a-php-application"></a>Activation d’Always Encrypted dans une application PHP
 
 Le moyen le plus simple d’activer le chiffrement des paramètres ciblant des colonnes chiffrées, et le déchiffrement des résultats de requête, est de définir la valeur du mot clé de chaîne de connexion `ColumnEncryption` sur `Enabled`. Voici quelques exemples de l’activation de Always Encrypted dans les pilotes SQLSRV et PDO_SQLSRV :
 
@@ -49,15 +49,15 @@ $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
-Activation d’Always Encrypted n’est pas suffisant pour le chiffrement ou déchiffrement réussisse. Vous devez également vous assurer que :
- -   L’application dispose des autorisations de base de données VIEW ANY COLUMN MASTER KEY DEFINITION et VIEW ANY COLUMN ENCRYPTION KEY DEFINITION qui sont nécessaires pour accéder aux métadonnées des clés Always Encrypted dans la base de données. Pour plus d’informations, consultez [autorisation de base de données](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
- -   L’application peut accéder à la clé principale de colonne qui protège les clés cek pour les colonnes chiffrées les interrogé. Cette exigence est dépendante du fournisseur de magasin de clés qui stocke la clé CMK. Pour plus d’informations, consultez [utilisation des magasins de clés principales de colonne](#working-with-column-master-key-stores).
+L’activation d’Always Encrypted ne suffit pas à la réussite du chiffrement ou du déchiffrement ; vous devez également garantir ce qui suit :
+ -   L’application dispose des autorisations de base de données VIEW ANY COLUMN MASTER KEY DEFINITION et VIEW ANY COLUMN ENCRYPTION KEY DEFINITION qui sont nécessaires pour accéder aux métadonnées des clés Always Encrypted dans la base de données. Pour plus d’informations, consultez [Autorisation de base de données](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
+ -   L’application peut accéder à la clé CMK qui protège les clés CEK pour les colonnes chiffrées interrogées. Cette exigence est dépendante du fournisseur de magasin de clés qui stocke la clé CMK. Pour plus d’informations, consultez [Utilisation de magasins de clés principales de colonne](#working-with-column-master-key-stores).
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Récupération et modification des données dans des colonnes chiffrées
 
-Une fois que vous activez Always Encrypted sur une connexion, vous pouvez utiliser les API SQLSRV standard (consultez [référence API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)) ou les API PDO_SQLSRV (consultez [référence API du pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)) pour récupérer ou modifier des données dans les colonnes de la base de données chiffrée. En supposant que votre application dispose des autorisations de base de données requis et peut accéder à la clé principale de colonne, le pilote chiffre tous les paramètres de requête qui ciblent des colonnes chiffrées et déchiffrement les données extraites des colonnes chiffrées, qui se comporte de manière transparente à la application comme si les colonnes n’ont pas été chiffrés.
+Une fois que vous activez Always Encrypted sur une connexion, vous pouvez utiliser les API SQLSRV standard (consultez [référence API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)) ou les API PDO_SQLSRV (consultez [référence API du pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)) pour récupérer ou modifier des données dans les colonnes de la base de données chiffrée. En supposant que votre application dispose des autorisations de base de données requises et puisse accéder à la clé principale de colonne, le pilote chiffrera tous les paramètres de requête qui ciblent des colonnes chiffrées et déchiffrera les données récupérées des colonnes chiffrées, se comportant de manière transparente pour l’application comme si les colonnes n’étaient pas chiffrées.
 
-Si Always Encrypted n’est pas activé, les requêtes ayant des paramètres qui ciblent des colonnes chiffrées échouent. Les données peuvent toujours être récupérées à partir des colonnes chiffrées, tant que la requête n’a aucun paramètre qui cible des colonnes chiffrées. Toutefois, le pilote ne tente pas de n’importe quel déchiffrement et l’application reçoit les données chiffrées binaires (en tant que tableaux d’octets).
+Si Always Encrypted n’est pas activé, les requêtes ayant des paramètres qui ciblent des colonnes chiffrées échouent. Les données peuvent toujours être récupérées à partir des colonnes chiffrées, tant que la requête n’a aucun paramètre qui cible des colonnes chiffrées. Toutefois, le pilote ne tente aucun déchiffrement et l’application reçoit les données chiffrées binaires (sous la forme de tableaux d’octets).
 
 Le tableau ci-dessous récapitule le comportement des requêtes, selon qu’Always Encrypted est activé ou non :
 
@@ -66,7 +66,7 @@ Le tableau ci-dessous récapitule le comportement des requêtes, selon qu’Alwa
 |Paramètres ciblant des colonnes chiffrées.|Des valeurs de paramètres sont chiffrées en toute transparence.|Error|Error|
 |Récupération des données à partir de colonnes chiffrées, sans paramètres ciblant des colonnes chiffrées.|Les résultats de colonnes chiffrées sont déchiffrés de manière transparente. L’application reçoit des valeurs de colonne en texte clair. |Error|Les résultats des colonnes chiffrées ne sont pas déchiffrés. L’application reçoit des valeurs chiffrées sous la forme de tableaux d’octets.|
  
-Les exemples suivants illustrent la récupération et la modification de données dans des colonnes chiffrées. Les exemples reposent sur une table avec le schéma suivant. Les colonnes SSN et BirthDate sont chiffrées.
+Les exemples suivants illustrent la récupération et la modification de données dans des colonnes chiffrées. Les exemples partent du principe que la table a le schéma suivant. Les colonnes SSN et BirthDate sont chiffrées.
 ```
 CREATE TABLE [dbo].[Patients](
  [PatientId] [int] IDENTITY(1,1),
@@ -84,11 +84,11 @@ CREATE TABLE [dbo].[Patients](
  GO
 ```
 
-### <a name="data-insertion-example"></a>Exemple d’Insertion de données
+### <a name="data-insertion-example"></a>Exemple d’insertion de données
 
 Les exemples suivants montrent comment utiliser les pilotes SQLSRV et PDO_SQLSRV pour insérer une ligne dans la table patients. Notez les points suivants :
- -   L’exemple de code ne contient aucun élément spécifique au chiffrement. Le pilote détecte automatiquement et chiffre les valeurs des paramètres SSN et BirthDate qui ciblent des colonnes chiffrées. Ce mécanisme rend le chiffrement transparent pour l’application.
- -   Les valeurs insérées dans les colonnes de base de données, y compris les colonnes chiffrées, sont passées en tant qu’objets liés. L’utilisation de paramètres est facultative lors de l’envoi de valeurs aux colonnes non chiffrées (même si elle est vivement recommandée, car elle contribue à empêcher l’injection SQL), mais elle est nécessaire pour les valeurs qui ciblent des colonnes chiffrées. Si les valeurs insérées dans les colonnes SSN ou BirthDate ont été passées en tant que littéraux incorporés dans l’instruction de requête, la requête échoue, car le pilote ne tente pas de chiffrer ou traiter des littéraux dans les requêtes. Par conséquent, le serveur les rejettera en les considérant comme incompatibles avec les colonnes chiffrées.
+ -   L’exemple de code ne contient aucun élément spécifique au chiffrement. Le pilote détecte et chiffre automatiquement les valeurs des paramètres de BirthDate et SSN, qui ciblent des colonnes chiffrées. Ce mécanisme rend le chiffrement transparent pour l’application.
+ -   Les valeurs insérées dans les colonnes de base de données, y compris les colonnes chiffrées, sont passées en tant qu’objets liés. L’utilisation de paramètres est facultative lors de l’envoi de valeurs aux colonnes non chiffrées (même si elle est vivement recommandée, car elle contribue à empêcher l’injection SQL), mais elle est nécessaire pour les valeurs qui ciblent des colonnes chiffrées. Si les valeurs insérées dans les colonnes SSN ou BirthDate ont été passées en tant que littéraux incorporés dans l’instruction de requête, la requête échoue car le pilote ne tente pas de chiffrer ou de traiter les littéraux dans les requêtes. Par conséquent, le serveur les rejettera en les considérant comme incompatibles avec les colonnes chiffrées.
  -   Lors de l’insertion de valeurs à l’aide des paramètres de liaison, un type SQL qui est identique au type de données de la colonne cible ou dont le type de données de la colonne cible de la conversion est prise en charge doit être passé à la base de données. Cette exigence est prenant en charge Always Encrypted peu de conversions de type (pour plus d’informations, consultez [Always Encrypted (moteur de base de données)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)). Les deux pilotes PHP, SQLSRV et PDO_SQLSRV, chacune a un mécanisme pour déterminer le type SQL de la valeur de l’utilisateur. Par conséquent, l’utilisateur ne devra pas fournir le type SQL explicitement.
   -   Pour le pilote SQLSRV, l’utilisateur a deux options :
    -   S’appuient sur le pilote PHP pour déterminer et définir le type SQL approprié. Dans ce cas, l’utilisateur doit utiliser `sqlsrv_prepare` et `sqlsrv_execute` pour exécuter une requête paramétrable.
@@ -184,7 +184,7 @@ $stmt->execute();
 $row = $stmt->fetch();
 ```
 
-### <a name="ciphertext-data-retrieval-example"></a>Exemple d’extraction de données de texte chiffré
+### <a name="ciphertext-data-retrieval-example"></a>Exemple d’extraction de données chiffrées
 
 Si Always Encrypted n’est pas activé, une requête peut toujours récupérer des données à partir de colonnes chiffrées, tant qu’aucun de ses paramètres ne ciblent des colonnes chiffrées.
 
@@ -221,14 +221,14 @@ Always Encrypted ne prend en charge que peu de conversions de types de données 
  -   Lorsque vous utilisez le pilote SQLSRV avec `sqlsrv_prepare` et `sqlsrv_execute` le type SQL, ainsi que la taille de colonne et le nombre de décimales du paramètre est déterminé automatiquement.
  -   Lorsque vous utilisez le pilote PDO_SQLSRV pour exécuter une requête, le type SQL avec la taille de colonne et le nombre de décimales du paramètre est déterminé automatiquement
  -   Lorsque vous utilisez le pilote SQLSRV avec `sqlsrv_query` pour exécuter une requête :
-  -   Le type SQL du paramètre est soit exactement la même que le type de la colonne cible ou la conversion du type SQL pour le type de la colonne est pris en charge.
+  -   Le type SQL du paramètre est exactement le même que le type de la colonne cible, ou la conversion du type SQL vers le type de la colonne est prise en charge.
   -   La précision et l’échelle des paramètres ciblant les colonnes des types de données SQL Server `decimal` et `numeric` sont les mêmes que celles configurées pour la colonne cible.
   -   La précision des paramètres ciblant les colonnes des types de données SQL Server `datetime2`, `datetimeoffset` ou `time` n’est pas supérieure à celle de la colonne cible dans les requêtes qui modifient les valeurs de la colonne cible.
  -   N’utilisez pas les attributs d’instruction PDO_SQLSRV `PDO::SQLSRV_ATTR_DIRECT_QUERY` ou `PDO::ATTR_EMULATE_PREPARES` dans une requête paramétrable
  
 #### <a name="errors-due-to-passing-plaintext-instead-of-encrypted-values"></a>Erreurs dues au passage de texte en clair au lieu de valeurs chiffrées
 
-Les valeurs qui ciblent une colonne chiffrée doivent être chiffré avant d’être envoyées au serveur. Toute tentative d’insertion, de modification ou de filtrage par une valeur en texte clair dans une colonne chiffrée entraîne une erreur. Pour éviter ces erreurs, effectuez les vérifications suivantes :
+Toute valeur qui cible une colonne chiffrée doit être chiffrée avant d’être envoyée au serveur. Toute tentative d’insertion, de modification ou de filtrage par une valeur en texte clair dans une colonne chiffrée entraîne une erreur. Pour éviter ces erreurs, effectuez les vérifications suivantes :
  -   Always Encrypted est activé (dans la chaîne de connexion, définissez la `ColumnEncryption` mot clé à `Enabled`).
  -   Utilisez un paramètre de liaison pour envoyer des données ciblant des colonnes chiffrées. L’exemple suivant montre une requête qui filtre incorrectement par une littéral ou d’une constante sur une colonne chiffrée (SSN) :
 ```
@@ -243,31 +243,31 @@ Always Encrypted étant une technologie de chiffrement côté client, la dégrad
  
 ### <a name="round-trips-to-retrieve-metadata-for-query-parameters"></a>Allers-retours vers la base de données en vue de la récupération des métadonnées pour les paramètres de requête.
 
-Si Always Encrypted est activé pour une connexion, le pilote ODBC appelle par défaut [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans valeurs de paramètre) à SQL Server. Cette procédure stockée analyse l’instruction de requête afin de déterminer si tous les paramètres doivent être chiffrés et si tel est le cas, retourne les informations relatives au chiffrement pour chaque paramètre permettre au pilote de les chiffrer.
+Si Always Encrypted est activé pour une connexion, le pilote ODBC appelle par défaut [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans valeurs de paramètre) à SQL Server. Cette procédure stockée analyse l’instruction de requête afin de savoir si des paramètres doivent être chiffrés. Si c’est le cas, elle retourne pour chaque paramètre des informations relatives au chiffrement qui permettent au pilote de les chiffrer.
 
 Étant donné que les pilotes PHP permettent à l’utilisateur lier un paramètre dans une instruction préparée sans fournir le code SQL, tapez, lors de la liaison d’un paramètre dans une connexion Always Encrypted est activé, les pilotes PHP appeler [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) sur le paramètre pour obtenir le type SQL, la taille de colonne et chiffres décimaux. Les métadonnées sont ensuite utilisées pour appeler [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md). Ces supplémentaire `SQLDescribeParam` appels ne requièrent pas des allers-retours supplémentaires vers la base de données, comme le pilote ODBC a déjà stocké les informations sur le côté client lorsque `sys.sp_describe_parameter_encryption` a été appelée.
 
-Les comportements précédents garantissent un haut niveau de transparence pour l’application cliente (et le développeur d’applications) est inutile de connaître les requêtes qui accèdent à des colonnes chiffrées, tant que les valeurs ciblant des colonnes chiffrées sont passées au pilote dans paramètres.
+Les comportements précédents garantissent un haut niveau de transparence à l’application cliente (et au développeur d’applications), qui n’a pas besoin de connaître les requêtes qui accèdent à des colonnes chiffrées, tant que les valeurs ciblant des colonnes chiffrées sont passées au pilote dans les paramètres.
 
 Contrairement à ODBC Driver for SQL Server, l’activation de Always Encrypted à/requête-niveau de l’instruction n'est pas encore pris en charge dans les pilotes PHP. 
 
 ### <a name="column-encryption-key-caching"></a>Mise en cache des clés de chiffrement de colonne
 
-Pour réduire le nombre d’appels à un magasin de clés principales de colonne pour déchiffrer les clés de chiffrement de colonne (CEK), le pilote met en cache le texte en clair clés cek en mémoire. Après avoir reçu la clé CEK chiffré (ECEK) à partir des métadonnées de la base de données, le pilote ODBC tente tout d’abord rechercher la clé CEK en texte brut correspondant à la valeur de clé chiffrée dans le cache. Le pilote appelle le magasin de clés contenant la clé CMK uniquement s’il ne trouve pas le texte en clair correspondant CEK dans le cache.
+Afin de réduire le nombre d’appels à un magasin de clés principales de colonne pour déchiffrer les clés de chiffrement de colonne (CEK), le pilote met en cache les clés CEK en clair dans la mémoire. Après avoir reçu la clé CEK (ECEK) chiffrée à partir des métadonnées de la base de données, le pilote ODBC tente d’abord de trouver la clé CEK en clair correspondant à la valeur de clé chiffrée qui se trouve dans le cache. Le pilote appelle le magasin de clés contenant la clé CMK uniquement s’il ne trouve pas la clé CEK en clair correspondante dans le cache.
 
-Remarque : Dans le pilote ODBC pour SQL Server, les entrées dans le cache sont supprimées après un délai d’attente de deux heures. Ce comportement signifie que, pour un ECEK donné, le pilote contacte le magasin de clés qu’une seule fois pendant la durée de vie de l’application ou de toutes les deux heures, plus petite étant retenue.
+Remarque : Dans ODBC Driver for SQL Server, les entrées dans le cache sont supprimées après un délai d’attente de deux heures. Ce comportement signifie que, pour une clé CEK chiffrée, le pilote ne contacte le magasin de clés qu’une seule fois au cours de la durée de vie de l’application, ou toutes les deux heures, la plus petite des deux valeurs étant retenue.
 
 ## <a name="working-with-column-master-key-stores"></a>Utilisation de magasins de clés principales de colonne
 
-Pour chiffrer ou déchiffrer des données, le pilote doit obtenir une clé CEK qui est configurée pour la colonne cible. Clés cek est stockés sous forme chiffrée (ECEKs) dans les métadonnées de base de données. Chaque clé CEK a une clé principale de colonne correspondante qui a été utilisé pour le chiffrement. Le [les métadonnées de base de données](../../t-sql/statements/create-column-master-key-transact-sql.md) ne stocke pas de la clé CMK lui-même ; il contient uniquement le nom du magasin de clés et des informations que le magasin de clés peut utiliser pour localiser la clé CMK.
+Pour chiffrer ou déchiffrer des données, le pilote doit obtenir une clé CEK configurée pour la colonne cible. Les clés CEK sont stockées sous forme chiffrée (on parle alors de clés ECEK) dans les métadonnées de la base de données. Chaque clé CEK a une clé CMK correspondante qui a été utilisée pour la chiffrer. Les [métadonnées de base de données](../../t-sql/statements/create-column-master-key-transact-sql.md) ne stockent pas la clé CMK proprement dite ; elles contiennent uniquement le nom du magasin de clés et des informations que ce dernier peut utiliser pour localiser la clé CMK.
 
-Pour obtenir la valeur de texte en clair de l’un ECEK, le pilote obtient d’abord les métadonnées relatives à la clé CEK et sa clé principale de colonne correspondantes, et il utilise ces informations pour contacter le magasin de clés contenant la clé CMK, puis la demande pour déchiffrer l’ECEK. Le pilote communique avec un magasin de clés à l’aide d’un fournisseur de magasin de clés.
+Pour obtenir la valeur de texte en clair d’une clé ECEK, le pilote obtient d’abord les métadonnées relatives à la clé CEK et sa clé CMK correspondante, il utilise ces informations pour contacter le magasin de clés contenant la clé CMK, puis il lui demande de déchiffrer la clé ECEK. Le pilote communique avec un magasin de clés à l’aide d’un fournisseur de magasin de clés.
 
 Microsoft Driver 5.3.0 for PHP for SQL Server, uniquement Windows Certificate Store Provider et Azure Key Vault sont prises en charge. L’autre fournisseur de magasin de clés pris en charge par le pilote ODBC (fournisseur de magasin de clés personnalisé) n’est pas encore pris en charge.
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Avec le fournisseur du magasin de certificats Windows
 
-Le pilote ODBC pour SQL Server sur Windows inclut un fournisseur de magasin de clé principale de colonne intégré pour le Store de certificat Windows nommé `MSSQL_CERTIFICATE_STORE`. (Ce fournisseur n’est pas disponible sur Mac OS ou Linux). Avec ce fournisseur, la clé principale de colonne sont stockées localement sur l’ordinateur client et aucune configuration supplémentaire par l’application n’est nécessaire pour l’utiliser avec le pilote. Toutefois, l’application doit avoir accès au certificat et sa clé privée dans le magasin. Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+ODBC Driver for SQL Server sur Windows inclut un fournisseur de magasin de clés CMK intégré pour le Magasin de certificats Windows, nommé `MSSQL_CERTIFICATE_STORE`. (Ce fournisseur n’est pas disponible sur Mac OS ou Linux.) Avec ce fournisseur, la clé CMK est stockée localement sur l’ordinateur client, et aucune configuration supplémentaire par l’application n’est nécessaire pour l’utiliser avec le pilote. Toutefois, l’application doit avoir accès au certificat et à sa clé privée dans le magasin. Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ### <a name="using-azure-key-vault"></a>Utilisation d’Azure Key Vault
 
@@ -308,7 +308,7 @@ $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStor
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
-## <a name="limitations-of-the-php-drivers-when-using-always-encrypted"></a>Limitations des pilotes PHP lors de l’utilisation de Always Encrypted
+## <a name="limitations-of-the-php-drivers-when-using-always-encrypted"></a>Limitations des pilotes PHP lors de l’utilisation d’Always Encrypted
 
 SQLSRV et PDO_SQLSRV :
  -   Linux/macOS ne prennent pas en charge Windows Certificate Store Provider
@@ -327,7 +327,7 @@ PDO_SQLSRV :
  
 Les pilotes PHP héritent également les limitations imposées par le pilote ODBC pour SQL Server et la base de données. Consultez [Limitations du pilote ODBC lors de l’utilisation de Always Encrypted](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) et [toujours chiffré informations sur les fonctionnalités](../../relational-databases/security/encryption/always-encrypted-database-engine.md#feature-details).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Guide de programmation pour le pilote SQL PHP](../../connect/php/programming-guide-for-php-sql-driver.md)
 [Référence d’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Référence API du pilote PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)  

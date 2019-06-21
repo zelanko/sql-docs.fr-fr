@@ -13,18 +13,18 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417940"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62466747"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Gérer la rétention des données d’historique dans les tables temporelles avec version gérée par le système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Avec les tables temporelles avec version gérée par le système, la table d’historique peut faire croître la taille de la base de données plus que les tables normales, surtout dans les conditions suivantes :  
   
--   conservation des données d’historique sur une longue période ;  
+-   conservation des données d’historique sur une longue période ;  
   
 -   existence d’un modèle de mise à jour ou de suppression des modifications des données lourd.  
   
@@ -45,24 +45,24 @@ ms.locfileid: "52417940"
 
  Pour chacune de ces méthodes, la logique de migration ou de nettoyage des données d’historique est basée sur la colonne qui correspond à la fin de période dans la table active. La valeur de fin de période de chaque ligne détermine le moment où la version de la ligne devient « fermée », c’est-à-dire où elle arrive dans la table d’historique. Par exemple, la condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` spécifie que les données d’historique de plus d’un mois doivent être supprimées ou déplacées de la table d’historique.  
   
-> **REMARQUE :**  les exemples de cette rubrique utilisent cet [exemple de table temporelle](creating-a-system-versioned-temporal-table.md).  
+> **REMARQUE :**  Les exemples de cette rubrique utilisent cet [exemple de table temporelle](creating-a-system-versioned-temporal-table.md).  
   
 ## <a name="using-stretch-database-approach"></a>Utilisation de la méthode Stretch Database  
   
-> **REMARQUE :**  la méthode Stretch Database vaut uniquement pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et ne s’applique pas à [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+> **REMARQUE :**  La méthode Stretch Database vaut uniquement pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et ne s’applique pas à [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md) de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migre vos données d’historique en toute transparence vers Azure. Pour renforcer la sécurité, vous pouvez chiffrer les données en mouvement à l’aide de la fonctionnalité [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx) de SQL Server. De plus, vous pouvez utiliser la [sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md) et les autres fonctionnalités de sécurité avancée de SQL Server avec Temporal et Stretch Database pour protéger vos données.  
   
  La méthode Stretch Database vous permet d’étendre tout ou partie des tables d’historique temporelles vers Azure. SQL Server déplace alors discrètement les données d’historique vers Azure. Le fait d’activer Strech pour une table d’historique ne change rien à la façon dont vous interagissez avec la table temporelle en termes de modification des données et d’interrogation temporelle.  
   
--   **Étendre l’ensemble de la table d’historique :** configurez Stretch Database pour l’ensemble de la table d’historique si votre scénario principal est l’audit des données dans l’environnement qui implique des modifications de données fréquentes et des interrogations relativement rares sur les données historiques.  En d’autres termes, employez cette méthode si les performances de l’interrogation temporelle ne sont pas un critère prépondérant. Dans ce cas, l’avantage offert par Azure sur le plan de la rentabilité peut s’avérer intéressant.   
+-   **Étendre l’ensemble de la table d’historique :** configurez Stretch Database pour l’ensemble de la table d’historique si votre scénario principal est l’audit des données dans l’environnement qui implique des modifications de données fréquentes et des interrogations relativement rares sur les données historiques.  En d’autres termes, employez cette méthode si les performances de l’interrogation temporelle ne sont pas un critère prépondérant. Dans ce cas, l’avantage offert par Azure sur le plan de la rentabilité peut s’avérer intéressant.   
     Quand il s’agit d’étendre la table d’historique dans son ensemble, vous pouvez utiliser l’Assistant Stretch ou Transact-SQL. Vous trouverez à la suite des exemples des deux.  
   
--   **Étirer une partie de la table d’historique :** vous pouvez configurer Stretch Database pour une partie de votre table d’historique à des fins de performances si votre scénario principal consiste essentiellement à interroger les données d’historique récentes, mais que vous souhaitez toujours pouvoir interroger des données d’historique plus anciennes quand cela est nécessaire tout en stockant ces données à distance à moindre coût. Avec Transact-SQL, vous pouvez faire cela en spécifiant une fonction de prédicat pour sélectionner les seules lignes qui seront migrées à partir de la table d’historique, et non l’ensemble des lignes.  Quand vous utilisez des tables temporelles, il est généralement judicieux de déplacer les données en fonction d’une condition temporelle (par exemple, selon l’ancienneté de la version de ligne dans la table d’historique).    
+-   **Étirer une partie de la table d’historique :** vous pouvez configurer Stretch Database pour une partie de votre table d’historique à des fins de performances si votre scénario principal consiste essentiellement à interroger les données d’historique récentes, mais que vous souhaitez toujours pouvoir interroger des données d’historique plus anciennes quand cela est nécessaire tout en stockant ces données à distance à moindre coût. Avec Transact-SQL, vous pouvez faire cela en spécifiant une fonction de prédicat pour sélectionner les seules lignes qui seront migrées à partir de la table d’historique, et non l’ensemble des lignes.  Quand vous utilisez des tables temporelles, il est généralement judicieux de déplacer les données en fonction d’une condition temporelle (par exemple, selon l’ancienneté de la version de ligne dans la table d’historique).    
     En utilisant une fonction de prédicat déterministe, vous pouvez conserver une partie de l’historique dans la même base de données avec les données actuelles, tandis que le reste est migré vers Azure.    
     Pour les exemples et les limitations, consultez [Sélectionner les lignes à migrer à l’aide d’une fonction de filtre (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Les fonctions non déterministes n’étant pas valides, si vous souhaitez transférer des données d’historique à la manière d’une fenêtre glissante, vous devez modifier régulièrement la définition de la fonction de prédicat inline de sorte que la fenêtre de lignes que vous conservez localement soit constante en termes d’ancienneté. La fenêtre glissante vous permet de déplacer constamment les données d’historique de plus d’un mois vers Azure. Cette méthode est illustrée dans l’exemple ci-après.  
   
-> **REMARQUE :** Stretch Database migre les données vers Azure. Par conséquent, vous devez disposer d’un compte Azure et d’un abonnement pour la facturation. Pour obtenir un compte d’évaluation gratuite Azure, cliquez sur [Évaluation d’un mois gratuite](https://azure.microsoft.com/pricing/free-trial/).  
+> **REMARQUE :** Stretch Database migre les données vers Azure. Par conséquent, vous devez disposer d’un compte Azure et d’un abonnement pour la facturation. Pour obtenir un compte d’évaluation gratuite Azure, cliquez sur [Évaluation d’un mois gratuite](https://azure.microsoft.com/pricing/free-trial/).  
   
  Vous pouvez configurer une table d’historique temporelle pour Stretch à l’aide de l’Assistant Stretch ou de Transact-SQL, et vous pouvez activer Stretch pour une table d’historique temporelle tout en ayant la gestion système des versions définie sur **ACTIVÉ**. L’extension de la table active n’est pas autorisée, car une telle opération ne se justifie pas.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "52417940"
   
 6.  Quand l’Assistant a terminé, vérifiez que Stretch est correctement activé pour votre base de données. Notez que les icônes de l’Explorateur d’objets indique que Stretch a été activé pour la base de données.  
   
-> **REMARQUE :** si Activer la base de données pour Stretch échoue, consultez le journal des erreurs. Une erreur courante consiste à configurer incorrectement la règle de pare-feu.  
+> **REMARQUE :** Si Activer la base de données pour Stretch échoue, consultez le journal des erreurs. Une erreur courante consiste à configurer incorrectement la règle de pare-feu.  
   
  Voir aussi :  
   
@@ -166,7 +166,7 @@ COMMIT ;
   
  Avec le partitionnement de table, vous pouvez implémenter une approche de fenêtre glissante pour déplacer une partie plus ancienne des données d’historique de la table d’historique et ainsi stabiliser la taille de la partie conservée en termes d’ancienneté (en conservant dans la table d’historique les données correspondant à la période de rétention requise). L’opération d’extraction des données de la table d’historique est prise en charge quand SYSTEM_VERSIONING a la valeur ON, ce qui signifie que vous pouvez nettoyer une partie des données d’historique sans introduire de fenêtres de maintenance ni bloquer vos charges de travail normales.  
   
-> **REMARQUE :** pour procéder au basculement de partition, l’index cluster de la table d’historique doit être aligné sur le schéma de partitionnement (il doit contenir SysEndTime). La table d’historique par défaut créée par le système contient un index cluster qui inclut les colonnes SysEndTime et SysStartTime, ce qui est idéal pour le partitionnement, l’insertion de nouvelles données d’historique et l’interrogation temporelle classique. Pour plus d'informations, consultez [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
+> **REMARQUE :** Pour procéder au basculement de partition, l’index cluster de la table d’historique doit être aligné sur le schéma de partitionnement (il doit contenir SysEndTime). La table d’historique par défaut créée par le système contient un index cluster qui inclut les colonnes SysEndTime et SysStartTime, ce qui est idéal pour le partitionnement, l’insertion de nouvelles données d’historique et l’interrogation temporelle classique. Pour plus d'informations, consultez [Temporal Tables](../../relational-databases/tables/temporal-tables.md).  
   
  Dans une approche de fenêtre glissante, il y a deux ensembles de tâches à effectuer :  
   
@@ -182,7 +182,7 @@ COMMIT ;
   
  ![Partitionnement](../../relational-databases/tables/media/partitioning.png "Partitionnement")  
   
-> **REMARQUE :** consultez la section Considérations relatives aux performances du partitionnement de table ci-après pour en savoir plus sur les conséquences d’une utilisation de RANGE LEFT plutôt que RANGE RIGHT sur les performances lors de la configuration du partitionnement.  
+> **REMARQUE :** Consultez la section Considérations relatives aux performances du partitionnement de table ci-après pour en savoir plus sur les conséquences d’une utilisation de RANGE LEFT plutôt que RANGE RIGHT sur les performances lors de la configuration du partitionnement.  
   
  Notez que la première et la dernière partition sont toutes deux « ouvertes » au niveau des limites inférieure et supérieure, respectivement. Chaque nouvelle ligne est donc assurée de trouver une partition de destination, quelle que soit la valeur de la colonne de partitionnement.   
 Au fil du temps, les nouvelles lignes de la table d’historique atterriront dans les partitions supérieures. Quand la sixième partition sera remplie, la période de rétention ciblée aura été atteinte. C’est à ce moment-là que la tâche de maintenance périodique sera lancée pour la première fois (elle doit être planifiée pour s’exécuter périodiquement, une fois par mois dans cet exemple).  
@@ -193,7 +193,7 @@ Au fil du temps, les nouvelles lignes de la table d’historique atterriront dan
   
  Voici la procédure à suivre pour effectuer les tâches de maintenance périodique de partition :  
   
-1.  SWITCH OUT : créez une table de mise en lots et faites un échange de partition entre la table d’historique et la table de mise en lots en utilisant l’instruction [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) avec l’argument SWITCH PARTITION (voir l’exemple C, Échange de partitions entre des tables).  
+1.  SWITCH OUT : créez une table de mise en lots et faites un échange de partition entre la table d’historique et la table de mise en lots en utilisant l’instruction [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) avec l’argument SWITCH PARTITION (voir l’exemple C, Échange de partitions entre des tables).  
   
     ```  
     ALTER TABLE <history table> SWITCH PARTITION 1 TO <staging table>  
@@ -201,9 +201,9 @@ Au fil du temps, les nouvelles lignes de la table d’historique atterriront dan
   
      À l’issue de l’échange de partition, vous pouvez éventuellement archiver les données de la table de mise en lots et supprimer ou tronquer cette même table pour la préparer à la prochaine tâche de maintenance périodique de partition.  
   
-2.  MERGE RANGE : fusionnez la partition vide 1 avec la partition 2 en utilisant [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) avec MERGE RANGE (consultez l’exemple B). En supprimant la limite inférieure avec cette fonction, vous fusionnez en réalité la partition vide 1 avec l’ancienne partition 2 pour former une nouvelle partition 1. Les ordinaux des autres partitions changent également.  
+2.  MERGE RANGE : fusionnez la partition vide 1 avec la partition 2 en utilisant [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) avec MERGE RANGE (consultez l’exemple B). En supprimant la limite inférieure avec cette fonction, vous fusionnez en réalité la partition vide 1 avec l’ancienne partition 2 pour former une nouvelle partition 1. Les ordinaux des autres partitions changent également.  
   
-3.  SPLIT RANGE : créez une partition vide 7 en utilisant [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) avec SPLIT RANGE (consultez l’exemple A). En ajoutant une nouvelle limite supérieure avec cette fonction, vous créez en réalité une partition distincte pour le mois à venir.  
+3.  SPLIT RANGE : créez une partition vide 7 en utilisant [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md) avec SPLIT RANGE (consultez l’exemple A). En ajoutant une nouvelle limite supérieure avec cette fonction, vous créez en réalité une partition distincte pour le mois à venir.  
   
 ### <a name="use-transact-sql-to-create-partitions-on-history-table"></a>Créer des partitions dans la table d’historique avec Transact-SQL  
  Utilisez le script Transact-SQL figurant dans la fenêtre de code ci-dessous pour créer la fonction de partition, le schéma de partition et recréer l’index cluster qui doit être aligné sur les partitions avec le schéma de partition, les partitions. Pour cet exemple, nous allons créer une approche de fenêtre glissante de six mois avec des partitions mensuelles débutant à septembre 2015.  
@@ -343,9 +343,9 @@ COMMIT TRANSACTION
   
 -   Cas RANGE LEFT : dans le cas de RANGE LEFT, la limite de partition inférieure appartient à la partition 1, qui est vide (après l’extraction de partition). Autrement dit, MERGE RANGE ne subit aucun déplacement de données.  
   
--   Cas RANGE RIGHT : dans le cas de RANGE RIGHT, la limite inférieure appartient à la partition 2, qui n’est pas vide, étant entendu que la partition 1 a été vidée par l’extraction. Dans ce cas, MERGE RANGE entraîne un déplacement de données (les données de la partition 2 sont déplacées vers la partition 1). Pour éviter cela, dans le scénario de fenêtre glissante, RANGE RIGHT doit avoir la partition 1, qui est toujours vide. Cela signifie que si nous utilisons RANGE RIGHT, nous devons créer et maintenir une partition supplémentaire par rapport au cas RANGE LEFT.  
+-   Cas RANGE RIGHT : dans le cas de RANGE RIGHT, la limite inférieure appartient à la partition 2, qui n’est pas vide, étant entendu que la partition 1 a été vidée par l’extraction. Dans ce cas, MERGE RANGE entraîne un déplacement de données (les données de la partition 2 sont déplacées vers la partition 1). Pour éviter cela, dans le scénario de fenêtre glissante, RANGE RIGHT doit avoir la partition 1, qui est toujours vide. Cela signifie que si nous utilisons RANGE RIGHT, nous devons créer et maintenir une partition supplémentaire par rapport au cas RANGE LEFT.  
   
- Conclusion : l’utilisation de RANGE LEFT dans une partition glissante facilite grandement la gestion des partitions et évite le déplacement des données. Cependant, définir les limites de partition avec RANGE RIGHT s’avère un peu plus simple, car vous n’êtes pas confronté aux problèmes de cycle datetime/time.  
+ Conclusion : l’utilisation de RANGE LEFT dans une partition glissante facilite grandement la gestion des partitions et évite le déplacement des données. Cependant, définir les limites de partition avec RANGE RIGHT s’avère un peu plus simple, car vous n’êtes pas confronté aux problèmes de cycle datetime/time.  
   
 ## <a name="using-custom-cleanup-script-approach"></a>Utilisation de la méthode de script de nettoyage personnalisé  
  Dans les cas où la méthode Stretch Database et le partitionnement de table ne sont pas des options viables, la troisième méthode consiste à supprimer les données de la table d’historique à l’aide du script de nettoyage personnalisé. La suppression des données de la table d’historique n’est possible que lorsque **SYSTEM_VERSIONING = OFF**. Pour éviter une incohérence de données, procédez à un nettoyage pendant la fenêtre de maintenance (quand les charges de travail qui modifient les données ne sont pas actives) ou lors d’une transaction (les autres charges de travail sont alors bloquées).  Cette opération nécessite une autorisation **CONTROL** sur les tables actives et d’historique.  
@@ -433,7 +433,7 @@ COMMIT;
 ```  
 
 ## <a name="using-temporal-history-retention-policy-approach"></a>Utilisation de l’approche de la stratégie de rétention d’historique temporelle
-> **REMARQUE :** L’utilisation de l’approche de la stratégie de rétention d’historique temporelle s’applique à [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et à SQL Server 2017 (à partir de la version CTP 1.3).  
+> **REMARQUE :**  L’utilisation de l’approche de la stratégie de rétention d’historique temporelle s’applique à [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et à SQL Server 2017 (à partir de la version CTP 1.3).  
 
 La rétention d’historique temporelle peut être configurée au niveau de la table individuelle, ce qui permet aux utilisateurs de créer des stratégies de vieillissement flexibles. L’application de la rétention temporelle est simple : un seul paramètre doit être défini durant la création de la table ou le changement de schéma.
 
@@ -503,7 +503,7 @@ En raison de l’excellence de la compression des données et de l’efficacité
 
 Pour plus d’informations, consultez [Gérer les données d’historique dans les tables temporelles avec une stratégie de rétention](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy).
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
  [Prise en main des tables temporelles avec versions gérées par le système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Vérifications de cohérence système des tables temporelles](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   

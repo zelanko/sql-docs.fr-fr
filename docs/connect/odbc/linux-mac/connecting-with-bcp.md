@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66789869"
 ---
 # <a name="connecting-with-bcp"></a>Connexion avec bcp
@@ -79,7 +79,7 @@ Spécifie le numéro de la première ligne à exporter à partir d’une table o
 Pendant l’opération, les colonnes vides doivent conserver une valeur NULL et les colonnes insérées ne doivent pas prendre de valeur par défaut.  
   
 - -l  
-Spécifie un délai de connexion. L’option -l spécifie le nombre de secondes au terme duquel une connexion de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à  expire quand vous tentez de vous connecter à un serveur. Le délai d’expiration de la connexion par défaut est de 15 secondes. Le délai de connexion doit être un nombre compris entre 0 et 65534. Si la valeur fournie n'est pas numérique ou n'est pas comprise dans cet intervalle, `bcp` génère un message d'erreur. La valeur 0 spécifie un délai d’attente infini.
+Spécifie un délai de connexion. L’option -l spécifie le nombre de secondes au terme duquel une connexion de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] expire quand vous tentez de vous connecter à un serveur. Le délai d’expiration de la connexion par défaut est de 15 secondes. Le délai de connexion doit être un nombre compris entre 0 et 65534. Si la valeur fournie n'est pas numérique ou n'est pas comprise dans cet intervalle, `bcp` génère un message d'erreur. La valeur 0 spécifie un délai d’attente infini.
   
 - -L *last_row*  
 Spécifie le numéro de la dernière ligne à exporter à partir d’une table ou à importer à partir d’un fichier de données.  

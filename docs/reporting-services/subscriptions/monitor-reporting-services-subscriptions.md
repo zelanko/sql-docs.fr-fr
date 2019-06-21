@@ -1,6 +1,6 @@
 ---
 title: Analyser les abonnements Reportions Services | Microsoft Docs
-ms.date: 03/07/2017
+ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: subscriptions
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: cb4d7f64bf72aaf8844097277c78d6563b426cc1
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
-ms.translationtype: MTE75
+ms.openlocfilehash: 33d865ad28e9d013b97910ff30c4bcf7be760f93
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65578219"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140535"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Analyser les abonnements Reportions Services
   Vous pouvez surveiller les abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à partir de l'interface utilisateur, de Windows PowerShell ou des fichiers journaux. Les options de surveillance à votre disposition dépendent du mode de serveur de rapports que vous exécutez.  
@@ -28,7 +28,7 @@ ms.locfileid: "65578219"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint.|  
   
- **Dans cette rubrique :**  
+ **Dans cet article :**  
   
 -   [Interface utilisateur en mode natif](#bkmk_native_mode)  
   
@@ -39,14 +39,14 @@ ms.locfileid: "65578219"
 -   [Gestion des abonnements inactifs](#bkmk_manage_inactive)  
   
 ##  <a name="bkmk_native_mode"></a> Interface utilisateur en mode natif  
- Chaque utilisateur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut surveiller l'état d'un abonnement dans la page **Mes abonnements** ou sous l'onglet **Abonnements** du Gestionnaire de rapports. Les pages d'abonnement présentent des colonnes qui indiquent l'état de l'abonnement et à quel moment l'abonnement a été exécuté pour la dernière fois. Les messages d'état sont mis à jour à chaque traitement planifié de l'abonnement. Si le déclencheur ne se produit jamais (par exemple, si un instantané d'exécution de rapport n'est jamais actualisée ou si une planification n'est jamais exécutée), le message d'état ne sera pas mis à jour.  
+ Chaque utilisateur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peut surveiller l'état d'un abonnement dans la page **Mes abonnements** ou sous l'onglet **Abonnements** du portail web. Les pages d'abonnement présentent des colonnes qui indiquent l'état de l'abonnement et à quel moment l'abonnement a été exécuté pour la dernière fois. Les messages d'état sont mis à jour à chaque traitement planifié de l'abonnement. Si le déclencheur ne se produit jamais (par exemple, si un instantané d'exécution de rapport n'est jamais actualisée ou si une planification n'est jamais exécutée), le message d'état ne sera pas mis à jour.  
   
  Le tableau suivant répertorie les valeurs possibles de la colonne **État** .  
   
 |État|Description|  
 |------------|-----------------|  
 |Nouvel abonnement|Apparaît la première fois que vous créez l'abonnement.|  
-|Inactif|Apparaît lorsqu'un abonnement ne peut pas être traité. Pour plus d'informations, consultez « Gestion des abonnements inactifs », plus loin dans cette rubrique.|  
+|Inactif|Apparaît lorsqu'un abonnement ne peut pas être traité. Pour plus d'informations, consultez « Gestion des abonnements inactifs », plus loin dans cet article.|  
 |Terminé : \<*nombre*> traité(s) sur un total de \<*nombre*> ; \<*nombre*> erreurs.|Indique l'état de l'exécution d'un abonnement piloté par les données. Ce message provient du processeur de planification et de livraison.|  
 |\<*nombre*> traités|Nombre de notifications que le processeur de planification et de livraison a réussi à remettre ou n'essaie plus de remettre. Lorsqu'une remise pilotée par les données est terminée, le nombre de notifications traitées doit être égal au nombre total de notifications générées.|  
 |\<*nombre*> au total|Nombre total de notifications générées pour la dernière remise de l'abonnement.|  
@@ -66,17 +66,17 @@ ms.locfileid: "65578219"
 ### <a name="native-mode-log-files"></a>Fichiers journaux en mode natif  
  Si une erreur se produit au cours de la remise, une entrée est inscrite dans le journal de trace du serveur de rapports.  
   
- Les administrateurs de serveur de rapports peuvent passer en revue les fichiers **reportserverservice_\*.log**pour déterminer l’état de remise des abonnements. Pour la remise par messagerie électronique, les fichiers journaux du serveur de rapports contiennent un enregistrement du traitement et des remises effectuées sur les comptes de messagerie spécifiques. Voici l'emplacement par défaut des fichiers journaux :  
+ Les administrateurs de serveur de rapports peuvent passer en revue les fichiers **ReportServerService_*.log** pour déterminer l’état de remise des abonnements. Pour la remise par messagerie électronique, les fichiers journaux du serveur de rapports contiennent un enregistrement du traitement et des remises effectuées sur les comptes de messagerie spécifiques. Voici l'emplacement par défaut des fichiers journaux :  
   
- `C:\Program Files\Microsoft SQL Server\MSRS11.MSSQLSERVER\Reporting Services\LogFiles`  
+ `C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles`  
   
  Voici un exemple de nom de fichier journal :  
   
- `ReportServerService__05_21_2014_00_05_07.log`  
+ `ReportServerService__05_21_2019_00_05_07.log`  
   
  Voici un exemple de message d'erreur de fichier journal de trace lié aux abonnements :  
   
--   library!WindowsService_7!b60!05/20/2014-22:34:36:: i INFO : Initialisation de EnableExecutionLogging sur 'True' comme spécifié dans les propriétés du système Server.emailextension!WindowsService_7!b60!05/20/2014-22:34:41:: e ERROR: **Erreur lors de l’envoi du message électronique**. Exception : System.Net.Mail.SmtpException: Le serveur SMTP requiert une connexion sécurisée ou le client n'était pas authentifié. La réponse du serveur était : 5.7.1 Le client n'était pas authentifié sur System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
+-   library!WindowsService_7!b60!05/20/2019-22:34:36:: i INFO: Initializing EnableExecutionLogging to 'True'  as specified in Server system properties.emailextension!WindowsService_7!b60!05/20/2019-22:34:41:: e ERROR: **Erreur lors de l’envoi du message électronique**. Exception : System.Net.Mail.SmtpException: Le serveur SMTP requiert une connexion sécurisée ou le client n'était pas authentifié. La réponse du serveur était : 5.7.1 Le client n'était pas authentifié sur System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)  
   
  Le fichier journal ne contient aucune information indiquant si le rapport a été ouvert ou si la remise a réussi. Une remise réussie signifie qu'aucune erreur n'a été générée par le processeur de planification et de livraison et que le serveur de rapports s'est connecté au serveur de messagerie. Si le message électronique a entraîné l'envoi d'un message d'erreur de non-remise dans la boîte aux lettres de l'utilisateur, cette information ne figurera pas dans le fichier journal. Pour plus d’informations sur les fichiers journaux, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -85,9 +85,9 @@ ms.locfileid: "65578219"
   
 1.  Accédez à la bibliothèque de documents qui contient le rapport.  
   
-2.  Ouvrez le menu contextuel du rapport (**...**).  
+2.  Ouvrez le menu contextuel du rapport ( **...** ).  
   
-3.  Sélectionnez l’option de menu développé (**...**).  
+3.  Sélectionnez l’option de menu développé ( **...** ).  
   
 4.  Sélectionnez **Gérer les abonnements**  
   
@@ -97,10 +97,10 @@ ms.locfileid: "65578219"
 ||||||||  
 |-|-|-|-|-|-|-|  
 |Date|Traiter|Domaine|Catégorie|Level|Correlation|Message|  
-|5/21/2014 14:34:06:15|Pool d'applications : a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extension du courrier électronique service Web Report Server|Inattendu.|(vide)|**Erreur d'envoi de courrier électronique.** Exception : System.Net.Mail.SmtpException: boîte aux lettres non disponible. La réponse du serveur était : 5.7.1 Le client n'est pas autorisé à envoyer en tant que cet expéditeur sur System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) sur System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) sur System.Net.Mail.SmtpClient.Send(MailMessage message) sur Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
+|5/21/2019 14:34:06:15|Pool d'applications : a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extension du courrier électronique service Web Report Server|Inattendu.|(vide)|**Erreur d'envoi de courrier électronique.** Exception : System.Net.Mail.SmtpException: boîte aux lettres non disponible. La réponse du serveur était : 5.7.1 Le client n'est pas autorisé à envoyer en tant que cet expéditeur sur System.Net.Mail.DataStopCommand.CheckResponse(SmtpStatusCode statusCode, String serverResponse) sur System.Net.Mail.DataStopCommand.Send(SmtpConnection conn) sur System.Net.Mail.SmtpClient.Send(MailMessage message) sur Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver(Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> Utiliser PowerShell pour surveiller les abonnements  
- Pour obtenir des exemples de scripts PowerShell permettant de vérifier l'état des abonnements en mode natif ou SharePoint, voir [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
+ Par exemple les scripts PowerShell que vous pouvez utiliser pour vérifier l’état du mode natif ou les abonnements du mode SharePoint, consultez [gérer les propriétaires d’abonnement et exécuter un abonnement - PowerShell](../../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md).  
   
 ##  <a name="bkmk_manage_inactive"></a> Gestion des abonnements inactifs  
  Lorsqu'un abonnement devient inactif, vous devez soit le supprimer, soit le réactiver en résolvant les conditions sous-jacentes qui empêchent son traitement. Les abonnements peuvent devenir inactifs si certaines conditions empêchant leur traitement se produisent. Ces conditions sont les suivantes :  
@@ -117,8 +117,8 @@ ms.locfileid: "65578219"
   
  Lorsque certaines conditions entraînent l'inactivité de l'abonnement, celui-ci manifeste son état lorsque le serveur de rapports exécute l'abonnement. Si un abonnement doit remettre un rapport chaque vendredi à 02:00 et que l'extension de remise qu'il utilise a été désinstallée le lundi à 09:00, l'abonnement ne manifestera pas son état d'inactivité avant le vendredi à 02:00.  
   
-## <a name="see-also"></a> Voir aussi  
- [old_Créer et gérer des abonnements pour les serveurs de rapports en mode natif](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)   
+## <a name="see-also"></a>Voir aussi  
+ [Créer et gérer des abonnements pour les serveurs de rapports en mode natif](../../reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)  
   
   

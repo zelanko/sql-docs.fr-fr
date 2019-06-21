@@ -16,17 +16,17 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5d982ba0b7a2ec5b35a6d38da3a5831119c4c1c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506883"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047573"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en mémoire (optimisation en mémoire)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] permet d’améliorer considérablement les performances du traitement transactionnel, de l’intégration et du chargement des données, et des scénarios de données temporaires.  Pour accéder au code et aux connaissances de base indispensables pour tester rapidement votre propre table optimisée en mémoire et votre procédure stockée compilée en mode natif, consultez
- -  [Démarrage rapide 1 : technologies OLTP en mémoire pour accélérer les performances Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md).  
+ -  [Démarrage rapide 1 : technologies OLTP en mémoire pour accélérer les performances Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md).  
  
 Une vidéo de 17 minutes expliquant la fonction OLTP en mémoire et montrant ses avantages en matière de performances :
 
@@ -55,7 +55,7 @@ Pour une présentation plus détaillée de l’OLTP en mémoire et un examen des
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Démarrage rapide 1 : technologies OLTP en mémoire pour accélérer les performances Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|Plongez directement au cœur de l’OLTP en mémoire.|
+|[Démarrage rapide 1 : technologies OLTP en mémoire pour accélérer les performances Transact-SQL](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)|Plongez directement au cœur de l’OLTP en mémoire.|
 |[Vue d’ensemble et scénarios d’utilisation](../../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md)|Vue d’ensemble de l’OLTP en mémoire et des scénarios où l’utilisation de cette technologie offre des avantages en matière de performances.|
 |[Conditions requises pour l’utilisation des tables optimisées en mémoire](../../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md)|Décrit les configurations matérielle et logicielle requises et fournit des instructions pour l'utilisation des tables optimisées en mémoire.|  
 |[Exemples de code OLTP en mémoire](../../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md)|Contient des exemples de code qui montrent comment créer et utiliser une table optimisée en mémoire.|  
@@ -87,7 +87,7 @@ Pour une présentation plus détaillée de l’OLTP en mémoire et un examen des
   
 -   [Blog OLTP en mémoire](https://go.microsoft.com/fwlink/?LinkId=311696)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités de base de données](../../relational-databases/database-features.md)  
   
   

@@ -14,10 +14,10 @@ ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506439"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Définition des valeurs de délai d'attente pour le traitement d'un rapport et d'un dataset partagé (SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66506439"
  Les valeurs de délai de requête sont spécifiées en secondes sur le serveur de rapports lorsque vous créez ou gérez un dataset partagé. Par défaut, cette valeur est définie sur 0 seconde, ce qui équivaut à une valeur sans délai d'attente. Pour plus d’informations, consultez [Gérer des datasets partagés](../../reporting-services/report-data/manage-shared-datasets.md).  
   
 ## <a name="setting-a-report-execution-time-out"></a>Définition d'un délai d'attente pour l'exécution de rapports  
- Vous pouvez définir un délai d'attente pour l'exécution de rapports de façon à limiter le temps que le serveur de rapports consacre au traitement d'un rapport. Les valeurs de délai d'attente peuvent être spécifiées dans le Gestionnaire de rapports. Vous pouvez définir une valeur par défaut pour tous les rapports dans la page des paramètres du site, puis remplacer cette valeur dans la page des propriétés d'exécution pour un rapport spécifique. Par défaut, la valeur est fixée à 1 800 secondes. Pour plus d’informations, consultez [Définir les propriétés de traitement d’un rapport](../../reporting-services/report-server/set-report-processing-properties.md).  
+ Vous pouvez définir un délai d'attente pour l'exécution de rapports de façon à limiter le temps que le serveur de rapports consacre au traitement d'un rapport. Les valeurs de délai d'attente peuvent être spécifiées dans le portail web. Vous pouvez définir une valeur par défaut pour tous les rapports dans la page des paramètres du site, puis remplacer cette valeur dans la page des propriétés d'exécution pour un rapport spécifique. Par défaut, la valeur est fixée à 1 800 secondes. Pour plus d’informations, consultez [Définir les propriétés de traitement d’un rapport](../../reporting-services/report-server/set-report-processing-properties.md).  
   
 ## <a name="how-report-execution-time-out-values-are-evaluated"></a>Méthode d'évaluation des valeurs d'expiration pour l'exécution de rapports  
  Le serveur de rapports évalue les travaux en cours d'exécution toutes les 60 secondes. Il compare alors la durée de traitement réelle à la valeur d'expiration de l'exécution du rapport. Si la durée du traitement d'un rapport dépasse la valeur d'expiration pour l'exécution du rapport, le traitement du rapport s'arrête.  

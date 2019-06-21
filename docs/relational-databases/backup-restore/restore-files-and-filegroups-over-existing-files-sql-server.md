@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ef333004fc3ed3d5404aa8cae7e3880c74fad1bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631927"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62504412"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Restaurer des fichiers et groupes de fichiers en remplaçant des fichiers existants (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,13 +53,13 @@ ms.locfileid: "47631927"
   
 -   La commande RESTORE n'est pas autorisée dans une transaction explicite ou implicite.  
   
--   Que vous soyez en mode de récupération complète ou en mode de récupération utilisant les journaux de transactions, pour pouvoir restaurer des fichiers, vous devez d'abord sauvegarder le journal des transactions actif (appelé fin du journal). Pour plus d’informations, consultez [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
+-   Que vous soyez en mode de récupération complète ou en mode de récupération utilisant les journaux de transactions, pour pouvoir restaurer des fichiers, vous devez d'abord sauvegarder le journal des transactions actif (appelé fin du journal). Pour plus d’informations, consultez [Back Up a Transaction Log &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   
 -   Pour restaurer une base de données chiffrée, vous devez avoir accès au certificat ou à la clé asymétrique qui a servi à chiffrer la base de données. Sans le certificat et la clé asymétrique, la base de données ne peut pas être restaurée. En conséquence, le certificat utilisé pour chiffrer la clé de chiffrement de base de données doit être conservé tant que la sauvegarde est utile. Pour plus d’informations, consultez [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Si la base de données restaurée n'existe pas, l'utilisateur doit posséder les autorisations CREATE DATABASE afin de pouvoir exécuter RESTORE. Si la base de données existe, les autorisations RESTORE reviennent par défaut aux membres des rôles serveur fixe **sysadmin** et **dbcreator** et au propriétaire (**dbo**) de la base de données (pour l’option FROM DATABASE_SNAPSHOT, la base de données existe toujours).  
   
  Les autorisations RESTORE sont attribuées aux rôles dont les informations d'appartenance sont toujours immédiatement accessibles à partir du serveur. Étant donné que l’appartenance au rôle de base de données fixe ne peut être contrôlée que quand la base de données est accessible et non endommagée, ce qui n’est pas toujours le cas quand RESTORE est exécuté, les membres du rôle de base de données fixe **db_owner** ne détiennent pas d’autorisations RESTORE.  
@@ -91,9 +91,9 @@ ms.locfileid: "47631927"
     |En-tête de colonne|Valeurs|  
     |-----------------|------------|  
     |**Restaurer**|Les cases à cocher sélectionnées correspondent aux jeux de sauvegarde à restaurer.|  
-    |**Nom**|Nom du jeu de sauvegarde.|  
-    |**Type de fichier**|Spécifie le type de données de la sauvegarde : **Données**, **Journal**ou **Données Filestream**. Les données qui sont contenues dans les tables sont dans les fichiers **Données** . Les données du journal des transactions sont dans les fichiers **Journaux** . Les données des objets BLOB (Binary Large Object) qui sont stockées dans le système de fichiers se trouvent dans des fichiers **Données Filestream** .|  
-    |**Type**|Type de sauvegarde effectué : **Complète**, **Différentielle**ou **Journal des transactions**.|  
+    |**Name**|Nom du jeu de sauvegarde.|  
+    |**Type de fichier**|Spécifie le type des données figurant dans la sauvegarde : **Données**, **Journal**, ou **Données Filestream**. Les données qui sont contenues dans les tables sont dans les fichiers **Données** . Les données du journal des transactions sont dans les fichiers **Journaux** . Les données des objets BLOB (Binary Large Object) qui sont stockées dans le système de fichiers se trouvent dans des fichiers **Données Filestream** .|  
+    |**Type**|Types de sauvegarde proposés : **Complète**, **Différentielle** ou **Journal des transactions**.|  
     |**Server**|Nom de l'instance Base de données-Moteur ayant effectué l'opération de sauvegarde.|  
     |**Nom logique du fichier**|Comme son nom l'indique.|  
     |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
@@ -104,7 +104,7 @@ ms.locfileid: "47631927"
   
 6.  Dans le volet **Sélectionner une page** , cliquez sur la page **Options** .  
   
-7.  Dans le panneau **Options de restauration** , sélectionnez **Remplacer la base de données existante (WITH REPLACE)**. L'opération de restauration remplace les bases de données existantes et leurs fichiers associés, même si une autre base de données ou un autre fichier existant porte le même nom.  
+7.  Dans le panneau **Options de restauration** , sélectionnez **Remplacer la base de données existante (WITH REPLACE)** . L'opération de restauration remplace les bases de données existantes et leurs fichiers associés, même si une autre base de données ou un autre fichier existant porte le même nom.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -167,7 +167,7 @@ RESTORE LOG MyNwind
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Restaurer une sauvegarde de base de données à l’aide de SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [Restaurer des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-files-and-filegroups-sql-server.md)   

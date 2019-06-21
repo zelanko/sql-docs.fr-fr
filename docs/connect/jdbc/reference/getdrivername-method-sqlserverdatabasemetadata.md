@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 87221173fc919244eca5a9df153ac1975f6d12ac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66767160"
 ---
 # <a name="getdrivername-method-sqlserverdatabasemetadata"></a>Méthode getDriverName (SQLServerDatabaseMetaData)
@@ -36,13 +36,13 @@ public java.lang.String getDriverName()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- **String** contenant la version du pilote JDBC.  
+ **String** contenant le nom du pilote JDBC.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getUserName est spécifiée par la méthode getUserName de l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getDriverName est spécifiée par la méthode getDriverName de l’interface java.sql.DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c59f9b04ad4552280c586941e43e91aa25fd935
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558273"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686879"
 ---
 # <a name="modified-features-contained-database"></a>Fonctionnalités modifiées (base de données autonome)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ ms.locfileid: "51558273"
  Les tables temporaires ne peuvent pas faire référence aux types définis par l'utilisateur, aux collections de schémas XML ou aux fonctions définies par l'utilisateur.  
   
 ## <a name="collation"></a>Classement  
- Dans le modèle de base de données non autonome, il existe trois types de classement distincts : classement de base de données, classement d’instance et classement tempdb. Les bases de données autonomes utilisent uniquement deux classements, le classement de base de données et le nouveau classement de catalogue. Consultez [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md) pour plus d’informations sur le classement de bases de données autonomes.  
+ Dans le modèle de base de données non autonome, il existe trois types de classement distincts : le classement de base de données, le classement d’instance et le classement TempDB. Les bases de données autonomes utilisent uniquement deux classements, le classement de base de données et le nouveau classement de catalogue. Consultez [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md) pour plus d’informations sur le classement de bases de données autonomes.  
   
 ## <a name="user-options"></a>Options utilisateur  
  Au moment d’activer les bases de données autonomes, l’option [user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) doit avoir la valeur 0 pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md)   
  [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)  
   

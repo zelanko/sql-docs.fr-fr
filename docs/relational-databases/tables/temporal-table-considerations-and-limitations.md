@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f88363967571c2f6401be42659b5b00ec3811b07
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410086"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034980"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Considérations et limitations liées aux tables temporelles
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52410086"
   
 -   Les tables temporelle et d’historique ne peuvent pas être **FILETABLE** et peuvent contenir des colonnes de n’importe quel type de données pris en charge autre que **FILESTREAM** , car **FILETABLE** et **FILESTREAM** permettent de manipuler des données en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ce qui ne garantit pas la gestion système des versions.  
   
--   Même si les tables temporelles prennent en charge les types de données blob, tels que **(n)varchar(max)**, **varbinary(max)**, **(n)text** et **image**, elles entraînent des coûts de stockage importants et ont un impact sur les performances en raison de leur taille. Par conséquent, il convient de prendre des précautions lorsque vous concevez votre système si vous souhaitez utiliser ces types de données .  
+-   Même si les tables temporelles prennent en charge les types de données blob, tels que **(n)varchar(max)** , **varbinary(max)** , **(n)text** et **image**, elles entraînent des coûts de stockage importants et ont un impact sur les performances en raison de leur taille. Par conséquent, il convient de prendre des précautions lorsque vous concevez votre système si vous souhaitez utiliser ces types de données .  
   
 -   La table d’historique doit être créée dans la même base de données que le tableau actuel. L’interrogation temporelle par l’intermédiaire de **Linked Server** n’est pas prise en charge.  
   
@@ -56,20 +56,20 @@ ms.locfileid: "52410086"
   
 -   **ON DELETE CASCADE** et **ON UPDATE CASCADE** ne sont pas autorisées dans la table actuelle. En d’autres termes, quand la table temporelle fait référence à la table dans la relation de clé étrangère (correspondant à *parent_object_id* dans sys.foreign_keys), les options CASCADE ne sont pas autorisées. Pour contourner cette limitation, utilisez une logique d’application ou des déclencheurs After pour maintenir la cohérence en cas de suppression dans la table de clé primaire (correspondant à  *referenced_object_id* dans sys.foreign_keys). Si la table de clé primaire est temporelle alors que la table de référence ne l’est pas, il n’existe aucune limitation de ce type. 
 
-    **REMARQUE :** Cette limitation s’applique uniquement à SQL Server 2016. Les options CASCADE sont prises en charge dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et SQL Server 2017 à partir de la version CTP 2.0.  
+    **REMARQUE :** cette limitation s’applique uniquement à SQL Server 2016. Les options CASCADE sont prises en charge dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et SQL Server 2017 à partir de la version CTP 2.0.  
   
 -   Les déclencheurs**INSTEAD OF** ne sont pas autorisés sur la table actuelle ou sur la table d’historique pour éviter l’invalidation de la logique DML. Les déclencheurs**AFTER** sont autorisés uniquement dans la table actuelle. Ils sont bloqués dans la table d’historique afin d’éviter l’invalidation de la logique DML.  
   
 -   L’utilisation de technologies de réplication est limitée.  
   
-    -   **Always On (Toujours active)** : entièrement prise en charge  
+    -   **Always On (Toujours active) :** entièrement prise en charge  
   
-    -   **Capture de données modifiées et Suivi des modifications de données** : uniquement prises en charge dans la table actuelle  
+    -   **Capture de données modifiées et suivi des modifications :** uniquement prise en charge sur la table actuelle  
   
-    -   **Capture instantanée et réplication transactionnelle**: uniquement prise en charge pour un serveur de publication unique sans activation de Temporal et un abonné avec Temporal activé. Dans ce cas, le serveur de publication est utilisé pour une charge de travail OLTP tandis que l’abonné est utilisé pour le déchargement de rapports (avec l’interrogation « AS OF »).    
+    -   **Capture instantanée et réplication transactionnelle** : uniquement prise en charge pour un serveur de publication unique sans activation de Temporal et un abonné avec Temporal activé. Dans ce cas, le serveur de publication est utilisé pour une charge de travail OLTP tandis que l’abonné est utilisé pour le déchargement de rapports (avec l’interrogation « AS OF »).    
         L’utilisation de plusieurs abonnés n’est pas prise en charge car ce scénario peut entraîner une incohérence des données temporelles, chacune d’elles dépendant de l’horloge système locale.  
   
-    -   **Réplication de fusion** : non prise en charge pour les tables temporelles  
+    -   **Réplication de fusion :** non prise en charge pour les tables temporelles  
   
 -   Les requêtes régulières affectent uniquement les données dans la table actuelle. Pour interroger des données dans la table d’historique, vous devez utiliser des requêtes temporelles. Ces points sont abordés dans ce document dans la section Interrogation des données temporelles.  
   
@@ -91,14 +91,14 @@ ms.locfileid: "52410086"
   
     -   Configuration du partitionnement  
   
-    -   Permissions  
+    -   Autorisations  
   
     -   Prédicats de sécurité au niveau des lignes  
   
 -   Une table d’historique ne peut pas être configurée en tant que table actuelle d’une chaîne de tables d’historique.  
   
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
  [Prise en main des tables temporelles avec versions gérées par le système](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Vérifications de cohérence système des tables temporelles](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
