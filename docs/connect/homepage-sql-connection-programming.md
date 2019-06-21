@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: genemi
 ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
-ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51289899"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63182209"
 ---
-# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Page d’accueil pour la programmation à Microsoft SQL Server côté client
+# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Page d’accueil pour la programmation client sur Microsoft SQL Server
 
 
 Bienvenue dans notre page d’accueil sur la programmation pour interagir avec Microsoft SQL Server et base de données SQL Azure dans le cloud client. Cet article fournit les informations suivantes :
@@ -54,7 +54,7 @@ Dans le tableau suivant, chaque image de la langue est un lien vers des détails
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp; [![Logo c#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM Entity Framework, du .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Logo Java][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Logo de Node.js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp gros avantage][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![Logo PHP][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Logo de Node.js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![Logo PHP][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp; [![Logo Python][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Logo Ruby][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -181,7 +181,7 @@ Le pilote de connexion de Node.js pour SQL Server est implémenté dans JavaScri
 
 ## <a name="odbc-for-c"></a>ODBC pour C++ 
 
-![Logo d’ODBC][image-ref-350-odbc] ![cpp gros avantage][image-ref-322-cpp]
+![Logo d’ODBC][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
 Connectivité de base de données ouverte (ODBC) a été développée dans les années 1990, et elle est antérieure à .NET Framework. ODBC est conçu pour être indépendamment de n’importe quel système de base de données particulière et du système d’exploitation.
 
@@ -191,7 +191,7 @@ D’autres pilotes de connectivité utilisent ODBC en interne.
 
 #### <a name="code-example"></a>Exemple de code
 
-- [Exemple de code C++, à l’aide d’ODBC](../odbc/reference/sample-odbc-program.md)
+- [Exemple de code C++, utilisant ODBC](../odbc/reference/sample-odbc-program.md)
 
 #### <a name="documentation-outline"></a>Plan de documentation
 
@@ -201,7 +201,7 @@ Le contenu d’ODBC dans cette section se concentre sur l’accès à SQL Server
 | Domaine | Sous-zone | Description |
 | :--- | :------ | :---------- |
 | [ODBC pour C++](./odbc/index.md) | Racine de notre documentation. |
-| [Mac-Linux](./odbc/linux-mac/index.md) | &nbsp; | Informations sur l’utilisation d’ODBC sur les systèmes d’exploitation Linux ou MacOS. |
+| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Informations sur l’utilisation d’ODBC sur les systèmes d’exploitation Linux ou MacOS. |
 | [Windows](./odbc/windows/index.md)     | &nbsp; | Informations sur l’utilisation d’ODBC sur le système d’exploitation Windows. |
 | [Administration](../odbc/admin/index.md) | &nbsp; | L’outil d’administration pour la gestion des sources de données ODBC. |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Divers pilotes ODBC qui sont créés et fournis par Microsoft. |
@@ -254,7 +254,7 @@ Vous pouvez utiliser Python pour interagir avec SQL Server.
 | Domaine | Description |
 | :--- | :---------- |
 | [Python pour SQL Server](./python/index.md) | Racine de notre documentation. |
-| [pilote pymssql](./python/pymssql/index.md) | Microsoft ne gère pas ni ne testez le pilote pymssql.<br /><br />Le pilote de connexion pymssql est une interface simple pour les bases de données SQL, pour une utilisation dans les programmes de Python. Pymssql s’appuie sur FreeTDS pour fournir une interface de base de données-API Python (249 du point de terminaison PRIVILÉGIÉ) à Microsoft SQL Server. |
+| [pymssql driver](./python/pymssql/index.md) | Microsoft ne gère pas ni ne testez le pilote pymssql.<br /><br />Le pilote de connexion pymssql est une interface simple pour les bases de données SQL, pour une utilisation dans les programmes de Python. Pymssql s’appuie sur FreeTDS pour fournir une interface de base de données-API Python (249 du point de terminaison PRIVILÉGIÉ) à Microsoft SQL Server. |
 | [pilote pyodbc](./python/pyodbc/index.md)   | Le pilote de connexion pyodbc est un module Python open source qui facilite l’accès aux bases de données ODBC. Il implémente la spécification DB API 2.0, mais il est compressé avec encore plus de commodité proche du langage Python. |
 | &nbsp; | <br /> |
 

@@ -1,5 +1,5 @@
 ---
-title: Help Viewer et contenu de l’aide SQL Server | Microsoft Docs
+title: Visionneuse d’aide et contenu de l’aide SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 12/16/2017
 ms.prod: sql
@@ -10,61 +10,51 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41b14322d3c895e687add2236c2447d93df62586
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: 727186e4c32291a02140c50780986c8b2f60e08a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771335"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140785"
 ---
-# <a name="sql-server-offline-help-and-help-viewer"></a>Help Viewer et aide en mode hors connexion SQL Server
+# <a name="sql-server-offline-help-and-help-viewer"></a>Visionneuse d’aide et aide en mode hors connexion SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Vous pouvez utiliser Microsoft Help Viewer pour télécharger et installer les packages d’aide SQL Server à partir de sources en ligne ou du disque et les afficher hors connexion. Help Viewer est installé avec SQL Server Management Studio (SSMS) ou Visual Studio (VS). Cet article décrit les outils installés par Help Viewer, comment installer le contenu d’aide en mode hors connexion et comment afficher l’aide pour [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 et SQL Server 2017.
+Vous pouvez utiliser Microsoft Help Viewer pour télécharger et installer les packages d’aide SQL Server à partir de sources en ligne ou du disque local. Vous pouvez ensuite afficher le contenu hors connexion. La visionneuse d’aide est installée avec différents outils. Cet article décrit les outils qui installent la visionneuse d’aide, comment installer le contenu de l’aide en mode hors connexion et comment afficher l’aide.
 
 Un accès à Internet est nécessaire pour télécharger le contenu de Help Viewer. Vous pouvez ensuite migrer le contenu sur un ordinateur qui n’a pas accès à Internet.
 
-> [!NOTE]
-> L’aide de SQL Server 2016 et celle de SQL Server 2017 sont combinées, même si certaines rubriques s’appliquent aux versions individuelles là où cela est mentionné. La plupart des rubriques s’appliquent aux deux.
+>[!NOTE]
+> Pour obtenir du contenu local pour les versions actuelles de SQL server, installez la version actuelle de SQL Server Management Studio [SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-## <a name="install-the-help-viewer"></a>Installer Help Viewer
+## <a name="what-tools-install-the-help-viewer-versions"></a>Quels outils installent les versions de la visionneuse d’aide ?
 
-Il existe deux versions de Help Viewer.  Chaque version prend en charge différentes versions de contenu SQL Server.  Le format de la documentation en mode hors connexion a changé au fil du temps et les anciennes versions de Help Viewer ne prennent pas en charge les versions plus récentes de la documentation :
-- v2.x prend en charge l’aide SQL Server 2016 et SQL Server 2017. 
-- v1.x prend en charge l’aide [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]. Help Viewer ne prend en charge ni les paramètres proxy ni le format ISO.
+Il existe deux versions majeures de la visionneuse d’aide Microsoft.  Les versions 1.x et 2.x. Chaque version prend en charge différentes versions de contenu SQL Server.  Le format de la documentation en mode hors connexion a changé au fil du temps et les anciennes versions de Help Viewer ne prennent pas en charge les versions plus récentes de la documentation.
 
+|**Ensemble de contenu**|**Outils qui installent la visionneuse d’aide**|**Version de la visionneuse d’aide**|
+|-|-|-|
+|Préversion de SQL Server 2019 <br> SQL Server 2017<br>SQL Server 2016|[Visual Studio 2019 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)<br>[Visual Studio 2017 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017)<br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)<br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791)<br>[SQL Server Data Tools pour Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)<br>Visual Studio 2015 | v2.3<br>V2.2|
+|SQL Server 2014<br>SQL Server 2012|Programme d’installation de SQL Server 2016 (2)<br>SQL Server 2014 Management Studio<br>Programme d’installation de SQL Server 2014 (2)<br>SQL Server Management Studio 2012<br>Programme d’installation de SQL Server 2012 (2)| v1.x|
+| | | |
 
-|**Outil**|**Version de Help Viewer installée**|
-|---------|---------|
-|[Visual Studio 2017*](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) | v2.3|
-|[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
-|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
-|[SQL Server Data Tools pour Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) | v2.2|
-|Visual Studio 2015 | v2.2|
-|SQL Server 2016 | v1.x|
-|SQL Server 2014 Management Studio | v1.x|
-|Versions antérieures de Visual Studio | v1.x|
-| | |
+(1) Pour installer la visionneuse d’aide avec Visual Studio 2019 ou 2017, sur l’onglet Composants individuels dans le programme d’installation de Visual Studio, sélectionnez **Visionneuse d’aide** sous Outils de code, puis cliquez sur **Installer**.
 
-\* Pour installer Help Viewer avec Visual Studio 2017, sur l’onglet Composants individuels dans le programme d’installation de Visual Studio, sélectionnez **Visionneuse d’aide** sous Outils de code, puis cliquez sur **Installer**.
+(2) indique l’option « Composants de Documentation » dans le programme d’installation de SQL Server.
 
 >[!NOTE]
-> - SQL Server 2016 installe Help Viewer 1.1, qui ne prend pas en charge l’aide de SQL Server 2016. 
-> - L’installation de SQL Server 2017 n’installe pas Help Viewer. Help Viewer n’est plus inclus dans l’installation de SQL Server.
-> - Help Viewer v2.x peut aussi prendre en charge l’aide [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], si vous installez le contenu à partir du disque.
+> - SQL Server 2016 installe la visionneuse d’aide version 1.1, qui ne prend pas en charge le contenu d’aide de SQL Server 2016. Pour plus d’informations, consultez les [Notes de mise à jour pour SQL Server 2016](sql-server-2016-release-notes.md).  Pour afficher le contenu de SQL Server 2016, vous avez besoin de la version 2.x de la visionneuse d’aide. 
+> - À partir de SQL Server 2017, la visionneuse d’aide ne peut pas être installée à partir du programme d’installation de SQL Server.
 
-## <a name="use-help-viewer-v2x"></a>Utiliser Help Viewer v2.x
+## <a name="use-help-viewer-v2x"></a>Utiliser la visionneuse d’aide version 2.x
 
-SSMS 17.x ainsi que VS 2015 et 2017 utilisent Help Viewer 2.x, qui prend en charge l’aide de SQL Server 2016 et SQL Server 2017. 
-
-**Pour télécharger et installer le contenu de l’aide en mode hors connexion avec Help Viewer v2.x**
+**Pour télécharger et installer le contenu de l’aide en mode hors connexion avec la visionneuse d’aide version 2.x**
 
 1. Dans SSMS ou VS, cliquez sur **Ajouter et supprimer le contenu d’aide** dans le menu Aide. 
 
    ![HelpViewer2_Ajouter et supprimer le contenu](../sql-server/media/sql-server-help-installation/addremovecontent.png)  
 
-   Help Viewer s’ouvre et affiche l’onglet Gérer le contenu.  
+   La visionneuse d’aide s’ouvre et affiche l’onglet Gérer le contenu.  
    
 2. Pour installer le dernier package de contenu de l’aide, choisissez **En ligne** sous Source d’installation.
    
@@ -74,7 +64,7 @@ SSMS 17.x ainsi que VS 2015 et 2017 utilisent Help Viewer 2.x, qui prend en c
    > Pour une installation à partir du disque (aide de SQL Server 2014), choisissez **Disque** sous Source d’installation et spécifiez l’emplacement du disque.
    
    L’option Chemin d’accès au stockage local sous l’onglet Gérer le contenu indique l’emplacement sur l’ordinateur local où sera installé le contenu. Pour changer d’emplacement, cliquez sur **Déplacer**, entrez un chemin de dossier différent dans le champ **Vers**, puis cliquez sur **OK**.
-   Si l’installation de l’aide échoue après avoir modifié le chemin d’accès au stockage local, fermez et rouvrez Help Viewer, vérifiez que le nouvel emplacement apparaît dans le chemin d’accès au stockage local, puis recommencez l’installation.
+   Si l’installation de l’aide échoue après avoir modifié le chemin d’accès du magasin local, fermez et rouvrez la visionneuse d’aide. Vérifiez que le nouvel emplacement apparaît dans le chemin d’accès du magasin local, puis recommencez l’installation.
 
 3. Cliquez sur **Ajouter** en regard de chaque package de contenu (livre) que vous souhaitez installer. 
    Pour installer tout le contenu de l’aide de SQL Server, ajoutez l’ensemble des 13 livres sous SQL Server. 
@@ -87,7 +77,7 @@ SSMS 17.x ainsi que VS 2015 et 2017 utilisent Help Viewer 2.x, qui prend en c
 > [!NOTE]
 > Les titres de nœud supérieur dans la table des matières SQL Server ne correspondent pas tous exactement aux noms des livres d’aide téléchargeables associés. Les titres de la table des matières sont mappés aux noms des livres comme suit :
 
-(*) indique le contenu tiré de la première version en disponibilité générale de SQL Server 2017, ainsi que l’ancien contenu de la version 2016. Cette documentation sera supprimée, car la documentation complète de SQL Server versions 2016 et 2017 contient les modifications apportées depuis janvier 2019.  
+(*) le contenu tiré de la première version en disponibilité générale de SQL Server 2017, ainsi que l’ancien contenu de la version 2016. Cette documentation sera supprimée, car la documentation complète de SQL Server versions 2016 et 2017 contient les modifications apportées depuis janvier 2019.  
 
 | | Volet de contenu | Livre SQL Server |
 |-----|-----|-----|
@@ -108,41 +98,40 @@ SSMS 17.x ainsi que VS 2015 et 2017 utilisent Help Viewer 2.x, qui prend en c
 |*|Références relatives au langage Xquery (SQL Server) | Références relatives au langage Xquery (SQL Server)|
 
 > [!NOTE]
-> Si Help Viewer se fige (se bloque) pendant l’ajout du contenu, remplacez la ligne Dernière actualisation du cache = « \<jj/mm/aaaa> 00:00:00 » dans le fichier %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings ou HlpViewer_VisualStudiox_en-US.settings par une date dans le futur. Pour plus d’informations sur ce problème, consultez [La visionneuse d’aide Visual Studio se fige sur l’écran de démarrage](/visualstudio/welcome-to-visual-studio).
+> Si la visionneuse d’aide se fige (se bloque) pendant l’ajout du contenu, remplacez la ligne Dernière actualisation du cache = « \<jj/mm/aaaa> 00:00:00 » dans le fichier %LOCALAPPDATA%\Microsoft\HelpViewer2.x\HlpViewer_SSMSx_en-US.settings ou HlpViewer_VisualStudiox_en-US.settings par une date dans le futur. Pour plus d’informations sur ce problème, consultez [La visionneuse d’aide Visual Studio se fige sur l’écran de démarrage](/visualstudio/welcome-to-visual-studio).
 
-**Pour afficher le contenu de l’aide en mode hors connexion dans SSMS avec Help Viewer v2.x**
+**Pour afficher le contenu de l’aide en mode hors connexion dans SSMS avec la visionneuse d’aide version 2.x**
 
-Pour afficher l’aide installée dans SSMS, appuyez sur Ctrl+Alt+F1 ou choisissez **Ajouter ou supprimer du contenu** dans le menu Aide pour lancer Help Viewer. 
+Pour afficher l’aide installée dans SSMS, appuyez sur Ctrl+Alt+F1 ou choisissez **Ajouter ou supprimer du contenu** dans le menu Aide pour lancer la visionneuse d’aide. 
 
    ![HelpViewer2_Ajouter et supprimer le contenu](../sql-server/media/sql-server-help-installation/addremovecontent.png)  
 
-Help Viewer s’ouvre et affiche l’onglet Gérer le contenu, avec la table des matières de l’aide installée dans le volet gauche. Cliquez sur les rubriques dans la table des matières pour les afficher dans le volet droit. 
+La visionneuse d’aide s’ouvre et affiche l’onglet Gérer le contenu, avec la table des matières de l’aide installée dans le volet gauche. Cliquez sur les articles dans la table des matières pour les afficher dans le volet droit.
 > [!TIP]
 > Si le volet de contenu n’est pas visible, cliquez sur Contenu dans la marge gauche. Cliquez sur l’icône représentant une punaise pour garder le volet de contenu ouvert.  
 
-   ![Help Viewer v2.x avec du contenu](../sql-server/media/sql-server-help-installation/helpviewer2-withcontentinstalled.png)
+   ![Visionneuse d’aide version 2.x avec du contenu](../sql-server/media/sql-server-help-installation/helpviewer2-withcontentinstalled.png)
 
-**Pour afficher le contenu de l’aide en mode hors connexion dans VS avec Help Viewer v2.x**
+**Pour afficher le contenu de l’aide en mode hors connexion dans VS avec la visionneuse d’aide version 2.x**
 
 Pour afficher l’aide installée dans Visual Studio :
 1. Pointez sur **Définir les préférences pour l’aide** dans le menu Aide, puis choisissez **Lancer dans la visionneuse d’aide**. 
 
    ![Visionneuse d’aide dans VS, Définir les préférences pour l’aide](../sql-server/media/sql-server-help-installation/launchviewer.png)
 
-2. Cliquez sur **Afficher l’aide** dans le menu Aide pour afficher le contenu dans Help Viewer. 
+2. Cliquez sur **Afficher l’aide** dans le menu Aide pour afficher le contenu dans la visionneuse d’aide. 
 
    ![Afficher l’aide](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
-   La table des matières de l’aide s’affiche sur la gauche et la rubrique d’aide sélectionnée sur la droite. 
-
+   La table des matières de l’aide s’affiche sur la gauche et l’article d’aide sélectionnée sur la droite.
   
-## <a name="use-help-viewer-v1x"></a>Utiliser Help Viewer v1.x
+## <a name="use-help-viewer-v1x"></a>Utiliser la visionneuse d’aide version 1.x
 
-Les versions antérieures de SSMS et VS utilisent Help Viewer 1.x, qui prend en charge l’aide de SQL Server 2014. 
+Les versions antérieures de SSMS et VS utilisent la visionneuse d’aide version 1.x, qui prend en charge l’aide de SQL Server 2014 et 2012. 
 
-**Pour télécharger et installer le contenu de l’aide en mode hors connexion avec Help Viewer v1.x**
+**Pour télécharger et installer le contenu de l’aide en mode hors connexion avec la visionneuse d’aide version 1.x**
 
-Ce processus utilise Help Viewer 1.x pour télécharger l’aide de SQL Server 2014 à partir du Centre de téléchargement Microsoft et l’installer sur votre ordinateur.
+Ce processus utilise la visionneuse d’aide version 1.x pour télécharger l’aide de SQL Server 2014 à partir du Centre de téléchargement Microsoft et l’installer sur votre ordinateur.
 
 1. Accédez au site de téléchargement [Documentation du produit pour Microsoft SQL Server 2014](https://www.microsoft.com/download/details.aspx?id=42557) et cliquez sur **Télécharger**.  
 2. Cliquez sur **Enregistrer** dans la zone de message pour enregistrer le fichier *SQLServer2014Documentation\_\*.exe* sur votre ordinateur.  
@@ -159,7 +148,7 @@ Ce processus utilise Help Viewer 1.x pour télécharger l’aide de SQL Server 
    ![HelpLibraryManager_InstallContentFromDisk_dialog1](../sql-server/media/sql-server-help-installation/helplibrarymanager-installcontentfromdisk-dialog1.png)
    
    > [!IMPORTANT]
-   > Pour éviter d’installer du contenu d’aide locale qui ne présente qu’une table des matières partielle, vous devez utiliser l’option **Installer du contenu à partir du disque** dans le **Gestionnaire de bibliothèque d’aide**.  Si vous avez utilisé l’option **Installer du contenu à partir d’une source en ligne** et que Help Viewer affiche une table des matières partielle, consultez ce [billet de blog](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) pour savoir comment résoudre ce problème. 
+   > Pour éviter d’installer du contenu d’aide locale qui ne présente qu’une table des matières partielle, vous devez utiliser l’option **Installer du contenu à partir du disque** dans le **Gestionnaire de bibliothèque d’aide**.  Si vous avez utilisé l’option **Installer du contenu à partir d’une source en ligne** et que la visionneuse d’aide affiche une table des matières partielle, consultez ce [billet de blog](https://blogs.msdn.microsoft.com/womeninanalytics/2016/06/21/troubleshoot-local-help-for-sql-server-2014/) pour savoir comment résoudre ce problème. 
    
 8. Cliquez successivement sur le fichier HelpContentSetup.msha, sur **Ouvrir**, puis sur **Suivant**.  
 9. Cliquez sur **Ajouter** en regard de la documentation que vous voulez installer, puis cliquez sur **Mettre à jour**.  
@@ -168,10 +157,10 @@ Ce processus utilise Help Viewer 1.x pour télécharger l’aide de SQL Server 
    
 10. Cliquez sur **Terminer**, puis sur **Quitter**.
 
-**Pour afficher le contenu de l’aide en mode hors connexion avec Help Viewer v1.x**
+**Pour afficher le contenu de l’aide en mode hors connexion avec la visionneuse d’aide version 1.x**
 
 11. Pour afficher l’aide installée, ouvrez le **Gestionnaire de bibliothèque d’aide**, cliquez sur **Choisir l’aide en ligne ou locale**, puis sur **Utiliser l’aide locale**.
-12. Ouvrez Help Viewer pour afficher le contenu en cliquant sur **Afficher l’aide** dans le menu **Aide**. Le contenu que vous avez installé est répertorié dans le volet gauche.  
+12. Ouvrez la visionneuse d’aide pour afficher le contenu en cliquant sur **Afficher l’aide** dans le menu **Aide**. Le contenu que vous avez installé est répertorié dans le volet gauche.  
    
    ![HelpViewer1_withContentInstalled_ZoomedIn](../sql-server/media/sql-server-help-installation/helpviewer1-withcontentinstalled-zoomedin.png)  
    
@@ -192,7 +181,7 @@ L’aide en ligne affiche toujours le contenu le plus récent.
 1. Pointez sur **Définir les préférences pour l’aide** dans le menu Aide, puis choisissez **Lancer dans le navigateur** ou **Lancer dans la visionneuse d’aide**. 
 2. Cliquez sur **Afficher l’aide** dans le menu Aide. La toute dernière aide de Visual Studio s’affiche dans l’environnement sélectionné. 
 
-**Pour afficher l’aide en ligne avec Help Viewer v1.x**
+**Pour afficher l’aide en ligne avec la visionneuse d’aide version 1.x**
 
 1. Ouvrez le **Gestionnaire de bibliothèque d’aide** en cliquant sur **Gérer les paramètres de l’aide** dans le menu Aide.  
 2. Dans la boîte de dialogue Gestionnaire de bibliothèque d’aide, cliquez sur **Choisir l’aide en ligne ou locale**.  
@@ -203,16 +192,16 @@ L’aide en ligne affiche toujours le contenu le plus récent.
    
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/sql-server-help-installation/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-4. Ouvrez Help Viewer pour afficher le contenu en cliquant sur **Afficher l’aide** dans le menu **Aide**. 
+4. Ouvrez la visionneuse d’aide pour afficher le contenu en cliquant sur **Afficher l’aide** dans le menu **Aide**.
 
 ## <a name="view-f1-help"></a>Afficher l’aide F1
 
-Quand vous appuyez sur F1, ou cliquez sur **Aide** ou l’icône **?** dans une boîte de dialogue dans SSMS ou VS, une rubrique d’aide en ligne contextuelle s’affiche dans le navigateur ou Help Viewer. 
+Quand vous appuyez sur F1, ou cliquez sur **Aide** ou l’icône **?** dans une boîte de dialogue dans SSMS ou VS, un article d’aide en ligne contextuelle s’affiche dans le navigateur ou la visionneuse d’aide.
 
 **Pour afficher l’aide F1**
 
-1. Pointez sur **Définir les préférences pour l’aide** dans le menu Aide, puis choisissez **Lancer dans le navigateur** ou **Lancer dans la visionneuse d’aide**.
-2. Appuyez sur F1 ou cliquez sur **Aide** ou sur **?** dans les boîtes de dialogue là où ces options sont disponibles pour afficher les rubriques en ligne contextuelles dans l’environnement sélectionné.
+1. Dans le menu Aide, cliquez sur **Définir les préférences pour l’aide**, puis choisissez **Lancer dans le navigateur** ou **Lancer dans la visionneuse d’aide**.
+2. Appuyez sur F1 ou cliquez sur **Aide** ou sur **?** dans les boîtes de dialogue là où ces options sont disponibles pour afficher les articles en ligne contextuelles dans l’environnement sélectionné.
 
 > [!NOTE]
 > L’aide F1 fonctionne uniquement quand vous êtes connecté. Il n’existe aucune source hors connexion pour l’aide F1.
@@ -221,15 +210,15 @@ Quand vous appuyez sur F1, ou cliquez sur **Aide** ou l’icône **?** dans une 
 Une fois que vous avez téléchargé la documentation en mode hors connexion sur un système ayant accès à Internet, vous pouvez exécuter les étapes suivantes pour migrer le contenu sur un système qui n’a pas accès à Internet.
 
   >[!NOTE]
-  >Vous devez installer un logiciel prenant en charge Help Viewer (par exemple, SQL Server Management Studio) sur le système hors connexion.
+  >Vous devez installer un logiciel prenant en charge la visionneuse d’aide (par exemple, SQL Server Management Studio) sur le système hors connexion.
 
-1. Ouvrez Help Viewer (Ctrl + Alt + F1).
+1. Ouvrez la visionneuse d’aide (Ctrl + Alt + F1).
 1. Sélectionnez la documentation qui vous intéresse. Par exemple, utilisez le filtre SQL, puis sélectionnez la documentation technique de SQL Server.
 1. Recherchez le chemin physique des fichiers sur disque, qui se trouve sous **Chemin d’accès au stockage local**.
 1. Accédez à cet emplacement à l’aide de l’Explorateur du système de fichiers.
     1.  L’emplacement par défaut est : `C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\Extensions\Application`
 1. Sélectionnez les trois dossiers (**ContentStore**, **Incoming**, **IndexStore**) et copiez-les au même emplacement de votre système hors connexion. Vous devrez peut-être utiliser un support intermédiaire, comme une clé USB ou un CD.
-1. Une fois ces fichiers déplacés, lancez Help Viewer sur le système hors connexion pour accéder à la documentation technique SQL Server.
+1. Une fois ces fichiers déplacés, lancez la visionneuse d’aide sur le système hors connexion pour accéder à la documentation technique SQL Server.
 
 ![physical-location-of-offline-content.png](media/sql-server-help-installation/physical-location-of-offline-content.png)
 
