@@ -14,12 +14,12 @@ ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 23d867bba50a42dc55f4095abbfd92129df634be
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cd71429e5a407e595cc3f65e73e984bfc12280b1
+ms.sourcegitcommit: 5d27fb187006e676d652884f0c1f5133a1bd62b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785864"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67152211"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Traçage de l’accès aux données avec le pilote ODBC sur Linux et macOS
 
@@ -30,6 +30,7 @@ Le Gestionnaire de pilotes unixODBC sur macOS et Linux prend en charge le traça
 Pour suivre le comportement de votre application ODBC, vous devez modifier le `odbcinst.ini` du fichier `[ODBC]` section pour définir les valeurs `Trace=Yes` et `TraceFile` pour le chemin d’accès du fichier qui doit contenir la trace de sortie ; par exemple :
 
 ```ini
+[ODBC]
 Trace=Yes
 TraceFile=/home/myappuser/odbctrace.log
 ```

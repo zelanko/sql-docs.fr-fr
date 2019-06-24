@@ -214,9 +214,9 @@
             - name: Stockage
               items:
                 - name: Pool de stockage de cluster mssqlctl
-                  href: ../big-data-cluster/reference-mssqlctl-storage.md
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool.md
                 - name: Montage de pool de stockage de cluster mssqlctl
-                  href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-storage-pool-mount.md
 - name: Continuité de l’activité
   items:
     - name: Vue d’ensemble
@@ -1382,7 +1382,7 @@
             - name: Propriétés de l'index – Aide (F1)
               href: ../relational-databases/indexes/index-properties-f1-help.md
         - name: Index columnstore
-          hrefe: ../relational-databases/indexes/columnstore-indexes-overview.md
+          href: ../relational-databases/indexes/columnstore-indexes-overview.md
           items:
             - name: Nouveautés
               href: ../relational-databases/indexes/columnstore-indexes-what-s-new.md

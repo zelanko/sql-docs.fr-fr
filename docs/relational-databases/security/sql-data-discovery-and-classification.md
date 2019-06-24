@@ -12,12 +12,12 @@ ms.date: 02/13/2018
 ms.author: giladm
 author: giladm
 manager: shaik
-ms.openlocfilehash: 18495f81289981d4ce5a72ac943150bfea4c4f3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539134"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316691"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Découverte et classification des données SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ La découverte et la classification de vos données les plus sensibles (professi
 La fonctionnalité Découverte et classification des données introduit un ensemble de services avancées, qui forment un nouveau paradigme de protection des informations SQL visant à protéger les données et pas seulement la base de données :
 * **Découverte et recommandations** : le moteur de classification analyse votre base de données et identifie les colonnes contenant des données potentiellement sensibles. Il fournit ensuite un moyen simple d’examiner et appliquer les recommandations de classification appropriée, ainsi que de classifier manuellement des colonnes.
 * **Étiquetage** : des étiquettes de classification de sensibilité peuvent être marquées de manière permanente sur les colonnes.
-* **Visibilité** : l’état de classification de la base de données peut être consulté dans un rapport détaillé imprimable/exportable à utiliser à des fins de conformité et d’audit, ainsi que pour d’autres besoins.
+* **Visibilité** : L’état de classification de la base de données peut être consulté dans un rapport détaillé imprimable/exportable à utiliser à des fins de conformité et d’audit, ainsi que pour d’autres besoins.
 
 ## <a id="subheading-2"></a>Découverte, classification et étiquetage des colonnes sensibles
 La section suivante décrit les étapes de découverte, classification et étiquetage des colonnes contenant des données sensibles dans votre base de données, ainsi que l’affichage de l’état de classification actuel de votre base de données et l’exportation de rapports.
@@ -43,12 +43,11 @@ La classification comprend deux attributs de métadonnées :
 * Étiquettes : principaux attributs de classification utilisés pour définir le niveau de sensibilité des données stockées dans la colonne.  
 * Types d’informations : fournissent un niveau de granularité supplémentaire dans le type de données stockées dans la colonne.
 
-<br>
 **Pour classifier votre base de données SQL Server :**
 
 1. Dans SQL Server Management Studio (SSMS), connectez-vous à SQL Server.
 
-2. Dans l’Explorateur d’objets SSMS, cliquez avec le bouton droit sur la base de données à classifier et choisissez **Tâches** > **Classifier les données...**.
+2. Dans l’Explorateur d’objets SSMS, cliquez avec le bouton droit sur la base de données à classifier et choisissez **Tâches** > **Classifier les données...** .
 
     ![Volet de navigation][1]
 

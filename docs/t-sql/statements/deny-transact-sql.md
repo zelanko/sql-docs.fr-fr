@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3ca28e379188c13c266871c4b2afdeecca773bf
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: d14ee4d8bef4e9b7ada7ee558ca2524538775148
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361649"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166379"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,11 +128,12 @@ DENY
  Indique que l'autorisation est refusée au principal spécifié et à tous les autres principaux auxquels le principal a accordé cette autorisation. Nécessaire lorsque le principal a l'autorisation avec l'option GRANT OPTION.  
   
  AS *principal*  
-  Utilisez la clause AS principal pour indiquer que le principal enregistré comme entité refusant l’autorisation doit être un principal autre que la personne qui exécute l’instruction. Supposez par exemple que l’utilisateur Mary est le principal_id 12 et que l’utilisateur Raul est le principal 15. Mary exécute `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Maintenant, la table sys.database_permissions indique que le grantor_prinicpal_id de l’instruction deny était 15 (Raul), même si l’instruction a été exécutée par l’utilisateur 13 (Mary).
+ Spécifie le principal à partir duquel le principal qui exécute cette requête dérive son droit de refuser l'autorisation.
+Utilisez la clause AS principal pour indiquer que le principal enregistré comme entité refusant l’autorisation doit être un principal autre que la personne qui exécute l’instruction. Supposez par exemple que l’utilisateur Mary est le principal_id 12 et que l’utilisateur Raul est le principal 15. Mary exécute `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Maintenant, la table sys.database_permissions indique que le grantor_prinicpal_id de l’instruction deny était 15 (Raul), même si l’instruction a été exécutée par l’utilisateur 13 (Mary).
   
 L’utilisation de AS dans cette instruction n’implique pas la possibilité d’emprunter l’identité d’un autre utilisateur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La syntaxe complète de l'instruction DENY est complexe. Le diagramme de syntaxe ci-dessus a été simplifié pour attirer l'attention sur sa structure. La syntaxe complète du refus des autorisations sur des éléments sécurisables particuliers est décrite dans les rubriques ci-dessous.  
   
  DENY échoue si CASCADE n'est pas spécifié lors du refus d'une autorisation à un principal auquel cette autorisation a été accordée avec GRANT OPTION.  
@@ -148,7 +149,7 @@ L’utilisation de AS dans cette instruction n’implique pas la possibilité d�
 > [!CAUTION]  
 >  Le refus de l'autorisation CONTROL SERVER entraîne implicitement le refus de l'autorisation CONNECT SQL sur le serveur. Un principal auquel l'autorisation CONTROL SERVER est refusée sur un serveur ne pourra pas se connecter à ce serveur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'appelant (ou le principal spécifié avec l'option AS) doit avoir l'autorisation CONTROL sur l'élément sécurisable ou une autorisation plus élevée qui implique cette autorisation. Si vous utilisez l'option AS, le principal spécifié doit être propriétaire de l'élément sécurisable auquel l'autorisation est refusée.  
   
  Les détenteurs de l'autorisation CONTROL SERVER, tels que les membres du rôle de serveur fixe sysadmin, peuvent refuser une autorisation sur n'importe quel élément sécurisable du serveur. Les détenteurs de l'autorisation CONTROL sur la base de données, tels que les membres du rôle de base de données fixe db_owner, peuvent refuser une autorisation sur n'importe quel élément sécurisable de la base de données. Les détenteurs de l'autorisation CONTROL sur un schéma peuvent refuser une autorisation sur n'importe quel objet dans ce schéma. Si vous utilisez la clause AS, le principal spécifié doit être propriétaire de l'élément sécurisable auquel les autorisations sont refusées.  
@@ -191,7 +192,7 @@ L’utilisation de AS dans cette instruction n’implique pas la possibilité d�
 |Affichage|[DENY - Refuser des autorisations sur un objet &#40;Transact-SQL&#41;](../../t-sql/statements/deny-object-permissions-transact-sql.md)|  
 |Collection de schémas XML|[DENY – Refuser des autorisations sur une collection de schémas &#40;Transact-SQL&#41;](../../t-sql/statements/deny-xml-schema-collection-permissions-transact-sql.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   

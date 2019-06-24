@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd33483d148b3f94ae54c1a1b94dbaf21acbac27
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63048463"
 ---
 # <a name="database-engine-errors"></a>Erreurs du moteur de base de données
 
@@ -28,7 +28,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   [-2](mssqlserver-neg2-database-engine-error.md) |       |       |   Délai d'expiration dépassé. Période de délai d'attente écoulée avant l'achèvement de l'opération, ou le serveur ne répond pas. (Microsoft SQL Server, erreur : -2).    |
 |   [-1](mssqlserver-1-database-engine-error.md)    |       |       |   Une erreur s'est produite lors de l'établissement d'une connexion au serveur. Lors de la connexion à SQL Server 2005, cet échec peut être dû au fait que sous les paramètres par défaut, SQL Server n’autorise pas les connexions distantes. (fournisseur : Interfaces réseau SQL, erreur : 28 - Le serveur ne prend pas en charge le protocole demandé) (Microsoft SQL Server, Erreur : -1).  |
 |   [2](mssqlserver-2-database-engine-error.md) |       |       |   Une erreur s'est produite lors de l'établissement d'une connexion au serveur. Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur de canaux nommés, erreur : 40 - Impossible d’ouvrir une connexion à SQL Server) (Fournisseur de données SqlClient .Net). |
-|   21  |   20  |   Non  |   Warning: Erreur irrécupérable %d à %S_DATE. Prenez note de l'erreur et de l'heure, et contactez l'administrateur système.    |
+|   21  |   20  |   Non  |   Avertissement : Erreur irrécupérable %d à %S_DATE. Prenez note de l'erreur et de l'heure, et contactez l'administrateur système.    |
 |   [53](mssqlserver-53-database-engine-error.md)   |       |       |   Une erreur s'est produite lors de l'établissement d'une connexion au serveur. Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur de canaux nommés, erreur : 40 - Impossible d’ouvrir une connexion à SQL Server) (Fournisseur de données SqlClient .Net).    |
 |   101 |   15  |   Non  |   Requête non autorisée dans Wait for.  |
 |   [102](mssqlserver-102-database-engine-error.md) |   15  |   Non  |   Syntaxe incorrecte près de '%.*ls'.  |
@@ -189,7 +189,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   261 |   16  |   Non  |   '%.*ls' n'est pas une fonction reconnue.   |
 |   262 |   16  |   Non  |   Autorisation %ls refusée dans la base de données '%.*ls'.  |
 |   263 |   16  |   Non  |   Il faut spécifier une table où effectuer la sélection.  |
-|   264 |   16  |   Non  |   Le nom de colonne '%.*ls' est spécifié plusieurs fois dans la clause SET. Il n'est pas possible d'attribuer plusieurs valeurs à une colonne dans une même clause SET. Modifiez la clause SET de sorte qu'une colonne ne soit mise à jour qu'une seule fois. Si la clause SET met à jour les colonnes d'une vue, le nom de colonne '%.* ls' peut apparaître deux fois dans la définition de la vue.    |
+|   264 |   16  |   Non  |   Le nom de colonne '%.*ls' est spécifié plusieurs fois dans la clause SET. Il n'est pas possible d’attribuer plusieurs valeurs à une colonne dans une même clause SET. Modifiez la clause SET de sorte qu'une colonne ne soit mise à jour qu'une seule fois. Si la clause SET met à jour les colonnes d'une vue, le nom de colonne '%.* ls' peut apparaître deux fois dans la définition de la vue.    |
 |   265 |   16  |   Non  |   Le nom de colonne "%.*ls" spécifié dans l'opérateur %ls est en conflit avec le nom de colonne existant dans l'argument %ls.  |
 |   266 |   16  |   Non  |   Le nombre des transactions après EXECUTE indique un nombre différent d'instructions BEGIN et COMMIT. Nombre précédent = %ld, nombre actuel = %ld.   |
 |   267 |   16  |   Non  |   L'objet '%.*ls' est introuvable. |
@@ -561,17 +561,17 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   957 |   17  |   Non  |   La base de données '%.*ls' est activée pour la mise en miroir de bases de données. Le nom de la base de données ne peut pas être modifié.    |
 |   958 |   10  |   Oui |   La version de la base de données de ressources est %.*ls. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.    |
 |   959 |   20  |   Oui |   La version de la base de données des ressources est %d et ce serveur prend en charge la version %d. Restaurez la version correcte ou réinstallez SQL Server.   |
-|   960 |   10  |   Non  |   Warning: l’utilisateur "sys" (principal_id = %d) dans la base de données "%.*ls" a été renommé en "%.* ls". "sys" est un nom de schéma ou d'utilisateur réservé dans cette version de SQL Server. |
-|   961 |   10  |   Non  |   Warning: l’index "%.*ls" (index_id = %d) de l’ID d’objet %d dans la base de données "%.* ls" a été renommé en "%.*ls", car son nom est identique à celui d’un autre index du même objet.  |
-|   962 |   10  |   Non  |   Warning: la clé primaire ou la contrainte unique "%.*ls" (object_id = %d) dans la base de données "%.* ls" a été renommée en "%.*ls" car son index a été renommé.    |
-|   963 |   10  |   Non  |   Warning: la base de données "%.*ls" a été marquée comme suspecte en raison d’actions entreprises durant la mise à niveau. Pour plus d'informations, consultez le journal des erreurs ou le journal des événements. Utilisez ALTER DATABASE pour mettre la base de données en ligne. La base de données sera en ligne dans l'état restricted_user.   |
-|   964 |   10  |   Non  |   Warning: l’utilisateur système '%.*ls' manquait dans la base de données '%.* ls' et a été restauré. Cet utilisateur est requis pour le bon fonctionnement de SQL Server. |
-|   965 |   10  |   Non  |   Warning: une incohérence au niveau de la possibilité de valeur NULL de la colonne a été détectée dans les métadonnées de l’index "%.*ls" (index_id = %d) sur l’ID d’objet ID %d dans la base de données "%.* ls". L'index est peut-être endommagé. Exécutez DBCC CHECKTABLE pour vérifier la cohérence. |
-|   966 |   10  |   Non  |   Warning: l’assembly "%.*ls" dans la base de données "%.* ls" a été renommé en "%.*ls", car le nom de l’assembly est en conflit avec celui d’un assembly système dans cette version de SQL Server.  |
-|   967 |   10  |   Non  |   Warning: l’index "%.*ls" sur "%.* ls"."%.*ls" est désactivé, car les données XML liées à cet index peuvent contenir des valeurs négatives pour xs:date et xs:dateTime, ce qui n’est plus pris en charge.  |
-|   968 |   10  |   Non  |   Warning: la facette XML sur le type "%.*ls" dans la collection de schémas "%.* ls" a été mise à jour de "%.*ls" vers "%.* ls", car SQL Server ne prend pas en charge les années négatives dans les valeurs de type xs:date ou xs:dateTime. |
-|   969 |   10  |   Non  |   Warning: la valeur par défaut ou fixe de l’élément ou attribut XML "%.*ls" dans la collection de schémas "%.* ls" a été mise à jour de "%.*ls" vers "%.* ls", car SQL Server ne prend pas en charge les années négatives dans les valeurs de type xs:date ou xs:dateTime.    |
-|   970 |   10  |   Non  |   Warning: les instances XML de la colonne XML "%.*ls.%.* ls.%.*ls" peuvent contenir des valeurs de type simple négatives, de type xs:date ou xs:dateTime. Il est impossible d'exécuter XQuery ou de construire un index XML primaire sur ces instances XML.   |
+|   960 |   10  |   Non  |   Avertissement : l’utilisateur "sys" (principal_id = %d) dans la base de données "%.*ls" a été renommé en "%.* ls". "sys" est un nom de schéma ou d'utilisateur réservé dans cette version de SQL Server. |
+|   961 |   10  |   Non  |   Avertissement : l’index "%.*ls" (index_id = %d) de l’ID d’objet %d dans la base de données "%.* ls" a été renommé en "%.*ls", car son nom est identique à celui d’un autre index du même objet.  |
+|   962 |   10  |   Non  |   Avertissement : la clé primaire ou la contrainte unique "%.*ls" (object_id = %d) dans la base de données "%.* ls" a été renommée en "%.*ls" car son index a été renommé.    |
+|   963 |   10  |   Non  |   Avertissement : la base de données "%.*ls" a été marquée comme suspecte en raison d’actions entreprises durant la mise à niveau. Pour plus d'informations, consultez le journal des erreurs ou le journal des événements. Utilisez ALTER DATABASE pour mettre la base de données en ligne. La base de données sera en ligne dans l'état restricted_user.   |
+|   964 |   10  |   Non  |   Avertissement : l’utilisateur système '%.*ls' manquait dans la base de données '%.* ls' et a été restauré. Cet utilisateur est requis pour le bon fonctionnement de SQL Server. |
+|   965 |   10  |   Non  |   Avertissement : une incohérence au niveau de la possibilité de valeur NULL de la colonne a été détectée dans les métadonnées de l’index "%.*ls" (index_id = %d) sur l’ID d’objet ID %d dans la base de données "%.* ls". L'index est peut-être endommagé. Exécutez DBCC CHECKTABLE pour vérifier la cohérence. |
+|   966 |   10  |   Non  |   Avertissement : l’assembly "%.*ls" dans la base de données "%.* ls" a été renommé en "%.*ls", car le nom de l’assembly est en conflit avec celui d’un assembly système dans cette version de SQL Server.  |
+|   967 |   10  |   Non  |   Avertissement : l’index "%.*ls" sur "%.* ls"."%.*ls" est désactivé, car les données XML liées à cet index peuvent contenir des valeurs négatives pour xs:date et xs:dateTime, ce qui n’est plus pris en charge.  |
+|   968 |   10  |   Non  |   Avertissement : la facette XML sur le type "%.*ls" dans la collection de schémas "%.* ls" a été mise à jour de "%.*ls" vers "%.* ls", car SQL Server ne prend pas en charge les années négatives dans les valeurs de type xs:date ou xs:dateTime. |
+|   969 |   10  |   Non  |   Avertissement : la valeur par défaut ou fixe de l’élément ou attribut XML "%.*ls" dans la collection de schémas "%.* ls" a été mise à jour de "%.*ls" vers "%.* ls", car SQL Server ne prend pas en charge les années négatives dans les valeurs de type xs:date ou xs:dateTime.    |
+|   970 |   10  |   Non  |   Avertissement : les instances XML de la colonne XML "%.*ls.%.* ls.%.*ls" peuvent contenir des valeurs de type simple négatives, de type xs:date ou xs:dateTime. Il est impossible d'exécuter XQuery ou de construire un index XML primaire sur ces instances XML.   |
 |   971 |   10  |   Non  |   La base de données des ressources a été détectée à deux emplacements différents. Attachement de la base de données des ressources dans le même répertoire que sqlservr.exe à '%.*ls' au lieu de la base de données des ressources actuellement attachée à '%.* ls'.    |
 |   972 |   17  |   Non  |   Impossible d'utiliser la base de données '%d' pendant l'exécution de la procédure. |
 |   973 |   10  |   Oui |   La base de données %ls a été démarrée. FILESTREAM n'est toutefois pas compatible avec les options READ_COMMITTED_SNAPSHOT et ALLOW_SNAPSHOT_ISOLATION. Supprimez les fichiers FILESTREAM et les groupes de fichiers FILESTREAM ou affectez à READ_COMMITTED_SNAPSHOT et ALLOW_SNAPSHOT_ISOLATION la valeur OFF.   |
@@ -591,7 +591,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   1008    |   15  |   Non  |   L'élément SELECT identifié par le numéro ORDER BY %d contient une variable faisant partie de l'expression identifiant une position de colonne. Les variables ne sont autorisées dans ORDER BY que si l'ordre est une expression référençant un nom de colonne.  |
 |   1009    |   16  |   Non  |   Le mot clé DEFAULT n'est pas autorisé dans les commandes DBCC.    |
 |   1010    |   15  |   Non  |   Caractère d'échappement '%.*ls' non valide.   |
-|   1011    |   15  |   Non  |   Le nom de corrélation '%.*ls' est spécifié plusieurs fois dans une clause FROM.  |
+|   1010    |   15  |   Non  |   Le nom de corrélation '%.*ls' est spécifié plusieurs fois dans une clause FROM.  |
 |   1012    |   15  |   Non  |   Le nom de corrélation '%.*ls' a le même nom exposé que la table '%.* ls'.    |
 |   1013    |   15  |   Non  |   Les objets "%.*ls" et "%.* ls" dans la clause FROM ont les mêmes noms exposés. Utilisez des noms de corrélation pour les distinguer.  |
 |   1014    |   15  |   Non  |   La clause TOP contient une valeur incorrecte.   |
@@ -821,7 +821,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   1702    |   16  |   Non  |   Échec de CREATE TABLE parce que la colonne '%.*ls' de la table '%.* ls' dépasse le nombre maximal de colonnes %d.  |
 |   1706    |   16  |   Non  |   La table système '%.*ls' peut être créée ou modifiée au cours d'une mise à niveau uniquement.  |
 |   1707    |   16  |   Non  |   Impossible de spécifier le groupe de fichiers TEXTIMAGE_ON pour une table partitionnée.  |
-|   1708    |   10  |   Non  |   Warning: la table "%.*ls" a été créée, mais la taille maximale des lignes excède le maximum autorisé, qui est de %d octets. INSERT ou UPDATE échouera dans cette table si la ligne créée dépasse la limite.    |
+|   1708    |   10  |   Non  |   Avertissement : la table "%.*ls" a été créée, mais la taille maximale des lignes excède le maximum autorisé, qui est de %d octets. INSERT ou UPDATE échouera dans cette table si la ligne créée dépasse la limite.    |
 |   1709    |   16  |   Non  |   Impossible d'utiliser TEXTIMAGE_ON si une table n'a aucune colonne de type text, ntext, image, varchar(max), nvarchar(max), varbinary(max), xml ou CLR volumineux. |
 |   1710    |   10  |   Non  |   Impossible d'utiliser un type d'alias avec une règle ou une valeur par défaut qui lui est associée sous la forme d'un type de colonne dans une variable de table ou une définition de table de retour dans une fonction table. Le type '%.*ls' a un élément %S_MSG associé.   |
 |   1711    |   16  |   Non  |   Impossible de définir la contrainte PRIMARY KEY sur la colonne '%.*ls' de la table '%.* ls'. La colonne calculée doit être persistée et ne pas accepter la valeur Null.  |
@@ -977,7 +977,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   1967    |   16  |   Non  |   Impossible de créer un nouvel index cluster sur une vue en ligne.   |
 |   1968    |   16  |   Non  |   Impossible de convertir un index non-cluster en index cluster en ligne à l'aide de l'option DROP_EXISTING. |
 |   1969    |   16  |   Non  |   Aucun groupe de fichiers FILESTREAM par défaut n'est disponible dans la base de données '%.*ls'.  |
-|   1970    |   10  |   Non  |   Warning: l’opération d’index en ligne sur la table '%.*ls' va se poursuivre, mais les accès simultanés à cette table risquent d’être restreints à cause d’un verrou qui est resté sur la table depuis une précédente opération de la même transaction.    |
+|   1970    |   10  |   Non  |   Avertissement : l’opération d’index en ligne sur la table '%.*ls' va se poursuivre, mais les accès simultanés à cette table risquent d’être restreints à cause d’un verrou qui est resté sur la table depuis une précédente opération de la même transaction.    |
 |   1971    |   16  |   Non  |   Impossible de désactiver l'index '%.*ls' sur la table '%.* ls'. Autorisation refusée de désactiver la clé étrangère '%.*ls' sur la table '%.* ls' qui utilise cet index.  |
 |   1972    |   16  |   Non  |   Impossible de désactiver l'index cluster '%.*ls' sur la table '%.* ls'. Autorisation refusée de modifier la vue de référencement '%.*ls' tout en désactivant son index cluster.   |
 |   1973    |   16  |   Non  |   Impossible d'effectuer l'opération spécifiée sur l'index désactivé '%.*ls' sur %S_MSG '%.* ls'. |
@@ -988,7 +988,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   1978    |   16  |   Non  |   Le type de la colonne '%.*ls' de la table '%.* ls' ne lui permet pas de servir de colonne clé dans un index ou des statistiques. |
 |   1979    |   16  |   Non  |   Impossible d'utiliser l'option d'index ignore_dup_key pour modifier l'index '%.*ls' puisqu'il met en application une contrainte primaire ou unique.    |
 |   1980    |   16  |   Non  |   Impossible de créer l'index sur la colonne calculée '%.*ls' de la table '%.* ls', car l'objet sous-jacent '%.*ls' a un propriétaire différent.    |
-|   1981    |   10  |   Non  |   Warning: la longueur maximale de la ligne excède la limite autorisée de %d octets. Dans certains cas, la combinaison de valeurs élevées entraînera l'échec de l'opération d'insertion/mise à jour.  |
+|   1981    |   10  |   Non  |   Avertissement : la longueur maximale de la ligne excède la limite autorisée de %d octets. Dans certains cas, la combinaison de valeurs élevées entraînera l'échec de l'opération d'insertion/mise à jour.  |
 |   1982    |   16  |   Non  |   Impossible de créer %S_MSG sur la vue '%.*ls', car la vue fait référence à une fonction membre '%.* ls' non déterministe ou imprécise pour le type CLR '%.*ls'. Supprimez la référence à la fonction ou modifiez la fonction de sorte qu'elle se comporte de manière déterministe. Ne déclarez pas une fonction CLR qui se comporte de manière non déterministe avec IsDeterministic=true, car cette incohérence peut endommager l'index. Consultez la documentation en ligne pour plus de détails. |
 |   1983    |   16  |   Non  |   Impossible de créer %S_MSG sur la vue '%.*ls'. La fonction '%s' génère des résultats imprécis. Utilisez une fonction système précise, ou modifiez la fonction définie par l'utilisateur de sorte qu'elle retourne des résultats précis. |
 |   1984    |   16  |   Non  |   Impossible de créer ou de reconstruire l'index '%.*ls'. La longueur de ligne spécifiée de cet index qui utilise le format de stockage vardecimal dépasse la longueur maximale autorisée de '%d' octets.   |
@@ -999,13 +999,13 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   1989    |   16  |   Non  |   Impossible d'activer la contrainte de clé étrangère '%.*ls' puisque l'index '%.* ls' sur la clé référencée est désactivé.    |
 |   1990    |   16  |   Non  |   Impossible de définir un index sur une vue avec l'option d'index ignore_dup_key. Supprimez l'option ignore_dup_key et vérifiez que la définition de cette vue n'autorise pas les doublons, ou n'indexez pas la vue.    |
 |   1991    |   16  |   Non  |   Impossible de désactiver l'index cluster '%.*ls' sur la table '%.* ls'. Autorisation refusée de désactiver la clé étrangère '%.*ls' sur la table '%.* ls' qui fait référence à cette table.  |
-|   1992    |   10  |   Non  |   Warning: la clé étrangère '%.*ls' de la table '%.* ls' faisant référence à la table '%.*ls' a été désactivée suite à la désactivation de l’index '%.* ls'.    |
+|   1992    |   10  |   Non  |   Avertissement : la clé étrangère '%.*ls' de la table '%.* ls' faisant référence à la table '%.*ls' a été désactivée suite à la désactivation de l’index '%.* ls'.    |
 |   1993    |   16  |   Non  |   Impossible de partitionner un index sur une variable de table ou de retourner une définition de table dans la fonction table.  |
 |   1994    |   16  |   Non  |   Impossible de créer ou de mettre à jour les statistiques sur la vue "%.*ls" car les options FULLSCAN et NORECOMPUTE sont requises.  |
 |   1995    |   16  |   Non  |   Impossible de reconstruire l'index hypothétique '%.*ls' en ligne.   |
 |   1996    |   16  |   Non  |   Impossible de créer un index mettant en application la contrainte de clé primaire '%.*ls' à l'aide de l'option DROP_EXISTING car la table possède un index XML ou un index spatial. Supprimez l'index XML ou spatial, créez la contrainte de clé primaire, puis recréez l'index XML ou spatial. |
 |   1997    |   16  |   Non  |   Impossible de convertir l'index XML ou spatial '%.*ls' en un index relationnel à l'aide de l'option DROP_EXISTING. Supprimez l'index XML ou spatial, et créez un index relationnel du même nom. |
-|   1998    |   10  |   Non  |   Warning: l’index cluster '%.*ls' de la vue '%.* ls' faisant référence à la table '%.*ls' a été désactivé suite à la désactivation de l’index '%.* ls'. |
+|   1998    |   10  |   Non  |   Avertissement : l’index cluster '%.*ls' de la vue '%.* ls' faisant référence à la table '%.*ls' a été désactivé suite à la désactivation de l’index '%.* ls'. |
 |   1999    |   16  |   Non  |   Le type de la colonne '%.*ls' de la table '%.* ls' ne lui permet pas de servir de colonne incluse dans un index.    |
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
@@ -1038,10 +1038,10 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   2117    |   16  |   Non  |   Déclencheur %S_MSG INSTEAD OF '%.*ls' impossible sur %S_MSG '%.* ls' car %S_MSG a une colonne FILESTREAM.  |
 |   2201    |   16  |   Non  |   %sLa dérivation par restriction de "anySimpleType" n'est pas autorisée et la dérivation par restriction à partir d'un type dérivé de "anySimpleType" par extension est uniquement autorisée si aucune facette de contrainte n'est spécifiée. |
 |   2202    |   16  |   Non  |   %sUne erreur s'est produite lors de la compilation de la requête. Pour obtenir des informations plus détaillées sur l'erreur, la requête doit être exécutée par un utilisateur disposant des autorisations EXECUTE sur la collection du schéma xml utilisé dans la requête.    |
-|   2203    |   16  |   Non  |   %sOnly 'http://www.w3.org/2001/XMLSchema#decimal?', 'http://www.w3.org/2001/XMLSchema#boolean?' ou 'node()*'sont autorisées en tant que prédicats, '%ls' trouvé |
-|   2204    |   16  |   Non  |   %sOnly 'http://www.w3.org/2001/XMLSchema#boolean?' ou 'node()*'sont autorisées avec les opérateurs logiques et dans les conditions, '%ls' trouvée(s)   |
+|   2203    |   16  |   Non  |   %sOnly 'http://www.w3.org/2001/XMLSchema#decimal? ', 'http://www.w3.org/2001/XMLSchema#boolean? ' ou 'node()*'sont autorisées en tant que prédicats, '%ls' trouvé |
+|   2204    |   16  |   Non  |   %sOnly 'http://www.w3.org/2001/XMLSchema#boolean? ' ou 'node()*'sont autorisées avec les opérateurs logiques et dans les conditions, '%ls' trouvée(s)   |
 |   2205    |   16  |   Non  |   %s"%ls" attendu.   |
-|   2206    |   16  |   Non  |   Le préfixe 'xml' %Namespace peut uniquement être associé à l'URI 'http://www.w3.org/XML/1998/namespace', laquelle ne peut pas être utilisée avec d'autres préfixes.    |
+|   2206    |   16  |   Non  |   Le préfixe 'xml' %Namespace peut uniquement être associé à l'URI 'http://www.w3.org/XML/1998/namespace ', laquelle ne peut pas être utilisée avec d'autres préfixes.    |
 |   2207    |   16  |   Non  |   %sSeuls les nœuds autres que les nœuds de document peuvent être insérés. "%ls" trouvé. |
 |   2208    |   16  |   Non  |   %sL'URI qui commence par '%ls' est trop long. La longueur maximale autorisée est de %d caractères.  |
 |   2209    |   16  |   Non  |   %sErreur de syntaxe près de '%ls'   |
@@ -1093,7 +1093,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   2269    |   16  |   Non  |   %sLa balise de fin '/%ls' ne possède pas de balise de début correspondante  |
 |   2270    |   16  |   Non  |   %sAttribut '%ls:%ls' dupliqué |
 |   2271    |   16  |   Non  |   %sAttribut '%ls' dupliqué |
-|   2272    |   16  |   Non  |   %s'?>' attendu |
+|   2272    |   16  |   Non  |   %s’?>' attendu |
 |   2273    |   16  |   Non  |   %sSection CDATA inachevée    |
 |   2274    |   16  |   Non  |   %sConstante de chaîne inachevée (commence à la ligne %u) |
 |   2275    |   16  |   Non  |   %sDéclaration XML inachevée  |
@@ -1111,7 +1111,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   2292    |   16  |   Non  |   %sLorsqu'un type à contenu simple restreint un type à contenu mixte, sa définition de type simple doit être incorporée. Emplacement : '%ls'.    |
 |   2293    |   16  |   Non  |   %sLe choix ne peut pas être vide, à moins que minOccurs n'ait pour valeur 0. Emplacement : '%ls'.    |
 |   2294    |   16  |   Non  |   %s'xml' n'est pas une cible d'instruction de traitement autorisée.  |
-|   2297    |   16  |   Non  |   %sÉlément <%ls> non valide à l'emplacement '%ls'. |
+|   2297    |   16  |   Non  |   %sÉlément <%ls> non valide à l’emplacement '%ls’. |
 |   2298    |   16  |   Non  |   %sAttribut '%ls' non valide à l'emplacement '%ls'.   |
 |   2299    |   16  |   Non  |   %sL'attribut requis "%ls" de l'élément XSD "%ls" est manquant. |
 |   2300    |   16  |   Non  |   %sLe sous-élément requis "%ls" de l'élément XSD "%ls" est manquant.   |
@@ -1124,7 +1124,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   2309    |   16  |   Non  |   %sLa valeur de "%ls" n'est pas un nombre correct. |
 |   2310    |   16  |   Non  |   %sL'attribut "%ls" est déclaré plusieurs fois.   |
 |   2311    |   16  |   Non  |   %sL'attribut "%ls" est déclaré plusieurs fois dans "%ls".  |
-|   2312    |   16  |   Non  |   %sLa valeur de l'attribut '%ls' n'est pas conforme à la définition de type 'http://www.w3.org/2001/XMLSchema#%ls': '%ls'.   |
+|   2312    |   16  |   Non  |   %sLa valeur de l'attribut '%ls' n'est pas conforme à la définition de type 'http://www.w3.org/2001/XMLSchema#%ls ': '%ls'.   |
 |   2313    |   16  |   Non  |   %sL'attribut "%ls" ne peut pas avoir une valeur de "%ls". |
 |   2314    |   16  |   Non  |   %sL'attribut "%ls" ne peut pas avoir une valeur négative. |
 |   2315    |   16  |   Non  |   %sL'attribut "%ls" doit avoir une valeur de chaîne.   |
@@ -1607,7 +1607,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   3409    |   16  |   Oui |   Échec de l'installation du compteur de performances en mémoire partagée avec l'erreur %d. Réinstallez sqlctr.ini pour cette instance et vérifiez que le compte de connexion à l'instance dispose des autorisations de Registre appropriées.  |
 |   3410    |   10  |   Oui |   Les données du groupe de fichiers %s sont hors connexion et il y a des transactions différées. Utilisez RESTORE pour récupérer le groupe de fichiers ou supprimez ce dernier si vous n'avez aucune intention de le récupérer. La troncation de journaux est impossible tant que cette condition n'est pas résolue.  |
 |   3411    |   21  |   Oui |   La version %d du bloc de configuration n'est pas un numéro de version valide. SQL Server va s'arrêter. Restaurez la base de données master ou procédez à une réinstallation.  |
-|   3412    |   10  |   Oui |   Warning: l’instance de serveur a démarré avec l’option de démarrage de la configuration minimale (-f). Le démarrage d'une instance de SQL Server avec la configuration minimale met automatiquement le serveur en mode mono-utilisateur. N'oubliez pas ensuite de revenir à l'option de démarrage appropriée, d'arrêter le serveur, puis de le redémarrer.  |
+|   3412    |   10  |   Oui |   Avertissement : l’instance de serveur a démarré avec l’option de démarrage de la configuration minimale (-f). Le démarrage d'une instance de SQL Server avec la configuration minimale met automatiquement le serveur en mode mono-utilisateur. N'oubliez pas ensuite de revenir à l'option de démarrage appropriée, d'arrêter le serveur, puis de le redémarrer.  |
 |   [3413](mssqlserver-3413-database-engine-error.md)   |   21  |   Oui |   ID base de données %d. Impossible de marquer la base de données comme suspecte. Échec de l'analyse Getnext NC sur sys.databases.database_id. Consultez les erreurs précédentes dans le journal des erreurs afin d'identifier la cause, puis corrigez tous les problèmes associés.   |
 |   [3414](mssqlserver-3414-database-engine-error.md)   |   10  |   Oui |   Une erreur s'est produite pendant la récupération, empêchant la base de données '%.*ls' (ID %d) de redémarrer. Diagnostiquez les erreurs de récupération et corrigez-les, ou procédez à une restauration à partir d'une sauvegarde connue. Si les erreurs persistent, contactez le Support technique.    |
 |   3415    |   16  |   Oui |   Impossible de mettre à niveau la base de données '%.*ls' car elle est en lecture seule ou contient des fichiers en lecture seule. Rendez la base de données accessible en écriture ou réexécutez la récupération.   |
@@ -1650,7 +1650,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   [3619](mssqlserver-3619-database-engine-error.md)   |   10  |   Oui |   Impossible d'écrire un enregistrement de point de contrôle dans la base de données ID %d car le journal est saturé. Demandez à l'administrateur de la base de données de tronquer ce journal ou d'allouer davantage d'espace aux fichiers journaux de la base de données. |
 |   3620    |   10  |   Oui |   Les points de contrôle automatiques sont désactivés dans la base de données '%.*ls', parce que le journal est saturé. Cette fonction sera activée lorsque le propriétaire de la base de données aura réussi le point de contrôle de la base de données. Demandez au propriétaire de tronquer le fichier journal ou d'ajouter de l'espace dans le journal. Ensuite, réessayez l'instruction CHECKPOINT.  |
 |   3621    |   10  |   Non  |   L'instruction a été arrêtée.  |
-|   3622    |   10  |   Non  |   Warning: Une opération en virgule flottante non valide s'est produite.  |
+|   3622    |   10  |   Non  |   Avertissement : Une opération en virgule flottante non valide s'est produite.  |
 |   3623    |   16  |   Non  |   Une opération en virgule flottante non valide s'est produite.   |
 |   3624    |   20  |   Oui |   Échec d'un contrôle d'assertion. Pour plus d’informations, consultez le journal des erreurs de SQL Server. En général, un échec d’assertion est provoqué par un bogue logiciel ou une altération des données. Pour vérifier si une base de données est endommagée, exécutez DBCC CHECKDB. Si vous avez accepté l’envoi de dumps à Microsoft pendant l’installation, un minidump sera envoyé. Il est possible qu'une mise à jour Microsoft soit disponible dans le Service Pack le plus récent ou dans un correctif QFE émis par le support technique.  |
 |   3625    |   20  |   Oui |   '%hs' n'est pas encore implémenté.   |
@@ -1698,16 +1698,16 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   3747    |   16  |   Non  |   Impossible de supprimer un index cluster créé sur une vue si vous utilisez la clause de suppression d'index cluster. L'index cluster '%.*ls' est créé sur la vue '%.* ls'.  |
 |   3748    |   16  |   Non  |   Impossible de supprimer un index non cluster '%.*ls' si vous utilisez la clause de suppression d'index cluster.  |
 |   3749    |   16  |   Non  |   Impossible de supprimer l'index XML '%.*ls' en utilisant l'ancienne syntaxe 'Table.Index', utilisez plutôt la syntaxe 'Index ON Table'.  |
-|   3750    |   10  |   Non  |   Warning: l’index '%.*ls' de %S_MSG '%.* ls' a été désactivé suite à la désactivation de l’index cluster de l’élément %S_MSG.   |
+|   3750    |   10  |   Non  |   Avertissement : l’index '%.*ls' de %S_MSG '%.* ls' a été désactivé suite à la désactivation de l’index cluster de l’élément %S_MSG.   |
 |   3751    |   16  |   Non  |   Impossible d'utiliser SP_DROPEXTENDEDPROC ou DBCC DROPEXTENDEDPROC avec '%.*ls' car '%.* ls' est un %S_MSG. Utilisez % ls.  |
-|   3801    |   10  |   Non  |   Warning: l’index "%.*ls" sur "%.* ls"."%.*ls" peut être affecté par la mise à jour du classement. Exécutez DBCC CHECKTABLE.    |
-|   3802    |   10  |   Non  |   Warning: la contrainte "%.*ls" sur "%.* ls"."%.*ls" peut être affectée par la mise à jour du classement. Désactivez et activez WITH CHECK. |
-|   3803    |   10  |   Non  |   Warning: l’index "%.*ls" de "%.* ls"."%.*ls" est désactivé, parce que la mise en œuvre de la fonction de somme de contrôle a changé.  |
-|   3804    |   10  |   Non  |   Warning: la contrainte de validation "%.*ls" sur la table "%.* ls"."%.*ls" est désactivée, parce que l’implémentation de la fonction de somme de contrôle a changé. |
-|   3805    |   10  |   Non  |   Warning: l’index "%.*ls" de la table "%.* ls"."%.*ls" est peut-être endommagé, car il fait référence à la colonne calculée "%.* ls" qui contient une conversion non déterministe de chaîne en date. Exécutez DBCC CHECKTABLE pour vérifier l'index. Utilisez une instruction CONVERT explicite avec un style de date déterministe tel que 121. Les index de la colonne calculée faisant référence à des expressions non déterministes ne peuvent pas être créés dans le mode de compatibilité 90. Consultez la rubrique de la documentation en ligne "Création d'index sur des colonnes calculées" pour plus d'informations.    |
-|   3806    |   10  |   Non  |   Warning: la vue indexée "%.*ls"."%.* ls" est peut-être endommagée, car elle contient une conversion non déterministe de chaîne en date. Exécutez DBCC CHECKTABLE pour vérifier la vue. Utilisez une instruction CONVERT explicite avec un style de date déterministe tel que 121. Les vues indexées faisant référence à des expressions non déterministes ne peuvent pas être créées dans le mode de compatibilité 90. Consultez la rubrique de la documentation en ligne « Création de vues indexées » pour plus d'informations.    |
+|   3801    |   10  |   Non  |   Avertissement : l’index "%.*ls" sur "%.* ls"."%.*ls" peut être affecté par la mise à jour du classement. Exécutez DBCC CHECKTABLE.    |
+|   3802    |   10  |   Non  |   Avertissement : la contrainte "%.*ls" sur "%.* ls"."%.*ls" peut être affectée par la mise à jour du classement. Désactivez et activez WITH CHECK. |
+|   3803    |   10  |   Non  |   Avertissement : l’index "%.*ls" de "%.* ls"."%.*ls" est désactivé, parce que la mise en œuvre de la fonction de somme de contrôle a changé.  |
+|   3804    |   10  |   Non  |   Avertissement : la contrainte de validation "%.*ls" sur la table "%.* ls"."%.*ls" est désactivée, parce que l’implémentation de la fonction de somme de contrôle a changé. |
+|   3805    |   10  |   Non  |   Avertissement : l’index "%.*ls" de la table "%.* ls"."%.*ls" est peut-être endommagé, car il fait référence à la colonne calculée "%.* ls" qui contient une conversion non déterministe de chaîne en date. Exécutez DBCC CHECKTABLE pour vérifier l'index. Utilisez une instruction CONVERT explicite avec un style de date déterministe tel que 121. Les index de la colonne calculée faisant référence à des expressions non déterministes ne peuvent pas être créés dans le mode de compatibilité 90. Consultez la rubrique de la documentation en ligne "Création d'index sur des colonnes calculées" pour plus d'informations.    |
+|   3806    |   10  |   Non  |   Avertissement : la vue indexée "%.*ls"."%.* ls" est peut-être endommagée, car elle contient une conversion non déterministe de chaîne en date. Exécutez DBCC CHECKTABLE pour vérifier la vue. Utilisez une instruction CONVERT explicite avec un style de date déterministe tel que 121. Les vues indexées faisant référence à des expressions non déterministes ne peuvent pas être créées dans le mode de compatibilité 90. Consultez la rubrique de la documentation en ligne « Création de vues indexées » pour plus d'informations.    |
 |   3807    |   17  |   Non  |   La création a échoué en raison de l'épuisement de tous les identificateurs disponibles.    |
-|   3808    |   10  |   Non  |   Warning: l’index "%.*ls" sur "%.* ls"."%.*ls" est désactivé, car cet index est défini sur une vue avec l’option d’index ignore_dup_key. Supprimez l'index et, si possible, recréez-le sans utiliser l'option ignore_dup_key. Vous devrez peut-être modifier la structure logique de la vue afin de vous assurer que toutes les lignes sont uniques.  |
+|   3808    |   10  |   Non  |   Avertissement : l’index "%.*ls" sur "%.* ls"."%.*ls" est désactivé, car cet index est défini sur une vue avec l’option d’index ignore_dup_key. Supprimez l'index et, si possible, recréez-le sans utiliser l'option ignore_dup_key. Vous devrez peut-être modifier la structure logique de la vue afin de vous assurer que toutes les lignes sont uniques.  |
 |   3809    |   16  |   Non  |   La mise à niveau de la base de données "%.*ls" a échoué car l'index "%.* ls" de l'ID d'objet %d a le même nom qu'un autre index de la même table.  |
 |   3810    |   10  |   Non  |   La notification d'événements "%.*ls" sur l'assembly est supprimée.  |
 |   3811    |   10  |   Non  |   La notification d'événements "%.*ls" sur la file d'attente du service est supprimée, parce que l'instance du Broker n'est pas spécifiée. |
@@ -1716,13 +1716,13 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   3814    |   16  |   Non  |   La connexion locale mappée à la connexion distante '%.*ls' sur le serveur '%.* ls' n'est pas valide. Supprimez et recréez la connexion distante avant de procéder à la mise à niveau. |
 |   3815    |   16  |   Non  |   La connexion locale mappée à la connexion liée '%.*ls' sur le serveur '%.* ls" n'est pas valide. Supprimez et recréez la connexion liée avant de procéder à la mise à niveau. |
 |   3816    |   16  |   Non  |   La mise à niveau de la connexion '%.*ls' a échoué, car le hachage du mot de passe n'est pas valide. Mettez à jour le mot de passe de connexion avant de procéder à la mise à niveau. |
-|   3817    |   10  |   Non  |   Warning: l’index "%.*ls" sur "%.* ls"."%.*ls" a été désactivé, car l’implémentation des méthodes de géométrie et géographie a changé.   |
+|   3817    |   10  |   Non  |   Avertissement : l’index "%.*ls" sur "%.* ls"."%.*ls" a été désactivé, car l’implémentation des méthodes de géométrie et géographie a changé.   |
 |   3818    |   16  |   Non  |   La colonne CUID de 6 octets ne peut pas être ajoutée à l'index "%.*ls" de l'objet %.* ls, car la longueur de ligne dépasserait la longueur maximale autorisée de %d octets. |
-|   3819    |   10  |   Non  |   Warning: la contrainte de validation "%.*ls" sur "%.* ls"."%.*ls" a été désactivée et définie comme non approuvée, car l’implémentation des méthodes de géométrie et géographie a changé. |
-|   3820    |   10  |   Non  |   Warning: la colonne CUID de 6 octets a été ajoutée à l’index "%.*ls" de l’objet %.* ls, mais sa taille de ligne maximale dépasse la taille maximale autorisée de %d octets. Dans certains cas, la combinaison de valeurs élevées entraînera l'échec de l'opération INSERT ou UPDATE.   |
-|   3821    |   10  |   Non  |   Warning: la contrainte de clé étrangère "%.*ls" sur "%.* ls"."%.*ls" a été désactivée, car l’implémentation des méthodes de géométrie et géographie a changé.  |
-|   3822    |   10  |   Non  |   Warning: le segment de mémoire "%.*ls"."%.* ls" possède des colonnes calculées persistantes dépendant de méthodes de géométrie ou géographie et peut contenir des informations obsolètes. De ce fait, DBCC risque de signaler des incohérences dans cette table. Les colonnes calculées persistantes dépendant de méthodes de géométrie ou géographie doivent être rendues non persistantes, puis rendues à nouveau persistantes pour actualiser les données.  |
-|   3823    |   10  |   Non  |   Warning: l’objet "%.*ls"."%.* ls" n’a pas pu être lié et a été ignoré pendant la mise à niveau. Envisagez de vérifier et corriger sa définition.    |
+|   3819    |   10  |   Non  |   Avertissement : la contrainte de validation "%.*ls" sur "%.* ls"."%.*ls" a été désactivée et définie comme non approuvée, car l’implémentation des méthodes de géométrie et géographie a changé. |
+|   3820    |   10  |   Non  |   Avertissement : la colonne CUID de 6 octets a été ajoutée à l’index "%.*ls" de l’objet %.* ls, mais sa taille de ligne maximale dépasse la taille maximale autorisée de %d octets. Dans certains cas, la combinaison de valeurs élevées entraînera l'échec de l'opération INSERT ou UPDATE.   |
+|   3821    |   10  |   Non  |   Avertissement : la contrainte de clé étrangère "%.*ls" sur "%.* ls"."%.*ls" a été désactivée, car l’implémentation des méthodes de géométrie et géographie a changé.  |
+|   3822    |   10  |   Non  |   Avertissement : le segment de mémoire "%.*ls"."%.* ls" possède des colonnes calculées persistantes dépendant de méthodes de géométrie ou géographie et peut contenir des informations obsolètes. De ce fait, DBCC risque de signaler des incohérences dans cette table. Les colonnes calculées persistantes dépendant de méthodes de géométrie ou géographie doivent être rendues non persistantes, puis rendues à nouveau persistantes pour actualiser les données.  |
+|   3823    |   10  |   Non  |   Avertissement : l’objet "%.*ls"."%.* ls" n’a pas pu être lié et a été ignoré pendant la mise à niveau. Envisagez de vérifier et corriger sa définition.    |
 |   3851    |   10  |   Non  |   Une ligne non valide (%ls) a été détectée dans la table système sys.%ls%ls.  |
 |   3852    |   10  |   Non  |   La ligne (%ls) de sys.%ls%ls ne correspond à aucune ligne (%ls) dans sys.%ls%ls.   |
 |   3853    |   10  |   Non  |   L'attribut (%ls) de la ligne (%ls) dans sys.%ls%ls ne correspond à aucune ligne (%ls) dans sys.%ls%ls.    |
@@ -1731,7 +1731,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   3856    |   10  |   Non  |   L'attribut (%ls) existe alors qu'il ne le devrait pas pour la ligne (%ls) dans sys.%ls%4ls.  |
 |   3857    |   10  |   Non  |   L'attribut (%ls) est obligatoire mais il n'existe pas pour la ligne (%ls) dans sys.%ls%ls. |
 |   3858    |   10  |   Non  |   L'attribut (%ls) de la ligne (%ls) dans sys.%ls%ls a une valeur non valide.    |
-|   3859    |   10  |   Non  |   Warning: le catalogue système a été mis à jour directement dans l’ID de base de données %d, le plus récemment à %S_DATE.   |
+|   3859    |   10  |   Non  |   Avertissement : le catalogue système a été mis à jour directement dans l’ID de base de données %d, le plus récemment à %S_DATE.   |
 |   3860    |   10  |   Non  |   Impossible de mettre à jour la base de données ID 32767. Cette valeur d'ID est réservée à une utilisation interne dans SQL Server.    |
 |   3862    |   10  |   Non  |   Le type CLR '%.*ls'.'%.* ls' est désactivé, car le format utilisé sur le disque pour ce type CLR a changé. Utilisez DROP TYPE pour supprimer ce type désactivé. |
 |   3864    |   23  |   Oui |   Impossible de trouver une entrée pour l'index dont l'ID est %d sur l'objet avec l'ID %d dans la base de données portant l'ID %d. Altération possible du schéma. Exécutez DBCC CHECKDB. |
@@ -1879,7 +1879,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   4103    |   15  |   Non  |   %.*ls : les vues temporaires ne sont pas autorisées. |
 |   [4104](mssqlserver-4104-database-engine-error.md)   |   16  |   Non  |   L'identificateur en plusieurs parties "%.*ls" ne peut pas être lié.   |
 |   4105    |   16  |   Non  |   Les fonctions définies par l'utilisateur, les fonctions de partition et les références de colonnes ne sont pas autorisées dans les expressions de ce contexte.  |
-|   4106    |   16  |   Non  |   Les jointures externes non-ANSI (*= et =*) ne sont pas autorisées lorsqu'une table qui contient un jeu de colonnes est utilisée dans une requête. Modifiez la requête pour qu'elle utilise des jointures externes ANSI.  |
+|   4106    |   16  |   Non  |   Les jointures externes non-ANSI ( *= et =* ) ne sont pas autorisées lorsqu'une table qui contient un jeu de colonnes est utilisée dans une requête. Modifiez la requête pour qu'elle utilise des jointures externes ANSI.  |
 |   4107    |   16  |   Non  |   L'insertion dans des tables ou des vues distantes n'est pas autorisée à l'aide de l'utilitaire BCP ou de BULK INSERT.  |
 |   4108    |   16  |   Non  |   Les fonctions fenêtrées peuvent uniquement apparaître dans les clauses SELECT ou ORDER BY.   |
 |   4109    |   16  |   Non  |   Les fonctions fenêtrées ne peuvent pas être employées dans le contexte d'une autre fonction en fenêtre ou d'un agrégat. |
@@ -1918,7 +1918,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   4144    |   16  |   Non  |   L'indicateur '%.*ls' n'est pas autorisé lors de l'insertion dans des tables distantes.  |
 |   4145    |   15  |   Non  |   Expression de type non booléen spécifiée dans un contexte où une condition est attendue, près de '%.*ls'.   |
 |   4146    |   16  |   Non  |   Des statistiques ne peuvent être créées que sur des colonnes.  |
-|   4147    |   15  |   Non  |   La requête utilise des opérateurs de jointure externe non ANSI ("*=" ou "=*"). Pour exécuter cette requête sans modification, attribuez au niveau de compatibilité de la base de données actuelle la valeur 80, à l'aide de l'option SET COMPATIBILITY_LEVEL de ALTER DATABASE. Il est instamment recommandé de réécrire la requête en utilisant des opérateurs de jointure externe ANSI (LEFT OUTER JOIN, RIGHT OUTER JOIN). Dans les futures versions de SQL Server, les opérateurs de jointure non ANSI ne seront pas pris en charge, même dans les modes de compatibilité descendante.  |
+|   4147    |   15  |   Non  |   La requête utilise des opérateurs de jointure externe non ANSI (" *=" ou "=* "). Pour exécuter cette requête sans modification, attribuez au niveau de compatibilité de la base de données actuelle la valeur 80, à l'aide de l'option SET COMPATIBILITY_LEVEL de ALTER DATABASE. Il est instamment recommandé de réécrire la requête en utilisant des opérateurs de jointure externe ANSI (LEFT OUTER JOIN, RIGHT OUTER JOIN). Dans les futures versions de SQL Server, les opérateurs de jointure non ANSI ne seront pas pris en charge, même dans les modes de compatibilité descendante.  |
 |   4148    |   16  |   Non  |   Les méthodes XML ne sont pas autorisées dans une clause GROUP BY.   |
 |   4150    |   16  |   Non  |   Les indicateurs (hint) ne sont pas autorisés dans des références CTE (Common Table Expression) récursives. Vous pourriez par exemple supprimer l'indicateur de la référence CTE récursive '%.*ls'.   |
 |   4151    |   16  |   Non  |   Le type du premier argument de NULLIF ne peut pas être la constante Null, car le type du premier argument doit être connu.    |
@@ -1997,7 +1997,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   4347    |   16  |   Non  |   La séquence de restauration actuelle a été interrompue précédemment pendant la transition vers l'état en ligne. RESTORE DATABASE WITH RECOVERY peut être utilisé pour effectuer la transition vers l'état en ligne. |
 |   4348    |   16  |   Non  |   La restauration en ligne dans la base de données '%ls' a échoué. Il peut s'avérer nécessaire d'effectuer une restauration hors ligne. Pour lancer cette opération, utilisez l'instruction BACKUP LOG WITH NORECOVERY.  |
 |   4349    |   16  |   Non  |   Le journal dans ce jeu de sauvegarde commence au numéro de séquence d'enregistrement %.*ls, ce qui est trop récent pour une application à la base de données. Cette séquence de restauration doit initialiser le journal pour commencer à LSN %.* ls. Relancez l'instruction RESTORE LOG en utilisant une sauvegarde du journal antérieure.   |
-|   4350    |   16  |   Non  |   La liste de pages fournies avec l'instruction RESTORE PAGE n'est pas correctement mise en forme. Avant que ce problème ne se produise, %d pages ont été correctement identifiées. Le problème s'est produit à l'offset de caractère %d. Assurez-vous que toutes les pages sont identifiées par paires numériques <file>:<page>, les paires étant séparées par des virgules. Exemple : PAGE=’1:57,2:31’.   |
+|   4350    |   16  |   Non  |   La liste de pages fournies avec l'instruction RESTORE PAGE n'est pas correctement mise en forme. Avant que ce problème ne se produise, %d pages ont été correctement identifiées. Le problème s'est produit à l'offset de caractère %d. Assurez-vous que toutes les pages sont identifiées par paires numériques <file>:<page>, les paires étant séparées par des virgules. Par exemple : PAGE=’1:57,2:31’.   |
 |   4351    |   16  |   Non  |   Les sauvegardes effectuées sur des versions antérieures de SQL Server ne sont pas prises en charge par fn_dump_dblog. |
 |   4352    |   16  |   Non  |   RESTORE LOG n'est pas pris en charge à partir de cette sauvegarde de données, car le fichier '%ls' est trop ancien. Utilisez une sauvegarde de fichier journal ordinaire pour continuer la séquence de restauration.    |
 |   4353    |   16  |   Non  |   Des réadressages de fichiers en conflit ont été spécifiés pour le fichier '%.*ls'. Une seule clause WITH MOVE doit être spécifiée par nom de fichier logique.    |
@@ -2027,7 +2027,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   4426    |   16  |   Non  |   La vue '%.*ls' ne peut pas être mise à jour parce que la définition contient un opérateur UNION. |
 |   4427    |   16  |   Non  |   Impossible de mettre à jour la vue "%.*ls" parce que cette dernière, ou l'une des vues auxquelles elle fait référence, a été créée avec WITH CHECK OPTION et que sa définition contient la clause TOP.    |
 |   4429    |   16  |   Non  |   La vue ou la fonction '%.*ls' contient une auto-référence. Les vues ou les fonctions ne peuvent pas se faire référence à elles-mêmes, ni directement, ni indirectement.  |
-|   4430    |   10  |   Non  |   Warning: les indicateurs (hint) d’index fournis pour la vue '%.*ls' seront ignorés. |
+|   4430    |   10  |   Non  |   Avertissement : les indicateurs (hint) d’index fournis pour la vue '%.*ls' seront ignorés. |
 |   4431    |   16  |   Non  |   Impossible de mettre à jour la vue partitionnée '%.*ls' car la table '%.* ls' comporte une colonne de type timestamp. |
 |   4432    |   16  |   Non  |   Impossible de mettre à jour la vue partitionnée '%.*ls' car la table '%.* ls' comporte une contrainte DEFAULT.   |
 |   4433    |   16  |   Non  |   Impossible d'effectuer une insertion dans la vue partitionnée '%.*ls' car la table '%.* ls' comporte une contrainte IDENTITY.   |
@@ -2135,7 +2135,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   4833    |   16  |   Non  |   Chargement en masse : discordance de version entre la bibliothèque de liens dynamiques du fournisseur et le fichier exécutable du serveur.    |
 |   4834    |   16  |   Non  |   Vous n'êtes pas autorisé à utiliser l'instruction de chargement en masse.  |
 |   4835    |   16  |   Non  |   La copie en bloc dans une table comportant des colonnes calculées n'est pas prise en charge pour les clients de niveau inférieur. |
-|   4836    |   10  |   Non  |   Warning: la table "%.*s" est publiée en vue d’une réplication de fusion. Réinitialisez les abonnés affectés ou exécutez sp_addtabletocontents pour garantir que les données ajoutées sont incluses dans la prochaine synchronisation. |
+|   4836    |   10  |   Non  |   Avertissement : la table "%.*s" est publiée en vue d’une réplication de fusion. Réinitialisez les abonnés affectés ou exécutez sp_addtabletocontents pour garantir que les données ajoutées sont incluses dans la prochaine synchronisation. |
 |   4837    |   16  |   Non  |   Copie en bloc impossible dans une table "%.*s" pour laquelle les abonnements de mise à jour immédiate sont activés.  |
 |   4838    |   16  |   Non  |   La source de données en bloc ne prend pas en charge les types de données SQLNUMERIC ou SQLDECIMAL.  |
 |   4839    |   16  |   Non  |   Impossible d’effectuer le chargement en masse. Nom de classement non valide pour la colonne source %d dans le fichier de format "%s".  |
@@ -2169,10 +2169,10 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   4873    |   16  |   Non  |   Ligne %d dans le fichier de format "%ls" : référence à un ID d'élément inexistant "%ls".    |
 |   4874    |   16  |   Non  |   Ligne %d dans le fichier de format "%ls" : référence à un ID d'élément en double "%ls". |
 |   4875    |   16  |   Non  |   Attribut de colonne non valide du client bcp pour colid %d.  |
-|   4876    |   16  |   Non  |   L'opération d'insertion en bloc de la destination pour SQL Server a dépassé le délai d'attente. Envisagez d'augmenter la valeur de la propriété Timeout sur la destination pour SQL Server dans le flux de données.  |
+|   4876    |   16  |   Non  |   L’opération d’insertion en bloc de la destination pour SQL Server a dépassé le délai d’attente. Envisagez d’augmenter la valeur de la propriété Timeout sur la destination pour SQL Server dans le flux de données.  |
 |   4877    |   16  |   Non  |   Erreur lors de l'analyse du flux DTS lors de la lecture de la ligne %d, colonne %d.    |
 |   4880    |   16  |   Non  |   Chargement en masse impossible. Lors de l'utilisation des paramètres FIRSTROW et LASTROW, la valeur de FIRSTROW ne doit pas être supérieure à celle de LASTROW.    |
-|   4881    |   10  |   Non  |   Remarque : L’insertion en bloc par le biais d’une vue peut aboutir à l’ignorance des valeurs par défaut de la table de base pour les colonnes NULL du fichier de données.   |
+|   4881    |   10  |   Non  |   Remarque : L’insertion en bloc par le biais d’une vue peut aboutir à l’ignorance des valeurs par défaut de la table de base pour les colonnes NULL du fichier de données.   |
 |   4882    |   16  |   Non  |   Chargement en masse impossible. Une longueur de préfixe, une longueur de champ ou un terminateur est requis pour la colonne source %d dans le fichier de format "%s".    |
 |   4883    |   16  |   Non  |   Le lecteur XML a retourné 0x%08X pour l'élément d'informations commençant près de la ligne %d, colonne %d, dans le fichier de format "%ls".  |
 |   4884    |   16  |   Non  |   Erreur inconnue à proximité de l'élément commençant près de la ligne %d, colonne %d dans le fichier de format "%ls".  |
@@ -2192,7 +2192,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   4900    |   16  |   Non  |   Échec de l'instruction ALTER TABLE SWITCH pour la table '%.*ls'. Il n'est pas possible de changer la partition d'une table dans laquelle le suivi des modifications est activé. Désactivez le suivi des modifications avant d'utiliser ALTER TABLE SWITCH. |
 |   4901    |   16  |   Non  |   ALTER TABLE permet d'ajouter uniquement des colonnes pouvant contenir des valeurs NULL, des colonnes ayant une définition DEFAULT, des colonnes identité ou de type timestamp ; si aucune des conditions précédentes n'est satisfaite, la table doit être vide pour autoriser l'ajout de cette colonne. La colonne '%.*ls' ne peut pas être ajoutée à une table non vide '%.* ls' car elle ne répond pas à ces conditions.   |
 |   4902    |   16  |   Non  |   L'objet "%.*ls" est introuvable, car il n'existe pas ou vous ne disposez pas des autorisations requises.    |
-|   4903    |   10  |   Non  |   Warning: la partition spécifiée %d pour la table '%.*ls' a été ignorée dans l’instruction ALTER TABLE SWITCH, parce que la table n’est pas partitionnée. |
+|   4903    |   10  |   Non  |   Avertissement : la partition spécifiée %d pour la table '%.*ls' a été ignorée dans l’instruction ALTER TABLE SWITCH, parce que la table n’est pas partitionnée. |
 |   4904    |   16  |   Non  |   Échec de l'instruction ALTER TABLE SWITCH. La partition spécifiée %d de la table cible '%.*ls' doit être vide.  |
 |   4905    |   16  |   Non  |   Échec de l'instruction ALTER TABLE SWITCH. La table cible '%.*ls' doit être vide.    |
 |   4906    |   16  |   Non  |   Échec de l'instruction '%ls' %S_MSG '%.*ls' est %S_MSG partitionné tandis que l'index '%.* ls' est %S_MSG partitionné. |
@@ -2314,7 +2314,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   5025    |   16  |   Non  |   Le fichier '%.*ls' existe déjà. Pour pouvoir créer un autre fichier journal, vous devez le renommer ou le supprimer.   |
 |   5027    |   16  |   Non  |   Impossible de reconstruire les journaux des bases de données système master, model et tempdb.  |
 |   5028    |   16  |   Non  |   Le système ne peut pas activer suffisamment la base de données pour reconstruire le journal.    |
-|   5029    |   10  |   Oui |   Warning: le journal de la base de données '%.*ls' a été reconstruit. La cohérence transactionnelle a été perdue. La chaîne RESTORE a été rompue et le serveur n'a plus de contexte sur les fichiers journaux précédents, aussi devez-vous connaître leur nature. Vous devez exécuter DBCC CHECKDB pour valider la cohérence physique. La base de données a été mise en mode dbo uniquement. Au moment de mettre la base de données à la disposition des utilisateurs, vous devrez rétablir ses options et supprimer tous les fichiers journaux en surplus.    |
+|   5029    |   10  |   Oui |   Avertissement : le journal de la base de données '%.*ls' a été reconstruit. La cohérence transactionnelle a été perdue. La chaîne RESTORE a été rompue et le serveur n'a plus de contexte sur les fichiers journaux précédents, aussi devez-vous connaître leur nature. Vous devez exécuter DBCC CHECKDB pour valider la cohérence physique. La base de données a été mise en mode dbo uniquement. Au moment de mettre la base de données à la disposition des utilisateurs, vous devrez rétablir ses options et supprimer tous les fichiers journaux en surplus.    |
 |   5030    |   16  |   Non  |   La base de données ne peut pas être verrouillée de façon exclusive pour effectuer cette opération.  |
 |   5031    |   16  |   Non  |   Impossible de supprimer le fichier '%.*ls' parce qu'il est le seul dans le groupe de fichiers DEFAULT.    |
 |   5032    |   10  |   Non  |   Impossible de compacter le fichier en dessous de la page %ud tant que le journal n'est pas sauvegardé, parce qu'il contient des pages utilisant les journaux de transactions.  |
@@ -2358,7 +2358,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   5073    |   16  |   Non  |   Impossible de changer le classement de la base de données '%ls' parce qu'elle est READONLY, OFFLINE ou SUSPECT.   |
 |   5074    |   16  |   Non  |   %S_MSG '%.*ls' est dépendant de %S_MSG '%.* ls'.  |
 |   5075    |   16  |   Non  |   %S_MSG '%.*ls' est dépendant de %S_MSG. Le classement de base de données ne peut être modifié si un objet lié au schéma dépend de lui. Supprimez les dépendances sur le classement de base de données, puis réessayez l'opération. |
-|   5076    |   10  |   Non  |   Warning: modification du classement par défaut de la base de données '%.*ls' qui est utilisée dans une réplication. Il est recommandé que toutes les bases de données de réplication aient le même classement par défaut.   |
+|   5076    |   10  |   Non  |   Avertissement : modification du classement par défaut de la base de données '%.*ls' qui est utilisée dans une réplication. Il est recommandé que toutes les bases de données de réplication aient le même classement par défaut.   |
 |   5077    |   16  |   Non  |   Impossible de modifier l'état des fichiers, qu'ils correspondent ou non à des données, dans le groupe de fichiers primaire.    |
 |   5078    |   16  |   Non  |   Impossible de modifier les options de base de données pour "%ls" parce qu'elle est READONLY, OFFLINE ou SUSPECT. |
 |   5079    |   10  |   Non  |   La base de données "%.*ls" est %S_MSG pour le format de stockage VarDecimal.   |
@@ -2752,7 +2752,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   6263    |   16  |   Non  |   L'exécution du code utilisateur dans le .NET Framework est désactivée. Activez l'option de configuration "clr enabled".    |
 |   6264    |   16  |   Non  |   Échec de l'accès aux données parce que la routine du .NET Framework n'est pas marquée avec "DataAccessKind.Read" ou "SystemDataAccessKind.Read".  |
 |   6265    |   16  |   Non  |   Échec de l'ASSEMBLY %s, car le type "%.*ls" dans l’assembly %.* ls "%.*ls" comporte une méthode pinvokeimpl. P/Invoke n'est pas autorisé dans les assemblys %.* ls.    |
-|   6266    |   10  |   Non  |   Warning: l’assembly "%.*ls" a été créé avec la version %.* ls de .NET Framework. SQL Server utilise actuellement la version %s.    |
+|   6266    |   10  |   Non  |   Avertissement : l’assembly "%.*ls" a été créé avec la version %.* ls de .NET Framework. SQL Server utilise actuellement la version %s.    |
 |   6267    |   16  |   Non  |   L'assembly "%.*ls" n'existe pas ou l'utilisateur n'est pas autorisé à le référencer.  |
 |   6269    |   16  |   Non  |   Échec de ALTER ASSEMBLY parce que la fonction d'agrégation définie par l'utilisateur "%s" n'existe pas ou n'est pas correctement définie dans l'assembly mis à jour.   |
 |   6270    |   16  |   Non  |   Échec de ALTER ASSEMBLY parce que la méthode nécessaire "%s" du type "%s" n'a pas été trouvée avec la même signature dans l'assembly mis à jour.  |
@@ -3122,7 +3122,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   6963    |   16  |   Non  |   La valeur 'default' ou 'fixed' est trop longue ; la longueur maximale autorisée est de 4 000 caractères : '%s' |
 |   6964    |   16  |   Non  |   La valeur de facette est trop longue ; la longueur maximale autorisée est de 4 000 caractères : '%s'    |
 |   6965    |   10  |   Non  |   Validation XML : Contenu non valide. Élément(s) attendu(s) : %s. Élément '%s' trouvé. Emplacement : %s.    |
-|   6966    |   10  |   Non  |   Warning: le type '%s' est limité par une facette '%s' susceptible de compromettre full round-tripping des instances de ce type  |
+|   6966    |   10  |   Non  |   Avertissement : le type '%s' est limité par une facette '%s' susceptible de compromettre full round-tripping des instances de ce type  |
 |   6967    |   16  |   Non  |   Définition de type non valide pour le type '%s'. Les types de base et dérivés doivent avoir la même valeur pour le contenu 'mixte' sauf en cas de dérivation par restriction ; dans ce cas, 'false' est toujours autorisé pour le type dérivé.  |
 |   6968    |   16  |   Non  |   Définition de type non valide pour le type '%s'. Les types complexes ne peuvent pas restreindre les types simples   |
 |   6969    |   16  |   Non  |   La validation ID/IDREF a utilisé une trop grande quantité de mémoire. Essayez de réduire le nombre d'attributs ID et IDREF. Il peut également être utile de réorganiser le fichier de sorte que les éléments comportant des attributs IDREF apparaissent après les éléments auxquels ils font référence.   |
@@ -3333,47 +3333,47 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   7629    |   17  |   Non  |   Impossible d'ouvrir ou d'interroger la clé de Registre du chemin d'accès par défaut de texte intégral. Le chemin d'accès du catalogue par défaut de texte intégral n'est pas valide.    |
 |   7630    |   15  |   Non  |   Erreur de syntaxe près de '%.*ls' dans la condition de recherche en texte intégral '%.* ls'.    |
 |   7632    |   15  |   Non  |   La valeur de l'argument Weight doit être comprise entre 0,0 et 1,0.   |
-|   7636    |   10  |   Non  |   Warning: la demande de démarrage d’une alimentation d’index de texte intégral dans la table ou la vue indexée '%.*ls' est ignorée, car une alimentation est en cours dans cette table ou cette vue indexée. |
-|   7638    |   10  |   Non  |   Warning: la demande destinée à arrêter le suivi des modifications a supprimé tous les changements suivis dans la table ou la vue indexée '%ls'.    |
-|   7640    |   10  |   Non  |   Warning: la demande destinée à arrêter le suivi des modifications sur la table ou la vue indexée '%.*ls' ne mettra pas fin à l’alimentation en cours sur la table ou la vue indexée. |
+|   7636    |   10  |   Non  |   Avertissement : la demande de démarrage d’une alimentation d’index de texte intégral dans la table ou la vue indexée '%.*ls' est ignorée, car une alimentation est en cours dans cette table ou cette vue indexée. |
+|   7638    |   10  |   Non  |   Avertissement : la demande destinée à arrêter le suivi des modifications a supprimé tous les changements suivis dans la table ou la vue indexée '%ls'.    |
+|   7640    |   10  |   Non  |   Avertissement : la demande destinée à arrêter le suivi des modifications sur la table ou la vue indexée '%.*ls' ne mettra pas fin à l’alimentation en cours sur la table ou la vue indexée. |
 |   7641    |   16  |   Non  |   Le catalogue de texte intégral '%ls' n'existe pas dans la base de données '%.*ls' ou l'utilisateur n'a pas l'autorisation d'effectuer cette action. |
 |   7642    |   16  |   Non  |   Un catalogue de texte intégral nommé '%ls' existe déjà dans cette base de données. Utilisez un autre nom.  |
 |   7644    |   16  |   Non  |   Le gestionnaire d'analyse de texte intégral n'a pas été initialisé. Toute analyse démarrée avant l'initialisation complète du gestionnaire d'analyse doit être redémarrée. Veuillez redémarrer SQL Server et réessayer la commande. Consultez également le journal des erreurs pour corriger toutes les erreurs susceptibles d'avoir provoqué l'échec du gestionnaire d'analyse.    |
 |   7645    |   16  |   Non  |   Prédicat de texte intégral NULL ou vide.  |
 |   7646    |   16  |   Non  |   Le prédicat de texte intégral fait référence à des colonnes de deux tables ou vues indexées différentes '%.*ls' et '%.* ls', ce qui n'est pas autorisé.  |
-|   7647    |   10  |   Non  |   Warning: impossible d’enregistrer la configuration du catalogue de texte intégral à '%ls' pendant le détachement de la base de données. |
-|   7648    |   10  |   Non  |   Warning: échec de l’attachement du catalogue de texte intégral '%ls'.  |
-|   7649    |   10  |   Non  |   Warning: échec du démontage du catalogue de texte intégral à '%ls'. |
-|   7650    |   10  |   Non  |   Warning: échec de la suppression du catalogue de texte intégral à '%ls'. |
-|   7651    |   10  |   Non  |   Warning: l’alimentation en cours est nécessaire pour garantir l’actualité de l’index. Si nécessaire, arrêtez le suivi des modifications, puis désactivez l'alimentation d'index de texte intégral.  |
+|   7647    |   10  |   Non  |   Avertissement : impossible d’enregistrer la configuration du catalogue de texte intégral à '%ls' pendant le détachement de la base de données. |
+|   7648    |   10  |   Non  |   Avertissement : échec de l’attachement du catalogue de texte intégral '%ls'.  |
+|   7649    |   10  |   Non  |   Avertissement : échec du démontage du catalogue de texte intégral à '%ls'. |
+|   7650    |   10  |   Non  |   Avertissement : échec de la suppression du catalogue de texte intégral à '%ls'. |
+|   7651    |   10  |   Non  |   Avertissement : l’alimentation en cours est nécessaire pour garantir l’actualité de l’index. Si nécessaire, arrêtez le suivi des modifications, puis désactivez l'alimentation d'index de texte intégral.  |
 |   7652    |   16  |   Non  |   Un index de texte intégral pour la table ou la vue indexée '%.*ls' a déjà été créé.   |
 |   7653    |   16  |   Non  |   '%ls' n'est pas un index valide pour appliquer une clé de recherche en texte intégral. Une clé de recherche en texte intégral doit être un index unique qui n'accepte pas la valeur Null, ne comporte qu'une seule colonne non hors connexion, n'est pas défini sur une colonne calculée non déterministe ou non persistante imprécise, n'a pas de filtre et dont la taille maximale est de %d octets. Choisissez un autre index pour la clé de texte intégral.   |
 |   7654    |   16  |   Non  |   Impossible d'obtenir l'état de l'alimentation de la table ou de la vue indexée '%.*ls'.    |
 |   7655    |   16  |   Non  |   L'option TYPE COLUMN doit être spécifiée avec une colonne de type image ou varbinary(max).   |
 |   7656    |   16  |   Non  |   Impossible de remplir l'index de texte intégral de la table ou de la vue indexée '%.*ls', car la base de données est en mode mono-utilisateur.   |
-|   7657    |   10  |   Non  |   Warning: la table ou la vue indexée '%.*ls' contient des colonnes indexées en texte intégral qui sont de type image, text ou ntext. Le suivi des modifications de texte intégral ne peut pas inclure les opérations WRITETEXT ou UPDATETEXT effectuées sur ces colonnes.  |
+|   7657    |   10  |   Non  |   Avertissement : la table ou la vue indexée '%.*ls' contient des colonnes indexées en texte intégral qui sont de type image, text ou ntext. Le suivi des modifications de texte intégral ne peut pas inclure les opérations WRITETEXT ou UPDATETEXT effectuées sur ces colonnes.  |
 |   7658    |   16  |   Non  |   Aucun index de texte intégral n'est créé pour la table ou la vue indexée '%.*ls', ou l'utilisateur n'est pas autorisé à effectuer cette action.  |
 |   7659    |   16  |   Non  |   Impossible d'activer la recherche en texte intégral dans la table ou la vue indexée '%.*ls' parce qu'aucune colonne n'a été désignée pour cette opération.   |
 |   7660    |   16  |   Non  |   La recherche en texte intégral doit être activée dans la table ou la vue indexée '%.*ls' avant de pouvoir traiter cette opération. |
-|   7661    |   10  |   Non  |   Warning: le suivi des modifications de texte intégral est actuellement activé pour la table ou la vue indexée '%.*ls'.  |
-|   7662    |   10  |   Non  |   Warning: la propagation automatique de texte intégral est actuellement activée pour la table ou la vue indexée '%.*ls'. |
+|   7661    |   10  |   Non  |   Avertissement : le suivi des modifications de texte intégral est actuellement activé pour la table ou la vue indexée '%.*ls'.  |
+|   7662    |   10  |   Non  |   Avertissement : la propagation automatique de texte intégral est actuellement activée pour la table ou la vue indexée '%.*ls'. |
 |   7663    |   16  |   Non  |   Vous ne devez pas utiliser l'option 'WITH NO POPULATION' lorsque le suivi des modifications est activé. |
 |   7664    |   16  |   Non  |   Vous devez démarrer le suivi des modifications de texte intégral dans la table ou la vue indexée '%.*ls' avant de pouvoir supprimer les modifications.   |
 |   7665    |   16  |   Non  |   Une analyse complète doit être exécutée sur la table ou la vue indexée '%.*ls'. Les colonnes affectant l'index ont été ajoutées ou supprimées depuis l'alimentation du dernier index.  |
 |   7666    |   16  |   Non  |   L'utilisateur n'est pas autorisé à effectuer cette action.   |
 |   7668    |   16  |   Non  |   Impossible de supprimer le catalogue de texte intégral '%ls' parce qu'il contient un index de texte intégral.  |
-|   7669    |   10  |   Non  |   Warning: Impossible de remplir l'index de texte intégral de la table ou de la vue indexée '%.*ls', car la base de données est en mode mono-utilisateur. Le suivi des modifications sera arrêté pour cette table ou cette vue indexée.   |
+|   7669    |   10  |   Non  |   Avertissement : Impossible de remplir l'index de texte intégral de la table ou de la vue indexée '%.*ls', car la base de données est en mode mono-utilisateur. Le suivi des modifications sera arrêté pour cette table ou cette vue indexée.   |
 |   7670    |   16  |   Non  |   Impossible d'utiliser la colonne '%.*ls' pour la recherche en texte intégral, car ce n'est pas une colonne de caractères, XML, de type image ou varbinary(max).   |
 |   7671    |   16  |   Non  |   Impossible d'utiliser la colonne '%.*ls' en tant que colonne de type texte intégral pour une colonne image. Ce doit être une colonne de caractères dont la taille est inférieure ou égale à %d caractères.  |
 |   7672    |   16  |   Non  |   Impossible de créer un index de texte intégral sur la table ou la vue indexée, car une colonne en double '%.*ls' est spécifiée. |
-|   7673    |   10  |   Non  |   Warning: le suivi des modifications de texte intégral est actuellement désactivé pour la table ou la vue indexée '%.*ls'. |
-|   7674    |   10  |   Non  |   Warning: le catalogue de texte intégral '%.*ls' est en cours de suppression alors qu’il est actuellement défini comme catalogue par défaut. |
-|   7676    |   10  |   Non  |   Warning: la propagation automatique de texte intégral est activée. L'arrêt de la demande d'analyse est ignoré.   |
+|   7673    |   10  |   Non  |   Avertissement : le suivi des modifications de texte intégral est actuellement désactivé pour la table ou la vue indexée '%.*ls'. |
+|   7674    |   10  |   Non  |   Avertissement : le catalogue de texte intégral '%.*ls' est en cours de suppression alors qu’il est actuellement défini comme catalogue par défaut. |
+|   7676    |   10  |   Non  |   Avertissement : la propagation automatique de texte intégral est activée. L'arrêt de la demande d'analyse est ignoré.   |
 |   7677    |   16  |   Non  |   La colonne "%.*ls" n'est pas indexée en texte intégral.    |
 |   7678    |   16  |   Non  |   La chaîne suivante n'est pas définie comme alias de langue dans syslanguages : %.*ls. |
 |   7679    |   16  |   Non  |   La langue de l'index de texte intégral de la colonne "%.*ls" n'est pas une langue prise en charge par la recherche en texte intégral. |
 |   7680    |   16  |   Non  |   La langue de l'index de texte intégral par défaut n'est pas une langue prise en charge par la recherche en texte intégral.   |
-|   7681    |   10  |   Non  |   Warning: le répertoire '%ls' ne contient pas de catalogue de texte intégral valide. Le fichier d'en-tête ou le fichier d'état joint de ce catalogue est absent ou endommagé. Impossible d'attacher le catalogue de texte intégral.  |
+|   7681    |   10  |   Non  |   Avertissement : le répertoire '%ls' ne contient pas de catalogue de texte intégral valide. Le fichier d'en-tête ou le fichier d'état joint de ce catalogue est absent ou endommagé. Impossible d'attacher le catalogue de texte intégral.  |
 |   7682    |   10  |   Non  |   Le composant '%ls' a signalé une erreur pendant l'indexation. Chemin d'accès du composant '%ls'.    |
 |   7683    |   16  |   Non  |   Des erreurs se sont produites lors de l'alimentation d'index de texte intégral pour la table ou la vue indexée '%ls', la base de données '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Pour plus de détails, consultez les journaux d'analyse de texte intégral.   |
 |   7684    |   10  |   Non  |   Une erreur '%ls' s'est produite pendant l'alimentation de l'index de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'), valeur de clé de texte intégral '%ls'. Impossible d'indexer la ligne.   |
@@ -3385,7 +3385,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   7693    |   16  |   Non  |   L'initialisation de texte intégral n'a pas réussi à créer un régisseur de mémoire.   |
 |   7694    |   16  |   Non  |   Impossible de suspendre le catalogue pour la sauvegarde. Celle-ci a été abandonnée. |
 |   7696    |   16  |   Non  |   L'ID de paramètres régionaux spécifié est incorrect. Veuillez vous assurer que l'ID de paramètres régionaux est correct et correspond à la ressource de langue qui a été installée.    |
-|   7697    |   10  |   Non  |   Warning: l’index de texte intégral sur la table ou la vue indexée '%.*ls' de la base de données '%.* ls' a été modifié après la sauvegarde des fichiers du catalogue de texte intégral. Il faut une alimentation complète pour amener l'index de texte intégral à un état cohérent.  |
+|   7697    |   10  |   Non  |   Avertissement : l’index de texte intégral sur la table ou la vue indexée '%.*ls' de la base de données '%.* ls' a été modifié après la sauvegarde des fichiers du catalogue de texte intégral. Il faut une alimentation complète pour amener l'index de texte intégral à un état cohérent.  |
 |   7698    |   16  |   Non  |   Impossible d'utiliser GROUP BY ALL dans les requêtes de recherche en texte intégral.    |
 |   7699    |   16  |   Non  |   L'option TYPE COLUMN n'est pas autorisée pour les types de colonnes autres qu'image ou varbinary(max).  |
 |   7702    |   16  |   Non  |   La liste des paramètres de types de la fonction Partition vide n'est pas autorisée lors de la définition d'une fonction de partition. |
@@ -3395,8 +3395,8 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   7706    |   16  |   Non  |   La fonction de partition '%ls' est utilisée par un ou plusieurs schémas de partition.    |
 |   7707    |   16  |   Non  |   La fonction de partition associée '%ls' génère plus de partitions qu'il n'y a de groupes de fichiers mentionnés dans le schéma '%ls'. |
 |   7708    |   16  |   Non  |   Des valeurs limites de plage en double ne sont pas autorisées dans la liste des valeurs limites de fonction de partition. Les valeurs limites de partition aux nombres ordinaux %d et %d sont égales.   |
-|   7709    |   10  |   Non  |   Warning: la liste des valeurs de plage pour la fonction de partition '%.*ls' n’est pas triée par valeur. Le mappage des partitions avec les groupes de fichiers lors d'une opération CREATE PARTITION SCHEME utilisera les valeurs limites triées si la fonction '%.* ls' est référencée dans CREATE PARTITION SCHEME.   |
-|   7710    |   10  |   Non  |   Warning: le schéma de partition '%.*ls' n’a plus de groupe de fichiers utilisé. Il n'a pas été modifié. |
+|   7709    |   10  |   Non  |   Avertissement : la liste des valeurs de plage pour la fonction de partition '%.*ls' n’est pas triée par valeur. Le mappage des partitions avec les groupes de fichiers lors d'une opération CREATE PARTITION SCHEME utilisera les valeurs limites triées si la fonction '%.* ls' est référencée dans CREATE PARTITION SCHEME.   |
+|   7710    |   10  |   Non  |   Avertissement : le schéma de partition '%.*ls' n’a plus de groupe de fichiers utilisé. Il n'a pas été modifié. |
 |   [7711](mssqlserver-7711-database-engine-error.md)   |   16  |   Non  |   L'option DATA_COMPRESSION a été spécifiée plusieurs fois pour la table ou pour au moins une de ses partitions si la table est partitionnée.  |
 |   7712    |   10  |   Non  |   Le schéma de partition '%.*ls' a été créé avec succès. '%.* ls' est marqué comme étant le prochain groupe de fichiers utilisé dans le schéma de partition '%.*ls'.   |
 |   7713    |   10  |   Non  |   Les groupes de fichiers %d spécifiés après le prochain groupe de fichiers utilisé sont ignorés.  |
@@ -3561,7 +3561,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   7948    |   10  |   Non  |   - Moy. - pages par extension........................: %3.1f  |
 |   7949    |   10  |   Non  |   - Densité d'analyse [Meilleur nombre:Nombre réel].......: %4.2f%ls [%I64d:%I64d] |
 |   7950    |   10  |   Non  |   - Fragmentation d'analyse logique..................: %4.2f%ls   |
-|   7951    |   10  |   Non  |   Warning: impossible de procéder aux vérifications de la cohérence du flux de fichier en raison d’une erreur du système d’exploitation. Toutes les erreurs de cohérence trouvées dans le sous-système du flux de fichier seront passées sous silence. Pour plus d'informations, examinez d'autres erreurs. Cette condition étant probablement temporaire, essayez d'exécuter à nouveau la commande.    |
+|   7951    |   10  |   Non  |   Avertissement : impossible de procéder aux vérifications de la cohérence du flux de fichier en raison d’une erreur du système d’exploitation. Toutes les erreurs de cohérence trouvées dans le sous-système du flux de fichier seront passées sous silence. Pour plus d'informations, examinez d'autres erreurs. Cette condition étant probablement temporaire, essayez d'exécuter à nouveau la commande.    |
 |   7952    |   10  |   Non  |   - Fragmentation d'analyse d'extension..................: %4.2f%ls   |
 |   7953    |   10  |   Non  |   - Moy. - d'octets libres par page.....................: %3.1f  |
 |   7954    |   10  |   Non  |   - Moy. - Densité de page (complète).....................: %4.2f%ls   |
@@ -3574,7 +3574,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   7963    |   16  |   Non  |   Erreur de base de données : le fichier "%.*ls" n’est pas un fichier FILESTREAM LOG valide.    |
 |   7964    |   10  |   Non  |   Réparation : fichier FILESTREAM "%.*ls" supprimé pour l’ID de colonne %d, ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.* ls), sur la page %S_PGID, emplacement %d. |
 |   7965    |   16  |   Non  |   Erreur de table : Impossible de vérifier l’ID d’objet %d, ID d’index %d, ID de partition %I64d, ID d’unité d’allocation %I64d (type %.*ls) en raison d’une ou plusieurs pages (IAM) d’allocation non valides.   |
-|   7966    |   10  |   Non  |   Warning: l’option NO_INDEX de %ls est utilisée. Les vérifications des index non-système seront ignorées.   |
+|   7966    |   10  |   Non  |   Avertissement : l’option NO_INDEX de %ls est utilisée. Les vérifications des index non-système seront ignorées.   |
 |   7968    |   10  |   Non  |   Informations de transaction pour la base de données '%.*ls'.   |
 |   7969    |   16  |   Non  |   Aucune transaction ouverte active.    |
 |   7970    |   10  |   Non  |   %hsPlus ancienne transaction active :   |
@@ -3717,7 +3717,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   8150    |   16  |   Non  |   Plusieurs contraintes NULL ont été spécifiées pour la colonne '%.*ls', table '%.* ls'. |
 |   8151    |   16  |   Non  |   Les contraintes PRIMARY KEY et UNIQUE ont été définies pour la colonne '%.*ls', table '%.* ls'. Une seule contrainte est autorisée.  |
 |   8152    |   16  |   Non  |   Les données de chaîne ou binaires seront tronquées.   |
-|   8153    |   10  |   Non  |   Warning: la valeur NULL est éliminée par un agrégat ou par une autre opération SET.   |
+|   8153    |   10  |   Non  |   Avertissement : la valeur NULL est éliminée par un agrégat ou par une autre opération SET.   |
 |   8154    |   15  |   Non  |   La table  '%.*ls' est ambiguë. |
 |   8155    |   15  |   Non  |   Aucun nom de colonne n'a été spécifié pour la colonne %d de '%.*ls'.  |
 |   8156    |   15  |   Non  |   La colonne '%.*ls' a été spécifiée plusieurs fois pour '%.* ls'.    |
@@ -3950,7 +3950,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   8622    |   16  |   Non  |   Le processeur de requêtes ne peut pas fournir de plan de requête à cause des indicateurs définis dans cette requête. Soumettez à nouveau la requête sans aucune option et sans recourir à SET FORCEPLAN. |
 |   8623    |   16  |   Oui |   Ressources internes du processeur de requêtes insuffisantes. Cette erreur se produit rarement et uniquement avec des requêtes extrêmement complexes ou qui référencent un grand nombre de tables ou de partitions. Simplifiez la requête. Si vous pensez que vous avez reçu ce message par erreur, contactez le support technique pour plus d'informations.    |
 |   8624    |   16  |   Oui |   Erreur interne du processeur de requêtes : Le processeur de requêtes n'a pas pu créer un plan de requête. Pour plus d'informations, contactez le support technique.    |
-|   8625    |   10  |   Non  |   Warning: l’ordre de jointure a été mis en application parce qu’un indicateur de jointure local est utilisé.    |
+|   8625    |   10  |   Non  |   Avertissement : l’ordre de jointure a été mis en application parce qu’un indicateur de jointure local est utilisé.    |
 |   8628    |   17  |   Oui |   Le délai a été dépassé pendant l'attente de l'optimisation de la requête. Réexécutez la requête.   |
 |   [8630](mssqlserver-8630-database-engine-error.md)   |   17  |   Non  |   Erreur interne du processeur de requêtes : le processeur de requêtes a rencontré une erreur inattendue pendant l’exécution.   |
 |   8631    |   17  |   Non  |   Erreur interne : la limite de la pile serveur est dépassée. Recherchez les imbrications complexes dans votre requête et simplifiez-les.    |
@@ -3974,7 +3974,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   8660    |   16  |   Non  |   Impossible de créer l'index cluster "%.*ls" dans la vue "%.* ls", car la liste de sélection de la définition de la vue ne comporte pas toutes les colonnes dans la clause GROUP BY. Ajoutez ces colonnes à la liste de sélection. |
 |   8661    |   16  |   Non  |   Impossible de créer l'index cluster "%.*ls" dans la vue "%.* ls", car la clé d'index contient des colonnes qui ne figurent pas dans la clause GROUP BY. Supprimez les colonnes qui ne sont pas dans la clause GROUP BY de la clé d'index.  |
 |   8662    |   16  |   Non  |   Impossible de créer l'index cluster "%.*ls" dans la vue "%.* ls", car la vue référence une valeur inconnue (agrégat SUM d'une expression qui accepte les valeurs NULL). Référencez uniquement les valeurs non NULL dans l'agrégat SUM. ISNULL() peut être utile à cet effet.   |
-|   8663    |   16  |   Non  |   Impossible de créer l'index cluster "%.*ls" dans la vue "%.* ls", car la liste de sélection ne contient pas COUNT_BIG(*). Ajoutez COUNT_BIG(*) à la liste de sélection.   |
+|   8663    |   16  |   Non  |   Impossible de créer l'index cluster "%.*ls" dans la vue "%.* ls", car la liste de sélection ne contient pas COUNT_BIG( *). Ajoutez COUNT_BIG(* ) à la liste de sélection.   |
 |   8665    |   16  |   Non  |   Impossible de créer l'index cluster "%.*ls" dans la vue "%.* ls", car aucune ligne ne correspond à la définition de la vue. Supprimez les contradictions dans la définition de la vue. |
 |   8668    |   16  |   Non  |   Impossible de créer l'index cluster '%.*ls' dans la vue '%.* ls', car la liste de sélection de la vue contient une expression sur le résultat de la fonction d'agrégation ou de la colonne de regroupement. Supprimez l'expression sur le résultat de la fonction d'agrégation ou de la colonne de regroupement dans la liste de sélection.  |
 |   8669    |   16  |   Non  |   Échec de la tentative de maintien de la vue indexée "%.*ls", parce qu'elle contient une expression sur les résultats d'agrégation, ou parce qu'elle contient une fonction de classement ou une fonction d'agrégation. Supprimez l'index cluster de la vue ou modifiez la définition de la vue.  |
@@ -4183,11 +4183,11 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9304    |   16  |   Non  |   %sCette version du serveur prend uniquement en charge XQuery version '1.0'.    |
 |   9305    |   16  |   Non  |   %Seuls les noms de types suivis de '?' sont pris en charge dans la cible de 'instance of'. |
 |   9306    |   16  |   Non  |   %sLa cible de 'replace value of' ne doit pas être de type union, '%ls' trouvé. |
-|   9308    |   16  |   Non  |   %L’argument de '%ls' doit être d’un type primitif numérique unique ou 'http://www.w3.org/2004/07/xpath-datatypes#untypedAtomic'. Argument trouvé de type '%ls'.  |
-|   9309    |   16  |   Non  |   %sLa cible de 'replace value of' ne doit pas être de type 'http://www.w3.org/2001/XMLSchema#anySimpleType', '%ls' trouvé. |
+|   9308    |   16  |   Non  |   %L’argument de '%ls' doit être d’un type primitif numérique unique ou 'http://www.w3.org/2004/07/xpath-datatypes#untypedAtomic '. Argument trouvé de type '%ls'.  |
+|   9309    |   16  |   Non  |   %sLa cible de 'replace value of' ne doit pas être de type 'http://www.w3.org/2001/XMLSchema#anySimpleType ', '%ls' trouvé. |
 |   9310    |   16  |   Non  |   %sLa clause 'with' de 'replace value of' ne peut pas contenir de XML construit.   |
 |   9311    |   16  |   Non  |   %sLes séquences hétérogènes ne sont pas autorisées dans '%ls', '%ls' et '%ls' trouvées.  |
-|   9312    |   16  |   Non  |   %s'%ls' n’est pas pris en charge sur les éléments de type simple ou 'http://www.w3.org/2001/XMLSchema#anyType', '%ls' trouvé.   |
+|   9312    |   16  |   Non  |   %s'%ls' n’est pas pris en charge sur les éléments de type simple ou 'http://www.w3.org/2001/XMLSchema#anyType ', '%ls' trouvé.   |
 |   9313    |   16  |   Non  |   %sCette version du serveur ne prend pas en charge les expressions multiples ou les expressions mélangées à des chaînes dans un constructeur d'attribut.   |
 |   9314    |   16  |   Non  |   %sImpossible d'atomiser implicitement ou d'appliquer la fonction 'fn:data()' aux éléments à contenu complexe ; type '%ls' trouvé dans type déduit '%ls'.  |
 |   9315    |   16  |   Non  |   %sSeules les expressions constantes sont prises en charge pour l'expression du nom de l'élément calculé et les constructeurs d'attribut.   |
@@ -4197,7 +4197,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9319    |   16  |   Non  |   %s Validation du type simple statique : valeur de type simple non valide '%ls'.   |
 |   9320    |   16  |   Non  |   %sLe résultat de l'application de l'axe 'parent' sur le nœud du document est statiquement 'vide'.  |
 |   9321    |   16  |   Non  |   %sLe résultat de l'application de 'parent::%ls' est statiquement 'vide'.   |
-|   9322    |   16  |   Non  |   %sDeux '-' consécutifs peut uniquement apparaître dans un constructeur de commentaire s'ils servent à fermer le commentaire ('-->').   |
+|   9322    |   16  |   Non  |   %sDeux '-' consécutifs peut uniquement apparaître dans un constructeur de commentaire s’ils servent à fermer le commentaire ('-->').   |
 |   9323    |   16  |   Non  |   %sUtiliser ':' dans les noms de variables n'est pas pris en charge dans cette version du serveur.   |
 |   9324    |   16  |   Non  |   %s'}' trouvée sans '{' correspondante. Si vous souhaitez utiliser les caractères '{' et '}', vous devez utiliser le caractère d'échappement '{{' ou '}}' respectivement.   |
 |   9325    |   16  |   Non  |   %sLes constructeurs d'instruction de traitement calculés ne sont pas pris en charge.   |
@@ -4207,7 +4207,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9330    |   16  |   Non  |   %sSeuls les types comparables sont autorisés dans '%ls', '%ls' trouvé.  |
 |   9331    |   16  |   Non  |   %sErreur de syntaxe près de '%ls', '%ls' ou '%ls' attendu. |
 |   9332    |   16  |   Non  |   %sErreur de syntaxe près de '%ls', 'where', '(stable) order by' ou 'return' attendu.   |
-|   9333    |   16  |   Non  |   %s'//' suivi des axes 'self', 'parent' ou 'descendant-or-self' n'est pas pris en charge avec les éléments de type simple ou 'http://www.w3.org/2001/XMLSchema#anyType', '%ls' trouvé.  |
+|   9333    |   16  |   Non  |   %s'//' suivi des axes 'self', 'parent' ou 'descendant-or-self' n'est pas pris en charge avec les éléments de type simple ou 'http://www.w3.org/2001/XMLSchema#anyType ', '%ls' trouvé.  |
 |   9334    |   16  |   Non  |   %sL'attribut 'form' ne peut pas être spécifié dans une définition d'élément ou d'attribut locale comportant l'attribut 'ref'. Emplacement : '%ls'.    |
 |   9335    |   16  |   Non  |   %sLa syntaxe XQuery '%ls' n'est pas prise en charge. |
 |   9336    |   16  |   Non  |   %sLa syntaxe de schéma XML '%ls' n'est pas prise en charge. |
@@ -4228,7 +4228,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9412    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, '>' attendu    |
 |   9413    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, littéral de chaîne attendu   |
 |   9414    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, égal attendu  |
-|   9415    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, contrôle correct : aucun '<' dans la valeur d'attribut    |
+|   9415    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, contrôle correct : aucun '<' dans la valeur d’attribut    |
 |   9416    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, chiffre hexadécimal attendu  |
 |   9417    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, chiffre décimal attendu  |
 |   9418    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, '[' attendu    |
@@ -4267,7 +4267,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9451    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, syntaxe d'instruction de traitement incorrecte |
 |   9452    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, syntaxe de l'identificateur système incorrecte  |
 |   9453    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, '?' attendu    |
-|   9454    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, aucun ']]>' dans le contenu de l'élément |
+|   9454    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, aucun ']]>' dans le contenu de l’élément |
 |   9455    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, caractère de nom qualifié non conforme    |
 |   9456    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, plusieurs signes deux-points dans le nom qualifié   |
 |   9457    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, deux-points dans le nom   |
@@ -4279,8 +4279,8 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9463    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, xml:space contient une valeur non conforme |
 |   9464    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, le préfixe d'espace de noms XML 'xml' peut uniquement être associé à l'URI http://www.w3.org/XML/1998/namespace. Cet URI ne peut pas être utilisé avec d'autres préfixes.   |
 |   9465    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, le préfixe d'espace de noms XML 'xmlns' est réservé pour une utilisation par XML.    |
-|   9466    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, l'URI d'espace de noms XML (http://www.w3.org/XML/1998/namespace)) ne doit être assigné qu'au préfixe 'xml'.   |
-|   9467    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, l'URI d'espace de noms xmlns (http://www.w3.org/2000/xmlns/)) est réservé et ne doit pas être utilisé.   |
+|   9466    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, l'URI d'espace de noms XML (http://www.w3.org/XML/1998/namespace) ) ne doit être assigné qu'au préfixe 'xml'.   |
+|   9467    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, l'URI d'espace de noms xmlns (http://www.w3.org/2000/xmlns/) ) est réservé et ne doit pas être utilisé.   |
 |   9480    |   16  |   Non  |   Analyse XML : ligne %d, caractère %d, XML non pris en charge |
 |   9500    |   16  |   Non  |   Le type de données '%.*ls' utilisé dans la méthode VALUE n'est pas valide.  |
 |   9501    |   16  |   Non  |   XQuery : impossible de résoudre sql:variable('%.*ls'). La variable doit être déclarée en tant que variable TSQL scalaire.   |
@@ -4523,8 +4523,8 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9906    |   10  |   Non  |   L'analyse de catalogue de texte intégral a signalé le catalogue '%ls' (%d) de la base de données '%ls' (%d) dans l'état %ls. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.   |
 |   9907    |   10  |   Non  |   Erreur : le nombre total d’éléments de l’ID de catalogue de texte intégral '%d' dans l’ID de base de données '%d' excède la limite prise en charge. Consultez la documentation en ligne pour y trouver des conseils de dépannage. |
 |   9908    |   10  |   Non  |   Modification de l'état en %ls pour le catalogue de texte intégral '%ls' (%d) de la base de données '%ls' (%d). Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.  |
-|   9909    |   10  |   Non  |   Warning: échec du changement d’état en %ls pour le catalogue de texte intégral '%ls' (%d) de la base de données '%ls' (%d). Erreur : %ls.    |
-|   9910    |   10  |   Non  |   Warning: une erreur s’est produite pendant l’alimentation %ls de texte intégral pour la table ou la vue indexée '%ls', base de données '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Erreur : %ls.  |
+|   9909    |   10  |   Non  |   Avertissement : échec du changement d’état en %ls pour le catalogue de texte intégral '%ls' (%d) de la base de données '%ls' (%d). Erreur : %ls.    |
+|   9910    |   10  |   Non  |   Avertissement : une erreur s’est produite pendant l’alimentation %ls de texte intégral pour la table ou la vue indexée '%ls', base de données '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Erreur : %ls.  |
 |   9911    |   10  |   Non  |   Information : alimentation %ls de texte intégral commencée pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Sous-tâches d'alimentation : %d.    |
 |   9912    |   10  |   Non  |   Erreur : échec de l’initialisation de l’alimentation %ls de texte intégral pour la table ou la vue indexée '%ls', base de données '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Erreur : %d.  |
 |   9913    |   10  |   Non  |   Information : reprise du remplissage de texte intégral pour la table ou la vue indexée '%ls' de la base de données '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Nombre précédent de documents traités : %d, erreur rencontrée : %d.   |
@@ -4532,12 +4532,12 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9915    |   10  |   Non  |   Réinitialisation de l'alimentation %ls de texte intégral pour la table '%ls' (ID de table '%d', ID de base de données '%d') suite à une défaillance temporaire. Nombre de documents traités avant l'erreur : %d, erreurs rencontrées : %d. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.  |
 |   9916    |   10  |   Non  |   Erreur : échec de la réinitialisation de l’alimentation %ls de texte intégral à la suite d’une défaillance temporaire pour la table ou la vue indexée '%ls', base de données '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Erreur : %d.  |
 |   9917    |   17  |   Non  |   Une erreur interne s'est produite dans le mappeur docid de texte intégral.   |
-|   9918    |   10  |   Non  |   Warning: le catalogue de texte intégral '%ls' utilise un volume FAT. La sécurité et les sauvegardes différentielles ne sont pas prises en charge pour ce catalogue.   |
+|   9918    |   10  |   Non  |   Avertissement : le catalogue de texte intégral '%ls' utilise un volume FAT. La sécurité et les sauvegardes différentielles ne sont pas prises en charge pour ce catalogue.   |
 |   9919    |   16  |   Non  |   Échec de la commande DDL de texte intégral, car SQL Server a démarré en mode utilisateur unique. |
-|   9920    |   10  |   Non  |   Warning: échec de l’obtention de l’interface de l’indexeur MSFTESQL pour le catalogue de texte intégral '%ls' ('%d') dans la base de données '%ls' ('%d'). Erreur : %ls.  |
+|   9920    |   10  |   Non  |   Avertissement : échec de l’obtention de l’interface de l’indexeur MSFTESQL pour le catalogue de texte intégral '%ls' ('%d') dans la base de données '%ls' ('%d'). Erreur : %ls.  |
 |   9921    |   16  |   Non  |   L'erreur irrécupérable 0x%x s'est produite lors de la mise à niveau dans CoCreateGuid. Impossible de résoudre le nom de fichier du catalogue de texte intégral pour '%ls'.   |
-|   9922    |   10  |   Non  |   Warning: l’alimentation de texte intégral pour la table ou la vue indexée '%ls' n’a pas réussi à envoyer un lot de données au service MSFTESQL (ID de table ou de vue indexée '%d', ID de catalogue '%d', ID de base de données '%d'). Erreur : %ls.  |
-|   9923    |   10  |   Non  |   Warning: l’alimentation de texte intégral pour la table ou la vue indexée '%ls' a signalé un manque de ressources lors de l’envoi d’un lot de données au service MSFTESQL (ID de table ou de vue indexée '%d', ID de catalogue '%d', ID de base de données '%d'). Erreur : %ls.  |
+|   9922    |   10  |   Non  |   Avertissement : l’alimentation de texte intégral pour la table ou la vue indexée '%ls' n’a pas réussi à envoyer un lot de données au service MSFTESQL (ID de table ou de vue indexée '%d', ID de catalogue '%d', ID de base de données '%d'). Erreur : %ls.  |
+|   9923    |   10  |   Non  |   Avertissement : l’alimentation de texte intégral pour la table ou la vue indexée '%ls' a signalé un manque de ressources lors de l’envoi d’un lot de données au service MSFTESQL (ID de table ou de vue indexée '%d', ID de catalogue '%d', ID de base de données '%d'). Erreur : %ls.  |
 |   9924    |   16  |   Non  |   Échec de la reconstruction du catalogue de texte intégral '%ls' : le fichier d’en-tête du catalogue est en lecture seule.   |
 |   9925    |   16  |   Non  |   Échec de la reconstruction du catalogue de texte intégral '%ls' : le catalogue de texte intégral est en lecture seule. |
 |   9926    |   10  |   Non  |   Information : limite d’arrêt de MS Search atteinte. La requête de texte intégral a peut-être retourné moins de lignes qu'elle aurait dû.   |
@@ -4549,7 +4549,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9932    |   10  |   Non  |   La valeur du type de document est incorrecte. La ligne n’est pas indexée sur le texte intégral.    |
 |   9933    |   10  |   Non  |   Erreur interne : la ligne ne sera pas indexée en texte intégral. Le gestionnaire de protocole a été appelé hors séquence. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.   |
 |   9934    |   10  |   Non  |   Ligne introuvable. Elle a été supprimée ou mise à jour pendant l'indexation.    |
-|   9935    |   10  |   Non  |   Warning: le séparateur de mots, le filtre ou le gestionnaire de protocole qu’utilise le catalogue '%ls' n’existe pas sur cette instance. Utilisez sp_help_fulltext_catalog_components et sp_help_fulltext_system_components pour vérifier les composants non-correspondants. La reconstruction du catalogue est recommandée.   |
+|   9935    |   10  |   Non  |   Avertissement : le séparateur de mots, le filtre ou le gestionnaire de protocole qu’utilise le catalogue '%ls' n’existe pas sur cette instance. Utilisez sp_help_fulltext_catalog_components et sp_help_fulltext_system_components pour vérifier les composants non-correspondants. La reconstruction du catalogue est recommandée.   |
 |   9936    |   10  |   Non  |   Information : aucune langue prise en charge en texte intégral n’a été trouvée.  |
 |   9937    |   16  |   Non  |   Trop de colonnes de texte intégral ou la requête de texte intégral est trop complexe pour être exécutée.    |
 |   9938    |   16  |   Non  |   L'utilisateur ou le rôle spécifié '%.*ls' est introuvable. |
@@ -4560,11 +4560,11 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9943    |   10  |   Non  |   Information : fin du remplissage %ls de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Nombre de documents traités : %d. Nombre de documents en échec : %d. Nombre de documents qui seront retentés : %d.   |
 |   9944    |   10  |   Non  |   Information : deuxième tentative d’alimentation %ls de texte intégral terminée pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Nombre de documents retraités : %d. Nombre de documents en échec : %d. |
 |   9945    |   10  |   Non  |   Erreur : toutes les alimentations de texte intégral en cours pour le catalogue '%ls' ('%d') de la base de données '%ls' ('%d') ont été arrêtées à cause d’une erreur. Erreur : 0x%x.  |
-|   9947    |   10  |   Non  |   Warning: l’identité du catalogue de texte intégral dans le répertoire '%ls' ne correspond pas à la base de données '%.*ls'. Impossible d'attacher le catalogue de texte intégral.    |
-|   9948    |   10  |   Non  |   Warning: le chemin d’accès du catalogue de texte intégral '%ls' n’est pas valide. Il dépasse la limite de longueur, il s'agit d'un chemin d'accès relatif ou c'est un répertoire caché. Impossible d'attacher le catalogue de texte intégral. |
-|   9949    |   10  |   Non  |   Warning: toutes les alimentations de texte intégral en cours pour le catalogue de texte intégral '%ls' ('%d') de la base de données '%ls' ('%d') sont interrompues. Code de la raison : %d. Erreur : %ls. Si ce message apparaît souvent, consultez la documentation en ligne pour plus de détails sur le réglage des performances d'indexation. |
+|   9947    |   10  |   Non  |   Avertissement : l’identité du catalogue de texte intégral dans le répertoire '%ls' ne correspond pas à la base de données '%.*ls'. Impossible d'attacher le catalogue de texte intégral.    |
+|   9948    |   10  |   Non  |   Avertissement : le chemin d’accès du catalogue de texte intégral '%ls' n’est pas valide. Il dépasse la limite de longueur, il s'agit d'un chemin d'accès relatif ou c'est un répertoire caché. Impossible d'attacher le catalogue de texte intégral. |
+|   9949    |   10  |   Non  |   Avertissement : toutes les alimentations de texte intégral en cours pour le catalogue de texte intégral '%ls' ('%d') de la base de données '%ls' ('%d') sont interrompues. Code de la raison : %d. Erreur : %ls. Si ce message apparaît souvent, consultez la documentation en ligne pour plus de détails sur le réglage des performances d'indexation. |
 |   9950    |   10  |   Non  |   Information : l’analyse de l’état de santé des catalogues de texte intégral a signalé une erreur pour le catalogue '%ls' ('%d') de la base de données '%ls' ('%d'). Code de la raison : %d. Erreur : %ls. Le catalogue est endommagé et toutes les alimentations en cours seront arrêtées. Reconstruisez le catalogue pour résoudre le problème et recommencez les alimentations depuis le début.  |
-|   9951    |   10  |   Non  |   Warning: impossible de modifier la base de données %.*ls pendant le détachement, car elle est en état de lecture seule, de secours ou de fermeture. Le catalogue de texte intégral n'est pas supprimé et '\@keepfulltextindexfile = false' est ignoré.  |
+|   9951    |   10  |   Non  |   Avertissement : impossible de modifier la base de données %.*ls pendant le détachement, car elle est en état de lecture seule, de secours ou de fermeture. Le catalogue de texte intégral n'est pas supprimé et '\@keepfulltextindexfile = false' est ignoré.  |
 |   9952    |   10  |   Non  |   Information : le suivi des modifications automatiques du texte intégral est désactivé pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d') à cause d’une erreur d’analyse irrécupérable. |
 |   9953    |   16  |   Non  |   Le chemin d'accès '%.*ls' comporte des attributs non valides. Ce doit être un répertoire. Il ne doit pas être caché, en lecture seule ou sur une unité amovible. |
 |   9954    |   16  |   Non  |   SQL Server n'a pas pu démarrer le processus de démon de filtre de texte intégral (erreur Windows %ls). Échec du démarrage du processus de démon de filtre de texte intégral. La fonctionnalité de recherche en texte intégral ne sera pas disponible. |
@@ -4578,17 +4578,17 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   9965    |   16  |   Non  |   NULL ou type de valeur non valide spécifié pour le paramètre '%ls'.    |
 |   9966    |   16  |   Non  |   Impossible d'utiliser la recherche en texte intégral dans les bases de données master, tempdb et model.   |
 |   9967    |   10  |   Non  |   Il n'existe pas de catalogue de texte intégral par défaut dans la base de données '%.*ls' ou l'utilisateur n'a pas l'autorisation d'effectuer cette action. |
-|   9968    |   10  |   Non  |   Warning: aucun filtre approprié n’a été trouvé lors de l’alimentation d’index de recherche en texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'), valeur de clé de texte intégral '%ls'. Certaines colonnes de la ligne n'ont pas été indexées.  |
-|   9969    |   10  |   Non  |   Warning: aucun analyseur lexical approprié n’a été trouvé lors de l’alimentation d’index de recherche en texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'), valeur de clé de texte intégral '%ls'. Un analyseur lexical neutre a été utilisé pour certaines colonnes de la ligne. |
+|   9968    |   10  |   Non  |   Avertissement : aucun filtre approprié n’a été trouvé lors de l’alimentation d’index de recherche en texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'), valeur de clé de texte intégral '%ls'. Certaines colonnes de la ligne n'ont pas été indexées.  |
+|   9969    |   10  |   Non  |   Avertissement : aucun analyseur lexical approprié n’a été trouvé lors de l’alimentation d’index de recherche en texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'), valeur de clé de texte intégral '%ls'. Un analyseur lexical neutre a été utilisé pour certaines colonnes de la ligne. |
 |   9970    |   16  |   Non  |   Impossible de terminer l'opération de texte intégral, car la clé de texte intégral pour la table ou la vue indexée '%.*ls' est hors connexion.   |
-|   9971    |   10  |   Non  |   Warning: aucun filtre approprié n’a été trouvé pour les objets incorporés lors de l’alimentation d’index de recherche en texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'), valeur de clé de texte intégral '%ls'. Certains objets incorporés de cette ligne n'ont pas pu être indexés. |
+|   9971    |   10  |   Non  |   Avertissement : aucun filtre approprié n’a été trouvé pour les objets incorporés lors de l’alimentation d’index de recherche en texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'), valeur de clé de texte intégral '%ls'. Certains objets incorporés de cette ligne n'ont pas pu être indexés. |
 |   9972    |   16  |   Non  |   La base de données n'a pas démarré complètement ou son état n'est pas ONLINE. Exécutez de nouveau la commande DDL de texte intégral après que la base de données a démarré et que son état est ONLINE.  |
 |   9973    |   10  |   Non  |   Information : interruption du remplissage %ls de texte intégral pour la table ou la vue indexée '%ls' (ID de table ou de vue indexée '%d', ID de base de données '%d'). Nombre de documents traités : %d. Nombre de documents en échec : %d.    |
-|   9974    |   10  |   Non  |   Warning: seul un remplissage complet peut être interrompu. La commande est ignorée. Les autres types de remplissages peuvent simplement être arrêtés et ils se poursuivront lorsque vous recommencerez le même type d'analyse.    |
-|   9975    |   10  |   Non  |   Warning: seule une alimentation complète interrompue peut être reprise. La commande est ignorée.    |
-|   9977    |   10  |   Non  |   Warning: la date d’alimentation du catalogue de texte intégral dans le répertoire '%ls' ne correspond pas à la base de données '%.*ls'. Le catalogue de texte intégral est attaché et doit peut-être être rempli à nouveau.    |
-|   9978    |   10  |   Non  |   Warning: lors de la mise à niveau, l’index de texte intégral dans la table '%ls' est désactivé car au moins une colonne clé de texte intégral, colonne de texte intégral ou colonne de type est une colonne calculée non déterministe ou une colonne calculée imprécise non persistante.   |
-|   9979    |   10  |   Non  |   Warning: lors de la mise à niveau, le catalogue de texte intégral '%ls' de la base de données '%ls' est hors connexion car il n’a pas pu être créé dans le chemin d’accès '%ls'. Corrigez le chemin d'accès au catalogue de texte intégral et recréez le catalogue de texte intégral après la mise à niveau.   |
+|   9974    |   10  |   Non  |   Avertissement : seul un remplissage complet peut être interrompu. La commande est ignorée. Les autres types de remplissages peuvent simplement être arrêtés et ils se poursuivront lorsque vous recommencerez le même type d'analyse.    |
+|   9975    |   10  |   Non  |   Avertissement : seule une alimentation complète interrompue peut être reprise. La commande est ignorée.    |
+|   9977    |   10  |   Non  |   Avertissement : la date d’alimentation du catalogue de texte intégral dans le répertoire '%ls' ne correspond pas à la base de données '%.*ls'. Le catalogue de texte intégral est attaché et doit peut-être être rempli à nouveau.    |
+|   9978    |   10  |   Non  |   Avertissement : lors de la mise à niveau, l’index de texte intégral dans la table '%ls' est désactivé car au moins une colonne clé de texte intégral, colonne de texte intégral ou colonne de type est une colonne calculée non déterministe ou une colonne calculée imprécise non persistante.   |
+|   9979    |   10  |   Non  |   Avertissement : lors de la mise à niveau, le catalogue de texte intégral '%ls' de la base de données '%ls' est hors connexion car il n’a pas pu être créé dans le chemin d’accès '%ls'. Corrigez le chemin d'accès au catalogue de texte intégral et recréez le catalogue de texte intégral après la mise à niveau.   |
 |   9980    |   16  |   Non  |   Les paramètres de variables ne peuvent pas être passés aux prédicats de texte intégral contains, freetext, ni aux fonctions de texte intégral containstable, freetexttable appliqués à la table distante.   |
 |   9982    |   16  |   Non  |   Impossible d'utiliser la recherche en texte intégral dans une instance utilisateur.   |
 |   9983    |   16  |   Non  |   La valeur '%ls' du composant en texte intégral '%ls' dépasse la longueur autorisée (%d caractères). Veuillez réduire la longueur de la valeur.  |
@@ -4649,7 +4649,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   10087   |   16  |   Non  |   La table a été construite pendant un flux de données actif et la position ne peut pas être redémarrée.   |
 |   10088   |   16  |   Non  |   Le fournisseur n'a pas libéré certaines lignes existantes. |
 |   10100   |   16  |   Non  |   L'ordre des colonnes n'a pas été spécifié dans l'objet qui a créé l'ensemble de lignes. Le fournisseur a dû réexécuter la commande pour redéfinir la prochaine position d'extraction à sa valeur d'origine ; par ailleurs, l'ordre des colonnes a changé.    |
-|   10101   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car elle contient le mot clé DISTINCT. Supprimez le mot clé DISTINCT de la vue ou n'indexez pas la vue. Vous pouvez également remplacer DISTINCT par GROUP BY ou COUNT_BIG(*) pour simuler DISTINCT dans les colonnes de regroupement.    |
+|   10101   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car elle contient le mot clé DISTINCT. Supprimez le mot clé DISTINCT de la vue ou n'indexez pas la vue. Vous pouvez également remplacer DISTINCT par GROUP BY ou COUNT_BIG(* ) pour simuler DISTINCT dans les colonnes de regroupement.    |
 |   10102   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car elle contient le mot clé TOP. Supprimez le mot clé TOP ou n'indexez pas la vue.   |
 |   10103   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car elle contient la clause TABLESAMPLE. Supprimez la clause TABLESAMPLE ou n'indexez pas la vue.    |
 |   10104   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car elle utilise OPENROWSET, OPENQUERY ou OPENDATASOURCE. N'indexez pas la vue ou supprimez OPENQUERY, OPENROWSET et OPENDATASOURCE.    |
@@ -4666,7 +4666,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   10115   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car elle utilise l'opérateur PIVOT. N'indexez pas cette vue.   |
 |   10116   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car elle utilise l'opérateur UNPIVOT. N'indexez pas cette vue. |
 |   10117   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue '%.*ls', car elle contient un ou plusieurs opérateurs UNION, INTERSECT ou EXCEPT. Créez une vue indexée distincte pour chaque requête correspondant à une entrée des opérateurs UNION, INTERSECT ou EXCEPT de la vue d'origine.    |
-|   10118   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car la vue utilise l'opérateur "*" pour sélectionner les colonnes. Référencez plutôt les colonnes par leur nom.    |
+|   10118   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car la vue utilise l'opérateur "* " pour sélectionner les colonnes. Référencez plutôt les colonnes par leur nom.    |
 |   10119   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car elle contient GROUP BY ALL. Utilisez plutôt GROUP BY. |
 |   10121   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car elle contient un opérateur CUBE, ROLLUP ou GROUPING SETS. N'indexez pas cette vue.    |
 |   10122   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car elle contient une clause HAVING. Supprimez la clause HAVING.  |
@@ -4685,7 +4685,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   10136   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car elle contient plusieurs APPLY. N'indexez pas la vue ou utilisez APPLY une seule fois.  |
 |   10137   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car elle utilise l'agrégat COUNT. Utilisez COUNT_BIG à la place.    |
 |   10138   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue "%.*ls", car elle référence l'expression de table courante "%.* ls". Les vues qui référencent les expressions de table courantes ne peuvent pas être indexées. N'indexez pas la vue ou supprimez l'expression de table courante de la définition de la vue. |
-|   10139   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue '%.*ls', car la liste de sélection ne contient pas COUNT_BIG. Ajoutez COUNT_BIG(*) à la liste de sélection.   |
+|   10139   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue '%.*ls', car la liste de sélection ne contient pas COUNT_BIG. Ajoutez COUNT_BIG(* ) à la liste de sélection.   |
 |   10140   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue '%.*ls', car elle utilise une conversion implicite de la chaîne en datetime ou smalldatetime. Utilisez une instruction CONVERT explicite avec une valeur de style déterministe.   |
 |   10141   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue '%.*ls', car elle contient un indicateur de table. Supprimez l'indicateur.    |
 |   10142   |   16  |   Non  |   Impossible de créer %S_MSG dans la vue '%.*ls', car elle référence la routine CLR (fonction ou méthode) '%.* ls' hors des colonnes non-clés de la liste SELECT. Recréez ou modifiez la vue de façon à ce qu'elle ne référence pas de routine CLR sauf dans les colonnes non-clés de la liste SELECT, puis créez l'index.   |
@@ -4704,8 +4704,8 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   10306   |   16  |   Non  |   La méthode Init d'une fonction table CLR doit être annotée avec SqlFunctionAttribute.    |
 |   10307   |   16  |   Non  |   L'attribut SqlFunctionAttribute de la méthode Init d'une fonction table CLR doit définir la propriété FillRowMethodName.    |
 |   10308   |   10  |   Non  |   La propriété FillRowMethodName de SqlFunctionAttribute ne contient aucun nom de méthode valide.    |
-|   10309   |   10  |   Non  |   Warning: l’assembly Microsoft .Net Framework '%.*ls' que vous enregistrez n’est pas entièrement testé dans un environnement hébergé SQL Server et n’est pas pris en charge. À l'avenir, si vous mettez à niveau ou révisez cet assembly ou le .NET Framework, votre routine d'intégration CLR peut cesser de fonctionner. Pour plus d'informations, consultez la documentation en ligne de SQL Server.   |
-|   10310   |   10  |   Oui |   Warning: l’assembly client SQL Server '%.*ls' que vous enregistrez n’est pas entièrement testé dans un environnement hébergé SQL Server.   |
+|   10309   |   10  |   Non  |   Avertissement : l’assembly Microsoft .Net Framework '%.*ls' que vous enregistrez n’est pas entièrement testé dans un environnement hébergé SQL Server et n’est pas pris en charge. À l'avenir, si vous mettez à niveau ou révisez cet assembly ou le .NET Framework, votre routine d'intégration CLR peut cesser de fonctionner. Pour plus d'informations, consultez la documentation en ligne de SQL Server.   |
+|   10310   |   10  |   Oui |   Avertissement : l’assembly client SQL Server '%.*ls' que vous enregistrez n’est pas entièrement testé dans un environnement hébergé SQL Server.   |
 |   10311   |   10  |   Oui |   AppDomain %i (%.*ls) est marqué pour être déchargé en raison d'opérations CLR ou DDL liées à la sécurité.   |
 |   10312   |   16  |   Non  |   AppDomain %i (%.*ls) est marqué pour être déchargé en raison d'une sollicitation de la mémoire.   |
 |   10313   |   16  |   Non  |   L'exécution de .NET Framework a été annulée. Le type UDP/UDF/CLR n'a pas rétabli le jeton de thread. |
@@ -4774,7 +4774,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   10609   |   16  |   Non  |   L'index '%.*ls' de la table '%.* ls' ne peut pas être désactivé, car le suivi des modifications est activé sur la table. Le suivi des modifications nécessite une contrainte de clé primaire sur la table et la désactivation de l'index supprimera la contrainte. Désactivez le suivi des modifications sur la table avant de désactiver l'index. |
 |   10610   |   16  |   Non  |   Impossible de créer %S_MSG '%.*ls' filtré sur la table '%.* ls', car la colonne '%.*ls' de l'expression de filtre est une colonne calculée. Réécrivez l'expression de filtre de manière à ne pas inclure cette colonne. |
 |   10611   |   16  |   Non  |   Impossible de créer l'index filtré '%.*ls' sur l'objet '%.* ls', car il ne s'agit pas d'une table utilisateur. Les index filtrés sont uniquement pris en charge dans les tables. Si vous essayez de créer un index filtré sur une vue, envisagez de créer une vue indexée avec l'expression de filtre incorporée à la définition de vue. |
-|   10612   |   16  |   Non  |   Impossible de créer %S_MSG '%.*ls' filtré(e) sur la table '%.* ls', car la colonne '%.*ls' de l'expression de filtre est comparée à une constante dont la priorité de type de données est supérieure ou le classement est différent. La conversion d'une colonne en type de données de constante n'est pas prise en charge pour les éléments %S_MSG. Pour résoudre cette erreur, convertissez de façon explicite la constante pour que le type de données et le classement soient identiques à ceux de la colonne '%.* ls'.   |
+|   10612   |   16  |   Non  |   Impossible de créer %S_MSG '%.*ls' filtré(e) sur la table '%.* ls', car la colonne '%.*ls' de l'expression de filtre est comparée à une constante dont la priorité de type de données est supérieure ou le classement est différent. La conversion d’une colonne en type de données de constante n'est pas prise en charge pour les éléments %S_MSG. Pour résoudre cette erreur, convertissez de façon explicite la constante pour que le type de données et le classement soient identiques à ceux de la colonne '%.* ls'.   |
 |   10617   |   16  |   Non  |   Impossible de créer %S_MSG '%.*ls' filtré sur la table '%.* ls', car la colonne '%.*ls' de l'expression de filtre est comparée à une constante qu'il est impossible de convertir en type de données de la colonne. Réécrivez l'expression de filtre de manière à ne pas inclure cette comparaison.  |
 |   10618   |   16  |   Non  |   Impossible de créer ou de reconstruire l'index '%.*ls'. La longueur de clé de cet index (%d octets) dépasse la longueur maximale autorisée de '%d' octets lors de l'utilisation du format de stockage VarDecimal.  |
 |   10619   |   16  |   Non  |   Impossible de %S_MSG l'index filtré '%.*ls' sur la table '%.* ls', car l'instruction affecte à l'option IGNORE_DUP_KEY la valeur ON. Réécrivez l'instruction de manière à ne pas utiliser l'option IGNORE_DUP_KEY.  |
@@ -4794,13 +4794,13 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   10710   |   15  |   Non  |   Le nombre de colonnes doit être identique pour chaque ligne dans un constructeur de valeurs de table.   |
 |   10711   |   15  |   Non  |   Une action de type '%S_MSG' n'est pas autorisée dans la clause 'WHEN NOT MATCHED' d'une instruction MERGE.    |
 |   10712   |   15  |   Non  |   Une action de type 'INSERT' n'est pas autorisée dans la clause '%S_MSG' d'une instruction MERGE.  |
-|   10713   |   15  |   Non  |   Les opérateurs de jointure externe non ANSI ("*=" ou "=*") ne sont pas autorisés dans une instruction MERGE. Utilisez plutôt les mots clés OUTER JOIN. |
+|   10713   |   15  |   Non  |   Les opérateurs de jointure externe non ANSI (" *=" ou "=* ") ne sont pas autorisés dans une instruction MERGE. Utilisez plutôt les mots clés OUTER JOIN. |
 |   10714   |   15  |   Non  |   Une instruction MERGE doit se terminer par un point-virgule (;).   |
 |   10716   |   15  |   Non  |   Une action de type '%S_MSG' ne peut pas figurer plus d'une fois dans la clause '%S_MSG' d'une instruction MERGE.  |
 |   10717   |   15  |   Non  |   Une instruction INSERT, UPDATE, DELETE ou MERGE imbriquée doit avoir une clause OUTPUT. |
 |   10718   |   15  |   Non  |   La clause %S_MSG n'est pas autorisée lorsque la clause FROM contient une instruction INSERT, UPDATE, DELETE ou MERGE imbriquée. |
 |   10719   |   15  |   Non  |   Les indicateurs de requête ne sont pas autorisés dans les instructions INSERT, UPDATE, DELETE ou MERGE imbriquées.  |
-|   10720   |   15  |   Non  |   Les opérateurs de jointure externe non ANSI ("*=" ou "=*") ne sont pas autorisés dans une instruction INSERT, UPDATE, DELETE ou MERGE imbriquée. Utilisez plutôt les mots clés OUTER JOIN.   |
+|   10720   |   15  |   Non  |   Les opérateurs de jointure externe non ANSI (" *=" ou "=* ") ne sont pas autorisés dans une instruction INSERT, UPDATE, DELETE ou MERGE imbriquée. Utilisez plutôt les mots clés OUTER JOIN.   |
 |   10721   |   15  |   Non  |   Une clause OUTPUT INTO n'est pas autorisée dans une instruction INSERT, UPDATE, DELETE ou MERGE imbriquée.    |
 |   10722   |   15  |   Non  |   La clause WHERE CURRENT OF n'est pas autorisée dans une instruction INSERT, UPDATE, DELETE ou MERGE imbriquée.  |
 |   10723   |   15  |   Non  |   Le mot clé DISTINCT n'est pas autorisé lorsque la clause FROM contient une instruction INSERT, UPDATE, DELETE ou MERGE imbriquée.  |
@@ -5019,7 +5019,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   11411   |   16  |   Non  |   Impossible d'ajouter la colonne éparse '%.*ls' à la table '%.* ls', car le type de données de la colonne a une valeur par défaut ou une règle liée. Séparez la règle ou la valeur par défaut du type de données avant d'ajouter la colonne éparse à la table.    |
 |   11412   |   16  |   Non  |   Échec de l'instruction ALTER TABLE SWITCH parce que la colonne '%.*ls' n'a pas le même attribut de stockage éparse dans les tables '%.* ls' et '%.*ls'.   |
 |   11413   |   16  |   Non  |   Échec de l'instruction ALTER TABLE SWITCH parce que la colonne '%.*ls' n'a pas la même propriété de jeu de colonnes dans les tables '%.* ls' et '%.*ls'.    |
-|   11414   |   10  |   Non  |   Warning: l’option %ls ne s’applique pas à la table %.*ls, car elle ne possède pas d’index cluster. Cette option ne sera appliquée qu'aux index non cluster de la table, si elle en contient.   |
+|   11414   |   10  |   Non  |   Avertissement : l’option %ls ne s’applique pas à la table %.*ls, car elle ne possède pas d’index cluster. Cette option ne sera appliquée qu'aux index non cluster de la table, si elle en contient.   |
 |   11415   |   16  |   Non  |   L'objet '%.*ls' ne peut pas être activé ni désactivé. Cette action ne s'applique qu'aux contraintes de clé étrangère et de validation.    |
 |   11418   |   16  |   Non  |   Impossible de %S_MSG la table '%.*ls', car la table contient des colonnes éparses ou une colonne de jeu de colonnes qui ne sont pas compatibles avec la compression.    |
 |   12002   |   16  |   Non  |   L'index%S_MSG demandé sur la colonne '%.*ls' de la table '%.* ls' n'a pas pu être créé, car le type de colonne n'est pas %S_MSG. Indiquez un nom de colonne qui fait référence à une colonne avec un type de données %S_MSG.   |
@@ -5331,7 +5331,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   13297   |   16  |   Non  |   balise de l'algorithme de chiffrement    |
 |   13298   |   16  |   Non  |   NAME    |
 |   13299   |   16  |   Non  |   thumbprint  |
-|   13301   |   16  |   Non  |   Longueur du vecteur d'initialisation     |
+|   13301   |   16  |   Non  |   Longueur du vecteur d'initialisation    |
 |   13302   |   16  |   Non  |   longueur en bits  |
 |   13303   |   16  |   Non  |   contrainte  |
 |   13373   |   16  |   Non  |   Enregistrement d'ancrage   |
@@ -5353,7 +5353,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   13389   |   10  |   Non  |   Nom de la clé    |
 |   13390   |   10  |   Non  |   Type de clé    |
 |   13400   |   10  |   Non  |   L'API de la procédure stockée étendue sera supprimée dans une future version de SQL Server. Évitez d'utiliser cette fonctionnalité dans tout nouveau travail de développement et prévoyez de modifier les applications qui l'utilisent.   |
-|   13401   |   10  |   Non  |   Les opérateurs de jointure externe non ANSI ('*=' ou '=*') seront supprimés dans la prochaine version de SQL Server. Évitez d'utiliser cette fonctionnalité dans tout nouveau travail de développement et prévoyez de modifier les applications qui l'utilisent. Utilisez des jointures externes ANSI à la place.   |
+|   13401   |   10  |   Non  |   Les opérateurs de jointure externe non ANSI (' *=' ou '=* ') seront supprimés dans la prochaine version de SQL Server. Évitez d'utiliser cette fonctionnalité dans tout nouveau travail de développement et prévoyez de modifier les applications qui l'utilisent. Utilisez des jointures externes ANSI à la place.   |
 |   13402   |   10  |   Non  |   La possibilité d'insérer des valeurs NULL dans des colonnes TIMESTAMP sera supprimée dans une future version de SQL Server. Évitez d'utiliser cette fonctionnalité dans tout nouveau travail de développement et prévoyez de modifier les applications qui l'utilisent. Remplacez-la par DEFAULT.   |
 |   13403   |   10  |   Non  |   La possibilité d'utiliser des littéraux de chaîne comme alias de colonnes sera supprimée dans une future version de SQL Server. Évitez d'utiliser cette fonctionnalité dans tout nouveau travail de développement et prévoyez de modifier les applications qui l'utilisent. Remplacez-la par la clause AS. |
 |   13404   |   10  |   Non  |   La possibilité d'utiliser '#' et '##' comme noms de tables et de procédures stockées temporaires sera supprimée dans une future version de SQL Server. Évitez d'utiliser cette fonctionnalité dans tout nouveau travail de développement et prévoyez de modifier les applications qui l'utilisent.   |
@@ -5544,8 +5544,8 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   14221   |   16  |   Non  |   Ce travail adresse une ou plusieurs notifications aux opérateurs autres que '%s'. Le travail ne peut pas être ciblé sur les serveurs distants actuellement définis. |
 |   14222   |   16  |   Non  |   Impossible de renommer l'opérateur '%s'.    |
 |   14223   |   16  |   Non  |   Impossible de modifier ou de supprimer l'opérateur '%s' tant que le serveur est un %s.    |
-|   14224   |   10  |   Non  |   Warning: le nom de serveur donné n’est pas le serveur MSX en cours ('%s').    |
-|   14225   |   16  |   Non  |   Warning: impossible de déterminer le nom de l’ordinateur local. Impossible de publier les opérations MSX.    |
+|   14224   |   10  |   Non  |   Avertissement : le nom de serveur donné n’est pas le serveur MSX en cours ('%s').    |
+|   14225   |   16  |   Non  |   Avertissement : impossible de déterminer le nom de l’ordinateur local. Impossible de publier les opérations MSX.    |
 |   14226   |   10  |   Non  |   %ld entrées historiques purgées. |
 |   14227   |   10  |   Non  |   Serveur désinscrit du MSX '%s'. %ld travail (travaux) supprimé(s).  |
 |   14228   |   10  |   Non  |   L'inscription du serveur MSX est passée de '%s' à '%s'.    |
@@ -5556,7 +5556,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   14233   |   16  |   Non  |   Spécifiez un job_id valide (ou 0x00 pour tous les travaux).  |
 |   14234   |   16  |   Non  |   Le '%s' est non valide (les valeurs correctes sont retournées par %s).    |
 |   14235   |   16  |   Non  |   Le '%s' est non valide (les valeurs correctes sont supérieures à 0 mais excluent %ld).  |
-|   14236   |   10  |   Non  |   Warning: étape inexistante référencée par %s.    |
+|   14236   |   10  |   Non  |   Avertissement : étape inexistante référencée par %s.    |
 |   14237   |   16  |   Non  |   Quand l'action 'REASSIGN' est spécifiée, le paramètre indiquant le nouveau nom de connexion doit l'être également.   |
 |   14238   |   10  |   Non  |   %ld travaux supprimés.   |
 |   14239   |   10  |   Non  |   %ld travaux réassignés à %s.  |
@@ -5595,7 +5595,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   14278   |   16  |   Non  |   La planification de ce travail est non valide (raison : %s).  |
 |   14279   |   16  |   Non  |   Fournissez le \@job_name, \@job_id ou le \@originating_server. |
 |   14280   |   16  |   Non  |   Fournissez un nom de travail (et un aspect de travail), ou un ou plusieurs paramètres de filtre de travail.    |
-|   14281   |   10  |   Non  |   Warning: le paramètre \@new_owner_login_name n’est pas nécessaire quand une action DELETE est spécifiée.   |
+|   14281   |   10  |   Non  |   Avertissement : le paramètre \@new_owner_login_name n’est pas nécessaire quand une action DELETE est spécifiée.   |
 |   14282   |   16  |   Non  |   Fournissez une date (création ou dernière modification) et un comparateur de données, ou ne donnez aucun paramètre de date.    |
 |   14283   |   16  |   Non  |   Fournissez les \@target_server_groups ou les \@target_servers, ou les deux. |
 |   14284   |   16  |   Non  |   Impossible de spécifier un ID pour un nouveau travail. Un ID doit être affecté par la procédure. |
@@ -5731,7 +5731,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   14544   |   16  |   Non  |   Ce travail est la propriété de '%s'. Seul un travail propriété d'un membre du rôle %s peut être multiserveur.    |
 |   14545   |   16  |   Non  |   Le paramètre %1!s! n'est pas valide pour une étape de travail de type '%s'.  |
 |   14546   |   16  |   Non  |   Le paramètre %s n'est pas pris en charge par les plates-formes Windows 95/98.   |
-|   14547   |   10  |   Non  |   Warning: cette modification ne sera pas téléchargée par le ou les serveurs cibles tant qu’un %s pour le travail ne sera pas publié au moyen de %s. |
+|   14547   |   10  |   Non  |   Avertissement : cette modification ne sera pas téléchargée par le ou les serveurs cibles tant qu’un %s pour le travail ne sera pas publié au moyen de %s. |
 |   14548   |   10  |   Non  |   Le serveur cible '%s' n'a aucun travail qui lui est assigné.   |
 |   14549   |   10  |   Non  |   (Description non demandée.)    |
 |   14550   |   10  |   Non  |   Sous-système de ligne de commande  |
@@ -5757,7 +5757,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   14570   |   10  |   Non  |   (Sortie du travail)   |
 |   14571   |   10  |   Non  |   Pas de description disponible.   |
 |   14572   |   10  |   Non  |   \@freq_interval doit être au moins égal à 1 pour un travail quotidien. |
-|   14573   |   10  |   Non  |   \@freq_interval doit être un jour valide de la semaine du masque binaire [Dimanche = 1 .. Samedi = 64] pour un travail hebdomadaire. |
+|   14573   |   10  |   Non  |   \@freq_interval doit être un jour valide de la semaine du masque binaire [Dimanche = 1 . Samedi = 64] pour un travail hebdomadaire. |
 |   14574   |   10  |   Non  |   \@freq_interval doit être entre 1 et 31 pour un travail mensuel. |
 |   14575   |   10  |   Non  |   \@freq_relative_interval doit être 1st (0x1), 2nd (0x2), 3rd [0x4], 4th (0x8) ou Last (0x10).  |
 |   14576   |   10  |   Non  |   \@freq_interval doit être compris entre 1 et 10 (1 = Dimanche . 7 = Samedi, 8 = Jour, 9 = Semaine, 10 = Week-end) pour un travail réparti sur un mois.   |
@@ -5958,7 +5958,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   15070   |   10  |   Non  |   L'objet '%s' a été marqué correctement pour la recompilation.  |
 |   15071   |   16  |   Non  |   Utilisation : sp_addmessage <msgnum>,<severity>,<msgtext> [,<language> [,FALSE | TRUE [,REPLACE]]] |
 |   15072   |   16  |   Non  |   Utilisation : sp_addremotelogin remoteserver [,loginname [,remotename]]    |
-|   15074   |   10  |   Non  |   Warning: vous devez récupérer cette base de données avant d’y accéder.    |
+|   15074   |   10  |   Non  |   Avertissement : vous devez récupérer cette base de données avant d’y accéder.    |
 |   15076   |   16  |   Non  |   La valeur par défaut, la table et les types de données utilisateur doivent être dans la base en cours.    |
 |   15077   |   16  |   Non  |   La règle, la table et le type de données utilisateur doivent être dans la base en cours.    |
 |   15078   |   16  |   Non  |   La table ou la vue doit être dans la base de données en cours.  |
@@ -6031,7 +6031,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   15163   |   16  |   Non  |   Valeur d'expiration de délai non valide. Le délai d'expiration valide se situe entre 1 et 7 200 sec. |
 |   15164   |   16  |   Non  |   '%.*ls' n'est pas une ouverture de session valide ou ne peut admettre un jeton d'emprunt d'identité.   |
 |   15165   |   16  |   Non  |   L'objet '%ls' est introuvable ou vous ne disposez pas de l'autorisation nécessaire.  |
-|   15166   |   10  |   Non  |   Warning: les types d’utilisateur créés via sp_addtype figurent dans le schéma dbo. S'il est spécifié, le paramètre \@owner est ignoré.  |
+|   15166   |   10  |   Non  |   Avertissement : les types d’utilisateur créés via sp_addtype figurent dans le schéma dbo. S'il est spécifié, le paramètre \@owner est ignoré.  |
 |   15167   |   16  |   Non  |   Impossible de créer un GUID.   |
 |   15168   |   16  |   Non  |   Impossible de renommer la vue '%s', ainsi que ses colonnes et ses index car il s'agit d'une vue générée par le système, créée à des fins d'optimisation.   |
 |   15169   |   16  |   Non  |   L'option de serveur "%Is" n'est pas disponible dans cette édition de SQL Server. |
@@ -6071,9 +6071,9 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   15208   |   16  |   Non  |   Le fichier de certificat, de clé asymétrique ou de clé privée n'existe pas ou a un format non valide.  |
 |   15209   |   16  |   Non  |   Une erreur s'est produite au cours du chiffrement.    |
 |   15212   |   16  |   Non  |   Objet de certificat non valide. L'objet du certificat doit comporter entre 1 et %d caractères. |
-|   15213   |   16  |   Non  |   Warning: le certificat que vous avez créé a une période de validité non valide ; sa date d’expiration est antérieure à sa date de début.   |
-|   15214   |   16  |   Non  |   Warning: le certificat que vous avez créé est arrivé à expiration.    |
-|   15215   |   16  |   Non  |   Warning: le certificat que vous avez créé n’est pas encore valide ; sa date de début se situe dans le futur. |
+|   15213   |   16  |   Non  |   Avertissement : le certificat que vous avez créé a une période de validité non valide ; sa date d’expiration est antérieure à sa date de début.   |
+|   15214   |   16  |   Non  |   Avertissement : le certificat que vous avez créé est arrivé à expiration.    |
+|   15215   |   16  |   Non  |   Avertissement : le certificat que vous avez créé n’est pas encore valide ; sa date de début se situe dans le futur. |
 |   15216   |   16  |   Non  |   '%s' n'est pas une option valide pour le paramètre \@delfile. |
 |   15217   |   16  |   Non  |   Impossible de mettre à jour ou de supprimer la propriété. La propriété '%.*ls' n'existe pas pour '%.* ls'. |
 |   15218   |   16  |   Non  |   L'objet '%s' n'est pas une table. |
@@ -6361,7 +6361,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   15574   |   10  |   Non  |   Cet objet ne possède aucune statistique.   |
 |   15575   |   10  |   Non  |   Cet objet ne possède pas de statistiques ou d'index.    |
 |   15576   |   16  |   Non  |   Impossible de définir un nom de réseau sur le serveur '%ls' car il n'est pas associé à SQL Server.  |
-|   15577   |   10  |   Non  |   Warning: un serveur lié qui fait référence au serveur d’origine n’est pas un scénario pris en charge. Si vous souhaitez utiliser un nom en quatre parties pour faire référence à une table locale, utilisez le nom de serveur réel plutôt qu'un alias. |
+|   15577   |   10  |   Non  |   Avertissement : un serveur lié qui fait référence au serveur d’origine n’est pas un scénario pris en charge. Si vous souhaitez utiliser un nom en quatre parties pour faire référence à une table locale, utilisez le nom de serveur réel plutôt qu'un alias. |
 |   15578   |   16  |   Non  |   Il existe déjà une clé principale dans la base de données. Supprimez-la avant d'exécuter cette instruction. |
 |   15579   |   16  |   Non  |   Échec de l'ajout d'un chiffrement à la clé symétrique. Un chiffrement par le même %S_MSG '%.*s' existe peut-être déjà.    |
 |   15580   |   16  |   Non  |   Impossible de supprimer %S_MSG, car %S_MSG '%.*s' est chiffré par celui-ci.    |
@@ -6551,7 +6551,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   17162   |   10  |   Oui |   SQL Server démarre à la priorité de base normale (=7). Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise. |
 |   17163   |   10  |   Oui |   SQL Server démarre à la priorité de base supérieure (=13). Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.  |
 |   17164   |   10  |   Oui |   %d UC détectées. Ce message est fourni à titre d'information. Aucune action n'est requise de la part de l'utilisateur. |
-|   17165   |   10  |   Oui |   L'instance RANU se termine en réponse à l'expiration de son délai d'attente interne. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.   |
+|   17165   |   10  |   Oui |   L’instance RANU se termine en réponse à l’expiration de son délai d’attente interne. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.   |
 |   17166   |   10  |   Oui |   Tentative d'initialisation de MS DTC (Microsoft Distributed Transaction Coordinator). Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise. |
 |   17167   |   10  |   Oui |   La prise en charge des transactions distribuées n'a pas été activée pour cette instance du moteur de base de données parce qu'elle a été démarrée avec l'option de configuration minimale. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise. |
 |   17169   |   10  |   Oui |   Impossible de localiser le pilote HTTP du noyau, Httpapi.dll, dans le chemin d'accès. La prise en charge HTTP native de SQL Server n'est pas disponible. Erreur : 0x%lx Votre système d’exploitation risque de ne pas prendre en charge le pilote HTTP du noyau.    |
@@ -6620,7 +6620,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   17656   |   10  |   Oui |   Avertissement ******************  |
 |   17657   |   10  |   Oui |   Tentative de remplacer l'option de classement par défaut par %s.   |
 |   17658   |   10  |   Oui |   SQL Server a démarré en mode mono-utilisateur. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise. |
-|   17659   |   10  |   Oui |   Warning: l’ID de table système %d a été mis à jour directement dans l’ID de base de données %d et la cohérence du cache n’a peut-être pas été préservée. SQL Server doit être redémarré.   |
+|   17659   |   10  |   Oui |   Avertissement : l’ID de table système %d a été mis à jour directement dans l’ID de base de données %d et la cohérence du cache n’a peut-être pas été préservée. SQL Server doit être redémarré.   |
 |   [17660](mssqlserver-17660-database-engine-error.md) |   10  |   Oui |   Démarrage sans récupération. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.   |
 |   17661   |   10  |   Oui |   Récupération de toutes les bases de données, mais sans effacer tempdb. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.   |
 |   17663   |   10  |   Oui |   Le nom du serveur est ‘%s’. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise. |
@@ -7119,15 +7119,15 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   20559   |   10  |   Non  |   La méthode de comptage de lignes rapide et conditionnelle a été demandée sans spécifier le nombre attendu. La méthode rapide sera utilisée.  |
 |   20560   |   10  |   Non  |   Une valeur de somme de contrôle attendue a été transmise, mais les sommes de contrôle ne seront pas comparées, car seule la vérification du nombre de lignes a été demandée. |
 |   20561   |   10  |   Non  |   Création de la valeur du nombre de lignes attendue : %s pour %s. |
-|   20565   |   10  |   Non  |   Réplication : l'Abonné n'a pas réussi la validation des données  |
-|   20566   |   10  |   Non  |   Réplication : l'Abonné a passé la validation des données  |
+|   20565   |   10  |   Non  |   Réplication : l’abonné n'a pas réussi la validation des données  |
+|   20566   |   10  |   Non  |   Réplication : l’abonné a passé la validation des données  |
 |   20567   |   10  |   Non  |   Nettoyage de l'historique de l'Agent : %s  |
 |   20568   |   10  |   Non  |   Nettoyage de la distribution : %s   |
 |   20569   |   10  |   Non  |   Nettoyage de l'abonnement expiré   |
 |   20570   |   10  |   Non  |   Réinitialiser les abonnements présentant des erreurs de validation de données  |
 |   20571   |   10  |   Non  |   Réinitialise tous les abonnements qui présentent des erreurs de validation de données. |
 |   [20572](mssqlserver-20572-database-engine-error.md) |   10  |   Oui |   L'Abonné '%s' avec un abonnement à l'article '%s' de la publication '%s' a été réinitialisé après l'échec de la validation. |
-|   20573   |   10  |   Non  |   Réplication : abonnement réinitialisé après l'échec de validation    |
+|   20573   |   10  |   Non  |   Réplication : abonnement réinitialisé après l’échec de validation    |
 |   [20574](mssqlserver-20574-database-engine-error.md) |   10  |   Oui |   L'Abonné '%s' avec un abonnement à l'article '%s' de la publication '%s' n'a pas réussi la validation de données.    |
 |   20575   |   10  |   Non  |   L'Abonné '%s' avec un abonnement à l'article '%s' de la publication '%s' a passé la validation de données.    |
 |   20576   |   10  |   Non  |   L'Abonné '%s' avec un abonnement à l'article '%s' de la publication '%s' a été réinitialisé après un échec de synchronisation.    |
@@ -7285,12 +7285,12 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   20729   |   16  |   Non  |   L'allocation de valeur maximale d'identité pour l'article '%s' dans la publication '%s' est introuvable sur le serveur de distribution.   |
 |   20730   |   16  |   Non  |   L'attribution de la valeur 'True' à \@upload_first nécessite que la publication ait pour publication_compatibility_level la valeur '80RTM' ou une valeur supérieure. Utilisez sp_changemergepublication pour attribuer à publication_compatibility_level la valeur '80RTM' ou une valeur supérieure si vous voulez utiliser cette fonction. |
 |   20731   |   16  |   Non  |   Cette édition de SQL Server ne prend pas en charge les publications. Suppression des publications existantes en cours.   |
-|   20732   |   10  |   Non  |   Warning: les valeurs de certains des indicateurs spécifiés dans la propriété schema_option ne correspondent pas au niveau de compatibilité de la publication. La valeur schema_option modifiée de '%s' sera utilisée à la place.    |
+|   20732   |   10  |   Non  |   Avertissement : les valeurs de certains des indicateurs spécifiés dans la propriété schema_option ne correspondent pas au niveau de compatibilité de la publication. La valeur schema_option modifiée de '%s' sera utilisée à la place.    |
 |   20733   |   16  |   Non  |   Une ou plusieurs lignes mises à jour dans la table '%s' se trouvaient en dehors de la partition alors que la table était publiée avec la valeur %d pour 'partition_options'.  |
 |   20734   |   16  |   Non  |   Une ou plusieurs lignes supprimées dans la table '%s' se trouvaient en dehors de la partition alors que la table était publiée avec la valeur %d pour 'partition_options'.  |
 |   20735   |   16  |   Non  |   Impossible d'ajouter l'article '%s' à la publication '%s'. La publication contient déjà 256 articles, soit le nombre maximal.   |
-|   20736   |   10  |   Non  |   Warning: les valeurs de certains des indicateurs spécifiés dans la propriété schema_option ne correspondent pas au niveau de compatibilité de la publication. La valeur schema_option modifiée de '%s' sera utilisée à la place.    |
-|   20737   |   10  |   Non  |   Warning: pour permettre à la réplication des données FILESTREAM de se dérouler de façon optimale et réduire l’utilisation de la mémoire, la valeur ’true’ a été affectée à la propriété ’stream_blob_columns’. Pour forcer les articles de la table FILESTREAM à ne pas utiliser le flux d'objet blob, utilisez sp_changemergearticle pour affecter 'false' à 'stream_blob_columns'.    |
+|   20736   |   10  |   Non  |   Avertissement : les valeurs de certains des indicateurs spécifiés dans la propriété schema_option ne correspondent pas au niveau de compatibilité de la publication. La valeur schema_option modifiée de '%s' sera utilisée à la place.    |
+|   20737   |   10  |   Non  |   Avertissement : pour permettre à la réplication des données FILESTREAM de se dérouler de façon optimale et réduire l’utilisation de la mémoire, la valeur ’true’ a été affectée à la propriété ’stream_blob_columns’. Pour forcer les articles de la table FILESTREAM à ne pas utiliser le flux d'objet blob, utilisez sp_changemergearticle pour affecter 'false' à 'stream_blob_columns'.    |
 |   20738   |   11  |   Non  |   Impossible d'ajouter l'article '%s' avec la colonne éparse ou le jeu de colonnes pour fusionner la publication dans la mesure où la réplication de fusion ne prend pas en charge les colonnes éparses et les jeux de colonnes.   |
 |   20739   |   16  |   Non  |   L'opération DDL n'est pas prise en charge pour l'article '%s'. Si la colonne de l'opération DDL est activée pour FILESTREAM ou est de type hierarchyid, geometry, geography, datetime2, date, time ou datetimeoffset, le niveau de compatibilité de la publication doit être au moins égal à 100RTM. Pour les opérations DDL qui comprennent des colonnes FILESTREAM et hierarchyid, le mode d'instantané doit être natif. Le mode caractère, qui est requis pour les abonnés SQL Server Compact, n'est pas pris en charge.  |
 |   20800   |   16  |   Non  |   Impossible de réinitialiser l'article '%s' dans l'abonnement '%s:%s' à la publication '%s'. La publication est activée pour la réplication transactionnelle d'égal à égal, qui n'autorise pas la réinitialisation d'abonnements à l'aide d'un instantané. Supprimez et recréez l'abonnement à la place.   |
@@ -7726,7 +7726,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   21426   |   16  |   Non  |   Il n'existe aucun abonnement d'agent partagé pour la publication '%s' et la paire abonné/base de données d'abonnés '%s'/'%s'. |
 |   21450   |   16  |   Non  |   Impossible de mettre à niveau la réplication %s pour les bases de données %s. Vérifiez que %s a été mis à niveau et exécutez %s à nouveau. |
 |   21451   |   16  |   Non  |   Le mot de passe (%s) de l'ouverture de session %s %s (%s) a été changé.    |
-|   21452   |   10  |   Non  |   Warning: le travail de l’Agent %s a été créé implicitement et il s’exécutera sous le compte de service de l’Agent SQL Server.  |
+|   21452   |   10  |   Non  |   Avertissement : le travail de l’Agent %s a été créé implicitement et il s’exécutera sous le compte de service de l’Agent SQL Server.  |
 |   21454   |   16  |   Non  |   La procédure interne sp_MStran_is_snapshot_required doit être exécutée sur le serveur de distribution si le paramètre \@run_at_distributor a la valeur 1. Si le problème persiste, contactez les services d'assistance Microsoft. |
 |   21456   |   16  |   Non  |   La valeur fournie pour le paramètre % n'est pas valide.   |
 |   21460   |   16  |   Non  |   La clé primaire de la table source "%s" contient la colonne timestamp "%s". Impossible de créer l'article pour la publication spécifiée car il autorise la mise à jour des abonnés.   |
@@ -7777,7 +7777,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   21539   |   16  |   Non  |   Une relation d'enregistrements logiques, spécifiée par le paramètre \@filter_type, nécessite une jointure un-à-un ou un-à-plusieurs, de la table parente à la table enfant. Modifiez la valeur du paramètre \@filter_type ou affectez la valeur 1 au paramètre \@join_unique_key. |
 |   21540   |   16  |   Non  |   Vous ne pouvez pas supprimer une colonne définie comme type de données uniqueidentifier à l'aide de la propriété rowguidcol, car la réplication de fusion utilise cette colonne pour le suivi. Pour supprimer la colonne, vous devez d'abord supprimer la table de toutes les publications et de tous les abonnements. |
 |   21541   |   16  |   Non  |   Impossible de terminer la commande ALTER TABLE. N'exécutez pas la commande 'ALTER TABLE table_name DISABLE TRIGGER ALL' sur une table publiée. Relancez plusieurs instructions 'ALTER TABLE table_name DISABLE TRIGGER trigger_name' pour désactiver individuellement chaque déclencheur sur la table donnée.   |
-|   21542   |   16  |   Non  |   Une erreur de serveur %d s'est produite pendant l'exécution de <%s>.   |
+|   21542   |   16  |   Non  |   Une erreur de serveur %d s’est produite pendant l’exécution de <%s>.   |
 |   21543   |   16  |   Non  |   Le schéma pour l'article %s n'a pas été créé correctement ou n'a pas été appliqué correctement pendant la synchronisation initiale. Ceci peut être dû à des problèmes d'autorisations. Vérifiez que l'objet existe et que les autorisations nécessaires ont été accordées. |
 |   21544   |   10  |   Non  |   La valeur spécifiée pour la propriété de publication replicate_ddl n'est pas valide. La valeur doit être 1 ou 0.  |
 |   21545   |   16  |   Non  |   Vous ne pouvez pas désactiver un déclencheur utilisé par la réplication de fusion sur une table publiée. Pour supprimer le déclencheur, supprimez la table de la publication.  |
@@ -7966,7 +7966,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   21764   |   16  |   Non  |   Impossible de créer la publication. La spécification de la valeur 'msmq' pour le paramètre \@queue_type est prise en charge exclusivement sur les plateformes Windows NT. Spécifiez la valeur 'sql' pour ce paramètre.    |
 |   21765   |   10  |   Non  |   La msrepl_tran_version de la colonne a été prédéfinie et elle autorise les valeurs NULL. Cette colonne sera supprimée et recréée pour ne plus autoriser les valeurs NULL pour la mise à jour des abonnés. |
 |   21766   |   16  |   Non  |   La table %s contient une colonne d'identité marquée Pas pour la réplication, mais le paramètre \@identitymanagementoption de sp_addarticle a la valeur 'none'. Pour prendre en charge les abonnements avec mise à jour immédiate, spécifiez la valeur 'manual' ou 'auto' pour \@identitymanagementoption.  |
-|   21767   |   10  |   Non  |   Warning: le paramètre '%s' est obsolète et il n’est disponible que pour assurer la compatibilité descendante. Il ne figurera plus dans les futures versions. Utilisez le paramètre '%s' à la place.  |
+|   21767   |   10  |   Non  |   Avertissement : le paramètre '%s' est obsolète et il n’est disponible que pour assurer la compatibilité descendante. Il ne figurera plus dans les futures versions. Utilisez le paramètre '%s' à la place.  |
 |   21768   |   16  |   Non  |   Un mot de passe est nécessaire lors de l'exécution de sp_adddistributor pour un serveur de publication distant. Le mot de passe spécifié pour le paramètre \@password doit être identique lorsque la procédure est exécutée sur le serveur de publication et sur le serveur de distribution.    |
 |   21769   |   10  |   Non  |   Les mappages de types de données personnalisés ne sont pas pris en charge. Vous devez valider le mappage. En cas d'incompatibilité des mappages, des erreurs peuvent se produire lors du déplacement des données du serveur de publication vers l'Abonné.  |
 |   21770   |   10  |   Non  |   Le mappage de type de données de '%s' avec '%s' n'existe pas. Vérifiez les types de données de la source et de la destination, la longueur, la précision, l'échelle et la possibilité de valeurs NULL. Interrogez la table système msdb.dbo.sysdatatypemappings pour avoir une liste des mappages pris en charge.   |
@@ -8050,7 +8050,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   21850   |   16  |   Non  |   Impossible de remplacer la propriété "%s" par "%s" une fois que la valeur est déjà égale à "%s".   |
 |   21851   |   16  |   Non  |   Les publications d'égal à égal ne prennent en charge qu'une valeur "%s" de %s. L'article "%s" a actuellement une valeur "%s" de %s. Cette valeur doit être modifiée pour continuer.   |
 |   21852   |   16  |   Non  |   Les publications d'égal à égal ne prennent pas en charge %s. L'article "%s" a actuellement %s. Pour continuer, il faut modifier cet élément.   |
-|   21853   |   10  |   Non  |   Warning: la propriété "%s" pour %s "%s" est devenue "%s" parce que %s l’exige.   |
+|   21853   |   10  |   Non  |   Avertissement : la propriété "%s" pour %s "%s" est devenue "%s" parce que %s l’exige.   |
 |   21854   |   10  |   Non  |   Impossible d'ajouter un nouvel article à la publication '%s' en raison de modifications apportées au schéma actif ou de la génération d'un instantané.  |
 |   21855   |   16  |   Non  |   La connexion %s fournie dans sp_link_publication ne correspond à aucun utilisateur de la base de données de publication %s.   |
 |   21856   |   16  |   Non  |   Pour un Gestionnaire de logique métier d'assemblys .NET, le nom de l'assembly .NET doit être celui d'un assembly valide dans '%s' qui contient la classe qui met en œuvre l'interface Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule. Vérifiez l'inscription du gestionnaire de logique métier pour vous assurer que le nom de l'assembly .NET a été spécifié correctement. |
@@ -8140,7 +8140,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   22541   |   16  |   Non  |   Impossible d'ajouter une relation d'enregistrements logiques dans la publication "%s", parce qu'elle utilise le sync_mode "character" et peut avoir des abonnés SQL Server Compact Edition.    |
 |   22542   |   16  |   Non  |   Valeur incorrecte pour la propriété \@subscriber_upload_options. Les valeurs correctes sont 0 (autoriser les téléchargements), 1 (désactiver les téléchargements), 2 (désactiver les téléchargements et interdire les modifications de l'abonné) et 3 (disable_outofpartition_subscriber_changes).    |
 |   22543   |   16  |   Non  |   Lorsque la propriété de publication \@allow_partition_realignment a la valeur "false", la propriété \@subscriber_upload_options de tous les articles de la publication doit être définie pour désactiver les téléchargements. |
-|   22544   |   10  |   Non  |   Warning: la procédure sp_mergecleanupmetadata a été déconseillée. Dans SQL Server 2000 SP1 et les versions plus récentes, l'agent de fusion appelle sp_mergemetadataretentioncleanup chaque fois qu'il s'exécute, de sorte que le nettoyage manuel des métadonnées n'est pas nécessaire. Les paramètres transmis sont ignorés et sp_mergemetadataretentioncleanup est appelée.   |
+|   22544   |   10  |   Non  |   Avertissement : la procédure sp_mergecleanupmetadata a été déconseillée. Dans SQL Server 2000 SP1 et les versions plus récentes, l'agent de fusion appelle sp_mergemetadataretentioncleanup chaque fois qu'il s'exécute, de sorte que le nettoyage manuel des métadonnées n'est pas nécessaire. Les paramètres transmis sont ignorés et sp_mergemetadataretentioncleanup est appelée.   |
 |   22545   |   16  |   Non  |   Impossible d'ajouter une relation d'enregistrements logiques dans la publication "%s", parce qu'elle autorise la synchronisation Web. |
 |   22546   |   16  |   Non  |   Impossible de modifier la publication "%s" pour qu'elle autorise la synchronisation Web, parce qu'elle contient une ou plusieurs relations d'enregistrements logiques.   |
 |   22547   |   16  |   Non  |   Les publications d'instantané n'autorisent pas les instantanés simultanés. |
@@ -8180,7 +8180,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   22581   |   16  |   Non  |   L'article ‘%s’ ne peut pas être ajouté ni modifié dans la publication ‘%s’. La réplication des colonnes FILESTREAM n'est pas prise en charge pour les publications avec un 'sync_mode' égal à 1 (mode caractère). Indiquez un 'sync_mode' égal à 0 (mode natif) pour la publication en utilisant sp_addmergepublication ou sp_changemergepublication, ou partitionnez l'article verticalement afin que la colonne FILESTREAM ne soit pas répliquée.    |
 |   22582   |   16  |   Non  |   L'article ‘%s’ ne peut pas être ajouté ni modifié dans la publication ‘%s’. La réplication des colonnes FILESTREAM n'est pas prise en charge pour les publications avec un 'publication_compatibility_level' inférieur à "90RTM" (SQL Server 2005). Indiquez un 'publication_compatibility_level' supérieur ou égal à "90RTM" en utilisant sp_addmergepublication ou sp_changemergepublication, ou partitionnez l'article verticalement afin que la colonne FILESTREAM ne soit pas répliquée. |
 |   22583   |   16  |   Non  |   L'article ‘%s’ ne peut pas être ajouté ni modifié dans la publication ‘%s’. La réplication des colonnes FILESTREAM n'est pas prise en charge pour les articles avec la valeur 0x20000000 affectée à 'schema_option'. Les types de données d'objet volumineuses sont ainsi convertis en types de données qui sont pris en charge dans les versions antérieures de Microsoft SQL Server. Supprimez ce paramètre 'schema_option' en utilisant sp_addmergepublication ou sp_changemergepublication, ou partitionnez l'article verticalement afin que la colonne FILESTREAM ne soit pas répliquée. |
-|   22584   |   10  |   Non  |   Warning: les valeurs de certains des indicateurs spécifiés dans la propriété schema_option ne correspondent pas au niveau de compatibilité de la publication. La valeur schema_option modifiée de '%s' sera utilisée à la place.    |
+|   22584   |   10  |   Non  |   Avertissement : les valeurs de certains des indicateurs spécifiés dans la propriété schema_option ne correspondent pas au niveau de compatibilité de la publication. La valeur schema_option modifiée de '%s' sera utilisée à la place.    |
 |   22585   |   10  |   Non  |   L'option de schéma permettant de générer le script de l'attribut FILESTREAM sur les colonnes varbinary(max) a été activée pour l'article ‘%s’. L'activation de cette option après la création de l'article peut provoquer l'échec de la réplication si les données d'une colonne FILESTREAM dépassent 2 Go et qu'un conflit se produit lors de la réplication. Si vous voulez que les données FILESTREAM soient répliquées, supprimez et recréez l'article, puis spécifiez l'option de schéma appropriée lors de la nouvelle création de l'article.  |
 |   22586   |   16  |   Non  |   La colonne '%s' ne peut pas être ajoutée ou modifiée dans l'article '%s' de la publication '%s'. L'opération DDL sur les colonnes hierarchyid et FILESTREAM n'est pas prise en charge pour les publications ayant un 'sync_mode' correspondant à 1 (mode caractère) ou ayant un niveau de compatibilité descendante inférieur à 90RTM.   |
 |   22801   |   16  |   Non  |   Démarrage du travail de l'Agent de collecte des captures de données modifiées. Pour signaler l'avancement de l'opération, interrogez la vue de gestion dynamique sys.dm_cdc_log_scan_sessions.  |
@@ -8230,9 +8230,9 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   22852   |   10  |   Non  |   Impossible de supprimer les entrées de table de modifications rendues obsolètes par une modification dans une ou plusieurs limites inférieures des instances de capture de la base de données %. La défaillance s'est produite lors de l'exécution de la commande ‘%s’. L’erreur retournée était %d : ‘%s’. Utilisez les informations d'action et d'erreur pour déterminer la cause du problème et soumettre à nouveau la requête.    |
 |   22853   |   10  |   Non  |   Impossible de supprimer les entrées obsolètes dans la table cdc.lsn_time_mapping pour la base de données %s. La défaillance s'est produite lors de l'exécution de la commande ‘%s’. L’erreur retournée était %d : ‘%s’. Utilisez les informations d'action et d'erreur pour déterminer la cause du problème et soumettre à nouveau la requête.    |
 |   22854   |   16  |   Non  |   Impossible d'activer la capture de données modifiées sur la table '%s' ou d'y ajouter la colonne ColumnSet, car la capture de données modifiées ne prend pas en charge ColumnSet.  |
-|   22855   |   10  |   Non  |   Warning: le paramètre \@allow_partition_switch a la valeur 1. La capture de données modifiées n'effectuera pas le suivi des modifications introduites dans la table résultant d'un basculement de partition qui provoquera une incohérence des données lors de l'utilisation des modifications. Reportez-vous à la documentation en ligne pour plus d'informations sur le comportement du basculement de partition lors de l'utilisation de la capture de données modifiées.  |
-|   22856   |   10  |   Non  |   Warning: le paramètre \@allow_partition_switch a la valeur 0. L'instruction ALTER TABLE ... SWITCH PARTITION ne sera pas autorisée sur cette table partitionnée. Reportez-vous à la documentation en ligne pour plus d'informations sur le comportement du basculement de partition lors de l'utilisation de la capture de données modifiées. |
-|   22857   |   10  |   Non  |   Warning: le paramètre \@allow_partition_switch doit avoir la valeur 1 pour les tables qui ne sont pas partitionnées. L'affectation explicite de la valeur 0 au paramètre a été ignorée. Reportez-vous à la documentation en ligne pour plus d'informations sur le comportement du basculement de partition lors de l'utilisation de la capture de données modifiées.    |
+|   22855   |   10  |   Non  |   Avertissement : le paramètre \@allow_partition_switch a la valeur 1. La capture de données modifiées n'effectuera pas le suivi des modifications introduites dans la table résultant d'un basculement de partition qui provoquera une incohérence des données lors de l'utilisation des modifications. Reportez-vous à la documentation en ligne pour plus d'informations sur le comportement du basculement de partition lors de l'utilisation de la capture de données modifiées.  |
+|   22856   |   10  |   Non  |   Avertissement : le paramètre \@allow_partition_switch a la valeur 0. l’instruction ALTER TABLE ... SWITCH PARTITION ne sera pas autorisée sur cette table partitionnée. Reportez-vous à la documentation en ligne pour plus d'informations sur le comportement du basculement de partition lors de l'utilisation de la capture de données modifiées. |
+|   22857   |   10  |   Non  |   Avertissement : le paramètre \@allow_partition_switch doit avoir la valeur 1 pour les tables qui ne sont pas partitionnées. L'affectation explicite de la valeur 0 au paramètre a été ignorée. Reportez-vous à la documentation en ligne pour plus d'informations sur le comportement du basculement de partition lors de l'utilisation de la capture de données modifiées.    |
 |   22858   |   16  |   Non  |   Impossible d'ajouter des entrées à la table de mappage de temps LSN de la capture de données modifiées pour refléter les modifications dml appliquées aux tables faisant l'objet d'un suivi. Reportez-vous aux erreurs précédentes de la session active afin d'en identifier la cause et de corriger les problèmes associés.    |
 |   22859   |   16  |   Non  |   Le processus d'analyse du journal n'a pas réussi à traiter les enregistrements de journal. Reportez-vous aux erreurs précédentes de la session active afin d'en identifier la cause et de corriger les problèmes associés.   |
 |   22860   |   16  |   Non  |   Le processus d'analyse du journal n'a pas réussi à traiter un enregistrement de journal ddl. Reportez-vous aux erreurs précédentes de la session active afin d'en identifier la cause et de corriger les problèmes associés.  |
@@ -8502,7 +8502,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   25809   |   16  |   Non  |   Le chemin d'accès du fichier journal "%ls" à la cible ETW n'est pas valide. Vérifiez que le chemin d'accès existe et que le compte de démarrage de SQL Server a accès au fichier journal.   |
 |   25810   |   16  |   Non  |   Le nom de session spécifié dépasse la longueur maximale de %d caractères. |
 |   25811   |   16  |   Non  |   Le système d'exploitation a retourné l'erreur 5 (ACCESS_DENIED) lors de la création d'une session de suivi ETW. Vérifiez que le compte de démarrage de SQL Server est membre du groupe 'Utilisateurs du journal de performances' et réessayez d'exécuter la commande.   |
-|   25812   |   16  |   Non  |   Le champ '%ls' n'est pas valide pour l'événement '%ls'.  Vérifiez que le champ existe et réessayez d'exécuter la commande.    |
+|   25812   |   16  |   Non  |   Le champ '%ls' n'est pas valide pour l'événement '%ls'. Vérifiez que le champ existe et réessayez d'exécuter la commande.    |
 |   25813   |   16  |   Non  |   L'action "%ls" n'existe pas. Vérifiez que l'action existe et réessayez d'exécuter la commande.  |
 |   25814   |   16  |   Non  |   L'événement de filtrage "%ls" n'existe pas. Vérifiez que l'événement existe et réessayez d'exécuter la commande.  |
 |   25815   |   16  |   Non  |   Le type de source %d, n'est pas valide. Les types valides sont 0 pour les champs d'événement ou 1 pour les actions.   |
@@ -8628,7 +8628,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   27058   |   16  |   Non  |   Une erreur SQL s'est produite lors de l'exécution de la maintenance de table de recherche floue.    |
 |   27059   |   16  |   Non  |   Impossible de rechercher object_id. La table de référence ou le déclencheur de maintenance est introuvable.  |
 |   27060   |   16  |   Non  |   Le nom de table fourni pour l'index à tolérance d'erreur n'est pas un identificateur SQL valide. |
-|   27061   |   16  |   Non  |   Le nom de table fourni pour l'index à tolérance d'erreur fait référence à une table manquante. Vérifiez sys.tables    |
+|   27061   |   16  |   Non  |   Le nom de table fourni pour l'index à tolérance d'erreur fait référence à une table manquante. Vérifiez sys.tables   |
 |   27062   |   16  |   Non  |   Il manque une table auxiliaire pour la maintenance de table de recherche floue.   |
 |   27063   |   16  |   Non  |   Un nom de table auxiliaire de la maintenance de table de recherche floue est NULL. La maintenance ne peut pas se poursuivre. |
 |   27064   |   16  |   Non  |   Impossible de localiser la ligne supprimée de la table de référence dans la copie de la table de référence.  |
@@ -8711,7 +8711,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   28070   |   10  |   Non  |   Échec de la négociation de connexion. L'état de confirmation du message SSPI reçu est inattendu. État %d.  |
 |   28072   |   16  |   Non  |   Une erreur grave s’est produite au niveau de la transmission de messages Service Broker (opération %i) : Erreur : %i, état : %i. La transmission de messages reprendra dans %i secondes.    |
 |   28073   |   16  |   Non  |   Insuffisance de mémoire au niveau de la transmission de messages Service Broker (opération %i). La transmission de messages reprendra dans %i secondes.   |
-|   28074   |   16  |   Non  |   Service Broker n'a pas pu mettre à niveau la conversation avec le conversation_handle '%ls'. Utilisez END CONVERSATION ... WITH CLEANUP pour supprimer cette conversation, puis réessayez d'activer Service Broker. Utilisez ALTER DATABASE ... SET ERROR_BROKER pour marquer en tant qu'erreurs toutes les conversations de cette base de données. Utilisez ALTER DATABASE ... SET NEW_BROKER pour supprimer toutes les conversations de cette base de données.  |
+|   28074   |   16  |   Non  |   Service Broker n'a pas pu mettre à niveau la conversation avec le conversation_handle '%ls'. Utilisez END CONVERSATION ... WITH CLEANUP pour supprimer cette conversation, puis réessayez d’activer Service Broker. Utilisez ALTER DATABASE ... SET ERROR_BROKER pour marquer en tant qu'erreurs toutes les conversations de cette base de données. Utilisez ALTER DATABASE ... SET NEW_BROKER pour supprimer toutes les conversations de cette base de données.  |
 |   28075   |   10  |   Non  |   Le Broker dans la base de données de l'expéditeur est en mode d'utilisateur unique. Les messages ne peuvent pas être remis en mode d'utilisateur unique. |
 |   28076   |   10  |   Non  |   Impossible d'interroger l'indicateur du mode de conformité FIPS dans le Registre. Erreur %ls. |
 |   28077   |   10  |   Non  |   Le transport %S_MSG s'exécute en mode de conformité FIPS. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise. |
@@ -8746,7 +8746,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   30008   |   16  |   Non  |   Le numéro de niveau spécifié pour la fonction fn_fulltext_compindex n'est pas valide. Les numéros de niveau valides commencent à 0 et doivent être inférieurs au nombre de niveaux de l'index compressé. Utilisez le numéro de niveau correct.  |
 |   30009   |   16  |   Non  |   Le type de données '%.*ls' de l'argument spécifié pour la requête de texte intégral n'est pas valide. Les types de données autorisés sont char, varchar, nchar et nvarchar. |
 |   30020   |   16  |   Non  |   Le paramètre de requête de texte intégral pour %S_MSG n'est pas valide.  |
-|   30022   |   10  |   Non  |   Warning: la configuration d’une liste de mots vides en texte intégral a été modifiée à l’aide de la clause WITH NO POPULATION, ce qui a mis l'index de texte intégral dans un état non cohérent. Pour lui donner un état cohérent, démarrez une alimentation complète. La syntaxe Transact-SQL de base pour cette opération est la suivante : ALTER FULLTEXT INDEX ON nom_table START FULL POPULATION   |
+|   30022   |   10  |   Non  |   Avertissement : la configuration d’une liste de mots vides en texte intégral a été modifiée à l’aide de la clause WITH NO POPULATION, ce qui a mis l'index de texte intégral dans un état non cohérent. Pour lui donner un état cohérent, démarrez une alimentation complète. La syntaxe Transact-SQL de base pour cette opération est la suivante : ALTER FULLTEXT INDEX ON nom_table START FULL POPULATION   |
 |   30023   |   16  |   Non  |   La liste de mots vides en texte intégral '%.*ls' n'existe pas ou l'utilisateur actuel n'a pas l'autorisation d'effectuer cette action. Vérifiez que le nom correct de liste de mots vides est spécifié et que l'utilisateur possède l'autorisation requise par l'instruction Transact-SQL.   |
 |   30024   |   16  |   Non  |   La liste de mots vides en texte intégral '%.*ls' existe déjà dans la base de données actuelle. Les noms de liste de mots vides en double ne sont pas autorisés. Réexécutez l'instruction et spécifiez un nom unique. |
 |   30028   |   17  |   Non  |   Échec de l’obtention de l’interface de pipeline pour '%.*ls', provoquant une erreur : 0x%X. Il y a un problème de communication avec le contrôleur hôte ou l'hôte de démon de filtre.  |
@@ -8776,9 +8776,9 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   30060   |   16  |   Non  |   L'importation du remplissage pour la base de données %ls (id : %d), catalogue %ls (id : %d) est annulée en raison de l'erreur irrécupérable ('%ls'). Résolvez les erreurs consignées dans le journal d'analyse de texte intégral. Reprenez ensuite l'importation soit en détachant la base de données et en la rattachant, soit en mettant la base de données hors connexion et en la remettant en ligne. Si l'erreur est irrécupérable, reconstruisez le catalogue de texte intégral.   |
 |   30061   |   17  |   Non  |   SQL Server n'a pas réussi à créer le répertoire FilterData de texte intégral. Il est possible que FulltextDefaultPath ne soit pas valide ou que le compte de service SQL Server n'ait pas l'autorisation. L'indexation des objets blob de texte intégral échouera tant que ce problème ne sera pas résolu. Redémarrez SQL Server une fois le problème corrigé.   |
 |   30062   |   17  |   Non  |   SQL Server n'a pas réussi à charger le SID de groupe de services FDHost. L'installation est peut-être endommagée.    |
-|   30063   |   10  |   Non  |   Warning: SQL Server n’a pas pu affecter à l’affinité du processeur fdhost.exe la valeur %d, car la valeur n’est pas valide.   |
+|   30063   |   10  |   Non  |   Avertissement : SQL Server n’a pas pu affecter à l’affinité du processeur fdhost.exe la valeur %d, car la valeur n’est pas valide.   |
 |   30064   |   17  |   Non  |   SQL Server n'a pas réussi à définir des informations de sécurité sur le répertoire FilterData de texte intégral dans le dossier FTData. L'indexation de texte intégral de certains types de documents peut échouer tant que ce problème n'est pas résolu. Vous devez réparer l'installation de SQL Server. |
-|   30067   |   10  |   Non  |   Warning: l’opération de détachement ne peut pas supprimer un index de recherche en texte intégral créé sur la table '%ls' dans la base de données '%ls', car l’index se situe dans un groupe de fichiers en lecture seule. Pour supprimer l'index de texte intégral, rattachez la base de données, modifiez le groupe de fichiers en lecture seule pour avoir un accès en lecture/écriture, puis détachez-la. Cet avertissement ne provoquera pas l'échec de l'opération de détachement de la base de données.    |
+|   30067   |   10  |   Non  |   Avertissement : l’opération de détachement ne peut pas supprimer un index de recherche en texte intégral créé sur la table '%ls' dans la base de données '%ls', car l’index se situe dans un groupe de fichiers en lecture seule. Pour supprimer l'index de texte intégral, rattachez la base de données, modifiez le groupe de fichiers en lecture seule pour avoir un accès en lecture/écriture, puis détachez-la. Cet avertissement ne provoquera pas l'échec de l'opération de détachement de la base de données.    |
 |   30068   |   10  |   Non  |   Au cours de la mise à niveau de la base de données, le composant de filtre de texte intégral '%.*ls' utilisé par le catalogue '%.*ls' a été correctement vérifié. La version du composant est '%.*ls' ; le chemin d'accès complet est '%.*ls'.    |
 |   30069   |   11  |   Non  |   Le composant de filtre de texte intégral '%.*ls' utilisé pour remplir le catalogue '%.*ls' dans une précédente version SQL Server ne correspond pas à la version en cours (la version du composant est '%.*ls', le chemin d'accès complet '%.*ls'). Il se peut que les résultats de la recherche diffèrent alors légèrement des versions précédentes. Pour éviter le problème, reconstruisez le catalogue de texte intégral à l'aide de la version en cours du composant de filtre.    |
 |   30070   |   10  |   Non  |   Au cours de la mise à niveau de la base de données, le composant d'analyseur lexical de texte intégral '%.*ls' utilisé par le catalogue '%.*ls' a été correctement vérifié. La version du composant est '%.*ls'. Le chemin d'accès complet est '%.*ls'. La langue demandée est %d. La langue utilisée est %d.   |
@@ -8954,7 +8954,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   33088   |   16  |   Non  |   SQL Server ne prend pas en charge l'algorithme : %.*ls pour les opérations EKM  |
 |   33089   |   16  |   Non  |   La validation de clé a échoué dans la mesure où la tentative d'obtention des informations d'algorithme pour cette clé a échoué. Code d'erreur du fournisseur : %d. (%S-MSG) |
 |   33090   |   10  |   Non  |   Tentative du chargement de la bibliothèque '%.*ls' en mémoire. Ce message est fourni uniquement à titre d'information. Aucune action de l'utilisateur n'est requise.  |
-|   33091   |   10  |   Non  |   Warning: le certificat utilisé pour chiffrer la clé de chiffrement de base de données n’a pas été sauvegardé. Vous devez immédiatement sauvegarder le certificat et la clé privée associée au certificat. Dans l'éventualité où le certificat ne serait plus disponible ou que vous deviez restaurer ou attacher la base de données sur un autre serveur, vous devez disposer de sauvegardes du certificat et de la clé privée, sans quoi vous ne pourrez pas ouvrir la base de données.   |
+|   33091   |   10  |   Non  |   Avertissement : le certificat utilisé pour chiffrer la clé de chiffrement de base de données n’a pas été sauvegardé. Vous devez immédiatement sauvegarder le certificat et la clé privée associée au certificat. Dans l'éventualité où le certificat ne serait plus disponible ou que vous deviez restaurer ou attacher la base de données sur un autre serveur, vous devez disposer de sauvegardes du certificat et de la clé privée, sans quoi vous ne pourrez pas ouvrir la base de données.   |
 |   33101   |   16  |   Non  |   Impossible d'utiliser %S_MSG '%.*ls', car sa clé privée est absente ou il n'est pas protégé par la clé principale de base de données. SQL Server nécessite la possibilité d'accéder automatiquement à la clé privée du %S_MSG utilisé pour cette opération. |
 |   33102   |   16  |   Non  |   Impossible de chiffrer une base de données système. Les opérations de chiffrement de bases de données ne peuvent pas être exécutées pour les bases de données 'master', 'model', 'tempdb', 'msdb' ni 'resource'.  |
 |   33103   |   16  |   Non  |   Une clé de chiffrement de base de données existe déjà pour cette base de données. |
@@ -9062,8 +9062,8 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   [41332](mssqlserver-41332-database-engine-error.md) |       |       |   Les tables optimisées en mémoire et les procédures stockées compilées en mode natif ne sont pas accessibles ou ne peuvent pas être créées lorsque la session TRANSACTION ISOLATION LEVEL a la valeur SNAPSHOT.  |
 |   [41333](mssqlserver-41333-database-engine-error.md) |       |       |   Les transactions suivantes doivent accéder à des tables mémoire optimisées et à des procédures stockées compilées en mode natif dans un isolement d’instantané : transactions RepeatableRead, transactions Serializable et transactions qui accèdent aux tables non mémoire optimisées dans l’isolement RepeatableRead ou Serializable. |
 |   [41342](mssqlserver-41342-database-engine-error.md) |       |       |   Le modèle du processeur sur le système ne prend pas en charge la création de *construct*. En règle générale, cette erreur se produit avec les processeurs plus anciens.|
-|   [41349](mssqlserver-41349-database-engine-error.md) |       |       |   Warning: le chiffrement a été activé pour une base de données qui contient une ou plusieurs tables optimisées par mémoire avec la durabilité SCHEMA_AND_DATA. Les données dans ces tables optimisées en mémoire ne seront pas chiffrées.  |
-|   [41350](mssqlserver-41350-database-engine-error.md) |       |       |   Warning: une table optimisée par mémoire avec la durabilité SCHEMA_AND_DATA a été créée dans une base de données activée pour le chiffrement. Les données de la table optimisée en mémoire ne seront pas chiffrées.   |
+|   [41349](mssqlserver-41349-database-engine-error.md) |       |       |   Avertissement : le chiffrement a été activé pour une base de données qui contient une ou plusieurs tables optimisées par mémoire avec la durabilité SCHEMA_AND_DATA. Les données dans ces tables optimisées en mémoire ne seront pas chiffrées.  |
+|   [41350](mssqlserver-41350-database-engine-error.md) |       |       |   Avertissement : une table optimisée par mémoire avec la durabilité SCHEMA_AND_DATA a été créée dans une base de données activée pour le chiffrement. Les données de la table optimisée en mémoire ne seront pas chiffrées.   |
 |   [41359](mssqlserver-41359-database-engine-error.md) |       |       |   Une requête qui accède à des tables optimisées en mémoire selon le niveau d'isolement READ COMMITTED ne peut pas accéder aux tables sur disque lorsque l'option READ_COMMITTED_SNAPSHOT de la base de données a la valeur ON. Spécifiez un niveau d'isolement pris en charge pour la table optimisée en mémoire à l'aide d'un indicateur de table, comme WITH (SNAPSHOT).  |
 |   [41365](mssqlserver-41365-database-engine-error.md) |       |       |   La demande de fusion de la plage des transactions '%ld, %ld' dans la base de données %.*ls n'a pas été planifiée. Les fichiers de point de contrôle représentant la plage sont soit indisponibles pour la fusion, soit ils font partie d'une fusion en cours. |
 |   [41368](mssqlserver-41368-database-engine-error.md) |       |       |   L'accès aux tables optimisées en mémoire selon le niveau d'isolement READ COMMITTED est pris en charge uniquement pour les transactions validées automatiquement. Cela n'est pas pris en charge pour les transactions explicites ou implicites. Spécifiez un niveau d'isolement pris en charge pour la table optimisée en mémoire à l'aide d'un indicateur de table, comme WITH (SNAPSHOT).    |
@@ -9071,7 +9071,7 @@ Ce tableau contient les numéros des messages d’erreur et leur description, qu
 |   [41399](mssqlserver-41399-database-engine-error.md) |       |       |   L'opération de tri est trop complexe. Consultez la documentation en ligne de SQL Server pour plus d'informations.    |
 |   &nbsp;  |   &nbsp;  |&nbsp;     |   &nbsp;  |
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Présentation des erreurs du moteur de base de données](../../relational-databases/errors-events/understanding-database-engine-errors.md)
 [Cause et résolution des erreurs du moteur de base de données](https://msdn.microsoft.com/library/cbfbea15-9277-498f-b772-75b4cb06f408)
