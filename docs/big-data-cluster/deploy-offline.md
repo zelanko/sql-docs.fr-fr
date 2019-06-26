@@ -5,16 +5,16 @@ description: Découvrez comment effectuer un déploiement hors connexion d’un 
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd6a1e1e6f2ad661c8a2316c434854095c7f6da5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f3bfcfba0cfb972c7d02042bc98aa461eb110bb
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797890"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388812"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Effectuer un déploiement hors connexion d’un cluster de données volumineuses de SQL Server
 
@@ -42,7 +42,7 @@ Les étapes suivantes décrivent comment extraire des images de conteneur du clu
    > [!TIP]
    > Ces commandes utilisent PowerShell par exemple, mais vous pouvez les exécuter à partir de cmd, bash ou n’importe quel interface de commande qui peut s’exécuter docker. Sur Linux, ajoutez `sudo` à chaque commande.
 
-1. Extraire des images de conteneur du cluster de données volumineux en répétant la commande suivante. Remplacez `<SOURCE_IMAGE_NAME>` avec chaque [nom de l’image](#images). Remplacez `<SOURCE_DOCKER_TAG>` avec la balise pour les données volumineuses de cluster version, tel que **CTP 3.0**.  
+1. Extraire des images de conteneur du cluster de données volumineux en répétant la commande suivante. Remplacez `<SOURCE_IMAGE_NAME>` avec chaque [nom de l’image](#images). Remplacez `<SOURCE_DOCKER_TAG>` avec la balise pour les données volumineuses de cluster version, tel que **ctp3.1**.  
 
    ```PowerShell
    docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -84,7 +84,6 @@ Les images de conteneur de cluster big data suivantes sont requises pour une ins
  - **mssql-mlserver-r-runtime**
  - **mssql-mlserver-py-runtime**
  - **mssql-controller**
- - **mssql-portal**
  - **mssql-server-controller**
  - **mssql-monitor-grafana**
  - **mssql-monitor-kibana**
@@ -92,6 +91,8 @@ Les images de conteneur de cluster big data suivantes sont requises pour une ins
  - **mssql-app-service-proxy**
  - **mssql-ssis-app-runtime**
  - **mssql-monitor-telegraf**
+ - **mssql-mleap-serving-runtime**
+  
 
 ## <a id="automated"></a> Script automatisé
 
@@ -179,9 +180,9 @@ Pour installer **kubectl** à un ordinateur hors connexion, procédez comme suit
 Pour déployer à partir du référentiel privé, utilisez les étapes décrites dans le [guide de déploiement](deployment-guidance.md), mais utiliser un fichier de configuration de déploiement personnalisé qui spécifie vos informations de référentiel Docker privées. Ce qui suit **mssqlctl** commandes montrent comment modifier les paramètres de Docker dans un fichier de configuration de déploiement personnalisé nommé **custom.json**:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
 Le déploiement vous invite à entrer le nom d’utilisateur docker et le mot de passe, ou vous pouvez les spécifier dans le **DOCKER_USERNAME** et **DOCKER_PASSWORD** variables d’environnement.

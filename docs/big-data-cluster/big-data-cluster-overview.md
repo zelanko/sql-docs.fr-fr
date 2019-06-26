@@ -5,17 +5,17 @@ description: En savoir plus sur les clusters de données volumineuses de SQL Ser
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 12/07/2018
+ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 667c7a76bfc0b74ab8ee642ccb558a774a1e0e2c
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801889"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388727"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>Que sont les clusters de Big Data SQL Server ?
 
@@ -57,9 +57,7 @@ Les clusters de données volumineuses de SQL Server autorisent intelligence arti
 
 ### <a name="management-and-monitoring"></a>Gestion et surveillance
 
-Gestion et surveillance sont fournies via une combinaison d’outils de ligne de commande, API, un portail d’administration et de vues de gestion dynamique.
-
-Le [portail d’administration de cluster](cluster-admin-portal.md) est une interface web qui affiche l’état et l’intégrité des blocs dans le cluster. Il fournit également des liens vers d’autres tableaux de bord d’analytique de journal et de la surveillance des tableaux de bord.
+Gestion et surveillance sont fournies via une combinaison d’outils de ligne de commande, les API, les portails et les vues de gestion dynamique.
 
 Vous pouvez utiliser Azure Data Studio pour effectuer diverses tâches sur le cluster de données volumineuses. Cette option est activée par la nouvelle **2019 Extension (version préliminaire) de SQL Server**. Cette extension fournit :
 

@@ -1,6 +1,6 @@
 ---
-title: Fonctionnalités prises en charge par les éditions de SQL Server 2016 Analysis Services | Documents Microsoft
-ms.date: 05/08/2018
+title: Fonctionnalités prises en charge par les éditions de SQL Server Analysis Services | Microsoft Docs
+ms.date: 06/25/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,17 +9,17 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 19618fc0311de28184e3a95c5e57e423d121f085
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 9947b10e01864f66bf26d6599e43814ab37dadc6
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015566"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388207"
 ---
-# <a name="analysis-services-features-supported-by-sql-server-editions"></a>Fonctionnalités Analysis Services pris en charge par les éditions de SQL Server
+# <a name="analysis-services-features-supported-by-sql-server-edition"></a>Fonctionnalités Analysis Services prises en charge par l’édition de SQL Server
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
-Cette rubrique fournit des détails sur les fonctionnalités prises en charge par les différentes éditions de SQL Server 2016 Analysis Services. Pour les fonctionnalités prises en charge par les éditions Evaluation et Developer, consultez Enterprise edition.
+Cet article décrit les fonctionnalités prises en charge par les différentes éditions de SQL Server 2016, 2017, 2019 Analysis Services. Version d’évaluation prend en charge les fonctionnalités de l’édition Enterprise.
 
 ## <a name="analysis-services-servers"></a>Analysis Services (serveurs)
   
@@ -37,13 +37,14 @@ Cette rubrique fournit des détails sur les fonctionnalités prises en charge pa
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Hierarchies|Oui|Oui|||||Oui|  
 |Indicateurs de performance clés|Oui|Oui|||||Oui|  
-|Perspectives|Oui||||||Oui|  
-|Traductions|Oui|Oui|||||Oui|  
+|perspectives|Oui||||||Oui|  
+|Translations|Oui|Oui|||||Oui|  
 |Calculs DAX, requêtes DAX, requêtes MDX|Oui|Oui|||||Oui|  
 |Sécurité au niveau des lignes|Oui|Oui|||||Oui|  
 |Partitions multiples|Oui||||||Oui|  
+|Groupes de calcul|Oui (à partir de SQL Server 2019)|Oui (à partir de SQL Server 2019)|||||Oui (à partir de SQL Server 2019)|  
 |Mode de stockage en mémoire|Oui|Oui|||||Oui|  
-|Mode de stockage DirectQuery|Oui||||||Oui|  
+|Mode DirectQuery|Oui|Oui (à partir de SQL Server 2019)|||||Oui|  
 
 ## <a name="multidimensional-models"></a>Modèles multidimensionnels 
   
@@ -52,7 +53,7 @@ Cette rubrique fournit des détails sur les fonctionnalités prises en charge pa
 |Mesures semi-additives|Oui|Non <sup>1</sup>|||||Oui|  
 |Hierarchies|Oui|Oui|||||Oui|  
 |Indicateurs de performance clés|Oui|Oui|||||Oui|  
-|Perspectives|Oui||||||Oui|  
+|perspectives|Oui||||||Oui|  
 |Actions|Oui|Oui|||||Oui|  
 |Intelligence comptable|Oui|Oui|||||Oui|  
 |Time Intelligence|Oui|Oui|||||Oui|  
@@ -60,11 +61,11 @@ Cette rubrique fournit des détails sur les fonctionnalités prises en charge pa
 |Cube d'écriture différée|Oui|Oui|||||Oui|  
 |Dimensions d'écriture différée|Oui||||||Oui|  
 |Cellules d'écriture différée|Oui|Oui|||||Oui|  
-|extraction|Oui|Oui|||||Oui|  
+|Extraction|Oui|Oui|||||Oui|  
 |Types de hiérarchies avancés (parent-enfant et irrégulières)|Oui|Oui|||||Oui|  
 |Dimensions avancées (dimensions de référence, plusieurs-à-plusieurs)|Oui|Oui|||||Oui|  
 |Dimensions et mesures liées|Oui|Oui  <sup>2</sup> |||||Oui|  
-|Traductions|Oui|Oui|||||Oui|  
+|Translations|Oui|Oui|||||Oui|  
 |Aggregations|Oui|Oui|||||Oui|  
 |Partitions multiples|Oui|Oui, jusqu'à 3|||||Oui|  
 |Mise en cache proactive|Oui||||||Oui|  
@@ -77,11 +78,10 @@ Cette rubrique fournit des détails sur les fonctionnalités prises en charge pa
 |Modèles de stockage MOLAP, ROLAP et HOLAP|Oui|Oui|||||Oui|  
 |Transport XML binaire et compressé|Oui|Oui|||||Oui|  
 |Traitement de type envoi de données (push)|Oui||||||Oui|  
-|Écriture différée directe|Oui||||||Oui|  
 |Expressions de mesure|Oui||||||Oui|  
   
  <sup>1</sup> La mesure semi-additive LastChild est prise en charge dans l’édition Standard, contrairement à d’autres mesures semi-additives, telles que None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren et ByAccount. Les mesures additives, telles que Sum, Count, Min, Max, et les mesures non additives (DistinctCount) sont prises en charge dans toutes les éditions.  
-  <sup>2</sup> standard edition prend en charge la liaison des mesures et des dimensions dans la même base de données, mais pas à partir de bases de données ou des autres instances.
+  <sup>2</sup> L’édition Standard prend en charge la liaison des mesures et des dimensions dans la même base de données, mais pas à partir d’autres bases de données ou instances.
   
 ## <a name="power-pivot-for-sharepoint"></a>Power Pivot pour SharePoint  
   
@@ -102,8 +102,8 @@ Cette rubrique fournit des détails sur les fonctionnalités prises en charge pa
 |Outils d’exploration de données (Assistants, éditeurs, générateurs de requêtes)|Oui|Oui|||||Oui|  
 |Validation croisée|Oui||||||Oui|  
 |Modèles sur les sous-ensembles filtrés de données de structure d'exploration de données|Oui||||||Oui|  
-|Série chronologique : fusion personnalisée entre les méthodes ARTXP et ARIMA|Oui||||||Oui|  
-|Série chronologique : prédiction avec les nouvelles données|Oui||||||Oui|  
+|Série chronologique : Fusion personnalisée entre les méthodes ARTXP et ARIMA|Oui||||||Oui|  
+|Série chronologique : PRÉDICTION avec de nouvelles données|Oui||||||Oui|  
 |Requêtes d’exploration de données simultanées illimitées|Oui||||||Oui|  
 |Configuration avancée et options de paramétrage pour les algorithmes d’exploration de données|Oui||||||Oui|  
 |Prise en charge des algorithmes de plug-in|Oui||||||Oui|  
@@ -113,8 +113,5 @@ Cette rubrique fournit des détails sur les fonctionnalités prises en charge pa
 |Prédiction de séquence|Oui||||||Oui|  
 |Plusieurs cibles de prédiction pour naïve Bayes, réseau neuronal et régression logistique|Oui||||||Oui|  
   
- ## <a name="see-also"></a>Voir aussi  
- [Spécifications de produit pour SQL Server 2016](http://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)   
- [Installation de SQL Server 2016](../database-engine/install-windows/installation-for-sql-server-2016.md)  
 
 

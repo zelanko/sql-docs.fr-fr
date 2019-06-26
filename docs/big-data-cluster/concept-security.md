@@ -6,17 +6,17 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 12/06/2018
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a71c4fb8902bb016de0d5ee607f955db61d94901
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57fbeee578d2889d330ba19401477a43ab95e60
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783065"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387941"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Concepts de sécurité pour les clusters de données volumineuses de SQL Server
 
@@ -34,7 +34,7 @@ Il existe trois points d’entrée pour le cluster de données volumineux
 
 * Passerelle HDFS/Spark (Knox) - il s’agit d’un point de terminaison HTTPS. Autres points de terminaison sont transmises via ce. Passerelle HDFS/Spark est utilisé pour accéder aux services tels que webHDFS et Livy. Là où vous voyez des références à Knox, c’est le point de terminaison.
 
-* Point de terminaison contrôleur - service de gestion de cluster big data qui expose les API REST de gestion de cluster. Certains outils, tels que le portail d’administration, sont également accessibles via ce point de terminaison.
+* Point de terminaison contrôleur - service de gestion de cluster big data qui expose les API REST de gestion de cluster. Certains outils sont également accessibles via ce point de terminaison.
 
 * Instance principale - point de terminaison TDS pour les outils de base de données et applications de se connecter à une Instance de SQL Server Master dans le cluster.
 

@@ -5,16 +5,16 @@ description: Découvrez les étapes et les ressources pour le déploiement des c
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 31f8b94693ad7c6d242249300a21d051a7afe859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4379e35b4d86ca462ea97b28c37d2f3b56427292
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797906"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388829"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Bien démarrer avec les clusters de données volumineuses de SQL Server
 
@@ -47,7 +47,7 @@ Les clusters de données volumineuses sont déployés comme une série de conten
 
 ## <a name="deploy-a-big-data-cluster"></a>Déployer un cluster Big Data
 
-Après avoir configuré Kubernetes, vous déployez un cluster de données volumineuses avec la `mssqlctl cluster create` commande. Lors du déploiement, vous pouvez tirer plusieurs approches différentes.
+Après avoir configuré Kubernetes, vous déployez un cluster de données volumineuses avec la `mssqlctl bdc create` commande. Lors du déploiement, vous pouvez tirer plusieurs approches différentes.
 
 - Si vous déployez dans un environnement de développement et de test, vous pouvez choisir d’utiliser une de la [configurations par défaut](deployment-guidance.md#deploy) fourni par **mssqlctl**.
 

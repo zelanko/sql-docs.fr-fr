@@ -5,17 +5,17 @@ description: En savoir plus sur le fonctionne de la persistance des données dan
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 24c90bfb8c99178e8ffa7822fba4bea709c536e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfba93aaca23ca3303b6d9bd9752c1d458a9a81a
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800716"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388010"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistance des données avec un cluster volumineux de données SQL Server sur Kubernetes
 
@@ -49,7 +49,7 @@ Similaire aux autres personnalisations, vous pouvez spécifier les paramètres d
 Déploiement de cluster big data utilisent le stockage persistant pour stocker des données, les métadonnées et les journaux pour les différents composants. Vous pouvez personnaliser la taille des revendications de volume persistant créé dans le cadre du déploiement. En tant que meilleure pratique, nous vous recommandons d’utiliser les classes de stockage avec un *conserver* [récupérer de la stratégie](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy).
 
 > [!NOTE]
-> Dans CTP 3.0, vous ne pouvez pas modifier le déploiement paramètre post de la configuration de stockage. En outre, seuls `ReadWriteOnce` mode d’accès pour l’ensemble du cluster est prise en charge.
+> Dans les versions CTP 3.1, vous ne pouvez pas modifier après le déploiement stockage configuration paramètre. En outre, seuls `ReadWriteOnce` mode d’accès pour l’ensemble du cluster est prise en charge.
 
 > [!WARNING]
 > En cours d’exécution sans stockage persistant peut fonctionner dans un environnement de test, mais cela peut entraîner un cluster non fonctionnelles. Lors des redémarrages de pod, données de métadonnées ou pour un utilisateur de cluster seront définitivement perdues. Nous déconseillons d’exécuter dans cette configuration. 
@@ -58,7 +58,7 @@ Déploiement de cluster big data utilisent le stockage persistant pour stocker d
 
 ## <a name="aks-storage-classes"></a>Classes de stockage AKS
 
-ACS est fourni avec [deux classes de stockage intégrée](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **par défaut** et **premium managed** , ainsi que le fournisseur dynamique pour eux. Vous pouvez spécifier des deux ou créer votre propre classe de stockage pour le déploiement de cluster de données volumineux avec le stockage persistant est activé. Par défaut, généré dans le fichier de configuration de cluster pour aks *aks-dev-test.json* est fourni avec des configurations de stockage persistant à utiliser **par défaut** classe de stockage.
+ACS est fourni avec [deux classes de stockage intégrée](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv) **par défaut** et **premium managed** , ainsi que le fournisseur dynamique pour eux. Vous pouvez spécifier des deux ou créer votre propre classe de stockage pour le déploiement de cluster de données volumineux avec le stockage persistant est activé. Par défaut, généré dans le fichier de configuration de cluster pour aks *aks-dev-test* est fourni avec des configurations de stockage persistant à utiliser **par défaut** classe de stockage.
 
 > [!WARNING]
 > Volumes persistants créés avec les classes de stockage intégrée **par défaut** et **premium managed** ont une stratégie de demande de récupération de *supprimer*. Au moment où vous supprimer le cluster de données volumineux de SQL Server, les revendications de volume persistant obtient également les volumes supprimés et puis persistants. Vous pouvez créer des classes de stockage personnalisés à l’aide de **azure-disque** privioner avec un *conserver* récupérer la stratégie comme indiqué dans [cela](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) article.
@@ -66,25 +66,25 @@ ACS est fourni avec [deux classes de stockage intégrée](https://docs.microsoft
 
 ## <a name="minikube-storage-class"></a>Classe de stockage Minikube
 
-Minikube est fourni avec une classe de stockage intégré appelée **standard** ainsi que d’un fournisseur dynamique pour celui-ci. La configuration intégrée dans fichier minikube *minikube-dev-test.json* a les paramètres de configuration de stockage dans la spécification de plan de contrôle. Les mêmes paramètres s’appliqueront à toutes les spécifications de pools. Vous pouvez également personnaliser une copie de ce fichier et l’utiliser pour votre déploiement de cluster de données volumineuses sur minikube. Vous pouvez modifier le fichier personnalisé et modifier la taille des revendications volumes persistants pour les pools spécifiques prendre en charge les charges de travail à exécuter manuellement. Vous pouvez aussi consulter [configurer le stockage](#config-samples) modifie de section pour obtenir des exemples sur la procédure à suivre à l’aide de *mssqlctl* commandes.
+Minikube est fourni avec une classe de stockage intégré appelée **standard** ainsi que d’un fournisseur dynamique pour celui-ci. La configuration intégrée dans fichier minikube *minikube-dev-test* a les paramètres de configuration de stockage dans la spécification de plan de contrôle. Les mêmes paramètres s’appliqueront à toutes les spécifications de pools. Vous pouvez également personnaliser une copie de ce fichier et l’utiliser pour votre déploiement de cluster de données volumineuses sur minikube. Vous pouvez modifier le fichier personnalisé et modifier la taille des revendications volumes persistants pour les pools spécifiques prendre en charge les charges de travail à exécuter manuellement. Vous pouvez aussi consulter [configurer le stockage](#config-samples) modifie de section pour obtenir des exemples sur la procédure à suivre à l’aide de *mssqlctl* commandes.
 
 ## <a name="kubeadm-storage-classes"></a>Classes de stockage Kubeadm
 
 Kubeadm n’est pas fourni avec une classe de stockage intégrée. Vous devez créer vos propres classes de stockage et les volumes persistants à l’aide de stockage local ou votre fournisseur préféré, tel que [tour](https://github.com/rook/rook). Dans ce cas, vous devez définir le **className** à la classe de stockage que vous avez configuré. 
 
 > [!NOTE]
->  Dans le texte généré dans le fichier de configuration de déploiement pour *kubeadm kubeadm-dev-test.json* aucun nom de classe de stockage spécifié pour le stockage des journaux et des données. Avant le déploiement, vous devez personnaliser le fichier de configuration et définir la valeur de className sinon que les validations avant le déploiement échoue. Déploiement a également une étape de validation qui vérifie l’existence de la classe de stockage, mais pas pour les volumes persistants nécessaires. Vous devez vous assurer de que vous créez suffisamment volumes en fonction de l’échelle de votre cluster. Dans CTP 3.0, pour la taille de cluster par défaut, vous devez créer au moins 23 volumes. [Ici](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) est un exemple sur la façon de créer des volumes persistants à l’aide du fournisseur local.
+>  Dans le texte généré dans le fichier de configuration de déploiement pour *kubeadm kubeadm-dev-test* aucun nom de classe de stockage spécifié pour le stockage des journaux et des données. Avant le déploiement, vous devez personnaliser le fichier de configuration et définir la valeur de className sinon que les validations avant le déploiement échoue. Déploiement a également une étape de validation qui vérifie l’existence de la classe de stockage, mais pas pour les volumes persistants nécessaires. Vous devez vous assurer de que vous créez suffisamment volumes en fonction de l’échelle de votre cluster. Dans les versions CTP 3.1, pour la taille de cluster par défaut, vous devez créer au moins 23 volumes. [Ici](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) est un exemple sur la façon de créer des volumes persistants à l’aide du fournisseur local.
 
 
 ## <a name="customize-storage-configurations-for-each-pool"></a>Personnaliser les configurations de stockage pour chaque pool
 
-Pour toutes les personnalisations, vous devez d’abord créer une copie de la génération dans le fichier de configuration que vous souhaitez utiliser. Par exemple, la commande suivante crée une copie de la *aks-dev-test.json* fichier de configuration de déploiement dans le répertoire actif :
+Pour toutes les personnalisations, vous devez d’abord créer une copie de la génération dans le fichier de configuration que vous souhaitez utiliser. Par exemple, la commande suivante crée une copie de la *aks-dev-test* fichier de configuration de déploiement dans un sous-répertoire nommé `custom`:
 
 ```bash
-mssqlctl cluster config init --src aks-dev-test.json --target custom.json
+mssqlctl bdc config init --source aks-dev-test --target custom
 ```
 
-Ensuite, vous pouvez personnaliser votre fichier de configuration en le modifiant manuellement, ou vous pouvez utiliser *ensemble de section de configuration de cluster mssqlctl* commande. Cette commande set utilise une combinaison des bibliothèques jsonpath et jsonpatch pour offrir des moyens de modifier votre fichier de configuration.
+Ensuite, vous pouvez personnaliser votre fichier de configuration en le modifiant manuellement, ou vous pouvez utiliser **mssqlctl bdc configuration section défini** commande. Cette commande set utilise une combinaison des bibliothèques jsonpath et jsonpatch pour offrir des moyens de modifier votre fichier de configuration.
 
 ### <a name="configure-size"></a>Configurer la taille
 
@@ -93,13 +93,13 @@ Par défaut, la taille des revendications de volume persistant pour chacune des 
 L’exemple suivant met à jour uniquement la taille de volume persistant des revendications pour les données stockées dans le pool de stockage à Gi 100. Notez que la section de stockage doit exister dans le fichier de configuration pour le pool de stockage avant d’exécuter cette commande :
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
 ```
 
 L’exemple suivant met à jour la taille de volume persistant des revendications pour tous les pools à Gi 32 :
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
 ```
 
 ### <a id="config-samples"></a> Configurer la classe de stockage
@@ -107,7 +107,7 @@ mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.
 Exemple suivant montre comment modifier la classe de stockage pour le plan de contrôle :
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
 ```
 
 Une autre option consiste à modifier manuellement le fichier de configuration personnalisée ou utiliser jsonpatch comme dans l’exemple suivant qui modifie la classe de stockage pour le pool de stockage. Créer un *patch.json* fichier avec ce contenu :
@@ -135,10 +135,10 @@ Une autre option consiste à modifier manuellement le fichier de configuration p
 }
 ```
 
-Appliquer le fichier de correctif. Utilisez *ensemble de section de configuration de cluster mssqlctl* commande pour appliquer les modifications dans le fichier de correctif JSON. L’exemple suivant applique le fichier patch.json à un custom.json de fichier de configuration de déploiement cible.
+Appliquer le fichier de correctif. Utilisez **mssqlctl bdc configuration section défini** commande pour appliquer les modifications dans le fichier de correctif JSON. L’exemple suivant applique le fichier patch.json à un custom.json de fichier de configuration de déploiement cible.
 
 ```bash
-mssqlctl cluster config section set -c custom.json -p ./patch.json
+mssqlctl bdc config section set --config-profile custom -p ./patch.json
 ```
 
 ## <a name="next-steps"></a>Étapes suivantes

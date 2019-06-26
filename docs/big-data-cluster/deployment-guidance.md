@@ -5,17 +5,17 @@ description: Découvrez comment déployer des clusters de données volumineuses 
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 15cd412de1dda9d1245859c27d35a7c7f9f52710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bd6d260d58b837e2df0d216c28149b6e9a3fa51
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782252"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388782"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Comment déployer des clusters de données volumineuses de SQL Server sur Kubernetes
 
@@ -82,14 +82,14 @@ Options sont définies dans les fichiers de configuration JSON de déploiement d
 
 | Profil de déploiement | Environnement Kubernetes |
 |---|---|
-| **aks-dev-test.json** | Azure Kubernetes Service (AKS) |
-| **kubeadm-dev-test.json** | Plusieurs ordinateurs (kubeadm) |
-| **minikube-dev-test.json** | minikube |
+| **aks-dev-test** | Azure Kubernetes Service (AKS) |
+| **kubeadm-dev-test** | Plusieurs ordinateurs (kubeadm) |
+| **minikube-dev-test** | minikube |
 
-Vous pouvez déployer un cluster de données volumineux en exécutant **de création du cluster mssqlctl**. Cela vous invite à choisir une des configurations par défaut et vous guide ensuite dans le déploiement.
+Vous pouvez déployer un cluster de données volumineux en exécutant **mssqlctl bdc créer**. Cela vous invite à choisir une des configurations par défaut et vous guide ensuite dans le déploiement.
 
 ```bash
-mssqlctl cluster create
+mssqlctl bdc create
 ```
 
 Dans ce scénario, vous êtes invité pour tous les paramètres qui ne font pas partie de la configuration par défaut, tels que les mots de passe. Notez que les informations de Docker sont fournies pour vous par Microsoft dans le cadre de la 2019 de serveur SQL [programme d’Adoption anticipée](https://aka.ms/eapsignup).
@@ -99,35 +99,38 @@ Dans ce scénario, vous êtes invité pour tous les paramètres qui ne font pas 
 
 ## <a id="customconfig"></a> Configurations personnalisées
 
-Il est également possible de personnaliser votre propre fichier de configuration de déploiement. Vous pouvez le faire avec les étapes suivantes :
+Il est également possible de personnaliser votre propre profil de configuration de déploiement. Vous pouvez le faire avec les étapes suivantes :
 
-1. Démarrer avec l’un des profils de déploiement standard qui correspondent à votre environnement Kubernetes. Vous pouvez utiliser la **liste de configuration de cluster mssqlctl** commande pour répertorier les :
+1. Démarrer avec l’un des profils de déploiement standard qui correspondent à votre environnement Kubernetes. Vous pouvez utiliser la **mssqlctl bdc configuration liste** commande pour répertorier les :
 
    ```bash
-   mssqlctl cluster config list
+   mssqlctl bdc config list
    ```
 
-1. Pour personnaliser votre déploiement, créez une copie du profil de déploiement avec le **mssqlctl cluster config init** commande. Par exemple, la commande suivante crée une copie de la **aks-dev-test.json** fichier de configuration de déploiement dans le répertoire actif :
+1. Pour personnaliser votre déploiement, créez une copie du profil de déploiement avec le **mssqlctl bdc config init** commande. Par exemple, la commande suivante crée une copie de la **aks-dev-test** fichier de configuration de déploiement dans le répertoire cible `custom`:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
-   ```
-
-1. Pour personnaliser les paramètres dans votre fichier de configuration de déploiement, vous pouvez le modifier dans un outil qui convient pour la modification des documents json comme Visual Studio Code. Pour l’automatisation de l’aide de scripts, vous pouvez modifier le fichier de configuration personnalisée à l’aide **ensemble de section de configuration de cluster mssqlctl** commande. Par exemple, la commande suivante modifie un fichier de configuration personnalisée pour modifier le nom du cluster déployé à partir de la valeur par défaut (**mssql-cluster**) à **test-cluster**:  
-
-   ```bash
-   mssqlctl cluster config section set --config-file custom.json --json-values "metadata.name=test-cluster"
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
    > [!TIP]
-   > Est un outil utile pour rechercher les chemins d’accès JSON le [évaluateur en ligne JSONPath](https://jsonpath.com/).
+   > Le `--target` spécifie un répertoire qui contient le fichier de configuration basé sur le `--source` paramètre.
+
+1. Pour personnaliser les paramètres dans votre profil de configuration de déploiement, vous pouvez modifier le fichier de configuration de déploiement dans un outil qui convient pour la modification des fichiers JSON, tels que Visual Studio Code. Pour l’automatisation de l’aide de scripts, vous pouvez également modifier le profil de déploiement personnalisé à l’aide **mssqlctl bdc configuration section défini** commande. Par exemple, la commande suivante modifie un profil de déploiement personnalisé pour modifier le nom du cluster déployé à partir de la valeur par défaut (**mssql-cluster**) à **test-cluster**:  
+
+   ```bash
+   mssqlctl bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"
+   ```
+
+   > [!TIP]
+   > Le `--config-profile` spécifie un nom de répertoire pour votre profil de déploiement personnalisé, mais les modifications se produisent sur le fichier JSON de configuration de déploiement de ce répertoire. Est un outil utile pour rechercher les chemins d’accès JSON le [évaluateur en ligne JSONPath](https://jsonpath.com/).
 
    En plus de transmettre des paires clé-valeur, vous pouvez également fournir des valeurs JSON en ligne ou transmettre les fichiers du correctif JSON. Pour plus d’informations, consultez [configurer les paramètres de déploiement pour les clusters de données volumineuses](deployment-custom-configuration.md).
 
-1. Puis passez le fichier de configuration personnalisée à **de création du cluster mssqlctl**. Notez que vous devez définir le texte requis [variables d’environnement](#env), sinon vous demandera les valeurs :
+1. Puis passez le fichier de configuration personnalisée à **mssqlctl bdc créer**. Notez que vous devez définir le texte requis [variables d’environnement](#env), sinon vous demandera les valeurs :
 
    ```bash
-   mssqlctl cluster create --config-file custom.json --accept-eula yes
+   mssqlctl bdc create --config-profile custom --accept-eula yes
    ```
 
 > [!TIP]
@@ -146,7 +149,7 @@ Les variables d’environnement suivantes sont utilisées pour les paramètres d
 | **KNOX_PASSWORD** | Le mot de passe utilisateur de Knox. |
 | **MSSQL_SA_PASSWORD** | Le mot de passe de l’utilisateur d’association de sécurité pour l’instance principale de SQL. |
 
-Ces variables d’environnement doivent être définies avant d’appeler **de création du cluster mssqlctl**. Si n’importe quelle variable n’est pas définie, vous êtes invité pour celui-ci.
+Ces variables d’environnement doivent être définies avant d’appeler **mssqlctl bdc créer**. Si n’importe quelle variable n’est pas définie, vous êtes invité pour celui-ci.
 
 L’exemple suivant montre comment définir les variables d’environnement pour Linux (bash) et Windows (PowerShell) :
 
@@ -168,10 +171,10 @@ SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 ```
 
-Lors de la configuration des variables d’environnement, vous devez exécuter `mssqlctl cluster create` pour déclencher le déploiement. Cet exemple utilise le fichier de configuration de cluster créé ci-dessus :
+Après avoir défini les variables d’environnement, vous devez exécuter `mssqlctl bdc create` pour déclencher le déploiement. Cet exemple utilise le profil de configuration de cluster créé ci-dessus :
 
 ```
-mssqlctl cluster create --config-file custom.json --accept-eula yes
+mssqlctl bdc create --config-profile custom --accept-eula yes
 ```
 
 Veuillez noter les recommandations suivantes :
@@ -182,7 +185,7 @@ Veuillez noter les recommandations suivantes :
 
 ## <a id="unattended"></a> Installation sans assistance
 
-Pour un déploiement sans assistance, vous devez définir toutes les variables d’environnement requises, utilisez un fichier de configuration et appeler `mssqlctl cluster create` commande avec le `--accept-eula yes` paramètre. Les exemples dans la section précédente illustrent la syntaxe pour une installation sans assistance.
+Pour un déploiement sans assistance, vous devez définir toutes les variables d’environnement requises, utilisez un fichier de configuration et appeler `mssqlctl bdc create` commande avec le `--accept-eula yes` paramètre. Les exemples dans la section précédente illustrent la syntaxe pour une installation sans assistance.
 
 ## <a id="monitor"></a> Surveiller le déploiement
 
@@ -195,7 +198,7 @@ Pendant l’amorçage de cluster, la fenêtre de commande client affiche l’ét
 En moins de 15 à 30 minutes, vous devez averti que le pod de contrôleur est en cours d’exécution :
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
+2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
 2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
 2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
 ```
@@ -206,11 +209,8 @@ En moins de 15 à 30 minutes, vous devez averti que le pod de contrôleur est en
 Une fois le déploiement terminé, la sortie vous informe de réussite :
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Monitor and track your cluster at the Portal Endpoint: https://<ip-address>:30777/portal/
 2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
 ```
-
-Notez l’URL de la **portail le point de terminaison** dans la sortie précédente pour une utilisation dans la section suivante.
 
 > [!TIP]
 > Le nom par défaut pour le cluster déployé des données volumineuses est `mssql-cluster` sauf modification par une configuration personnalisée.
@@ -236,10 +236,10 @@ Une fois le script de déploiement terminée, vous pouvez obtenir les adresses I
 
    Spécifiez le nom d’utilisateur et le mot de passe que vous avez configuré pour le contrôleur (CONTROLLER_USERNAME et CONTROLLER_PASSWORD) au cours du déploiement.
 
-1. Exécutez **liste de point de terminaison de cluster mssqlctl** pour obtenir une liste avec une description de chaque point de terminaison et leurs valeurs d’adresse et le port IP correspondantes. 
+1. Exécutez **liste de point de terminaison mssqlctl bdc** pour obtenir une liste avec une description de chaque point de terminaison et leurs valeurs d’adresse et le port IP correspondantes. 
 
    ```bash
-   mssqlctl cluster endpoint list
+   mssqlctl bdc endpoint list
    ```
 
    La liste suivante illustre le résultat de cette commande :
@@ -252,7 +252,6 @@ Une fois le script de déploiement terminée, vous pouvez obtenir les adresses I
    yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
    app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
    management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
    log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
    metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
    controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https

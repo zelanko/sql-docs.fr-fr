@@ -1,7 +1,7 @@
 ---
-title: Sys.internal_partitions (Transact-SQL) | Microsoft Docs
+title: sys.internal_partitions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,14 +14,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a86c559adeeca787ac0e278eed5fb832b8c00bfd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5795ec9feaef483dd3ee9b5f3e31dbb619a89331
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537904"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388337"
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>Sys.internal_partitions (Transact-SQL)
+# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque ensemble de lignes qui assure le suivi des données internes pour les index columnstore sur les tables sur disque. Ces ensembles de lignes sont internes aux index columnstore et les lignes supprimé de suivi, les mappages de rowgroup et delta magasin rowgroups. Suivre les données pour chaque pour chaque partition de table ; chaque table possède au moins une partition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recrée les ensembles de lignes chaque fois qu’il reconstruit l’index columnstore.   
@@ -39,6 +39,7 @@ ms.locfileid: "52537904"
 |lignes|**bigint**|Nombre approximatif de lignes dans cette partition.|  
 |data_compression|**tinyint**|L’état de compression pour l’ensemble de lignes :<br /><br /> 0 = AUCUN<br /><br /> 1 = LIGNE<br /><br /> 2 = PAGE|  
 |data_compression_desc|**nvarchar(60)**|L’état de compression pour chaque partition. Les valeurs possibles pour les tables rowstore sont AUCUN, LIGNE et PAGE. Les valeurs possibles pour les tables columnstore sont COLUMNSTORE et COLUMNSTORE_ARCHIVE.|  
+|optimize_for_sequential_key|**bit**|1 = partition a l’optimisation d’insertion de la dernière page est activée.<br><br>0 = valeur par défaut. Partition a l’optimisation de l’insertion de la dernière page désactivée.|
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

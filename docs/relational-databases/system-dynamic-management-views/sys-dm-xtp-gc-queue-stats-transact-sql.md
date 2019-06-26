@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -19,15 +19,17 @@ ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 189d6c83eee8caa891585f051d4ee66f4d22e44f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
+ms.openlocfilehash: cb8173ed92dd50c640435b14f4b9096d46ee4471
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413739"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388714"
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Génère des informations sur chaque file d'attente de travaux de garbage collection sur le serveur, ainsi que diverses statistiques sur chacune d'entre elles. Il existe une file d'attente par processeur logique.  
   
@@ -38,7 +40,7 @@ ms.locfileid: "52413739"
  Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Nom de colonne|Type|Description|  
+|Nom de colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |queue_id|**Int**|Identificateur unique de la file d'attente.|  
 |total_enqueues|**bigint**|Nombre total d'éléments de travail garbage collection empilés dans cette file d'attente depuis que le serveur a démarré.|  

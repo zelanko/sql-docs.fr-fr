@@ -6,17 +6,17 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 115809307b430a9e5079de4db71180cca4766dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0623a920b060e4d5d1e7724f39e2eadb0bd2475
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783166"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387946"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>Qu’est le contrôleur sur un cluster de données volumineux de SQL Server ?
 
@@ -44,17 +44,13 @@ Le flux de travail buildout sera à disposition sur Kubernetes un cluster de don
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>La gestion du cluster via le service de contrôleur
 
-Vous pouvez gérer le cluster purement via le service de contrôleur à l’aide `mssqlctl` API ou le portail d’administration de cluster qui est hébergé au sein du cluster. Si vous déployez des objets supplémentaires comme pods Kubernetes dans le même espace de noms, ils ne sont pas gérés ou surveillées par le service de contrôleur.
+Vous pouvez gérer le cluster via le service de contrôleur à l’aide **mssqlctl** commandes. Si vous déployez des objets supplémentaires comme pods Kubernetes dans le même espace de noms, ils ne sont pas gérés ou surveillées par le service de contrôleur. Vous pouvez également utiliser **kubectl** commandes pour gérer le cluster au niveau de Kubernetes. Pour plus d’informations, consultez [analyse et résoudre les problèmes de clusters de données volumineuses de SQL Server](cluster-troubleshooting-commands.md).
 
-Le contrôleur et les objets Kubernetes (jeux avec état, pods, secrets, etc.) créés pour un cluster de données volumineux se trouvent dans un espace de noms Kubernetes dédié. Le service du contrôleur sera être autorisé par l’administrateur de cluster Kubernetes pour gérer toutes les ressources au sein de cet espace de noms.  La stratégie RBAC pour ce scénario est configurée automatiquement dans le cadre du déploiement initial du cluster à l’aide `mssqlctl`. 
+Le contrôleur et les objets Kubernetes (jeux avec état, pods, secrets, etc.) créés pour un cluster de données volumineux se trouvent dans un espace de noms Kubernetes dédié. Le service du contrôleur sera être autorisé par l’administrateur de cluster Kubernetes pour gérer toutes les ressources au sein de cet espace de noms.  La stratégie RBAC pour ce scénario est configurée automatiquement dans le cadre du déploiement initial du cluster à l’aide **mssqlctl**.
 
 ### <a name="mssqlctl"></a>mssqlctl
 
-`mssqlctl` est un utilitaire de ligne de commande écrit dans Python qui permet aux administrateurs de cluster à démarrer et gérer des clusters de données volumineuses via les API REST exposées par le service de contrôleur.
-
-### <a name="cluster-administration-portal"></a>Portail d’Administration de cluster
-
-Une fois que le service de contrôleur est en cours d’exécution, l’administrateur de cluster peut utiliser le [portail d’Administration de Cluster](cluster-admin-portal.md) pour surveiller la progression du déploiement, détecter et résoudre les problèmes avec les services au sein du cluster.
+**mssqlctl** est un utilitaire de ligne de commande écrit dans Python que permet aux administrateurs pour démarrer et gérer des clusters de données volumineuses via les API REST exposées par le service de contrôleur de cluster.
 
 ## <a name="controller-service-security"></a>Sécurité du contrôleur de service
 

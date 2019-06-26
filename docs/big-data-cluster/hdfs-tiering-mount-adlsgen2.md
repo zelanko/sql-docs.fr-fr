@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 504559fab3078b03ea3b8aea923035654f60ce47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16b336113f869733b8f6ba93e3dbfe3dde5a52c1
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782136"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388791"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Comment Gen2 ADLS de montage de fichiers HDFS la hiérarchisation d’un cluster de données volumineuses
 
@@ -112,10 +112,10 @@ Maintenant que vous avez préparé un fichier d’informations d’identificatio
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. Montage du stockage HDFS à distance dans Azure à l’aide **créer de montage du pool de stockage de clusters mssqlctl**. Remplacez les valeurs d’espace réservé avant d’exécuter la commande suivante :
+1. Montage du stockage HDFS à distance dans Azure à l’aide **créer de montage de pool de stockage mssqlctl bdc**. Remplacez les valeurs d’espace réservé avant d’exécuter la commande suivante :
 
    ```bash
-   mssqlctl cluster storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -128,21 +128,21 @@ Si monté correctement, il se peut que vous devez être en mesure d’interroger
 Pour répertorier l’état de tous les montages dans votre cluster de données volumineux, utilisez la commande suivante :
 
 ```bash
-mssqlctl cluster storage-pool mount status
+mssqlctl bdc storage-pool mount status
 ```
 
 Pour répertorier l’état d’un montage à un emplacement spécifique dans HDFS, utilisez la commande suivante :
 
 ```bash
-mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Supprimer le montage
 
-Pour supprimer le montage, utilisez le **delete de montage de pool de stockage de cluster mssqlctl** commande et spécifiez le chemin d’accès de montage dans HDFS :
+Pour supprimer le montage, utilisez le **mssqlctl bdc pool de stockage montage delete** commande et spécifiez le chemin d’accès de montage dans HDFS :
 
 ```bash
-mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Étapes suivantes

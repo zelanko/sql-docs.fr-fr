@@ -5,16 +5,16 @@ description: Article de référence pour les commandes de mssqlctl.
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: acc25e6b3deca199ad774378318e17991614dcaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2601d526710e6cf51de089f7879f0f5517bf86aa
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779239"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388672"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -26,9 +26,11 @@ L’article suivant fournit la référence pour le **mssqlctl** outil pour [clus
 |     |     |
 | --- | --- |
 |[mssqlctl app](reference-mssqlctl-app.md) | Créer, supprimer, exécuter et gérer des applications. |
-|[mssqlctl cluster](reference-mssqlctl-cluster.md) | Sélectionnez, gérer et exploiter des clusters. |
+|[mssqlctl bdc](reference-mssqlctl-bdc.md) | Sélectionnez, gérer et exploiter des Clusters de données volumineuses de SQL Server. |
+|[mssqlctl hdfs](reference-mssqlctl-hdfs.md) | Le module HDFS fournit le système de fichiers de commandes pour accéder à un système HDFS. |
 [mssqlctl login](#mssqlctl-login) | Connectez-vous au point de terminaison de contrôleur du cluster.
 [déconnexion de mssqlctl](#mssqlctl-logout) | Se déconnecter de cluster.
+|[mssqlctl sql](reference-mssqlctl-sql.md) | L’interface de base de données SQL CLI permet à l’utilisateur d’interagir avec SQL Server par le biais de T-SQL. |
 ## <a name="mssqlctl-login"></a>mssqlctl login
 Lorsque votre cluster est déployé, il répertorie le point de terminaison du contrôleur au cours du déploiement, vous devez utiliser pour vous connecter.  Si vous ne connaissez pas le point de terminaison du contrôleur, vous pouvez la connexion en utilisant la configuration de kube de votre cluster sur votre système dans l’emplacement par défaut de <user home>/.kube/config ou utiliser le var env KUBECONFIG, par exemple, exporter KUBECONFIG=path/to/.kube/config.
 ```bash

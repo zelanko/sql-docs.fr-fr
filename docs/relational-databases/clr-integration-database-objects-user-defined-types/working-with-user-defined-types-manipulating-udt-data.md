@@ -29,12 +29,12 @@ ms.assetid: 51b1a5f2-7591-4e11-bfe2-d88e0836403f
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c216b41fe7f7c4d9a8b1c5e290b07bc0fec2c3d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b83088e64314c21d8a71deb1da395d40eecfdec
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635517"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351650"
 ---
 # <a name="working-with-user-defined-types---manipulating-udt-data"></a>Utilisation de types définis par l’utilisateur - Manipulation de données UDT
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +66,11 @@ FROM dbo.Points;
  Ce code produit les résultats suivants.  
   
 ```  
-IDPointValue  
-----------  
-13,4  
-21,5  
-31,99  
+ID PointValue  
+-- ----------  
+ 1 3,4  
+ 2 1,5  
+ 3 1,99  
 ```  
   
  Vous pouvez également utiliser les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST et CONVERT pour obtenir les mêmes résultats.  
@@ -93,11 +93,11 @@ FROM dbo.Points;
  Les propriétés X et Y retournent une valeur entière qui est affichée dans le jeu de résultats.  
   
 ```  
-IDxValyVal  
-----------  
-134  
-215  
-3199  
+ID xVal yVal  
+-- ---- ----  
+ 1    3    4  
+ 2    1    5  
+ 3    1   99  
 ```  
   
 ## <a name="working-with-variables"></a>Utilisation de Variables  
@@ -171,11 +171,11 @@ FROM dbo.Points;
  Les résultats sont affichés dans le **Distance** colonne :  
   
 ```  
-IDXYDistance  
-------------------------  
-1345  
-2155.09901951359278  
-319999.0050503762308  
+ID X  Y  Distance  
+-- -- -- ----------------  
+ 1  3  4                5  
+ 2  1  5 5.09901951359278  
+ 3  1 99 99.0050503762308  
 ```  
   
  Le **DistanceFrom** méthode prend un argument de **Point** type de données et affiche la distance à partir du point spécifié au PointValue :  
@@ -189,11 +189,11 @@ FROM dbo.Points;
  Les résultats affichent les résultats de la **DistanceFrom** méthode pour chaque ligne dans la table :  
   
 ```  
-ID PntDistanceFromPoint  
----------------------  
-13,495.0210502993942  
-21,594  
-31,990  
+ID Pnt DistanceFromPoint  
+-- --- -----------------  
+ 1 3,4  95.0210502993942  
+ 2 1,5                94  
+ 3 1,9                90  
 ```  
   
  Le **DistanceFromXY** méthode accepte les points individuellement en tant qu’arguments :  
