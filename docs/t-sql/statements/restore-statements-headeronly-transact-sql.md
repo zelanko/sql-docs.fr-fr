@@ -150,7 +150,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) via la version actuelle.<br /><br /> Type de chiffreur utilisé : certificat ou clé asymétrique. Si la sauvegarde n'est pas chiffrée, cette valeur est NULL.|  
   
 > [!NOTE]  
->  Si des mots de passe sont définis pour les jeux de sauvegarde, RESTORE HEADERONLY n'affiche que les informations complètes relatives au jeu de sauvegarde dont le mot de passe correspond à la définition de l'option PASSWORD de la commande. RESTORE HEADERONLY affiche également les informations complètes relatives aux jeux de sauvegarde non protégés. La colonne **BackupName** des autres jeux de sauvegarde du support protégés par mot de passe prend la valeur '**_Password Protected_**', et toutes les autres colonnes ont la valeur NULL.  
+>  Si des mots de passe sont définis pour les jeux de sauvegarde, RESTORE HEADERONLY n'affiche que les informations complètes relatives au jeu de sauvegarde dont le mot de passe correspond à la définition de l'option PASSWORD de la commande. RESTORE HEADERONLY affiche également les informations complètes relatives aux jeux de sauvegarde non protégés. La colonne **BackupName** des autres jeux de sauvegarde du support protégés par mot de passe prend la valeur ' **_Password Protected_** ', et toutes les autres colonnes ont la valeur NULL.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Un client peut utiliser RESTORE HEADERONLY pour récupérer toutes les informations des en-têtes de sauvegarde pour toutes les sauvegardes figurant sur une unité particulière. Pour chaque sauvegarde réalisée sur une unité de sauvegarde, le serveur envoie les informations d'en-tête sous forme de ligne.  
@@ -174,7 +174,7 @@ WITH NOUNLOAD;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   
  [RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)   
