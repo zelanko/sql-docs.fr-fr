@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16b336113f869733b8f6ba93e3dbfe3dde5a52c1
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388791"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400019"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Comment Gen2 ADLS de montage de fichiers HDFS la hiérarchisation d’un cluster de données volumineuses
 
@@ -64,17 +64,15 @@ Pour pouvoir utiliser les informations d’identification OAuth pour monter, vou
 
 Attendez 5 à 10 minutes avant d’utiliser les informations d’identification pour le montage
 
-### <a name="create-credential-file"></a>Créer le fichier d’informations d’identification
+### <a name="set-environment-variable-for-oauth-credentials"></a>Définir la variable d’environnement pour les informations d’identification OAuth
 
-Ouvrez une invite de commandes sur un ordinateur client qui peut accéder à votre cluster de données volumineux.
-
-Créez un fichier local nommé **filename.creds** qui contient vos informations d’identification du compte Azure Data Lake Storage Gen2 en utilisant le format suivant :
+Ouvrez une invite de commandes sur un ordinateur client qui peut accéder à votre cluster de données volumineux. Définissez une variable d’environnement en utilisant le format suivant : Notez que les informations d’identification doivent se trouver dans une virgule liste séparée par des. La commande 'set' est utilisée sur Windows. Si vous utilisez Linux, utilisez « export » à la place.
 
    ```text
-    fs.azure.account.auth.type=OAuth
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above]
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above]
+    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
+    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
     fs.azure.account.oauth2.client.secret=[<key> from step5 above]
    ```
 
@@ -85,20 +83,20 @@ Vous pouvez également monter à l’aide de clés d’accès que vous pouvez ob
  > [!TIP]
    > Pour plus d’informations sur la façon de trouver la clé d’accès (`<storage-account-access-key>`) pour votre compte de stockage, consultez [clés d’accès afficher et copier](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
 
-### <a name="create-credential-file"></a>Créer le fichier d’informations d’identification
+### <a name="set-environment-variable-for-access-key-credentials"></a>Définir la variable d’environnement pour les informations d’identification de clé accès
 
 1. Ouvrez une invite de commandes sur un ordinateur client qui peut accéder à votre cluster de données volumineux.
 
-1. Créez un fichier local nommé **filename.creds** qui contient vos informations d’identification du compte Azure Data Lake Storage Gen2 en utilisant le format suivant :
+1. Ouvrez une invite de commandes sur un ordinateur client qui peut accéder à votre cluster de données volumineux. Définissez une variable d’environnement en utilisant le format suivant. Notez que les informations d’identification doivent se trouver dans une virgule liste séparée par des. La commande 'set' est utilisée sur Windows. Si vous utilisez Linux, utilisez « export » à la place.
 
    ```text
-   fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net
+   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
 ## <a id="mount"></a> Montage du stockage HDFS à distance
 
-Maintenant que vous avez préparé un fichier d’informations d’identification avec les clés d’accès ou à l’aide d’OAuth, vous pouvez commencer le montage. Les étapes suivantes monter le stockage HDFS à distance dans Azure Data Lake sur le stockage HDFS local de votre cluster big data.
+Maintenant que vous avez défini la variable d’environnement MOUNT_CREDENTIALS pour les clés d’accès ou à l’aide d’OAuth, vous pouvez commencer le montage. Les étapes suivantes monter le stockage HDFS à distance dans Azure Data Lake sur le stockage HDFS local de votre cluster big data.
 
 1. Utilisez **kubectl** pour rechercher l’adresse IP du point de terminaison **contrôleur-svc-external** service dans votre cluster de données volumineux. Recherchez le **External-IP**.
 
@@ -111,11 +109,12 @@ Maintenant que vous avez préparé un fichier d’informations d’identificatio
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+1. Variable d’environnement définie MOUNT_CREDENTIALS (faites défiler pour obtenir des instructions)
 
 1. Montage du stockage HDFS à distance dans Azure à l’aide **créer de montage de pool de stockage mssqlctl bdc**. Remplacez les valeurs d’espace réservé avant d’exécuter la commande suivante :
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]

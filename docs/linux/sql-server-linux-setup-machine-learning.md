@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a64addb1d9267aadc7e7eb2828e032d67db5d540
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705096"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399950"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Installer SQL Server 2019 Machine Learning Services (R, Python) sur Linux
 
@@ -28,7 +28,7 @@ Services machine Learning est également pris en charge sur les conteneurs Linux
 
 ## <a name="uninstall-previous-ctp"></a>Désinstaller la version CTP précédente
 
-La liste des packages a changé au CTP versions antérieures, ce qui entraîne moins de packages. Nous vous recommandons de désinstallation de CTP 2.x pour supprimer tous les packages précédentes avant d’installer la version CTP 3.0. Installation côte à côte de plusieurs versions n’est pas pris en charge.
+La liste des packages a changé au CTP versions antérieures, ce qui entraîne moins de packages. Nous vous recommandons de désinstallation de CTP 2.x pour supprimer tous les packages précédentes avant d’installer la version CTP 3.1. Installation côte à côte de plusieurs versions n’est pas pris en charge.
 
 ### <a name="1-confirm-package-installation"></a>1. Confirmer l’installation du package
 
@@ -61,7 +61,7 @@ Commandes de suppression de packages apparaissent dans le tableau suivant.
 > microsoft-r-open-mro-3.4.4
 > ```
 
-### <a name="3-proceed-with-ctp-30-install"></a>3. Poursuivre l’installation de la version CTP 3.0
+### <a name="3-proceed-with-ctp-31-install"></a>3. Poursuivre l’installation de la version CTP 3.1
 
 Installez au niveau du package le plus élevé en suivant les instructions dans cet article pour votre système d’exploitation.
 

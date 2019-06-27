@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b31c47039c79e0b8303f560694e67276dd192b6f
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: f26fcfa24da5b9f22ddab1e76c2f80a0d24fae8d
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388771"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400030"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Comment S3 de montage de fichiers HDFS la hiérarchisation d’un cluster de données volumineuses
 
@@ -32,12 +32,12 @@ Les sections suivantes fournissent un exemple de configuration HDFS la hiérarch
 
 ## <a name="access-keys"></a>Clés d'accès
 
-1. Ouvrez une invite de commandes sur un ordinateur client qui peut accéder à votre cluster de données volumineux.
+### <a name="set-environment-variable-for-access-key-credentials"></a>Définir la variable d’environnement pour les informations d’identification de clé accès
 
-1. Créez un fichier local nommé **filename.creds** qui contient vos informations d’identification du compte de S3 en utilisant le format suivant :
+Ouvrez une invite de commandes sur un ordinateur client qui peut accéder à votre cluster de données volumineux. Définissez une variable d’environnement en utilisant le format suivant. Notez que les informations d’identification doivent se trouver dans une virgule liste séparée par des. La commande 'set' est utilisée sur Windows. Si vous utilisez Linux, utilisez « export » à la place.
 
    ```text
-    fs.s3a.access.key=<Access Key ID of the key>
+    set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
     fs.s3a.secret.key=<Secret Access Key of the key>
    ```
 
@@ -59,11 +59,13 @@ Maintenant que vous avez préparé un fichier d’informations d’identificatio
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+   
+1. Définir la variable d’environnement MOUNT_CREDENTIALS suivant les instructions ci-dessus
 
 1. Montage du stockage HDFS à distance dans Azure à l’aide **créer de montage de pool de stockage mssqlctl bdc**. Remplacez les valeurs d’espace réservé avant d’exécuter la commande suivante :
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
