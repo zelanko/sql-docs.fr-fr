@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 863fd1a396f7bdb0679f2f20372db13db29b60b6
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 709d74ef33ab6b54ac688763b006d66e4210006d
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394181"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412880"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>Créer, exporter et noter les modèles d’apprentissage automatique Spark sur des clusters de données volumineuses de SQL Server
 
@@ -36,8 +36,7 @@ Pour exécuter l’exemple, vous devez également les conditions préalables sui
 - [Outils de données volumineuses](deploy-big-data-tools.md)
    - **kubectl**
    - **curl**
-
-- [Azure Data Studio](../azure-data-studio/download.md)
+   - **Azure Data Studio**
 
 ## <a name="model-training-with-spark-ml"></a>Apprentissage du modèle avec Spark ML
 

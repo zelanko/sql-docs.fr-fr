@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 06/26/2019
+ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 1d06b668a6c8badef75a0e90d3f58b67b1269984
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400019"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419045"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Comment Gen2 ADLS de montage de fichiers HDFS la hiérarchisation d’un cluster de données volumineuses
 
@@ -81,7 +81,7 @@ Ouvrez une invite de commandes sur un ordinateur client qui peut accéder à vot
 Vous pouvez également monter à l’aide de clés d’accès que vous pouvez obtenir pour votre compte ADLS sur le portail Azure.
 
  > [!TIP]
-   > Pour plus d’informations sur la façon de trouver la clé d’accès (`<storage-account-access-key>`) pour votre compte de stockage, consultez [clés d’accès afficher et copier](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
+   > Pour plus d’informations sur la façon de trouver la clé d’accès (`<storage-account-access-key>`) pour votre compte de stockage, consultez [afficher les clés de compte et de la chaîne de connexion](/azure/storage/common/storage-account-manage#view-account-keys-and-connection-string).
 
 ### <a name="set-environment-variable-for-access-key-credentials"></a>Définir la variable d’environnement pour les informations d’identification de clé accès
 

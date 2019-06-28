@@ -13,12 +13,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cfb905cb56c053d44b93021838915d3a628241a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7b5bf6ff2324c8e63b030d03e36794faf0ec9d4
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62813222"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419036"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Changements essentiels dans les fonctionnalités du moteur de base de données de SQL Server 2014
   Cette rubrique décrit les modifications importantes apportées à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] et aux versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Ces modifications peuvent interrompre les applications, scripts ou fonctionnalités fondés sur les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il se peut que vous rencontriez ces problèmes lors d'une mise à niveau. Pour plus d'informations, consultez [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -265,9 +265,9 @@ ms.locfileid: "62813222"
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
- [Changements de comportement des fonctionnalités du moteur de base de données dans SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)   
- [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)   
+ [Changements de comportement des fonctionnalités du moteur de base de données dans SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md?view=sql-server-2014)   
+ [Fonctionnalités du moteur de base de données supprimées dans SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md?view=sql-server-2014)   
  [Compatibilité descendante du moteur de base de données SQL Server](sql-server-database-engine-backward-compatibility.md)   
  [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
  [Modifications importantes apportées aux fonctionnalités des outils d’administration dans SQL Server 2014](breaking-changes-to-management-tools-features-in-sql-server-2014.md?view=sql-server-2014)  

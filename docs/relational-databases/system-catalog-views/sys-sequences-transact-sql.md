@@ -1,5 +1,5 @@
 ---
-title: Sys.sequences (Transact-SQL) | Microsoft Docs
+title: sys.sequences (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e33dfa78117b68d1cb67baed2aea6bd7f5487e5b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 64532403f495a65cd61fbf6a8bc95369a0a4add3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398122"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413086"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,8 +48,9 @@ ms.locfileid: "52398122"
 |**user_type_id**|**int non NULL**|ID du type de données pour l'objet séquence, comme défini par l'utilisateur.|  
 |**precision**|**tinyint non NULL**|Précision maximale du type de données.|  
 |**scale**|**tinyint non NULL**|Échelle maximale du type. L'échelle est retournée avec la précision afin de donner des métadonnées complètes aux utilisateurs. L'échelle est toujours de 0 pour les objets séquences car seuls les types entiers sont autorisés.|  
-|**Current_value**|**sql_variant non NULL**|La dernière valeur engagée. Autrement dit, la valeur retournée à partir de la dernière exécution de la fonction NEXT VALUE FOR ou la dernière valeur de l’exécution de la **sp_sequence_get_range** procédure. Retourne la valeur START WITH si la séquence n'a jamais été utilisée.|  
+|**current_value**|**sql_variant non NULL**|La dernière valeur engagée. Autrement dit, la valeur retournée à partir de la dernière exécution de la fonction NEXT VALUE FOR ou la dernière valeur de l’exécution de la **sp_sequence_get_range** procédure. Retourne la valeur START WITH si la séquence n'a jamais été utilisée.|  
 |**is_exhausted**|**bit pas NULL**|0 indique que davantage de valeurs peuvent être générées à partir de la séquence. 1 indique que l'objet séquence a atteint le paramètre MAXVALUE et que la séquence n'est pas définie sur CYCLE. La fonction NEXT VALUE FOR retourne une erreur jusqu'à ce que la séquence soit redémarrée à l'aide d'ALTER SEQUENCE.|  
+|**last_used_value**|**sql_variant NULL**|Retourne la dernière valeur générée par le [Next Value For](../../t-sql/functions/next-value-for-transact-sql.md) (fonction). S’applique à SQL Server 2017 et versions ultérieures.|  
   
 ## <a name="permissions"></a>Autorisations  
  Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et les versions ultérieures, la visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

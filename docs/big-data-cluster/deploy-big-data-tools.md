@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: cbb4860cd747e454a09f1374d3b166fae466ee33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ffb63e3e7fb2891aeed1b9b26fbc43dddf69c78e
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797917"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412967"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installer les outils de données volumineuses de SQL Server 2019
 
@@ -33,7 +33,7 @@ Le tableau suivant répertorie les outils de cluster big data courants et commen
 |---|---|---|---|
 | **mssqlctl** | Oui | Outil de ligne de commande pour installer et gérer un cluster de données volumineux. | [Installer](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | Oui | Outil de ligne de commande pour l’analyse du cluster Kuberentes sous-jacent ([plus d’informations](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio** | Oui | Outil graphique multiplateforme pour l’interrogation de SQL Server ([plus d’informations](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Installer](../azure-data-studio/download.md) |
+| **Azure Data Studio (insiders)** | Oui | Outil graphique multiplateforme pour l’interrogation de SQL Server ([plus d’informations](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Installer](https://aka.ms/azdata-insiders) |
 | **Extension de SQL Server 2019** | Oui | Extension pour Azure Data Studio qui prend en charge la connexion au cluster big data. Fournit également un Assistant de virtualisation des données. | [Installer](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | Pour AKS | Interface de ligne de commande moderne pour la gestion des services Azure. Utilisé avec les déploiements de cluster AKS big data ([plus d’informations](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Installer](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Ce paramètre est facultatif | Interface de ligne de commande moderne pour l’interrogation de SQL Server ([plus d’informations](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |

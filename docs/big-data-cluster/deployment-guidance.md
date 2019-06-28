@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4bd6d260d58b837e2df0d216c28149b6e9a3fa51
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 75f4f7d046e144713efa271fb1980d4518843448
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388782"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413104"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Comment déployer des clusters de données volumineuses de SQL Server sur Kubernetes
 
@@ -192,15 +192,14 @@ Pour un déploiement sans assistance, vous devez définir toutes les variables d
 Pendant l’amorçage de cluster, la fenêtre de commande client affiche l’état du déploiement. Pendant le processus de déploiement, vous devez voir une série de messages où il attend que le pod de contrôleur :
 
 ```output
-2019-04-12 14:40:10.0129 UTC | INFO | Waiting for controller pod to be up...
+Waiting for cluster controller to start.
 ```
 
 En moins de 15 à 30 minutes, vous devez averti que le pod de contrôleur est en cours d’exécution :
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
-2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
-2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
+Cluster controller endpoint is available at 11.111.111.11:30080.
+Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
@@ -209,7 +208,7 @@ En moins de 15 à 30 minutes, vous devez averti que le pod de contrôleur est en
 Une fois le déploiement terminé, la sortie vous informe de réussite :
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
+Cluster deployed successfully.
 ```
 
 > [!TIP]
@@ -228,7 +227,7 @@ Une fois le script de déploiement terminée, vous pouvez obtenir les adresses I
    > [!TIP]
    > Si vous n’avez pas modifié le nom par défaut au cours du déploiement, utilisez `-n mssql-cluster` dans la commande précédente. **MSSQL-cluster** est le nom par défaut pour le cluster de données volumineuses.
 
-1. Connectez-vous au cluster big data avec **mssqlctl connexion**. Définir le **--contrôleur de point de terminaison** paramètre à l’adresse IP externe du point de terminaison de contrôleur.
+1. Connectez-vous au cluster big data avec [mssqlctl connexion](reference-mssqlctl.md). Définir le **--contrôleur de point de terminaison** paramètre à l’adresse IP externe du point de terminaison de contrôleur.
 
    ```bash
    mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
@@ -236,29 +235,35 @@ Une fois le script de déploiement terminée, vous pouvez obtenir les adresses I
 
    Spécifiez le nom d’utilisateur et le mot de passe que vous avez configuré pour le contrôleur (CONTROLLER_USERNAME et CONTROLLER_PASSWORD) au cours du déploiement.
 
-1. Exécutez **liste de point de terminaison mssqlctl bdc** pour obtenir une liste avec une description de chaque point de terminaison et leurs valeurs d’adresse et le port IP correspondantes. 
+1. Exécutez [liste de point de terminaison mssqlctl bdc](reference-mssqlctl-bdc-endpoint.md) pour obtenir une liste avec une description de chaque point de terminaison et leurs valeurs d’adresse et le port IP correspondantes. 
 
    ```bash
-   mssqlctl bdc endpoint list
+   mssqlctl bdc endpoint list -o table
    ```
 
    La liste suivante illustre le résultat de cette commande :
 
    ```output
-   Name               Description                                             Endpoint                                                   Ip              Port    Protocol
-   -----------------  ------------------------------------------------------  ---------------------------------------------------------  --------------  ------  ----------
-   gateway            Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  30443   https
-   spark-history      Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  30443   https
-   yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
-   app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
-   management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
-   metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
-   controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https
-   sql-server-master  SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  31433   tcp
-   webhdfs            HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  30443   https
-   livy               Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  30443   https
+   Description                                             Endpoint                                                   Ip              Name               Port    Protocol
+   ------------------------------------------------------  ---------------------------------------------------------  --------------  -----------------  ------  ----------
+   Gateway to access HDFS files, Spark                     https://11.111.111.111:30443                               11.111.111.111  gateway            30443   https
+   Spark Jobs Management and Monitoring Dashboard          https://11.111.111.111:30443/gateway/default/sparkhistory  11.111.111.111  spark-history      30443   https
+   Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  yarn-ui            30443   https
+   Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  app-proxy          30778   https
+   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  mgmtproxy          30777   https
+   Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  logsui             30777   https
+   Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  metricsui          30777   https
+   Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  controller         30080   https
+   SQL Server Master Instance Front-End                    11.111.111.111,31433                                       11.111.111.111  sql-server-master  31433   tcp
+   HDFS File System Proxy                                  https://11.111.111.111:30443/gateway/default/webhdfs/v1    11.111.111.111  webhdfs            30443   https
+   Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
+
+Vous pouvez également obtenir tous les points de terminaison service déployés pour le cluster en exécutant la commande suivante **kubectl** commande :
+
+```bash
+kubectl get svc -n <your-big-data-cluster-name>
+```
 
 ### <a name="minikube"></a>Minikube
 
@@ -268,11 +273,38 @@ Si vous utilisez minikube, vous devez exécuter la commande suivante pour obteni
 minikube ip
 ```
 
-Quelle que soit la plateforme vous s’exécutent votre cluster Kubernetes, pour obtenir tous les points de terminaison service déployés pour le cluster, exécutez la commande suivante :
+## <a id="status"></a> Vérifier l’état du cluster
+
+Après le déploiement, vous pouvez vérifier l’état du cluster avec le [afficher d’état mssqlctl bdc](reference-mssqlctl-bdc-status.md) commande.
 
 ```bash
-kubectl get svc -n <your-big-data-cluster-name>
+mssqlctl bdc status show -o table
 ```
+
+> [!TIP]
+> Pour exécuter les commandes d’état, vous devez tout d’abord vous connecter avec le **mssqlctl connexion** commande, qui a été indiqué dans la section précédente de points de terminaison.
+
+Voici un exemple de sortie de cette commande :
+
+```output
+Kind     Name           State
+-------  -------------  -------
+BDC      mssql-cluster  Ready
+Control  default        Ready
+Master   default        Ready
+Compute  default        Ready
+Data     default        Ready
+Storage  default        Ready
+```
+
+En plus de ce résumé de l’état, vous pouvez également obtenir un état plus détaillé avec les commandes suivantes :
+
+- [mssqlctl bdc control status](reference-mssqlctl-bdc-control-status.md)
+- [mssqlctl bdc pool status](reference-mssqlctl-bdc-pool-status.md)
+
+La sortie de ces commandes comprennent des URL vers des tableaux de bord Kibana et Grafana pour une analyse plus détaillée. 
+
+Outre l’utilisation de **mssqlctl**, vous pouvez également utiliser Azure Data Studio pour rechercher des points de terminaison et les informations d’état. Pour plus d’informations sur l’affichage État du cluster avec **mssqlctl** et Azure Data Studio, consultez [comment afficher l’état d’un cluster de données volumineuses](view-cluster-status.md).
 
 ## <a id="connect"></a> Connectez-vous au cluster
 

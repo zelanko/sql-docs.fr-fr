@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 51c7dbf8e50f6c3537a2a4171720c160c444471d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad42063b2c4959429bdc54e3772aa755bc32e2f2
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797866"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412957"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurer Azure Kubernetes Service pour les déploiements de cluster SQL Server big data
 
@@ -70,28 +70,44 @@ Un groupe de ressources Azure est un groupe logique dans Azure les ressources so
    az account set --subscription <subscription id>
    ```
 
-1. Créer un groupe de ressources avec le **az groupe créer** commande. L’exemple suivant crée un groupe de ressources nommé `sqlbigdatagroup` dans le `westus2` emplacement.
+1. Créer un groupe de ressources avec le **az groupe créer** commande. L’exemple suivant crée un groupe de ressources nommé `sqlbdcgroup` dans le `westus2` emplacement.
 
    ```azurecli
-   az group create --name sqlbigdatagroup --location westus2
+   az group create --name sqlbdcgroup --location westus2
    ```
 
 ## <a name="create-a-kubernetes-cluster"></a>Créer un cluster Kubernetes
 
 1. Créer un cluster Kubernetes dans ACS avec la [créer az aks](https://docs.microsoft.com/cli/azure/aks) commande. L’exemple suivant crée un cluster Kubernetes nommé *kubcluster* avec un nœud de l’agent Linux de taille **Standard_L8s**. Vérifiez que vous créez le cluster AKS dans le même groupe de ressources que vous avez utilisé dans les sections précédentes.
 
-    ```azurecli
+   **bash:**
+
+   ```bash
    az aks create --name kubcluster \
-    --resource-group sqlbigdatagroup \
-    --generate-ssh-keys \
-    --node-vm-size Standard_L8s \
-    --node-count 1 \
-    --kubernetes-version 1.12.8
-    ```
+   --resource-group sqlbdcgroup \
+   --generate-ssh-keys \
+   --node-vm-size Standard_L8s \
+   --node-count 1 \
+   --kubernetes-version 1.12.8
+   ```
+
+   **PowerShell :**
+
+   ```powershell
+   az aks create --name kubcluster `
+   --resource-group sqlbdcgroup `
+   --generate-ssh-keys `
+   --node-vm-size Standard_L8s `
+   --node-count 1 `
+   --kubernetes-version 1.12.8
+   ```
 
    Vous pouvez augmenter ou diminuer le nombre de nœuds d’agent Kubernetes en modifiant le `--node-count <n>` où `<n>` est le nombre de nœuds d’agent à utiliser. Cela n’inclut pas le nœud principal Kubernetes, qui est géré en arrière-plan par AKS. L’exemple précédent utilise uniquement un seul nœud à des fins d’évaluation.
 
    Après quelques minutes, la commande se termine et retourne des informations formatées JSON sur le cluster.
+
+   > [!TIP]
+   > Si vous obtenez des erreurs de création du cluster dans ACS, consultez le [section Dépannage](#troubleshoot) de cet article.
 
 1. Enregistrer la sortie JSON à partir de la commande précédente pour une utilisation ultérieure.
 
@@ -100,17 +116,24 @@ Un groupe de ressources Azure est un groupe logique dans Azure les ressources so
 1. Pour configurer kubectl pour vous connecter à votre cluster Kubernetes, exécutez le [az aks get-credentials](https://docs.microsoft.com/cli/azure/aks?view=azure-cli-latest#az-aks-get-credentials) commande. Cette étape télécharge les informations d’identification et configure l’interface CLI pour les utiliser kubectl.
 
    ```azurecli
-   az aks get-credentials --resource-group=sqlbigdatagroup --name kubcluster
+   az aks get-credentials --resource-group=sqlbdcgroup --name kubcluster
    ```
 
 1. Pour vérifier la connexion à votre cluster, utilisez le [kubectl get](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands) commande pour retourner une liste des nœuds du cluster.  L’exemple ci-dessous montre la sortie si vous deviez avoir 1 master et 3 nœuds de l’agent.
 
-   ```
+   ```bash
    kubectl get nodes
    ```
 
+## <a id="troubleshoot"></a> Dépannage
+
+Si vous avez des problèmes de création d’un Service de Kubernetes Azure avec les commandes précédentes, essayez les solutions suivantes :
+
+- Assurez-vous que vous avez installé le [dernière version d’Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest).
+- Essayez les mêmes étapes à l’aide d’un nom de cluster et de groupe de ressources différent.
+
 ## <a name="next-steps"></a>Étapes suivantes
 
-Les étapes décrites dans cet article configuré un cluster Kubernetes dans ACS. L’étape suivante consiste à déployer SQL Server 2019 des données volumineuses vers le cluster. Pour plus d’informations sur la façon de déployer des clusters de données volumineuses, consultez l’article suivant :
+Les étapes décrites dans cet article configuré un cluster Kubernetes dans ACS. L’étape suivante consiste à déployer un cluster SQL Server 2019 de données volumineux sur le cluster ACS Kubernetes. Pour plus d’informations sur la façon de déployer des clusters de données volumineuses, consultez l’article suivant :
 
 [Comment déployer des clusters de données volumineuses de SQL Server sur Kubernetes](deployment-guidance.md)

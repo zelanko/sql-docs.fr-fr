@@ -2,10 +2,10 @@
 title: sys.dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
-ms.prod: ''
+ms.prod: sql
+ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -21,12 +21,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: bb4c43fa4193d9254d7f06f24bd903f974739e87
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: d25c4d3cfe8628c01b44a99c6e26a96adf453050
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567635"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413061"
 ---
 # <a name="sysdmuserdbresourcegovernance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
 
@@ -68,7 +68,7 @@ Retourne la gouvernance des ressources des paramètres de configuration et de la
 |**max_transaction_size**|BIGINT|Espace de journal maximale utilisée par une transaction, en Ko.|
 |**checkpoint_rate_mbps**|INT|Bande passante du point de contrôle, en Mbits/s.|
 |**checkpoint_rate_io**|INT|Point de contrôle d’e/s taux en e/s par seconde.|
-|**last_updated_date_utc**|DATETIME|Date et heure de la dernière modification du paramètre ou de reconfiguration.|
+|**last_updated_date_utc**|datetime|Date et heure de la dernière modification du paramètre ou de reconfiguration.|
 |**primary_group_id**|INT|ID de groupe de charge de travail d’utilisateur principal.|
 |**primary_group_max_workers**|INT|Limite de travail au niveau de groupe de charge de travail utilisateur principal.|
 |**primary_min_log_rate**|BIGINT|Taux de journalisation minimum (octets par seconde) au niveau de groupe de charge de travail utilisateur principal.|

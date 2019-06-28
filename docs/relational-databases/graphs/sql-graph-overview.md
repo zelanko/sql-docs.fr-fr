@@ -1,7 +1,7 @@
 ---
 title: Traitement des graphes avec SQL Server et de la base de données SQL Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 010d985245052949451a0b519ee4d7b312a97f4a
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502487"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413078"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Traitement des graphes avec SQL Server et de la base de données SQL Azure
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -84,6 +84,9 @@ Pour en savoir plus sur la façon de créer et utiliser les contraintes d’arê
 Le [fusion](../../t-sql/statements/merge-transact-sql.md) instruction effectue la requête insert, update ou supprimer des opérations sur une table cible selon les résultats d’une jointure avec une table source. Par exemple, vous pouvez synchroniser deux tables en insérant, de la mise à jour ou de suppression de lignes dans une table cible selon les différences entre la table cible et la table source. À l’aide des prédicats de correspondance dans une instruction MERGE est maintenant pris en charge sur Azure SQL Database et SQL Server vNext. Autrement dit, il est désormais possible de fusionner vos données de graphique actuelle (tables de nœuds ou d’arêtes) avec de nouvelles données à l’aide des correspondance de prédicats pour spécifier les relations de graphique dans une seule instruction, au lieu des instructions INSERT/UPDATE/DELETE distinctes.
 
 Pour en savoir plus sur l’utilisation de la correspondance dans la fusion DML, consultez [instruction MERGE](../../t-sql/statements/merge-transact-sql.md)
+
+## <a name="shortest-path"></a>Chemin d’accès le plus court
+Le [SHORTEST_PATH](./sql-graph-shortest-path.md) fonction recherche le chemin le plus court entre les 2 nœuds dans un graphique ou à partir d’un nœud donné à tous les autres nœuds dans le graphique. Chemin d’accès le plus court peut également servir pour rechercher une fermeture transitive ou pour les traversées de longueur arbitraire dans le graphique. 
 
  ## <a name="next-steps"></a>Étapes suivantes  
 Lire le [base de données SQL Graph - Architecture](./sql-graph-architecture.md)
