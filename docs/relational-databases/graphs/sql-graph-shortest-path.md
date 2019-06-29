@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed931a8b1918961b69cc0600f94aff6e4d68b9e1
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413986"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463542"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -39,12 +39,12 @@ La fonction SHORTEST_PATH vous permet de rechercher :
 * Chemins d’accès le plus court source unique.
 * Chemin d’accès le plus court à partir de plusieurs nœuds de la source à plusieurs nœuds cibles.
 
-Il prend un modèle de longueur arbitraire en tant qu’entrée et retourne un chemin d’accès le plus court qui existe entre deux nœuds. Cette fonction peut uniquement être utilisée à l’intérieur de correspondance. Il accepte un modèle de longueur arbitraire et recherche un chemin d’accès le plus court dans le graphique, qui correspond à ce modèle. La fonction ne retourne qu’un seul chemin le plus court entre deux nœuds donnés. S’il existe, deux ou plusieurs chemins le plus court de la même longueur entre toute paire de nœuds source et de destination, la fonction retournera qu’un seul chemin d’accès qui a été trouvé le premier pendant le parcours. Notez que, un modèle de longueur arbitraire peut uniquement être spécifié à l’intérieur d’une fonction SHORTEST_PATH. 
+Il prend un modèle de longueur arbitraire en tant qu’entrée et retourne un chemin d’accès le plus court qui existe entre deux nœuds. Cette fonction peut uniquement être utilisée à l’intérieur de correspondance. La fonction ne retourne qu’un seul chemin le plus court entre deux nœuds donnés. S’il existe, deux ou plusieurs chemins d’accès le plus court de la même longueur entre toute paire de nœuds source et de destination, la fonction retourne qu’un seul chemin d’accès qui a été trouvé le premier pendant le parcours. Notez que, un modèle de longueur arbitraire peut uniquement être spécifié à l’intérieur d’une fonction SHORTEST_PATH. 
 
 Reportez-vous à la [correspondance (graphe SQL)](../../t-sql/queries/match-sql-graph.md) pour la syntaxe. 
 
 ## <a name="for-path"></a>POUR LE CHEMIN D’ACCÈS
-Chemin d’accès doit être utilisée avec n’importe quel nom de table de nœuds ou d’arêtes dans la clause FROM, qui participera à un modèle de longueur arbitraire. POUR le chemin d’accès indique au moteur que la table de nœuds ou d’arêtes retournera une collection ordonnée représentant la liste de nœuds ou d’arêtes parcourus le long du tracé à partir du nœud de démarrage pour le nœud de fin. Les attributs à partir de ces tables ne peut pas être projetés directement dans la clause SELECT. Pour prévoir des attributs à partir de ces tables, fonctions d’agrégation chemin d’accès du graphique doit être utilisé.  
+Chemin d’accès doit être utilisée avec n’importe quel nom de table de nœuds ou d’arêtes dans la clause FROM, qui participera à un modèle de longueur arbitraire. POUR le chemin d’accès indique au moteur que la table de nœuds ou d’arêtes retournera une collection ordonnée représentant la liste de nœuds ou d’arêtes trouvées avec le chemin d’accès parcouru. Les attributs à partir de ces tables ne peut pas être projetés directement dans la clause SELECT. Pour prévoir des attributs à partir de ces tables, fonctions d’agrégation chemin d’accès du graphique doit être utilisé.  
 
 ## <a name="arbitrary-length-pattern"></a>Modèle de longueur arbitraire
 Ce modèle inclut les nœuds et les bords qui doivent être parcourus à plusieurs reprises jusqu'à ce que le nœud souhaité soit atteint ou jusqu'à ce que le nombre maximal d’itérations tel que spécifié dans le modèle est remplie. Chaque fois que la requête est exécutée, le résultat de l’exécution de ce modèle sera une collection ordonnée des nœuds et des bords parcourus le long du tracé à partir du nœud de démarrage pour le nœud de fin. Il s’agit d’un modèle de syntaxe d’expression régulière style et les quantificateurs deux modèle suivantes sont prises en charge :
