@@ -3,7 +3,7 @@ title: Comment utiliser des blocs-notes de SQL dans Azure Data Studio
 titleSuffix: Azure Data Studio
 description: Découvrez comment utiliser des blocs-notes de SQL dans Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/17/2019
+ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: achatter; alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 6ac15dcd6b440a8c3bcca0c468a79548469fe059
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798043"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469080"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Comment utiliser des blocs-notes dans Azure Data Studio
 
@@ -163,14 +163,13 @@ import <package-name>
 
 Lorsque vous exécutez cette commande, `Module not found` est retournée. Si votre package existe, puis vous pas obtiendrez l’erreur.
 
-Si elle retourne un `Module not Found` erreur, puis cliquez sur **gérer les Packages** pour lancer le terminal. Vous pouvez désormais installer les packages localement. Utilisez les commandes suivantes pour installer les packages :
+Si elle retourne un `Module not Found` erreur, puis cliquez sur **gérer les Packages** pour lancer l’expérience de l’Assistant. 
 
-```bash
-./pip install <package-name>
-```
+![image17](media/sql-notebooks/manage-packages.png)
 
-   > [!Tip]
-   > Sur Mac, suivez les instructions dans la fenêtre de Terminal pour installer des packages. 
+Dans cet Assistant, vous serez en mesure de voir les **installé** packages. Vous pouvez parcourir la liste et la version associée de chacun de ces packages. Si vous avez besoin pour **désinstaller** aucune de ces packages, puis vous pouvez cliquer sur un des packages, puis cliquez sur le **désinstaller des packages sélectionnés** option.
+
+Vous serez également en mesure de cliquer sur **Ajouter nouveau** des packages vers **recherche** pour un package particulier, choisissez la version associée, puis cliquez sur **installer**. Par défaut, nous sélectionnons la dernière version du package recherché. 
 
 Une fois que le package est installé, vous devez pouvoir dans la cellule du bloc-notes, tapez la commande suivante :
 
@@ -178,11 +177,7 @@ Une fois que le package est installé, vous devez pouvoir dans la cellule du blo
 import <package-name>
 ```
 
-Pour désinstaller un package, utilisez la commande suivante à partir de votre terminal :
-
-```bash
-./pip uninstall <package-name>
-```
+Si vous avez besoin pour **désinstaller** aucune de ces packages, puis vous pouvez cliquer sur un ou plusieurs packages, puis cliquez sur le **désinstaller des packages sélectionnés** option.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 424b09f9cd18a3fa68eb8a3ade26eecc1191ef72
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1f2d7f5a1d4a966edbce3c4ad96a7b31bd604b48
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388639"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469133"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notes de publication pour les clusters de données volumineuses sur SQL Server
 
@@ -36,7 +36,7 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 | `mssqlctl` modifications de commande | `mssqlctl cluster` commandes ont été renommées `mssqlctl bdc`. Pour plus d’informations, consultez le [ `mssqlctl` référence](reference-mssqlctl.md). |
 | Nouvelle `mssqlctl` commandes d’état et de suppression du portail d’Administration de Cluster. | Le portail d’Administration de Cluster est supprimé dans cette version. Nouvelles commandes d’état ont été ajoutées à `mssqlctl` complément existants commandes de surveillance. |
 | Pools de calcul Spark | Créer des nœuds supplémentaires afin d’augmenter la puissance de calcul Spark sans avoir à l’échelle le stockage. En outre, vous pouvez démarrer les nœuds de pool de stockage qui ne sont pas utilisées pour Spark. Spark et stockage sont découplés. Pour plus d’informations, consultez [configurer le stockage sans spark](deployment-custom-configuration.md#sparkstorage). |
-| Connecteur Spark de MSSQL | Prise en charge de lecture/écriture aux tables externes de pool de données. Précédentes versions prises en charge en lecture/écriture au maître d’instance tables uniquement. |
+| Connecteur Spark de MSSQL | Prise en charge de lecture/écriture aux tables externes de pool de données. Précédentes versions prises en charge en lecture/écriture au maître d’instance tables uniquement. Pour plus d’informations, consultez [comment lire et écrire dans SQL Server à partir de Spark à l’aide du connecteur Spark MSSQL](spark-mssql-connector.md). |
 | Machine Learning à l’aide de MLeap | [Former un modèle d’apprentissage automatique MLeap dans Spark et noter dans SQL Server à l’aide de l’extension du langage Java](spark-create-machine-learning-model.md). |
 
 ### <a name="known-issues"></a>Problèmes connus
