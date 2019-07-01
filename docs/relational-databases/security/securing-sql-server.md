@@ -1,7 +1,7 @@
 ---
 title: Sécurisation de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 01/31/2017
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -18,17 +18,19 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 1c5694fc4fbf2464030eb5fe3104117cfee71eb0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 410fef7965918c69c49585fe282277ccebf01575
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398362"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314006"
 ---
 # <a name="securing-sql-server"></a>Sécurisation de SQL Server
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  La sécurisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être vue comme une série d’étapes impliquant quatre domaines : la plateforme, l’authentification, les objets (notamment les données) et les applications qui accèdent au système. Les rubriques suivantes vous guideront tout au long des processus de création et de mise en place d'un plan de sécurité efficace.  
+
+La sécurisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être vue comme une série d’étapes impliquant quatre domaines : la plateforme, l’authentification, les objets (notamment les données) et les applications qui accèdent au système. Les rubriques suivantes vous guideront tout au long des processus de création et de mise en place d'un plan de sécurité efficace.  
   
  Vous trouverez de plus amples informations sur la sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le site web de [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) . Cela inclut un guide de recommandations et une liste de contrôle de sécurité. Ce site contient également les informations et les téléchargements les plus récents sur les Service Packs.  
   
@@ -43,6 +45,7 @@ ms.locfileid: "52398362"
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)] et accès réseau à d’autres éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|« Configuration et sécurisation d'un environnement serveur » dans la documentation en ligne de [!INCLUDE[ssEW](../../includes/ssew-md.md)]|  
+| &nbsp; | &nbsp; |
   
 ### <a name="operating-system-security"></a>Sécurité du système d'exploitation  
  Les Service Packs et les mises à niveau des systèmes d'exploitation apportent des améliorations importantes en termes de sécurité. Appliquez l'ensemble des mises à jour et des mises à niveau au système d'exploitation après les avoir testés avec les applications de base de données.  
@@ -56,12 +59,14 @@ ms.locfileid: "52398362"
 |Configuration d’un pare-feu fonctionnant avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
 |Ouverture de ports spécifiques sur un pare-feu pour permettre l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurer le Pare-feu Windows pour autoriser l'accès à SQL Server](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Configuration de la prise en charge de la Protection étendue de l'authentification à l'aide de la liaison de canal et liaison de service|[Se connecter au moteur de base de données à l'aide de la protection étendue](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
+| &nbsp; | &nbsp; |
   
  La réduction de la surface d'exposition est une mesure de sécurité qui implique l'arrêt ou la désactivation de composants inutilisés. La réduction de la surface d'exposition permet de renforcer la sécurité en réduisant les risques d'attaque à l'encontre d'un système. L'élément principal à prendre en compte pour limiter la surface d'exposition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implique l'exécution des services requis dotés des privilèges minimaux en attribuant uniquement les droits appropriés aux services et aux utilisateurs. Le tableau ci-dessous contient des informations supplémentaires sur l'accès aux services et au système.  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |Services requis pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configurer les comptes de service Windows et les autorisations](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)|  
+| &nbsp; | &nbsp; |
   
  Si votre système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise Internet Information Services (IIS), d’autres étapes sont nécessaires pour mieux sécuriser la surface de la plateforme. Le tableau ci-dessous contient des informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les services Internet (IIS).  
   
@@ -70,6 +75,7 @@ ms.locfileid: "52398362"
 |Sécurité IIS avec [!INCLUDE[ssEW](../../includes/ssew-md.md)]|« Sécurité IIS » dans la documentation en ligne de [!INCLUDE[ssEW](../../includes/ssew-md.md)]|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Authentification|[Authentification dans Reporting Services](../../reporting-services/extensions/security-extension/authentication-in-reporting-services.md)|  
 |[!INCLUDE[ssEW](../../includes/ssew-md.md)] et accès à IIS|« Organigramme de la sécurité Internet Information Services » dans la documentation en ligne de [!INCLUDE[ssEW](../../includes/ssew-md.md)]|  
+| &nbsp; | &nbsp; |
   
 ### <a name="sql-server-operating-system-files-security"></a>Sécurité des fichiers du système d'exploitation SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise les fichiers du système d’exploitation pour son fonctionnement et le stockage des données. Les méthodes conseillées en matière de sécurité des fichiers exigent que vous restreigniez l'accès à ces fichiers. Le tableau ci-dessous contient des informations sur ces fichiers.  
@@ -77,14 +83,14 @@ ms.locfileid: "52398362"
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fichiers programme|[Emplacements des fichiers pour les instances par défaut et les instances nommées de SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md)|  
+| &nbsp; | &nbsp; |
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les Service Packs et les mises à niveau offrent une sécurité accrue. Pour identifier les derniers Service Packs disponibles pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez le site web de [SQL Server](https://go.microsoft.com/fwlink/?LinkID=31629) .  
   
  Vous pouvez utiliser le script ci-dessous pour déterminer quel Service Pack est installé sur le système.  
   
-```  
+```sql
 SELECT CONVERT(char(20), SERVERPROPERTY('productlevel'));  
-GO  
 ```  
   
 ## <a name="principals-and-database-object-security"></a>Sécurité des principaux et des objets de base de données  
@@ -95,6 +101,7 @@ GO
 |Utilisateurs, rôles et processus de serveur et de base de données|[Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)|  
 |Sécurité des serveurs et des objets de base de données|[Éléments sécurisables](../../relational-databases/security/securables.md)|  
 |Hiérarchie de sécurité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Hiérarchie des autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)|  
+| &nbsp; | &nbsp; |
   
 ### <a name="encryption-and-certificates"></a>Chiffrement et certificats  
  Le chiffrement ne résout pas les problèmes de contrôle d'accès. Toutefois, il améliore la sécurité en limitant la perte de données même dans le cas rare où les contrôles d'accès sont ignorés. Par exemple, si l'ordinateur hôte de la base de données est mal configuré et qu'un utilisateur malveillant parvient à se procurer des données sensibles, telles que des numéros de carte de crédit, les données subtilisées peuvent être inutilisables si elles sont chiffrées. Le tableau ci-dessous contient davantage d'informations sur le chiffrement dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -111,12 +118,24 @@ GO
 |---------------------------|---------|  
 |Création d’un certificat à utiliser dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)|  
 |Utilisation d'un certificat avec la mise en miroir de bases de données|[Utiliser des certificats pour un point de terminaison de mise en miroir de bases de données &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
-  
-## <a name="application-security"></a>Sécurité des applications  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les méthodes conseillées pour la sécurité incluent notamment la création d’applications clientes sécurisées.  
-  
- Pour plus d’informations sur la façon de mieux sécuriser des applications clientes au niveau de la couche réseau, consultez [Configuration du réseau client](../../database-engine/configure-windows/client-network-configuration.md).  
-  
+| &nbsp; | &nbsp; |
+
+## <a name="application-security"></a>Sécurité des applications
+
+### <a name="client-programs"></a>Programmes clients
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les méthodes conseillées pour la sécurité incluent notamment la création d’applications clientes sécurisées. Pour plus d’informations sur la façon de mieux sécuriser des applications clientes au niveau de la couche réseau, consultez [Configuration du réseau client](../../database-engine/configure-windows/client-network-configuration.md).
+
+### <a name="windows-defender-application-control-wdac"></a>Contrôle d’application Windows Defender (WDAC)
+
+<!--
+This next live paragraph, about Windows Defender Application Control (WDAC), was requested by Bella Brahm, 2019/06/20. (GeneMi)
+
+WDAC can also prevent the kind of highly sophisticated 'Nansh0u' attacks described in 'https://www.guardicore.com/2019/05/nansh0u-campaign-hackers-arsenal-grows-stronger/'. That webpage recommends this present article.
+-->
+
+Contrôle d’application Windows Defender (WDAC) empêche l’exécution de code non autorisé. WDAC permet d’atténuer efficacement la menace que posent les logiciels malveillants basés sur des fichiers exécutables. Pour plus d’informations, consultez la documentation propre à [Contrôle d’application Windows Defender](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control).
+
 ## <a name="sql-server-security-tools-utilities-views-and-functions"></a>Outils, utilitaires, affichages catalogue et fonctions de sécurité SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose des outils, des utilitaires, des affichages catalogue et des fonctions à l’aide desquels vous pouvez configurer et gérer la sécurité.  
   
@@ -130,7 +149,8 @@ GO
 |Configuration et contrôle réseau pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md)|  
 |Activation et désactivation de fonctionnalités à l'aide de la gestion basée sur une stratégie|[Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)|  
 |Manipulation des clés symétriques d'un serveur de rapports|[Utilitaire rskeymgmt &#40;SSRS&#41;](../../reporting-services/tools/rskeymgmt-utility-ssrs.md)|  
-  
+| &nbsp; | &nbsp; |
+
 ### <a name="sql-server-security-catalog-views-and-functions"></a>Affichages catalogue et fonctions de sécurité SQL Server  
  Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] présente des informations de sécurité dans plusieurs affichages et fonctions optimisés pour des raisons de performance et d'utilisation. Le tableau ci-dessous contient des informations sur les vues et les fonctions de sécurité.  
   
@@ -139,7 +159,8 @@ GO
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Affichages catalogue de la sécurité retournant des informations sur les autorisations de niveau serveur et base de données, les principaux, les rôles, etc. En outre, des affichages catalogue fournissent des informations sur les clés de chiffrement, les certificats et les informations d'identification.|[Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fonctions de sécurité qui retournent des informations sur l’utilisateur actuel, les autorisations et les schémas.|[Fonctions de sécurité &#40;Transact-SQL&#41;](../../t-sql/functions/security-functions-transact-sql.md)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Vues de gestion dynamique de la sécurité.|[Fonctions et vues de gestion dynamique relatives à la sécurité &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/security-related-dynamic-management-views-and-functions-transact-sql.md)|  
-  
+| &nbsp; | &nbsp; |
+
 ## <a name="related-content"></a>Contenu associé  
  [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  

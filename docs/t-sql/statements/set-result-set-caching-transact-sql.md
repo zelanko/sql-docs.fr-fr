@@ -15,18 +15,20 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 561e92512ded10b06926f5b23f0f5d40540e3d2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9750cdc2dea7049bde77d31c275789691abf1b0
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826864"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313812"
 ---
-# <a name="set-result-set-caching-transact-sql-applies-to-azure-sql-data-warehouse-gen2-only-preview"></a>SET RESULT SET CACHING (Transact-SQL) Appliqué uniquement à Azure SQL Data Warehouse Gen2 (préversion)
+# <a name="set-result-set-caching-transact-sql"></a>DÉFINIR LA MISE EN CACHE DU JEU DE RÉSULTATS (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Entraine la mise en cache des jeux de résultats de requête par Azure SQL Data Warehouse.
+Contrôle le comportement de mise en cache du jeu de résultats pour la session client actuelle.  
+
+S’applique à Azure SQL Data Warehouse (préversion) 
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,98 +40,15 @@ SET RESULT_SET_CACHING { ON | OFF };
   
 ## <a name="remarks"></a>Notes  
 
-> [!Note]
-> Bien que cette fonctionnalité soit déployée dans toutes les régions, vérifiez la version déployée sur votre instance et les dernières [notes de publication sur Azure SQL DW](/azure/sql-data-warehouse/release-notes-10-0-10106-0) pour savoir si vous disposez de cette fonctionnalité.
-  
-Cette commande doit être exécutée lorsque vous êtes connecté à la base de données master.  La modification de ce paramètre de base de données prend effet immédiatement.  Des coûts de stockage sont facturés en mettant en cache des jeux de résultats de requête. Après avoir désactivé la mise en cache de résultats pour une base de données, le cache de résultats rendu persistant auparavant sera immédiatement supprimé depuis le stockage Azure SQL Data Warehouse. Une nouvelle colonne nommée is_result_set_caching_on est introduite dans [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest) pour afficher le paramètre de mise en cache de résultats pour une base de données.  
+**ON**   
+Active la mise en cache du jeu de résultats pour la session client actuelle.  La mise en cache du jeu de résultats ne peut pas être activée pour une session si elle est désactivée au niveau de la base de données.
 
-**ACTIF** Spécifie que les jeux de résultats de requête retournés à partir de cette base de données seront mis en cache dans le stockage Azure SQL Data Warehouse.
+**OFF**   
+Désactive la mise en cache du jeu de résultats pour la session client actuelle.
 
-**INACTIF** Spécifie que les jeux de résultats de requête retournés à partir de cette base de données ne seront pas mis en cache dans le stockage Azure SQL Data Warehouse.
-
-Les utilisateurs peuvent indiquer si une requête a été exécutée avec une correspondance dans le cache de résultats ou absence dans le cache en interrogeant [sys.pdw_request_steps](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql?view=azure-sqldw-latest) avec un request_id spécifique. S’il existe une correspondance dans le cache, le résultat de la requête aura une seule étape avec les détails suivants :
-
-|**Nom de colonne**|**Opérateur**|**Value**|
-|----|----|----|
-|operation_type|=|ReturnOperation|
-|step_index|=|0|
-|location_type|=|Control|
-|commande|Correspond à|%DWResultCacheDb%|
-||||
-  
 ## <a name="permissions"></a>Autorisations
 
-Nécessite ces autorisations :
-
-- Connexion au principal au niveau du serveur (celle créée par le processus de provisionnement) ou
-- Membre du rôle de base de données dbmanager.
-
-Le propriétaire de la base de données ne peut pas modifier la base de données à moins d'être membre du rôle dbmanager.
-  
-## <a name="examples"></a>Exemples
-
-### <a name="enable-result-set-caching-for-a-database"></a>Activer la mise en cache d’un jeu de résultats pour une base de données
-
-```sql
-ALTER DATABASE myTestDW  
-SET RESULT_SET_CACHING ON;
-```
-
-### <a name="disable-result-set-caching-for-a-database"></a>Désactiver la mise en cache d’un jeu de résultats pour une base de données
-
-```sql
-ALTER DATABASE myTestDW  
-SET RESULT_SET_CACHING OFF;
-```
-
-### <a name="check-result-set-caching-setting-for-a-database"></a>Vérifier le paramètre de mise en cache d’un jeu de résultats pour une base de données
-
-```sql
-SELECT name, is_result_set_caching_on  
-FROM sys.databases
-```
-
-### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>Vérifiez le nombre de requêtes avec correspondance dans le cache du jeu de résultats et absence dans le cache
-
-```sql
-SELECT  
-Queries=CacheHits+CacheMisses,
-CacheHits,
-CacheMisses,
-CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
-FROM  
-(SELECT  
-CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
-r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
-s.step_index = 0 then s.request_id else null end) ,
-CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
-s.request_id else null end)
-     FROM sys.dm_pdw_request_steps s  
-     JOIN sys.dm_pdw_exec_requests r  
-     ON s.request_id = r.request_id) A
-```
-
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Vérifiez la correspondance dans le cache ou l’absence dans le cache du jeu de résultats pour une requête
-
-```sql
-If
-(SELECT step_index  
-FROM sys.dm_pdw_request_steps  
-WHERE request_id = 'QID58286'
-      and operation_type = 'ReturnOperation'
-      and command like '%DWResultCacheDb%') = 0
-SELECT 1 as is_cache_hit  
-ELSE
-SELECT 0 as is_cache_hit
-```
-
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Vérifiez toutes les requêtes avec correspondances dans le cache du jeu de résultats
-
-```sql
-SELECT *  
-FROM sys.dm_pdw_request_steps  
-WHERE command like '%DWResultCacheDb%' and step_index = 0
-```
+Nécessite l’appartenance au rôle public.
 
 ## <a name="see-also"></a>Voir aussi
 

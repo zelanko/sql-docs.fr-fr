@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e2bf0ddde51d69567393a77b18a1f72478101b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4aa152883c8d6571f446bee5c783e96b88cbba64
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67145490"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419055"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -117,7 +117,7 @@ Spécifie des options supplémentaires lors de la connexion via `ODBC` à une so
 
 Au minimum, le nom du pilote est requis, mais d’autres options telles que `APP='<your_application_name>'` ou `ApplicationIntent= ReadOnly|ReadWrite` sont également utiles pour paramétrer et aider à la résolution des problèmes.
 
-Reportez-vous à la documentation produit de `ODBC` pour obtenir la liste des options [CONNECTION_OPTIONS][connection_options] autorisées
+Reportez-vous à la documentation du produit `ODBC` pour obtenir la liste des options [CONNECTION_OPTIONS][connection_options] autorisées.
 
 ### <a name="pushdown--on--off"></a>PUSHDOWN = *ON | OFF*
 
@@ -125,7 +125,7 @@ Indique si le calcul peut être transmis à la source de données externe. Cette
 
 `PUSHDOWN` est pris en charge lors de la connexion à SQL Server, Oracle, Teradata, MongoDB ou ODBC au niveau de la source de données externe.
 
-L’activation ou la désactivation de la transmission au niveau de la requête s’effectue via un [indicateur][hint_pb].
+L’activation ou la désactivation de la transmission au niveau de la requête s’effectue au moyen d’un [indicateur][hint_pb].
 
 ### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
 
@@ -148,7 +148,7 @@ Pour créer des informations d’identification délimitées à la base de donn�
 Spécifie le type de source de données externe en cours de configuration. Ce paramètre n’est pas toujours requis.
 
 - Utilisez HADOOP lorsque la source de données externe est Cloudera, Hortonworks ou Stockage Blob Azure.
-- Utilisez BLOB_STORAGE quand vous exécutez des opérations en bloc à l’aide de [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset] avec [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+- Utilisez BLOB_STORAGE quand vous exécutez des opérations en bloc à l’aide de [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] avec [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 
 > [!IMPORTANT]
 > Ne paramétrez pas `TYPE` si vous utilisez toute autre source de données externe.
@@ -175,7 +175,7 @@ Si le port n’est pas spécifié, la valeur par défaut est déterminée d’ap
 | 6                   | 8032                          |
 | 7                   | 8050                          |
 
-Pour une liste complète des versions de Hadoop prises en charge, consultez [Configuration de la connectivité PolyBase (Transact-SQL)][connectivity_pb].
+Pour obtenir la liste complète des versions de Hadoop prises en charge, consultez [Configuration de la connectivité PolyBase (Transact-SQL)][connectivity_pb].
 
 > [!IMPORTANT]  
 > La valeur RESOURCE_MANAGER_LOCATION n’est pas validée lorsque vous créez la source de données externe. La saisie d’une valeur incorrecte peut entraîner l’échec de la requête au moment de l’exécution chaque fois qu’une transmission est tentée, étant donné que la valeur fournie ne serait pas en mesure d’être résolue.
@@ -226,7 +226,7 @@ WITH
 ;
 ```
 
-Pour des exemples supplémentaires pour d’autres sources de données telles que MongoDB, consultez [Configurer PolyBase pour accéder aux données externes dans MongoDB][mongodb_pb]
+Pour obtenir des exemples supplémentaires pour d’autres sources de données telles que MongoDB, consultez [Configurer PolyBase pour accéder aux données externes dans MongoDB][mongodb_pb].
 
 ### <a name="b-create-external-data-source-to-reference-hadoop"></a>B. Créer une source de données externe pour faire référence à Hadoop
 
@@ -318,7 +318,7 @@ WITH
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Créer une source de données externe pour les opérations en bloc de récupération de données dans le stockage Blob Azure
 
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-Utilisez la source de données suivante pour les opérations en bloc à l’aide de [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset]. L’identifiant utilisé doit donner à l’identité la valeur `SHARED ACCESS SIGNATURE`, ne doit pas avoir le premier `?` dans le jeton SAS, doit avoir au moins les droits de lecture sur le fichier à charger (par exemple `srt=o&sp=r`), et doit présenter une période d’expiration valide (toutes les dates sont en heure UTC). Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)][sas_token].
+Utilisez la source de données suivante pour les opérations en bloc à l’aide de [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. L’identifiant utilisé doit donner à l’identité la valeur `SHARED ACCESS SIGNATURE`, ne doit pas avoir le premier `?` dans le jeton SAS, doit avoir au moins les droits de lecture sur le fichier à charger (par exemple `srt=o&sp=r`), et doit présenter une période d’expiration valide (toutes les dates sont en heure UTC). Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -356,7 +356,7 @@ Pour voir une utilisation de cet exemple, consultez [BULK INSERT][bulk_insert_ex
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
 [create_eff]: https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql
-[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
+[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-transact-sql
 [create_etb_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azure-sqldw-latest
 [create_tbl_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?view=azure-sqldw-latest
 
@@ -453,12 +453,10 @@ Spécifie le type de source de données externe en cours de configuration. Ce pa
 
 - Utilisez SGBDR pour les requêtes de bases de données croisées utilisant les requêtes élastiques à partir de SQL Database.  
 - Utilisez SHARD_MAP_MANAGER lors de la création d’une source de données externe lorsque vous vous connectez à une base de données SQL partitionnée.
-- Utilisez BLOB_STORAGE quand vous exécutez des opérations en bloc à l’aide de [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset].
+- Utilisez BLOB_STORAGE quand vous exécutez des opérations en bloc à l’aide de [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset].
 
 > [!IMPORTANT]
 > Ne paramétrez pas `TYPE` si vous utilisez toute autre source de données externe.
-
-Pour un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des données depuis le stockage Blob Azure, consultez [Créer une source de données externes pour référencer le stockage blob Azure](#e-create-external-data-source-to-reference-azure-blob-storage).
 
 ### <a name="databasename--databasename"></a>DATABASE_NAME = *database_name*
 
@@ -547,7 +545,7 @@ Pour un tutoriel détaillé sur le SGBDR, consultez [Prise en main des requêtes
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. Créer une source de données externe pour les opérations en bloc de récupération de données dans le stockage Blob Azure
 
-Utilisez la source de données suivante pour les opérations en bloc à l’aide de [BULK INSERT][bulk_insert] ou [OPENROWSET][openrowset]. L’identifiant utilisé doit donner à l’identité la valeur `SHARED ACCESS SIGNATURE`, ne doit pas avoir le premier `?` dans le jeton SAS, doit avoir au moins les droits de lecture sur le fichier à charger (par exemple `srt=o&sp=r`), et doit présenter une période d’expiration valide (toutes les dates sont en heure UTC). Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)][sas_token].
+Utilisez la source de données suivante pour les opérations en bloc à l’aide de [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. L’identifiant utilisé doit donner à l’identité la valeur `SHARED ACCESS SIGNATURE`, ne doit pas avoir le premier `?` dans le jeton SAS, doit avoir au moins les droits de lecture sur le fichier à charger (par exemple `srt=o&sp=r`), et doit présenter une période d’expiration valide (toutes les dates sont en heure UTC). Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -678,7 +676,7 @@ Spécifie le type de source de données externe en cours de configuration. Ce pa
 > [!IMPORTANT]
 > Ne paramétrez pas `TYPE` si vous utilisez toute autre source de données externe.
 
-Pour un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des données depuis le stockage Blob Azure, consultez [Créer une source de données externes pour référencer le stockage blob Azure](#e-create-external-data-source-to-reference-azure-blob-storage).
+Pour un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des données depuis le stockage Blob Azure, consultez [Créer une source de données externes pour référencer le stockage blob Azure](#a-create-external-data-source-to-reference-azure-blob-storage).
 
 ## <a name="permissions"></a>Autorisations
 
@@ -897,7 +895,7 @@ Spécifie le type de source de données externe en cours de configuration. Ce pa
 > [!IMPORTANT]
 > Ne paramétrez pas `TYPE` si vous utilisez toute autre source de données externe.
 
-Pour un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des données depuis le stockage Blob Azure, consultez [Créer une source de données externes pour référencer le stockage blob Azure](#e-create-external-data-source-to-reference-azure-blob-storage).
+Pour un exemple d’utilisation de `TYPE` = `HADOOP` pour charger des données depuis le stockage Blob Azure, consultez [Créer une source de données externes pour référencer le stockage blob Azure](#d-create-external-data-source-to-reference-azure-blob-storage).
 
 ### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -919,12 +917,12 @@ Si le port n’est pas spécifié, la valeur par défaut est déterminée d’ap
 | 6                   | 8032                          |
 | 7                   | 8050                          |
 
-Pour une liste complète des versions de Hadoop prises en charge, consultez [Configuration de la connectivité PolyBase (Transact-SQL)][connectivity_pb].
+Pour obtenir la liste complète des versions de Hadoop prises en charge, consultez [Configuration de la connectivité PolyBase (Transact-SQL)][connectivity_pb].
   
 > [!IMPORTANT]  
 > La valeur RESOURCE_MANAGER_LOCATION n’est pas validée lorsque vous créez la source de données externe. La saisie d’une valeur incorrecte peut entraîner l’échec de la requête au moment de l’exécution chaque fois qu’une transmission est tentée, étant donné que la valeur fournie ne serait pas en mesure d’être résolue.
 
-[Créer une source de données externe pour faire référence à Hadoop avec la transmission activée](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) fournit un exemple concret ainsi que des instructions complémentaires.
+[Créer une source de données externe pour faire référence à Hadoop avec la transmission activée](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled) fournit un exemple concret ainsi que des instructions complémentaires.
 
 ## <a name="permissions"></a>Autorisations
 

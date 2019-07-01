@@ -1,6 +1,6 @@
 ---
 title: 'Tutoriel : Installation sur Linux et macOS des pilotes Microsoft pour PHP pour SQL Server | Microsoft Docs'
-ms.date: 05/09/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 2e1e6e6773644b12b6259349c522113ec66a0d43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90d2b5850010d49e881ea0169566fe8e7d046f0d
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502766"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343911"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutoriel : Installation sur Linux et macOS des pilotes Microsoft pour PHP pour SQL Server
 Les instructions suivantes partent du principe que votre environnement est propre. Elles montrent comment installer PHP 7.x, le pilote Microsoft ODBC, Apache et les pilotes Microsoft pour PHP pour SQL Server sur Ubuntu 16.04, 18.04 et 18.10, Red Hat 7, Debian 8 et 9, Suse 12 et 15 et macOS 10.12, 10.13 et 10.14. Ces instructions conseillent d’installer les pilotes à l’aide de PECL, mais vous pouvez également télécharger les fichiers binaires prédéfinis à partir de la page de projet Github des [pilotes Microsoft pour PHP pour SQL Server](https://github.com/Microsoft/msphpsql/releases) et les installer en suivant les instructions fournies dans [Chargement des pilotes Microsoft SQL Server pour PHP](../../connect/php/loading-the-php-sql-driver.md). Pour obtenir une explication concernant le chargement d’extension et savoir pourquoi nous n’ajoutons pas les extensions à php.ini, consultez la section sur le [chargement des pilotes](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup).
@@ -49,10 +49,14 @@ Installez le pilote ODBC pour Ubuntu en suivant les instructions fournies dans l
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
-echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
-echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
+printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.3/mods-available/sqlsrv.ini
+printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.3/mods-available/pdo_sqlsrv.ini
 exit
+sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
+
+Si qu’une seule version PHP dans le système, la dernière étape peut être simplifiée en `phpenmod sqlsrv pdo_sqlsrv`.
+
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Étape 4. Installer Apache et configurer le chargement du pilote
 ```
 sudo su
@@ -60,8 +64,6 @@ apt-get install libapache2-mod-php7.3 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.3
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/30-pdo_sqlsrv.ini
-echo "extension=sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/20-sqlsrv.ini
 exit
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Étape 5. Redémarrer Apache et tester l’exemple de script
@@ -91,31 +93,16 @@ yum install php php-pdo php-xml php-pear php-devel re2c gcc-c++ gcc
 ### <a name="step-2-install-prerequisites"></a>Étape 2. Prérequis à installer
 Installez le pilote ODBC pour Red Hat 7 en suivant les instructions fournies dans la [page d’installation de Linux et macOS](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
-La compilation des pilotes PHP avec PECL avec PHP 7.2 ou 7.3 nécessite une version de GCC plus récente que la version par défaut :
-```
-sudo yum-config-manager --enable rhel-server-rhscl-7-rpms
-sudo yum install devtoolset-7
-scl enable devtoolset-7 bash
-```
 ### <a name="step-3-install-the-php-drivers-for-microsoft-sql-server"></a>Étape 3. Installer les pilotes PHP pour Microsoft SQL Server
 ```
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
-echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
-echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
+echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/pdo_sqlsrv.ini
+echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/sqlsrv.ini
 exit
 ```
-Un problème dans PECL peut empêcher l’installation correcte de la dernière version des pilotes même si vous avez mis à niveau GCC. Pour installer, téléchargez les packages et compilez manuellement (étapes similaires pour pdo_sqlsrv) :
-```
-pecl download sqlsrv
-tar xvzf sqlsrv-5.6.1.tgz
-cd sqlsrv-5.6.1/
-phpize
-./configure --with-php-config=/usr/bin/php-config
-make
-sudo make install
-```
+
 Vous pouvez également télécharger les fichiers binaires prédéfinis à partir de la [page de projet Github](https://github.com/Microsoft/msphpsql/releases), ou installer à partir du dépôt Remi :
 ```
 sudo yum install php-sqlsrv
@@ -163,10 +150,14 @@ locale-gen
 sudo pecl install sqlsrv
 sudo pecl install pdo_sqlsrv
 sudo su
-echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/30-pdo_sqlsrv.ini
-echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/20-sqlsrv.ini
+printf "; priority=20\nextension=sqlsrv.so\n" > /etc/php/7.3/mods-available/sqlsrv.ini
+printf "; priority=30\nextension=pdo_sqlsrv.so\n" > /etc/php/7.3/mods-available/pdo_sqlsrv.ini
 exit
+sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
+
+Si qu’une seule version PHP dans le système, la dernière étape peut être simplifiée en `phpenmod sqlsrv pdo_sqlsrv`.
+
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Étape 4. Installer Apache et configurer le chargement du pilote
 ```
 sudo su
@@ -174,8 +165,6 @@ apt-get install libapache2-mod-php7.3 apache2
 a2dismod mpm_event
 a2enmod mpm_prefork
 a2enmod php7.3
-echo "extension=pdo_sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/30-pdo_sqlsrv.ini
-echo "extension=sqlsrv.so" >> /etc/php/7.3/apache2/conf.d/20-sqlsrv.ini
 ```
 ### <a name="step-5-restart-apache-and-test-the-sample-script"></a>Étape 5. Redémarrer Apache et tester l’exemple de script
 ```

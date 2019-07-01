@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: e3b0e53dfbbe03fd723edb4d4c941e3395a0b1e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10b29bcce89adb35b4650b5501fea9a460f18d50
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826926"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313991"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Options SET d'ALTER DATABASE (Transact-SQL)
 
@@ -2897,49 +2897,45 @@ SET QUERY_STORE = ON
 
 ## <a name="azure-sql-data-warehouse"></a>Azure SQL Data Warehouse.
 
-> [!NOTE]
-> La plupart des options SET de base de données sont configurables pour la session en cours avec les [Instructions SET](../../t-sql/statements/set-statements-transact-sql.md), souvent par des applications au moment de la connexion. Les options SET de niveau session remplacent les valeurs **ALTER DATABASE SET** . Les options de base de données décrites ci-après sont des valeurs qui peuvent être définies pour les sessions qui ne fournissent pas explicitement d’autres valeurs d’option SET.
-
 ## <a name="syntax"></a>Syntaxe
 
 ```
-ALTER DATABASE { database_name | Current }
+ALTER DATABASE { database_name }
 SET
 {
     <optionspec> [ ,...n ]
 }
 ;
 
-<auto_option> ::=
-{}
-RESULT_SET_CACHING { ON | OFF}
+<option_spec>::=
+{
+<RESULT_SET_CACHING>
 }
+;
+
+<RESULT_SET_CACHING>::=
+{
+RESULT_SET_CACHING {ON | OFF}
+}
+
 ```
 
 ## <a name="arguments"></a>Arguments
 
-*database_name* Spécifie le nom de la base de données à modifier.
+*database_name*
 
-**\<auto_option> ::=**
+Nom de la base de données à modifier.
 
-Contrôle les options automatiques.
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
+S’applique à Azure SQL Data Warehouse (préversion)
 
-**Autorisations** Nécessite les autorisations suivantes :
+Cette commande doit être exécutée quand vous êtes connecté à la base de données `master`.  La modification de ce paramètre de base de données prend effet immédiatement.  Des coûts de stockage sont facturés en mettant en cache des jeux de résultats de requête. Après avoir désactivé la mise en cache de résultats pour une base de données, le cache de résultats rendu persistant auparavant sera immédiatement supprimé depuis le stockage Azure SQL Data Warehouse. Une nouvelle colonne, is_result_set_caching_on, est introduite dans `sys.databases` pour afficher le paramètre du cache de résultats pour une base de données.  
 
-- Connexion au principal de niveau serveur (créée par le processus de provisionnement) ou
-- Membre du rôle de base de données `dbmanager`.
+ON   
+Indique que les jeux de résultats de requête retournés à partir de cette base de données seront mis en cache dans le stockage Azure SQL Data Warehouse.
 
-Le propriétaire de la base de données ne peut pas modifier la base de données à moins d'être membre du rôle dbmanager.
-
-> [!Note]
-> Bien que cette fonctionnalité soit déployée dans toutes les régions, vérifiez la version déployée sur votre instance et les dernières [notes de publication sur Azure SQL DW](/azure/sql-data-warehouse/release-notes-10-0-10106-0) pour savoir si vous disposez de cette fonctionnalité.
-
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | {OFF } S’applique uniquement à Azure SQL Data Warehouse Gen2 (préversion). Cette commande doit être exécutée quand vous êtes connecté à la base de données master.  La modification de ce paramètre de base de données prend effet immédiatement.  Des coûts de stockage sont facturés en mettant en cache des jeux de résultats de requête. Après avoir désactivé la mise en cache de résultats pour une base de données, le cache de résultats rendu persistant auparavant sera immédiatement supprimé depuis le stockage Azure SQL Data Warehouse. Une nouvelle colonne nommée is_result_set_caching_on est introduite dans les sys.databases pour afficher le paramètre de mise en cache de résultats pour une base de données.  
-
-ACTIF Spécifie que les jeux de résultats de requête retournés à partir de cette base de données seront mis en cache dans le stockage Azure SQL Data Warehouse.
-
-INACTIF Spécifie que les jeux de résultats de requête retournés à partir de cette base de données ne seront pas mis en cache dans le stockage Azure SQL Data Warehouse.
-Les utilisateurs peuvent indiquer si une requête a été exécutée avec une correspondance dans le cache de résultats ou absence dans le cache en interrogeant sys.pdw_request_steps avec un request_id spécifique.   S’il existe une correspondance dans le cache, le résultat de la requête aura une seule étape avec les détails suivants :
+OFF   
+Indique que les jeux de résultats de requête retournés à partir de cette base de données ne seront pas mis en cache dans le stockage Azure SQL Data Warehouse. Les utilisateurs peuvent indiquer si une requête a été exécutée avec une correspondance dans le cache de résultats ou absence dans le cache en interrogeant sys.pdw_request_steps avec un request_id spécifique.   S’il existe une correspondance dans le cache, le résultat de la requête aura une seule étape avec les détails suivants :
 
 |**Nom de colonne** |**Opérateur** |**Value** |
 |----|----|----|
@@ -2948,6 +2944,25 @@ Les utilisateurs peuvent indiquer si une requête a été exécutée avec une co
 |location_type|=|Control|
 commande|Correspond à|%DWResultCacheDb%|
 | | |
+
+## <a name="remarks"></a>Notes
+
+Le jeu de résultats mis en cache est réutilisé pour une requête si toutes les conditions suivantes sont remplies :
+
+1. L’utilisateur qui exécute la requête a accès à toutes les tables référencées dans la requête.
+1. Une correspondance exacte existe entre la nouvelle requête et la requête précédente ayant généré le cache du jeu de résultats.
+1. Aucun changement au niveau des données ou du schéma n’est signalé dans les tables à partir desquelles le jeu de résultats mis en cache a été généré.  
+
+Une fois que la mise en cache du jeu de résultats est activée pour une base de données, les résultats sont mis en cache pour toutes les requêtes jusqu’à ce que le cache soit plein, à l’exception des requêtes avec des fonctions non déterministes telles que DateTime.Now ().   Les requêtes avec des jeux de résultats volumineux (par exemple, plus d’un million de lignes) peuvent accuser des performances plus lentes durant la première exécution au moment de la création du cache de résultats.
+
+## <a name="permissions"></a>Autorisations
+
+Nécessite ces autorisations :
+
+- Connexion au principal de niveau serveur (créée par le processus de provisionnement) ou
+- Membre du rôle de base de données `dbmanager`.
+
+Le propriétaire de la base de données ne peut pas modifier la base de données à moins d'être membre du rôle dbmanager.
 
 ## <a name="examples"></a>Exemples
 
