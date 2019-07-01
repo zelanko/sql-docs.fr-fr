@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
-ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
+ms.openlocfilehash: 783b2249a36b69bc53e147699e50dcab86fd89b5
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55428646"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316679"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ Par exemple, si une taille de cache de 50 est choisie, [!INCLUDE[ssNoVersion](.
 En cas de création avec l’option **CACHE**, un arrêt inattendu (tel qu’une panne de courant) peut provoquer la perte des numéros séquentiels qui restent dans le cache.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
- Les numéros séquentiels sont générés à l'extérieur de l'étendue de la transaction actuelle. Ils sont utilisés si la transaction à l'aide du numéro séquentiel est validée ou restaurée.  
+ Les numéros séquentiels sont générés à l'extérieur de l'étendue de la transaction actuelle. Ils sont utilisés si la transaction à l'aide du numéro séquentiel est validée ou restaurée. La validation des doublons ne se produit qu’une fois qu’un enregistrement est entièrement rempli. Dans certains cas, il peut arriver que le même numéro soit utilisé pour plusieurs enregistrements durant la création, d’où son identification en tant que doublon. Si cela se produit et que d’autres valeurs de numérotation automatique ont été appliquées aux enregistrements suivants, il peut en résulter un écart entre les valeurs de numérotation automatique et le comportement attendu.
   
 ### <a name="cache-management"></a>Gestion du cache  
  Pour améliorer les performances, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pré-alloue le nombre de numéros séquentiels spécifié par l’argument **CACHE**.  
@@ -154,7 +154,7 @@ En cas de création avec l’option **CACHE**, un arrêt inattendu (tel qu’une
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation **CREATE SEQUENCE**, **ALTER**ou **CONTROL** sur le SCHEMA.  
   
 -   Les membres des rôles de base de données fixe db_owner et db_ddladmin peuvent créer, modifier et supprimer des objets séquences.  
@@ -196,7 +196,7 @@ CREATE SEQUENCE Test.CountBy1
 GO  
 ```  
   
-### <a name="b-creating-a-sequence-that-decreases-by-1"></a>b. Création d'une séquence qui décroît de 1  
+### <a name="b-creating-a-sequence-that-decreases-by-1"></a>B. Création d'une séquence qui décroît de 1  
  L'exemple suivant démarre à 0 et décroît d'une valeur négative chaque fois qu'il est utilisé.  
   
 ```sql  
@@ -292,7 +292,7 @@ FROM sys.sequences
 WHERE name = 'DecSeq' ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
  [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   

@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 63d16dd3856fc680ab580451f769bd29aeabeef4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4093a3629278f6bd733abdd3d14a006d2b73a75
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140609"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166397"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Mécanismes et recommandations liés aux délais d’attente concernant les baux, les clusters et le contrôle d’intégrité pour les groupes de disponibilité Always On 
 
@@ -56,7 +56,7 @@ Les paramètres par défaut sont optimisés pour réagir rapidement aux symptôm
 
 ### <a name="relationship-between-cluster-timeout-and-lease-timeout"></a>Relation entre le délai d’expiration du cluster et le délai d’expiration du bail 
 
-La principale fonction du mécanisme de bail est d’accepter la ressource SQL Server dans le cas où le service de cluster ne peut pas communiquer avec l’instance lors de l’exécution d’un basculement vers un autre nœud. Lorsque le cluster effectue une opération hors connexion sur la ressource de cluster du groupe de disponibilité, le service de cluster effectue un appel RPC à rhs.exe afin de mettre la ressource hors connexion. La DLL de ressource utilise des procédures stockées pour indiquer à SQL Server de mettre le groupe de disponibilité hors connexion. Toutefois, les procédures stockées peuvent échouer ou expirer. L’hôte des ressources arrête également son propre thread de renouvellement de bail lors de l’appel hors connexion. Dans le cas le plus défavorable, SQL Server provoque l’expiration du bail à la moitié du délai défini (LeaseTimeout) et fait passer l’instance à l’état de résolution. Les basculements peuvent être effectués par plusieurs parties. Toutefois, il est crucial que la vue de l’état du cluster soit la même sur l’ensemble du cluster et entre les instances SQL Server. Prenons, par exemple, un scénario dans lequel l’instance principale perd la connexion avec le reste du cluster. Tous les nœuds du cluster vont détecter une défaillance au même moment en raison des valeurs de délai d’expiration du cluster, mais seul le nœud principal pourra interagir avec l’instance principale de SQL Server afin de la forcer à abandonner le rôle principal. 
+La principale fonction du mécanisme de bail est d’accepter la ressource SQL Server hors connexion si le service de cluster ne peut pas communiquer avec l’instance lors de l’exécution d’un basculement vers un autre nœud. Lorsque le cluster effectue une opération hors connexion sur la ressource de cluster du groupe de disponibilité, le service de cluster effectue un appel RPC à rhs.exe afin de mettre la ressource hors connexion. La DLL de ressource utilise des procédures stockées pour indiquer à SQL Server de mettre le groupe de disponibilité hors connexion. Toutefois, les procédures stockées peuvent échouer ou expirer. L’hôte des ressources arrête également son propre thread de renouvellement de bail lors de l’appel hors connexion. Dans le cas le plus défavorable, SQL Server provoque l’expiration du bail à la moitié du délai défini (LeaseTimeout) et fait passer l’instance à l’état de résolution. Les basculements peuvent être effectués par plusieurs parties. Toutefois, il est crucial que la vue de l’état du cluster soit la même sur l’ensemble du cluster et entre les instances SQL Server. Prenons, par exemple, un scénario dans lequel l’instance principale perd la connexion avec le reste du cluster. Tous les nœuds du cluster vont détecter une défaillance au même moment en raison des valeurs de délai d’expiration du cluster, mais seul le nœud principal pourra interagir avec l’instance principale de SQL Server afin de la forcer à abandonner le rôle principal. 
 
 Pour le nœud principal, le service de cluster a perdu le quorum et met fin à sa propre exécution. Le service de cluster émet un appel RPC vers l’hôte des ressources pour mettre fin au processus. Cet appel de fin d’exécution est chargé de mettre hors connexion le groupe de disponibilité de l’instance SQL Server. Cet appel hors connexion est effectué via T-SQL, mais ne peut pas garantir la connexion entre SQL et la DLL de ressource. 
 
