@@ -13,11 +13,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0dc7ab298607964f4b9a6d7c1c7fa74a53c6bc83
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399272"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047477"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introduction aux tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ Les tables optimisées en mémoire sont plus efficacement accessibles à partir 
 |Fonctionnalité|Accès à l'aide d'une procédure stockée compilée en mode natif|Accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété|Accès CLR|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Table mémoire optimisée|Oui|Oui|Non*|  
-|Type de table mémoire optimisée|Oui|Oui|non|  
+|Type de table mémoire optimisée|Oui|Oui|Non|  
 |Procédure stockée compilée en mode natif|L’imbrication de procédures stockées compilées en mode natif est désormais prise en charge. Vous pouvez utiliser la syntaxe EXECUTE à l’intérieur des procédures stockées, à condition que la procédure référencée soit également compilée en mode natif.|Oui|Non*|  
   
  *Vous ne pouvez pas accéder à une table optimisée en mémoire ou à une procédure stockée compilée en mode natif à partir de la connexion contextuelle (connexion à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au moment de l’exécution d’un module CLR). Cependant, vous pouvez créer et ouvrir une autre connexion à partir de laquelle vous accédez aux tables optimisées en mémoire et aux procédures stockées compilées en mode natif.  
@@ -70,20 +70,20 @@ Les tables optimisées en mémoire sont plus efficacement accessibles à partir 
 
 Les facteurs suivants affectent les gains de performance pouvant être obtenus avec l'OLTP en mémoire :  
   
-*Communication :* Une application comportant de nombreux appels à des procédures stockées courtes a un moindre gain de performances par rapport à une application comportant moins d’appels et plus de fonctionnalités implémentées dans chaque procédure stockée.  
+*Communication :* Une application comportant de nombreux appels à des procédures stockées courtes aura un moindre gain de performances par rapport à une application comportant moins d'appels et plus de fonctionnalités implémentées dans chaque procédure stockée.  
   
-*[!INCLUDE[tsql](../../includes/tsql-md.md)] Exécution :* L’OLTP en mémoire offre des performances optimales si vous utilisez des procédures stockées compilées en mode natif plutôt que des procédures stockées interprétées ou l’exécution de requêtes. Il peut être avantageux d’accéder aux tables optimisées en mémoire à partir de ces procédures stockées.  
+*Exécution de [!INCLUDE[tsql](../../includes/tsql-md.md)] :* L'OLTP en mémoire offre des performances optimales si vous utilisez des procédures stockées compilées en mode natif plutôt que des procédures stockées interprétées ou l'exécution de requêtes. Il peut être avantageux d’accéder aux tables optimisées en mémoire à partir de ces procédures stockées.  
   
-*Comparaison entre l’analyse de plage et la recherche de points :* Les index non cluster optimisés en mémoire prennent en charge les analyses de plage et les analyses triées. Pour les recherches de points, les index de hachage optimisés en mémoire offrent de meilleures performances que les index non cluster optimisés en mémoire. Les index non cluster optimisés en mémoire offrent de meilleures performances que les index sur disque.
+*Comparaison entre l’analyse de plage et la recherche de points :* Les index non cluster mémoire optimisés prennent en charge les analyses de plage et les analyses triées. Pour les recherches de points, les index de hachage mémoire optimisés offrent de meilleures performances que les index non cluster mémoire optimisés. Les index non cluster optimisés en mémoire offrent de meilleures performances que les index sur disque.
 
 - À partir de SQL Server 2016, le plan de requête pour une table optimisée en mémoire peut analyser la table en parallèle. Les requêtes analytiques sont donc plus performantes.
   - Les index de hachage peuvent également être analysés en parallèle à partir de SQL Server 2016.
   - Les index non cluster peuvent également être analysés en parallèle à partir de SQL Server 2016.
   - Les index columnstore peuvent être analysés en parallèle depuis leur création dans SQL Server 2014.
   
-*Opérations d’index :* Les opérations d’index ne sont pas stockées et existent uniquement en mémoire.  
+*Opérations d’index :* les opérations d’index ne sont pas journalisées et existent uniquement en mémoire.  
   
-*Accès simultané :* Pour les applications dont les performances sont affectées par l’accès simultané au niveau du moteur, tel que la contention de verrous internes ou le blocage, les performances s’améliorent de façon significative quand l’application passe à l’OLTP en mémoire.  
+*Accès simultané :* Pour les applications dont les performances sont affectées par l'accès simultané au niveau du moteur, tel que la contention de verrous internes ou le blocage, les performances s'améliorent de façon significative lorsque l'application passe à l'OLTP en mémoire.  
   
 Le tableau suivant répertorie les problèmes de performance et d'extensibilité couramment rencontrés dans les bases de données relationnelles et indique comment l'OLTP peut améliorer les performances.  
   
@@ -105,7 +105,7 @@ EXECUTE AS CALLER n’entraîne qu’une faible baisse de performances (de l’o
 
 Pour découvrir une brève description des scénarios types dans lesquels [!INCLUDE[hek_1](../../includes/hek-1-md.md)] peut contribuer à améliorer les performances, voir [OLTP en mémoire](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306227"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644362"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Les expressions de table communes peuvent également s'utiliser avec les instructions SELECT, INSERT, UPDATE et CREATE VIEW. Pour plus d’informations, consultez [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(**_expression_**)** [ PERCENT ]  
+ TOP **(** _expression_ **)** [ PERCENT ]  
  Spécifie le nombre ou le pourcentage de lignes aléatoires qui seront supprimées. L'argument*expression* peut être un nombre ou un pourcentage de lignes. Les lignes référencées dans l'expression TOP utilisée dans les instructions INSERT, UPDATE ou DELETE ne sont pas triées dans un ordre précis. Pour plus d’informations, consultez [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
@@ -164,7 +164,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *cursor_variable_name*  
  Nom d'une variable curseur. La variable de curseur doit référencer un curseur qui autorise les mises à jour.  
   
- OPTION **(** \<query_hint> [ **,**... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  Mots clés spécifiant les indicateurs d’optimiseur utilisés pour personnaliser le traitement de l’instruction par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
@@ -240,7 +240,7 @@ GO
 ###  <a name="LimitRows"></a> Limitation des lignes supprimées  
  Les exemples de cette section montrent comment limiter le nombre de lignes qui seront supprimées.  
   
-#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>b. Utilisation de la clause WHERE pour supprimer un jeu de lignes  
+#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Utilisation de la clause WHERE pour supprimer un jeu de lignes  
  L'exemple suivant supprime toutes les lignes de la table `ProductCostHistory` , dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , dans lesquelles la valeur de la colonne `StandardCost` est supérieure à `1000.00`.  
   
 ```sql
@@ -472,7 +472,7 @@ WHERE ProductKey IN (
 OPTION ( LABEL = N'CustomJoin', HASH JOIN ) ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
