@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92154266ba63b51b83667ee548fdb2fa9d8472e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766507"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62805609"
 ---
 # <a name="mssqlserver7933"></a>MSSQLSERVER_7933
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47766507"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_ORPHANED_ROWSET_DIRECTORY|  
-|Texte du message|Erreur de table : un ID de répertoire FILESTREAM F_ID existe pour une partition, mais la partition correspondante n'existe pas dans la base de données.|  
+|Texte du message|Erreur de table, un ID de répertoire Filestream F_ID existe pour une partition, mais la partition correspondante n’existe pas dans la base de données.|  
   
 ## <a name="explanation"></a>Explication  
 Au cours de l'exécution de DBCC CHECKDB, un répertoire d'ensemble de lignes a été trouvé dans l'espace de données FILESTREAM ; toutefois, sa partition correspondante reste introuvable dans la base de données.  

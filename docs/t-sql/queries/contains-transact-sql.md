@@ -36,11 +36,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4afc59a5901497fc3112cff3a06bbe20dd3ce04d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334806"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62466994"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ CONTAINS (
   
 ## <a name="arguments"></a>Arguments  
  *column_name*  
- Nom d'une colonne d'index de recherche en texte intégral de la table spécifiée dans la clause FROM. Les colonnes peuvent être de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)**.  
+ Nom d'une colonne d'index de recherche en texte intégral de la table spécifiée dans la clause FROM. Les colonnes peuvent être de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** ou **varbinary(max)** .  
   
  *column_list*  
  Spécifie deux colonnes ou plus, séparées par des virgules. *column_list* doit être mis entre parenthèses. Une seule et même langue doit être utilisée dans toutes les colonnes de *column_list*, sauf si *language_term* est spécifié.  
@@ -211,7 +211,7 @@ WHERE CONTAINS(Description, @SearchWord);
 >  Certaines langues, notamment certaines langues asiatiques, peuvent contenir des expressions composées d'un ou de plusieurs mots non séparés par des espaces.  
   
 \<simple_term>  
-Spécifie une correspondance pour un mot ou une expression exacts. Exemples de termes simples autorisés : « lieu dit », « lieudit » et « Microsoft SQL Server ». Les expressions doivent être mises entre des guillemets doubles (""). Les mots d’une expression doivent apparaître dans l’ordre spécifié dans *\<contains_search_condition>*, tels qu’ordre ils apparaissent dans la colonne de la base de données. La recherche de caractères dans un mot ou une expression ne respecte pas la casse. Dans des colonnes d’index de recherche en texte intégral, les mots parasites ou [mots vides](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) (par exemple « un », « et » ou « le ») ne sont pas stockés dans l’index de recherche en texte intégral. Si un mot parasite est utilisé dans la recherche d'un mot unique, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un message d'erreur indiquant que la requête contient uniquement des mots parasites. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient une liste standard des mots parasites dans le répertoire \Mssql\Binn\FTERef de chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Spécifie une correspondance pour un mot ou une expression exacts. Exemples de termes simples autorisés : « lieu dit », « lieudit » et « Microsoft SQL Server ». Les expressions doivent être mises entre des guillemets doubles (""). Les mots d’une expression doivent apparaître dans l’ordre spécifié dans *\<contains_search_condition>* , tels qu’ordre ils apparaissent dans la colonne de la base de données. La recherche de caractères dans un mot ou une expression ne respecte pas la casse. Dans des colonnes d’index de recherche en texte intégral, les mots parasites ou [mots vides](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) (par exemple « un », « et » ou « le ») ne sont pas stockés dans l’index de recherche en texte intégral. Si un mot parasite est utilisé dans la recherche d'un mot unique, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne un message d'erreur indiquant que la requête contient uniquement des mots parasites. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient une liste standard des mots parasites dans le répertoire \Mssql\Binn\FTERef de chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  La ponctuation est ignorée. Par conséquent, `CONTAINS(testing, "computer failure")` retourne la ligne ayant la valeur « Où est mon ordinateur (computer) ? Il est en panne (Failure). » Pour plus d’informations sur le comportement des analyseurs lexicaux, consultez [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
@@ -229,7 +229,7 @@ Spécifie une correspondance pour un mot ou une expression exacts. Exemples de t
  Un *\<simple_term>* donné dans un *\<generation_term>* ne correspondra pas aux noms et aux verbes.  
   
  THESAURUS  
- Spécifie l'utilisation du dictionnaire des synonymes correspondant à la langue de texte intégral de la colonne ou à la langue spécifiée dans la requête. Les modèles les plus longs de *\<simple_term>* sont interprétés par rapport au dictionnaire des synonymes, et des termes supplémentaires sont créés pour étendre ou remplacer le modèle initial. Si aucune correspondance n’est trouvée pour tout ou partie de *\<simple_term>*, la partie sans correspondance est traitée en tant que *simple_term*. Pour plus d’informations sur le dictionnaire des synonymes pour la recherche en texte intégral, consultez [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+ Spécifie l'utilisation du dictionnaire des synonymes correspondant à la langue de texte intégral de la colonne ou à la langue spécifiée dans la requête. Les modèles les plus longs de *\<simple_term>* sont interprétés par rapport au dictionnaire des synonymes, et des termes supplémentaires sont créés pour étendre ou remplacer le modèle initial. Si aucune correspondance n’est trouvée pour tout ou partie de *\<simple_term>* , la partie sans correspondance est traitée en tant que *simple_term*. Pour plus d’informations sur le dictionnaire des synonymes pour la recherche en texte intégral, consultez [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
  \<generic_proximity_term>  
  Spécifie une correspondance de mots ou d'expressions qui doit figurer dans le document faisant l'objet d'une recherche.  
@@ -313,7 +313,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Précise que les lignes retournées par la requête correspondent à une liste de mots ou d'expressions auxquels une valeur de pondération peut être affectée.  
   
  ISABOUT  
- Spécifie le mot clé *\<weighted_term>*.  
+ Spécifie le mot clé *\<weighted_term>* .  
   
  WEIGHT(*weight_value*)  
  Définit une valeur de pondération qui est un nombre compris entre 0,0 et 1,0. Chaque élément de *\<weighted_term>* peut inclure une valeur *weight_value*. *weight_value* permet de changer l’influence de diverses parties d’une requête sur la valeur de classement assignée à chaque ligne correspondant à la requête. WEIGHT n’a pas d’incidence sur les résultats des requêtes CONTAINS, mais impacte le classement dans les requêtes [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).  
@@ -321,14 +321,14 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
 > [!NOTE]  
 >  Le séparateur de décimale est toujours un point, quels que soient les paramètres régionaux du système d'exploitation.  
   
- { AND | & } | { AND NOT | &! } | { OR | | }   
+ { AND | & } | { AND NOT | &! } | { OR | | }  
  Spécifie une opération logique entre deux conditions de recherche de contenu.  
   
  { AND | & }  
- Indique que les deux conditions de recherche de contenu doivent être satisfaites pour obtenir une correspondance. Le symbole et commercial (&) peut être utilisé à la place du mot clé AND pour représenter l'opérateur AND.  
+ Indique que les deux conditions de recherche de contenu doivent être satisfaites pour obtenir une correspondance. Vous pouvez utiliser une esperluette (&) à la place du mot clé AND pour représenter l’opérateur AND.  
   
  { AND NOT | &! }  
- Indique que la deuxième condition de recherche ne doit pas être satisfaite pour obtenir une correspondance. Le symbole et commercial suivi d'un point d'exclamation (&!) peut être utilisé à la place du mot clé AND NOT pour représenter l'opérateur AND NOT.  
+ Indique que la deuxième condition de recherche ne doit pas être satisfaite pour obtenir une correspondance. Vous pouvez utiliser une esperluette suivie d’un point d’exclamation (&!) à la place du mot clé AND NOT pour représenter l’opérateur AND NOT.  
   
  { OR | | }  
  Indique que l'une des deux conditions de recherche de contenu doit être satisfaite pour obtenir une correspondance. Le symbole de barre verticale (|) peut être utilisé à la place du mot clé OR pour représenter l'opérateur OR.  
@@ -385,7 +385,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>b. Utilisation de CONTAINS et d’une expression avec \<simple_term>  
+### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. Utilisation de CONTAINS et d’une expression avec \<simple_term>  
  L'exemple ci-dessous retourne tous les produits qui contiennent l'expression `Mountain` ou `Road`.  
   
 ```sql  
@@ -536,7 +536,7 @@ WHERE CONTAINS(PROPERTY(Document,'Title'), 'Maintenance OR Repair');
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Commencer à utiliser la recherche en texte intégral](../../relational-databases/search/get-started-with-full-text-search.md)   
  [Créer et gérer des catalogues de texte intégral](../../relational-databases/search/create-and-manage-full-text-catalogs.md)   
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-catalog-transact-sql.md)   

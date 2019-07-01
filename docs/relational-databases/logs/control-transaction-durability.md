@@ -16,11 +16,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513752"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62707126"
 ---
 # <a name="control-transaction-durability"></a>Contrôler la durabilité d'une transaction
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "52513752"
     
  Voici quelques-uns des cas dans lesquels vous pouvez tirer parti de l'utilisation de la durabilité retardée des transactions :    
     
- **Vous tolérez la perte de certaines données.**    
+ **Vous tolérez la perte de certaines données.**     
  Si vous tolérez la perte de certaines données, par exemple des enregistrements qui ne sont pas indispensables tant que vous disposez de la majeure partie des données, il peut être intéressant d'utiliser la durabilité retardée. Si, en revanche, vous ne tolérez aucune perte de données, n'utilisez pas la durabilité retardée des transactions.    
     
- **Vous rencontrez un goulot d’étranglement au niveau des écritures du journal de transactions.**    
+ **Vous rencontrez un goulot d’étranglement au niveau des écritures du journal de transactions.**     
  Si les problèmes de performances sont attribuables à une latence dans les écritures du journal de transactions, votre application bénéficiera probablement de l'utilisation de la durabilité retardée des transactions.    
     
- **Vos charges de travail présentent un niveau de contention élevé.**    
+ **Vos charges de travail présentent un niveau de contention élevé.**     
  Si votre système a des charges de travail présentant un haut degré de contention, beaucoup de temps est perdu à attendre la libération de verrous. La durabilité retardée des transactions réduit la durée de validation. De ce fait, les verrous sont libérés plus rapidement, ce qui se traduit par un débit supérieur.    
     
  ### <a name="delayed-transaction-durability-guarantees"></a>Garanties offertes par la durabilité retardée des transactions   
@@ -135,7 +135,7 @@ AS BEGIN ATOMIC WITH
 END    
 ```    
     
-### <a name="table-1-durability-in-atomic-blocks"></a>Tableau 1 : durabilité dans les blocs atomiques    
+### <a name="table-1-durability-in-atomic-blocks"></a>Tableau 1 : durabilité dans les blocs atomiques    
     
 |Option de durabilité de bloc atomique|Aucune transaction existante|Transaction en cours (à durabilité complète ou retardée)|    
 |------------------------------------|-----------------------------|---------------------------------------------------------|    
@@ -204,10 +204,10 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="catastrophic-events"></a>Événements graves    
  Dans le cas d'événements graves, par exemple une défaillance du serveur, vous pouvez perdre les données de toutes les transactions validées qui n'ont pas été enregistrées sur le disque. Les transactions durables retardées sont enregistrées sur le disque quand une transaction à durabilité complète est exécutée sur une table (durable optimisé en mémoire ou sur disque) dans la base de données, ou quand `sp_flush_log` est appelé. Si vous utilisez des transactions durables retardées, vous pouvez créer une petite table dans la base de données afin de mettre à jour ou d'appeler périodiquement `sp_flush_log` pour enregistrer toutes les transactions validées en attente. Le journal des transactions est également vidé quand il est plein, mais cela est difficile à prévoir et impossible à contrôler.    
     
-### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>Arrêt et redémarrage de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]     
+### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>Arrêt et redémarrage de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    
  Pour une durabilité retardée, il n'y a pas de différence entre un arrêt inattendu et un arrêt/redémarrage attendu de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Comme pour les événements graves, vous devez prévoir une perte de données. Dans un arrêt/redémarrage planifié, certaines transactions qui n'ont pas été écrites sur disque peuvent tout d'abord l'être, mais vous ne pouvez pas planifier cela. La planification comme pour un arrêt/redémarrage, planifiée ou non, entraîne la perte de données comme pour un événement grave.    
     
-## <a name="see-also"></a> Voir aussi    
+## <a name="see-also"></a>Voir aussi    
  [Transactions avec tables optimisées en mémoire](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   
