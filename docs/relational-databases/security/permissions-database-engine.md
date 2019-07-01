@@ -20,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 521b183a1901bac8a5ac982baa65d2d8cbb60264
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8303b8639ff72ad8bf6f9e3ebfc0b2232aae147b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840071"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412664"
 ---
 # <a name="permissions-database-engine"></a>Autorisations (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -108,8 +108,8 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
 |Exécutez|Types CLR, scripts externes, procédures ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR), fonctions scalaires et d’agrégation ([!INCLUDE[tsql](../../includes/tsql-md.md)] et CLR) et synonymes|  
 |IMPERSONATE|Connexions et utilisateurs|  
 |INSERT|Synonymes, tables et colonnes, vues et colonnes. l’autorisation peut être accordée au niveau de la base de données, du schéma ou de l’objet.|  
-|RECEIVE|Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)] |  
-|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />SYNONYM,<br />TABLE,<br />TYPE,<br />VIEW et<br />XML SCHEMA COLLECTION|  
+|RECEIVE|Files d’attente[!INCLUDE[ssSB](../../includes/sssb-md.md)]|  
+|REFERENCES|AGGREGATE,<br />ASSEMBLY,<br />ASYMMETRIC KEY,<br />CERTIFICATE,<br />CONTRACT,<br />DATABASE,<br />DATABASE SCOPED CREDENTIAL,<br />FULLTEXT CATALOG,<br />FULLTEXT STOPLIST,<br />FUNCTION,<br />MESSAGE TYPE,<br />PROCEDURE,<br />QUEUE, <br />RULE,<br />SCHEMA,<br />SEARCH PROPERTY LIST,<br />SEQUENCE OBJECT, <br />SYMMETRIC KEY,<br />TABLE,<br />TYPE,<br />VIEW et<br />XML SCHEMA COLLECTION|  
 |SELECT|Synonymes, tables et colonnes, vues et colonnes. l’autorisation peut être accordée au niveau de la base de données, du schéma ou de l’objet.|  
 |TAKE OWNERSHIP|Toutes les classes d’objets, à l’exception de DATABASE SCOPED CONFIGURATION, LOGIN, SERVER et USER.|  
 |UPDATE|Synonymes, tables et colonnes, vues et colonnes. l’autorisation peut être accordée au niveau de la base de données, du schéma ou de l’objet.|  
@@ -259,7 +259,7 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
 |MESSAGE TYPE|VIEW DEFINITION|VW|DATABASE|VIEW DEFINITION|  
 |OBJECT|ALTER|AL|SCHEMA|ALTER|  
 |OBJECT|CONTROL|CL|SCHEMA|CONTROL|  
-|OBJECT|DELETE|DL|SCHEMA|Suppression|  
+|OBJECT|Suppression|DL|SCHEMA|Suppression|  
 |OBJECT|Exécutez|EX|SCHEMA|Exécutez|  
 |OBJECT|INSERT|IN|SCHEMA|INSERT|  
 |OBJECT|RECEIVE|RC|SCHEMA|CONTROL|  
@@ -418,7 +418,7 @@ Pour des conseils sur la conception d’un système d’autorisations, consultez
 
 ## <a name="special-considerations-for-column-level-permissions"></a>Considérations spéciales relatives aux autorisations au niveau des colonnes
 
-Les autorisations au niveau des colonnes sont accordées avec la syntaxe *<nom_table>(\<nom_colonne>)*. Exemple :
+Les autorisations au niveau des colonnes sont accordées avec la syntaxe *<nom_table>(\<nom_colonne>)* . Par exemple :
 ```sql
 GRANT SELECT ON OBJECT::Customer(CustomerName) TO UserJoe;
 ```
@@ -460,7 +460,7 @@ SELECT * FROM sys.database_permissions
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Hiérarchie des autorisations &#40;Moteur de base de données&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)  
   
