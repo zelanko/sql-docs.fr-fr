@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ba776c683ea05665708891dbe734e82591077bf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd0a4a2850af0bcd954db1c257adef209d5876c8
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946231"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67219007"
 ---
 # <a name="create-a-format-file-sql-server"></a>Créer un fichier de format (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "64946231"
  En règle générale, les fichiers de format XML et non-XML sont interchangeables. Toutefois, nous recommandons d'utiliser la syntaxe XML pour les nouveaux fichiers de format, car elle offre plusieurs avantages par rapport aux fichiers de format non-XML.  
   
 > [!NOTE]  
->  La version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** peut lire un fichier de format version 10.0 , généré par [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, mais [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** ne peut pas lire un fichier de format version 11.0, généré par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**.  
+>  La version de l’utilitaire **bcp** (Bcp.exe) servant à lire un fichier de format doit être identique ou ultérieure à la version utilisée pour créer le fichier de format. Par exemple, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** peut lire un fichier de format version 10.0 généré par [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, mais [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** ne peut pas lire un fichier de format version 11.0 généré par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**.  
   
  Cette rubrique décrit l'utilisation de l' [utilitaire bcp](../../tools/bcp-utility.md) pour créer un fichier de format pour une table donnée. Le fichier de format est basé sur l’option de type de données spécifiée ( **-n**, **-c**, **-w**ou **-N**) et les délimiteurs de la table ou de la vue.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "64946231"
  **bcp** _table_ou_vue_ **format** nul **-f**_nom_fichier_de_format_  
   
 > [!NOTE]  
->  Pour bien distinguer un fichier au format non-XML, nous vous recommandons d'utiliser l'extension de nom de fichier .fmt, par exemple MaTable.fmt.  
+> Pour bien distinguer un fichier au format non-XML, nous vous recommandons d'utiliser l'extension de nom de fichier .fmt, par exemple MaTable.fmt.  
   
  Pour plus d’informations sur la structure et les champs des fichiers de format non-XML, consultez [Fichiers de format non-XML &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md).  
   
@@ -172,7 +172,7 @@ Voici un exemple de fichier de format sans les informations de classement.
  **bcp** _table_ou_vue_ **format nul-f** _nom_fichier_de_format_ **-x**  
   
 > [!NOTE]  
->  Pour bien distinguer un fichier de format XML, nous vous recommandons d'utiliser l'extension de nom de fichier .xml, par exemple MaTable.xml.  
+> Pour bien distinguer un fichier de format XML, nous vous recommandons d'utiliser l'extension de nom de fichier .xml, par exemple MaTable.xml.  
   
  Pour plus d’informations sur la structure et les champs des fichiers de format XML, consultez [Fichiers de format XML &#40;SQL Server&#41;](../../relational-databases/import-export/xml-format-files-sql-server.md).  
   
@@ -180,7 +180,6 @@ Voici un exemple de fichier de format sans les informations de classement.
  Cette section contient les exemples suivants, qui illustrent l’utilisation des commandes **bcp** pour créer un fichier de format XML :  
   
 -   A. Création d'un fichier de format XML pour des données de type caractère  
-  
 -   B. Création d'un fichier de format XML pour des données natives  
   
  Ces exemples créent la table `HumanResources.Department` dans l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . La table `HumanResources.Department` contient quatre colonnes : `DepartmentID`, `Name`, `GroupName`et `ModifiedDate`.  
@@ -203,7 +202,7 @@ Voici un exemple de fichier de format sans les informations de classement.
  Dans la fenêtre d'invite de commandes Windows, tapez la commande `bcp` suivante :  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c..xml -t, -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-c.xml -t, -T  
 ```  
   
  Le fichier de format généré `Department-c.xml`contient les éléments XML suivants :  
@@ -242,7 +241,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -x -f Department-
  Dans la fenêtre d'invite de commandes Windows, tapez la commande `bcp` suivante :  
   
 ```cmd
-bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n..xml -n -T  
+bcp AdventureWorks2012.HumanResources.Department format nul -x -f Department-n.xml -n -T  
 ```  
   
  Le fichier de format généré `Department-n.xml`contient les éléments XML suivants :  

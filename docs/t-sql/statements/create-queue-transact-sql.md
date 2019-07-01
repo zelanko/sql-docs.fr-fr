@@ -26,12 +26,12 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f7c970293a68e1ecf4df19ac70bb0e7e1ba303a
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503238"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232557"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,32 +163,32 @@ CREATE QUEUE <object>
 |message_id|**uniqueidentifier**|Identificateur unique du message.|  
   
 ## <a name="permissions"></a>Autorisations  
- L'autorisation de création d'une file d'attente est accordée aux membres du rôle de base de données fixe db_ddladmin ou db_owner et aux membres du rôle serveur fixe sysadmin.  
+ L’autorisation de création d’une file d’attente est accordée aux membres du rôle de base de données fixe `db_ddladmin` ou `db_owner` ou aux membres du rôle serveur fixe `sysadmin`.  
   
- L'autorisation REFERENCES pour une file d'attente est accordée par défaut au propriétaire de la file d'attente, aux membres du rôle de base de données fixe db_ddladmin ou db_owner et aux membres du rôle serveur fixe sysadmin.  
+ L’autorisation `REFERENCES` pour une file d’attente est accordée par défaut au propriétaire de la file d’attente, aux membres du rôle de base de données fixe `db_ddladmin` ou `db_owner` ou aux membres du rôle serveur fixe `sysadmin`.  
   
- L'autorisation RECEIVE pour une file d'attente est accordée par défaut au propriétaire de la file d'attente, aux membres du rôle de base de données fixe db_owner et aux membres du rôle serveur fixe sysadmin.  
+ L’autorisation `RECEIVE` pour une file d’attente est accordée par défaut au propriétaire de la file d’attente, aux membres du rôle de base de données fixe `db_owner` ou aux membres du rôle serveur fixe `sysadmin`.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-creating-a-queue-with-no-parameters"></a>A. Création d'une file d'attente sans paramètres  
  L'exemple suivant crée une file d'attente disponible pour la réception de messages. Aucune procédure stockée d'activation n'est spécifiée pour la file d'attente.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue ;  
 ```  
   
 ### <a name="b-creating-an-unavailable-queue"></a>B. Création d'une file d'attente indisponible  
  L'exemple suivant crée une file d'attente indisponible pour la réception de messages. Aucune procédure stockée d'activation n'est spécifiée pour la file d'attente.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;  
 ```  
   
 ### <a name="c-creating-a-queue-and-specify-internal-activation-information"></a>C. Création d'une file d'attente et spécification d'informations d'activation internes  
  L'exemple suivant crée une file d'attente disponible pour la réception de messages. La file d'attente lance la procédure stockée `expense_procedure` quand un message entre dans la file d'attente. Cette procédure stockée s'exécute en tant qu'utilisateur `ExpenseUser`. La file d'attente démarre au maximum `5` instances de la procédure stockée.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS=ON,  
     ACTIVATION (  
@@ -200,7 +200,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>D. Création d'une file d'attente dans un groupe de fichiers spécifique  
  L'exemple suivant crée une file d'attente dans le groupe de fichiers `ExpenseWorkFileGroup`.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     ON ExpenseWorkFileGroup ;  
 ```  
@@ -208,7 +208,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. Création d'une file d'attente avec plusieurs paramètres  
  L’exemple suivant crée une file d’attente dans le groupe de fichiers `DEFAULT`. La file d'attente n'est pas disponible. Les messages sont conservés dans la file d'attente jusqu'à ce que la conversation dont ils font partie se termine. Lorsque la file d'attente est rendue disponible via l'instruction ALTER QUEUE, elle démarre la procédure stockée `2008R2.dbo.expense_procedure` pour traiter les messages. La procédure stockée s'exécute sous l'utilisateur qui a lancé l'instruction `CREATE QUEUE`. La file d'attente démarre au maximum `10` instances de la procédure stockée.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS = OFF,  
       RETENTION = ON,  

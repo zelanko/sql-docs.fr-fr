@@ -20,12 +20,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aeb87d4408f1fbe1ba269d8373e8cc648efba55e
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 4364afdd649fe91f5e779170d9f80a4071118ea0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65948380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145409"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="return-value"></a>Valeur retournée  
  **varbinary** (au maximum 8 000 octets)  
 
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Envisagez d’utiliser `CHECKSUM` ou `BINARY_CHECKSUM` comme alternatives pour calculer une valeur de hachage.
 
 Les algorithmes de hachage MD2, MD4, MD5, SHA et SHA1 sont dépréciés à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Utilisez SHA2_256 ou SHA2_512 à la place. Des algorithmes plus anciens continueront de fonctionner, mais ils déclencheront un événement de dépréciation.
@@ -96,9 +96,8 @@ SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;
 (2 row(s) affected)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
-[Choisir un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
-[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
-[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
-[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)  
-  
+## <a name="see-also"></a>Voir aussi  
+[Choisir un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)
