@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a73ae886682890c68c34ac90af33438d7f7b9644
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124179"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644757"
 ---
 # <a name="secure-the-snapshot-folder"></a>Sécuriser le dossier d'instantanés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "54124179"
 > [!NOTE]  
 >  Le contrôle de compte d'utilisateur (UAC) aide les administrateurs à gérer leurs droits utilisateur élevés (parfois appelés *privilèges*). Dans les systèmes d'exploitation dans lesquels le contrôle de compte d'utilisateur est activé, les administrateurs n'utilisent pas leurs droits d'administration. À la place, ils effectuent la plupart des actions en tant qu'utilisateurs standard (non administratifs), assumant temporairement leurs droits d'administration seulement lorsque cela est nécessaire. La fonctionnalité Contrôle de compte d'utilisateur peut empêcher l'accès administratif au partage de fichiers d'instantanés. Vous devez donc octroyer explicitement des autorisations sur le partage de fichiers d'instantanés aux comptes Windows qui sont utilisés par l'Agent d'instantané, l'Agent de distribution et l'Agent de fusion. Vous devez effectuer cette opération même si les comptes Windows sont membres du groupe Administrateurs.  
   
- Lorsque vous configurez un serveur de distribution au moyen de l'Assistant Configuration de distribution ou de l'Assistant Nouvelle publication, le dossier d'instantané est installé par défaut sur un chemin local : X:\Program Files\Microsoft SQL Server\\*\<instance>* \MSSQL\ReplData. Si vous utilisez un serveur de distribution distant ou des abonnements par extraction, vous devez spécifier un partage réseau UNC (tel que \\\\<*nom_ordinateur>* \snapshot) plutôt qu’un chemin local.  
+ Quand vous configurez un serveur de distribution au moyen de l’Assistant Configuration de distribution ou de l’Assistant Nouvelle publication, le dossier d’instantané est installé par défaut sur un chemin local : X:\Program Files\Microsoft SQL Server\\ *\<instance>* \MSSQL\ReplData. Si vous utilisez un serveur de distribution distant ou des abonnements par extraction, vous devez spécifier un partage réseau UNC (tel que \\\\<*nom_ordinateur>* \snapshot) plutôt qu’un chemin local.  
   
  Lorsque vous accordez des autorisations d'accès au dossier d'instantané, faites-le en fonction du mode d'accès au dossier. Les onglets de boîte de dialogue suivants sont utilisés dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003 :  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54124179"
   
  Pour plus d'informations sur la définition et la modification du mot de passe d'accès aux instantanés via FTP, consultez la section « Remise d'instantanés via FTP » dans [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modifier les options des instantanés](../../../relational-databases/replication/snapshot-options.md)   
  [Initialiser un abonnement avec un instantané](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   

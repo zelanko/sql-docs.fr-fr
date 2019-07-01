@@ -4,17 +4,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.reviewer: ''
-ms.prod: reporting-services, sql-server
+ms.prod: reporting-services
+ms.technology: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: ff8293e5fa891ddcf0c5ab980e8c63799fbce9ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14aba1a63b068a3a1cbc0400c10b73ed57e3e376
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937938"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463407"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Analyse et création de rapports avec les outils Microsoft Business Intelligence
 
@@ -47,5 +48,6 @@ Le tableau suivant mappe les charges de travail pour l'analyse et la création d
 |**Analyse avancée**|Données scientifiques||||||  
 |Effectuer des analyses prédictives en libre-service||||||[Compléments d’exploration de données pour Excel](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
 |Utiliser des algorithmes d'exploration de données||||||[Exploration de données dans Analysis Services](../analysis-services/data-mining/data-mining-ssas.md)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   
  *Reporting Services a un certain nombre de fonctionnalités qui prennent en charge la remise de rapports opérationnels et de rapports personnalisés, comme la remise de rapports modernes et paginés.
