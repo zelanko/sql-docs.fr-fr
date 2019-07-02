@@ -1,6 +1,6 @@
 ---
 title: Désactiver ou suspendre le traitement des rapports et des abonnements | Microsoft Docs
-ms.date: 09/29/2015
+ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: subscriptions
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 66c9072f10165b520120b80a9264a828a4e037db
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: bfebb45330ef9775a3e707ad244122654a1f582e
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66499885"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313995"
 ---
-# <a name="disable-or-pause-report-and-subscription-processing"></a>Désactiver ou suspendre le traitement des rapports et des abonnements
-  Il existe plusieurs approches pour désactiver ou suspendre le traitement des rapports et des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les approches présentées dans cette rubrique couvrent la désactivation d’un abonnement jusqu’à la suspension de la connexion à la source de données. Certaines approches ne sont pas possibles avec les deux modes serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les tableaux suivants récapitulent les méthodes et les modes serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pris en charge :  
+# <a name="disable-or-pause-report-and-subscription-processing"></a>Désactiver ou suspendre le traitement des rapports et des abonnements  
+Il existe plusieurs approches pour désactiver ou suspendre le traitement des rapports et des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les approches présentées dans cet article couvrent la désactivation d’un abonnement jusqu’à la suspension de la connexion à la source de données. Pas toutes les approches sont possibles avec les deux [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modes serveur. Les éléments suivants récapitulent les méthodes de tables et pris en charge [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] modes serveur :  
   
-##  <a name="bkmk_top"></a> Dans cette rubrique  
+##  <a name="bkmk_top"></a> Contenu de cet article  
   
 ||Mode serveur pris en charge|  
 |-|---------------------------|  
@@ -40,28 +40,28 @@ ms.locfileid: "66499885"
 |[Supprimer les autorisations de gestion des abonnements d’un rôle (mode natif)](#bkmk_remove_manage_subscriptions_permission)|en mode natif|  
 |[Désactiver des extensions de remise](#bkmk_disable_extensions)|Mode natif et SharePoint|  
   
-##  <a name="bkmk_disable_subscription"></a> Activation et désactivation des abonnements  
+##  <a name="bkmk_disable_subscription"></a>Activation et désactivation des abonnements  
   
-> [!TIP]  
->  Nouveauté de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]! **Activation et désactivation des abonnements**. De nouvelles options de l'interface utilisateur vous permettent de rapidement désactiver et activer les abonnements. Les abonnements désactivés conservent leurs autres propriétés de configuration comme la planification, et peuvent être facilement activés. Vous pouvez également programmer l’activation et la désactivation des abonnements ou faire un audit des abonnements désactivés.  
+>[!TIP]  
+>Nouveautés de SQL 2016 Reporting Services, *activer et désactiver des abonnements*. De nouvelles options de l'interface utilisateur vous permettent de rapidement activer et désactiver les abonnements. Les abonnements désactivés conservent leurs autres propriétés de configuration comme la planification, et peuvent être facilement réactivés. Vous pouvez également programmer l’activation et la désactivation des abonnements ou faire un audit des abonnements désactivés.  
   
- ![ruban des abonnements Reporting Services](../../reporting-services/subscriptions/media/ssrs-subscription-ribbon.png "ruban des abonnements Reporting Services")  
+  ![Les boutons activer et désactiver de la page abonnements ](../../reporting-services/subscriptions/media/disable-or-pause-report-and-subscription-processing/subscription-enable-and-disable-buttons.png)  
   
- Dans le Gestionnaire de rapports en mode natif, accédez à l'abonnement sur la page **Mes abonnements** ou **Gérer** d'un abonnement individuel. Sélectionnez un ou plusieurs abonnements, puis cliquez sur le bouton de désactivation ![désactiver un abonnement Reporting Services](../../reporting-services/subscriptions/media/ssrs-disable-subscription.png "désactiver un abonnement Reporting Services") ou sur le bouton d’activation ![activer un abonnement Reporting Services](../../reporting-services/subscriptions/media/ssrs-enable-subscription.png "activer un abonnement Reporting Services") dans le ruban. Les abonnements désactivés sont signalés par une icône d’avertissement ![avertissement concernant l’état d’un abonnement Reporting Services](../../reporting-services/subscriptions/media/ssrs-subscription-warning.png "avertissement concernant l’état d’un abonnement Reporting Services") et affichent l’état **Désactivé**.  
+Dans le portail web, accédez à l’abonnement à partir de le le **Mes abonnements** page ou le **abonnements** page d’un abonnement individuel. Sélectionnez un ou plusieurs abonnements, puis cliquez sur le bouton de désactivation ou sur le bouton d’activation sur le ruban (voir l’image ci-dessus). La colonne d’état passe à « Désactivé » ou « Activé » respectivement.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] inscrit une ligne dans le journal [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] lorsqu'un abonnement est désactivé, et une autre entrée lorsque l'abonnement est activé. Par exemple, dans le fichier journal du serveur de rapports :  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] écrit une ligne le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] journal lorsqu’un abonnement est activé ou désactivé. Par exemple, dans le fichier journal du serveur de rapports :  
   
- `C:\Program Files\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\LogFiles\ReportServerService__10_16_2014_00_02_18.log`  
+ `C:\Program Files\Microsoft SQL Server Reporting Services\SSRS\LogFiles\RSPortal_2019_06_20_00_49_22.log`  
   
  des lignes similaires à ce qui suit apparaissent :  
   
- `library!ReportServer_0-1!b08!10/16/2014-16:21:14:: i INFO: Call to DisableSubscriptionAction(SubscriptionID=e843bc2b-023e-45a3-ba23-22f9dc9a0934)`  
+ `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:47:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca disabled at 06/20/2019 01:16:47`  
   
- `library!ReportServer_0-1!2eec!10/16/2014-16:44:18:: i INFO: Call to EnableSubscriptionAction(SubscriptionID=e843bc2b-023e-45a3-ba23-22f9dc9a0934).`  
+ `RSPortal!subscription!RSPortal.exe!93!06/20/2019-01:16:51:: i INFO: Subscription 2b409d66-d4ea-408a-918c-0f9e41ce49ca enabled at 06/20/2019 01:16:51`  
   
- ![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") **Utiliser Windows PowerShell pour désactiver un abonnement unique :** utilisez le script PowerShell suivant pour désactiver un abonnement spécifique. Mettez à jour le nom du serveur et l’ID d’abonnement.  
+![Contenu relatif à PowerShell](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "Contenu relatif à PowerShell") : **Utiliser Windows PowerShell pour désactiver un abonnement unique :** utilisez le script PowerShell suivant pour désactiver un abonnement spécifique. Mettez à jour le nom du serveur et l’ID d’abonnement dans le script.  
   
-```  
+```PS  
 #disable specific subscription  
 $rs2010 = New-WebServiceProxy -Uri "https://SERVERNAME/ReportServer/ReportService2010.asmx" -Namespace SSRS.ReportingService2010 -UseDefaultCredential;  
 $subscriptionID = "subscription guid";  
@@ -122,7 +122,7 @@ ForEach ($subscription in $subscriptions)
   
 -   **Mode SharePoint :** ![Paramètres SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "Paramètres SharePoint") Dans **Paramètres du site**, sélectionnez **Gérer les planifications partagées**. Sélectionnez la planification, puis cliquez sur **Suspendre les planifications sélectionnées**.  
   
--   **Mode natif :** dans le gestionnaire de rapports, cliquez sur **Paramètres du site**. Sélectionnez la planification puis cliquez sur **Suspendre**.  
+-   **En mode natif :** dans le portail web, sélectionnez le **paramètres** bouton ![bouton paramètres](media/ssrs-portal-settings-gear.png) à partir de la barre de menus en haut de l’écran du portail web, puis sélectionnez **paramètres du Site**dans le menu déroulant. Sélectionnez le **planifications** onglet pour afficher la page planifications. Sélectionnez l’ou les cases en regard de la planification que vous souhaitez activer ou désactiver, puis sélectionnez le **activer** ou **désactiver** bouton respectivement pour effectuer l’action souhaitée. La colonne d’état met à jour en conséquence à « Désactivé » ou « Activé ».  
   
 ##  <a name="bkmk_disable_shared_datasource"></a> Désactiver une source de données partagée  
  L'un des avantages de l'utilisation de sources de données partagées est que vous pouvez désactiver celles-ci pour empêcher l'exécution d'un rapport ou d'un abonnement piloté par les données. La désactivation d'une source de données partagée déconnecte le rapport de sa source externe. Lorsqu'elle est désactivée, la source de données n'est plus disponible pour les rapports et les abonnements qui l'utilisent.  
@@ -131,23 +131,30 @@ ForEach ($subscription in $subscriptions)
   
 -   **Mode SharePoint :** pour désactiver une source de données partagée sur un serveur de rapports en mode SharePoint, accédez à la bibliothèque de documents qui contient la source de données. ![Icône de source de données partagée](../../reporting-services/report-data/media/hlp-16datasource.png "Icône de source de données partagée") Cliquez sur la source de données, puis décochez la case **Activer cette source de données**.  
   
--   **Mode natif :** pour désactiver une source de données partagée sur un serveur de rapports en mode natif, ouvrez-la dans le Gestionnaire de rapports et désactivez la case à cocher **Activer cette source de données** .  
+-   **Mode natif :** pour désactiver une source de données partagée sur un serveur de rapports en mode natif, ouvrez-la dans le portail web et désactivez la case à cocher **Activer cette source de données** .  
   
 ##  <a name="bkmk_modify_role_assignment"></a> Modifier les attributions de rôles afin d'empêcher l’accès à un rapport (mode natif)  
- Un moyen de rendre un rapport indisponible consiste à supprimer temporairement l'attribution de rôle qui permet d'accéder au rapport. Cette méthode peut s'appliquer à tous les rapports, quelle que soit la façon dont est établie la connexion à la source de données. Elle a une incidence uniquement sur le rapport et n'affecte pas la mise en œuvre des autres rapports ou éléments.  
+Un moyen de rendre un rapport indisponible consiste à supprimer temporairement l'attribution de rôle qui permet d'accéder au rapport. Cette méthode peut s'appliquer à tous les rapports, quelle que soit la façon dont est établie la connexion à la source de données. Elle a une incidence uniquement sur le rapport et n'affecte pas la mise en œuvre des autres rapports ou éléments.  
   
- Pour supprimer une attribution de rôle, ouvrez la page Propriétés de sécurité du rapport dans le Gestionnaire de rapports. Si le rapport hérite de la sécurité d’un parent, cliquez sur **Modifier la sécurité de l’élément** pour créer une stratégie de sécurité restrictive qui supprime les attributions de rôles offrant un accès étendu. Par exemple, vous pouvez supprimer une attribution de rôle qui fournit un accès à Tout le monde et conserver l’attribution de rôle offrant un accès à un petit groupe d’utilisateurs, comme le groupe Administrateurs.  
+ Pour supprimer l’attribution de rôle, ouvrez le **sécurité** page du rapport dans le portail web. Si le rapport hérite de la sécurité d’un parent, vous pouvez sélectionner**Personnaliser la sécurité** puis **Confirmer** dans la boîte de dialogue **Sécurité de l’élément** pour créer une stratégie de sécurité restrictive qui supprime les attributions de rôles offrant un accès étendu. Par exemple, vous pouvez supprimer une attribution de rôle qui fournit un accès à Tout le monde et conserver l’attribution de rôle offrant un accès à un petit groupe d’utilisateurs, comme le groupe Administrateurs.  
   
 ##  <a name="bkmk_remove_manage_subscriptions_permission"></a> Supprimer les autorisations de gestion des abonnements d’un rôle (mode natif)  
- Désactivez la tâche **Gérer les abonnements individuels** du rôle pour retirer aux utilisateurs la possibilité de créer des abonnements. Lorsque vous supprimez cette tâche, les pages Abonnements ne sont plus disponibles. Dans le Gestionnaire de rapports, la page Mes abonnements semble vide (il est impossible de la supprimer) même si elle contenait auparavant des abonnements. La suppression de tâches liées à des abonnements empêche les utilisateurs de créer et de modifier des abonnements, mais elle ne supprime pas les abonnements existants. Ces abonnements continuent de s'exécuter tant qu'ils ne sont pas supprimés. Pour supprimer l'autorisation :  
+ Désactivez la tâche **Gérer les abonnements individuels** du rôle pour retirer aux utilisateurs la possibilité de créer des abonnements. Lorsque vous supprimez cette tâche, les pages Abonnements ne sont plus disponibles. Dans le portail web, la page Mes abonnements semble vide (il est impossible de la supprimer) même si elle contenait auparavant des abonnements. La suppression de tâches liées à des abonnements empêche les utilisateurs de créer et de modifier des abonnements, mais elle ne supprime pas les abonnements existants. Ces abonnements continuent de s'exécuter tant qu'ils ne sont pas supprimés. Pour supprimer l'autorisation :  
   
-1.  Ouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et con  
+1.  Ouvrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. 
   
 2.  Connectez-vous au serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
 3.  Développez le nœud **Sécurité** .  
   
-4.  Sélectionnez le rôle et désactivez la tâche **Gérer les abonnements individuels** .  
+4.  Développez le **rôles** nœud et sélectionnez le rôle souhaité.  
+  
+5.  Cliquez avec le bouton droit sur le rôle, puis sélectionnez **Propriétés**.  
+  
+6.  Effacer la **gérer les abonnements individuels** et **gérer tous les abonnements** tâches.  
+  
+7.  Sélectionnez **OK** pour appliquer les modifications.
+
   
 ##  <a name="bkmk_disable_extensions"></a> Désactiver des extensions de remise  
  Toutes les extensions de remise installées sur un serveur de rapports sont disponibles pour tout utilisateur autorisé à créer un abonnement à un rapport donné. Les extensions de remise suivantes sont disponibles et configurées automatiquement :  
@@ -160,14 +167,13 @@ ForEach ($subscription in $subscriptions)
   
  Si vous souhaitez désactiver des extensions spécifiques, vous pouvez supprimer les entrées d'extension appropriées dans le fichier **RSReportServer.config** . Pour plus d’informations, consultez [fichiers de Configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md) et [paramètres de messagerie : mode natif de Reporting Services (Gestionnaire de Configuration)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md).  
   
- Lorsqu'une extension de remise est supprimée, elle n'est plus disponible dans le Gestionnaire de rapports, ni dans un site SharePoint. La suppression d'une extension de remise peut engendrer des abonnements inactifs. Avant de supprimer une extension, prenez soin de supprimer ces abonnements ou configurez-les pour qu'ils utilisent une autre extension de remise.  
+ Lorsqu'une extension de remise est supprimée, elle n'est plus disponible dans le portail web, ni dans un site SharePoint. La suppression d'une extension de remise peut engendrer des abonnements inactifs. Avant de supprimer une extension, prenez soin de supprimer ces abonnements ou configurez-les pour qu'ils utilisent une autre extension de remise.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Fichiers de configuration de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Configurer le Gestionnaire de rapports &#40;mode natif&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md)   
+ [Configurer le portail web](../../reporting-services/report-server/configure-web-portal.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
- [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)   
- [Page Propriétés de sécurité, Éléments &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/351b8503-354f-4b1b-a7ac-f1245d978da0)  
-  
+ [Le portail web d’un serveur de rapports (Mode natif SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)   
+ [Éléments sécurisables](../../reporting-services/security/securable-items.md) 
   

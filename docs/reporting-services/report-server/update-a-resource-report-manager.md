@@ -1,6 +1,6 @@
 ---
-title: Mettre à jour une ressource (Gestionnaire de rapports) | Microsoft Docs
-ms.date: 03/01/2017
+title: Mettre à jour une ressource (portail web) | Microsoft Docs
+ms.date: 06/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -11,40 +11,35 @@ helpviewer_keywords:
 ms.assetid: d21f7493-bcf7-4e9e-9886-55ebdc1f1037
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 29ebd13314c99d425b191f049f86e6e78d3134fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f101df8f160e7d6bab50dd96e7a156622c7699a
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571469"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67228583"
 ---
-# <a name="update-a-resource-report-manager"></a>mise à jour d'une ressource (Gestionnaire de rapports)
+# <a name="update-a-resource-web-portal"></a>Mettre à jour une ressource (portail web)
   Vous pouvez mettre à jour une ressource en la remplaçant par une nouvelle version. Les ressources sont des éléments stockés sur un serveur de rapports qui tirent leur contenu des fichiers que vous téléchargez. Vous pouvez remplacer une ressource existante en important du contenu de fichier inédit ou différent dans la ressource existante. La mise à jour d'une ressource permet d'actualiser du contenu tout en préservant les propriétés existantes et les paramètres de sécurité définis sur la ressource.  
   
-### <a name="to-update-a-resource"></a>Pour mettre à jour une ressource  
+## <a name="to-update-a-resource"></a>Pour mettre à jour une ressource  
   
-1.  Démarrez le [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896).  
+1.  Lancez [le portail web d’un serveur de rapports (Mode natif SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md).  
   
-2.  Dans le Gestionnaire de rapports, parcourez l'arborescence jusqu'à la ressource à mettre à jour ou effectuez une recherche pour la localiser.  
+2.  Parcourez l'arborescence jusqu'à la ressource à mettre à jour ou effectuez une recherche pour la localiser.  
   
-3.  Cliquez sur la ressource pour l’ouvrir dans la page **Vue** .  
+3.  Cliquez sur la ressource et sélectionnez **gérer** dans le menu déroulant.  
   
-4.  Cliquez sur **Propriétés** pour ouvrir la page de propriétés **Général** .  
+4.  Sélectionnez le **propriétés** page, puis sélectionnez **remplacer**.  
   
-5.  Cliquez sur **Remplacer** pour ouvrir la page **Importer une ressource** .  
+5.  À partir de la **Open** boîte de dialogue, accédez au répertoire contenant le fichier que vous souhaitez utiliser comme la nouvelle ressource.  
   
-6.  Cliquez sur **Parcourir**.  
+6.  Sélectionnez le fichier que vous voulez substituer à la ressource actuelle. Vous pouvez utiliser une version mise à jour du fichier de ressources ou spécifier un fichier avec un nom ou un type de fichier différent.  
   
-7.  Sélectionnez le fichier que vous voulez substituer à la ressource actuelle. Vous pouvez utiliser une version mise à jour du fichier de ressources ou spécifier un fichier avec un nom ou un type de fichier différent.  
-  
-8.  Cliquez sur **OK** pour charger le fichier de ressources, fermez la page **Importer une ressource** et enregistrez les modifications sur le serveur de rapports.  
+7.  Sélectionnez **Open** pour charger le fichier de ressources et enregistrer vos modifications sur le serveur de rapports.  
   
  Si la ressource en cours de mise à jour contient une image utilisée dans un rapport, vous devez actualiser le rapport pour afficher l'image mise à jour.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page Contenu &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/6b16869b-158a-4934-9c85-bee934b35378)   
- [Page Charger un fichier &#40;Gestionnaire de rapports&#41;](https://msdn.microsoft.com/library/7bb3166f-9374-4449-b66a-ffb77298507d)   
+ [Gestion du contenu du serveur de rapports (SSRS en mode natif)](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
  [Télécharger des fichiers dans un dossier](../../reporting-services/report-server/upload-files-to-a-folder.md)   
- [Aide F1 du Gestionnaire de rapports](https://msdn.microsoft.com/library/e0137273-85b8-45f0-83e5-38a50481768f)  
-  
   

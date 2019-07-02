@@ -1,6 +1,6 @@
 ---
 title: Rapports Reporting Services (SSRS) | Microsoft Docs
-ms.date: 06/15/2016
+ms.date: 06/19/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reports
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 52ed9e74-f2c8-488b-a2c2-6dfbc2a2c8cc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b872952b1e84bfc12722e14234207ff67525699b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f0d3a49ae2fc2b0b5f8ecf8f8a92161f66aa839
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571030"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314026"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Rapports Reporting Services (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Les rapports paginés sont des définitions de rapport XML qui incluent des données de rapport et des éléments de disposition du rapport. Sur un système de fichiers client, les définitions de rapport portent l'extension de fichier .rdl. Une fois publié, un rapport paginé correspond à un élément de rapport stocké sur le serveur de rapports ou le site SharePoint. Les rapports paginés constituent une partie de la plateforme de création de rapports sur le serveur fourni par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous pouvez également [Créer des rapports mobiles avec l’Éditeur de rapports mobiles SQL Server](../../reporting-services/mobile-reports/create-mobile-reports-with-sql-server-mobile-report-publisher.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "65571030"
   
 -   Définir des expressions qui vous permettent de personnaliser la façon dont les données de rapport sont filtrées, regroupées et triées.  
   
- ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
+    ![rs_GettingStartedReport](../../reporting-services/report-builder/media/rs-gettingstartedreport.png "rs_GettingStartedReport")  
   
 ##  <a name="bkmk_StagesSummary"></a> Étapes du traitement des rapports  
  Lorsque vous créez un rapport, vous définissez un fichier de définition de rapport (.rdl) au format XML. Ce fichier contient toutes les informations nécessaires pour combiner les données et la mise en page du rapport par le processeur de rapports. Lorsque vous affichez un rapport, le rapport passe par les étapes suivantes :  
@@ -77,7 +77,7 @@ ms.locfileid: "65571030"
   
     -   **Choisissez les données à utiliser à partir de chaque source.** Pour chaque source de données, définissez les datasets de rapport. Chaque dataset inclut une requête pour spécifier les données à utiliser. Si vous avez des paramètres de rapport, définissez un dataset pour remplir une liste de valeurs disponibles pour chaque paramètre. Pour plus d’informations, consultez [Jeux de données du rapport &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md) et [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md).  
   
-    -   **Choisissez une visualisation des données.** Pour chaque dataset, sélectionnez la région de données à utiliser pour l'affichage des données. Choisissez dans la liste de tables, graphiques, jauges et cartes. Pour plus d'informations, consultez les rubriques suivantes :  
+    -   **Choisissez une visualisation des données.** Pour chaque dataset, sélectionnez la région de données à utiliser pour l'affichage des données. Choisissez dans la liste de tables, graphiques, jauges et cartes. Pour plus d'informations, consultez les articles suivants :  
   
         -   [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65571030"
   
         -   [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)  
   
-    -   **Personnalisez les données et la mise en page.** Concevez la mise en page du rapport. Une définition de rapport comporte un corps de rapport, des sources de données, des datasets, des régions de données, des zones de texte, des lignes et des images. Les rectangles sont utilisés comme conteneurs pour la mise en page ainsi que les éléments visuels. Personnalisez chaque région de données en écrivant des expressions pour contrôler le filtrage, le regroupement, le tri, le format et l'affichage des données. Ajoutez les noms de rapport, les emplacements, et d'autres informations d'identification qui permettent de gérer des dizaines ou des centaines de rapports. Ajoutez conteneurs et des éléments visuels pour organiser les éléments de mise en page sur la page. Pour plus d'informations, consultez les rubriques suivantes :  
+    -   **Personnalisez les données et la mise en page.** Concevez la mise en page du rapport. Une définition de rapport comporte un corps de rapport, des sources de données, des datasets, des régions de données, des zones de texte, des lignes et des images. Les rectangles sont utilisés comme conteneurs pour la mise en page ainsi que les éléments visuels. Personnalisez chaque région de données en écrivant des expressions pour contrôler le filtrage, le regroupement, le tri, le format et l'affichage des données. Ajoutez les noms de rapport, les emplacements, et d'autres informations d'identification qui permettent de gérer des dizaines ou des centaines de rapports. Ajoutez conteneurs et des éléments visuels pour organiser les éléments de mise en page sur la page. Pour plus d'informations, consultez les articles suivants :  
   
         -   [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
@@ -122,7 +122,11 @@ ms.locfileid: "65571030"
 ## <a name="view-reports"></a>Afficher les rapports  
  En plus de l'aperçu d'un rapport enregistré localement ou publié sur un serveur de rapports, vous pouvez fournir un large éventail d'affichages pour les lecteurs de votre rapport. Pour afficher un rapport :  
   
--   **Navigateur.**  Utilisez le service Web Report Server ou le site SharePoint pour afficher les rapports publiés. Sur un site SharePoint, vous pouvez également configurer un composant WebPart pour afficher les rapports publiés. Pour plus d’informations, consultez [Planification de la prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md), [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896) et [Accès URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md).  
+-   **Navigateur.**  Utilisez le service Web Report Server ou le site SharePoint pour afficher les rapports publiés. Sur un site SharePoint, vous pouvez également configurer un composant WebPart pour afficher les rapports publiés. Pour plus d'informations, consultez les articles suivants :
+
+     - [Prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
+     - [Le portail web d’un serveur de rapports (Mode natif SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)
+     - [Accès URL &#40;SSRS&#41;](../../reporting-services/url-access-ssrs.md)
   
 -   **Remise.**  Configurez un abonnement pour remettre les rapports aux personnes souhaitant les lire dans un dossier de messagerie ou dans un dossier partagé.  Pour plus d’informations, consultez [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
@@ -130,7 +134,7 @@ ms.locfileid: "65571030"
   
 -   **Impression.**  Un lecteur de rapport peut imprimer un rapport ou des pages d'un rapport selon la façon dont il est affiché. Pour plus d’informations, consultez [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md).  
   
--   **Application Web ou Windows Form.**  Utilisez Visual Studio pour développer une application AJAX ASP.NET ou Windows Form qui héberge le contrôle Visionneuse de rapports. Le contrôle peut indiquer les rapports publiés sur un serveur de rapports. Pour plus d'informations, consultez [Rapports Microsoft](https://go.microsoft.com/fwlink/?LinkID=205399).  
+-   **Application Web ou Windows Form.**  Utilisez Visual Studio pour développer une application qui facilite la création de rapports par le biais de SSRS. Pour plus d’informations, consultez [[l’intégration de Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
   
 ## <a name="manage-reports"></a>Gérer les rapports  
  Pour gérer un rapport publié :  
@@ -154,28 +158,27 @@ ms.locfileid: "65571030"
 ##  <a name="bkmk_SecureReportsSummary"></a> Sécuriser les rapports  
  Pour sécuriser un rapport :  
   
--   Auprès de l'administrateur du serveur de rapports, identifiez le système d'autorisation et d'authentification utilisé pour votre installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise l'authentification Windows, la sécurité intégrée, et l'attribution de rôle pour contrôler l'accès aux rapports publiés. Pour plus d’informations, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md) et [Sécurité et protection de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).  
+En tant qu'administrateur du serveur de rapports, identifiez le système d'autorisation et d'authentification utilisé pour votre installation de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise l'authentification Windows, la sécurité intégrée, et l'attribution de rôle pour contrôler l'accès aux rapports publiés. Pour plus d’informations, consultez [Rôles et autorisations &#40;Reporting Services&#41;](../../reporting-services/security/roles-and-permissions-reporting-services.md) et [Sécurité et protection de Reporting Services](../../reporting-services/security/reporting-services-security-and-protection.md).  
   
-## <a name="create-notifications-based-on-report-data"></a>Créer des notifications en fonction de données de rapport  
- Vous pouvez créer des alertes de données pour les rapports publiés sur un site SharePoint. Les alertes de données sont basées sur les flux de données des régions de données dans le rapport. Par défaut, les régions de données sont nommées automatiquement. Les auteurs de rapport peuvent faciliter la création d'alertes de données dans leurs rapports en nommant les régions de données en fonction de leur objectif métier. Si vous créez une alerte de données, vous êtes averti par message électronique lorsque les données remplissent les critères que vous spécifiez. Pour plus d’informations, consultez [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Créer une alerte de données dans le Concepteur d’alertes](../../reporting-services/create-a-data-alert-in-data-alert-designer.md) et [Alertes de données Reporting Services](../../reporting-services/reporting-services-data-alerts.md).  
+## <a name="create-notifications-based-on-report-data"></a>Créer des notifications en fonction de données de rapport 
+Vous pouvez créer des alertes de données pour les rapports publiés sur un site SharePoint. Les alertes de données sont basées sur les flux de données des régions de données dans le rapport. Par défaut, les régions de données sont nommées automatiquement. Les auteurs de rapport peuvent faciliter la création d'alertes de données dans leurs rapports en nommant les régions de données en fonction de leur objectif métier. Si vous créez une alerte de données, vous êtes averti par message électronique lorsque les données remplissent les critères que vous spécifiez. Pour plus d’informations, consultez [Génération de flux de données à partir de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/generating-data-feeds-from-reports-report-builder-and-ssrs.md), [Créer une alerte de données dans le Concepteur d’alertes](../../reporting-services/create-a-data-alert-in-data-alert-designer.md) et [Alertes de données Reporting Services](../../reporting-services/reporting-services-data-alerts.md).  
   
 ## <a name="upgrade-reports"></a>Mettre à niveau des rapports  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge plusieurs versions des définitions de rapports, serveurs de rapports et sites SharePoint. Pour mettre à niveau un rapport :  
   
--   Mettez à niveau une installation du serveur de rapports. Les rapports compilés stockés sur le serveur de rapports sont automatiquement mis à niveau lors de la première utilisation. La définition de rapport (.rdl) n'est pas modifiée. Pour plus d'informations, consultez [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
+- Mettez à niveau une installation du serveur de rapports. Les rapports compilés stockés sur le serveur de rapports sont automatiquement mis à niveau lors de la première utilisation. La définition de rapport (.rdl) n'est pas modifiée. Pour plus d'informations, consultez [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md).  
   
--   Ouvrez u rapport dans un environnement de création de rapports. La définition de rapport est mise à niveau dans la plupart des cas. Pour plus d’informations, consultez [Mettre à niveau des rapports](../../reporting-services/install-windows/upgrade-reports.md) et [Déploiement et prise en charge des versions dans SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
+- Ouvrez u rapport dans un environnement de création de rapports. La définition de rapport est mise à niveau dans la plupart des cas. Pour plus d’informations, consultez [Mettre à niveau des rapports](../../reporting-services/install-windows/upgrade-reports.md) et [Déploiement et prise en charge des versions dans SQL Server Data Tools &#40;SSRS&#41;](../../reporting-services/tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
 ## <a name="troubleshoot-reports"></a>Dépanner les rapports  
  Pour dépanner un rapport :  
   
--   **Déterminez où se produit le problème.** Vérifiez les informations dans [Étapes d'un rapport](#bkmk_StagesSummary).  
+- **Déterminez où se produit le problème.** Vérifiez les informations dans [Étapes d'un rapport](#bkmk_StagesSummary).  
   
--   **Déterminez où vous pouvez rechercher plus d'informations.** Par exemple, pour la création de rapports qui inclut des expressions, l'outil Concepteur de rapports fournit plus d'informations sur les problèmes d'évaluation d'expression que l'outil Générateur de rapports. Pour les erreurs de traitement des rapports, les fichiers journaux contiennent des informations détaillées.  
+- **Déterminez où vous pouvez rechercher plus d'informations.** Par exemple, pour la création de rapports qui inclut des expressions, l'outil Concepteur de rapports fournit plus d'informations sur les problèmes d'évaluation d'expression que l'outil Générateur de rapports. Pour les erreurs de traitement des rapports, les fichiers journaux contiennent des informations détaillées.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
  [Extensions &#40;SSRS&#41;](../../reporting-services/extensions-ssrs.md)   
- [Serveur de rapports Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
-  
+ [Comparaison natif et les serveurs de rapports SharePoint Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  
   

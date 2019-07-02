@@ -1,6 +1,6 @@
 ---
 title: À propos des réservations et de l’inscription d’URL (Gestionnaire de configuration de SSRS) | Microsoft Docs
-ms.date: 05/18/2016
+ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 640407e68b146e399dc478b17a91c351b23fe306
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454503"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314037"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>À propos des réservations et de l’inscription d’URL (Gestionnaire de configuration de SSRS)
-  Les URL pour les applications Reporting Services sont définies en tant que réservations d'URL dans HTTP.SYS. Une réservation d'URL définit la syntaxe d'un point de terminaison URL à une application Web. Les réservations d'URL sont définies pour le service Web Report Server et pour le Gestionnaire de rapports lorsque vous configurez les applications sur le serveur de rapports. Les réservations d'URL sont créées automatiquement pour vous lors de la configuration d'URL par le biais du programme d'installation ou de l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
+  Les URL pour les applications Reporting Services sont définies en tant que réservations d'URL dans HTTP.SYS. Une réservation d'URL définit la syntaxe d'un point de terminaison URL à une application Web. Les réservations d'URL sont définies pour le service Web Report Server et pour le portail web lorsque vous configurez les applications sur le serveur de rapports. Les réservations d'URL sont créées automatiquement pour vous lors de la configuration d'URL par le biais du programme d'installation ou de l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
--   Le programme d'installation crée des réservations d'URL à l'aide de valeurs par défaut. Si le programme d'installation installe la configuration par défaut, il réserve deux URL : une pour le service Web Report Server et une autre pour le Gestionnaire de rapports. Vous pouvez utiliser l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour ajouter davantage d'URL ou modifier les URL par défaut créées par le programme d'installation.  
+-   Le programme d'installation crée des réservations d'URL à l'aide de valeurs par défaut. Si le programme d'installation installe la configuration par défaut, il réserve deux URL : une pour le service Web Report Server et une autre pour le portail web. Vous pouvez utiliser l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour ajouter davantage d'URL ou modifier les URL par défaut créées par le programme d'installation.  
   
 -   L’outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] crée une réservation d’URL basée sur l’URL que vous spécifiez dans les pages **URL du service web** ou **URL du portail web** .  
   
  Le programme d'installation et l'outil assignent également des autorisations sur l'URL au service Report Server, vérifient s'il existe des instances en double et ajoutent la réservation d'URL à HTTP.SYS. Vous ne devez jamais créer ou modifier une réservation d'URL Reporting Services directement à l'aide de HttpCfg.exe ou d'un autre outil. Si vous ignorez une étape ou si vous avez défini une valeur non valide, vous rencontrerez des problèmes qui pourront être difficiles à diagnostiquer ou à résoudre.  
   
 > [!NOTE]  
->  HTTP.SYS est un composant du système d'exploitation qui écoute les demandes réseau et les transfère vers une file d'attente de demandes. Dans cette version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS établit et maintient la file d'attente de demandes pour le service Web Report Server et le Gestionnaire de rapports. Les services Internet (IIS) ne sont plus utilisés pour héberger ou accéder aux applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d'informations sur la fonctionnalité HTTP.SYS, consultez [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652) sur MSDN.  
+> HTTP.SYS est un composant du système d'exploitation qui écoute les demandes réseau et les transfère vers une file d'attente de demandes. Dans cette version de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS établit et maintient la file d'attente de demandes pour le service Web Report Server et le portail web. Les services Internet (IIS) ne sont plus utilisés pour héberger ou accéder aux applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d'informations sur la fonctionnalité HTTP.SYS, consultez [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652).  
   
 ##  <a name="ReportingServicesURLs"></a> URL dans Reporting Services  
  Dans une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez accéder aux outils, applications et éléments suivants au moyen d'URL :  
@@ -42,10 +42,10 @@ ms.locfileid: "66454503"
  L’accès aux autres éléments publiés adressables par URL, tels que les sources de données partagées, ne doit pas se faire au moyen d’URL en tant qu’éléments autonomes. Le serveur de rapports n'affiche pas ces éléments dans un format explicite lorsqu'ils sont affichés dans une fenêtre de navigateur.  
   
 > [!NOTE]  
->  Cette rubrique ne décrit pas l’accès par le biais d’URL à des rapports spécifiques stockés sur le serveur de rapports. Pour plus d’informations sur l’accès à ces éléments par le biais d’URL, consultez [Accéder à des éléments de serveur de rapports à l’aide de l’accès URL](../../reporting-services/access-report-server-items-using-url-access.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+> Cet article ne décrit pas l’accès par le biais d’URL à des rapports spécifiques stockés sur le serveur de rapports. Pour plus d’informations sur l’accès à ces éléments par le biais d’URL, consultez [Accéder à des éléments de serveur de rapports à l’aide de l’accès URL](../../reporting-services/access-report-server-items-using-url-access.md).  
   
 ##  <a name="URLreservation"></a> Réservation et inscription d'URL  
- Une réservation d'URL définit les URL pouvant être utilisées pour accéder à une application [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] réserve une ou plusieurs URL pour le service Web Report Server et le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] dans HTTP.SYS, puis les inscrit au démarrage du service. En ajoutant des paramètres à l’URL, vous pouvez ouvrir les rapports par le biais du service web. Les réservations et l'inscription sont fournies par HTTP.SYS. Pour plus d'informations, consultez [Namespace Reservations, Registration, and Routing](https://go.microsoft.com/fwlink/?LinkId=92653) sur MSDN.  
+ Une réservation d'URL définit les URL pouvant être utilisées pour accéder à une application [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] réserve une ou plusieurs URL pour le service Web Report Server et le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] dans HTTP.SYS, puis les inscrit au démarrage du service. En ajoutant des paramètres à l’URL, vous pouvez ouvrir les rapports par le biais du service web. Les réservations et l'inscription sont fournies par HTTP.SYS. Pour plus d'informations, consultez [Namespace Reservations, Registration, and Routing](https://go.microsoft.com/fwlink/?LinkId=92653).  
   
  La*réservation d'URL* est un processus par lequel un point de terminaison URL à une application Web est créé et stocké dans HTTP.SYS. HTTP.SYS est la base de données de référentiel commune de toutes les réservations d'URL qui sont définies sur un ordinateur ; elle définit un jeu de règles communes qui garantissent des réservations d'URL uniques.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66454503"
  Si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, le programme d’installation réserve des URL pour le service Web Report Server et pour le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. Vous pouvez également accepter ces valeurs par défaut lorsque vous définissez des réservations d'URL dans l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les URL par défaut incluront un nom d'instance si vous installez [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] ou si vous installez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en tant qu'instance nommée.  
   
 > [!IMPORTANT]  
->  Le caractère d’instance est un trait de soulignement ( **_** ).  
+> Le caractère d’instance est un trait de soulignement ( **_** ).  
   
  Les réservations d'URL incluent un numéro de port. Les systèmes d'exploitation suivants permettent à plusieurs applications web de partager un port :  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66454503"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Les réservations URL affichent le compte de la réservation URL. Le compte de service virtuel est utilisé pour toutes les URL créées pour les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] qui s’exécutent dans la même instance.
   
  
- L’accès anonyme est désactivé, car la sécurité par défaut est **RSWindowsNegotiate**. Pour l'accès intranet, les URL de serveur de rapports utilisent des noms d'ordinateurs réseau. Si vous souhaitez configurer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour des connexions Internet, vous devez utiliser des paramètres différents. Pour plus d’informations sur l’authentification, consultez [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md) dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ L’accès anonyme est désactivé, car la sécurité par défaut est **RSWindowsNegotiate**. Pour l'accès intranet, les URL de serveur de rapports utilisent des noms d'ordinateurs réseau. Si vous souhaitez configurer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour des connexions Internet, vous devez utiliser des paramètres différents. Pour plus d’informations sur l’authentification, consultez [Authentification avec le serveur de rapports](../../reporting-services/security/authentication-with-the-report-server.md).  
   
 ##  <a name="URLlocalAdmin"></a> URL pour l'administration locale  
  Vous pouvez utiliser `https://localhost/reportserver` ou `https://localhost/reports` si vous avez spécifié un caractère générique fort ou faible pour la réservation d’URL.  
@@ -105,5 +105,4 @@ ms.locfileid: "66454503"
 ## <a name="see-also"></a>Voir aussi  
  [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Syntaxe de réservation d’URL &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
-  
   
