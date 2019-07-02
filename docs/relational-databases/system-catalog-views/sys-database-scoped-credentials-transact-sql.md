@@ -1,5 +1,5 @@
 ---
-title: Sys.database_scoped_credentials (Transact-SQL) | Microsoft Docs
+title: sys.database_scoped_credentials (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2017
 ms.prod: sql
@@ -19,29 +19,30 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d3718357b68aa47bbc32e4d975a546f3e86cb73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1deb05541e46ec1007d234dc622b14ea1e20eb3f
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814837"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492577"
 ---
-# <a name="sysdatabasescopedcredentials-transact-sql"></a>Sys.database_scoped_credentials (Transact-SQL)
+# <a name="sysdatabasescopedcredentials-transact-sql"></a>sys.database_scoped_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Retourne une ligne pour chaque base de données étendue des informations d’identification dans la base de données.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
+|name|**sysname**|Nom de la base de données limitées d’informations d’identification. Est unique dans la base de données.|  
 |credential_id|**Int**|ID de l’information d’identification de niveau base de données. Est unique dans la base de données.|  
-|NAME|**sysname**|Nom de la base de données limitées d’informations d’identification. Est unique dans la base de données.|  
+|principal_id|**Int**|ID du principal de la base de données propriétaire de la clé.|  
 |credential_identity|**nvarchar(4000)**|Nom de l'identité à utiliser. Il s'agit généralement d'un utilisateur Windows. Il n'est pas nécessaire qu'elle soit unique.|  
 |create_date|**datetime**|Heure à laquelle les informations d’identification de niveau base de données a été créée.|  
 |modify_date|**datetime**|Heure de dernière modification à laquelle les informations d’identification de niveau base de données.|  
 |target_type|**nvarchar(100)**|Type de base de données limitées d’informations d’identification. Retourne `NULL` pour la base de données étendue des informations d’identification.|  
 |target_id|**Int**|ID de l’objet mappé sur les informations d’identification de niveau base de données. Retourne 0 pour la base de données étendue des informations d’identification|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation `CONTROL` sur la base de données.  
   
 ## <a name="see-also"></a>Voir aussi  

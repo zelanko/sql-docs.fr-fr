@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251549"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500041"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Fonctions VBA dans MDX et DAX
 
@@ -53,10 +53,10 @@ ms.locfileid: "63251549"
 |CVErr|Non pris en charge||  
 |Date|MDX uniquement|**Avertissement** DAX implémente une fonction différente avec le même nom ; la fonction DATE (année, mois, jour), utilisé pour générer une valeur de type date des arguments fournis|  
 |AjDate|MDX uniquement|**Avertissement** DAX implémente une fonction différente avec le même nom ; la DATEADD (\<dates >, < number_of_intervals >,\<intervalle >) fonction, utilisée pour décaler les dates données par un nombre d’intervalles donnés|  
-|DateDiff]|MDX uniquement||  
+|DiffDate|MDX uniquement||  
 |PartDate|MDX uniquement||  
 |SérieDate|MDX uniquement||  
-|DateValue]|DAX, MDX||  
+|ValDate|DAX, MDX||  
 |Jour|DAX, MDX||  
 |DDB|MDX uniquement||  
 |Réper|Non pris en charge||  
@@ -118,7 +118,7 @@ ms.locfileid: "63251549"
 |MonthName|Non pris en charge||  
 |MsgBox|Non pris en charge||  
 |maintenant|DAX, MDX||  
-|Npm]|MDX uniquement||  
+|NPer|MDX uniquement||  
 |NPV|MDX uniquement||  
 |Oct|MDX uniquement||  
 |Partition|MDX uniquement||  
@@ -146,7 +146,7 @@ ms.locfileid: "63251549"
 |NumChaîne|MDX uniquement||  
 |CompChaîne|MDX uniquement||  
 |ConvChaîne|MDX uniquement||  
-|Chaîne]|MDX uniquement||  
+|String|MDX uniquement||  
 |StrReverse|Non pris en charge||  
 |Basculer|MDX uniquement||  
 |SYD|MDX uniquement||  
@@ -156,7 +156,7 @@ ms.locfileid: "63251549"
 |Minuterie|MDX uniquement||  
 |SérieHeure|MDX uniquement||  
 |VHeure|DAX, MDX||  
-|Trim]|DAX, MDX||  
+|SupprEspace|DAX, MDX||  
 |TypeName|MDX uniquement||  
 |UBound|Non pris en charge||  
 |UCase|MDX uniquement||  

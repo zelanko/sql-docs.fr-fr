@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d7b47670d56ab916a8c2f263f9ddee3dc85c0a6
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: 18680069663b0979662b3288b5d02439fdf55297
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652538"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492749"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  Un rôle ne peut pas s'inclure lui-même en tant que membre. Des définitions « circulaires » de ce type ne sont pas valides, même si l'appartenance est seulement déduite indirectement par une ou plusieurs appartenances intermédiaires.  
   
- sp_addrolemember ne peut pas ajouter un rôle de base de données fixe, le rôle serveur fixe ou le dbo à un rôle. sp_addrolemember ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
+ sp_addrolemember ne peut pas ajouter un rôle de base de données fixe, le rôle serveur fixe ou le dbo à un rôle.
   
  Utilisez uniquement sp_addrolemember pour ajouter un membre à un rôle de base de données. Pour ajouter un membre à un rôle de serveur, utilisez [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
@@ -88,7 +88,7 @@ CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;
 GO  
 ```  
   
-### <a name="b-adding-a-database-user"></a>b. Ajout d'un utilisateur de base de données  
+### <a name="b-adding-a-database-user"></a>B. Ajout d'un utilisateur de base de données  
  L'exemple suivant ajoute l'utilisateur de base de données `Mary5` au rôle de base de données `Production` dans la base de données actuelle.  
   
 ```  
