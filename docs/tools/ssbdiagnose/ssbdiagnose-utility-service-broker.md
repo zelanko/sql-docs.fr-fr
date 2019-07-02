@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07e4f9c8f694f68e1ee0df02ec6110847fde4e0f
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.openlocfilehash: 34d549a433bebe20beaae287362537a851b2ae6b
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66836321"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469147"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitaire ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -185,14 +185,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Identificateur unique qui identifie un point de terminaison de conversation dans une application. Les descripteurs de conversation sont uniques à un point de terminaison d'une conversation, les points de terminaison initiateur et cible ont des descripteurs de conversation distincts.  
   
- Les descripteurs de conversation sont retournés aux applications par le paramètre *@dialog_handle* de l’instruction **BEGIN DIALOG** , et la colonne **conversation_handle** dans le jeu de résultats d’une instruction **RECEIVE** .  
+ Les descripteurs de conversation sont retournés aux applications par le paramètre *\@@dialog_handle* de l’instruction **BEGIN DIALOG**, et la colonne **conversation_handle** dans le jeu de résultats d’une instruction **RECEIVE**.  
   
  Les descripteurs de conversation sont signalés dans la colonne **conversation_handle** des affichages catalogue **sys.transmission_queue** et **sys.conversation_endpoints** .  
   
  *conversation_group_id*  
  Identificateur unique qui identifie un groupe de conversations.  
   
- Les ID de groupe de conversations sont retournés aux applications par le paramètre *@conversation_group_id* de l’instruction **GET CONVERSATION GROUP** , et la colonne **conversation_group_id** dans le jeu de résultats d’une instruction **RECEIVE** .  
+ Les ID de groupe de conversations sont retournés aux applications par le paramètre *\@@conversation_group_id* de l’instruction **GET CONVERSATION GROUP**, et la colonne **conversation_group_id** dans le jeu de résultats d’une instruction **RECEIVE**.  
   
  Les ID de groupe de conversations sont signalés dans les colonnes **conversation_group_id** des affichages catalogue **sys.conversation_groups** et **sys.conversation_endpoints** .  
   

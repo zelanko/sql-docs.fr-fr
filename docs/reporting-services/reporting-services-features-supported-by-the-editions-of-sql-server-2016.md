@@ -6,13 +6,13 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/01/2018
-ms.openlocfilehash: b536d94f5dcfb332f39733f8e3a116294a7d40c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 06/20/2019
+ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936546"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343877"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Fonctionnalités Reporting Services prises en charge par les éditions de SQL Server
 
@@ -53,7 +53,7 @@ Pour connaître les fonctionnalités prises en charge par les éditions Evaluati
 |Bibliothèque de composants partagés|Oui|Oui|||Oui|  
 |Abonnements et planifications par partage de fichiers et messagerie électronique|Oui|Oui|||Oui|  
 |Historique de rapport, exécution d'instantanés et mise en cache|Oui|Oui|||Oui|  
-|intégration SharePoint|Oui|Oui|||Oui|  
+|Intégration SharePoint<sup>2</sup>|Oui|Oui|||Oui|  
 |Prise en charge de sources de données distantes et non-SQL<sup>1</sup>|Oui|Oui|||Oui|  
 |Source de données, remise, rendu et extensibilité RDCE|Oui|Oui|||Oui|  
 |Options de personnalisation|Oui||||Oui|  

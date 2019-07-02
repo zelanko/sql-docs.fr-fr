@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd837276436de158f58fd2f66ed864930fe6032
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269917"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400046"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -602,4 +602,10 @@ Une action de script **SqlPackage.exe** crée un script de mise à jour incréme
 |**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|Spécifie si des avertissements doivent être générés lorsque des différences sont trouvées au niveau d'objets ne pouvant pas être modifiés, par exemple au niveau de la taille du fichier ou de son chemin d'accès.|
 |**/p:**|VerifyCollationCompatibility=(BOOLEAN 'True')|Spécifie si la compatibilité du classement est vérifiée.
 |**/p:**|VerifyDeployment=(BOOLEAN 'True')|Spécifie si des vérifications doivent être effectuées avant la publication dans le but de rechercher les problèmes susceptibles d'empêcher une publication correcte. Par exemple, votre publication action peut arrêter si vous avez des clés étrangères sur la base de données cible qui n’existent pas dans le projet de base de données, et qui provoque des erreurs lors de la publication.|
-  
+
+## <a name="exit-codes"></a>Codes de sortie
+
+Commandes qui retournent des codes de sortie suivants :
+
+- 0 = réussite
+- non-zéro = échec
