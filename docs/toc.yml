@@ -1,5 +1,5 @@
 - name: Bienvenue dans SQL Server
-  href: sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+  href: sql-server/sql-server-technical-documentation.md?toc=toc.json
 - name: Versions précédentes 2014-2005
   href: toc/previous-versions-sql-server.md
 - name: Vue d’ensemble
@@ -9061,6 +9061,8 @@
               items:
                 - name: Obtenir l’image mémoire complète
                   href: ssms/troubleshoot/get-full-memory-dump.md
+                - name: Plantages et blocages
+                  href: ssms/troubleshoot/ssms-troubleshoot.md
             - name: SQL Server Agent
               items:
                 - name: Configurer
