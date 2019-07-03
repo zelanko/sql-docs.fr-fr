@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96a48d60cc0c127f41e6e1b79b9faf29ea4392cf
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280416"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533828"
 ---
 # <a name="driver-manager-connection-pooling"></a>Regroupement de connexions du gestionnaire de pilotes
 Le regroupement de connexions permet à une application d’utiliser une connexion à partir d’un pool de connexions qui ne doivent pas être rétablie pour chaque utilisation. Une fois qu’une connexion a été créée et placée dans un pool, une application peut réutiliser cette connexion sans effectuer le processus de connexion complète.  
@@ -31,7 +31,7 @@ Le regroupement de connexions permet à une application d’utiliser une connexi
  En plus des gains de performances, l’architecture de regroupement de connexions permet à un environnement et les connexions associées à être utilisé par plusieurs composants dans un processus unique. Cela signifie que les composants autonomes dans le même processus peuvent interagir avec eux sans connaître les unes des autres. Une connexion dans un pool de connexions peut être utilisée à plusieurs reprises par plusieurs composants.  
   
 > [!NOTE]
->  Le regroupement de connexions peut être utilisé par une application ODBC présentant ODBC 2. *x* comportement, à condition que l’application peut appeler *SQLSetEnvAttr*. Lorsque vous utilisez le regroupement de connexions, l’application ne doit pas exécuter les instructions SQL qui modifient la base de données ou le contexte de la base de données, telles que la modification la \< *base de données ** nom*>, ce qui modifie le catalogue utilisé par un source de données.  
+>  Le regroupement de connexions peut être utilisé par une application ODBC présentant ODBC 2. *x* comportement, à condition que l’application peut appeler *SQLSetEnvAttr*. Lorsque vous utilisez le regroupement de connexions, l’application ne doit pas exécuter les instructions SQL qui modifient la base de données ou le contexte de la base de données, telles que la modification la \< *nom de la base de données*>, ce qui modifie le catalogue utilisé par une personne concernée source.  
 
 
  Un pilote ODBC doit être complètement thread-safe, et les connexions ne doivent pas d’affinité de thread pour prendre en charge le regroupement de connexions. Cela signifie que le pilote est en mesure de gérer un appel sur n’importe quel thread à tout moment et est en mesure de se connecter sur un thread, à utiliser la connexion sur un autre thread et à la déconnexion sur un troisième thread.  

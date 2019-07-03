@@ -4,17 +4,17 @@ description: Cet article contient les notes de publication et les fonctionnalit�
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 05/22/2019
+ms.date: 07/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4b6a8cb48e6447992fafc5b028146955668a7f66
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: f172cf3b4ab72fe413cbc639c3e880edef311e9e
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399976"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533842"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Notes de publication pour la version préliminaire de SQL Server 2019 sur Linux
 
@@ -82,12 +82,6 @@ Pour les installations de package manuelles ou hors connexion, vous pouvez tél�
 | Package Red Hat RPM | 15.0.1700.37-2 | [Package RPM de moteur](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-15.0.1700.37-2.x86_64.rpm)</br>[Package RPM de disponibilité élevée](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-ha-15.0.1700.37-2.x86_64.rpm)</br>[Package RPM de recherche de texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-fts-15.0.1700.37-2.x86_64.rpm)</br>[Package RPM d’extensibilité](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-15.0.1700.37-2.x86_64.rpm)</br>[Package RPM d’extensibilité de Java](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-extensibility-java-15.0.1700.37-2.x86_64.rpm)</br>[Package RPM de PolyBase](https://packages.microsoft.com/rhel/7/mssql-server-preview/mssql-server-polybase-15.0.1700.37-2.x86_64.rpm)|
 | Package RPM de SLES | 15.0.1700.37-2 | [package de moteur RPM MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-15.0.1700.37-2.x86_64.rpm)</br>[Package RPM de disponibilité élevée](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-ha-15.0.1700.37-2.x86_64.rpm)</br>[Package RPM de recherche de texte intégral](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-fts-15.0.1700.37-2.x86_64.rpm)</br>[Package RPM d’extensibilité](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-15.0.1700.37-2.x86_64.rpm)</br>[Package RPM d’extensibilité de Java](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-extensibility-java-15.0.1700.37-2.x86_64.rpm)</br>[Package RPM de PolyBase](https://packages.microsoft.com/sles/12/mssql-server-preview/mssql-server-polybase-15.0.1700.37-2.x86_64.rpm)|
 | Package Debian Ubuntu 16.04 | 15.0.1700.37-2 | [Package Debian moteur](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server/mssql-server_15.0.1700.37-2_amd64.deb)</br>[Package de Debian haute disponibilité](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-ha/mssql-server-ha_15.0.1700.37-2_amd64.deb)</br>[Package Debian de recherche en texte intégral](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-fts/mssql-server-fts_15.0.1700.37-2_amd64.deb)</br>[Package Debian d’extensibilité](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility/mssql-server-extensibility_15.0.1700.37-2_amd64.deb)</br>[Package Debian d’extensibilité de Java](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-extensibility-java/mssql-server-extensibility-java_15.0.1700.37-2_amd64.deb)</br>[Package RPM de PolyBase](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/mssql-server-polybase/mssql-server-polybase_15.0.1700.37-2_amd64.deb)|
-
-### <a name="known-issues"></a>Problèmes connus
-
-#### <a id="msdtc"></a> Microsoft Distributed Transaction Coordinator
-
-Actuellement, MSDTC nécessite des transactions non authentifiés. Par exemple, si vous utilisez un serveur lié à partir de SQL Server sur Windows pour SQL Server sur Linux ou utilisez une application cliente de Windows pour démarrer une transaction distribuée par rapport à SQL Server sur Linux, puis MSDTC sur un serveur/client Windows est requis pour utiliser option « non Authentification requise ».
 
 ## <a id="CTP30"></a> CTP 3.0 (mai 2019)
 
