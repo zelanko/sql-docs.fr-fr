@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 manager: jroth
-ms.openlocfilehash: 4836b22d9903b05d70170aad53fde7ac7101f537
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d06af565a581ea8ed9dbbdd6330271ef9f6c7218
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778380"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556895"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Se connecter [!INCLUDE[name-sos](../includes/name-sos-short.md)] à votre serveur SQL à l’aide de l’authentification Windows - Kerberos 
 
@@ -160,7 +160,7 @@ Obtenir un Ticket d’accord de Ticket (TGT ticket) à partir du contrôleur de 
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-Afficher les tickets disponibles à l’aide de kinit. Si le kinit a réussi, vous devez voir un ticket. 
+Afficher les tickets disponibles à l’aide de klist. Si le kinit a réussi, vous devez voir un ticket. 
 
 ```bash
 klist
