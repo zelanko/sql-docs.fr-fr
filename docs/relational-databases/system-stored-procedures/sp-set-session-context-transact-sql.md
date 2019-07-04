@@ -1,9 +1,9 @@
 ---
 title: sp_set_session_context (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/04/2017
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
@@ -18,16 +18,16 @@ ms.assetid: 7a3a3b2a-1408-4767-a376-c690e3c1fc5b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c7c68341338706c59c7ef966bf5abc6110c46e6
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 25f9d67ee50f7c33391027d69c7db87aac8d7210
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51811870"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559432"
 ---
 # <a name="spsetsessioncontext-transact-sql"></a>sp_set_session_context (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
 Définit une paire clé-valeur dans le contexte de session.  
   
@@ -52,7 +52,7 @@ sp_set_session_context [ @key= ] N'key', [ @value= ] 'value'
  [ @read_only= ] { 0 | 1 }  
  Un indicateur de type **bits**. La valeur 1, la valeur de la clé spécifiée ne peut pas être modifiée à nouveau sur cette connexion logique. Si 0 (valeur par défaut), alors que la valeur peut être modifié.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  N’importe quel utilisateur peut définir un contexte de session pour sa session.  
   
 ## <a name="remarks"></a>Notes  
