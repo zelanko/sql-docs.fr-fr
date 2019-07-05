@@ -1,7 +1,7 @@
 ---
 title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/01/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ''
@@ -9,16 +9,16 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 390225cc-23e8-4051-a5f6-221e33e4c0b4
-author: ronortloff
-ms.author: rortloff
+author: XiaoyuL-Preview
+ms.author: xiaoyul
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 20ce33d85c3906a14bbc813b110591e3aa0b71fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3aa0219e1e8d0733926662b22f929fa923ae071
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836187"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564173"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -44,6 +44,8 @@ ms.locfileid: "65836187"
 |importance|**nvarchar(32)**|L’importance de définition de la demande a été envoyée. Requêtes avec une importance inférieure reste en file d’attente dans un état suspendu, si les demandes d’importance plus élevées sont envoyés.  Requêtes avec une importance plus élevée s’exécutent avant les demandes importance inférieure qui ont été envoyées précédemment.  Pour plus d’informations sur l’importance, consultez [Importance de la charge de travail](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>Faible</br>below_normal</br>normal (valeur par défaut)</br>above_normal</br>Haute|
 |group_name| |Réservé à une utilisation interne.</br>S'applique à : Azure SQL Data Warehouse.|
 |resource_allocation_percentage| |Réservé à une utilisation interne.</br>S'applique à : Azure SQL Data Warehouse.|
+|result_set_cache|**bit**|Précise si une requête terminée a un accès au cache de résultat (1) ou non (0).|0,1|
+||||
   
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section de métadonnées dans le [limites de capacité](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) rubrique.   
   

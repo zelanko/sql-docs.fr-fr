@@ -1,7 +1,7 @@
 ---
 title: sys.index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 07/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7ee4944511dca9167c787c529cdebcf33cdc92c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8707cb6cfb4f535a634f501e9113406c26b7e4a8
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004391"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564188"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,15 +42,18 @@ ms.locfileid: "63004391"
 |**key_ordinal**|**tinyint**|Valeur ordinale (basée sur la valeur 1) dans l'ensemble de colonnes clés.<br /><br /> 0 = N'est pas une colonne clé, ou est un index XML, un index columnstore ou un index spatial.<br /><br /> Remarque : Un index XML ou spatial ne peut pas être une clé, car les colonnes sous-jacentes ne sont pas comparables, ce qui signifie que leurs valeurs ne peuvent pas être triées.|  
 |**partition_ordinal**|**tinyint**|Valeur ordinale (basée sur la valeur 1) dans l'ensemble de colonnes de partitionnement. Un index cluster columnstore peut avoir au plus une colonne de partitionnement.<br /><br /> 0 = N'est pas une colonne de partitionnement.|  
 |**is_descending_key**|**bit**|1 = Colonne clé d'index avec un ordre de tri descendant.<br /><br /> 0 = Colonne clé d'index avec un ordre de tri croissant, ou il s'agit d'une colonne qui fait partie d'un index de hachage.|  
-|**is_included_column**|**bit**|1 = colonne est une colonne non clée ajoutée à l’index à l’aide de la clause CREATE INDEX INCLUDE ou de la colonne fait partie d’un index columnstore.<br /><br /> 0 = Colonne non incluse.<br /><br /> Les colonnes ajoutées implicitement car ils font partie de la clé de clustering ne figurent pas dans **sys.index_columns**.<br /><br /> Les colonnes ajoutées implicitement car il s'agit de colonnes de partitionnement sont retournées avec la valeur 0.|  
+|**is_included_column**|**bit**|1 = colonne est une colonne non clée ajoutée à l’index à l’aide de la clause CREATE INDEX INCLUDE ou de la colonne fait partie d’un index columnstore.<br /><br /> 0 = Colonne non incluse.<br /><br /> Les colonnes ajoutées implicitement car ils font partie de la clé de clustering ne figurent pas dans **sys.index_columns**.<br /><br /> Les colonnes ajoutées implicitement car il s'agit de colonnes de partitionnement sont retournées avec la valeur 0.| 
+|**column_store_order_ordinal**</br> S'applique à : Azure SQL Data Warehouse (version préliminaire)|**tinyint**|Ordinal (de base 1) au sein d’ensemble d’ordre des colonnes dans un index columnstore cluster ordonnée.|
   
-## <a name="permissions"></a>Autorisations  
+## <a name="permissions"></a>Autorisations
+
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="examples"></a>Exemples  
+## <a name="examples"></a>Exemples
+
  L'exemple suivant retourne tous les index et les colonnes d'index de la table `Production.BillOfMaterials`.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SELECT i.name AS index_name  
@@ -59,7 +62,7 @@ SELECT i.name AS index_name
     ,ic.key_ordinal  
 ,ic.is_included_column  
 FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic   
+INNER JOIN sys.index_columns AS ic
     ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
 WHERE i.object_id = OBJECT_ID('Production.BillOfMaterials');  
   
@@ -67,7 +70,7 @@ WHERE i.object_id = OBJECT_ID('Production.BillOfMaterials');
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
   
 index_name                                                 column_name        index_column_id key_ordinal is_included_column  
 ---------------------------------------------------------- -----------------  --------------- ----------- -------------  
