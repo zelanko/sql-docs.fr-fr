@@ -12,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 81fd6e4a9be7b27190491c6a36ef536e3c1ba669
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1d9b9d9ac9c5b1a0eeb7d40640db83ce688ae7e5
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212488"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67396523"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services avec les groupes de disponibilité Always On
 
@@ -27,24 +27,12 @@ ms.locfileid: "53212488"
   
  Le traitement et l'exécution des requêtes sont des charges de travail en lecture seule. Vous pouvez améliorer les performances en déchargeant ces charges de travail vers un réplica secondaire lisible. Une configuration supplémentaire est requise pour ce scénario. Utilisez la liste de contrôle de cette rubrique pour vous assurer que vous suivez toutes les étapes.  
   
- [Conditions préalables](#bkmk_prereq)  
-  
- [Liste de vérification : Utiliser un réplica secondaire pour les opérations en lecture seule](#bkmk_UseSecondary)  
-  
- [Créer une source de données Analysis Services à l’aide d’une base de données de disponibilité Always On](#bkmk_ssasAODB)  
-  
- [Tester la configuration](#bkmk_test)  
-  
- [Que se passe-t-il après un basculement](#bkmk_whathappens)  
-  
- [Écriture différée lors de l’utilisation d’une base de données de disponibilité Always On](#bkmk_writeback)  
-  
 ##  <a name="bkmk_prereq"></a> Conditions préalables  
  Vous devez avoir compte de connexion SQL Server sur tous les réplicas. Vous devez être un **sysadmin** pour configurer des groupes de disponibilité, des écouteurs et des bases de données, mais les utilisateurs n’ont besoin que d’autorisations **db_datareader** pour accéder à la base de données d’un client Analysis Services.  
   
  Utilisez un fournisseur de données qui prend en charge la version 7.4 du protocole TDS (Tabular Data Stream) ou une version plus récente, telle que SQL Server Native Client 11.0 ou le Fournisseur de données pour SQL Server dans .NET Framework 4.02.  
   
- **(Pour les charges de travail en lecture seule)**. Le rôle de réplica secondaire doit être configuré pour les connexions en lecture seule, le groupe de disponibilité doit avoir une liste de routage et la connexion dans la source de données Analysis Services doit spécifier l'écouteur du groupe de disponibilité. Les instructions sont fournies dans cette rubrique.  
+ **(Pour les charges de travail en lecture seule)** . Le rôle de réplica secondaire doit être configuré pour les connexions en lecture seule, le groupe de disponibilité doit avoir une liste de routage et la connexion dans la source de données Analysis Services doit spécifier l'écouteur du groupe de disponibilité. Les instructions sont fournies dans cette rubrique.  
   
 ##  <a name="bkmk_UseSecondary"></a> Liste de vérification : Utiliser un réplica secondaire pour les opérations en lecture seule  
  À moins que votre solution Analysis Services inclue l'écriture différée, vous pouvez configurer une connexion de source de données pour utiliser un réplica secondaire lisible. Si votre connexion réseau est rapide, le réplica secondaire a une latence de données très faible et fournit des données pratiquement identiques au réplica principal. En utilisant le réplica secondaire pour les opérations Analysis Services, vous pouvez réduire les conflits de lecture-écriture sur le réplica principal et optimiser l'utilisation des réplicas secondaires dans votre groupe de disponibilité.  
@@ -230,7 +218,7 @@ ms.locfileid: "53212488"
   
  Pour cela, créez une source de données supplémentaire dans un modèle Analysis Services pour prendre en charge la connexion en lecture-écriture. Lors de la création de la source de données supplémentaire, utilisez le nom d’écouteur et la base de données que vous avez spécifiés dans la connexion en lecture seule, mais au lieu de modifier **Intention de l’application**, conservez la valeur par défaut qui prend en charge les connexions READWRITE. Vous pouvez à présent ajouter de nouvelles tables de faits ou de dimension à votre vue de source de données, basées sur la source de données en lecture-écriture, puis activer l'écriture différée sur les nouvelles tables.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Secondaires actifs : Réplicas secondaires accessibles en lecture &#40;groupes de disponibilité Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [Stratégies Always On pour les problèmes opérationnels avec les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md)   

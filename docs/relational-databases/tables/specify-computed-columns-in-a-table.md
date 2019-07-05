@@ -14,15 +14,15 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 00a50efc25142a78a3363959c238d87efd84de90
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 0b8cef2656c1d06e7f03f122ab96600cc5b8fea0
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072153"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351704"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Spécifier les colonnes calculées dans une table
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Une colonne calculée est une colonne virtuelle qui n'est pas stockée physiquement dans la table, à moins que la colonne ne soit indiquée comme PERSISTED. Une expression de colonne calculée peut utiliser des données d'autres colonnes afin de calculer une valeur pour la colonne à laquelle elle appartient. Vous pouvez spécifier une expression pour une colonne calculée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -50,7 +50,7 @@ ms.locfileid: "49072153"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -90,14 +90,14 @@ ms.locfileid: "49072153"
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple crée une table avec une colonne calculée qui multiplie la valeur de la colonne `QtyAvailable` par la valeur de la colonne `UnitPrice` .  
   
-    ```  
+    ```sql
     CREATE TABLE dbo.Products   
     (  
         ProductID int IDENTITY (1,1) NOT NULL  
       , QtyAvailable smallint  
       , UnitPrice money  
       , InventoryValue AS QtyAvailable * UnitPrice  
-    );  
+    );
   
     -- Insert values into the table.  
     INSERT INTO dbo.Products (QtyAvailable, UnitPrice)  
@@ -117,11 +117,17 @@ ms.locfileid: "49072153"
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple suivant ajoute une nouvelle colonne à la table créée dans l'exemple précédent.  
   
+    ```sql
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);
     ```  
-    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.35);  
+
+    Ajoutez éventuellement l’argument PERSISTED pour stocker physiquement les valeurs calculées dans la table :
   
-    ```  
+    ```sql
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5) PERSISTED;
+    ```
   
+
 #### <a name="to-change-an-existing-column-to-a-computed-column"></a>Pour modifier une colonne existante en une colonne calculée  
   
 1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -130,13 +136,12 @@ ms.locfileid: "49072153"
   
 3.  Pour modifier une colonne existante en une colonne calculée vous devez supprimer et recréer la colonne calculée. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. L'exemple suivant modifie la colonne ajoutée dans l'exemple précédent.  
   
-    ```  
+    ```sql
     ALTER TABLE dbo.Products DROP COLUMN RetailValue;  
     GO  
-    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);  
-  
-    ```  
-  
+    ALTER TABLE dbo.Products ADD RetailValue AS (QtyAvailable * UnitPrice * 1.5);
+    ```
+
      Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ###  <a name="TsqlExample"></a>  

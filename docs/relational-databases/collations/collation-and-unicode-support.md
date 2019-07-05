@@ -1,7 +1,7 @@
 ---
 title: Prise en charge d’Unicode et du classement | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -22,18 +22,20 @@ helpviewer_keywords:
 - locales [SQL Server]
 - code pages [SQL Server]
 - SQL Server collations
+- UTF-8
+- UTF-16
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a754607e4eb3af99216e5a11e9af50730279040e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bcff15423fb1ab3f1f05347bddba6eab09fae713
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836376"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419195"
 ---
 # <a name="collation-and-unicode-support"></a>Prise en charge d’Unicode et du classement
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -117,57 +119,54 @@ Les paramètres régionaux sont un ensemble d'informations associées à un empl
     
 ###  <a name="Code_Page_Defn"></a> Code Page    
  Une page de codes est le jeu ordonné de caractères d'un script donné dans lequel un index numérique (ou une valeur de point de code) est associé à chaque caractère. Une page de codes Windows est généralement appelée *jeu de caractères* ou *charset*. Les pages de codes permettent d'assurer la prise en charge des jeux de caractères et des dispositions du clavier utilisés par différents paramètres régionaux système Windows.     
+ 
 ###  <a name="Sort_Order_Defn"></a> Sort Order    
  L'ordre de tri spécifie comment sont triées les valeurs de données. Cela affecte les résultats de comparaison de données. Les données sont triées en utilisant les classements et peuvent être optimisées à l'aide des index.    
     
 ##  <a name="Unicode_Defn"></a> Prise en charge d’Unicode    
-Unicode est un standard en matière de correspondance de points de code avec des caractères. Comme il est conçu pour couvrir tous les caractères de toutes les langues du monde, il n'y a pas besoin de pages de codes différentes pour gérer des jeux de caractères différents. Si vous stockez des données caractères pour plusieurs langues dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), utilisez des types de données Unicode (UTF-16) (**nchar**, **nvarchar** et **ntext**) au lieu de types de données non-Unicode (**char**, **varchar** et **text**). D’autre part, à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si un classement compatible UTF-8 (\_UTF8) est utilisé, les types de données qui étaient auparavant non-Unicode (**char** et **varchar**) deviennent des types de données Unicode (UTF-8). 
-
-> [!NOTE]
-> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ne change pas le comportement des types de données Unicode (UTF-16) existants (**nchar**, **nvarchar** et **ntext**).   
-    
-Des limitations significatives sont associées aux types de données non-Unicode. C’est parce qu’un ordinateur non-Unicode ne peut utiliser qu’une seule page de codes. Vous pouvez bénéficier de gains de performances en utilisant Unicode parce qu'un moins grand nombre de conversions de page de codes est requis. Les classements Unicode doivent être sélectionnés individuellement au niveau de la base de données, de la colonne ou de l’expression parce qu’ils ne sont pas pris en charge au niveau du serveur.    
-    
+Unicode est un standard en matière de correspondance de points de code avec des caractères. Comme il est conçu pour couvrir tous les caractères de toutes les langues du monde, il n'y a pas besoin de pages de codes différentes pour gérer des jeux de caractères différents. 
+   
 Les pages de codes qu'utilise un client sont déterminées par les paramètres du système d'exploitation. Pour définir les pages de codes du client sur le système d'exploitation Windows, utilisez **Paramètres régionaux** dans le Panneau de configuration.    
-    
+
+Des limitations significatives sont associées aux types de données non-Unicode. C’est parce qu’un ordinateur non-Unicode ne peut utiliser qu’une seule page de codes. Vous pouvez bénéficier de gains de performances en utilisant Unicode parce qu'un moins grand nombre de conversions de page de codes est requis. Les classements Unicode doivent être sélectionnés individuellement au niveau de la base de données, de la colonne ou de l’expression parce qu’ils ne sont pas pris en charge au niveau du serveur.    
+   
 Lorsque vous déplacez des données d'un serveur vers un client, votre classement du serveur peut ne pas être reconnu par les pilotes de clients plus anciens. Cela peut se produire lorsque vous déplacez des données d'un serveur Unicode vers un client non-Unicode. La meilleure solution peut alors consister à mettre à niveau le système d'exploitation du client afin de mettre aussi à jour les classements du système sous-jacent. Si le client est équipé du logiciel client de base de données, vous pouvez envisager de lui appliquer une mise à jour du service.    
     
-Vous pouvez également essayer d'utiliser un autre classement pour les données du serveur. Choisissez un classement qui établit un mappage à une page de codes du client.    
-    
-Pour utiliser les classements UTF-16 disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] afin d’améliorer la recherche et le tri de certains caractères Unicode (classements Windows uniquement), vous pouvez sélectionner un des classements (\_SC) de caractères supplémentaires ou un des classements version 140.    
+> [!TIP]
+> Vous pouvez également essayer d'utiliser un autre classement pour les données du serveur. Choisissez un classement qui établit un mappage à une page de codes du client.    
+
+Si vous stockez des données caractères qui reflètent plusieurs langues dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), utilisez des types de données Unicode (**nchar**, **nvarchar** et **ntext**) au lieu de types de données non-Unicode (**char**, **varchar** et **text**). 
+
+> [!NOTE]
+> Pour les types de données Unicode, le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] peut représenter jusqu'à 65 535 caractères à l’aide de UCS-2 ou la plage Unicode complète (1 114 111 caractères) si les caractères supplémentaires sont utilisés. Pour plus d’informations sur l’activation de caractères supplémentaires, consultez [Caractères supplémentaires](#Supplementary_Characters).
+
+D’autre part, à compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], si un classement compatible UTF-8 (\_UTF8) est utilisé, les types de données qui étaient auparavant non-Unicode (**char** et **varchar**) deviennent des types de données Unicode (UTF-8). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] ne change pas le comportement des types de données Unicode (UTF-16) existants (**nchar**, **nvarchar** et **ntext**). Pour d’autres considérations, consultez [Différences de stockage entre UTF-8 et UTF-16](#storage_differences).
+       
+Pour utiliser les classements UTF-16 disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) afin d’améliorer la recherche et le tri de certains caractères Unicode (classements Windows uniquement), vous pouvez sélectionner un des classements (\_SC) de caractères supplémentaires ou un des classements de la version 140.    
  
 Pour utiliser les classements UTF-8 disponibles dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] afin d’améliorer la recherche et le tri de certains caractères Unicode (classements Windows uniquement), vous devez sélectionner des classements compatibles avec l’encodage UTF-8 (\_UTF8).
  
 -   L’indicateur UTF8 peut être appliqué aux éléments suivants :    
-   
     -   Classements version 90 
-    
         > [!NOTE]
         > Seulement quand des caractères supplémentaires (\_SC) ou des classements compatibles avec le respect du sélecteur de variante (\_VSS) existent déjà dans cette version.
-    
     -   Classements version 100    
-    
     -   Classements version 140   
-    
     -   BIN2<sup>1</sup> classement binaire
     
 -   L’indicateur UTF8 ne peut pas être appliqué aux éléments suivants :    
-    
     -   Classements version 90 qui ne prennent pas en charge les caractères supplémentaires (\_SC) ou le respect du sélecteur de variante (\_VSS)    
-    
     -   Classements binaires BIN ou BIN2<sup>2</sup>    
-    
     -   Classements SQL\*  
     
-<sup>1</sup> À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3     
-<sup>2</sup> Jusqu’à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3
+<sup>1</sup> À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] Classement CTP 3.0 remplacé UTF8_BIN2 avec Latin1_General_100_BIN2_UTF8.     
+<sup>2</sup> Jusqu’à [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3. 
     
 Pour déterminer les problèmes qui sont liés à l'utilisation des types de données Unicode ou non-Unicode, testez votre scénario pour mesurer les écarts de performances dans votre environnement. Vous devez normaliser le classement utilisé sur les systèmes de votre organisation et déployer des serveurs et clients Unicode partout où vous le pouvez.    
     
 Dans de nombreuses situations, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interagit avec d’autres serveurs ou clients, et votre organisation peut utiliser plusieurs normes d’accès aux données entre les applications et les instances de serveur. Les clients[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont l'un des deux types principaux :    
     
 -   Les**clients Unicode** qui utilisent OLE DB et ODBC (Open Database Connectivity) 3.7 ou version ultérieure.    
-    
 -   Les**clients non-Unicode** qui utilisent DB-Library et ODBC 3.6 ou version antérieure.    
     
 Le tableau suivant présente des informations sur l'utilisation des données multilingues avec diverses combinaisons de serveurs Unicode et non-Unicode.    
@@ -180,38 +179,34 @@ Le tableau suivant présente des informations sur l'utilisation des données mul
 |Non-Unicode|Non-Unicode|Cette configuration est la plus limitée pour des données multilingues. Vous pouvez utiliser uniquement une seule page de codes.|    
     
 ##  <a name="Supplementary_Characters"></a> Caractères supplémentaires    
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des types de données comme **nchar** et **nvarchar** pour stocker des données Unicode (UTF-16) sous n’importe quel classement, et des types de données comme **char** et **varchar** pour stocker des données Unicode (UTF-8) sous des classements compatibles UTF-8 (\_UTF-8). Ces types de données encodent le texte dans un format appelé *UTF-16* et *UTF-8*, respectivement. Le Consortium Unicode alloue à chaque caractère un codepoint unique, qui est une valeur comprise entre 0x0000 et 0x10FFFF. Les caractères les plus fréquemment utilisés ont des valeurs de point de code qui correspondent à un mot de 8 bits ou de 16 bits en mémoire et sur le disque, mais les caractères dont les valeurs de point de code sont supérieures à 0xFFFF nécessitent deux à quatre mots de 8 bits consécutifs (UTF-8), ou deux mots de 16 bits consécutifs (UTF-16). Ces caractères sont appelés *caractères supplémentaires*, et les deux mots de 8 ou 16 bits consécutifs supplémentaires sont appelés *paires de substitution*.    
-    
-À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], vous pouvez utiliser une nouvelle famille de classements de caractères supplémentaires (\_SC) avec les types de données **nchar**, **nvarchar** et **sql_variant**. Par exemple : `Latin1_General_100_CI_AS_SC` ou si vous utilisez un classement japonais, `Japanese_Bushu_Kakusu_100_CI_AS_SC`. 
- 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] étend la prise en charge des caractères supplémentaires aux types de données **char** et **varchar** avec les nouveaux classements compatibles UTF-8 (\_UTF-8).   
+Le Consortium Unicode alloue à chaque caractère un code de caractère unique, qui est une valeur comprise entre 000000 et 10FFFF. Les caractères les plus fréquemment utilisés ont des valeurs de code de caractère dans la plage de 000000 à 00FFFF (65 535 caractères) qui correspondent à un mot de 8 ou 16 bits en mémoire et sur le disque. Cette plage est généralement désignée en tant que Plan multilingue de base (BMP). 
 
-À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], tous les nouveaux classements prennent en charge automatiquement les caractères supplémentaires.
+Mais le Consortium Unicode a établi des 16 « plans » de caractères supplémentaires, chacun ayant la même taille que le BMP. Cette définition accorde à Unicode le potentiel de représenter 1 114 112 caractères (autrement dit, 2<sup>16</sup> * 17 caractères) au sein de la plage de code de caractère de 000000 à 10FFFF. Les caractères dont les valeurs de code de caractère supérieures à 00FFFF requièrent entre deux et quatre mots de 8 bits consécutifs (UTF-8) ou deux mots de 16 bits consécutifs (UTF-16). Ces caractères situés au-delà du BMP sont appelés *caractères supplémentaires* et les deux mots de 8 ou 16 bits consécutifs supplémentaires sont appelés *paires de substitution*. Pour plus d’informations sur les caractères supplémentaires, des substitutions et des paires de substitution, reportez-vous à [la norme Unicode](http://www.unicode.org/standard/standard.html).    
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit des types de données tels que **nchar** et **nvarchar** pour stocker les données Unicode dans la plage BMP (de 000000 à 00FFFF), ce que [!INCLUDE[ssde_md](../../includes/ssde_md.md)] encode à l’aide de UCS-2. 
+
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] introduit une nouvelle famille de classements de caractères supplémentaires (\_SC) pouvant être utilisée avec les types de données **nchar**, **nvarchar** et **sql_variant** pour représenter la plage de caractères Unicode (de 000000 à 10FFFF). Par exemple : `Latin1_General_100_CI_AS_SC` ou si vous utilisez un classement japonais, `Japanese_Bushu_Kakusu_100_CI_AS_SC`. 
+ 
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] étend le support des caractères supplémentaires aux types de données **char** et **varchar** avec les nouveaux classements prenant en charge UTF-8 ([\_UTF8](#utf8)). Ils sont également capables de représenter la plage de caractères Unicode complète.   
+
+> [!NOTE]
+> À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], tous les nouveaux classements **\_140** prennent en charge automatiquement les caractères supplémentaires.
 
 Si vous utilisez des caractères supplémentaires :    
     
 -   Les caractères supplémentaires peuvent être utilisés dans des opérations de tri et de comparaison dans les versions de classement 90 ou versions supérieures.    
-    
 -   Tous les classements version 100 prennent en charge le tri linguistique avec les caractères supplémentaires.    
-    
 -   Les caractères supplémentaires ne sont pas utilisables dans les métadonnées, telles que les noms d'objets de base de données.    
-    
 -   Les bases de données qui utilisent des classements avec des caractères supplémentaires (\_SC) ne peuvent pas être activées pour la réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. C’est parce que certaines des tables système et des procédures stockées créées pour la réplication utilisent le type de données **ntext** hérité qui ne prend pas en charge les caractères supplémentaires.  
-    
+
 -   L’indicateur SC peut s’appliquer aux éléments suivants :    
-    
     -   Classements version 90    
-    
     -   Classements version 100    
     
 -   L’indicateur SC ne peut pas s’appliquer aux éléments suivants :    
-    
     -   Classements Windows version 80 et sans version    
-    
     -   Classements binaires BIN ou BIN2    
-    
     -   Classements SQL\*    
-    
     -   Classements version 140 (ces derniers n’ont pas besoin de l’indicateur SC, car ils prennent déjà en charge les caractères supplémentaires)    
     
 Le tableau suivant compare le comportement de quelques fonctions de chaîne et opérateurs de chaîne quand ils utilisent des caractères supplémentaires avec et sans classement sensible aux caractères supplémentaires :    
@@ -224,11 +219,11 @@ Le tableau suivant compare le comportement de quelques fonctions de chaîne et o
 |[UNICODE](../../t-sql/functions/unicode-transact-sql.md)|Retourne un codepoint UTF-16 dans la plage 0 à 0x10FFFF.|Retourne un codepoint UCS-2 dans la plage 0 à 0xFFFF.|    
 |[Recherche de correspondance d’un seul caractère générique](../../t-sql/language-elements/wildcard-match-one-character-transact-sql.md)<br /><br /> [Caractère générique - Caractères à ne pas faire correspondre](../../t-sql/language-elements/wildcard-character-s-not-to-match-transact-sql.md)|Les caractères supplémentaires sont pris en charge pour toutes les opérations génériques.|Les caractères supplémentaires ne sont pas pris en charge pour ces opérations génériques. D'autres opérateurs génériques sont pris en charge.|    
     
-##  <a name="GB18030"></a> Prise en charge du langage GB18030    
- GB18030 est une norme distincte utilisée en République populaire de Chine pour l'encodage des caractères chinois. Dans la norme GB18030, les caractères peuvent être encodés sur 1, 2 ou 4 octets de longueur. Pour prendre en charge les caractères encodés selon la norme GB18030,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les reconnaît lorsqu'ils entrent dans le serveur en provenance d'une application côté client, puis les convertit et les stocke en mode natif en tant que caractères Unicode. Une fois stockés dans le serveur, ils sont traités en tant que caractères Unicode dans toutes les opérations suivantes. Vous pouvez utiliser n'importe quel classement chinois, de préférence la version 100 la plus récente. Tous les classements de niveau _100 prennent en charge le tri linguistique avec les caractères GB18030. Si les données incluent des caractères supplémentaires (paires de substitution), vous pouvez utiliser les classements SC disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour améliorer la recherche et le tri.    
+## <a name="GB18030"></a> Prise en charge du langage GB18030    
+GB18030 est une norme distincte utilisée en République populaire de Chine pour l'encodage des caractères chinois. Dans la norme GB18030, les caractères peuvent être encodés sur 1, 2 ou 4 octets de longueur. Pour prendre en charge les caractères encodés selon la norme GB18030,[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les reconnaît lorsqu'ils entrent dans le serveur en provenance d'une application côté client, puis les convertit et les stocke en mode natif en tant que caractères Unicode. Une fois stockés dans le serveur, ils sont traités en tant que caractères Unicode dans toutes les opérations suivantes. Vous pouvez utiliser n'importe quel classement chinois, de préférence la version 100 la plus récente. Tous les classements de niveau _100 prennent en charge le tri linguistique avec les caractères GB18030. Si les données incluent des caractères supplémentaires (paires de substitution), vous pouvez utiliser les classements SC disponibles dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour améliorer la recherche et le tri.    
     
-##  <a name="Complex_script"></a> Prise en charge des scripts complexes    
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut prendre en charge l'entrée, le stockage, la modification et l'affichage de scripts complexes. Les scripts complexes sont notamment les suivants :    
+## <a name="Complex_script"></a> Prise en charge des scripts complexes    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut prendre en charge l'entrée, le stockage, la modification et l'affichage de scripts complexes. Les scripts complexes sont notamment les suivants :    
     
 -   Scripts qui associent l'utilisation de textes écrits de droite à gauche et de gauche à droite, par exemple les textes écrits en arabe et en anglais.    
 -   Scripts dont les caractères changent de forme en fonction de leur position ou lorsqu'ils sont associés à d'autres caractères, par exemple les caractères arabes, indiens et thaï.    
@@ -236,7 +231,7 @@ Le tableau suivant compare le comportement de quelques fonctions de chaîne et o
     
 Les applications de base de données qui interagissent avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent utiliser des contrôles qui prennent en charge les scripts complexes. Les contrôles Windows Form standard créés dans du code managé peuvent prendre en charge les scripts complexes.    
 
-##  <a name="Japanese_Collations"></a> Classements japonais ajoutés dans  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
+## <a name="Japanese_Collations"></a> Classements japonais ajoutés dans  [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
  
 À compter de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], de nouvelles familles de classement du japonais sont prises en charge, avec les permutations de différentes options (\_CS, \_AS, \_KS, \_WS, \_VSS). 
 
@@ -247,19 +242,44 @@ SELECT Name, Description FROM fn_helpcollations()
 WHERE Name LIKE 'Japanese_Bushu_Kakusu_140%' OR Name LIKE 'Japanese_XJIS_140%'
 ``` 
 
-Tous les nouveaux classements prenant automatiquement en charge les caractères supplémentaires, aucun d’eux n’a (ou ne requiert) l’indicateur SC.
+Tous les nouveaux classements disposent d’un support intégré des caractères supplémentaires, par conséquent, aucun des nouveaux classements **\_140** n’a (ni ne requiert) l’indicateur SC.
 
-Ces classements sont pris en charge dans les index de moteur de base de données, les tables optimisées en mémoire, les index columnstore et les modules compilés en mode natif.
+Ces classements sont pris en charge dans les index, les tables optimisées en mémoire, les index columnstore et les modules compilés en mode natif [!INCLUDE[ssde_md](../../includes/ssde_md.md)].
 
 <a name="ctp23"></a>
 
-## <a name="utf-8-support"></a>Prise en charge d’UTF-8
+## <a name="utf8"></a> Support UTF-8
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit le complet support du codage de caractères UTF-8 largement utilisé en tant qu’encodage d’importation ou d’exportation et en tant que classement au niveau des base de données et au niveau des colonnes pour les données de chaîne. UTF-8 est autorisé dans les types de données **char** et **varchar** et est activé pendant la création ou la modification d’un classement d’objet en un classement avec le suffixe `UTF8`. Par exemple,`LATIN1_GENERAL_100_CI_AS_SC` en `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. 
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduit la prise en charge complète du codage de caractères UTF-8 courant en tant qu’encodage d’importation ou d’exportation ou que classement de données texte au niveau de la base de données ou des colonnes. UTF-8 est autorisé dans les types de données `CHAR` et `VARCHAR`, et est activé pendant la création du classement d’un objet ou sa modification en un classement avec le suffixe `UTF8`. 
+UTF-8 est uniquement disponible pour les classements Windows qui prennent en charge les caractères supplémentaires, comme introduit dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. **nchar** et **nvarchar** autorisent l’encodage UCS-2 ou UTF-16 uniquement et restent inchangées.
 
-Par exemple,`LATIN1_GENERAL_100_CI_AS_SC` en `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 est uniquement disponible pour les classements Windows qui prennent en charge les caractères supplémentaires, comme introduit dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. `NCHAR` et `NVARCHAR` autorisent uniquement l’encodage UTF-16 et restent inchangés.
+### <a name="storage_differences"></a> Différences de stockage entre UTF-8 et UTF-16
+Le Consortium Unicode alloue à chaque caractère un code de caractère unique, qui est une valeur comprise entre 000000 et 10FFFF. Avec [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], les encodages UTF-8 et UTF-16 sont disponibles pour représenter la plage complète :    
+-  Avec l’encodage UTF-8, les caractères dans la plage ASCII (000000 – 00007F) utilisent 1 octet, les codes de caractère de 000080 à 0007FF nécessitent 2 octets, les codes de caractère de 000800 à 00FFFF nécessitent 3 octets et les codes de caractère de 0010000 à 0010FFFF nécessitent 4 octets. 
+-  Avec l’encodage UTF-16, les codes de caractère de 000000 à 00FFFF nécessitent 2 octets et les codes de caractère de 0010000 à 0010FFFF nécessitent 4 octets. 
 
-Cette fonctionnalité peut engendrer des économies de stockage importantes, selon le jeu de caractères utilisé. Par exemple, le fait de changer un type de données de colonne existant comportant des chaînes ASCII (Latin) de `NCHAR(10)` en `CHAR(10)` avec un classement prenant en charge UTF-8 se traduit par une réduction de 50 % des besoins en stockage. En effet, `NCHAR(10)` nécessite 20 octets pour le stockage, tandis que `CHAR(10)` nécessite 10 octets pour la même chaîne Unicode.
+La table suivante présente les octets de stockage d’encodage pour chaque plage de caractères et type d’encodage :
+
+|Plage de codes (hexadécimal)|Plage de codes (décimal)|Octets de stockage <sup>1</sup> avec UTF-8|Octets de stockage <sup>1</sup> avec UTF-16|    
+|---------------------------------|---------------------------------|--------------------------|-----------------------------|   
+|000000 – 00007F|0 - 127|1|2|
+|000080 – 00009F<br />0000A0 – 0003FF<br />000400 – 0007FF|128 – 159<br />160 – 1,023<br />1,024 – 2,047|2|2|
+|000800 – 003FFF<br />004000 – 00FFFF|2,048 - 16,383<br />16,384 – 65,535|3|2|
+|010000 – 03FFFF <sup>2</sup><br /><br />040000 – 10FFFF <sup>2</sup>|65,536 – 262,143 <sup>2</sup><br /><br />262,144 – 1,114,111 <sup>2</sup>|4|4|
+
+<sup>1</sup> Les octets de stockage font référence à la longueur d’octets encodés et pas à la taille de stockage sur disque des types de données respectifs. Pour plus d’informations sur les tailles de stockage sur disque, consultez [nchar et nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) et [char et varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md).
+
+<sup>2</sup> Plage de codes de caractère pour des [caractères supplémentaires](#Supplementary_Characters).
+
+Comme décrit ci-dessus, le choix du codage Unicode et du type de données appropriés peut fournir des gains de stockage significatifs, en fonction du jeu de caractères utilisé. Par exemple, le fait de transformer un type de données de colonne existant comportant des caractères ASCII de `NCHAR(10)` en `CHAR(10)` avec un classement prenant en charge UTF-8 se traduit par une réduction de 50 % des besoins en stockage. Cette réduction correspond au fait que `NCHAR(10)` nécessite 20 octets pour le stockage, tandis que `CHAR(10)` nécessite 10 octets pour la même représentation de chaîne Unicode.
+
+Avant de choisir s’il faut utiliser l’encodage UTF-8 ou UTF-16 pour une base de données ou une colonne, prenez en compte la distribution des données de chaîne qui seront stockées :
+-  Si elle est principalement dans la plage ASCII (par exemple, en anglais), chaque caractère nécessite alors 1 octet en UTF-8 et 2 octets en UTF-16. L’utilisation UFT-8 offre des avantages du stockage. 
+-  Au-dessus de la plage ASCII, presque tout l’alphabet latin et également grec, cyrillique, copte, arménien, hébreu, arabe, syriaque, Tāna et n’ko nécessitera 2 octets par caractère dans les encodages UTF-8 et UTF-16. Dans ces cas, il n’existe pas de différences significatives de stockage pour les types de données comparables (par exemple à l’aide de **char** ou **nchar**).
+-  S’il s’agit principalement d’un script d’Extrême-Orient (par exemple, coréen, chinois et japonais), chaque caractère nécessite alors 3 octets en UTF-8 et 2 octets en UTF-16. L’utilisation UFT-16 offre des avantages du stockage. 
+-  Les caractères compris entre 010000 et 10FFFF nécessitent 4 octets en encodage UTF-8 et UTF-16. Dans ces cas, il n’existe pas de différences de stockage pour les types de données comparables (par exemple à l’aide de **char** ou **nchar**).
+
+Pour d’autres considérations, consultez [Écrire des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md).
 
 ##  <a name="Related_Tasks"></a> Tâches associées    
     
@@ -277,7 +297,8 @@ Cette fonctionnalité peut engendrer des économies de stockage importantes, sel
 [Utiliser le format de caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md)        
 [Rédiger des instructions Transact-SQL internationales](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 ["SQL Server Best Practices Migration to Unicode"](https://go.microsoft.com/fwlink/?LinkId=113890) - (Plus de support)   
-[Site web du consortium Unicode](https://go.microsoft.com/fwlink/?LinkId=48619)    
+[Site web du consortium Unicode](https://go.microsoft.com/fwlink/?LinkId=48619)   
+[Norme Unicode](http://www.unicode.org/standard/standard.html)      
     
 ## <a name="see-also"></a>Voir aussi    
 [Classements de base de données autonome](../../relational-databases/databases/contained-database-collations.md)     

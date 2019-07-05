@@ -1,7 +1,7 @@
 ---
 title: Vue d’ensemble de la gestion des clés pour Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 27387a217ccd6c4a48921dae88b56d6ba1832240
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535389"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388762"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Vue d’ensemble de la gestion des clés pour Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Quand il s’agit de gestion des clés et de clés Always Encrypted, il est impo
 
 - Les***clés principales de colonne*** sont des clés de protection de clé utilisées pour chiffrer les clés de chiffrement de colonne. Les clés principales de colonne doivent être stockées dans un magasin de clés approuvé, tel que le Magasin de certificats Windows, Azure Key Vault ou un module de sécurité matériel. La base de données contient uniquement des métadonnées sur les clés principales de colonne (le type de magasin de clés et l’emplacement). Les métadonnées de clé principale de colonne sont stockées dans l’affichage catalogue [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) .  
 
-Il est important de noter que les métadonnées de clé dans le système de base de données ne contiennent pas de clés principales de colonne en texte clair ni de clés de chiffrement de colonne en texte clair. La base de données contient uniquement des informations sur le type et l’emplacement des clés principales de colonne, et des valeurs chiffrées des clés de chiffrement de colonne. Cela signifie que les clés en texte clair ne sont jamais exposées au système de base de données. Ainsi, les données protégées à l’aide d’Always Encrypted sont sécurisées, même si le système de base de données est compromis. Pour vous assurer que le système de base de données ne peut pas accéder aux clés en texte clair, veillez à exécuter vos outils de gestion de clés sur un ordinateur différent de celui qui héberge votre base de données. Pour plus d’informations, consultez les [Considérations relatives à la sécurité pour la gestion des clés](#SecurityForKeyManagement) ci-dessous.
+Il est important de noter que les métadonnées de clé dans le système de base de données ne contiennent pas de clés principales de colonne en texte clair ni de clés de chiffrement de colonne en texte clair. La base de données contient uniquement des informations sur le type et l’emplacement des clés principales de colonne, et des valeurs chiffrées des clés de chiffrement de colonne. Cela signifie que les clés en texte clair ne sont jamais exposées au système de base de données. Ainsi, les données protégées à l’aide d’Always Encrypted sont sécurisées, même si le système de base de données est compromis. Pour vous assurer que le système de base de données ne peut pas accéder aux clés en texte clair, veillez à exécuter vos outils de gestion de clés sur un ordinateur différent de celui qui héberge votre base de données. Pour plus d’informations, consultez les [Considérations relatives à la sécurité pour la gestion des clés](#security-considerations-for-key-management) ci-dessous.
 
 Étant donné que la base de données contient uniquement des données chiffrées (dans les colonnes protégées par Always Encrypted) et ne peut pas accéder aux clés en texte clair, elle ne peut pas déchiffrer les données. Cela signifie que l’interrogation de colonnes Always Encrypted retourne simplement des valeurs chiffrées. Ainsi, les applications clientes qui doivent chiffrer ou déchiffrer des données protégées doivent pouvoir accéder à la clé principale de colonne et aux clés de chiffrement de colonne associées. Pour plus d’informations, consultez [Always Encrypted (développement client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
@@ -59,7 +59,7 @@ Si l’on considère les rôles ci-dessus, il existe deux façons d’effectuer 
 ## <a name="managing-keys-with-role-separation"></a>Gestion des clés avec séparation des rôles
 Quand les clés Always Encrypted sont gérées avec séparation des rôles, différentes personnes au sein d’une organisation assument les rôles d’administrateur de sécurité et d’administrateur de base de données. Un processus de gestion des clés avec séparation des rôles garantit que les administrateurs de base de données n’ont pas accès aux clés ou aux magasins de clés contenant les clés, et que les administrateurs de sécurité n’ont pas accès à la base de données contenant des données sensibles. La gestion des clés avec séparation des rôles est recommandée si votre objectif est de garantir que les administrateurs de base de données de votre organisation ne peuvent pas accéder aux données sensibles. 
 
-**Remarque :** les administrateurs de sécurité génèrent et utilisent des clés en texte clair. Ils ne doivent donc jamais effectuer leurs tâches sur des ordinateurs hébergeant un système de base de données ou sur des ordinateurs qui sont accessibles par les administrateurs de base de données ou toute autre personne pouvant être un adversaire potentiel. 
+**Remarque :** Les administrateurs de sécurité génèrent et utilisent des clés en texte en clair. Ils ne doivent donc jamais effectuer leurs tâches sur les mêmes ordinateurs hébergeant un système de base de données ou sur des ordinateurs qui sont accessibles des par des DBA ou toute autre personne pouvant être un adversaire potentiel. 
 
 ## <a name="managing-keys-without-role-separation"></a>Gestion des clés sans séparation des rôles
 Quand les clés Always Encrypted sont gérées sans séparation des rôles, une seule personne peut assumer les rôles d’administrateur de base de données et d’administrateur de sécurité. Cette personne doit donc pouvoir accéder aux clés, aux magasins de clés et aux métadonnées de clés, et les gérer. La gestion des clés sans séparation des rôles est recommandée pour les organisations qui utilisent le modèle DevOps, ou si la base de données est hébergée dans le cloud et que le principal objectif est de restreindre l’accès des administrateurs du cloud (mais pas des administrateurs de base de données) aux données sensibles.
@@ -82,7 +82,7 @@ Vous pouvez gérer les clés Always Encrypted à l’aide de [SQL Server Managem
     - [Permuter des clés Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
-## <a name="SecurityForKeyManagement"></a> Considérations relatives à la sécurité pour la gestion des clés
+## <a name="security-considerations-for-key-management"></a>Considérations relatives à la sécurité pour la gestion des clés
 
 L’objectif principal d’Always Encrypted consiste à garantir la sécurité des données sensibles stockées dans une base de données, même si le système de base de données ou son environnement d’hébergement est compromis. Voici quelques exemples d’attaques de sécurité où Always Encrypted peut vous aider à éviter les fuites de données sensibles :
 

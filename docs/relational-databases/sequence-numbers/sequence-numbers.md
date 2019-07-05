@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5665e97e09d8bdaad57a328aae31113f42f15b
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b5198b8919fb41c754d5d94ac45c895dda852e2e
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571138"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343847"
 ---
 # <a name="sequence-numbers"></a>Numéros séquentiels
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,6 +58,8 @@ ms.locfileid: "51571138"
  L'objet séquence génère des nombres en fonction de sa définition, mais l'objet séquence ne contrôle pas la façon dont les nombres sont utilisés. Les numéros séquentiels insérés dans une table peuvent présenter des intervalles en cas d'annulation d'une transaction, de partage d'un objet séquence par plusieurs tables ou lorsque des numéros séquentiels sont alloués sans les utiliser dans les tables. En cas de création avec l'option CACHE, un arrêt inattendu, tel qu'une panne de courant, peut conduire à la perte des numéros séquentiels dans le cache.  
   
  Si plusieurs instances de la fonction **NEXT VALUE FOR** spécifient le même générateur de séquence dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] unique, toutes ces instances retournent la même valeur pour une ligne donnée traitée par cette instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ce comportement est cohérent avec la norme ANSI.  
+ 
+ Les numéros séquentiels sont générés à l'extérieur de l'étendue de la transaction actuelle. Ils sont utilisés si la transaction à l'aide du numéro séquentiel est validée ou restaurée. La validation des doublons ne se produit qu’une fois qu’un enregistrement est entièrement rempli. Dans certains cas, il peut arriver que le même numéro soit utilisé pour plusieurs enregistrements durant la création, d’où son identification en tant que doublon. Si cela se produit et que d’autres valeurs de numérotation automatique ont été appliquées aux enregistrements suivants, il peut en résulter un écart entre les valeurs de numérotation automatique.
   
 ## <a name="typical-use"></a>Utilisation courante  
  Pour créer un numéro séquentiel entier qui incrémente par 1 de -2 147 483 648 à 2 147 483 647, utilisez l'instruction suivante.  

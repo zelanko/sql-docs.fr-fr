@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9df4e39b1d0689294c597053f3cdbfac55f76b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f229584dafc8484ca4fd6e20034e6ce91446224
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945878"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413223"
 ---
 # <a name="avg-transact-sql"></a>AVG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ Le résultat évalué de l’*expression* détermine le type de retour.
 |**smallint**|**Int**|  
 |**Int**|**Int**|  
 |**bigint**|**bigint**|  
-|Catégorie **decimal** (p, s)|**decimal(38, s)** divisé par **decimal(10, 0)**|  
+|Catégorie **decimal** (p, s)|**décimal(38, min(s,6))**|  
 |Catégorie **money** et **smallmoney**|**money**|  
 |Catégorie **float** et **real**|**float**|  
   

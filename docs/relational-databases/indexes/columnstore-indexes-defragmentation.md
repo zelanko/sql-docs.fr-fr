@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c33b07af2ad43f15913580ce55c173d04a876366
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 67131c083966244db252c047b200c2a6d979aadb
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511543"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388138"
 ---
 # <a name="columnstore-indexes---defragmentation"></a>Index columnstore - Défragmentation
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ Réorganisez un index columnstore après un ou plusieurs chargements de données
   
 Utilisez l’exemple dans [sys.dm_db_column_store_row_group_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-column-store-row-group-physical-stats-transact-sql.md) pour calculer la fragmentation. Vous pouvez déterminer ainsi s’il est judicieux d’effectuer une opération REORGANIZE.  
   
-### <a name="example-how-reorganizing-works"></a>Exemple : fonctionnement de la réorganisation  
+### <a name="example-how-reorganizing-works"></a>Exemple : Fonctionnement de la réorganisation  
  Cet exemple montre comment l’opération ALTER INDEX REORGANIZE peut forcer tous les rowgroups deltastore dans le columnstore et combiner ensuite les rowgroups.  
   
 1.  Exécutez cette instruction Transact-SQL pour créer une table de mise en lots contenant 300 000 lignes. Nous pourrons alors charger des lignes en masse dans un index columnstore.  
@@ -55,6 +55,9 @@ Utilisez l’exemple dans [sys.dm_db_column_store_row_group_physical_stats &#40;
     CREATE DATABASE [columnstore];  
     GO  
   
+    USE columnstore;
+    GO
+
     IF EXISTS (SELECT name FROM sys.tables  
         WHERE name = N'staging'  
         AND object_id = OBJECT_ID (N'staging'))  
@@ -208,7 +211,7 @@ Utilisez l’exemple dans [sys.dm_db_column_store_row_group_physical_stats &#40;
 
 Tirez parti de solutions comme [Adaptive Index Defrag](https://github.com/Microsoft/tigertoolbox/tree/master/AdaptiveIndexDefrag) pour gérer automatiquement la défragmentation des index et les mises à jour des statistiques pour une ou plusieurs bases de données. Cette procédure choisit automatiquement s’il faut reconstruire ou réorganiser un index en fonction de son niveau de fragmentation, entre autres, et mettre à jour les statistiques avec un seuil linéaire.
 
-## <a name="see-also"></a> Voir aussi        
+## <a name="see-also"></a>Voir aussi        
 [Index columnstore - Nouveautés](../../relational-databases/indexes/columnstore-indexes-what-s-new.md)    
 [Performances des requêtes d’index columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
 [Bien démarrer avec columnstore pour l’analytique opérationnelle en temps réel](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)   

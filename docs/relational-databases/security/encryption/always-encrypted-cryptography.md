@@ -1,7 +1,7 @@
 ---
 title: Chiffrement Always Encrypted
 ms.custom: ''
-ms.date: 02/29/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,26 +13,26 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cd361a27a07c7b7750046d9664d77fd6d3fdc04
-ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
+ms.openlocfilehash: 6e0ec7ce1a9c3a171ea44b23c5fa4a5897ad7de8
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007582"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388366"
 ---
 # <a name="always-encrypted-cryptography"></a>Chiffrement Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Ce document décrit les algorithmes et mécanismes de chiffrement permettant de dériver le matériel de chiffrement utilisé dans la fonctionnalité [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
   
-## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Clés, magasins de clé et algorithmes de chiffrement par clé  
+## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Clés, magasins de clés et algorithmes de chiffrement à clé
  Always Encrypted utilise deux types de clés : des clés principales de colonne et des clés de chiffrement de colonne.  
   
- Une clé principale de colonne (CMK) est une clé de chiffrement de clé (par exemple, une clé utilisée pour chiffrer d’autres clés) qui est toujours contrôlée par le client et stockée dans un magasin de clés externe. Un pilote client avec Always Encrypted interagit avec le magasin de clés via un fournisseur de magasins CMK, qui peut faire partie de la bibliothèque de pilotes (un fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/système) ou de l’application cliente (un fournisseur personnalisé). Les bibliothèques de pilotes clients incluent actuellement des fournisseurs de magasins de clés [!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour le [magasin de certificats Windows](/windows/desktop/SecCrypto/using-certificate-stores) et les modules de sécurité matériels (HSM).  (Pour obtenir la liste des fournisseurs, consultez [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Un développeur d'applications peut proposer un fournisseur personnalisé pour un magasin arbitraire.  
+ Une clé principale de colonne (CMK) est une clé de chiffrement à clé (par exemple, une clé utilisée pour chiffrer d’autres clés) qui est toujours contrôlée par le client et stockée dans un magasin de clés externes. Un pilote client avec Always Encrypted interagit avec le magasin de clés via un fournisseur de magasins CMK, qui peut faire partie de la bibliothèque de pilotes (un fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/système) ou de l’application cliente (un fournisseur personnalisé). Les bibliothèques de pilotes clients incluent actuellement des fournisseurs de magasins de clés [!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour le [magasin de certificats Windows](/windows/desktop/SecCrypto/using-certificate-stores) et les modules de sécurité matériels (HSM).  (Pour obtenir la liste des fournisseurs, consultez [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Un développeur d'applications peut proposer un fournisseur personnalisé pour un magasin arbitraire.  
   
- Une clé de chiffrement de colonne (CEK) est une clé de chiffrement de contenu (par exemple, une clé utilisée pour protéger les données) protégée par une clé CMK.  
+ Une clé de chiffrement de colonne (CEK) est une clé de chiffrement de contenu (par exemple, une clé utilisée pour protéger des données) protégée par une clé CMK.  
   
- Tous les fournisseurs de magasins de clés CMK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] chiffrent les clés CEK à l’aide de la méthode RSA-OAEP (RSA with Optimal Asymmetric Encryption) avec les paramètres par défaut spécifiés dans l’article RFC 8017, section A.2.1. Ces paramètres par défaut utilisent une fonction de hachage SHA-1 et une fonction de génération de masque MGF1 avec SHA-1.  
+ Tous les fournisseurs du magasin CMK [!INCLUDE[msCoName](../../../includes/msconame-md.md)] chiffrent les clés CEK à l’aide de la méthode RSA-OAEP (RSA avec Optimal Asymmetric Encryption Padding). Le fournisseur du magasin de clés qui prend en charge l’API de chiffrement Microsoft : La prochaine génération (CNG) dans .NET Framework ([classe SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) utilise les paramètres par défaut spécifiés par RFC 8017 dans la Section A.2.1. Ces paramètres par défaut utilisent une fonction de hachage SHA-1 et une fonction de génération de masque MGF1 avec SHA-1. Tous les autres fournisseurs du magasin de clés utilisent SHA-256. 
   
 ## <a name="data-encryption-algorithm"></a>Algorithme de chiffrement des données  
  Always Encrypted utilise l’algorithme **AEAD_AES_256_CBC_HMAC_SHA_256** pour chiffrer les données de la base de données.  
@@ -68,7 +68,7 @@ When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) trun
 iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_length)  
 ```  
   
- La troncation de la valeur HMAC est effectuée afin d'ajuster 1 bloc de données si nécessaire pour le vecteur d'initialisation.    
+ La troncation de la valeur HMAC est effectuée afin d'ajuster 1 bloc de données si nécessaire pour le vecteur d'initialisation.
 Par conséquent, le chiffrement déterministe génère toujours le même texte chiffré pour une valeur en texte clair donnée, ce qui permet de déduire si deux valeurs de texte en clair sont égales en comparant leurs valeurs de texte chiffré correspondantes. Cette divulgation limitée des informations permet au système de base de données de prendre en charge une comparaison d'égalité au niveau des valeurs de colonne chiffrées.  
   
  Le chiffrement déterministe est plus efficace pour dissimuler les modèles par rapport aux autres méthodes comme l'utilisation d'une valeur IV prédéfinie.  
@@ -96,7 +96,7 @@ MAC = HMAC-SHA-256(mac_key, versionbyte + IV + Ciphertext + versionbyte_length)
  Où :  
   
 ```  
-versionbyte = 0x01 and versionbyte_length = 1   
+versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
@@ -130,7 +130,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 1 + 32 + 16 + (FLOOR(DATALENGTH(cell_data)/16) + 1) * 16  
 ```  
   
- Exemple :  
+ Par exemple :  
   
 -   Une valeur en texte clair **int** d’une longueur de 4 octets devient une valeur binaire d’une longueur de 65 octets après chiffrement.  
   
@@ -178,7 +178,7 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 ## <a name="net-reference"></a>Référence .NET  
  Pour plus d’informations sur les algorithmes présentés dans ce document, consultez les fichiers **SqlAeadAes256CbcHmac256Algorithm.cs** et **SqlColumnEncryptionCertificateStoreProvider.cs** dans la [référence .NET](https://referencesource.microsoft.com/).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Always Encrypted &#40;moteur de base de données&#41;](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)   
  [Always Encrypted &#40;développement client&#41;](../../../relational-databases/security/encryption/always-encrypted-client-development.md)  
   

@@ -24,12 +24,12 @@ ms.author: dinethi
 manager: craigg
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 7993cfbf21efcbb6f984a91347987e5805741904
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 403ca9e5132a00f003aa67a2011d98d0044b4807
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67033408"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399654"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
 
@@ -68,7 +68,6 @@ Cette version de SSMS peut être installée dans les langues suivantes :
 SQL Server Management Studio 18.1 :<br>
 [Chinois (simplifié)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinois (traditionnel)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [Anglais (États-Unis)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [Français](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [Allemand](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italien](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japonais](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Coréen](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Portugais (Brésil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russe](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Espagnol](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
 
-
 > [!NOTE]
 > Le module SQL Server PowerShell est une installation distincte que vous pouvez effectuer via PowerShell Gallery. Pour plus d'informations, consultez la page [Télécharger le module SQL Server PowerShell](download-sql-server-ps-module.md).
 
@@ -79,7 +78,6 @@ SQL Server Management Studio 18.1 :<br>
 - **Integration Services (SSIS)**  : prise en charge pour la planification du package SSIS, situé dans le catalogue SSIS dans Azure ou le système de fichiers, dans Azure. Il existe trois entrées pour le lancement de la boîte de dialogue Nouvelle planification, l’élément de menu *Nouvelle planification...* affiché lors d’un clic droit sur la package SSIS dans le catalogue SSIS au sein d’Azure, l’élément de menu *Planifier un package SSIS dans Azure* sous l’élément de menu *Migrer vers Azure* sous l’élément de menu *Outils* et « Planifier SSIS dans Azure » affiché lors d’un clic droit sur le dossier Travaux sous l’agent SQL Server de Azure SQL Database Managed Instance.
 
 Pour plus d’informations sur les nouveautés de cette version, voir les [notes de publication de SSMS](release-notes-ssms.md).
-
 
 ## <a name="supported-sql-offerings-ssms-181"></a>Offres SQL prises en charge (SSMS 18.1)
 
@@ -93,7 +91,8 @@ Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand 
 
 - Windows 10 (64 bits) <sup>*</sup>
 - Windows 8.1 (64 bits)
-- Windows Server 2016 <sup>*</sup>
+- Windows Server 2019 (64 bits)
+- Windows Server 2016 (64 bits) <sup>*</sup>
 - Windows Server 2012 R2 (64 bits)
 - Windows Server 2012 (64 bits)
 - Windows Server 2008 R2 (64 bits)
@@ -105,7 +104,7 @@ Cette version de SSMS prend en charge les plateformes 64 bits suivantes quand 
 
 ## <a name="release-notes-ssms-181"></a>Notes de publication (SSMS 18.1)
 
-Il n’existe aucun problème connu dans cette version.
+Il existe quelques [problèmes connus](release-notes-ssms.md#known-issues-181) dans cette version.
 
 Pour plus d’informations sur cette version, voir les [notes de publication de SSMS](release-notes-ssms.md).
 

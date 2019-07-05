@@ -17,12 +17,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 7f0f2c7bf602e0280f7d38147d3d7924712d90eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1498a7d78e88055052499027a8255743ca3da6dc
+ms.sourcegitcommit: fb9114df7224446696e7772024f64735c3e46c8f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772624"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67345145"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Configurer les transactions distribuées pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,6 +89,15 @@ ALTER AVAILABILITY GROUP MyaAG
 
 >[!NOTE]
 >Depuis [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] Service Pack 2, vous pouvez modifier un groupe de disponibilité pour les transactions distribuées. Pour les versions de [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] antérieures au Service Pack 2, vous devez supprimer et recréer le groupe de disponibilité avec le paramètre `DTC_SUPPORT = PER_DB`. 
+
+Pour désactiver les transactions distribuées, utilisez la commande Transact-SQL suivante :
+
+```sql
+ALTER AVAILABILITY GROUP MyaAG
+   SET (
+      DTC_SUPPORT = NONE  
+      );
+```
 
 ## <a name="a-namedisttrandistributed-transactions---technical-concepts"></a><a name="distTran"/>Transactions distribuées - concepts techniques
 

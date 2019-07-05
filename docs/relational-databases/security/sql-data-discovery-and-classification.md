@@ -2,22 +2,22 @@
 title: Découverte et classification des données SQL | Microsoft Docs
 description: Découverte et classification des données SQL
 documentationcenter: ''
-ms.reviewer: carlrab
+ms.reviewer: vanto
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 02/13/2018
-ms.author: giladm
-author: giladm
-manager: shaik
-ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
-ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
+ms.date: 06/25/2019
+ms.author: mibar
+author: barmichal
+manager: craigg
+ms.openlocfilehash: b45f3a081b7be55642e662ed195cfc1377e3659b
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316691"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351730"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Découverte et classification des données SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ La découverte et la classification de vos données les plus sensibles (professi
 * Contrôler l’accès aux bases de données/colonnes contenant des données sensibles et en renforcer la sécurité.
 
 > [!NOTE]
-> La fonctionnalité Découverte et classification des données est **prise en charge pour SQL Server 2008 et versions ultérieures**. Pour Azure SQL Database, consultez [Découverte et classification des données Azure SQL Database](https://go.microsoft.com/fwlink/?linkid=866265).
+> La fonctionnalité Découverte et classification des données est **prise en charge pour SQL Server 2008 et versions ultérieures et peut être utilisée avec SSMS 17.5 ou versions ultérieures**. Pour Azure SQL Database, consultez [Découverte et classification des données Azure SQL Database](https://go.microsoft.com/fwlink/?linkid=866265).
 
 ## <a id="subheading-1"></a>Vue d'ensemble
 La fonctionnalité Découverte et classification des données introduit un ensemble de services avancées, qui forment un nouveau paradigme de protection des informations SQL visant à protéger les données et pas seulement la base de données :

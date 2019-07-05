@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185025"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419169"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ Le serveur calcule le jeu de résultats et, pour toutes les colonnes chiffrées 
 
 Pour plus d’informations sur la façon de développer des applications à l’aide d’Always Encrypted avec des pilotes clients particuliers, consultez [Always Encrypted (développement client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Le déchiffrement est effectué via le client. Cela signifie que certaines actions qui se produisent uniquement côté serveur ne fonctionneront pas en utilisant Always Encrypted. 
 
@@ -181,11 +181,11 @@ Vous ne pouvez pas utiliser les clauses suivantes pour les colonnes chiffrées :
 Les fonctionnalités suivantes ne fonctionnent pas sur les colonnes chiffrées :
 
 - Réplication transactionnelle ou de fusion
-- Requêtes distribuées (serveurs liés)
+- Requêtes distribuées (serveurs liés, OPENROWSET(T-SQL), OPENDATASOURCE(T-SQL))
 
 Spécifications des outils
 
-- SQL Server Management Studio peut déchiffrer les résultats récupérés à partir de colonnes chiffrées si vous vous connectez avec *column encryption setting=enabled* sous l’onglet **Propriétés supplémentaires** de la boîte de dialogue **Se connecter au serveur** . Nécessite au moins SQL Server Management Studio version 17 pour insérer, mettre à jour ou filtrer les colonnes chiffrées.
+- SQL Server Management Studio peut déchiffrer les résultats récupérés à partir de colonnes chiffrées si vous vous connectez avec *column encryption setting=enabled* sous l’onglet **Propriétés supplémentaires** de la boîte de dialogue **Se connecter au serveur** . Nécessite au moins SQL Server Management Studio version 17 pour insérer, mettre à jour ou filtrer les colonnes chiffrées. Pour que les chaînes de connexion soient utilisées dans les applications clientes, consultez [Always Encrypted (développement client)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
 
 - Les connexions chiffrées depuis `sqlcmd` requièrent au moins la version 13.1, disponible dans le [Centre de téléchargement](https://go.microsoft.com/fwlink/?LinkID=825643).
 
@@ -219,7 +219,7 @@ Spécifications des outils
 -   Dans [!INCLUDE[ssSDS](../../../includes/sssds-md.md)], les autorisations *VIEW* ne sont pas accordées par défaut au rôle de base de données fixe `public` . Cela permet à certains outils hérités (utilisant des versions antérieures de DacFx) de fonctionner correctement. Ainsi, pour travailler avec des colonnes chiffrées (même si vous ne les déchiffrez pas), un administrateur de base de données doit accorder explicitement les deux autorisations *VIEW* .  
 
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Le code [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivant crée des métadonnées de clé principale de colonne, des métadonnées de clé de chiffrement de colonne et une table comportant des colonnes chiffrées. Pour plus d’informations sur la façon de créer les clés référencées dans les métadonnées, consultez :
 - [Configurer Always Encrypted à l’aide de SQL Server Management Studio](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md)
 - [Configurer Always Encrypted à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md)
@@ -255,7 +255,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md)   
 [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
 [CREATE TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql.md)   

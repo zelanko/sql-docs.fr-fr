@@ -27,12 +27,12 @@ ms.assetid: 2202236b-e09f-40a1-bbc7-b8cff7488905
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fba367c376084ff4842ef165382fb5a91f410724
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 02a84386929f2e62200cc67946be3567c6e02a51
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266000"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463597"
 ---
 # <a name="create-type-transact-sql"></a>CREATE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,13 +52,15 @@ ms.locfileid: "53266000"
 -- User-defined Data Type Syntax    
 CREATE TYPE [ schema_name. ] type_name  
 {   
-    FROM base_type   
-    [ ( precision [ , scale ] ) ]  
-    [ NULL | NOT NULL ]   
-  | EXTERNAL NAME assembly_name [ .class_name ]   
-AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
-    | [ <table_constraint> ] [ ,... n ]    
-    | [ <table_index> ] [ ,... n ] } )
+    [
+      FROM base_type   
+      [ ( precision [ , scale ] ) ]  
+      [ NULL | NOT NULL ]
+    ]
+    | EXTERNAL NAME assembly_name [ .class_name ]   
+    | AS TABLE ( { <column_definition> | <computed_column_definition> [ ,... n ] }
+      [ <table_constraint> ] [ ,... n ]    
+      [ <table_index> ] [ ,... n ] } )
  
 } [ ; ]  
   
@@ -206,7 +208,7 @@ column_name <data_type>
  **[.** *class_name*  **]**  
  **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
- Spécifie la classe au sein de l'assembly qui implémente le type défini par l'utilisateur. *class_name* doit être un identificateur valide et doit exister en tant que classe dans l’assembly avec une visibilité d’assembly. *class_name* respecte la casse, quel que soit le classement de base de données, et doit correspondre exactement au nom de la classe dans l’assembly correspondant. Le nom de la classe peut être un nom qualifié par un espace de noms entouré de crochets (**[ ]**) si le langage de programmation utilisé pour écrire la classe utilise le concept des espaces de noms (par exemple C#). Si *class_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose qu’il est identique à *type_name*.  
+ Spécifie la classe au sein de l'assembly qui implémente le type défini par l'utilisateur. *class_name* doit être un identificateur valide et doit exister en tant que classe dans l’assembly avec une visibilité d’assembly. *class_name* respecte la casse, quel que soit le classement de base de données, et doit correspondre exactement au nom de la classe dans l’assembly correspondant. Le nom de la classe peut être un nom qualifié par un espace de noms entouré de crochets ( **[ ]** ) si le langage de programmation utilisé pour écrire la classe utilise le concept des espaces de noms (par exemple C#). Si *class_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose qu’il est identique à *type_name*.  
   
  \<column_definition>  
  Définit les colonnes pour un type de table défini par l'utilisateur.  
@@ -250,7 +252,7 @@ Indique qu’il faut créer un index sur la table. Il peut s’agir d’un index
   
  Indique qu'un index HASH est créé. Les index de hachage sont pris en charge uniquement sur les tables optimisées en mémoire.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La classe de l’assembly référencé dans *assembly_name*, ainsi que ses méthodes, doit satisfaire tous les besoins d’implémentation d’un type défini par l’utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur ces exigences, consultez [Types CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).  
   
  Les autres considérations portent sur les points suivants :  
@@ -274,7 +276,7 @@ Indique qu’il faut créer un index sur la table. Il peut s’agir d’un index
 ## <a name="memory-optimized-table-types"></a>Types de tables optimisées en mémoire  
  À partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], le traitement des données dans un type de table peut être effectué dans la mémoire principale, et non sur disque. Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md). Pour obtenir des exemples de code montrant comment créer des tables à mémoire optimisée, consultez [Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation CREATE TYPE dans la base de données actuelle et l’autorisation ALTER sur *schema_name*. Si *schema_name* n’est pas spécifié, les règles de résolution de noms par défaut pour la détermination du schéma de l’utilisateur actuel s’appliquent. Si *assembly_name* est spécifié, un utilisateur doit être propriétaire de l’assembly ou disposer d’une autorisation REFERENCES sur lui.  
 
  Si des colonnes de l’instruction CREATE TABLE sont définies avec un type de données défini par l’utilisateur, une autorisation REFERENCES est nécessaire sur ce type.
@@ -293,7 +295,7 @@ CREATE TYPE SSN
 FROM varchar(11) NOT NULL ;  
 ```  
   
-### <a name="b-creating-a-user-defined-type"></a>b. Création d'un type défini par l'utilisateur  
+### <a name="b-creating-a-user-defined-type"></a>B. Création d'un type défini par l'utilisateur  
  L’exemple suivant crée un type `Utf8String` qui référence la classe `utf8string` dans l’assembly `utf8string`. Avant de créer le type, l'assembly `utf8string` est enregistré dans la base de données locale. Remplacez la partie binaire de l'instruction CREATE ASSEMBLY par une description valide.  
   
 **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -317,8 +319,27 @@ CREATE TYPE LocationTableType AS TABLE
     , CostRate INT );  
 GO  
 ```  
+
+### <a name="d-creating-a-user-defined-table-type-with-primary-key-and-index"></a>D. Création d’un type de table défini par l’utilisateur avec l’index et la clé primaire
+L’exemple suivant crée un type de table défini par l’utilisateur qui a trois colonnes, une d'entre elles (`Name`) est la clé primaire et l’autre (`Price`) possède un index non cluster.  Pour plus d’informations sur la création et l’utilisation des paramètres table, consultez [Utiliser les paramètres table &#40;moteur de base de données&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md).
+
+```sql
+CREATE TYPE InventoryItem AS TABLE
+(
+    [Name] NVARCHAR(50) NOT NULL,
+    SupplierId BIGINT NOT NULL,
+    Price DECIMAL (18, 4) NULL,
+    PRIMARY KEY (
+        Name
+    ),
+    INDEX IX_InventoryItem_Price (
+        Price
+    )
+)
+GO
+```
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 825fedb3bfc3262abf4e432075e03f6e0a370eac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d5e7b1be70692f29b81f06725adfa326ba77d65
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626701"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388364"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -134,6 +134,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
   | MAXDOP = max_degree_of_parallelism
   | DATA_COMPRESSION = { NONE | ROW | PAGE}
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
@@ -233,19 +234,19 @@ Sauf indication contraire, le type d’index par défaut est NONCLUSTERED.
 
 Vous pouvez combiner jusqu’à 32 colonnes dans une même clé d’index composite. Toutes les colonnes d'une clé d'index composite doivent se trouver dans la même table ou la même vue. La taille maximale autorisée pour les valeurs d’index combinées est de 900 octets pour un index cluster, ou de 1 700 pour un index non-cluster. Les limites sont de 16 colonnes et de 900 octets pour les versions antérieures à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
 
-Les colonnes ayant les types de données LOB (Large OBject) **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml** ou **image** ne peuvent pas être spécifiées comme colonnes clés pour un index. De plus, une définition de vue ne peut pas contenir des colonnes **ntext**, **text** ou **image**, même si elles ne sont pas référencées dans l’instruction CREATE INDEX.
+Les colonnes ayant les types de données LOB (Large OBject) **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml** ou **image** ne peuvent pas être spécifiées comme colonnes clés pour un index. De plus, une définition de vue ne peut pas contenir des colonnes **ntext**, **text** ou **image**, même si elles ne sont pas référencées dans l’instruction CREATE INDEX.
 
 Vous pouvez créer des index sur des colonnes de type CLR défini par l'utilisateur si le type prend en charge le tri binaire. Vous pouvez également créer des index sur des colonnes calculées définies comme appels de méthodes d'une colonne de type défini par l'utilisateur, dès lors que les méthodes sont déterministes et n'exécutent pas des opérations d'accès aux données. Pour plus d’informations sur l’indexation des colonnes de types CLR définis par l’utilisateur, consultez [Types CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).
 
 [ **ASC** | DESC ] Détermine le sens croissant ou décroissant du tri d’une colonne d’index particulière. La valeur par défaut est ASC.
 
-INCLUDE **(**_column_ [ **,**... *n* ] **)** Spécifie les colonnes non clés à ajouter au niveau feuille de l’index non cluster. L'index non cluster peut être unique ou non.
+INCLUDE **(** _column_ [ **,** ... *n* ] **)** Spécifie les colonnes non clés à ajouter au niveau feuille de l’index non cluster. L'index non cluster peut être unique ou non.
 
 Les noms de colonne ne peuvent pas être répétés dans la liste INCLUDE et ne peuvent pas être utilisés simultanément comme colonnes clés et colonnes non clés. Les index non cluster contiennent toujours les colonnes de l'index cluster si un index cluster est défini sur la table. Pour plus d’informations, consultez [Créer des index avec colonnes incluses](../../relational-databases/indexes/create-indexes-with-included-columns.md).
 
-Tous les types de données sont autorisés, à l'exception de **text**, **ntext**et **image**. L’index doit être créé ou reconstruit hors connexion (ONLINE = OFF) si l’une des colonnes non-clés spécifiées est du type de données **varchar(max)**, **nvarchar(max)** ou **varbinary(max)**.
+Tous les types de données sont autorisés, à l'exception de **text**, **ntext**et **image**. L’index doit être créé ou reconstruit hors connexion (ONLINE = OFF) si l’une des colonnes non-clés spécifiées est du type de données **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** .
 
-Les colonnes calculées déterministes et précises ou imprécises peuvent être des colonnes incluses. Les colonnes calculées dérivées des types de données **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et **xml** peuvent être incluses dans des colonnes non-clés dès lors que le type de données de la colonne calculée est autorisé comme colonne incluse. Pour plus d'informations, consultez [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).
+Les colonnes calculées déterministes et précises ou imprécises peuvent être des colonnes incluses. Les colonnes calculées dérivées des types de données **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** et **xml** peuvent être incluses dans des colonnes non-clés dès lors que le type de données de la colonne calculée est autorisé comme colonne incluse. Pour plus d'informations, consultez [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).
 
 Pour plus d’informations sur la création d’un index XML, consultez [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md).
 
@@ -285,12 +286,12 @@ ON _filegroup_name_
 
 Crée l'index spécifié dans le groupe de fichiers spécifié. Si aucun emplacement n'est défini et que la table ou la vue n'est pas partitionnée, l'index utilise le même groupe de fichiers que la table ou la vue sous-jacente. Le groupe de fichiers doit déjà exister.
 
-ON **"** default **"**
+ON **"** default **"** 
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)].
 
 Crée l’index spécifié dans le même groupe de fichiers ou schéma de partition que la table ou la vue.
 
-Le terme « default », dans ce contexte, n'est pas un mot clé. Il s’agit de l’identificateur du groupe de fichiers par défaut et il doit être délimité, comme dans ON **"** default **"** ou ON **[** default **]**. Si "default" est spécifié, l'option QUOTED_IDENTIFIER doit être activée (ON) pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, voir [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
+Le terme « default », dans ce contexte, n'est pas un mot clé. Il s’agit de l’identificateur du groupe de fichiers par défaut et il doit être délimité, comme dans ON **"** default **"** ou ON **[** default **]** . Si "default" est spécifié, l'option QUOTED_IDENTIFIER doit être activée (ON) pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, voir [SET QUOTED_IDENTIFIER](../../t-sql/statements/set-quoted-identifier-transact-sql.md).
 
 > [!NOTE]
 > « default » n’indique pas le groupe de fichiers de base de données par défaut dans le contexte de CREATE INDEX. Cela diffère de CREATE TABLE, où « default » localise la table dans le groupe de fichiers de base de données par défaut.
@@ -341,7 +342,7 @@ L'option PAD_INDEX est utile seulement si FILLFACTOR est spécifié, car PAD_IND
 
 Dans la syntaxe de compatibilité descendante, WITH PAD_INDEX est équivalent à WITH PAD_INDEX = ON.
 
-FILLFACTOR **=**_fillfactor_
+FILLFACTOR **=** _fillfactor_
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Spécifie un pourcentage indiquant le taux de remplissage appliqué par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] au niveau feuille de chaque page d'index lors de la création ou de la reconstruction de l'index. *fillfactor* doit être une valeur entière comprise entre 1 et 100. Si *fillfactor* a la valeur 100, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée des index avec des pages de niveau feuille intégralement remplies.
@@ -456,7 +457,7 @@ Indique le temps (valeur entière spécifiée en minutes) pendant lequel une op�
 - index cluster unique initial sur une vue ;
 - index cluster désactivés ;
 - index cluster si la table sous-jacente contient des types de données LOB : **image**, **ntext**, **text** et des types spatiaux.
-- Les colonnes **varchar(max)** et **varbinary(max)** ne peuvent pas faire partie d’un index. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) et dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], quand une table contient des colonnes **varchar(max)** ou **varbinary(max)**, un index cluster contenant d’autres colonnes peut être créé ou reconstruit à l’aide de l’option **ONLINE**. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] n’autorise pas l’option **ONLINE** quand la table de base contient des colonnes **varchar(max)** ou **varbinary(max)**.
+- Les colonnes **varchar(max)** et **varbinary(max)** ne peuvent pas faire partie d’un index. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (en commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) et dans [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)], quand une table contient des colonnes **varchar(max)** ou **varbinary(max)** , un index cluster contenant d’autres colonnes peut être créé ou reconstruit à l’aide de l’option **ONLINE**. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] n’autorise pas l’option **ONLINE** quand la table de base contient des colonnes **varchar(max)** ou **varbinary(max)** .
 
 Pour plus d'informations, consultez [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
@@ -475,6 +476,11 @@ Indique si les verrous de page sont autorisés. La valeur par défaut est ON.
 ON Les verrous de page sont autorisés lors de l’accès à l’index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de page sont utilisés.
 
 OFF Les verrous de page ne sont pas utilisés.
+
+
+OPTIMIZE_FOR_SEQUENTIAL_KEY = {ON | **OFF** } **s’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures.
+
+Spécifie s’il faut optimiser ou pas la contention d’insertion de la dernière page. La valeur par défaut est OFF. Pour plus d'informations, consultez la section [Clés séquentielles](#sequential-keys) .
 
 MAXDOP = _max_degree_of_parallelism_
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -504,7 +510,7 @@ PAGE L’index ou les partitions spécifiées sont compressés au moyen de la co
 
 Pour plus d’informations sur la compression, consultez [Compression des données](../../relational-databases/data-compression/data-compression.md).
 
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**..._n_ ] **)**
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)** 
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Spécifie les partitions auxquelles le paramètre DATA_COMPRESSION s'applique. Si l'index n'est pas partitionné, l'argument ON PARTITIONS générera une erreur. Si la clause ON PARTITIONS n'est pas fournie, l'option DATA_COMPRESSION s'applique à toutes les partitions d'un index partitionné.
@@ -528,7 +534,7 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );
 ```
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 L'instruction CREATE INDEX est optimisée comme toute autre requête. Pour consommer moins de ressources sur les opérations d'E/S, le processeur de requêtes peut choisir d'analyser un autre index au lieu d'effectuer une analyse de la table. L'opération de tri peut être éliminée dans certains cas. Sur des ordinateurs multiprocesseurs, CREATE INDEX peut utiliser plusieurs processeurs pour exécuter les opérations d'analyse et de tri associées à la création de l'index, à l'instar des autres requêtes. Pour plus d’informations, consultez [Configurer des opérations d’index parallèles](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
@@ -631,7 +637,7 @@ Les colonnes calculées persistantes nécessitent de définir les options SET ci
 
 La contrainte UNIQUE ou PRIMARY KEY peut contenir une colonne calculée dès lors qu'elle satisfait à toutes les conditions d'indexation. En particulier, la colonne calculée doit être déterministe et précise, ou déterministe et permanente. Pour plus d’informations sur le déterminisme, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).
 
-Les colonnes calculées dérivées des types de données **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et **xml** peuvent être indexées comme colonnes clés ou comme colonnes non-clés incluses dès lors que le type de données de la colonne calculée est autorisé comme colonne clé d’index ou comme colonne non-clé incluse. Par exemple, vous ne pouvez pas créer un index XML primaire sur une colonne **xml** calculée. Si la taille de la clé d'index est supérieure à 900 octets, un message d'avertissement est affiché.
+Les colonnes calculées dérivées des types de données **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** et **xml** peuvent être indexées comme colonnes clés ou comme colonnes non-clés incluses dès lors que le type de données de la colonne calculée est autorisé comme colonne clé d’index ou comme colonne non-clé incluse. Par exemple, vous ne pouvez pas créer un index XML primaire sur une colonne **xml** calculée. Si la taille de la clé d'index est supérieure à 900 octets, un message d'avertissement est affiché.
 
 La création d'un index sur une colonne calculée peut provoquer l'échec d'une opération d'insertion ou de mise à jour qui fonctionnait auparavant. Ce type d'échec peut survenir lorsque la colonne calculée génère une erreur arithmétique. Par exemple, dans la table suivante, bien que la colonne calculée `c` retourne une erreur arithmétique, l’instruction INSERT fonctionne.
 
@@ -656,11 +662,11 @@ Des colonnes non clés, appelées colonnes incluses, peuvent être ajoutées au 
 
 ## <a name="specifying-index-options"></a>Définition des options d'index
 
-[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit de nouvelles options d'index et modifié également la façon dont les options sont spécifiées. Dans la syntaxe à compatibilité descendante, WITH *option_name* est équivalent à WITH **(**\<option_name> **= ON )**. Lorsque vous définissez les options d'index, les règles suivantes s'appliquent :
+[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a introduit de nouvelles options d'index et modifié également la façon dont les options sont spécifiées. Dans la syntaxe à compatibilité descendante, WITH *option_name* est équivalent à WITH **(** \<option_name> **= ON )** . Lorsque vous définissez les options d'index, les règles suivantes s'appliquent :
 
-- Les nouvelles options d’index peuvent être spécifiées uniquement en utilisant WITH (**_option\_name_ = ON | OFF**).
+- Les nouvelles options d’index peuvent être spécifiées uniquement en utilisant WITH ( **_option\_name_ = ON | OFF**).
 - Vous ne pouvez pas définir les options en utilisant la syntaxe de compatibilité descendante et la nouvelle syntaxe dans une même instruction. Par exemple, si vous définissez WITH (**DROP_EXISTING, ONLINE = ON**), l’instruction échoue.
-- Quand vous créez un index XML, les options doivent être spécifiées en utilisant WITH (**_option_name_= ON | OFF**).
+- Quand vous créez un index XML, les options doivent être spécifiées en utilisant WITH ( **_option_name_= ON | OFF**).
 
 ## <a name="dropexisting-clause"></a>Clause DROP_EXISTING
 
@@ -732,6 +738,13 @@ Les fonctionnalités suivantes sont désactivées pour les opérations de créat
 Lorsque ALLOW_ROW_LOCKS = ON et ALLOW_PAGE_LOCK = ON, les verrous de ligne, de page et de table sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] choisit le verrou approprié et peut promouvoir un verrou de ligne ou de page en verrou de table.
 
 Lorsque ALLOW_ROW_LOCKS = OFF et ALLOW_PAGE_LOCK = OFF, seul un verrou de table est autorisé lors de l'accès à l'index.
+
+## <a name="sequential-keys"></a>Clés séquentielles
+**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures.
+
+La contention de l’insertion de la dernière page est un problème de performances courant qui se produit lorsqu’un grand nombre de threads simultanés tentent d’insérer des lignes dans un index avec une clé séquentielle. Un index est considéré comme séquentiel lorsque la colonne clé principale contient des valeurs qui augmentent (ou diminuent) toujours, par exemple une colonne d’identité ou une date correspondant par défaut à la date/heure actuelle. Étant donné que les clés insérées sont séquentielles, toutes les nouvelles lignes seront insérées à la fin de la structure d’index - en d’autres termes, sur la même page. Cela conduit à une contention de la page en mémoire qui peut être observée comme plusieurs threads en attente sur PAGELATCH_EX de la page en question.
+
+L’activation de l’option d’index OPTIMIZE_FOR_SEQUENTIAL_KEY permet une optimisation dans le moteur de base de données qui vous aide à améliorer le débit pour les insertions de haute concurrence dans l’index. Elle est conçue pour les index qui ont une clé séquentielle et sont susceptibles d’engendrer des contentions d’insertion de la dernière page, mais elle peut être également utile avec les index qui ont des zones réactives dans d’autres zones de la structure d’index B-Tree.
 
 ## <a name="viewing-index-information"></a>Affichage des informations sur les index
 
@@ -1104,7 +1117,7 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
   ON Purchasing..ProductVendor (VendorID);
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [Guide de conception d’index SQL Server](../../relational-databases/sql-server-index-design-guide.md)
 - [Index et ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)

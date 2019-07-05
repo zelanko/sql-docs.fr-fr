@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: ad844d0b08ba0323f9930970a3056e592e44c25e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e64c2fa9f1006e07f6da72d8fdfc146c9faf8b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765723"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388106"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Créer un groupe de disponibilité indépendant du domaine
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +71,10 @@ Un suffixe DNS commun est nécessaire pour le cluster de groupe de travail d’u
 10. Vous êtes invité à redémarrer. Si vous ne voulez pas redémarrer immédiatement, cliquez sur Redémarrer ultérieurement, sinon cliquez sur Redémarrer maintenant.
 11. Une fois que le serveur a redémarré, vérifiez que le suffixe DNS commun est configuré en réexaminant Système.
 
-
 ![Configuration réussie du suffixe DNS][4]
+
+  > [!NOTE]
+  > Si vous utilisez plusieurs sous-réseaux et avez un nom DNS statique, vous devez disposer d’un processus en place pour mettre à jour l’enregistrement DNS associé à l’écouteur avant d’effectuer un basculement, car sinon le nom de réseau n’est pas mis en ligne.
 
 ## <a name="create-a-domain-independent-availability-group"></a>Créer un groupe de disponibilité indépendant du domaine
 
