@@ -1,7 +1,7 @@
 ---
 title: Contraintes d’arête de graphe | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,31 +13,22 @@ helpviewer_keywords:
 - edge constraints [Azure SQL Database]
 - graph edge constraints
 - SQL Graph
-ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86544dee5262a1d04c1ff1d8e59f8ddac5e9b5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: aa73858e6df29c814821ee9e24923cbfc0fbd4a2
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774648"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343891"
 ---
 # <a name="edge-constraints"></a>Contraintes d’arête
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  Les contraintes d’arête peuvent être utilisées pour appliquer l’intégrité des données et une sémantique spécifique sur les tables d’arêtes dans une base de données de graphe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  
-Cet article contient les sections suivantes.  
-  
-[Contraintes d’arête](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[Contraintes d’arête](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
-  
-[Tâches associées](../../relational-databases/tables/graph-edge-constraints.md#Tasks)  
-  
+Les contraintes Edge peuvent être utilisées pour appliquer l’intégrité des données et une sémantique spécifique sur les tables Edge dans une base de données de graphe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
 ##  <a name="Connection"></a> Contraintes d’arête
  Dans la première version des fonctionnalités de graphe, les tables d’arêtes n’appliquaient rien pour les points de terminaison de l’arête. Autrement dit, une arête dans une base de données de graphe pouvait connecter n’importe quel nœud à n’importe quel autre nœud, quel que soit leur type. 
 
@@ -66,3 +57,5 @@ Cet article contient les sections suivantes.
 |Explique comment supprimer une contrainte d’arête.|[Supprimer une contrainte d’arête](../../relational-databases/tables/delete-edge-constraint.md)|  
 |Explique comment modifier une contrainte d’arête.|[Modifier une contrainte d’arête](../../relational-databases/tables/modify-edge-constraint.md)|  
 |Explique comment afficher les propriétés d’une contrainte d’arête.|[Afficher les propriétés d’une contrainte d’arête](../../relational-databases/tables/view-edge-constraint-properties.md)|  
+| Vue d’ensemble de la technologie Graph dans SQL Server | [Traitement de graphiques avec SQL Server et Azure SQL Database](../graphs/sql-graph-overview.md) |
+| &nbsp; | &nbsp; |
