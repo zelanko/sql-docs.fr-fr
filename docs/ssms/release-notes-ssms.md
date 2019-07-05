@@ -11,12 +11,12 @@ ms.author: maghan
 manager: craigg
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 74ec0cd11e1c13363905c71a64096f6c4eb8b053
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: 0be9bae60c46aa43c6f0acb5de5204d33a318450
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263538"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399666"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notes de publication de SQL Server Management Studio (SSMS)
 
@@ -56,7 +56,7 @@ SSMS 18.1 est la dernière version en disponibilité générale (GA) de SSMS. S
 
 | Nouvel élément| Détails|
 | :-------| :------|
-| Diagrammes de base de données | Les diagrammes de base de données ont été rajoutés à SSMS. Pour plus d’informations, consultez [Diagrammes de base de données](https://feedback.azure.com/forums/908035/suggestions/37507828). |
+| Diagrammes de base de données | [Les diagrammes de base de données ont été rajoutés à SSMS](https://feedback.azure.com/forums/908035/suggestions/37507828).
 | SSBDIAGNOSE.EXE |L’outil de ligne de commande SQL Server Diagnose a été rajouté au package SSMS.|
 | Integration Services (SSIS) | Prise en charge de la planification du package SSIS, situé dans le catalogue SSIS dans Azure ou le système de fichiers, dans Azure. Il existe trois entrées pour le lancement de la boîte de dialogue Nouvelle planification, l’élément de menu *Nouvelle planification...* affiché lors d’un clic droit sur la package SSIS dans le catalogue SSIS au sein d’Azure, l’élément de menu *Planifier un package SSIS dans Azure* sous l’élément de menu *Migrer vers Azure* sous l’élément de menu *Outils* et « Planifier SSIS dans Azure » affiché lors d’un clic droit sur le dossier Travaux sous l’agent SQL Server de Azure SQL Database Managed Instance.|
 
@@ -101,6 +101,12 @@ SSMS 18.1 est la dernière version en disponibilité générale (GA) de SSMS. S
 | Agent SQL | Correction d’un problème lié au fait que le bouton « Afficher » situé dans *Propriétés de l’étape du travail* n’était pas toujours activé, ce qui empêchait l’affichage de la sortie d’une étape de travail donnée. |
 | Interface utilisateur XEvent | Ajout de la colonne « Package » à la liste XEvents pour distinguer les événements portant le même nom. |
 | Interface utilisateur XEvent | Ajout du mappage de type de classe « EXTERNAL LIBRARY » manquant à XEventUI. |
+
+### <a name="known-issues-181"></a>Problèmes connus (18.1)
+
+- Les utilisateurs peuvent voir une erreur lorsqu’ils font glisser un objet de table de l’Explorateur d’objets à l’éditeur de requête. Nous sommes au courant du problème et le correctif est prévu pour la prochaine version.
+
+- Les options de couleur pour *Grouper les connexions* et *Connexions à un seul serveur* sous Options -> Éditeur de texte -> onglet Éditeur et barre d’état -> Couleurs et disposition de la barre d’état ne sont pas conservées après la fermeture de SSMS 18.1. Après avoir rouvert SSMS, l’option Couleurs et disposition de la barre d’état revient à sa définition par défaut (blanc).
 
 ## <a name="previous-ssms-releases"></a>Versions précédentes de SSMS
 
@@ -368,9 +374,9 @@ Liste des fonctionnalités dépréciées ou supprimées
 - Suppression du nœud « Maintenance > Existant » dans l’Explorateur d’objets.
   - Les nœuds très anciens « Plan de maintenance de base de données » et « SQL Mail » ne seront plus accessibles. Les nœuds modernes « Database Mail » et « Plans de maintenance » continueront de fonctionner normalement.
 
-### <a name="known-issues"></a>Problèmes connus
+### <a name="known-issues-180"></a>Problèmes connus (18.0)
 
-Lors de l’installation de la version 18.0, vous pouvez rencontrer un problème qui empêche l’exécution de SQL Server Management Studio. Si vous rencontrez ce problème, suivez les étapes de l’article [SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) (SSMS2018 - Installé, mais ne s’exécute pas).
+- Lors de l’installation de la version 18.0, vous pouvez rencontrer un problème qui empêche l’exécution de SQL Server Management Studio. Si vous rencontrez ce problème, suivez les étapes de l’article [SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run) (SSMS2018 - Installé, mais ne s’exécute pas).
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>![télécharger](../ssdt/media/download.png) [SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409)
 
@@ -454,7 +460,7 @@ Intégration de Microsoft Azure :
 - Correction du problème selon lequel SSMS affichait seulement les 50 premiers abonnements (boîtes de dialogue Always Encrypted, Sauvegarder/Restaurer à partir d’une URL, et autres).
 - Correction d’un problème lié à SSMS qui levait une exception (« Index hors limites ») quand il tentait de se connecter à un compte Microsoft Azure sans compte de stockage (dans la boîte de dialogue Restaurer la sauvegarde à partir d’une URL). 
 
-Scripts d’objets : 
+Scripts d’objets :
 
 - Avec des scripts « Annuler et créer », SSMS évite désormais de générer du code T-SQL dynamique.
 - Avec des scripts portant sur un objet de base de données, SSMS ne génère plus de script pour définir des configurations étendues à la base de données, si elles sont définies sur les valeurs par défaut.

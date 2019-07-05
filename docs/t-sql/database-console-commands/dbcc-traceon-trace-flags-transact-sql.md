@@ -21,18 +21,37 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 31bfc7ef9761ac40b56af9b733a29fbb12bc586e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e366d686bc71d9b4ee391013fedb25e93494c45
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822963"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413156"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Indicateurs de trace (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Les indicateurs de trace sont utilisés pour définir des caractéristiques de serveur spécifiques ou pour modifier un comportement particulier. Par exemple, l’indicateur de trace 3226 est un indicateur de trace de démarrage couramment utilisé qui supprime les messages de réussite de la sauvegarde dans le journal des erreurs. Les indicateurs de trace sont fréquemment utilisés pour diagnostiquer les problèmes de performances, ou pour déboguer des procédures stockées ou des systèmes informatiques complexes, mais ils peuvent être également recommandés par le Support Microsoft pour modifier un comportement qui a un impact négatif sur une charge de travail spécifique.  Tous les indicateurs de trace documentés et ceux qui sont recommandés par le Support Microsoft sont entièrement pris en charge dans un environnement de production quand ils sont utilisés comme indiqué.  Notez que les indicateurs de trace de cette liste peuvent faire l’objet de considérations supplémentaires relatives à leur utilisation particulière : il est donc conseillé d’examiner attentivement toutes les recommandations données ici et/ou par votre ingénieur du support technique. En outre, à l’instar de toute modification de configuration dans SQL Server, il est toujours préférable de tester minutieusement l’indicateur dans un environnement hors production avant de le déployer.
+
+## <a name="remarks"></a>Notes  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il existe trois types d’indicateurs de trace : de requête, de session et globaux. Les indicateurs de trace de requête sont actifs dans le contexte d’une requête spécifique. Les indicateurs de trace de session sont actifs pour une connexion et visibles uniquement par celle-ci. Les indicateurs de trace globaux sont définis au niveau du serveur et sont visibles pour chaque connexion sur celui-ci. Certains indicateurs ne peuvent être activés qu'en tant qu'indicateurs globaux, tandis que d'autres peuvent être activés avec une étendue globale ou de session.  
+  
+ Les règles suivantes s'appliquent :  
+-   Un indicateur de trace global doit être activé globalement. Sinon, il est sans effet. Il est recommandé d’activer les indicateurs de trace globaux au démarrage, à l’aide de l’option de ligne de commande **-T**. Cela garantit que l’indicateur de trace reste actif après le redémarrage d’un serveur. Redémarrez SQL Server pour que l’indicateur de trace prenne effet. 
+-   Si un indicateur de trace possède une étendue globale, de session ou de requête, il peut être activé avec l’étendue appropriée. Un indicateur de trace activé au niveau session n'affecte jamais une autre session et l'effet de l'indicateur de trace est perdu lorsque le SPID qui a ouvert la session se déconnecte.  
+  
+Les indicateurs de trace s'activent ou se désactivent de l'une des façons suivantes :
+-   en utilisant les commandes DBCC TRACEON et DBCC TRACEOFF ;  
+     Par exemple, pour activer l’indicateur de trace 2528 globalement, utilisez [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) avec l’argument -1 : `DBCC TRACEON (2528, -1)`. L’effet de l’activation d’un indicateur de trace global avec DBCC TRACEON est perdu lors du redémarrage du serveur. Pour désactiver un indicateur de trace global, utilisez [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) avec l’argument -1.  
+-   Utilisation de l’option de démarrage **-T** pour signaler que l’indicateur de trace doit être défini au démarrage.  
+     L’option de démarrage **-T** active un indicateur de trace de façon globale. Vous ne pouvez pas activer un indicateur de trace de niveau session à l'aide d'une option de démarrage. Cela garantit que l’indicateur de trace reste actif après le redémarrage d’un serveur. Pour plus d’informations sur les options de démarrage, consultez [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md).
+-   Au niveau de la requête, utilisation de [l’indicateur de requête](https://support.microsoft.com/kb/2801413) QUERYTRACEON. L’option QUERYTRACEON est prise en charge seulement pour les indicateurs de trace de l’optimiseur de requête décrits dans le tableau ci-dessus.
+  
+Utilisez la commande `DBCC TRACESTATUS` afin de déterminer quels indicateurs de trace sont actuellement actifs.
+
+## <a name="trace-flags"></a>Indicateurs de trace
+
   
 Le tableau ci-dessous répertorie et décrit les indicateurs de trace disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
@@ -156,21 +175,7 @@ Le tableau ci-dessous répertorie et décrit les indicateurs de trace disponible
 |**11023**|Désactive l’utilisation du dernier taux d’échantillonnage enregistré pour toutes les mises à jour des statistiques suivantes où un taux d’échantillonnage n’est pas spécifié explicitement dans le cadre de l’instruction [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Pour plus d’informations, consultez cet [article du support technique Microsoft](https://support.microsoft.com/kb/4039284).<br /><br />**Étendue** : globale ou de session|    
 |**11024**|Active le déclenchement de la mise à jour automatique des statistiques quand le nombre de modifications de n’importe quelle partition dépasse le [seuil](../../relational-databases/statistics/statistics.md#AutoUpdateStats) local. Pour plus d’informations, consultez cet [article du support technique Microsoft](https://support.microsoft.com/kb/4041811).<br /><br />**Remarque :** Cet indicateur de trace s’applique à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 et aux builds ultérieures.<br /><br />**Étendue** : globale ou de session| 
   
-## <a name="remarks"></a>Notes  
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il existe trois types d’indicateurs de trace : de requête, de session et globaux. Les indicateurs de trace de requête sont actifs dans le contexte d’une requête spécifique. Les indicateurs de trace de session sont actifs pour une connexion et visibles uniquement par celle-ci. Les indicateurs de trace globaux sont définis au niveau du serveur et sont visibles pour chaque connexion sur celui-ci. Certains indicateurs ne peuvent être activés qu'en tant qu'indicateurs globaux, tandis que d'autres peuvent être activés avec une étendue globale ou de session.  
-  
- Les règles suivantes s'appliquent :  
--   Un indicateur de trace global doit être activé globalement. Sinon, il est sans effet. Il est recommandé d’activer les indicateurs de trace globaux au démarrage, à l’aide de l’option de ligne de commande **-T**. Cela garantit que l’indicateur de trace reste actif après le redémarrage d’un serveur.  
--   Si un indicateur de trace possède une étendue globale, de session ou de requête, il peut être activé avec l’étendue appropriée. Un indicateur de trace activé au niveau session n'affecte jamais une autre session et l'effet de l'indicateur de trace est perdu lorsque le SPID qui a ouvert la session se déconnecte.  
-  
-Les indicateurs de trace s'activent ou se désactivent de l'une des façons suivantes :
--   en utilisant les commandes DBCC TRACEON et DBCC TRACEOFF ;  
-     Par exemple, pour activer l’indicateur de trace 2528 globalement, utilisez [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) avec l’argument -1 : `DBCC TRACEON (2528, -1)`. L’effet de l’activation d’un indicateur de trace global avec DBCC TRACEON est perdu lors du redémarrage du serveur. Pour désactiver un indicateur de trace global, utilisez [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) avec l’argument -1.  
--   Utilisation de l’option de démarrage **-T** pour signaler que l’indicateur de trace doit être défini au démarrage.  
-     L’option de démarrage **-T** active un indicateur de trace de façon globale. Vous ne pouvez pas activer un indicateur de trace de niveau session à l'aide d'une option de démarrage. Cela garantit que l’indicateur de trace reste actif après le redémarrage d’un serveur. Pour plus d’informations sur les options de démarrage, consultez [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md).
--   Au niveau de la requête, utilisation de [l’indicateur de requête](https://support.microsoft.com/kb/2801413) QUERYTRACEON. L’option QUERYTRACEON est prise en charge seulement pour les indicateurs de trace de l’optimiseur de requête décrits dans le tableau ci-dessus.
-  
-Utilisez la commande `DBCC TRACESTATUS` afin de déterminer quels indicateurs de trace sont actuellement actifs.
+
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant définit l’indicateur de trace 3205 pour toutes les sessions au niveau du serveur à l’aide de DBCC TRACEON.  

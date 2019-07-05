@@ -1,7 +1,7 @@
 ---
 title: Permuter des clés Always Encrypted à l’aide de PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95718cff851a9ec13cda4cfa5d192bd366d7edcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b74fd823b513114e84c5ac22c5d8f8404d352e68
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413475"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387915"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Permuter des clés Always Encrypted à l’aide de PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ Always Encrypted utilisant deux types de clés, il existe deux principaux flux d
 * **Permutation des clés de chiffrement de colonne** : elle implique le déchiffrement des données chiffrées avec la clé actuelle, et le rechiffrement des données à l’aide de la nouvelle clé de chiffrement de colonne. La permutation d’une clé de chiffrement de colonne nécessitant l’accès aux clés et à la base de données, la permutation des clés de chiffrement de colonne ne peut être effectuée que sans séparation des rôles.
 * **Permutation des clés principales de colonne** : elle implique le déchiffrement de clés de chiffrement de colonne qui sont protégées avec la clé principale de colonne active, leur rechiffrement à l’aide de la nouvelle clé principale de colonne et la mise à jour des métadonnées pour les deux types de clés. La permutation des clés principales de colonne peut être effectuée avec ou sans séparation des rôles (lors de l’utilisation du module SqlServer PowerShell).
 
-
 ## <a name="column-master-key-rotation-without-role-separation"></a>Permutation des clés principales de colonne sans séparation des rôles
-La méthode de permutation d’une clé principale de colonne décrite dans cette section ne prend pas en charge la séparation des rôles entre un administrateur de sécurité et un administrateur de base de données. Certaines des étapes ci-dessous combinent des opérations sur les clés physiques avec des opérations sur les métadonnées de clés. Ce flux de travail est donc recommandé pour les organisations qui utilisent le modèle DevOps, ou quand votre base de données est hébergée dans le cloud et que le principal objectif est de restreindre l’accès des administrateurs du cloud (mais pas des administrateurs de base de données) aux données sensibles. Elle n’est pas recommandée si les rivaux potentiels incluent des administrateurs de bases de données ou si ceux-ci ne doivent tout simplement pas avoir accès aux données sensibles.  
+
+La méthode de permutation d’une clé principale de colonne décrite dans cette section ne prend pas en charge la séparation des rôles entre un administrateur de sécurité et un administrateur de base de données. Certaines des étapes ci-dessous combinent des opérations sur les clés physiques avec des opérations sur les métadonnées de clés. Ce flux de travail est donc recommandé pour les organisations qui utilisent le modèle DevOps, ou quand votre base de données est hébergée dans le cloud et que le principal objectif est de restreindre l’accès des administrateurs du cloud (mais pas des administrateurs de base de données) aux données sensibles. Elle n’est pas recommandée si les rivaux potentiels incluent des administrateurs de bases de données, ou si ceux-ci ne doivent pas avoir accès aux données sensibles.  
 
 
 | Tâche | Article | Accède au magasin de clés/aux clés en texte clair| Accède à la base de données
@@ -96,8 +96,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 Le flux de travail de permutation de clé principale de colonne décrit dans cette section garantit la séparation entre un administrateur de la sécurité et un administrateur de base de données.
 
 > [!IMPORTANT]
-> Avant d’exécuter des étapes où *Accède au magasin de clés/aux clés en texte clair*=**Oui** dans le tableau ci-dessous (étapes qui accèdent à des clés en texte clair ou au magasin de clés), vérifiez que l’environnement PowerShell s’exécute sur un ordinateur sécurisé différent de celui qui héberge votre base de données. Pour plus d’informations, consultez [Considérations en matière de sécurité pour la gestion des clés](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
-
+> Avant d’exécuter des étapes où *Accède au magasin de clés/aux clés en texte clair*=**Oui** dans le tableau ci-dessous (étapes qui accèdent à des clés en texte clair ou au magasin de clés), vérifiez que l’environnement PowerShell s’exécute sur un ordinateur sécurisé différent de celui qui héberge votre base de données. Pour plus d’informations, consultez [Considérations en matière de sécurité pour la gestion des clés](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 ### <a name="part-1-dba"></a>Première partie : Administrateur de base de données
 
@@ -129,7 +128,6 @@ L’administrateur de la sécurité génère une nouvelle clé principale de col
 
 > [!NOTE]
 > Nous vous recommandons vivement de ne pas supprimer définitivement l’ancienne clé principale de colonne après la permutation. Au lieu de cela, laissez l’ancienne clé principale de colonne dans son magasin de clés actuel ou archivez-la dans un autre emplacement sécurisé. Si vous restaurez votre base de données à partir d’un fichier de sauvegarde à un point dans le temps *avant* la configuration de la nouvelle clé principale de colonne, vous aurez besoin de l’ancienne clé pour accéder aux données.
-
 
 ### <a name="part-3-dba"></a>Troisième partie : Administrateur de base de données
 
@@ -296,10 +294,9 @@ Complete-SqlColumnMasterKeyRotation -SourceColumnMasterKeyName $oldCmkName  -Inp
 Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 ```
 
-
 ## <a name="rotating-a-column-encryption-key"></a>Permutation d’une clé de chiffrement de colonne
 
-La permutation d’une clé de chiffrement de colonne implique le déchiffrement des données dans toutes les colonnes, chiffrées avec la clé à permuter, et le rechiffrement des données à l’aide de la nouvelle clé de chiffrement de colonne. Ce flux de travail de permutation nécessite l’accès aux clés et à la base de données. Il ne peut donc pas être effectué avec la séparation des rôles. Notez que la permutation d’une clé de chiffrement de colonne peut prendre beaucoup de temps si les tables qui contiennent des colonnes chiffrées avec la clé soumise à la permutation sont volumineuses. Votre organisation doit donc apporter un soin particulier à la planification de la permutation des clés de chiffrement de colonne.
+La permutation d’une clé de chiffrement de colonne implique le déchiffrement des données dans toutes les colonnes, chiffrées avec la clé à permuter, et le rechiffrement des données à l’aide de la nouvelle clé de chiffrement de colonne. Ce flux de travail de permutation nécessite l’accès aux clés et à la base de données. Il ne peut donc pas être effectué avec la séparation des rôles. La permutation d’une clé de chiffrement de colonne peut prendre beaucoup de temps si les tables qui contiennent les colonnes chiffrées avec la clé soumise à la permutation sont volumineuses. Votre organisation doit donc apporter un soin particulier à la planification de la permutation des clés de chiffrement de colonne.
 
 Vous pouvez faire pivoter une clé de chiffrement de colonne à l’aide d’une approche hors ligne ou en ligne. La première méthode est susceptible d’être plus rapide, mais vos applications ne peuvent pas écrire dans les tables concernées. La deuxième approche est susceptible de prendre plus de temps, mais vous pouvez limiter l’intervalle de temps pendant lequel les tables concernées sont indisponibles pour les applications. Consultez [Configurer le chiffrement de colonne à l’aide de PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) et [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/) pour plus de détails.
 
@@ -311,7 +308,7 @@ Vous pouvez faire pivoter une clé de chiffrement de colonne à l’aide d’une
 |Étape 4. Générer une clé de chiffrement de colonne, la chiffrer avec la clé principale de colonne et créer les métadonnées de clé de chiffrement de colonne dans la base de données.  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Remarque :** Utilisez une variation de l’applet de commande qui génère et chiffre en interne une clé de chiffrement de colonne.<br>En arrière-plan, l’applet de commande exécute l’instruction [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) pour créer les métadonnées de clé. | Oui | Oui
 |Étape 5. Rechercher toutes les colonnes chiffrées avec l’ancienne clé de chiffrement de colonne. | [Guide de programmation SMO (SQL Server Management Objects)](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | Non | Oui
 |Étape 6. Créer un objet *SqlColumnEncryptionSettings* pour chaque colonne concernée.  SqlColumnMasterKeySettings est un objet qui existe en mémoire (dans PowerShell). Il spécifie le schéma de chiffrement cible pour une colonne. Dans ce cas, l’objet doit spécifier que la colonne concernée doit être chiffrée à l’aide de la nouvelle clé de chiffrement de colonne. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | Non | Non
-|Étape 7. Rechiffrer les colonnes identifiées à l’étape 5 à l’aide de la nouvelle clé de chiffrement de colonne. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Remarque :** cette étape est susceptible de prendre un certain temps. Vos applications ne pourront pas accéder aux tables pendant toute la durée de l’opération ou pendant une partie de l’opération, selon l’approche sélectionnée (en ligne ou hors ligne). | Oui | Oui
+|Étape 7. Rechiffrer les colonnes identifiées à l’étape 5 à l’aide de la nouvelle clé de chiffrement de colonne. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Remarque :** cette étape est susceptible de prendre un certain temps. Vos applications ne peuvent pas accéder aux tables pendant toute la durée de l’opération ou pendant une partie de l’opération, en fonction de l’approche sélectionnée (en ligne ou hors ligne). | Oui | Oui
 |Étape 8. Supprimer les métadonnées de l’ancienne clé de chiffrement de colonne. | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | Non | Oui
 
 ### <a name="example---rotating-a-column-encryption-key"></a>Exemple : permutation d’une clé de chiffrement de colonne
@@ -364,7 +361,7 @@ Remove-SqlColumnEncryptionKey -Name $oldCekName -InputObject $database
   
 ## <a name="next-steps"></a>Next Steps  
     
-- [Développer des applications utilisant Always Encrypted avec le fournisseur de données .NET Framework pour SQL Server](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
+- [Développer des applications à l’aide d’Always Encrypted avec le fournisseur de données .NET Framework pour SQL Server](../../../relational-databases/security/encryption/always-encrypted-client-development.md)
   
 ## <a name="additional-resources"></a>Ressources supplémentaires  
 

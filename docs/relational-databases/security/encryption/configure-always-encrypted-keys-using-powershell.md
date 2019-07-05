@@ -1,7 +1,7 @@
 ---
 title: Configurer des clés Always Encrypted à l’aide de PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 889df15caaba289e5f0fed43727d9358bab3a2e1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 5e8f0eb293390e88f0c7d8f982c0525b5a62f871
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327470"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388001"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Configurer des clés Always Encrypted à l’aide de PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Pour plus d’informations sur l’utilisation du module SqlServer PowerShell po
 
 ## <a name="KeyProvisionWithoutRoles"></a> Mise en service des clés sans séparation des rôles
 
-La méthode de mise en service des clés décrite dans cette section ne prend pas en charge la séparation des rôles entre les administrateurs de la sécurité et les administrateurs de bases de données. Certaines des étapes ci-dessous associent des opérations sur les clés physiques à des opérations sur les métadonnées de clé. Par conséquent, cette méthode de mise en service des clés est recommandée pour les organisations qui utilisent le modèle DevOps, ou si la base de données est hébergée dans le cloud et que le principal objectif est de restreindre l’accès des administrateurs du cloud (mais pas des administrateurs de bases de données) aux données sensibles. Elle n’est pas recommandée si les rivaux potentiels incluent des administrateurs de bases de données ou si ceux-ci ne doivent tout simplement pas avoir accès aux données sensibles.
+La méthode de mise en service des clés décrite dans cette section ne prend pas en charge la séparation des rôles entre les administrateurs de la sécurité et les administrateurs de bases de données. Certaines des étapes ci-dessous associent des opérations sur les clés physiques à des opérations sur les métadonnées de clé. Par conséquent, cette méthode de mise en service des clés est recommandée pour les organisations qui utilisent le modèle DevOps, ou si la base de données est hébergée dans le cloud et que le principal objectif est de restreindre l’accès des administrateurs du cloud (mais pas des administrateurs de bases de données) aux données sensibles. Elle n’est pas recommandée si les rivaux potentiels incluent des administrateurs de bases de données ou si ceux-ci ne doivent pas avoir accès aux données sensibles.
 
 Avant d’exécuter des étapes qui impliquent l’accès aux clés en texte clair ou au magasin de clés (identifiées dans la colonne **Accède au magasin de clés/aux clés en texte clair** dans le tableau ci-dessous), vérifiez que l’environnement PowerShell s’exécute sur un ordinateur sécurisé qui est différent d’un ordinateur qui héberge votre base de données. Pour plus d’informations, consultez ***Considérations en matière de sécurité pour la gestion des clés***.
 
@@ -132,7 +132,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 Le script ci-dessous est un exemple de bout en bout de génération d’une clé principale de colonne dans un magasin de clés qui implémente l’API CNG (Cryptography Next Generation), de génération et de chiffrement d’une clé de chiffrement de colonne, et de création de métadonnées de clé dans une base de données SQL Server.
 
-L’exemple s’appuie sur le magasin de clés qui utilise le fournisseur de stockage de clés (KSP) des logiciels Microsoft. Vous pouvez choisir de modifier l’exemple pour utiliser un autre magasin, tel que votre module de sécurité matériel. Pour ce faire, vous devez vérifier que le fournisseur du magasin de clés qui implémente CNG pour votre appareil est correctement installé sur votre ordinateur. Vous devez remplacer « Microsoft Software Key Storage Provider » par le nom du fournisseur KSP de l’appareil.
+L’exemple s’appuie sur le magasin de clés qui utilise le fournisseur de stockage de clés (KSP) des logiciels Microsoft. Vous pouvez choisir de modifier l’exemple pour utiliser un autre magasin, tel que votre module de sécurité matériel. Pour ce faire, vous devez vérifier que le fournisseur du magasin de clés (KSP) qui implémente CNG pour votre appareil est correctement installé sur votre ordinateur. Vous devez remplacer « Microsoft Software Key Storage Provider » par le nom du fournisseur KSP de l’appareil.
 
 
 ```
@@ -186,7 +186,7 @@ Avant d’exécuter des étapes qui impliquent l’accès aux clés en texte cla
 1.  L’environnement PowerShell s’exécute sur une machine sécurisée qui est différente d’un ordinateur qui héberge votre base de données.
 2.  Les administrateurs de bases de données de votre organisation n’ont aucun accès à l’ordinateur (ce serait en opposition avec l’objectif de la séparation des rôles).
 
-Pour plus d’informations, consultez [Considérations en matière de sécurité pour la gestion des clés](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
+Pour plus d’informations, consultez [Considérations en matière de sécurité pour la gestion des clés](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 
 Tâche  |Article  |Accède au magasin de clés/aux clés en texte brut  |Accède à la base de données  

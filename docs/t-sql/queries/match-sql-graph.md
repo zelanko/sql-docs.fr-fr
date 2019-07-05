@@ -1,7 +1,7 @@
 ---
 title: MATCH (SQL Graph) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/05/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -9,21 +9,23 @@ ms.topic: language-reference
 f1_keywords:
 - MATCH
 - MATCH_TSQL
+- SHORTEST_PATH
 dev_langs:
 - TSQL
 helpviewer_keywords:
 - MATCH statement [SQL Server], SQL graph
 - SQL graph, MATCH statement
+- Shortest Path, shortest_path
 author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0296f915e0731bac9e7a714fa1e307bd2cda86b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d24d4f9e206fb6bd0b57cfcbbae6d1cf724ffa5e
+ms.sourcegitcommit: 60009734e0ce9d9ac655e83b3b04e340b73095f5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62504646"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67409996"
 ---
 # <a name="match-transact-sql"></a>MATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -38,20 +40,78 @@ ms.locfileid: "62504646"
 MATCH (<graph_search_pattern>)
 
 <graph_search_pattern>::=
-    {<node_alias> { 
-                     { <-( <edge_alias> )- } 
-                   | { -( <edge_alias> )-> }
-                 <node_alias> 
-                 } 
-     }
-     [ { AND } { ( <graph_search_pattern> ) } ]
-     [ ,...n ]
-  
+  {  
+      <simple_match_pattern> 
+    | <arbitrary_length_match_pattern>  
+    | <arbitrary_length_match_last_node_predicate> 
+  }
+
+<simple_match_pattern>::=
+  {
+      LAST_NODE(<node_alias>) | <node_alias>   { 
+          { <-( <edge_alias> )- } 
+        | { -( <edge_alias> )-> }
+        <node_alias> | LAST(<node_alias>)
+        } 
+  }
+  [ { AND } { ( <simple_match_pattern> ) } ]
+  [ ,...n ]
+
 <node_alias> ::=
-    node_table_name | node_alias 
+  node_table_name | node_table_alias 
 
 <edge_alias> ::=
-    edge_table_name | edge_alias
+  edge_table_name | edge_table_alias
+
+
+<arbitrary_length_match_pattern>  ::=
+  { 
+    SHORTEST_PATH( 
+      <arbitrary_length_pattern> 
+      [ { AND } { <arbitrary_length_pattern> } ] 
+      [ ,…n] 
+    )
+  } 
+
+<arbitrary_length_match_last_node_predicate> ::=
+  {  LAST_NODE( <node_alias> ) = LAST_NODE( <node_alias> ) }
+
+
+<arbitrary_length_pattern> ::=
+    {  LAST_NODE( <node_alias> )   | <node_alias>
+     ( <edge_first_al_pattern> [<edge_first_al_pattern>…,n] )
+     <al_pattern_quantifier> 
+  }
+    |  ( {<node_first_al_pattern> [<node_first_al_pattern> …,n] )
+        <al_pattern_quantifier> 
+        LAST_NODE( <node_alias> ) | <node_alias> 
+ }
+    
+<edge_first_al_pattern> ::=
+  { (  
+        { -( <edge_alias> )->   } 
+      | { <-( <edge_alias> )- } 
+      <node_alias>
+      ) 
+  } 
+
+<node_first_al_pattern> ::=
+  { ( 
+      <node_alias> 
+        { <-( <edge_alias> )- } 
+      | { -( <edge_alias> )-> }
+      ) 
+  } 
+
+
+<al_pattern_quantifier> ::=
+  {
+        +
+      | { 1 , n }
+  }
+
+n -  positive integer only.
+ 
 ```
 
 ## <a name="arguments"></a>Arguments  
@@ -64,8 +124,18 @@ Nom ou alias d’une table de nœuds fourni dans la clause FROM.
 *edge_alias*  
 Nom ou alias d’une table d’arêtes fourni dans la clause FROM.
 
+*SHORTEST_PATH*   
+La fonction de chemin la plus courte est utilisée pour rechercher le chemin le plus court entre deux nœuds donnés d’un graphique, ou entre un nœud donnée et tous les autres nœuds d’un graphique. Il prend un modèle de longueur arbitraire en tant qu’entrée, qui est recherchée de manière répétée dans un graphique. 
 
-## <a name="remarks"></a>Notes   
+*arbitrary_length_match_pattern*  
+Spécifie les nœuds et les arêtes qui doivent être parcourus de manière répétée jusqu'à ce que le nœud souhaité ou le nombre maximal d’itérations spécifié dans le modèle soient atteints. 
+
+*al_pattern_quantifier*   
+Le modèle de longueur arbitraire prend des quantificateurs de modèles de style d’expressions régulières pour spécifier le nombre de répétitions d’un modèle de recherche donné. Les quantificateurs de modèle de recherche pris en charge sont :   
+* **+**  : Répétez le modèle une ou plusieurs fois. Arrêtez dès qu’un chemin d’accès le plus court est trouvé.    
+* **{1,n}**  : Répétez le modèle une à « n » fois. Arrêtez dès qu’un chemin d’accès le plus court est trouvé.     
+
+## <a name="remarks"></a>Notes  
 Un nom de nœud peut être répété dans un indicateur MATCH.  En d’autres termes, un nœud peut être parcouru un nombre de fois arbitraire dans la même requête.  
 Un nom d’arête ne peut pas être répété dans un indicateur MATCH.  
 Une arête peut pointer dans les deux directions, mais elle doit avoir une direction explicite.  
@@ -145,7 +215,7 @@ AND Person1.name = 'Alice';
  ```
  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TABLE &#40;SQL Graph&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Traitement des graphes avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  

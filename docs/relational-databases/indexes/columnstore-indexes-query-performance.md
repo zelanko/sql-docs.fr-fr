@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ff3494a9983104c958dbd1f3e0ac7b74598f2dcb
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255276"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343918"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Index columnstore - Performances des requêtes
 
@@ -159,7 +159,7 @@ Avec la transmission Push des prédicats de type string, la requête calcule le 
     -   Il n’y a pas de transmission Push des prédicats de type string si le dictionnaire dépasse la taille de 64 Ko.    
     -   Les expressions ayant pour résultat une valeur NULL ne sont pas prises en charge.    
     
-## <a name="see-also"></a> Voir aussi    
+## <a name="see-also"></a>Voir aussi    
  [Index columnstore - Guide de conception](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   
  [Index columnstore - Conseils en matière de chargement de données](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Prise en main de columnstore pour l’analytique opérationnelle en temps réel](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
