@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33860539b188af46404865738621ceaf87ebfb3c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1e12e038d4128a7290e4dd848b6b2afccba8c0bb
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659429"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582087"
 ---
 # <a name="bulk-copy-a-select-result-set-odbc"></a>Copier en bloc un jeu de résultats SELECT (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,12 +48,14 @@ ms.locfileid: "51659429"
   
     -   Nom d'un fichier de données devant recevoir tous les messages d'erreur de copie en bloc (spécifiez NULL si vous ne souhaitez pas de fichier de message).  
   
-    -   Direction de la copie : DB_OUT.  
+    -   La direction de la copie : DB_OUT.  
   
 5.  Appelez [bcp_control](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md), définissez eOption avec la valeur BCPHINTS et placez dans iValue un pointeur vers un tableau SQLTCHAR contenant l’instruction SELECT.  
   
 6.  Appelez [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) pour exécuter l’opération de copie en bloc.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Durant ces étapes, le fichier est créé au format natif. Vous pouvez convertir les valeurs de données à d’autres types de données à l’aide de [bcp_colfmt](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Pour plus d’informations, consultez [créer un fichier de Format de copie en bloc &#40;ODBC&#41;](../../../relational-databases/native-client-odbc-how-to/bulk-copy/create-a-bulk-copy-format-file-odbc.md).  
   
 ## <a name="example"></a>Exemple  

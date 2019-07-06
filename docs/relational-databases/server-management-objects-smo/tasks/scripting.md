@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 68fcd735be7c3729f01e50a6133b5de2a6f9cfe6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a53ab0d5b8fde978afce5adeb3dd753da554cda4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715687"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582627"
 ---
 # <a name="scripting"></a>Création de scripts
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,7 +34,9 @@ ms.locfileid: "47715687"
 2.  Génération de la liste  
   
 3.  Génération du script  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  La phase de découverte utilise l'objet <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker>. À partir d'une liste URN d'objets, la méthode <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> retourne un objet <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> pour les objets de la liste URN. La valeur booléenne *fParents* paramètre est utilisé pour indiquer si les parents ou les enfants de l’objet spécifié doivent être découverts. L'arborescence des dépendances peut être modifiée à ce stade.  
   
  Dans la phase de la génération de la liste, l'arborescence est transmise et la liste résultante est retournée. Cette liste d'objets suit l'ordre d'écriture du script et peut être manipulée.  

@@ -17,12 +17,12 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: a3f544ae5a38b50ed13ddbafb725c07e0c8a4c8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e643c82653ecb10bc2006eb5ed14bd2dede9b7
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697956"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597555"
 ---
 # <a name="find-method-ado"></a>Find, méthode (ADO)
 Recherche un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour la ligne répondant aux critères spécifiés. Si vous le souhaitez, la direction de recherche, de ligne de début et de décalage à partir de la ligne initiale peut être spécifiée. Si les critères sont satisfaits, la position de ligne actuelle est définie sur l’enregistrement est trouvé ; Sinon, la position est définie à la fin (ou le début) de la **Recordset**.  
@@ -39,10 +39,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  Un **chaîne** valeur qui contient une instruction en spécifiant le nom de colonne, un opérateur de comparaison et une valeur à utiliser dans la recherche.  
   
  *SkipRows*  
- Facultatif *.* Un **Long** valeur, dont la valeur par défaut est égale à zéro, ce qui spécifie l’offset de ligne à partir de la ligne actuelle ou *Démarrer* signet pour commencer la recherche. Par défaut, la recherche démarre sur la ligne actuelle.  
+ Facultatif. Un **Long** valeur, dont la valeur par défaut est égale à zéro, ce qui spécifie l’offset de ligne à partir de la ligne actuelle ou *Démarrer* signet pour commencer la recherche. Par défaut, la recherche démarre sur la ligne actuelle.  
   
  *SearchDirection*  
- Facultatif *.* Un [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valeur qui spécifie si la recherche doit commencer sur la ligne actuelle ou de la ligne suivante disponible dans la direction de la recherche. Une recherche s’arrête à la fin de la **Recordset** si la valeur est **adSearchForward**. Une recherche s’arrête au début de la **Recordset** si la valeur est **adSearchBackward**.  
+ Facultatif. Un [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) valeur qui spécifie si la recherche doit commencer sur la ligne actuelle ou de la ligne suivante disponible dans la direction de la recherche. Une recherche s’arrête à la fin de la **Recordset** si la valeur est **adSearchForward**. Une recherche s’arrête au début de la **Recordset** si la valeur est **adSearchBackward**.  
   
  *Démarrer*  
  Facultatif. Un **Variant** signet qui indique la position de départ pour la recherche.  

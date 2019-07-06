@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14d152adb1d2b24b70e64a0924935416cdcf09af
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 00edc71fdec53ac7606f11d913a2c1089ecf0216
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675108"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586224"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Extraire des colonnes avec IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51675108"
   
 -   comment extraire un groupe de colonnes (de manière consécutive) ;  
   
--   comment accéder deux fois à une colonne avec extraction de la largeur réelle de la colonne la première fois, puis accès aux données concernées par la suite. Dans la structure DBCOLUMNACCESS, si **pData** a la valeur NULL et que **cbMaxLen** est défini sur 0, l’appel à **IRow**-**>GetColumns()** retourne seulement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler **IRow->GetColumns()** sur la même colonne pour extraire les données réelles.  
+-   comment accéder deux fois à une colonne avec extraction de la largeur réelle de la colonne la première fois, puis accès aux données concernées par la suite. Dans la structure DBCOLUMNACCESS, si **pData** a la valeur NULL et que **cbMaxLen** est défini sur 0, l’appel à **IRow**- **>GetColumns()** retourne seulement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler **IRow->GetColumns()** sur la même colonne pour extraire les données réelles.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, utilisez l'authentification Windows. Si l'authentification Windows n'est pas disponible, invitez les utilisateurs à entrer leurs informations d'identification au moment de l'exécution. Évitez de stocker ces informations dans un fichier. Si vous devez rendre les informations d'identification persistantes, chiffrez-les avec l' [API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -45,7 +45,9 @@ ms.locfileid: "51675108"
 3.  Exécutez IRow::GetColumns() pour extraire une ou plusieurs colonnes dans la ligne obtenue. Si vous souhaitez rechercher la taille de colonne réelle avant d'extraire des données, définissez pData dans DBCOLUMNACCESS sur NULL. L'appel à IRow::GetColumns() retourne uniquement la largeur de la colonne. Un autre appel à IRow::GetColumns() permet d'extraire les données.  
   
 4.  Exécutez IRow::GetColumns() jusqu'à ce que vous accédiez à toutes les colonnes dont vous avez besoin. Vous devez accéder aux colonnes de manière consécutive.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment utiliser l'interface IRow pour permettre d'accéder directement aux colonnes d'une ligne unique dans le jeu de résultats. L'exemple montre :  
   
@@ -53,7 +55,7 @@ ms.locfileid: "51675108"
   
 -   Comment accéder deux fois à une colonne : la première fois au moment de l'obtention de la largeur de colonne réelle, puis ultérieurement, au moment de l'accès aux données effectives.  
   
- Dans la structure DBCOLUMNACCESS, si pData a la valeur NULL et cbMaxLen est définie sur 0, l'appel à IRow->GetColumns retourne uniquement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler IRow->GetColumns sur la même colonne pour récupérer les données effectives. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
+ Dans la structure DBCOLUMNACCESS, si pData a la valeur NULL et que cbMaxLen est défini sur 0, l’appel à IRow>GetColumns retourne seulement la longueur de colonne réelle. Dans ce cas, vous pouvez rappeler IRow->GetColumns sur la même colonne pour extraire les données réelles. Cet exemple n'est pas pris en charge sur la plateforme IA64.  
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   

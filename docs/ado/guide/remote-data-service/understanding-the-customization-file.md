@@ -13,12 +13,12 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 581065868f408eca28f15ffe9fb703d53e16ae66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d58edcfae92c94cfc635d3539f81faf834e382c7
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704134"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597568"
 ---
 # <a name="understanding-the-customization-file"></a>Présentation du fichier de personnalisation
 Chaque en-tête de section dans le fichier de personnalisation se compose de crochets ( **[]** ) contenant un type et un paramètre. Les quatre types de section sont indiquées par les chaînes littérales **connecter**, **sql**, **userlist**, ou **journaux**. Le paramètre est la chaîne littérale, la valeur par défaut, un identificateur spécifié par l’utilisateur ou rien du tout.  
@@ -55,7 +55,7 @@ identifier
   
  Une section particulière est utilisée dans les circonstances suivantes :  
   
--   A **connecter** section est utilisée si la valeur du client de connexion mot clé de chaîne, «**Source de données =** _valeur_», correspond à un **connecter** identificateur de la section *.*  
+-   A **connecter** section est utilisée si la valeur du client de connexion mot clé de chaîne, «**Source de données =** _valeur_», correspond à un **connecter** identificateur de la section. 
   
 -   Un **sql** section est utilisée si la chaîne de commande client contient une chaîne qui correspond à un **sql** identificateur de section.  
   

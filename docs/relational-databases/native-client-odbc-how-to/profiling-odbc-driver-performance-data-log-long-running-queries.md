@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3605365fcee0a351d7638fb20f3633f03b976a3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c2d90f9ec9a396333715f6285ed300bc2436eed2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656618"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580972"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Profilage des données de performances du pilote ODBC - Enregistrer les requêtes longues
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51656618"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Pour enregistrer des requêtes longues à l'aide de l'Administrateur ODBC  
   
-1.  Dans **le panneau de configuration**, double-cliquez sur **outils d’administration** , puis double-cliquez sur **Sources de données (ODBC)**. (Vous pouvez également exécuter odbcad32.exe à partir de l'invite de commandes.)  
+1.  Dans **le panneau de configuration**, double-cliquez sur **outils d’administration** , puis double-cliquez sur **Sources de données (ODBC)** . (Vous pouvez également exécuter odbcad32.exe à partir de l'invite de commandes.)  
   
 2.  Cliquez sur le **DSN utilisateur**, **DSN système**, ou **fichier DSN** onglet.  
   
@@ -45,7 +45,9 @@ ms.locfileid: "51656618"
 6.  Sélectionnez **enregistrer les requêtes à long terme dans le fichier journal**. Dans la zone, tapez le nom du fichier dans lequel les requêtes longues sont à enregistrer. Si vous le souhaitez, cliquez sur **Parcourir** pour parcourir le système de fichiers pour le journal des requêtes.  
   
 7.  Définir un intervalle de délai d’attente de requête, en millisecondes, dans le **longue durée (en millisecondes) de requête** boîte.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Pour enregistrer des données de requêtes longues par programme  
   
 1.  Appelez [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) avec SQL_COPT_SS_PERF_QUERY_LOG et spécifiez le chemin d’accès et le nom complet du fichier de journal de requête longue à exécuter. Exemple :  

@@ -16,18 +16,18 @@ ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: f913d6ef342a110d6484e05a2f1925e47d5abdac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c62953f958ef14134d7463c899f5b842d94f596
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718484"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597584"
 ---
 # <a name="datasource-property-ado"></a>DataSource, propriété (ADO)
 Indique un objet qui contient les données pour être représentée comme un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
   
 ## <a name="remarks"></a>Notes  
- Cette propriété est utilisée pour créer des contrôles liés aux données avec l’environnement de données. L’environnement de données conserve des collections de données (sources de données) contenant des objets nommés (données membres) qui seront représentés comme un **Recordset** objet *.*  
+ Cette propriété est utilisée pour créer des contrôles liés aux données avec l’environnement de données. L’environnement de données conserve des collections de données (sources de données) contenant des objets nommés (données membres) qui seront représentés comme un **Recordset** objet.  
   
  Le [DataMember](../../../ado/reference/ado-api/datamember-property.md) et **DataSource** propriétés doivent être utilisées conjointement.  
   

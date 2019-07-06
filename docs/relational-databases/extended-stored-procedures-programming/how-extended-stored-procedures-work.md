@@ -13,12 +13,12 @@ ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ab0864e8eb320c63bd757d4c6edab384c6c821b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7bbc9fad964f5d58efeb48683b052275f7fb166
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742235"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583328"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Fonctionnement des procédures stockées étendues
 
@@ -36,3 +36,6 @@ ms.locfileid: "62742235"
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelle la procédure stockée étendue demandée (implémentée comme fonction à l'intérieur de la DLL).  
   
 4.  La procédure stockée étendue transmet les jeux de résultats et retourne les paramètres au serveur via l'API de la procédure stockée étendue.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

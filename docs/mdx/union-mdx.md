@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e51749416c0668ccc4760132bb860121ebae6e3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe80d94be42a9ea953a5829de43bcab3cb30955f
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653459"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597380"
 ---
 # <a name="union--mdx"></a>Union (MDX)
 
@@ -43,7 +43,7 @@ Alternate syntax 2
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
 ## <a name="remarks"></a>Notes  
- Cette fonction retourne l’union de deux ou plusieurs jeux spécifiés *.* Avec la syntaxe standard et la syntaxe alternative 1, les doublons sont éliminés par défaut. Avec la syntaxe standard, à l’aide de la **tous les** indicateur conserve les doublons dans le jeu joint. Les doublons sont supprimés de la fin du jeu. Avec la syntaxe alternative 2, les doublons sont toujours conservés.  
+ Cette fonction retourne l’union de deux ou plusieurs jeux spécifiés. Avec la syntaxe standard et la syntaxe alternative 1, les doublons sont éliminés par défaut. Avec la syntaxe standard, à l’aide de la **tous les** indicateur conserve les doublons dans le jeu joint. Les doublons sont supprimés de la fin du jeu. Avec la syntaxe alternative 2, les doublons sont toujours conservés.  
   
 ## <a name="examples"></a>Exemples  
  Les exemples suivants montrent le comportement de la **Union** avec chaque syntaxe de fonction.  

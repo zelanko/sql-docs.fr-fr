@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017753"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586246"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**Classement**|**sysname**|Classement du type de données. NULL pour les types de données non caractère.|  
   
 3.  Si *nom* est n’importe quel objet de base de données autre qu’un type de données, **sp_help** retourne ce résultat des jeux de résultats de jeu et également supplémentaires, en fonction du type d’objet spécifié.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     |Nom de colonne|Type de données|Description|  
     |-----------------|---------------|-----------------|  
     |**Nom**|**nvarchar(** 128 **)**|Nom de la table|  
@@ -82,9 +84,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**Type**|**nvarchar(** 31 **)**|Type de la table|  
     |**Created_datetime**|**datetime**|Date de création de la table|  
   
-     En fonction de l’objet de base de données spécifié, **sp_help** retourne des jeux de résultats supplémentaires.  
+     Depending on the database object specified, **sp_help** returns additional result sets.  
   
-     Si *nom* est une table système, une table ou une vue, **sp_help** retourne les jeux de résultats suivant. Toutefois, le jeu de résultats qui indique à quel endroit se trouve le fichier de données sur un groupe de fichiers n'est pas retourné pour une vue.  
+     If *name* is a system table, user table, or view, **sp_help** returns the following result sets. However, the result set that describes where the data file is located on a file group is not returned for a view.  
   
     -   Jeu de résultats supplémentaire retourné sur des objets de colonne :  
   

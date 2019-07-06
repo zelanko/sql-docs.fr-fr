@@ -15,15 +15,15 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 207ac319852435d3d0178e4a0dcc78a1cc1a0c8e
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702653"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597502"
 ---
 # <a name="absolute-and-relative-urls"></a>URL absolues et relatives
-Une URL spécifie l’emplacement d’une cible sur un ordinateur local ou en réseau. La cible peut être un fichier, répertoire, page HTML, image, programme et ainsi de suite *.*  
+Une URL spécifie l’emplacement d’une cible sur un ordinateur local ou en réseau. La cible peut être un fichier, répertoire, page HTML, image, programme et ainsi de suite.  
   
  Un *URL absolue* contient toutes les informations nécessaires pour localiser une ressource.  
   
@@ -53,7 +53,7 @@ Une URL spécifie l’emplacement d’une cible sur un ordinateur local ou en r�
   
  Avec ADO 2.7 ou version ultérieure, une URL absolue peut également définir un contexte. Par exemple, quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet est ouvert avec une URL absolue, un **connexion** objet est implicitement créé pour représenter la ressource spécifiée par l’URL.  
   
- Une URL absolue qui définit un contexte peut être spécifiée dans le *ActiveConnection* paramètre de la **enregistrement** objet [Open](../../../ado/reference/ado-api/open-method-ado-record.md) (méthode). Une URL absolue peut également être spécifiée comme valeur de le « URL **=** » mot clé dans le **connexion** objet [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) méthode  *ConnectionString* paramètre et le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode *ActiveConnection* paramètre.  
+ Une URL absolue qui définit un contexte peut être spécifiée dans le *ActiveConnection* paramètre de la **enregistrement** objet [Open](../../../ado/reference/ado-api/open-method-ado-record.md) (méthode). Une URL absolue peut également être spécifiée comme valeur de la « URL = « mot clé dans le **connexion** objet [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) (méthode) *ConnectionString* paramètre et le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode *ActiveConnection* paramètre.  
   
  Le contexte peut également être défini en ouvrant un **enregistrement** ou **Recordset** objet qui représente un répertoire, étant donné que ces objets ont déjà un implicitement ou explicitement déclaré **connexion**  objet qui spécifie le contexte.  
   

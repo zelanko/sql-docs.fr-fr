@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c965300654f8cbebdf6fbd88699afdd512632488
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224881"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597445"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 
@@ -46,9 +46,9 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  Délimiteur valide exprimé en tant qu'expression de chaîne.  
   
 ## <a name="remarks"></a>Notes  
- Si un deuxième jeu est spécifié, le **générer** fonction retourne un jeu généré en appliquant les tuples dans le deuxième jeu à chaque tuple dans le premier jeu *,* et puis associant les jeux obtenus par union. Si **tous les** est spécifié, la fonction conserve les doublons dans le jeu résultant.  
+ Si un deuxième jeu est spécifié, le **générer** fonction retourne un jeu généré en appliquant les tuples dans le deuxième jeu à chaque tuple dans le premier jeu, et puis associant les jeux obtenus par union. Si **tous les** est spécifié, la fonction conserve les doublons dans le jeu résultant.  
   
- Si une expression de chaîne est spécifiée, le **générer** fonction retourne une chaîne générée en évaluant l’expression de chaîne spécifiée par rapport à chaque tuple dans le premier jeu *,* puis en concaténant le résultats. Vous pouvez éventuellement délimiter la chaîne en séparant chaque résultat dans la chaîne concaténée obtenue.  
+ Si une expression de chaîne est spécifiée, le **générer** fonction retourne une chaîne générée en évaluant l’expression de chaîne spécifiée par rapport à chaque tuple dans le premier jeu et puis en concaténant les résultats. Vous pouvez éventuellement délimiter la chaîne en séparant chaque résultat dans la chaîne concaténée obtenue.  
   
 ## <a name="examples"></a>Exemples  
   

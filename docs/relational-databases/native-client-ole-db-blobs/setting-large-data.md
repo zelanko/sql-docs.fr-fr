@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a73e1cc51cade93183af1fe4e98e59c3c65d474
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba7ff25e8f80fbdda0994b8855a30d47e4532c93
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738250"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580225"
 ---
 # <a name="setting-large-data"></a>Définition de données volumineuses
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,9 @@ ms.locfileid: "62738250"
 5.  Appelez la méthode **GetNextRows** pour extraire les lignes suivantes dans l'ensemble de lignes. Appelez la méthode **GetData** pour lire les données de l'ensemble de lignes.  
   
 6.  Créez un objet de stockage contenant les données (et également l’indicateur de longueur), puis appelez **IRowsetChange::SetData** (ou **IRowsetChange::InsertRow**) avec l’accesseur qui lie la colonne BLOB pour définir les données.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment définir des données BLOB. Cet exemple crée une table, ajoute un exemple d'enregistrement, extrait cet enregistrement de l'ensemble de lignes, puis définit la valeur du champ BLOB.  
   

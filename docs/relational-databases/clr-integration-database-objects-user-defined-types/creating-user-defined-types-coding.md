@@ -31,12 +31,12 @@ ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b3e8921e230f581f60c96e6443d4fa5b71a417b3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dfb90f9e0d1e3910f45a5b283161e9c36da49a71
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661559"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579795"
 ---
 # <a name="creating-user-defined-types---coding"></a>Création de types définis par l’utilisateur - Codage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ public static Point Null
 }  
 ```  
   
-### <a name="is-null-vs-isnull"></a>Comparaison de IS NULL et de IsNull  
+### <a name="is-null-vs-isnull"></a>IS NULL et. IsNull  
  Considérez une table qui contient le schéma Points (id int, location Point), où **Point** est un UDT CLR et les requêtes suivantes :  
   
 ```  
@@ -544,7 +544,7 @@ public Double DistanceFromXY(Int32 iX, Int32 iY)
  Le **Microsoft.SqlServer.Server.SqlMethodAttribute** classe fournit des attributs personnalisés qui peuvent être utilisés pour marquer des définitions de méthode afin de spécifier le déterminisme, sur le comportement d’appel null et pour spécifier si une méthode est un mutateur. Les valeurs par défaut de ces propriétés sont assumées et l'attribut personnalisé est utilisé uniquement lorsqu'une valeur non définie par défaut est exigée.  
   
 > [!NOTE]  
->  Le **SqlMethodAttribute** classe hérite de la **SqlFunctionAttribute** classe, **SqlMethodAttribute** hérite le **FillRowMethodName** et **TableDefinition** champs à partir de **SqlFunctionAttribute**. Cela implique qu'il est possible d'écrire une méthode table, ce qui n'est pas le cas. La méthode compile et déploie l’assembly, mais une erreur sur le **IEnumerable** retourner le type est déclenché lors de l’exécution avec le message suivant : « méthode, propriété ou champ «\<nom >' dans la classe\<classe >' dans l’assembly '\<assembly >' a un type de retour non valide. »  
+>  Le **SqlMethodAttribute** classe hérite de la **SqlFunctionAttribute** classe, **SqlMethodAttribute** hérite le **FillRowMethodName** et **TableDefinition** champs à partir de **SqlFunctionAttribute**. Cela implique qu'il est possible d'écrire une méthode table, ce qui n'est pas le cas. La méthode compile et déploie l’assembly, mais une erreur sur le **IEnumerable** retourner le type est déclenché lors de l’exécution avec le message suivant : « Méthode, propriété ou le champ '\<nom >' dans la classe\<classe >' dans l’assembly '\<assembly >' a un type de retour non valide. »  
   
  Le tableau suivant décrit certaines des pertinentes **Microsoft.SqlServer.Server.SqlMethodAttribute** propriétés qui peuvent être utilisées dans les méthodes UDT et répertorie leurs valeurs par défaut.  
   
@@ -614,7 +614,9 @@ public void Rotate(double anglex, double angley, double anglez)
 2.  Utilisez le **écrire** méthode pour le **devise** UDT pour déterminer comment l’UDT est conservé sur disque et par conséquent, comment les valeurs UDT sont comparées et commandées pour [!INCLUDE[tsql](../../includes/tsql-md.md)] operations.  
   
 3.  Enregistrer le **devise** UDT à l’aide du format binaire suivant :  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Enregistrez la culture en tant que chaîne encodée UTF-16 pour les octets 0-19, avec un remplissage à droite avec des caractères Null.  
   
     2.  Utilisez les octets 20 et plus pour contenir la valeur décimale de la monnaie.  

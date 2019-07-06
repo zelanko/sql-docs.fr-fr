@@ -17,12 +17,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ff7b05cf91351973fc7c7f0efbc9af0dfa901dea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cefa1cfe2bd7ea792035bdc16de93ccc35591aee
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62720702"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580890"
 ---
 # <a name="applying-an-xsl-transformation-sqlxml-managed-classes"></a>Application d'une transformation XSL (classes managées SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -111,7 +111,9 @@ class Test
      Un fichier exécutable (DocSample.exe) est alors créé.  
   
 4.  À l'invite de commandes, exécutez DocSample.exe.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="applying-an-xsl-transformation-in-the-net-framework"></a>Application d'une Transformation XSL dans le .NET Framework  
  Au lieu d'appliquer une transformation XSL dans la couche intermédiaire, comme décrit précédemment, vous pouvez appliquer une transformation XSL côté client (dans le .NET Framework). Le code C# modifié suivant montre comment la transformation XSL est appliquée dans le .NET Framework.  
   

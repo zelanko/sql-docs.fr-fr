@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e16bbc20d98a313be039f207556b963ac43fa541
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43f213ca1abcbb9b8fae1e20e338b773907a0b38
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035720"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581887"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Interprétation des annotations - sql:relationship et Key Ordering Rule
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "56035720"
 </xsd:schema>  
 ```  
   
- Comme le  **\<client >** nœud d’élément entre dans l’étendue, le chargement en masse XML génère un enregistrement de client. Cet enregistrement est conservé jusqu'à ce que le chargement en masse XML lit  **\</Customer >**. Dans le traitement du  **\<ordre >** nœud d’élément, le chargement en masse XML utilise  **\<SQL : Relationship >** pour obtenir la valeur de la colonne de clé étrangère CustomerID de la table CustOrder à partir de la  **\<client >** élément, parent, car le  **\<ordre >** élément ne spécifie pas le **CustomerID** attribut. Cela signifie que la définition dans le  **\<client >** élément, vous devez spécifier le **CustomerID** attribut dans le schéma avant de le spécifier  **\<sql : relation >**. Sinon, lorsque un  **\<ordre >** élément entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table CustOrder, et lorsque le code XML en bloc charge atteint le  **\</Order >** fin de balise, il envoie l’enregistrement à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sans la valeur de colonne de clé étrangère CustomerID.  
+ Comme le  **\<client >** nœud d’élément entre dans l’étendue, le chargement en masse XML génère un enregistrement de client. Cet enregistrement est conservé jusqu'à ce que le chargement en masse XML lit  **\</Customer >** . Dans le traitement du  **\<ordre >** nœud d’élément, le chargement en masse XML utilise  **\<SQL : Relationship >** pour obtenir la valeur de la colonne de clé étrangère CustomerID de la table CustOrder à partir de la  **\<client >** élément, parent, car le  **\<ordre >** élément ne spécifie pas le **CustomerID** attribut. Cela signifie que la définition dans le  **\<client >** élément, vous devez spécifier le **CustomerID** attribut dans le schéma avant de le spécifier  **\<sql : relation >** . Sinon, lorsque un  **\<ordre >** élément entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table CustOrder, et lorsque le code XML en bloc charge atteint le  **\</Order >** fin de balise, il envoie l’enregistrement à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sans la valeur de colonne de clé étrangère CustomerID.  
   
  Enregistrez le schéma fourni dans cet exemple sous le nom SampleSchema.xml.  
   
@@ -107,7 +107,9 @@ ms.locfileid: "56035720"
     ```  
   
 3.  Pour effectuer le chargement en masse XML, enregistrez l'exemple [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) suivant sous le nom MySample.vbs, puis exécutez-le :  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
@@ -118,7 +120,7 @@ ms.locfileid: "56035720"
     set objBL=Nothing  
     ```  
   
-     Il en résulte que la fonctionnalité de chargement en masse XML insère une valeur NULL dans la colonne de clé étrangère CustomerID de la table CustOrder. Si vous modifiez les exemples de données XML afin que le  **\<CustomerID >** élément enfant apparaisse avant la  **\<ordre >** élément enfant, vous obtenez le résultat attendu : Chargement en masse XML insère la valeur de clé étrangère spécifiée dans la colonne.  
+     The result is that XML Bulk Load inserts a NULL value in the CustomerID foreign key column of the CustOrder table. If you revise the XML sample data so that the **\<CustomerID>** child element appears before the **\<Order>** child element, you get the expected result: XML Bulk Load inserts the specified foreign key value into the column.  
   
  Voici le schéma XDR équivalent :  
   

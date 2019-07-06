@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
+title: sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/02/2016
 ms.prod: sql
@@ -21,14 +21,14 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5b2cb804718afc2eeed5aa174b2de51a33f5c3ea
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 40bf73a1cdca0bc582ac3e6ed6a977980d2aa24f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409066"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585109"
 ---
-# <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>Sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
+# <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Wrappers pour le **toutes les modifications** fonctions de requête. Les scripts requis pour créer ces fonctions sont générés par la procédure stockée sys.sp_cdc_generate_wrapper_function.  
@@ -63,7 +63,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 -   @closed_high_end_point = 1  
   
-     Seules les lignes dans la table de modifications cdc.<instance_capture>_CT qui ont une heure de validation associée inférieure ou égale à end_time sont incluses dans le jeu de résultats.  
+     Seules les lignes dans la table de modifications cdc. < instance_capture > _CT qui ont un associé heure de validation inférieure ou égale à end_time sont incluses dans le jeu de résultats...  
   
 -   @closed_high_end_point = 0  
   
@@ -71,7 +71,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Si une valeur NULL est fournie pour cet argument, le point de terminaison supérieur de la plage de requêtes correspond au point de terminaison supérieur de la plage valide pour l'instance de capture.  
   
- <row_filter_option> ::= { all | all update old }  
+ < row_filter_option > :: = {toutes les | tous les mettre à jour ancien}  
  Option qui régit le contenu des colonnes de métadonnées ainsi que les lignes retournées dans le jeu de résultats.  
   
  Il peut s'agir de l'une des options suivantes :  
@@ -93,14 +93,16 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
 |\<colonnes de @update_flag_list>|**bit**|Un indicateur de bit nommé en ajoutant _uflag au nom de colonne. L’indicateur est toujours défini sur NULL lorsque \__CDC_OPERATION est avait ', 'I' ou 'UO'. Lorsque \__CDC_OPERATION est un », il est défini sur 1 si la mise à jour a produit une modification dans la colonne correspondante. Sinon, il prend la valeur 0.|  
   
 ## <a name="remarks"></a>Notes  
- La fonction fn_all_changes_<instance_capture> sert de wrapper pour la fonction de requête cdc.fn_cdc_get_all_changes_<instance_capture>. La procédure stockée sys.sp_cdc_generate_wrapper sert à générer le script de création du wrapper.  
+ La fonction fn_all_changes_ < instance_capture > sert de wrapper pour la fonction de requête cdc.fn_cdc_get_all_changes_ < instance_capture >. La procédure stockée sys.sp_cdc_generate_wrapper sert à générer le script de création du wrapper.  
   
  Les fonctions wrapper ne sont pas créées automatiquement. Vous devez effectuer deux opérations pour créer des fonctions wrapper :  
   
 1.  Exécuter la procédure stockée pour générer le script pour créer le wrapper.  
   
 2.  Exécuter le script pour créer la fonction wrapper.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Fonctions wrapper permettent aux utilisateurs d’interroger systématiquement les modifications qui se sont produites dans un intervalle lié par **datetime** valeurs au lieu de valeurs LSN. Les fonctions wrapper effectuent toutes les conversions requises entre les **datetime** valeurs et les valeurs LSN requises en interne en tant qu’arguments pour les fonctions de requête. Lorsque les fonctions wrapper sont utilisées en série pour traiter un flux de données modifiées, elles garantissent qu’aucune perte ou de données répétées condition que la convention suivante soit respectée : la @end_time valeur de l’intervalle associé à un appel est fournie en tant que le @start_time valeur pour l’intervalle associé à l’appel suivant.  
   
  L'utilisation du paramètre @closed_high_end_point lors de la création du script vous permet de générer des wrappers destinés à prendre en charge une limite supérieure fermée ou une limite supérieure ouverte sur la fenêtre de requête spécifiée. Autrement dit, vous pouvez décider si les entrées qui ont une heure de validation égale à la limite supérieure de l'intervalle d'extraction doivent être incluses dans l'intervalle. Par défaut, la limite supérieure est incluse.  
@@ -112,7 +114,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
  Le modèle de configuration de capture de données modifiées 'Instantiate de CDC Wrapper TVFs for Schema' illustre comment utiliser la procédure stockée sp_cdc_generate_wrapper_function pour obtenir des scripts CREATE pour toutes les fonctions wrapper pour les fonctions de requêtes définies d’un schéma. Le modèle crée ensuite ces scripts. Pour plus d’informations sur les modèles, consultez [Explorateur de modèles](../../ssms/template/template-explorer.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
+ [sys.sp_cdc_generate_wrapper_function &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

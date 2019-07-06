@@ -10,12 +10,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285690"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597529"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Création de prédictions (Didacticiel sur l'exploration de données de base)
   Une fois que vous avez testé la précision de vos modèles d’exploration de données et décidé que vous êtes satisfait des résultats, vous pouvez ensuite générer des prédictions à l’aide du Générateur de requêtes de prédiction sur le **prévision de modèle d’exploration de données** onglet dans l’exploration de données Concepteur.  
@@ -96,7 +96,7 @@ ms.locfileid: "63285690"
   
      Ceci permet de spécifier la colonne cible pour la fonction `PredictProbability`. Pour plus d’informations sur les fonctions, consultez [Data Mining Extensions &#40;DMX&#41; référence des fonctions](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-5.  Cliquez sur la ligne vide suivante dans le **Source** colonne, puis sélectionnez un modèle d’exploration de données TM_Decision_Tree **.**  
+5.  Cliquez sur la ligne vide suivante dans le **Source** colonne, puis sélectionnez **TM_Decision_Tree** modèle d’exploration de données.  
   
 6.  Dans le `TM_Decision_Tree` de ligne, dans le **champ** colonne, sélectionnez `Bike Buyer`.  
   

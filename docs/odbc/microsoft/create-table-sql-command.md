@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 195d226caed68da7131390eaf1985d4e05b2edf3
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232294"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597543"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE, commande SQL
 Crée une table comportant les champs spécifiés.  
@@ -121,7 +121,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  Une table peut avoir plusieurs index candidats.  
   
  CLÉ étrangère *eExpression4*balise *TagName4*[NODUP]  
- Crée un index (non essentielles) étrangère et établit une relation à une table parent. *eExpression4* Spécifie l’expression de clé étrangère d’index, et *TagName4* Spécifie le nom de la balise de clé étrangère index créé *.* Noms de balise d’index peuvent contenir jusqu'à 10 caractères. Inclure NODUP pour créer un index étrangère candidate.  
+ Crée un index (non essentielles) étrangère et établit une relation à une table parent. *eExpression4* Spécifie l’expression de clé étrangère d’index, et *TagName4* Spécifie le nom de la balise de clé étrangère d’index qui est créé. Noms de balise d’index peuvent contenir jusqu'à 10 caractères. Inclure NODUP pour créer un index étrangère candidate.  
   
  Vous pouvez créer plusieurs index étrangères pour la table, mais les expressions d’index étrangère doivent spécifier différents champs de la table.  
   

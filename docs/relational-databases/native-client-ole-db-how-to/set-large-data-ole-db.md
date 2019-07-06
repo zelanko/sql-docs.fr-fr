@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33a35a56cb433e860eb1cc66b7e0178db3eed925
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2f23c7ace1a4a83b07d5ac25972c8fd4028d173f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667538"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583803"
 ---
 # <a name="set-large-data-ole-db"></a>Définir des données volumineuses (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +49,9 @@ ms.locfileid: "51667538"
 5.  Appelez la méthode **GetNextRows** pour extraire les lignes suivantes dans l'ensemble de lignes. Appelez la méthode **GetData** pour lire les données de l'ensemble de lignes.  
   
 6.  Pour définir les données, créez un objet de stockage contenant les données (ainsi que l'indicateur de longueur), puis appelez **IRowsetChange::SetData** (ou **IRowsetChange::InsertRow**) avec l'accesseur qui lie la colonne BLOB.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Exemple  
   
 ### <a name="description"></a>Description  

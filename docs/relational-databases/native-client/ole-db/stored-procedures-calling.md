@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57a95705e24d2437a2a8f2695a68e97c129fd619
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 578aeaeaa73cab0aff58b66c031e108b92f8658c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131057"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586384"
 ---
 # <a name="stored-procedures---calling"></a>Procédures stockées - Appel
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,9 @@ ms.locfileid: "54131057"
     -   le handle d'accesseur créé à l'étape 3.  
   
 5.  Exécutez la commande en utilisant **ICommand::Execute**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="methods-of-calling-a-stored-procedure"></a>Méthodes d'appel d'une procédure stockée  
  Lors de l’exécution d’une procédure stockée dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge du fournisseur OLE DB Native Client le :  
   
@@ -96,7 +98,7 @@ ms.locfileid: "54131057"
   
  La syntaxe générale pour l'appel d'une procédure à l'aide de la séquence d'échappement ODBC CALL est :  
   
- {[**? =**]**appeler**_nom_procédure_[**(**[*paramètre*] [**,**[*paramètre*]]... **)**]}  
+ {[ **?=** ]**call**_procedure_name_[ **(** [*parameter*][ **,** [*parameter*]]... **)** ]}  
   
  Exemple :  
   

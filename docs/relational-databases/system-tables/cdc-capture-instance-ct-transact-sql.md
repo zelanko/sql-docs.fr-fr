@@ -1,5 +1,5 @@
 ---
-title: capture de données modifiées. &lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs
+title: cdc.&lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 346fea411891f04e4b4742ff50c2dd9cce6f1587
-ms.sourcegitcommit: 4c053cd2f15968492a3d9e82f7570dc2781da325
+ms.openlocfilehash: c4d6202e3ac68a1c1d36e307b9073ce23f1efb6e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336248"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586378"
 ---
-# <a name="cdcltcaptureinstancegtct-transact-sql"></a>capture de données modifiées. &lt;capture_instance&gt;_CT (Transact-SQL)
+# <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Table de modifications créée lorsque la capture de données modifiées est activée sur une table source. La table retourne une ligne pour chaque opération d'insertion et de suppression effectuée sur la table source, et deux lignes pour chaque opération de mise à jour effectuée sur la table source. Lorsque le nom de la table de modifications n'est pas spécifié au moment de l'activation de la table source, le nom est dérivé. Le format du nom est cdc. *capture_instance*_CT où *capture_instance* est le nom de schéma de la table source et le nom de la table source au format *schema_table*. Par exemple, si la table **Person.Address** dans le **AdventureWorks** exemple de base de données est activée pour la capture de données modifiées, le nom de table de modifications dérivé serait **capture de données modifiées. Person_Address_CT**.  
@@ -37,28 +37,28 @@ ms.locfileid: "49336248"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Numéro séquentiel dans le journal associé à la transaction de validation pour la modification.<br /><br /> Toutes les modifications validées dans la même transaction partagent le même numéro séquentiel dans le journal de validation. Par exemple, si une opération de suppression sur la table source supprime deux lignes, la table de modifications contiendra deux lignes, chacune avec la même **__ $start_lsn** valeur.|  
-|**__ $end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cette colonne a toujours pour valeur NULL.|  
+|**__$end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cette colonne a toujours pour valeur NULL.|  
 |**__$seqval**|**binary(10)**|Valeur de la séquence utilisée pour ordonner les modifications de la ligne dans une transaction.|  
 |**__$operation**|**Int**|Identifie l'opération de langage de manipulation de données associée à la modification. Les valeurs possibles sont les suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (anciennes valeurs)<br /><br /> Les données de colonne ont des valeurs de ligne avant d'exécuter l'instruction UPDATE.<br /><br /> 4 = mise à jour (nouvelles valeurs)<br /><br /> Les données de colonne ont des valeurs de ligne après l'exécution de l'instruction UPDATE.|  
 |**__$update_mask**|**varbinary(128)**|Un masque de bits basé sur les ordinaux de colonne de la table de modifications identifiant les colonnes modifiées.|  
 |*\<<colonnes_de_table_source_capturées>*|variable|Les colonnes restantes de la table de modifications sont les colonnes de la table source qui ont été identifiées comme colonnes capturées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée dans la liste des colonnes capturées, toutes les colonnes de la table source sont incluses dans cette table.|  
-|**__ $command_id** |**Int** |Effectue le suivi de l’ordre des opérations dans une transaction. |  
+|**__$command_id** |**Int** |Effectue le suivi de l’ordre des opérations dans une transaction. |  
   
 ## <a name="remarks"></a>Notes  
 
-Le `__$command_id` colonne a été de colonne a été introduite dans une mise à jour cumulative dans les versions 2012 à 2016. Pour plus d’informations de version et le téléchargement, consultez l’article 3030352 à [FIX : la table de modifications est ordonnée incorrectement mises à jour de capture de lignes après avoir activé les données modifiées pour une base de données Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Pour plus d’informations, consultez [les fonctionnalités de capture de données modifiées peuvent s’interrompre après la mise à niveau vers la dernière version CU pour SQL Server 2012, 2014 et 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
+Le `__$command_id` colonne a été de colonne a été introduite dans une mise à jour cumulative dans les versions 2012 à 2016. Pour plus d’informations de version et le téléchargement, consultez l’article 3030352 à [corriger : La table de modifications est ordonnée incorrectement mises à jour de capture de lignes après avoir activé les données modifiées pour une base de données Microsoft SQL Server](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you).  Pour plus d’informations, consultez [les fonctionnalités de capture de données modifiées peuvent s’interrompre après la mise à niveau vers la dernière version CU pour SQL Server 2012, 2014 et 2016](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/).
 
 ## <a name="captured-column-data-types"></a>Types de données de la colonne capturée.  
  Les colonnes capturées incluses dans cette table ont les mêmes type de données et valeur que leurs colonnes sources correspondantes avec les exceptions suivantes :  
   
--   **Horodatage** colonnes sont définies comme **Binary (8)**.  
+-   **Horodatage** colonnes sont définies comme **Binary (8)** .  
   
 -   **Identité** colonnes sont définies en tant que **int** ou **bigint**.  
   
  Toutefois, les valeurs dans ces colonnes sont les mêmes que celles des colonnes sources.  
   
 ### <a name="large-object-data-types"></a>Types de données des objets importants  
- Colonnes de type de données **image**, **texte**, et **ntext** sont toujours affectés un **NULL** valeur lorsque __ $operation = 1 ou \_ \_$operation = 3. Colonnes de type de données **varbinary (max)**, **varchar (max)**, ou **nvarchar (max)** bénéficient d’un **NULL** valeur lorsque \_ \_$operation = 3, sauf si la colonne a changé pendant la mise à jour. Lorsque \_ \_$operation = 1, ces colonnes sont affectées de leur valeur au moment de la suppression. Les colonnes calculées qui sont inclus dans une instance de capture toujours ont la valeur **NULL**.  
+ Colonnes de type de données **image**, **texte**, et **ntext** sont toujours affectés un **NULL** valeur lorsque __ $operation = 1 ou \_ \_$operation = 3. Colonnes de type de données **varbinary (max)** , **varchar (max)** , ou **nvarchar (max)** bénéficient d’un **NULL** valeur lorsque \_ \_$operation = 3, sauf si la colonne a changé pendant la mise à jour. Lorsque \_ \_$operation = 1, ces colonnes sont affectées de leur valeur au moment de la suppression. Les colonnes calculées qui sont inclus dans une instance de capture toujours ont la valeur **NULL**.  
   
  Par défaut, la taille maximale qui peut être ajoutée à une colonne capturée dans une seule instruction INSERT, UPDATE, WRITETEXT ou UPDATETEXT est de 65 536 octets ou 64 Ko. Pour augmenter cette taille afin de prendre en charge les données métier plus volumineuses, utilisez le [configurer l’Option de Configuration de serveur de max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md) pour spécifier une plus grande taille maximale. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max text repl size](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
@@ -74,7 +74,9 @@ Le `__$command_id` colonne a été de colonne a été introduite dans une mise �
 2.  Dans la table de modifications, effectuez la même opération de mise à jour sur la colonne équivalente.  
   
 3.  Modifiez la table source en spécifiant le nouveau type de données. La modification du type de données est propagée avec succès à la table de modifications.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="data-manipulation-language-modifications"></a>Modifications du langage de manipulation de données  
  Lorsque des opérations d'insertion, de mise à jour et de suppression sont effectuées sur une table source où la capture de données modifiées est activée, un enregistrement de ces opérations DML apparaît dans le journal des transactions de la base de données. Le processus de capture de données modifiées récupère des informations sur ces modifications dans le journal des transactions et ajoute une ou deux lignes dans la table de modifications pour enregistrer la modification. Les entrées sont ajoutées à la table de modifications selon l'ordre dans lequel elles ont été validées dans la table source, même si la validation d'entrées de table de modifications doit en général être effectuée sur un groupe de modifications plutôt que sur une entrée unique.  
   
@@ -83,7 +85,7 @@ Le `__$command_id` colonne a été de colonne a été introduite dans une mise �
  Pour les opérations d'insertion et de suppression, tous les bits du masque de mise à jour sont définis. Pour les opérations de mise à jour, le masque de mise à jour sera modifié dans les lignes de mise à jour nouvelles et anciennes pour refléter les colonnes qui ont changé pendant la mise à jour.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
- [Sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_get_ddl_history &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md)  
   
   

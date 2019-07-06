@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d9c14a534dc46f320ddacbf518c2df766292de6
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656758"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584045"
 ---
 # <a name="creating-an-assembly"></a>Création d'un assembly
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   l'assembly appelé ou référencé a été créé dans la même base de données.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Définition de la sécurité lors de la création d'assemblys  
- Lorsque vous créez un assembly dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous pouvez spécifier un des trois niveaux différents de sécurité dans lesquels votre code peut être exécuté : **SAFE**, **EXTERNAL_ACCESS**ou **UNSAFE**. Au moment de l'exécution de l'instruction **CREATE ASSEMBLY** , l'assembly de code est soumis à certains contrôles qui peuvent entraîner l'échec de l'enregistrement de l'assembly sur le serveur. Pour plus d'informations, consultez l'exemple d'emprunt d'identité sur [CodePlex](https://msftengprodsamples.codeplex.com/).  
+ Lors de la création d’un assembly dans un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données, vous pouvez spécifier une des trois différents niveaux de sécurité dans lequel votre code peut être exécuté : **SAFE**, **EXTERNAL_ACCESS**, ou **UNSAFE**. Au moment de l'exécution de l'instruction **CREATE ASSEMBLY** , l'assembly de code est soumis à certains contrôles qui peuvent entraîner l'échec de l'enregistrement de l'assembly sur le serveur. Pour plus d'informations, consultez l'exemple d'emprunt d'identité sur [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **SAFE** est le jeu d'autorisations par défaut et fonctionne pour la majorité des scénarios. Pour spécifier un niveau de sécurité donné, vous devez modifier la syntaxe de l'instruction CREATE ASSEMBLY comme suit :  
   
@@ -80,7 +80,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  L'assembly est signé avec un nom fort ou porte une signature Authenticode avec certificat. Ce nom fort (ou certificat) est créé dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en tant que clé asymétrique (ou certificat) et dispose d'une connexion correspondante avec l'autorisation **EXTERNAL ACCESS ASSEMBLY** (pour les assemblys à accès externe) ou l'autorisation **UNSAFE ASSEMBLY** (pour les assemblys non sécurisés).  
   
 2.  Le propriétaire de la base de données (DBO) bénéficie de l'autorisation **EXTERNAL ACCESS ASSEMBLY** (pour les assemblys **EXTERNAL ACCESS** ) ou **UNSAFE ASSEMBLY** (pour les assemblys **UNSAFE** ) et la [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) de la base de données est définie sur **ON**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Les deux conditions mentionnées ci-dessus sont également vérifiées au moment du chargement de l'assembly (exécution incluse). Une des conditions doit au minimum être satisfaite pour le chargement de l'assembly.  
   
  Nous vous recommandons de ne pas définir la [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) sur **ON** dans une base de données uniquement afin d'exécuter le code du CLR (Common Language Runtime) dans le processus serveur. Il est préférable, à la place, de créer une clé asymétrique à partir du fichier d'assembly dans la base de données master. Une connexion mappée à cette clé asymétrique doit ensuite être créée. Cette connexion doit disposer de l'autorisation **EXTERNAL ACCESS ASSEMBLY** ou **UNSAFE ASSEMBLY** .  

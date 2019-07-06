@@ -16,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12e2dde3916392e2e106499bdfb9dd0d4fad5b0c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017847"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582171"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 5.  Régénérez les fichiers d'instantané de toutes les publications de fusion impliquées à tous les niveaux. Si vous tentez d'effectuer la fusion sans régénérer l'instantané au préalable, vous recevez un message vous invitant à la régénérer.  
   
 6.  Sauvegardez la base de données de publication. car sans cela, une opération de fusion peut échouer après la restauration de la base de données de publication.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **Remarques importantes concernant les fusions en Mode continu**  
   
  Si vous exécutez des fusions en mode continu, vous devez :  

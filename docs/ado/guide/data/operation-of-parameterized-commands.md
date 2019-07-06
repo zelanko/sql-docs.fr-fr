@@ -14,12 +14,12 @@ ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 4001ac5b449609683293cd3174dc4410cabf4c4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c07c42a1f864c3dc6888003cd31b06fce9e6893c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701865"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597457"
 ---
 # <a name="operation-of-parameterized-commands"></a>Fonctionnement des commandes paramétrées
 Si vous travaillez avec un enfant **Recordset**, en particulier par rapport à la taille du parent **Recordset**, mais ont besoin d’accéder uniquement quelques chapitres enfant, il peut s’avérer plus efficace d’utiliser un commande paramétrable.  
@@ -36,7 +36,7 @@ SHAPE {SELECT * FROM customer}
    RELATE cust_id TO PARAMETER 0)  
 ```  
   
- Les tables parent et enfant partagent un nom de colonne commun, cust_id *.* Le *commande enfant* a un « ? » espace réservé, auquel la clause RELATE fait référence (autrement dit, »... PARAMÈTRE DE « 0 »).  
+ Les tables parent et enfant ont un nom de colonne en commun, *cust_id*. Le *commande enfant* a un « ? » espace réservé, auquel la clause RELATE fait référence (autrement dit, »... PARAMÈTRE DE « 0 »).  
   
 > [!NOTE]
 >  La clause de paramètre concerne uniquement la syntaxe de commande de forme. Il n’est pas associé à la soit ADO [paramètre](../../../ado/reference/ado-api/parameter-object.md) objet ou le [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection.  
