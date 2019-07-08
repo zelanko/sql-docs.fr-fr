@@ -9,12 +9,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037850"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533831"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Notes de publication de SQL Server Reporting Services (SSRS) 2017 et versions ultérieures
 
@@ -50,6 +50,23 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+
+## <a name="1406001274-20190701"></a>14.0.600.1274, 01/07/2019
+
+| Résolution du problème | Détails |
+| :---------- | :------ |
+| Mises à jour de sécurité | &nbsp; |
+| Impossible de sélectionner les jours de la semaine lors de la création d’une planification hebdomadaire partagée | &nbsp; |
+| Rapport n’affiche pas les retours chariot correctement au format Word | &nbsp; |
+| Aucun travaille plus avec récente SSRS 2017 de System Center Operations Manager(SCOM) 2019 met à niveau | &nbsp; |
+| Une erreur s’est produite lors de l’appel de l’extension d’autorisation pour le Dataset partagé | &nbsp; |
+| Logique modifiée sur la procédure stockée GetAllProperties dans SSRS 2017 et PBIRS, ce qui provoque le point de terminaison de service Web ReportingService2010.GetProperties méthode Impossible d’obtenir toutes les données de rapport lié | &nbsp; |
+| En-tête de ligne de grille simple dans le rapport Mobile disparaît lorsque l’utilisateur clique sur un élément dans la grille | &nbsp; |
+| Impossible d’utiliser le champ de date dans le paramètre d’abonnement piloté par des données | &nbsp; |
+| Tableau matriciel imbriqué montre petite police ou partielle dans SSRS 2016 et versions ultérieures | &nbsp; |
+| Abonnements avec l’erreur de paramètre DateTime en une fois que l’utilisateur avec les modifications des paramètres régionaux différents l’abonnement | &nbsp; |
+| Création d’un abonnement piloté par les données avec l’Extension de remise Null échoue avec « une erreur de remise s’est produite » | &nbsp; |
+| L’encodage des URL est incorrect lors de la définition de la valeur au format de Excel\Word | &nbsp; |
 
 ## <a name="1406001109-20190212"></a>14.0.600.1109, 12/02/2019
 
