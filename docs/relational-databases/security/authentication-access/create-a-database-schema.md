@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cdaa903f8d81c2c4878965bc085f594f0313704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 073d0a9a3600144eac7edd2e10a73c744ee6bd50
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715896"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580009"
 ---
 # <a name="create-a-database-schema"></a>Créer un schéma de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,6 +61,8 @@ ms.locfileid: "62715896"
 5.  Dans la zone **Propriétaire du schéma** , entrez le nom d'un utilisateur de base de données ou d'un rôle propriétaire du schéma. Vous pouvez également cliquer sur **Rechercher** pour ouvrir la boîte de dialogue **Rechercher les rôles et les utilisateurs** .  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > Aucune boîte de dialogue ne s’affiche si vous créez un schéma à l’aide de SSMS à partir d’**Azure SQL Database** ou d’**Azure SQL Data Warehouse**. Vous devez exécuter l’instruction T-SQL Create Schema Template qui est générée.

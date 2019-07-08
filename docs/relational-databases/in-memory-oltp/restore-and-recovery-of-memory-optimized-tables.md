@@ -11,12 +11,12 @@ ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8dbf17ab9e9340b793b4310427169be3bcdfe120
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 074802ff3717b8935015071fdf37e43923d752c1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671318"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582976"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauration et récupération de tables à mémoire optimisée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] redémarre, ch
     Lorsque les précédentes opérations sur les tables sur disque et sur les tables à mémoire optimisée sont terminées, la base de données est accessible.  
   
 3.  **Annulation**. Au cours de cette phase, les transactions non validées sont restaurées.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="process-for-improving-load-time"></a>Processus pour améliorer les temps de chargement
 Le chargement des tables mémoire optimisées dans la mémoire peut affecter les performances de l'objectif de temps de récupération (RTO). Pour améliorer le temps de chargement des données mémoire optimisées à partir des fichiers de données et des fichiers delta, le moteur de l'OLTP en mémoire charge les fichiers de données/delta en parallèle, comme suit :  
   

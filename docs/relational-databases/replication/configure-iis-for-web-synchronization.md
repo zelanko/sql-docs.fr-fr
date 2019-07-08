@@ -15,12 +15,12 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78fc4eff34dd98552924435c3132c1fafb96c746
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668878"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585800"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurer IIS pour la synchronisation web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "62668878"
 4.  Définissez les autorisations appropriées pour l'écouteur de réplication [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 5.  Exécutez la synchronisation Web en mode de diagnostic pour tester la connexion à l'ordinateur exécutant IIS et pour vérifier que le certificat SSL est correctement installé.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="configuring-secure-sockets-layer"></a>Configuration de SSL (Secure Sockets Layer)  
  Pour configurer SSL, spécifiez un certificat que l'ordinateur exécutant IIS va utiliser. La synchronisation Web pour la réplication de fusion prend en charge l'utilisation des certificats de serveur, mais pas celle des certificats clients. Pour configurer IIS pour le déploiement, vous devez d'abord obtenir un certificat auprès d'une Autorité de certification. Une Autorité de certification est une entité chargée d'établir et de se porter garante de l'authenticité des clés publiques de chiffrement appartenant à des utilisateurs, à des ordinateurs ou à d'autres Autorités de certification. Pour plus d'informations sur les certificats, consultez la documentation de IIS. Après avoir installé le certificat, vous devez l'associer au site Web utilisé par la synchronisation Web.  
   

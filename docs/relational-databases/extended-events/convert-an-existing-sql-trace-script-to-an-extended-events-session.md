@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c95169a1be08b04be9b7cdb1b90fea243e99cf10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 206749c851423dd7a3b0ea06e1f443732d86b8bd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669292"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583849"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertir un script Trace SQL existant en session d'événements étendus
 
@@ -37,7 +37,9 @@ ms.locfileid: "62669292"
 3.  Utilisez la fonction fn_trace_getfilterinfo pour répertorier les filtres et les actions d’événements étendus équivalentes à utiliser.  
   
 4.  Créez manuellement une session d'événements étendus, à l'aide des événements, des actions et des prédicats (filtres) d'événements étendus équivalents.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="to-obtain-the-trace-id"></a>Pour obtenir l'ID de trace  
   
 1.  Ouvrez le script Trace SQL dans l'Éditeur de requête, puis exécutez le script pour créer la session de trace. Notez qu'il n'est pas nécessaire que la session de trace soit en cours d'exécution pour exécuter cette procédure.  

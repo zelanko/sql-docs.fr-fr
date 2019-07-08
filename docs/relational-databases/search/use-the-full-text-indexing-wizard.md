@@ -24,12 +24,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 250334bceefa2a3cac6226d32792a8be5ef89206
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd312800fd20ae3e2d57c09df20aa9a14181af8a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716096"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582041"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utiliser l'Assistant Indexation de texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,6 +47,9 @@ ms.locfileid: "62716096"
 4. **Langue pour l’analyseur lexical.** Sélectionnez une langue dans la liste déroulante. Cette option sera utilisée pour identifier les analyseurs lexicaux appropriés pour l’index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des analyseurs lexicaux pour identifier les limites des mots dans les données indexées en texte intégral.  
   
 5.  **Colonne de type.** Sélectionnez le nom de la colonne qui contient le type de document de la colonne indexée en texte intégral.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > **REMARQUE :** L’option **Colonne de type** est activée uniquement quand la colonne nommée dans la colonne **Colonnes disponibles** est de type **varbinary(max)** ou **image**.  
   
 6. **Sémantique statistique.** Sélectionnez s'il faut activer l'indexation sémantique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  

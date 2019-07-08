@@ -14,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: ed9959bf001855e869262c9f91f2821bf7c59744
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 95c7b2a185786c37687a28978fc4786c45a99958
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689902"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586190"
 ---
 # <a name="view-resource-governor-properties"></a>Afficher les propriétés du gouverneur de ressources
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "55689902"
   
  Vous pouvez déterminer s’il existe une configuration en attente en interrogeant la vue de gestion dynamique [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) pour obtenir l’état en cours d’is_configuration_pending.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  L'affichage des propriétés de Resource Governor nécessite l'autorisation VIEW SERVER STATER. Les tâches de configuration de Resource Governor nécessitent l'autorisation CONTROL SERVER.  
   
 ##  <a name="ViewRGProp"></a> Page Propriétés de Resource Governor  
@@ -62,7 +62,9 @@ ms.locfileid: "55689902"
 3.  Pour obtenir les descriptions des champs de la page, consultez [Propriétés de Resource Governor](#RGProp).  
   
 4.  Cliquez sur **OK**pour enregistrer les éventuelles modifications.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="RGProp"></a> Resource Governor properties  
  **Nom de la fonction classifieur**  
  Spécifiez la fonction classifieur en la sélectionnant dans la liste.  
@@ -73,7 +75,7 @@ ms.locfileid: "55689902"
  **Pools de ressources**  
  Créez ou modifiez la configuration des pools de ressources et des pools de ressources externes à l’aide de la grille fournie. Cette grille est remplie à l'aide des informations des pools internes et par défaut prédéfinis. Sélectionnez un pool à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un pool de ressources, cliquez sur la ligne comportant le préfixe **&#42;** (astérisque).  
   
- **Nom**  
+ **Name**  
  Spécifiez le nom du pool de ressources.  
   
  **% processeur minimal**  
@@ -93,7 +95,7 @@ ms.locfileid: "55689902"
  **Groupes de charge de travail pour le pool de ressources**  
  Créez ou modifiez la configuration du groupe de charges de travail à l'aide de la grille fournie. Cette grille est remplie à l'aide des informations des groupes internes et par défaut prédéfinis. Sélectionnez un groupe à utiliser en cliquant sur la première colonne de la ligne du pool. Pour créer un groupe de charges de travail, cliquez sur la ligne comportant le préfixe **&#42;** (astérisque).  
   
- **Nom**  
+ **Name**  
  Spécifiez le nom du groupe de charges de travail.  
   
  **Importance**  

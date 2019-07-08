@@ -16,12 +16,12 @@ ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 455a0f9b8d570adcaa4fadae6f81163e1648a6c2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716116"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582023"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Créer une spécification de l'audit du serveur et de la base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,9 @@ ms.locfileid: "62716116"
 2.  Cliquez avec le bouton droit sur le dossier **Audits** et sélectionnez **Nouvel audit...** . Pour plus d’informations, consultez [Créer un audit du serveur et une spécification d'audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Lorsque vous avez fini de sélectionner les options, cliquez sur **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-create-a-database-level-audit-specification"></a>Pour créer une spécification d'audit de niveau base de données  
   
 1.  Dans l'Explorateur d'objets, développez la base de données dans laquelle vous souhaitez créer une spécification d'audit.  

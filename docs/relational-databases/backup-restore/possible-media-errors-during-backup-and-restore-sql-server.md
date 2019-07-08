@@ -24,12 +24,12 @@ ms.assetid: 83a27b29-1191-4f8d-9648-6e6be73a9b7c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9878aaa62eedf9a2468aa02031e3dcf20e6d7df6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6875a490a2ebb4228321cbf9d9076af892c9471
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025497"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580222"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Erreurs de support possibles pendant les opérations de sauvegarde et de restauration (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,9 @@ ms.locfileid: "63025497"
 2.  Que la somme de contrôle de la page soit disponible ou non, BACKUP génère une somme de contrôle de sauvegarde séparée pour le flux de sauvegardes. Les opérations de restauration peuvent éventuellement utiliser cette somme de contrôle pour vérifier que la sauvegarde n'est pas endommagée. La somme de contrôle de sauvegarde est stockée sur le support de sauvegardes et non pas dans les pages de base de données. Elle peut en option être utilisée lors de la restauration.  
   
 3.  Le jeu de sauvegarde est signalé comme contenant des sommes de contrôle de sauvegarde (dans la colonne **has_backup_checksums** de **msdb..backupset)** . Pour plus d’informations, consultez [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Au cours d'une opération de restauration, si des sommes de contrôle de sauvegarde sont présentes sur le support de sauvegarde, par défaut, les instructions RESTORE et RESTORE VERIFYONLY vérifient les sommes de contrôle de sauvegarde et les sommes de contrôle de page. En l'absence de somme de contrôle de sauvegarde, les deux opérations de restauration se poursuivent sans vérification ; en effet, sans somme de contrôle de sauvegarde, la restauration ne peut pas vérifier les sommes de contrôle de page de façon fiable.  
   
 ## <a name="response-to-page-checksum-errors-during-a-backup-or-restore-operation"></a>Réponse aux erreurs de somme de contrôle de page pendant une opération de sauvegarde ou de restauration  

@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 245ff3f542bead93290c09bf4dd3de25337795cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 927967c01e03327512bbb9876e2893f89c4f0082
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624267"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584689"
 ---
 # <a name="create-dml-triggers"></a>Créer des déclencheurs DML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47624267"
 ### <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Pour obtenir la liste des limitations et des restrictions liées à la création de déclencheurs DML, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la table ou la vue sur laquelle le déclencheur est créé.  
   
 ##  <a name="Procedures"></a> Comment créer un déclencheur DML  
@@ -99,7 +99,9 @@ ms.locfileid: "47624267"
 9. Pour créer le déclencheur DML, dans le menu **Requête** , cliquez sur **Exécuter**. Le déclencheur DML est créé en tant qu'objet dans la base de données.  
   
 10. Pour afficher le déclencheur DML dans l’Explorateur d’objets, cliquez avec le bouton droit sur **Déclencheurs** , puis sélectionnez **Actualiser**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  [Avant de commencer](#Top)  
   
 ###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  

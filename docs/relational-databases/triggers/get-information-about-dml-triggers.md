@@ -18,12 +18,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b4006814233152c487823fbe1936431368af5f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d2e2f82379ad32b5de25778a60f123221114ae9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703157"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584322"
 ---
 # <a name="get-information-about-dml-triggers"></a>Obtenir des informations sur les déclencheurs DML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,12 +45,12 @@ ms.locfileid: "47703157"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  **sys.sql.modules**, **sys.object**, **sys.triggers**, **sys.events**, **sys.trigger_events**  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Nécessite l'appartenance au rôle **public** . La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
+ Nécessite l'appartenance au rôle **public** . La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Requiert l’autorisation VIEW DEFINITION sur la base de données et l’autorisation SELECT sur **sys.sql_expression_dependencies** pour la base de données. Par défaut, l’autorisation SELECT est accordée uniquement aux membres du rôle de base de données fixe **db_owner** . Lorsque les autorisations SELECT et VIEW DEFINITION sont accordées à un autre utilisateur, le bénéficiaire peut consulter toutes les dépendances dans la base de données.  
@@ -64,7 +64,9 @@ ms.locfileid: "47703157"
 2.  Développez la base de données choisie, développez **Tables**, puis développez la table qui contient le déclencheur dont vous souhaitez consulter la définition.  
   
 3.  Développez **Déclencheurs**, cliquez avec le bouton droit sur le déclencheur de votre choix, puis cliquez sur **Modifier**. La définition du déclencheur DML s'affiche dans la fenêtre de requête.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>Pour afficher les dépendances d'un déclencheur DML  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et développez-la.  
@@ -75,7 +77,7 @@ ms.locfileid: "47703157"
   
 4.  Dans la fenêtre **Dépendances d’objets**, sélectionnez **Objets dépendants de \<nom du déclencheur DML>** pour afficher les objets qui dépendent du déclencheur DML. Les objets apparaissent dans la zone **Dépendances** .  
   
-     Pour afficher les objets dont dépend le déclencheur DML, sélectionnez **Objets dont dépend \<nom du déclencheur DML>**. Les objets apparaissent dans la zone **Dépendances** . Développez chaque nœud pour voir tous les objets.  
+     Pour afficher les objets dont dépend le déclencheur DML, sélectionnez **Objets dont dépend \<nom du déclencheur DML>** . Les objets apparaissent dans la zone **Dépendances** . Développez chaque nœud pour voir tous les objets.  
   
 5.  Pour obtenir des informations sur un objet qui apparaît dans la zone **Dépendances** , cliquez sur l'objet. Dans le champ **Objet sélectionné** , les informations sont fournies dans les zones **Nom**, **Type**et **Type de dépendance** .  
   
@@ -204,7 +206,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

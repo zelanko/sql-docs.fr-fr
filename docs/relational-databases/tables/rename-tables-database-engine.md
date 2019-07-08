@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 53d48d2522dc32db775782cf147a3e503b543c9f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 199f89e1ee33793a1186a6b40fed6dcf9658d8b5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601597"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581598"
 ---
 # <a name="rename-tables-database-engine"></a>Renommer des tables (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ Pour renommer une table dans Azure SQL Data Warehouse ou Parallel Data Warehouse
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -70,7 +70,9 @@ Pour renommer une table dans Azure SQL Data Warehouse ou Parallel Data Warehouse
 4.  Pour annuler cette action, appuyez sur la touche Échap avant de quitter ce champ.  
   
 5.  Dans le menu **Fichier**, choisissez **Enregistrer** _nom de la table_.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-rename-a-table"></a>Pour renommer une table  

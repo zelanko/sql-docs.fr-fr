@@ -13,12 +13,12 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df8cd54cdf13941044ae4f72f8781e4532fc5c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0bea639ebb7ec36cc1784db829fc98db8d2c0ba
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714326"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580197"
 ---
 # <a name="monitor-data-tier-applications"></a>Analyser les applications de la couche Données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "62714326"
 3.  Sélectionnez le menu **Affichage/Détails de l’Explorateur de l’utilitaire** .  
   
 4.  Sélectionnez le nœud **Applications de la couche Données déployées** dans l’ **Explorateur de l’utilitaire**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Les informations de la page des détails **Applications de la couche Données déployées** proviennent des données dans l’entrepôt de données de gestion de l’utilitaire, qui recueille par défaut les données toutes les 15 minutes. L'intervalle peut également être adapté à l'aide de la page des détails **Administration de l'utilitaire** .  
   
 ## <a name="using-object-explorer"></a>Utilisation de l'Explorateur d'objets  

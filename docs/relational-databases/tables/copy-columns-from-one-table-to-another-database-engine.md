@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb65ec8874d6fc006f3c765ba91667233bb5571c
-ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
+ms.openlocfilehash: 7709a7d43d99daae1eaec74472b1332c2bf5fa4d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742089"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585054"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copier des colonnes d'une table vers une autre (Moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "55742089"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -64,7 +64,9 @@ ms.locfileid: "55742089"
 4.  Cliquez sur l'onglet de la table dans laquelle vous souhaitez copier les colonnes.  
   
 5.  Sélectionnez la colonne qui doit suivre les colonnes insérées, puis cliquez sur **Coller** dans le menu **Edition**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-copy-data-from-one-table-to-another"></a>Pour copier des données d'une table vers une autre  
   
 1.  Conformez-vous aux instructions relatives à la copie des définitions de colonne ci-dessus.  

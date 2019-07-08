@@ -19,12 +19,12 @@ ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c719c6897edfa956c70b7863811ccea98bee68b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ee2fcc90061bbd003081f747fb7f4a50b6755f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507670"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585833"
 ---
 # <a name="define-an-article"></a>Définir un article
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,9 @@ ms.locfileid: "62507670"
 3.  Cliquez sur **Nouvelle publication**.  
   
 4.  Exécutez les pages de l'Assistant Nouvelle publication pour.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   Spécifier un serveur de distribution si la distribution n'a pas été configurée sur le serveur. Pour plus d’informations sur la configuration de la distribution, consultez [Configurer la publication et la distribution](../../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
          Si vous spécifiez dans la page **Serveur de distribution** que le serveur de publication se comportera comme son propre serveur de distribution (serveur de distribution local), et si ce serveur n'est pas configuré comme serveur de distribution, l'Assistant Nouvelle publication configurera ce serveur. Vous spécifierez un dossier d'instantanés par défaut pour le serveur de distribution dans la page **Dossier d'instantanés** . Le dossier d'instantanés correspond à un simple répertoire que vous définissez sous la forme d'un partage ; les agents qui lisent et écrivent dans le dossier doivent disposer des autorisations suffisantes pour pouvoir y accéder. Pour plus d’informations sur une sécurisation appropriée du dossier, consultez [Sécuriser le dossier d’instantanés](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  

@@ -24,12 +24,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fb94ddf437439fe2dcb414fb69f3049d1a4dbd9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ebee4a462cd865ef606d38ecf205bf41065a0d2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513820"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580280"
 ---
 # <a name="export-a-data-tier-application"></a>Exporter une application de la couche Données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "52513820"
 1.  L’exportation génère une définition de la DAC dans le fichier d’exportation (fichier BACPAC), de la même manière que l’extraction d’une DAC génère une définition de la DAC dans un fichier de package DAC. La définition de la DAC exportée inclut tous les objets de la base de données active. Si le processus d'exportation est exécuté sur une base de données à l'origine déployée à partir de la DAC et si des modifications ont été apportées directement à la base de données après le déploiement, la définition exportée correspond au jeu d'objets dans la base de données, pas à ce qui a été défini dans la DAC d'origine.  
   
 2.  L'exportation copie en bloc les données de toutes les tables dans la base de données et les incorpore dans le fichier d'exportation.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Le processus d'exportation définit la version de la DAC sur 1.0.0.0 et la description de la DAC dans le fichier d'exportation sur une chaîne vide. Si la base de données a été déployée à partir de la DAC, la définition de la DAC dans le fichier d'exportation contient le nom donné à la DAC d'origine, sinon le nom de la DAC est défini sur le nom de la base de données.  
   
 
@@ -50,7 +52,7 @@ ms.locfileid: "52513820"
   
  Vous ne pouvez pas exporter une base de données contenant des objets qui ne sont pas pris en charge dans une DAC ou contenant des utilisateurs à relation contenant-contenu. Pour plus d'informations sur les types d'objets pris en charge dans une DAC, consultez [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  L’exportation d’une DAC requiert au minimum des autorisations ALTER ANY LOGIN et VIEW DEFINITION de la portée de la base de données, ainsi que des autorisations SELECT sur **sys.sql_expression_dependencies**. L'exportation d'une DAC peut être réalisée par les membres du rôle serveur fixe securityadmin également membres du rôle de base de données fixe database_owner dans la base de données à partir de laquelle est extraite la DAC. Les membres du rôle serveur fixe sysadmin ou le compte d’administrateur système intégré de SQL Server nommé **sa** peuvent également exporter une DAC.
  
 Sur Azure SQL DB, vous devez accorder **pour chaque base de données** l’autorisation VIEW DEFINITION et SELECT sur toutes les tables ou sur des tables spécifiques
@@ -128,7 +130,7 @@ Sur Azure SQL DB, vous devez accorder **pour chaque base de données** l’autor
   
 3.  Utilisez la méthode **Export** de type **Microsoft.SqlServer.Management.Dac.DacStore** pour exporter la DAC. Spécifiez le nom de la DAC à exporter, ainsi que le chemin d'accès au dossier où le fichier d'exportation doit être placé.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Extraire une DAC d'une base de données](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
   

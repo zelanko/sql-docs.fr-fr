@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 4d7b86e88d576d44869dd3a54ddfd6af05770971
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 647630106046345dbe2b3008df020fa1d790d2aa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369291"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582553"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,9 @@ ms.locfileid: "53369291"
 5.  Désactivez la case à cocher **Afficher les objets existants** située au bas de la page à onglets **Recommandations** . La grille n'affiche alors que les objets de base de données mentionnés dans la recommandation. Utilisez la barre de défilement inférieure pour visualiser la colonne située à l’extrême droite de la grille des recommandations, puis cliquez sur un élément de la colonne **Définition** pour visualiser ou copier le script [!INCLUDE[tsql](../../includes/tsql-md.md)] générateur de cet objet dans votre base de données.  
   
 6.  Si vous souhaitez enregistrer dans un fichier de script l'ensemble des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] qui créent ou suppriment les objets de base de données mentionnés dans cette recommandation, cliquez sur **Enregistrer les recommandations** dans le menu **Actions** .  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>Pour afficher le résumé et les rapports de paramétrage dans l'interface graphique de l'Assistant Paramétrage du moteur de base de données  
   
 1.  Paramétrez une base de données dans l’interface utilisateur graphique de l’Assistant Paramétrage du moteur de base de données ou dans l’utilitaire de ligne de commande **dta** . Pour plus d’informations, consultez [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Si vous souhaitez utiliser une session de paramétrage existante, ignorez cette étape et passez directement à l'étape 2.  
@@ -388,7 +390,7 @@ ms.locfileid: "53369291"
  **Select Report**  
  Affiche les détails du rapport sélectionné. Les colonnes de la grille varient en fonction du rapport.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [Utilitaire dta](../../tools/dta/dta-utility.md)  
   

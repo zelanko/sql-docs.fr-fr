@@ -14,12 +14,12 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b29e94e129cf674beee7d9ca2b784203c753c79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b08178a89f8678b8ad0ac9f9f2f848860bb786c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826397"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584199"
 ---
 # <a name="view-offline-log-files"></a>Afficher les fichiers journaux hors connexion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,13 +70,13 @@ ms.locfileid: "47826397"
   
      Si vous souhaitez vous connecter à un ordinateur distant, suivez ces étapes :  
   
-    1.  Cliquez avec le bouton droit sur **Contrôle WMI (local)**, puis cliquez sur **Se connecter à un autre ordinateur**.  
+    1.  Cliquez avec le bouton droit sur **Contrôle WMI (local)** , puis cliquez sur **Se connecter à un autre ordinateur**.  
   
     2.  Dans la boîte de dialogue **Changer d'ordinateur géré** , cliquez sur **Un autre ordinateur**.  
   
     3.  Entrez le nom de l'ordinateur distant, puis cliquez sur **OK**.  
   
-3.  Cliquez avec le bouton droit sur **Contrôle WMI (local)** ou **Contrôle WMI (***NomOrdinateurDistant***)**, puis cliquez sur **Propriétés**.  
+3.  Cliquez avec le bouton droit sur **Contrôle WMI (local)** ou **Contrôle WMI (***NomOrdinateurDistant***)** , puis cliquez sur **Propriétés**.  
   
 4.  Dans la boîte de dialogue **Propriétés du Contrôle WMI** , cliquez sur l'onglet **Sécurité** .  
   
@@ -87,7 +87,9 @@ ms.locfileid: "47826397"
 6.  Cliquez sur **Sécurité**.  
   
 7.  Assurez-vous que le compte qui sera utilisé a l'autorisation **Activer le compte** . Cette autorisation autorise l'accès en lecture aux objets WMI.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="view-log-files"></a>Afficher les fichiers journaux  
  La procédure suivante indique comment afficher les fichiers journaux hors connexion via des serveurs inscrits. Cette procédure suppose que la condition suivante est remplie :  
   
@@ -120,7 +122,7 @@ ms.locfileid: "47826397"
     > [!NOTE]  
     >  Si les fichiers journaux mettent trop de temps à se charger, vous pouvez cliquer sur **Arrêt** dans la barre d’outils de la Visionneuse du fichier journal.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Visionneuse du fichier journal](../../relational-databases/logs/log-file-viewer.md)  
   
   

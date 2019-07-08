@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 1be87a50ad6e8815a9446ca22c2734a6e82b4745
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872019"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583534"
 ---
 # <a name="rename-a-database"></a>Modifier le nom d'une base de données
 
@@ -72,7 +72,9 @@ Utilisez les étapes suivantes pour renommer une base de données SQL Server ou 
 3. Dans l’Explorateur d’objets, développez **Bases de données**, cliquez avec le bouton droit sur la base de données à renommer, puis cliquez sur **Renommer**.  
   
 4. Entrez le nouveau nom de la base de données, puis cliquez sur **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="rename-a-database-using-transact-sql"></a>Renommer une base de données avec Transact-SQL  
   
 ### <a name="to-rename-a-sql-server-database-by-placing-it-in-single-user-mode"></a>Pour renommer une base de données SQL Server en la plaçant en mode mono-utilisateur
@@ -111,7 +113,7 @@ Utilisez les étapes suivantes pour renommer une base de données Azure SQL avec
 
 Après avoir renommé une base de données dans SQL Server, sauvegardez la base de données `master`. Dans Azure SQL Database, ceci n’est pas nécessaire, car les sauvegardes sont effectuées automatiquement.  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
 - [Identificateurs de base de données](../../relational-databases/databases/database-identifiers.md)  

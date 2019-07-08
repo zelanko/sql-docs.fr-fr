@@ -12,12 +12,12 @@ ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 0053db2d88c63a4ea7d5a49dc88048b218a6c517
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 23b539444f2de609053d530df85edafcc58ba1f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689742"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582422"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Configurer Resource Governor à l'aide d'un modèle
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "55689742"
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Utilisez les étapes suivantes pour ouvrir et modifier un modèle qui crée un pool de ressources et un groupe de charge de travail pour le pool. De plus, ce modèle vous permet de créer une fonction classifieur définie par l'utilisateur qui achemine de nouvelles connexions vers le groupe par défaut ou le groupe de charge de travail que vous créez.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de Resource Governor dans le modèle requièrent l'autorisation CONTROL SERVER.  
   
 ##  <a name="ConfRGTemplate"></a> Configurer Resource Governor à l'aide d'un modèle  
@@ -47,8 +47,10 @@ ms.locfileid: "55689742"
 5.  Pour enregistrer les modifications que vous apportez au modèle, cliquez sur **OK**.  
   
 6.  Pour exécuter la requête, cliquez sur **Exécuter**.  
-  
-## <a name="see-also"></a> Voir aussi  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de ressources de Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

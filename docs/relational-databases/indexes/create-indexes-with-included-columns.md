@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c32b38b0327c8c418929514c7f82e26a3a41584
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b515cbf3da95ffdab82ad609937b7a1738684678
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539721"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492876"
 ---
 # <a name="create-indexes-with-included-columns"></a>Créer des index avec colonnes incluses
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "52539721"
   Cette rubrique explique comment ajouter des colonnes incluses (ou non-clés) pour étendre les fonctionnalités des index non cluster dans [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'inclusion de colonnes non-clés permet de créer des index non-cluster qui couvrent davantage de requêtes. En effet, les colonnes non-clés présentent les avantages suivants :  
   
 -   Elles peuvent contenir des types de données qui ne sont pas autorisés dans les colonnes de clés d'index.  
-  
 -   Elles ne sont pas prises en compte par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] lors du calcul du nombre de colonnes clés d'index ou de la taille de la clé d'index.  
   
  Un index contenant des colonnes non-clés peut améliorer considérablement les performances des requêtes lorsque toutes les colonnes de la requête sont incluses dans l'index en tant que colonnes clés ou non-clés. Les gains de performances sont dus au fait que l'optimiseur de requête peut localiser toutes les valeurs des colonnes dans l'index ; l'accès aux données de table et d'index n'a pas lieu, produisant ainsi un nombre moindre d'opérations d'E/S sur le disque.  
@@ -71,7 +70,7 @@ ms.locfileid: "52539721"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -84,17 +83,17 @@ ms.locfileid: "52539721"
   
 3.  Cliquez sur le signe plus (+) pour développer la table sur laquelle vous souhaitez créer un index avec des colonnes non-clés.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...**.  
+4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...** .  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
-6.  Sous l’onglet **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
+6.  Sous l’onglet **Colonnes clés d’index**, cliquez sur **Ajouter…** .  
   
 7.  Dans la boîte de dialogue **Sélectionner des colonnes dans** _nom\_table_, cochez les cases correspondant aux colonnes de table à ajouter à l’index.  
   
 8.  Cliquez sur **OK**.  
   
-9. Sous l’onglet **Colonnes incluses**, cliquez sur **Ajouter...**.  
+9. Sous l’onglet **Colonnes incluses**, cliquez sur **Ajouter...** .  
   
 10. Dans la boîte de dialogue **Sélectionner des colonnes dans** _nom\_table_, cochez les cases correspondant aux colonnes de table à ajouter à l’index en tant que colonnes non-clés.  
   

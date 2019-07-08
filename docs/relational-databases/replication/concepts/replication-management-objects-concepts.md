@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6a42f77b21e8b06fc9795caac7064368af436bb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd704b4c72e454534cba627c5730dff5867dfc61
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724631"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583094"
 ---
 # <a name="replication-management-objects-concepts"></a>Concepts liés à Replication Management Objects
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,9 @@ ms.locfileid: "62724631"
 9. Dans le menu **Affichage** , cliquez sur **Code**.  
   
 10. Dans le code, avant l’instruction d’espace de noms, tapez les instructions **using** suivantes pour qualifier les types dans les espaces de noms RMO :  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     // These namespaces are required.  
     using Microsoft.SqlServer.Replication;  

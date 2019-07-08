@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 455530c12d498f62b367ecb7ce30d0eb34aa6c5d
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 6169d09cd048c9883836c3d34ff8912e9101ba07
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542039"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586320"
 ---
 # <a name="query-store-usage-scenarios"></a>Scénarios d’utilisation du Magasin des requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -67,7 +67,9 @@ Quand vous identifiez une requête dont les performances ne sont pas optimales, 
 4.  Vérifiez que les index utilisés par la requête sont défragmentés.  
   
 5.  Envisagez de récrire la requête coûteuse. Par exemple, profitez du paramétrage des requêtes et réduisez l’utilisation d’instructions SQL dynamiques. Implémentez une logique optimale lors de la lecture de données (appliquez le filtrage des données côté base de données, et non pas côté application).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ab-testing"></a>Test A/B  
  Utilisez le magasin de requêtes pour comparer les performances de la charge de travail avant et après la modification d’application que vous prévoyez d’introduire. La liste suivante contient plusieurs exemples où vous pouvez utiliser le magasin de requêtes pour évaluer l’impact de la modification de l’environnement ou de l’application sur les performances de la charge de travail :  
   
@@ -218,7 +220,7 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
     (OPERATION_MODE = READ_WRITE, QUERY_CAPTURE_MODE = AUTO);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)         
  [Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           

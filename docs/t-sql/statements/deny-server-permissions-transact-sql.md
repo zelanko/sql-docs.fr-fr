@@ -18,12 +18,12 @@ ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9f480a406983fa0e4bdce4c100b4ccb4d44c5c3a
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: df064e5ebe9a5a6fabbd1eda16cf29bfa3f58d0e
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361589"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556910"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY – refus d'autorisations de serveur (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,13 +60,16 @@ DENY permission [ ,...n ]
  Spécifie une autorisation qui peut être refusée sur un serveur. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
  CASCADE  
- Indique que l'autorisation à refuser est également refusée pour les autres principaux auxquels elle a été accordée par ce principal.  
+ Indique que l'autorisation est refusée au principal spécifié et à tous les autres principaux auxquels le principal a accordé cette autorisation. Nécessaire lorsque le principal a l'autorisation avec l'option GRANT OPTION. 
   
  TO \<server_principal>  
  Spécifie le principal pour lequel l'autorisation doit être refusée.  
   
  AS \<grantor_principal>  
- Spécifie le principal à partir duquel le principal qui exécute cette requête dérive son droit de refuser l'autorisation.  
+ Spécifie le principal à partir duquel le principal qui exécute cette requête dérive son droit de refuser l'autorisation.
+Utilisez la clause AS principal pour indiquer que le principal enregistré comme entité refusant l’autorisation doit être un principal autre que la personne qui exécute l’instruction. Supposez par exemple que l’utilisateur Mary est le principal_id 12 et que l’utilisateur Raul est le principal 15. Mary exécute `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Maintenant, la table sys.database_permissions indique que le grantor_prinicpal_id de l’instruction deny était 15 (Raul), même si l’instruction a été exécutée par l’utilisateur 13 (Mary).
+  
+L’utilisation de AS dans cette instruction n’implique pas la possibilité d’emprunter l’identité d’un autre utilisateur.    
   
  *SQL_Server_login*  
  Spécifie une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -86,7 +89,7 @@ DENY permission [ ,...n ]
  *server_role*  
  Spécifie un rôle de serveur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les autorisations dans l'étendue du serveur peuvent être refusées seulement lorsque la base de données en cours est master.  
   
  Les informations sur les autorisations de serveur peuvent être consultées dans la vue de catalogue [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), tandis que les informations sur les principaux de serveur peuvent être consultées dans la vue de catalogue [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Des informations sur l’appartenance des rôles de serveur peuvent être consultées dans la vue de catalogue [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
@@ -130,7 +133,7 @@ DENY permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les trois autorisations de serveur suivantes ont été ajoutées dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Autorisation **CONNECT ANY DATABASE**  
@@ -142,7 +145,7 @@ DENY permission [ ,...n ]
  Autorisation **SELECT ALL USER SECURABLES**  
  Lorsque cette autorisation est accordée, une connexion telle qu'un auditeur peut afficher les données de toutes les bases de données auxquelles l'utilisateur se connecte. Quand cette autorisation est refusée, elle empêche l’accès aux objets sauf s’ils se trouvent dans le schéma **sys**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER ou la propriété de l'élément sécurisable. Si vous utilisez la clause AS, le principal spécifié doit posséder l'élément sécurisable sur lequel les autorisations doivent être refusées.  
   
 ## <a name="examples"></a>Exemples  
@@ -156,7 +159,7 @@ DENY CONNECT SQL TO Annika CASCADE;
 GO  
 ```  
   
-### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>b. Refus d'une autorisation CREATE ENDPOINT à une connexion SQL Server avec l'option AS  
+### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>B. Refus d'une autorisation CREATE ENDPOINT à une connexion SQL Server avec l'option AS  
  Dans l'exemple ci-dessous, l'autorisation `CREATE ENDPOINT` est refusée à l'utilisateur `ArifS`. L'exemple utilise l'option `AS` pour spécifier `MandarP` comme principal à partir duquel le principal en charge dérive l'autorité d'agir ainsi.  
   
 ```  
@@ -165,7 +168,7 @@ DENY CREATE ENDPOINT TO ArifS AS MandarP;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [DENY - Refuser des autorisations sur un serveur (Transact-SQL)](../../t-sql/statements/deny-server-permissions-transact-sql.md)   

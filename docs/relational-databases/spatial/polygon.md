@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bbed0ab919c2eb4258c22bee4545ec8d49a1462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 192b068c8ece6bcfda9aee2899793d7d901dd90a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761453"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581700"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -43,7 +43,9 @@ Comme indiqué par l'illustration :
 2.  La Figure 2 est une instance **Polygon** dont la limite est définie par un anneau extérieur et deux anneaux intérieurs. La zone à l’intérieur des anneaux intérieurs fait partie de l’extérieur de l’instance **Polygon** .  
   
 3.  La Figure 3 est une instance **Polygon** valide, car ses anneaux intérieurs se croisent à un point tangent unique.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="accepted-instances"></a>Instances acceptées  
  Les instances **Polygon** acceptées sont des instances qui peuvent être stockées dans une variable **geometry** ou **geography** sans lever d’exception. Les instances **Polygon** suivantes sont acceptées :  
   

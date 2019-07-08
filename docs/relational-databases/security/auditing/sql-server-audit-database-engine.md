@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: eebc9f2cdc059bb8d90c290981da0560a15ab5dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bba79c497f9999f263de90622b5c306d035ec823
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716080"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581996"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "62716080"
 > [!IMPORTANT]  
 >  Tout utilisateur authentifié peut lire et écrire dans le journal des événements d'applications de Windows. Celui-ci requiert des autorisations inférieures au journal des événements de sécurité de Windows et il est moins sécurisé.  
   
- L'écriture dans le journal de sécurité de Windows requiert l'ajout du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à la stratégie **Générer des audits de sécurité** . Par défaut, les comptes Système Local, Service local et Service réseau font partie de cette stratégie. Ce paramètre peut être configuré à l'aide du composant logiciel enfichable de stratégie de sécurité (secpol.msc). En outre, la stratégie de sécurité **Auditer l'accès aux objets** doit être activée pour **Succès** et **Échec**. Ce paramètre peut être configuré à l'aide du composant logiciel enfichable de stratégie de sécurité (secpol.msc). Dans [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou Windows Server 2008, vous pouvez définir une stratégie **générée par une application** plus précise à partir de la ligne de commande à l’aide du programme de stratégie d’audit (**AuditPol.exe)**. Pour plus d’informations sur les étapes permettant d’activer l’écriture dans le journal de sécurité de Windows, consultez [Écrire des événements d’audit SQL Server dans le journal de sécurité](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Pour en savoir plus sur le programme Auditpol.exe, consultez l’article 921469 de la Base de connaissances : [Comment faire pour utiliser la stratégie de groupe pour configurer des paramètres d'audit de sécurité détaillés](https://support.microsoft.com/kb/921469/). Les journaux des événements de Windows sont communs à l'ensemble du système d'exploitation Windows. Pour plus d'informations sur les journaux des événements de Windows, consultez [Vue d'ensemble de l'observateur d'événements](https://go.microsoft.com/fwlink/?LinkId=101455). Si vous avez besoin d'autorisations plus précises sur l'audit, utilisez la cible de fichier binaire.  
+ L'écriture dans le journal de sécurité de Windows requiert l'ajout du compte de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à la stratégie **Générer des audits de sécurité** . Par défaut, les comptes Système Local, Service local et Service réseau font partie de cette stratégie. Ce paramètre peut être configuré à l'aide du composant logiciel enfichable de stratégie de sécurité (secpol.msc). En outre, la stratégie de sécurité **Auditer l'accès aux objets** doit être activée pour **Succès** et **Échec**. Ce paramètre peut être configuré à l'aide du composant logiciel enfichable de stratégie de sécurité (secpol.msc). Dans [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] ou Windows Server 2008, vous pouvez définir une stratégie **générée par une application** plus précise à partir de la ligne de commande à l’aide du programme de stratégie d’audit (**AuditPol.exe)** . Pour plus d’informations sur les étapes permettant d’activer l’écriture dans le journal de sécurité de Windows, consultez [Écrire des événements d’audit SQL Server dans le journal de sécurité](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md). Pour en savoir plus sur le programme Auditpol.exe, consultez l’article 921469 de la Base de connaissances : [Comment faire pour utiliser la stratégie de groupe pour configurer des paramètres d'audit de sécurité détaillés](https://support.microsoft.com/kb/921469/). Les journaux des événements de Windows sont communs à l'ensemble du système d'exploitation Windows. Pour plus d'informations sur les journaux des événements de Windows, consultez [Vue d'ensemble de l'observateur d'événements](https://go.microsoft.com/fwlink/?LinkId=101455). Si vous avez besoin d'autorisations plus précises sur l'audit, utilisez la cible de fichier binaire.  
   
  Lorsque vous enregistrez des informations d'audit dans un fichier, pour éviter toute falsification, vous pouvez limiter l'accès à l'emplacement du fichier des façons suivantes :  
   
@@ -110,7 +110,9 @@ ms.locfileid: "62716080"
 3.  Activez l'audit.  
   
 4.  Lisez les événements d’audit à l’aide de l’ **Observateur d’événements**Windows, de la **Visionneuse du fichier journal**ou de la fonction fn_get_audit_file.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Pour plus d'informations, consultez [Créer un audit du serveur et une spécification d’audit du serveur](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) et [Créer une spécification de l’audit du serveur et de la base de données](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ## <a name="considerations"></a>Observations  
@@ -128,7 +130,7 @@ ms.locfileid: "62716080"
 ### <a name="database-mirroring-and-sql-server-audit"></a>Mise en miroir de bases de données et SQL Server Audit  
  Une base de données qui possède une spécification d'audit définie et qui utilise la mise en miroir de bases de données inclut la spécification de l'audit de la base de données. Pour fonctionner correctement sur l'instance SQL en miroir, les éléments suivants doivent être configurés :  
   
--   Le serveur miroir doit avoir un audit avec le même GUID afin de permettre à la spécification de l'audit de la base de données d'écrire des enregistrements d'audit. La commande CREATE AUDIT WITH GUID **=**_\<GUID_de_l’audit_de_serveur_source_> permet d’obtenir cette configuration.  
+-   Le serveur miroir doit avoir un audit avec le même GUID afin de permettre à la spécification de l'audit de la base de données d'écrire des enregistrements d'audit. La commande CREATE AUDIT WITH GUID **=** _\<GUID_de_l’audit_de_serveur_source_> permet d’obtenir cette configuration.  
   
 -   Si la cible est un fichier binaire, le compte de service de serveur miroir doit avoir des autorisations appropriées pour l'emplacement où le journal d'audit est écrit.  
   
@@ -213,7 +215,7 @@ ms.locfileid: "62716080"
  [Microsoft TechNet - TechCenter SQL Server : Sécurité et protection SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Fournit des informations à jour sur la sécurité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Actions et groupes d’actions SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)   
  [Enregistrements SQL Server Audit](../../../relational-databases/security/auditing/sql-server-audit-records.md)  
   

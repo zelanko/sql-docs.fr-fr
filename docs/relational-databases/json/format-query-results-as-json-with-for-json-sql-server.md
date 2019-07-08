@@ -15,12 +15,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ea42c8ca9025880f28f273248682e5b8fa88f3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b30a29f7aa2cd0e64c645d2e62f60a10c74063ac
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66743904"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586258"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Mettre les résultats de requête au format JSON avec FOR JSON (SQL Server)
 
@@ -195,7 +195,9 @@ La sortie de la clause **FOR JSON** présente les caractéristiques suivantes :
     -   Chaque colonne des résultats de l’instruction SELECT (avant l’application de la clause FOR JSON) devient une propriété de l’objet JSON.  
   
 3.  Le nom et la valeur des colonnes sont échappés selon la syntaxe JSON. Pour plus d’informations, consultez [Comment FOR JSON place dans une séquence d’échappement les caractères spéciaux et les caractères de contrôle &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md).
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="example"></a>Exemple
 Voici un exemple qui montre comment la clause **FOR JSON** met en forme la sortie JSON.  
   

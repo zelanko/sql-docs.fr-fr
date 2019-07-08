@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e44cb9ed2c5009dffce1373c57d512b8e578d025
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 584617a0932e3b2941eb8dca153caee01512a147
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478124"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585920"
 ---
 # <a name="monitor-system-activity-using-extended-events"></a>Surveiller l'activité système à l’aide d’événements étendus
 
@@ -108,7 +108,9 @@ ms.locfileid: "58478124"
     ```  
   
 8.  Émettez les instructions suivantes pour arrêter la session d'événement et la supprimer du serveur.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     ALTER EVENT SESSION test0  
     ON SERVER  
@@ -120,7 +122,7 @@ ms.locfileid: "58478124"
     go  
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   

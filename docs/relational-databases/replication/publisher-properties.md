@@ -16,12 +16,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ba43fc3f35c1fd3cacd3bdda6d4192cf7dc75af
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: def9df7e03f596cf519eebebd7b2ca83a912fe98
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129839"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580019"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>Réplication SQL Server, boîte de dialogue Propriétés du serveur de publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,9 @@ Cette rubrique décrit les différentes options disponibles dans la boîte de di
   
 1.  Désactivez la publication sur le serveur de publication. Pour plus d’informations, consultez [Désactiver la publication et la distribution](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 2.  Reconfigurez la publication et la distribution. Pour plus d’informations, consultez [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="distributor"></a>Serveur de distribution 
 La boîte de dialogue **Propriétés du serveur de publication** permet d'afficher et de modifier les propriétés associées à la relation existant entre le serveur de publication et son serveur de distribution.  
   
@@ -70,12 +72,12 @@ La boîte de dialogue **Propriétés du serveur de publication** permet d'affich
   
 ### <a name="options"></a>Options  
  **Abonnés**  
- La grille de propriétés **Abonnés** indique les abonnés qui peuvent recevoir des données de publication du serveur de publication. Cliquez sur le bouton des propriétés (**...**) à côté d'un abonné pour afficher et définir des propriétés supplémentaires.  
+ La grille de propriétés **Abonnés** indique les abonnés qui peuvent recevoir des données de publication du serveur de publication. Cliquez sur le bouton des propriétés ( **...** ) à côté d'un abonné pour afficher et définir des propriétés supplémentaires.  
   
  **Ajouter**  
  Cliquez sur **Ajouter** pour ajouter un abonné, puis cliquez sur **Ajout un Abonné SQL Server** ou **Ajouter un Abonné non-SQL Server**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les propriétés d’un serveur de distribution et d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [Créer une publication](../../relational-databases/replication/publish/create-a-publication.md)   
 

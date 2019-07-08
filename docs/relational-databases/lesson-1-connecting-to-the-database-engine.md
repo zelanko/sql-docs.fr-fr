@@ -11,12 +11,12 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a7f95a4ebc0227a4bb16f256073a3408ae15a1c2
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801683"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517769"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Leçon 1 : Connexion au moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,6 +60,8 @@ Les exemples de bases de données et les exemples ne sont pas fournis avec [!INC
 3.  Si le composant Serveurs inscrits n'apparaît pas, dans le menu **Affichage** , cliquez sur **Serveurs inscrits**.
 4.  Sélectionnez l’option **Moteur de base de données** dans la barre d’outils Serveurs inscrits, développez **Moteur de base de données**, cliquez avec le bouton droit sur **Groupes de serveurs locaux**, pointez sur **Tâches**, puis cliquez sur **Inscrire les serveurs locaux**. Toutes les instances du [!INCLUDE[ssDE](../includes/ssde-md.md)] installées sur l'ordinateur s'affichent, L'instance par défaut n'a pas de nom et prend le nom de l'ordinateur. Une instance nommée s’affiche sous le nom de l’ordinateur suivi d’une barre oblique inversée (\\), puis du nom de l’instance. Pour [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], l’instance est nommée *<nom_ordinateur>* \sqlexpress sauf si vous avez modifié le nom pendant l’installation.  
 
+[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Pour vérifier que le moteur de base de données est en cours d'exécution
 
 1.  Dans le composant Serveurs inscrits, si le nom de l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contient un point vert avec une flèche blanche en regard du nom, le [!INCLUDE[ssDE](../includes/ssde-md.md)] est exécuté et aucune autre action n'est requise.  
@@ -77,7 +79,7 @@ Au moins un compte d’administrateur a été sélectionné pendant l’installa
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  Dans la zone **Nom du serveur** , tapez le nom de l'instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Pour l'instance par défaut de SQL Server, le nom du serveur est celui de l'ordinateur. Pour une instance nommée de SQL Server, le nom du serveur est _\<nom_ordinateur\>_**\\**_\<nom_instance\>_, par exemple **ACCTG_SRVR\SQLEXPRESS**. La capture d’écran suivante montre la connexion à l’instance par défaut (non nommée) de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] sur un ordinateur nommé « PracticeComputer ». L’utilisateur connecté à Windows est Mary du domaine Contoso. Quand vous utilisez l’authentification Windows, vous ne pouvez pas modifier le nom d’utilisateur. 
+3.  Dans la zone **Nom du serveur** , tapez le nom de l'instance du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Pour l'instance par défaut de SQL Server, le nom du serveur est celui de l'ordinateur. Pour une instance nommée de SQL Server, le nom du serveur est _\<nom_ordinateur\>_ **\\** _\<nom_instance\>_ , par exemple **ACCTG_SRVR\SQLEXPRESS**. La capture d’écran suivante montre la connexion à l’instance par défaut (non nommée) de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] sur un ordinateur nommé « PracticeComputer ». L’utilisateur connecté à Windows est Mary du domaine Contoso. Quand vous utilisez l’authentification Windows, vous ne pouvez pas modifier le nom d’utilisateur. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
@@ -110,5 +112,5 @@ Une fois que vous êtes connecté à [!INCLUDE[ssNoVersion](../includes/ssnovers
 > Ces informations sont des notions de base destinées à vous aider au démarrage. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] offre un environnement de sécurité de qualité. La sécurité est à l'évidence un aspect primordial des opérations de base de données.  
 
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 2 : Connexion à partir d’un autre ordinateur](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+[Leçon 2 : Connexion à partir d’un autre ordinateur](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   

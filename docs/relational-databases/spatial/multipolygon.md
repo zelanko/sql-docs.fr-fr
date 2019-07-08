@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a66491bb68469ecaa8f9cde47f77566e6c31236a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c806c91beb14d2a50988b95e0ab09ee7f678dc3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936426"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584701"
 ---
 # <a name="multipolygon"></a>MultiPolygon
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,9 @@ La deuxième instance du MultiPolygon est une instance LineString et non une ins
 1.  Toutes les instances comprenant l’instance **MultiPolygon** sont des instances **Polygon** valides. Pour obtenir des instances **Polygon** valides, consultez [Polygon](../../relational-databases/spatial/polygon.md).  
   
 2.  Aucune des instances **Polygon** comprenant l’instance **MultiPolygon** n’en chevauche une autre.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 L’exemple suivant illustre deux instances **MultiPolygon** valides et une instance **MultiPolygon** non valide.  
   
 ```sql  

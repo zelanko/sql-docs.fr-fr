@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b0544c995039c2dda6f20ea86b5893e2938708d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d0023f2646cadac8b189992f06b695c1779c491d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559912"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583405"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>Afficher ou modifier le niveau de compatibilité d'une base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51559912"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -62,8 +62,10 @@ ms.locfileid: "51559912"
   
      Le niveau de compatibilité actuel apparaît dans la zone de liste **Niveau de compatibilité** .  
   
-5.  Pour modifier le niveau de compatibilité, sélectionnez une option différente dans la liste. Les choix sont **SQL Server 2008 (100)**, **SQL Server 2012 (110)**, **SQL Server 2014 (120)**, **SQL Server 2016 (130)** et **SQL Server 2017 (140)**.  
-  
+5.  Pour modifier le niveau de compatibilité, sélectionnez une option différente dans la liste. Les choix sont **SQL Server 2008 (100)** , **SQL Server 2012 (110)** , **SQL Server 2014 (120)** , **SQL Server 2016 (130)** et **SQL Server 2017 (140)** .  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-view-the-compatibility-level-of-a-database"></a>Pour afficher le niveau de compatibilité d'une base de données  
@@ -96,5 +98,5 @@ SET COMPATIBILITY_LEVEL = 120;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
  [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)

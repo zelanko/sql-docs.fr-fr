@@ -15,12 +15,12 @@ ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 3e102f509d289c4bc0e3a4a4100ec7c091636acd
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 0aef47aa00c52bd5adb0069baf0a1d06a6848d43
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143409"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580767"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Activer ou désactiver un repère de plan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "54143409"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  La désactivation ou l'activation d'un repère de plan OBJECT nécessite l'autorisation ALTER sur l'objet (par exemple : fonction, procédure stockée) qui est référencé par le repère de plan. Tous les autres repères de plan nécessitent l'autorisation ALTER DATABASE.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -64,7 +64,9 @@ ms.locfileid: "54143409"
 3.  Cliquez avec le bouton droit sur le repère de plan que vous souhaitez désactiver ou activer et sélectionnez **Désactiver** ou **Activer**.  
   
 4.  Dans la boîte de dialogue **Désactiver le repère de plan** ou **Activer le repère de plan** , vérifiez que l'action choisie a abouti, puis cliquez sur **Fermer**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Pour activer ou désactiver tous les repères de plan dans une base de données  
   
 1.  Cliquez sur le signe plus pour développer la base de données dans laquelle vous souhaitez désactiver ou activer un repère de plan, puis cliquez sur le signe plus pour développer le dossier **Programmabilité** .  

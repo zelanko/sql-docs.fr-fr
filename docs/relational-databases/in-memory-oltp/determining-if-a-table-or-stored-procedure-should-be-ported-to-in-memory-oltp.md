@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcb4c7385c509e132da589149c4da9f2db5c0d5f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047769"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582232"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,9 @@ Les statistiques d'analyse et de contention dans le rapport détaillé de la tab
 3.  Cliquez sur **Suivant** et vérifiez que la liste des tâches correspond à vos paramètres sur la page de **configuration des options de génération de liste de contrôle** .  
   
 4.  Cliquez sur **Terminer**, puis vérifiez que les rapports de liste de contrôle de migration ont été générés uniquement pour les objets sélectionnés.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Vous pouvez vérifier l'exactitude des rapports en les comparant aux rapports générés par l'outil Conseiller d'optimisation de la mémoire et l'outil Conseiller de compilation native. Pour plus d'informations, consultez [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) et [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   
 **Pour générer une liste de contrôle de migration à l'aide de SQL Server PowerShell**  

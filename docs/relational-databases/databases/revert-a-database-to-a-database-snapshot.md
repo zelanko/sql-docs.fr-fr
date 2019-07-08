@@ -14,12 +14,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d04286e2b8703e7d06a9913b421f69a94234b25
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b0b31cb616e5e7d8c2b5c83386f247729a115cbe
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591053"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583553"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Rétablir une base de données dans l'état d'un instantané de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "53591053"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Tout utilisateur qui dispose des autorisations RESTORE DATABASE sur la base de données source peut la rétablir dans l'état qui était le sien au moment où l'instantané a été créé.  
   
 ##  <a name="TsqlProcedure"></a> Comment rétablir une base de données dans l'état d'un instantané de base de données (à l'aide de Transact-SQL)  
@@ -101,7 +101,7 @@ ms.locfileid: "53591053"
   
      Une opération de restauration nécessite des autorisations RESTORE DATABASE sur la base de données source. Pour restaurer la base de données, utilisez l'instruction Transact-SQL suivante :  
   
-     RESTORE DATABASE *nom_base_de_données* FROM DATABASE_SNAPSHOT **=**_nom_instantané_base_de_données_  
+     RESTORE DATABASE *nom_base_de_données* FROM DATABASE_SNAPSHOT **=** _nom_instantané_base_de_données_  
   
      Où *nom_base_de_données* est la base de données source et *nom_instantané_base_de_données* le nom de l’instantané auquel vous souhaitez rétablir la base de données. Notez que dans cette instruction, vous devez spécifier un nom d'instantané et non un périphérique de sauvegarde.  
   
@@ -118,13 +118,15 @@ ms.locfileid: "53591053"
 5.  Démarrez la base de données.  
   
 6.  En option, sauvegardez la base de données restaurée, notamment si elle utilise le mode de récupération complète (ou utilisant les journaux de transactions). Pour sauvegarder une base de données, consultez [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cette section présente les exemples suivants de rétablissement d'une base de données à un état antérieur par le biais d'un instantané de base de données :  
   
 -   A. [Rétablissement d'un instantané sur la base de données AdventureWorks](#Reverting_AW)  
   
--   b. [Rétablissement d'un instantané sur la base de données Sales (Ventes)](#Reverting_Sales)  
+-   B. [Rétablissement d'un instantané sur la base de données Sales (Ventes)](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Rétablissement d'un instantané sur la base de données AdventureWorks  
  L'exemple suivant part du principe qu'un seul instantané existe actuellement sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Pour l’exemple qui crée l’instantané auquel la base de données est ici rétablie, consultez [Créer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  
@@ -167,7 +169,7 @@ GO
   
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   

@@ -15,12 +15,12 @@ ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 0a17a0708621a01c101cb29786d61ceda192b5b8
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 2bbe90a155ee0bf995d0b5f7f21cf0c686275a9f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689792"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584749"
 ---
 # <a name="resource-governor-classifier-function"></a>Fonction classifieur du gouverneur de ressources
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -74,7 +74,9 @@ ms.locfileid: "55689792"
 2.  exécution des déclencheurs LOGON ;  
   
 3.  classification.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Lorsque la classification commence, Resource Governor exécute la fonction classifieur et utilise la valeur retournée par la fonction pour envoyer des demandes au groupe de charges de travail approprié.  
   
 > [!NOTE]  
@@ -86,7 +88,7 @@ ms.locfileid: "55689792"
 |----------------------|-----------|  
 |Décrit comment créer et tester une fonction définie par l'utilisateur classifieur.|[Créer et tester une fonction classifieur définie par l'utilisateur](../../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de ressources de Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

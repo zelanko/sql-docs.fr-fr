@@ -14,12 +14,12 @@ ms.assetid: b3812746-14b0-4b22-809e-b4a95e1c8083
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 62d24228267d0f5fd104a26d46d4aae721ac2663
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2edf3cf1f23b8a18f2fc2b7586d22b7d46bb7226
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62509942"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580095"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Créer une publication à partir d'une base de données Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +78,9 @@ ms.locfileid: "62509942"
     >  En cas de problème lié à la configuration réseau, vous recevrez un message d'erreur à ce stade. Si vous rencontrez des difficultés pour vous connecter à la base de données Oracle, consultez la section « Connexion impossible du serveur de distribution SQL Server à l'instance de base de données Oracle » dans [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
   
 8.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-create-a-publication-from-an-oracle-database"></a>Pour créer une publication à partir d'une base de données Oracle  
   
 1.  Connectez-vous à l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que le serveur de publication Oracle utilisera comme serveur de distribution puis développez le nœud du serveur.  

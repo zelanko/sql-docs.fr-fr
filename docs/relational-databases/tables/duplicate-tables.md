@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af0251b5a493eb757b16dfb01b08304751eaa4dc
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 68c611986bba308dc06476a7fd61328353c9075d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589523"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580590"
 ---
 # <a name="duplicate-tables"></a>Dupliquer des tables
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53589523"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CREATE TABLE dans la base de données de destination.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -70,7 +70,9 @@ ms.locfileid: "53589523"
 7.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
   
 8.  Dans la boîte de dialogue **Choisir un nom** , tapez un nom pour la nouvelle table et cliquez sur **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-duplicate-a-table-in-query-editor"></a>Pour dupliquer une table dans l'éditeur de requête  

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e92e16db5eb7ac6edf03a07c3091edac2c26d144
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f0dae8999d22773a1a76440c439d4682785f684
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581200"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492848"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Recherche et affichage de rapports dans le portail web (Générateur de rapports et SSRS)
   Le Gestionnaire de rapports est un outil Web qui intègre des fonctionnalités d'affichage et de gestion des rapports. Il fait partie d'une installation du serveur de rapports. Pour ce faire, tapez l'URL du Gestionnaire de rapports dans une fenêtre du navigateur. Pour plus d’informations sur la configuration de navigateur requise, consultez [Browser Support for Reporting Services and Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)(Planification de la prise en charge des navigateurs pour Reporting Services et Power View). Pour plus d'informations sur la façon de configurer une URL de Gestionnaire de rapports sur votre serveur de rapports, contactez votre administrateur système. Pour plus d’informations, consultez [Configurer le Gestionnaire de rapports &#40;mode natif&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
@@ -40,8 +40,8 @@ Ruban du Gestionnaire de rapports
 ## <a name="opening-a-report"></a>Ouverture d'un rapport  
  Une fois le rapport trouvé, cliquez sur son nom pour l'ouvrir. Le rapport est rendu en HTML et s'affiche dans la page Contenu du Gestionnaire de rapports. Les rapports sont toujours mis en cache par la session du navigateur, de sorte que si vous ouvrez un rapport, vous pouvez généralement y revenir en cliquant sur le bouton **Précédent** . Ceci est vrai même s'il vous a été demandé de fournir un nom d'utilisateur et un mot de passe pour exécuter le rapport. Vous ne pouvez pas véritablement fermer un rapport rendu tant que le navigateur n'est pas fermé.  
   
- Tous les rapports visibles dans l'arborescence des dossiers ne sont pas accessibles immédiatement. Certains rapports peuvent exiger la saisie d'un nom d'utilisateur et d'un mot de passe afin de déterminer si vous êtes autorisé ou non à accéder à la source de données du rapport. Pour plus d’informations sur l’ouverture des rapports dans le Gestionnaire de rapports, consultez [Ouvrir et fermer un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
-  
+ Tous les rapports visibles dans l'arborescence des dossiers ne sont pas accessibles immédiatement. Certains rapports peuvent exiger la saisie d'un nom d'utilisateur et d'un mot de passe afin de déterminer si vous êtes autorisé ou non à accéder à la source de données du rapport. 
+
  Vous pouvez également accéder à un rapport du serveur de rapports et l'ouvrir directement à partir du Générateur de rapports. 
   
 ## <a name="to-search-for-items"></a>Pour rechercher des éléments  

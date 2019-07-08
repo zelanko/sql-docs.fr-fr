@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45fd2a7f8281a2b65097c7c0e493cc0a6f60eddc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099971"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584363"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
 
@@ -175,7 +175,9 @@ Le collecteur de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.m
 3. Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], développez **Gestion**, puis développez **Collecte de données**. Cliquez avec le bouton droit sur **Collecteur de données de performance de capture de données modifiées**, puis cliquez sur **Démarrer le jeu d’éléments de collecte de données**.  
   
 4. Dans l'entrepôt de données que vous avez configuré à l'étape 1, recherchez la table custom_snapshots.cdc_log_scan_data. Cette table fournit un instantané historique de données de sessions d'analyse du journal. Ces données peuvent être utilisées pour analyser la latence, le débit et d'autres mesures de la performance sur la durée.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ScriptUpgrade"></a> Mode de mise à niveau du script
 
 Lorsque vous appliquez des mises à jour cumulatives ou des Service Pack à une instance, au redémarrage, l’instance peut entrer en mode de mise à niveau du script. Dans ce mode, SQL Server peut procéder à une analyse et mise à niveau des tables internes de capture des changements de données, ce qui pourrait entraîner la recréation d’objets tels que les index sur les tables de capture. Selon la quantité de données impliquées, cette étape peut prendre un certain temps ou provoquer une forte utilisation du journal des transactions pour les bases de données où la capture des changements de données est activée.

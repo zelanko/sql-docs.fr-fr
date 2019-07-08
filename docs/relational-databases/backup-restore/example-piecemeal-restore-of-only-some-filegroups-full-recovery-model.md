@@ -15,12 +15,12 @@ ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 992b010e583a8c40032021f91f26f0a13569b2ee
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b16e030be8afa6caa0de6cb42ed82a3b396801c3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583142"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579447"
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>Exemple : Restauration fragmentaire de quelques groupes de fichiers (mode de restauration complète)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,17 +72,19 @@ ms.locfileid: "59583142"
      À ce stade, le groupe de fichiers primaire et les groupes de fichiers `A` et `C` sont en ligne. Les fichiers du groupe de fichiers `B` restent en attente de récupération et le groupe de fichiers est déconnecté.  
   
 4.  Restauration en ligne du groupe de fichiers `B`.  
-  
-     Les fichiers du groupe de fichiers `B` sont restaurés à n'importe quel moment ensuite.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Files in filegroup `B` are restored any time thereafter.  
   
     > [!NOTE]  
-    >  La sauvegarde du groupe de fichiers `B` a été effectuée après que le groupe de fichiers soit passé en lecture seule, ces fichiers n'ont donc pas besoin d'être restaurés par progression.  
+    >  The backup of filegroup `B` was taken after the filegroup became read-only; therefore, these files do not have to be rolled forward.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
     ```  
   
-     Tous les groupes de fichiers sont maintenant en ligne.  
+     All filegroups are now online.  
   
 ## <a name="additional-examples"></a>Autres exemples  
   
@@ -98,7 +100,7 @@ ms.locfileid: "59583142"
   
 -   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Restauration en ligne &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   

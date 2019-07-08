@@ -11,12 +11,12 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dcc749166f7c86575a84f41e12b452275ff3649c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4127d0dce2f693a89bec5ef79e83884f1181d0d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66402986"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586090"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Démarrage rapide : Sauvegarde et restauration SQL Server avec le service Stockage Blob Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,9 @@ Pour créer un conteneur, suivez ces étapes :
 
 1. Ouvrez le portail Azure. 
 1. Accédez à votre compte de stockage. 
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
    1. Sélectionnez le compte de stockage et faites défiler l’affichage jusqu'à **Services d’objets Blob**.
    1. Sélectionnez **Objets blob**, puis sélectionnez +**Conteneur** pour ajouter un nouveau conteneur. 
    1. Entrez le nom du conteneur et notez le nom de conteneur que vous avez spécifié. Ces informations sont utilisées dans l’URL (chemin du fichier de sauvegarde) dans les instructions T-SQL, plus loin dans ce guide de démarrage rapide. 

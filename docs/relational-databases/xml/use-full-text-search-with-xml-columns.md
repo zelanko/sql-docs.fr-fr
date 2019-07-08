@@ -14,15 +14,17 @@ ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b342fff66d5e3ec955566963a4a31d1540a2853e
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1535618a2f5ed180d679bad982c0b77e05a66f95
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513026"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579796"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Utiliser la recherche en texte intégral avec des colonnes XML
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
   Vous pouvez créer un index de texte intégral sur des colonnes XML de façon à indexer le contenu des valeurs XML tout en ignorant le balisage XML. Des balises d'éléments sont utilisées comme limites de jeton. Les éléments suivants sont indexés :  
   
 -   Contenu des éléments XML.  
@@ -34,11 +36,13 @@ ms.locfileid: "58513026"
 1.  Tout d'abord, filtrez les valeurs XML pertinentes à l'aide d'une recherche en texte intégral SQL.  
   
 2.  Ensuite, interrogez les valeurs XML pour lesquelles il existe un index XML sur la colonne XML.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemple : Association d’une recherche en texte intégral avec une requête XML  
  Une fois l'index de texte intégral créé sur la colonne XML, la requête suivante recherche une valeur XML contenant le mot « custom » dans le titre d'un livre :  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'custom')   
@@ -54,7 +58,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
 ## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Exemple : Recherche en texte intégral sur des valeurs XML à l’aide de l’extraction de radical  
  La vérification XQuery **contains()** exécutée dans l’exemple précédent ne peut généralement pas être éliminée. Prenons par exemple la requête suivante :  
   
-```  
+```sql
 SELECT *   
 FROM   T   
 WHERE  CONTAINS(xCol,'run')   
@@ -64,7 +68,7 @@ WHERE  CONTAINS(xCol,'run')
   
  Lorsque le code XML est décomposé, à l'aide de AXSD, dans des colonnes relationnelles indexées en texte intégral, les requêtes XPath qui portent sur la vue XML ne lancent pas une recherche en texte intégral sur les tables sous-jacentes.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Index XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)  
   
   

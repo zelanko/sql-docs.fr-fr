@@ -20,12 +20,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a97bee55c0f23a82470091c1c9ea7b44463221e0
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: 81ab0d79b985ee6814de82d1c9c18499ed99761c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317809"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580386"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restaurer une sauvegarde de base de données à l’aide de SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,12 +66,12 @@ Pour plus d’informations sur la restauration SQL Server à partir du service d
     
     -   **Unité**    
     
-         Cliquez sur le bouton Parcourir (**...**) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . 
+         Cliquez sur le bouton Parcourir ( **...** ) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . 
          
-        -   Boîte de dialogue**Sélectionner les unités de sauvegarde**   
+        -   Boîte de dialogue**Sélectionner les unités de sauvegarde**  
         
             **Type de support de sauvegarde**  
-         Sélectionnez un type de support dans la liste déroulante **Type de support de sauvegarde** .  Remarque : L'option **Bande** s'affiche uniquement si un lecteur de bande est connecté à l'ordinateur et l'option **Unité de sauvegarde**, seulement si au moins une unité de sauvegarde est connectée.
+         Sélectionnez un type de support dans la liste déroulante **Type de support de sauvegarde** .  Remarque : L'option **Bande** s'affiche uniquement si un lecteur de bande est connecté à l'ordinateur et l'option **Unité de sauvegarde**, seulement si au moins une unité de sauvegarde est connectée.
 
             **Ajouter**  
             En fonction du type de support sélectionné dans la liste déroulante **Support de sauvegarde** , quand vous cliquez sur **Ajouter** , l’une des boîtes de dialogue suivantes s’ouvre. (Si la liste dans la zone de liste **Support de sauvegarde** est pleine, le bouton **Ajouter** n’est pas disponible.)
@@ -108,7 +108,9 @@ Pour plus d’informations sur la restauration SQL Server à partir du service d
 7.  Vous pouvez aussi cliquer sur **Fichiers** dans le volet **Sélectionner une page** pour accéder à la boîte de dialogue **Fichiers** . Vous pouvez alors restaurer la base de données vers un nouvel emplacement, en spécifiant une nouvelle destination de restauration pour chaque fichier dans la grille **Restaurer les fichiers de la base de données en tant que**. Pour plus d’informations sur cette grille, consultez [Restaurer la base de données &#40;page Fichiers&#41;](../../relational-databases/backup-restore/restore-database-files-page.md).    
     
 8. Pour afficher ou sélectionner les options avancées, dans la page **Options**, dans le volet **Options de restauration**, vous pouvez choisir les options suivantes si elles s’appliquent à votre situation :    
-    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Options**WITH** (non obligatoires) :    
     
         -   **Remplacer la base de données existante (WITH REPLACE)**    
@@ -139,10 +141,10 @@ L’exemple suivant restaure une sauvegarde sur disque antérieure de `Sales` et
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
 2.  Cliquez avec le bouton droit sur **Bases de données** et sélectionnez **Restaurer la base de données**.  
 3.  Dans la page **Général** , sélectionnez **Unité** dans la section **Source** .
-4.  Cliquez sur le bouton Parcourir (**...**) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Cliquez sur **Ajouter** et accédez à votre sauvegarde. Cliquez sur **OK** après avoir sélectionné vos fichiers de sauvegarde sur disque.
+4.  Cliquez sur le bouton Parcourir ( **...** ) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Cliquez sur **Ajouter** et accédez à votre sauvegarde. Cliquez sur **OK** après avoir sélectionné vos fichiers de sauvegarde sur disque.
 5.  Cliquez sur **OK** pour revenir à la page **Général** .
 6.  Dans le volet **Sélectionner une page** , cliquez sur **Options** .
-7.  Dans la section **Options de restauration** , sélectionnez **Remplacer la base de données existante (WITH REPLACE)**.
+7.  Dans la section **Options de restauration** , sélectionnez **Remplacer la base de données existante (WITH REPLACE)** .
 
     > [!NOTE]
     > Ne pas vérifier cette option peut entraîner le message d’erreur suivant : "System.Data.SqlClient.SqlError: Le jeu de sauvegarde contient la sauvegarde d'une base de données qui n'est pas la base de données '`Sales`' existante. (Microsoft.SqlServer.SmoExtended) »
@@ -167,7 +169,7 @@ L’exemple suivant restaure une sauvegarde sur disque antérieure de `Sales` et
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
 2.  Cliquez avec le bouton droit sur **Bases de données** et sélectionnez **Restaurer la base de données**.  
 3.  Dans la page **Général** , sélectionnez **Unité** dans la section **Source** .
-4.  Cliquez sur le bouton Parcourir (**...**) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Cliquez sur **Ajouter** et accédez à votre sauvegarde. Cliquez sur **OK** après avoir sélectionné vos fichiers de sauvegarde sur disque.
+4.  Cliquez sur le bouton Parcourir ( **...** ) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Cliquez sur **Ajouter** et accédez à votre sauvegarde. Cliquez sur **OK** après avoir sélectionné vos fichiers de sauvegarde sur disque.
 5.  Cliquez sur **OK** pour revenir à la page **Général** .
 6.  Dans la section **Destination** , la zone **Base de données** est automatiquement renseignée avec le nom de la base de données à restaurer. Pour changer le nom de la base de données, entrez le nouveau nom dans la zone **Base de données** .
 7.  Dans le volet **Sélectionner une page** , cliquez sur **Options** .
@@ -189,7 +191,7 @@ L'exemple suivant restaure une base de données dans l'état où elle se trouvai
 1.  Dans l’**Explorateur d'objets**, connectez-vous à une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et développez-la.  
 2.  Cliquez avec le bouton droit sur **Bases de données** et sélectionnez **Restaurer la base de données**.  
 3.  Dans la page **Général** , sélectionnez **Unité** dans la section **Source** .
-4.  Cliquez sur le bouton Parcourir (**...**) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Cliquez sur **Ajouter** et accédez à votre sauvegarde complète et à toutes les sauvegardes des journaux de transactions pertinentes.  Cliquez sur **OK** après avoir sélectionné vos fichiers de sauvegarde sur disque.
+4.  Cliquez sur le bouton Parcourir ( **...** ) pour ouvrir la boîte de dialogue **Sélectionner les unités de sauvegarde** . Cliquez sur **Ajouter** et accédez à votre sauvegarde complète et à toutes les sauvegardes des journaux de transactions pertinentes.  Cliquez sur **OK** après avoir sélectionné vos fichiers de sauvegarde sur disque.
 5.  Cliquez sur **OK** pour revenir à la page **Général** .
 6.  Dans la section **Destination** , cliquez sur **Chronologie** pour accéder boîte de dialogue **Chronologie de sauvegarde** et sélectionner manuellement une limite dans le temps pour arrêter l’action de récupération.
 7.  Sélectionnez **Date et heure spécifiques**.  
@@ -220,7 +222,7 @@ Une stratégie d’accès stockée a été créée avec des droits de lecture, �
 12. Cliquez sur **OK**.
 13. Cliquez sur **OK** pour revenir à la page **Général** .
 14. Dans le volet **Sélectionner une page** , cliquez sur **Options** .
-15. Dans la section **Options de restauration** , sélectionnez **Remplacer la base de données existante (WITH REPLACE)**.
+15. Dans la section **Options de restauration** , sélectionnez **Remplacer la base de données existante (WITH REPLACE)** .
 16. Dans la section **Sauvegarde de la fin du journal** , décochez la case **Effectuer la sauvegarde de la fin du journal avant la restauration**.
 17. Dans la section **Connexions au serveur** , sélectionnez **Fermer les connexions existantes à la base de données de destination**.
 18. Cliquez sur **OK**.
@@ -250,7 +252,7 @@ La base de données `Sales` sera restaurée dans le conteneur de stockage Micros
 11. Entrez le conteneur, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, dans les zones de texte pour **Dossier des fichiers de données** et **Dossier des fichiers journaux**.
 12. Cliquez sur **OK**.
 
-## <a name="see-also"></a> Voir aussi    
+## <a name="see-also"></a>Voir aussi    
  [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)     
  [Créer une sauvegarde complète de base de données &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)     
  [Restaurer une base de données à un nouvel emplacement &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-database-to-a-new-location-sql-server.md)     

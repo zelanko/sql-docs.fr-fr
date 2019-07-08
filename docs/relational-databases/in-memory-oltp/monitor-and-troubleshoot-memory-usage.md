@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b250f4ec67db43c975d61f5944b7d6eaee8ccc73
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 63fa87597bfb1f98fa25342d42cf5a32d0eef024
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712001"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581839"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,9 @@ ms.locfileid: "52712001"
 2.  Cliquez sur **Nouvelle requête**.  
   
 3.  Collez ce code dans la nouvelle fenêtre de requête et exécutez chaque section.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     -- create a database to be used  
     CREATE DATABASE IMOLTP_DB  
@@ -285,7 +287,7 @@ MEMORYCLERK_XTP      Default    64             0
   
 3.  Agissez pour atténuer les éventuels problèmes de mémoire. Pour plus d’informations, consultez [Résoudre les problèmes de mémoire insuffisante](../../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Lier une base de données avec des tables optimisées en mémoire à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
  [Modifier MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT sur un pool existant](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
   

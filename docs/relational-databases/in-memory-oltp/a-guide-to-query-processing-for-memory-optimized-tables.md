@@ -1,7 +1,7 @@
 ---
 title: Guide du traitement des requêtes pour les tables optimisées en mémoire | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b69d261470a674ef6a90a5bef9e0db7aebfbb44a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0234a6806e63a7eec6a13d30ceeda55c0ee27a29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205578"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579589"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Le plan d'exécution estimé tel qu'affiché par [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est le suivant :  
   
- ![Plan de requête pour joindre des tables sur disque.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.gif "Plan de requête pour joindre des tables sur disque.")  
+ ![Plan de requête pour joindre des tables sur disque.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-1.png "Plan de requête pour joindre des tables sur disque.")  
 Plan de requête pour joindre des tables sur disque.  
   
  À propos de ce plan de requête :  
@@ -93,7 +93,7 @@ SELECT o.*, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.CustomerID =
   
  Le plan estimé pour cette requête est le suivant :  
   
- ![Plan de requête d’une jointure hachée des tables sur disque.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.gif "Plan de requête d’une jointure hachée des tables sur disque.")  
+ ![Plan de requête d’une jointure hachée des tables sur disque.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-2.png "Plan de requête d’une jointure hachée des tables sur disque.")  
 Plan de requête d'une jointure hachée des tables sur disque.  
   
  Dans cette requête, les lignes de la table Order sont récupérées à partir de l'index cluster. L’opérateur physique **Correspondances de hash** est désormais utilisé pour la **Jointure interne**. L’index cluster sur Order n’étant pas trié sur CustomerID, une **Jointure de fusion** nécessite un opérateur de tri, ce qui affecte les performances. Notez le coût relatif de l’opérateur **Correspondances de hash** (75 %) comparé au coût de l’opérateur **Jointure de fusion** dans l’exemple précédent (46 %). L’optimiseur aurait pu utiliser l’opérateur **Correspondances de hash** également dans l’exemple précédent, mais il a considéré que l’opérateur **Jointure de fusion** fournirait de meilleures performances.  
@@ -101,7 +101,7 @@ Plan de requête d'une jointure hachée des tables sur disque.
 ## <a name="includessnoversionincludesssnoversion-mdmd-query-processing-for-disk-based-tables"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Traitement des requêtes pour les tables sur disque  
  Le diagramme suivant représente le flux de traitement des requêtes dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les requêtes ad hoc :  
   
- ![Pipeline de traitement des requêtes SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.gif "Pipeline de traitement des requêtes SQL Server.")  
+ ![Pipeline de traitement des requêtes SQL Server.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-3.png "Pipeline de traitement des requêtes SQL Server.")  
 Pipeline de traitement des requêtes SQL Server  
   
  Dans ce scénario :  
@@ -117,7 +117,9 @@ Pipeline de traitement des requêtes SQL Server
 5.  Pour chaque recherche d'index, analyse d'index et opérateur d'analyse de table, le moteur d'exécution demande des lignes aux structures d'index et de table respectives à partir des méthodes d'accès.  
   
 6.  Les méthodes d'accès récupèrent les lignes de l'index et les pages de données dans le pool de mémoires tampons, et chargent les pages à partir du disque dans le pool de mémoires tampons si nécessaire.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Pour le premier exemple de requête, le moteur d'exécution demande des lignes à l'index cluster sur la table Customer, et à l'index non cluster sur la table Order, à partir des méthodes d'accès. Les méthodes d'accès parcourent les structures d'index B-tree pour récupérer les lignes demandées. Dans ce cas, toutes les lignes sont récupérées lorsque le plan appelle des analyses d'index complètes.  
   
 ## <a name="interpreted-includetsqlincludestsql-mdmd-access-to-memory-optimized-tables"></a>Accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables mémoire optimisées  
@@ -125,7 +127,7 @@ Pipeline de traitement des requêtes SQL Server
   
  Le [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété peut être utilisé pour accéder aux tables mémoire optimisées et sur disque. L'illustration suivante montre le traitement des requêtes pour l'accès en [!INCLUDE[tsql](../../includes/tsql-md.md)] interprété aux tables mémoire optimisées :  
   
- ![Pipeline de traitement des requêtes pour le TSQL interprété.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.gif "Pipeline de traitement des requêtes pour le TSQL interprété.")  
+ ![Pipeline de traitement des requêtes pour le TSQL interprété.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-4.png "Pipeline de traitement des requêtes pour le TSQL interprété.")  
 Pipeline de traitement des requêtes pour l'accès en Transact-SQL interprété aux tables mémoire optimisées.  
   
  Comme illustré dans la figure, le pipeline de traitement des requêtes reste principalement inchangé :  
@@ -163,7 +165,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Le plan estimé est le suivant :  
   
- ![Plan de requête pour joindre des table à mémoire optimisée.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.gif "Plan de requête pour joindre des table à mémoire optimisée.")  
+ ![Plan de requête pour joindre des table à mémoire optimisée.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-5.png "Plan de requête pour joindre des table à mémoire optimisée.")  
 Plan de requête pour joindre des tables mémoire optimisées.  
   
  Observez les différences suivantes dans le plan pour la même requête sur des tables sur disque (figure 1) :  
@@ -204,7 +206,7 @@ END
 ### <a name="compilation-and-query-processing"></a>Compilation et traitement des requêtes  
  Le diagramme ci-dessous illustre le processus de compilation des procédures stockées compilées en mode natif :  
   
- ![Procédures stockées compilées en mode natif.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.gif "Procédures stockées compilées en mode natif.")  
+ ![Procédures stockées compilées en mode natif.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-6.png "Procédures stockées compilées en mode natif.")  
 Procédures stockées compilées en mode natif.  
   
  Le processus se présente comme suit :  
@@ -221,7 +223,7 @@ Procédures stockées compilées en mode natif.
   
  L'appel d'une procédure stockée compilée en mode natif se traduit par l'appel à une fonction dans la DLL.  
   
- ![Exécution de procédures stockées compilées en mode natif.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.gif "Exécution de procédures stockées compilées en mode natif.")  
+ ![Exécution de procédures stockées compilées en mode natif.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-7.png "Exécution de procédures stockées compilées en mode natif.")  
 Exécution de procédures stockées compilées en mode natif.  
   
  L'appel d'une procédure stockée compilée en mode natif se présente comme suit :  
@@ -243,7 +245,7 @@ Exécution de procédures stockées compilées en mode natif.
  La détection des paramètres n'est pas utilisée pour compiler des procédures stockées compilées en mode natif. Tous les paramètres de la procédure stockée sont considérés comme ayant des valeurs UNKNOWN. À l’instar des procédures stockées interprétées, les procédures stockées compilées en mode natif prennent également en charge l’indicateur **OPTIMIZE FOR**. Pour plus d’informations, consultez [Indicateurs de requête &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ### <a name="retrieving-a-query-execution-plan-for-natively-compiled-stored-procedures"></a>Récupération d'un plan d'exécution de requêtes pour les procédures stockées compilées en mode natif  
- Vous pouvez récupérer le plan d’exécution de requêtes pour une procédure stockée compilée en mode natif en utilisant le **plan d’exécution estimé** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou en utilisant l’option SHOWPLAN_XML dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. Exemple :  
+ Vous pouvez récupérer le plan d’exécution de requêtes pour une procédure stockée compilée en mode natif en utilisant le **plan d’exécution estimé** dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ou en utilisant l’option SHOWPLAN_XML dans [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par exemple :  
   
 ```sql  
 SET SHOWPLAN_XML ON  
@@ -295,7 +297,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
  Après la suppression de toutes les lignes, à part une dans la table Customer :  
   
- ![Statistiques et jointures de colonne.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.gif "Statistiques et jointures de colonne.")  
+ ![Statistiques et jointures de colonne.](../../relational-databases/in-memory-oltp/media/hekaton-query-plan-9.png "Statistiques et jointures de colonne.")  
   
  À propos de ce plan de requête :  
   
@@ -303,7 +305,7 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
   
 -   L'analyse complète d'un index sur IX_CustomerID a été remplacée par une recherche d'index. Cela a abouti à l'analyse de 5 lignes, au lieu des 830 lignes requises pour l'analyse complète de l'index.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)  
   
   

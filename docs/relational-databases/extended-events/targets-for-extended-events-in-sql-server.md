@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a34c835fe87edb3acf8e6bb64f262a090cc92806
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 6d9a5221f3386bd96a728bab27db93eca9373054
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478134"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583389"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Cibles des Événements étendus SQL Server
 
@@ -521,6 +521,7 @@ Pour tester la session d’événements, nous avons empêché volontairement le 
 3. N’émettez volontairement aucune instruction COMMIT TRANSACTION tant que nous n’avons pas examiné les cibles.
 4. Ultérieurement une fois le test, nous avons émis une instruction COMMIT TRANSACTION.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 La cible **event_counter** simple a donné les lignes de sortie suivantes. Étant donné que 52-50=2, la sortie nous indique que nous devrions voir 2 événements lock_acquired non jumelés lorsque nous examinons la sortie à partir de la cible pair-matching.
 

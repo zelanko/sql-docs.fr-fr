@@ -18,12 +18,12 @@ ms.assetid: 1ad468f5-4f75-480b-aac6-0b01b048bd67
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b75512b0b0e4f4975074bd35f797f526d25ffc2
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.openlocfilehash: 41906481891908c85daf22c223e77826baa27766
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683599"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581992"
 ---
 # <a name="database-file-initialization"></a>Initialisation des fichiers de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,13 +64,15 @@ Pour accorder l'autorisation `Perform volume maintenance tasks` à un compte
 
 1. Redémarrez le service SQL Server.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]
 > À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vous pouvez accorder cette autorisation au compte de service au moment de l’installation. Si vous effectuez [l’installation depuis une invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md), ajoutez l’argument /SQLSVCINSTANTFILEINIT ou cochez la case *Accorder le privilège Effectuer une tâche de maintenance en volume au service Moteur de base de données SQL Server* dans [l’Assistant Installation](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md).
 
 > [!NOTE]
 > À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, et de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez utiliser la colonne *instant_file_initialization_enabled* dans la vue de gestion dynamique [sys.dm_server_services](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md) pour déterminer si l’initialisation instantanée de fichiers est activée.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 Si le compte de démarrage de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dispose de l’autorisation *SE_MANAGE_VOLUME_NAME*, un message d’information similaire au suivant est journalisé dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au démarrage : 
 
 `Database Instant File Initialization: enabled. For security and performance considerations see the topic 'Database Instant File Initialization' in SQL Server Books Online. This is an informational message only. No user action is required.`
@@ -102,7 +104,7 @@ Si le risque de divulgation du contenu supprimé constitue un problème, effectu
 > [!NOTE]  
 > La désactivation de l'initialisation instantanée des fichiers n'affecte que les fichiers créés ou dont la taille a augmenté après la révocation du droit de l'utilisateur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
   

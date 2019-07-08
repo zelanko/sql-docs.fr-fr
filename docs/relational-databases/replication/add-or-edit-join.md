@@ -13,12 +13,12 @@ ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d883a137dd182f233bc056b0fca98cf60df4331f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c6e0a2429bfb78f2cee7ae5871cef98660ccce1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665501"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585703"
 ---
 # <a name="add-or-edit-join"></a>Ajouter ou modifier une jointure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,9 @@ ms.locfileid: "62665501"
     -   Si vous modifiez une jointure existante, vous devez effectuer les modifications manuellement.  
   
 3.  **Spécifiez les options de jointure.**  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   Si la colonne sur laquelle vous effectuez la jointure dans la table filtrée est unique, sélectionnez **Clé unique**. Le processus de fusion possède des fonctionnalités d'optimisation de performances spéciales disponibles si la colonne est unique.  
   
         > [!CAUTION]  

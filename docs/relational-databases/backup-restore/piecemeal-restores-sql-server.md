@@ -16,12 +16,12 @@ ms.assetid: 208f55e0-0762-4cfb-85c4-d36a76ea0f5b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 481146623145c2abc6e3e9c8ed5b971f614979e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40062550cba47e7de36ccb5d389bae15853da026
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640810"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581010"
 ---
 # <a name="piecemeal-restores-sql-server"></a>Restaurations fragmentaires (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -173,7 +173,9 @@ ms.locfileid: "62640810"
 3.  Ultérieurement, restauration de fichiers d'un groupe de fichiers secondaire en lecture/écriture avec l'option WITH NORECOVERY à partir de la sauvegarde partielle backup_1.  
   
 4.  Sauvegarde différentielle suivie d'autres sauvegardes restaurées dans la séquence de restauration fragmentaire d'origine pour restaurer les données jusqu'au point de récupération d'origine.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="see-also"></a>Voir aussi  
  [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   

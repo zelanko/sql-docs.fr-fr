@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78ae465604c6f1b368cb0d1b8483025feef9d343
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 7a8078302624e280fa23de0401302106e867e5e0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380387"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583021"
 ---
 # <a name="modify-statistics"></a>Modifier des statistiques
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "53380387"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Exigences :  
   
 -   L'utilisateur doit disposer de l'autorisation ALTER sur la table ou la vue.  
@@ -65,7 +65,9 @@ ms.locfileid: "53380387"
 6.  Dans la boîte de dialogue **Propriétés des statistiques** *statistics_name* dialog box, on the **General** page, click **Add**, **Remove**, **Move Up**, or **Move Down**, ou toute combinaison, pour modifier les propriétés des statistiques. Gardez à l’esprit que l’emplacement d’une colonne dans la grille **Colonnes de statistiques** peut avoir une incidence notable sur l’utilité des statistiques.  
   
 7.  Cliquez sur **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour modifier des statistiques**  
   

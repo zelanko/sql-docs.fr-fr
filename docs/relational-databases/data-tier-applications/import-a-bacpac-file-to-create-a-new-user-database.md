@@ -26,12 +26,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 405e15aca972d600a566ca08ea85445291c8ec2a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5343d744d5b8be25a51ad48ec5ad797208a2643c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590683"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580188"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>Importer un fichier BACPAC pour créer une nouvelle base de données utilisateur
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +43,9 @@ ms.locfileid: "53590683"
 1.  L'importation crée la nouvelle DAC et la base de données associée à l'aide de la définition de la DAC stockée dans le fichier d'exportation de la même manière que le déploiement de la DAC crée la nouvelle DAC à partir de la définition dans un fichier de package DAC.  
   
 2.  L'importation copie en bloc les données du fichier d'exportation.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="sql-server-utility"></a>Utilitaire SQL Server  
  Si vous importez une DAC dans une instance du moteur de base de données, la DAC importée est incorporée dans l’Utilitaire SQL Server quand le jeu d’éléments de collecte de l’utilitaire est envoyé de l’instance au point de contrôle de l’utilitaire. La DAC sera ensuite présente dans le nœud **Applications de la couche Données déployées** dans l’ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Utility Explorer** and reported in the **Applications de la couche Données déployées** details page.  
   
@@ -61,7 +63,7 @@ ms.locfileid: "53590683"
 ## <a name="security"></a>Sécurité  
  Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un fichier d'exportation DAC sans mot de passe. Lorsque le fichier est importé, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l’aide d’une connexion qui possède l’autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l’utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Une DAC ne peut être importée que par les membres des rôles serveur fixes **sysadmin** ou **serveradmin** , ou par les connexions figurant dans le rôle serveur fixe **dbcreator** et disposant d'autorisations ALTER ANY LOGIN. Le compte d’administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré nommé **sa** peut également importer une DAC. L'importation d'une DAC avec des connexions à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles loginmanager ou serveradmin. L'importation d'une DAC sans connexions à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] requiert l'appartenance aux rôles dbmanager ou serveradmin.  
   
 ## <a name="using-the-import-data-tier-application-wizard"></a>Utilisation de l'Assistant Importation d'application de la couche Données  
@@ -143,7 +145,7 @@ ms.locfileid: "53590683"
   
  Pour fermer l'Assistant, cliquez sur **Fermer** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Importer un fichier BACPAC pour créer une nouvelle base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-import/)  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Exporter une application de la couche Données](../../relational-databases/data-tier-applications/export-a-data-tier-application.md)  

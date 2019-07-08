@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 38d58dc9156488e9c80e199ba2074b96015df7f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294447"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583167"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Prise en main de Columnstore pour l’analytique opérationnelle en temps réel
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,9 @@ ms.locfileid: "56294447"
     ```  
   
 3.  Vous n’avez rien d’autre à faire !  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Vous êtes maintenant prêt à exécuter l’analytique opérationnelle en temps réel sans apporter aucune modification à votre application.  Les requêtes analytiques sont exécutées sur l’index columnstore et les opérations OLTP continuent de s’exécuter sur les index BTree OLTP. Les charges de travail OLTP continuent de fonctionner, mais encourent une surcharge supplémentaire pour gérer l’index columnstore. Consultez les optimisations des performances dans la section suivante.  
   
 ## <a name="blog-posts"></a>Billets de blog  
@@ -220,7 +222,7 @@ ORDER BY created_time DESC
   
  Si le nombre de lignes supprimées dans les rowgroups compressés est supérieur à 20 %, stable dans les anciens rowgroups avec une variation inférieure à 5 % (désignés sous le nom de rowgroups froids), définissez COMPRESSION_DELAY = (youngest_rowgroup_created_time –  current_time). Notez que cette approche fonctionne mieux avec une charge de travail stable et relativement homogène.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Guide des index columnstore](../../relational-databases/indexes/columnstore-indexes-overview.md)   
  [Chargement de données d’index columnstore](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Performances des requêtes d’index columnstore](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   

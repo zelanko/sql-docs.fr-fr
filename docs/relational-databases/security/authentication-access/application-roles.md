@@ -22,12 +22,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8346c4f7a5b324c8fb05a46e74aae3bbdd5dab49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233f794901dd73fd8a6d49a000ebdcccd2e92184
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715816"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581090"
 ---
 # <a name="application-roles"></a>Rôles d'applications
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "62715816"
 4.  Si le nom et le mot de passe du rôle d'application sont valides, le rôle d'application est activé.  
   
 5.  À ce stade, la connexion perd les autorisations de l'utilisateur et adopte les autorisations du rôle d'application.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Les autorisations acquises via le rôle d'application restent effectives pendant la durée de la connexion.  
   
  Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], lorsqu'un utilisateur a démarré un rôle d'application, il peut récupérer son contexte de sécurité initial uniquement en se déconnectant de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]et en s'y reconnectant. À partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], **sp_setapprole** a une option qui crée un cookie. Le cookie contient des informations de contexte avant que le rôle d'application soit activé. Le cookie peut être utilisé par **sp_unsetapprole** pour rétablir la session à son contexte d’origine. Pour obtenir des informations sur cette nouvelle option et un exemple, consultez [sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  

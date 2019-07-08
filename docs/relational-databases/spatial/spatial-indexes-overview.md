@@ -13,12 +13,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6cad42165bfb79e411a6e1fe6edef0c1b2ef9caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 542fd8c891a0efcaf216d9a5d00de69921ae0dd7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939208"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585820"
 ---
 # <a name="spatial-indexes-overview"></a>Vue d'ensemble des index spatiaux
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -170,7 +170,9 @@ ms.locfileid: "65939208"
 2.  Aplatissement des deux pyramides.  
   
 3.  Jointure des pyramides aplaties pour former un plan non Euclidien.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  L'illustration suivante montre une vue schématique du processus de décomposition en trois étapes. Dans les pyramides, les traits pointillés représentent les limites des quatre facettes de chaque pyramide. Les étapes 1 et 2 illustrent l'ellipsoïde géodésique, avec une ligne horizontale verte pour représenter la ligne de longitude équatoriale et une série de lignes verticales vertes pour représenter plusieurs lignes de latitude. L'étape 1 illustre la projection des pyramides sur les deux hémisphères. L'étape 2 illustre l'aplatissement des pyramides. L'étape 3 illustre les pyramides aplaties, après qu'elles ont été combinées de façon à former un plan, avec plusieurs lignes de longitude projetées. Remarquez que ces lignes projetées sont tendues et que leur longueur varie en fonction de l'emplacement où elles sont sur les pyramides.  
   
  ![Projection de l’ellipsoïde sur un plan](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Projection de l’ellipsoïde sur un plan")  

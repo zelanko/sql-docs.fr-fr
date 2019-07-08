@@ -14,12 +14,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0959480c6c9b90f1a212d77ce3b4684b2e72e05b
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 2bc6e0c8a517ce78a36c776f692a16d406e7aae5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305497"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586124"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Créer et gérer des catalogues de texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Un catalogue de texte intégral est un objet virtuel qui n’appartient à aucun
 ##  <a name="creating"></a> Créer un catalogue de texte intégral  
 
 ### <a name="create-a-full-text-catalog-with-transact-sql"></a>Créer un catalogue de texte intégral avec Transact-SQL
-Utilisez [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Exemple :
+Utilisez [CREATE FULLTEXT CATALOG](../../t-sql/statements/create-fulltext-catalog-transact-sql.md). Par exemple :
 
 ```sql 
 USE AdventureWorks;  
@@ -52,7 +52,9 @@ GO
     >  Les ID de catalogues de texte intégral commencent à 00005 et sont incrémentés d'une unité à chaque fois qu'un catalogue est créé.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="props"></a> Obtenir les propriétés d’un catalogue de texte intégral  
 Utilisez la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] **FULLTEXTCATALOGPROPERTY** pour obtenir la valeur de diverses propriétés relatives aux catalogues de texte intégral. Pour plus d’informations, consultez [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
 
@@ -89,7 +91,7 @@ Exécutez l’instruction Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
   
 3.  Cliquez avec le bouton droit sur le nom du catalogue de texte intégral que vous souhaitez reconstruire, puis sélectionnez **Reconstruire**.  
   
-4.  En réponse à la question **Voulez-vous supprimer le catalogue de texte intégral et le reconstruire ?**, cliquez sur **OK**.  
+4.  En réponse à la question **Voulez-vous supprimer le catalogue de texte intégral et le reconstruire ?** , cliquez sur **OK**.  
   
 5.  Dans la boîte de dialogue **Reconstruire le catalogue de texte intégral** , cliquez sur **Fermer**.  
    
@@ -101,7 +103,7 @@ Exécutez l’instruction Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
   
 3.  Sélectionnez **Tout reconstruire**.  
   
-4.  En réponse à la question **Voulez-vous supprimer tous les catalogues de texte intégral et les reconstruire ?**, cliquez sur **OK**.  
+4.  En réponse à la question **Voulez-vous supprimer tous les catalogues de texte intégral et les reconstruire ?** , cliquez sur **OK**.  
   
 5.  Dans la boîte de dialogue **Reconstruire tous les catalogues de texte intégral** , cliquez sur **Fermer**.  
   

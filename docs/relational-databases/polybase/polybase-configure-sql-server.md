@@ -10,12 +10,12 @@ ms.author: aboke
 ms.reviewer: jroth
 manager: craigg
 monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
-ms.openlocfilehash: fe5fd6f1842e02d85f6dcd9ee53884ff4cd289e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47945c13c7091dfeaec0c8d18222935ef91e5723
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776076"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584508"
 ---
 # <a name="configure-polybase-to-access-external-data-in-sql-server"></a>Configurer PolyBase pour accéder à des données externes dans SQL Server
 
@@ -67,7 +67,9 @@ Les commandes Transact-SQL suivantes sont utilisées dans cette section :
 
 1. **Facultatif :** Créez des statistiques sur une table externe.
 
-    Pour des performances de requêtes optimales, nous vous recommandons de créer des statistiques sur les colonnes de table externe, en particulier celles utilisées pour les jointures, les filtres et les agrégats.
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+    We recommend creating statistics on external table columns, especially the ones used for joins, filters and aggregates, for optimal query performance.
 
     ```sql
     CREATE STATISTICS statistics_name ON customer (C_CUSTKEY) WITH FULLSCAN;

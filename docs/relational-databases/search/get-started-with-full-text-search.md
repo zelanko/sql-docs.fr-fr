@@ -16,12 +16,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d87ebe37c4dcf669243262c97422337b1669be6
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6043372a62776b4f7417b3a666417be9a811bfce
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973709"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585497"
 ---
 # <a name="get-started-with-full-text-search"></a>Commencer à utiliser la recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,6 +31,8 @@ Par défaut, les bases de données SQL Server prennent en charge le texte intég
 La configuration de la recherche en texte intégral s’effectue en deux étapes :  
 1.  Création d'un catalogue de texte intégral.  
 2.  Créez un index de texte intégral sur les tables ou les vues indexées dans lesquelles vous souhaitez effectuer votre recherche. 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Chaque index de recherche en texte intégral doit appartenir à un catalogue de texte intégral. Vous pouvez créer un catalogue de texte séparé pour chaque index de recherche en texte intégral ou associer plusieurs index de recherche en texte intégral à un catalogue donné. Un catalogue de texte intégral est un objet virtuel qui n'appartient à aucun groupe de fichiers. Le catalogue est un concept logique qui fait référence à un groupe d'index de recherche en texte intégral.
 

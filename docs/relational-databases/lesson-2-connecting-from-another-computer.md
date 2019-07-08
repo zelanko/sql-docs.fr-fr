@@ -11,12 +11,12 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d08fe92b865076a330f0272f8b3fde81f17a8854
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 740a5e5843966a6f4891f195453ffd01ec6ea048
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589233"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517846"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Leçon 2 : Connexion depuis un autre ordinateur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Si vous prévoyez de vous connecter au [!INCLUDE[ssDE](../includes/ssde-md.md)] 
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour** _<InstanceName>_.  
+2.  Dans le **Gestionnaire de configuration SQL Server**, développez **Configuration du réseau SQL Server**, puis cliquez sur **Protocoles pour** _<InstanceName>_ .  
   
     L’instance par défaut (instance sans nom) est répertoriée sous **MSSQLSERVER**. Si vous avez installé une instance nommée, le nom que vous indiquez est répertorié. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] est installé en tant que **SQLEXPRESS**, sauf si vous avez changé le nom lors de l'installation.  
   
@@ -64,7 +64,9 @@ Si vous prévoyez de vous connecter au [!INCLUDE[ssDE](../includes/ssde-md.md)] 
   
     > [!NOTE]  
     > Lorsque vous avez apporté des modifications aux protocoles réseau, vous devez redémarrer le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ; toutefois, cette opération est prévue dans la tâche suivante.  
-  
+
+[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="port"></a>Configuration d'un port fixe  
 Pour une sécurité optimale, Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]et Windows 7 activent le Pare-feu Windows. Pour vous connecter à cette instance à partir d'un autre ordinateur, vous devez ouvrir un port de communication dans le pare-feu. L'instance par défaut du [!INCLUDE[ssDE](../includes/ssde-md.md)] écoute sur le port 1433 ; par conséquent, vous n'avez pas besoin de configurer un port fixe. Toutefois, les instances nommées incluant [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] sont à l'écoute sur des ports dynamiques. Avant d'ouvrir un port sur le pare-feu, vous devez configurer le [!INCLUDE[ssDE](../includes/ssde-md.md)] pour l'écoute sur un port spécifique appelé port fixe ou port statique ; le [!INCLUDE[ssDE](../includes/ssde-md.md)] peut également écouter sur un port différent à chaque démarrage. Pour plus d’informations sur les pare-feu, les paramètres par défaut du Pare-feu Windows et pour obtenir une description des ports TCP qui affectent le moteur de base de données, Analysis Services, Reporting Services et Integration Services, consultez [Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
@@ -124,7 +126,7 @@ Lorsque le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Browse
   
 2.  Dans la boîte de dialogue **Se connecter au serveur** , confirmez **Moteur de base de données** dans la zone **Type de serveur** .  
   
-3.  Dans la zone **Nom du serveur** , tapez **tcp:** pour spécifier le protocole, suivi du nom d'ordinateur, d'une virgule et du numéro de port. Pour vous connecter à l’instance par défaut, l’utilisation du port 1433 est implicite et n’a pas besoin d’être précisée. Ainsi, tapez **tcp:**_<nom_ordinateur>_. Dans notre exemple d’instance nommée, tapez **tcp:**_<nom_ordinateur>_**,49172**.  
+3.  Dans la zone **Nom du serveur** , tapez **tcp:** pour spécifier le protocole, suivi du nom d'ordinateur, d'une virgule et du numéro de port. Pour vous connecter à l’instance par défaut, l’utilisation du port 1433 est implicite et n’a pas besoin d’être précisée. Ainsi, tapez **tcp:** _<nom_ordinateur>_ . Dans notre exemple d’instance nommée, tapez **tcp:** _<nom_ordinateur>_ **,49172**.  
   
     > [!NOTE]  
     > Si vous omettez  **tcp:** dans la zone **Nom du serveur**, le client essaie tous les protocoles activés, dans l’ordre spécifié dans sa configuration.  
@@ -139,6 +141,6 @@ Pour utiliser le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 
 Cette étape est la dernière de ce didacticiel sommaire sur les notions de connexion de base.  
   
 ## <a name="return-to-tutorials-portal"></a>Revenir au portail des didacticiels  
-[Didacticiel : Bien démarrer avec le moteur de base de données](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
+[Tutoriel : Bien démarrer avec le moteur de base de données](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  
   
 

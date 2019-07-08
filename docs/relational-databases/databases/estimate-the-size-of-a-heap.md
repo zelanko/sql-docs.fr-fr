@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d65ccbf6784b7571684624423cc0f7d378c0f2c7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62860669"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585293"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimer la taille d’un segment de mémoire
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,8 +83,10 @@ ms.locfileid: "62860669"
      Le nombre de pages de données estimé doit être arrondi à la page entière la plus proche.  
   
 8.  Calculez la quantité d'espace nécessaire pour le stockage des données dans le segment de mémoire (8 192 octets par page) :  
-  
-     Taille du segment de mémoire (octets) = 8192 x **_Num_Pages_**  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Heap size (bytes) = 8192 x **_Num_Pages_**  
   
  Ce calcul ne tient pas compte des éléments suivants :  
   

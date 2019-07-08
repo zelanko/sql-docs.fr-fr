@@ -15,12 +15,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ab0b82002024a819ef1e6794b6c99bb238fa18e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ec133a404b7485edff3e63e3c8c495ef2bc4a542
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135889"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586242"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurer la publication et la distribution
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "54135889"
 Pour plus d’informations, consultez [Afficher et modifier les paramètres de sécurité de la réplication](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio 
-Configurez la distribution à l'aide de l'Assistant Nouvelle publication ou de l'Assistant Configuration de la distribution. Après avoir configuré le serveur de distribution, affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**. Utilisez l'Assistant Configuration de la distribution si vous voulez configurer un serveur de distribution de telle sorte que les membres des rôles de base de données fixes `db_owner` puissent créer des publications, ou si vous souhaitez configurer un serveur de distribution distant qui ne soit pas un serveur de publication.
+Configurez la distribution à l'aide de l'Assistant Nouvelle publication ou de l'Assistant Configuration de la distribution. Après avoir configuré le serveur de distribution, affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** . Utilisez l'Assistant Configuration de la distribution si vous voulez configurer un serveur de distribution de telle sorte que les membres des rôles de base de données fixes `db_owner` puissent créer des publications, ou si vous souhaitez configurer un serveur de distribution distant qui ne soit pas un serveur de publication.
 
 #### <a name="to-configure-distribution"></a>Pour configurer la distribution 
 
@@ -41,6 +41,8 @@ Configurez la distribution à l'aide de l'Assistant Nouvelle publication ou de l
 2. Cliquez avec le bouton droit sur le dossier **Réplication** , puis cliquez sur **Configurer la distribution**.
 
 3. Suivez les instructions de l'Assistant Configuration de la distribution pour : 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   - Sélectionner un serveur de distribution. Pour utiliser un serveur de distribution local, sélectionnez **nom_serveur agit comme son propre serveur de distribution ; SQL Server crée une base de données de distribution et un journal**. Pour utiliser un serveur de distribution distant, sélectionnez l'option **Utiliser le serveur suivant comme serveur de distribution**, puis sélectionnez un serveur. Ce dernier doit déjà être configuré comme un serveur de distribution et le serveur de publication configuré pour utiliser ce serveur de distribution. Pour plus d’informations, consultez [Activer un serveur de publication distant sur un serveur de distribution &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).
 
@@ -166,7 +168,7 @@ Vous pouvez configurer par programme la publication et la distribution de la ré
 
 [!code-vb[HowTo#rmo_vb_AddDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_adddistpub)] 
 
-## <a name="see-also"></a> Voir aussi 
+## <a name="see-also"></a>Voir aussi 
 [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  
 [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
 [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)  

@@ -15,12 +15,12 @@ ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3bf9130dadbc0b7a851856d70d78403b6f0008e1
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: caae503d57460d88d2396842f565125ff32c9378
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581844"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579443"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>Exemple : Restauration fragmentaire d'une base de données (Mode de restauration complète)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,14 +75,16 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
      À ce stade, le groupe de fichiers primaire et les groupes de fichiers `A` et `C` sont en ligne. Les fichiers du groupe de fichiers `B` restent en attente de récupération et le groupe de fichiers est déconnecté. Les transactions différées ont été résolues et la troncation du fichier journal a lieu.  
   
 3.  Restauration en ligne du groupe de fichiers `B`.  
-  
-     Dans la troisième séquence de restauration, l'administrateur de base de données restaure le groupe de fichiers `B`. La sauvegarde du groupe de fichiers `B` a été effectuée après que le groupe de fichiers soit passé en lecture seule ; ces fichiers n'ont donc pas besoin d'être restaurés par progression au cours de la récupération.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     In the third restore sequence, the database administrator restores filegroup `B`. The backup of filegroup `B` was taken after the filegroup became read-only; therefore, it does not have to be rolled forward during recovery.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
     ```  
   
-     Tous les groupes de fichiers sont maintenant en ligne.  
+     All filegroups are now online.  
   
 ## <a name="additional-examples"></a>Autres exemples  
   
@@ -98,7 +100,7 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
   
 -   [Exemple : restauration en ligne d’un fichier en lecture seule &#40;mode de restauration complète&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Restauration en ligne &#40;SQL Server&#41;](../../relational-databases/backup-restore/online-restore-sql-server.md)   
  [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   

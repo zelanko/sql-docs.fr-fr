@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5e0431b913366b4e4ccb34bea7a00f0cf003a82e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 077abbbb8ca5e233cc9582d9305f3e689a25bc6a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134429"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583182"
 ---
 # <a name="create-nonclustered-indexes"></a>Créer des index non cluster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "54134429"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -73,7 +73,9 @@ ms.locfileid: "54134429"
 8.  Cliquez sur **Fermer**.  
   
 9. Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-create-a-nonclustered-index-by-using-object-explorer"></a>Pour créer un index non-cluster à l'aide de l'Explorateur d'objets  
   
 1.  Dans l'Explorateur d'objets, développez la base de données qui contient la table sur laquelle vous souhaitez créer un index non-cluster.  
@@ -82,11 +84,11 @@ ms.locfileid: "54134429"
   
 3.  Développez la table sur laquelle vous souhaitez créer un index non-cluster.  
   
-4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...**.  
+4.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index non cluster...** .  
   
 5.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
-6.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
+6.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…** .  
   
 7.  Dans la boîte de dialogue **Sélectionnez les colonnes à partir de**_nom_table_ , cochez la ou les cases de la ou des colonnes de table à ajouter à l’index non cluster.  
   

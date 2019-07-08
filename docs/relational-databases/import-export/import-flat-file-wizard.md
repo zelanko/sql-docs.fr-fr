@@ -13,12 +13,12 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f577b3f7f739f2642af239c3396a545dfd6332fb
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836391"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585885"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Assistant Importation d’un fichier plat dans SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,8 @@ Pour accéder à l’Assistant Importation d’un fichier plat, procédez comme 
 1. Ouvrez **SQL Server Management Studio**.
 2. Connectez-vous à une instance du Moteur de base de données SQL Server ou à un hôte local.
 3. Développez **Bases de données**, cliquez avec le bouton droit sur une base de données (test dans l’exemple ci-dessous), pointez sur **Tâches** et cliquez sur **Importer un fichier plat** au-dessus de « Importer des données ».
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![Menu de l’Assistant](media/import-flat-file-wizard/importffmenu.png)
 

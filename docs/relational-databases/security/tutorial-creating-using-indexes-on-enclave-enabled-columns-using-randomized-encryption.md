@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ebfac68a62ef9ddbe954ed692bf46549e07bae88
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 0c22fb10e6264420c95149bb77c2318fdf89a715
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67391339"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556976"
 ---
 # <a name="tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>Tutoriel : Création et utilisation des index sur des colonnes prenant en charge les enclaves à l’aide d’un chiffrement aléatoire
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -87,7 +87,7 @@ Dans cette étape, vous allez créer et tester un index sur une colonne chiffré
 
    CREATE INDEX IX_LastName ON [Employees] ([LastName])
    INCLUDE ([EmployeeID], [FirstName], [SSN], [Salary]);
-   GO;
+   GO
    ```
 
 1. Exécutez une requête enrichie sur la colonne **LastName** et vérifiez que SQL Server utilise l’index lors de l’exécution de la requête.
@@ -154,7 +154,7 @@ Dans cette étape, vous allez créer un index sur une colonne chiffrée, préten
 
         CREATE INDEX IX_LastName ON [Employees] ([LastName])
         INCLUDE ([EmployeeID], [FirstName], [SSN], [Salary]);
-        GO;
+        GO
         ```
 
 1. En tant que propriétaire des données, exécutez une requête enrichie sur la colonne **LastName** et vérifiez que SQL Server utilise l’index lors de l’exécution de la requête.

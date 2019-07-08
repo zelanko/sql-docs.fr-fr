@@ -18,12 +18,12 @@ ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9ed0ab606ec5ff41719111f160d5afb30da534bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4f31434f5e210a4c681a3d080824850527c6cbc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501747"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583746"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>Restaurer des fichiers et des groupes de fichiers (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,22 +138,24 @@ ms.locfileid: "62501747"
     |**Restaurer sous**|Chemin d'accès complet du fichier de base de données à restaurer. Pour définir un nouveau fichier de restauration, cliquez sur la zone de texte et modifiez le chemin d'accès et le nom de fichier proposés. La modification du chemin d'accès ou du nom de fichier dans la colonne **Restaurer sous** équivaut à utiliser l'option MOVE dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE.|  
   
 11. Le volet **État de récupération** détermine l'état de la base de données à l'issue de l'opération de restauration.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     **Leave the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. (RESTORE WITH RECOVERY)**  
+     Recovers the database. This is the default behavior. Choose this option only if you are restoring all of the necessary backups now. This option is equivalent to specifying WITH RECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
   
-     **Laisser la base de données opérationnelle en restaurant les transactions non validées. Les journaux des transactions supplémentaires ne peuvent pas être restaurés. (RESTORE WITH RECOVERY)**  
-     Récupère la base de données. Il s'agit du comportement par défaut. Ne choisissez cette option que si vous restaurez toutes les sauvegardes nécessaires maintenant. Cette option revient à spécifier WITH RECOVERY dans une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE.  
+     **Leave the database non-operational, and don't roll back the uncommitted transactions. Additional transaction logs can be restored. (RESTORE WITH NORECOVERY)**  
+     Leaves the database in the restoring state. To recover the database, you will need to perform another restore using the preceding RESTORE WITH RECOVERY option (see above). This option is equivalent to specifying WITH NORECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
   
-     **Laisser la base de données non opérationnelle, et ne pas restaurer les transactions non validées. Les journaux des transactions supplémentaires peuvent être restaurés. (RESTORE WITH NORECOVERY)**  
-     Laisse la base de données en état de restauration. Pour restaurer la base de données, vous devez exécuter une autre restauration en utilisant l'option RESTORE WITH RECOVERY précédente (voir ci-dessus). Cette option revient à spécifier WITH NORECOVERY dans une instruction RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+     If you select this option, the **Preserve replication settings** option is unavailable.  
   
-     Si vous sélectionnez cette option, l'option **Conserver les paramètres de réplication** n'est pas disponible.  
+     **Leave the database in read-only mode. Roll back the uncommitted transactions, but save the rollback operation in a file so the recovery effects can be undone. (RESTORE WITH STANDBY)**  
+     Leaves the database in a standby state. This option is equivalent to specifying WITH STANDBY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
   
-     **Laisser la base de données en lecture seule. Annulez les transactions non validées, mais enregistrez l'opération d'annulation dans un fichier pour pouvoir annuler les effets de la restauration. (RESTORE WITH STANDBY)**  
-     Laisse la base de données dans un état de secours. Cette option revient à spécifier WITH STANDBY dans une instruction RESTORE [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
+     Choosing this option requires that you specify a standby file.  
   
-     Cette option nécessite de définir un fichier d'annulation.  
-  
-     **Fichier journal des annulations de la restauration**  
-     Définissez un fichier d’annulation dans la zone de texte **Fichier journal des annulations de la restauration** . Cette option est nécessaire si vous laissez la base de données en lecture seule (RESTORE WITH STANDBY).  
+     **Rollback undo file**  
+     Specify a standby file name in the **Rollback undo file** text box. This option is required if you leave the database in read-only mode (RESTORE WITH STANDBY).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

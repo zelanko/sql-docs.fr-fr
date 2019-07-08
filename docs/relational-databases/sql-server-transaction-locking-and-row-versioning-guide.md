@@ -17,12 +17,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 069480b8a2afc1e88f5edbdd11775e4988e3f9f4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62663348"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585781"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -1074,6 +1074,9 @@ BEGIN TRANSACTION
   
 1.  Activez (valeur ON) l’option de base de données `READ_COMMITTED_SNAPSHOT` et/ou l’option `ALLOW_SNAPSHOT_ISOLATION`.  
 2.  Définissez le niveau d'isolement des transactions approprié dans une application :  
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   Quand l’option `READ_COMMITTED_SNAPSHOT` est activée (ON), les transactions qui définissent le niveau d’isolation read committed utilisent le contrôle de version de ligne.  
     -   Quand l’option de base de données `ALLOW_SNAPSHOT_ISOLATION` est activée (ON), les transactions peuvent définir le niveau d’isolation d’instantané.  
   

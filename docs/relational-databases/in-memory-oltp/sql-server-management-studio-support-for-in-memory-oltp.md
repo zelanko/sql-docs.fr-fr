@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3053f1415332ee26017126322ab5cd029f668e32
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6e8472678a0d25c134f99317a2588e329c468e8d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665118"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579425"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Prise en charge de SQL Server Management Studio pour l'OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,8 +36,10 @@ ms.locfileid: "51665118"
 3.  Pour ajouter un nouveau groupe de fichiers de données optimisé en mémoire, cliquez sur la page **Groupes de fichiers** . Sous **MEMORY OPTIMIZED DATA**, cliquez sur **Ajouter un groupe de fichiers** , puis entrez le nom du groupe de fichiers de données optimisé en mémoire.  La colonne correspondant aux **fichiers FILESTREAM** représente le nombre de conteneurs dans le groupe de fichiers. Les conteneurs sont ajoutés à la page **Général** .  
   
 4.  Pour ajouter un fichier (conteneur) au groupe de fichiers, cliquez sur la page **Général** . Sous **Fichiers de la base de données**, cliquez sur **Ajouter**. Sélectionnez **Type de fichier** comme **Données FILESTREAM**, spécifiez le nom logique du conteneur, sélectionnez le groupe de fichiers optimisé en mémoire, puis assurez-vous que l’option **Croissance automatique/Taille maximale** est définie sur **Illimité**.  
-  
-     Pour plus d’informations sur la création d’une base de données à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consultez [Créer une base de données](../../relational-databases/databases/create-a-database.md).  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information on how to create a new database by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], see [Create a Database](../../relational-databases/databases/create-a-database.md).  
   
 ### <a name="to-create-a-memory-optimized-table"></a>Pour créer une table optimisée en mémoire  
   
@@ -92,7 +94,7 @@ ms.locfileid: "51665118"
   
  Pour la base de données, la table, la procédure stockée, le type de table défini par l'utilisateur ou les objets Index, les fonctionnalités de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suivantes ont été mises à jour ou étendues pour prendre en charge OLTP en mémoire.  
   
--   Explorateur d'objets  
+-   Explorateur d’objets  
   
     -   Menu contextuels  
   
@@ -131,7 +133,7 @@ ms.locfileid: "51665118"
   
              Dans l’**Assistant Générer et publier des scripts**, la valeur par défaut de l’option de script **Vérifier l’existence de l’objet** est FALSE. Si la valeur de l’option de script **Vérifier l’existence de l’objet** est TRUE dans l’écran **Définir les options de script** de l’Assistant, le script généré contient « CREATE PROCEDURE <nom_procédure> AS » et « ALTER PROCEDURE <nom_procédure> <définition_procédure> ». Lorsqu'il est exécuté, le script généré retourne une erreur, car ALTER PROCEDURE n'est pas pris en charge sur les procédures stockées compilées en mode natif.  
   
-             Pour modifier le script généré pour chaque procédure stockée compilée en mode natif :  
+             Pour modifier le script généré pour chaque procédure stockée compilée en mode natif :  
   
             1.  Dans « CREATE PROCEDURE <nom_procédure> AS », remplacez « AS » par « <définition_procédure> ».  
   
@@ -141,7 +143,7 @@ ms.locfileid: "51665118"
   
         -   Importez et exportez des données. Utilisez l’ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et l’option Copier les données à partir d’une ou plusieurs tables ou vues** . Si la table de destination est une table optimisée en mémoire qui n'existe pas dans la base de données de destination :  
   
-            1.  Dans l’**Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, dans l’écran **Spécifier la copie ou l’interrogation de table**, sélectionnez **Copier les données à partir d’une ou plusieurs tables ou vues**. Ensuite, cliquez sur **Suivant**.  
+            1.  Dans l’**Assistant Importation et Exportation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , dans l’écran **Spécifier la copie ou l’interrogation de table**, sélectionnez **Copier les données à partir d’une ou plusieurs tables ou vues**. Ensuite, cliquez sur **Suivant**.  
   
             2.  Cliquez sur **Modifier les mappages**. Sélectionnez ensuite **Créer la table de destination** puis cliquez sur **Modifier SQL**. Entrez la syntaxe CREATE TABLE pour créer une table optimisée en mémoire sur la base de données de destination. Cliquez sur **OK** et suivez les étapes restantes de l’Assistant.  
   
@@ -158,7 +160,7 @@ ms.locfileid: "51665118"
   
  Pour plus d’informations sur les fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] non prises en charge, consultez [Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge d'OLTP en mémoire par SQL Server](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

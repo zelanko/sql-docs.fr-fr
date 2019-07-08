@@ -15,12 +15,12 @@ ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 388c7c40afcf370b181378259c97fd399781e983
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d7b8389317ea7239533b98d46562fdcf9bfa6212
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560356"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583420"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>Afficher un instantané de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51560356"
 2.  Développez **Bases de données**.  
   
 3.  Développez **Instantanés de base de données**et sélectionnez l’instantané que vous voulez afficher.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour afficher un instantané de base de données**  
   
@@ -63,7 +65,7 @@ ms.locfileid: "51560356"
   
 -   [Supprimer un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 920fe0f3e450448a1d8c9a262d2ae0e372e6769f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62939043"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584434"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promouvoir les valeurs XML les plus fréquentes à l'aide de colonnes calculées
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Créez des déclencheurs sur la colonne XML pour assurer la maintenance des tables de propriétés. Dans les déclencheurs, procédez ainsi :  
   
-    -   Utilisez des méthodes du type de données **xml** , comme **nodes()** et **value()**, pour insérer et supprimer des lignes dans les tables de propriétés.  
+    -   Utilisez des méthodes du type de données **xml** , comme **nodes()** et **value()** , pour insérer et supprimer des lignes dans les tables de propriétés.  
   
     -   Créez des fonctions table multidiffusion dans CLR (Common Language Runtime) pour insérer et supprimer des lignes dans les tables de propriétés.  
   
@@ -173,7 +173,9 @@ WHERE    tblPropAuthor.propAuthor = 'David'
 2.  Créez un assembly et une fonction Transact-SQL définie par l'utilisateur pour démarrer la classe CLR.  
   
 3.  Définissez les déclencheurs insert, update et delete à l'aide de la fonction définie par l'utilisateur pour assurer la maintenance de la table de propriétés.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Pour cela, vous devez commencer par créer la fonction multidiffusion dans CLR. Le type de données **xml** est exposé en tant que classe managée SqlXml dans ADO.NET et prend en charge la méthode **CreateReader()** qui retourne un flux XmlReader.  
   
 > [!NOTE]  
@@ -255,7 +257,7 @@ as
   
  Le déclencheur delete est identique à celui utilisé dans la version non CLR. Le déclencheur update, quant à lui, remplace simplement la fonction udf_XML2Table() par CLR_udf_XML2Table().  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser des données XML dans les colonnes calculées](../../relational-databases/xml/use-xml-in-computed-columns.md)  
   
   

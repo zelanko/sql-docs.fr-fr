@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: ac71a5cc516b89636576aa59114974b4bd5cd017
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 87ae14a8acaa94873b81238d998f755a8ee0a8bd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67387985"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583661"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurer Always Encrypted avec enclaves sécurisées
 
@@ -32,6 +32,8 @@ Pour configurer Always Encrypted avec enclaves sécurisées, utilisez le workflo
 4. Configurez le type d’enclave dans votre instance SQL Server.
 5. Approvisionnez les clés prenant en charge les enclaves.
 6. Chiffrez des colonnes qui contiennent des données sensibles.
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > Pour obtenir un tutoriel pas à pas sur la manière de tester votre environnement de test et d’essayer la fonctionnalité Always Encrypted avec enclaves sécurisées dans SSMS, consultez [Tutoriel : bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

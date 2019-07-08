@@ -17,12 +17,12 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dae7b73c02ce1c9ced01104754dc881bf25893f
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 20cebbb314e2830272e677da2d26bf53668798ab
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571229"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579841"
 ---
 # <a name="filter-a-trace"></a>Filtrer une trace
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51571229"
 2.  Identifiez les données et les colonnes des données qui contiennent les informations dont vous avez besoin.  
   
 3.  Identifiez un sous-ensemble des données dont vous avez besoin et définissez des filtres en fonction de ce sous-ensemble.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Par exemple, vous pouvez être intéressé uniquement par les événements qui durent plus longtemps qu'une certaine période de temps. Vous pouvez créer une trace qui inclut les événements pour lesquels les données de la colonne **Durée** sont supérieures à 300 millisecondes. Votre trace n'inclura pas les événements qui se terminent en moins de 300 millisecondes.  
   
  Vous pouvez créer des filtres en utilisant le Générateur de profils SQL Server Profiler ou des procédures stockées Transact-SQL.  

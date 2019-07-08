@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14e32081c9cbe03d7336f4ee973b02737f1cda1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6239c7854a5a63165672dc3a66d5b6ce26dfb3ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454593"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579896"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Prise en main des autorisations du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "66454593"
 ## <a name="security-principals"></a>Principaux de sécurité  
  Le principal de sécurité est le nom officiel des identités qui utilisent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et qui peuvent être autorisées à prendre des mesures. Ce sont généralement des personnes ou des groupes de personnes, mais il peut également s’agir d’entités qui se font passer pour des personnes. Les principaux de sécurité peuvent être créés et gérés à l’aide des instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] répertoriées ou de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
- Connexions  
+##### <a name="logins"></a>Connexions  
  Les connexions sont des comptes d’utilisateur qui permettent d’ouvrir une session sur le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] prennent en charge les connexions basées sur l’authentification Windows et les connexions basées sur l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d’informations sur les deux types de connexions, consultez [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
- Rôles serveur fixes  
+##### <a name="fixed-server-roles"></a>Rôles serveur fixes  
  Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les rôles serveur fixes sont un ensemble de rôles préconfigurés qui fournissent un groupe pratique d’autorisations de niveau serveur. Les connexions peuvent être ajoutées aux rôles à l’aide de l’instruction `ALTER SERVER ROLE ... ADD MEMBER` . Pour plus d’informations, consultez [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ne prend pas en charge les rôles serveur fixes, mais a deux rôles dans la base de données MASTER (`dbmanager` et `loginmanager`) qui agissent comme des rôles serveur.  
   
- Rôles de serveur définis par l’utilisateur  
+##### <a name="user-defined-server-roles"></a>Rôles de serveur définis par l’utilisateur  
  Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous pouvez créer vos propres rôles serveur et leur attribuer des autorisations de niveau serveur. Les connexions peuvent être ajoutées aux rôles de serveur à l’aide de l’instruction `ALTER SERVER ROLE ... ADD MEMBER` . Pour plus d’informations, consultez [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] ne prend pas en charge les rôles serveur définis par l’utilisateur.  
   
- Utilisateurs de base de données  
+##### <a name="database-users"></a>Utilisateurs de base de données  
  Pour qu’une connexion puisse accéder à une base de données, un utilisateur de base de données doit être créé dans une base de données, puis mappé à la connexion. En général, le nom d’utilisateur de base de données est le même que le nom de connexion, mais ce n’est pas obligatoire. Chaque utilisateur de base de données est mappé à une seule connexion. Une connexion ne peut être mappée qu’à un seul utilisateur dans une base de données, mais peut être mappée comme utilisateur de base de données dans plusieurs bases de données.  
   
  En outre, les utilisateurs de base de données peuvent être créés sans avoir de connexion correspondante. Ils sont appelés *utilisateurs de base de données autonome*. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] encourage l’utilisation de ces utilisateurs, car elle facilite le déplacement de votre base de données vers un autre serveur. Comme une connexion, un utilisateur de base de données autonome peut utiliser l’authentification Windows ou l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  Il existe 12 types d’utilisateurs, qui varient légèrement selon la façon dont ils s’authentifient et qui ils représentent. Pour voir une liste d’utilisateurs, consultez [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
- Rôles de base de données fixes  
+##### <a name="fixed-database-roles"></a>Rôles de base de données fixes  
  Les rôles de base de données fixes sont un ensemble de rôles préconfigurés qui fournissent un groupe pratique d’autorisations de niveau base de données. Les utilisateurs de base de données et les rôles de base de données définis par l’utilisateur peuvent être ajoutés aux rôles de base de données fixes à l’aide de l’instruction `ALTER ROLE ... ADD MEMBER`. Pour plus d’informations, consultez [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- Rôles de base de données définis par l’utilisateur  
+##### <a name="user-defined-database-roles"></a>Rôles de base de données définis par l’utilisateur  
  Les utilisateurs ayant l’autorisation `CREATE ROLE` peuvent créer des rôles de base de données définis par l’utilisateur pour représenter des groupes d’utilisateurs disposant d’autorisations courantes. En général, les autorisations sont accordées ou refusées à l’ensemble du rôle, ce qui simplifie la gestion et la surveillance des autorisations. Les utilisateurs de base de données peuvent être ajoutés aux rôles de base de données à l’aide de l’instruction `ALTER ROLE ... ADD MEMBER` . Pour plus d’informations, consultez [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- Autres principaux  
+##### <a name="other-principals"></a>Autres principaux  
  Des principaux de sécurité supplémentaires non présentés ici incluent les rôles d’application, ainsi que les connexions et les utilisateurs basés sur des certificats ou des clés asymétriques.  
   
  Pour obtenir un graphique montrant les relations entre les utilisateurs Windows, les groupes Windows, les connexions et les utilisateurs de base de données, consultez [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md).  
@@ -66,7 +66,9 @@ ms.locfileid: "66454593"
 2.  Créez des groupes Windows qui représentent les unités de travail et les fonctions de travail.  
   
 3.  Ajoutez les utilisateurs Windows aux groupes Windows.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>Si la personne qui se connecte doit se connecter à plusieurs bases de données  
   
 1.  Créez une connexion pour les groupes Windows. (Si vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ignorez les étapes d’Active Directory et créez ici des connexions d’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .)  

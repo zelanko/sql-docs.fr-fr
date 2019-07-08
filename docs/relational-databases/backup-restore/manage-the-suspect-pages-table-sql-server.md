@@ -19,12 +19,12 @@ ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d1081ea3a972dea318e7ad7952f313a95f407223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 053ea3fdc7ad56ef6b6c9c9992506cf07623cb5e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621547"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584019"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Gérer la table suspect_pages (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47621547"
   
      La table **suspect_pages** contient une ligne pour chaque page dans laquelle une erreur 824 (avec une limite de 1 000 lignes) s’est produite. Le tableau suivant présente les erreurs consignées dans la colonne **event_type** de la table **suspect_pages** .  
   
-    |Description de l'erreur|Valeur**event_type** |  
+    |Description de l'erreur|Valeur**event_type**|  
     |-----------------------|---------------------------|  
     |Erreur 823 provoquée par une erreur CRC du système d'exploitation ou erreur 824 autre qu'une somme de contrôle incorrecte ou une page endommagée (par exemple, ID de page incorrect)|1|  
     |Somme de contrôle incorrecte|2|  
@@ -119,7 +119,7 @@ ms.locfileid: "47621547"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Toute personne ayant accès à **msdb** peut lire les données de la table **suspect_pages** . Toute personne ayant l'autorisation UPDATE sur la table suspect_pages peut mettre à jour ses enregistrements. Les membres du rôle de base de données fixe **db_owner** sur **msdb** ou du rôle serveur fixe **sysadmin** peuvent insérer, mettre à jour et supprimer des enregistrements.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -133,7 +133,9 @@ ms.locfileid: "47621547"
 3.  Développez **dbo.suspect_pages** et cliquez avec le bouton droit sur **Modifier les 200 lignes du haut**.  
   
 4.  Dans la fenêtre de requête, modifiez, mettez à jour ou supprimez les lignes de votre choix.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-manage-the-suspectpages-table"></a>Pour gérer la table suspect_pages  
@@ -162,7 +164,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

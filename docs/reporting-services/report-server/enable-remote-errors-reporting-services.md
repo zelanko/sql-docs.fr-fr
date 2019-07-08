@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 045689c0aa7f5b4bbc8a365ad2d15d77f3b67ce4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b2e193f4ebbcca98fd27657618ef2e1a7f7ef92
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577755"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500182"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Activer les erreurs distantes (Reporting Services)
   Vous pouvez définir des propriétés de serveur sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de façon à retourner des informations supplémentaires concernant les conditions d'erreur qui se produisent sur des serveurs distants. Si un message d'erreur contient le texte « Pour obtenir plus d'informations sur cette erreur, accédez au serveur de rapports sur le serveur local ou activez les erreurs distantes », vous pouvez définir la propriété **EnableRemoteErrors** de façon à accéder à des informations supplémentaires qui peuvent vous aider à résoudre le problème. Pour plus d’informations, consultez [Propriétés système de Report Server](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -68,7 +68,7 @@ ms.locfileid: "65577755"
   
 3.  Cliquez sur **Avancé** pour ouvrir la page de propriétés. Pour plus d’informations, consultez [Propriétés du serveur &#40;page Avancé&#41; - Reporting Services](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-4.  Dans **EnableRemoteErrors**, sélectionnez **True**.  
+4.  Dans le **sécurité** section dans **EnableRemoteErrors**, sélectionnez **True**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

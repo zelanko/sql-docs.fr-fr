@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8b61ab4da7de38c045fe222a6c0784b7032658ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5da7d9bf341db44648062d740410dbcf9193d125
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62685213"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579480"
 ---
 # <a name="rename-indexes"></a>Renommer des index
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,9 @@ ms.locfileid: "62685213"
 7.  Cliquez sur **Fermer**.  
   
 8.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_table_.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-rename-an-index-by-using-object-explorer"></a>Pour renommer un index à l'aide de l'Explorateur d'objets  
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus (+) pour développer la base de données qui contient la table sur laquelle vous souhaitez renommer un index.  

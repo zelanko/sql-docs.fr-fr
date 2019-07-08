@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a12c6ae385b4fa527251da266f2d0711eb2b9e9c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994241"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583443"
 ---
 # <a name="tempdb-database"></a>Base de données tempdb
 
@@ -244,6 +244,8 @@ Certaines limitations de cette implémentation méritent votre attention :
     ```
 3. Les requêtes sur les tables à mémoire optimisée ne prennent pas en charge les indicateurs de verrouillage et d’isolation ; les requêtes sur les vues de catalogue tempdb à mémoire optimisée ne respectent donc pas les indicateurs de verrouillage et d’isolation. Comme avec les autres vues de catalogue système dans SQL Server, toutes les transactions sur des vues système sont effectuées au niveau de l’isolation READ COMMITTED (ou dans ce cas READ COMMITTED SNAPSHOT).
 4. Il peut y avoir certains problèmes avec les index columnstore sur les tables temporaires quand les métadonnées tempdb à mémoire optimisée sont activées. Pour cette préversion, il est préférable d’éviter les index columnstore sur les tables temporaires lors de l’utilisation de métadonnées tempdb à mémoire optimisée.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE] 
 > Ces limitations s’appliquent uniquement quand vous référencez des vues système TempDB ; si vous le souhaitez, vous pouvez créer une table temporaire dans la même transaction quand vous accédez à une table à mémoire optimisée dans une base de données utilisateur.

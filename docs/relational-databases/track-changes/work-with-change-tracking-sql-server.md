@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2f41329c10544686194524327ddb7fd560cb57d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 333e4f7eb3177529f55a9be18aa1e042b10737c8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514155"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584674"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Utiliser le suivi des modifications (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -207,7 +207,9 @@ ON
 3.  Obtenez les modifications de la table Sales à l’aide de CHANGETABLE(CHANGES ...).  
   
 4.  Obtenez les modifications de la table SalesOrders à l’aide de CHANGETABLE(CHANGES ...).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Deux processus qui se produisent dans la base de données peuvent affecter les résultats retournés par les étapes précédentes :  
   
 -   Le processus de nettoyage s'exécute en arrière-plan et supprime les informations de suivi des modifications antérieures à la période de rétention spécifiée.  
@@ -434,7 +436,7 @@ COMMIT TRAN
   
 -   Lorsqu'un client interroge les modifications, enregistrez le numéro de version de la dernière synchronisation pour chaque client sur le serveur. En cas de problème avec les données, les derniers numéros de versions synchronisées ne correspondent pas. Ils indiquent qu'une réinitialisation est requise.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [À propos du suivi des modifications &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Gérer le suivi des modifications &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   

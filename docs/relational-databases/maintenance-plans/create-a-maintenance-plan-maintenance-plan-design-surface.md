@@ -13,12 +13,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 436dfee205c5e200d469741075ac2e61b1e7d875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78f09611e71c39902e81580d752d302fee604be9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514392"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584143"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Créer un plan de maintenance (aire de conception de plan de maintenance)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52514392"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour créer ou gérer des plans de maintenance, vous devez être membre du rôle serveur fixe **sysadmin** . L'Explorateur d'objets affiche uniquement le nœud **Plans de maintenance** pour les utilisateurs membres du rôle serveur fixe **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de l'aire de conception de plan de maintenance  
@@ -85,7 +85,7 @@ ms.locfileid: "52514392"
      **Serveurs**  
      Affichez la boîte de dialogue **Serveurs** qui permet de sélectionner les serveurs où sont exécutées les tâches du sous-plan. Cette option est activée uniquement sur des serveurs maîtres dans des environnements multiserveurs. Pour plus d’informations, consultez [Créer un environnement multiserveur](../../ssms/agent/create-a-multiserver-environment.md) et [Plan de maintenance &#40;Serveurs&#41;](../../relational-databases/maintenance-plans/maintenance-plan-servers.md).  
   
-     **Nom**  
+     **Name**  
      Affichez le nom du plan de maintenance. Pour les nouveaux plans de maintenance, le nom est spécifié dans une boîte de dialogue avant l'ouverture du concepteur de plan de maintenance. Pour renommer un plan de maintenance, cliquez dessus avec le bouton droit dans l’Explorateur d’objets, puis cliquez sur **Renommer**.  
   
      **Description**  
@@ -100,7 +100,7 @@ ms.locfileid: "52514392"
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Propriétés du sous-plan** .  
   
-     **Nom**  
+     **Name**  
      Nom du sous-plan.  
   
      **Description**  
@@ -109,7 +109,7 @@ ms.locfileid: "52514392"
      **Planifier**  
      Indique pour quelle planification le sous-plan sera exécuté. Cliquez sur **Planification du sous-plan** pour ouvrir la boîte de dialogue **Nouvelle planification du travail** . Cliquez sur **Supprimer la planification** pour supprimer la planification du sous-plan.  
   
-     Liste**Exécuter en tant que**   
+     Liste**Exécuter en tant que**  
      Sélectionnez le compte à utiliser pour exécuter cette sous-tâche.  
   
 6.  Cliquez sur l'icône **Planification du sous-plan** pour entrer les informations de la planification dans la boîte de dialogue **Nouvelle planification du travail** .  
@@ -161,11 +161,11 @@ ms.locfileid: "52514392"
          **Option de contrainte**  
          Définit la manière dont une contrainte fonctionne entre deux tâches.  
   
-         Liste**Opération d’évaluation**    
-         Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Les opérations disponibles sont : **Contrainte**, **Expression**, **Expression et contrainte**et **Expression ou contrainte**.  
+         Liste**Opération d’évaluation**  
+         Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Ces opérations sont : **Contrainte**, **Expression**, **Expression et contrainte** et **Expression ou contrainte**.  
   
-         Liste**Valeur**   
-         Spécifiez la valeur de contrainte : **Réussite**, **Échec**ou **À l’achèvement**. **Réussite** est la valeur par défaut.  
+         Liste**Valeur**  
+         Spécifiez la valeur de contrainte : **Réussite**, **Échec** ou **À l'achèvement**. **Réussite** est la valeur par défaut.  
   
         > [!NOTE]  
         >  La ligne de contrainte de précédence est verte pour **Réussite**, rouge pour **Échec**et bleue pour **À l’achèvement**.  
@@ -217,7 +217,7 @@ ms.locfileid: "52514392"
   
         1.  Si vous sélectionnez **Générer un rapport de fichier texte**, sélectionnez **Créer un nouveau fichier** ou **Ajouter au fichier**.  
   
-        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Vous pouvez également cliquer sur les points de suspension **(...)**, puis sélectionner le chemin du dossier ou le nom de fichier à partir des boîtes de dialogue **Localiser le dossier -**_nom\_serveur_ ou **Rechercher les fichiers de la base de données -**_nom\_serveur_.  
+        2.  En fonction de la sélection ci-dessus, entrez le nom et le chemin complet du nouveau fichier ou du fichier à ajouter dans les zones **Dossier** ou **Nom de fichier** . Vous pouvez également cliquer sur les points de suspension **(...)** , puis sélectionner le chemin du dossier ou le nom de fichier à partir des boîtes de dialogue **Localiser le dossier -** _nom\_serveur_ ou **Rechercher les fichiers de la base de données -** _nom\_serveur_.  
   
         3.  Si vous sélectionnez **Envoyer le rapport à un destinataire de messagerie**, dans la liste **Opérateur d'agent** , sélectionnez le destinataire du rapport envoyé par messagerie électronique.  
   
@@ -231,49 +231,51 @@ ms.locfileid: "52514392"
     5.  Dans la boîte de dialogue **Création de rapport et enregistrement** , cliquez sur **OK**.  
   
 12. Pour consulter les résultats dans la visionneuse du fichier journal, dans **l’Explorateur d’objets**, cliquez avec le bouton droit sur le dossier **Plans de maintenance** ou sur le plan de maintenance spécifique et sélectionnez **Afficher l’historique**.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
   
-     Les options suivantes sont disponibles dans la boîte de dialogue **Visionneuse du fichier journal -**_nom\_serveur_.  
+     **Load Log**  
+     Open a dialog box where you can specify a log file to load.  
   
-     **Charger le journal**  
-     Ouvre une boîte de dialogue dans laquelle vous pouvez spécifier un fichier journal à charger.  
+     **Export**  
+     Open a dialog box that lets you export the information that is shown in the **Log file summary** grid to a text file.  
   
-     **Exporter**  
-     Ouvre une boîte de dialogue qui vous permet d’exporter les informations figurant dans la grille **Résumé du fichier journal** vers un fichier texte.  
+     **Refresh**  
+     Refresh the view of the selected logs. The **Refresh** button rereads the selected logs from the target server while applying any filter settings.  
   
-     **Actualiser**  
-     Actualise l'affichage des journaux sélectionnés. Le bouton **Actualiser** permet de relire les journaux sélectionnés à partir du serveur cible lors de l'application des paramètres de filtre.  
+     **Filter**  
+     Open a dialog box that lets you specify settings that are used to filter the log file, such as **Connection**, **Date**, or other **General** filter criteria.  
   
-     **Filtre**  
-     Ouvre une boîte de dialogue qui vous permet de spécifier les paramètres utilisés pour filtrer le fichier journal, notamment **Connexion**, **Date**et d’autres critères de filtre **Général** .  
+     **Search**  
+     Search the log file for specific text. Searching with wildcard characters is not supported.  
   
-     **Recherche**  
-     Permet de rechercher un texte spécifique dans le fichier journal. La recherche des caractères génériques n'est pas prise en charge.  
+     **Stop**  
+     Stops loading the log file entries. For example, you can use this option if a remote or offline log file takes a long time to load, and you only want to view the most recent entries.  
   
-     **Arrêter**  
-     Arrête le chargement des entrées du fichier-journal. Par exemple, vous pouvez utiliser cette option si un fichier de journal distant ou hors connexion est long à charger, et que vous souhaitez seulement consulter les entrées les plus récentes.  
-  
-     **Résumé du fichier journal**  
-     Ce volet d'informations affiche un résumé du filtrage du fichier journal. Si le fichier n'est pas filtré, le texte suivant s'affiche : **Aucun filtre appliqué**. Si un filtre est appliqué au journal, le texte suivant s’affiche : **Filtrer les entrées du journal pour :** \<critères de filtre>.  
+     **Log file summary**  
+     This information panel displays a summary of the log file filtering. If the file is not filtered, you will see the following text, **No filter applied**. If a filter is applied to the log, you will see the following text, **Filter log entries where:** \<filter criteria>.  
   
      **Date**  
-     Affiche la date de l'événement.  
+     Displays the date of the event.  
   
      **Source**  
-     Affiche la fonctionnalité source à partir de laquelle l'événement est créé, par exemple le nom du service (comme MSSQLSERVER). Ceci n'apparaît pas pour tous les types de journaux.  
+     Displays the source feature from which the event is created, such as the name of the service (MSSQLSERVER, for example). This does not appear for all log types.  
   
      **Message**  
-     Affiche les messages associés à l'événement.  
+     Displays any messages associated with the event.  
   
-     **Type de journal**  
-     Affiche le type de journal auquel appartient l'événement. Tous les journaux sélectionnés s'affichent dans la fenêtre de résumé du fichier journal.  
+     **Log Type**  
+     Displays the type of log to which the event belongs. All selected logs appear in the log file summary window.  
   
-     **Source du journal**  
-     Affiche une description du journal source dans lequel l'événement est capturé.  
+     **Log Source**  
+     Displays a description of the source log in which the event is captured.  
   
-     **Détails de la ligne sélectionnée**  
-     Sélectionnez une ligne pour afficher des détails supplémentaires sur la ligne d'événement sélectionnée en bas de la page. Vous pouvez changer l'ordre des colonnes en les faisant glisser sur la grille. Vous pouvez redimensionner les colonnes en faisant glisser les barres de séparation des colonnes dans l'en-tête de la grille vers la gauche ou la droite. Double-cliquez sur les barres de séparation des colonnes dans l'en-tête de la grille pour ajuster automatiquement la largeur de la colonne au contenu.  
+     **Selected row details**  
+     Select a row to display additional details about the selected event row at the bottom of the page. The columns can be reordered by dragging them to new locations in the grid. The columns can be resized by dragging the column separator bars in the grid header to the left or right. Double-click the column separator bars in the grid header to automatically size the column to the content width.  
   
      **Instance**  
-     Nom de l'instance pour laquelle l'événement s'est produit. Il est affiché sous la forme *nom de l'ordinateur*\\*nom de l'instance*.  
+     The name of the instance on which the event occurred. This is displayed as *computer name*\\*instance name*.  
   
   

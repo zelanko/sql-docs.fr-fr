@@ -16,12 +16,12 @@ ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 292c180b70143826ebdb8ea75b015dcbe6a2011f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c7b7588801419f57d04996d6bd2cad335a9eede
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523929"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583230"
 ---
 # <a name="attach-a-database"></a>Attacher une base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ Les autorisations d'accès au fichier sont définies au cours de plusieurs opér
   
 Nous vous recommandons de ne pas attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez aussi le code, notamment les procédures stockées ou le code défini par l’utilisateur, de la base de données. Pour plus d’informations sur l’attachement de bases de données et sur les modifications apportées aux métadonnées à cette occasion, consultez [Attacher et détacher une base de données (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
 Requiert l’autorisation `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABASE`.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -58,32 +58,34 @@ Requiert l’autorisation `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY
 2.  Cliquez avec le bouton droit sur **Bases de données** , puis cliquez sur **Attacher**.  
   
 3.  Dans la boîte de dialogue **Attacher des bases de données** , pour spécifier la base de données à attacher, cliquez sur **Ajouter**, dans la boîte de dialogue **Rechercher les fichiers de base de données** , sélectionnez l'unité de disque contenant la base de données et développez l'arborescence pour rechercher et sélectionner le fichier .mdf de la base de données. Par exemple :  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > Une tentative de sélection d'une base de données déjà attachée génère une erreur.  
+    > Trying to select a database that is already attached generates an error.  
   
-     **Bases de données à attacher**  
-     Affiche des informations sur les bases de données sélectionnées.  
+     **Databases to attach**  
+     Displays information about the selected databases.  
   
-     \<aucun en-tête de colonne>  
-     Affiche une icône indiquant l'état de l'opération d'attachement. Les icônes possibles sont décrites dans la section **État** ci-dessous.  
+     \<no column header>  
+     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
   
-     **Emplacement du fichier MDF**  
-     Affiche le chemin d'accès et le nom du fichier MDF sélectionné.  
+     **MDF File Location**  
+     Displays the path and file name of the selected MDF file.  
   
      **Database Name**  
-     Affiche le nom de la base de données.  
+     Displays the name of the database.  
   
-     **Attacher en tant que**  
-     Permet de spécifier éventuellement un autre nom sous lequel la base de données doit être attachée.  
+     **Attach As**  
+     Optionally, specifies a different name for the database to attach as.  
   
-     **Propriétaire**  
-     Fournit une liste déroulante des propriétaires de bases de données possibles dans laquelle vous pouvez sélectionner un autre propriétaire.  
+     **Owner**  
+     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
   
-     **État**  
-     Affiche l'état de la base de données conformément au tableau ci-après.  
+     **Status**  
+     Displays the status of the database according to the following table.  
   
     |Icône|Texte d'état|Description|  
     |----------|-----------------|-----------------|  
@@ -95,31 +97,31 @@ Requiert l’autorisation `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY
     |Cercle contenant une flèche courbe pointant dans le sens inverse des aiguilles d'une montre|Restauré|L'opération d'attachement a réussi, mais a été restaurée en raison d'une erreur lors de l'attachement d'un autre objet.|  
   
      **Message**  
-     Affiche un message vierge ou un lien hypertexte « Fichier introuvable ».  
+     Displays either a blank message or a "File not found" hyperlink.  
   
-     **Ajouter**  
-     Permet de rechercher les principaux fichiers de base de données nécessaires. Lorsque l'utilisateur sélectionne un fichier .mdf, les informations applicables sont automatiquement remplies dans les champs respectifs de la grille **Bases de données à attacher** .  
+     **Add**  
+     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
   
-     **Supprimer**  
-     Supprime le fichier sélectionné de la grille **Bases de données à attacher** .  
+     **Remove**  
+     Removes the selected file from the **Databases to attach** grid.  
   
-     **"** *<database_name>* **»détails de la base de données**  
-     Affiche le nom des fichiers à attacher. Pour vérifier ou changer le nom du chemin d’accès d’un fichier, cliquez sur le bouton **Parcourir** (**...**).  
+     **"** *<database_name>* **" database details**  
+     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
   
     > [!NOTE]  
-    > Si un fichier n'existe pas, la colonne **Message** affiche « Introuvable ». Si un fichier journal est introuvable, cela signifie qu'il se trouve dans un autre répertoire ou qu'il a été supprimé. Vous devez mettre à jour le chemin d'accès du fichier dans la grille **Détails de la base de données** pour désigner l'emplacement correct ou supprimer le fichier journal de la grille. Si un fichier de données .ndf est introuvable, vous devez mettre à jour son chemin d'accès dans la grille pour désigner l'emplacement correct.  
+    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
   
-     **Nom du fichier d'origine**  
-     Affiche le nom du fichier attaché appartenant à la base de données.  
+     **Original File Name**  
+     Displays the name of the attached file belonging to the database.  
   
-     **Type de fichier**  
-     Indique le type du fichier, **Données** ou **Journal**.  
+     **File Type**  
+     Indicates the type of file, **Data** or **Log**.  
   
-     **Chemin d'accès au fichier actuel**  
-     Affiche le chemin d'accès au fichier de base de données sélectionné. Le chemin d'accès peut être modifié manuellement.  
+     **Current File Path**  
+     Displays the path to the selected database file. The path can be edited manually.  
   
      **Message**  
-     Affiche un message vierge ou un lien hypertexte «**Fichier introuvable**».  
+     Displays either a blank message or a "**File not found**" hyperlink.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
@@ -143,7 +145,7 @@ Requiert l’autorisation `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY
     > [!NOTE]  
     > Vous pouvez aussi utiliser la procédure stockée [sp_attach_db](../../relational-databases/system-stored-procedures/sp-attach-db-transact-sql.md) ou [sp_attach_single_file_db](../../relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql.md) . Toutefois, ces procédures seront supprimées dans une future version de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Nous vous recommandons d'utiliser `CREATE DATABASE ... FOR ATTACH` à la place.  
   
-##  <a name="FollowUp"></a> Suivi : Après la mise à niveau d'une base de données SQL Server  
+##  <a name="FollowUp"></a> Suivi : Après la mise à niveau d'une base de données SQL Server  
 Après avoir mis à niveau une base de données à l'aide de la méthode par attachement, cette base de données est immédiatement disponible et est automatiquement mise à niveau. Si la base de données comprend des index de recherche en texte intégral, la mise à niveau les importe, les réinitialise ou les reconstruit, selon le paramètre de la propriété de serveur **Option de mise à niveau du catalogue de texte intégral** . Si l’option de mise à niveau est définie sur **Importer** ou **Reconstruire**, les index de recherche en texte intégral ne seront pas disponibles pendant la mise à niveau. Selon le volume de données indexé, l'importation peut prendre plusieurs heures et la reconstruction jusqu'à dix fois plus longtemps. Notez aussi que lorsque l’option de mise à niveau est définie sur **Importer**, si aucun catalogue de texte intégral n’est disponible, les index de recherche en texte intégral associés sont reconstruits.  
   
 Si le niveau de compatibilité d'une base de données utilisateur est à 100 ou supérieur avant la mise à niveau, il reste le même après la mise à niveau. Si le niveau de compatibilité était à 90 avant la mise à niveau, dans la base de données mise à niveau, le niveau de compatibilité est défini à 100, ce qui correspond au niveau de compatibilité le plus bas pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
@@ -156,7 +158,7 @@ USE <database name>
 EXEC sys.sp_cdc_vupgrade  
 ``` 
  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
  <br>[Gérer les métadonnées lors de la mise à disposition d’une base de données sur un autre serveur](manage-metadata-when-making-a-database-available-on-another-server.md)  
  [Détacher une base de données](../../relational-databases/databases/detach-a-database.md)  
