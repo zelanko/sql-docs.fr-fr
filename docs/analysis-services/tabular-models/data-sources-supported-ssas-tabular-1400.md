@@ -1,6 +1,6 @@
 ---
 title: Sources de données prises en charge dans les modèles tabulaires 1400 SQL Server Analysis Services | Microsoft Docs
-ms.date: 02/12/2019
+ms.date: 07/02/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4c900c6f1683b9f4c96355a759c604022515d2ce
-ms.sourcegitcommit: 89a7bd9ccbcb19bb92a1f4ba75576243a58584e8
+ms.openlocfilehash: 246375015786cf67685c89f368f83662539da36b
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56159754"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597349"
 ---
 # <a name="data-sources-supported-in-sql-server-analysis-services-tabular-1400-models"></a>Sources de données pris en charge dans SQL Server Analysis Services les modèles tabulaires 1400
 
@@ -31,18 +31,20 @@ Pour Azure Analysis Services, consultez [des sources de données prises en charg
 
 |Source de données  |En mémoire  |DirectQuery  |
 |---------|---------|---------|
-|Azure SQL Database     |   Oui      |    Oui      |
+|Base de données SQL Azure <sup> [1](#ae)</sup>    |   Oui      |    Oui      |
 |Azure SQL Data Warehouse.     |   Oui      |   Oui       |
 |Stockage Blob Azure     |   Oui       |    Non      |
 |Stockage Table Azure    |   Oui       |    Non      |
 |Azure Cosmos DB     |  Oui        |  Non        |
-|Azure Data Lake Store (Gen1)<sup>[1](#gen2)</sup>      |   Oui       |    Non      |
+|Azure Data Lake Store (Gen1)<sup>[2](#gen2)</sup>      |   Oui       |    Non      |
 |Azure HDInsight HDFS    |     Oui     |   Non       |
-|Azure HDInsight Spark <sup> [2](#databricks)</sup>     |   Oui       |   Non       |
+|Azure HDInsight Spark <sup> [3](#databricks)</sup>     |   Oui       |   Non       |
 ||||
 
-<a name="gen2">1</a> -ADLS Gen2 n’est actuellement pas pris en charge.   
-<a name="databricks">2</a> - azure Databricks en utilisant le connecteur n’est actuellement pas pris en charge de Spark.   
+<a name="ae">1</a> -Always Encrypted de base de données de SQL azure n’est pas pris en charge.   
+<a name="gen2">2</a> -ADLS Gen2 n’est actuellement pas pris en charge.   
+<a name="databricks">3</a> - azure Databricks en utilisant le connecteur n’est actuellement pas pris en charge de Spark.   
+
 
 
 
@@ -55,11 +57,13 @@ En mémoire et les modèles DirectQuery connexion aux sources de données Azure 
 
 |Source de données | Fournisseur en mémoire | Fournisseur DirectQuery |
 |  --- | --- | --- |
-| SQL Server |SQL Server Native Client 11.0, fournisseur Microsoft OLE DB pour SQL Server, le fournisseur de données .NET Framework pour SQL Server | Fournisseur de données .NET Framework pour SQL Server |
+| SQL Server <sup>[4](#aeop)</sup> |SQL Server Native Client 11.0, fournisseur Microsoft OLE DB pour SQL Server, le fournisseur de données .NET Framework pour SQL Server | Fournisseur de données .NET Framework pour SQL Server |
 | SQL Server Data Warehouse |SQL Server Native Client 11.0, fournisseur Microsoft OLE DB pour SQL Server, le fournisseur de données .NET Framework pour SQL Server | Fournisseur de données .NET Framework pour SQL Server |
 | Oracle |Fournisseur Microsoft OLE DB pour Oracle, fournisseur de données Oracle pour .NET |Fournisseur de données Oracle pour .NET | |
 | Teradata |Fournisseur OLE DB pour Teradata, fournisseur de données Teradata pour .NET |Fournisseur de données Teradata pour .NET | |
 | | | |
+
+<a name="aeop">4</a> -base de données azure SQL Database et SQL Server Always Encrypted est pris en charge comme un DirectQuery [source de données client](data-sources-supported-ssas-tabular.md#bkmk_supported_ds_dq) dans les modèles tabulaires SQL Server Analysis Services sur le niveau de compatibilité 1200 uniquement. Base de données Azure SQL Database et SQL Server Always Encrypted n’est pas pris en charge dans Azure Analysis Services.       
 
 > [!NOTE]
 > Pour les modèles en mémoire, les fournisseurs OLE DB peuvent offrir de meilleures performances pour les données à grande échelle. Lors du choix entre différents fournisseurs pour la même source de données, essayez tout d’abord le fournisseur OLE DB.  
