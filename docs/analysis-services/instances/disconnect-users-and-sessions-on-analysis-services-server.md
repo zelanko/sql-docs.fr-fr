@@ -1,6 +1,6 @@
 ---
 title: Déconnecter des utilisateurs et Sessions sur Analysis Services Server | Microsoft Docs
-ms.date: 05/02/2018
+ms.date: 07/05/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0e4868a7ff2e8b03835988cd4517909c722eaf4a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 696c6548dadda2412566acf7fae1e2cff2b28095
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144769"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624397"
 ---
 # <a name="disconnect-users-and-sessions-on-analysis-services-server"></a>Déconnecter des utilisateurs et sessions sur un serveur Analysis Services
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Un administrateur de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut vouloir arrêter l'activité des utilisateurs dans le cadre de la gestion de la charge de travail. Pour cela, vous devez annuler les sessions et les connexions. Les sessions peuvent être formées automatiquement lorsqu'une requête est exécutée (implicite) ou nommées au moment de la création par l'administrateur (explicite). Les connexions sont des conduits ouverts par lesquels les requêtes peuvent être exécutées. Les sessions et les connexions peuvent être terminées pendant qu'elles sont actives. Par exemple, un administrateur peut vouloir terminer le processus de traitement d'une session si le traitement dure trop longtemps ou si l'administrateur n'est pas sûr que la commande en cours d'exécution a été écrite correctement.  
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
+  En tant qu’administrateur, vous souhaiterez l’activité utilisateur final dans le cadre de la gestion de la charge de travail. Pour cela, vous devez annuler les sessions et les connexions. Les sessions peuvent être formées automatiquement lorsqu'une requête est exécutée (implicite) ou nommées au moment de la création par l'administrateur (explicite). Les connexions sont des conduits ouverts par lesquels les requêtes peuvent être exécutées. Les sessions et les connexions peuvent être terminées pendant qu'elles sont actives. Par exemple, vous souhaiterez terminer le traitement d’une session si le traitement est trop long ou si vous obligent à certains doutes concernant si la commande en cours d’exécution a été écrit correctement.  
   
 ## <a name="ending-sessions-and-connections"></a>Arrêt des sessions et des connexions  
- Pour gérer les sessions et les connexions, vous pouvez utiliser des vues de gestion dynamique (DMV) et XMLA :  
+ Pour gérer les sessions et les connexions, utilisez les vues de gestion dynamique (DMV) et XMLA :  
   
 1.  Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à une instance d'Analysis Services.  
   
@@ -29,7 +29,7 @@ ms.locfileid: "50144769"
   
      `Select * from $System.Discover_Sessions`  
   
-     `Select * from $System.Discover_Connections`  
+     `Select * from $System.Discover_Connections`  (Cette requête ne s’applique pas à Azure Analysis Services)
   
      `Select * from $System.Discover_Commands`  
   
@@ -56,16 +56,10 @@ ms.locfileid: "50144769"
     ```  
   
 2.  Appuyez sur F5 pour exécuter la commande d'annulation.  
+
+Annulation d’un SPID/SessionID annulera toutes les commandes actives en cours d’exécution sur la session correspondant à l’élément SPID/SessionID. Annulation d’une connexion identifie la session associée à la connexion et annuler des commandes actives en cours d’exécution sur cette session. Dans de rares cas, une connexion n’est pas fermée si le moteur ne peut pas suivre toutes les sessions et SPID associés à la connexion ; par exemple, lorsque plusieurs sessions sont ouverts dans un scénario HTTP.   
   
- Le fait d'arrêter une connexion annule toutes les sessions et SPID, et ferme la session hôte.  
-  
- L'arrêt d'une session arrête toutes les commandes (SPID) qui sont en cours d'exécution dans le cadre de cette session.  
-  
- L'arrêt d'un SPID annule la commande correspondante.  
-  
- Dans de rares cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne fermera pas la connexion s’il n’arrive pas à effectuer le suivi de toutes les sessions et tous les SPID associés à la connexion (par exemple quand plusieurs sessions sont ouvertes dans un scénario HTTP).  
-  
- Pour plus d’informations sur le code XMLA mentionné dans cette rubrique, consultez [Méthode Execute &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) et [Élément Cancel &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla).  
+Pour en savoir plus sur le code XMLA mentionné dans cette rubrique, consultez [méthode Execute &#40;XMLA&#41; ](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) et [élément Cancel &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/cancel-element-xmla).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gestion des connexions et des sessions &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/managing-connections-and-sessions-xmla.md)   

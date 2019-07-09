@@ -15,12 +15,12 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14153d38d53a87729231b60b2b2846dc12401fc1
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856941"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624356"
 ---
 # <a name="excel-source"></a>Source Excel
   La source Excel extrait des données de feuilles de calcul ou de plages dans des classeurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -118,6 +118,6 @@ ms.locfileid: "62856941"
   
 -   Entrée de blog, [Excel in Integration Services, partie 3 sur 3 : Issues and Alternatives](https://go.microsoft.com/fwlink/?LinkId=217676), sur dougbert.com.  
   
--   Entrée de blog, [connexion à Excel (XLSX) dans SSIS ](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
+-   Entrée de blog, [connexion à Excel (XLSX) dans SSIS](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
   
   

@@ -16,12 +16,12 @@ ms.assetid: 3e6d4f5a-59b7-4203-b95a-f7e692c0f131
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c1239d2dea1a4f73b54f78345f769c9550c262b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 871f5eb0dab1105017fac8be1f978e0c81a9f1d3
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064691"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624368"
 ---
 # <a name="invoke-policyevaluation-cmdlet"></a>Invoke-PolicyEvaluation (applet de commande)
   **Invoke-PolicyEvaluation** est une applet de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui indique si un jeu cible d’objets SQL Server est conforme ou non aux conditions spécifiées dans une ou plusieurs stratégies de gestion basée sur des stratégies.  
@@ -88,7 +88,7 @@ gci "Database Status.xml", "Trustworthy Database.xml" | Invoke-PolicyEvaluation 
   
 -   **-TargetObjects** accepte un objet ou un tableau d’objets représentant les objets SQL Server dans le jeu cible. Par exemple, vous pouvez créer un tableau d’objets de classe <xref:Microsoft.SqlServer.Management.Smo.Database> à transmettre à **-TargetObjects**.  
   
--   **-TargetExpressions** accepte une chaîne contenant une expression de requête qui spécifie les objets dans le jeu cible. L'expression de requête se présente sous la forme de nœuds séparés par le caractère « / ». Chaque nœud se présente sous la forme ObjectType[Filter]. Le type d'objet est l'un des objets dans une hiérarchie d'objets SMO (SQL Server Management Objects). Le filtre est une expression qui filtre les objets au niveau de ce nœud. Pour plus d’informations, consultez [Expressions de requête et noms URN](../powershell/query-expressions-and-uniform-resource-names.md).  
+-   **-TargetExpressions** accepte une chaîne contenant une expression de requête qui spécifie les objets dans le jeu cible. L'expression de requête se présente sous la forme de nœuds séparés par le caractère « / ». Chaque nœud se présente sous la forme ObjectType[Filter]. Type d’objet est un des objets dans une hiérarchie d’objets SQL Server Management Object (SMO). Le filtre est une expression qui filtre les objets au niveau de ce nœud. Pour plus d’informations, consultez [Expressions de requête et noms URN](../powershell/query-expressions-and-uniform-resource-names.md).  
   
  Spécifiez **-TargetObjects** ou **-TargetExpression**, mais pas les deux.  
   

@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463542"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652848"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,8 +49,8 @@ Chemin d’accès doit être utilisée avec n’importe quel nom de table de nœ
 ## <a name="arbitrary-length-pattern"></a>Modèle de longueur arbitraire
 Ce modèle inclut les nœuds et les bords qui doivent être parcourus à plusieurs reprises jusqu'à ce que le nœud souhaité soit atteint ou jusqu'à ce que le nombre maximal d’itérations tel que spécifié dans le modèle est remplie. Chaque fois que la requête est exécutée, le résultat de l’exécution de ce modèle sera une collection ordonnée des nœuds et des bords parcourus le long du tracé à partir du nœud de démarrage pour le nœud de fin. Il s’agit d’un modèle de syntaxe d’expression régulière style et les quantificateurs deux modèle suivantes sont prises en charge :
 
-* **‘+’** : Répétez le modèle 1 ou plusieurs fois. Terminer dès qu’un chemin d’accès le plus court est trouvé.
-* **{1, n}** : Répétez le modèle 1 à « n » fois. Terminer dès qu’une plus courte est trouvée.
+* **‘+’** : Répétez le modèle une ou plusieurs fois. Arrêtez dès qu’un chemin d’accès le plus court est trouvé.
+* **{1,n}**  : Répétez le modèle une à « n » fois. Terminer dès qu’une plus courte est trouvée.
 
 ## <a name="lastnode"></a>LAST_NODE
 LAST_NODE() fonction permet le chaînage des deux modèles de traversée de longueur arbitraire. Il peut être utilisé dans les scénarios où :    
@@ -94,7 +94,7 @@ En revanche, dernier nœud est le dernier nœud nième dans le chemin d’accès
 Cette fonction retourne la somme des valeurs d’attribut de nœud/edge fourni ou une expression qui est apparu dans le chemin d’accès traversé.
 
 ### <a name="count"></a>COUNT
-Cette fonction retourne le nombre de valeurs non null de l’attribut de nœud/edge souhaité dans le chemin d’accès. La fonction COUNT prend en charge le ' *' opérateur avec un alias de table de nœuds ou d’arêtes. Sans l’alias de table nœuds ou d’arêtes, l’utilisation de * est ambigu et provoque une erreur.
+Cette fonction retourne le nombre de valeurs non null de l’attribut de nœud/edge souhaité dans le chemin d’accès. La fonction COUNT prend en charge le «\*' opérateur avec un alias de table de nœuds ou d’arêtes. Sans l’alias de table nœuds ou d’arêtes, l’utilisation de \* est ambigu et provoque une erreur.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 

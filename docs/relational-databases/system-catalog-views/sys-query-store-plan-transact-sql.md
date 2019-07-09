@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7987b0cfb8be268a8e48fd25d7512b4969aea6fb
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542179"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652862"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,7 +68,7 @@ Premièrement, si le plan contient les constructions suivantes :
 * Référence à une table externe
 * Requête distribuée ou opérations de recherche en texte intégral
 * Utilisation de requêtes globales 
-* Curseurs
+* Curseurs dynamiques ou jeu de clés (application forcée du plan est pris en charge pour les curseurs statiques et avance rapide)
 * Spécification de jointure en étoile non valide 
 
 Deuxièmement, quand les objets sur lesquels s’appuie le plan ne sont plus disponibles :
