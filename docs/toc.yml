@@ -9056,7 +9056,7 @@
               items:
                 - name: Obtenir l’image mémoire complète
                   href: ssms/troubleshoot/get-full-memory-dump.md
-                - name: Plantages et blocages
+                - name: Obtenir des données de diagnostic
                   href: ssms/troubleshoot/ssms-troubleshoot.md
             - name: SQL Server Agent
               items:
