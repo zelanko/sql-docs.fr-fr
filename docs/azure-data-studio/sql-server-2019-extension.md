@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 0b8f31d55ae9dcc7042fff051c37a4beaa72a47e
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: bc865b36dc8b8036fa9a6a1a9c58c6890acadf47
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399995"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681606"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extension de SQL Server 2019 (version préliminaire)
 
@@ -51,7 +51,7 @@ Pour installer l’extension de SQL Server 2019 (version préliminaire), téléc
 
 * Le **cluster de données volumineux de SQL Server** type de connexion a été supprimé dans cette version. Toutes les fonctionnalités précédemment disponibles à partir de la connexion au cluster volumineuses de données SQL Server sont maintenant disponible dans la connexion SQL Server.
 * HDFS de navigation se trouve sous le **Data Services** dossier
-* Pour les blocs-notes le le noyaux PySpark et autres données volumineuses travailler connecté à l’instance principale de SQL Server dans votre cluster de données volumineux de SQL Server.
+* Pour les blocs-notes le noyaux PySpark et autres données volumineuses fonctionne lorsque connecté à l’instance principale de SQL Server dans votre cluster de données volumineux de SQL Server.
 * Créer un Assistant de Table externe :
   * Prise en charge pour la création d’une Table externe à l’aide de la Source de données externe existante.
   * Améliorations des performances dans l’Assistant.

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1f2d7f5a1d4a966edbce3c4ad96a7b31bd604b48
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469133"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681555"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notes de publication pour les clusters de données volumineuses sur SQL Server
 
@@ -33,11 +33,11 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 
 | Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-| `mssqlctl` modifications de commande | `mssqlctl cluster` commandes ont été renommées `mssqlctl bdc`. Pour plus d’informations, consultez le [ `mssqlctl` référence](reference-mssqlctl.md). |
+| `mssqlctl` modifications de commande | `mssqlctl cluster` commandes ont été renommées par `mssqlctl bdc`. Pour plus d’informations, consultez la référence [`mssqlctl` ](reference-mssqlctl.md). |
 | Nouvelle `mssqlctl` commandes d’état et de suppression du portail d’Administration de Cluster. | Le portail d’Administration de Cluster est supprimé dans cette version. Nouvelles commandes d’état ont été ajoutées à `mssqlctl` complément existants commandes de surveillance. |
-| Pools de calcul Spark | Créer des nœuds supplémentaires afin d’augmenter la puissance de calcul Spark sans avoir à l’échelle le stockage. En outre, vous pouvez démarrer les nœuds de pool de stockage qui ne sont pas utilisées pour Spark. Spark et stockage sont découplés. Pour plus d’informations, consultez [configurer le stockage sans spark](deployment-custom-configuration.md#sparkstorage). |
-| Connecteur Spark de MSSQL | Prise en charge de lecture/écriture aux tables externes de pool de données. Précédentes versions prises en charge en lecture/écriture au maître d’instance tables uniquement. Pour plus d’informations, consultez [comment lire et écrire dans SQL Server à partir de Spark à l’aide du connecteur Spark MSSQL](spark-mssql-connector.md). |
-| Machine Learning à l’aide de MLeap | [Former un modèle d’apprentissage automatique MLeap dans Spark et noter dans SQL Server à l’aide de l’extension du langage Java](spark-create-machine-learning-model.md). |
+| Pools de calcul Spark | Créer des nœuds supplémentaires afin d’augmenter la puissance de calcul Spark sans avoir à monter le stockage en puissance. En outre, vous pouvez démarrer les nœuds de pool de stockage qui ne sont pas utilisés pour Spark. Spark et stockage sont découplés. Pour plus d’informations, consultez [Configurer le stockage sans spark](deployment-custom-configuration.md#sparkstorage). |
+| Connecteur Spark de MSSQL | Support de lecture/écriture aux tables externes de pool de données. Précédentes versions prises en charge en lecture/écriture pour les tables d’instance MASTER uniquement. Pour plus d’informations, consultez [Comment lire et écrire dans SQL Server à partir de Spark à l’aide du connecteur Spark MSSQL](spark-mssql-connector.md). |
+| Machine Learning à l’aide de MLeap | [Former un modèle d’apprentissage automatique MLeap dans Spark et le noter dans SQL Server à l’aide de l’extension du langage Java](spark-create-machine-learning-model.md). |
 
 ### <a name="known-issues"></a>Problèmes connus
 
@@ -125,7 +125,7 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 | **mssqlctl** updates | Plusieurs [mises à jour de commande et de paramètre](../big-data-cluster/reference-mssqlctl.md) **mssqlctl**. Ces dernières incluent une mise à jour de la commande **mssqlctl login**, qui cible désormais le nom d’utilisateur et le point de terminaison du contrôleur. |
 | Améliorations du stockage | Prise en charge de différentes configurations de stockage pour les journaux et les données. En outre, le nombre de revendications de volume persistant pour un cluster Big Data a été réduit. |
 | Plusieurs instances de pool de calcul | Prise en charge de plusieurs instances de pool de calcul. |
-| Nouveaux comportement et fonctionnalités pour les pools | Le pool de calcul est maintenant utilisé par défaut pour les opérations de pool de données et de pool de stockage dans une distribution **ROUND_ROBIN** uniquement. Le pool de données peut désormais utiliser un nouveau type de distribution **REPLICATED**, ce qui signifie que les mêmes données sont présentes sur toutes les instances de pool de données. |
+| Nouveaux comportement et fonctionnalités pour les pools | Le pool de calcul est maintenant utilisé par défaut pour les opérations de pool de données et de pool de stockage dans une distribution **ROUND_ROBIN** uniquement. Le pool de données peut désormais utiliser un nouveau **RÉPLIQUÉ** type de distribution, ce qui signifie que les mêmes données sont présentes sur toutes les instances de pool de données. |
 | Améliorations des tables externes | Les tables externes de type de source de données HADOOP prennent maintenant en charge la lecture des lignes d’une taille maximale de 1 Mo. Dans les tables externes (ODBC, pool de stockage, pool de données), les lignes peuvent désormais être aussi larges que dans une table SQL Server. |
 
 ### <a name="known-issues"></a>Problèmes connus

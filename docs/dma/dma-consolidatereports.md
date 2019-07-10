@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: jroth
-ms.openlocfilehash: 0021e5851627e156addb86fa1c136d78d3be2228
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: 361b1d318a7db08007d4506531441ab19347ea62
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67313840"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680260"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation avec le DMA
 
@@ -181,7 +181,7 @@ Vous pouvez également utiliser le script LoadWarehouse pour fournir les instruc
    ![Vue de rapport DMAWarehouse](../dma/media//dma-consolidatereports/dma-DMAWarehouse-report1.png)
 
    > [!TIP]
-   > Si vous ne voyez pas les données que vous attendiez, essayez de modifier le signet actif.  Pour plus d’informations, consultez le le détail dans la section suivante.
+   > Si vous ne voyez pas les données que vous attendiez, essayez de modifier le signet actif.  Pour plus d’informations, consultez les détails dans la section suivante.
 
 ## <a name="working-with-dma-reports"></a>Utilisation des rapports DMA
 

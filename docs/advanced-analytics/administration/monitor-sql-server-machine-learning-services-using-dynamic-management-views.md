@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645548"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681623"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Surveiller SQL Server Machine Learning Services à l’aide de vues de gestion dynamique (DMV)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +40,7 @@ Pour obtenir des informations plus générales sur les vues DMV, consultez [les 
 
 Les vues de gestion dynamique suivantes peuvent être utilisés lors de l’analyse des charges de travail machine learning dans SQL Server. Pour interroger les vues de gestion dynamique, vous devez `VIEW SERVER STATE` autorisation sur l’instance.
 
-| Vue de gestion dynamique | Type | Description |
+| Vue de gestion dynamique | type | Description |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Exécution | Renvoie une ligne pour chaque compte de travail actif qui exécute un script externe. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Exécution | Renvoie une ligne pour chaque type de demande de script externe. |
@@ -121,7 +121,7 @@ La requête retourne les colonnes suivantes :
 | reads | Nombre de lectures effectuées par la demande. |
 | logical_reads | Nombre de lectures logiques effectuées par la demande. |
 | writes | Nombre d'écritures effectuées par la demande. |
-| langue | Mot clé qui représente un langage de script pris en charge. |
+| langage | Mot clé qui représente un langage de script pris en charge. |
 | degree_of_parallelism | Nombre indiquant le nombre de traitements parallèles qui ont été créés. Cette valeur peut être différente du nombre de traitements parallèles qui ont été demandés. |
 | external_user_name | Le compte de travail Windows sous lequel le script a été exécuté. |
 
@@ -144,7 +144,7 @@ La requête retourne les colonnes suivantes :
 
 | colonne | Description |
 |--------|-------------|
-| langue | Nom du langage enregistré de script externe. |
+| langage | Nom du langage enregistré de script externe. |
 | counter_name | Nom de la fonction enregistrée de script externe. |
 | counter_value | Nombre total d’instance appelée de la fonction enregistrée de script externe sur le serveur. Cette valeur, cumulative, commence par l’horodatage d’installation de la fonction sur l’instance. Elle ne peut pas être réinitialisée. |
 
@@ -196,7 +196,7 @@ La requête retourne les colonnes suivantes :
 |--------|-------------|
 | physical_memory_kb | Quantité totale de mémoire physique sur l’ordinateur. |
 | committed_kb | La mémoire allouée en kilo-octets (Ko) dans le Gestionnaire de mémoire. Elle ne comprend pas la mémoire réservée dans le gestionnaire de mémoire. |
-| external_pool_peak_memory_kb | La somme de la la quantité maximale de mémoire utilisée, en kilo-octets, pour tous les pools de ressources externes. |
+| external_pool_peak_memory_kb | La somme de la quantité maximale de mémoire utilisée, en kilo-octets, pour tous les pools de ressources externes. |
 
 ## <a name="memory-configuration"></a>Configuration de la mémoire
 
@@ -223,7 +223,7 @@ La requête retourne les colonnes suivantes :
 
 | colonne | Description |
 |--------|-------------|
-| NAME | Nom du pool de ressources externes ou SQL Server. |
+| name | Nom du pool de ressources externes ou SQL Server. |
 | max_memory_percent | Mémoire maximale que SQL Server ou le pool de ressources externes peut utiliser. |
 
 ## <a name="resource-pools"></a>Pools de ressources
@@ -305,7 +305,7 @@ Les colonnes retournées sont :
 |--------|-------------|
 | Package | Nom du package installé. |
 | Version | Version du package. |
-| Emplacement | Répertoire où vous pouvez trouver le package. |
+| Location | Répertoire où vous pouvez trouver le package. |
 
 ## <a name="next-steps"></a>Étapes suivantes
 

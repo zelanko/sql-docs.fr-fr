@@ -11,12 +11,12 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798097"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681611"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
@@ -367,7 +367,7 @@ Le 20 juin 2018 &nbsp;  /  &nbsp; version : 0.30.6 &nbsp;  /  &nbsp; version pr
 ### <a name="github-issues-fixes-june-2018"></a>Résout des problèmes GitHub, juin 2018
 
 - Demande de fonctionnalité ([émettre 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)) : Vérifiez les résultats de la largeur de colonne de l’ajustement automatique de la grille aux données et n’oubliez pas de modifications manuelles si la même requête est exécutée de nouveau.
-- Corriger [émettre 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Show doit ajouter un message et bouton Ajouter un compte compte lorsque compte lié est vide.
+- Corriger [émettre 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Show doit ajouter un message et bouton Ajouter un compte lorsque compte lié est vide.
 - Corriger [émettre 1399](https://github.com/Microsoft/azuredatastudio/issues/1399): Onglet compte lié est interrompue lorsque la vue est réduite.
 - Corriger [émettre 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): Service des outils SQL se bloque lors de l’ouverture du fichier .sql à partir du disque.
 - Corriger [émettre 1372](https://github.com/Microsoft/azuredatastudio/issues/1372): Mot clé « BETWEEN » de SQL absent.

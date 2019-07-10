@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3eb73528800d45daf0ea8b68ae94536f63c25df
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 179885276bdda206e4414bd22675e97449df9129
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585480"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687603"
 ---
 # <a name="create-a-distributed-transaction"></a>Créer une transaction distribuée
 
@@ -53,7 +53,7 @@ MSDTC est appelée par le pilote SQL Server Native Client pour Open Database Con
 3. L’application met à jour des données sur SQL Server Y sur l’ordinateur B.
     - Si une mise à jour sur le serveur SQL Y échoue, toutes les mises à jour non validées sur les deux instances de SQL Server sont annulées.
 
-4. Enfin, le l’application termine la transaction en appelant [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md), avec l’option le SQL_COMMIT ou SQL_ROLLBACK.
+4. Enfin, l’application termine la transaction en appelant [SQLEndTran _(1)_ ](../../../relational-databases/native-client-odbc-api/sqlendtran.md), avec l’option le SQL_COMMIT ou SQL_ROLLBACK.
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
