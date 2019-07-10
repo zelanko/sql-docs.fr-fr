@@ -16,12 +16,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3a20135a3063e5316f133e2f6483eb40e17d035
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 27fb2d88af957067af09baccd7cbd6f3629b7353
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256634"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585038"
 ---
 # <a name="view-statistics-properties"></a>Afficher les propriétés des statistiques
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "54256634"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour afficher l’objet de statistiques, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe **sysadmin** , du rôle de base de données fixe **db_owner** ou du rôle de base de données fixe **db_ddladmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -75,7 +75,7 @@ ms.locfileid: "54256634"
   
      Les informations suivantes décrivent les colonnes retournées dans le jeu de résultats de l'en-tête de statistiques.  
   
-     **Nom**  
+     **Name**  
      Nom de l'objet de statistiques.  
   
      **Mis à jour**  
@@ -97,7 +97,7 @@ ms.locfileid: "54256634"
      Nombre moyen d'octets par valeur pour toutes les colonnes clés de l'objet de statistiques.  
   
      **String Index**  
-     La valeur Yes indique que l'objet de statistiques contient des statistiques de résumé de chaîne pour améliorer les estimations de cardinalité des prédicats de requête qui utilisent l'opérateur LIKE ; c'est le cas par exemple de `WHERE ProductName LIKE '%Bike'`. Les statistiques de résumé de chaîne sont stockées à l’écart de l’histogramme et créées sur la première colonne clé de l’objet de statistiques quand il est de type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**ou **ntext**.  
+     La valeur Yes indique que l'objet de statistiques contient des statistiques de résumé de chaîne pour améliorer les estimations de cardinalité des prédicats de requête qui utilisent l'opérateur LIKE ; c'est le cas par exemple de `WHERE ProductName LIKE '%Bike'`. Les statistiques de résumé de chaîne sont stockées à l’écart de l’histogramme et créées sur la première colonne clé de l’objet de statistiques quand il est de type **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**ou **ntext**.  
   
      **Expression de filtre**  
      Prédicat pour le sous-ensemble des lignes de table incluses dans l'objet de statistiques. NULL = statistiques non filtrées.  
@@ -108,7 +108,7 @@ ms.locfileid: "54256634"
      Les informations suivantes décrivent les colonnes retournées dans le jeu de résultats du vecteur de densité.  
   
      **Toutes les densités**  
-     La densité est calculée selon la formule 1 / *valeurs distinctes*. Les résultats affichent la densité pour chaque préfixe des colonnes de l'objet de statistiques, à raison d'une ligne par densité. Une valeur distincte est une liste distincte des valeurs de colonnes par ligne et par préfixe de colonne. Par exemple, si l'objet de statistiques contient des colonnes clés (A, B, C), les résultats affichent la densité des listes distinctes de valeurs dans chacun des préfixes de colonnes suivants : (A), (A,B), et (A, B, C). Avec le préfixe (A, B, C), chacune des listes suivantes est une liste de valeurs distincte : (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Avec le préfixe (A, B) les listes de valeurs distinctes suivantes sont associées aux mêmes valeurs de colonnes : (3, 5), (4, 4) et (4, 5).  
+     La densité est calculée selon la formule 1 / *valeurs distinctes*. Les résultats affichent la densité pour chaque préfixe des colonnes de l'objet de statistiques, à raison d'une ligne par densité. Une valeur distincte est une liste distincte des valeurs de colonnes par ligne et par préfixe de colonne. Par exemple, si l'objet de statistiques contient des colonnes clés (A, B, C), les résultats rapportent la densité des listes distinctes de valeurs dans chacun des préfixes de colonnes suivants : (A), (A,B) et (A, B, C). Avec le préfixe (A, B, C), chacune des listes suivantes est une liste de valeurs distincte : (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Avec le préfixe (A, B) les listes de valeurs distinctes suivantes sont associées aux mêmes valeurs de colonnes : (3, 5), (4, 4) et (4, 5).  
   
      **Longueur moyenne**  
      Longueur moyenne, en octets, pour le stockage d'une liste des valeurs de colonnes pour le préfixe de colonne. Par exemple, si les valeurs dans la liste (3, 5, 6) nécessitent 4 octets chacune, la longueur est égale à 12 octets.  
@@ -134,7 +134,9 @@ ms.locfileid: "54256634"
      Nombre moyen de lignes ayant des valeurs de colonnes dupliquées dans une étape d'histogramme, à l'exception de la limite supérieure (RANGE_ROWS / DISTINCT_RANGE_ROWS pour DISTINCT_RANGE_ROWS > 0).  
   
 7.  Cliquez sur **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>Pour afficher les propriétés des statistiques  

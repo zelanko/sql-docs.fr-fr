@@ -11,12 +11,12 @@ ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8eab3ceeb9ace557f7e7f34b4bb267d6269d7fdc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3bf26c7ea0384523370557e71069bf30233a74d6
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521381"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586370"
 ---
 # <a name="create-an-encrypted-backup"></a>Créer une sauvegarde chiffrée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52521381"
   
  Utilisez la procédure suivante pour créer une sauvegarde chiffrée d'une base de données sur un disque local. Cet exemple utilise une base de données utilisateur appelée MyTestDB.  
   
-1.  **Créez une clé principale de base de données pour la base de données master :** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera enregistrée dans la base de données. Connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple, puis cliquez sur **Exécuter**.  
+1.  **Créer une clé principale de base de données de la base de données MASTER :** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera stockée dans la base de données. Connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple, puis cliquez sur **Exécuter**.  
   
     ```  
     -- Creates a database master key.   
@@ -43,7 +43,7 @@ ms.locfileid: "52521381"
   
     ```  
   
-2.  **Créez une sauvegarde du certificat :** Créez un certificat dans la base de données MASTER. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+2.  **Créer un certificat de sauvegarde :** Créez un certificat de sauvegarde dans la base de données MASTER. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     Use Master  
@@ -54,8 +54,10 @@ ms.locfileid: "52521381"
   
     ```  
   
-3.  **Sauvegardez la base de données :** spécifiez l'algorithme de chiffrement et le certificat à utiliser. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
-  
+3.  **Sauvegarder la base de données :** Spécifiez l'algorithme de chiffrement et le certificat à utiliser. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     BACKUP DATABASE [MyTestDB]  
     TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
@@ -78,11 +80,11 @@ ms.locfileid: "52521381"
   
  **Configuration requise :**  
   
--   Un compte de stockage Windows et un conteneur. Pour plus d'informations, consultez [Lesson 1: Create Windows Azure Storage Objects](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
+-   Un compte de stockage Windows et un conteneur. Pour plus d'informations, consultez [Leçon 1 : Créez des objets de Stockage Azure Windows](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
   
 -   Une clé principale de base de données pour la base de données master, et un certificat ou une clé asymétrique sur l'instance de SQL Server. Pour les conditions et les autorisations de chiffrement, consultez [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md).  
   
-1.  **Créez les informations d'identification SQL Server :** Pour créer des informations d'identification SQL Server, connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple suivant, puis cliquez sur **Exécuter**.  
+1.  **Créer des informations d’identification SQL Server :** Pour créer des informations d'identification SQL Server, connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple suivant, puis cliquez sur **Exécuter**.  
   
     ```  
     CREATE CREDENTIAL mycredential   
@@ -90,7 +92,7 @@ ms.locfileid: "52521381"
     , SECRET = '<storage account access key>' - this should be either the Primary or Secondary Access Key for the storage account  
     ```  
   
-2.  **Créer une clé principale de base de données :** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera stockée dans la base de données. Connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple, puis cliquez sur **Exécuter**.  
+2.  **Créer une clé principale de base de données :** Choisissez un mot de passe pour chiffrer la copie de la clé principale qui sera stockée dans la base de données. Connectez-vous au moteur de base de données, ouvrez une nouvelle fenêtre de requête, copiez et collez l'exemple, puis cliquez sur **Exécuter**.  
   
     ```  
     -- Creates a database master key.  
@@ -102,7 +104,7 @@ ms.locfileid: "52521381"
   
     ```  
   
-3.  **Créez une sauvegarde du certificat :** créez un certificat de sauvegarde dans la base de données MASTER. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+3.  **Créer un certificat de sauvegarde :** Créez un certificat de sauvegarde dans la base de données MASTER. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     USE Master;  
@@ -113,7 +115,7 @@ ms.locfileid: "52521381"
   
     ```  
   
-4.  **Sauvegardez la base de données :** spécifiez l'algorithme de chiffrement et le certificat à utiliser. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
+4.  **Sauvegarder la base de données :** Spécifiez l'algorithme de chiffrement et le certificat à utiliser. Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
   
     ```  
     BACKUP DATABASE [MyTestDB]  

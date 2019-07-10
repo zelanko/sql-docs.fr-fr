@@ -11,12 +11,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1d6e67ef3810a6da8a58b81f278afafd713e0f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd06ad617f2e74d068209859bde6bcbe95d84b62
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935383"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580539"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,9 @@ ms.locfileid: "65935383"
 1.  Il doit contenir au moins une instance **CircularString** ou **LineString** .  
   
 2.  La séquence d’instances **CircularString** ou **LineString** doit être continue.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Si un **CompoundCurve** contient une séquence de plusieurs instances **CircularString** et **LineString** , le point de terminaison de fin de chaque instance, à l’exception de la dernière, doit correspondre au point de terminaison de début de l’instance suivante dans la séquence. Cela signifie que si le point de fin d'une instance précédente dans la séquence est (4 3 7 2), le point de départ de l'instance suivante dans la séquence doit être (4 3 7 2). Notez que les valeurs Z (élévation) et M (mesure) du point doivent également être identiques. Si les deux points présentent une différence, une `System.FormatException` est levée. Les points d’un **CircularString** n’ont pas besoin d’une valeur Z ou M. Si aucune valeur Z ou M n'est indiquée pour le point de fin de l'instance précédente, le point de départ de l'instance suivante ne peut pas inclure de valeur Z ou M. Si le point de fin de la séquence précédente est (4 3), le point de départ de la séquence suivante doit être (4 3), mais pas (4 3 7 2). Tous les points d’une instance **CompoundCurve** doivent soit ne pas avoir de valeur Z, soit avoir une valeur Z identique.  
   
 ## <a name="compoundcurve-instances"></a>Instances CompoundCurve  
@@ -138,7 +140,7 @@ SET @g = geometry::Parse('COMPOUNDCURVE(CIRCULARSTRING(0 2, 2 0, 4 2), CIRCULARS
 SELECT @g.STLength();  
 ```  
   
-Cela génère la sortie `12.5663706143592`, qui est l’équivalent de 4∏. L'instance `CompoundCurve` de l'exemple stocke un cercle avec un rayon de 2. Les deux exemples de code précédents n'ont pas eu à utiliser un `CompoundCurve`. Pour le premier exemple, une instance `LineString` aurait été plus simple et pour le deuxième exemple, une instance `CircularString` . Toutefois, l'exemple suivant montre en quoi un `CompoundCurve` constitue une meilleure solution.  
+Cela génère la sortie `12.5663706143592`, qui est l’équivalent de 4?. L'instance `CompoundCurve` de l'exemple stocke un cercle avec un rayon de 2. Les deux exemples de code précédents n'ont pas eu à utiliser un `CompoundCurve`. Pour le premier exemple, une instance `LineString` aurait été plus simple et pour le deuxième exemple, une instance `CircularString` . Toutefois, l'exemple suivant montre en quoi un `CompoundCurve` constitue une meilleure solution.  
   
 ### <a name="f-using-a-compoundcurve-to-store-a-semicircle"></a>F. Utilisation d'un CompoundCurve pour stocker un demi-cercle  
  L'exemple suivant utilise une instance `CompoundCurve` pour stocker un demi-cercle.  
@@ -184,7 +186,7 @@ Circle One11.940039...
 Circle Two12.566370...  
 ```  
   
-Le périmètre de Circle Two est approximativement de 4∏, ce qui correspond à la valeur réelle du périmètre. Toutefois, le périmètre de Circle One est exagérément inexact. L'instance `CompoundCurve` de Circle One stocke un segment d'arc de cercle (ABC) et deux segments de ligne (CD, DA). L'instance `CompoundCurve` doit stocker deux segments d'arc de cercle (ABC, CDA) pour définir un cercle. Une instance `LineString` définit le deuxième ensemble de points (4 2, 2 4, 0 2) dans l'instance `CompoundCurve` de Circle One. Vous devez déclarer de manière explicite une instance `CircularString` à l'intérieur d'un `CompoundCurve`.  
+Le périmètre du Cercle deux est approximativement de 4?, ce qui correspond à la valeur réelle du périmètre. Toutefois, le périmètre de Circle One est exagérément inexact. L'instance `CompoundCurve` de Circle One stocke un segment d'arc de cercle (ABC) et deux segments de ligne (CD, DA). L'instance `CompoundCurve` doit stocker deux segments d'arc de cercle (ABC, CDA) pour définir un cercle. Une instance `LineString` définit le deuxième ensemble de points (4 2, 2 4, 0 2) dans l'instance `CompoundCurve` de Circle One. Vous devez déclarer de manière explicite une instance `CircularString` à l'intérieur d'un `CompoundCurve`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [STIsValid &#40;Type de données geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   

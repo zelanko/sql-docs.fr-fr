@@ -27,19 +27,19 @@ ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: da68caa3ac81d25c8a03dfe11c1f75dcee15d40d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 876e498a84ea3b6066647b47ea7ba27b5fc2a91d
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041540"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492585"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Type de données présentant des nombres binaires uniques automatiquement générés à l'intérieur d'une base de données. **rowversion** est généralement utilisé comme mécanisme de marquage de version des lignes de tables. La taille de stockage est de 8 octets. Le type de données **rowversion** est seulement un numéro à incrémentation et ne permet pas de conserver une date ni une heure. Pour enregistrer une date ou une heure, utilisez le type de données **datetime2**.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Chaque base de données dispose d’un compteur qui est incrémenté chaque fois qu’une opération d’insertion ou de mise à jour est effectuée dans une table contenant une colonne **rowversion** dans la base de données. Ce compteur est la base de données rowversion. Il suit une heure relative au sein d'une base de données, et non pas une heure réelle qui peut être associée à une horloge. Une table ne peut comporter qu’une seule colonne **rowversion**. Chaque fois qu’une ligne associée à une colonne **rowversion** est modifiée ou insérée, la valeur incrémentée rowversion de la base de données est insérée dans la colonne **rowversion**. Cette propriété fait de la colonne **rowversion** un candidat peu valable pour les clés, en particulier les clés primaires. En effet, toute mise à jour apportée à la ligne a pour effet de changer la valeur rowversion, et par conséquent de modifier la valeur de la clé. Si la colonne se trouve dans une clé primaire, l'ancienne valeur de clé n'est plus valide et les clés étrangères faisant référence à l'ancienne valeur ne sont plus valides. Si la table est référencée dans un curseur dynamique, toutes les mises à jour modifient la position des lignes dans le curseur. Si la colonne est une clé d'index, toutes les mises à jour apportées à la ligne de données génèrent également des mises à jour de l'index.  La valeur **rowversion** est incrémentée avec toute instruction de mise à jour, même si aucune valeur de ligne n’est modifiée. (Par exemple, si la valeur d’une colonne est égale à 5 et qu’une instruction de mise à jour définit la valeur 5, cette action est considérée comme une mise à jour même si aucune modification n’a été apportée et la valeur **rowversion** est incrémentée.)
   
 **timestamp** est le synonyme du type de données **rowversion** et est soumis au comportement des synonymes des types de données. Dans les instructions DDL, utilisez **rowversion** au lieu de **timestamp** autant que possible. Pour plus d’informations, consultez [Synonymes des types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md).
@@ -64,7 +64,7 @@ CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;
 > [!NOTE]  
 >  Des valeurs **rowversion** en double peuvent être générées quand l’instruction SELECT INTO est utilisée et qu’elle contient une colonne **rowversion** dans la liste SELECT. Nous vous déconseillons d’utiliser **rowversion** de cette façon.  
   
-Une colonne **rowversion** qui n’accepte pas la valeur Null est sémantiquement équivalente à une colonne **binary(8)**. Une colonne **rowversion** qui accepte la valeur Null est sémantiquement équivalente à une colonne **varbinary(8)**.
+Une colonne **rowversion** qui n’accepte pas la valeur Null est sémantiquement équivalente à une colonne **binary(8)** . Une colonne **rowversion** qui accepte la valeur Null est sémantiquement équivalente à une colonne **varbinary(8)** .
   
 La colonne **rowversion** d’une ligne permet de déterminer facilement si une instruction de mise à jour a été exécutée sur la ligne depuis la dernière fois qu’elle a été lue. Si une instruction de mise à jour est exécutée sur la ligne, la valeur rowversion est mise à jour. Si aucune instruction de mise à jour n’est exécutée sur la ligne, la valeur rowversion est la même que la dernière fois qu’elle a été lue. Pour retourner la valeur rowversion actuelle pour une base de données, utilisez [@@DBTS](../../t-sql/functions/dbts-transact-sql.md).
   
@@ -102,7 +102,7 @@ IF (SELECT COUNT(*) FROM @t) = 0
   
 `myRv` est la valeur de la colonne **rowversion** pour la ligne qui indique la dernière fois que vous avez lu la ligne. Cette valeur doit être remplacée par la valeur **rowversion** réelle. Un exemple de la valeur **rowversion** réelle est 0x00000000000007D3.
   
-Vous pouvez également mettre les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de l'exemple dans une transaction. En interrogeant la variable `@t` dans l'étendue de la transaction, vous pouvez extraire la colonne `myKey` mise à jour de la table sans réinterroger la table `MyTes`.
+Vous pouvez également mettre les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de l'exemple dans une transaction. En interrogeant la variable `@t` dans l'étendue de la transaction, vous pouvez récupérer la colonne `myKey` mise à jour de la table sans réinterroger la table `MyTest`.
   
 Voici le même exemple avec la syntaxe **timestamp** :
   

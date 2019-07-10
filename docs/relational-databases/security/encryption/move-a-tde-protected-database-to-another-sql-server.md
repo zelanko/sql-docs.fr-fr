@@ -13,12 +13,12 @@ ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 6ab4adbe1e4233c5e2189c784f71e8897547ebaf
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c1e9105b104d6fb79c43d23bdda6da4b4603d339
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590263"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585679"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>Déplacer une base de données protégée par le chiffrement transparent des données vers un autre serveur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "53590263"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stocke les fichiers créés ici dans **C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA** par défaut. Vos noms et emplacements de fichier peuvent être différents.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
   
 -   Requiert l'autorisation **CONTROL DATABASE** sur la base de données **master** pour créer la clé principale de base de données.  
   
@@ -75,7 +75,9 @@ Les procédures suivantes vous montrent comment créer une base de données prot
      Modifie la base de données pour activer ou désactiver le chiffrement transparent des données.  
   
 8.  Lorsque vous avez terminé, cliquez sur **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlCreate"></a> Utilisation de Transact-SQL  
   
 1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
@@ -142,7 +144,7 @@ Les procédures suivantes vous montrent comment déplacer une base de données p
   
 ###  <a name="SSMSMove"></a> Utilisation de SQL Server Management Studio  
   
-1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données que vous avez chiffrée précédemment, pointez sur **Tâches** et sélectionnez **Détacher…**.  
+1.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données que vous avez chiffrée précédemment, pointez sur **Tâches** et sélectionnez **Détacher…** .  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Détacher la base de données** .  
   
@@ -165,14 +167,14 @@ Les procédures suivantes vous montrent comment déplacer une base de données p
      Par défaut, l'opération de détachement conserve tous les catalogues de texte intégral associés à la base de données. Pour les supprimer, décochez la case **Conserver les catalogues de texte intégral** . Cette option s'affiche uniquement lors de la mise à niveau d'une base de données à partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
      **État**  
-     Indique un des états suivants : **Prêt** ou **Non prêt**.  
+     Affiche un des états suivants : **Prêt** ou **Non prêt**.  
   
      **Message**  
      La colonne **Message** peut indiquer des informations sur la base de données, comme suit :  
   
     -   Lorsqu'une base de données est impliquée dans la réplication, l' **État** est **Non prêt** et la colonne **Message** indique **Base de données répliquée**.  
   
-    -   Quand une base de données a une ou plusieurs connexions actives, l’**État** est **Non prêt** et la colonne **Message** affiche _\<nombre\_de\_connexions\_actives\>_**Connexion(s) active(s)**, par exemple : **1 connexion(s) active(s)**. Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
+    -   Quand une base de données a une ou plusieurs connexions actives, l’**État** est **Non prêt** et la colonne **Message** affiche _\<nombre\_de\_connexions\_actives\>_ **Connexion(s) active(s)** , par exemple : **1 connexion(s) active(s)** . Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
   
      Pour obtenir plus d'informations sur un message, cliquez sur le texte du lien hypertexte pour ouvrir le Moniteur d'activité.  
   
@@ -186,11 +188,11 @@ Les procédures suivantes vous montrent comment déplacer une base de données p
   
 6.  Recréez le certificat de serveur à l'aide du fichier de sauvegarde du certificat de serveur d'origine. Pour plus d’informations, consultez **Utilisation de Transact-SQL** ci-dessous.  
   
-7.  Dans l’Explorateur d’objets, dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le dossier **Bases de données** et sélectionnez **Attacher…**.  
+7.  Dans l’Explorateur d’objets, dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], cliquez avec le bouton droit sur le dossier **Bases de données** et sélectionnez **Attacher…** .  
   
 8.  Dans la boîte de dialogue **Attacher des bases de données** , sous **Bases de données à attacher**, cliquez sur **Ajouter**.  
   
-9. Dans la boîte de dialogue **Rechercher les fichiers de base de données-**_nom\_serveur_, sélectionnez le fichier de base de données à attacher au nouveau serveur et cliquez sur **OK**.  
+9. Dans la boîte de dialogue **Rechercher les fichiers de base de données-** _nom\_serveur_, sélectionnez le fichier de base de données à attacher au nouveau serveur et cliquez sur **OK**.  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Attacher des bases de données** .  
   
@@ -234,7 +236,7 @@ Les procédures suivantes vous montrent comment déplacer une base de données p
      Supprime le fichier sélectionné de la grille **Bases de données à attacher** .  
   
      **"** _<database_name>_ **»détails de la base de données**  
-     Affiche le nom des fichiers à attacher. Pour vérifier ou changer le nom du chemin d’accès d’un fichier, cliquez sur le bouton **Parcourir** (**...**).  
+     Affiche le nom des fichiers à attacher. Pour vérifier ou changer le nom du chemin d’accès d’un fichier, cliquez sur le bouton **Parcourir** ( **...** ).  
   
     > [!NOTE]  
     >  Si un fichier n'existe pas, la colonne **Message** affiche « Introuvable ». Si un fichier journal est introuvable, cela signifie qu'il se trouve dans un autre répertoire ou qu'il a été supprimé. Vous devez mettre à jour le chemin d'accès du fichier dans la grille **Détails de la base de données** pour désigner l'emplacement correct ou supprimer le fichier journal de la grille. Si un fichier de données .ndf est introuvable, vous devez mettre à jour son chemin d'accès dans la grille pour désigner l'emplacement correct.  
@@ -302,7 +304,7 @@ Les procédures suivantes vous montrent comment déplacer une base de données p
   
 -   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../../relational-databases/databases/database-detach-and-attach-sql-server.md)   
  [Chiffrement transparent des données avec Azure SQL Database](../../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)  
   

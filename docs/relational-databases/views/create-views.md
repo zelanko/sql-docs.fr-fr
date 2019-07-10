@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4d718b38780b7dd77f356269a431daf0f91b03
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 23b29d5d7626986c957489249eb570eaa993f8f0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514641"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581682"
 ---
 # <a name="create-views"></a>Créer des vues
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "52514641"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation CREATE VIEW dans la base de données et l'autorisation ALTER sur le schéma dans lequel la vue est créée.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -63,9 +63,9 @@ ms.locfileid: "52514641"
   
 1.  Dans l' **Explorateur d'objets**, développez la base de données dans laquelle vous souhaitez créer votre nouvelle vue.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Vues**, puis cliquez sur **Nouvelle vue...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Vues**, puis cliquez sur **Nouvelle vue...** .  
   
-3.  Dans la boîte de dialogue **Ajouter une table** , sélectionnez le ou les éléments que vous souhaitez inclure dans votre nouvelle vue dans l'un des onglets suivants : Tables, Vues, Fonctions et Synonymes.  
+3.  Dans la boîte de dialogue **Ajouter une table**, sélectionnez le ou les éléments que vous souhaitez inclure dans votre nouvel affichage dans l'un des onglets suivants : Tables, affichages, fonctions et synonymes.  
   
 4.  Cliquez sur **Ajouter**, puis sur **Fermer**.  
   
@@ -76,8 +76,10 @@ ms.locfileid: "52514641"
 7.  Dans le menu **Fichier** , cliquez sur **Enregistrer**_nom_vue_.  
   
 8.  Dans la boîte de dialogue **Choisir un nom** , entrez un nom pour la nouvelle vue et cliquez sur **OK**.  
-  
-     Pour plus d’informations sur le Concepteur de requêtes et de vues, consultez [Outils du concepteur de requêtes et de vues &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     For more information about the query and view designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

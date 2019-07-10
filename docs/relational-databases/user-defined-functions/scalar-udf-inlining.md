@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dba65eb4ca0aa97ca747567a6337e68fb7c2f29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775141"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581434"
 ---
 # <a name="scalar-udf-inlining"></a>Incorporation des fonctions UDF scalaires
 
@@ -136,6 +136,8 @@ Comme mentionné précédemment, le plan de requête n’a plus d’opérateur d
 2. SQL Server a également déduit le `GROUP BY O_CUSTKEY on ORDERS` implicite et a utilisé IndexSpool + StreamAggregate pour l’implémenter.
 3. SQL Server utilise désormais le parallélisme entre tous les opérateurs.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Selon la complexité de la logique dans la fonction UDF, le plan de requête obtenu peut également grandir et se complexifier. Comme nous pouvons le constater, les opérations au sein de la fonction UDF ne sont plus une boîte noire et, par conséquent, l’optimiseur de requête est en mesure d’évaluer le coût de ces opérations et de les optimiser. En outre, comme la fonction UDF n’est plus dans le plan, l’appel itératif de la fonction UDF est remplacé par un plan qui permet d’éviter toute surcharge d’appel de fonction.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Exigences des fonctions UDF scalaires incorporables
@@ -182,7 +184,7 @@ Si toutes les conditions préalables sont remplies et que SQL Server décide d�
 
 ## <a name="enabling-scalar-udf-inlining"></a>Activation de l’incorporation des fonctions UDF scalaires
 
-Vous pouvez rendre les charges de travail automatiquement éligibles à l’incorporation des fonctions UDF scalaires en activant le niveau de compatibilité 150 pour la base de données.  Vous pouvez définir cette option à l’aide de Transact-SQL. Par exemple :  
+Vous pouvez rendre les charges de travail automatiquement éligibles à l’incorporation des fonctions UDF scalaires en activant le niveau de compatibilité 150 pour la base de données.? Vous pouvez définir cette option à l’aide de Transact-SQL.?Par exemple :  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -256,7 +258,7 @@ Comme cela est décrit dans cet article, l’incorporation des fonctions UDF sca
 1. Il peut y avoir des différences de comportement de [Dynamic Data Masking](../security/dynamic-data-masking.md) avec l’incorporation des données UDF. Dans certaines situations (selon la logique utilisée dans la fonction UDF), l’incorporation peut être plus conservatrice que le masquage des colonnes de sortie. Dans les scénarios où les colonnes référencées dans une fonction UDF ne sont pas les colonnes de sortie, elles ne sont pas masquées. 
 1. Si une fonction UDF référence des fonctions intégrées telles que `SCOPE_IDENTITY()`, la valeur retournée par la fonction intégrée change avec l’incorporation. Ce changement de comportement est dû au fait que l’incorporation modifie l’étendue des instructions au sein de la fonction UDF.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)
 

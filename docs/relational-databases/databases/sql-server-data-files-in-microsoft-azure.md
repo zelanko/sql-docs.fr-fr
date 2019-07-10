@@ -11,12 +11,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5dc7979ea9778ad6f580bb4c7c4af517dc3d515f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6df72b8094f62ca2ab16bee617f9d1c442cc10d5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62706731"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583446"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Fichiers de données SQL Server dans Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,10 +168,13 @@ ON
 2.  *Erreurs lors de l'exécution de l'instruction Alter*   
     Résolution : veillez à exécuter l’instruction Alter Database lorsque la base de données est en ligne. Lors de la copie des fichiers de données vers le stockage Azure, créez toujours un objet blob de pages, et non un objet blob de blocs. Sinon, la modification de la base de données avec l'instruction ALTER échouera. Consultez les instructions fournies dans la leçon 7 du [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Code d’erreur 5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »*    
-    Résolution : Actuellement, cette nouvelle amélioration ne prend pas en charge l’accès simultané de plusieurs instances SQL Server aux mêmes fichiers de base de données dans le Stockage Azure. Si ServerA est en ligne avec un fichier de base de données actif et si ServerB est démarré par erreur et qu’il comporte également une base de données qui désigne le même fichier de données, le deuxième serveur ne parvient pas à démarrer la base de données et génère le code d’erreur *5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d’exploitation : « %ls »* .  
+3.  *Code d’erreur 5120 Impossible d’ouvrir le fichier physique « %.\*ls ». Erreur %d du système d'exploitation : « %ls »*   
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+    Resolution: Currently, this new enhancement does not support more than one SQL Server instance accessing the same database files in Azure Storage at the same time. If ServerA is online with an active database file and if ServerB is accidently started, and it also has a database which points to the same data file, the second server will fail to start the database with an error *code 5120 Unable to open the physical file "%.\*ls". Operating system error %d: "%ls"*.  
   
-     Pour résoudre ce problème, déterminez d’abord si vous avez besoin du serveur A pour accéder au fichier de base de données dans le stockage Azure. Si vous n’en avez pas besoin, supprimez simplement toute connexion entre le serveur A et les fichiers de base de données dans le stockage Azure. Pour cela, procédez comme suit :  
+     To resolve this issue, first determine if you need ServerA to access the database file in Azure Storage or not. If not, simply remove any connection between ServerA and the database files in Azure Storage. To do this, follow these steps:  
   
     1.  Définissez le chemin d'accès du serveur A sur un dossier local à l'aide de l'instruction ALTER Database.  
   

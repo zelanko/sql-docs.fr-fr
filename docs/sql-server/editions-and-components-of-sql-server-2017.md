@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7e831a6c0e5a1d45c8e7ac2c921be3ef120a41f
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66744174"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556950"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Éditions et fonctionnalités prises en charge de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Assistant de récupération de base de données|Oui|Oui|Oui|Oui|Oui|
 |Sauvegarde chiffrée|Oui|Oui|Non|Non|Non|
 |Sauvegarde hybride vers Windows Azure (sauvegarde vers une URL)|Oui|Oui|Non|Non|Non|
-|Groupe de disponibilité sans cluster|Oui|Oui|Non|Non|Non|Non|
+|Groupe de disponibilité avec échelle lecture|Oui|Oui|Non|Non|Non|Non|
 |Groupe de disponibilité à validation de réplica minimale|Oui|Oui|Oui|Non|Non|Non|
   
 

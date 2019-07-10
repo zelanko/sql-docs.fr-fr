@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/14/2017
+ms.date: 07/03/2019
 ms.service: sql-data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 328a0aaeed34bd03e33f480ea0b0ea6afc7e940d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a137ff26240b23e99f2faeadb367b1379b8c0f8
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413329"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564021"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -164,21 +164,21 @@ Crée une ou plusieurs partitions de table. Ces partitions sont des coupes de ta
 
  Consultez [Créer une table partitionnée](#PartitionedTable) dans la section Exemples.
 
-### <a name="ordered-clustered-columnstore-index-option-preview"></a>Option index columnstore en cluster ordonné (préversion)
+### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>Option d’index columnstore en cluster ordonné (préversion pour Azure SQL Data Warehouse)
 
 L’index columnstore en cluster est la valeur par défaut pour la création de tables dans Azure SQL Data Warehouse.  La spécification ORDER se transforme par défaut en clés COMPOUND.  Le tri sera toujours être en ordre croissant. Si aucune clause ORDER n’est spécifiée, columnstore n’est pas trié. En raison de la procédure d’ordonnancement, une table avec index columnstore en cluster ordonnée peut présenter des durées de chargement des données plus longues que les index columnstore en cluster non ordonnés. Si vous avez besoin de davantage d’espace tempdb lors du chargement des données, vous pouvez réduire la quantité de données par insertion.
 
-Durant la version préliminaire, vous pouvez exécuter cette requête pour vérifier la ou les colonnes avec ORDER activée.  Une vue de catalogue est fournie plus loin pour fournir ces informations et le numéro si plusieurs colonnes sont spécifiées dans ORDER.
+Durant la version préliminaire, vous pouvez exécuter cette requête pour vérifier la ou les colonnes avec ORDER activée.
 
 ```sql
-SELECT o.name, c.name, s.min_data_id, s.max_data_id, s.max_data_id-s.min_data_id as difference,  s.*
-FROM sys.objects o 
-INNER JOIN sys.columns c ON o.object_id = c.object_id 
-INNER JOIN sys.partitions p ON o.object_id = p.object_id   
-INNER JOIN sys.column_store_segments s 
-    ON p.hobt_id = s.hobt_id AND s.column_id = c.column_id  
-WHERE o.name = 't1' and c.name = 'col1' 
-ORDER BY c.name, s.min_data_id, s.segment_id;
+SELECT i.name AS index_name  
+    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
+    ,ic.index_column_id  
+    ,ic.key_ordinal  
+,ic.is_included_column  
+FROM sys.indexes AS i  
+INNER JOIN sys.index_columns AS ic
+    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
 ```
 
 ### <a name="DataTypes"></a> Type de données
@@ -594,7 +594,8 @@ WITH
 <a name="SeeAlso"></a>
 ## <a name="see-also"></a>Voir aussi
  
- [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
- [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
- [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
+[CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
+[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
+[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
+[sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql?view=azure-sqldw-latest) 
   

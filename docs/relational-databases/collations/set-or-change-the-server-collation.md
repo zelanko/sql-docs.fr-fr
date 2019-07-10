@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2bb8afe1e20e71245beea8f9482ff0aec4b047ba
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: 29b980fffbc4c6f670f48694cd238c521337ef70
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671136"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517750"
 ---
 # <a name="set-or-change-the-server-collation"></a>Définir ou changer le classement du serveur
 
@@ -61,10 +61,10 @@ ms.locfileid: "59671136"
   
 ## <a name="setting-the-server-collation-in-managed-instance"></a>Définition du classement du serveur dans Managed Instance
 
-Le classement au niveau du serveur (préversion) dans Azure SQL Managed Instance peut être spécifié quand l’instance est créée et ne peut pas être changé par la suite. Vous pouvez définir le classement au niveau du serveur par le biais du [portail Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) ou de [PowerShell et du modèle Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) lors de la création de l’instance. Le classement par défaut au niveau du serveur est **SQL_Latin1_General_CP1_CI_AS**. Les classements Unicode seulement et les nouveaux classements UTF-8 ne peuvent pas être spécifiés comme classement au niveau du serveur.
+Le classement au niveau du serveur dans Azure SQL Managed Instance peut être spécifié quand l’instance est créée et ne peut plus être modifiée. Vous pouvez définir le classement au niveau du serveur par le biais du [portail Azure](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) ou de [PowerShell et du modèle Resource Manager](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) lors de la création de l’instance. Le classement par défaut au niveau du serveur est **SQL_Latin1_General_CP1_CI_AS**. Les classements Unicode seulement et les nouveaux classements UTF-8 ne peuvent pas être spécifiés comme classement au niveau du serveur.
 Si vous migrez des bases de données depuis SQL Server vers Managed Instance, vérifiez le classement du serveur dans le serveur SQL Server source à l’aide de la fonction `SERVERPROPERTY(N'Collation')`, puis créez une instance Managed Instance qui correspond au classement de votre serveur SQL Server. La migration d’une base de données depuis SQL Server vers Managed Instance sans mise en correspondance des classements au niveau du serveur peut entraîner plusieurs erreurs inattendues dans les requêtes. Vous ne pouvez pas changer le classement au niveau du serveur sur l’instance Managed Instance existante.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
  [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)   
  [Définir ou modifier le classement de la base de données](../../relational-databases/collations/set-or-change-the-database-collation.md)   

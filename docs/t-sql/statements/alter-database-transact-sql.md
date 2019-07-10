@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b05cca816684cbb95c625232883d06706edfe7f6
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: 26db878bee2a786dc52f6046afea617bf7c69c0f
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351724"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500156"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -566,10 +566,7 @@ Vous pouvez utiliser les affichages catalogue, les fonctions système et les pro
 
 ## <a name="permissions"></a>Autorisations
 
-Seule la connexion principale au niveau du serveur (créée par le processus de configuration) ou les membres du rôle de base de données `dbmanager` peuvent modifier une base de données.
-
-> [!IMPORTANT]
-> Le propriétaire de la base de données ne peut pas modifier la base de données à moins d'être membre du rôle `dbmanager`.
+Pour modifier une base de données, un compte de connexion doit être la principale connexion au niveau du serveur (créée par le processus d’approvisionnement), un membre du rôle de base de données `dbmanager` dans master, un membre du rôle de base de données `db_owner` dans la base de données actuelle ou `dbo` de la base de données.
 
 ## <a name="examples"></a>Exemples
 

@@ -18,12 +18,12 @@ ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9c7abfc8f9ae7837ad1a89214c2e956ed5ff63a7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9bc4038e2f0b683668530298eb7a9a0418831cd0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520921"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583108"
 ---
 # <a name="index-disk-space-example"></a>Exemple d'espace disque d'un index
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,29 +51,31 @@ ms.locfileid: "52520921"
   
 1.  Déterminez la taille des structures sources.  
   
-     Segment de mémoire : 1 million * 200 octets ~ 200 Mo  
+     Segment de mémoire : 1 million * 200 octets ~ 200 Mo  
   
-     Index non-cluster A : 1 million * 50 octets / 80 % ~ 63 Mo  
+     Index non-cluster A : 1 million * 50 octets / 80 % ~ 63 Mo  
   
-     Index non-cluster B : 1 million * 80 octets / 80 % ~ 100 Mo  
+     Index non-cluster B : 1 million * 80 octets / 80 % ~ 100 Mo  
   
-     Taille totale des structures existantes : 363 Mo  
+     Taille totale des structures existantes : 363 Mo  
   
 2.  Déterminez la taille des structures d'index cibles. Supposons que la nouvelle clé en cluster a une longueur de 24 octets, indicateur d’unicité compris. L'indicateur de ligne (8 octets de long) des deux index non-cluster sera remplacé par cette clé d'index cluster.  
   
-     Index cluster : 1 million * 200 octets / 80 % ~ 250 Mo  
+     Index cluster : 1 million * 200 octets / 80 % ~ 250 Mo  
   
-     Index non cluster A : 1 million * (50 - 8 + 24) octets / 80 % ~ 83 Mo  
+     Index non-cluster A : 1 million * (50 - 8 + 24) octets / 80 % ~ 83 Mo  
   
-     Index non cluster B : 1 million * (80 - 8 + 24) octets / 80 % ~ 120 Mo  
+     Index non-cluster B : 1 million * (80 - 8 + 24) octets / 80 % ~ 120 Mo  
   
-     Taille totale des nouvelles structures : 453 Mo  
+     Taille totale des nouvelles structures : 453 Mo  
   
      La quantité totale d'espace disque nécessaire à la prise en charge des structures sources et cibles pendant la durée de l'opération d'index est de 816 Mo (363 + 453). L'espace actuellement alloué aux structures sources sera désalloué une fois l'opération d'index validée.  
   
 3.  Déterminez l'espace disque temporaire supplémentaire pour le tri.  
-  
-     L’espace nécessaire est indiqué pour le tri dans **tempdb** (SORT_IN_TEMPDB a la valeur ON) et pour le tri à l’emplacement cible (SORT_IN_TEMPDB a la valeur OFF).  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
   
     1.  Lorsque SORT_IN_TEMPDB a la valeur ON, **tempdb** doit disposer de suffisamment d’espace pour contenir l’index le plus volumineux (1 million * 200 octets ~ 200 Mo). Le facteur de remplissage n'est pas pris en compte dans l'opération de tri.  
   
@@ -111,10 +113,10 @@ ms.locfileid: "52520921"
   
 |Opération d'index|Espace disque nécessaire pour les emplacements des structures suivantes|  
 |---------------------|---------------------------------------------------------------------------|  
-|Opération d'index hors ligne avec SORT_IN_TEMPDB = ON|Espace total lors de l'opération : 1018 Mo<br /><br /> -Table et index existants : 363 Mo\*<br /><br /> -<br />                    **tempdb**: 202 Mo*<br /><br /> -Nouveaux index : 453 Mo<br /><br /> Espace total requis après l'opération : 453 Mo|  
-|Opération d'index hors ligne avec SORT_IN_TEMPDB = OFF|Espace total lors de l'opération : 816 Mo<br /><br /> -Table et index existants : 363 Mo*<br /><br /> -Nouveaux index : 453 Mo<br /><br /> Espace total requis après l'opération : 453 Mo|  
-|Opération d'index en ligne avec SORT_IN_TEMPDB = ON|Espace total lors de l'opération : 1058 Mo<br /><br /> -Table et index existants : 363 Mo\*<br /><br /> -<br />                    **tempdb** (index de mappage compris) : 242 Mo*<br /><br /> -Nouveaux index : 453 Mo<br /><br /> Espace total requis après l'opération : 453 Mo|  
-|Opération d'index en ligne avec SORT_IN_TEMPDB = OFF|Espace total lors de l'opération : 856 Mo<br /><br /> -Table et index existants : 363 Mo*<br /><br /> -Index de mappage temporaire : 40 Mo\*<br /><br /> -Nouveaux index : 453 Mo<br /><br /> Espace total requis après l'opération : 453 Mo|  
+|Opération d'index hors ligne avec SORT_IN_TEMPDB = ON|Espace total lors de l'opération : 1 018 Mo<br /><br /> -Table et index existants : 363 Mo\*<br /><br /> -<br />                    **tempdb** : 202 Mo*<br /><br /> -Nouveaux index : 453 Mo<br /><br /> Espace total requis après l'opération : 453 Mo|  
+|Opération d'index hors ligne avec SORT_IN_TEMPDB = OFF|Espace total lors de l'opération : 816 Mo<br /><br /> -Table et index existants : 363 Mo*<br /><br /> -Nouveaux index : 453 Mo<br /><br /> Espace total requis après l'opération : 453 Mo|  
+|Opération d'index en ligne avec SORT_IN_TEMPDB = ON|Espace total lors de l'opération : 1 058 Mo<br /><br /> -Table et index existants : 363 Mo\*<br /><br /> -<br />                    **tempdb** (index de mappage compris) : 242 Mo*<br /><br /> -Nouveaux index : 453 Mo<br /><br /> Espace total requis après l'opération : 453 Mo|  
+|Opération d'index en ligne avec SORT_IN_TEMPDB = OFF|Espace total lors de l'opération : 856 Mo<br /><br /> -Table et index existants : 363 Mo*<br /><br /> -Index de mappage temporaire : 40 Mo\*<br /><br /> -Nouveaux index : 453 Mo<br /><br /> Espace total requis après l'opération : 453 Mo|  
   
  *Cet espace est désalloué une fois l'opération d'index validée.  
   

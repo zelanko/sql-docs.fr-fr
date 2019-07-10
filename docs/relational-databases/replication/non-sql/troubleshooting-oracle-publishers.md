@@ -14,12 +14,12 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e12b5746d99635b773e3b61a6db10485f2e60765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c4259070befa31239ca68ce93106ec990b131e4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667837"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582208"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Dépannage des serveurs de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47667837"
   
 -   « L’instance de serveur Oracle '\<*NomServeurPublicationOracle*>' a été précédemment configurée pour utiliser '\<*NomServeurDistributionSQLServer*>' en tant que serveur de distribution. Pour démarrer l’utilisation de '\<*NouveauNomServeurDistributionSQLServer*>' en tant que serveur de distribution, vous devez supprimer la configuration de réplication actuelle sur l’instance de serveur Oracle, ce qui entraînera également la suppression de toutes les publications sur cette instance de serveur. »  
   
--   « Le serveur Oracle '\<*NomServeurOracle*>' est déjà défini comme serveur de publication '\<*NomServeurPublicationOracle*>' sur le serveur de distribution '\<*NomServeurDistributionSQLServer*>.*\<NomBaseDeDonnéesDistribution>*. Supprimez le serveur de publication ou le synonyme public '*\<NomSynonyme>*' à recréer. »  
+-   « Le serveur Oracle '\<*NomServeurOracle*>' est déjà défini comme serveur de publication '\<*NomServeurPublicationOracle*>' sur le serveur de distribution '\<*NomServeurDistributionSQLServer*>. *\<NomBaseDeDonnéesDistribution>* . Supprimez le serveur de publication ou le synonyme public ' *\<NomSynonyme>* ' à recréer. »  
   
  Quand un serveur de publication Oracle est supprimé, les objets de réplication de la base de données Oracle sont automatiquement nettoyés. Cependant, un nettoyage manuel des objets de réplication Oracle est nécessaire dans certains cas. Pour nettoyer manuellement des objets de réplication Oracle créés par réplication :  
   
@@ -79,7 +79,9 @@ ms.locfileid: "47667837"
 2.  Lancez la commande SQL `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`.  
   
 3.  Lancez la commande SQL `DROP USER <replication_administrative_user_schema>``CASCADE;`.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>Une erreur SQL Server 21663 est provoquée par l'absence d'une clé primaire  
  Les articles des publications transactionnelles doivent avoir une clé primaire valide. Si ce n'est pas le cas, vous recevez le message d'erreur suivant si vous essayez d'ajouter un article :  
   
@@ -90,7 +92,7 @@ ms.locfileid: "47667837"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>Une erreur SQL Server 21642 est provoquée par une connexion à un serveur lié en double  
  Quand un serveur de publication Oracle est initialement configuré, une entrée de serveur lié est créée pour la connexion entre le serveur de publication et le serveur de distribution. Le serveur lié a le même nom que le service TNS d'Oracle. Si vous essayez de créer un serveur lié avec le même nom, le message d'erreur suivant apparaît :  
   
- « Les serveurs de publication hétérogènes requièrent un serveur lié. Un serveur lié appelé '*\<NomServeurLié>* existe déjà. Supprimez ce serveur ou choisissez un autre nom de serveur de publication. »  
+ « Les serveurs de publication hétérogènes requièrent un serveur lié. Un serveur lié appelé ' *\<NomServeurLié>* existe déjà. Supprimez ce serveur ou choisissez un autre nom de serveur de publication. »  
   
  Cette erreur peut se produire si vous tentez de créer directement un serveur lié ou si vous avez précédemment supprimé la relation entre le serveur de publication Oracle et le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , et que vous tentez de le reconfigurer. Si vous recevez cette erreur en tentant de reconfigurer le serveur de publication, supprimez le serveur lié avec [sp_dropserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md).  
   
@@ -124,7 +126,7 @@ ms.locfileid: "47667837"
   
  Si plusieurs versions du logiciel client Oracle sont installées sur le serveur de distribution, assurez-vous que la plus récente soit au moins de version 9 et que la variable système path se réfère d'abord à cette version (des références à d'autres versions sont possibles à condition que la plus récente apparaisse en premier). Pour plus d'informations sur la modification de la variable système path, consultez la section « Une erreur SQL Server 21617 est signalée » plus haut dans cette rubrique.  
   
-## <a name="sql-server-error-21624-or-error-21629-is-raised"></a>Une erreur SQL Server 21624 ou 21629 est signalée  
+## <a name="sql-server-error-21624-or-error-21629-is-raised"></a>Une erreur SQL Server 21624 ou 21629 est signalée  
  Pour les serveurs de distribution en 64 bits, la publication Oracle utilise le fournisseur Oracle OLEDB pour Oracle (OraOLEDB.Oracle). Assurez-vous que le fournisseur Oracle OLEDB est installé et enregistré sur le serveur de distribution. Si ce n'est pas le cas, un (ou deux) des messages suivants s'affiche :  
   
 -   « Impossible de trouver le fournisseur Oracle OLEDB enregistré, OraOLEDB.Oracle, sur le serveur de distribution '%s'. Assurez-vous qu'une version actuelle du fournisseur Oracle OLEDB est installée et enregistrée sur le serveur de distribution.»  
@@ -142,10 +144,10 @@ ms.locfileid: "47667837"
   
 -   « Impossible de se connecter au serveur de base de données Oracle '%s' au moyen du fournisseur Oracle OLEDB OraOLEDB.Oracle. »  
   
- Si ce message d'erreur s'affiche, vérifiez la connectivité avec la base de données Oracle en exécutant SQL*PLUS directement en employant le nom de connexion et le mot de passe spécifiés lors de la configuration du serveur de publication Oracle. Pour plus d'informations, consultez la section « Le serveur de distribution SQL Server ne peut pas se connecter à l'instance de base de données Oracle », plus haut dans cette rubrique.  
+ Si ce message d'erreur s'affiche, vérifiez la connectivité avec la base de données Oracle en exécutant SQL*PLUS directement en employant le nom de connexion et le mot de passe spécifiés lors de la configuration du serveur de publication Oracle. Pour plus d'informations, consultez la section « Le serveur de distribution SQL Server ne peut pas se connecter à l'instance de base de données Oracle », plus haut dans cette rubrique.  
   
 ## <a name="sql-server-error-21628-is-raised"></a>Une erreur SQL Server 21628 est signalée  
- Pour les serveurs de distribution en 64 bits, la publication Oracle utilise le fournisseur Oracle OLEDB pour Oracle (OraOLEDB.Oracle). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crée une entrée de Registre pour permettre au fournisseur Oracle de s'exécuter en processus avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En cas de problème de lecture ou d'écriture de cette entrée de Registre, l'erreur suivante est signalée :  
+ Pour les serveurs de distribution en 64 bits, la publication Oracle utilise le fournisseur Oracle OLEDB pour Oracle (OraOLEDB.Oracle). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crée une entrée de Registre pour permettre au fournisseur Oracle de s'exécuter en processus avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. En cas de problème de lecture ou d'écriture de cette entrée de Registre, l'erreur suivante est signalée :  
   
  « Impossible de mettre à jour le Registre du serveur de distribution '%s' pour permettre au fournisseur Oracle OLEDB OraOLEDB.Oracle de s'exécuter en processus avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Assurez-vous que la connexion actuelle est autorisée pour modifier les clés de Registre appartenant à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . »  
   
@@ -157,7 +159,7 @@ ms.locfileid: "47667837"
   
 2.  Dans la boîte de dialogue **Exécuter** , tapez **regedit**et cliquez sur **OK**.  
   
-3.  Accédez à HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<Nom_instance>* \Providers.  
+3.  Accédez à HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<Nom_instance>* \Providers.  
   
      Sous Providers doit se trouver un répertoire nommé OraOLEDB.Oracle contenant le nom de valeur DWORD **AllowInProcess**, définie à **1**.  
   
@@ -198,7 +200,7 @@ ms.locfileid: "47667837"
  Le schéma utilisateur de réplication doit avoir les autorisations décrites dans la section « Création manuelle du schéma utilisateur » de la rubrique [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 ## <a name="oracle-error-ora-01000"></a>Erreur Oracle ORA-01000  
- La réplication utilise des curseurs sur le serveur de publication Oracle au cours du processus d'ajout d'articles à une publication. Il est possible que le nombre maximal de curseurs disponibles sur le serveur de publication soit dépassé au cours de ce processus. Si cela se produit, l'erreur suivante est signalée :  
+ La réplication utilise des curseurs sur le serveur de publication Oracle au cours du processus d'ajout d'articles à une publication. Il est possible que le nombre maximal de curseurs disponibles sur le serveur de publication soit dépassé au cours de ce processus. Si cela se produit, l'erreur suivante est signalée :  
   
  « ORA-01000 : Nombre maximum de curseurs ouverts atteint »  
   
@@ -207,7 +209,7 @@ ms.locfileid: "47667837"
 ## <a name="oracle-error-ora-01555"></a>Erreur Oracle ORA-01555  
  L'erreur de base de données Oracle suivante n'est pas liée à la réplication d'instantané ; elle est liée à la façon dont Oracle construit des vues de données cohérentes en lecture :  
   
- « ORA-01555 : Instantané trop ancien »  
+ « ORA-01555 : capture instantanée trop ancienne »  
   
  À l'aide d'objets appelés segments d'annulation, Oracle construit des vues de données cohérentes en lecture à partir du moment où une instruction SQL est émise. Une erreur « instantané trop ancien » peut se produire quand des informations de restauration sont écrasées par d'autres sessions concurrentes. Avant Oracle 9i, la méthode recommandée pour réduire la fréquence de cette erreur était d'augmenter la taille et/ou le nombre de segments d'annulation, et d'attribuer les grosses transactions à un segment d'annulation spécifique.  
   
@@ -226,7 +228,7 @@ ms.locfileid: "47667837"
   
  `GRANT READ ON DIRECTORY <directory_name> TO <replication_administrative_user_schema>`  
   
- Si l'accès n'est pas accordé, l'erreur suivante est générée par l'Agent de lecture du journal :  
+ Si l'accès n'est pas accordé, l'erreur suivante est générée par l'Agent de lecture du journal :  
   
  « ORA-22285 : répertoire ou fichier inexistant pour l'opération fileopen »  
   
@@ -247,7 +249,7 @@ ms.locfileid: "47667837"
   
 -   Exécutez **sp_dropdistpublisher**. Pour plus d’informations, consultez [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Vue d’ensemble de la publication Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

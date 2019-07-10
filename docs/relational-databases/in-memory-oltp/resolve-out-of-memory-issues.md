@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38ac1dae8a3d679a09ccebaa2aca06b681ac48ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518606"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582753"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Résoudre les problèmes de mémoire insuffisante
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "52518606"
   
 ## <a name="covered-in-this-topic"></a>Thèmes abordés dans cette rubrique  
   
-|Rubrique|Vue d'ensemble|  
+|Rubrique|Vue d’ensemble|  
 |-----------|--------------|  
 |[Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire](#bkmk_resolveRecoveryFailures)|Explique la procédure à suivre si vous recevez le message d’erreur « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  ». »|  
 |[Résoudre les problèmes d'insuffisance de mémoire ayant un impact sur la charge de travail](#bkmk_recoverFromOOM)|Explique la procédure à suivre si vous constatez que les problèmes d'insuffisance de mémoire ont un effet négatif sur les performances.|  
@@ -33,7 +33,7 @@ ms.locfileid: "52518606"
 |[Bonnes pratiques concernant l’utilisation de l’OLTP en mémoire dans un environnement de machine virtuelle](#bkmk_VMs)|Ce qu’il faut savoir avant d’utiliser l’OLTP en mémoire dans un environnement virtualisé.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire  
- Quand vous tentez de restaurer une base de données, il se peut que le message d’erreur suivant s’affiche : « Échec de l’opération de restauration pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  ». » Cela indique que le serveur ne dispose pas de suffisamment de mémoire pour la restauration de la base de données. 
+ Quand vous tentez de restaurer une base de données, le message d'erreur suivant peut s'afficher : « Échec de l'opération de restauration pour la base de données « *\<databaseName>*  » en raison d'une insuffisance de mémoire dans le pool de ressources *\<resourcePoolName>*  ». » Cela indique que le serveur ne dispose pas de suffisamment de mémoire pour la restauration de la base de données. 
    
 Le serveur sur lequel vous restaurez une base de données doit disposer de suffisamment de mémoire pour les tables à mémoire optimisée dans la sauvegarde de base de données. Dans le cas contraire, la base de données n’est pas mise en ligne et est marquée comme suspecte.  
   
@@ -77,7 +77,9 @@ Si le serveur n’a pas suffisamment de mémoire physique, et que cette erreur p
 1.  [Ouvrir une connexion administrateur dédiée (DAC).](#bkmk_openDAC)  
   
 2.  [Prendre une mesure corrective](#bkmk_takeCorrectiveAction)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="bkmk_openDAC"></a> Ouvrir une connexion administrateur dédiée (DAC).  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit une connexion administrateur dédiée. Cette connexion DAC permet à un administrateur d’accéder à une instance active du moteur de base de données SQL Server afin de résoudre les problèmes sur le serveur, même si ce serveur ne répond pas aux autres connexions clientes. La connexion administrateur dédiée est disponible via l'utilitaire `sqlcmd` et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -158,7 +160,7 @@ Si vous suivez les pratiques ci-dessus pour une base de données avec des tables
 ### <a name="resolution"></a>Résolution
 Pour atténuer ce problème, préallouez suffisamment de mémoire à la base de données pour la récupération ou le redémarrage ; ne vous contentez pas d'une valeur minimale en comptant sur la mémoire dynamique pour fournir la mémoire supplémentaire lorsque cela est nécessaire.
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion de la mémoire pour l'OLTP en mémoire](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Analyse et dépannage de l’utilisation de mémoire](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [Lier une base de données avec des tables mémoire optimisées à un pool de ressources](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   

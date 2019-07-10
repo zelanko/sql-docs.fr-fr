@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ce984371d1dd618c7a99b081667115208b7afb7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 21298500f7d5bc135b8e9068c97e2928d1853b6f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406466"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583569"
 ---
 # <a name="recompile-a-stored-procedure"></a>Recompiler une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-  Cette rubrique explique comment recompiler une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Il existe trois manières d’effectuer cette opération : via l’option **WITH RECOMPILE** dans la définition de la procédure ou lorsque la procédure est appelée, via l’indicateur de requête **RECOMPILE** sur des instructions ou en utilisant la procédure stockée système **sp_recompile** . Cette rubrique décrit l’utilisation de l’option WITH RECOMPILE lors de la création d’une définition de procédure et de l’exécution d’une procédure existante. Elle décrit également l’utilisation de la procédure stockée système sp_recompile pour recompiler une procédure existante.  
+  Cette rubrique explique comment recompiler une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour ce faire, deux possibilités s'offrent à vous : L’option **WITH RECOMPILE** dans la définition de la procédure ou lorsque la procédure est appelée, via l’indicateur de requête **RECOMPILE** sur des instructions individuelles ou en utilisant la procédure stockée système **sp_recompile**. Cette rubrique décrit l’utilisation de l’option WITH RECOMPILE lors de la création d’une définition de procédure et de l’exécution d’une procédure existante. Elle décrit également l’utilisation de la procédure stockée système sp_recompile pour recompiler une procédure existante.  
   
  **Dans cette rubrique**  
   
@@ -55,8 +55,8 @@ ms.locfileid: "52406466"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
- **WITH RECOMPILE**   
+####  <a name="Permissions"></a> Autorisations  
+ **WITH RECOMPILE**  
  Si cette option est utilisée lorsque la définition de la procédure est créée, elle nécessite l'autorisation CREATE PROCEDURE dans la base de données et l'autorisation ALTER sur le schéma dans lequel la procédure est créée.  
   
  Si cette option est utilisée dans une instruction EXECUTE, elle nécessite des autorisations EXECUTE sur la procédure. Aucune autorisation n'est requise sur l'instruction EXECUTE elle-même, mais une autorisation est requise sur la procédure référencée dans l'instruction EXECUTE. Pour plus d’informations, consultez [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "52406466"
  Indicateur de requête **RECOMPILE**  
  Cette fonctionnalité est utilisée lorsque la procédure est créée et l’indicateur est inclus dans les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de la procédure. Par conséquent, elle nécessite l'autorisation CREATE PROCEDURE dans la base de données et l'autorisation ALTER sur le schéma dans lequel la procédure est créée.  
   
- Procédure stockée système**sp_recompile**   
+ Procédure stockée système**sp_recompile**  
  Nécessite l'autorisation ALTER pour la procédure spécifiée.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
@@ -76,7 +76,9 @@ ms.locfileid: "52406466"
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple crée la définition de la procédure.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ```  
 USE AdventureWorks2012;  
 GO  
@@ -133,7 +135,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer une procédure stockée](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Modifier une procédure stockée](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Renommer une procédure stockée](../../relational-databases/stored-procedures/rename-a-stored-procedure.md)   

@@ -20,12 +20,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f7642b2514f7a73034e8f0c2a5c75db71149d33e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: ae356a0f5ad27a92eb7ba7ba70fcf1553c0aa65c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559586"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583459"
 ---
 # <a name="shrink-a-database"></a>Réduire une base de données
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51559586"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [You shrink a database](#FollowUp)  
+-   **Suivi :**  [Vous réduisez une base de données](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -77,7 +77,7 @@ ms.locfileid: "51559586"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -106,7 +106,9 @@ ms.locfileid: "51559586"
      Entrez le pourcentage maximal d'espace disponible à conserver dans les fichiers de base de données après la réduction de la base de données. Les valeurs autorisées sont comprises entre 0 et 99.  
   
 4.  Cliquez sur **OK**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-shrink-a-database"></a>Pour réduire une base de données  
@@ -119,10 +121,10 @@ ms.locfileid: "51559586"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../relational-databases/databases/codesnippet/tsql/shrink-a-database_1.sql)]  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir réduit une base de données  
+##  <a name="FollowUp"></a> Suivi : Après avoir réduit une base de données  
  Les données qui sont déplacées pour réduire un fichier peuvent être dispersées à n'importe quel emplacement disponible dans le fichier. Cela provoque la fragmentation de l'index et peut ralentir les performances des requêtes qui recherchent une plage de l'index. Pour éliminer la fragmentation, reconstruisez les index dans le fichier après réduction.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Réduire un fichier](../../relational-databases/databases/shrink-a-file.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

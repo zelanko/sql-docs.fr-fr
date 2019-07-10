@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d537dedf9cf84cafd0b61cfac6605f1b0457fb8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a18aaf9d8743e5f3d250d04156dd5bab5375625f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135609"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579465"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Créer et appliquer l'instantané initial
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,18 +50,20 @@ Pour afficher ou modifier l'emplacement par défaut du dossier d'instantanés, c
 
  Spécifiez l'emplacement par défaut des instantanés dans la page **Dossier d'instantanés** de l'Assistant Configuration de la distribution. Pour plus d’informations sur l’utilisation de cet Assistant, consultez [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md). Si vous créez une publication sur un serveur qui n'est pas configuré en tant que serveur de distribution, spécifiez un emplacement d'instantanés par défaut dans la page **Dossier d'instantanés** de l'Assistant Nouvelle publication. Pour plus d’informations sur l’utilisation de cet Assistant, consultez [Créer une publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
- Modifiez l’emplacement par défaut des instantanés dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur de distribution>**. Pour plus d’informations, consultez [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md). Définissez le dossier d’instantanés pour chaque publication dans la boîte de dialogue **Propriétés de publication - \<Publication>**. Pour plus d'informations, voir [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Modifiez l’emplacement par défaut des instantanés dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur de distribution>** . Pour plus d’informations, consultez [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md). Définissez le dossier d’instantanés pour chaque publication dans la boîte de dialogue **Propriétés de publication - \<Publication>** . Pour plus d'informations, voir [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 ### <a name="modify-the-default-snapshot-location"></a>Modifier l’emplacement par défaut des instantanés  
   
-1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur de distribution>**, cliquez sur le bouton des propriétés (**…**) du serveur de publication pour lequel vous voulez modifier l’emplacement par défaut des instantanés.  
+1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Base de données du serveur de publication>** , cliquez sur le bouton des propriétés ( **?** ) du serveur de publication pour lequel vous voulez modifier l’emplacement par défaut des captures instantanées.  
   
-2.  Dans la boîte de dialogue **Propriétés du serveur de publication - \<Serveur de publication>**, entrez une valeur pour la propriété **Dossier des captures instantanées par défaut**.  
+2.  Dans la boîte de dialogue **Propriétés du serveur de publication - \<Serveur de publication>** , entrez une valeur pour la propriété **Dossier des captures instantanées par défaut**.  
   
     > [!NOTE]  
     >  L'Agent d'instantané doit posséder des autorisations en écriture sur le répertoire spécifié et les Agents de distribution et de fusion des autorisations en lecture. Si vous utilisez des abonnements par extraction, vous devez spécifier un répertoire partagé en tant que chemin UNC, par exemple \\\nom_ordinateur\snapshot. Pour plus d’informations, consultez [Sécuriser le dossier d’instantanés](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-snapshot"></a>Créer l’instantané
 Par défaut, si SQL Server Agent est en cours d’exécution, un instantané est généré par l’Agent d’instantané immédiatement après la création d’une publication par l’Assistant Nouvelle publication. Il est ensuite appliqué par défaut par l'Agent de distribution (pour la réplication d'instantané et transactionnelle) ou l'Agent de fusion (pour les abonnements de fusion) pour tous les abonnements. Il est également possible de générer un instantané à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et du Moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
@@ -71,7 +73,7 @@ Par défaut, si SQL Server Agent est en cours d’exécution, un instantané est
 1.  Connectez-vous au serveur de publication dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], puis développez le nœud du serveur.    
 2.  Développez le dossier **Réplication** , puis développez le dossier **Publications locales** .    
 3.  Cliquez avec le bouton droit sur la réplication pour laquelle vous souhaitez créer un instantané, puis cliquez sur **Afficher l'état de l'Agent d'instantané**.    
-4.  Dans la boîte de dialogue **Afficher l’état de l’Agent d’instantané - \<Publication>**, cliquez sur **Démarrer**.    
+4.  Dans la boîte de dialogue **Afficher l’état de l’Agent d’instantané - \<Publication>** , cliquez sur **Démarrer**.    
  Lorsque l'Agent d'instantané termine la génération de l'instantané, un message comme celui-ci s'affiche : « [100 %] Un instantané de 17 article(s) a été généré ».  
   
 ### <a name="in-replication-monitor"></a>Dans le moniteur de réplication  
@@ -92,9 +94,9 @@ Les instantanés initiaux peuvent être créés par programme en créant et exé
   
     -   **@job_login, qui spécifie** les informations d’identification de l’authentification Windows qu’utilise l’Agent d’instantané pour s’exécuter sur le serveur de distribution.  
   
-    -   **@job_password**, qui correspond au mot de passe pour les informations d’identification Windows fournies.  
+    -   **@job_password** , qui correspond au mot de passe pour les informations d’identification Windows fournies.  
   
-    -   (Facultatif) La valeur **0** pour **@publisher_security_mode** si l'agent utilisera l'authentification SQL Server lors de la connexion au serveur de publication. Dans ce cas, vous devez également spécifier les informations de connexion d'authentification SQL Server pour **@publisher_login** et **@publisher_password**.  
+    -   (Facultatif) La valeur **0** pour **@publisher_security_mode** si l'agent utilisera l'authentification SQL Server lors de la connexion au serveur de publication. Dans ce cas, vous devez également spécifier les informations de connexion d'authentification SQL Server pour **@publisher_login** et **@publisher_password** .  
   
     -   (Facultatif) Une planification de synchronisation pour le travail de l'Agent d'instantané. Pour plus d'informations, voir [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
@@ -254,7 +256,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
  [!code-vb[HowTo#rmo_vb_GenerateSnapshot_WithJob](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_generatesnapshot_withjob)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   

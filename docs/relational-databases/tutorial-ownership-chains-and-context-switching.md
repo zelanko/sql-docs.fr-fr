@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : chaînes de propriétés et changement de contexte | Microsoft Docs'
+title: 'Tutoriel : Chaînes de propriétés et changement de contexte | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: db5d4cc3-5fc5-4cf5-afc1-8d4edc1d512b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f74c768c55058f2ec17fb569c934317f550d13bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22851b6b515d50ce9a68c4323729b1b838b5e281
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657193"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581471"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutorial: Ownership Chains and Context Switching
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutoriel : Chaînes de propriétés et changement de contexte
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Ce didacticiel explore en se fondant sur un scénario les concepts de sécurité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] impliquant les chaînes de propriétés et le changement de contexte utilisateur.  
   
@@ -40,7 +40,9 @@ Pour répondre aux exigences de ce scénario, l'exemple est divisé en quatre pa
 2.  Création d'une procédure stockée pour l'accès aux données par bon de commande   
 3.  Accès aux données par le biais de la procédure stockée  
 4.  Réinitialisation de l'environnement  
-  
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Chaque bloc de code dans cet exemple est présenté sous forme de lignes. Pour copier l'exemple tout entier, consultez la section [Exemple complet](#CompleteExample) à la fin de ce didacticiel.
 
 ## <a name="prerequisites"></a>Conditions préalables requises
@@ -332,7 +334,7 @@ DROP LOGIN TestManagerUser;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Centre de sécurité pour le moteur de base de données SQL Server et la base de données SQL Azure](../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
   

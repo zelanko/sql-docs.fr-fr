@@ -11,12 +11,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79be3e174e77648b4cbe908fa7d29f827bf4d3c5
-ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
+ms.openlocfilehash: d1f75a8c70415fe31419a8f30f80e727226fa879
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/19/2019
-ms.locfileid: "67263499"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556930"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>Nouveautés de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ SQL Server 2017 inclut de nombreuses nouvelles fonctionnalités du moteur de ba
 - La colonne **modified_extent_page_count** dans [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md) effectue le suivi des modifications différentielles dans chaque fichier de base de données, en activant des solutions Smart Backup qui effectuent une sauvegarde différentielle ou complète basée sur le pourcentage de pages modifiées dans la base de données. (CTP 2.0)
 - La syntaxe T-SQL [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md) prend désormais en charge le chargement d’une table dans un groupe de fichiers différent de celui par défaut de l’utilisateur à l’aide du mot clé **ON**. (CTP 2.0)
 - Les transactions de bases de données croisées sont maintenant prises en charge parmi toutes les bases de données qui font partie d’un **groupe de disponibilité Always On**, dont les bases de données qui font partie de la même instance. Consultez [Transactions : groupes de disponibilité Always On et mise en miroir de bases de données](../database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md) (CTP 2.0)
-- La nouvelle fonctionnalité **Groupes de disponibilité** comprend la prise en charge sans cluster, le paramètre de groupe de disponibilité à validation de réplica minimale ainsi que les migrations et les tests entre systèmes d’exploitation Windows-Linux. (CTP 1.3)
+- La nouvelle fonctionnalité **Groupes de disponibilité** comprend la prise en charge avec échelle de lecture sans cluster, le paramètre de groupes de disponibilité à validation de réplica minimale ainsi que les migrations et les tests entre systèmes d’exploitation Windows-Linux. (CTP 1.3)
 - Nouvelles vues de gestion dynamique :
     - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) expose des informations et des attributs de niveau résumé sur les fichiers journaux des transactions, utiles pour surveiller l’intégrité du journal des transactions. (CTP 2.1)
     - [sys.dm_tran_version_store_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-space-usage.md) effectue le suivi de l’utilisation de la banque des versions par base de données, ce qui permet de planifier de manière proactive le dimensionnement de tempdb selon cette utilisation. (CTP 2.0)

@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e071a15e119e1225698cb2cea3f602d256841e74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 945573e16582ba2778ff29e7396a2fb6ea3dedce
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63015475"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556944"
 ---
 # <a name="memory-management-architecture-guide"></a>guide d’architecture de gestion de la mémoire
 
@@ -82,7 +82,7 @@ Dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion
 -  Allocations de mémoire pour les **[piles de threads](../relational-databases/memory-management-architecture-guide.md#stacksizes)**  dans le processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 -  **Allocations Windows directes (DWA)** , pour les demandes d’allocation de mémoire apportées directement à Windows. Il s’agit notamment de l’utilisation des segments de mémoire Windows et des allocations virtuelles directes effectuées par les modules chargés dans le processus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les allocations à partir des DLL de procédure stockée étendue, les objets créés au moyen de procédures Automation (appels sp_OA) et les allocations à partir de fournisseurs de serveur lié sont des exemples de demandes d’allocation de mémoire.
 
-À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], les allocations de page unique, de plusieurs pages et du CLR sont regroupées dans un **allocateur de pages de « toute taille »** , les limites de mémoire étant contrôlées par les options de configuration *Mémoire maximum du serveur (Mo)* et *Mémoire minimum du serveur (Mo)* . Ce changement offre des capacités de redimensionnement plus précises pour tous les besoins en mémoire transitant par le Gestionnaire de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
+À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], les allocations de page unique, les allocations de plusieurs pages et les allocations du CLR sont toutes consolidées dans un **Allocateur de pages de « toute taille »** et sont incluent dans les limites de mémoire contrôlées par les options de configuration *mémoire maximum du serveur (Mo)* et *mémoire minimum du serveur (Mo)* . Ce changement offre des capacités de redimensionnement plus précises pour tous les besoins en mémoire transitant par le Gestionnaire de mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. 
 
 > [!IMPORTANT]
 > Examinez attentivement vos configurations *Mémoire maximum du serveur (Mo)* et *Mémoire minimum du serveur (Mo)* après la mise à niveau vers [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. En effet, à compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], ces configurations comprennent et représentent plus d’allocations de mémoire que celles des versions antérieures. Ces changements s’appliquent aux versions 32 bits et 64 bits de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], ainsi qu’aux versions 64 bits de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
@@ -97,7 +97,7 @@ Le tableau suivant indique si un type spécifique d’allocation de mémoire est
 |Mémoire de piles de threads|Non|Non|
 |Allocations directes de Windows|Non|Non|
 
-À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut allouer plus de mémoire que la valeur spécifiée dans le paramètre max server memory. Ce comportement peut se produire quand la valeur de **_Mémoire totale du serveur (Ko)_ ** a déjà atteint le paramètre **_Mémoire du serveur cible (Ko)_ ** (comme spécifié par la mémoire maximum du serveur). Si la mémoire libre contiguë est insuffisante pour répondre aux demandes de mémoire de plusieurs pages (plus de 8 Ko) en raison de la fragmentation de la mémoire, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut procéder à une surallocation au lieu de rejeter la demande de mémoire. 
+À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut allouer plus de mémoire que la valeur spécifiée dans le paramètre max server memory. Ce comportement peut se produire quand la valeur de **_Mémoire totale du serveur (Ko)_** a déjà atteint le paramètre **_Mémoire du serveur cible (Ko)_** (comme spécifié par la mémoire maximum du serveur). Si la mémoire libre contiguë est insuffisante pour répondre aux demandes de mémoire de plusieurs pages (plus de 8 Ko) en raison de la fragmentation de la mémoire, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut procéder à une surallocation au lieu de rejeter la demande de mémoire. 
 
 Dès que cette allocation est effectuée, la tâche en arrière-plan du *moniteur de ressource* signale à tous les consommateurs de mémoire de libérer la mémoire allouée et tente de faire passer la valeur *Mémoire totale du serveur (Ko)* en dessous de la spécification *Mémoire du serveur cible (Ko)* . L’utilisation de la mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut donc dépasser brièvement le paramètre max server memory. Dans ce cas, la valeur du compteur de performances *Mémoire totale du serveur (Ko)* dépasse les paramètres max server memory et *Mémoire du serveur cible (Ko)* .
 
@@ -280,7 +280,7 @@ La forte sollicitation de la mémoire est une situation résultant d’un manque
 - Exécution plus longue des requêtes (dans le cas où des allocations de mémoire sont en attente)
 - Cycles d’UC supplémentaires
 
-Cette situation peut se produire pour des raisons externes ou internes. Les raisons externes peuvent être les suivantes :
+Cette situation peut être déclenchée pour des raisons externes ou internes. Les raisons externes peuvent être les suivantes :
 - La mémoire physique (RAM) disponible est faible. Ceci fait que le système raccourcit les plages de travail des processus actuellement en cours d’exécution, ce qui peut aboutir à un ralentissement global. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut réduire la cible de validation du pool de mémoires tampons et commencer à réduire les caches internes plus souvent. 
 - La mémoire système globale disponible (qui inclut le fichier d’échange système) est faible. Ceci peut entraîner l’échec des allocations de mémoire par le système, car il ne peut pas paginer la mémoire actuellement allouée.
 Les raisons internes peuvent être les suivantes :

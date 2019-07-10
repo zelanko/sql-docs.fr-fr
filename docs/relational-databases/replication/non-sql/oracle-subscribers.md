@@ -17,12 +17,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 647828d7e0e78b7faa6abb2ce1a7ca8102490d67
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3c24ad02eb34e06d23ec30f91b3c547f6fbd737e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135899"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585878"
 ---
 # <a name="oracle-subscribers"></a>Abonnés Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,9 @@ ms.locfileid: "54135899"
     |Spécifier les informations d'hôte pour identifier l'écouteur de la base de données|L'hôte est le nom ou l'alias DNS de l'ordinateur sur lequel s'exécute l'écouteur d'Oracle ; cet ordinateur est en général celui sur lequel réside la base de données. Pour certains protocoles, vous devez fournir des informations supplémentaires. Par exemple, si vous sélectionnez TCP, vous devez fournir le port sur lequel l'écouteur est à l'écoute des demandes de connexion sur la base de données cible. La configuration TCP par défaut utilise le port 1521.|  
   
 3.  Créez une publication transactionnelle ou d'instantané, activez-la pour les Abonnés non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] puis créez un abonnement par émission de données pour l'Abonné. Pour plus d’informations, voir [Créer un abonnement pour un Abonné non-SQL Server](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md).  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="setting-directory-permissions"></a>Définition des autorisations sur les répertoires  
  Les comptes sous lesquels s'exécute le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le serveur de distribution doivent détenir les autorisations de lecture et d'exécution pour le répertoire (et tous ses sous-répertoires) sur lequel le logiciel réseau client est installé.  
   
@@ -87,7 +89,7 @@ ms.locfileid: "54135899"
   
     -   vous assurer qu'aucune chaîne vide n'est insérée dans la table publiée en tant que valeurs de colonne ;  
   
-    -   utiliser le paramètre **–SkipErrors** pour l’Agent de distribution s’il vous est possible de recevoir les notifications d’échec dans le journal d’historique de l’Agent de distribution sans interrompre le traitement ; spécifier le code d’erreur Oracle 1400 (**-SkipErrors1400**) ;  
+    -   Utilisez le paramètre **?SkipErrors** pour l’Agent de distribution s’il vous est possible de recevoir les notifications d’échec dans le journal d’historique de l’Agent de distribution sans interrompre le traitement. spécifier le code d’erreur Oracle 1400 ( **-SkipErrors1400**) ;  
   
     -   modifier le script de création de table généré, en supprimant l'attribut NOT NULL de toutes les colonnes de caractères ayant des chaînes vides associées, et fournir le script modifié en tant que script de création personnalisé pour l'article en utilisant le paramètre @creation_script de [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
@@ -144,7 +146,7 @@ ms.locfileid: "54135899"
 |**varchar(max)**|CLOB|  
 |**xml**|NCLOB|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Non-SQL Server Subscribers](../../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)   
  [S'abonner à des publications](../../../relational-databases/replication/subscribe-to-publications.md)  
   

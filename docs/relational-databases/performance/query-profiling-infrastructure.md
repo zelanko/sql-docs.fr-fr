@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: dbf81f0cb1100fdc5663a8c2ff46343d8d9671c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47382961ebb72d3d0b51ae9a72161fb107021f75
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64568272"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559469"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastructure du profilage de requête
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -171,6 +171,18 @@ WITH (MAX_MEMORY=4096 KB, EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
     MAX_DISPATCH_LATENCY=30 SECONDS, MAX_EVENT_SIZE=0 KB, 
     MEMORY_PARTITION_MODE=NONE, TRACK_CAUSALITY=OFF, STARTUP_STATE=OFF);
 ```
+
+## <a name="query-profiling-infrastruture-usage-guidance"></a>Conseils d’utilisation de l’infrastructure de profilage de requête
+La table suivante récapitule les actions pour activer le profilage standard ou le profilage léger, à la fois globalement (au niveau du serveur) ou dans une seule session. Inclut également la version la plus ancienne pour laquelle l’action est disponible. 
+
+|Portée|Profilage standard|Profilage léger|
+|---------------|---------------|---------------|
+|Global|session xEvent avec le XE; `query_post_execution_showplan` commençant par [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|Indicateur de trace 7412; commençant par SP1 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|
+|Global|Trace SQL et SQL Server Profiler avec l’événement de trace `Showplan XML`; commençant par SQL Server 2000|session xEvent avec le XE; `query_thread_profile` commençant par SP2 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|
+|Global|-|session xEvent avec le XE; `query_post_execution_plan_profile` commençant par [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]|
+|Session|Utiliser `SET STATISTICS XML ON`; commençant par SQL Server 2000|Utiliser l’indicateur de requête `QUERY_PLAN_PROFILE` avec une session xEvent avec le XE; `query_plan_profile` commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 et [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11|
+|Session|Utiliser `SET STATISTICS PROFILE ON`; commençant par SQL Server 2000|-|
+|Session|Cliquer sur le bouton [Statistiques des requêtes en direct](../../relational-databases/performance/live-query-statistics.md) dans SSMS; commençant par SP2 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|-|
 
 ## <a name="remarks"></a>Notes
 

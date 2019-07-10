@@ -20,14 +20,15 @@ ms.assetid: 6ef578bf-8da7-46e0-88b5-e310fc908bb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 28ac0ac6b125d394633a601d7f45d7608a22ce06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5418ea8fa92e8e62cf28d1bb740091feb88f32d2
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354373"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556928"
 ---
 # <a name="linked-servers-database-engine"></a>Serveurs liés (Moteur de base de données)
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   Les serveurs liés permettent au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] et à [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) de lire des données à partir des sources de données distantes et d’exécuter des commandes sur les serveurs de base de données distants (par exemple des sources de données OLE DB) en dehors de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En général, les serveurs liés sont configurés pour permettre au [!INCLUDE[ssDE](../../includes/ssde-md.md)] d'exécuter une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui inclut des tables situées dans une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou un autre produit de base de données comme Oracle. De nombreux types de sources de données OLE DB peuvent être configurés comme serveurs liés, notamment [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access, Excel et Azure CosmosDB.
@@ -72,7 +73,7 @@ Généralement, les serveurs liés sont utilisés pour le traitement des requêt
 > Pour qu'une source de données renvoie les données via un serveur lié, le fournisseur OLE DB (DLL) associé à cette source de données doit se trouver sur le même serveur que l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT] 
-> Lorsqu'un fournisseur OLE DB est utilisé, le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doit disposer d'autorisations de lecture et d'exécution sur le répertoire et sur tous les sous-répertoires correspondants dans lequel le fournisseur est installé. Cela inclut le fournisseur mis en production par Microsoft, ainsi que tous les fournisseurs tiers. 
+> Lorsqu'un fournisseur OLE DB est utilisé, le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute doit disposer d'autorisations de lecture et d'exécution sur le répertoire et sur tous les sous-répertoires correspondants dans lequel le fournisseur est installé. Cela inclut les fournisseurs mis en production par Microsoft, ainsi que tous les fournisseurs tiers. 
   
 ## <a name="managing-providers"></a>Gestion des fournisseurs  
 Un ensemble d'options permettent de contrôler la façon dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] charge et utilise des fournisseurs OLE DB spécifiés dans le Registre.  

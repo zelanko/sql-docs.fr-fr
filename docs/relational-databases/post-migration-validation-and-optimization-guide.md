@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: 7e9e96ee56895c38a8c242d3cd48804884f581d1
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: d13809c3fa5b100a29df4434da5aec354de0c7c2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206365"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581227"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guide de validation et d’optimisation post-migration
 
@@ -53,7 +53,7 @@ Pour plus d’informations à ce sujet, consultez [Maintenir la stabilité des p
 **S’applique à :** Migration d’une plateforme étrangère (par exemple Oracle, DB2, MySQL et Sybase) vers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Pour les migrations de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si ce problème existe dans la source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la migration vers une version plus récente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  en l’état ne concerne pas ce scénario. 
+> Pour les migrations de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si ce problème existait dans la source [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la migration vers une version plus récente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]?en l’état ne concerne pas ce scénario. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compile les plans de requête sur les procédures stockées en utilisant la détection de paramètres d’entrée au moment de la première compilation, et en générant un plan paramétrable et réutilisable, optimisé pour la distribution des données d’entrée. Même s’il ne s’agit pas de procédures stockées, la plupart des instructions qui génèrent des plans triviaux sont paramétrables. Après la première mise en cache d’un plan, les exécutions futures sont mappées au plan déjà mis en cache.
 Un problème peut se produire quand la première compilation n’a pas utilisé les jeux de paramètres les plus courants pour la charge de travail usuelle. Pour des paramètres distincts, le même plan d’exécution devient inefficace. Pour plus d’informations à ce sujet, consultez [Détection de paramètres](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).
@@ -108,6 +108,9 @@ Voici quelques exemples de prédicats non SARGable :
   -   Cela peut impliquer la comparaison d’une construction de code définie par l’utilisateur et stockée dans la base de données (par exemple des procédures stockées, des fonctions définies par l’utilisateur ou des vues) aux tables système qui contiennent des informations sur les types de données utilisés dans les tables sous-jacentes (par exemple [sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md)).
 2. Si vous ne parvenez pas à traverser l’ensemble du code jusqu’au point précédent, pour la même finalité, changez le type de données de la table afin qu’il corresponde à une déclaration de variable/paramètre.
 3. Vérifiez l’utilité des constructions suivantes :
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
   -   fonctions utilisées en tant que prédicats ;
   -   recherches à l’aide de caractères génériques ;
   -   expressions complexes basées sur des données en colonne (évaluez la nécessité de créer plutôt des colonnes calculées persistantes, lesquelles sont indexables).

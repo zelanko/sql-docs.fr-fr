@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b1bd2ab7d1ab17ef9d0bc4671054f02808ed230f
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 7703ad7ce46c9dda59dacbc86ebbd9646b1015cf
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439841"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584487"
 ---
 # <a name="compare-execution-plans"></a>Comparer des plans d’exécution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +69,13 @@ Quand deux plans d’exécution sont comparés, les régions du plan qui **font 
      > [!TIP]
      > Toutes les options de zoom et de navigation disponibles pour les plans d’exécution fonctionnent en mode de comparaison de plans. Pour plus d’informations, consultez [Afficher un plan d’exécution réel](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
-5.  Une double fenêtre de propriétés s’ouvre également sur le côté droit, dans la portée de la sélection par défaut. Les propriétés qui existent dans les deux opérateurs comparés mais qui présentent des différences sont précédées du signe *différent* (≠) afin de faciliter leur identification.
+5.  Une double fenêtre de propriétés s’ouvre également sur le côté droit, dans la portée de la sélection par défaut. Les propriétés qui existent dans les deux opérateurs comparés mais qui présentent des différences sont précédées du signe *différent* (?) afin de faciliter leur identification.
 
     ![Double fenêtre de propriétés](../../relational-databases/performance/media/plancomparison-properties.png "Double fenêtre de propriétés")  
 
 6.  La fenêtre de comparaison **Analyse du plan d’exécution de requêtes** s’ouvre également en bas. Trois onglets sont disponibles :
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  Sous l’onglet **Options d’instruction**, la sélection par défaut est *Mettre en évidence les opérations similaires*, et les mêmes opérateurs ou nœuds en surbrillance dans les plans comparés partagent le même modèle de ligne et la même couleur. Naviguez entre les zones similaires dans les plans comparés en cliquant sur un modèle de ligne. Vous pouvez également choisir de mettre en évidence les différences dans les plans (au lieu des similitudes) en sélectionnant *Mettre en évidence les opérateurs qui ne correspondent pas à des segments similaires*. 
     

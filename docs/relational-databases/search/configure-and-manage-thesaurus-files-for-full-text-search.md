@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 94531ed04a4265a5fa1a9293e191faeb37feab9f
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973938"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586179"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Un dictionnaire des synonymes pour la recherche en texte intégral est un fichie
 
 -   Paramètre de signes diacritiques  
   
-     Pour un dictionnaire des synonymes donné, tous les modèles de recherche respectent ou non les signes diacritiques, par exemple le tilde (**~**), l’accent aigu (**´**) ou le tréma (**¨**), autrement dit ils *respectent les accents* ou *ne respectent pas les accents*. Par exemple, supposez que vous spécifiez le remplacement du modèle « café » par d'autres modèles dans une requête de texte intégral. Si le dictionnaire des synonymes ne tient pas compte des accents, la recherche en texte intégral remplace les modèles « café » et « cafe ». Si le dictionnaire des synonymes tient compte des accents, la recherche en texte intégral remplace seulement le modèle « café ». Par défaut, un dictionnaire des synonymes ne tient pas compte des accents.  
+     Pour un dictionnaire des synonymes donné, tous les modèles de recherche respectent ou non les signes diacritiques, par exemple le tilde ( **~** ), l’accent aigu (**´**) ou le tréma (**¨**), (autrement dit ils *respectent les accents* ou *ne respectent pas les accents*). Par exemple, supposons que vous spécifiez le modèle « café » à remplacer par d’autres modèles dans une requête de texte intégral. Si le dictionnaire des synonymes ne respecte pas les accents, la recherche en texte intégral remplace les modèles « café » et « cafe ». Si le dictionnaire des synonymes respecte les accents, la recherche en texte intégral remplace seulement le modèle « café ». Par défaut, un dictionnaire des synonymes ne tient pas compte des accents.  
   
 ##  <a name="initial_thesaurus_files"></a> Fichiers par défaut du dictionnaire des synonymes
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un fichier de dictionnaire des synonymes XML par langue prise en charge. Ces fichiers sont essentiellement vides. Ils contiennent uniquement la structure XML de niveau supérieur commune à tous les dictionnaires des synonymes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un exemple commenté de dictionnaire des synonymes.  
@@ -83,6 +83,8 @@ Vous pouvez modifier l'emplacement et le nom d'un fichier de dictionnaire des sy
 Une requête de dictionnaire des synonymes utilise à la fois le dictionnaire des synonymes spécifique à la langue et le dictionnaire des synonymes global.
 1.  En premier lieu, la requête recherche le fichier spécifique à la langue et le charge en vue du traitement (à moins qu'il ne soit déjà chargé). La requête est développée pour inclure les synonymes spécifiques à la langue spécifiés par les règles de jeu d'expansion et de jeu de remplacement définies dans le fichier du dictionnaire des synonymes. 
 2.  Ces étapes sont ensuite répétées pour le dictionnaire des synonymes global. Toutefois, si un terme fait déjà partie d'une correspondance dans le fichier du dictionnaire des synonymes spécifique à la langue, ce terme est inéligible pour la mise en correspondance dans le dictionnaire des synonymes global.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="structure"></a> Structure d’un fichier de dictionnaire des synonymes  
  Chaque fichier de dictionnaire des synonymes définit un conteneur XML dont l’ID est `Microsoft Search Thesaurus` et un commentaire, `<!--` ... `-->`, qui contient un exemple de dictionnaire des synonymes. Le dictionnaire des synonymes est défini dans un élément `<thesaurus>` qui contient des exemples des éléments enfants qui définissent le paramètre de signes diacritiques, les jeux d’expansion et les jeux de remplacement.
@@ -224,7 +226,7 @@ Vous pouvez configurer le dictionnaire des synonymes d’une langue donnée en m
   
 -   Un dictionnaire des synonymes ne doit pas contenir d’entrées en double parmi les entrées `<sub>` des jeux d’expansion et les éléments `<pat>` des jeux de remplacement.  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CONTAINS &#40;Transact-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
  [FREETEXT &#40;Transact-SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)   

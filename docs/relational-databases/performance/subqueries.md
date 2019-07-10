@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 07d8b7936051b202c73b7457c87e7533e1d46192
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579389"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500230"
 ---
 # <a name="subqueries-sql-server"></a>Sous-requêtes (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -88,7 +88,7 @@ Les instructions contenant une sous-requête se présentent généralement sous 
 
 Dans certaines instructions [!INCLUDE[tsql](../../includes/tsql-md.md)], la sous-requête peut être évaluée comme s'il s'agissait d'une requête indépendante. Théoriquement, les résultats de la sous-requête viennent s’insérer dans la requête externe (bien que ce ne soit pas nécessairement comme cela que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite en réalité les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] comportant des sous-requêtes).    
 
-Il existe trois sous-requêtes de base  : 
+Il existe trois sous-requêtes de base : 
 -   les sous-requêtes qui opèrent sur des listes, introduites par `IN` ou par un opérateur de comparaison modifié par `ANY` ou `ALL` ;
 -   les sous-requêtes introduites par un opérateur de comparaison non modifié et qui doivent retourner une valeur unique ;
 -   les sous-requêtes introduites par `EXISTS` qui constituent des tests d’existence.
@@ -106,7 +106,7 @@ Une sous-requête est soumise aux restrictions suivantes :
 -   Par convention, la liste de sélection d’une sous-requête introduite par `EXISTS` est dotée d’un astérisque (\*) au lieu d’un nom de colonne unique. Les règles à appliquer à une sous-requête introduite par `EXISTS` sont identiques à celles d’une liste de sélection standard. En effet, une sous-requête introduite par `EXISTS` crée un test d’existence et retourne les valeurs TRUE ou FALSE au lieu des données.   
 
 ## <a name="qualifying"></a> Qualification de noms de colonnes dans des sous-requêtes
-Dans l’exemple suivant, la colonne *CustomerID* indiquée dans la clause `WHERE` de la requête externe est implicitement qualifiée par le nom de table figurant dans la clause `FROM` de la requête externe, c’est-à-dire *Sales.Store*. La référence à la colonne *CustomerID* dans la liste de sélection de la sous-requête est qualifiée par la clause `FROM` de la sous-requête, c’est-à-dire par la table *Sales.Customer*.
+Dans l’exemple suivant, la colonne *BusinessEntityID* indiquée dans la clause `WHERE` de la requête externe est implicitement qualifiée par le nom de table figurant dans la clause `FROM` de la requête externe, (*Sales.Store*). La référence à la colonne *CustomerID* dans la liste de sélection de la sous-requête est qualifiée par la clause `FROM` de la sous-requête, c’est-à-dire par la table *Sales.Customer*.
 
 ```sql
 USE AdventureWorks2016;
@@ -487,7 +487,7 @@ WHERE ProductSubcategoryID NOT IN
 GO
 ```
 
-Cette instruction ne peut pas être convertie en jointure. La jointure analogue « non égal à » revêt une autre signification : elle trouve les noms des produits qui se trouvent dans une sous-catégorie différente de « produits finis ».      
+Cette instruction ne peut pas être convertie en jointure. La jointure analogue non égale revêt une autre signification : elle trouve les noms des produits qui se trouvent dans certaines sous-catégories différentes d’un vélo fini.      
 
 ### <a name="upsert"></a> Sous-requêtes dans les instructions UPDATE, DELETE et INSERT
 Les sous-requêtes peuvent être imbriquées dans les instructions de manipulation de données (DML, Data Manipulation Language) `UPDATE`, `DELETE`, `INSERT` et `SELECT`.    
@@ -772,7 +772,7 @@ WHERE ProductSubcategoryID = 1;
 GO
 ```   
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)       
 [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)     
 [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md)     

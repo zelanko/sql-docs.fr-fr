@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle) | Microsoft Docs'
+title: 'Tutoriel : configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f7d40e49816ccec8c84486056a3f5b3bdee759de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128349"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581327"
 ---
-# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Didacticiel : configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle)
+# <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutoriel : configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 La réplication transactionnelle constitue une bonne solution au problème de transfert de données entre serveurs connectés en permanence. À l’aide de l’Assistant Réplication, vous pouvez aisément configurer et administrer une topologie de réplication. 
 
@@ -59,7 +59,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management S
 > - Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vous connecter au serveur de publication et à l’abonné à l’aide d’un identifiant de connexion membre du rôle serveur fixe **sysadmin**. Pour plus d’informations sur ce rôle, consultez [Rôles de niveau serveur](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
-**Durée estimée pour effectuer le didacticiel : 60 minutes**  
+**Durée estimée pour terminer ce didacticiel : 60 minutes**  
   
 ## <a name="configure-the-publisher-for-transactional-replication"></a>Configurer le serveur de publication pour la réplication transactionnelle
 Dans cette section, vous créez une publication transactionnelle en utilisant [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour publier un sous-ensemble filtré de la table **Product** de l’exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Vous ajoutez également à la liste d'accès à la publication (PAL) le compte de connexion SQL Server utilisée par l'Agent de distribution.
@@ -102,11 +102,11 @@ Dans cette section, vous créez une publication transactionnelle en utilisant [!
   
 10. Dans la page **Sécurité de l’agent**, décochez la case **Utiliser les paramètres de sécurité de l’Agent d’instantané**.   
   
-    Sélectionnez **Paramètres de sécurité** pour l'Agent d'instantané. Entrez <*nom_ordinateur_serveur_de_publication*>**\repl_snapshot** dans la zone **Compte de processus**, spécifiez le mot de passe du compte, puis sélectionnez **OK**.  
+    Sélectionnez **Paramètres de sécurité** pour l'Agent d'instantané. Entrez <*nom_ordinateur_serveur_de_publication*> **\repl_snapshot** dans la zone **Compte de processus**, spécifiez le mot de passe du compte, puis sélectionnez **OK**.  
 
     ![Page« Sécurité de l’agent » et boîte de dialogue « Sécurité de l’Agent d’instantané »](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
-12. Répétez l’étape précédente pour définir <*nom_ordinateur_serveur_de_publication*>**\repl_logreader** comme compte de processus de l’Agent de lecture du journal, puis sélectionnez **OK**.  
+12. Répétez l’étape précédente pour définir <*nom_ordinateur_serveur_de_publication*> **\repl_logreader** comme compte de processus de l’Agent de lecture du journal, puis sélectionnez **OK**.  
 
     ![Boîte de dialogue « Sécurité de l’Agent de lecture du journal » et page « Sécurité de l’Agent »](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
 
@@ -116,6 +116,8 @@ Dans cette section, vous créez une publication transactionnelle en utilisant [!
     ![Page « Terminer l’Assistant » avec le nom de la publication](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. Une fois la publication créée, sélectionnez **Fermer** pour terminer l’Assistant. 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Vous pouvez rencontrer l’erreur suivante si SQL Server Agent n’est pas en cours d’exécution quand vous essayez de créer la publication. Cette erreur indique que votre publication a été créée avec succès, mais que l’Agent d’instantané n’a pas pu démarrer. Dans ce cas, vous devez démarrer SQL Server Agent, puis démarrer manuellement l’Agent d’instantané. La section suivante fournit des instructions. 
 
@@ -146,7 +148,7 @@ Si une erreur apparaît ici, consultez [Résoudre les erreurs liées à l’Agen
 2. Dans le dossier **Publications locales**, cliquez avec le bouton droit sur **AdvWorksProductTrans**, puis sélectionnez **Propriétés**.  La boîte de dialogue **Propriétés de la publication** apparaît.    
   
    A. Sélectionnez la page **Liste d’accès à la publication**, puis sélectionnez **Ajouter**.  
-   B. Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez <*nom_ordinateur_serveur_de_publication*>**\repl_distribution** et sélectionnez **OK**.
+   B. Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez <*nom_ordinateur_serveur_de_publication*> **\repl_distribution** et sélectionnez **OK**.
    
    ![Sélections pour ajouter une connexion à la liste d'accès à la publication](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -182,7 +184,7 @@ Dans cette section, vous ajoutez un Abonné à la publication que vous avez cré
   
    ![Saisie du nom de la base de données d'abonnement](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. Dans la page **Sécurité de l’Agent de distribution**, sélectionnez le bouton représentant des points de suspension (**…**). Entrez <*nom_ordinateur_serveur_de_publication>*>**\repl_distribution** dans la zone **Compte de processus**, entrez le mot de passe du compte, sélectionnez **OK**, puis **Suivant**.
+8. Dans la page **Sécurité de l’Agent de distribution**, sélectionnez le bouton représentant des points de suspension ( **?** ). Entrez <*nom_ordinateur_serveur_de_publication>* > **\repl_distribution** dans la zone **Compte de processus**, entrez le mot de passe du compte, sélectionnez **OK**, puis **Suivant**.
 
    ![Informations sur le compte de distribution dans la boîte de dialogue « Sécurité de l'Agent de distribution »](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   
@@ -192,7 +194,7 @@ Dans cette section, vous ajoutez un Abonné à la publication que vous avez cré
   
 1. Connectez-vous à l’abonné dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Développez **Sécurité**, cliquez avec le bouton droit sur **Connexions**, puis sélectionnez **Nouvelle connexion**.     
   
-   A. Dans la page **Général**, sous **Nom de connexion**, sélectionnez **Rechercher**, puis ajoutez le nom de connexion pour <*nom_ordinateur_Abonné>*>**\repl_distribution**.
+   A. Dans la page **Général**, sous **Nom de connexion**, sélectionnez **Rechercher**, puis ajoutez le nom de connexion pour <*nom_ordinateur_Abonné>* > **\repl_distribution**.
 
    B. Dans la page **Mappages d’utilisateur**, accordez l’appartenance **db_owner** pour la base de données **ProductReplica**. 
 
@@ -226,7 +228,7 @@ Dans cette section, vous utilisez les jetons de suivi pour vérifier que les mod
   
    A. Sélectionnez l’onglet **Jetons de suivi**.  
    B. Sélectionnez **Insérer un suivi**.    
-   c. Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l’Abonné**, **Latence totale**. Une valeur **En attente** indique que le jeton n’a pas atteint un point spécifié.
+   c. Affichez la durée calendaire pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l’Abonné**, **Latence totale**. Une valeur **En attente** indique que le jeton n’a pas atteint un point spécifié.
 
    ![Informations pour le jeton de suivi](media/tutorial-replicating-data-between-continuously-connected-servers/tracertoken.png)
 
@@ -242,4 +244,4 @@ Vous avez correctement configuré votre serveur de publication et votre abonné 
 L’article suivant va vous apprendre à configurer la réplication de fusion :  
 
 > [!div class="nextstepaction"]
-> [Didacticiel : configurer la réplication entre un serveur et des clients mobiles (fusion)](tutorial-replicating-data-with-mobile-clients.md)
+> [Tutoriel : configurer la réplication entre un serveur et des clients mobiles (fusion)](tutorial-replicating-data-with-mobile-clients.md)

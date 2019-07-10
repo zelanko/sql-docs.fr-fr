@@ -11,14 +11,14 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 688a61aeecfb729eeee877e0f8d3e463eaff06c8
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: c00b9b2156848e45ce4f73429c8cf397f7d34fc2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159037"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584897"
 ---
-# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Leçon 2 : Créer et appliquer une stratégie de normes d'affectation de noms
+# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Leçon 2 : Créer et appliquer une stratégie de normes d’affectation de noms
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Certains types de stratégies de la Gestion basée sur des stratégies peuvent créer des déclencheurs afin d'appliquer la future conformité avec la stratégie. Dans cette leçon, vous allez créer une stratégie qui applique une norme d'affectation de noms pour des tables. Ensuite, vous allez tester la stratégie en essayant de créer une table qui enfreint la stratégie.  
 
@@ -40,6 +40,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d�
   
 2.  Dans l’Explorateur d’objets, cliquez sur **Bases de données**, puis appuyez sur la touche F5 pour actualiser la liste de bases de données.  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-the-finance-tables-condition"></a>Créer la condition Tables de finance 
 
@@ -49,7 +50,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d�
   
 2.  Dans la boîte de dialogue **Créer une nouvelle condition** , dans la zone **Nom** , tapez **Tables de finance**.  
     1. Dans la liste **Facette** , sélectionnez **Nom en plusieurs parties**. 
-    1. Dans la boîte de dialogue **Expression**, dans la zone **Champ**, sélectionnez **@Name**, dans la zone **Opérateur**, sélectionnez **Comme** et dans la zone **Valeur**, tapez ```'fintbl%'``` pour forcer tous les noms de tables à commencer par les lettres **fintbl**.
+    1. Dans la boîte de dialogue **Expression**, dans la zone **Champ**, sélectionnez **@Name** , dans la zone **Opérateur**, sélectionnez **Comme** et dans la zone **Valeur**, tapez ```'fintbl%'``` pour forcer tous les noms de tables à commencer par les lettres **fintbl**.
     1. Dans la page **Description** , tapez **Les noms des tables de finance doivent commencer par fintbl**, puis cliquez sur **OK** pour créer la condition.  
 
     ![Condition Tables de finance](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)
@@ -156,9 +157,9 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d�
 Ce didacticiel vous a montré comment créer des conditions, des stratégies et des groupes de stratégies de la Gestion basée sur des stratégies et comment appliquer des filtres et vérifier la conformité des cibles de la Gestion basée sur des stratégies.  
   
 ## <a name="next"></a>Suivant  
-Ce didacticiel est terminé. Pour revenir au début, visitez [Tutoriel : Administration de serveurs à l’aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md).  
+Ce didacticiel est terminé. Pour revenir au début, visitez [Didacticiel : Administration de serveurs à l’aide de la gestion basée sur des stratégies](../../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md).  
   
 Pour obtenir la liste des didacticiels, consultez [Didacticiels pour SQL Server 2016](../../sql-server/tutorials-for-sql-server-2016.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

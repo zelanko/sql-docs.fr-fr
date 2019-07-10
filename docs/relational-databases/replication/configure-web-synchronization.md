@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 674a785d0e5d3dd6b847c8f26701ad0ce48e2d20
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135579"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582522"
 ---
 # <a name="configure-web-synchronization"></a>Configurer la synchronisation Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,11 @@ ms.locfileid: "54135579"
 3.  Configurez une publication de fusion pour autoriser la synchronisation Web.  
   
 4.  Configurez un ou plusieurs abonnements de sorte qu'ils utilisent la synchronisation Web.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
->  Si vous envisagez de répliquer d'importants volumes de données ou d'utiliser des types de données volumineuses, tels que **varchar(max)**, lisez la section « Réplication d'importants volumes de données » dans cette rubrique.  
+>  Si vous envisagez de répliquer d'importants volumes de données ou d'utiliser des types de données volumineuses, tels que **varchar(max)** , lisez la section « Réplication d'importants volumes de données » dans cette rubrique.  
   
  Pour configurer correctement la synchronisation Web, vous devez décider comment configurer la sécurité pour répondre à vos besoins et stratégies spécifiques. Il est préférable de prendre ces décisions et de créer les comptes nécessaires avant d'essayer de configurer IIS, la publication et les abonnements.  
   
@@ -100,7 +102,7 @@ ms.locfileid: "54135579"
   
 #### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>Pour augmenter le nombre maximal de processus de travail dans IIS 7  
   
-1.  Dans **Gestionnaire des services Internet (IIS)**, développez le nœud du serveur local, puis cliquez sur le nœud **Pool d'applications** .  
+1.  Dans **Gestionnaire des services Internet (IIS)** , développez le nœud du serveur local, puis cliquez sur le nœud **Pool d'applications** .  
   
 2.  Sélectionnez le pool d'applications associé au site de synchronisation Web, puis cliquez sur **Paramètres avancés** dans le volet **Actions** .  
   
@@ -132,11 +134,11 @@ ms.locfileid: "54135579"
   
  La taille maximale du fichier XML est de 4 Go, mais la réplication synchronise les modifications de ce fichier dans des lots. La taille maximale des lots de données et de métadonnées est de 25 Mo. Vous devez vous assurer que le volume de données de chaque lot ne dépasse pas approximativement 20 Mo, ce qui permet de prendre en charge les métadonnées et toute surcharge additionnelle. Cette limite a les conséquences suivantes :  
   
--   Vous ne pouvez pas répliquer une colonne qui générerait un volume de données et de métadonnées supérieur à 25 Mo. Cela peut être un problème lors de la réplication de lignes contenant des types de données volumineuses, tels que **varchar(max)**.  
+-   Vous ne pouvez pas répliquer une colonne qui générerait un volume de données et de métadonnées supérieur à 25 Mo. Cela peut être un problème lors de la réplication de lignes contenant des types de données volumineuses, tels que **varchar(max)** .  
   
 -   Si vous répliquez d'importants volumes de données, vous pouvez être amené à ajuster la taille de lot de l'Agent de fusion.  
   
- La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide des paramètres –**DownloadGenerationsPerBatch** et –**UploadGenerationsPerBatch** de l’Agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ La taille de lot pour la réplication de fusion est mesurée en *générations*, lesquelles sont des collections de modifications par article. Le nombre de générations dans un lot est spécifié à l’aide des paramètres -**DownloadGenerationsPerBatch** et -**UploadGenerationsPerBatch** de l’Agent de fusion. Pour plus d’informations, voir [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Pour d'importants volumes de données, spécifiez un petit nombre pour chaque paramètre de traitement par lot. Nous vous recommandons de commencer avec une valeur de 10, puis d'ajuster cette valeur selon les besoins et les performances des applications. En général, ces paramètres sont spécifiés dans un profil d'agent. Pour plus d'informations sur ces profils, consultez [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -175,7 +177,7 @@ ms.locfileid: "54135579"
 > [!IMPORTANT]  
 >  L'ouverture de ports dans votre pare-feu peut exposer votre serveur à des attaques malveillantes. Assurez-vous de comprendre le fonctionnement des systèmes de pare-feu avant d'ouvrir des ports. Pour plus d'informations, consultez [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Synchronisation web pour la réplication de fusion](../../relational-databases/replication/web-synchronization-for-merge-replication.md)  
   
   

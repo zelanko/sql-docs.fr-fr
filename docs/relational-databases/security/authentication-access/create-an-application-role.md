@@ -16,12 +16,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 70f74f1b098c53c864fb2bf20889b43541d70846
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0ed869ccfbeb745229ce1bbf2780ce6beb7e12e2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539730"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579883"
 ---
 # <a name="create-an-application-role"></a>Créer un rôle d'application
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52539730"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER ANY APPLICATION ROLE sur la base de données.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -59,7 +59,7 @@ ms.locfileid: "52539730"
   
 3.  Développez le dossier **Rôles** .  
   
-4.  Cliquez avec le bouton droit sur le dossier **Rôles d’application** et sélectionnez **Nouveau rôle d’application...**.  
+4.  Cliquez avec le bouton droit sur le dossier **Rôles d’application** et sélectionnez **Nouveau rôle d’application...** .  
   
 5.  Dans la boîte de dialogue **Rôle d’application - Nouveau**, dans la **page Général**, entrez le nouveau nom du nouveau rôle d’application dans la zone **Nom du rôle**.  
   
@@ -70,9 +70,11 @@ ms.locfileid: "52539730"
 8.  Sous **Schémas appartenant à ce rôle**, sélectionnez ou affichez les schémas qui appartiendront à ce rôle. Un schéma ne peut appartenir qu'à un seul schéma ou rôle.  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="additional-options"></a>Options supplémentaires  
- La boîte de dialogue **Rôle d’application - Nouveau** offre également des options dans deux pages supplémentaires : **Éléments sécurisables** et **Propriétés étendues**.  
+ La boîte de dialogue **Rôle d'application - Nouveau** offre également des options sur deux pages supplémentaires : **Sécurisables** et **Propriétés étendues**.  
   
 -   La page **Éléments sécurisables** répertorie tous les éléments sécurisables possibles et les autorisations sur ces éléments sécurisables qui peuvent être accordées à la connexion.  
   

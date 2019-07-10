@@ -1,7 +1,7 @@
 ---
 title: Analyse des performances à l’aide du Magasin des requêtes | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92752fa479852c2f0c17ded6fa2a047cfcff5dcb
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: e407b4ae2a9be3b4a2d3c2671c59548db94916de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356472"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581401"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>Surveillance des performances à l’aide du magasin de requêtes
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,10 +45,12 @@ ms.locfileid: "58356472"
 2.  Dans la boîte de dialogue **Propriétés de la base de données** , sélectionnez la page **Magasin de requêtes** .  
   
 3.  Dans la zone **Mode d’opération (demandé)** , sélectionnez **Lecture Écriture**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="use-transact-sql-statements"></a>Utilisation d’instructions Transact-SQL  
   
-Utilisez l’instruction **ALTER DATABASE** pour activer le magasin de requêtes. Exemple :  
+Utilisez l’instruction **ALTER DATABASE** pour activer le magasin de requêtes. Par exemple :  
   
 ```sql  
 ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE); 
@@ -571,7 +573,7 @@ Pour les requêtes exécutées plusieurs fois, vous pouvez remarquer que [!INCLU
   
 Vous pouvez également identifier les performances de requêtes incohérentes avec des paramètres (définis manuellement ou automatiquement). Parmi les différents plans, vous pouvez identifier le plan qui est suffisamment rapide et optimal pour la totalité ou la plupart des valeurs de paramètre et forcer ce plan, en maintenant ainsi des performances prévisibles pour un ensemble plus large de scénarios utilisateur.  
   
- ### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Forcer un plan pour une requête (appliquer une stratégie de forçage)
+### <a name="force-a-plan-for-a-query-apply-forcing-policy"></a>Forcer un plan pour une requête (appliquer une stratégie de forçage)
 
 Quand un plan est forcé pour une requête donnée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de forcer le plan dans l’optimiseur. Si le forçage de plan échoue, un XEvent est déclenché et l’optimiseur est tenu d’optimiser de façon normale.
 
@@ -580,7 +582,11 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```  
   
 Quand vous utilisez **sp_query_store_force_plan** , vous pouvez uniquement forcer des plans qui ont été enregistrés par le magasin de requêtes en tant que plan pour cette requête. En d'autres termes, les plans disponibles pour une requête sont uniquement ceux qui ont déjà été utilisés pour exécuter cette requête lorsque le magasin de requêtes était actif.  
+
+#### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23"><a/> Considérer l’application forcée du support de l’avance rapide et des curseurs statiques
   
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] Le Magasin des requêtes CTP 2.3 prend en charge la capacité de forcer des plans d’exécution de requêtes pour l’avance rapide et les curseurs T-SQL et d’API statiques. Ce forçage est à présent pris en charge par le biais de `sp_query_store_force_plan` ou des rapports du Magasin des requêtes SQL Server Management Studio.
+
 ### <a name="remove-plan-forcing-for-a-query"></a>Annuler l’application forcée du plan pour une requête
 
 Pour vous appuyer à nouveau sur l’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour calculer le plan de requête optimal, utilisez **sp_query_store_unforce_plan** pour annuler l’application forcée du plan qui était sélectionné pour la requête.  
@@ -588,8 +594,10 @@ Pour vous appuyer à nouveau sur l’optimiseur de requête [!INCLUDE[ssNoVersio
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
-  
-## <a name="see-also"></a> Voir aussi  
+
+
+
+## <a name="see-also"></a>Voir aussi  
  [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Utilisation du Magasin des requêtes avec l’OLTP en mémoire](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)   
  [Scénarios d’utilisation du Magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md)   

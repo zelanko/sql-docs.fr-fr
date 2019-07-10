@@ -15,12 +15,12 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0b9a3f872a87695da3e6c57ad90012cfe1307109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a5aced367f3b046473887999ff8e72b24ff8156
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047337"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580458"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Résolution de conflit pour la réplication de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "63047337"
   
     -   Sélectionner une ou plusieurs lignes dans la grille supérieure puis cliquer sur **Supprimer**, ce qui équivaut à cliquer sur le bouton **Soumettre le gagnant** (sans modifier les données).  
   
-    -   Cliquer sur le bouton des propriétés ( **…** ) pour afficher des informations plus détaillées sur une colonne concernée par un conflit.  
+    -   Cliquez sur le bouton des propriétés ( **?** ) pour afficher plus d’informations sur une colonne concernée par un conflit.  
   
     -   Modifier des données dans la colonne **Gagnant du conflit** ou **Perdant du conflit** avant de soumettre les données (les données sont en lecture seule si la colonne est grisée).  
   
@@ -74,8 +74,8 @@ ms.locfileid: "63047337"
   
 6.  Fermer la Visionneuse des conflits de réplication.  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-  
 ## <a name="view-conflict-information"></a>Afficher les informations de conflit
 Lorsqu'un conflit est résolu dans une réplication de fusion, les données de la ligne perdante sont écrites dans une table de conflits. Ces données peuvent être affichées par programme en utilisant des procédures stockées de réplication. Pour plus d’informations, consultez [Détection et résolution avancées des conflits de réplication de fusion](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   

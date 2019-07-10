@@ -25,12 +25,12 @@ ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 85db3bb859a84ed9821f81186b311baf591583e0
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 433f0bac60d3643c56b37cdd6d2750952d9836b2
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802673"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492789"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "56802673"
 
 Exécute des opérations d'insertion, de mise à jour ou de suppression sur une table cible à partir des résultats d'une jointure avec une table source. Par exemple, synchronisez deux tables en insérant, mettant à jour ou supprimant des lignes dans une seule table selon les différences trouvées dans l'autre table.  
   
-**Conseil relatif aux performances :** Le comportement conditionnel décrit pour l'instruction MERGE fonctionne mieux lorsque les deux tables ont un mélange complexe de caractéristiques correspondantes. Par exemple, l'insertion d'une ligne si elle n'existe pas ou la mise à jour d’une ligne si elle correspond. Vous pouvez améliorer les performances et l'extensibilité lors d'une simple mise à jour d'une table basée sur les lignes d'une autre table en utilisant les instructions INSERT, UPDATE et DELETE. Exemple :  
+**Conseil relatif aux performances :** Le comportement conditionnel décrit pour l'instruction MERGE fonctionne mieux lorsque les deux tables ont un mélange complexe de caractéristiques correspondantes. Par exemple, l'insertion d'une ligne si elle n'existe pas ou la mise à jour d’une ligne si elle correspond. Vous pouvez améliorer les performances et l'extensibilité lors d'une simple mise à jour d'une table basée sur les lignes d'une autre table en utilisant les instructions INSERT, UPDATE et DELETE. Par exemple :  
   
 ```  
 INSERT tbl_A (col, col2)  
@@ -285,7 +285,7 @@ Spécifie les conditions de recherche utilisées pour spécifier \<merge_search_
 \<graph search pattern>  
 Spécifie le modèle de correspondance de graphe. Pour plus d’informations sur les arguments de cette clause, consultez [MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md).
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Au moins l'une des trois clauses MATCHED doit être spécifiée, mais cela peut être dans n'importe quel ordre. Une variable ne peut pas être mise à jour plus d'une fois dans la même clause MATCHED.  
   
 Toute opération d'insertion, de mise à jour ou de suppression spécifiée sur la table cible par l'instruction MERGE est limitée par toutes contraintes qui s'appliquent à elle, notamment les contraintes d'intégrité référentielle en cascade. Si IGNORE_DUP_KEY a la valeur ON pour un index unique sur la table cible, MERGE ignore ce paramètre.  
@@ -307,7 +307,7 @@ Si des déclencheurs INSTEAD OF UPDATE ou INSTEAD OF DELETE sont définis sur *t
   
 Si des déclencheurs INSTEAD OF INSERT sont définis sur *target_table*, l’opération INSERT n’est pas effectuée. Au lieu de cela, la table est remplie en conséquence.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l'autorisation SELECT sur la table source et les autorisations INSERT, UPDATE ou DELETE sur la table cible. Pour plus d’informations, consultez la section Autorisations dans les articles [SELECT](../../t-sql/queries/select-transact-sql.md), [INSERT](../../t-sql/statements/insert-transact-sql.md), [UPDATE](../../t-sql/queries/update-transact-sql.md) et [DELETE](../../t-sql/statements/delete-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
@@ -366,9 +366,9 @@ BEGIN
     ON (target.UnitMeasureCode = source.UnitMeasureCode)  
     WHEN MATCHED THEN   
         UPDATE SET Name = source.Name  
-WHEN NOT MATCHED THEN  
-    INSERT (UnitMeasureCode, Name)  
-    VALUES (source.UnitMeasureCode, source.Name)  
+    WHEN NOT MATCHED THEN  
+        INSERT (UnitMeasureCode, Name)  
+        VALUES (source.UnitMeasureCode, source.Name)  
     OUTPUT deleted.*, $action, inserted.* INTO #MyTempTable;  
 END;  
 GO  
@@ -384,7 +384,7 @@ DROP TABLE #MyTempTable;
 GO  
 ```  
   
-### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>b. Utilisation de MERGE pour effectuer des opérations UPDATE et DELETE sur une table dans une instruction unique  
+### <a name="b-using-merge-to-do-update-and-delete-operations-on-a-table-in-a-single-statement"></a>B. Utilisation de MERGE pour effectuer des opérations UPDATE et DELETE sur une table dans une instruction unique  
 L'exemple suivant utilise la clause MERGE pour mettre quotidiennement à jour la table `ProductInventory` dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)], selon les commandes traitées dans la table `SalesOrderDetail`. La colonne `Quantity` de la table `ProductInventory` est mise à jour en soustrayant le nombre de commandes passées chaque jour pour chaque produit dans la table `SalesOrderDetail`. Si le nombre de commandes concernant un produit est tel que le stock de ce produit tombe à 0 ou en dessous de cette valeur, la ligne correspondant à ce produit est supprimée de la table `ProductInventory`.  
   
 ```sql  
@@ -541,7 +541,7 @@ WHERE MATCH(Person-(livesIn)->city)
 GO
 ```
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
 [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

@@ -1,9 +1,9 @@
 ---
 title: Sécurité au niveau des lignes | Microsoft Docs
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 05/14/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
@@ -18,12 +18,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ba5cddf682ba9e3f9dfa6e5ef9b44ce7f9e5f4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de58a5d37bae0f589cae0c56dba21370923aa850
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140602"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559452"
 ---
 # <a name="row-level-security"></a>Sécurité au niveau des lignes
 
@@ -38,8 +38,8 @@ La sécurité au niveau des lignes simplifie la conception et codage de la sécu
 La logique de la restriction d'accès est située dans la couche de base de données plutôt que loin des données d'une autre couche Application. Le système de base de données applique les restrictions d'accès chaque fois que cet accès aux données est tenté à partir d'une couche quelconque. Votre système de sécurité est ainsi rendu plus fiable et plus robuste, grâce à une réduction de sa surface d'exposition.  
   
 Implémentez une sécurité au niveau des lignes à l’aide de l’instruction [CREATE SECURITY POLICY](../../t-sql/statements/create-security-policy-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)], et de prédicats créés en tant que [fonctions table inline](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
-  
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenez-le](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([Obtenez-le](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)), [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
   
 > [!NOTE]
 > Azure SQL Data Warehouse prend en charge uniquement des prédicats de filtre. Les prédicats BLOCK ne sont actuellement pas pris en charge dans Azure SQL Data Warehouse.
@@ -422,7 +422,7 @@ DROP LOGIN Manager;
 ### <a name="MidTier"></a> C. Scénario pour les utilisateurs qui se connectent à la base de données via une application intermédiaire
 
 > [!NOTE]
-> Cet exemple n’est pas applicable à Azure SQL Data Warehouse dans la mesure où les prédicats BLOCK et SESSION_CONTEXT ne sont pas actuellement pris en charge.
+> Dans cet exemple la fonctionnalité Prédicats BLOCK n’est pas actuellement prise en charge pour Azure SQL Data Warehouse, par conséquent, l’insertion de lignes pour le mauvais identificateur d'utilisateur n’est pas bloquée avec Azure SQL Data Warehouse.
 
 Cet exemple montre comment une application de couche intermédiaire peut implémenter le filtrage des connexions, lorsque les utilisateurs (ou locataires) d'application partagent le même utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (l'application). L’application définit l’ID d’utilisateur d’application actuel dans [SESSION_CONTEXT &#40;Transact-SQL&#41;](../../t-sql/functions/session-context-transact-sql.md) après la connexion à la base de données, puis les stratégies de sécurité filtrent en toute transparence les lignes qui ne devraient pas être visibles par cet ID, et empêchent l’utilisateur d’insérer des lignes pour l’ID d’utilisateur incorrect. Aucune autre modification de l'application n'est nécessaire.  
   

@@ -24,12 +24,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 768ffcece8525d36eb7ab3576f28596430941caa
-ms.sourcegitcommit: 3a1e0b92cbe53ccf3b233faf8629d16bbf673b30
+ms.openlocfilehash: a34c21deff4314747f1477efeb3f20991d311fb5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55229040"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585028"
 ---
 # <a name="statistics"></a>Statistiques
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +112,7 @@ ORDER BY s.name;
     * Si la cardinalité de la table affichait une valeur de 500 ou moins au moment de l’évaluation des statistiques, une mise à jour est effectuée toutes les 500 modifications.
     * Si la cardinalité de la table affichait une valeur supérieure à 500 au moment de l’évaluation des statistiques, une mise à jour est effectuée toutes les 500 modifications + 20 %.
 
-* À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et avec un [niveau de compatibilité de base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) de 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un seuil dynamique décroissant de mise à jour des statistiques qui s’ajuste en fonction du nombre de lignes contenues de la table. Il est obtenu en calculant la racine carrée du produit de 1 000 et de la cardinalité de la table actuelle. Par exemple, si votre table contient 2 millions de lignes, le calcul est le suivant : sqrt (1000 * 2000000) = 44721,359. Du fait de cette modification, les statistiques sur des tables volumineuses sont mises à jour plus fréquemment. Toutefois, si une base de données affiche un niveau de compatibilité inférieur à 130, le seuil [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] s’applique.  
+* À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et avec un [niveau de compatibilité de base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) de 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un seuil dynamique décroissant de mise à jour des statistiques qui s’ajuste en fonction du nombre de lignes contenues de la table. Il est obtenu en calculant la racine carrée du produit de 1 000 et de la cardinalité de la table actuelle. Par exemple, si votre table contient 2 millions de lignes, le calcul est le suivant : sqrt (1 000 * 2 000 000) = 44 721,359. Du fait de cette modification, les statistiques sur des tables volumineuses sont mises à jour plus fréquemment. Toutefois, si une base de données affiche un niveau de compatibilité inférieur à 130, le seuil [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] s’applique. ?
 
 > [!IMPORTANT]
 > À compter de [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] jusqu’à [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], ou dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et avec un [niveau de compatibilité de base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) inférieur à 130, utilisez [l’indicateur de suivi 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) pour que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise un seuil dynamique décroissant de mise à jour des statistiques qui s’ajuste en fonction du nombre de lignes de la table.
@@ -162,7 +162,9 @@ Pour plus d’informations sur le contrôle de AUTO_UPDATE_STATISTICS, voir [Con
 1.  L'optimiseur de requête crée des statistiques pour les index de tables ou de vues lors de la création des index. Ces statistiques sont créées sur les colonnes de clés de l'index. Si l'index est un index filtré, l'optimiseur de requête crée des statistiques filtrées sur le même sous-ensemble de lignes spécifié pour l'index filtré. Pour plus d’informations sur les index filtrés, consultez [Créer des index filtrés](../../relational-databases/indexes/create-filtered-indexes.md) et [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 2.  L’optimiseur de requête crée des statistiques pour les colonnes individuelles des prédicats de requête quand l’option [AUTO_CREATE_STATISTICS](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_create_statistics) est activée.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Pour la plupart des requêtes, ces deux méthodes de création de statistiques sont l’assurance de disposer d’un plan de requête de haute qualité. Dans certains cas, vous pouvez améliorer les plans de requête en créant des statistiques supplémentaires à l’aide de l’instruction [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) . Ces statistiques supplémentaires peuvent capturer des corrélations statistiques dont l'optimiseur de requête ne tient pas compte lorsqu'il crée des statistiques pour des index ou des colonnes uniques. Il se peut que votre application présente des corrélations statistiques supplémentaires dans les données de table qui, si elles sont calculées dans un objet de statistiques, peuvent permettre à l'optimiseur de requête d'améliorer les plans de requête. Par exemple, les statistiques filtrées sur un sous-ensemble de lignes de données ou les statistiques multicolonnes sur des colonnes de prédicat de requête sont susceptibles d'améliorer le plan de requête.  
   
 Dans le cadre de la création de statistiques à l'aide de l'instruction CREATE STATISTICS, nous vous recommandons de maintenir l'option AUTO_CREATE_STATISTICS activée de sorte que l'optimiseur de requête continue de créer de manière régulière des statistiques de colonne unique pour les colonnes de prédicat de requête. Pour plus d’informations sur les prédicats de requête, consultez [Condition de recherche &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md).  
@@ -236,7 +238,7 @@ Lorsque les statistiques sur une base de données en lecture seule ou un instant
 Seul [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer et mettre à jour les statistiques temporaires. Toutefois, vous pouvez supprimer des statistiques temporaires et analyser les propriétés des statistiques en utilisant les mêmes outils que ceux que vous utilisez pour les statistiques permanentes :  
   
 * Supprimez les statistiques temporaires en utilisant l’instruction [DROP STATISTICS](../../t-sql/statements/drop-statistics-transact-sql.md).  
-* Surveillez les statistiques en utilisant les vues du catalogue **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** et **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)**. **sys_stats** inclut la colonne **is_temporary** pour indiquer les statistiques permanentes et temporaires.  
+* Surveillez les statistiques en utilisant les vues du catalogue **[sys.stats](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md)** et **[sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md)** . **sys_stats** inclut la colonne **is_temporary** pour indiquer les statistiques permanentes et temporaires.  
   
  Étant donné que les statistiques temporaires sont stockées dans **tempdb**, un redémarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provoque la disparition de toutes les statistiques temporaires.  
     
@@ -373,7 +375,7 @@ GO
  Pour certaines applications, les recommandations en matière de conception de requêtes peuvent ne pas s'appliquer, soit parce que vous ne pouvez pas modifier la requête, soit parce que l'utilisation de l'indicateur de requête RECOMPILE peut entraîner un nombre trop important de recompilations. Vous pouvez utiliser des repères de plan pour spécifier d'autres indicateurs, tels que USE PLAN, dans le but de contrôler le comportement de la requête, en attendant de trouver une solution avec l'éditeur de l'application. Pour plus d'informations sur les repères de plan, consultez [Plan Guides](../../relational-databases/performance/plan-guides.md).  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)   
  [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)   

@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff3494a9983104c958dbd1f3e0ac7b74598f2dcb
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: b8cd9f4e066096bcffa5181e112710fb1c4e2d17
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343918"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583220"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Index columnstore - Performances des requêtes
 
@@ -57,7 +57,7 @@ ms.locfileid: "67343918"
     
 -   Les index columnstore lisent les données compressées directement sur le disque, ce qui réduit le nombre d’octets de données à lire en mémoire.    
     
--   Les index columnstore stockent les données dans un format compressé en mémoire. Cela réduit le nombre de lectures en mémoire de données identiques et, au final, le nombre d’E/S. Par exemple, avec une compression dix fois plus élevée, les index columnstore peuvent conserver dix fois plus de données en mémoire que si les données étaient stockées dans un format non compressé. Du fait qu’il y ait davantage de données en mémoire, l’index columnstore a plus de chances de trouver les données qu’il recherche dans la mémoire en entraînant des lectures supplémentaires sur le disque.    
+-   Les index columnstore stockent les données dans un format compressé en mémoire. Cela réduit le nombre de lectures en mémoire de données identiques et, au final, le nombre d’E/S. Par exemple, avec une compression dix fois plus élevée, les index columnstore peuvent conserver dix fois plus de données en mémoire que si les données étaient stockées dans un format non compressé. Du fait qu’il y ait davantage de données en mémoire, l’index columnstore a plus de chances de trouver les données dont il a besoin dans la mémoire sans entraîner des lectures supplémentaires sur le disque.    
     
 -   Les index columnstore compressent les données par colonne plutôt que par ligne. C’est ce qui permet d’atteindre des taux de compression élevés et de diminuer le volume des données stockées sur le disque. Chaque colonne est compressée et stockée séparément.  Les données d’une colonne ont toujours le même type et ont souvent des valeurs similaires. Les méthodes de compression de données offrent des taux de compression particulièrement élevés en présence de valeurs similaires.    
     
@@ -92,7 +92,7 @@ ms.locfileid: "67343918"
     
  Il n’est pas possible d’exécuter tous les opérateurs d’exécution de requête en mode batch. Par exemple, les opérations DML comme Insert, Delete ou Update sont exécutées ligne par ligne. Les opérateurs en mode batch ciblent les opérateurs tels que Scan, Join, Aggregate, Sort, etc. pour améliorer la vitesse de traitement des requêtes. Depuis l’introduction de l’index columnstore dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], nous nous efforçons d’étendre la prise en charge d’opérateurs exécutables en mode batch. Le tableau ci-dessous répertorie les opérateurs exécutables en mode batch pour chaque version du produit.    
     
-|Opérateurs en mode batch|Contexte d’utilisation|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]¹|Commentaires|    
+|Opérateurs en mode batch|Contexte d’utilisation|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]?|Commentaires|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |Opérations DML (insert, delete, update, merge)||non|non|non|DML n’est pas une opération en mode batch, car elle n’est pas effectuée en parallèle. Même si nous rendons possible le traitement batch en mode série, l’ajout du traitement des opérations DML en mode batch n’offre pas d’avantages significatifs.|    
 |Columnstore Index Scan|SCAN|N/A|oui|oui|Pour les index columnstore, nous pouvons transmettre le prédicat en mode Push vers le nœud SCAN.|    
@@ -111,7 +111,7 @@ ms.locfileid: "67343918"
 |Top Sort||non|non|oui||    
 |Window Aggregates||N/A|N/A|oui|Nouvel opérateur dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
- ¹S’applique à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], aux niveaux Premium, aux niveaux Standard (S3 et ultérieur) et à tous les niveaux vCore [!INCLUDE[ssSDS](../../includes/sssds-md.md)], ainsi qu’à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
+ ?S’applique à [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], aux niveaux Premium [!INCLUDE[ssSDS](../../includes/sssds-md.md)], aux niveaux Standard (S3 et ultérieur) et à tous les niveaux vCore, ainsi qu’à [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]    
     
 ### <a name="aggregate-pushdown"></a>Agrégation en mode Push    
  Chemin d’exécution standard utilisé pour le calcul d’agrégation qui récupère les lignes qualifiées du nœud SCAN et agrège les valeurs en mode batch. Cette méthode offre de bonnes performances, mais dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], l’opération d’agrégation peut être transmise en mode Push vers le nœud SCAN pour améliorer les performances de calcul d’agrégation par ordre de grandeur avec l’exécution en mode batch. Cela est possible si les conditions suivantes sont remplies : 
@@ -146,7 +146,7 @@ Quand vous créez un schéma d’entrepôt de données, le modèle de schéma re
     
 Par exemple, un fait est un enregistrement représentant la vente d’un produit particulier dans une région spécifique, tandis que la dimension représente un ensemble de régions, produits, etc. Les tables de faits et de dimension sont associées par une relation de clé primaire/étrangère. Les requêtes analytiques les plus courantes associent une ou plusieurs tables de dimensions avec la table de faits.    
     
-Prenons l’exemple d’une table de dimension `Products`. `ProductCode` est une clé primaire classique qui est généralement représentée par un type de données string. Pour améliorer les performances des requêtes, il est recommandé de créer une clé de substitution, généralement une colonne de type integer, pour faire référence à la ligne dans la table de dimension à partir de la table de faits.    
+Prenons l’exemple d’une table de dimension `Products`. `ProductCode` est une clé primaire classique qui est généralement représentée par un type de données string. Pour améliorer les performances des requêtes, il est recommandé de créer une clé de substitution, généralement une colonne de type integer, pour faire référence à la ligne dans la table de dimension à partir de la table de faits. ? ?
     
 L’index columnstore offre de très bonnes performances pour l’exécution de requêtes analytiques avec des jointures/prédicats impliquant des clés numériques ou entières. Toutefois, pour beaucoup de charges de travail client, l’utilisation de colonnes de type string associant des tables de faits/dimension, les performances de requête avec l’index columnstore n’étaient pas aussi bonnes. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] améliore considérablement les performances des requêtes analytiques sur des colonnes de type string en transmettant en mode Push les prédicats avec les colonnes string vers le nœud SCAN.    
     
@@ -155,6 +155,9 @@ Pour améliorer les performances de requête, la transmission Push des prédicat
 Avec la transmission Push des prédicats de type string, la requête calcule le prédicat d’après les valeurs dans le dictionnaire et, en cas d’éligibilité, toutes les lignes faisant référence à la valeur de dictionnaire sont automatiquement qualifiées. Cela améliore les performances de deux manières :
 1.  Seule la ligne qualifiée est renvoyée, ce qui réduit le nombre de lignes à transmettre à partir du nœud SCAN. 
 2.  Le nombre de comparaisons de chaînes s’en trouve considérablement réduit. Dans cet exemple, seulement 100 chaînes doivent être comparées au lieu d’un million. Les limitations suivantes s’appliquent :    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   Il n’y a pas de transmission Push des prédicats de type string pour les rowgroups delta. Il n’existe pas de dictionnaire pour les colonnes des rowgroups delta.    
     -   Il n’y a pas de transmission Push des prédicats de type string si le dictionnaire dépasse la taille de 64 Ko.    
     -   Les expressions ayant pour résultat une valeur NULL ne sont pas prises en charge.    

@@ -12,12 +12,12 @@ ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 3a6e9206bb252d90a9bca498ffdc27ce507556c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 626d188dca3a013cba246f54523aa4fe9532815d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776014"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581215"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Résoudre les problèmes de connectivité de PolyBase Kerberos
 
@@ -31,6 +31,8 @@ Cet article sert de guide tout le long du processus de débogage de tels problè
 
 1. SQL Server 2016 RTM mise à jour cumulative 6 / SQL Server 2016 SP1 mise à jour cumulative 3 / SQL Server 2017 ou version ultérieure avec PolyBase installé
 1. Un cluster Hadoop (Cloudera ou Hortonworks) sécurisé avec Kerberos (Active Directory ou MIT)
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="introduction"></a>Introduction
 
@@ -246,7 +248,7 @@ Si vous rencontrez toujours des problèmes d’accès à Kerberos, suivez les é
 
      Dans l’exemple ci-dessus, `admin_user` inclut uniquement le nom d’utilisateur, mais aucune partie relative au domaine.
 
-2. Si vous ne pouvez pas accéder aux données HDFS Kerberos en dehors de PolyBase :
+2. Si vous ne pouvez pas accéder aux données HDFS Kerberos depuis l’extérieur de PolyBase :
     - Il existe deux types d’authentification Kerberos : l’authentification Kerberos Active Directory et l’authentification Kerberos MIT.
     - Vérifiez que l’utilisateur existe dans le compte de domaine et utilisez le même compte d’utilisateur lors de la tentative d’accès à HDFS.
 

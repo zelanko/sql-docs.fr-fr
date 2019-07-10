@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 6a3f6ccaf2da262033a291d300fc66c02ca35e78
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419169"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580708"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,13 +84,15 @@ Pour mettre à jour correctement la colonne, effectuez les étapes suivantes :
 1. Sélectionnez les données de la colonne SSN et stockez-les comme jeu de résultats dans l’application. Cela permettra à l’application (*pilote* client) de déchiffrer la colonne.
 2. Insérez les données du jeu de résultats dans SQL Server. 
 
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  >[!IMPORTANT]
  > Dans ce scénario, les données sont non chiffrées quand elles sont renvoyées au serveur, car la colonne de destination est un type varchar standard qui n’accepte pas les données chiffrées. 
   
 ## <a name="selecting--deterministic-or-randomized-encryption"></a>Sélection d’un chiffrement déterministe ou aléatoire  
  Le moteur de base de données n’opère jamais sur des données en texte clair stockées dans des colonnes chiffrées, mais il prend quand même en charge les requêtes sur des données chiffrées, en fonction du type de chiffrement de la colonne. Always Encrypted prend en charge deux types de chiffrement : le chiffrement aléatoire et le chiffrement déterministe.  
   
-- Le chiffrement déterministe génère toujours la même valeur chiffrée pour une valeur en texte clair donnée. Le chiffrement déterministe permet d’effectuer des recherches de point, des jointures d’égalité, ainsi que des regroupements et une indexation sur les colonnes chiffrées. Toutefois, il peut également permettre aux utilisateurs non autorisés de deviner des informations sur les valeurs chiffrées en examinant les modèles dans la colonne chiffrée, en particulier s’il existe un petit ensemble de valeurs chiffrées possibles, telles que True/False, ou la région Nord/Sud/Est/Ouest. Le chiffrement déterministe doit utiliser un classement de colonne avec un ordre de tri binaire 2 pour les colonnes de type caractère.
+- Le chiffrement déterministe génère toujours la même valeur chiffrée pour une valeur en texte clair donnée. Le chiffrement déterministe permet d’effectuer des recherches de point, des jointures d’égalité, ainsi que des regroupements et une indexation sur les colonnes chiffrées. Toutefois, il peut également permettre aux utilisateurs non autorisés de deviner des informations sur des valeurs chiffrées en examinant les modèles dans la colonne chiffrée, en particulier s’il existe un petit ensemble de valeurs chiffrées possibles, telles que Vrai/Faux ou la région Nord/Sud/Est/Ouest. Le chiffrement déterministe doit utiliser un classement de colonne avec un ordre de tri binaire 2 pour les colonnes de type caractère.
 
 - Le chiffrement aléatoire utilise une méthode qui chiffre les données de manière moins prévisible. Le chiffrement aléatoire est plus sécurisé, mais il empêche la recherche, le regroupement, l’indexation et la jointure sur des colonnes chiffrées.
 

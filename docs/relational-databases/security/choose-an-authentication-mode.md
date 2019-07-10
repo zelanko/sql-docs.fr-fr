@@ -26,16 +26,16 @@ ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ac0c3526439d0dc899e81554305c7602c4fa8a9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb99199e90a4e85412fed33210d75b18c8f2975a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781907"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579867"
 ---
 # <a name="choose-an-authentication-mode"></a>Choisir un mode d'authentification
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Pendant l’installation, vous devez sélectionner un mode d’authentification pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Deux modes sont possibles : le mode d’authentification Windows et le mode mixte. Le mode d’authentification Windows active l’authentification Windows et désactive l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le mode mixte active à la fois l’authentification Windows et l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'authentification Windows est toujours disponible et ne peut pas être désactivée.  
+  Pendant l’installation, vous devez sélectionner un mode d’authentification pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Il existe deux modes possibles : Mode d'authentification Windows et mode mixte. Le mode d’authentification Windows active l’authentification Windows et désactive l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le mode mixte active à la fois l’authentification Windows et l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'authentification Windows est toujours disponible et ne peut pas être désactivée.  
   
 ## <a name="configuring-the-authentication-mode"></a>Configuration du mode d'authentification  
  Si vous sélectionnez le mode d'authentification mixte au cours de l'installation, vous devez fournir, puis confirmer, un mot de passe fort pour le compte d'administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré appelé sa. Le compte sa se connecte à l'aide de l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -74,8 +74,10 @@ ms.locfileid: "47781907"
 2.  Dans la boîte de dialogue **Exécuter** , tapez **secpol.msc**, puis cliquez sur **OK**.  
   
 3.  Dans l’application **Paramètres de sécurité locale** , développez **Paramètres de sécurité**, **Stratégies de comptes**, puis cliquez sur **Stratégie de mot de passe**.  
-  
-     Les stratégies de mot de passe sont décrites dans le volet de résultats.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The password policies are described in the results pane.  
   
 ### <a name="disadvantages-of-sql-server-authentication"></a>Inconvénients de l'authentification SQL Server  
   
@@ -102,7 +104,7 @@ ms.locfileid: "47781907"
     > [!NOTE]  
     >  L'utilisation de l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne limite pas les autorisations des administrateurs locaux sur l'ordinateur où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Considérations sur la sécurité pour une installation SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
   
   

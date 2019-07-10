@@ -14,21 +14,21 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 99ff37b3c974f6ba63515b3b51e87719a1912521
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 4b5e2a9dbb6963b63d6dfac8d76d9c01e839a8fe
+ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242396"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67559474"
 ---
 # <a name="performance-dashboard"></a>Tableau de bord Performances
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] version 17.2 et ultérieures inclut le tableau de bord Performances. Ce tableau de bord a été conçu pour fournir visuellement un insight rapide de l’état des performances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]). 
+[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] version 17.2 et ultérieures inclut le tableau de bord Performances. Ce tableau de bord a été conçu pour fournir visuellement un aperçu rapide de l’état des performances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) et [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]. 
 
-Le tableau de bord Performances aide à déterminer rapidement si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est victime d’un goulot d’étranglement de performances. Si un goulot d’étranglement est trouvé, capturez facilement des données de diagnostic supplémentaires pouvant être nécessaires pour résoudre le problème. Voici certains problèmes de performances courants que le tableau de bord Performances peut aider à identifier :
+Le tableau de bord Performances aide à identifier rapidement si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] est victime d’un goulot d’étranglement de performances. Si un goulot d’étranglement est trouvé, capturez facilement des données de diagnostic supplémentaires pouvant être nécessaires pour résoudre le problème. Voici certains problèmes de performances courants que le tableau de bord Performances peut aider à identifier :
 -  Goulots d'étranglement au niveau de l'unité centrale (et identification des requêtes sollicitant le plus l'unité centrale)
--  Goulots d’étranglement au niveau des entrées/sorties (et identification des requêtes effectuant le plus d’E/S)
+-  Goulots d’étranglement E/S (et identification des requêtes effectuant le plus d’E/S)
 -  Recommandations d’index générées par l’optimiseur de requête (index absents)
 -  Blocage
 -  Conflit de ressources (y compris une contention de verrous)
@@ -66,7 +66,7 @@ Le tableau de bord Performances apparaît sous la forme d’un nouvel onglet. Vo
   
 ![Écran principal du tableau de bord Performances](../../relational-databases/performance/media/perf_dashboard.png "Écran principal du tableau de bord Performances")  
   
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 Le rapport **Index absents** indique les index potentiellement absents que l’optimiseur de requête a identifiés pendant la compilation de la requête. Toutefois, ces recommandations ne doivent pas être prises telles quelles. Microsoft recommande d’évaluer la création des index ayant un score supérieur à 100 000, car ils correspondent à la prévision d’amélioration la plus élevée pour les requêtes utilisateur. 
 
 > [!TIP]
@@ -80,10 +80,10 @@ Les rapports **Requêtes coûteuses** sont réinitialisés quand [!INCLUDE[ssNoV
 > [!NOTE]
 > Le tableau de bord Performances a d’abord été publié sous forme de téléchargement autonome pour [SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602), puis mis à jour pour [SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063).
 
-## <a name="permissions"></a>Permissions  
-Requiert les autorisations `VIEW SERVER STATE` et `ALTER TRACE`. 
+## <a name="permissions"></a>Autorisations  
+Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], requiert les autorisations `VIEW SERVER STATE` et `ALTER TRACE`. Sur [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surveiller et optimiser les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Outils de surveillance et d’optimisation des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Ouvrir le Moniteur d’activité &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)     

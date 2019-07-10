@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ab1678831e67fa2504f9abb64a7dcc95f9f8e64
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: dde30ce48bf559bc72b3cdf3a4544039328f53e7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388133"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585098"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutoriel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,7 +46,7 @@ Pour bien démarrer avec Always Encrypted avec enclaves sécurisées, vous avez 
    - Sur Hyper-V 2016 et les versions ultérieures, [activez les extensions de virtualisation imbriquée](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) sur le processeur de la machine virtuelle.
    - Dans Azure, vérifiez que vous utilisez une taille de machine virtuelle qui prend en charge la virtualisation imbriquée, comme les machines virtuelles des séries Dv3 et Ev3. Voir [Créer une machine virtuelle Azure compatible avec l’imbrication](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
    - Sur VMware vSphere 6.7 et les versions ultérieures, activez la prise en charge de la sécurité basée sur la virtualisation pour la machine virtuelle, comme le décrit la [documentation VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
-   - D’autres hyperviseurs et clouds publics peuvent prendre en charge la virtualisation à l’aide d’Always Encrypted avec des enclaves sécurisées dans une machine virtuelle tant que les extensions de virtualisation (parfois appelées virtualisation imbriquée) sont exposées à la machine virtuelle. Consultez la documentation de votre solution de virtualisation, qui contient des instructions relatives à la compatibilité et à la configuration.
+   - D’autres hyperviseurs et clouds publics peuvent prendre en charge la virtualisation à l’aide d’Always Encrypted avec des enclaves sécurisées dans une machine virtuelle tant que les extensions de virtualisation (parfois appelées virtualisation imbriquée) sont exposées à la machine virtuelle. Consultez les instructions relatives à la compatibilité et à la configuration de la documentation de votre solution de virtualisation.
 - [SQL Server Management Studio (SSMS) version 18.0 ou ultérieure](../../ssms/download-sql-server-management-studio-ssms.md).
 
 Vous pouvez aussi installer SSMS sur un autre ordinateur.
@@ -88,6 +88,8 @@ Dans cette étape, vous allez configurer l’ordinateur SGH pour exécuter le Se
    ```
 
 4. Recherchez l’adresse IP de l’ordinateur SGH en exécutant la commande suivante. Enregistrez cette adresse IP pour les étapes suivantes.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```powershell
    Get-NetIPAddress  

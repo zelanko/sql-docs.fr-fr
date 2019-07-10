@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f9889ac45bff237ddb1e26e9dbbaffd12f3be556
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f548fff9a7634e0c105fc8ce09fa39d2aa4100c7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64776027"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580751"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Traitement de requêtes intelligent dans les bases de données SQL
 
@@ -44,7 +44,7 @@ Le tableau suivant détaille toutes les fonctionnalités du traitement de requê
 | [Exécution entrelacée](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Oui, avec le niveau de compatibilité 140| Oui, à partir de SQL Server 2017 sous le niveau de compatibilité 140|Utilise la cardinalité réelle de la fonction table à instructions multiples rencontrée à la première compilation, au lieu d’une estimation fixe.|
 | [Retour d’allocation de mémoire (mode batch)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Oui, avec le niveau de compatibilité 140| Oui, à partir de SQL Server 2017 sous le niveau de compatibilité 140|Si une requête en mode batch a des opérations débordant sur le disque, ajoutez de la mémoire pour les exécutions suivantes. Si une requête gaspille plus de 50 % de la mémoire qui lui est allouée, réduisez l’octroi de mémoire pour les exécutions suivantes.|
 | [Retour d’allocation de mémoire (mode ligne)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de SQL Server 2019 CTP 2.0 sous le niveau de compatibilité 150, préversion publique|Si une requête en mode ligne a des opérations débordant sur le disque, ajoutez de la mémoire pour les exécutions suivantes. Si une requête gaspille plus de 50 % de la mémoire qui lui est allouée, réduisez l’octroi de mémoire pour les exécutions suivantes.|
-| [Incorporation (inlining) des fonctions UDF scalaires](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Non | Oui, à partir de SQL Server 2019 CTP 2.1 sous le niveau de compatibilité 150, préversion publique|Les fonctions scalaires définies par l’utilisateur sont transformées en expressions relationnelles équivalentes qui sont « placées inline » dans la requête appelante, ce qui entraîne souvent des gains de performances significatifs.|
+| [Incorporation (inlining) des fonctions UDF scalaires](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Non | Oui, à partir de SQL Server 2019 CTP 2.1 sous le niveau de compatibilité 150, préversion publique|Les fonctions UDF scalaires sont transformées en expressions relationnelles équivalentes qui sont incluses dans la requête appelante, ce qui entraîne souvent des gains de performances significatifs.|
 | [Compilation différée de variable de table](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de SQL Server 2019 CTP 2.0 sous le niveau de compatibilité 150, préversion publique|Utilise la cardinalité réelle de la variable de table rencontrée à la première compilation, au lieu d’une estimation fixe.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Jointures adaptatives en mode batch
@@ -75,6 +75,9 @@ Dans le plan, nous voyons les éléments suivants :
 1. Nous avons le nouvel opérateur de jointure adaptative. Cet opérateur définit un seuil qui sert à déterminer le moment où il faut basculer vers un plan de boucles imbriquées. Dans notre exemple, le seuil est de 78 lignes. Tout plan avec &gt;= 78 lignes utilise une jointure hachée. Si le nombre de lignes est inférieur au seuil, une jointure de boucles imbriquées est utilisée.
 1. Comme dans notre exemple nous obtenons 336 lignes, nous dépassons le seuil et la deuxième branche représente donc la phase de sondage d’une opération de jointure hachée standard. Notez que les statistiques des requêtes actives affichent les lignes qui sont traitées par les opérateurs (dans notre exemple, « 672 sur 672 »).
 1. La dernière branche est notre recherche d’index cluster que doit utiliser la jointure de boucles imbriquées, pour laquelle le seuil n’a pas été dépassé. Notez que nous voyons « 0 sur 336 » lignes affichées (la branche n’est pas utilisée).
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Maintenant, nous allons comparer le plan avec la même requête, mais cette fois pour une valeur *Quantité* comprenant une seule ligne dans la table :
  
 ```sql
@@ -127,7 +130,7 @@ Une jointure logique doit respecter certaines conditions pour être assimilée �
 Si une jointure adaptative bascule sur une opération de boucles imbriquées, elle utilise les lignes déjà lues dans la génération de jointure hachée. L’opérateur ne relit **pas** les lignes de référence externe.
 
 ### <a name="adaptive-threshold-rows"></a>Lignes du seuil adaptatif
-Le graphique suivant montre un exemple d’intersection entre le coût d’une jointure hachée et le coût d’une jointure de boucles imbriquées alternative.  À ce point d’intersection, le seuil est déterminé, qui détermine à son tour l’algorithme réel utilisé pour l’opération de jointure.
+Le graphique suivant montre un exemple d’intersection entre le coût d’une jointure hachée et le coût d’une jointure de boucles imbriquées alternative.? À ce point d’intersection, le seuil est déterminé, qui détermine à son tour l’algorithme réel utilisé pour l’opération de jointure.
 
 ![Seuil de jointure](./media/6_AQPJoinThreshold.png)
 

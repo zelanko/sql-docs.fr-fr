@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a423012af5d4fa7c89b38fda6739c142bc5b367b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d6be68be92ac6525e0fb3b128e8c02ab596c601
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648917"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584133"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Afficher la définition d'une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,18 +30,18 @@ ms.locfileid: "47648917"
   
 -   **Avant de commencer :**  [Sécurité](#Security)  
   
--   **Pour afficher la définition d’une procédure, en utilisant**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Pour afficher la définition d'une procédure, à l'aide de :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Procédure stockée système : **sp_helptext**  
- Nécessite l'appartenance au rôle **public** . Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION.  
+ Nécessite l'appartenance au rôle **public** . Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION.  
   
- Fonction système : **OBJECT_DEFINITION**  
- Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
+ Fonction système :  **OBJECT_DEFINITION**  
+ Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
   
  Affichage catalogue d’objet : **sys.sql_modules**  
  La visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
@@ -60,10 +60,12 @@ ms.locfileid: "47648917"
   
 2.  Développez **Bases de données**, développez la base de données à laquelle appartient la procédure, puis développez **Programmabilité**.  
   
-3.  Développez **Procédures stockées**, cliquez avec le bouton droit sur la procédure, cliquez sur **Générer un script de la procédure stockée en tant que**, puis sur l’une des opérations suivantes : **Create To**, **Alter To**ou **Drop and Create To**.  
+3.  Développez **Procédures stockées**, cliquez avec le bouton de droite sur la procédure, puis cliquez sur **Script de procédure stockée en tant que**, puis cliquez sur l'une des options suivantes : **Créer dans**, **Modifier dans** ou **Déposer et créer dans**.  
   
 4.  Sélectionnez **Nouvelle fenêtre d'éditeur de requête**. Cette action affiche la définition de la procédure.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
  **Pour afficher la définition d'une procédure dans l'éditeur de requête**  
   
@@ -80,7 +82,7 @@ ms.locfileid: "47648917"
     EXEC sp_helptext N'AdventureWorks2012.dbo.uspLogError';  
     ```  
   
- Fonction système : **OBJECT_DEFINITION**  
+ Fonction système :  **OBJECT_DEFINITION**  
  1.  Dans l'Explorateur d'objets, connectez-vous à une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils, cliquez sur **Nouvelle requête**.  
@@ -108,7 +110,7 @@ ms.locfileid: "47648917"
     WHERE object_id = (OBJECT_ID(N'AdventureWorks2012.dbo.uspLogError'));  
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer une procédure stockée](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   
  [Modifier une procédure stockée](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)   
  [Supprimer une procédure stockée](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)   
