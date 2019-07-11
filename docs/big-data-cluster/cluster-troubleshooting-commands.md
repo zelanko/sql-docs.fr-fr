@@ -1,21 +1,21 @@
 ---
-title: Superviser et dépanner
+title: Surveiller et résoudre des problèmes
 titleSuffix: SQL Server big data clusters
 description: Cet article fournit des commandes utiles pour surveiller et dépanner un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
-author: rothja
-ms.author: jroth
+author: mihaelablendea
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d217e206ff9b41b0b61fa2d0407f530ef31eadf7
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 404d81c8d16a6ee6c173de4ebc5a85edc070a6ca
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388724"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729215"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Surveillance et de résoudre les problèmes de clusters de données volumineuses de SQL Server
 
@@ -112,7 +112,7 @@ kubectl get svc -n mssql-cluster
 
 Les services suivants prennent en charge les connexions externes au cluster big data :
 
-| Service | Description |
+| de diffusion en continu | Description |
 |---|---|
 | **master-svc-external** | Fournit l’accès à l’instance principale.<br/>(**EXTERNAL-IP, 31433** et **SA** utilisateur) |
 | **controller-svc-external** | Prend en charge des outils et les clients qui gèrent le cluster. |
