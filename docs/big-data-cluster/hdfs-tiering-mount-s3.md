@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Cet article explique comment configurer HDFS la hiérarchisation pour monter un système de fichiers externe S3 dans HDFS sur un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f26fcfa24da5b9f22ddab1e76c2f80a0d24fae8d
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: d782a2c8727f053b569c77af525795d81afebbc7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400030"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728750"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Comment S3 de montage de fichiers HDFS la hiérarchisation d’un cluster de données volumineuses
 

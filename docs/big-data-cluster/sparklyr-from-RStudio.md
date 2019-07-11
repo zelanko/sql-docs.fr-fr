@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Connectez-vous au cluster big data à l’aide de sparklyr à partir de RStudio.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 04/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8004146499bd8b17c7705f7558de075dfece5813
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f346fed17e4c79214a7eba43f70767fc80b98a07
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994180"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728378"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Utiliser sparklyr dans un cluster de données volumineux de SQL Server
 
