@@ -1336,7 +1336,7 @@
       items:
         - name: Segments (tables sans index cluster)
           href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-        - name: Description des index cluster et non-cluster
+        - name: Index cluster et non-cluster
           href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
           items:
             - name: Créer
