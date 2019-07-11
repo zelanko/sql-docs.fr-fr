@@ -14,15 +14,15 @@ ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39736d4d007814e29bc8c8293fa7e1020539b940
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 841310d1e51084ae6a61c629b8782a8b84c665f8
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280859"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793580"
 ---
 # <a name="sqlallocenv-mapping"></a>SQLAllocEnv, mappage
-Lorsqu’une application appelle **SQLAllocEnv** via un ODBC 3 *.x* pilote, l’appel à **SQLAllocEnv**(*phenv*) est mappé à **SQLAllocHandle** comme suit :  
+Lorsqu’une application appelle **SQLAllocEnv** via une application ODBC *3.x* pilote, l’appel à **SQLAllocEnv**(*phenv*) est mappé à **SQLAllocHandle** comme suit :  
   
 1.  Le Gestionnaire de pilotes alloue un handle d’environnement et le renvoie à l’application. Les appels du Gestionnaire de pilotes **SQLSetEnvAttr** à la valeur de l’attribut d’environnement SQL_ATTR_ODBC_VERSION SQL_OV_ODBC2.  
   

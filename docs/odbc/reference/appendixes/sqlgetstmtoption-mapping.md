@@ -14,15 +14,15 @@ ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f2423d41b1e9c549b7202a68fb2a0e085e0a6e11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98bbdcf66ed9ee8f2d716d8953fde8f4a888fca0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297957"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792849"
 ---
 # <a name="sqlgetstmtoption-mapping"></a>SQLGetStmtOption, mappage
-Lorsqu’une application appelle **SQLGetStmtOption** à un ODBC 3 *.x* pilote qui ne prend pas en charge cela, l’appel à  
+Lorsqu’une application appelle **SQLGetStmtOption** à une application ODBC *3.x* pilote qui ne prend pas en charge cela, l’appel à  
   
 ```  
 SQLGetStmtOption(hstmt, fOption, pvParam)  
@@ -52,6 +52,6 @@ SQLGetStmtOption(hstmt, fOption, pvParam)
   
  Pour les options de connexion de chaîne définie par ODBC, le Gestionnaire de pilotes définit le *BufferLength* argument dans l’appel à **SQLGetConnectAttr** à la longueur maximale prédéfinie (SQL_MAX_OPTION_STRING_LENGTH) ; une option de connexion sans chaînes, *BufferLength* est définie sur 0.  
   
- L’option d’instruction SQL_GET_BOOKMARK a été déconseillée dans ODBC 3 *.x*. Pour un ODBC 3 *.x* pilote fonctionne avec ODBC 2. *x* les applications qui utilisent SQL_GET_BOOKMARK, il doit prendre en charge SQL_GET_BOOKMARK. Pour un ODBC 3 *.x* pilote fonctionne avec ODBC 2. *x* applications, il doit prendre en charge affectant SQL_USE_BOOKMARKS SQL_UB_ON et doivent exposer des signets de longueur fixe. Si un ODBC 3 *.x* pilote prend en charge uniquement des signets de longueur variable, les signets de longueur pas fixe, elle doit retourner SQLSTATE HYC00 (fonctionnalité facultative non implémentée) si un ODBC 2. *x* application tente de définir SQL_USE_BOOKMARKS à SQL_UB_ON.  
+ L’option d’instruction SQL_GET_BOOKMARK a été déconseillée dans ODBC *3.x*. Pour une application ODBC *3.x* pilote fonctionne avec ODBC *2.x* les applications qui utilisent SQL_GET_BOOKMARK, il doit prendre en charge SQL_GET_BOOKMARK. Pour une application ODBC *3.x* pilote fonctionne avec ODBC *2.x* applications, il doit prendre en charge affectant SQL_USE_BOOKMARKS SQL_UB_ON et doivent exposer des signets de longueur fixe. Si une application ODBC *3.x* pilote prend en charge uniquement des signets de longueur variable, les signets de longueur pas fixe, elle doit retourner SQLSTATE HYC00 (fonctionnalité facultative non implémentée) si une application ODBC *2.x* tente d’application la valeur SQL_USE_BOOKMARKS SQL_UB_ON.  
   
- Pour un ODBC 3 *.x* pilote, le Gestionnaire de pilotes ne vérifie plus pour voir si *Option* est comprise entre SQL_STMT_OPT_MIN et SQL_STMT_OPT_MAX, ou est supérieure à SQL_CONNECT_OPT_DRVR_START. Le pilote doit vérifier cela.
+ Pour une application ODBC *3.x* pilote, le Gestionnaire de pilotes ne vérifie plus pour voir si *Option* est comprise entre SQL_STMT_OPT_MIN et SQL_STMT_OPT_MAX, ou est supérieure à SQL_CONNECT_OPT_DRVR_START. Le pilote doit vérifier cela.

@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addlogreader_agent
 ms.assetid: d83096b9-96ee-4789-bde0-940d4765b9ed
-author: stevestein
-ms.author: sstein
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7b3968f7c196c63ed66b98f19acd1dcf4d972336
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 7aa2fc93806bdbce244643d78930c7c9c113bf01
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494341"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716620"
 ---
 # <a name="spaddlogreaderagent-transact-sql"></a>sp_addlogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_addlogreader_agent [ @job_login = ] 'job_login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_login = ] 'job_login'` Nom de connexion pour le [!INCLUDE[msCoName](../../includes/msconame-md.md)] du compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)**, avec NULL comme valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution.  
+`[ @job_login = ] 'job_login'` Nom de connexion pour le [!INCLUDE[msCoName](../../includes/msconame-md.md)] du compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)** , avec NULL comme valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution.  
   
 > [!NOTE]
 >  Pour les non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication, il doit être la même connexion que celui spécifiée dans [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  

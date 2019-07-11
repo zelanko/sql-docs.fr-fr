@@ -16,16 +16,16 @@ helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e3432bbf535b329f539b9404cb0f5b5b87d38542
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4b7534a806a856dee922ead1055da6a7567a4d8c
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035710"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716602"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -44,9 +44,9 @@ ms.locfileid: "56035710"
 |-----------------|-----------------|  
 |**time**|Heure à laquelle la bande passante a été consommée. Les lignes de cette vue sont par heure. Par exemple, 2009-09-19 02:00:00.000 indique que la bande passante a été consommée le 19 septembre 2009 entre 2h00 et 3h00.|  
 |**database_name**|Nom de la base de données qui a utilisé la bande passante.|  
-|**direction**|Type de bande passante utilisé, un des suivants :<br /><br /> Entrée : Les données sont déplacées vers [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Sortie : Les données sont déplacées depuis [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
-|**class**|Classe de bande passante utilisée, une des suivantes :<br />Interne : Données qui se déplacent au sein de la plateforme Windows Azure.<br />Externes : Données qui se déplacent hors de la plateforme Microsoft Azure.<br /><br /> Cette classe est retournée uniquement si la base de données est engagée dans une relation de copie continue entre des régions ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Si une base de données n’est pas inclus dans une relation de copie continue, les lignes « Interlink » ne sont pas retournés. Pour plus d’informations, consultez la section « Remarques » plus loin dans cette rubrique.|  
-|**time_period**|La période de temps lorsque l’utilisation s’est produite est pointe ou fixes. La période de pointe (Peak) repose sur la zone dans laquelle le serveur a été créé. Par exemple, si un serveur a été créé dans la zone « US_Northwest », la période de pointe est définie comme étant entre 10h00 et et 18 h 00. PST.|  
+|**direction**|Type de bande passante utilisé, un des suivants :<br /><br /> Entrée : Les données sont déplacées dans le [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Sortie : Les données sont déplacées hors de la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**class**|Classe de bande passante utilisée, une des suivantes :<br />Interne : Données qui sont déplacent au sein de la plateforme Azure.<br />Externes : Données qui se déplacent hors de la plateforme Azure.<br /><br /> Cette classe est retournée uniquement si la base de données est engagée dans une relation de copie continue entre des régions ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Si une base de données n’est pas inclus dans une relation de copie continue, les lignes « Interlink » ne sont pas retournés. Pour plus d’informations, consultez la section « Remarques » plus loin dans cette rubrique.|  
+|**time_period**|La période de temps lorsque l’utilisation s’est produite est pointe ou fixes. La période de pointe (Peak) repose sur la zone dans laquelle le serveur a été créée. Par exemple, si un serveur a été créé dans la zone « US_Northwest », la période de pointe est définie comme étant entre 10h00 et et 18 h 00. PST.|  
 |**quantity**|Quantité de bande passante, en kilo-octets (Ko), qui a été utilisée.|  
   
 ## <a name="permissions"></a>Autorisations
@@ -57,13 +57,13 @@ ms.locfileid: "56035710"
   
 ### <a name="external-and-internal-classes"></a>Classes externes et internes
 
- Pour chaque base de données utilisée à un moment donné, le **sys.bandwidth_usage** vue retourne les lignes qui affichent la classe et la direction de l’utilisation de la bande passante. L'exemple suivant illustre les données qui peuvent être exposées pour une base de données donnée. Dans cet exemple, la date et l'heure sont 2012-04-21 17h00, au cours d'une période de pointe. Le nom de la base de données est Db1. Dans cet exemple, **sys.bandwidth_usage** a retourné une ligne pour chacune des quatre combinaisons de directions d’entrée et de sortie et des classes externes et internes, comme suit :  
+ Pour chaque base de données utilisée à un moment donné, le **sys.bandwidth_usage** vue retourne les lignes qui affichent la classe et la direction de l’utilisation de la bande passante. L'exemple suivant illustre les données qui peuvent être exposées pour une base de données donnée. Dans cet exemple, la date et l'heure sont 2012-04-21 17h00 : 00, au cours d'une période de pointe. Le nom de la base de données est Db1. Dans cet exemple, **sys.bandwidth_usage** a retourné une ligne pour chacune des quatre combinaisons de directions d’entrée et de sortie et des classes externes et internes, comme suit :  
   
 |time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|Ingress|External|Peak|66|  
-|2012-04-21 17:00:00|Db1|Egress|External|Peak|741|  
-|2012-04-21 17:00:00|Db1|Ingress|Internal|Peak|1052|  
+|2012-04-21 17:00:00|Db1|Sortie|Ressource externe|Peak|741|  
+|2012-04-21 17:00:00|Db1|Entrée|Internal|Peak|1052|  
 |2012-04-21 17:00:00|Db1|Egress|Interne|Peak|3525|  
   
 ### <a name="interpreting-data-direction-for-includessgeodrincludesssgeodr-mdmd"></a>Interprétation de la direction des données pour [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]

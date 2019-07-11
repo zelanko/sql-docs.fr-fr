@@ -2,20 +2,20 @@
 title: Notes de publication
 titleSuffix: SQL Server big data clusters
 description: Cet article décrit les dernières mises à jour et les problèmes connus pour les clusters de données volumineuses de SQL Server 2019 (version préliminaire).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2937734ad4543d9dc59e777ceaddfc597da148d2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681555"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794092"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notes de publication pour les clusters de données volumineuses sur SQL Server
 
@@ -113,6 +113,11 @@ Les sections suivantes décrivent les problèmes connus et les limitations de ce
 - Le SA_PASSWORD fait partie de l’environnement et détectable (par exemple dans un fichier de vidage cordon). Vous devez réinitialiser le SA_PASSWORD sur l’instance principale après le déploiement. Cela n’est pas un bogue, mais une étape de sécurité. Pour plus d’informations sur la façon de modifier le SA_PASSWORD dans un conteneur Linux, consultez [modifier le mot de passe SA](../linux/quickstart-install-connect-docker.md#sapassword).
 
 - AKS journaux peuvent contenir le mot de passe SA pour les déploiements de cluster big data.
+
+#### <a name="kibana-logs-dashboards"></a>Kibana connecte à des tableaux de bord
+
+- Entre Aris CTP 3.0 et 3.1, la version de Kibana a été mise à niveau à partir de 6.3.1 7.0.1.  Cela a apporté le navigateur Edge incompatible avec Kibana. Les utilisateurs verront une page vierge lors du chargement de la version actuelle des tableaux de bord Kibana dans Edge. Consultez [ici]( https://www.elastic.co/support/matrix#matrix_browse) pour des navigateurs pris en charge pour Kibana.rs 
+
 
 ## <a id="ctp30"></a> CTP 3.0 (mai)
 

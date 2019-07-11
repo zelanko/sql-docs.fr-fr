@@ -21,19 +21,19 @@ ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6819b28ba57f1e6314535a6a90ad13de39b4842c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224486"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793197"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Conversion de données de SQL en types de données C
 Lorsqu’une application appelle **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, le pilote récupère les données à partir de la source de données. Si nécessaire, il convertit les données à partir du type de données dans lequel, récupérés par le pilote pour le type de données spécifié par le *TargetType* argument dans **SQLBindCol** ou **SQLGetData.** Enfin, il stocke les données dans l’emplacement vers lequel pointé le *TargetValuePtr* argument dans **SQLBindCol** ou **SQLGetData** (et le champ SQL_DESC_DATA_PTR de la ARD).  
   
  Le tableau suivant répertorie les conversions prises en charge à partir d’ODBC SQL aux types de données ODBC C, les types de données. Un cercle plein indique la conversion par défaut pour un type de données SQL (le type de données C vers lequel les données seront converties lorsque la valeur de *TargetType* est SQL_C_DEFAULT). Un cercle creux indique une conversion prises en charge.  
   
- Pour un ODBC 3 *.x* application fonctionne avec une API ODBC 2. *x* pilote, la conversion de données spécifiques au pilote types ne peuvent pas être pris en charge.  
+ Pour une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote, la conversion de données spécifiques au pilote types ne peuvent pas être pris en charge.  
   
  Le format des données converties n’est pas affecté par le paramètre de pays Windows®.  
   

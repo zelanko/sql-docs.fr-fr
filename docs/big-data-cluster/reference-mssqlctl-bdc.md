@@ -2,19 +2,20 @@
 title: mssqlctl bdc reference
 titleSuffix: SQL Server big data clusters
 description: Article de référence pour les commandes de bdc mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2c16a8121f2a0ec90fe8141c78e690bf212b5f27
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 96ecf1c987baffec0ff71b8b6ef5eccb204b3108
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394231"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727484"
 ---
 # <a name="mssqlctl-bdc"></a>mssqlctl bdc
 
@@ -66,15 +67,15 @@ Acceptez-vous les termes du contrat de licence ? Oui/non. Si vous ne souhaitez 
 Force à créer, l’utilisateur ne sera pas invité à entrer pour toutes les valeurs et tous les problèmes seront affichera dans le cadre de stderr.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
+Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
 #### `--help -h`
-Afficher ce message d’aide et de sortie.
+Affiche ce message d’aide et quitte.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut : json.
 #### `--query -q`
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
-Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
+Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 ## <a name="mssqlctl-bdc-delete"></a>mssqlctl bdc delete
 Supprimer le Cluster de données volumineuses de SQL Server - Configuration de kube est requise sur votre système, ainsi que les variables d’environnement ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD'].
 ```bash
@@ -94,15 +95,15 @@ Nom BDC, utilisé pour l’espace de noms kubernetes.
 Forcer la suppression BDC.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
+Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
 #### `--help -h`
-Afficher ce message d’aide et de sortie.
+Affiche ce message d’aide et quitte.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut : json.
 #### `--query -q`
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
-Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
+Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

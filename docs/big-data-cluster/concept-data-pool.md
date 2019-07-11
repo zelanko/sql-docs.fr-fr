@@ -2,20 +2,20 @@
 title: Quelles sont les pools de données ?
 titleSuffix: SQL Server big data clusters
 description: Cet article décrit le pool de données dans un cluster de données volumineux de SQL Server 2019.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: ba296a504ae4a6656941c408e7b7a0c96a83c97d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7530036cae939f6fd5d45fb5575f2161a36f21a1
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783093"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729126"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>Quelles sont les pools de données dans un cluster de données volumineux de SQL Server ?
 

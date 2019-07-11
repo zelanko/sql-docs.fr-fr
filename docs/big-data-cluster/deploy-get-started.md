@@ -1,20 +1,21 @@
 ---
-title: Bien démarrer
+title: Prise en main
 titleSuffix: SQL Server big data clusters
 description: Découvrez les étapes et les ressources pour le déploiement des clusters de données volumineuses de SQL Server 2019 (version préliminaire).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4379e35b4d86ca462ea97b28c37d2f3b56427292
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: b090ec57ae62058a211e4e232f8bfa99e44f9675
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388829"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728960"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Bien démarrer avec les clusters de données volumineuses de SQL Server
 
@@ -35,7 +36,7 @@ Les clusters de données volumineuses nécessitent un ensemble spécifique d’o
 
 Autres outils sont nécessaires pour différents scénarios. Chaque article doit expliquer les outils requis pour effectuer une tâche spécifique. Pour obtenir une liste complète des outils et des liens d’installation, consultez [outils de big data d’installer SQL Server 2019](deploy-big-data-tools.md).
 
-## <a name="kubernetes"></a>Kubernetes
+## <a name="kubernetes"></a>kubernetes
 
 Les clusters de données volumineuses sont déployés comme une série de conteneurs reliés entre eux qui sont gérés dans [Kubernetes](https://kubernetes.io/docs/home). Vous pouvez héberger Kubernetes de plusieurs façons. Même si vous disposez déjà d’un environnement Kubernetes existant, vous devez examiner les spécifications connexes pour les clusters de données volumineuses.
 

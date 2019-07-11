@@ -12,16 +12,16 @@ helpviewer_keywords:
 - remote execution
 - queries, remote execution
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
-author: CarlRabeler
-ms.author: carlrab
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a475ba50aa8d3ba140ea551306d8b9f17fe66d22
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 100da3bfaeee1c4b1e4dae00c96bcc08a763f3b3
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035900"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716610"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  Identifie la source de données externe dans laquelle l’instruction est exécutée. Consultez [créer une SOURCE de données externe &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). La source de données externe peut être de type « SGBDR » ou « SHARD_MAP_MANAGER ».  
   
  [ \@stmt= ] *statement*  
- Est une chaîne Unicode contenant un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot. \@stmt doit être une constante Unicode ou une variable Unicode. L'utilisation d'expressions Unicode plus complexes (comme la concaténation de deux chaînes avec l'opérateur +) n'est pas autorisée. L'utilisation de constantes de caractères n'est pas autorisée. Si une constante Unicode est spécifiée, elle doit porter le préfixe avec un **N**. Par exemple, la constante Unicode **ne sp_who'** est valide, mais la constante caractère **'sp_who'** n’est pas. La taille de la chaîne n'est limitée que par la quantité de mémoire disponible sur le serveur de base de données. Sur les serveurs 64 bits, la taille de la chaîne est limitée à 2 Go, la taille maximale de **nvarchar (max)**.  
+ Est une chaîne Unicode contenant un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot. \@stmt doit être une constante Unicode ou une variable Unicode. L'utilisation d'expressions Unicode plus complexes (comme la concaténation de deux chaînes avec l'opérateur +) n'est pas autorisée. L'utilisation de constantes de caractères n'est pas autorisée. Si une constante Unicode est spécifiée, elle doit porter le préfixe avec un **N**. Par exemple, la constante Unicode **ne sp_who'** est valide, mais la constante caractère **'sp_who'** n’est pas. La taille de la chaîne n'est limitée que par la quantité de mémoire disponible sur le serveur de base de données. Sur les serveurs 64 bits, la taille de la chaîne est limitée à 2 Go, la taille maximale de **nvarchar (max)** .  
   
 > [!NOTE]  
 >  \@stmt peut contenir des paramètres possédant la même forme qu’un nom de variable, par exemple : `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  

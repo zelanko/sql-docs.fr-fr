@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Consommer une application déployée sur SQL Server 2019 cluster de données volumineux à l’aide d’un service web RESTful (version préliminaire).
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: a3894ccbd8ffda7cfe00d61a7a47622f7f481c8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 308bbe40ba49566bf6cbccad13f8edab0db3d363
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801901"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729297"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Utiliser une application déployée sur un cluster de données volumineux de SQL Server à l’aide d’un service web RESTful
 
@@ -30,7 +29,7 @@ Cet article décrit comment utiliser une application déployée sur un cluster d
 - [mssqlctl command-line utility](deploy-install-mssqlctl.md)
 - Une application déployée à l’aide [ `mssqlctl` ](big-data-cluster-create-apps.md) ou [application déployer une extension](app-deployment-extension.md)
 
-## <a name="capabilities"></a>Fonctions
+## <a name="capabilities"></a>Fonctionnalités
 
 Une fois que vous avez déployé une application sur votre cluster big data de SQL Server 2019 (version préliminaire), vous pouvez accéder et utiliser cette application à l’aide d’un service web RESTful. Cela permet l’intégration de cette application à partir d’autres applications ou services (par exemple, une application mobile ou un site Web). Le tableau suivant décrit les commandes de déploiement d’application que vous pouvez utiliser avec **mssqlctl** pour obtenir des informations sur le service web RESTful pour votre application.
 

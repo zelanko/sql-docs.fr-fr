@@ -14,12 +14,12 @@ ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b390df48e676290696ae8080c8f671fd0e37bad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cb723e7325454e6ff60e05d28a6321fd4d167e2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298270"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792834"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField et SQLSetDescRec (bibliothèque de curseurs)
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ ms.locfileid: "63298270"
   
  La bibliothèque de curseurs exécute les appels à **SQLSetDescRec** pour une colonne de signet.  
   
- Lorsque vous travaillez avec un ODBC 2. *x* pilote, la bibliothèque de curseurs retourne SQLSTATE HY090 (longueur de chaîne ou de mémoire tampon non valide) lorsque **SQLSetDescField** ou **SQLSetDescRec** est appelée pour définir le SQL_DESC_OCTET_ Champ de longueur de l’enregistrement de signet d’un ARD et une valeur non égale à 4. Lorsque vous travaillez avec un ODBC 3 *.x* pilote, la bibliothèque de curseurs permet d’être n’importe quelle taille de la mémoire tampon.  
+ Lorsque vous travaillez avec une application ODBC *2.x* pilote, la bibliothèque de curseurs retourne SQLSTATE HY090 (longueur de chaîne ou de mémoire tampon non valide) lorsque **SQLSetDescField** ou **SQLSetDescRec** est appelée Pour définir le champ SQL_DESC_OCTET_LENGTH pour l’enregistrement de signet d’un ARD sur une valeur non égale à 4. Lorsque vous travaillez avec une application ODBC *3.x* pilote, la bibliothèque de curseurs permet d’être n’importe quelle taille de la mémoire tampon.  
   
  La bibliothèque de curseurs exécute **SQLSetDescField** lorsqu’elle est appelée pour retourner la valeur du champ SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE ou SQL_DESC_ROW_STATUS_PTR. Ces champs peuvent être retournées pour n’importe quelle ligne, pas seulement la ligne du signet.  
   

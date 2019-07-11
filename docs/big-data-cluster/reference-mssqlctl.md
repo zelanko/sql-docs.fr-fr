@@ -2,19 +2,20 @@
 title: Référence mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Article de référence pour les commandes de mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2601d526710e6cf51de089f7879f0f5517bf86aa
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: a30f78b24a85f85b85beb914dc0f26af652242fd
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388672"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728530"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -63,15 +64,15 @@ Point de terminaison de contrôleur de cluster « https://host:port ». Si vous 
 Acceptez-vous les termes du contrat de licence ? Oui/non. Si vous ne souhaitez pas utiliser cette arg, vous pouvez définir la variable d’environnement ACCEPT_EULA sur « Oui »
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
+Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
 #### `--help -h`
-Afficher ce message d’aide et de sortie.
+Affiche ce message d’aide et quitte.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut : json.
 #### `--query -q`
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
-Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
+Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 ## <a name="mssqlctl-logout"></a>déconnexion de mssqlctl
 Se déconnecter de cluster.
 ```bash
@@ -84,15 +85,15 @@ mssqlctl logout
 ```
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
+Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
 #### `--help -h`
-Afficher ce message d’aide et de sortie.
+Affiche ce message d’aide et quitte.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut : json.
 #### `--query -q`
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
-Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
+Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

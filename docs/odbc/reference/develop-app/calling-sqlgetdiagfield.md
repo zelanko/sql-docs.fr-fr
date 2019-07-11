@@ -17,12 +17,12 @@ ms.assetid: 3c4fb606-b81c-4f11-9820-f0a54e3bc401
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a27584a0892bc468b50286b79edbe92d7c968a0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42d24de7e5e94a3301653eb3082140e260a1e745
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199159"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793903"
 ---
 # <a name="calling-sqlgetdiagfield"></a>Appel de SQLGetDiagField
-Lorsqu’une application ODBC 3. *x* application appelle **SQLGetDiagField** dans un ODBC 2 *.x* pilote, le pilote retourne SQL_SUCCESS et les informations appropriées dans  *\*DiagInfoPtr* si le *DiagIdentifier* argument est SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_ NOMBRE, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME ou SQL_DIAG_SQLSTATE. Tous les autres champs de diagnostic retourne SQL_ERROR.
+Lorsqu’une application ODBC *3.x* application appelle **SQLGetDiagField** dans une application ODBC *2.x* pilote, le pilote retourne SQL_SUCCESS et les informations appropriées dans  *\*DiagInfoPtr* si le *DiagIdentifier* argument est SQL_DIAG_CLASS_ORIGIN, SQL_DIAG_CLASS_SUBCLASS_ORIGIN, SQL_DIAG_CONNECTION_NAME, SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_ NATIF, SQL_DIAG_NUMBER, SQL_DIAG_RETURNCODE, SQL_DIAG_SERVER_NAME ou SQL_DIAG_SQLSTATE. Tous les autres champs de diagnostic retourne SQL_ERROR.

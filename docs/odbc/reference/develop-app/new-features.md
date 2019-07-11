@@ -17,15 +17,15 @@ ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4582a99797d5f6035f6d5d639514c5a6fdd572d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658182"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794064"
 ---
 # <a name="new-features"></a>Nouvelles fonctionnalités
-Les nouvelles fonctionnalités suivantes a été introduite dans ODBC 3. *x*. Une application ODBC 3. *x* application fonctionne avec un ODBC 2 *.x* pilote ne sera pas en mesure d’utiliser cette fonctionnalité. ODBC 3. *x* Gestionnaire de pilotes ne mappe pas ces fonctionnalités lorsque vous travaillez avec un ODBC 2 *.x* pilote.  
+Les nouvelles fonctionnalités suivantes a été introduite dans ODBC *3.x*. Une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote ne sera pas en mesure d’utiliser cette fonctionnalité. ODBC *3.x* Gestionnaire de pilotes ne mappe pas ces fonctionnalités lorsque vous travaillez avec une application ODBC *2.x* pilote.  
   
 -   Fonctions qui acceptent un descripteur de gérer en tant qu’argument : **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, and **SQLCopyDesc**.  
   
@@ -81,7 +81,7 @@ Les nouvelles fonctionnalités suivantes a été introduite dans ODBC 3. *x*. Un
   
 -   Paramètres nommés.  
   
--   Une des ODBC 3. *x*-spécifiques **SQLGetInfo** options. (Le cas une ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote appelle les types d’informations SQL_XXX_CURSOR_ATTRIBUTES1, qui ont remplacé plusieurs ODBC 2. *x* types d’informations, certaines informations peuvent être fiable, mais certaines peuvent être peu fiables. Pour plus d’informations, consultez [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
+-   Un des ODBC *3.x*-spécifiques **SQLGetInfo** options. (Si une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote appelle les types d’informations SQL_XXX_CURSOR_ATTRIBUTES1, qui ont remplacé plusieurs ODBC *2.x* types d’informations, certaines informations peuvent être fiable, mais certaines peuvent être peu fiables. Pour plus d’informations, consultez [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md).)  
   
 -   Lier les décalages.  
   
@@ -103,7 +103,7 @@ Les nouvelles fonctionnalités suivantes a été introduite dans ODBC 3. *x*. Un
   
 -   Utilisation de **SQLDescribeCol** et **SQLColAttribute** sur la colonne 0.  
   
--   Utilisation de n’importe quel ODBC 3. *x*-attributs de colonne spécifique dans un appel à **SQLColAttribute**.  
+-   Utilisation de n’importe quel ODBC *3.x*-attributs de colonne spécifique dans un appel à **SQLColAttribute**.  
   
 -   Utilisation de plusieurs handles d’environnement.  
   

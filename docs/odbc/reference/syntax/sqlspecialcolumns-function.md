@@ -20,12 +20,12 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c49e7fd827cfd48df07e5e5a01367977504f4511
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f3fe596428450795426537f5c2f5913a6c83a46
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536258"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793742"
 ---
 # <a name="sqlspecialcolumns-function"></a>Fonction SQLSpecialColumns
 **Conformité**  
@@ -151,9 +151,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns** retourne les résultats sous la forme d’un jeu de résultats standard, trié par SCOPE.  
   
- Les colonnes suivantes ont été renommées pour ODBC 3 *.x*. Les modifications de nom de colonne n’affectent pas la compatibilité descendante, car les applications lier par numéro de colonne.  
+ Les colonnes suivantes ont été renommées pour ODBC *3.x*. Les modifications de nom de colonne n’affectent pas la compatibilité descendante, car les applications lier par numéro de colonne.  
   
-|Colonne de ODBC 2.0|ODBC 3 *.x* colonne|  
+|Colonne de ODBC 2.0|ODBC *3.x* colonne|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  
@@ -163,14 +163,14 @@ SQLRETURN SQLSpecialColumns(
   
  Le tableau suivant répertorie les colonnes du jeu de résultats. Les colonnes supplémentaires au-delà de la colonne 8 (PSEUDO_COLUMN) peuvent être définies par le pilote. Une application doit accéder à des colonnes spécifiques aux pilotes à rebours à partir de la fin du jeu de résultats au lieu d’en spécifiant une position ordinale explicite. Pour plus d’informations, consultez [les données retournées par les fonctions de catalogue](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Nom de colonne|Numéro de colonne|Type de données|Commentaires|  
+|Nom de la colonne|Numéro de colonne|Type de données|Commentaires|  
 |-----------------|-------------------|---------------|--------------|  
 |ÉTENDUE (ODBC 1.0)|1|Smallint|Étendue réelle de l’ID de ligne. Contient l’une des valeurs suivantes :<br /><br /> SQL_SCOPE_CURROW SQL_SCOPE_TRANSACTION SQL_SCOPE_SESSION<br /><br /> La valeur NULL est retournée lorsque *IdentifierType* est SQL_ROWVER. Pour obtenir une description de chaque valeur, consultez la description de *étendue* dans « Syntaxe », plus haut dans cette section.|  
 |COLUMN_NAME (ODBC 1.0)|2|Varchar non NULL|Nom de colonne. Le pilote retourne une chaîne vide pour une colonne qui n’a pas de nom.|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint non NULL|Type de données SQL. Cela peut être un type de données ODBC SQL ou un type de données spécifiques au pilote SQL. Pour obtenir la liste des types de données ODBC SQL valides, consultez [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md). Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.|  
 |TYPE_NAME (ODBC 1.0)|4|Varchar non NULL|Nom de type de données dépendant de la source de données ; par exemple, « CHAR », « VARCHAR », « Argent », « LONG VARBINARY » ou « CHAR () pour les données BIT ».|  
-|COLUMN_SIZE (ODBC 1.0)|5|Entier|La taille de la colonne sur la source de données. Pour plus d’informations concernant la taille de colonne, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|BUFFER_LENGTH (ODBC 1.0)|6|Entier|La longueur en octets de données transférées sur un **SQLGetData** ou **SQLFetch** opération si SQL_C_DEFAULT est spécifié. Pour les données numériques, cette taille peut être différente de la taille des données stockées sur la source de données. Cette valeur est identique à la colonne COLUMN_SIZE pour les données binaires ou caractères. Pour plus d’informations, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
+|COLUMN_SIZE (ODBC 1.0)|5\.|Entier|La taille de la colonne sur la source de données. Pour plus d’informations concernant la taille de colonne, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
+|BUFFER_LENGTH (ODBC 1.0)|6\.|Entier|La longueur en octets de données transférées sur un **SQLGetData** ou **SQLFetch** opération si SQL_C_DEFAULT est spécifié. Pour les données numériques, cette taille peut être différente de la taille des données stockées sur la source de données. Cette valeur est identique à la colonne COLUMN_SIZE pour les données binaires ou caractères. Pour plus d’informations, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|Les chiffres décimaux de la colonne sur la source de données. La valeur NULL est retournée pour les types de données où les chiffres décimaux ne sont pas applicables. Pour plus d’informations concernant les chiffres décimaux, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indique si la colonne est une pseudo-colonne, telles que Oracle ROWID :<br /><br /> SQL_PC_UNKNOWN forme SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Remarque :**  Pour une interopérabilité maximale, pseudo-colonnes ne doivent pas être mis entre guillemets avec l’identificateur de caractère de guillemet retourné par **SQLGetInfo**.|  
   

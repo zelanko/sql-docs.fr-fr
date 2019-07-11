@@ -14,15 +14,15 @@ ms.assetid: e3792fe4-a955-473a-a297-c1b2403660c4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8504709cb2cedb36c62bb9be74ffc8d12a4c811d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccfebb99d6f98f1c6c2e5eea4650e1433e536d97
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188788"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792452"
 ---
 # <a name="sqlgetconnectoption-mapping"></a>SQLGetConnectOption, mappage
-Lorsqu’une application appelle **SQLGetConnectOption** via un ODBC 3 *.x* pilote, l’appel à  
+Lorsqu’une application appelle **SQLGetConnectOption** via une application ODBC *3.x* pilote, l’appel à  
   
 ```  
 SQLGetConnectOption(hdbc, fOption, pvParam)   
@@ -52,4 +52,4 @@ SQLGetConnectOption(hdbc, fOption, pvParam)
   
  Pour les options de connexion de chaîne définie par ODBC, le Gestionnaire de pilotes définit le *BufferLength* argument dans l’appel à **SQLGetConnectAttr** à la longueur maximale prédéfinie (SQL_MAX_OPTION_STRING_LENGTH) ; une option de connexion sans chaînes, *BufferLength* est définie sur 0.  
   
- Pour un ODBC 3 *.x* pilote, le Gestionnaire de pilotes ne sont plus vérifie si *Option* est comprise entre SQL_CONN_OPT_MIN et SQL_CONN_OPT_MAX, ou est supérieure à SQL_CONNECT_OPT_DRVR_START. Le pilote doit vérifier la validité des valeurs d’option.
+ Pour une application ODBC *3.x* pilote, le Gestionnaire de pilotes ne sont plus vérifie si *Option* est comprise entre SQL_CONN_OPT_MIN et SQL_CONN_OPT_MAX, ou est supérieure à SQL_CONNECT_OPT_DRVR_START. Le pilote doit vérifier la validité des valeurs d’option.

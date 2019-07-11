@@ -18,12 +18,12 @@ ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a2af55b8c5354dd90e80a0a2a9d149f56abdef27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc6e973b71b16817f3e3533544102bfeba3caeb4
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63472159"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793053"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,14 +56,14 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Cette procédure stockée est modifiée si le profil spécifié est ou non le profil par défaut pour l'utilisateur de la base de données. Un utilisateur de base de données peut avoir uniquement un profil privé par défaut.  
   
  Lorsque le nom principal de l’association est **public** ou l’id du principal pour l’association est **0**, cette procédure stockée modifie le profil public. Il ne peut y avoir qu'un seul profil public par défaut.  
   
- Lorsque **@is_default** est «**1**» et le principal est associé à plusieurs profils, le profil spécifié devient le profil par défaut pour le principal. Le précédent profil par défaut est toujours associé au principal, mais il ne représente plus le profil par défaut.  
+ Lorsque  **\@is_default** est «**1**» et le principal est associé à plusieurs profils, le profil spécifié devient le profil par défaut pour le principal. Le précédent profil par défaut est toujours associé au principal, mais il ne représente plus le profil par défaut.  
   
  La procédure stockée **sysmail_update_principalprofile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   

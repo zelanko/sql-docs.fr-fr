@@ -12,12 +12,12 @@ ms.assetid: ef4df75d-0f36-4c8b-b36c-e427f65f91ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ec0a5700df76134eab8a4fe2278820691dad509e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ada58ff37b3fb7dd2760427483b0935d9bc47cb
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62869687"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727740"
 ---
 # <a name="mssqlserver1505"></a>MSSQLSERVER_1505
     
@@ -30,7 +30,7 @@ ms.locfileid: "62869687"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DUP_KEY|  
-|Texte du message|L’instruction CREATE UNIQUE INDEX a été interrompue, car une clé dupliquée a été trouvée pour l’objet ’%.*ls’ et l’index ’%.\*ls’.  Valeur de clé dupliquée : %ls.|  
+|Texte du message|L’instruction CREATE UNIQUE INDEX a été interrompue, car une clé dupliquée a été trouvée pour l’objet '%.\*ls' et l’index '%.\*ls'.  Valeur de clé dupliquée : %ls.|  
   
 ## <a name="explanation"></a>Explication  
  Cette erreur se produit lorsque vous essayez de créer un index unique et que plusieurs lignes de la table contiennent la valeur dupliquée spécifiée. Un index unique est créé lorsque vous créez un index et spécifiez le mot clé UNIQUE ou lorsque vous créez une contrainte UNIQUE. La table ne peut pas contenir de lignes qui présentent des valeurs dupliquées dans les colonnes définies dans l'index ou la contrainte.  
@@ -50,7 +50,7 @@ ms.locfileid: "62869687"
   
  Le message d'erreur 1505 retourne la première ligne qui enfreint la contrainte d'unicité. La table peut contenir d'autres lignes dupliquées. Pour les trouver toutes, interrogez la table spécifiée et utilisez les clauses GROUP BY et HAVING pour signaler les lignes dupliquées. Par exemple, la requête suivante retourne les lignes de la table **Employee** qui présentent des noms (LastName) et prénoms (FirstName) en double.  
   
- SELECT LastName, FirstName, count(*) FROM dbo.Employee GROUP BY LastName, FirstName HAVING count(\*) > 1;  
+ Sélectionnez LastName, FirstName, nombre (\*) à partir de dbo. Employé groupe par LastName, FirstName ayant un nombre (\*) > 1 ;  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
  Réfléchissez aux solutions ci-dessous.  

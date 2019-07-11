@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Cet article explique comment configurer HDFS la hiérarchisation pour monter un système de fichiers externe Azure Data Lake Storage dans HDFS sur un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 author: nelgson
 ms.author: negust
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a36bd28efd128a76246297995d712b417d7f230d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823e24b4ec78996140fa3f17cef9c1e56365a3f7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782112"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728737"
 ---
 # <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurer HDFS hiérarchisation sur les clusters de données volumineuses de SQL Server
 
@@ -49,7 +49,7 @@ Nous prenons en charge la connexion à Azure Data Lake Storage Gen2 et Amazon S3
 - [Comment Gen2 ADLS de montage de fichiers HDFS la hiérarchisation d’un cluster de données volumineuses](hdfs-tiering-mount-adlsgen2.md)
 - [Comment S3 de montage de fichiers HDFS la hiérarchisation d’un cluster de données volumineuses](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a> Limitations et problèmes connus
+## <a id="issues"></a> Problèmes connus et limitations
 
 La liste suivante fournit les problèmes connus et limitations actuelles lors de l’utilisation de HDFS la hiérarchisation dans les clusters de données volumineuses de SQL Server :
 

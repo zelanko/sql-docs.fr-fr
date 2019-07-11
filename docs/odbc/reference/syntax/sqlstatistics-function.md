@@ -20,12 +20,12 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4277c6606392c91ffb3de40ace658cd68461f01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc0c1d981180c61452f97a01bc0aba6fdc2d81e3
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536271"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793733"
 ---
 # <a name="sqlstatistics-function"></a>Fonction SQLStatistics
 **Conformité**  
@@ -86,7 +86,7 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE demande que le pilote de manière inconditionnelle extraire des statistiques. (Les pilotes qui sont conformes uniquement à la norme Open Group et ne prennent pas en charge les extensions ODBC seront pas en mesure de prendre en charge SQL_ENSURE.)  
   
- SQL_QUICK demande que le pilote de récupérer la cardinalité et des PAGES uniquement si elles sont immédiatement disponibles à partir du serveur. Dans ce cas, le pilote ne s'assure pas que les valeurs sont actuelles. (Les applications qui sont écrits dans la norme Open Group toujours obtiennent SQL_QUICK comportement à partir d’ODBC 3 *.x*-pilotes conformes.)  
+ SQL_QUICK demande que le pilote de récupérer la cardinalité et des PAGES uniquement si elles sont immédiatement disponibles à partir du serveur. Dans ce cas, le pilote ne s'assure pas que les valeurs sont actuelles. (Les applications qui sont écrits dans la norme Open Group toujours obtiennent SQL_QUICK comportement à partir d’ODBC *3.x*-pilotes conformes.)  
   
 ## <a name="returns"></a>Valeur renvoyée  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -126,9 +126,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation générale, les arguments et les données retournées des fonctions de catalogue ODBC, consultez [fonctions de catalogue](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- Les colonnes suivantes ont été renommées pour ODBC 3 *.x*. Les modifications de nom de colonne n’affectent pas la compatibilité descendante, car les applications lier par numéro de colonne.  
+ Les colonnes suivantes ont été renommées pour ODBC *3.x*. Les modifications de nom de colonne n’affectent pas la compatibilité descendante, car les applications lier par numéro de colonne.  
   
-|Colonne de ODBC 2.0|ODBC 3 *.x* colonne|  
+|Colonne de ODBC 2.0|ODBC *3.x* colonne|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  
@@ -137,18 +137,18 @@ SQLRETURN SQLStatistics(
   
  Le tableau suivant répertorie les colonnes du jeu de résultats. Les colonnes supplémentaires au-delà de la colonne 13 (FILTER_CONDITION) peuvent être définies par le pilote. Une application doit accéder à des colonnes spécifiques aux pilotes à rebours à partir de la fin de l’ensemble au lieu de spécifier une position ordinale explicite de résultats. Pour plus d’informations, consultez [les données retournées par les fonctions de catalogue](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Nom de colonne|Numéro de colonne|Type de données|Commentaires|  
+|Nom de la colonne|Numéro de colonne|Type de données|Commentaires|  
 |-----------------|-------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Nom du catalogue de la table à laquelle l’index ou statistique s’applique ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de catalogues.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nom du schéma de la table à laquelle l’index ou statistique s’applique ; NULL si non applicable à la source de données. Si un pilote prend en charge les schémas pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de schémas.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar non NULL|Nom de la table de la table à laquelle s’applique l’index ou statistique.|  
 |NON_UNIQUE (ODBC 1.0)|4|Smallint|Indique si l’index n’autorise pas les valeurs en double :<br /><br /> SQL_TRUE si les valeurs d’index peuvent être non uniques.<br /><br /> SQL_FALSE si les valeurs d’index doivent être uniques.<br /><br /> La valeur NULL est retournée si le TYPE est SQL_TABLE_STAT.|  
-|INDEX_QUALIFIER (ODBC 1.0)|5|Varchar|Nom de l’identificateur qui est utilisé pour qualifier l’index sous peine un **DROP INDEX**; La valeur NULL est retournée si un qualificateur de l’index n’est pas pris en charge par la source de données ou si le TYPE est SQL_TABLE_STAT. Si une valeur non null est retournée dans cet article, il doit être utilisé pour qualifier le nom d’index sur une **DROP INDEX** instruction ; sinon, le TABLE_SCHEM doit servir à qualifier le nom d’index.|  
-|INDEX_NAME (ODBC 1.0)|6|Varchar|Nom de l’index ; La valeur NULL est retournée si le TYPE est SQL_TABLE_STAT.|  
+|INDEX_QUALIFIER (ODBC 1.0)|5\.|Varchar|Nom de l’identificateur qui est utilisé pour qualifier l’index sous peine un **DROP INDEX**; La valeur NULL est retournée si un qualificateur de l’index n’est pas pris en charge par la source de données ou si le TYPE est SQL_TABLE_STAT. Si une valeur non null est retournée dans cet article, il doit être utilisé pour qualifier le nom d’index sur une **DROP INDEX** instruction ; sinon, le TABLE_SCHEM doit servir à qualifier le nom d’index.|  
+|INDEX_NAME (ODBC 1.0)|6\.|Varchar|Nom de l’index ; La valeur NULL est retournée si le TYPE est SQL_TABLE_STAT.|  
 |TYPE (ODBC 1.0)|7|Smallint non NULL|Type d’informations renvoyées :<br /><br /> SQL_TABLE_STAT indique une statistique pour la table (dans la colonne de cardinalité ou de PAGES).<br /><br /> SQL_INDEX_BTREE indique un index B-Tree.<br /><br /> SQL_INDEX_CLUSTERED indique un index cluster.<br /><br /> SQL_INDEX_CONTENT indique un index de contenu.<br /><br /> SQL_INDEX_HASHED indique un index haché.<br /><br /> SQL_INDEX_OTHER indique un autre type d’index.|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|Numéro de séquence de colonne dans l’index (à partir de 1) ; La valeur NULL est retournée si le TYPE est SQL_TABLE_STAT.|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|Nom de colonne. Si la colonne est basée sur une expression, telles que le salaire + avantages, l’expression est retournée ; Si l’expression ne peut pas être déterminée, une chaîne vide est retournée. La valeur NULL est retournée si le TYPE est SQL_TABLE_STAT.|  
-|ASC_OR_DESC (ODBC 1.0)|10|char (1)|Ordre de tri pour la colonne : « A » pour l’ordre croissant ; « D » pour l’ordre décroissant ; La valeur NULL est retournée si la séquence de tri de la colonne n’est pas pris en charge par la source de données ou si le TYPE est SQL_TABLE_STAT.|  
+|ASC_OR_DESC (ODBC 1.0)|10|Char (1)|Ordre de tri pour la colonne : « A » pour l’ordre croissant ; « D » pour l’ordre décroissant ; La valeur NULL est retournée si la séquence de tri de la colonne n’est pas pris en charge par la source de données ou si le TYPE est SQL_TABLE_STAT.|  
 |CARDINALITÉ (ODBC 1.0)|11|Entier|Cardinalité de la table ou un index ; nombre de lignes dans la table si le TYPE est SQL_TABLE_STAT ; nombre de valeurs uniques dans l’index si TYPE n’est pas SQL_TABLE_STAT ; La valeur NULL est retournée si la valeur n’est pas disponible à partir de la source de données.|  
 |PAGES (ODBC 1.0)|12|Entier|Nombre de pages utilisées pour stocker l’index ou la table ; nombre de pages pour la table si le TYPE est SQL_TABLE_STAT ; nombre de pages pour l’index si TYPE n’est pas SQL_TABLE_STAT ; La valeur NULL est retournée si la valeur n’est pas disponible à partir de la source de données ou si non applicable à la source de données.|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|Si l’index est un index filtré, il s’agit de la condition de filtre, tels que les salaires > 30000 ; Si la condition de filtre ne peut pas être déterminée, il s’agit d’une chaîne vide.<br /><br /> NULL si l’index n’est pas un index filtré, il ne peut pas être déterminé si l’index est un index filtré ou le TYPE est SQL_TABLE_STAT.|  

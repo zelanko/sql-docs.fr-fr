@@ -2,20 +2,20 @@
 title: Interroger des données HDFS dans le pool de stockage
 titleSuffix: SQL Server big data clusters
 description: Ce didacticiel montre comment interroger des données HDFS dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire). Vous créez une table externe sur les données dans le pool de stockage et puis exécutez une requête.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 83a039fcbc335ecbc6057b1c8d7d1a953ba2c364
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: bcb2b036610b1ef62575d9a03043158e1b8af653
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388652"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728335"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutoriel : Requête HDFS dans un cluster de données volumineux de SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "67388652"
 
 Ce didacticiel montre comment interroger des données HDFS dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 
-Dans ce didacticiel, vous allez découvrir comment :
+Ce tutoriel vous montre comment effectuer les opérations suivantes :
 
 > [!div class="checklist"]
 > * Créer une table externe pointant vers les données HDFS dans un cluster de données volumineux.

@@ -19,25 +19,25 @@ ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 93c8510bb23bb57244590a472073fc882f9fe64f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a51183964fe36d799e0e62243c6a0012da99727
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208459"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793285"
 ---
 # <a name="writing-odbc-3x-applications"></a>Écriture d’applications ODBC 3.x
-Lorsqu’une application ODBC 2. *x* application est mis à niveau vers ODBC 3. *x*, elle doit être écrite de sorte qu’il fonctionne avec ODBC 2. *x* et 3. *x* pilotes. L’application doit incorporer le code conditionnel pour tirer pleinement parti de ODBC 3. *x* fonctionnalités.  
+Lorsqu’une application ODBC *2.x* application est mise à niveau vers ODBC *3.x*, elle doit être écrite de sorte qu’il fonctionne avec les deux ODBC *2.x* et *3.x* pilotes . L’application doit incorporer le code conditionnel pour tirer pleinement parti de ODBC *3.x* fonctionnalités.  
   
- L’attribut d’environnement SQL_ATTR_ODBC_VERSION doit être définie à SQL_OV_ODBC2. Cela garantit que le pilote se comporte comme un ODBC 2 *.x* pilote en ce qui concerne les modifications décrites dans la section [des changements de comportement](../../../odbc/reference/develop-app/behavioral-changes.md).  
+ L’attribut d’environnement SQL_ATTR_ODBC_VERSION doit être définie à SQL_OV_ODBC2. Cela garantit que le pilote se comporte comme une application ODBC *2.x* pilote en ce qui concerne les modifications décrites dans la section [des changements de comportement](../../../odbc/reference/develop-app/behavioral-changes.md).  
   
- Si l’application utilise les fonctionnalités décrites dans la section [nouvelles fonctionnalités](../../../odbc/reference/develop-app/new-features.md), code conditionnel doit être utilisé pour déterminer si le pilote est un ODBC 3. *x* ou ODBC 2 *.x* pilote. L’application utilise **SQLGetDiagField** et **SQLGetDiagRec** obtenir ODBC 3. *x* SQLSTATE tout en erreur lors du traitement sur ces fragments de code conditionnel. Prenez en compte les points suivants concernant les nouvelles fonctionnalités :  
+ Si l’application utilise les fonctionnalités décrites dans la section [nouvelles fonctionnalités](../../../odbc/reference/develop-app/new-features.md), code conditionnel doit être utilisé pour déterminer si le pilote est une application ODBC *3.x* ou ODBC *2.x* pilote. L’application utilise **SQLGetDiagField** et **SQLGetDiagRec** obtenir ODBC *3.x* SQLSTATE tout en erreur lors du traitement sur ces fragments de code conditionnel. Prenez en compte les points suivants concernant les nouvelles fonctionnalités :  
   
--   Une application affectée par le changement de comportement de taille d’ensemble de lignes doit être veiller à ne pas appeler **SQLFetch** lorsque la taille du tableau est supérieure à 1. Ces applications doivent remplacer les appels aux **SQLExtendedFetch** avec les appels à **SQLSetStmtAttr** pour définir l’attribut d’instruction SQL_ATTR_ARRAY_STATUS_PTR et **SQLFetchScroll**, afin qu’ils aient un code commun qui fonctionne avec les deux ODBC 3. *x* et ODBC 2. *x* pilotes. Étant donné que **SQLSetStmtAttr** avec SQL_ATTR_ROW_ARRAY_SIZE sera mappé à **SQLSetStmtAttr** avec SQL_ROWSET_SIZE pour ODBC 2. *x* pilotes, les applications peuvent définir simplement SQL_ATTR_ROW_ARRAY_SIZE pour leurs opérations d’extraction de plusieurs lignes.  
+-   Une application affectée par le changement de comportement de taille d’ensemble de lignes doit être veiller à ne pas appeler **SQLFetch** lorsque la taille du tableau est supérieure à 1. Ces applications doivent remplacer les appels aux **SQLExtendedFetch** avec les appels à **SQLSetStmtAttr** pour définir l’attribut d’instruction SQL_ATTR_ARRAY_STATUS_PTR et **SQLFetchScroll**, afin qu’ils aient un code commun qui fonctionne avec les deux ODBC *3.x* et ODBC *2.x* pilotes. Étant donné que **SQLSetStmtAttr** avec SQL_ATTR_ROW_ARRAY_SIZE sera mappé à **SQLSetStmtAttr** avec SQL_ROWSET_SIZE pour ODBC *2.x* pilotes, les applications peuvent définir simplement de SQL _ATTR_ROW_ARRAY_SIZE pour leurs opérations d’extraction de plusieurs lignes.  
   
--   La plupart des applications qui sont la mise à niveau ne sont pas réellement affectés par des modifications dans les codes SQLSTATE. Pour les applications qui sont affectées, ils peuvent effectuer une recherche mécanique et remplacer dans la plupart des cas à l’aide de la table de conversion d’erreur dans la section « Mappage SQLSTATE » pour convertir ODBC 3. *x* codes d’erreur à ODBC 2 *.x* codes. Depuis le 3 ODBC *.x* Gestionnaire de pilotes effectuera le mappage à partir d’ODBC 2. *x* SQLSTATE pour ODBC 3. *x* SQLSTATE, ces créateurs d’applications a besoin uniquement de vérification pour ODBC 3. *x* SQLSTATE et sans vous soucier, y compris ODBC 2. *x* SQLSTATE dans le code conditionnel.  
+-   La plupart des applications qui sont la mise à niveau ne sont pas réellement affectés par des modifications dans les codes SQLSTATE. Pour les applications qui sont affectées, ils peuvent effectuer une recherche mécanique et remplacer dans la plupart des cas à l’aide de la table de conversion d’erreur dans la section « Mappage SQLSTATE » pour convertir ODBC *3.x* codes d’erreur à ODBC *2.x* codes. Depuis ODBC *3.x* Gestionnaire de pilotes effectuera le mappage à partir d’ODBC *2.x* SQLSTATE pour ODBC *3.x* SQLSTATE, ces créateurs d’applications a besoin uniquement de vérification pour ODBC  *3.x* SQLSTATE et sans vous soucier, y compris ODBC *2.x* SQLSTATE dans le code conditionnel.  
   
--   Si une application utilise superbement date, heure et types de données timestamp, l’application peut se déclarer à être un ODBC 2. *x* application et utiliser ses code au lieu d’utiliser le code de climatisation.  
+-   Si une application utilise superbement date, heure et types de données timestamp, l’application peut déclarer elle-même être une application ODBC *2.x* application et utiliser ses code au lieu d’utiliser le code de climatisation.  
   
  La mise à niveau doit également inclure les étapes suivantes :  
   
@@ -57,7 +57,7 @@ Lorsqu’une application ODBC 2. *x* application est mis à niveau vers ODBC 3. 
   
 -   Remplacez tous les appels à **SQLTransact** avec les appels à **SQLEndTran**. Si le handle valid plus à droite dans le **SQLTransact** appel est un handle d’environnement, un *HandleType* argument de SQL_HANDLE_ENV doit être utilisé dans le **SQLEndTran** appeler avec approprié *gérer* argument. Si le handle valid plus à droite dans votre **SQLTransact** appel est un handle de connexion, un *HandleType* argument de SQL_HANDLE_DBC doit être utilisé dans le **SQLEndTran** appeler avec approprié *gérer* argument.  
   
--   Remplacez tous les appels à **SQLColAttributes** avec les appels à **SQLColAttribute**. Si le *FieldIdentifier* argument est SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE ou SQL_COLUMN_LENGTH, ne modifiez rien d’autre que le nom de la fonction. Dans le cas contraire, modifiez *FieldIdentifier* de SQL_COLUMN_XXXX à SQL_DESC_XXXX. Si *FieldIdentifier* est SQL_DESC_CONCISE_TYPE et le type de données est un type de données datetime, remplacez le correspondantes ODBC 3 *.x* type de données.  
+-   Remplacez tous les appels à **SQLColAttributes** avec les appels à **SQLColAttribute**. Si le *FieldIdentifier* argument est SQL_COLUMN_PRECISION, SQL_COLUMN_SCALE ou SQL_COLUMN_LENGTH, ne modifiez rien d’autre que le nom de la fonction. Dans le cas contraire, modifiez *FieldIdentifier* de SQL_COLUMN_XXXX à SQL_DESC_XXXX. Si *FieldIdentifier* est SQL_DESC_CONCISE_TYPE et le type de données est un type de données datetime, remplacez par ODBC correspondant *3.x* type de données.  
   
 -   Si vous utilisez les curseurs de bloc, curseurs avec défilement ou les deux, l’application effectue les opérations suivantes :  
   

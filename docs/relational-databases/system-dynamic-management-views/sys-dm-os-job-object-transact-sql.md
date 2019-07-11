@@ -16,16 +16,16 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 074981f19f0eb74a7e7c7d4e82466957f0ff98b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fdc778a34a513c2aca12da0dd0e1245e50dc5d6a
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047041"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716277"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>Sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ Un objet de tâche est une construction de Windows qui implémente la gouvernanc
   
 |Colonnes|Type de données|Description|  
 |-------------|---------------|-----------------|  
-|cpu_rate|**Int**|Spécifie la partie de cycles de processeur que les threads SQL Server peuvent utiliser pendant chaque intervalle de planification. La valeur est indiquée sous forme de pourcentage de cycles disponibles dans un intervalle de planification du cycle de 10000. Par exemple, la valeur 100 signifie que les threads peuvent utiliser des cœurs de processeur est à leur capacité maximale.|
+|cpu_rate|**int**|Spécifie la partie de cycles de processeur que les threads SQL Server peuvent utiliser pendant chaque intervalle de planification. La valeur est indiquée sous forme de pourcentage de cycles disponibles dans un intervalle de planification du cycle de 10000. Par exemple, la valeur 100 signifie que les threads peuvent utiliser des cœurs de processeur est à leur capacité maximale.|
 |cpu_affinity_mask|**bigint**|Un masque de bits qui décrit les processeurs logiques du processus SQL Server peut utiliser au sein du groupe de processeur. Par exemple, cpu_affinity_mask 255 (1111 1111 en binaire) signifie que les huit premiers processeurs logiques peuvent être utilisés.|
 |cpu_affinity_group|**Int**|Le numéro du groupe de processeur qui est utilisé par SQL Server.|
 |memory_limit_mb|**bigint**|La quantité maximale de mémoire allouée, en Mo, que tous les processus de l’objet de travail, y compris SQL Server, permettent de manière cumulative.| 
@@ -52,7 +52,7 @@ Un objet de tâche est une construction de Windows qui implémente la gouvernanc
 |peak_job_memory_used_mb|**bigint**|La quantité maximale de mémoire, en Mo, que tous les processus dans l’objet de traitement ont utilisé cumulativement étant donné que l’objet de travail a été créée.|
   
 ## <a name="permissions"></a>Autorisations  
-Sur SQL Database Managed Instance nécessite `VIEW SERVER STATE` autorisation. Sur la base de données SQL, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.  
+Sur SQL Database Managed Instance nécessite `VIEW SERVER STATE` autorisation. Sur SQL Database, requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.  
  
 ## <a name="see-also"></a>Voir aussi  
 

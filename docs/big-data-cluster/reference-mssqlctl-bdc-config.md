@@ -2,19 +2,20 @@
 title: mssqlctl bdc config reference
 titleSuffix: SQL Server big data clusters
 description: Article de référence pour les commandes de bdc mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f57ba87ea7cbd770380497bd340b5eaa4d80f29c
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 5c4182f216b13d4b56d1c37f6d003ad2ea6f5cf6
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394161"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728688"
 ---
 # <a name="mssqlctl-bdc-config"></a>mssqlctl bdc config
 
@@ -47,15 +48,15 @@ Fichier de sortie pour stocker le résultat dans. Par défaut : dirigé vers st
 Forcer le remplacement du fichier cible.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
+Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
 #### `--help -h`
-Afficher ce message d’aide et de sortie.
+Affiche ce message d’aide et quitte.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut : json.
 #### `--query -q`
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
-Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
+Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 ## <a name="mssqlctl-bdc-config-init"></a>mssqlctl bdc config init
 Initialise un grand Cluster données créer de profil de configuration qui peut être utilisé avec le cluster. La source du profil de configuration spécifique peut être spécifiée dans les arguments à partir de 3 choix.
 ```bash
@@ -81,15 +82,15 @@ Source du profil de configuration : [« aks-dev-test », « kubeadm-dev-test
 Forcer le remplacement du fichier cible.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
+Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
 #### `--help -h`
-Afficher ce message d’aide et de sortie.
+Affiche ce message d’aide et quitte.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut : json.
 #### `--query -q`
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
-Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
+Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 ## <a name="mssqlctl-bdc-config-list"></a>mssqlctl bdc config list
 Répertorie les options de profil de configuration disponibles pour une utilisation dans `bdc config init`
 ```bash
@@ -110,15 +111,15 @@ mssqlctl bdc config list --config-profile aks-dev-test
 Profil de configuration par défaut : [« aks-dev-test », « kubeadm-dev-test », « minikube-dev-test »]
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
+Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
 #### `--help -h`
-Afficher ce message d’aide et de sortie.
+Affiche ce message d’aide et quitte.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut : json.
 #### `--query -q`
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
-Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
+Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

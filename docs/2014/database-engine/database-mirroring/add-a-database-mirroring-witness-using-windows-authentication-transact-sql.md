@@ -14,12 +14,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a03a530c83cdf492eb7c4c0fcc000a6343c9a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754920"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792610"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Ajouter un témoin de mise en miroir de bases de données à l'aide de l'authentification Windows (Transact-SQL)
   Pour configurer un témoin pour une base de données, le propriétaire de la base de données attribue à une instance de moteur de base de données le rôle de serveur témoin. L'instance de serveur témoin peut être exécutée sur le même ordinateur que l'instance de serveur principal ou miroir, mais cela réduit alors considérablement la robustesse du basculement automatique.  
@@ -33,7 +33,7 @@ ms.locfileid: "62754920"
   
 ### <a name="to-establish-a-witness"></a>Pour établir un témoin  
   
-1.  Sur l'instance de serveur témoin, assurez-vous qu'un point de terminaison existe pour la mise en miroir de bases de données. Quel que soit le nombre de sessions de mise en miroir à prendre en charge, l'instance de serveur ne doit disposer que d'un seul point de terminaison de mise en miroir de bases de données. Si vous voulez utiliser cette instance de serveur exclusivement comme témoin dans des sessions de mise en miroir de bases de données, attribuez le rôle de témoin au point de terminaison (ROLE **=** WITNESS). Si vous souhaitez utiliser cette instance de serveur comme partenaire dans une ou plusieurs sessions de mise en miroir de bases de données, attribuez le rôle ALL au point de terminaison.  
+1.  Sur l'instance de serveur témoin, assurez-vous qu'un point de terminaison existe pour la mise en miroir de bases de données. Quel que soit le nombre de sessions de mise en miroir à prendre en charge, l'instance de serveur ne doit disposer que d'un seul point de terminaison de mise en miroir de bases de données. Si vous envisagez d’utiliser cette instance de serveur exclusivement comme témoin dans des sessions de mise en miroir de base de données, attribuez le rôle de témoin au point de terminaison (rôle **=** témoin). Si vous souhaitez utiliser cette instance de serveur comme partenaire dans une ou plusieurs sessions de mise en miroir de bases de données, attribuez le rôle ALL au point de terminaison.  
   
      Pour exécuter une instruction SET WITNESS, la session de mise en miroir de bases de données doit déjà être démarrée (entre les partenaires) et la valeur STATE du point de terminaison du témoin doit être STARTED.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62754920"
   
 3.  Connectez-vous au serveur principal et exécutez l'instruction suivante :  
   
-     ALTER DATABASE *<nom_base_de_données>* SET WITNESS **=** _<adresse_réseau_serveur>_  
+     ALTER DATABASE *< nom_base_de_données >* SET WITNESS **=** _< adresse_réseau_serveur >_  
   
      où *<nom_base_de_données>* est le nom de la base de données à mettre en miroir (ce nom est identique sur les deux partenaires) et *<adresse_réseau_serveur>* est l’adresse réseau du serveur de l’instance de serveur témoin.  
   

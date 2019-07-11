@@ -16,21 +16,21 @@ helpviewer_keywords:
 - sys.resource_stats
 - resource_stats
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c12b995a52f633c4fbd7829f090f2a95d631751e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6918c712e5440aa79bef045f2d64b2578eb42a69
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041440"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716316"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Retourne les données de stockage et d'utilisation de l'UC pour Azure SQL Database. Les données sont collectées et agrégées dans des intervalles de cinq minutes. Pour chaque base de données utilisateur, il existe une ligne pour chaque fenêtre de rapports de cinq minutes au cours desquels survient une modification de la consommation de ressources. Les données retournées incluent l’utilisation du processeur, changement de taille de stockage et base de données de modification de la référence. Bases de données inactives sans aucune modification ne peuvent pas avoir de lignes pour chaque intervalle de cinq minutes. Les données historiques sont conservées pendant environ 14 jours.  
+  Renvoie les données de stockage et l’utilisation d’UC pour une base de données Azure SQL Database. Les données sont collectées et agrégées par intervalles de cinq minutes. Pour chaque base de données utilisateur, il existe une ligne pour chaque fenêtre de rapports de cinq minutes au cours desquels survient une modification de la consommation de ressources. Les données retournées incluent l’utilisation du processeur, changement de taille de stockage et base de données de modification de la référence. Bases de données inactives sans aucune modification ne peuvent pas avoir de lignes pour chaque intervalle de cinq minutes. Les données historiques sont conservées pendant environ 14 jours.  
   
  Le **sys.resource_stats** vue a des définitions différentes selon la version du serveur de base de données SQL Azure qui est associé à la base de données. Tenez compte de ces différences et des modifications requises par votre application lors de la mise à niveau vers une nouvelle version de serveur.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "56041440"
 |start_time|**datetime**|Heure UTC indiquant le début de l’intervalle de création de rapports de cinq minutes.|  
 |end_time|**datetime**|Heure UTC indiquant la fin de l’intervalle de création de rapports de cinq minutes.|  
 |database_name|**varchar**|Nom de la base de données utilisateur.|  
-|sku|**varchar**|Niveau de service de la base de données. Les valeurs possibles sont les suivantes :<br /><br /> Simple<br /><br /> Standard<br /><br /> Premium<br /><br />Usage général<br /><br />Critique pour l’entreprise|  
+|sku|**varchar**|Niveau de service de la base de données. Les valeurs possibles sont les suivantes :<br /><br /> De base<br /><br /> standard<br /><br /> Premium<br /><br />Usage général<br /><br />Critique pour l’entreprise|  
 |storage_in_megabytes|**float**|Taille de stockage maximale en mégaoctets pour la période de temps, y compris la base de données, les index, les procédures stockées et les métadonnées.|  
 |avg_cpu_percent|**numeric**|Utilisation moyenne du calcul en pourcentage de la limite de la couche de service.|  
 |avg_data_io_percent|**numeric**|Utilisation moyenne des E-S en pourcentage en fonction de la limite du niveau de service.|  

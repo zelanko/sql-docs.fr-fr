@@ -14,12 +14,12 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3caa5feb387a7acdfa682f048bf77f2d999b560
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83cb2faad86268c3270e9386ca10b25e4807e030
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305798"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793749"
 ---
 # <a name="unicode-function-arguments"></a>Arguments des fonctions Unicode
 Le Gestionnaire de pilotes ODBC 3.5 (ou version ultérieure) prend en charge les versions ANSI et Unicode de toutes les fonctions qui acceptent des pointeurs vers des chaînes de caractères ou SQLPOINTER dans leurs arguments. Les fonctions Unicode sont implémentées en tant que fonctions (avec le suffixe de *W*), et non comme macros. Les fonctions ANSI (qui peut être appelé avec ou sans le suffixe *A*) sont identiques aux fonctions API ODBC en cours.  
@@ -66,7 +66,7 @@ Le Gestionnaire de pilotes ODBC 3.5 (ou version ultérieure) prend en charge les
 |**SQLInstallDriver**||  
   
 > [!NOTE]
->  Fonctions déconseillées ont prise en charge du mappage Unicode en ANSI, car le ODBC 3 *.x* Gestionnaire de pilotes prend en charge la recompilation d’ODBC 2. *x* des applications avec le UNICODE **#define**.  
+>  Fonctions déconseillées ont prise en charge du mappage Unicode en ANSI, car ODBC *3.x* prend en charge de gestionnaire de pilotes ODBC de recompilation *2.x* des applications avec le UNICODE **#define**.  
   
  Cette section contient les rubriques suivantes.  
   

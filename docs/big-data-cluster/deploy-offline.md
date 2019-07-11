@@ -2,19 +2,20 @@
 title: Déployer en mode hors connexion
 titleSuffix: SQL Server big data clusters
 description: Découvrez comment effectuer un déploiement hors connexion d’un cluster de données volumineuses de SQL Server.
-author: rothja
-ms.author: jroth
+author: mihaelablendea
+ms.author: mihaelab
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0f3bfcfba0cfb972c7d02042bc98aa461eb110bb
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1300c375903eb8692b8da6dce4e74a41e91d80c0
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388812"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728925"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Effectuer un déploiement hors connexion d’un cluster de données volumineuses de SQL Server
 
@@ -131,7 +132,7 @@ Déploiements de cluster Big data requièrent plusieurs outils, y compris **Pyth
 
 1. Sur un ordinateur connecté à internet, téléchargez un des fichiers compressés suivantes contenant les Python :
 
-   | Système d'exploitation | Télécharger |
+   | Système d’exploitation | Télécharger |
    |---|---|
    | Windows | [https://go.microsoft.com/fwlink/?linkid=2074021](https://go.microsoft.com/fwlink/?linkid=2074021) |
    | Linux   | [https://go.microsoft.com/fwlink/?linkid=2065975](https://go.microsoft.com/fwlink/?linkid=2065975) |

@@ -2,20 +2,20 @@
 title: Recevoir des données dans un pool de données SQL Server
 titleSuffix: SQL Server big data clusters
 description: Ce didacticiel montre comment recevoir des données dans le pool de données d’un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 86aca5e5e9ccbddfebcdeb3dade057b7fb138c4d
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 52881f5102125cc008c1a35278b9bf46bef289f4
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388613"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728360"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutoriel : Recevoir des données dans un pool de données SQL Server avec Transact-SQL
 
@@ -23,7 +23,7 @@ ms.locfileid: "67388613"
 
 Ce didacticiel montre comment utiliser Transact-SQL pour charger des données dans le [pool de données](concept-data-pool.md) d’un cluster de données volumineuses de SQL Server 2019 (version préliminaire). Avec les clusters de données volumineuses de SQL Server, à partir de diverses sources ingérées et de données distribuées sur des instances de pool de données.
 
-Dans ce didacticiel, vous allez découvrir comment :
+Ce tutoriel vous montre comment effectuer les opérations suivantes :
 
 > [!div class="checklist"]
 > * Créer une table externe dans le pool de données.

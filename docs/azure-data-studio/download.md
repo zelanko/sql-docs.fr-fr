@@ -1,5 +1,5 @@
 ---
-title: Téléchargez et installez
+title: Télécharger et installer
 titleSuffix: Azure Data Studio
 description: Télécharger et installer Azure Data Studio pour Windows, macOS ou Linux
 ms.prod: sql
@@ -9,30 +9,30 @@ author: markingmyname
 ms.author: maghan
 manager: jroth
 ms.custom: seodec18
-ms.date: 06/25/2019
+ms.date: 07/10/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 3954e9dbe1159608cb0141e908ae65b7cde7fa81
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 75122c146a33e5e44b61cbfd894c6997c2a4601f
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400113"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792936"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Téléchargez et installez Azure Data Studio
 
 [!INCLUDE[name-sos](../includes/name-sos.md)] s’exécute sur Windows, macOS et Linux.
 
 
-Téléchargez et installez la dernière version, le *June Release*:
+Téléchargez et installez la dernière version, le *versions*:
 
 > [!NOTE]
 > Si vous mettez à jour à partir de SQL Operations Studio et que vous souhaitez conserver vos paramètres, raccourcis clavier ou des extraits de code, consultez [déplacer les paramètres de l’utilisateur](#move-user-settings).
 
 |Plateforme|Télécharger|Date de publication| Version |
 |:---|:---|:---|:---|
-|Windows|[Programme d’installation de l’utilisateur (recommandé)](https://go.microsoft.com/fwlink/?linkid=2094100)<br>[Programme d’installation du système](https://go.microsoft.com/fwlink/?linkid=2094200)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2094201)|6 juin 2019 |1.8.0|
-|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2094202)|6 juin 2019 |1.8.0|
-|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2094203)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2094102)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2094101)|6 juin 2019 |1.8.0|
+|Windows|[Programme d’installation de l’utilisateur (recommandé)](https://go.microsoft.com/fwlink/?linkid=2098449)<br>[Programme d’installation du système](https://go.microsoft.com/fwlink/?linkid=2098450)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2098500)|10 juillet 2019 |1.9.0|
+|macOS|[.zip](https://go.microsoft.com/fwlink/?linkid=2098501)|10 juillet 2019 |1.9.0|
+|Linux|[.deb](https://go.microsoft.com/fwlink/?linkid=2098279)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2098280)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2098197)|10 juillet 2019 |1.9.0|
 
 Pour plus d’informations sur la dernière version, consultez les [notes de publication](release-notes.md).
 
@@ -45,25 +45,25 @@ Le *programme d’installation de l’utilisateur* est recommandée, car il ne n
 
 **Programme d’installation de l’utilisateur** (recommandé)
 
-1. Téléchargez et exécutez le [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *utilisateur* programme d’installation pour Windows](https://go.microsoft.com/fwlink/?linkid=2094100).
+1. Téléchargez et exécutez le [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *utilisateur* programme d’installation pour Windows](https://go.microsoft.com/fwlink/?linkid=2098449).
 2. Démarrer le [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] application.
 
 **Programme d’installation du système**
 
-1. Téléchargez et exécutez le [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *système* programme d’installation pour Windows](https://go.microsoft.com/fwlink/?linkid=2094200).
+1. Téléchargez et exécutez le [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *système* programme d’installation pour Windows](https://go.microsoft.com/fwlink/?linkid=2098450 ).
 2. Démarrer le [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] application.
 
 
 **Fichier zip**
 
-1. Télécharger [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip pour Windows](https://go.microsoft.com/fwlink/?linkid=2094201).
+1. Télécharger [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip pour Windows](https://go.microsoft.com/fwlink/?linkid=2098500).
 2. Recherchez le fichier téléchargé et extrayez-le.
 3. Exécutez `\azuredatastudio-windows\azuredatastudio.exe`
 
 
 ## <a name="get-azure-data-studio-for-macos"></a>Obtenir un Studio de données Azure pour macOS
 
-1. Télécharger [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour macOS](https://go.microsoft.com/fwlink/?linkid=2094202).
+1. Télécharger [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour macOS](https://go.microsoft.com/fwlink/?linkid=2098501).
 2. Pour développer le contenu du fichier zip, double-cliquez dessus.
 3. Pour rendre [!INCLUDE[name-sos](../includes/name-sos-short.md)] disponibles dans le *Launchpad*, faites glisser *Studio.app de données Azure* à la *Applications* dossier.
 
@@ -71,9 +71,9 @@ Le *programme d’installation de l’utilisateur* est recommandée, car il ne n
 ## <a name="get-azure-data-studio-for-linux"></a>Obtenir un Studio de données Azure pour Linux
 
 1. Télécharger [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour Linux à l’aide d’un des programmes d’installation ou de l’archive tar.gz :
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2094203)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2094102)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2094101)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2098279)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2098280)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2098197)
 1. Pour extraire le fichier et le lancement [!INCLUDE[name-sos](../includes/name-sos-short.md)], ouvrez une nouvelle fenêtre de Terminal et tapez les commandes suivantes :
 
    **Installation de Debian :**
@@ -163,8 +163,8 @@ Pour une expérience optimale, utilisez la configuration système recommandée.
 
 |             | Cœurs de processeur | Mémoire/RAM |
 |:-----------|:---------|:----------|
-| Recommandation |     4     |      8 GO    |
-|   Minimum   |     2     |      4 Go     |
+| Recommandé |     4     |      8 Go    |
+|   Minimale   |     2     |      4 Go     |
 |             |           |            |
 
 ## <a name="check-for-updates"></a>Rechercher des mises à jour

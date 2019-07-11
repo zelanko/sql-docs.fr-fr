@@ -20,12 +20,12 @@ ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 81659ae2cab2343a7fcf03327cbdc89c0db6c8c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3581c5ae7b9f4e41d0f8646f4e6e1d2cca1a2ca8
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536308"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793724"
 ---
 # <a name="sqltableprivileges-function"></a>Fonction SQLTablePrivileges
 **Conformité**  
@@ -114,23 +114,23 @@ SQLRETURN SQLTablePrivileges(
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation générale, les arguments et les données retournées des fonctions de catalogue ODBC, consultez [fonctions de catalogue](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- Les colonnes suivantes ont été renommées pour ODBC 3 *.x*. Les modifications de nom de colonne n’affectent pas la compatibilité descendante, car les applications lier par numéro de colonne.  
+ Les colonnes suivantes ont été renommées pour ODBC *3.x*. Les modifications de nom de colonne n’affectent pas la compatibilité descendante, car les applications lier par numéro de colonne.  
   
-|Colonne de ODBC 2.0|ODBC 3 *.x* colonne|  
+|Colonne de ODBC 2.0|ODBC *3.x* colonne|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  
   
  Le tableau suivant répertorie les colonnes du jeu de résultats. Les colonnes supplémentaires au-delà de la colonne 7 (IS_GRANTABLE) peuvent être définies par le pilote. Une application doit accéder à des colonnes spécifiques aux pilotes à rebours à partir de la fin du jeu de résultats au lieu d’en spécifiant une position ordinale explicite. Pour plus d’informations, consultez [les données retournées par les fonctions de catalogue](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Nom de colonne|Numéro de colonne|Type de données|Commentaires|  
+|Nom de la colonne|Numéro de colonne|Type de données|Commentaires|  
 |-----------------|-------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Nom de catalogue ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de catalogues.|  
 |TABLE_SCHEM  (ODBC 1.0)|2|Varchar|Nom du schéma ; NULL si non applicable à la source de données. Si un pilote prend en charge les schémas pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de schémas.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar non NULL|Nom de la table.|  
 |FOURNISSEUR D’AUTORISATIONS (ODBC 1.0)|4|Varchar|Nom de l’utilisateur qui dispose du privilège ; NULL si non applicable à la source de données.<br /><br /> Pour toutes les lignes dans lequel la valeur dans la colonne GRANTEE est le propriétaire de l’objet, la colonne GRANTOR sera « _système ».|  
-|BÉNÉFICIAIRE (ODBC 1.0)|5|Varchar non NULL|Nom de l’utilisateur auquel l’autorisation a été accordée.|  
-|PRIVILÈGE (ODBC 1.0)|6|Varchar non NULL|Le privilège de table. Peut être un des types suivants ou un privilège spécifique à la source de données.<br /><br /> SÉLECTIONNEZ : Le grantee est autorisé à récupérer des données pour une ou plusieurs colonnes de la table.<br /><br /> INSERTION : Le grantee est autorisé à insérer de nouvelles lignes contenant des données pour une ou plusieurs colonnes dans la table.<br /><br /> MISE À JOUR : Le grantee est autorisé à mettre à jour les données dans une ou plusieurs colonnes de la table.<br /><br /> SUPPRIMER : Le grantee est autorisé à supprimer des lignes de données à partir de la table.<br /><br /> RÉFÉRENCES : Le grantee est autorisé pour faire référence à une ou plusieurs colonnes de la table dans une contrainte (par exemple, une valeur unique, référentielle, ou une contrainte de validation de table).<br /><br /> Le rayon d’action autorisée au grantee par un privilège de table donnée est dépendante de la source de données. Par exemple, le privilège UPDATE peut autoriser le grantee à mettre à jour toutes les colonnes d’une table pour une source de données et uniquement les colonnes pour lesquelles le grantor possède le privilège UPDATE sur une autre source de données.|  
+|BÉNÉFICIAIRE (ODBC 1.0)|5\.|Varchar non NULL|Nom de l’utilisateur auquel l’autorisation a été accordée.|  
+|PRIVILÈGE (ODBC 1.0)|6\.|Varchar non NULL|Le privilège de table. Peut être un des types suivants ou un privilège spécifique à la source de données.<br /><br /> SÉLECTIONNEZ : Le grantee est autorisé à récupérer des données pour une ou plusieurs colonnes de la table.<br /><br /> INSERTION : Le grantee est autorisé à insérer de nouvelles lignes contenant des données pour une ou plusieurs colonnes dans la table.<br /><br /> MISE À JOUR : Le grantee est autorisé à mettre à jour les données dans une ou plusieurs colonnes de la table.<br /><br /> SUPPRIMER : Le grantee est autorisé à supprimer des lignes de données à partir de la table.<br /><br /> RÉFÉRENCES : Le grantee est autorisé pour faire référence à une ou plusieurs colonnes de la table dans une contrainte (par exemple, une valeur unique, référentielle, ou une contrainte de validation de table).<br /><br /> Le rayon d’action autorisée au grantee par un privilège de table donnée est dépendante de la source de données. Par exemple, le privilège UPDATE peut autoriser le grantee à mettre à jour toutes les colonnes d’une table pour une source de données et uniquement les colonnes pour lesquelles le grantor possède le privilège UPDATE sur une autre source de données.|  
 |IS_GRANTABLE (ODBC 1.0)|7|Varchar|Indique si le grantee est autorisé à accorder le privilège à d’autres utilisateurs ; « Oui », « Non », ou NULL si inconnu ou non applicable à la source de données.<br /><br /> Un privilège est possible d’accorder ou non transférables mais pas les deux. Le jeu de résultats retourné par **SQLColumnPrivileges** ne contient jamais les deux lignes pour lequel toutes les colonnes à l’exception de la colonne IS_GRANTABLE contiennent la même valeur.|  
   
 ## <a name="code-example"></a>Exemple de code  

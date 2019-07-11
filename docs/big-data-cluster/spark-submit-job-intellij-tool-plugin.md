@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Envoyer des travaux Spark sur des clusters de données volumineuses de SQL Server dans le Kit de ressources Azure pour IntelliJ.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e48aebbb15b9bd684b2ed3f5d4d314191a55ba42
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 5d2bb4b55b578530a29490a0a1a284f338686c38
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932296"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728370"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Envoyer des travaux Spark sur des clusters de données volumineuses de SQL Server dans IntelliJ
 
@@ -51,14 +51,14 @@ Un des scénarios clés pour les clusters de données volumineuses de SQL Server
 
 1. Démarrez IntelliJ IDEA et créez un projet. Dans le **nouveau projet** boîte de dialogue, suivez étapes ci-dessous : 
 
-   A. Sélectionnez **Azure Spark/HDInsight** > **Spark du projet avec des exemples (Scala)**.
+   a. Sélectionnez **Azure Spark/HDInsight** > **Spark du projet avec des exemples (Scala)** .
 
-   B. Dans le **outil de génération** , sélectionnez une des opérations suivantes, en fonction de vos besoins :
+   b. Dans la liste des **outils de génération**, sélectionnez l’une des options suivantes, en fonction de vos besoins :
 
-      * **Maven**, pour la prise en charge d’Assistant de création de projets Scala
+      * **Maven**, pour la prise en charge de l’Assistant de création de projets Scala
       * **SBT**, pour gérer les dépendances et la génération du projet Scala
 
-    ![La boîte de dialogue Nouveau projet](./media/spark-submit-job-intellij-tool-plugin/create-hdi-scala-app.png)
+    ![Boîte de dialogue Nouveau projet](./media/spark-submit-job-intellij-tool-plugin/create-hdi-scala-app.png)
 
 2. Sélectionnez **Suivant**.
 
@@ -72,21 +72,21 @@ Un des scénarios clés pour les clusters de données volumineuses de SQL Server
 
 5. Dans le **nouveau projet** fenêtre, procédez comme suit :  
 
-    ![Sélection du Kit de développement logiciel Spark](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
+    ![Sélection du kit de développement logiciel (SDK) Spark](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   A. Entrez un nom de projet et un emplacement.
+   a. Entrez un nom de projet et un emplacement.
 
-   B. Dans le **SDK de projet** liste déroulante, sélectionnez **Java 1.8** pour le cluster Spark 2.x, ou sélectionnez **Java 1.7** pour le cluster Spark 1.x.
+   b. Dans le **SDK de projet** liste déroulante, sélectionnez **Java 1.8** pour le cluster Spark 2.x, ou sélectionnez **Java 1.7** pour le cluster Spark 1.x.
 
-   c. Dans le **version Spark** liste déroulante, Assistant de création de projets Scala intègre la version correcte pour le Kit de développement logiciel Spark et le SDK Scala. Si la version de cluster Spark est antérieure à 2.0, sélectionnez **Spark 1.x**. Sinon, sélectionnez **Spark2.x**. Cet exemple utilise **Spark 2.0.2 (Scala 2.11.8)**.
+   c. Dans le **version Spark** liste déroulante, Assistant de création de projets Scala intègre la version correcte pour le Kit de développement logiciel Spark et le SDK Scala. Si la version du cluster spark est antérieure à la version 2.0, sélectionnez **Spark 1.x**. Sinon, sélectionnez **Spark 2.x**. La version utilisée dans cet exemple est **Spark 2.0.2 (Scala 2.11.8)** .
 
 6. Sélectionnez **Terminer**.
 
-7. Le projet Spark crée automatiquement un artefact pour vous. Pour afficher l’artefact, procédez comme suit :
+7. Le projet Spark crée automatiquement un artefact à votre intention. Pour afficher l’artefact, procédez comme suit :
 
-   A. Sur le **fichier** menu, sélectionnez **Structure de projet**.
+   a. Sur le **fichier** menu, sélectionnez **Structure de projet**.
 
-   B. Dans le **Structure de projet** boîte de dialogue, sélectionnez **artefacts** pour afficher l’artefact par défaut qui est créé. Vous pouvez également créer votre propre artefact en sélectionnant le signe plus (**+**).
+   b. Dans le **Structure de projet** boîte de dialogue, sélectionnez **artefacts** pour afficher l’artefact par défaut qui est créé. Vous pouvez également créer votre propre artefact en sélectionnant le signe plus ( **+** ).
 
       ![Informations sur l’artefact dans la boîte de dialogue](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -100,19 +100,19 @@ Après le lien d’un cluster de données volumineux de SQL Server, vous pouvez 
 
     ![lien cluster Big Data - config](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-config.png)
 
-    * Pour **Spark clusters (Linux uniquement)**, sélectionnez le cluster sur lequel vous souhaitez exécuter votre application.
+    * Pour **Spark clusters (Linux uniquement)** , sélectionnez le cluster sur lequel vous souhaitez exécuter votre application.
 
     * Sélectionnez un artefact à partir du projet IntelliJ, ou sélectionnez-en un dans le disque dur.
 
-    * **Nom de la classe principale** champ : La valeur par défaut est la classe principale à partir du fichier sélectionné. Vous pouvez modifier la classe en sélectionnant les points de suspension (**...** ) et en choisissant une autre classe.   
+    * **Nom de la classe principale** champ : la valeur par défaut est la classe main du fichier sélectionné. Vous pouvez modifier la classe en sélectionnant les points de suspension ( **...** ) pour choisir une autre classe.   
 
-    * **Configurations de tâche** champ :  Les valeurs par défaut sont définies en tant qu’image indiqué ci-dessus. Vous pouvez modifier la valeur ou ajouter la nouvelle clé/valeur votre soumission de travaux. Pour plus d'informations, consultez : [Apache Livy API REST](http://livy.incubator.apache.org./docs/latest/rest-api.html)
+    * **Configurations de tâche** champ :  Les valeurs par défaut sont définies en tant qu’image indiqué ci-dessus. Vous pouvez modifier la valeur ou ajouter la nouvelle clé/valeur votre soumission de travaux. Pour plus d'informations : [Apache Livy API REST](http://livy.incubator.apache.org./docs/latest/rest-api.html)
 
       ![La signification configuration travail de boîte de dialogue Spark Submission](./media/spark-submit-job-intellij-tool-plugin/submit-job-configurations.png)
 
     * **Arguments de ligne de commande** champ : Vous pouvez entrer les valeurs d’arguments fractionner par un espace pour la classe principale, si nécessaire.
 
-    * **Référencées des fichiers JAR** et **fichiers référencés** champs : Le cas échéant, vous pouvez entrer les chemins d’accès pour les fichiers et les fichiers JAR référencés. Pour plus d'informations, consultez : [Apache Spark Configuration](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
+    * **Référencées des fichiers JAR** et **fichiers référencés** champs : vous pouvez entrer les chemins des JAR et fichiers référencés, le cas échéant. Pour plus d'informations : [Apache Spark Configuration](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
 
       ![Le fichier jar boîte de dialogue Spark Submission fichiers signification](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 
@@ -121,76 +121,76 @@ Après le lien d’un cluster de données volumineux de SQL Server, vous pouvez 
                          
     * **Télécharger le chemin d’accès**: Vous pouvez indiquer l’emplacement de stockage pour l’envoi de ressources de projet Jar ou Scala. Il existe plusieurs types de stockage pris en charge : **Session interactive Spark permet de charger** et **WebHDFS usage à télécharger**
     
-2. Cliquez sur **SparkJobRun** pour envoyer votre projet pour le cluster sélectionné. Le **tâche Spark à distance dans le Cluster** onglet affiche la progression de l’exécution du travail en bas. Vous pouvez arrêter l’application en cliquant sur le bouton rouge.  
+2. Cliquez sur **SparkJobRun** pour envoyer votre projet pour le cluster sélectionné. La progression de l’exécution de la tâche est affichée au bas de l’onglet **Remote Spark Job in Cluster** (Tâche Spark distante du cluster). Vous pouvez arrêter l’application en cliquant sur le bouton rouge.  
 
     ![cluster de Big Data Link - exécuter](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-run.png)
 
-## <a name="spark-console"></a>Console de Spark
-Vous pouvez exécutez Console(Scala) Local Spark ou Console(Scala) de Session Interactive Spark Livy.
+## <a name="spark-console"></a>Console Spark
+Vous pouvez exécutez Spark Local Console(Scala) ou Spark Livy Interactive Session Console(Scala).
 
-### <a name="spark-local-consolescala"></a>Console(Scala) Local Spark
-Vérifiez que vous avez respecté la WINUTILS. Condition préalable EXE.
+### <a name="spark-local-consolescala"></a>Spark Local Console(Scala)
+Vérifiez que le prérequis relatif à WINUTILS.EXE est respecté.
 
-1. À partir de la barre de menus, accédez à **exécuter** > **modifier les Configurations...** .
+1. À partir de la barre de menus, accédez à **Run** > **Edit Configurations...** (Exécuter > Modifier les configurations).
 
-2. À partir de la **exécuter/déboguer des Configurations** fenêtre, dans le volet gauche, accédez à **Apache Spark sur un cluster de données volumineux de SQL Server** > **[Spark sur SQL] myApp**.
+2. À partir de la **exécuter/déboguer des Configurations** fenêtre, dans le volet gauche, accédez à **Apache Spark sur un cluster de données volumineux de SQL Server** >  **[Spark sur SQL] myApp**.
 
-3. Dans la fenêtre principale, sélectionnez le **exécuter localement** onglet.
+3. Dans la fenêtre principale, sélectionnez l’onglet **Locally Run** (Exécuter localement).
 
-4. Entrez les valeurs suivantes, puis sélectionnez **OK**:
+4. Entrez les valeurs suivantes, puis sélectionnez **OK** :
 
-    |Propriété |Value |
+    |Propriété |Valeur |
     |----|----|
-    |Classe principale du travail|La valeur par défaut est la classe principale à partir du fichier sélectionné. Vous pouvez modifier la classe en sélectionnant les points de suspension (**...** ) et en choisissant une autre classe.|
-    |Variables d'environnement|Vérifiez que la valeur de HADOOP_HOME est correcte.|
-    |Emplacement de WINUTILS.exe|Vérifiez que le chemin d’accès est correct.|
+    |Job main class (Classe main du travail)|la valeur par défaut est la classe main du fichier sélectionné. Vous pouvez modifier la classe en sélectionnant les points de suspension ( **...** ) pour choisir une autre classe.|
+    |Variables d’environnement|Vérifiez que la valeur de HADOOP_HOME est correcte.|
+    |WINUTILS.exe location (Emplacement de WINUTILS.exe)|Vérifiez que le chemin est correct.|
 
-    ![Configuration du jeu Console locale](./media/spark-submit-job-intellij-tool-plugin/console-set-configuration.png)
+    ![Configuration de la console locale](./media/spark-submit-job-intellij-tool-plugin/console-set-configuration.png)
 
-5. À partir du projet, accédez à **myApp** > **src** > **principal** > **scala**  >  **myApp**.  
+5. À partir de Project, accédez à **myApp** > **src** > **main** > **scala** > **myApp**.  
 
-6. À partir de la barre de menus, accédez à **outils** > **Spark Console** > **Console(Scala) locales de Spark exécuter**.
+6. À partir de la barre de menus, accédez à **Tools** > **Spark Console** > **Run Spark Local Console(Scala)** (Outils > Console Spark > Exécuter la console Spark locale (Scala)).
 
-7. Ensuite, deux boîtes de dialogue peuvent s’afficher pour vous demander si vous souhaitez auto fixer des dépendances. Dans ce cas, sélectionnez **correction automatique**.
+7. Ensuite, deux boîtes de dialogue peuvent s’afficher pour vous demander si vous souhaitez corriger automatiquement les dépendances. Dans ce cas, sélectionnez **Auto Fix** (Correction automatique).
 
-    ![Fix1 automatique de Spark](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix1.png)
+    ![Spark Auto Fix1](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix1.png)
 
-    ![Fix2 automatique de Spark](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix2.png)
+    ![Spark Auto Fix2](./media/spark-submit-job-intellij-tool-plugin/console-auto-fix2.png)
 
-8. La console doit ressembler à l’image ci-dessous. Dans le type de fenêtre de console `sc.appName`, puis appuyez sur ctrl + entrée.  Le résultat s’affichera. Vous pouvez mettre fin à la console locale en cliquant sur le bouton rouge.
+8. La console doit ressembler à l’image ci-dessous. Dans la fenêtre de console, tapez `sc.appName`, puis appuyez sur Ctrl+Entrée.  Le résultat s’affichera. Vous pouvez clore la console locale en cliquant sur le bouton rouge.
 
-    ![Résultat de la Console locale](./media/spark-submit-job-intellij-tool-plugin/local-console-result.png)
+    ![Résultat dans la console locale](./media/spark-submit-job-intellij-tool-plugin/local-console-result.png)
 
 
-### <a name="spark-livy-interactive-session-consolescala"></a>Spark Console(Scala) de Session Interactive Livy
+### <a name="spark-livy-interactive-session-consolescala"></a>Spark Livy Interactive Session Console(Scala)
 Le Console(Scala) de Session Interactive Spark Livy est uniquement pris en charge IntelliJ 2018.2 et 2018.3.
 
-1. À partir de la barre de menus, accédez à **exécuter** > **modifier les Configurations...** .
+1. À partir de la barre de menus, accédez à **Run** > **Edit Configurations...** (Exécuter > Modifier les configurations).
 
-2. À partir de la **exécuter/déboguer des Configurations** fenêtre, dans le volet gauche, accédez à **Apache Spark sur un cluster de données volumineux de SQL Server** > **[Spark sur SQL] myApp**.
+2. À partir de la **exécuter/déboguer des Configurations** fenêtre, dans le volet gauche, accédez à **Apache Spark sur un cluster de données volumineux de SQL Server** >  **[Spark sur SQL] myApp**.
 
-3. Dans la fenêtre principale, sélectionnez le **exécuter à distance dans le Cluster** onglet.
+3. Dans la fenêtre principale, sélectionnez l’onglet **Remotely Run in Cluster** (Exécuter à distance dans le cluster).
 
-4. Entrez les valeurs suivantes, puis sélectionnez **OK**:
+4. Entrez les valeurs suivantes, puis sélectionnez **OK** :
 
-    |Propriété |Value |
+    |Propriété |Valeur |
     |----|----|
     |Clusters Spark (Linux uniquement)|Sélectionnez le cluster Big Data de SQL Server sur lequel vous souhaitez exécuter votre application.|
-    |Nom de la classe principale|La valeur par défaut est la classe principale à partir du fichier sélectionné. Vous pouvez modifier la classe en sélectionnant les points de suspension (**...** ) et en choisissant une autre classe.|
+    |Nom de la classe main|la valeur par défaut est la classe main du fichier sélectionné. Vous pouvez modifier la classe en sélectionnant les points de suspension ( **...** ) pour choisir une autre classe.|
 
-    ![Configuration du jeu Console interactive](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
+    ![Configuration de la console interactive](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
 
-5. À partir du projet, accédez à **myApp** > **src** > **principal** > **scala**  >  **myApp**.  
+5. À partir de Project, accédez à **myApp** > **src** > **main** > **scala** > **myApp**.  
 
-6. À partir de la barre de menus, accédez à **outils** > **Spark Console** > **exécuter Spark Livy Interactive Session Console(Scala)**.
+6. À partir de la barre de menus, accédez à **Tools** > **Spark Console** > **Run Spark Livy Interactive Session Console(Scala)** (Exécuter la console de session interactive Spark Livy (Scala)).
 
-7. La console doit ressembler à l’image ci-dessous. Dans le type de fenêtre de console `sc.appName`, puis appuyez sur ctrl + entrée.  Le résultat s’affichera. Vous pouvez mettre fin à la console locale en cliquant sur le bouton rouge.
+7. La console doit ressembler à l’image ci-dessous. Dans la fenêtre de console, tapez `sc.appName`, puis appuyez sur Ctrl+Entrée.  Le résultat s’affichera. Vous pouvez clore la console locale en cliquant sur le bouton rouge.
 
-    ![Résultat de la Console interactive](./media/spark-submit-job-intellij-tool-plugin/interactive-console-result.png)
+    ![Résultat dans la console interactive](./media/spark-submit-job-intellij-tool-plugin/interactive-console-result.png)
 
 ### <a name="send-selection-to-spark-console"></a>Envoyer la sélection à la Console de Spark
 
-Pour plus de commodité, vous pouvez voir le résultat du script en envoyant du code à la Console locale ou Console(Scala) de Session Interactive Livy. Vous pouvez mettre en surbrillance du code dans le fichier Scala, puis cliquez sur **envoyer la sélection à la Console de Spark**. Le code sélectionné sera envoyé à la console et être effectué. Le résultat s’affichera après le code dans la console. La console vérifie les erreurs si existant.  
+Pour plus de commodité, vous pouvez voir le résultat du script en envoyant du code à la Console locale ou Console(Scala) de Session Interactive Livy. Vous pouvez mettre en évidence du code dans le fichier Scala, puis cliquer avec le bouton droit sur **Send Selection To Spark Console** (Envoyer la sélection à la console Spark). Le code sélectionné est envoyé à la console afin d’être traité. Le résultat s’affiche après le code dans la console. La console vérifiera les erreurs s’il y en a.  
 
    ![Envoyer la sélection à la Console de Spark](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 

@@ -17,12 +17,12 @@ ms.assetid: ef448c39-a9ad-4f07-8ef3-65bd4cef672a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7ee139dd652204c750c99d8bad8ab2b17c7c1ba1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da5a674f86228c71a26e621936dc711a688a684d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007805"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793942"
 ---
 # <a name="calling-sqlclosecursor"></a>Appel de SQLCloseCursor
-Étant donné que **SQLCloseCursor** est presque identique **SQLFreeStmt** avec SQL_CLOSE, le Gestionnaire de pilotes ne mappe pas cette fonction. Fonctions de remplacement sont mappées afin qu’existant ODBC 2 *.x* applications peuvent facilement transférer dans ODBC 3. *x* à l’aide des nouvelles fonctions. Ce déplacement rend plus facile pour de telles applications commencer à l’aide de la nouvelle ODBC 3. *x* fonctionnalités à l’intérieur du code conditionnel de façon modulaire. **SQLCloseCursor** ne représente pas de nouvelles fonctionnalités. Une application ne peut pas accéder tout l’avantage en déplaçant vers **SQLCloseCursor** de **SQLFreeStmt** avec SQL_CLOSE.
+Étant donné que **SQLCloseCursor** est presque identique **SQLFreeStmt** avec SQL_CLOSE, le Gestionnaire de pilotes ne mappe pas cette fonction. Fonctions de remplacement sont mappées afin qu’existant ODBC *2.x* applications peuvent facilement déplacer vers ODBC *3.x* à l’aide des nouvelles fonctions. Ce déplacement plus facilement ces applications commencer à utiliser ODBC nouvelle *3.x* fonctionnalités à l’intérieur du code conditionnel de façon modulaire. **SQLCloseCursor** ne représente pas de nouvelles fonctionnalités. Une application ne peut pas accéder tout l’avantage en déplaçant vers **SQLCloseCursor** de **SQLFreeStmt** avec SQL_CLOSE.

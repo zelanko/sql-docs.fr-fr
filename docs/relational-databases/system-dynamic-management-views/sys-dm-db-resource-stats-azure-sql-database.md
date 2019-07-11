@@ -16,21 +16,21 @@ helpviewer_keywords:
 - sys.dm_db_resource_stats
 - dm_db_resource_stats
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3ca0aa09718d8310ccb6ba304d8cc5595d8c5299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22d771f57e5ac0d9035b8c283eb6da69027eadb3
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65993887"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716679"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de données Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Retourne la consommation d'UC, d’E/S et de mémoire pour une base de données [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il existe une ligne pour chaque période de 15 secondes, même s'il n'y a aucune activité dans la base de données. Les données historiques sont conservées pendant une heure.  
+  Retourne la consommation d'UC, d’E/S et de mémoire pour une base de données [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Il existe une ligne pour toutes les 15 secondes, même s’il n’existe aucune activité dans la base de données. L’historique des données est conservé pendant une heure.  
   
 |Colonnes|Type de données|Description|  
 |-------------|---------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "65993887"
 |avg_instance_cpu_percent|**decimal (5,2)**|Base de données l’utilisation du processeur en pourcentage moyen.|
 |avg_instance_memory_percent|**decimal (5,2)**|Utilisation moyenne de base de données de mémoire en pourcentage.|
 |avg_login_rate_percent|**decimal (5,2)**|Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.|
-|replica_role|**Int**|Représente le rôle du réplica en cours avec 0 comme principal, 1 en tant que base de données secondaire et 2 en tant que redirecteur (principal de géo-secondaire). Vous voyez « 1 », cas de connexion avec intention en lecture seule à toutes les bases de données secondaires. Si vous vous connectez à une base de données géo-secondaire sans spécifier l’intention en lecture seule, vous devez voir « 2 » (connexion au redirecteur).|
+|replica_role|**int**|Représente le rôle du réplica en cours avec 0 comme principal, 1 en tant que base de données secondaire et 2 en tant que redirecteur (principal de géo-secondaire). Vous voyez « 1 », cas de connexion avec intention en lecture seule à toutes les bases de données secondaires. Si vous vous connectez à une base de données géo-secondaire sans spécifier l’intention en lecture seule, vous devez voir « 2 » (connexion au redirecteur).|
 |||
   
 > [!TIP]  

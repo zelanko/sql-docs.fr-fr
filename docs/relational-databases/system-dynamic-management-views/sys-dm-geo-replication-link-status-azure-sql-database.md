@@ -14,16 +14,16 @@ helpviewer_keywords:
 - dm_geo_replication_link_status dynamic management view
 - sys.dm_geo_replication_link_status dynamic management view
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 2c416d0d2a39439e2b6fe79fbe755cdc62a4b8cf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e94406cf30d1a942581f5fcfd30438c84ea2b159
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56021752"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716699"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
@@ -31,7 +31,7 @@ ms.locfileid: "56021752"
 
   Contient une ligne pour chaque lien de réplication entre les bases de données primaires et secondaires dans un partenariat de géo-réplication. Cela inclut les bases de données primaires et secondaire. S’il existe plusieurs liens de réplication continue pour une base de données primaire donnée, cette table contient une ligne pour chacune des relations. La vue est créée dans toutes les bases de données, y compris la logique principale. Cependant, l'interrogation de cette vue dans la base de données master logique retourne un ensemble vide.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |link_guid|**uniqueidentifier**|ID unique du lien de réplication.|  
 |partner_server|**sysname**|Nom du serveur de base de données SQL contenant la base de données lié.|  
@@ -40,10 +40,10 @@ ms.locfileid: "56021752"
 |replication_lag_sec|**Int**|Différence de temps en secondes entre la valeur last_replication et l’horodateur de validation de cette transaction sur le serveur principal basé sur l’horloge de la base de données primaire.  Cette valeur est disponible sur la base de données primaire.|  
 |replication_state|**tinyint**|L’état de géo-réplication pour cette base de données :.<br /><br /> 1 = Seeding. La cible de géo-réplication est en cours d’amorçage, mais les deux bases de données ne sont pas encore synchronisés. Jusqu'à ce que l’amorçage terminé, vous ne peut pas se connecter à la base de données secondaire. Suppression de base de données secondaire du site principal annulera l’opération d’amorçage.<br /><br /> 2 = mise à jour. La base de données secondaire est dans un état transactionnellement cohérent et est constamment synchronisé avec la base de données primaire.<br /><br /> 4 = messages interrompus. Il ne s'agit pas d'une relation de copie continue active. Cet état indique généralement que la bande passante disponible pour l'interlien est insuffisante pour le niveau d'activité de transaction dans la base de données primaire. Toutefois, la relation de copie continue est toujours intacte.|  
 |replication_state_desc|**nvarchar (256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|rôle|**tinyint**|Rôle de géo-réplication, une des :<br /><br /> 0 = primary. Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.<br /><br /> 1 = la base de données secondaire.  Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.|  
+|role|**tinyint**|Rôle de géo-réplication, une des :<br /><br /> 0 = primary. Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.<br /><br /> 1 = la base de données secondaire.  Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.|  
 |role_desc|**nvarchar (256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|Le type secondaire, un des suivants :<br /><br /> 0 ne = aucune direct connexions sont autorisées pour la base de données secondaire et la base de données n’est pas disponible pour un accès en lecture.<br /><br /> 2 = toutes les connexions sont autorisées pour la base de données dans la boucle repl secondaire ; application pour l’accès en lecture seule.|  
-|secondary_allow_connections_desc|**nvarchar (256)**|Non<br /><br /> All|  
+|secondary_allow_connections_desc|**nvarchar (256)**|Non<br /><br /> Tous|  
 |last_commit|**datetimeoffset**|L’heure de la dernière transaction validée dans la base de données. Si récupéré sur la base de données primaire, il indique la dernière heure de validation sur la base de données primaire. Si récupéré sur la base de données secondaire, cette propriété indique l’heure de la dernière validation sur la base de données secondaire. Si récupéré sur la base de données secondaire lorsque le réplica principal du lien de réplication est arrêté, il indique jusqu'à quel point la base de données secondaire a rattrapé.|
   
 > [!NOTE]  

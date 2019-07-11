@@ -1,6 +1,6 @@
 ---
-title: Fonctionnalités prises en charge par les éditions de SQL Server Analysis Services | Microsoft Docs
-ms.date: 06/25/2019
+title: Fonctionnalités Analysis Services prises en charge par les éditions de SQL Server | Microsoft Docs
+ms.date: 07/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9947b10e01864f66bf26d6599e43814ab37dadc6
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 6d4f0cc16638963dbbbb091bc19cade36e45fe3b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388207"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792551"
 ---
 # <a name="analysis-services-features-supported-by-sql-server-edition"></a>Fonctionnalités Analysis Services prises en charge par l’édition de SQL Server
+
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 Cet article décrit les fonctionnalités prises en charge par les différentes éditions de SQL Server 2016, 2017, 2019 Analysis Services. Version d’évaluation prend en charge les fonctionnalités de l’édition Enterprise.
@@ -37,7 +38,7 @@ Cet article décrit les fonctionnalités prises en charge par les différentes �
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Hierarchies|Oui|Oui|||||Oui|  
 |Indicateurs de performance clés|Oui|Oui|||||Oui|  
-|perspectives|Oui||||||Oui|  
+|Perspectives|Oui||||||Oui|  
 |Translations|Oui|Oui|||||Oui|  
 |Calculs DAX, requêtes DAX, requêtes MDX|Oui|Oui|||||Oui|  
 |Sécurité au niveau des lignes|Oui|Oui|||||Oui|  
@@ -50,21 +51,21 @@ Cet article décrit les fonctionnalités prises en charge par les différentes �
   
 |Fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Développeur|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Mesures semi-additives|Oui|Non <sup>1</sup>|||||Oui|  
+|Mesures semi-additives|Oui|Ne <sup> [1](#sameas)</sup>|||||Oui|  
 |Hierarchies|Oui|Oui|||||Oui|  
 |Indicateurs de performance clés|Oui|Oui|||||Oui|  
-|perspectives|Oui||||||Oui|  
+|Perspectives|Oui||||||Oui|  
 |Actions|Oui|Oui|||||Oui|  
 |Intelligence comptable|Oui|Oui|||||Oui|  
 |Time Intelligence|Oui|Oui|||||Oui|  
 |Cumuls personnalisés|Oui|Oui|||||Oui|  
 |Cube d'écriture différée|Oui|Oui|||||Oui|  
-|Dimensions d'écriture différée|Oui||||||Oui|  
+|Dimensions d'écriture différée|Oui <sup>[2](#wb)</sup>||||||Oui <sup>[2](#wb)</sup>|  
 |Cellules d'écriture différée|Oui|Oui|||||Oui|  
 |Extraction|Oui|Oui|||||Oui|  
 |Types de hiérarchies avancés (parent-enfant et irrégulières)|Oui|Oui|||||Oui|  
 |Dimensions avancées (dimensions de référence, plusieurs-à-plusieurs)|Oui|Oui|||||Oui|  
-|Dimensions et mesures liées|Oui|Oui  <sup>2</sup> |||||Oui|  
+|Dimensions et mesures liées|Oui|Oui <sup> [3](#linkmd)</sup> |||||Oui|  
 |Translations|Oui|Oui|||||Oui|  
 |Aggregations|Oui|Oui|||||Oui|  
 |Partitions multiples|Oui|Oui, jusqu'à 3|||||Oui|  
@@ -80,8 +81,12 @@ Cet article décrit les fonctionnalités prises en charge par les différentes �
 |Traitement de type envoi de données (push)|Oui||||||Oui|  
 |Expressions de mesure|Oui||||||Oui|  
   
- <sup>1</sup> La mesure semi-additive LastChild est prise en charge dans l’édition Standard, contrairement à d’autres mesures semi-additives, telles que None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren et ByAccount. Les mesures additives, telles que Sum, Count, Min, Max, et les mesures non additives (DistinctCount) sont prises en charge dans toutes les éditions.  
-  <sup>2</sup> L’édition Standard prend en charge la liaison des mesures et des dimensions dans la même base de données, mais pas à partir d’autres bases de données ou instances.
+<a name="sameas">[1] </a> The semi-additive LastChild est prise en charge dans l’Édition Standard, mais d’autres mesures semi-additives, telles que None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren et ByAccount, ne sont pas. Les mesures additives, telles que Sum, Count, Min, Max, et les mesures non additives (DistinctCount) sont prises en charge dans toutes les éditions. 
+
+<a name="wb">[2] </a> L’écriture différée des dimensions sont supprimées dans SQL Server Analysis Services 2019 et versions ultérieures.
+ 
+<a name="linkmd">[3] </a> Standard edition prend en charge la liaison des mesures et dimensions dans la même base de données, mais pas à partir de bases de données ou des autres instances.
+  
   
 ## <a name="power-pivot-for-sharepoint"></a>Power Pivot pour SharePoint  
   
@@ -95,6 +100,9 @@ Cet article décrit les fonctionnalités prises en charge par les différentes �
 |Flux de données Power Pivot|Oui||||||Oui|  
   
 ## <a name="data-mining"></a>Exploration de données  
+
+> [!NOTE]
+> Exploration de données est [déconseillée](analysis-services-backward-compatibility-sql2017.md#deprecated-features) dans SQL Server Analysis Services 2017.
   
 |Nom de la fonctionnalité|Enterprise|Standard|Web|Express with Advanced Services|Express with Tools|Express|Développeur|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  

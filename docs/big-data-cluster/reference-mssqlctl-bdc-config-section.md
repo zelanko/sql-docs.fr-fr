@@ -2,19 +2,20 @@
 title: mssqlctl bdc config section reference
 titleSuffix: SQL Server big data clusters
 description: Article de référence pour les commandes de section config mssqlctl bdc.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2522aa41f860d7552df934ffc1751d2e7e8d43d1
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 3ca96ddbbf64b04e8ccd8854a8338fe6e118debb
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394401"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728696"
 ---
 # <a name="mssqlctl-bdc-config-section"></a>mssqlctl bdc config section
 
@@ -56,15 +57,15 @@ Chemin d’accès de l’emplacement où vous souhaitez la section du fichier pl
 Forcer le remplacement du fichier cible.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
+Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
 #### `--help -h`
-Afficher ce message d’aide et de sortie.
+Affiche ce message d’aide et quitte.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut : json.
 #### `--query -q`
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
-Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
+Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 ## <a name="mssqlctl-bdc-config-section-set"></a>mssqlctl bdc config section set
 Définit la section spécifiée dans le profil de configuration sélectionné selon le chemin d’accès json donnée.  Tous les examplesbelow sont indiqués dans Bash.  Si vous utilisez une autre ligne de commande, sachez que vous devrez peut-être escapequotations en conséquence.  Vous pouvez également utiliser la fonctionnalité fichiers de correctifs.
 ```bash
@@ -116,15 +117,15 @@ Une liste de paires de valeur de clé des chemins d’accès json aux valeurs :
 Chemin d’accès à un fichier json de correctif qui est basée sur la bibliothèque jsonpatch : http://jsonpatch.com/. Vous devez démarrer votre fichier json de correctif avec une clé appelée « patch », dont la valeur est un tableau d’opérations de correction destinées. Pour le chemin d’accès d’une opération de correctif logiciel, vous pouvez utiliser la notation à points, tels que key1.key2 pour la plupart des opérations. Si vous souhaitez effectuer une opération de remplacement, et que vous remplacez une valeur dans un tableau qui requiert un conditionnel, utilisez la notation jsonpath par au début de votre chemin d’accès par le symbole $. Ainsi, vous permettent d’effectuer un conditionnel telles que $. key1.key2 [ ? () @.key3== 'someValue'] .key4. Consultez les exemples ci-dessous. Pour plus d’aide, consultez : https://jsonpath.com/.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
+Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
 #### `--help -h`
-Afficher ce message d’aide et de sortie.
+Affiche ce message d’aide et quitte.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut : json.
 #### `--query -q`
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
-Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
+Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

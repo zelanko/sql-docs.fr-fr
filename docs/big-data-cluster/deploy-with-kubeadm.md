@@ -2,20 +2,20 @@
 title: Configurer Kubernetes avec kubeadm
 titleSuffix: SQL Server big data clusters
 description: Découvrez comment configurer Kubernetes sur plusieurs Ubuntu 16.04 ou 18.04 machines (physiques ou virtuels) pour les déploiements de cluster (version préliminaire) de SQL Server 2019 big data.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: c48a8a8ad84a1378eed09727a3e51a51252b88c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5e59caaf408968f6b669364ccbe07e8ea973c34
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803064"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728901"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>Configurer Kubernetes sur plusieurs ordinateurs pour les déploiements de cluster SQL Server big data
 

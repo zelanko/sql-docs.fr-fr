@@ -19,22 +19,22 @@ ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e948b1e2fa5bb0877597e3fc3429f306afe991f2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026566"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793761"
 ---
 # <a name="compatibility-matrix"></a>Matrice de compatibilité
 Le tableau suivant décrit la compatibilité des types d’applications et des pilotes définis précédemment dans cette section.  
   
-|Type d'application<br /><br /> et version|ODBC 32 bits<br /><br /> 2.*x* pilote|ODBC 3.*x*<br /><br /> Pilote|Pilotes ODBC 3.8|ISO et conforme Open groupe pilote|  
+|Type d'application<br /><br /> et version|ODBC 32 bits<br /><br /> *2.x* pilote|ODBC *3.x*<br /><br /> Pilote|Pilotes ODBC 3.8|ISO et conforme Open groupe pilote|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |application 16 bits, n’importe quelle version|Compatible|Compatible|Compatible|Compatible|  
-|2 pure. *x* application|Compatible|Compatible|Compatible|Non compatible avec [3]|  
-|2 pure. *x* recompiler l’application|Compatible|Compatible[1]|Compatible[1]|Non compatible avec [3]|  
-|2 pure. *x* application Unicode|Compatible|Compatible[1]|Compatible[1]|Non compatible avec [3]|  
+|Pure *2.x* application|Compatible|Compatible|Compatible|Non compatible avec [3]|  
+|Pure *2.x* recompiler l’application|Compatible|Compatible[1]|Compatible[1]|Non compatible avec [3]|  
+|Pure *2.x* application Unicode|Compatible|Compatible[1]|Compatible[1]|Non compatible avec [3]|  
 |Application pure Open Group et conforme à ISO|Non compatible|Compatible[2]|Compatible[2]|Compatible[2]|  
 |Application 3.0 pure|Non compatible|Compatible|Compatible|Non compatible avec [4]|  
 |Application 3.5 pure|Non compatible|Compatible|Compatible|Non compatible avec [4]|  
@@ -45,9 +45,9 @@ Le tableau suivant décrit la compatibilité des types d’applications et des p
   
  [2] l’application doit compiler à l’aide d’en-têtes ODBC 3.5 (ou version ultérieure) et lier avec le Gestionnaire de pilotes ODBC. Il doit également définir l’indicateur d’en-tête ODBC_STD.  
   
- [3] cette configuration peut potentiellement échouer car il existe des fonctionnalités dans ODBC 2. *x* qui ne sont pas dans les normes, telles que les signets.  
+ [3] cette configuration peut potentiellement échouer car il existe des fonctionnalités dans ODBC *2.x* qui ne sont pas dans les normes, telles que les signets.  
   
- [4], cette configuration peut potentiellement échouer car il existe des fonctionnalités dans ODBC 3 *.x* qui ne sont pas dans les normes, telles que les signets.  
+ [4], cette configuration peut potentiellement échouer car il existe des fonctionnalités dans ODBC *3.x* qui ne sont pas dans les normes, telles que les signets.  
   
  [5] cette configuration peut potentiellement échouer, car il existe des fonctionnalités qui ne sont pas dans ODBC 2.x ou 3.x pilotes, tels que spécifiques au pilote dans ODBC 3.8 [des Types de données C dans ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   

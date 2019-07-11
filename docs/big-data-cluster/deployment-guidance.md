@@ -2,20 +2,20 @@
 title: Conseils pour le déploiement
 titleSuffix: SQL Server big data clusters
 description: Découvrez comment déployer des clusters de données volumineuses de SQL Server 2019 (version préliminaire) sur Kubernetes.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 75f4f7d046e144713efa271fb1980d4518843448
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: e04986691b52149f0918b1559f1f3db1d99cab38
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413104"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728794"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Comment déployer des clusters de données volumineuses de SQL Server sur Kubernetes
 
@@ -82,7 +82,7 @@ Options sont définies dans les fichiers de configuration JSON de déploiement d
 
 | Profil de déploiement | Environnement Kubernetes |
 |---|---|
-| **aks-dev-test** | Azure Kubernetes Service (AKS) |
+| **aks-dev-test** | Service Azure Kubernetes (AKS) |
 | **kubeadm-dev-test** | Plusieurs ordinateurs (kubeadm) |
 | **minikube-dev-test** | minikube |
 

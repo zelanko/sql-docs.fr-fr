@@ -2,20 +2,20 @@
 title: Recevoir des données avec des travaux Spark
 titleSuffix: SQL Server big data clusters
 description: Ce didacticiel montre comment recevoir des données dans le pool de données d’un cluster de données volumineuses de SQL Server 2019 (version préliminaire) à l’aide de travaux Spark dans Azure Data Studio.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 56715b8134ca5427807bb287124d7766aefb1b3b
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1d52a88a1742cdf1dbd83bebe52ebeb6cc277033
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388553"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727438"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutoriel : Recevoir des données dans un pool de données SQL Server avec des travaux Spark
 
@@ -23,7 +23,7 @@ ms.locfileid: "67388553"
 
 Ce didacticiel montre comment utiliser des travaux Spark pour charger des données dans le [pool de données](concept-data-pool.md) d’un cluster de données volumineuses de SQL Server 2019 (version préliminaire). 
 
-Dans ce didacticiel, vous allez découvrir comment :
+Ce tutoriel vous montre comment effectuer les opérations suivantes :
 
 > [!div class="checklist"]
 > * Créer une table externe dans le pool de données.
@@ -115,7 +115,7 @@ L’étape suivante consiste à créer un travail qui charge les données de par
    | Répertoire source pour la diffusion en continu | Cela doit être un URI complet, tel que « hdfs : / / / clickstream_data » |
    | format d’entrée | Cela peut être « csv », « parquet » ou « json » |
    | Activer le point de contrôle | True ou False |
-   | délai d'expiration | durée d’exécution de la tâche pour en millisecondes avant de quitter |
+   | timeout | durée d’exécution de la tâche pour en millisecondes avant de quitter |
 
 1. Appuyez sur **Submit** pour envoyer la tâche.
 

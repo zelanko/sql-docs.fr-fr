@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Déployer un script Python ou R en tant qu’application sur un cluster de données volumineux de SQL Server 2019 (version préliminaire).
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2309fd7a318222ef337815ddf511359f5b305e26
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681591"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729291"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Comment déployer une application sur un cluster de données volumineux de SQL Server (version préliminaire)
 
@@ -43,7 +42,7 @@ Les types d’applications suivants sont pris en charge :
 - [Cluster de données volumineux de SQL Server 2019](deployment-guidance.md)
 - [mssqlctl command-line utility](deploy-install-mssqlctl.md)
 
-## <a name="capabilities"></a>Fonctions
+## <a name="capabilities"></a>Fonctionnalités
 
 Dans SQL Server 2019 (version préliminaire) vous pouvez créer, supprimer, décrivent, initialiser, liste de s’exécuter et mettre à jour votre application. Le tableau suivant décrit les commandes de déploiement d’application que vous pouvez utiliser avec **mssqlctl**.
 

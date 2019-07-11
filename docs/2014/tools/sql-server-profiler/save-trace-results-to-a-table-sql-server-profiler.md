@@ -13,12 +13,12 @@ ms.assetid: edbecf74-683b-4e43-a1ef-7a3d5f5e27f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4679576a8336d9a35299622b8513b9c8ae855287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8571f7273cc2667040ffffc8ffbfb0df4e2a6ef6
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267780"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792687"
 ---
 # <a name="save-trace-results-to-a-table-sql-server-profiler"></a>Enregistrer des résultats d'une trace dans une table (SQL Server Profiler)
   Cette rubrique explique comment enregistrer les résultats d'une trace dans une table de base de données à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  
@@ -40,9 +40,9 @@ ms.locfileid: "63267780"
   
 5.  Dans la liste **Propriétaire** , sélectionnez le propriétaire de la trace.  
   
-6.  Dans la liste **Table** , tapez ou sélectionnez le nom de la table dans laquelle seront enregistrés les résultats de la trace. Cliquez sur **OK.**  
+6.  Dans la liste **Table** , tapez ou sélectionnez le nom de la table dans laquelle seront enregistrés les résultats de la trace. Cliquez sur **OK**.  
   
-7.  Dans la boîte de dialogue **Propriétés de la trace** , cochez la case **Définir le nombre de lignes maximal (en milliers)** pour définir le nombre maximal de lignes à enregistrer.  
+7.  Dans le **propriétés de la Trace** boîte de dialogue, sélectionnez le **définir le nombre de lignes maximal (en milliers)** case à cocher pour spécifier le nombre maximal de lignes à enregistrer.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Profiler](sql-server-profiler.md)  

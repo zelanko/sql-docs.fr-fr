@@ -14,12 +14,12 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8a1b81d60ef691e02d4b69cc71fa961bbaddf18
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62790658"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793433"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Connectivité client Always On (SQL Server)
   Cette rubrique décrit les considérations relatives à la connectivité client aux groupes de disponibilité AlwaysOn, y compris les conditions préalables requises, les restrictions et les recommandations concernant les paramètres et les configurations de clients.  
@@ -33,12 +33,12 @@ ms.locfileid: "62790658"
   
  Le tableau suivant récapitule les pilotes pris en charge pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
-|Pilote|Basculement de sous-réseaux multiples|Intention de l'application|Routage en lecture seule|Basculement de sous-réseaux multiples : Basculement de point de terminaison de sous-réseau unique plus rapide|Basculement de sous-réseaux multiples : Résolution d’Instance nommée de SQL en cluster des Instances|  
+|Pilote|Basculement de sous-réseaux multiples|Intention de l'application|Routage en lecture seule|Basculement de sous-réseaux multiples : basculement plus rapide du point de terminaison d’un sous-réseau unique|Basculement de sous-réseaux multiples : résolution d’instance nommée pour les instances cluster SQL|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Oui|Oui|Oui|Oui|Oui|  
 |SQL Native Client 11.0 OLEDB|Non|Oui|Oui|Non|Non|  
-|ADO.NET avec .NET Framework 4.0 et correctif logiciel de connectivité **<sup>*</sup>**|Oui|Oui|Oui|Oui|Oui|  
-|ADO.NET avec .NET Framework 3.5 SP1 et correctif logiciel de connectivité **<sup>** </sup>**|Oui|Oui|Oui|Oui|Oui|  
+|ADO.NET avec .NET Framework 4.0 et correctif logiciel de connectivité **<sup>*</sup>** |Oui|Oui|Oui|Oui|Oui|  
+|ADO.NET avec .NET Framework 3.5 SP1 et correctif logiciel de connectivité **<sup>** </sup>** |Oui|Oui|Oui|Oui|Oui|  
 |Microsoft JDBC Driver 4.0 pour SQL Server|Oui|Oui|Oui|Oui|Oui|  
   
  **<sup>*</sup>**  Télécharger le correctif logiciel de connectivité pour ADO .NET avec .NET Framework 4.0 : [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211).  

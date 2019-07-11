@@ -16,12 +16,12 @@ ms.assetid: 917c4d47-1a95-4f54-98b1-e8cb2165d90f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ba5d3ec6958cf3dbc3cca0497f08feaac094b837
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb9e2ae87a82bf272e84a8d940606879aa3c1e9d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63265116"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792803"
 ---
 # <a name="accessing-custom-assemblies-through-expressions"></a>Accès aux assemblys personnalisés par le biais d'expressions
   Une fois que vous avez créé un assembly personnalisé, qu'il est disponible auprès du Concepteur de rapports ou du serveur de rapports, que vous avez ajouté la stratégie de sécurité appropriée et une référence à votre assembly personnalisé dans votre définition de rapport, vous pouvez accéder aux membres des classes dans votre assembly à l'aide d'expressions de rapport. Pour faire référence à du code personnalisé dans une expression, vous devez appeler le membre d'une classe au sein de l'assembly. La procédure pour ce faire dépend du type de méthode, à savoir statique ou basée sur une instance.  
@@ -43,7 +43,7 @@ ms.locfileid: "63265116"
 ## <a name="calling-instance-members-from-a-report-definition-file"></a>Appel de membres d'instance à partir d'un fichier de définition de rapport  
  Si votre assembly personnalisé contient des membres d'instance auxquels vous devez accéder dans une définition de rapport, vous devez ajouter un nom d'instance pour votre classe au rapport. Vous pouvez ajouter un nom d’instance pour une classe à l’aide de l’onglet **Code** de la boîte de dialogue **Propriétés de rapport**. Pour plus d’informations sur l’ajout d’instances de classes à un rapport, consultez [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](../report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md).  
   
- Pour appeler un membre statique, vous devez le référencer comme une expression qui prend la forme =Code *.InstanceName.Method*.  
+ Pour appeler un membre statique, vous devez le référencer comme une expression qui prend la forme = Code *. InstanceName.Method*.  
   
 #### <a name="to-call-instance-members"></a>Pour appeler des membres d'instance  
   

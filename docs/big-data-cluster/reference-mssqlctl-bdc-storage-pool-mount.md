@@ -2,19 +2,20 @@
 title: référence de montage mssqlctl bdc pool de stockage
 titleSuffix: SQL Server big data clusters
 description: Article de référence pour les commandes de montage du pool de stockage mssqlctl bdc.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cf6012b6c700afd6ee0eca763df0961f088a3be4
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 4204e87e96fd0d91a9bfbf64813583ef92d3202b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394241"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727481"
 ---
 # <a name="mssqlctl-bdc-storage-pool-mount"></a>mssqlctl bdc storage-pool mount
 
@@ -52,15 +53,15 @@ URI de la banque à distance qui doit être monté (source de montage).
 Chemin d’accès HDFS dans lequel le montage doit être créé (destination de montage).
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
+Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
 #### `--help -h`
-Afficher ce message d’aide et de sortie.
+Affiche ce message d’aide et quitte.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut : json.
 #### `--query -q`
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
-Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
+Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 ## <a name="mssqlctl-bdc-storage-pool-mount-delete"></a>mssqlctl bdc storage-pool mount delete
 Supprimer les montages de magasins distants dans HDFS.
 ```bash
@@ -77,15 +78,15 @@ mssqlctl bdc storage-pool mount delete --mount-path /mounts/adlsv2/data
 Le chemin d’accès HDFS correspondant pour le montage qui doit être supprimé.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
+Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
 #### `--help -h`
-Afficher ce message d’aide et de sortie.
+Affiche ce message d’aide et quitte.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut : json.
 #### `--query -q`
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
-Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
+Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 ## <a name="mssqlctl-bdc-storage-pool-mount-status"></a>mssqlctl bdc storage-pool mount status
 État de mount(s).
 ```bash
@@ -106,15 +107,15 @@ mssqlctl bdc storage-pool mount status
 Chemin d’accès de montage.
 ### <a name="global-arguments"></a>Arguments globaux
 #### `--debug`
-Augmente le détail de journalisation pour afficher que tous les journaux de débogage.
+Augmente le détail de la journalisation pour afficher tous les journaux d’activité de débogage.
 #### `--help -h`
-Afficher ce message d’aide et de sortie.
+Affiche ce message d’aide et quitte.
 #### `--output -o`
 Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut : json.
 #### `--query -q`
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
-Augmente le détail de journalisation. Utilisez--debug pour les journaux de débogage complets.
+Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

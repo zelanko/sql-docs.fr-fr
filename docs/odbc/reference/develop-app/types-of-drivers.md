@@ -16,12 +16,12 @@ ms.assetid: 864c53c1-b68a-48b6-b6bc-5ecb520bb9dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 445fe3a0b87e6ad8e35dbc585981d874f8e357bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08c1c9b4338502f20e5f99885d371d713971aa38
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306208"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792701"
 ---
 # <a name="types-of-drivers"></a>Types de pilotes
 Pilotes ODBC peuvent être classés comme suit :  
@@ -29,9 +29,9 @@ Pilotes ODBC peuvent être classés comme suit :
 -   **32 bits ODBC 2.**  
      **_x_ pilote** pilote de 32 bits qui :  
   
-    -   Exporte uniquement les 2 d’ODBC *.x* fonctions.  
+    -   Exporte uniquement ODBC *2.x* fonctions.  
   
-    -   Expose le ODBC 2.*x* comportement pour les changements de comportement.  
+    -   Expose ODBC *2.x* comportement pour les changements de comportement.  
   
 -   **ISO et pilote compatible groupe Open** pilote de 32 bits qui :  
   
@@ -45,13 +45,13 @@ Pilotes ODBC peuvent être classés comme suit :
   
     -   Exporte uniquement des fonctions qui se trouvent dans ODBC 3.0 moins déconseillé de fonctions.  
   
-    -   Est capable de présentant ODBC 2.*x* comportement ou comportement ODBC 3.0 en ce qui concerne les changements de comportement, en fonction de l’attribut d’environnement SQL_ATTR_APP_ODBC_VERSION.  
+    -   Est capable de présentant ODBC *2.x* comportement ou comportement ODBC 3.0 en ce qui concerne les changements de comportement, en fonction de l’attribut d’environnement SQL_ATTR_APP_ODBC_VERSION.  
   
 -   **Pilote de ANSI ODBC 3.5 (ou version ultérieure)** pilote de 32 bits qui :  
   
     -   Exporte uniquement des fonctions qui se trouvent dans ODBC 3.5 moins déconseillé de fonctions.  
   
-    -   Est capable de présentant ODBC 2. *x* comportement ou ODBC 3.0 comportement ou le comportement ODBC 3.5 en ce qui concerne les changements de comportement, basé sur l’attribut d’environnement SQL_ATTR_APP_ODBC_VERSION.  
+    -   Est capable de présentant ODBC *2.x* comportement ou ODBC 3.0 comportement ou le comportement ODBC 3.5 en ce qui concerne les changements de comportement, basé sur l’attribut d’environnement SQL_ATTR_APP_ODBC_VERSION.  
   
 -   **ODBC 3.5 (ou version ultérieure) Unicode Driver** pilote de 32 bits qui :  
   
@@ -62,4 +62,4 @@ Pilotes ODBC peuvent être classés comme suit :
     -   Stocker et traiter les données Unicode sur la source de données.  
   
 > [!NOTE]  
->  pilotes ODBC 16 bits ne fonctionnent pas directement avec le ODBC 3. *x* Gestionnaire de pilotes. Toutefois, il est possible pour les pilotes 16 bits fonctionner avec le Gestionnaire de pilotes ODBC 2.0, qui par la suite des thunks jusqu'à la version 3. *x* Gestionnaire de pilotes.
+>  pilotes ODBC 16 bits ne fonctionnent pas directement avec ODBC *3.x* Gestionnaire de pilotes. Toutefois, il est possible pour les pilotes 16 bits fonctionner avec le Gestionnaire de pilotes ODBC 2.0, qui par la suite thunks jusqu'à la *3.x* Gestionnaire de pilotes.

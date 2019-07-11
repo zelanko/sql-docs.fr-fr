@@ -14,12 +14,12 @@ ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33116adaf74ed2d3fc52fec460859a7672ce2d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6741b5f07f2427ef502f5177bbf01acd56c4d5b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057781"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794169"
 ---
 # <a name="odbc-glossary"></a>Glossaire ODBC
 ## <a name="a"></a>A  
@@ -53,9 +53,9 @@ ms.locfileid: "63057781"
  **auto-commit mode**  
  Mode de validation de transaction dans laquelle les transactions sont validées immédiatement après leur exécution.  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
  **changement de comportement**  
- Une modification de certaines fonctionnalités à partir d’ODBC 3 *.x* comportement ODBC 2. *x* comportement, ou vice versa. Dû en modifiant l’attribut d’environnement SQL_ATTR_ODBC_VERSION.  
+ Une modification de certaines fonctionnalités à partir d’ODBC *3.x* comportement vers ODBC *2.x* comportement, ou vice versa. Dû en modifiant l’attribut d’environnement SQL_ATTR_ODBC_VERSION.  
   
  **Objet binaire volumineux (BLOB)**  
  Toutes les données binaires sur un certain nombre d’octets, tels que 255. En général beaucoup plus de temps. Ce type de données est généralement envoyé au et récupérée à partir de la source de données dans les parties. Également appelé *données de type long*.  
@@ -85,7 +85,7 @@ ms.locfileid: "63057781"
  **fonction de catalogue**  
  Une fonction ODBC utilisée pour récupérer les informations de catalogue de la base de données.  
   
- **INTERFACE CLI**  
+ **INTERFACE DE LIGNE DE COMMANDE**  
  *Consultez* API.  
   
  **client/server**  
@@ -103,7 +103,7 @@ ms.locfileid: "63057781"
  **Niveau de conformité**  
  Un ensemble discret de fonctionnalités prises en charge par une pilote ou source de données. ODBC définit des niveaux de conformité d’API et les niveaux de conformité de SQL.  
   
- **connection**  
+ **Connexion**  
  Une instance particulière d’une source de données et de pilote.  
   
  **connexion de navigation**  

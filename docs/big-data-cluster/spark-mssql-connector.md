@@ -2,19 +2,20 @@
 title: Connecter Spark à SQL Server
 titleSuffix: SQL Server big data clusters
 description: Découvrez comment utiliser le connecteur Spark MSSQL dans Spark pour lire et écrire à SQL Server.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: shivsood
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 878e08426fc58d6ad5a921eff4ac33dca18aa03c
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: aaa9cd54c3540c17f9995f985f4537dafe05d5c2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469122"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727465"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Comment lire et écrire dans SQL Server à partir de Spark à l’aide du connecteur Spark MSSQL
 
@@ -39,7 +40,7 @@ Version préliminaire de SQL Server 2019 fournit le **connecteur MSSQL Spark** b
 
 Le tableau suivant décrit les paramètres d’interface qui ont été modifiées ou sont nouveaux :
 
-| Nom de la propriété | Ce paramètre est facultatif | Description |
+| Nom de la propriété | Facultatif | Description |
 |---|---|---|
 | **isolationLevel** | Oui | Cette section décrit le niveau d’isolation de la connexion. Est la valeur par défaut pour le connecteur de MSSQLSpark **READ_COMMITTED** |
 

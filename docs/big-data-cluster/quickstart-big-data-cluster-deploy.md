@@ -1,32 +1,32 @@
 ---
-title: Démarrage rapide du déploiement
+title: Script de déploiement
 titleSuffix: SQL Server big data clusters
 description: Procédure pas à pas un déploiement de clusters SQL Server 2019 données volumineuses (version préliminaire) sur Azure Kubernetes Service (AKS).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/22/2019
-ms.topic: quickstart
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d1b8c595512d3268e0e04482d464f6c19ee01234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0254b76b0845ff5f913d2d0ab69324ddd0072923
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798737"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728775"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)
+# <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Dans ce démarrage rapide, vous utilisez un exemple de script de déploiement pour déployer le cluster de données volumineux SQL Server 2019 (version préliminaire) pour Azure Kubernetes Service (AKS). 
+Dans ce didacticiel, vous utilisez un exemple de script de déploiement pour déployer le cluster de données volumineux SQL Server 2019 (version préliminaire) pour Azure Kubernetes Service (AKS). 
 
 > [!TIP]
 > ACS n'est qu’une seule option pour l’hébergement de Kubernetes pour votre cluster de données volumineux. Pour en savoir plus sur les autres options de déploiement, ainsi que la manière dont les options pour personnaliser le déploiement, consultez [comment déployer des données volumineuses de SQL Server clusters sur Kubernetes](deployment-guidance.md).
 
-Le déploiement de cluster de données volumineuses par défaut utilisé ici se compose d’une instance SQL principale, instance de pool d’un calcul, deux instances de pool de données et deux instances de pool de stockage. Données sont conservées à l’aide de volumes persistants Kubernetes qui utilisent les classes de stockage par défaut AKS. La configuration par défaut utilisée dans ce démarrage rapide est adaptée aux environnements de développement/test.
+Le déploiement de cluster de données volumineuses par défaut utilisé ici se compose d’une instance SQL principale, instance de pool d’un calcul, deux instances de pool de données et deux instances de pool de stockage. Données sont conservées à l’aide de volumes persistants Kubernetes qui utilisent les classes de stockage par défaut AKS. La configuration par défaut utilisée dans ce didacticiel est adaptée aux environnements de développement/test.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -38,7 +38,7 @@ Le déploiement de cluster de données volumineuses par défaut utilisé ici se 
    - **kubectl**
    - **Azure Data Studio**
    - **Extension de SQL Server 2019**
-   - **Azure CLI**
+   - **Interface de ligne de commande Azure**
 
 ## <a name="log-in-to-your-azure-account"></a>Connectez-vous à votre compte Azure
 
@@ -50,7 +50,7 @@ az login
 
 ## <a name="download-the-deployment-script"></a>Télécharger le script de déploiement
 
-Ce démarrage rapide automatise la création du cluster big data sur AKS à l’aide d’un script python **déployer-sql-big-data-aks.py**. Si vous avez déjà installé python pour **mssqlctl**, vous devez être en mesure d’exécuter le script avec succès dans ce démarrage rapide. 
+Ce didacticiel automatise la création du cluster big data sur AKS à l’aide d’un script python **déployer-sql-big-data-aks.py**. Si vous avez déjà installé python pour **mssqlctl**, vous devez être en mesure d’exécuter le script avec succès dans ce didacticiel. 
 
 Dans une invite de l’interpréteur de commandes Windows PowerShell ou Linux, exécutez la commande suivante pour télécharger le script de déploiement à partir de GitHub.
 
@@ -62,7 +62,7 @@ curl -o deploy-sql-big-data-aks.py "https://raw.githubusercontent.com/Microsoft/
 
 Utilisez les étapes suivantes pour exécuter le script de déploiement. Ce script crée un service AKS dans Azure et puis déployer un cluster de données volumineuses de SQL Server 2019 sur AKS. Vous pouvez également modifier le script avec d’autres [variables d’environnement](deployment-guidance.md#configfile) pour créer un déploiement personnalisé.
 
-1. Exécutez le script avec la commande suivante :
+1. Exécutez le script avec la commande suivante :
 
    ```
    python deploy-sql-big-data-aks.py
@@ -154,7 +154,7 @@ Ouvrez une nouvelle fenêtre de commande à utiliser **kubectl** pendant le proc
 > [!TIP]
 > Pour plus d’informations sur comment surveiller et résoudre les problèmes d’un déploiement, consultez [analyse et résoudre les problèmes de clusters de données volumineuses de SQL Server](cluster-troubleshooting-commands.md).
 
-## <a name="connect-to-the-cluster"></a>Connectez-vous au cluster
+## <a name="connect-to-the-cluster"></a>Connexion au cluster
 
 Une fois le script de déploiement, la sortie vous informe de réussite :
 
@@ -185,4 +185,4 @@ Le script de déploiement configuré Azure Kubernetes Service et également dép
 Maintenant que le cluster de données volumineuses de SQL Server est déployé, vous pouvez charger des exemples de données et explorez les didacticiels :
 
 > [!div class="nextstepaction"]
-> [Tutoriel : Charger des exemples de données dans un cluster de données volumineux de SQL Server 2019](tutorial-load-sample-data.md)
+> [Tutoriel : Charger des exemples de données dans un cluster de données volumineux de SQL Server 2019](tutorial-load-sample-data.md)

@@ -2,20 +2,20 @@
 title: Charger un exemple de données
 titleSuffix: SQL Server big data clusters
 description: Ce didacticiel montre comment charger des exemples de données dans un cluster de données volumineux de SQL Server. Les exemples de données inclut des données relationnelles dans l’instance principale de SQL Server. Il inclut également des données HDFS dans le pool de stockage. Ces données prend en charge les autres didacticiels de cette section.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d78fd9ecce71e9b7ffb86441fab134b1180d058a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ea5540c0188ec9a57ad8b6780cf3ab6af5dfc2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770828"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727347"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutoriel : Charger des exemples de données dans un cluster de données volumineux de SQL Server
 
@@ -121,14 +121,14 @@ Une fois le script de démarrage s’exécute, votre cluster de données volumin
 
 Virtualisation des données :
 
-- [Tutoriel : Requête HDFS dans un cluster de données volumineux de SQL Server](tutorial-query-hdfs-storage-pool.md)
-- [Tutoriel : Interroger Oracle à partir d’un cluster de données volumineux de SQL Server](tutorial-query-oracle.md)
+- [Tutoriel : Requête HDFS dans un cluster de données volumineux de SQL Server](tutorial-query-hdfs-storage-pool.md)
+- [Tutoriel : Interroger Oracle à partir d’un cluster de données volumineux de SQL Server](tutorial-query-oracle.md)
 
 Ingestion de données :
 
-- [Tutoriel : Recevoir des données dans un pool de données SQL Server avec Transact-SQL](tutorial-data-pool-ingest-sql.md)
-- [Tutoriel : Recevoir des données dans un pool de données SQL Server avec des travaux Spark](tutorial-data-pool-ingest-spark.md)
+- [Tutoriel : Recevoir des données dans un pool de données SQL Server avec Transact-SQL](tutorial-data-pool-ingest-sql.md)
+- [Tutoriel : Recevoir des données dans un pool de données SQL Server avec des travaux Spark](tutorial-data-pool-ingest-spark.md)
 
 Ordinateurs portables :
 
-- [Tutoriel : Exécuter un exemple de notebook sur un cluster de données volumineuses de SQL Server 2019](tutorial-notebook-spark.md)
+- [Tutoriel : Exécuter un exemple de notebook sur un cluster de données volumineuses de SQL Server 2019](tutorial-notebook-spark.md)

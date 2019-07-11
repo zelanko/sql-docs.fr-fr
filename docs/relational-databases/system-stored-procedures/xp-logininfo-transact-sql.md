@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 96dc11ebc246e42fb4b01b777b430c6aa9230b5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e48337afee5320355eb71025bffb972b85e3358
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099957"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793608"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 `[ @acctname = ] 'account_name'` Est le nom d’un utilisateur de Windows ou d’un groupe accordé l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Si *account_name* n’est pas spécifié, tous les groupes de Windows et les utilisateurs Windows qui ont été explicitement accordé l’autorisation de se connecter sont signalés. *nom_compte* doivent être qualifiés complets. Par exemple, « ADVWKS4\macraes » ou « BUILTIN\Administrators ».  
   
  **'all'**  |  **'members'**  
- Spécifie s'il faut rapporter les informations sur tous les chemins d'autorisation du compte ou sur les membres du groupe Windows. **@option** est **varchar (10)** , avec NULL comme valeur par défaut. À moins que **tous les** est spécifié, seul le chemin de la première autorisation s’affiche.  
+ Spécifie s'il faut rapporter les informations sur tous les chemins d'autorisation du compte ou sur les membres du groupe Windows. **\@option** est **varchar (10)** , avec NULL comme valeur par défaut. À moins que **tous les** est spécifié, seul le chemin de la première autorisation s’affiche.  
   
 `[ @privilege = ] variable_name` Est un paramètre de sortie qui retourne le niveau de privilège du compte Windows spécifié. *nom_variable* est **varchar (10)** , avec une valeur par défaut « Not wanted ». Le niveau de privilège renvoyé est **utilisateur**, **administrateur**, ou **null**.  
   
@@ -57,7 +57,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Nom du compte**|**sysname**|Nom de compte Windows complet.|  
 |**type**|**char(8)**|Type de compte Windows. Les valeurs valides sont **utilisateur** ou **groupe**.|  

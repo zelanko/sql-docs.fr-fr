@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Déployer un script Python ou R en tant qu’application sur un cluster de données volumineux de SQL Server 2019 (version préliminaire).
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b0d76db3813e0a399f1ece841d729711743cbd9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801906"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729305"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Comment utiliser VS Code pour déployer des applications sur les clusters de données volumineuses de SQL Server
 
@@ -28,7 +28,7 @@ Cet article décrit comment déployer des applications sur un cluster de donnée
 - [Visual Studio Code](https://code.visualstudio.com/).
 - [Cluster de données volumineux de SQL Server](big-data-cluster-overview.md) CTP 2.3 ou version ultérieure.
 
-## <a name="capabilities"></a>Fonctions
+## <a name="capabilities"></a>Fonctionnalités
 
 Cette extension prend en charge les tâches suivantes dans Visual Studio Code :
 
@@ -163,7 +163,7 @@ Lors de l’appel d’une application déployée, si tous les paramètres d’en
 - vecteur
     - `inputs:`
         - `x: [1, 2, 3]`
-- Matrice
+- Matrix
     - `inputs:`
         - `x: [[A,B,C],[1,2,3]]`
 - Object

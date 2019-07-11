@@ -10,12 +10,12 @@ ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fb48665fafc9c79856279c7460918b85334bfb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064296"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792934"
 ---
 # <a name="create-the-off-by-default-policy"></a>Créer la stratégie Désactivé par défaut
   Cette tâche crée une condition nommée Courrier désactivé basée sur la facette Configuration de la surface d'exposition. Ensuite, elle crée une stratégie nommée Désactivé par défaut.  
@@ -28,7 +28,7 @@ ms.locfileid: "66064296"
   
 3.  Dans la zone **Facette** , vérifiez que la facette **Configuration de la surface d’exposition** est sélectionnée.  
   
-4.  Dans la boîte de dialogue **Expression** , dans la zone **Champ** , sélectionnez **@DatabaseMailEnabled** ; ensuite, dans la zone **Opérateur** , sélectionnez **=** ; enfin, dans **Valeur** , sélectionnez **Faux**.  
+4.  Dans le **Expression** zone, dans le **champ** boîte, sélectionnez  **\@DatabaseMailEnabled**, dans le **opérateur** zone Sélectionnez **=** , puis, dans le **valeur** sélectionnez **False**.  
   
 5.  Dans la page **Description** , entrez une description de la condition, puis cliquez sur **OK** pour créer la condition.  
   

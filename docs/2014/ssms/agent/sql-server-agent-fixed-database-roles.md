@@ -19,12 +19,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8067aaa2133648c1a1ea4fff81db08c139d5278
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245993"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793405"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Rôles de base de données fixes de SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] possède les rôles fixes de base de données **msdb** suivants, qui permettent aux administrateurs de contrôler plus précisément l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Les rôles sont classés ci-après selon leurs privilèges d'accès, du moins privilégié au plus privilégié :  
@@ -48,7 +48,7 @@ ms.locfileid: "63245993"
   
  Le tableau suivant récapitule les autorisations de **SQLAgentUserRole** sur les objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-|Action|Opérateurs|Travaux locaux<br /><br /> (travaux lui appartenant uniquement)|Calendriers de travaux<br /><br /> (planifications lui appartenant uniquement)|Proxys|  
+|Action|Opérateurs|Travaux locaux<br /><br /> (travaux lui appartenant uniquement)|Planifications de travaux<br /><br /> (planifications lui appartenant uniquement)|Serveurs proxy|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
 |Créer/modifier/supprimer|Non|Oui <sup>1</sup>|Oui|Non|  
 |Afficher la liste (énumérer)|Oui <sup>2</sup>|Oui|Oui|Oui <sup>3</sup>|  
@@ -98,7 +98,7 @@ ms.locfileid: "63245993"
 ### <a name="sqlagentoperatorrole-permissions"></a>Autorisations du rôle SQLAgentOperatorRole  
  **SQLAgentOperatorRole** est le plus privilégié des rôles de base de données fixes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Il inclut toutes les autorisations des rôles **SQLAgentUserRole** et **SQLAgentReaderRole**. Les membres de ce rôle peuvent également afficher les propriétés pour les opérateurs et les proxys, ainsi que dresser la liste des proxys disponibles et des alertes sur le serveur.  
   
- Les membres de**SQLAgentOperatorRole** disposent d’autorisations supplémentaires sur les travaux locaux et les planifications. Ils peuvent exécuter, arrêter ou démarrer tous les travaux locaux, ainsi que supprimer l'historique de n'importe quel travail local sur le serveur. Ils peuvent également activer ou désactiver tous les travaux locaux et les planifications sur le serveur. Pour ce faire, les membres de ce rôle doivent utiliser les procédures stockées **sp_update_job** et **sp_update_schedule**. Seuls les paramètres qui spécifient le nom ou l’identificateur du travail ou de la planification et le paramètre **@enabled** peuvent être spécifiés par les membres de **SQLAgentOperatorRole**. S'ils spécifient d'autres paramètres, l'exécution de ces procédures stockées échoue. Les membres de**SQLAgentOperatorRole** ne peuvent pas modifier l’appartenance des travaux pour obtenir l’accès aux travaux qui ne leur appartiennent pas encore.  
+ Les membres de**SQLAgentOperatorRole** disposent d’autorisations supplémentaires sur les travaux locaux et les planifications. Ils peuvent exécuter, arrêter ou démarrer tous les travaux locaux, ainsi que supprimer l'historique de n'importe quel travail local sur le serveur. Ils peuvent également activer ou désactiver tous les travaux locaux et les planifications sur le serveur. Pour ce faire, les membres de ce rôle doivent utiliser les procédures stockées **sp_update_job** et **sp_update_schedule**. Seuls les paramètres qui spécifient le nom de travail ou de la planification ou l’identificateur et le  **\@activé** paramètre peut être spécifié par les membres de **SQLAgentOperatorRole**. S'ils spécifient d'autres paramètres, l'exécution de ces procédures stockées échoue. Les membres de**SQLAgentOperatorRole** ne peuvent pas modifier l’appartenance des travaux pour obtenir l’accès aux travaux qui ne leur appartiennent pas encore.  
   
  Les nœuds **Travaux**, **Alertes**, **Opérateurs**et **Proxies** dans l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sont visibles aux membres de **SQLAgentOperatorRole**. Seul le nœud **Journaux d’erreur** n’est pas visible aux membres de ce rôle.  
   
@@ -123,9 +123,9 @@ ms.locfileid: "63245993"
   
  <sup>2</sup> ne pouvez pas modifier l’appartenance des travaux.  
   
- <sup>3</sup> **SQLAgentOperatorRole** peuvent activer ou désactiver les travaux locaux à l’aide de la procédure stockée ne leur appartiennent pas **sp_update_job** et en spécifiant des valeurs pour le ** @enabled ** et ** @job_id ** (ou ** @job_name **) paramètres. Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.  
+ <sup>3</sup> **SQLAgentOperatorRole** peuvent activer ou désactiver les travaux locaux à l’aide de la procédure stockée ne leur appartiennent pas **sp_update_job** et en spécifiant des valeurs pour le  **\@activé** et  **\@job_id** (ou  **\@nom_travail**) paramètres. Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.  
   
- <sup>4</sup> **SQLAgentOperatorRole** peuvent activer ou désactiver les planifications à l’aide de la procédure stockée ne leur appartiennent pas **sp_update_schedule** et en spécifiant des valeurs pour le ** @enabled ** et ** @schedule_id ** (ou ** @name **) paramètres. Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.  
+ <sup>4</sup> **SQLAgentOperatorRole** peuvent activer ou désactiver les planifications à l’aide de la procédure stockée ne leur appartiennent pas **sp_update_schedule** et en spécifiant des valeurs pour le  **\@activé** et  **\@id_de_la_planification** (ou  **\@nom**) paramètres. Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.  
   
 ## <a name="assigning-users-multiple-roles"></a>Assignation de plusieurs rôles aux utilisateurs  
  Les membres du rôle serveur fixe **sysadmin** ont accès à toutes les fonctionnalités de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Si un utilisateur n’est pas membre du rôle **sysadmin** , mais qu’il est membre de plusieurs rôles de base de données fixes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, il est important de prendre en compte le modèle concentrique des autorisations de ces rôles. Étant donné que les rôles plus privilégiés contiennent toujours toutes les autorisations des rôles moins privilégiés, un utilisateur qui est membre de plusieurs rôles a automatiquement les autorisations associées au rôle le plus privilégié dont il est membre.  

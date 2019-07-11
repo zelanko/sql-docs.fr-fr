@@ -14,12 +14,12 @@ ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a883377a17aa9e0c3426b4805263616375ea6215
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d58b5791fc3cd6418f5594828aff6c8419cc7e1
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198391"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793406"
 ---
 # <a name="installation-components"></a>Composants d’installation
 > [!NOTE]  
@@ -30,7 +30,7 @@ ms.locfileid: "63198391"
  ![Relation entre composants d’installation](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
 > [!IMPORTANT]
->  Le fichier Odbc.inf qui a été utilisé dans ODBC 2. *x* pour décrire les fichiers requis par chaque ODBC le composant n’est pas utilisé dans ODBC 3 *.x*. Les pilotes fournis ODBC 3 *.x* composants n’êtes pas obligé de créer un fichier Odbc.inf. La suppression de **SQLInstallDriver** et **SQLInstallODBC ne**et le fait de déconseiller **SQLInstallTranslator**, les ont rendus Odbc.inf inutiles. Les informations de pilote qui existaient dans les sections de mot clé Driver de Odbc.inf sont désormais fournies dans le *lpszDriver* argument dans **SQLInstallDriverEx**. Les informations de traducteur qui existaient dans le [traducteur ODBC] et les sections de spécification de traducteur de Odbc.inf est désormais fourni dans le *lpszTranslator* argument de **SQLInstallTranslatorEx**. Ces modifications permettent le programme d’installation de ODBC être plus portable sur plusieurs plateformes.  
+>  Le fichier Odbc.inf qui a été utilisé dans ODBC *2.x* pour décrire les fichiers requis par chaque ODBC le composant n’est pas utilisé dans ODBC *3.x*. Les pilotes fournis ODBC *3.x* composants n’êtes pas obligé de créer un fichier Odbc.inf. La suppression de **SQLInstallDriver** et **SQLInstallODBC ne**et le fait de déconseiller **SQLInstallTranslator**, les ont rendus Odbc.inf inutiles. Les informations de pilote qui existaient dans les sections de mot clé Driver de Odbc.inf sont désormais fournies dans le *lpszDriver* argument dans **SQLInstallDriverEx**. Les informations de traducteur qui existaient dans le [traducteur ODBC] et les sections de spécification de traducteur de Odbc.inf est désormais fourni dans le *lpszTranslator* argument de **SQLInstallTranslatorEx**. Ces modifications permettent le programme d’installation de ODBC être plus portable sur plusieurs plateformes.  
   
  Pour plus d’informations sur ces composants, consultez les rubriques suivantes à la fin de cette section.  
   

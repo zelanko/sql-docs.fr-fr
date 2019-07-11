@@ -20,12 +20,12 @@ ms.assetid: 453b21ff-3c2b-4069-8ff7-5c727f062d89
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de493cc42980390fee94ca4d86efc8f5cd40646c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08a9e3a1afef8b9ea3bf1f4266196341e0edeb76
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242305"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792864"
 ---
 # <a name="sqlinstalltranslator-function"></a>SQLInstallTranslator, fonction
 **Conformité**  
@@ -34,4 +34,4 @@ ms.locfileid: "63242305"
  **Résumé**  
  Dans ODBC 3.0, **SQLInstallTranslator** a été remplacé par [SQLInstallTranslatorEx](../../../odbc/reference/syntax/sqlinstalltranslatorex-function.md). Les appels à **SQLInstallTranslator** sera mappé à **SQLInstallTranslatorEx**. Pour plus d’informations, consultez **SQLInstallTranslatorEx**.  
   
- **SQLInstallTranslator** renvoie la valeur FALSE si une application l’appelle dans ODBC 3 *.x* Gestionnaire de pilotes avec les *lpszInfFile* argument défini sur une valeur autre que NULL. Le fichier Odbc.inf utilisé dans ODBC 2. *x* n’est plus pris en charge dans ODBC 3 *.x*, même pour la compatibilité descendante.
+ **SQLInstallTranslator** renvoie la valeur FALSE si une application l’appelle dans le système ODBC *3.x* Gestionnaire de pilotes avec les *lpszInfFile* argument défini sur une valeur autre que NULL. Le fichier Odbc.inf utilisé dans ODBC *2.x* n’est plus pris en charge dans ODBC *3.x*, même pour la compatibilité descendante.

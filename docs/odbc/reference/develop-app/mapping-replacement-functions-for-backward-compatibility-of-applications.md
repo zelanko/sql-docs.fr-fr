@@ -19,17 +19,17 @@ ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6cecc7fcd5ffa7234544dd0a9bc10407b1ea5cb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 099fd0ff318a77f1f1916395fbd13087ab8ba18b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032837"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793308"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mappage des fonctions de remplacement pour la compatibilité descendante des applications
-Un ODBC 3 *.x* application fonctionne via le ODBC 3 *.x* Gestionnaire de pilotes fonctionnera par rapport à une API ODBC 2. *x* pilote tant qu’aucune nouvelle fonctionnalité n’est utilisées. Les deux dupliquée des fonctionnalités et des changements de comportement, toutefois, affectent-elles la façon qui le ODBC 3. *x* application fonctionne sur un ODBC 2. *x* pilote. Lorsque vous travaillez avec un ODBC 2. *x* pilote, le Gestionnaire de pilotes mappe le suivantes ODBC 3. *x* fonctions qui ont remplacé un ou plusieurs ODBC 2. *x* les fonctions, en le correspondantes ODBC 2. *x* fonctions.  
+Une application ODBC *3.x* application fonctionne via ODBC *3.x* Gestionnaire de pilotes fonctionnera par rapport à une application ODBC *2.x* pilote tant qu’aucune nouvelle fonctionnalité n’est utilisées. Les deux dupliquée des fonctionnalités et des changements de comportement, toutefois, affectent-elles la façon qui ODBC *3.x* application fonctionne sur une application ODBC *2.x* pilote. Lorsque vous travaillez avec une application ODBC *2.x* pilote, le Gestionnaire de pilotes ODBC suivante le mappe *3.x* fonctions qui ont remplacé un ou plusieurs ODBC *2.x* fonctions, dans le ODBC correspondant *2.x* fonctions.  
   
-|ODBC 3. *x* (fonction)|ODBC 2. *x* (fonction)|  
+|ODBC *3.x* (fonction)|ODBC *2.x* (fonction)|  
 |-------------------------|-------------------------|  
 |**SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect**, or **SQLAllocStmt**|  
 |**SQLBulkOperations**|**SQLSetPos**|  
@@ -102,7 +102,7 @@ SQLColAttribute(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttribu
   
      le Gestionnaire de pilotes retourne SQL_ERROR avec SQLSTATE HY091 (identificateur de champ de descripteur non valide). Aucune autre règle de cette section s’appliquent.  
   
-2.  Le Gestionnaire de pilotes mappe SQL_COLUMN_COUNT, SQL_COLUMN_NAME ou SQL_COLUMN_NULLABLE SQL_DESC_COUNT, SQL_DESC_NAME ou SQL_DESC_NULLABLE, respectivement. (Un ODBC 2 *.x* pilote devez prennent uniquement en charge SQL_COLUMN_COUNT SQL_COLUMN_NAME et SQL_COLUMN_NULLABLE, SQL_DESC_COUNT, SQL_DESC_NAME et non SQL_DESC_NULLABLE.) L’appel de SQLColAttribute est mappé à :  
+2.  Le Gestionnaire de pilotes mappe SQL_COLUMN_COUNT, SQL_COLUMN_NAME ou SQL_COLUMN_NULLABLE SQL_DESC_COUNT, SQL_DESC_NAME ou SQL_DESC_NULLABLE, respectivement. (Une application ODBC *2.x* pilote devez prennent uniquement en charge SQL_COLUMN_COUNT SQL_COLUMN_NAME et SQL_COLUMN_NULLABLE, SQL_DESC_COUNT, SQL_DESC_NAME et non SQL_DESC_NULLABLE.) L’appel de SQLColAttribute est mappé à :  
   
     ```  
     SQLColAttributes(StatementHandle, ColumnNumber, FieldIdentifier, CharacterAttributePtr, BufferLength, StringLengthPtr, NumericAttributePtr);  
@@ -219,7 +219,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
   
  entraîne la séquence d’étapes suivante :  
   
-1.  Si *attribut* n’est pas un attribut de connexion ou d’instruction définis par le pilote et n’est pas un attribut défini dans ODBC 2. *x*, le Gestionnaire de pilotes retourne SQL_ERROR avec SQLSTATE HY092 (identificateur d’option/attribut non valide). Aucune autre règle dans cette section s’appliquent.  
+1.  Si *attribut* n’est pas un attribut de connexion ou d’instruction définis par le pilote et n’est pas un attribut défini dans ODBC *2.x*, le Gestionnaire de pilotes retourne SQL_ERROR avec SQLSTATE HY092 (attribut non valide / identificateur d’option). Aucune autre règle dans cette section s’appliquent.  
   
 2.  Si *attribut* est égale à SQL_ATTR_AUTO_IPD ou SQL_ATTR_METADATA_ID, le Gestionnaire de pilotes de retourne SQL_ERROR avec SQLSTATE HY092 (identificateur d’option/attribut non valide).  
   
@@ -234,7 +234,7 @@ SQLGetConnectAttr(ConnectionHandle, Attribute, ValuePtr, BufferLength, StringLen
      Notez que le *BufferLength* et *StringLengthPtr* sont ignorés.  
   
 ## <a name="sqlgetdata"></a>SQLGetData  
- Lorsqu’une application ODBC 3. *x* application fonctionne avec un ODBC 2 *.x* pilote appelle **SQLGetData** avec la *ColumnNumber* argument égal à 0, le Kit de développement ODBC 3 *.x* Gestionnaire de pilotes le mappe à un appel à **SQLGetStmtOption** avec la *Option* attribut la valeur SQL_GET_BOOKMARK.  
+ Lorsqu’une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote appelle **SQLGetData** avec la *ColumnNumber* argument égal à 0, le ODBC *3.x* Gestionnaire de pilotes le mappe à un appel à **SQLGetStmtOption** avec la *Option* attribut la valeur SQL_GET_BOOKMARK.  
   
 ## <a name="sqlgetstmtattr"></a>SQLGetStmtAttr  
  Le Gestionnaire de pilotes le mappe à **SQLGetStmtOption**. L’appel suivant à **SQLGetStmtAttr**:  
@@ -245,7 +245,7 @@ SQLGetStmtAttr(StatementHandle, Attribute, ValuePtr, BufferLength, StringLengthP
   
  entraîne la séquence d’étapes suivante :  
   
-1.  Si *attribut* n’est pas un attribut de connexion ou d’instruction définis par le pilote et n’est pas un attribut défini dans ODBC 2. *x*, le Gestionnaire de pilotes retourne SQL_ERROR avec SQLSTATE HY092 (identificateur d’option/attribut non valide). Aucune autre règle dans cette section s’appliquent.  
+1.  Si *attribut* n’est pas un attribut de connexion ou d’instruction définis par le pilote et n’est pas un attribut défini dans ODBC *2.x*, le Gestionnaire de pilotes retourne SQL_ERROR avec SQLSTATE HY092 (attribut non valide / identificateur d’option). Aucune autre règle dans cette section s’appliquent.  
   
 2.  Si *attribut* est une des opérations suivantes :  
   
@@ -304,7 +304,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
   
  entraîne la séquence d’étapes suivante :  
   
-1.  Si *attribut* n’est pas un attribut de connexion ou d’instruction définis par le pilote et n’est pas un attribut défini dans ODBC 2. *x*, le Gestionnaire de pilotes retourne SQL_ERROR avec SQLSTATE HY092 (identificateur d’option/attribut non valide). Aucune autre règle dans cette section s’appliquent.  
+1.  Si *attribut* n’est pas un attribut de connexion ou d’instruction définis par le pilote et n’est pas un attribut défini dans ODBC *2.x*, le Gestionnaire de pilotes retourne SQL_ERROR avec SQLSTATE HY092 (attribut non valide / identificateur d’option). Aucune autre règle dans cette section s’appliquent.  
   
 2.  Si *attribut* est égal à SQL_ATTR_AUTO_IPD, le Gestionnaire de pilotes de retourne SQL_ERROR avec SQLSTATE HY092 (identificateur d’option/attribut non valide).  
   
@@ -319,7 +319,7 @@ SQLSetConnectAttr(ConnectionHandle, Attribute, ValuePtr, StringLength);
      où *pas*, *fOption*, et *vParam* sera défini sur les valeurs de *ConnectionHandle*, *attribut*, et *ValuePtr*, respectivement. *StringLengthPtr* est ignoré.  
   
 > [!NOTE]  
->  Possibilité de définir des attributs d’instruction sur le niveau de la connexion a été déconseillée. Attributs d’instruction ne doivent jamais être définis sur le niveau de connexion par un ODBC 3. *x* application.  
+>  Possibilité de définir des attributs d’instruction sur le niveau de la connexion a été déconseillée. Attributs d’instruction ne doivent jamais être définis sur le niveau de connexion par une application ODBC *3.x* application.  
   
 ## <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
  Le Gestionnaire de pilotes le mappe à **SQLSetStmtOption**. L’appel suivant à **SQLSetStmtAttr**:  
@@ -330,7 +330,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
  entraîne la séquence d’étapes suivante :  
   
-1.  Si *attribut* n’est pas un attribut de connexion ou d’instruction définis par le pilote et n’est pas un attribut défini dans ODBC 2. *x*, le Gestionnaire de pilotes retourne SQL_ERROR avec SQLSTATE HY092 (identificateur d’option/attribut non valide). Aucune autre règle dans cette section s’appliquent.  
+1.  Si *attribut* n’est pas un attribut de connexion ou d’instruction définis par le pilote et n’est pas un attribut défini dans ODBC *2.x*, le Gestionnaire de pilotes retourne SQL_ERROR avec SQLSTATE HY092 (attribut non valide / identificateur d’option). Aucune autre règle dans cette section s’appliquent.  
   
 2.  Si *attribut* est une des opérations suivantes :  
   
@@ -382,7 +382,7 @@ SQLSetStmtAttr(StatementHandle, Attribute, ValuePtr, StringLength);
   
      où *hstmt*, *fOption*, et *vParam* sera défini sur les valeurs de *au paramètre StatementHandle*, *attribut*, et *ValuePtr*, respectivement. Le *StringLength* argument est ignoré.  
   
-     If un ODBC 2. *x* pilote prend en charge les options de l’instruction de chaîne de caractères, spécifiques au pilote, un ODBC 3. *x* application doit appeler **SQLSetStmtOption** pour définir ces options.  
+     Si une application ODBC *2.x* pilote prend en charge les options de l’instruction de chaîne de caractères, spécifiques au pilote, une application ODBC *3.x* application doit appeler **SQLSetStmtOption** pour définir ces options.  
   
 ## <a name="mappings-for-handling-parameter-arrays"></a>Mappages pour la gestion des tableaux de paramètres  
  Lorsque l’application appelle la méthode :  
@@ -399,23 +399,23 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
   
  Le Gestionnaire de pilotes une version ultérieure retourne un pointeur à cette variable lorsque l’application appelle **SQLGetStmtAttr** pour récupérer SQL_ATTR_PARAMS_PROCESSED_PTR. Le Gestionnaire de pilotes ne peut pas modifier cette variable interne jusqu'à ce que le descripteur d’instruction est retourné à l’état alloué ou préparé.  
   
- Une application ODBC 3. *x* application peut appeler **SQLGetStmtAttr** pour obtenir la valeur de SQL_ATTR_PARAMS_PROCESSED_PTR bien qu’il n’a pas explicitement défini le champ SQL_DESC_ARRAY_SIZE dans le descripteur APD. Cette situation peut se produire, par exemple, si l’application possède une routine générique qui vérifie la « ligne » de paramètres actuel en cours de traitement lorsque **SQLExecute** retourne SQL_NEED_DATA. Cette routine est appelée ou non le SQL_DESC_ARRAY_SIZE est 1 ou supérieur à 1. Pour éviter cela, le Gestionnaire de pilotes devez définir cette variable interne ou non l’application a appelé **SQLSetStmtAttr** pour définir le champ SQL_DESC_ARRAY_SIZE dans APD. Si SQL_DESC_ARRAY_SIZE n’a pas été définie, le Gestionnaire de pilotes doit s’assurer que cette variable contient la valeur 1 avant le retour à partir de **SQLExecDirect** ou **SQLExecute**.  
+ Une application ODBC *3.x* application peut appeler **SQLGetStmtAttr** pour obtenir la valeur de SQL_ATTR_PARAMS_PROCESSED_PTR bien qu’il n’a pas explicitement défini le champ SQL_DESC_ARRAY_SIZE dans le descripteur APD. Cette situation peut se produire, par exemple, si l’application possède une routine générique qui vérifie la « ligne » de paramètres actuel en cours de traitement lorsque **SQLExecute** retourne SQL_NEED_DATA. Cette routine est appelée ou non le SQL_DESC_ARRAY_SIZE est 1 ou supérieur à 1. Pour éviter cela, le Gestionnaire de pilotes devez définir cette variable interne ou non l’application a appelé **SQLSetStmtAttr** pour définir le champ SQL_DESC_ARRAY_SIZE dans APD. Si SQL_DESC_ARRAY_SIZE n’a pas été définie, le Gestionnaire de pilotes doit s’assurer que cette variable contient la valeur 1 avant le retour à partir de **SQLExecDirect** ou **SQLExecute**.  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
- Dans ODBC 3. *x*, l’appel **SQLFetch** ou **SQLFetchScroll** remplit le SQL_DESC_ARRAY_STATUS_PTR dans le descripteur IRD et le champ SQL_DIAG_ROW_NUMBER d’un enregistrement de diagnostic contient le numéro de la ligne dans l’ensemble de lignes appartenant à cet enregistrement. À l’aide de cela, l’application peut mettre en corrélation un message d’erreur avec une position de ligne donné.  
+ Dans ODBC *3.x*, l’appel **SQLFetch** ou **SQLFetchScroll** remplit le SQL_DESC_ARRAY_STATUS_PTR dans le descripteur IRD et le champ SQL_DIAG_ROW_NUMBER d’un diagnostic donné enregistrement contient le numéro de la ligne dans l’ensemble de lignes appartenant à cet enregistrement. À l’aide de cela, l’application peut mettre en corrélation un message d’erreur avec une position de ligne donné.  
   
- Une application ODBC 2. *x* pilote sera incapable de fournir cette fonctionnalité. Toutefois, il fournira démarcation erreur avec 01 s 01 SQLSTATE (erreur de ligne). Une application ODBC 3. *x* application qui utilise **SQLFetch** ou **SQLFetchScroll** au cours par rapport à une API ODBC 2. *x* pilote doit être conscient de cette situation. Notez également que ce type d’application sera impossible d’appeler **SQLGetDiagField** afin d’obtenir réellement le champ SQL_DIAG_ROW_NUMBER quand même. Une application ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote sera en mesure d’appeler **SQLGetDiagField** uniquement avec un *DiagIdentifier* argument de SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE ou SQL_DIAG_ SQLSTATE. Le 3 ODBC *.x* Gestionnaire de pilotes conserve la structure de données de diagnostic lorsque vous travaillez avec un ODBC 2. *x* pilote, mais ODBC 2. *x* pilote retourne uniquement ces quatre champs.  
+ Une application ODBC *2.x* pilote sera incapable de fournir cette fonctionnalité. Toutefois, il fournira démarcation erreur avec 01 s 01 SQLSTATE (erreur de ligne). Une application ODBC *3.x* application qui utilise **SQLFetch** ou **SQLFetchScroll** au cours par rapport à une application ODBC *2.x* pilote doit être conscient des ce fait. Notez également que ce type d’application sera impossible d’appeler **SQLGetDiagField** afin d’obtenir réellement le champ SQL_DIAG_ROW_NUMBER quand même. Une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote sera en mesure d’appeler **SQLGetDiagField** uniquement avec un *DiagIdentifier* argument de SQL_DIAG_MESSAGE_TEXT, SQL_DIAG_NATIVE, SQL_DIAG_RETURNCODE ou SQL_DIAG_SQLSTATE. ODBC *3.x* Gestionnaire de pilotes conserve la structure de données de diagnostic lorsque vous travaillez avec une application ODBC *2.x* pilote, mais ODBC *2.x* pilote retourne uniquement ces quatre champs.  
   
- Lorsqu’une application ODBC 2. *x* application fonctionne avec une API ODBC 2. *x* pilote, si une opération peut entraîner plusieurs erreurs renvoyées par le Gestionnaire de pilotes, différentes erreurs peuvent être renvoyés par la ODBC 3 *.x* Gestionnaire de pilotes que par ODBC 2. *x* Gestionnaire de pilotes.  
+ Lorsqu’une application ODBC *2.x* application fonctionne avec une application ODBC *2.x* pilote, si une opération peut entraîner plusieurs erreurs renvoyées par le Gestionnaire de pilotes, différentes erreurs peuvent être renvoyés par ODBC *3.x* Gestionnaire de pilotes que par ODBC *2.x* Gestionnaire de pilotes.  
   
 ## <a name="mappings-for-bookmark-operations"></a>Mappages pour les opérations de signet  
- Le 3 ODBC *.x* Gestionnaire de pilotes effectue les mappages suivants lorsqu’un ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote effectue des opérations de signet.  
+ ODBC *3.x* Gestionnaire de pilotes effectue les mappages suivants lorsqu’une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote effectue des opérations de signet.  
   
 ### <a name="sqlbindcol"></a>SQLBindCol  
- Lorsqu’une application ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote appelle **SQLBindCol** pour lier à la colonne 0 avec *fCType* égal à SQL_C_VARBOOKMARK, les 3 ODBC *.x* vérifie Gestionnaire de pilotes Si le *BufferLength* argument est inférieur à 4 ou supérieure à 4 et si tel est le cas, retourne SQLSTATE HY090 (longueur de chaîne ou de mémoire tampon non valide). Si le *BufferLength* argument est égal à 4, le Gestionnaire de pilotes appelle **SQLBindCol** dans le pilote, après avoir remplacé *fCType* avec SQL_C_BOOKMARK.  
+ Lorsqu’une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote appelle **SQLBindCol** pour lier à la colonne 0 avec *fCType* égal à SQL_C_ VARBOOKMARK, ODBC *3.x* Gestionnaire de pilotes vérifie si le *BufferLength* argument est inférieur à 4 ou supérieure à 4 et si tel est le cas, retourne SQLSTATE HY090 (chaîne non valide ou une mémoire tampon longueur). Si le *BufferLength* argument est égal à 4, le Gestionnaire de pilotes appelle **SQLBindCol** dans le pilote, après avoir remplacé *fCType* avec SQL_C_BOOKMARK.  
   
 ### <a name="sqlcolattribute"></a>SQLColAttribute  
- Lorsqu’une application ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote appelle **SQLColAttribute** avec la *ColumnNumber* argument la valeur 0, le Gestionnaire de pilote retourne la *FieldIdentifier* valeurs répertoriées dans le tableau suivant.  
+ Lorsqu’une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote appelle **SQLColAttribute** avec la *ColumnNumber* argument la valeur 0, le Gestionnaire de pilotes retourne le *FieldIdentifier* valeurs répertoriées dans le tableau suivant.  
   
 |*FieldIdentifier*|Value|  
 |-----------------------|-----------|  
@@ -447,7 +447,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |SQL_DESC_UPDATEABLE|SQL_ATTR_READ_ONLY|  
   
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
- Lorsqu’une application ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote appelle **SQLDescribeCol** avec la *ColumnNumber* argument la valeur 0, le Gestionnaire de pilotes retourne les valeurs répertoriées dans le tableau suivant.  
+ Lorsqu’une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote appelle **SQLDescribeCol** avec la *ColumnNumber* argument la valeur 0, le Gestionnaire de pilotes retourne les valeurs répertoriées dans le tableau suivant.  
   
 |Buffer|Value|  
 |------------|-----------|  
@@ -459,7 +459,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |*NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
- Lorsqu’une application ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote effectue l’appel suivant à **SQLGetData** pour récupérer un signet :  
+ Lorsqu’une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote effectue l’appel suivant à **SQLGetData** pour récupérer un signet :  
   
 ```  
 SQLGetData(StatementHandle, 0, SQL_C_VARBOOKMARK, TargetValuePtr, BufferLength, StrLen_or_IndPtr)  
@@ -473,9 +473,9 @@ SQLGetStmtOption(hstmt, SQL_GET_BOOKMARK, TargetValuePtr)
   
  où *hstmt* et *pvParam* sont définies sur les valeurs dans *au paramètre StatementHandle* et *TargetValuePtr*, respectivement. Le signet est retourné dans la mémoire tampon vers laquelle pointée le *pvParam* (*TargetValuePtr*) argument. La valeur dans la mémoire tampon vers laquelle pointe le *StrLen_or_IndPtr* argument dans l’appel à **SQLGetData** est défini à 4.  
   
- Ce mappage est nécessaire pour prendre en compte le cas dans lequel **SQLFetch** a été appelé avant l’appel à **SQLGetData** et ODBC 2. *x* pilote ne prenait pas en charge **SQLExtendedFetch**. Dans ce cas, **SQLFetch** est repassée par ODBC 2. *x* pilote, dans lequel la récupération de signet cas n’est pas pris en charge.  
+ Ce mappage est nécessaire pour prendre en compte le cas dans lequel **SQLFetch** a été appelé avant l’appel à **SQLGetData** et ODBC *2.x* pilote ne prenait pas en charge **SQLExtendedFetch**. Dans ce cas, **SQLFetch** est repassée par ODBC *2.x* pilote, dans lequel la récupération de signet cas n’est pas pris en charge.  
   
- **SQLGetData** ne peut pas être appelée plusieurs fois dans une API ODBC 2. *x* pilote de récupérer un signet en parties, ainsi, l’appel **SQLGetData** avec la *BufferLength* argument défini sur une valeur inférieure à 4 et le *ColumnNumber*argument la valeur 0 retourne SQLSTATE HY090 (longueur de chaîne ou de mémoire tampon non valide). **SQLGetData** peuvent, toutefois, être appelée plusieurs fois pour récupérer le même signet.  
+ **SQLGetData** ne peut pas être appelée plusieurs fois dans une application ODBC *2.x* pilote de récupérer un signet en parties, ainsi, l’appel **SQLGetData** avec la *BufferLength* argument défini sur une valeur inférieure à 4 et le *ColumnNumber* argument la valeur 0 retourne SQLSTATE HY090 (longueur de chaîne ou de mémoire tampon non valide). **SQLGetData** peuvent, toutefois, être appelée plusieurs fois pour récupérer le même signet.  
   
 ### <a name="sqlsetstmtattr"></a>SQLSetStmtAttr  
- Lorsqu’une application ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote appelle **SQLSetStmtAttr** pour définir l’attribut SQL_ATTR_USE_BOOKMARKS à SQL_UB_VARIABLE, le Gestionnaire de pilotes affecte l’attribut SQL_UB_ON dans sous-jacent ODBC 2. *x* pilote.
+ Lorsqu’une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote appelle **SQLSetStmtAttr** pour définir le SQL_ATTR_USE_BOOKMARKS attribut SQL_UB_VARIABLE, le pilote Le gestionnaire définit l’attribut à SQL_UB_ON dans ODBC sous-jacent *2.x* pilote.

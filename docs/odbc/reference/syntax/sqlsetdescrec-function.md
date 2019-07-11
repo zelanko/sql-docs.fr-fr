@@ -20,12 +20,12 @@ ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f76974a17fc12c4a72623c133586690c81269d06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cee1f41c76a79edf1d78d8b94b07107c3c2771e0
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536274"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793162"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec, fonction
 **Conformité**  
@@ -101,7 +101,7 @@ SQLRETURN SQLSetDescRec(
 |HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, probablement en raison de conditions de mémoire insuffisante.|  
 |HY016|Impossible de modifier un descripteur de ligne d’implémentation|Le *DescriptorHandle* argument a été associé à un IRD.|  
 |HY021|Informations de descripteur incohérentes|Le *Type* champ, ou tout autre champ associé au champ SQL_DESC_TYPE dans le descripteur, n’était pas valide ou cohérente.<br /><br /> Informations de descripteur vérifiées pendant une vérification de cohérence n’étaient pas cohérentes. (Voir « Vérifications de cohérence, » plus loin dans cette section.)|  
-|HY090|Longueur de chaîne ou une mémoire tampon non valide|(DM) le pilote a été un ODBC 2 *.x* pilote, le descripteur a été un ARD, le *ColumnNumber* argument a été défini sur 0 et la valeur spécifiée pour l’argument *BufferLength* a été non égal à 4.|  
+|HY090|Longueur de chaîne ou une mémoire tampon non valide|(DM) le pilote a été une ODBC *2.x* pilote, le descripteur a été un ARD, le *ColumnNumber* argument a été défini sur 0 et la valeur spécifiée pour l’argument *BufferLength* a été non égal à 4.|  
 |HY117|Connexion est suspendue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYT01|Délai de connexion expiré|Le délai de connexion a expiré avant que la source de données a répondu à la demande. Le délai de connexion est défini via **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
 |IM001|Pilote ne prend pas en charge cette fonction|Le pilote (DM) associé le *DescriptorHandle* ne prend pas en charge la fonction.|  

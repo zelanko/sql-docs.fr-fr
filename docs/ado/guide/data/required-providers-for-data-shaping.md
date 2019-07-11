@@ -14,12 +14,12 @@ ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: b95d6e42174cbce4357562ac3b866f49f0b58fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b825139c99fe97cfce27d03e65429bb076558413
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701799"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793043"
 ---
 # <a name="required-providers-for-data-shaping"></a>Fournisseurs nécessaires pour la mise en forme des données
 Mise en forme des données nécessite généralement deux fournisseurs. Le fournisseur de services, [Data Shaping Service pour OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), fournit les données de mise en forme des fonctionnalités et un fournisseur de données, tels que le fournisseur OLE DB pour SQL Server, fournit les lignes de données pour remplir la forme [Recordset ](../../../ado/reference/ado-api/recordset-object-ado.md).  

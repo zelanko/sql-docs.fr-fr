@@ -20,22 +20,22 @@ ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5296bcbe54aa90badf5e39a2c21287793c03fe83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d79776151f8fdf370b5b53231b7810fa371d4a3
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62982275"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792569"
 ---
 # <a name="sqlfreeconnect-function"></a>SQLFreeConnect, fonction
 **Conformité**  
- Version introduite : Conformité aux normes 1.0 ODBC : Déprécié  
+ Version introduite : Conformité aux normes 1.0 ODBC : Déconseillé  
   
  **Résumé**  
- Dans ODBC 3 *.x*, la fonction ODBC 2.0 **SQLFreeConnect** a été remplacé par **SQLFreeHandle**. Pour plus d’informations, consultez [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ Dans ODBC *3.x*, la fonction ODBC 2.0 **SQLFreeConnect** a été remplacé par **SQLFreeHandle**. Pour plus d’informations, consultez [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 > [!NOTE]
->  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 2 *.x* application fonctionne avec un ODBC 3 *.x* pilote, consultez [mappage de fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)dans l’annexe g : Instructions de pilote pour la compatibilité descendante.  
+>  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction lorsqu’une application ODBC *2.x* application fonctionne avec une application ODBC *3.x* pilote, consultez [mappage de fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)dans l’annexe g : Instructions de pilote pour la compatibilité descendante.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

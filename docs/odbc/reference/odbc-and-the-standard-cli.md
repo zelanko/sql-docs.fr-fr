@@ -17,12 +17,12 @@ ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5485da176b9bd4aa7afca7afa088e6932d6f0d58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adddf32a29d3a891a4a2c6fb2353648e62b0d9c5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273306"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794101"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC et l’interface CLI standard
 ODBC s’aligne sur les spécifications et les normes qui traitent avec l’Interface de niveau d’appel (CLI) suivantes. (Les fonctions ODBC sont un sur-ensemble de chacun de ces normes.)  
@@ -33,17 +33,17 @@ ODBC s’aligne sur les spécifications et les normes qui traitent avec l’Inte
   
  À la suite de cet alignement, les conditions suivantes sont réunies :  
   
--   Une application écrite aux Open Group et aux spécifications ISO CLI fonctionne avec un ODBC 3. *x* pilote ou un pilote conforme aux normes lorsqu’il est compilé avec l’ODBC 3. *x* en-tête des fichiers et lié avec ODBC 3. *x* bibliothèques, et quand il accède au pilote via l’ODBC 3. *x* Gestionnaire de pilotes.  
+-   Une application écrite dans les spécifications Open Group et ISO CLI fonctionne avec une application ODBC *3.x* pilote ou un pilote conforme aux normes lorsqu’il est compilé avec ODBC *3.x* en-tête des fichiers et lié à ODBC *3.x* bibliothèques, et quand il accède au pilote via ODBC *3.x* Gestionnaire de pilotes.  
   
--   Un pilote écrit dans les spécifications Open Group et ISO CLI fonctionne avec un ODBC 3 *.x* application ou une application conforme aux normes lorsqu’il est compilé avec l’ODBC 3 *.x* en-tête des fichiers et lié avec ODBC 3 *.x* bibliothèques, et lorsque l’application accède au pilote via l’ODBC 3 *.x* Gestionnaire de pilotes. (Pour plus d’informations, consultez [Applications conformes aux normes et des pilotes](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
+-   Un pilote écrit dans les spécifications Open Group et ISO CLI fonctionne avec une application ODBC *3.x* application ou une application conforme aux normes lorsqu’il est compilé avec ODBC *3.x* en-tête des fichiers et lié avec ODBC *3.x* bibliothèques, et lorsque l’application accède au pilote via ODBC *3.x* Gestionnaire de pilotes. (Pour plus d’informations, consultez [Applications conformes aux normes et des pilotes](../../odbc/reference/develop-app/standards-compliant-applications-and-drivers.md).  
   
- Niveau de la conformité de l’interface Core englobe toutes les fonctionnalités de la CLI ISO et toutes les fonctionnalités obligatoires dans l’interface CLI de groupe ouvert. Fonctionnalités facultatives de l’interface CLI de groupe ouvert s’affichent dans les niveaux de conformité interface supérieurs. Étant donné que tous les ODBC 3. *x* pilotes sont requis pour prendre en charge les fonctionnalités de niveau de la conformité de l’interface de Core, les conditions suivantes sont remplies :  
+ Niveau de la conformité de l’interface Core englobe toutes les fonctionnalités de la CLI ISO et toutes les fonctionnalités obligatoires dans l’interface CLI de groupe ouvert. Fonctionnalités facultatives de l’interface CLI de groupe ouvert s’affichent dans les niveaux de conformité interface supérieurs. Étant donné que tous les ODBC *3.x* pilotes sont requis pour prendre en charge les fonctionnalités de niveau de la conformité de l’interface de Core, les conditions suivantes sont remplies :  
   
--   Une application ODBC 3. *x* pilote prendra en charge toutes les fonctionnalités utilisées par une application conforme aux normes.  
+-   Une application ODBC *3.x* pilote prendra en charge toutes les fonctionnalités utilisées par une application conforme aux normes.  
   
--   Une application ODBC 3. *x* application en utilisant uniquement les fonctionnalités de ISO CLI et les fonctionnalités obligatoires de l’interface CLI de groupe Ouvrir fonctionnera avec n’importe quel pilote conformes aux normes.  
+-   Une application ODBC *3.x* application en utilisant uniquement les fonctionnalités de ISO CLI et les fonctionnalités obligatoires de l’interface CLI de groupe Ouvrir fonctionnera avec n’importe quel pilote conformes aux normes.  
   
- En plus des spécifications de l’interface de niveau d’appel contenues dans les normes ISO/CEI et l’interface CLI de groupe ouvert, ODBC implémente les fonctionnalités suivantes. (Certaines de ces fonctionnalités existaient dans les versions d’ODBC avant ODBC 3. *x*.)  
+ En plus des spécifications de l’interface de niveau d’appel contenues dans les normes ISO/CEI et l’interface CLI de groupe ouvert, ODBC implémente les fonctionnalités suivantes. (Certaines de ces fonctionnalités existaient dans les versions d’ODBC avant ODBC *3.x*.)  
   
 -   Extractions multilignes par un appel de fonction unique  
   

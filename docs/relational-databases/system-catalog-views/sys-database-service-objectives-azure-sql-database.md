@@ -12,21 +12,21 @@ keywords:
 f1_keywords:
 - DATABASE_SERVICE_OBJECTIVES_TSQL
 ms.assetid: cecd8c31-06c0-4aa7-85d3-ac590e6874fa
-author: CarlRabeler
-ms.author: carlrab
+author: stevestein
+ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 889d8d618cf017d27e3b92ce845c8ebfee179048
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: 1bd16b4ac7fb0b27296fb2cc7e47ec683d761ed4
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342921"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716646"
 ---
 # <a name="sysdatabaseserviceobjectives-azure-sql-database"></a>Sys.database_service_objectives (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-Retourne l’édition (niveau de service), un objectif de service (niveau tarifaire) et un nom du pool élastique, le cas échéant, pour une base de données SQL Azure ou Azure SQL Data Warehouse. Si connecté à la base de données master sur un serveur de base de données SQL Azure, retourne des informations sur toutes les bases de données. Pour Azure SQL Data Warehouse, vous devez être connecté à la base de données master.  
+Retourne l’édition (niveau de service), un objectif de service (niveau tarifaire) et un nom du pool élastique, le cas échéant, pour une base de données SQL Azure ou Azure SQL Data Warehouse. Si vous êtes connecté à la base de données MASTER d’un serveur Azure SQL Database, retourne les informations sur toutes les bases de données. Pour Azure SQL Data Warehouse, vous devez être connecté à la base de données MASTER.  
   
   
  Pour plus d’informations sur la tarification, consultez [les options de base de données SQL et les performances : Tarification de base de données SQL](https://azure.microsoft.com/pricing/details/sql-database/) et [SQL Data Warehouse tarification](https://azure.microsoft.com/pricing/details/sql-data-warehouse/).  
@@ -37,7 +37,7 @@ Retourne l’édition (niveau de service), un objectif de service (niveau tarifa
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|INT|ID de la base de données unique au sein d’une instance de serveur de base de données SQL Azure. Joignable avec [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|database_id|int|ID de la base de données unique au sein d’une instance de serveur de base de données SQL Azure. Joignable avec [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |édition|sysname|Le niveau de service pour l’entrepôt de données ou de la base de données : **Base**, **Standard**, **Premium** ou **Data Warehouse**.|  
 |service_objective|sysname|Le niveau tarifaire de la base de données. Si la base de données est dans un pool élastique, retourne **ElasticPool**.<br /><br /> Sur le **base** tier, retourne **base**.<br /><br /> **Base de données unique dans un niveau de service standard** retourne une des opérations suivantes : S0, S1, S2, S3, S4, S6, S7, S9 ou S12.<br /><br /> **Base de données unique dans un niveau premium** retourne des éléments suivants : P1, P2, P4, P6, P11 ou P15.<br /><br /> **SQL Data Warehouse** retourne DW100 via DW30000c.|  
 |elastic_pool_name|sysname|Le nom de la [pool élastique](https://azure.microsoft.com/documentation/articles/sql-database-elastic-pool/) appartenant à la base de données. Retourne **NULL** si la base de données est une base de données unique ou un warehoue de données.|  

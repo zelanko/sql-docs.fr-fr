@@ -10,12 +10,12 @@ ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ec01dd697e04b5d4b5d8d943a855a62adac48f60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090617"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792916"
 ---
 # <a name="create-the-finance-name-policy"></a>Créer la stratégie Nom financier
   Dans cette tâche, vous allez créer une base de données nommée Finance, puis créer une condition qui exige que toutes les tables commencent par les lettres **fintbl**. Ensuite, vous allez créer une stratégie et une catégorie de stratégies afin d'appliquer une norme d'affectation de noms pour les tables dans la base de données Finance.  
@@ -39,7 +39,7 @@ ms.locfileid: "66090617"
   
 3.  Dans la liste **Facette** , sélectionnez **Nom en plusieurs parties**.  
   
-4.  Dans la boîte de dialogue **Expression** , dans la zone **Champ** , sélectionnez **@Name** , dans la zone **Opérateur** , sélectionnez **Comme**et dans la zone **Valeur** , tapez **'fintbl%'** pour forcer tous les noms de tables à commencer par les lettres **fintbl**.  
+4.  Dans le **Expression** zone, dans le **champ** boîte, sélectionnez  **\@nom**; dans le **opérateur** boîte, sélectionnez  **Comme**; puis, dans le **valeur** , tapez **'% fintbl'** pour forcer tous les noms de tables commencent par les lettres **fintbl**.  
   
 5.  Dans la page **Description** , tapez **Les noms des tables de finance doivent commencer par fintbl**, puis cliquez sur **OK** pour créer la condition.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66090617"
   
 6.  Dans la boîte de dialogue **Créer une nouvelle condition** , dans la zone **Nom** , tapez **Base de données de finance**.  
   
-7.  Dans la zone **Expression**, complétez l’expression de façon à inclure **@Name = 'Finance'** , puis cliquez sur **OK** pour fermer la page de condition.  
+7.  Dans le **Expression** boîte, complétez l’expression à inclure  **\@nom = 'Finance'** , puis cliquez sur **OK** pour fermer la page de condition.  
   
     > [!NOTE]  
     >  Vous devrez peut-être quitter la zone **Valeur** pour activer le bouton **OK** .  

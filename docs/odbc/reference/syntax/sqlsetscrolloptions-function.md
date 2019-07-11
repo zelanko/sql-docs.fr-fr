@@ -20,25 +20,25 @@ ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dbdd2038bc217a7ca2a2efe08940c03c5da5d8f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e0c2a9c367df9cd71d68d73ff676c8df915237b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62985236"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793881"
 ---
 # <a name="sqlsetscrolloptions-function"></a>SQLSetScrollOptions, fonction
 **Conformité**  
- Version introduite : Conformité aux normes 1.0 ODBC : Déprécié  
+ Version introduite : Conformité aux normes 1.0 ODBC : Déconseillé  
   
  **Résumé**  
- Dans ODBC 3 *.x*, la fonction ODBC 2.0 **SQLSetScrollOptions** a été remplacé par des appels à **SQLGetInfo** et **SQLSetStmtAttr**.  
+ Dans ODBC *3.x*, la fonction ODBC 2.0 **SQLSetScrollOptions** a été remplacé par des appels à **SQLGetInfo** et **SQLSetStmtAttr**.  
   
 > [!NOTE]
->  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 2 *.x* application fonctionne avec un ODBC 3 *.x* pilote, consultez [mappage de fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)dans l’annexe g : Instructions de pilote pour la compatibilité descendante.  
+>  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction lorsqu’une application ODBC *2.x* application fonctionne avec une application ODBC *3.x* pilote, consultez [mappage de fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)dans l’annexe g : Instructions de pilote pour la compatibilité descendante.  
 > 
 > [!NOTE]
->  Lorsque le Gestionnaire de pilotes mappe **SQLSetScrollOptions** pour une application qui fonctionne avec un ODBC 3 *.x* pilote qui ne prend pas en charge **SQLSetScrollOptions**, le pilote Le gestionnaire définit l’option d’instruction SQL_ROWSET_SIZE, pas l’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE, à la *la RowsetSize* argument dans **SQLSetScrollOption**. Par conséquent, **SQLSetScrollOptions** ne peut pas être utilisé par une application lors de l’extraction de plusieurs lignes par un appel à **SQLFetch** ou **SQLFetchScroll**. Il peut être uniquement utilisé lorsque l’extraction de plusieurs lignes par un appel à **SQLExtendedFetch**.  
+>  Lorsque le Gestionnaire de pilotes mappe **SQLSetScrollOptions** pour une application fonctionne avec une application ODBC *3.x* pilote qui ne prend pas en charge **SQLSetScrollOptions**, le pilote Le gestionnaire définit l’option d’instruction SQL_ROWSET_SIZE, pas l’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE, à la *la RowsetSize* argument dans **SQLSetScrollOption**. Par conséquent, **SQLSetScrollOptions** ne peut pas être utilisé par une application lors de l’extraction de plusieurs lignes par un appel à **SQLFetch** ou **SQLFetchScroll**. Il peut être uniquement utilisé lorsque l’extraction de plusieurs lignes par un appel à **SQLExtendedFetch**.  
   
 ## <a name="remarks"></a>Notes  
  Si votre application s’exécutera sur un système d’exploitation 64 bits, consultez [informations sur ODBC 64 bits](../../../odbc/reference/odbc-64-bit-information.md).  

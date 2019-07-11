@@ -15,19 +15,19 @@ ms.assetid: c91bef31-3794-4736-966a-d50997b2233c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5472595383c7e4fcf448374c1fd85587246328f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3817b33aa294d6081b9fa2ee240e67ac38dd2a25
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199214"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793980"
 ---
 # <a name="c-data-types-in-odbc"></a>Types de données C dans ODBC
 ODBC définit les types de données C qui sont utilisés par les variables d’application et leurs identificateurs de type correspondant. Ils sont utilisés par les mémoires tampons qui sont liés aux colonnes du jeu de résultats et les paramètres de l’instruction. Par exemple, qu'une application souhaite récupérer des données à partir d’une colonne de jeu de résultats au format caractère. Elle déclare une variable avec le SQLCHAR * type de données et lie cette variable à la colonne de jeu de résultats avec un identificateur de type de SQL_C_CHAR. Pour obtenir une liste complète des types de données C et les identificateurs de type, consultez [annexe d : Types de données](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
   
  ODBC définit également un mappage par défaut à partir de chaque type de données SQL à un type de données C. Par exemple, un entier sur 2 octets dans la source de données est mappé à un entier sur 2 octets dans l’application. Pour utiliser le mappage par défaut, une application spécifie l’identificateur de type SQL_C_DEFAULT. Toutefois, l’utilisation de cet identificateur est déconseillée pour des raisons de l’interopérabilité.  
   
- Tous les types de données entier C définis dans ODBC 1 *.x* ont été signées. Les types de données C non signés et leurs identificateurs de type correspondants ont été ajoutés dans ODBC 2.0. Pour cette raison, les applications et pilotes doivent être particulièrement prudent lorsque vous traitez avec 1 *.x* versions.  
+ Tous les types de données entier C définis dans ODBC *1.x* ont été signées. Les types de données C non signés et leurs identificateurs de type correspondants ont été ajoutés dans ODBC 2.0. Pour cette raison, les applications et pilotes doivent être particulièrement prudent lorsque vous traitez des *1.x* versions.  
   
 ## <a name="c-data-type-extensibility"></a>Extensibilité du Type de données C  
  Dans ODBC 3.8, vous pouvez spécifier les types de données C spécifiques au pilote. Cela vous permet de lier un type SQL comme un type de C spécifiques au pilote dans les applications ODBC lorsque vous appelez [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md), [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md), ou [SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md). Cela peut être utile pour prendre en charge de nouveaux types de serveur, car les types de données C existants ne peut ne pas représentent correctement les nouveaux types de données de serveur. L’utilisation de types de C spécifiques au pilote peut augmenter le nombre de conversions qui effectuent des pilotes.  

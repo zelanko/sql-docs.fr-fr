@@ -13,19 +13,19 @@ ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c706dca3a1479a299841f9d47743785d29689f12
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724364"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792559"
 ---
 # <a name="header-files"></a>Fichiers d’en-tête
 Le fichier d’en-tête Sql.h contient des prototypes pour les fonctions et fonctionnalités dans le niveau de conformité Interface ODBC de base. Le fichier d’en-tête Sqlext.h contient des prototypes pour les fonctions et fonctionnalités dans le niveau 1 et les niveaux de conformité des API de niveau 2. Le fichier d’en-tête Sqltypes.h contient les définitions de type et des indicateurs pour les types de données SQL.  
   
  Les fichiers d’en-tête contiennent tous un **#define**, ODBCVER, qui une application ou le pilote peut définie pour être compilé pour différentes versions d’ODBC.  
   
- Pour s’aligner avec la CLI d’ISO et groupe ouvert, les fichiers d’en-tête contiennent des alias pour les types d’informations utilisés dans les appels à **SQLGetInfo**. Dans le tableau suivant, la colonne « Nom ODBC » indique le nom ODBC pour le type d’informations dans [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md). La colonne « Alias dans le fichier d’en-tête » indique le nom qui est utilisé dans la CLI ISO et le groupe ouvert. La valeur numérique réelle de ces noms de manifeste est la même dans ODBC et les interfaces CLI standards. Ces alias activer une application conforme aux normes ou à un pilote pour compiler à l’aide ODBC 3 *.x* fichiers d’en-tête.  
+ Pour s’aligner avec la CLI d’ISO et groupe ouvert, les fichiers d’en-tête contiennent des alias pour les types d’informations utilisés dans les appels à **SQLGetInfo**. Dans le tableau suivant, la colonne « Nom ODBC » indique le nom ODBC pour le type d’informations dans [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md). La colonne « Alias dans le fichier d’en-tête » indique le nom qui est utilisé dans la CLI ISO et le groupe ouvert. La valeur numérique réelle de ces noms de manifeste est la même dans ODBC et les interfaces CLI standards. Ces alias activer une application conforme aux normes ou à un pilote pour compiler avec ODBC *3.x* fichiers d’en-tête.  
   
  Ces alias sont expansions d’abréviations dans les noms ODBC afin que les noms sont plus compréhensibles. « MAX » est développé pour « MAXIMUM », « Long » à « Longueur », « MULT » à « Plusieurs », « JO » à « OUTER_JOIN » et « Transaction » pour « TRANSACTION ».  
   

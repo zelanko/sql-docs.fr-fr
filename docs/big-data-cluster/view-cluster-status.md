@@ -1,20 +1,21 @@
 ---
-title: Afficher l’état de cluster
+title: Afficher l’état du cluster
 titleSuffix: SQL Server big data clusters
 description: Cet article explique comment afficher l’état d’un cluster de données volumineux à l’aide d’Azure Data Studio, les ordinateurs portables et les commandes de mssqlctl.
 author: yualan
 ms.author: alayu
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2edd49c37655d420cf8022677c0d0287028a0b93
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: b3cc78e36fe427966c7730533104c63aa3ed9332
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413966"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727329"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Comment afficher l’état d’un cluster de données volumineuses
 
@@ -36,7 +37,7 @@ Après avoir téléchargé la dernière version **insiders build** de [Azure Dat
 
    ![Tableau de bord de cluster Big data](media/view-cluster-status/bdc-dashboard.png)
 
-### <a name="service-endpoints"></a>points de terminaison de service
+### <a name="service-endpoints"></a>Points de terminaison de service
 
 Il est important de pouvoir accéder facilement aux différents services au sein d’un cluster de données volumineux. Le tableau de bord de cluster de données volumineuses fournit une table de points de terminaison de service qui vous permet de voir et de copier les points de terminaison de service.
 
@@ -90,7 +91,7 @@ Vous pouvez cliquer directement sur ces liens. Vous êtes invité à deux repris
 
 Vous pouvez également utiliser [mssqlctl](deploy-install-mssqlctl.md) commandes pour afficher les points de terminaison et l’état du cluster.
 
-### <a name="service-endpoints"></a>points de terminaison de service
+### <a name="service-endpoints"></a>Points de terminaison de service
 
 Vous pouvez obtenir les adresses IP des points de terminaison externes pour le cluster de données volumineuses en procédant comme suit.
 
@@ -135,7 +136,7 @@ Vous pouvez obtenir les adresses IP des points de terminaison externes pour le c
    Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
 
-### <a name="view-cluster-status"></a>Afficher l’état de cluster
+### <a name="view-cluster-status"></a>Afficher l’état du cluster
 
 Vous pouvez afficher l’état du cluster avec le [afficher d’état mssqlctl bdc](reference-mssqlctl-bdc-status.md) commande.
 
@@ -167,7 +168,7 @@ Vous pouvez afficher l’état des pools au sein du cluster avec le [afficher d�
 - data
 - master
 - Spark
-- Stockage
+- storage
 
 Par exemple, la commande suivante affiche l’état du pool du pool de stockage :
 

@@ -2,20 +2,20 @@
 title: Gérer les ordinateurs portables dans Azure Data Studio
 titleSuffix: SQL Server big data clusters
 description: Découvrez comment gérer des ordinateurs portables dans Azure Data Studio. Cela inclut l’ouverture des blocs-notes, leur enregistrement et la modification de votre connexion au cluster big data.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 9173c630514465914a31bb5b4c2999145884c78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf0041ee2beecb0864f196c4d13c7be309b40d17
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790046"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727567"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Comment gérer des ordinateurs portables dans Azure Data Studio
 
@@ -43,7 +43,7 @@ Sélectionnez **ouvrir le fichier** dans le menu fichier Ctrl + O (dans Windows)
 
 ![Ouvrez la boîte de dialogue Ouvrir un fichier en sélectionnant Ouvrir le fichier](./media/notebooks-how-to-manage/open-file-1.png) 
 
-### <a name="dashboard"></a>Tableau de bord
+### <a name="dashboard"></a>tableau de bord
 
 Cliquez sur **ouvrir le bloc-notes** dans le tableau de bord pour ouvrir la boîte de dialogue d’ouverture de fichier.
 
