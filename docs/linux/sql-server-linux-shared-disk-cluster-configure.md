@@ -1,20 +1,21 @@
 ---
-title: Configurer l’instance de cluster de basculement - SQL Server sur Linux (RHEL) | Microsoft Docs
+title: Configurer l’instance de cluster de basculement - SQL Server sur Linux (RHEL)
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 00ae511095e046623df080e7cc6f9704aedc87ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 407e1e11bcaf2c1b7ffe0426c6a3c7493e71bc74
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712926"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833161"
 ---
 # <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>Configurer l’instance de cluster de basculement - SQL Server sur Linux (RHEL)
 
@@ -202,7 +203,7 @@ Cet exemple crée une instance FCI dans le groupe NewLinFCIGrp. Le nom du groupe
 
     \<FolderToMountNFSShare > est le dossier pour monter le disque (pour les bases de données système et l’emplacement par défaut, il serait /var/opt/mssql/data)
 
-    Voici un exemple ici :
+    Voici un exemple :
 
     ```bash
     mount -t nfs4 200.201.202.63:/var/nfs/fci1 /var/opt/mssql/data -o nfsvers=4.2,timeo=14,intr
