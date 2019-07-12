@@ -1,20 +1,20 @@
 ---
-title: Notes de publication pour 2017 de SQL Server sur Linux | Documents Microsoft
+title: Notes de publication pour 2017 de SQL Server sur Linux
 description: Cette rubrique contient les notes de publication et les fonctionnalités prises en charge pour SQL Server 2017 fonctionnant sous Linux. Les notes de publication sont incluses dans la version la plus récente et plusieurs versions précédentes.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: da7d92fd1fa15deb83dbca9a1710b967d660b99f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06c46a54f21c0397f4ee801349acbebafeedf7a1
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705144"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834815"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour 2017 de SQL Server sur Linux
 
@@ -45,7 +45,7 @@ La plupart des outils clients qui ciblent [!INCLUDE[ssNoVersion](../includes/ssn
 
 Le tableau suivant répertorie l’historique de publication pour [!INCLUDE[ssSQL17](../includes/sssql17-md.md)].
 
-| Version               | Version       | Date de publication |
+| Libérer               | Version       | Date de publication |
 |-----------------------|---------------|--------------|
 | [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
 | [CU14](#CU14)         | 14.0.3076.1   | 2019-03-25   |
@@ -410,25 +410,25 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 
 Les sections suivantes décrivent les problèmes connus avec la version disponibilité générale de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] sur Linux.
 
-#### <a name="general"></a>Général
+#### <a name="general"></a>Généralités
 
 - La longueur du nom d’hôte dans lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est installée doit être de 15 caractères ou moins. 
 
-    - **Résolution**: Modifier le nom dans etc à quelque chose de 15 caractères ou plus.
+    - **Résolution** : Modifier le nom dans etc à quelque chose de 15 caractères ou plus.
 
 - Définition manuelle de l’heure système vers l’arrière dans le temps entraîne [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour arrêter la mise à jour dans l’heure système interne [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
-    - **Résolution**: Redémarrez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
+    - **Résolution** : Redémarrez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 - Seules les installations d’instance unique sont prises en charge.
 
-    - **Résolution**: Si vous souhaitez avoir plusieurs instances sur un hôte donné, envisagez d’utiliser des machines virtuelles ou des conteneurs Docker. 
+    - **Résolution** : Si vous souhaitez avoir plusieurs instances sur un hôte donné, envisagez d’utiliser des machines virtuelles ou des conteneurs Docker. 
 
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Configuration Manager ne peut pas se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur Linux.
 
 - La langue par défaut de la **sa** connexion est l’anglaise.
 
-    - **Résolution**: Modifier la langue de la **sa** connexion avec le **ALTER LOGIN** instruction.
+    - **Résolution** : Modifier la langue de la **sa** connexion avec le **ALTER LOGIN** instruction.
 
 #### <a name="databases"></a>Bases de données
 
@@ -440,7 +440,7 @@ Les sections suivantes décrivent les problèmes connus avec la version disponib
 
 - Certains algorithmes (suites de chiffrement) de sécurité TLS (Transport Layer) ne fonctionnent pas correctement avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur Linux. Cela entraîne des échecs de connexion lorsque vous tentez de vous connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], ainsi que des problèmes pour établir des connexions entre les réplicas dans les groupes de haute disponibilité.
 
-   - **Résolution**: Modifier le **mssql.conf** script de configuration pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sous Linux afin de désactiver les suites de chiffrement problématique, en procédant comme suit :
+   - **Résolution** : Modifier le **mssql.conf** script de configuration pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sous Linux afin de désactiver les suites de chiffrement problématique, en procédant comme suit :
 
       1. Ajoutez le code suivant /var/opt/mssql/mssql.conf.
 
@@ -462,7 +462,7 @@ Les sections suivantes décrivent les problèmes connus avec la version disponib
 
 - Autorisation utilisateur **ADMINISTER BULK OPERATIONS** n’est pas pris en charge sur Linux pour l’instant.
 
-#### <a name="networking"></a>Réseau
+#### <a name="networking"></a>Mise en réseau
 
 Fonctionnalités qui impliquent des connexions TCP sortantes à partir du processus sqlservr, tels que des serveurs liés ou des groupes de disponibilité, peut ne pas fonctionnent si les deux conditions suivantes sont remplies :
 

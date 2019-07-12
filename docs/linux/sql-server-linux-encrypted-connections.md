@@ -1,22 +1,22 @@
 ---
-title: Chiffrement des connexions à SQL Server sur Linux | Microsoft Docs
+title: Chiffrement des connexions à SQL Server sur Linux
 description: Cet article décrit le chiffrement des connexions à SQL Server sur Linux.
-author: vin-yu
 ms.date: 01/30/2018
+author: vin-yu
 ms.author: vinsonyu
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ca1a6b7a3530041def66ec74be9de547c6d98ea
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705669"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833771"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Chiffrement des connexions à SQL Server sur Linux
 
@@ -130,9 +130,9 @@ TLS est utilisé pour chiffrer les connexions à partir d’une application clie
 
 ## <a name="common-connection-errors"></a>Erreurs de connexion courantes  
 
-|Message d'erreur |Fix |
+|Message d’erreur |Fix |
 |--- |--- |
 |La chaîne de certificats a été émise par une autorité qui n’est pas approuvée.  |Cette erreur se produit lorsque les clients ne peuvent pas vérifier la signature sur le certificat présenté par SQL Server pendant la négociation TLS. Assurez-vous que le client approuve soit le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] certificat directement, ou l’autorité de certification qui a signé le certificat SQL Server. |
 |Le nom de principal de cible est incorrect.  |Vérifiez que champ de nom commun de certificat SQL Server correspond au nom de serveur spécifié dans la chaîne de connexion du client. |  
-|une connexion existante a dû être fermée par l’hôte distant. |Cette erreur peut se produire lorsque le client ne prend pas en charge la version du protocole TLS requise par SQL Server. Par exemple, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est configuré pour exiger TLS 1.2, assurez-vous que vos clients prennent également en charge le protocole TLS 1.2. |
+|Une connexion existante a été fermée de force par l'hôte distant. |Cette erreur peut se produire lorsque le client ne prend pas en charge la version du protocole TLS requise par SQL Server. Par exemple, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est configuré pour exiger TLS 1.2, assurez-vous que vos clients prennent également en charge le protocole TLS 1.2. |
 | | |   

@@ -1,20 +1,21 @@
 ---
-title: Utiliser le groupe de disponibilité SQL Server sur Linux | Microsoft Docs
+title: Utiliser le groupe de disponibilité SQL Server sur Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 98493c945f4f43e45b1f314f1500eb50a04c8e5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1dfdeead4f8eb82dc95882d719ef42f16017bdc
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713413"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834240"
 ---
 # <a name="operate-always-on-availability-groups-on-linux"></a>Fonctionnent toujours sur les groupes de disponibilité sur Linux
 
@@ -76,13 +77,13 @@ Avant de commencer, sauvegardez chaque base de données.
 
    Si le type de cluster de groupe de disponibilité est `NONE`manuellement effectuer un basculement. Exécutez les étapes suivantes dans l'ordre :
 
-      A. La commande suivante définit le réplica principal vers le site secondaire. Remplacez `AG1` par le nom de votre groupe de disponibilité. Exécutez la commande Transact-SQL sur l’instance de SQL Server qui héberge le réplica principal.
+      a. La commande suivante définit le réplica principal vers le site secondaire. Remplacez `AG1` par le nom de votre groupe de disponibilité. Exécutez la commande Transact-SQL sur l’instance de SQL Server qui héberge le réplica principal.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] SET (ROLE = SECONDARY);
       ```
 
-      B. La commande suivante définit un réplica secondaire synchrone vers le site principal. Exécutez la commande Transact-SQL suivante sur l’instance cible de SQL Server - l’instance qui héberge le réplica secondaire synchrone.
+      b. La commande suivante définit un réplica secondaire synchrone vers le site principal. Exécutez la commande Transact-SQL suivante sur l’instance cible de SQL Server - l’instance qui héberge le réplica secondaire synchrone.
 
       ```transact-sql
       ALTER AVAILABILITY GROUP [ag1] FAILOVER;

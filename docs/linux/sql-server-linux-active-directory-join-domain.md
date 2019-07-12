@@ -4,18 +4,18 @@ titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
 ms.author: dygray
-ms.reviewer: rothja
+ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: craigg
+manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 50f2685b5b981cddfdba61f91b7ec04e9f6345d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cee4ca0edcc5a49a34b6c352ae0121bed3b40ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822527"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834440"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Jointure de SQL Server sur un hôte Linux à un domaine Active Directory
 
@@ -128,7 +128,7 @@ Si une de ces vérifications de nom échoue, mettez à jour votre liste de reche
 Après avoir vérifié la configuration de base et la connectivité avec le contrôleur de domaine, il existe deux options pour joindre un ordinateur hôte de SQL Server Linux avec le contrôleur de domaine Active Directory :
 
 - [Option 1 : Utiliser un package SSSD](#option1)
-- [Option 2 : Utilisez les utilitaires de fournisseur tiers openldap](#option2)
+- [Option 2 : Utilisez les utilitaires de fournisseur tiers openldap](#option2)
 
 ### <a id="option1"></a> Option 1 : Utiliser le package SSSD pour joindre le domaine Active Directory
 
@@ -171,7 +171,7 @@ Utilisez les étapes suivantes pour joindre un ordinateur hôte SQL Server à un
 
    Le tableau suivant répertorie certains messages d’erreur que vous pourriez recevoir et des suggestions sur les résoudre :
 
-   | Message d'erreur | Recommandation |
+   | Message d’erreur | Recommandation |
    |---|---|
    | `Necessary packages are not installed` | Installer ces packages à l’aide du Gestionnaire de package de votre distribution Linux avant de réexécuter la commande de jointure de domaine. |
    | `Insufficient permissions to join the domain` | Un administrateur de domaine, vérifiez que vous disposez des autorisations suffisantes pour joindre des ordinateurs Linux à votre domaine. |

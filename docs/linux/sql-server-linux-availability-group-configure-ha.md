@@ -4,18 +4,19 @@ titleSuffix: SQL Server
 description: En savoir plus sur la création d’un SQL Server toujours sur groupe de disponibilité (AG) pour la haute disponibilité sur Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e339d83503c8fa1f5cdd383004fa93d41529d12d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8e367bdf33b22f3e2a122c31bcdfb8b5d65e648
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713441"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834313"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurer SQL Server groupe de disponibilité AlwaysOn pour la haute disponibilité sur Linux
 
@@ -215,7 +216,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 Si vous avez suivi les étapes décrites dans ce document, vous avez un groupe de disponibilité n’est pas mis en cluster. L’étape suivante consiste à ajouter le cluster. Cette configuration est valide pour les scénarios d’équilibrage de charge/mise à l’échelle en lecture, il n’est pas terminée pour la haute disponibilité. Pour la haute disponibilité, vous devez ajouter le groupe de disponibilité en tant que ressource de cluster. Consultez [étapes suivantes](#next-steps) pour obtenir des instructions. 
 
-## <a name="notes"></a>Remarques
+## <a name="notes"></a>Notes
 
 >[!IMPORTANT]
 >Après avoir configuré le cluster et ajouter le groupe de disponibilité en tant que ressource de cluster, vous ne pouvez pas utiliser Transact-SQL pour basculer les ressources du groupe de disponibilité. Ressources de cluster de SQL Server sur Linux sont couplés pas aussi étroitement avec le système d’exploitation tels qu’ils sont sur un Cluster de basculement du serveur Windows (WSFC). Service SQL Server n’est pas informé de la présence du cluster. Tous les orchestration s’effectue via les outils de gestion de cluster. Dans RHEL ou Ubuntu utiliser `pcs`. Dans SLES utiliser `crm`. 

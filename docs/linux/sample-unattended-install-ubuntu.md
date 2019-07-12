@@ -2,21 +2,21 @@
 title: Installation sans assistance pour SQL Server sur Ubuntu
 titleSuffix: SQL Server
 description: Exemple de Script SQL Server - installation sans assistance sur Ubuntu
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: caa08ab4780defb1ddcd6dedd49e261ea9c45625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bd5728e8046d7e48945fe815b64735362873ac1
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713544"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834472"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Exemple : Script d’installation de SQL Server sans assistance pour Ubuntu
+# <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Aperçu : Script d’installation de SQL Server sans assistance pour Ubuntu
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

@@ -1,19 +1,20 @@
 ---
-title: Principes fondamentaux de disponibilité de SQL Server pour les déploiements de Linux | Microsoft Docs
+title: Principes fondamentaux de disponibilité de SQL Server pour les déploiements de Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 203fad6aa3c39d57446738b9c74631fe114c609e
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719370"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833563"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Principes fondamentaux de disponibilité de SQL Server pour les déploiements de Linux
 
@@ -218,7 +219,7 @@ Pour plus d’informations, consultez :
 >[!NOTE]
 >RHEL avec un cluster Pacemaker avec STONITH n’est pas encore pris en charge par Hyper-V. Jusqu'à ce que qui est pris en charge, pour plus d’informations et mises à jour, consultez [des stratégies de prise en charge pour les Clusters à disponibilité élevée RHEL](https://access.redhat.com/articles/29440#3physical_host_mixing).
 
-### <a name="networking"></a>Réseau
+### <a name="networking"></a>Mise en réseau
 Contrairement à un cluster WSFC, Pacemaker ne nécessite pas un nom dédié ou au moins une adresse IP dédiée pour le cluster Pacemaker lui-même. Groupes de disponibilité et les instances fci nécessitent des adresses IP (consultez la documentation pour chacun d’eux pour plus d’informations), mais pas les noms, car il n’existe aucune ressource de nom de réseau. SLES n’autorise pas la configuration d’une adresse IP à des fins administratives, mais il n’est pas obligatoire, comme illustré dans [créer le cluster Pacemaker](sql-server-linux-deploy-pacemaker-cluster.md#create).
 
 Comme un cluster WSFC, Pacemaker préférez mise en réseau redondant, ce qui signifie que les cartes réseau distinctes (cartes réseau ou pNICs pour serveur physique) ayant des adresses IP individuelles. En termes de la configuration du cluster, chaque adresse IP aurait ce que l'on appelle sa propre anneau. Toutefois, comme avec les clusters Wsfc aujourd'hui, de nombreuses implémentations sont virtualisées ou dans le cloud public où il n’existe qu’un seul virtualisé carte d’interface réseau (carte réseau virtuelle) présenté au serveur. Si tous les pNICs et les cartes réseau virtuelles sont connectés au même commutateur physique ou virtuel, il n’étant aucune véritable redondance au niveau de la couche réseau, la configuration de plusieurs cartes réseau est un peu d’une illusion à la machine virtuelle. Redondance réseau est généralement générée dans l’hyperviseur pour les déploiements virtualisés et est sans aucun doute générée dans le cloud public.

@@ -4,18 +4,19 @@ titleSuffix: SQL Server
 description: Découvrez comment créer des clusters de groupe de disponibilité pour SQL Server sur SUSE Linux Enterprise Server (SLES)
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: f69a4c0d98807d11b0ef2b01fb2995a0eeaddf21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f6638d1d31be45f12f0b80b7fc63f918e90d5ca
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705598"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834389"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurer un Cluster SLES pour le groupe de disponibilité de SQL Server
 
@@ -118,9 +119,9 @@ Sur des serveurs Linux, configurez le groupe de disponibilité, puis configurez 
 
 3. Pour configurer la couche de communication de cluster (Corosync) : 
 
-   A. Entrez une adresse réseau à lier. Par défaut, le script propose l’adresse réseau d’eth0. Vous pouvez également entrer une adresse réseau différente, par exemple l’adresse de bond0. 
+   a. Entrez une adresse réseau à lier. Par défaut, le script propose l’adresse réseau d’eth0. Vous pouvez également entrer une adresse réseau différente, par exemple l’adresse de bond0. 
 
-   B. Entrez une adresse de multidiffusion. Le script propose une adresse aléatoire que vous pouvez utiliser comme valeur par défaut. 
+   b. Entrez une adresse de multidiffusion. Le script propose une adresse aléatoire que vous pouvez utiliser comme valeur par défaut. 
 
    c. Entrez un port de multidiffusion. Le script propose 5405 comme valeur par défaut. 
 

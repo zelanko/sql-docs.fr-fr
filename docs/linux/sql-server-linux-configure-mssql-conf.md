@@ -1,20 +1,20 @@
 ---
-title: Configurer les paramètres de SQL Server sur Linux | Microsoft Docs
+title: Configurer les paramètres de SQL Server sur Linux
 description: Cet article décrit comment utiliser l’outil mssql-conf pour configurer les paramètres de SQL Server sur Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719400"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834008"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurer SQL Server sur Linux avec l’outil mssql-conf
 
@@ -617,8 +617,8 @@ Les options suivantes configurent TLS pour une instance de SQL Server s’exécu
 |Option |Description |
 |--- |--- |
 |**network.forceencryption** |Si 1, puis [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] force toutes les connexions soient chiffrés. Par défaut, cette option est 0. |
-|**network.tlscert** |Le chemin d’accès absolu au certificat de fichiers qui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise pour TLS. Exemple :   `/etc/ssl/certs/mssql.pem`  Le fichier de certificat doit être accessible par le compte mssql. Microsoft vous recommande de restreindre l’accès au fichier en utilisant `chown mssql:mssql <file>; chmod 400 <file>`. |
-|**network.tlskey** |Le chemin d’accès absolu à la clé privée du fichier qui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise pour TLS. Exemple :  `/etc/ssl/private/mssql.key`  Le fichier de certificat doit être accessible par le compte mssql. Microsoft vous recommande de restreindre l’accès au fichier en utilisant `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**network.tlscert** |Le chemin d’accès absolu au certificat de fichiers qui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise pour TLS. Exemple :   `/etc/ssl/certs/mssql.pem`  Le fichier de certificat doit être accessible par le compte mssql. Microsoft vous recommande de restreindre l’accès au fichier en utilisant `chown mssql:mssql <file>; chmod 400 <file>`. |
+|**network.tlskey** |Le chemin d’accès absolu à la clé privée du fichier qui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise pour TLS. Exemple :  `/etc/ssl/private/mssql.key`  Le fichier de certificat doit être accessible par le compte mssql. Microsoft vous recommande de restreindre l’accès au fichier en utilisant `chown mssql:mssql <file>; chmod 400 <file>`. |
 |**network.tlsprotocols** |Une liste séparée par des virgules de quels TLS protocoles sont autorisées par SQL Server. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tente toujours de négocier le protocole autorisé plus fort. Si un client ne prend pas en charge tous les protocoles autorisés, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rejette la tentative de connexion.  Pour assurer la compatibilité, tous les protocoles pris en charge sont autorisées par défaut (1.2, 1.1, 1.0).  Si vos clients prennent en charge TLS 1.2, Microsoft vous recommande d’autoriser uniquement TLS 1.2. |
 |**network.tlsciphers** |Spécifie les chiffrements autorisés par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour TLS. Cette chaîne doit être formatée par [format de liste de chiffrement de OpenSSL](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html). En règle générale, vous ne devez pas modifier cette option. <br /> Par défaut, les chiffrements suivants sont autorisés : <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
 | **network.kerberoskeytabfile** |Chemin d’accès au fichier keytab Kerberos |

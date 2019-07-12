@@ -1,20 +1,21 @@
 ---
-title: Gérer le basculement du groupe de disponibilité - SQL Server sur Linux | Microsoft Docs
+title: Gérer le basculement du groupe de disponibilité - SQL Server sur Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/01/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 42401590745985baa207fa0db3ac9da774041ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f758b70e0b518418a95a79ebb4e9b7322f33f31f
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713453"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834248"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Basculement du groupe de disponibilité AlwaysOn sur Linux
 
@@ -102,7 +103,7 @@ Un exemple de la contrainte qui est créé en raison d’un basculement manuel.
 >[!NOTE]
 >Comme l’opération de basculement automatique n’ajoute pas de contrainte d’emplacement, aucun nettoyage n’est nécessaire. 
 
-Pour plus d'informations, consultez :
+Pour plus d'informations :
 - [Red Hat - Managing Cluster Resources](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html) (Red Hat - Gestion des ressources de cluster)
 - [Pacemaker - déplacer des ressources manuellement](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
  [SLES ressources - Guide d’Administration](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 

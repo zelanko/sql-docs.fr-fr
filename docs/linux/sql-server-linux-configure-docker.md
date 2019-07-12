@@ -1,21 +1,22 @@
 ---
-title: Options de configuration de SQL Server sur Docker | Microsoft Docs
+title: Options de configuration de SQL Server sur Docker
 description: Explorez les différentes façons d’utilisation et d’interagir avec SQL Server 2017 et 2019 images de conteneur d’aperçu dans Docker. Cela inclut la conservation des données, la copie de fichiers et le dépannage.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: vin-yu
+ms.author: vinsonyu
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 822fdbe60a9fe7740d2b7cb13ed9b8784e88945d
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 34320ca5f0e969443ecd60eae64ca80a6aeaec63
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500027"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834076"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurer des images de conteneur de SQL Server sur Docker
 
@@ -322,7 +323,7 @@ Pour copier un fichier en dehors du conteneur, utilisez la commande suivante :
 docker cp <Container ID>:<Container path> <host path>
 ```
 
-**Exemple :**
+**Exemple :**
 
 ```bash
 docker cp d6b75213ef80:/var/opt/mssql/log/errorlog /tmp/errorlog
@@ -340,7 +341,7 @@ Pour copier un fichier dans le conteneur, utilisez la commande suivante :
 docker cp <Host path> <Container ID>:<Container path>
 ```
 
-**Exemple :**
+**Exemple :**
 
 ```bash
 docker cp /tmp/mydb.mdf d6b75213ef80:/var/opt/mssql/data
