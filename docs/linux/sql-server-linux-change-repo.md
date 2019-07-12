@@ -1,20 +1,20 @@
 ---
-title: Configurer des référentiels de Linux pour SQL Server 2017 et 2019 | Microsoft Docs
+title: Configurer des référentiels de Linux pour SQL Server 2017 et 2019
 description: Vérifiez et configurez des référentiels de code source pour SQL Server 2019 et SQL Server 2017 sur Linux. Le référentiel source a une incidence sur la version de SQL Server qui est appliqué pendant l’installation et mise à niveau.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 5e21110eb8a24c736b08833d10b509b5494adc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05299a2efd374dc7d58b5e32fcdea918b12fc1d3
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713338"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834083"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurer des référentiels pour l’installation et la mise à niveau de SQL Server sur Linux
 
@@ -39,7 +39,7 @@ Cet article décrit comment configurer le référentiel approprié pour les mise
 
 Lorsque vous installez SQL Server sur Linux, vous devez configurer un référentiel Microsoft. Ce référentiel est utilisé pour acquérir le package de moteur de base de données, **mssql-server**et les packages SQL Server. Il existe actuellement trois référentiels principales :
 
-| Référentiel | Créer une vue d’abonnement | Description |
+| Référentiel | Name | Description |
 |---|---|---|
 | **Version préliminaire (2017)** | **mssql-server** | Référentiel SQL Server 2017 CTP et RC (supprimée). |
 | **Version préliminaire (2019)** | **mssql-server-preview** | Version préliminaire de SQL Server 2019 et référentiel RC. |

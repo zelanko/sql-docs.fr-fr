@@ -1,20 +1,21 @@
 ---
-title: Sauvegarde et restauration des bases de données SQL Server sur Linux | Microsoft Docs
+title: Sauvegarde et restauration de bases de données SQL Server sur Linux
 description: Découvrez comment sauvegarder et restaurer des bases de données SQL Server sur Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f07885aaef22da63d1c94e669db17e7536ccc933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4722afd669893dc4bfa9cad23a7c97cdef5cc182
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713344"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834202"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Sauvegarde et restauration de bases de données SQL Server sur Linux
 
@@ -57,7 +58,7 @@ Si votre base de données est en mode de récupération complète, vous pouvez �
 sqlcmd -S localhost -U SA -Q "BACKUP LOG [demodb] TO DISK = N'/var/opt/mssql/data/demodb_LogBackup.bak' WITH NOFORMAT, NOINIT, NAME = N'demodb_LogBackup', NOSKIP, NOREWIND, NOUNLOAD, STATS = 5"
 ```
 
-## <a name="restore-a-database"></a>Restaurer une base de données
+## <a name="restore-a-database"></a>Restauration d’une base de données
 
 Dans l’exemple suivant **sqlcmd** se connecte à l’instance locale de SQL Server et restaure la base de données demodb. Notez que le `NORECOVERY` option est utilisée pour permettre des restaurations de sauvegardes des fichiers journaux supplémentaires. Si vous ne souhaitez pas restaurer les fichiers journaux supplémentaires, supprimez le `NORECOVERY` option.
 
