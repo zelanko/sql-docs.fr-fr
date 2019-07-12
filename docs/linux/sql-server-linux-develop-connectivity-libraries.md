@@ -1,20 +1,20 @@
 ---
-title: Bibliothèques de connectivité et frameworks | Documents Microsoft
+title: Infrastructures et bibliothèques de connectivité
 description: Le tableau ci-dessous répertorie les bibliothèques de connectivité ou les pilotes que les applications clientes peuvent utiliser à partir d'une variété de langues pour se connecter et utiliser Microsoft SQL Server fonctionnant sur site ou dans le cloud, sous Linux, Windows ou Docker, ainsi qu'Azure SQL Database et Azure SQL Data Warehouse.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: 1f0274a8eb84f9700378d266729afbdc91aebaf1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88b212d9a39f990184753382f433f1c002a4634d
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713206"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833851"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Les bibliothèques de connectivité et des infrastructures pour Microsoft SQL Server
 
@@ -24,7 +24,7 @@ Consultez nos [Tutoriels de Démarrage](https://aka.ms/sqldev) pour démarrer ra
 
 Le tableau ci-dessous répertorie les bibliothèques de connectivité ou *pilotes* que les applications clientes peuvent utiliser à partir d’une variété de langages pour se connecter et utiliser Microsoft SQL Server en local ou dans le cloud, sous Linux, Windows ou Docker ainsi qu'avec SQL Azure Database et Azure SQL Data Warehouse. 
 
-| Langue | Plateforme | Ressources supplémentaires | Télécharger | Découvrir |
+| Langue | Plateforme | Ressources supplémentaires | Télécharger | Bien démarrer |
 | :-- | :-- | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Microsoft ADO.NET pour SQL Server](https://msdn.microsoft.com/library/mt657768.aspx) | [Télécharger](https://msdn.microsoft.com/vstudio/aa496123.aspx) | [Bien démarrer](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu)
 | Java | Windows, Linux, macOS | [Microsoft JDBC Driver pour SQL Server](https://msdn.microsoft.com/library/mt484311.aspx) | [Télécharger](https://go.microsoft.com/fwlink/?LinkId=245496) |  [Bien démarrer](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu)

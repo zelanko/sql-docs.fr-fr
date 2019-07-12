@@ -5,11 +5,8 @@ ms.date: 06/03/2019
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: ''
-ms.component: dmv's
-ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,33 +18,32 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_spinlock_stats dynamic management view
-ms.assetid: ''
-caps.latest.revision: ''
 author: bluefooted
 ms.author: pamela
+ms.reviewer: maghan
 manager: amitban
-ms.workload: Inactive
-ms.openlocfilehash: d26369b657848bf1ff092bc69fba1a6aa5850102
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: e302eadaa559674482911904678cc8aa4cbd2577
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67420851"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826608"
 ---
 # <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Retourne des informations sur toutes les attentes de verrouillage spinlock organisé par type.  
   
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar (256)**|Nom du type de verrouillage spinlock.|  
 |collisions|**bigint**|Le nombre de fois où un thread tente d’acquérir le verrouillage spinlock et est bloqué, car un autre thread actuellement maintient le verrouillage spinlock.|  
 |effectue des spins|**bigint**|Le nombre de fois qu’un thread exécute une boucle lors de la tentative d’acquérir le verrouillage spinlock.|  
 |spins_per_collision|**real**|Ratio de spins par collision.|  
 |sleep_time|**bigint**|La quantité de temps en millisecondes passé par threads à se mettre en veille en cas d’une interruption.|  
-|backoffs|**Int**|Le nombre de fois où un thread « tourne » ne parvient pas à acquérir le verrouillage spinlock et abandonne le planificateur.|  
+|backoffs|**int**|Le nombre de fois où un thread « tourne » ne parvient pas à acquérir le verrouillage spinlock et abandonne le planificateur.|  
 
 
 ## <a name="permissions"></a>Autorisations  
@@ -181,7 +177,7 @@ GO
 |HTTP|À usage interne uniquement|
 |HTTP_CONNCACHE|À usage interne uniquement|
 |HTTP_ENDPOINT|À usage interne uniquement|
-|IDENTITY|À usage interne uniquement|
+|IDENTITÉ|À usage interne uniquement|
 |INDEX_CREATE|À usage interne uniquement|
 |IO_DISPENSER_PAUSE|À usage interne uniquement|
 |IO_RG_VOLUME_HASHTABLE|À usage interne uniquement|
@@ -191,7 +187,7 @@ GO
 |LANG_RES_LOAD|À usage interne uniquement|
 |LIVE_TARGET_TVF|À usage interne uniquement|
 |LOCK_FREE_LIST|À usage interne uniquement|
-|LOCK_HASH|Protège l’accès à la table de hachage de gestionnaire de verrou qui stocke des informations sur les verrous maintenus dans une base de données. Consultez [cet article](https://support.microsoft.comkb/2926217) pour plus d’informations.|
+|LOCK_HASH|Protège l’accès à la table de hachage de gestionnaire de verrou qui stocke des informations sur les verrous maintenus dans une base de données. Consultez [cet article](https://support.microsoft.com/kb/2926217) pour plus d’informations.|
 |LOCK_NOTIFICATION|À usage interne uniquement|
 |LOCK_RESOURCE_ID|À usage interne uniquement|
 |LOCK_RW_ABTX_HASH_SET|À usage interne uniquement|

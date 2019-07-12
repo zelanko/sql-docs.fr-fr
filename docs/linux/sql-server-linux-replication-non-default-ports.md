@@ -1,20 +1,21 @@
 ---
-title: Configurer les partages de dossier d’instantanés réplication SQL Server sur Linux | Microsoft Docs
+title: Configurer les partages de dossier d’instantanés réplication SQL Server sur Linux
 description: Cet article décrit comment configurer la réplication d’instantané dossier partages SQL Server sur Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fd7c819af4c700af17a4b85fad2a4cc75e3e820
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456163bfec2324394455a5d098ef01c22d994696
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705134"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834805"
 ---
 # <a name="configure-replication-with-non-default-ports"></a>Configurer la réplication avec les ports par défaut
 

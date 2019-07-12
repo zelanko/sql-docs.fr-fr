@@ -22,19 +22,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: 7adf4a825fb93b6c87714476607b30e9f4ec97a7
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652862"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833571"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contient des informations sur chaque plan d’exécution associé à une requête.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|
 |**plan_id**|**bigint**|Clé primaire.|  
 |**query_id**|**bigint**|Clé étrangère. Joint à [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md).|  
@@ -57,7 +57,7 @@ ms.locfileid: "67652862"
 |**last_execution_time**|**datetimeoffset**|Dernier temps d’exécution fait référence à la dernière heure de fin du plan de requête /.|  
 |**avg_compile_duration**|**float**|Planifier les statistiques de compilation. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**last_compile_duration**|**bigint**|Planifier les statistiques de compilation. <br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
-|**plan_forcing_type**|**Int**|Planifier le forçage de type.<br /><br />0 : Aucune<br /><br />1 : MANUAL<br /><br />2 : AUTO|  
+|**plan_forcing_type**|**int**|Planifier le forçage de type.<br /><br />0 : Aucune<br /><br />1 : MANUAL<br /><br />2 : AUTO|  
 |**plan_forcing_type_desc**|**nvarchar(60)**|Description textuelle de plan_forcing_type.<br /><br />NONE : Aucune application forcée du plan<br /><br />MANUELLE : Plan forcé par l’utilisateur<br /><br />AUTO : Plan forcé par le réglage automatique|  
 
 ## <a name="plan-forcing-limitations"></a>Limitations de forçage de plan
@@ -68,8 +68,11 @@ Premièrement, si le plan contient les constructions suivantes :
 * Référence à une table externe
 * Requête distribuée ou opérations de recherche en texte intégral
 * Utilisation de requêtes globales 
-* Curseurs dynamiques ou jeu de clés (application forcée du plan est pris en charge pour les curseurs statiques et avance rapide)
+* Curseurs dynamiques ou jeu de clés 
 * Spécification de jointure en étoile non valide 
+
+> [!NOTE]
+> Base de données SQL Azure et SQL Server 2019 (version préliminaire) prend en charge l’application forcée du plan pour les curseurs statiques et avance rapide.
 
 Deuxièmement, quand les objets sur lesquels s’appuie le plan ne sont plus disponibles :
 * Base de données (si la base de données d'où provient le plan n’existe plus)

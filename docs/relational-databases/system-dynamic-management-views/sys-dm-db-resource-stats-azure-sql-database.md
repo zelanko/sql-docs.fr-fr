@@ -20,12 +20,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 22d771f57e5ac0d9035b8c283eb6da69027eadb3
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 1df2ac9979e99a301d416d25d143039bef3ee4ed
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716679"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833039"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de données Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,17 +37,17 @@ ms.locfileid: "67716679"
 |end_time|**datetime**|Heure UTC indiquant la fin de l'intervalle de rapports actuel.|  
 |avg_cpu_percent|**decimal (5,2)**|Utilisation moyenne du calcul en pourcentage de la limite de la couche de service.|  
 |avg_data_io_percent|**decimal (5,2)**|Utilisation d’e/s en pourcentage de la limite du niveau de service de données moyen.|  
-|avg_log_write_percent|**decimal (5,2)**|Utilisation de débit d’e/s en tant que pourcentage de la limite du niveau de service moyenne d’écriture.|  
+|avg_log_write_percent|**decimal (5,2)**|Les écritures de journaux de transaction moyen (en Mbits/s) en tant que pourcentage de la limite de niveau de service.|  
 |avg_memory_usage_percent|**decimal (5,2)**|Utilisation moyenne de la mémoire en pourcentage de la limite de la couche de service.<br /><br /> Cela inclut la mémoire utilisée pour les pages de pool de mémoire tampon et de stockage d’objets de l’OLTP en mémoire.|  
 |xtp_storage_percent|**decimal (5,2)**|Utilisation du stockage pour l’OLTP en mémoire en pourcentage de la limite du niveau de service (à la fin de la période de rapport). Cela inclut la mémoire utilisée pour le stockage des objets OLTP en mémoire suivants : tables optimisées en mémoire, les index et les variables de table. Il inclut également la mémoire utilisée pour le traitement des opérations ALTER TABLE.<br /><br /> Retourne 0 si l’OLTP en mémoire n’est pas utilisé dans la base de données.|  
 |max_worker_percent|**decimal (5,2)**|Nombre maximal d’ouvriers simultanés (demandes) en pourcentage de la limite de niveau de service de la base de données.|  
 |max_session_percent|**decimal (5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite de niveau de service de la base de données.|  
-|dtu_limit|**Int**|Base de données max DTU paramètre actuel de cette base de données pendant cet intervalle. Pour les bases de données à l’aide du modèle VCORE, cette colonne est NULL.|
+|dtu_limit|**int**|Base de données max DTU paramètre actuel de cette base de données pendant cet intervalle. Pour les bases de données à l’aide du modèle VCORE, cette colonne est NULL.|
 |cpu_limit|**decimal (5,2)**|Nombre de vCores pour cette base de données pendant cet intervalle. Pour les bases de données à l’aide du modèle dtu, cette colonne est NULL.|
 |avg_instance_cpu_percent|**decimal (5,2)**|Base de données l’utilisation du processeur en pourcentage moyen.|
 |avg_instance_memory_percent|**decimal (5,2)**|Utilisation moyenne de base de données de mémoire en pourcentage.|
 |avg_login_rate_percent|**decimal (5,2)**|Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.|
-|replica_role|**int**|Représente le rôle du réplica en cours avec 0 comme principal, 1 en tant que base de données secondaire et 2 en tant que redirecteur (principal de géo-secondaire). Vous voyez « 1 », cas de connexion avec intention en lecture seule à toutes les bases de données secondaires. Si vous vous connectez à une base de données géo-secondaire sans spécifier l’intention en lecture seule, vous devez voir « 2 » (connexion au redirecteur).|
+|replica_role|**Int**|Représente le rôle du réplica en cours avec 0 comme principal, 1 en tant que base de données secondaire et 2 en tant que redirecteur (principal de géo-secondaire). Vous voyez « 1 », cas de connexion avec intention en lecture seule à toutes les bases de données secondaires. Si vous vous connectez à une base de données géo-secondaire sans spécifier l’intention en lecture seule, vous devez voir « 2 » (connexion au redirecteur).|
 |||
   
 > [!TIP]  

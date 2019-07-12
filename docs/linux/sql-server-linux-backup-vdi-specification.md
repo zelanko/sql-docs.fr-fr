@@ -1,20 +1,21 @@
 ---
-title: Spécification de sauvegarde VDI - SQL Server sur Linux | Microsoft Docs
+title: Spécification de sauvegarde VDI - SQL Server sur Linux
 description: Spécification d’Interface périphérique virtuel sauvegarde SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: b3917f086361128ee0c3e0a73f44f2c7cc4049b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c684170ae6ca6420b6b5ebef91baae208ab0808
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713468"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834189"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server sur le client Linux VDI spécification du Kit de développement logiciel
 
@@ -81,7 +82,7 @@ Ce chapitre contient des descriptions de chacune de ces fonctions du client. Les
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| | **nom** | Cela identifie l’ensemble de l’appareil virtuel. Les règles pour les noms utilisés par la fonction CreateFileMapping() doivent être suivis. N’importe quel caractère à l’exception de barre oblique inverse (\) peut être utilisé. Il s’agit d’une chaîne de caractères. La chaîne avec le nom de produit ou de la société et le nom de base de données de l’utilisateur en ajoutant le préfixe est recommandé. |
+| | **name** | Cela identifie l’ensemble de l’appareil virtuel. Les règles pour les noms utilisés par la fonction CreateFileMapping() doivent être suivis. N’importe quel caractère à l’exception de barre oblique inverse (\) peut être utilisé. Il s’agit d’une chaîne de caractères. La chaîne avec le nom de produit ou de la société et le nom de base de données de l’utilisateur en ajoutant le préfixe est recommandé. |
 | |**cfg** | Il s’agit de la configuration pour l’ensemble de l’appareil virtuel. Pour plus d’informations, consultez « Configuration » plus loin dans ce document.
 
 | Valeurs de retour | Argument | Explication
@@ -129,7 +130,7 @@ Ce chapitre contient des descriptions de chacune de ces fonctions du client. Les
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| | **nom** |Cela identifie l’ensemble de l’appareil virtuel.
+| | **name** |Cela identifie l’ensemble de l’appareil virtuel.
 | | **ppVirtualDevice** |Lorsque la fonction réussit, un pointeur vers l’appareil virtuel est retourné. Cet appareil est utilisé pour la commande GetCommand et CompleteCommand.
 
 | Valeurs de retour | Argument | Explication
@@ -217,7 +218,7 @@ Lorsque cette routine doit bloquer à attendre une commande, le thread reste dan
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| |None | Non applicable
+| |Aucun | Non applicable
         
 | Valeurs de retour | Argument | Explication
 | ----- | ----- | ------ |
@@ -237,7 +238,7 @@ Lorsque cette routine doit bloquer à attendre une commande, le thread reste dan
 
 | Paramètres | Argument | Explication
 | ----- | ----- | ------ |
-| |None |Non applicable
+| |Aucun |Non applicable
         
 | Valeurs de retour | Argument | Explication
 | ----- | ----- | ------ |

@@ -1,21 +1,22 @@
 ---
-title: La réplication SQL Server sur Linux | Microsoft Docs
+title: Réplication SQL Server sur Linux
 description: Cet article décrit la réplication SQL Server sur Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ac812b8f39e9332f8bfcc22e91a6f575ef2873d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a083a5fe3710ca9682c9d9df9ba0f6a0eceaad6c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705108"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834770"
 ---
 # <a name="sql-server-replication-on-linux"></a>Réplication SQL Server sur Linux
 
@@ -37,7 +38,7 @@ Les instances de SQL Server sur Linux peuvent participer à n’importe quel typ
 
 * Transactionnelle
 * Fusion
-* Snapshot
+* Instantané
 
 Pour plus d’informations sur la réplication, consultez [documentation de réplication SQL Server](../relational-databases/replication/sql-server-replication.md).
 
@@ -54,7 +55,7 @@ Pour [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] les fonctionnalité
 * Configurations de réplication entre Windows et Linux
 * Mises à jour immédiates pour la réplication transactionnelle
 
-## <a name="limitations"></a>Limitations
+## <a name="limitations"></a>Limites
 
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] ne prend pas en charge les fonctionnalités suivantes :
 

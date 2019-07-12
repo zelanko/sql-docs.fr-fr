@@ -2,21 +2,21 @@
 title: Authentification Active Directory pour SQL Server sur Linux
 titleSuffix: SQL Server
 description: Cet article fournit une vue d’ensemble de l’authentification Active Directory pour SQL Server sur Linux.
-author: rothja
 ms.date: 04/01/2019
-ms.author: jroth
-manager: craigg
+author: Dylan-MSFT
+ms.author: dygray
+ms.reviewer: vanto
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 906dd961bcfbb7ea6d8868fdf6eb51cc7bc814aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14cb6a377e6aeb0fbd24f9808a794d68633f4ce6
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713595"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834425"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Authentification Active Directory pour SQL Server sur Linux
 
@@ -35,7 +35,7 @@ L’authentification Active Directory présente les avantages suivants sur [!INC
 - Chaque utilisateur a une identité unique au sein de votre organisation, donc vous n’êtes pas obligé d’effectuer le suivi de qui [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connexions correspondent aux personnes.   
 - Active Directory vous permet d’appliquer une stratégie de mot de passe centralisée au sein de votre organisation.   
 
-## <a name="configuration-steps"></a>Étapes de configuration
+## <a name="configuration-steps"></a>Configuration
 
 Pour pouvoir utiliser l’authentification Active Directory, vous devez disposer d’un contrôleur de domaine Active Directory (Windows) sur votre réseau.
 

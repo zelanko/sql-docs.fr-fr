@@ -1,20 +1,21 @@
 ---
-title: Déployer un conteneur de SQL Server dans Kubernetes avec Azure Kubernetes Services (AKS) | Microsoft Docs
+title: Déployer un conteneur de SQL Server dans Kubernetes avec Azure Kubernetes Services (AKS)
 description: Ce didacticiel montre comment déployer une solution de haute disponibilité de SQL Server avec Kubernetes sur Azure Kubernetes Service.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: mvc
 ms.technology: linux
-ms.openlocfilehash: 236ae198b77f8fdc63a6c4d5069e3b335a44a472
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76c4003398368a1cdbadb257165dab6b048ebced
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704850"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832989"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Déployer un conteneur de SQL Server dans Kubernetes avec Azure Kubernetes Services (AKS)
 
@@ -77,7 +78,7 @@ La commande suivante crée un mot de passe pour le compte SA :
 
 ## <a name="create-storage"></a>Créer le stockage
 
-Configurer un [volume persistant](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) et [revendication de volume persistant](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) dans le cluster Kubernetes. Procédez comme suit : 
+Configurer un [volume persistant](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) et [revendication de volume persistant](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistent-volume-claim-protection) dans le cluster Kubernetes. Effectuez ensuite les tâches suivantes : 
 
 1. Créer un manifeste pour définir la classe de stockage et du volume persistant revendication.  Le manifeste spécifie le fournisseur de stockage, paramètres, et [récupérer de la stratégie](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#reclaiming). Le cluster Kubernetes utilise ce manifeste pour créer le stockage persistant. 
 
@@ -216,7 +217,7 @@ Dans cette étape, créez un manifeste pour décrire le conteneur basé sur le s
       >[!NOTE]
       >Pour plus d’informations, consultez [comment obtenir la licence SQL Server](https://www.microsoft.com/sql-server/sql-server-2017-pricing).
 
-   * `persistentVolumeClaim`: Cette valeur nécessite une entrée pour `claimName:` qui mappe au nom utilisé pour la revendication de volume persistant. Ce didacticiel utilise `mssql-data`. 
+   * `persistentVolumeClaim`: Cette valeur nécessite une entrée pour `claimName:` qui mappe au nom utilisé pour la revendication de volume persistant. Ce didacticiel utilise`mssql-data`. 
 
    * `name: SA_PASSWORD`: Configure l’image de conteneur pour définir le mot de passe SA, tel que défini dans cette section.
 

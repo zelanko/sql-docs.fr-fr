@@ -1,20 +1,21 @@
 ---
-title: Installer des Extensions de langage SQL Server (Java) sur Linux | Microsoft Docs
+title: Installer des Extensions de langage SQL Server (Java) sur Linux
 description: Découvrez comment installer les Extensions de langage SQL Server (Java) sur Red Hat, Ubuntu et SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 25aa15f66827aeee7e86e7052febde9c31c7e15a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399935"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834697"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Installer des Extensions de langage SQL Server 2019 (Java) sur Linux
 
@@ -294,7 +295,7 @@ Extensibilité des Extensions de langage et de Java sur Linux est toujours en co
 
 Il existe une parité entre Linux et Windows pour [gouvernance des ressources](../t-sql/statements/create-external-resource-pool-transact-sql.md) pour les pools de ressources externes, mais les statistiques de [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) ont actuellement unités différentes sur Linux. Unités sont alignées dans une prochaine version CTP.
  
-| Nom de colonne   | Description | Valeur sur Linux | 
+| Nom de la colonne   | Description | Valeur sur Linux | 
 |---------------|--------------|---------------|
 |peak_memory_kb | La quantité maximale de mémoire utilisée pour le pool de ressources. | Sur Linux, cette statistique provient du sous-système de mémoire « cgroups », où la valeur est memory.max_usage_in_bytes |
 |write_io_count | Total d’écriture e/s émises depuis que les statistiques du gouverneur de ressources ont été réinitialisées. | Sur Linux, cette statistique est alimentée à partir du sous-système de blkio « cgroups », où la valeur sur la ligne de l’écriture est blkio.throttle.io_serviced | 
@@ -307,4 +308,4 @@ Il existe une parité entre Linux et Windows pour [gouvernance des ressources](.
 
 Les développeurs Java peuvent démarrer avec des exemples simples et apprendre les bases du fonctionne de Java avec SQL Server. Pour votre prochaine étape, consultez les liens suivants :
 
-+ [Tutoriel : Expressions régulières avec Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)
++ [Tutoriel : Expressions régulières avec Java](../language-extensions/tutorials/search-for-string-using-regular-expressions-in-java.md)

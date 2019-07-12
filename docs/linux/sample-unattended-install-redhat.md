@@ -2,21 +2,21 @@
 title: Installation sans assistance pour SQL Server sur Red Hat Enterprise Linux
 titleSuffix: SQL Server
 description: Exemple de Script SQL Server - installation sans assistance sur Red Hat Enterprise Linux
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e72c027f9426376ab79f29067385d2c4a8910a9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8a58ecebdbd8f5ffb8b03a06f44ab85d5281245
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713537"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834975"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Exemple : Script d’installation de SQL Server sans assistance pour Red Hat Enterprise Linux
+# <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>Aperçu : Script d’installation de SQL Server sans assistance pour Red Hat Enterprise Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

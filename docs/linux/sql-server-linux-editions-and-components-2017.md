@@ -1,8 +1,7 @@
 ---
-title: Éditions et fonctionnalités prises en charge de SQL Server 2017 ~ Linux | Microsoft Docs
+title: Éditions et fonctionnalités prises en charge de SQL Server 2017 ~ Linux
 ms.date: 09/14/2017
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: linux
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,16 +21,16 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 21e709b20df80fdecc7aff80ff983b0f33bbf101
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.reviewer: vanto
+manager: jroth
+ms.openlocfilehash: c3fe41e136bb3a4614c791cb7f225c8b32c63692
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713176"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833782"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Éditions et fonctionnalités prises en charge pour SQL Server 2017 sous Linux
 
@@ -86,9 +85,9 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Capacité maximale de calcul utilisée par une instance unique - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Maximum du système d'exploitation|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 16 cœurs|Limité à moins de 1 socket ou 4 cœurs| 
 |Capacité maximale de calcul utilisée par une instance unique - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Maximum du système d'exploitation|Limité à moins de 4 sockets ou 24 cœurs|Limité à moins de 4 sockets ou 16 cœurs|Limité à moins de 1 socket ou 4 cœurs|
 |Mémoire maximale du pool de mémoires tampons par instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Maximum du système d’exploitation|128 Go|64 Go|1410 Mo|
-|Mémoire maximale du cache de segments columnstore par instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go| 16 Go| 352 Mo|  
-|Taille maximale des données à mémoire optimisée par base de données dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go| 16 Go| 352 Mo|
-|Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|10 GB|  
+|Mémoire maximale du cache de segments columnstore par instance du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go| 16 Go| 352 Mo|  
+|Taille maximale des données à mémoire optimisée par base de données dans le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Mémoire illimitée| 32 Go| 16 Go| 352 Mo|
+|Taille maximale de la base de données relationnelle|524 Po|524 Po|524 Po|10 Go|  
   
 <sup>1</sup> Enterprise edition avec serveur + Client Access License (CAL) basé (non disponible pour les nouveaux contrats) est limitée à un maximum de 20 cœurs par instance de SQL Server. Il n'existe aucune limite dans le mode de licence Serveur selon le nombre de cœurs. Pour plus d’informations, consultez [limites de capacité de calcul par édition de SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
  
@@ -151,7 +150,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |-------------|----------------|--------------|---------|------------------------------------| 
 |Sécurité au niveau des lignes|Oui|Oui|Oui|Oui|  
 |Always Encrypted|Oui|Oui|Oui|Oui| 
-|Masquage dynamique des données|Oui|Oui|Oui|Oui|   
+|Masquage des données dynamiques|Oui|Oui|Oui|Oui|   
 |Audit de base|Oui|Oui|Oui|Oui| 
 |Audit de granularité fine|Oui|Oui|Oui|Oui| 
 |Chiffrement transparent de base de données|Oui|Non|Non|Non|   
@@ -183,7 +182,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Fonctionnalité|Enterprise|Standard|Web|Express 
 |-------------|----------------|--------------|---------|------------------------|  
 |JSON|Oui|Oui|Oui|Oui|   
-|Magasin des requêtes|Oui|Oui|Oui|Oui|   
+|Magasin de requêtes|Oui|Oui|Oui|Oui|   
 |Temporal|Oui|Oui|Oui|Oui|   
 |Prise en charge XML native|Oui|Oui|Oui|Oui| 
 |Indexation XML|Oui|Oui|Oui|Oui| 
@@ -210,7 +209,7 @@ Pour plus d’informations sur les fonctionnalités d’Integration Services (SS
 |Index spatiaux|Oui|Oui|Oui|Oui|   
 |Types de données planaires et géodésiques|Oui|Oui|Oui|Oui| 
 |Bibliothèques spatiales avancées|Oui|Oui|Oui|Oui|   
-|Importation/exportation de formats de données spatiales standard|Oui|Oui|Oui|Oui|   
+|Importation/exportation de formats de données spatiales standard|Oui|Oui|Oui|OUI|   
 
   
 ## <a name="next-steps"></a>Étapes suivantes 

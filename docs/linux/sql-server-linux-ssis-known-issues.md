@@ -1,20 +1,20 @@
 ---
-title: Limitations et problèmes connus pour SSIS sur Linux | Microsoft Docs
+title: Limitations et problèmes connus pour SSIS sur Linux
 description: Cet article décrit les limitations et problèmes connus pour SQL Server Integration Services (SSIS) sur les ordinateurs Linux
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: craigg
+manager: jroth
 ms.date: 06/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: fdf6542f64549233dd5d4ef15dc39a53fefa49a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc4ec7f99a8cbcf5b6bd48924f3eed1e8f10f658
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712838"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833133"
 ---
 # <a name="limitations-and-known-issues-for-ssis-on-linux"></a>Limitations et problèmes connus pour SSIS sur Linux
 
@@ -54,7 +54,7 @@ Les composants Integration Services suivants sont pris en charge sur Linux. Cert
 
 ## <a name="control-flow-tasks-supported-with-limitations"></a>Tâches de flux de contrôle pris en charge avec les limitations
 
-| Tâche | Limitations |
+| Tâche | Limites |
 |------------|---|
 | Tâche Exécuter processus | Prend uniquement en charge le mode in-process. |
 | Tâche de système de fichiers | Le *déplacement directory* et *définir les attributs de fichier* actions ne sont pas prises en charge. |
@@ -92,7 +92,7 @@ Les tâches de plan de maintenance suivantes sont prises en charge sur Linux :
 
 ## <a name="data-flow-sources-and-destinations-supported-with-limitations"></a>Sources de flux de données et des destinations prises en charge avec les limitations
 
-| Composant | Limitations |
+| Composant | Limites |
 |------------|---|
 | ADO.NET source et destination | Prennent uniquement en charge le fournisseur de données SQLClient. |
 | Source de fichier plat et de destination | Prend en charge uniquement les chemins de fichiers Windows-style, auquel la règle de mappage de chemin d’accès par défaut est appliquée. Par exemple `D:\home\ssis\travel.csv` devient `/home/ssis/travel.csv`. |
@@ -128,7 +128,7 @@ Les tâches de plan de maintenance suivantes sont prises en charge sur Linux :
 
 ## <a name="data-flow-transformations-supported-with-limitations"></a>Transformations du flux de données pris en charge avec les limitations
 
-| Composant | Limitations |
+| Composant | Limites |
 |------------|---|
 | transformation de commande OLE DB | Mêmes limitations que la source OLE DB et la destination. |
 | composant Script | Prend uniquement en charge les API .NET Framework standard. |

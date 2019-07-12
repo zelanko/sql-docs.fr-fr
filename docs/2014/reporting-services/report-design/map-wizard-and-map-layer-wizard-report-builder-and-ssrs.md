@@ -14,12 +14,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: dab4c978bc9309564d8d2f32410ae798becc4d8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5776fc96789eeb66f5bc7c4373b86a829f409bb9
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66105539"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826501"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistant Carte et Assistant Couche (Générateur de rapports et SSRS)
   L'Assistant Carte et l'Assistant Couche automatisent la tâche de création d'une carte, d'ajout d'une couche ou de modification des options de couche sur une couche existante.  
@@ -124,12 +124,12 @@ ms.locfileid: "66105539"
  La bibliothèque de cartes contient des cartes de rapports stockés dans le dossier Bibliothèque de cartes pour l'environnement de création de rapports. Les cartes de la bibliothèque fournissent un point de départ pratique pour ajouter rapidement une carte à votre rapport. Les cartes prédéfinies de la bibliothèque sont fournies par un fournisseur de cartes.  
   
 > [!NOTE]  
->  Cette fonctionnalité de cartographie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des données de fichiers de forme TIGER/Line gracieusement fournis par Bureau de recensement ([http://www.census.gov/](http://www.census.gov/)). Les fichiers de forme TIGER/Line sont un extrait d'informations géographiques et cartographiques sélectionnées de la base de données MAF/TIGER du Bureau de recensement. Les fichiers de forme TIGER/Line sont mis à disposition gratuitement par le Bureau de recensement des États-Unis. Pour plus d’informations sur les fichiers de forme TIGER/Line, consultez [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). Les informations de frontières dans les fichiers de forme TIGER/Line sont fournies à des fins de collecte et de tabulation de données statistiques uniquement ; leur description et leur désignation pour des objectifs statistiques ne constituent pas une détermination d'autorité juridictionnelle ou de droits de propriété et les informations ne constituent pas des descriptions juridiquement valables. Census TIGER et TIGER/Line sont des marques déposées du Bureau de recensement des États-Unis.  
+>  Cette fonctionnalité de cartographie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise des données de fichiers de forme TIGER/Line gracieusement fournis par Bureau de recensement ([http://www.census.gov/](http://www.census.gov/)). Les fichiers de forme TIGER/Line sont un extrait d'informations géographiques et cartographiques sélectionnées de la base de données MAF/TIGER du Bureau de recensement. Les fichiers de forme TIGER/Line sont mis à disposition gratuitement par le Bureau de recensement des États-Unis. Pour obtenir plus d’informations sur les fichiers de forme TIGER/Line allez à [Fichiers de forme TIGER/Line et documentation technique des fichiers TIGER/Line](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html). Les informations de frontières dans les fichiers de forme TIGER/Line sont fournies à des fins de collecte et de tabulation de données statistiques uniquement ; leur description et leur désignation pour des objectifs statistiques ne constituent pas une détermination d'autorité juridictionnelle ou de droits de propriété et les informations ne constituent pas des descriptions juridiquement valables. Census TIGER et TIGER/Line sont des marques déposées du Bureau de recensement des États-Unis.  
   
  Pour étendre la bibliothèque de cartes, vous pouvez ajouter ou supprimer des rapports du répertoire de la bibliothèque de cartes et ajouter des dossiers pour organiser les cartes. Pour plus d’informations, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- Un fichier de forme ESRI est un ensemble de fichiers contenant des données conformes au format de données spatiales de l'ESRI . Le jeu de fichiers inclut en général le fichier *\<nom_fichier>*.shp qui contient les données spatiales, ainsi qu’un fichier de support, *\<nom_fichier>*.dbf.  
+ Un fichier de forme ESRI est un ensemble de fichiers contenant des données conformes au format de données spatiales de l'ESRI . Le jeu de fichiers inclut en général le fichier *\<nom_fichier>* .shp qui contient les données spatiales, ainsi qu’un fichier de support, *\<nom_fichier>* .dbf.  
   
  Lorsque vous spécifiez un fichier de forme en tant que source de données spatiales et que ce fichier se trouve sur votre ordinateur local, les données spatiales sont incorporées automatiquement dans le rapport. Pour utiliser dynamiquement des données spatiales d'un fichier ESRI, vous devez effectuer les opérations suivantes :  
   

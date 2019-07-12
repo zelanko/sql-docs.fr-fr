@@ -10,12 +10,12 @@ ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2fe19165a8b9e0d419a1cba67eeb4ada6a3ce183
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66071428"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826337"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>Authentification et autorisation PowerPivot
   Un déploiement PowerPivot pour SharePoint qui s'exécute dans une batterie de serveurs SharePoint 2010 utilise le sous-système d'authentification et le modèle d'autorisation fournis par les serveurs SharePoint. L'infrastructure de sécurité SharePoint s'étend au contenu et aux opérations PowerPivot, car l'ensemble du contenu relatif à PowerPivot est stocké dans des bases de données de contenu SharePoint et l'ensemble des opérations relatives à PowerPivot est effectué par des services partagés PowerPivot de la batterie de serveurs. Les utilisateurs qui demandent un classeur contenant des données PowerPivot sont authentifiés à l'aide d'une identité d'utilisateur SharePoint basée sur leur identité d'utilisateur Windows. Les autorisations d'affichage sur le classeur déterminent si la demande est accordée ou refusée.  
@@ -87,7 +87,7 @@ ms.locfileid: "66071428"
 |Administrateur de batteries de serveurs ou de services|Installation, activation et configuration de services et d'applications.<br /><br /> Utilisation du tableau de bord de gestion PowerPivot et affichage des rapports d'administration.|  
 |Contrôle total|Activation de l'intégration des la fonctionnalités PowerPivot au niveau de la collection de sites.<br /><br /> Création d'une Galerie PowerPivot.<br /><br /> Création d'une bibliothèque de flux de données.|  
 |Collaboration|Ajout, modification, suppression et téléchargement de classeurs PowerPivot.<br /><br /> Configuration de l'actualisation des données.<br /><br /> Création de classeurs et rapports basés sur des classeurs PowerPivot sur un site SharePoint.<br /><br /> Création de documents de service de données dans une bibliothèque de flux de données|  
-|Lire|Accéder aux classeurs PowerPivot comme source de données externe, où l’URL du classeur est explicitement entrée dans une boîte de dialogue de connexion (par exemple, dans l’Assistant de connexion de données d’Excel).|  
+|Lecture|Accéder aux classeurs PowerPivot comme source de données externe, où l’URL du classeur est explicitement entrée dans une boîte de dialogue de connexion (par exemple, dans l’Assistant de connexion de données d’Excel).|  
 |Vue seule|Affichage de classeurs PowerPivot.<br /><br /> Affichage de l'historique d'actualisation des données.<br /><br /> Connexion d'un classeur local à un classeur PowerPivot sur un site SharePoint pour réutiliser ses données d'une autre façon.<br /><br /> Téléchargement d'un instantané du classeur. L'instantané est une copie statique des données, sans segments, filtres, formules ou connexions de données. Le contenu de l'instantané est similaire à la copie de valeurs de cellules de la fenêtre de navigateur.|  
   
 ##  <a name="excel"></a> Considérations sur la sécurité Excel Services pour les classeurs PowerPivot  

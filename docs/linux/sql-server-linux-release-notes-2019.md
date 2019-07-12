@@ -1,20 +1,20 @@
 ---
-title: Notes de version préliminaire de SQL Server 2019 sur Linux | Microsoft Docs
+title: Notes de publication pour la version préliminaire de SQL Server 2019 sur Linux
 description: Cet article contient les notes de publication et les fonctionnalités prises en charge pour la version préliminaire de SQL Server 2019 en cours d’exécution sur Linux. Les notes de publication sont incluses dans la version la plus récente et plusieurs versions précédentes.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 07/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f172cf3b4ab72fe413cbc639c3e880edef311e9e
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
+ms.openlocfilehash: 88c4ebbd5d2e106dbab2dcb057ef024fe0c7f26c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533842"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834825"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Notes de publication pour la version préliminaire de SQL Server 2019 sur Linux
 
@@ -45,7 +45,7 @@ La plupart des outils clients existants qui ciblent SQL Server peuvent en toute 
 
 Le tableau suivant répertorie l’historique de publication pour la version préliminaire de SQL Server 2019 que versions CTP.
 
-| Version               | Version       | Date de publication |
+| Libérer               | Version       | Date de publication |
 |-----------------------|---------------|--------------|
 | [CTP 3.1](#CTP31)     | 15.0.1700.37  | 2019-6-26    |
 | [CTP 3.0](#CTP30)     | 15.0.1600.8   | 2019-5-22    |

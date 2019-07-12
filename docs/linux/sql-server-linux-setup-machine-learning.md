@@ -1,20 +1,21 @@
 ---
-title: Installer SQL Server Machine Learning Services (R, Python) sur Linux | Microsoft Docs
+title: Installer SQL Server Machine Learning Services (R, Python) sur Linux
 description: Découvrez comment installer SQL Server Machine Learning Services (R, Python) sur Red Hat, Ubuntu et SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5e64f19c7495a58c02852d9c1207b047de669758
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399950"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834685"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Installer SQL Server 2019 Machine Learning Services (R, Python) sur Linux
 
@@ -160,7 +161,7 @@ Sur un appareil connecté à internet, les packages sont téléchargés et insta
 
 | Nom du package | Applies-to | Description |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | All | Infrastructure d’extensibilité utilisé pour exécuter du code R et Python. |
+|mssql-server-extensibility  | Tous | Infrastructure d’extensibilité utilisé pour exécuter du code R et Python. |
 | microsoft-openmpi  | Python, R | Message passant interface utilisée par les bibliothèques Revo * pour la parallélisation sur Linux. |
 | mssql-mlservices-python | Python | Distribution Open source d’Anaconda et Python. |
 |mssql-mlservices-mlm-py  | Python | *Installation complète*. Fournit des revoscalepy, microsoftml, de modèles pour l’analyse de sentiments de caractérisation et texte image préformés.| 
@@ -278,7 +279,7 @@ Une configuration supplémentaire est essentiellement via les [outil mssql-conf]
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
-2. Accepter les contrats de licence pour open source R et Python. Il existe plusieurs manières de procéder. Si vous avez précédemment accepté la licence SQL Server et que vous ajoutez à présent les extensions R ou Python, la commande suivante est votre consentement pour les conditions d’utilisation :
+2. Accepter les contrats de licence pour open source R et Python. Pour ce faire, plusieurs méthodes sont possibles. Si vous avez précédemment accepté la licence SQL Server et que vous ajoutez à présent les extensions R ou Python, la commande suivante est votre consentement pour les conditions d’utilisation :
 
    ```bash
    # Run as SUDO or root
@@ -462,7 +463,7 @@ mssql-mlservices-mlm-py-9.4.7.64
  
 Vous pouvez installer d’autres packages R et Python et les utiliser dans un script qui s’exécute sur SQL Server 2019.
 
-### <a name="r-packages"></a>Packages R 
+### <a name="r-packages"></a>Packages R 
  
 1. Démarrer une session R.
 
@@ -515,7 +516,7 @@ Intégration de R et Python sur Linux est toujours en cours de développement. L
 
 Il existe une parité entre Linux et Windows pour [gouvernance des ressources](../t-sql/statements/create-external-resource-pool-transact-sql.md) pour les pools de ressources externes, mais les statistiques de [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) ont actuellement unités différentes sur Linux. Unités sont alignées dans une prochaine version CTP.
  
-| Nom de colonne   | Description | Valeur sur Linux | 
+| Nom de la colonne   | Description | Valeur sur Linux | 
 |---------------|--------------|---------------|
 |peak_memory_kb | La quantité maximale de mémoire utilisée pour le pool de ressources. | Sur Linux, cette statistique provient du sous-système de mémoire « cgroups », où la valeur est memory.max_usage_in_bytes |
 |write_io_count | Total d’écriture e/s émises depuis que les statistiques du gouverneur de ressources ont été réinitialisées. | Sur Linux, cette statistique est alimentée à partir du sous-système de blkio « cgroups », où la valeur sur la ligne de l’écriture est blkio.throttle.io_serviced | 
@@ -528,12 +529,12 @@ Il existe une parité entre Linux et Windows pour [gouvernance des ressources](.
 
 Aux développeurs R peuvent démarrer avec des exemples simples et apprendre les bases du fonctionne de R avec SQL Server. Pour votre prochaine étape, consultez les liens suivants :
 
-+ [Tutoriel : Exécuter R dans T-SQL](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutoriel : Analytique en base de données pour les développeurs R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutoriel : Exécuter R dans T-SQL](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutoriel : Analytique en base de données pour les développeurs R](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Les développeurs Python peuvent apprendre à utiliser Python avec SQL Server en suivant ces didacticiels :
 
-+ [Tutoriel : Exécutez le code Python dans T-SQL](../advanced-analytics/tutorials/run-python-using-t-sql.md)
-+ [Tutoriel : Analytique en base de données pour les développeurs Python](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Tutoriel : Exécutez le code Python dans T-SQL](../advanced-analytics/tutorials/run-python-using-t-sql.md)
++ [Tutoriel : Analytique en base de données pour les développeurs Python](../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 Pour afficher des exemples d’apprentissage qui sont basées sur des scénarios réels, consultez [d’apprentissage didacticiels](../advanced-analytics/tutorials/machine-learning-services-tutorials.md).

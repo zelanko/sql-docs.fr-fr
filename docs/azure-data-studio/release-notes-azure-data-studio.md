@@ -10,21 +10,21 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/10/2019
-ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.date: 07/11/2019
+ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794070"
+ms.locfileid: "67826515"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
 
-## <a name="july-2019"></a>Juillet 2019
+## <a name="july-2019"></a>Juillet 2019
 
-Le 10 juillet 2019 &nbsp;  /  &nbsp; version : 1.9.0 
+Le 11 juillet 2019 &nbsp;  /  &nbsp; version : 1.9.0 
 
 &nbsp;
 
@@ -39,7 +39,6 @@ Le 10 juillet 2019 &nbsp;  /  &nbsp; version : 1.9.0
 | Visual Studio Code la version de mai fusion 1.35 | Vous pouvez trouver les dernières améliorations [ici](https://code.visualstudio.com/updates/v1_35). |
 | Problèmes et bogues résolus | Dans les versions précédentes d’Azure Data Studio, si une base de données utilisateur a été sélectionnée lors de la connexion à partir de la boîte de dialogue de connexion, l’entrée de l’Explorateur d’objets qui en résulte a été étendue entièrement à cette base de données unique. À compter de cette version, que comportement est en cours de modification afin que les propriétés de niveau serveur sont également affichées dans l’Explorateur d’objets. <br/> Pour obtenir la liste complète des correctifs consultez [bogues et des problèmes, sur GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
 | &nbsp; | &nbsp; |
-
 
 
 ## <a name="june-2019"></a>Juin 2019

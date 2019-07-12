@@ -2,21 +2,21 @@
 title: Installer les outils de ligne de SQL Server sur Linux
 titleSuffix: SQL Server
 description: Cet article décrit comment installer les outils SQL Server sur Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 06/07/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: d6e10c384d799ee416facee150e5e2318b381ea6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b93530b54f2f51f2c00b9d651fcae970507a4cf
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66810276"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834661"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Installer sqlcmd et bcp les outils de ligne de commande de SQL Server sur Linux
 
@@ -78,7 +78,7 @@ Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Red
    >   sudo yum update mssql-tools
    >   ```
 
-1. **Facultatif**: Ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
+1. **Facultatif** : Ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
 
    Pour rendre **sqlcmd et bcp** accessible à partir de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans le fichier **~/.bash_profile**  avec la commande suivante :
 
@@ -123,7 +123,7 @@ Utilisez les étapes suivantes pour installer le package **mssql-tools** sur Ubu
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **Facultatif**: Ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
+1. **Facultatif** : Ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
 
    Pour rendre **sqlcmd et bcp** accessible à partir de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans le fichier **~/.bash_profile**  avec la commande suivante :
 
@@ -162,7 +162,7 @@ Utilisez les étapes suivantes pour installer le package **mssql-tools** sur SUS
    >   sudo zypper update mssql-tools
    >   ```
 
-1. **Facultatif**: Ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
+1. **Facultatif** : Ajouter `/opt/mssql-tools/bin/` à votre **chemin d’accès** variable d’environnement dans un interpréteur de commandes bash.
 
    Pour rendre **sqlcmd et bcp** accessible à partir de l’interpréteur de commandes pour les sessions de connexion, modifiez votre **chemin d’accès** dans le fichier **~/.bash_profile**  avec la commande suivante :
 

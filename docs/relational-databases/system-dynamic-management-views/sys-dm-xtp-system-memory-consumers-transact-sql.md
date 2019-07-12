@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
+title: sys.dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,17 +19,17 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbab6be30b0d268c7632180caaf939a54e672fbf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ebc5947611129086952394f157c6173a3b4efcf0
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544031"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826302"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Indique les consommateurs de mémoire au niveau système pour l'[!INCLUDE[hek_2](../../includes/hek-2-md.md)]. La mémoire pour ces consommateurs vient du pool par défaut (lorsque l'allocation est dans le contexte d'un thread d'utilisateur) ou du pool interne (si l'allocation est dans le contexte d'un thread système).  
+  Indique les consommateurs de mémoire au niveau système pour l'[!INCLUDE[hek_2](../../includes/hek-2-md.md)]. La mémoire pour ces consommateurs vient du pool par défaut (lorsque l’allocation est dans le contexte d’un thread utilisateur) ou du pool interne (si l’allocation est dans le contexte d’un thread système).  
   
 ```  
 -- system memory consumers @ instance  
@@ -38,21 +38,21 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nom de colonne|Type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interne du consommateur de mémoire.|  
-|memory_consumer_type|**Int**|Entier qui représente le type de consommateur de mémoire avec l’une des valeurs suivantes :<br /><br /> 0 - ne doit pas être affiché. Regroupe l'utilisation de la mémoire de deux consommateurs ou plus.<br /><br /> 1 - LOOKASIDE : Effectue le suivi de la consommation de mémoire pour un système lookaside.<br /><br /> 2 - VARHEAP : Suit la consommation de mémoire pour un segment de longueur variable.<br /><br /> 4 - pool de pages d’e/s : Effectue le suivi de la consommation de mémoire pour un pool de pages système utilisé pour les opérations d'E/S.|  
+|memory_consumer_type|**int**|Entier qui représente le type de consommateur de mémoire avec l’une des valeurs suivantes :<br /><br /> 0 - ne doit pas être affiché. Regroupe l'utilisation de la mémoire de deux consommateurs ou plus.<br /><br /> 1 - LOOKASIDE : Suit la consommation de mémoire pour un système lookaside.<br /><br /> 2 - VARHEAP : Effectue le suivi de la consommation de mémoire pour un segment de longueur variable.<br /><br /> 4 - pool de pages d’e/s : Effectue le suivi de la consommation de mémoire pour un pool de pages système utilisé pour les opérations d’e/s.|  
 |memory_consumer_type_desc|**nvarchar(16)**|Description du type de consommateur de mémoire :<br /><br /> 0 - ne doit pas être affiché.<br /><br /> 1 - LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Description de l'instance de consommateur de mémoire :<br /><br /> VARHEAP : <br />Segment du système. Usage universel. Actuellement utilisé uniquement pour allouer des éléments de travail de garbage collection.<br />-ou-<br />Segment lookaside. Utilisé par les looksides lorsque le nombre d'éléments contenus dans la liste de disponibilité atteint un atteint une extrémité de fin prédéfinie (en règle générale environ 5 000 éléments).<br /><br /> PGPOOL : Pour les pools système d'E/S, il existe trois tailles différentes de pool de pages système : 4 Ko, 64 Ko et 256 Ko.|  
+|memory_consumer_desc|**nvarchar(64)**|Description de l'instance de consommateur de mémoire :<br /><br /> VARHEAP : <br />Segment du système. Usage universel. Actuellement utilisé uniquement pour allouer des éléments de travail de garbage collection.<br />-ou-<br />Segment lookaside. Utilisé par les looksides lorsque le nombre d'éléments contenus dans la liste de disponibilité atteint un atteint une extrémité de fin prédéfinie (en règle générale environ 5 000 éléments).<br /><br /> PGPOOL : Pour système d’e/s pools il existe trois tailles différentes : Pool de pages système 4K, pool de pages système 64 K et système 256 Ko de la page pool.|  
 |lookaside_id|**bigint**|ID du fournisseur de mémoire lookaside, ThreadLocal.|  
 |pagepool_id|**bigint**|ID du fournisseur de mémoire de pool de pages, ThreadLocal.|  
 |allocated_bytes|**bigint**|Nombre d'octets réservés pour ce consommateur.|  
 |used_bytes|**bigint**|Octets utilisés par ce consommateur. S'applique uniquement aux consommateurs de mémoire varheap.|  
 |allocation_count|**Int**|Nombre d'allocations.|  
-|partition_count|**Int**|À usage interne uniquement|  
+|partition_count|**int**|À usage interne uniquement|  
 |sizeclass_count|**Int**|À usage interne uniquement|  
 |min_sizeclass|**Int**|À usage interne uniquement|  
-|max_sizeclass|**Int**|À usage interne uniquement|  
+|max_sizeclass|**int**|À usage interne uniquement|  
 |memory_consumer_address|**varbinary**|Adresse interne du consommateur.|  
   
 ## <a name="permissions"></a>Autorisations  

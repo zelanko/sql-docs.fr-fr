@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 2f6568e39b364b0e7d486e0d9e0318709141be63
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c4f72522c1803a364d9a309b5fa2d21fd9f2fe18
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402644"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826494"
 ---
 # <a name="power-pivot-authentication-and-authorization"></a>Authentification et autorisation PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "52402644"
 |Administrateur de batteries de serveurs ou de services|Installation, activation et configuration de services et d'applications.<br /><br /> Utilisation du tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et affichage des rapports d’administration.|  
 |Contrôle total|Activation de l’intégration des fonctionnalités [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] au niveau de la collection de sites.<br /><br /> Création d’une bibliothèque [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Création d'une bibliothèque de flux de données.|  
 |Collaboration|Ajout, modification, suppression et téléchargement de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Configuration de l'actualisation des données.<br /><br /> Création de classeurs et rapports basés sur des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur un site SharePoint.<br /><br /> Création de documents de service de données dans une bibliothèque de flux de données|  
-|Lire|Accès [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeurs comme source de données externe, où l’URL du classeur est explicitement entrée dans une boîte de dialogue de connexion (par exemple, dans l’Assistant de connexion de données d’Excel).|  
+|Lecture|Accès [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] classeurs comme source de données externe, où l’URL du classeur est explicitement entrée dans une boîte de dialogue de connexion (par exemple, dans l’Assistant de connexion de données d’Excel).|  
 |Vue seule|Affichage de classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Affichage de l'historique d'actualisation des données.<br /><br /> Connexion d’un classeur local à un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sur un site SharePoint pour réutiliser ses données d’une autre façon.<br /><br /> Téléchargement d'un instantané du classeur. L'instantané est une copie statique des données, sans segments, filtres, formules ou connexions de données. Le contenu de l'instantané est similaire à la copie de valeurs de cellules de la fenêtre de navigateur.|  
   
 ##  <a name="excel"></a> Considérations relatives à la sécurité Excel Services pour les classeurs PowerPivot  
@@ -107,7 +107,7 @@ ms.locfileid: "52402644"
 ||Autoriser les données externes|Ce paramètre doit avoir la valeur **Bibliothèques de connexions de données approuvées et incorporées**. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont incorporées au classeur. Si vous interdisez les connexions incorporées, les utilisateurs peuvent consulter le cache [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , mais ne sont pas en mesure d’interagir avec les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 ||Avertir lors de l'actualisation|Cette valeur doit être désactivée si vous utilisez la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour stocker des classeurs et des rapports. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] inclut une fonctionnalité d’aperçu des documents qui fonctionne mieux si les paramètres Actualisation à l’ouverture et Avertir lors de l’actualisation sont désactivés.|  
 |Fournisseurs de données approuvés|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 est inclus par défaut, mais l’accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] requiert que le fournisseur MSOLAP.4 soit la version SQL Server 2008 R2.<br /><br /> MSOLAP.5 est installé avec la version [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint.<br /><br /> Ne supprimez pas ces fournisseurs de la liste des fournisseurs de données approuvés. Dans certains cas, vous devrez peut-être installer des copies supplémentaires de ce fournisseur sur d'autres serveurs SharePoint dans votre batterie de serveurs. Pour plus d’informations, voir [Install the Analysis Services OLE DB Provider on SharePoint Servers](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)(Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint).|  
-|Bibliothèques de connexions de données approuvées|Facultatif.|Vous pouvez utiliser des fichiers Office Data Connection (.odc) dans des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si vous utilisez des fichiers .odc pour fournir les informations de connexion aux classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locaux, vous pouvez ajouter les mêmes fichiers .odc à cette bibliothèque.|  
+|Bibliothèques de connexions de données approuvées|facultatif.|Vous pouvez utiliser des fichiers Office Data Connection (.odc) dans des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si vous utilisez des fichiers .odc pour fournir les informations de connexion aux classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locaux, vous pouvez ajouter les mêmes fichiers .odc à cette bibliothèque.|  
 |Assembly de fonction défini par l'utilisateur|Non applicable.|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint ignore les assemblys de fonction définis par l’utilisateur que vous générez pour Excel Services. Si vous comptez sur les assemblys définis par l’utilisateur pour un comportement spécifique, sachez que le traitement des requêtes [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] n’utilise pas les fonctions définies par l’utilisateur que vous avez créées.|  
   
 ## <a name="see-also"></a>Voir aussi  

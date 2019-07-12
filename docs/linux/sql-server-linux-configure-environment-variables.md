@@ -1,20 +1,20 @@
 ---
-title: Configurer les paramètres de SQL Server avec les variables d’environnement | Microsoft Docs
+title: Configurer les paramètres de SQL Server avec les variables d’environnement
 description: Cet article décrit comment utiliser des variables d’environnement pour configurer les paramètres spécifiques de SQL Server 2017 sur Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2b32c965dfed3647484a1de54539c79af3777ce4
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 71f537d0f9da626fbd7624727b3aee22d2a47676
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400081"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834052"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurer les paramètres de SQL Server avec les variables d’environnement sur Linux
 
@@ -39,7 +39,7 @@ Vous pouvez utiliser plusieurs variables d’environnement différentes pour con
 > [!TIP]
 > Si vous avez besoin configurer SQL Server après ces scénarios d’installation, consultez [configurer SQL Server sur Linux avec l’outil mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
-## <a name="environment-variables"></a>Variables d'environnement
+## <a name="environment-variables"></a>Variables d’environnement
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
