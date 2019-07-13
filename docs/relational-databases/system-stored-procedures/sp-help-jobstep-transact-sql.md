@@ -18,12 +18,12 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7ddacb0951b25469404b96d41ec81d2eaaba9cc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5faad4f4e0de6f9c56115bff59933360f551ab55
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530575"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866272"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,31 +61,31 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**step_id**|**Int**|Identificateur unique de l'étape.|  
+|**step_id**|**int**|Identificateur unique de l'étape.|  
 |**step_name**|**sysname**|Nom de l’étape du travail.|  
 |**subsystem**|**nvarchar(40)**|Sous-système dans lequel la commande d'étape doit être exécutée.|  
 |**commande**|**nvarchar(max)**|Commande exécutée dans l'étape.|  
-|**flags**|**Int**|Masque de bits des valeurs qui contrôle le comportement de l'étape.|  
-|**cmdexec_success_code**|**Int**|Pour un **CmdExec** étape, voici le code de sortie d’une commande réussie.|  
+|**flags**|**int**|Masque de bits des valeurs qui contrôle le comportement de l'étape.|  
+|**cmdexec_success_code**|**int**|Pour un **CmdExec** étape, voici le code de sortie d’une commande réussie.|  
 |**on_success_action**|**tinyint**|Action à effectuer si l'étape est exécutée correctement :<br /><br /> **1** = quitter le travail rapportant une réussite.<br /><br /> **2** = quitter le travail rapportant un échec.<br /><br /> **3** = passer à l’étape suivante.<br /><br /> **4** = passer à l’étape.|  
-|**on_success_step_id**|**Int**|Si **on_success_action** 4, cela indique la prochaine étape à exécuter.|  
+|**on_success_step_id**|**int**|Si **on_success_action** 4, cela indique la prochaine étape à exécuter.|  
 |**on_fail_action**|**tinyint**|Action à exécuter si l'étape échoue. Les valeurs sont les mêmes que **on_success_action**.|  
-|**on_fail_step_id**|**Int**|Si **on_fail_action** 4, cela indique la prochaine étape à exécuter.|  
+|**on_fail_step_id**|**int**|Si **on_fail_action** 4, cela indique la prochaine étape à exécuter.|  
 |**server**|**sysname**|Réservé.|  
 |**database_name**|**sysname**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], c'est la base de données dans laquelle la commande est exécutée.|  
 |**database_user_name**|**sysname**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], c'est le contexte de l'utilisateur de la base de données dans lequel la commande est exécutée.|  
-|**retry_attempts**|**Int**|Nombre maximum de tentatives de la commande (en cas d'échecs).|  
+|**retry_attempts**|**int**|Nombre maximum de tentatives de la commande (en cas d'échecs).|  
 |**retry_interval**|**Int**|Intervalle (en minutes) entre les tentatives.|  
-|**os_run_priority**|**Int**|Réservé.|  
+|**os_run_priority**|**int**|Réservé.|  
 |**output_file_name**|**nvarchar(200)**|Fichier de commande de sortie doit être écrite ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, et **PowerShell** étapes uniquement).|  
-|**last_run_outcome**|**Int**|Résultat de l'étape lors de sa dernière exécution.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **2** = Retry<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
-|**last_run_duration**|**Int**|Durée (en secondes) de l'étape lors de sa dernière exécution.|  
-|**last_run_retries**|**Int**|Nombre de tentatives de la commande lors de la dernière exécution de l'étape.|  
+|**last_run_outcome**|**int**|Résultat de l'étape lors de sa dernière exécution.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **2** = Retry<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
+|**last_run_duration**|**Int**|Durée (hhmmss) de l'étape lors de sa dernière exécution.|  
+|**last_run_retries**|**int**|Nombre de tentatives de la commande lors de la dernière exécution de l'étape.|  
 |**last_run_date**|**Int**|Date de début de la dernière exécution de l'étape.|  
 |**last_run_time**|**Int**|Heure de début de la dernière exécution de l'étape.|  
-|**proxy_id**|**Int**|Proxy pour les étapes du travail.|  
+|**proxy_id**|**int**|Proxy pour les étapes du travail.|  
   
 ## <a name="remarks"></a>Notes  
  **sp_help_jobstep** est dans le **msdb** base de données.  
@@ -105,7 +105,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-return-information-for-all-steps-in-a-specific-job"></a>A. Renvoi d'informations sur toutes les étapes d'un travail spécifique  
+### <a name="a-return-information-for-all-steps-in-a-specific-job"></a>R. Renvoi d'informations sur toutes les étapes d'un travail spécifique  
  L'exemple suivant renvoie toutes les étapes du travail intitulé `Weekly Sales Data Backup`.  
   
 ```  
