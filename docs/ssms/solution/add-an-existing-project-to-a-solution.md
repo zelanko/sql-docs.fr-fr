@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 7b0c8ac0-5941-4ac6-b960-87d9830d00de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c2416606148a0b735f48ec5bd951ee956e020b5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: ff9f94b545e7170d7d68b7b5412bf99a4cc47696
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105437"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683230"
 ---
 # <a name="add-an-existing-project-to-a-solution"></a>Ajouter un projet existant à une solution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ Vous pouvez ajouter un ou plusieurs projets à une solution existante. Un même 
 > [!NOTE]  
 > Avant d'ajouter un projet existant à partir d'un répertoire partagé dans un environnement multidéveloppeur, assurez-vous que vos modifications n'affectent pas ou n'écrasent pas les modifications effectuées par un autre développeur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Projets &#40;SQL Server Management Studio&#41;](../../ssms/solution/projects-sql-server-management-studio.md)  
 [Solutions &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
   

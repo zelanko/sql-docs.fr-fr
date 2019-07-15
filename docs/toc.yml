@@ -9041,11 +9041,13 @@
             - name: Installer SSMS dans une langue autre que l’anglais
               href: ssms/install-other-languages.md
             - name: Utiliser des modèles dans SSMS
-              href: ssms/tutorials/templates-ssms.md
+              href: ssms/template/templates-ssms.md
             - name: Scripter des objets
               href: ssms/tutorials/scripting-ssms.md
             - name: Configuration de SSMS
               href: ssms/tutorials/ssms-configuration.md
+            - name: Utiliser d’autres conseils et astuces
+              href: ssms/tutorials/ssms-tricks.md
             - name: Personnaliser des menus et des touches de raccourci
               href: ssms/customize-menus-and-shortcut-keys.md
             - name: Configurer WMI pour afficher l'état du serveur dans les outils SQL Server
@@ -9959,8 +9961,6 @@
                   href: ssms/visual-db-tools/print-query-results-visual-database-tools.md
         - name: Ressources
           items:
-            - name: SQL Server Management Studio
-              href: ssms/tutorials/tutorial-sql-server-management-studio.md
             - name: Politique de support de SSMS
               href: ssms/support-policy.md
             - name: Options de support pour les utilisateurs professionnels
@@ -10180,15 +10180,15 @@
           href: linux/quickstart-install-connect-clouds.md
     - name: Didacticiels
       items:
-        - name: 1_Migrer à partir de Windows
+        - name: Migrer à partir de Windows
           href: linux/sql-server-linux-migrate-restore-database.md
-        - name: 3_Migrer vers Docker
+        - name: Migrer vers Docker
           href: linux/tutorial-restore-backup-in-sql-server-container.md
-        - name: 3_Créer un travail
+        - name: Créer un travail
           href: linux/sql-server-linux-run-sql-server-agent-job.md
-        - name: 5_Configurer l’authentification AD
+        - name: Configurer l’authentification AD
           href: linux/sql-server-linux-active-directory-authentication.md
-        - name: 6_Créer une instance de cluster de basculement
+        - name: Créer une instance de cluster de basculement
           href: linux/sql-server-linux-shared-disk-cluster-configure.md
           items:
             - name: iSCSI
@@ -10197,16 +10197,18 @@
               href: linux/sql-server-linux-shared-disk-cluster-configure-nfs.md
             - name: SMB
               href: linux/sql-server-linux-shared-disk-cluster-configure-smb.md
-        - name: 6_Utiliser une instance de cluster de basculement - SQL Server sur Linux
+        - name: Utiliser une instance de cluster de basculement - SQL Server sur Linux
           href: linux/sql-server-linux-shared-disk-cluster-operate.md
-        - name: 7_Déployer un cluster Pacemaker
+        - name: Déployer un cluster Pacemaker
           href: linux/sql-server-linux-deploy-pacemaker-cluster.md
-        - name: 8_Créer et configurer les groupes de disponibilité
+        - name: Créer et configurer des groupes de disponibilité
           href: linux/sql-server-linux-create-availability-group.md
-        - name: 9_Déployer sur Kubernetes
+        - name: Déployer sur Kubernetes
           href: linux/tutorial-sql-server-containers-kubernetes.md
-        - name: 10_Configurer la réplication
+        - name: Configurer la réplication
           href: linux/sql-server-linux-replication-tutorial-tsql.md
+        - name: Machine learning dans un conteneur
+          href: linux/sql-server-linux-machine-learning-services-container.md
     - name: Concepts
       items:
         - name: Installation

@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a237f0b4d4f1d65e471be065cf13fa985de4cff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41319eaf883a1c7aee444d83b457b50c66bc76df
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821876"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679792"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - Utiliser l’utilitaire
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "65821876"
   
 ## <a name="typically-used-sqlcmd-options"></a>Options sqlcmd généralement utilisées  
   
--   L’option de serveur (**-S**) identifie l’instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle l’utilitaire **sqlcmd** se connecte.  
+-   L’option de serveur ( **-S**) identifie l’instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle l’utilitaire **sqlcmd** se connecte.  
   
--   Les options d’authentification (**-E**, **-U** et **-P**) définissent les informations d’identification qu’utilise **sqlcmd** pour se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **REMARQUE :** L’option **-E** est la valeur par défaut et n’a pas besoin d’être spécifiée.  
+-   Les options d’authentification ( **-E**, **-U** et **-P**) définissent les informations d’identification qu’utilise **sqlcmd** pour se connecter à l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **REMARQUE :** L’option **-E** est la valeur par défaut et n’a pas besoin d’être spécifiée.  
   
--   Les options d’entrée (**-Q**, **-q** et **-i**) identifient l’emplacement de l’entrée dans **sqlcmd**.  
+-   Les options d’entrée ( **-Q**, **-q** et **-i**) identifient l’emplacement de l’entrée dans **sqlcmd**.  
   
--   L’option de sortie (**-o**) spécifie le fichier dans lequel **sqlcmd** place sa sortie.  
+-   L’option de sortie ( **-o**) spécifie le fichier dans lequel **sqlcmd** place sa sortie.  
   
 ## <a name="connect-to-the-sqlcmd-utility"></a>Se connecter à l’utilitaire sqlcmd  
   

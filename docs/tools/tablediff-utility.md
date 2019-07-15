@@ -16,16 +16,16 @@ helpviewer_keywords:
 - troubleshooting [SQL Server replication], non-convergence
 - non-convergence [SQL Server]
 ms.assetid: 3c3cb865-7a4d-4d66-98f2-5935e28929fc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f0c4bec0b0ef0181a62ac8c8183830716a604490
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5a8612dc30a39a033d32daac158799fb3868ae65
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128509"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733537"
 ---
 # <a name="tablediff-utility"></a>tablediff (utilitaire)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,8 +81,8 @@ tablediff
  [ **-?** ]  
  Retour de la liste des paramètres pris en charge.  
   
- **-sourceserver** _source_server_name_[**\\**_instance\_name_]  
- Nom du serveur source. Spécifiez *source_server_name* pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez _source_server_name_**\\**_instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-sourceserver** _source_server_name_[ **\\** _instance\_name_]  
+ Nom du serveur source. Spécifiez *source_server_name* pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez _source_server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-sourcedatabase** _source_database_  
  Nom de la base de données source.  
@@ -105,8 +105,8 @@ tablediff
  **-sourcelocked**  
  Durant la comparaison, la table source est verrouillée à l'aide des indicateurs de table TABLOCK et HOLDLOCK.  
   
- **-destinationserver** _destination_server_name_[**\\**_instance_name_]  
- Nom du serveur de destination. Spécifiez *destination_server_name* pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez _destination_server_name_**\\**_instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **-destinationserver** _destination_server_name_[ **\\** _instance_name_]  
+ Nom du serveur de destination. Spécifiez *destination_server_name* pour l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez _destination_server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **-destinationdatabase** _subscription_database_  
  Nom de la base de données de destination.  
@@ -130,7 +130,7 @@ tablediff
  Durant la comparaison, la table de destination est verrouillée à l'aide des indicateurs de table TABLOCK et HOLDLOCK.  
   
  **-b** _large_object_bytes_  
- Nombre d’octets à comparer pour des colonnes de types de données d’objet volumineuses, notamment **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)** et **varbinary(max)**. *large_object_bytes* a comme valeur par défaut la taille de la colonne. Toutes les données au-dessus de *large_object_bytes* ne sont pas comparées.  
+ Nombre d’octets à comparer pour des colonnes de types de données d’objet volumineuses, notamment **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** et **varbinary(max)** . *large_object_bytes* a comme valeur par défaut la taille de la colonne. Toutes les données au-dessus de *large_object_bytes* ne sont pas comparées.  
   
  **-bf**  _number_of_statements_  
  Nombre d’instructions [!INCLUDE[tsql](../includes/tsql-md.md)] à écrire dans le fichier de script [!INCLUDE[tsql](../includes/tsql-md.md)] actuel lorsque l’option **-f** est utilisée. Quand le nombre d’instructions [!INCLUDE[tsql](../includes/tsql-md.md)] dépasse *number_of_statements*, un fichier de script [!INCLUDE[tsql](../includes/tsql-md.md)] est créé.  
@@ -173,7 +173,7 @@ tablediff
 |**1**|Erreur critique|  
 |**2**|Tables différentes|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’utilitaire **tablediff** ne peut pas être utilisé avec des serveurs non [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Les tables comprenant des colonnes de types de données **sql_variant** ne sont pas prises en charge.  
@@ -215,7 +215,7 @@ tablediff
   
 -   **image**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour comparer les tables, vous avez besoin des autorisations SELECT ALL sur les objets de table comparés.  
   
  Pour utiliser l’option **-et** , vous devez être membre du rôle de base de données fixe db_owner, ou au moins disposer de l’autorisation CREATE TABLE dans la base de données d’abonnement et de l’autorisation ALTER sur le schéma du propriétaire de destination sur le serveur de destination.  
@@ -224,7 +224,7 @@ tablediff
   
  Pour utiliser l’option **-o** ou **-f** , vous devez disposer d’autorisations d’écriture sur l’emplacement du répertoire de fichiers spécifié.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Comparer des tables répliquées pour identifier les différences &#40;programmation de réplication&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

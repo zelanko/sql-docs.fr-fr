@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 084e1504-3d2f-4bd9-b97c-b9c8c874751c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5fa79c9883a1de60f08fb6362e5aa7a7d9c4d28b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 60310b49996fcd4fa9cae91267978728a91c2b04
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099986"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690425"
 ---
 # <a name="delete-queries-visual-database-tools"></a>Supprimer des requêtes (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ Vous pouvez supprimer une requête en l'éliminant du projet et en la supprimant
 > [!NOTE]  
 > Si vous souhaitez éliminer la requête du projet sans la supprimer, cliquez sur **Enlever**. Ensuite, vous pouvez cliquer avec le bouton droit sur le dossier de requête et choisir **Ajouter un élément** pour rechercher et rajouter la requête ultérieurement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Effacer les résultats d’une requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/clear-query-results-visual-database-tools.md)  
 [Abandonner les modifications apportées aux requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/discard-changes-made-to-queries-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

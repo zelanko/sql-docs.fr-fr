@@ -20,15 +20,15 @@ helpviewer_keywords:
 - command prompt [SQL Server], starting instance of SQL Server
 - continuing instance of SQL Server
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7dba9e5498d39c80a5bc5d1c43134242c5715980
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 93a4572b44cf2be6fa8f1c0912fa7e8178e6c9a7
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656909"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733357"
 ---
 # <a name="sqlservr-application"></a>Application sqlservr
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Démarre une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec une configuration minimale. Cette option est utile lorsqu'une valeur de configuration définie (espace mémoire insuffisant, par exemple) a empêché le serveur de démarrer.  
   
  **-e** *chemin_du_journal_des_erreurs*  
- Indique le chemin d'accès complet au fichier journal des erreurs. Si cette option n’est pas spécifiée, l’emplacement par défaut est *\<lecteur>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog pour l’instance par défaut et *\<lecteur>* \Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog pour une instance nommée. Il n’existe aucun espace entre **-e** et *chemin_du_journal_des_erreurs*.  
+ Indique le chemin d'accès complet au fichier journal des erreurs. Si cette option n’est pas spécifiée, l’emplacement par défaut est *\<lecteur>* :\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog pour l’instance par défaut et *\<lecteur>* \Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog pour une instance nommée. Il n’existe aucun espace entre **-e** et *chemin_du_journal_des_erreurs*.  
   
  **-l** *chemin_du_journal_master*  
  Indique le chemin complet du fichier journal des transactions de la base de données **master** . Il n’existe aucun espace entre **-l** et *chemin_du_journal_master*.  
@@ -75,10 +75,10 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
  Permet de démarrer une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si le paramètre **-s** n’est pas spécifié, l’instance par défaut tente de démarrer. Vous devez accéder au répertoire BINN de l’instance, dans l’invite de commandes, avant de démarrer **sqlservr.exe**. Par exemple, si Instance1 doit utiliser \mssql$Instance1 pour ses fichiers binaires, l’utilisateur doit être dans le répertoire \mssql$Instance1\binn pour démarrer **sqlservr.exe -s instance1**. Si vous démarrez une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec l’option **-n** , il est également recommandé d’utiliser l’option **-e** , sinon les événements [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne sont pas consignés.  
   
  **-T** *trace#*  
- Indique qu’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit être démarrée avec un indicateur de trace spécifique (*trace#*) en vigueur. Les indicateurs de trace permettent de démarrer le serveur avec un comportement non standard. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
+ Indique qu’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit être démarrée avec un indicateur de trace spécifique (*trace#* ) en vigueur. Les indicateurs de trace permettent de démarrer le serveur avec un comportement non standard. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).  
   
 > [!IMPORTANT]  
->  Lorsque vous spécifiez un indicateur de trace, utilisez **-T** pour transmettre le numéro d’indicateur de trace. **accepte un t minuscule (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), mais **-t** définit d’autres indicateurs de trace internes requis par les ingénieurs du support technique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  Lorsque vous spécifiez un indicateur de trace, utilisez **-T** pour transmettre le numéro d’indicateur de trace. **accepte un t minuscule (** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), mais **-t** définit d’autres indicateurs de trace internes requis par les ingénieurs du support technique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-v**  
  Affiche le numéro de version du serveur.  
@@ -101,13 +101,13 @@ sqlservr [-sinstance_name] [-c] [-dmaster_path] [-f]
   
  L'utilisation d'une valeur inférieure à celle par défaut augmente la quantité de mémoire disponible dans le pool de mémoires tampons ou les piles de threads ; cela permet de profiter de l'amélioration des performances pour les charges de travail qui ont recours de manière intensive à la mémoire dans les systèmes qui n'utilisent pas de nombreuses procédures stockées étendues, requêtes distribuées ou objets Automation.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Dans la plupart des cas, le programme sqlservr.exe est uniquement utilisé pour le dépannage ou pour une maintenance majeure. Lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est démarré à partir de l’invite de commandes avec sqlservr.exe, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne démarre pas en tant que service et vous ne pouvez donc pas arrêter [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec des commandes **net** . Les utilisateurs peuvent se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais les outils [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] montrent l'état du service et le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] indique correctement que le service est arrêté. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] peut se connecter au serveur, mais indique également que le service est arrêté.  
   
 ## <a name="compatibility-support"></a>Prise en charge de la compatibilité  
  Le paramètre **-h**  n’est pas pris en charge dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Ce paramètre a été utilisé dans les versions antérieures des instances 32 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour réserver l'espace d'adressage de mémoire virtuelle pour les métadonnées d'ajout de mémoire à chaud lorsque AWE est activé. Pour plus d’informations, consultez [Fonctionnalités SQL Server supprimées dans SQL Server 2016](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options de démarrage du service moteur de base de données](../database-engine/configure-windows/database-engine-service-startup-options.md)  
   
   
