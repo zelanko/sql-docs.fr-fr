@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - opening trace files
 ms.assetid: f9ec6032-c961-4b00-ba38-208454fd2bdb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: f1672d8c58da05934c26a277dffee489452262aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 79b076926d4b81813cc3e7fa8dfeab6ccc988d9c
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599317"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733077"
 ---
 # <a name="open-a-trace-file-sql-server-profiler"></a>Ouvrir un fichier de trace (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47599317"
   
 2.  Dans la boîte de dialogue **Ouvrir un fichier** , sélectionnez le fichier de données de trace que vous voulez ouvrir.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4fab6179453ccd21623a2da5ea0157d235eea40
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677748"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732118"
 ---
 # <a name="distributed-replay-security"></a>Sécurité Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51677748"
 |Compte|Autorisations d'accès au dossier|  
 |-------------|------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|`<Controller_Installation_Path>\DReplayController` (lecture, écriture, suppression)<br /><br /> `DReplayServer.xml` fichier (lecture, écriture)|  
-|Compte de service du client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|`<Client_Installation_Path>\DReplayClient` (lecture, écriture, suppression)<br /><br /> `DReplayClient.xml` fichier (lecture, écriture)<br /><br /> Répertoires d'exécution et de résultat, comme spécifié dans le fichier de configuration du client par les éléments `WorkingDirectory` et `ResultDirectory` , respectivement. (Lecture, écriture)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay|`<Client_Installation_Path>\DReplayClient` (lecture, écriture, suppression)<br /><br /> `DReplayClient.xml` fichier (lecture, écriture)<br /><br /> Répertoires d'exécution et de résultat, comme spécifié dans le fichier de configuration du client par les éléments `WorkingDirectory` et `ResultDirectory` , respectivement. (Lecture, écriture)|  
   
 ## <a name="dcom-permissions"></a>Autorisations DCOM  
  DCOM est utilisé pour la communication d'appel de procédure distante (RPC) entre le contrôleur et l'outil d'administration, et entre le contrôleur et tous les clients. Vous devez configurer les autorisations DCOM au niveau de l'ordinateur et spécifiques à l'application sur le contrôleur une fois que les fonctionnalités Distributed Replay ont été installées.  
@@ -110,12 +110,12 @@ ms.locfileid: "51677748"
   
 -   Membres du groupe Administrateurs local sur le contrôleur.  
   
--   Membres du groupe Administrateurs local sur les clients.  
+-   Membres du groupe Administrateurs local sur les clients.  
   
     > [!IMPORTANT]  
     >  Ces comptes ont entièrement accès à toutes les informations d'identification personnelle (PII) ou informations sensibles contenues dans la trace, l'intermédiaire, la distribution ou les fichiers de données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisés par Distributed Replay.  
   
- Nous vous recommandons d'appliquer les précautions de sécurité suivantes :  
+ Nous vous recommandons d'appliquer les précautions de sécurité suivantes :  
   
 -   Stockez les données de la trace d'entrée, les résultats de la trace de sortie et les fichiers de base de données dans un emplacement qui utilise le système de fichiers NTFS et appliquez les listes de contrôle d'accès (ACL) appropriées. Si nécessaire, chiffrez les données stockées sur l'ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Sachez que les listes de contrôle d'accès (ACL) ne sont pas appliquées aux fichiers de trace, et qu'il n'y a pas de masque de données ni de codage. Vous devez supprimer ces fichiers rapidement après utilisation.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "51677748"
   
 -   Supprimez tous les fichiers de trace, intermédiaires, de distribution et de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisés pour le test. Les fichiers intermédiaires et de distribution sont stockés dans le répertoire de travail sur le contrôleur et le client, respectivement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Install Distributed Replay - Présentation](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   

@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: 9d33749f-9653-4691-9a0f-06ed7dd6166f
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 627edc6b58395f9d741b3972f04e9101127f72fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dac1f7434dd03fc7839a5b541432836590d315ef
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099918"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685319"
 ---
 # <a name="proxy-editor---add-principal"></a>Éditeur de compte proxy - Ajouter un principal
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,6 +39,6 @@ Répertorie les principaux du type choisi.
 **Name**  
 Sélectionnez le nom du principal pour accorder l’accès à ce principal ou sélectionnez **Nom** pour accorder l’accès à tous les principaux de la liste.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer un proxy de SQL Server Agent](../../ssms/agent/create-a-sql-server-agent-proxy.md)  
   

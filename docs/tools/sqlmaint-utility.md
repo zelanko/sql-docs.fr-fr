@@ -16,15 +16,15 @@ helpviewer_keywords:
 - maintenance plans [SQL Server], command prompt
 - backing up [SQL Server], sqlmaint utility
 ms.assetid: 937a9932-4aed-464b-b97a-a5acfe6a50de
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8f73f17d3224ced3fca052e9b19a7d61cf64548b
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 5b35a8027608cc2b250e37078b9c44971e9bb106
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100434"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728122"
 ---
 # <a name="sqlmaint-utility"></a>sqlmaint (utilitaire)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,8 +81,8 @@ number[minutes | hours | days | weeks | months]
  **-?**  
  Spécifie que le diagramme de syntaxe pour l’utilitaire **sqlmaint** doit être retourné. Ce paramètre doit être utilisé seul.  
   
- **-S** _server_name_[ **\\**_instance\_name_]  
- Spécifie l’instance cible de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez _server\_name_ pour vous connecter à l’instance par défaut de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sur ce serveur. Spécifiez _server\_name_**\\**_instance\_name_ pour vous connecter à une instance nommée de [!INCLUDE[ssDE](../includes/ssde-md.md)] sur ce serveur. Si aucun serveur n’est spécifié, **sqlmaint** se connecte à l’instance par défaut de [!INCLUDE[ssDE](../includes/ssde-md.md)] sur l’ordinateur local.  
+ **-S** _server_name_[ **\\** _instance\_name_]  
+ Spécifie l’instance cible de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifiez _server\_name_ pour vous connecter à l’instance par défaut de [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sur ce serveur. Spécifiez _server\_name_ **\\** _instance\_name_ pour vous connecter à une instance nommée de [!INCLUDE[ssDE](../includes/ssde-md.md)] sur ce serveur. Si aucun serveur n’est spécifié, **sqlmaint** se connecte à l’instance par défaut de [!INCLUDE[ssDE](../includes/ssde-md.md)] sur l’ordinateur local.  
   
  **-U** _login_ID_  
  Spécifie l'ID de connexion à utiliser lors de la connexion au serveur. Si celui-ci n’est pas fourni, **sqlmaint** tente d’utiliser l’authentification [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Si *login_ID* contient des caractères spéciaux, il doit être encadré par des guillemets doubles. Ceux-ci sont facultatifs dans tous les autres cas.  
@@ -136,12 +136,12 @@ c:\Program Files\Microsoft SQL Server\Mssql\Backup\AdventureWorks2012_maint_1996
  **-RmUnusedSpace** _threshold_percent free_percent_  
  Spécifie que l’espace inutilisé est retiré de la base de données spécifiée dans **-D**. Cette option est uniquement utile pour les bases de données dont la configuration prévoit une croissance automatique. *Threshold_percent* indique, en Mo, la taille qu’une base de données doit atteindre pour que **sqlmaint** tente d’en supprimer l’espace de données inutilisé. Si la base de données est plus petite que *threshold_percent*, aucune action n’est exécutée. *Free_percent* spécifie l’espace qui doit rester libre dans la base de données, exprimé sous la forme d’un pourcentage de la taille finale de celle-ci. Prenons l’exemple d’une base de données de 200 Mo contenant 100 Mo de données. Si la valeur 10 est affectée à *free_percent* , la base de données a pour taille finale 110 Mo. La base de données n’est pas étendue si elle est inférieure à la valeur de *free_percent* augmentée de la quantité de données contenue dans la base de données. Prenons l’exemple d’une base de données de 108 Mo contenant 100 Mo de données. Si la valeur 10 est affectée à *free_percent* , la base de données ne passera pas à 110 Mo, mais conserve sa taille de 108 Mo.  
   
- **-CkDB** | **-CkDBNoIdx**  
+ **-CkDB** |  **-CkDBNoIdx**  
  Spécifie qu’une instruction DBCC CHECKDB ou une instruction DBCC CHECKDB avec l’option NOINDEX est exécutée dans la base de données indiquée dans **-D**. Pour plus d'informations, consultez DBCC CHECKDB.  
   
  Un avertissement est enregistré dans *text_file* si la base de données est en cours d’utilisation lorsque **sqlmaint** est exécuté.  
   
- **-CkAl** | **-CkAlNoIdx**  
+ **-CkAl** |  **-CkAlNoIdx**  
  Spécifie qu’une instruction DBCC CHECKALLOC avec l’option NOINDEX est exécutée dans la base de données indiquée dans **-D**. Pour plus d’informations, consultez [DBCC CHECKALLOC &#40;Transact-SQL&#41;](../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md).  
   
  **-CkCat**  
@@ -213,7 +213,7 @@ dbname_log_yyyymmddhhmm.BAK
  Spécifie que le support de sauvegarde est une bande.  
   
  **-BkUpOnlyIfClean**  
- Spécifie que la sauvegarde a lieu uniquement si les contrôles **-Ck** spécifiés n’ont rencontré aucun problème au niveau des données. Les actions de maintenance s'exécutent dans le même ordre que celui dans lequel elles apparaissent dans la ligne de commande. Spécifiez les paramètres **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**ou **-CkCat** avant le(s) paramètre(s) **-BkUpDB**/**-BkUpLog** si vous allez également spécifier **-BkUpOnlyIfClean**ou la sauvegarde a lieu, même si la vérification signale des problèmes ou pas.  
+ Spécifie que la sauvegarde a lieu uniquement si les contrôles **-Ck** spécifiés n’ont rencontré aucun problème au niveau des données. Les actions de maintenance s'exécutent dans le même ordre que celui dans lequel elles apparaissent dans la ligne de commande. Spécifiez les paramètres **-CkDB**, **-CkDBNoIdx**, **-CkAl**, **-CkAlNoIdx**, **-CkTxtAl**ou **-CkCat** avant le(s) paramètre(s) **-BkUpDB**/ **-BkUpLog** si vous allez également spécifier **-BkUpOnlyIfClean**ou la sauvegarde a lieu, même si la vérification signale des problèmes ou pas.  
   
  **-VrfyBackup**  
  Spécifie que RESTORE VERIFYONLY est exécuté sur la sauvegarde lorsque celle-ci est terminée.  
@@ -229,7 +229,7 @@ dbname_log_yyyymmddhhmm.BAK
   
  Si seul le paramètre *number* est spécifié, la partie de la date sélectionnée par défaut est **semaines**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’utilitaire **sqlmaint** effectue des opérations de maintenance sur une ou plusieurs bases de données. Si **-D** est spécifié, les opérations spécifiées par ailleurs portent uniquement sur la base de données indiquée. Si **-PlanName** ou **-PlanID** est spécifié, la seule information récupérée du plan de maintenance indiqué par **sqlmaint** est la liste des bases de données contenues dans le plan. Toutes les opérations spécifiées dans les autres paramètres de **sqlmaint** s’appliquent à chaque base de données figurant sur la liste extraite du plan, l’utilitaire **sqlmaint** n’effectuant aucune opération de maintenance définie dans le plan lui-même.  
   
  L’utilitaire **sqlmaint** retourne 0 en cas de réussite et 1 en cas d’échec. L'échec de l'exécution est signalé :  
@@ -240,7 +240,7 @@ dbname_log_yyyymmddhhmm.BAK
   
 -   En cas de panne générale.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’utilitaire **sqlmaint** peut être exécuté par tout utilisateur Windows disposant de l’autorisation **Lecture et exécution** sur `sqlmaint.exe`, qui est stockée par défaut dans le dossier `x:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER1\MSSQL\Binn` . En outre, la connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] spécifiée avec **-login_ID** doit disposer des autorisations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requises pour effectuer l’action spécifiée. Si la connexion à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise l'authentification Windows, le nom d'ouverture de session [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mappé à l'utilisateur Windows authentifié doit disposer des autorisations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requises pour effectuer l'action spécifiée.  
   
  Par exemple, l’utilisation de l’argument **-BkUpDB** nécessite l’autorisation d’exécution de l’instruction BACKUP. L’utilisation de l’argument **-UpdOptiStats** nécessite l’autorisation d’exécution de l’instruction UPDATE STATISTICS. Pour plus d'informations, consultez la section « Autorisations » des rubriques correspondantes de la documentation en ligne.  
@@ -253,7 +253,7 @@ dbname_log_yyyymmddhhmm.BAK
 sqlmaint -S MyServer -D AdventureWorks2012 -CkDB -CkAl -CkCat -Rpt C:\MyReports\AdvWks_chk.rpt  
 ```  
   
-### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>b. Mise à jour des statistiques avec un échantillonnage de 15 % dans toutes les bases de données d'un plan. Compactage des bases de données ayant atteint 110 Mo de sorte qu'elles aient seulement 10 % d'espace libre  
+### <a name="b-updating-statistics-using-a-15-sample-in-all-databases-in-a-plan-also-shrink-any-of-the-database-that-have-reached-110-mb-to-having-only-10-free-space"></a>B. Mise à jour des statistiques avec un échantillonnage de 15 % dans toutes les bases de données d'un plan. Compactage des bases de données ayant atteint 110 Mo de sorte qu'elles aient seulement 10 % d'espace libre  
   
 ```  
 sqlmaint -S MyServer -PlanName MyUserDBPlan -UpdOptiStats 15 -RmUnusedSpace 110 10  
@@ -271,7 +271,7 @@ sqlmaint -S MyServer -PlanName MyUserDBPlan -BkUpDB -BkUpMedia DISK -UseDefDir -
 sqlmaint -S MyServer -BkUpDB -BkUpMedia DISK -UseDefDir  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md)   
  [UPDATE STATISTICS &#40;Transact-SQL&#41;](../t-sql/statements/update-statistics-transact-sql.md)  
   
