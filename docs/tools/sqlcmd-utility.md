@@ -24,16 +24,16 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 12a3fff2ff310f2aa096ec4bc49b76b9895cf3f7
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: afbb8ce321418cce7797b12b161bcef88b88183e
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974518"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728191"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -232,7 +232,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
  
-   Si les utilisateurs invités dans un annuaire Azure AD spécifique et font partie d’un groupe qui existe dans la base de données SQL qui dispose des autorisations de base de données pour exécuter la commande sqlcmd, leurs alias de l’utilisateur invité est utilisé (par exemple, *keith0@adventureworks.com*).
+   Si les utilisateurs invités dans un annuaire Azure AD spécifique et font partie d’un groupe qui existe dans la base de données SQL qui dispose des autorisations de base de données pour exécuter la commande sqlcmd, leurs alias de l’utilisateur invité est utilisé (par exemple, *keith0@adventureworks.com* ).
 
   >[!IMPORTANT]
   >Il existe un problème connu lorsque vous utilisez le `-G` et `-U` option avec SQLCMD, où placer le `-U` option avant la `-G` option peut entraîner l’échec de l’authentification. Toujours commencer par le `-G` option suivie par la `-U` option.
@@ -260,7 +260,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
 
 Nous vous recommandons d’utiliser un mot de passe fort.
  
-#### <a name="use-a-strong-passwordrelational-databasessecuritystrong-passwordsmd"></a>[**Utilisez un mot de passe fort !**](../relational-databases/security/strong-passwords.md)
+#### <a name="use-a-strong-passwordrelational-databasessecuritystrong-passwordsmd"></a>[**Utilisez un mot de passe fort !** ](../relational-databases/security/strong-passwords.md)
   
   
  L’invite de mot de passe s’affiche en imprimant l’invite de commande sur la console, comme suit : `Password:`  
@@ -284,14 +284,14 @@ Nous vous recommandons d’utiliser un mot de passe fort.
   
  Si l’option **-P** est suivie de plusieurs arguments, un message d’erreur est généré et le programme se termine.  
   
- **S -** [*protocole*:]*server*[**\\**_instance\_nom_] [**,**  _port_]  
+ **-S** [*protocole*:]*serveur*[ **\\** _instance\_nom_][ **,** _port_]  
  Spécifie l’instance de SQL Server à laquelle se connecter. Cette option définit la variable de script **sqlcmd** SQLCMDSERVER.  
   
- Spécifiez *server_name* pour vous connecter à l’instance par défaut de SQL Server sur cet ordinateur serveur. Spécifiez *server_name* [ **\\**_instance\_name_ ] pour vous connecter à une instance nommée de SQL Server sur cet ordinateur serveur. Si aucun ordinateur serveur n’est spécifié, **sqlcmd** se connecte à l’instance par défaut de SQL Server sur l’ordinateur local. Cette option est indispensable lorsque vous exécutez **sqlcmd** à partir d’un ordinateur distant connecté au réseau.  
+ Spécifiez *server_name* pour vous connecter à l’instance par défaut de SQL Server sur cet ordinateur serveur. Spécifiez *server_name* [ **\\** _instance\_name_ ] pour vous connecter à une instance nommée de SQL Server sur cet ordinateur serveur. Si aucun ordinateur serveur n’est spécifié, **sqlcmd** se connecte à l’instance par défaut de SQL Server sur l’ordinateur local. Cette option est indispensable lorsque vous exécutez **sqlcmd** à partir d’un ordinateur distant connecté au réseau.  
   
  Le*protocole* peut avoir la valeur **tcp** (TCP/IP), **lpc** (mémoire partagée) ou **np** (canaux nommés).  
   
- Si vous ne spécifiez pas *server_name* [ **\\**_instance\_name_ ] quand vous démarrez **sqlcmd**, SQL Server cherche et utilise la variable d’environnement SQLCMDSERVER.  
+ Si vous ne spécifiez pas *server_name* [ **\\** _instance\_name_ ] quand vous démarrez **sqlcmd**, SQL Server cherche et utilise la variable d’environnement SQLCMDSERVER.  
   
 > [!NOTE]  
 >  La variable d'environnement OSQLSERVER a été conservée pour assurer une compatibilité descendante. La variable d’environnement SQLCMDSERVER est prioritaire par rapport à la variable d’environnement OSQLSERVER ; **sqlcmd** et **osql** peuvent donc être utilisés l’un à côté de l’autre sans interférence et les anciens scripts continuent à fonctionner.  
@@ -317,7 +317,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Options d’entrée/sortie**  
-  **-f** _page_de_codes_ | **i:**_page_de_codes_[**,o:**_page_de_codes_] | **o:**_page_de_codes_[**,i:**_page_de_codes_]  
+  **-f** _page_de_codes_ | **i:** _page_de_codes_[ **,o:** _page_de_codes_] | **o:** _page_de_codes_[ **,i:** _page_de_codes_]  
  Spécifie les pages de codes d'entrée et de sortie. Le numéro de pages de codes est une valeur numérique spécifiant une page de codes Windows installée.  
   
  Règles de conversion des pages de code :  
@@ -332,7 +332,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
   
  Entrez **chcp** à l’invite de commandes pour vérifier la page de codes de Cmd.exe.  
   
- **-i** _input_file_[**,**_input\_file2_...]  
+ **-i** _input_file_[ **,** _input\_file2_...]  
  Identifie le fichier contenant un traitement d'instructions SQL ou des procédures stockées. Plusieurs fichiers peuvent être spécifiés, ils sont lus et traités dans l'ordre. N'utilisez pas d'espace entre les noms de fichiers. **sqlcmd** vérifie d’abord que tous les fichiers spécifiés existent. Si un ou plusieurs fichiers n’existent pas, **sqlcmd** se termine. Les options -i et -Q/-q s'excluent mutuellement.  
   
  Exemples de chemins :  
@@ -414,7 +414,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
 >  La valeur de délai d’expiration réelle peut différer de quelques secondes de la valeur *délai_expiration* .  
   
  **-vvar =**  _valeur_[ **var =** _valeur_...]  
- Crée une variable de script **sqlcmd**qui peut être utilisée dans un script **sqlcmd** . Placez la valeur entre guillemets si elle contient des espaces. Vous pouvez spécifier plusieurs valeurs _**var**_=**"**_valeurs_**"**. Si l’une des valeurs spécifiées comporte des erreurs, **sqlcmd** génère un message d’erreur et se termine.  
+ Crée une variable de script **sqlcmd**qui peut être utilisée dans un script **sqlcmd** . Placez la valeur entre guillemets si elle contient des espaces. Vous pouvez spécifier plusieurs valeurs _**var**_ = **"** _valeurs_ **"** . Si l’une des valeurs spécifiées comporte des erreurs, **sqlcmd** génère un message d’erreur et se termine.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -468,15 +468,15 @@ Nous vous recommandons d’utiliser un mot de passe fort.
  **-Y** _largeur_affichage_type_longueur_fixe_  
  Définit la variable de script **sqlcmd** `SQLCMDMAXFIXEDTYPEWIDTH`. La valeur par défaut est 0 (illimitée). Limite le nombre de caractères retournés pour les types de données suivants :  
   
--   **char(** _n_ **)**, où 1<=n<=8000  
+-   **char(** _n_ **)** , où 1<=n<=8000  
   
--   **nchar(n** _n_ **)**, où 1<=n<=4000  
+-   **nchar(n** _n_ **)** , où 1<=n<=4000  
   
--   **varchar(n** _n_ **)**, où 1<=n<=8000  
+-   **varchar(n** _n_ **)** , où 1<=n<=8000  
   
--   **nvarchar(n** _n_ **)**, où 1<=n<=4000  
+-   **nvarchar(n** _n_ **)** , où 1<=n<=4000  
   
--   **varbinary(n** _n_ **)**, où 1<=n\<=4000  
+-   **varbinary(n** _n_ **)** , où 1<=n\<=4000  
   
 -   **variant**  
   
@@ -546,7 +546,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
  **-?**  
  Affiche la version de **sqlcmd** et un résumé de la syntaxe des options de **sqlcmd** .  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les options ne doivent pas nécessairement être utilisées dans l'ordre indiqué dans la section de la syntaxe.  
   
  Lorsque plusieurs résultats sont retournés, **sqlcmd** imprime une ligne vide entre chaque ensemble de résultats dans un traitement. En outre, le message `<x> rows affected` ne s’affiche pas lorsqu’il ne concerne pas l’instruction exécutée.  
@@ -607,11 +607,11 @@ Nous vous recommandons d’utiliser un mot de passe fort.
 |||  
 |-|-|  
 |**GO** [*count*]|**:List**|  
-|[**:**] **RESET**|**:Error**|  
-|[**:**] **ED**|**:Out**|  
-|[**:**] **!!**|**:Perftrace**|  
-|[**:**] **QUIT**|**:Connect**|  
-|[**:**] **EXIT**|**:On Error**|  
+|[ **:** ] **RESET**|**:Error**|  
+|[ **:** ] **ED**|**:Out**|  
+|[ **:** ] **!!**|**:Perftrace**|  
+|[ **:** ] **QUIT**|**:Connect**|  
+|[ **:** ] **EXIT**|**:On Error**|  
 |**:r**|**:Help**|  
 |**:ServerList**|**:XML** [**ON** &#124; **OFF**]|  
 |**:Setvar**|**:Listvar**|  
@@ -621,7 +621,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
 -   Toutes les commandes **sqlcmd** , à l’exception de GO, doivent être précédées d’un signe deux-points (:).  
   
     > [!IMPORTANT]  
-    >  Pour assurer la compatibilité descendante avec les scripts **osql** existants, certaines commandes sont reconnues sans les deux-points. Elles sont indiquées par [**:**].
+    >  Pour assurer la compatibilité descendante avec les scripts **osql** existants, certaines commandes sont reconnues sans les deux-points. Elles sont indiquées par [ **:** ].
   
 -   Les commandes**sqlcmd** ne sont reconnues que si elles apparaissent au début d’une ligne.  
   
@@ -632,21 +632,21 @@ Nous vous recommandons d’utiliser un mot de passe fort.
 -   Les commandes sont exécutées immédiatement. Elles ne sont pas placées dans le tampon d’exécution comme le sont les instructions Transact-SQL.  
   
  **Commandes d’édition**  
-  [**:**] **ED**  
+  [ **:** ] **ED**  
  Démarre l'éditeur de texte. Cet éditeur peut être utilisé pour modifier le lot Transact-SQL actif ou le dernier lot exécuté. Pour modifier le dernier traitement exécuté, la commande **ED** doit être tapée immédiatement après la fin de l'exécution du dernier traitement.  
   
  L'éditeur de texte est défini dans la variable d'environnement SQLCMDEDITOR. L'éditeur par défaut est « edit ». Pour modifier l'éditeur, définissez la variable SQLCMDEDITOR. Par exemple, pour choisir l’éditeur Bloc-notes de Microsoft, à l’invite de commandes, tapez :  
   
  `SET SQLCMDEDITOR=notepad`  
   
- [**:**] **RESET**  
+ [ **:** ] **RESET**  
  Vide le cache d'instruction.  
   
  **:List**  
  Imprime le contenu du cache d'instruction.  
   
  **Variables**  
-  **:Setvar** \<**var**> [ **"**_value_**"** ]  
+  **:Setvar** \<**var**> [ **"** _value_ **"** ]  
  Définit les variables de script **sqlcmd** . Les variables de script possèdent le format suivant : `$(VARNAME)`.  
   
  Les noms de variable ne respectent pas la casse.  
@@ -678,7 +678,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
   
  **Commandes de sortie**  
   **:Error**   
- _**\<**_  _nom_fichier_  **_>|_  STDERR|STDOUT**  
+ _ **\<**_  _nom_fichier_  ** _>|_  STDERR|STDOUT**  
  Redirige l’ensemble de la sortie d’erreur dans le fichier spécifié par *nom_fichier*vers **stderr** ou vers **stdout**. La commande **Error** peut apparaître plusieurs fois dans un script. Par défaut, la sortie d'erreur est envoyée à **stderr**.  
   
  *nom de fichier*  
@@ -690,10 +690,10 @@ Nous vous recommandons d’utiliser un mot de passe fort.
  **STDOUT**  
  Fait basculer la sortie d’erreur vers le flux **stdout** . Si cette destination a été redirigée, la cible de cette redirection reçoit la sortie d'erreur.  
   
- **:Out \<** _nom_fichier_ **>**| **STDERR**| **STDOUT**  
+ **:Out \<** _nom_fichier_ **>** | **STDERR**| **STDOUT**  
  Crée et redirige l’ensemble des résultats de requête dans le fichier spécifié par *nom_fichier*vers **stderr** ou vers **stdout**. Par défaut, la sortie est envoyée à **stdout**. Si le fichier existe déjà, il est tronqué à zéro octet. La commande **Out** peut apparaître plusieurs fois dans un script.  
   
- **:Perftrace \<** _nom_fichier_ **>**| **STDERR**| **STDOUT**  
+ **:Perftrace \<** _nom_fichier_ **>** | **STDERR**| **STDOUT**  
  Crée et redirige l’ensemble des informations de traces de performances dans le fichier spécifié par *nom_fichier*vers **stderr** ou vers **stdout**. Par défaut, la sortie de traces de performances est envoyée à **stdout**. Si le fichier existe déjà, il est tronqué à zéro octet. La commande **Perftrace** peut apparaître plusieurs fois dans un script.  
   
  **Commandes de contrôle d’exécution**  
@@ -704,15 +704,15 @@ Nous vous recommandons d’utiliser un mot de passe fort.
   
  Lorsque l’option **ignore** est employée, **sqlcmd** ignore l’erreur et poursuit l’exécution du traitement ou du script. Par défaut, un message d’erreur est imprimé.  
   
- [**:**] **QUIT**  
+ [ **:** ] **QUIT**  
  Entraîne la fermeture de **sqlcmd** .  
   
- [**:**] **EXIT**[ **(**_instruction_**)** ]  
+ [ **:** ] **EXIT**[ **(** _instruction_ **)** ]  
  Vous permet d’utiliser le résultat d’une instruction SELECT comme valeur de retour de **sqlcmd**. S'il est numérique, la première colonne de la dernière ligne de résultats est convertie en un entier de 4 octets (entier long). MS-DOS transmet l'octet de poids faible au processus parent ou au niveau erreur du système d'exploitation. Windows 200x transmet la totalité de l'entier de 4 octets. La syntaxe de cette commande est la suivante :  
   
  `:EXIT(query)`  
   
- Exemple :  
+ Par exemple :  
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -738,7 +738,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
   
  Exécute le traitement qui inclut la requête, puis se termine après avoir retourné les résultats de la requête.  
   
- Si RAISERROR est utilisé dans un script **sqlcmd** et qu’une erreur de gravité 127 se produit, l’exécution de **sqlcmd** se termine et l’ID du message est retourné au client. Exemple :  
+ Si RAISERROR est utilisé dans un script **sqlcmd** et qu’une erreur de gravité 127 se produit, l’exécution de **sqlcmd** se termine et l’ID du message est retourné au client. Par exemple :  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -757,7 +757,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
   
  **Commandes diverses**  
   **:r \<** _filename_ **>**  
- Analyse les instructions Transact-SQL et les commandes **sqlcmd** supplémentaires du fichier spécifié par **\<**_nom_fichier_**>** dans le cache des instructions.  
+ Analyse les instructions Transact-SQL et les commandes **sqlcmd** supplémentaires du fichier spécifié par **\<** _nom_fichier_ **>** dans le cache des instructions.  
   
  Si le fichier contient des instructions Transact-SQL qui ne sont pas suivies par **GO**, vous devez entrer **GO** sur la ligne qui suit **:r**.  
   
@@ -772,7 +772,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
  **:Serverlist**  
  Répertorie tous les serveurs configurés localement et les noms des serveurs émettant sur le réseau.  
   
- **:Connect**  _nom_serveur_[**\\**_nom\_instance_] [-l *délai_expiration*] [-U *nom_utilisateur* [-P *mot_de_passe*]]  
+ **:Connect**  _nom_serveur_[ **\\** _nom\_instance_] [-l *délai_expiration*] [-U *nom_utilisateur* [-P *mot_de_passe*]]  
  Se connecte à une instance de SQL Server. Ferme également la connexion actuelle.  
   
  Options de délai :  
@@ -798,8 +798,8 @@ Nous vous recommandons d’utiliser un mot de passe fort.
   
  `:connect $(myservername) $(myusername)`  
   
- [**:**] **!!**< *commande*>  
- Exécute des commandes du système d'exploitation. Pour exécuter une commande du système d’exploitation, commencez une ligne par deux points d’exclamation (**!!**) suivis de la commande du système d’exploitation. Exemple :  
+ [ **:** ] **!!** < *commande*>  
+ Exécute des commandes du système d'exploitation. Pour exécuter une commande du système d’exploitation, commencez une ligne par deux points d’exclamation ( **!!** ) suivis de la commande du système d’exploitation. Par exemple :  
   
  `:!! Dir`  
   
@@ -815,7 +815,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
 ### <a name="sqlcmd-file-names"></a>Noms de fichiers sqlcmd  
  Les fichiers d’entrée**sqlcmd** peuvent être spécifiés avec l’option **-i** ou la commande **:r** . Les fichiers de sortie peuvent être spécifiés avec l’option **-o** ou les commandes **:Error**, **:Out** et **:Perftrace** . Voici quelques consignes relatives à l'utilisation de ces fichiers :  
   
--   Les commandes **:Error**, **:Out** et **:Perftrace** doivent utiliser une valeur **\<**_nom_fichier_**>** distincte. Si la même valeur **\<**_nom_fichier_**>** est utilisée, les entrées des commandes peuvent être mélangées.  
+-   Les commandes **:Error**, **:Out** et **:Perftrace** doivent utiliser une valeur **\<** _nom_fichier_ **>** distincte. Si la même valeur **\<** _nom_fichier_ **>** est utilisée, les entrées des commandes peuvent être mélangées.  
   
 -   Si un fichier d’entrée situé sur un serveur distant est appelé à partir de **sqlcmd** sur un ordinateur local et qu’il contient un chemin d’accès de fichier sur un lecteur, comme :Out C:\OutputFile.txt, le fichier de sortie est créé sur l’ordinateur local et non sur le serveur distant.  
   
@@ -912,7 +912,7 @@ sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G -U bob@contoso.com -P 
   
 -   Pour l'exécution de requête ou de traitement, définissez des valeurs de délai supérieures à la durée que vous prévoyez pour l'exécution du traitement ou de la requête.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer l’utilitaire sqlcmd](~/relational-databases/scripting/sqlcmd-start-the-utility.md)   
  [Exécuter des fichiers de script Transact-SQL à l’aide de sqlcmd](~/relational-databases/scripting/sqlcmd-run-transact-sql-script-files.md)   
  [Utiliser l’utilitaire sqlcmd](~/relational-databases/scripting/sqlcmd-use-the-utility.md)   

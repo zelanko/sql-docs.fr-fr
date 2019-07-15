@@ -21,16 +21,16 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 88e309d5a7d2f0b1464298ebd1ded5ae31139e78
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 736375fb0877dbe8eac497e269ef8620a871917b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356462"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731630"
 ---
 # <a name="osql-utility"></a>Utilitaire osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,7 +97,7 @@ C:\>osql
  Utilise une connexion approuvée au lieu de demander un mot de passe.  
   
  **S -** _server\_nom_[ **\\** _instance\_nom_]  
- Spécifie l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à laquelle établir une connexion. Spécifiez *server_name* pour vous connecter à l’instance par défaut du [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server\_name_**\\**_instance\_name_ pour vous connecter à une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur ce serveur. Si aucun serveur n'est spécifié, **osql** se connecte à l'instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'ordinateur local. Cette option est indispensable lorsque vous exécutez **osql** à partir d'un ordinateur distant connecté au réseau.  
+ Spécifie l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à laquelle établir une connexion. Spécifiez *server_name* pour vous connecter à l’instance par défaut du [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server\_name_ **\\** _instance\_name_ pour vous connecter à une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur ce serveur. Si aucun serveur n'est spécifié, **osql** se connecte à l'instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'ordinateur local. Cette option est indispensable lorsque vous exécutez **osql** à partir d'un ordinateur distant connecté au réseau.  
   
  **-H** _wksta_name_  
  Nom d'une station de travail. Le nom de la station de travail est stocké dans **sysprocesses.hostname** et est affiché par **sp_who**. Si cette option n'est pas spécifiée, le nom d'ordinateur en cours est utilisé par défaut.  
@@ -112,7 +112,7 @@ C:\>osql
  Spécifie le nombre de secondes accordées pour l'exécution d'une commande. Si aucune valeur *time_out* n’est spécifiée, les commandes n’ont pas de délai d’expiration.  
   
  **-h** _headers_  
- Spécifie le nombre de lignes à imprimer entre les en-têtes de colonne. Par défaut, les en-têtes ne sont imprimés qu'une fois pour chaque jeu de résultats d'une requête. Utilisez -1 pour indiquer qu'aucun titre ne sera imprimé. Si vous utilisez -1, ne laissez aucun espace entre le paramètre et sa valeur (**-h-1**, et non **-h -1**).  
+ Spécifie le nombre de lignes à imprimer entre les en-têtes de colonne. Par défaut, les en-têtes ne sont imprimés qu'une fois pour chaque jeu de résultats d'une requête. Utilisez -1 pour indiquer qu'aucun titre ne sera imprimé. Si vous utilisez -1, ne laissez aucun espace entre le paramètre et sa valeur ( **-h-1**, et non **-h -1**).  
   
  **-s** _col_separator_  
  Spécification du caractère de séparation des colonnes, qui est par défaut un espace. Pour utiliser des caractères qui présentent une signification particulière pour le système d'exploitation (par exemple, | ; & < >), mettez-les entre guillemets doubles (").  
@@ -139,7 +139,7 @@ C:\>osql
  Spécifie l'indicateur de fin de commande. Par défaut, il faut entrer la commande GO sur une ligne isolée pour terminer une commande et la soumettre à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Si vous changez d'indicateur de fin de commande, n'utilisez ni les mots réservés [!INCLUDE[tsql](../includes/tsql-md.md)] ni les caractères ayant une signification particulière pour le système d'exploitation, qu'ils soient ou non précédés d'une barre oblique inverse  
   
  **-q "** _query_ **"**  
- Exécute une requête au démarrage d’ **osql** , mais ne quitte pas **osql** à l’issue de la requête. (Notez que la requête ne doit pas comporter d'instruction GO). Si vous exécutez une requête à partir d'un fichier de commandes, vous pouvez utiliser %variable ou %variable d'environnement%. Exemple :  
+ Exécute une requête au démarrage d’ **osql** , mais ne quitte pas **osql** à l’issue de la requête. (Notez que la requête ne doit pas comporter d'instruction GO). Si vous exécutez une requête à partir d'un fichier de commandes, vous pouvez utiliser %variable ou %variable d'environnement%. Par exemple :  
   
 ```  
 SET table=sys.objects  
@@ -155,16 +155,16 @@ osql -E -q "select name, object_id from %table%"
  Supprime la numérotation et le symbole de ligne de commande (>) des lignes d'entrée.  
   
  **-m** _error_level_  
- Personnalise l'affichage des messages d'erreur. Le numéro du message, son état et son niveau d'erreur sont affichés pour les erreurs atteignant ou dépassant le niveau de gravité indiqué. Aucune information n'est affichée pour les erreurs d'une gravité inférieure au niveau indiqué. Utilisez **-1** pour afficher tous les en-têtes retournés avec les messages, même s’il s’agit de messages d’information. Si vous utilisez **-1**, ne laissez aucun espace entre le paramètre et sa valeur (**-m-1**, et non **-m -1**).  
+ Personnalise l'affichage des messages d'erreur. Le numéro du message, son état et son niveau d'erreur sont affichés pour les erreurs atteignant ou dépassant le niveau de gravité indiqué. Aucune information n'est affichée pour les erreurs d'une gravité inférieure au niveau indiqué. Utilisez **-1** pour afficher tous les en-têtes retournés avec les messages, même s’il s’agit de messages d’information. Si vous utilisez **-1**, ne laissez aucun espace entre le paramètre et sa valeur ( **-m-1**, et non **-m -1**).  
   
  **-r** { **0**| **1**}  
  Redirige la sortie des messages à l’écran (**stderr**). Si vous n'indiquez aucun paramètre ou si vous spécifiez la valeur **0**, seuls les messages d'erreur de gravité égale ou supérieure à 11 sont redirigés. Si vous indiquez la valeur **1**, tous les messages émis (y compris les messages d’impression) sont redirigés.  
   
  **-i** _input_file_  
- Identifie le fichier contenant un traitement d'instructions SQL ou des procédures stockées. L’opérateur de comparaison inférieur à (**\<**) peut être utilisé à la place de **-i**.  
+ Identifie le fichier contenant un traitement d'instructions SQL ou des procédures stockées. L’opérateur de comparaison inférieur à ( **\<** ) peut être utilisé à la place de **-i**.  
   
  **-o** _output_file_  
- Identifie le fichier recevant une sortie de **osql**. L’opérateur de comparaison supérieur à (**>**) peut être utilisé à la place de **-o**.  
+ Identifie le fichier recevant une sortie de **osql**. L’opérateur de comparaison supérieur à ( **>** ) peut être utilisé à la place de **-o**.  
   
  Si *input_file* n’est pas au format Unicode et si **-u** n’est pas spécifié, *output_file* est enregistré au format OEM. Si *input_file* est au format Unicode ou si **-u** est spécifié, *output_file* est stocké au format Unicode.  
   
@@ -194,10 +194,10 @@ osql -E -q "select name, object_id from %table%"
 > [!NOTE]  
 >  Les options **-n**, **-O** et **-D** ne sont plus prises en charge par **osql**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’utilitaire **osql** doit être exécuté directement à partir du système d’exploitation à l’aide des options respectant la casse énumérées ici. Une fois **osql**démarré, il accepte les instructions SQL et les envoie de manière interactive à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les résultats sont mis en forme et affichés à l’écran (**stdout**). Pour quitter **osql**, utilisez QUIT ou EXIT.  
   
- Si vous ne spécifiez pas de nom d’utilisateur quand vous démarrez **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vérifie les variables d’environnement et les utilise, par exemple, **osqluser=(**_user_**)** ou **osqlserver=(**_server_**)**. Si aucune variable d'environnement n'est définie, le nom d'utilisateur du poste de travail est utilisé. Si vous n'indiquez pas de serveur, le nom du poste de travail est utilisé.  
+ Si vous ne spécifiez pas de nom d’utilisateur quand vous démarrez **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vérifie les variables d’environnement et les utilise, par exemple, **osqluser=(** _user_ **)** ou **osqlserver=(** _server_ **)** . Si aucune variable d'environnement n'est définie, le nom d'utilisateur du poste de travail est utilisé. Si vous n'indiquez pas de serveur, le nom du poste de travail est utilisé.  
   
  Si aucune des options **-U** et **-P** n’est utilisée, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tente de se connecter à l’aide du mode d’authentification [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. L'authentification est basée sur le compte [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows de l'utilisateur exécutant **osql**.  
   
@@ -271,13 +271,13 @@ osql -E -i titles.qry -o titles.res
 EXIT ( < query > )  
 ```  
   
- Exemple :  
+ Par exemple :  
   
 ```  
 EXIT(SELECT @@ROWCOUNT)  
 ```  
   
- Vous pouvez également inclure le paramètre EXIT dans un fichier de commandes. Exemple :  
+ Vous pouvez également inclure le paramètre EXIT dans un fichier de commandes. Par exemple :  
   
 ```  
 osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"  
@@ -297,7 +297,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Exécute le traitement, puis quitte sans retourner de valeur.  
   
--   EXIT **(**_requête_**)**  
+-   EXIT **(** _requête_ **)**  
   
 > [!NOTE]  
 >  Exécute le traitement, y compris la requête, puis quitte en retournant les résultats de la requête.  
@@ -305,7 +305,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 -   RAISERROR avec une gravité de 127  
   
 > [!NOTE]  
->  Si RAISERROR est utilisé dans un script **osql** et qu'une erreur de gravité 127 se produit, l'exécution d’ **osql** se termine et l'ID du message est retourné au client. Exemple :  
+>  Si RAISERROR est utilisé dans un script **osql** et qu'une erreur de gravité 127 se produit, l'exécution d’ **osql** se termine et l'ID du message est retourné au client. Par exemple :  
   
 ```  
 RAISERROR(50001, 10, 127)  
@@ -337,7 +337,7 @@ GO
   
  Cette instruction produit le résultat `10.3496`, ce qui indique que la valeur est bien stockée avec toutes ses décimales.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Commentaire &#40;MDX&#41;](../mdx/comment-mdx.md)   
  [-- &#40;Commentaire&#41; &#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)   
  [CAST et CONVERT &#40;Transact-SQL&#41;](../t-sql/functions/cast-and-convert-transact-sql.md)   

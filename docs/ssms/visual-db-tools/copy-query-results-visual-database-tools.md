@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 65883f21-c898-4857-a0b8-d1851e1486e1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8b8d93c6daa4fd27a7414f6960f08d0e6ac5b597
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 1dc8c9a82efc52845eb12eb62ce42220d459624f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089501"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686132"
 ---
 # <a name="copy-query-results-visual-database-tools"></a>Copier les résultats d'une requête (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,6 +52,6 @@ Vous pouvez copier le jeu de résultats sous la forme de texte séparé par des 
   
 5.  Cliquez avec le bouton droit, puis cliquez sur **Copier**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  
   

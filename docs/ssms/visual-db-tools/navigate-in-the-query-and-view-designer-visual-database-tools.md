@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c2b659cf2763bf0710a1088e8add3722a0c6398
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: abfbe23266a726053a8dbf3cf1a068d9a85046e3
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095348"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681067"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Naviguer dans le Concepteur de requêtes et de vues (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -113,6 +113,6 @@ Pour plus d’informations, consultez [Volet SQL &#40;Visual Database Tools&#41;
   
 Pour plus d’informations, consultez [Volet Résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

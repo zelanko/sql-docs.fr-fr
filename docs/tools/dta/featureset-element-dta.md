@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - FeatureSet element
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 0e1dea053feee9539ad8ddd764954147e9428515
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: fab04800631cde90514b234b85adf2e5cdf010ac
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293065"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727716"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet, élément (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "51293065"
 |**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez [Exemple de fichier d’entrée XML simple &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/simple-xml-input-file-sample-dta.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

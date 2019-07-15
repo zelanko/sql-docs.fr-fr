@@ -22,14 +22,14 @@ helpviewer_keywords:
 ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 8332f52a9b5826c1b45788aa359652b6d3803c83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46c11d921076e3124e9b15fcfbb8d4ce6e63dfdf
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65104533"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688963"
 ---
 # <a name="alerts"></a>Alertes
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ Vous pouvez préciser qu'une alerte doit avoir lieu en réponse à une condition
   
     Indique le seuil d'alerte et le comportement qui déclenche l'alerte. Le seuil est une valeur numérique. Le comportement est l’un **des suivants : tombe sous**, **devient égal à**ou **s’élève au-dessus d’une valeur numérique déterminée**. La **valeur** est un nombre qui décrit le compteur des conditions de performances. Par exemple, pour définir le déclenchement d’une alerte pour l’objet de performances **SQLServer:Locks** quand le **Temps d’attente des verrous** dépasse 30 minutes, vous choisiriez **s’élève au-dessus** et **indiqueriez une valeur de 30**.  
   
-    De même, vous pourriez définir le déclenchement d’une alerte pour l’objet de performance **SQLServer:Transactions** quand l’espace disponible dans **tempdb** tombe en dessous de 1000 Ko. Pour définir ceci, choisissez le compteur **Espace disponible dans tempdb (Ko)**, **tombe sous**, et une **valeur** de **1000**.  
+    De même, vous pourriez définir le déclenchement d’une alerte pour l’objet de performance **SQLServer:Transactions** quand l’espace disponible dans **tempdb** tombe en dessous de 1000 Ko. Pour définir ceci, choisissez le compteur **Espace disponible dans tempdb (Ko)** , **tombe sous**, et une **valeur** de **1000**.  
   
     > [!NOTE]  
     > Les données de performances sont régulièrement échantillonnées, ce qui peut entraîner un léger décalage (de quelques secondes) entre l'atteinte du seuil et le déclenchement de l'alerte de performance.  
@@ -159,6 +159,6 @@ Vous trouverez ci-dessous des liens traitant des tâches courantes :
   
 -   [Transact-SQL](https://msdn.microsoft.com/4bbaeaab-8aca-4c9e-abc1-82ce73090bd3)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [sp_update_alert (Transact-SQL)](https://msdn.microsoft.com/bcd731b1-3c4e-4086-b58a-af7a3af904ad)  
   

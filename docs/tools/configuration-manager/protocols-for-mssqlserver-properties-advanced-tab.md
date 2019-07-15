@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: abd5ca68-825f-4c07-b27c-3b3a79d03d74
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: bc5ee796addb8c77170de2e3166aefb74d046ad1
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: a8ff4689c4b9746178d9030d82b9ed8fccdb961f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044615"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733413"
 ---
 # <a name="protocols-for-mssqlserver-properties-advanced-tab"></a>Propriétés de Protocoles pour MSSQLSERVER (onglet Avancé)
 
@@ -40,9 +40,9 @@ La**protection étendue** est totalement prise en charge par [!INCLUDE[ssNoVersi
 
 Il existe trois valeurs possibles :  
 
-- **Off** : Signifie **Protection étendue** est désactivé. L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acceptera les connexions de tous les clients, qu'ils soient protégés ou non. La valeur**Off** est compatible avec les anciens systèmes d'exploitation non corrigés, mais elle est moins sécurisée. Utilisez ce paramètre uniquement lorsque vous savez que les systèmes d'exploitation clients ne prennent pas en charge la Protection étendue.
+- **Désactiver**: signifie **Protection étendue** est désactivé. L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acceptera les connexions de tous les clients, qu'ils soient protégés ou non. La valeur**Off** est compatible avec les anciens systèmes d'exploitation non corrigés, mais elle est moins sécurisée. Utilisez ce paramètre uniquement lorsque vous savez que les systèmes d'exploitation clients ne prennent pas en charge la Protection étendue.
 
-- **Autorisée** : la **protection étendue** est requise pour les connexions établies à partir de systèmes d'exploitation qui la prennent en charge**protection étendue**. Les connexions provenant d'applications clientes non protégées qui s'exécutent sur des systèmes d'exploitation clients protégés sont rejetées. La**Protection étendue** est ignorée pour les connexions provenant de systèmes d'exploitation non protégés. Ce paramètre offre une meilleure protection que la valeur **Off**, mais ce n'est pas la configuration la plus sécurisée. Utilisez ce paramètre dans des environnements mixtes, dans lesquels certains systèmes d'exploitation ou applications prennent en charge la **protection étendue** et d'autres non.
+- **Autorisé** : signifie que la **protection étendue** est requise pour les connexions établies à partir de systèmes d'exploitation qui prennent en charge la **protection étendue**. Les connexions provenant d'applications clientes non protégées qui s'exécutent sur des systèmes d'exploitation clients protégés sont rejetées. La**Protection étendue** est ignorée pour les connexions provenant de systèmes d'exploitation non protégés. Ce paramètre offre une meilleure protection que la valeur **Off**, mais ce n'est pas la configuration la plus sécurisée. Utilisez ce paramètre dans des environnements mixtes, dans lesquels certains systèmes d'exploitation ou applications prennent en charge la **protection étendue** et d'autres non.
 
 - **Requis**: signifie que pour une connexion soit acceptée, elle doit provenir d’une application protégée sur un système d’exploitation protégé. Ce paramètre est le plus sécurisé des trois options. Mais les connexions provenant des systèmes d’exploitation ne prenant pas en charge **Protection étendue** ne sera pas en mesure de se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -50,7 +50,7 @@ Il existe trois valeurs possibles :
 
 Une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être identifié par plusieurs NTLM nom principal de service (SPN). Vous répertoriez les noms SPN en tant que série de chaînes séparées par des points-virgules. Par exemple, la valeur **MSSQLSvc/HostName1.Contoso.com;MSSQLSvc/HostName2.Contoso.com** indique que les clients qui essaient de se connecter au nom SPN **MSSQLSvc/HOST1.Contoso.com** ou **MSSQLSvc/HOST2.Contoso.com** sont autorisés. La variable a une longueur maximale de 2048 caractères.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Protection étendue de l'authentification avec Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)
 

@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - sample applications [DTA]
 ms.assetid: b29c9716-e5c3-4003-9efb-3ade2197b630
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1822e17af7e208cece782e2980a7b9908efe520f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 218b3fd76eaead97168dfb1407995827b5101137
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255744"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731676"
 ---
 # <a name="xml-input-file-sample-with-user-specified-configuration-dta"></a>Exemple de fichier d'entrée XML avec une configuration spécifiée par l'utilisateur (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +98,7 @@ ms.locfileid: "54255744"
   
 -   Vous ne pouvez pas créer et supprimer la même structure PDS dans les deux modes (**Relative** ou **Absolute**) de l’élément **Configuration** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)   
  [Afficher et utiliser la sortie de l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  

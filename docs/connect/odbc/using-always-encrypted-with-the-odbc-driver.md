@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: jroth
 author: MightyPen
-ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801736"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680083"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation d’Always Encrypted avec ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,7 +58,12 @@ Notez que l’activation d’Always Encrypted ne suffit pas à la réussite du c
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Récupération et modification des données dans des colonnes chiffrées
 
-Une fois que vous avez activé Always Encrypted sur une connexion, vous pouvez utiliser les API ODBC standard (voir [ODBC sample code](https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953) [Exemple de code ODBC] ou [ODBC Programmer’s Reference](https://msdn.microsoft.com/library/ms714177(v=vs.85).aspx) [Référence du programmeur ODBC]) pour récupérer ou modifier des données dans des colonnes de base de données chiffrées. En supposant que votre application dispose des autorisations de base de données requises et puisse accéder à la clé principale de colonne, le pilote chiffrera tous les paramètres de requête qui ciblent des colonnes chiffrées et déchiffrera les données récupérées des colonnes chiffrées, se comportant de manière transparente pour l’application comme si les colonnes n’étaient pas chiffrées.
+Une fois que vous activez Always Encrypted sur une connexion, vous pouvez utiliser les API ODBC standard. Les API ODBC peut récupérer ou modifier des données dans les colonnes de base de données chiffrée. Les éléments suivants de la documentation peuvent vous aider à cela :
+
+- [Exemple de code ODBC](cpp-code-example-app-connect-access-sql-db.md)
+- [Guide de référence du programmeur ODBC](../../odbc/reference/odbc-programmer-s-reference.md)
+
+Votre application doit disposer des autorisations de base de données requis et doit être en mesure d’accéder à la clé principale de colonne. Ensuite, le pilote chiffre tous les paramètres de requête qui ciblent des colonnes chiffrées. Le pilote déchiffre également les données extraites des colonnes chiffrées. Le pilote effectue tout ce chiffrement et déchiffrement sans assistance à partir de votre code source. Il est à votre programme, comme si les colonnes ne sont pas chiffrés.
 
 Si Always Encrypted n’est pas activé, les requêtes ayant des paramètres qui ciblent des colonnes chiffrées échouent. Les données peuvent toujours être récupérées à partir des colonnes chiffrées, tant que la requête n’a aucun paramètre qui cible des colonnes chiffrées. Toutefois, le pilote ne tentera aucun déchiffrement et l’application recevra les données chiffrées binaires (sous la forme de tableaux d’octets).
 

@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 9e4060ba-80c3-468f-bccb-e12e99f672c2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fb350568200226585f4c3138224e65816e617780
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 206f9d3907a5b3b7123c7d2d919f3b586fa4eee1
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096662"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682234"
 ---
 # <a name="indexes---keys-dialog-box-visual-database-tools"></a>Boîte de dialogue Index - Clés (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,7 +66,7 @@ Développée, elle affiche des informations pour **Créer comme Clustered**.
 Rend la clé ou l'index cluster. Un seul index cluster est autorisé par table. Les données contenues dans la table sont stockées dans l'ordre de l'index cluster. Pour plus d’informations, consultez [Créer des index cluster](../../relational-databases/indexes/create-clustered-indexes.md) et [Créez des index non-cluster](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
 **Spécification de l'espace de données**  
-Développée, elle affiche des informations pour **(Type d’espace de données)**, **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
+Développée, elle affiche des informations pour **(Type d’espace de données)** , **Nom du schéma de partition ou du groupe de fichiers**et **Liste des colonnes de partition**.  
   
 **(Type d’espace de données)**  
 Indique si cet index ou cette clé appartiennent à un groupe de fichiers ou à un schéma de partition.  
@@ -115,7 +115,7 @@ Spécifie si le [!INCLUDE[ssDE](../../includes/ssde_md.md)] sous-jacent calcule 
 **Verrouillage de ligne autorisé**  
 Spécifier si le verrouillage au niveau des lignes est autorisé dans cet index. L'autorisation ou non du verrouillage au niveau de la ligne affecte les performances de la base de données. Il est recommandé de choisir le paramètre **Oui**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Utilisation des contraintes (Visual Database Tools)](https://msdn.microsoft.com/637098af-2567-48f8-90f4-b41df059833e)  
 [Utilisation des clés (Visual Database Tools)](https://msdn.microsoft.com/31fbcc9f-2dc5-4bf9-aa50-ed70ec7b5bcd)  
   

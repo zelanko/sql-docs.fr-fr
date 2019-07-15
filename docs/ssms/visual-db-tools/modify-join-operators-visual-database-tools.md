@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: d1dcdcfd-166c-4147-85ab-43cadc63819b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 52ec5347795a6b26453ae806c3ef43113d28aed4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 102f8156bfb221c4bef61c3f75a5b67a82745759
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095413"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690216"
 ---
 # <a name="modify-join-operators-visual-database-tools"></a>Modifier des opérateurs de jointure (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,11 @@ Par défaut, le [Concepteur de requêtes et de vues](../../ssms/visual-db-tools/
   
 1.  Dans le [volet Schéma](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), cliquez avec le bouton droit sur la ligne de jointure à modifier, puis choisissez **Propriétés** dans le menu contextuel.  
   
-2.  Dans la fenêtre Propriété, cliquez sur **Condition et type de jointure** et cliquez sur le bouton de sélection **(...)**, à droite de la propriété.  
+2.  Dans la fenêtre Propriété, cliquez sur **Condition et type de jointure** et cliquez sur le bouton de sélection **(...)** , à droite de la propriété.  
   
 3.  Dans la boîte de dialogue **Joindre** , sélectionnez un nouvel opérateur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Joindre automatiquement des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-automatically-visual-database-tools.md)  
 [Joindre manuellement des tables &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/join-tables-manually-visual-database-tools.md)  
 [Interroger avec des jointures &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  

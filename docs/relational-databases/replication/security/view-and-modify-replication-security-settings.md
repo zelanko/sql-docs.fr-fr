@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 873604d3a27d4f3f01eb501f76a39fd008248cdd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: aa4ed7aa2eaf3d10ec2b69860b71b8b612cc9ff8
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584811"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860620"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Afficher et modifier les paramètres de sécurité de la réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,9 +146,9 @@ ms.locfileid: "67584811"
   
 1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur le serveur de publication, vous pouvez apporter les modifications suivantes :  
   
-    -   Pour modifier le compte sous lequel l’Agent de distribution s’exécute et établit des connexions au serveur de distribution, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés ( **?** ) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de distribution** .  
+    -   Pour modifier le compte sous lequel l’Agent de distribution s’exécute et établit des connexions au serveur de distribution, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés ( **...** ) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de distribution** .  
   
-    -   Pour modifier le contexte sous lequel l’Agent de distribution se connecte à l’Abonné, cliquez sur la ligne **Connexion de l’Abonné**, puis sur le bouton des propriétés ( **?** ) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
+    -   Pour modifier le contexte sous lequel l’Agent de distribution se connecte à l’Abonné, cliquez sur la ligne **Connexion de l’Abonné**, puis sur le bouton des propriétés ( **…** ) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
   
          Si vous utilisez les abonnements de mise à jour en attente, l'Agent de lecture de la file d'attente utilise également le contexte spécifié ici pour les connexions à l'Abonné.  
   
@@ -158,11 +158,11 @@ ms.locfileid: "67584811"
   
 1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur l’Abonné, vous pouvez apporter les modifications suivantes :  
   
-    -   Pour modifier le compte sous lequel l’Agent de distribution s’exécute et établit des connexions à l’Abonné, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés ( **?** ) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de distribution** .  
+    -   Pour modifier le compte sous lequel l’Agent de distribution s’exécute et établit des connexions à l’Abonné, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés ( **...** ) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de distribution** .  
   
          Si vous utilisez les abonnements de mise à jour en attente, l'Agent de lecture de la file d'attente utilise également le contexte spécifié ici pour les connexions à l'Abonné.  
   
-    -   Pour modifier le contexte sous lequel l’Agent de distribution se connecte à la base de données du serveur de distribution, cliquez sur la ligne **Connexion de la base de données du serveur de distribution**, puis sur le bouton des propriétés ( **?** ) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
+    -   Pour modifier le contexte sous lequel l’Agent de distribution se connecte au serveur de distribution, cliquez sur la ligne **Connexion du serveur de distribution**, puis sur le bouton des propriétés ( **…** ) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -170,9 +170,9 @@ ms.locfileid: "67584811"
   
 1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur le serveur de publication, vous pouvez apporter les modifications suivantes :  
   
-    -   Pour modifier le compte sous lequel l’Agent de fusion s’exécute et établit des connexions au serveur de publication et à la base de données du serveur de distribution, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés ( **?** ) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de fusion** .  
+    -   Pour modifier le compte sous lequel l’Agent de fusion s’exécute et établit des connexions au serveur de publication et au serveur de distribution, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés ( **...** ) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de fusion** .  
   
-    -   Pour modifier le contexte sous lequel l’Agent de fusion se connecte à l’Abonné, cliquez sur la ligne **Connexion de l’Abonné**, puis sur le bouton des propriétés ( **?** ) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
+    -   Pour modifier le contexte sous lequel l’Agent de fusion se connecte à l’Abonné, cliquez sur la ligne **Connexion de l’Abonné**, puis sur le bouton des propriétés ( **…** ) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -180,15 +180,15 @@ ms.locfileid: "67584811"
   
 1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur l’Abonné, vous pouvez apporter les modifications suivantes :  
   
-    -   Pour modifier le compte sous lequel l’Agent de fusion s’exécute et établit des connexions à l’Abonné, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés ( **?** ) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de fusion** .  
+    -   Pour modifier le compte sous lequel l’Agent de fusion s’exécute et établit des connexions à l’Abonné, cliquez sur la ligne **Compte de processus de l’agent**, puis sur le bouton des propriétés ( **...** ) dans la ligne. Spécifiez un compte et un mot de passe dans la boîte de dialogue **Sécurité de l'Agent de fusion** .  
   
-    -   Pour modifier le contexte sous lequel l’Agent de fusion se connecte au serveur de publication et à la base de données du serveur de distribution, cliquez sur la ligne **Connexion du serveur de publication**, puis sur le bouton des propriétés ( **?** ) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
+    -   Pour modifier le contexte sous lequel l’Agent de fusion se connecte au serveur de publication et au serveur de distribution, cliquez sur la ligne **Connexion du serveur de publication**, puis sur le bouton des propriétés ( **…** ) dans la ligne. Spécifiez le contexte dans la boîte de dialogue **Entrer les informations de connexion** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>Pour modifier le compte sous lequel s'exécute l'Agent de lecture de la file d'attente  
   
-1.  Dans la page **Général** de la boîte de dialogue **Propriétés de la base de données du serveur de distribution - \<Base de données du serveur de distribution>** , cliquez sur le bouton des propriétés ( **?** ) à côté de la base de données de distribution.  
+1.  Dans la page **Général** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur_de_distribution>** , cliquez sur le bouton des propriétés ( **...** ) à côté de la base de données de distribution.  
   
 2.  Dans la boîte de dialogue **Propriétés de la base de données de distribution - \<Base_de_données>** , cliquez sur le bouton **Paramètres de sécurité** à côte de la zone de texte **Compte de processus de l’agent**.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "67584811"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Pour modifier les paramètres de sécurité pour un abonnement par extraction de données (pull) mis à jour immédiatement  
   
-1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur l’Abonné, cliquez sur la ligne **Connexion du serveur de publication**, puis sur le bouton des propriétés ( **?** ) dans la ligne.  
+1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonnement>** sur l’Abonné, cliquez sur la ligne **Connexion du serveur de publication**, puis sur le bouton des propriétés ( **…** ) dans la ligne.  
   
 2.  Dans la boîte de dialogue **Entrer les informations de connexion** , sélectionnez une des options suivantes :  
   

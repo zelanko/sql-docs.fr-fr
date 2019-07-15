@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Filegroup element [DTA]
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 391167d35ecdfbfc1d9cdc9ac1f5306dbb7961a8
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 9536c494f06c981207acd8e4711b9b071f760db0
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293015"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727668"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Filegroup, élément pour les index (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "51293015"
 |**Élément parent**|[Index, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/index-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez l’[Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - DTAXML element
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: c4894cf7cbee04a039bf13eb07a0e05fea59c053
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 8bc5977952c32fdf4fa6b81bae20068ab47bb97a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255394"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729406"
 ---
 # <a name="dtaxml-element-dta"></a>DTAXML, élément (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,13 +59,13 @@ ms.locfileid: "54255394"
 |**Élément parent**|None|  
 |**Éléments enfants**|[DTAInput, élément &#40;DTA&#41;](../../tools/dta/dtainput-element-dta.md)<br /><br /> **DTAOutput**, élément (consultez l’article [Database Engine Tuning Advisor XML schema](https://schemas.microsoft.com/sqlserver/) pour plus d’informations)|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour plus d'informations sur les espaces de noms XML, consultez l'article [Namespaces in an XML Document](https://go.microsoft.com/fwlink/?LinkId=7341) dans la bibliothèque [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Pour obtenir des exemples d’éléments **DTAXML** caractéristiques, consultez [Exemples de fichiers d’entrée XML &#40;DTA&#41;](../../tools/dta/xml-input-file-samples-dta.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)   
  [Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)  
   

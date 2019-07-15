@@ -18,12 +18,12 @@ ms.assetid: eb2f23a8-7ec2-48af-9361-0e3cb87ebaf7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b2e412e2ef25e9eb48a8068cbe6e75b2c1ec8797
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 18668d7c5a36a39bacf61383507d0911737e7762
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579829"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860638"
 ---
 # <a name="replicate-identity-columns"></a>Répliquer des colonnes d'identité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "67579829"
  Par exemple, vous pouvez spécifier 10 000 pour **@pub_identity_range** , 1 000 pour **@identity_range** (en faisant l'hypothèse d'un nombre moins élevé de mises à jour sur l'Abonné) et 80 pour cent pour **@threshold** . Après 800 insertions sur un Abonné (80 pour cent de 1 000), un Abonné se voit attribuer une nouvelle plage. Après 8 000 insertions sur l'Abonné, le serveur de publication se voit attribuer une nouvelle plage. Quand une nouvelle plage est attribuée, il y aura une interruption dans les valeurs de plage d'identités de la  table. La spécification d'un seuil plus élevé donne des interruptions plus courtes, mais le système tolère moins les pannes : si l'agent de distribution ne peut pas être exécuté pour une raison quelconque, un abonné peut tomber plus facilement à court d'identités.  
   
 ## <a name="assigning-ranges-for-manual-identity-range-management"></a>Attribution de plages pour la gestion manuelle des plages d'identité  
- Si vous spécifiez une gestion manuelle des plages d'identité, vous devez vérifier que le serveur de publication et que chaque Abonné utilisent des plages d'identités différentes. Par exemple, supposons une table sur le serveur de publication avec une colonne d'identité définié en tant que `IDENTITY(1,1)`: la colonne d'identité commence à 1 et elle est incrémentée de 1 chaque fois qu'une ligne est insérée. Si la table sur le serveur de publication a 5 000 lignes et que vous vous attendez à un accroissement de la table au cours de la durée de vie de l'application, le serveur de publication peut utiliser la plage 1 à 10 000. Deux abonnés donnés, l’abonné A peut utiliser la plage de 10 001 à 20 000 et l’abonné B peut utiliser la plage de 20 001 à 30 000.  
+ Si vous spécifiez une gestion manuelle des plages d'identité, vous devez vérifier que le serveur de publication et que chaque Abonné utilisent des plages d'identités différentes. Par exemple, supposons une table sur le serveur de publication avec une colonne d'identité définié en tant que `IDENTITY(1,1)`: la colonne d'identité commence à 1 et elle est incrémentée de 1 chaque fois qu'une ligne est insérée. Si la table sur le serveur de publication a 5 000 lignes et que vous vous attendez à un accroissement de la table au cours de la durée de vie de l'application, le serveur de publication peut utiliser la plage 1 à 10 000. Étant donnés deux Abonnés, l’Abonné A peut utiliser la plage 10 001 à 20 000 et l’Abonné B peut utiliser la plage 20 001 à 30 000.  
   
  Après qu'un Abonné ait été initialisé avec un instantané ou via un autre moyen, exécutez DBCC CHECKIDENT pour attribuer un point de départ pour sa plage d'identités. Par exemple, sur l'Abonné A, vous pouvez exécuter `DBCC CHECKIDENT('<TableName>','reseed',10001)`. Sur l'Abonné B, vous pouvez exécuter `CHECKIDENT('<TableName>','reseed',20001)`.  
   

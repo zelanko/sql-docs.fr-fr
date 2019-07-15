@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - sqllogship
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 8e4179324ec6b194e0e60e4d9715ec24c1c4f835
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: ca6a9765c7813fd0fbece4d8c392c23e2f784ec2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100754"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728076"
 ---
 # <a name="sqllogship-application"></a>Application sqllogship
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,22 +64,22 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 |4|Envoie en sortie tous les messages de traçage et de débogage.|  
   
  **-logintimeout** _timeout_value_  
- Spécifie le délai accordé pour se connecter à l'instance de serveur avant l'expiration de la tentative. La valeur par défaut est 15 secondes. *timeout_value* a la valeur **int**_._  
+ Spécifie le délai accordé pour se connecter à l'instance de serveur avant l'expiration de la tentative. La valeur par défaut est 15 secondes. *timeout_value* a la valeur **int** _._  
   
  **-querytimeout** _timeout_value_  
- Spécifie le délai alloué au démarrage de l'opération spécifiée avant l'expiration de la tentative. Le paramètre par défaut est l'absence de délai d'attente. *timeout_value* a la valeur **int**_._  
+ Spécifie le délai alloué au démarrage de l'opération spécifiée avant l'expiration de la tentative. Le paramètre par défaut est l'absence de délai d'attente. *timeout_value* a la valeur **int** _._  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Il est recommandé d'utiliser les travaux de sauvegarde, de copie et de restauration pour effectuer les opérations correspondantes quand cela est possible. Pour démarrer ces travaux à partir d’une opération de traitement ou d’une autre application, appelez la procédure stockée [sp_start_job](../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md) .  
   
  L'historique d'envoi de journaux créé par **sqllogship** comprend également l'historique des travaux de restauration, de copie et de sauvegarde de l'envoi de journaux. Si vous envisagez d'utiliser **sqllogship** de manière répétée pour effectuer des opérations de restauration, de copie ou de sauvegarde pour une configuration de l'envoi de journaux, pensez à désactiver le ou les travaux d'envoi de journaux correspondants. Pour plus d’informations, consultez [Disable or Enable a Job](../ssms/agent/disable-or-enable-a-job.md).  
   
  L’application **sqllogship** , SqlLogShip.exe, est installée dans le répertoire x:\Program Files\Microsoft SQL Server\130\Tools\Binn.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  **sqllogship** utilise l'authentification Windows. Le compte d'authentification Windows où s'exécute la commande nécessite un accès au répertoire Windows et des autorisations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . La configuration requise dépend de l’option spécifiée par la commande **sqllogship** : **-backup**, **-copy**ou **-restore** .  
   
-|Option|Accès au répertoire|Permissions|  
+|Option|Accès au répertoire|Autorisations|  
 |------------|----------------------|-----------------|  
 |**-backup**|Nécessite un accès en lecture/écriture au répertoire de sauvegarde.|Nécessite les mêmes autorisations que l'instruction BACKUP. Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](../t-sql/statements/backup-transact-sql.md).|  
 |**-copy**|Nécessite l'accès en lecture au répertoire de sauvegarde et l'accès en écriture au répertoire de copie.|Nécessite les mêmes autorisations que la procédure stockée [sp_help_log_shipping_secondary_database](../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md) .|  
@@ -88,7 +88,7 @@ sqllogship -server instance_name { -backup primary_id | -copy secondary_id | -re
 > [!NOTE]  
 >  Pour connaître les chemins des répertoires de sauvegarde et de copie, exécutez la procédure stockée **sp_help_log_shipping_secondary_database** ou consultez la table **log_shipping_secondary** dans **msdb**. Les chemins du répertoire de sauvegarde et du répertoire de destination sont dans les colonnes **backup_source_directory** et **backup_destination_directory** respectivement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [log_shipping_primary_databases &#40;Transact-SQL&#41;](../relational-databases/system-tables/log-shipping-primary-databases-transact-sql.md)   
  [log_shipping_secondary &#40;Transact-SQL&#41;](../relational-databases/system-tables/log-shipping-secondary-transact-sql.md)   

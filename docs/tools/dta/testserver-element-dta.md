@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - TestServer element
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: a64b7feb1f3d557a6c5d38d6beaea1b32728d453
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: a5f078f38e64588ffa46f1529a89b29caf4e2a58
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292785"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729515"
 ---
 # <a name="testserver-element-dta"></a>TestServer, élément (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ ms.locfileid: "51292785"
 |**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez [Réduire la charge de paramétrage du serveur de production](../../relational-databases/performance/reduce-the-production-server-tuning-load.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

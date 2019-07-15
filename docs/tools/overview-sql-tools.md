@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 0d7683ed4f45a2d2e28843b24d9abd2592b08fae
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190989"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731599"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>Outils SQL et des utilitaires pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,6 @@ ms.locfileid: "52190989"
 Pour gérer (requête, analyse, etc.), votre base de données que vous avez besoin d’un outil. Alors que vos bases de données peuvent être exécutés dans le cloud, sur Windows, ou sur [Linux](../linux/sql-server-linux-overview.md), votre outil n’a pas besoin d’exécuter sur la même plateforme que la base de données. 
 
 De nombreux outils de base de données sont disponibles, par conséquent, cet article fournit des descriptions et des pointeurs vers des outils disponibles pour travailler avec vos bases de données SQL. Si vous devez déterminer quel outil que vous avez besoin, consultez [quel outil dois-je utiliser ?](#which-tool-should-i-choose).
-
 
 ## <a name="gui-tools-to-manage-databases"></a>Outils d’interface graphique pour gérer des bases de données  
 
@@ -35,7 +34,7 @@ Les outils d’interface graphique utilisateur graphique principal sont les suiv
 |:--|:--|:--|
 | [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)] est un outil gratuit, léger, pour la gestion des bases de données partout où ils s’exécutent. Cette version préliminaire fournit des fonctionnalités de gestion de base de données, y compris un éditeur Transact-SQL étendue et personnalisable connaître l’état de fonctionnement de vos bases de données. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] s’exécute sur Windows, macOS et Linux**.|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | Utilisez SQL Server Management Studio (SSMS) pour interroger, concevoir et gérer votre SQL Server, base de données SQL Azure et Azure SQL Data Warehouse. | **SSMS s’exécute sur Windows**.|
-| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Transformez Visual Studio en un puissant environnement de développement pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse.| **SSMS s’exécute sur Windows**.|
+| [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | Transformez Visual Studio en un puissant environnement de développement pour SQL Server, base de données SQL Azure et Azure SQL Data Warehouse.| **SSDT s’exécute sur Windows**.|
 | [Visual Studio Code](https://code.visualstudio.com/)| Après avoir installé Visual Studio Code, installer le [extension mssql](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) pour le développement de Microsoft SQL Server, base de données SQL Azure et SQL Data Warehouse.| **Visual Studio Code s’exécute sur Windows, macOS et Linux**.|
 
 
@@ -45,13 +44,13 @@ Les principaux outils de ligne de commande sont les suivantes :
 
 | Outil | Description | S’exécute sur |
 |:--|:--|:--|
-|[**mssql-cli (préversion)**](mssql-cli.md)|**MSSQL-cli** est un outil de ligne de commande interactif pour l’interrogation de SQL Server. | Windows, macOS et Linux|
+|[**mssql-cli (préversion)** ](mssql-cli.md)|**MSSQL-cli** est un outil de ligne de commande interactif pour l’interrogation de SQL Server. | Windows, macOS et Linux|
 | [**sqlpackage**](sqlpackage.md) |**Sqlpackage** est un utilitaire de ligne de commande qui automatise plusieurs tâches de développement de base de données. macOS et les versions de Linux de sqlpackage sont actuellement en version préliminaire. | Windows, macOS et Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** fournit des applets de commande pour travailler avec SQL| Windows, macOS et Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**SQLCMD** utilitaire vous permet d’entrer des instructions Transact-SQL, des procédures système et des fichiers de script à l’invite de commandes. | Windows, macOS et Linux|
 |[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|L’utilitaire **b**ulk **c**opy **p**rogram (**bcp**) copie en bloc des données entre une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et un fichier de données dans un format spécifié par l’utilisateur.|Windows, macOS et Linux|
-|[**MSSQL-Générateur de script (version préliminaire)**](https://github.com/Microsoft/mssql-scripter)|**MSSQL-scripter** est une expérience de ligne de commande multiplateforme pour les scripts de bases de données SQL Server|Windows, macOS et Linux|
-|[**MSSQL-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-conf** configure SQL Server s’exécutant sur Linux.|Linux|
+|[**mssql-scripter (préversion)** ](https://github.com/Microsoft/mssql-scripter)|**MSSQL-scripter** est une expérience de ligne de commande multiplateforme pour les scripts de bases de données SQL Server|Windows, macOS et Linux|
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**MSSQL-conf** configure SQL Server s’exécutant sur Linux.|Linux|
 
 
 

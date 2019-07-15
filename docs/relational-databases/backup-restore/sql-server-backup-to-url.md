@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ffaaae5e6849db094c4c7ea176118b68a040ad7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 73faafc9f9aca28ec6c334722a1cb9ce0a51d5ca
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582762"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860700"
 ---
 # <a name="sql-server-backup-to-url"></a>Sauvegarde SQL Server vers une URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ Lorsque vous sauvegardez sur un objet blob de blocs, vous pouvez spécifier une 
 |RESTORE HEADERONLY|O||Requiert que les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soient définies, et que l’argument WITH CREDENTIAL soit spécifié si les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont définies en utilisant la clé du compte de stockage comme clé secrète.|  
 |RESTORE LABELONLY|O||Requiert que les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soient définies, et que l’argument WITH CREDENTIAL soit spécifié si les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont définies en utilisant la clé du compte de stockage comme clé secrète.|  
 |RESTORE VERIFYONLY|O||Requiert que les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] soient définies, et que l’argument WITH CREDENTIAL soit spécifié si les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont définies en utilisant la clé du compte de stockage comme clé secrète.|  
-|RESTORE REWINDONLY|?|||  
+|RESTORE REWINDONLY|-|||  
   
  Pour plus d’informations sur la syntaxe et les instructions de sauvegarde, consultez [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
@@ -151,9 +151,9 @@ Lorsque vous sauvegardez sur un objet blob de blocs, vous pouvez spécifier une 
 |COMPRESSION&#124;NO_COMPRESSION|O|Non prise en charge pour une sauvegarde de capture instantanée de fichier.||  
 |DESCRIPTION|O|||  
 |NAME|O|||  
-|EXPIREDATE &#124; RETAINDAYS|?|||  
-|NOINIT &#124; INIT|?||L'ajout aux objets blob n'est pas possible. Pour remplacer une sauvegarde, utilisez l’argument **WITH FORMAT** . Toutefois, lors de l’utilisation de sauvegardes de capture instantanée de fichier (avec l’argument **WITH FILE_SNAPSHOT** ), l’argument **WITH FORMAT** n’est pas autorisé, pour éviter de laisser orphelines des captures instantanées de fichier qui ont été créées avec la sauvegarde d’origine.|  
-|NOSKIP &#124; SKIP|?|||  
+|EXPIREDATE &#124; RETAINDAYS|-|||  
+|NOINIT &#124; INIT|-||L'ajout aux objets blob n'est pas possible. Pour remplacer une sauvegarde, utilisez l’argument **WITH FORMAT** . Toutefois, lors de l’utilisation de sauvegardes de capture instantanée de fichier (avec l’argument **WITH FILE_SNAPSHOT** ), l’argument **WITH FORMAT** n’est pas autorisé, pour éviter de laisser orphelines des captures instantanées de fichier qui ont été créées avec la sauvegarde d’origine.|  
+|NOSKIP &#124; SKIP|-|||  
 |NOFORMAT &#124; FORMAT|O||Une sauvegarde effectuée vers un objet blob existant échoue à moins que l’option **WITH FORMAT** soit spécifiée. Quand l’option **WITH FORMAT** est spécifiée, l’objet blob existant est remplacé. Toutefois, lors de l’utilisation de sauvegardes de capture instantanée de fichier (avec l’argument **WITH FILE_SNAPSHOT** ), l’argument FORMAT n’est pas autorisé, pour éviter de laisser orphelines des captures instantanées de fichier qui ont été créées avec la sauvegarde file-snapshot d’origine. Toutefois, lors de l’utilisation de sauvegardes de capture instantanée de fichier (avec l’argument **WITH FILE_SNAPSHOT** ), l’argument **WITH FORMAT** n’est pas autorisé, pour éviter de laisser orphelines des captures instantanées de fichier qui ont été créées avec la sauvegarde d’origine.|  
 |MEDIADESCRIPTION|O|||  
 |MEDIANAME|O|||  
@@ -163,8 +163,8 @@ Lorsque vous sauvegardez sur un objet blob de blocs, vous pouvez spécifier une 
 |NO_CHECKSUM &#124; CHECKSUM|O|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|O|||  
 |STATS|O|||  
-|REWIND &#124; NOREWIND|?|||  
-|UNLOAD &#124; NOUNLOAD|?|||  
+|REWIND &#124; NOREWIND|-|||  
+|UNLOAD &#124; NOUNLOAD|-|||  
 |NORECOVERY &#124; STANDBY|O|||  
 |NO_TRUNCATE|O|||  
   
@@ -186,19 +186,19 @@ Lorsque vous sauvegardez sur un objet blob de blocs, vous pouvez spécifier une 
 |REPLACE|O|||  
 |RESTART|O|||  
 |RESTRICTED_USER|O|||  
-|FILE|?|||  
+|FILE|-|||  
 |PASSWORD|O|||  
 |MEDIANAME|O|||  
 |MEDIAPASSWORD|O|||  
 |BLOCKSIZE|O|||  
-|BUFFERCOUNT|?|||  
-|MAXTRANSFERSIZE|?|||  
+|BUFFERCOUNT|-|||  
+|MAXTRANSFERSIZE|-|||  
 |CHECKSUM &#124; NO_CHECKSUM|O|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|O|||  
 |FILESTREAM|O|Non prise en charge pour la sauvegarde de capture instantanée.||  
 |STATS|O|||  
-|REWIND &#124; NOREWIND|?|||  
-|UNLOAD &#124; NOUNLOAD|?|||  
+|REWIND &#124; NOREWIND|-|||  
+|UNLOAD &#124; NOUNLOAD|-|||  
 |KEEP_REPLICATION|O|||  
 |KEEP_CDC|O|||  
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|O|||  
@@ -219,9 +219,6 @@ Vous pouvez sauvegarder une base de données vers une URL par le biais de la tâ
 2.  Développez **Bases de données**, cliquez avec le bouton droit sur la base de données souhaitée, pointez sur **Tâches**, puis cliquez sur **Sauvegarder**.
   
 3.  Dans la page **Général** de la section **Destination** , l’option **URL** est disponible dans la liste déroulante **Sauvegarde sur** .  L’option **URL** sert à créer une sauvegarde dans le stockage Microsoft Azure. Cliquez sur **Ajouter** pour ouvrir la boîte de dialogue **Sélectionner la destination de la sauvegarde** .
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     1.  **Conteneur de stockage Azure :** Nom du conteneur de stockage Microsoft Azure pour stocker les fichiers de sauvegarde.  Sélectionnez un conteneur existant dans la liste déroulante ou entrez manuellement le conteneur. 
   
     2.  **Stratégie d’accès partagé :** Entrez la signature d’accès partagé pour un conteneur entré manuellement.  Ce champ n’est pas disponible si un conteneur existant a été choisi. 
@@ -229,11 +226,13 @@ Vous pouvez sauvegarder une base de données vers une URL par le biais de la tâ
     3.  **Fichier de sauvegarde :** Nom du fichier de sauvegarde.
     
     4.  **Nouveau conteneur :** Permet d’enregistrer un conteneur existant pour lequel vous n’avez pas de signature d’accès partagé.  Consultez [Se connecter à un abonnement Microsoft Azure](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
-  
+
 > [!NOTE] 
 >  **Ajouter** prend en charge plusieurs fichiers de sauvegarde et conteneurs de stockage pour un seul support de sauvegarde.
-  
- Quand vous sélectionnez **URL** comme destination, certaines options de la page **Options de support** sont désactivées.  Les rubriques suivantes contiennent d'autres informations sur la boîte de dialogue Sauvegarder la base de données :  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+Quand vous sélectionnez **URL** comme destination, certaines options de la page **Options de support** sont désactivées.  Les rubriques suivantes contiennent d'autres informations sur la boîte de dialogue Sauvegarder la base de données :  
   
  [Sauvegarder la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)  
   

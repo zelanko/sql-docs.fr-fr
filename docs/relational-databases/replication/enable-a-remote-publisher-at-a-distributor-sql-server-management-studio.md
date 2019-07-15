@@ -14,12 +14,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 57175bc18d82971e6707a9791953bd760d517e10
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 25a92152f7fc32fefd38569ecf9cf20945a76b5d
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581142"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860731"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>Activer un serveur de publication distant sur un serveur de distribution (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67581142"
   
 4.  Sur la page **Mot de passe du serveur de distribution** , dans les zones de texte **Mot de passe** et **Confirmer le mot de passe** , spécifiez un mot de passe fort pour le compte **distributor_admin** que la réplication utilise pour se connecter du serveur de publication sur le serveur de distribution afin d'effectuer des tâches administratives.  
   
-5.  Pour afficher et modifier les paramètres d’un Serveur de publication, cliquez sur le bouton des propriétés ( **?** ).  
+5.  Pour afficher et modifier les paramètres d’un serveur de publication, cliquez sur le bouton des propriétés ( **...** ).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
@@ -51,7 +51,7 @@ ms.locfileid: "67581142"
   
 4.  Sur la page **Serveurs de publication** , dans les zones de texte **Mot de passe** et **Confirmer le mot de passe** , spécifiez un mot de passe fort pour le compte **distributor_admin** que la réplication utilise pour se connecter du serveur de publication sur le serveur de distribution afin d'effectuer des tâches administratives.  
   
-5.  Pour afficher et modifier les paramètres d’un Serveur de publication, cliquez sur le bouton des propriétés ( **?** ).  
+5.  Pour afficher et modifier les paramètres d’un serveur de publication, cliquez sur le bouton des propriétés ( **...** ).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

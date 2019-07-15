@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 4aab04bc-e1ab-4d4b-ab74-b287fc805bc2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 72fff7180d260197f56b6506092e6b5353f125d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 2b039dbbfff0f525ff7af7e9438221f2ff83e814
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095351"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690007"
 ---
 # <a name="filter-settings-object-explorer-and-utility-explorer"></a>Paramètres de filtre (Explorateur d'objets et Explorateur de l'utilitaire)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +74,7 @@ Tapez la valeur à comparer à la propriété. Pour une date, cliquez sur la fl�
 **Effacer le filtre**  
 Supprime tous les paramètres actuels du filtre.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Utiliser SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  
 [Vue d'ensemble de l'utilitaire SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   

@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 452857fb-be1b-4e1e-851c-dd2216640f35
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: dd5919844de2b880d3d707e19a1dd212d5da1803
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a567a35862c5b7fbfa39e3eda65ea89a24532b66
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538263"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733269"
 ---
 # <a name="sql-server-agent-properties-service-tab"></a>Propriétés de l'Agent SQL Server (onglet Service)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "52538263"
  **Host Name**  
  Affiche le nom de l’ordinateur ou du cluster exécutant l’Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Nom**  
+ **Name**  
  Indique le nom d'affichage du service.  
   
  **ID de processus**  
@@ -55,6 +55,6 @@ ms.locfileid: "52538263"
 -   Désactivé : ce service ne peut pas être démarré.  
   
  **État**  
- Indique si ce service est en cours d'exécution, arrêté ou désactivé. «**…**» indique qu'un changement d'état est en attente.  
+ Indique si ce service est en cours d'exécution, arrêté ou désactivé. « **…** » indique qu’un changement d’état est en attente.  
   
   

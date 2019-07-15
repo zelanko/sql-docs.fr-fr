@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - CmdExec jobs
 ms.assetid: b48da5b4-6fe7-4eb7-bade-dc7d697c6d5c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 452e88dfc3ff2bc1353013f2a7a140b68db5121f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 35f2a4382d70aebf6c179bcc760b0914fd48e590
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698167"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688625"
 ---
 # <a name="create-a-cmdexec-job-step"></a>Créer une étape de travail CmdExec
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Cette rubrique explique comment créer et définir une étape de travail de [!IN
 Par défaut, seuls les membres du rôle de serveur fixe **sysadmin** peuvent créer des étapes de travail CmdExec. Ces étapes de travail s'exécutent sous le contexte du compte de service SQL Server Agent à moins que l'utilisateur **sysadmin** crée un compte proxy. Les utilisateurs qui ne sont pas membres du rôle **sysadmin** peuvent créer des étapes de travail CmdExec s'ils peuvent accéder à un compte proxy CmdExec.  
   
 #### <a name="Permissions"></a>Permissions  
-Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
+Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
   
 ## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
   
@@ -63,7 +63,7 @@ Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../
   
 4.  Dans la boîte de dialogue **Nouvelle étape du travail** , tapez un **nom d'étape**de travail.  
   
-5.  Dans la liste **Type** , choisissez **Système d’exploitation (CmdExec)**.  
+5.  Dans la liste **Type** , choisissez **Système d’exploitation (CmdExec)** .  
   
 6.  Dans la liste **Exécuter en tant que** , sélectionnez le compte proxy avec les informations d'identification que doit utiliser le travail. Par défaut, les étapes de travail CmdExec s'exécutent dans le contexte du compte de service SQL Server Agent.  
   
@@ -91,7 +91,7 @@ Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../
         @job_name = N'Weekly Sales Data Backup',  
         @step_name = N'Set database to read only',  
         @subsystem = N'CMDEXEC',  
-        @command = C:\clickme_scripts\SQL11\PostBOLReorg GetHsX.exe',   
+        @command = 'C:\clickme_scripts\SQL11\PostBOLReorg GetHsX.exe',   
         @retry_attempts = 5,  
         @retry_interval = 5 ;  
     GO  

@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7d40e49816ccec8c84486056a3f5b3bdee759de
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 23169fd3625c2501e295645201da89667731f0b6
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581327"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860678"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutoriel : configurer la réplication entre deux serveurs intégralement connectés (réplication transactionnelle)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ Dans cette section, vous ajoutez un Abonné à la publication que vous avez cré
   
    ![Saisie du nom de la base de données d'abonnement](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. Dans la page **Sécurité de l’Agent de distribution**, sélectionnez le bouton représentant des points de suspension ( **?** ). Entrez <*nom_ordinateur_serveur_de_publication>* > **\repl_distribution** dans la zone **Compte de processus**, entrez le mot de passe du compte, sélectionnez **OK**, puis **Suivant**.
+8. Dans la page **Sécurité de l’Agent de distribution**, sélectionnez le bouton représentant des points de suspension ( **…** ). Entrez <*nom_ordinateur_serveur_de_publication>* > **\repl_distribution** dans la zone **Compte de processus**, entrez le mot de passe du compte, sélectionnez **OK**, puis **Suivant**.
 
    ![Informations sur le compte de distribution dans la boîte de dialogue « Sécurité de l'Agent de distribution »](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   

@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: a8316a58-bb57-485e-845f-84c23360314c
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 530a2a1e9ac8d1176eac109c2996b8359afcfc71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ecee115d21ab7d9fd9758f953bd3c84251528f2
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65820937"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683813"
 ---
 # <a name="complete-transact-sql-snippets"></a>Compléter des extraits de code Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "65820937"
   
 3.  Sélectionnez un élément dans la liste ou tapez le code de remplacement de votre choix.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Insérer des extraits de code Transact-SQL](../../relational-databases/scripting/insert-transact-sql-snippets.md)   
  [Insérer des extraits de code d'entourage (surround-with) Transact-SQL](../../relational-databases/scripting/insert-surround-with-transact-sql-snippets.md)  
   

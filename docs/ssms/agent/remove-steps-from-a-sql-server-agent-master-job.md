@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 871e6162-1221-464d-8f7f-7e454dcd9edb
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0d678f740c9aa5c457efdf94f2a97585099b3a7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bddeb711983cfff5ec8631c54bb00bcae7d2033
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088728"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67685282"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à mo
   
 4.  Cliquez avec le bouton droit sur le travail dont vous voulez supprimer les étapes, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail -**_nom_travail_, sous **Sélectionner une page**, sélectionnez **Étapes**.  
+5.  Dans la boîte de dialogue **Propriétés du travail -** _nom_travail_, sous **Sélectionner une page**, sélectionnez **Étapes**.  
 
 6.  Sous **Liste des étapes du travail**, sélectionnez l'étape du travail à supprimer et cliquez sur **Supprimer**.  
   

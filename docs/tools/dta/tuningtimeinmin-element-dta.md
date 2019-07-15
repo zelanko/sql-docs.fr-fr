@@ -1,5 +1,5 @@
 ---
-title: Tuningtimeinmin, élément (DTA) | Microsoft Docs
+title: Élément TuningTimeInMin (Assistant Paramétrage de base de données) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - TuningTimeInMin element
 ms.assetid: 4973d9ac-20fd-4ac3-bc9f-5d60e39fdb7d
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 908b4b6b8f4551fd5b611997dabedc5f1cf1c474
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: b1b5c836f3c318429757d1d4786876275edcf03c
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292405"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729505"
 ---
 # <a name="tuningtimeinmin-element-dta"></a>TuningTimeInMin, élément (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +49,9 @@ ms.locfileid: "51292405"
 |Relation|Éléments|  
 |------------------|--------------|  
 |**Élément parent**|[Élément TuningOptions &#40;DTA&#41;](../../tools/dta/tuningoptions-element-dta.md)|  
-|**Éléments enfants**|Aucun|  
+|**Éléments enfants**|None|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ## <a name="description"></a>Description  
  L'exemple de code suivant montre comment définir une durée de réglage maximale de 12 heures :  
@@ -68,7 +68,7 @@ ms.locfileid: "51292405"
 </DTAInput>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

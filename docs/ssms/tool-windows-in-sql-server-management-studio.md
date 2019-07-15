@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d3be5062-234c-43a8-8d47-cce111dd3c25
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 656eb21e7b6ebb1d263bd42df0b2fc97ae457373
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: e89faa976798cb1242d8b813ffa6fe5baf8fbcdc
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102679"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687217"
 ---
 # <a name="tool-windows-in-sql-server-management-studio"></a>Fenêtres Outil dans SQL Server Management Studio
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,6 +39,6 @@ Les outils de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] fon
   
 -   ouvrir une fenêtre Éditeur SQL connectée à une base de données spécifique à partir de l'Explorateur d'objets.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Utiliser SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
   

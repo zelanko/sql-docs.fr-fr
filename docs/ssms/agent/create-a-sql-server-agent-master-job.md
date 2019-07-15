@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: c12ab23f-d7ee-43a5-8cd2-0a9121292bcd
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b999b7a06f07df346f9fd38f8118913321d893fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b3f9dc320e6ac2a74700abd36a9e5bdc2af0e94
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095554"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681198"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Créer un travail principal SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ Si les étapes du travail utilisant des comptes proxy échouent pendant leur té
   
 2.  Cliquez sur le signe plus (+) pour développer **Agent SQL Server**.  
   
-3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Nouveau travail...**.  
+3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Nouveau travail...** .  
   
 4.  Dans la boîte de dialogue **Nouveau travail** , sur la page **Général** , modifiez les propriétés générales du travail. Pour plus d’informations sur les options disponibles dans cette page, consultez [Propriétés du travail - Nouveau travail &#40;page Général&#41;](../../ssms/agent/job-properties-new-job-general-page.md).  
   

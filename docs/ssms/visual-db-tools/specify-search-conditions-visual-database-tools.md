@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 18e2c759-68ec-4efe-b208-2f73418cd9bd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0bbff2cbc8eb04bad8c45ff5ef236acd22bb4a5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 409e8c9a7639c3de4febdc6aadf2fac635c20089
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105749"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682830"
 ---
 # <a name="specify-search-conditions-visual-database-tools"></a>Spécifier des conditions de recherche (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +48,7 @@ Vous spécifiez des conditions de recherche à l'aide d'une expression. La plupa
   
 Le Concepteur de requêtes et de vues met à jour l’instruction SQL dans le [volet SQL](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md) en ajoutant ou en modifiant la clause WHERE.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Règles pour l’entrée de valeurs de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-entering-search-values-visual-database-tools.md)  
 [Spécifier des critères de recherche &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md)  
   

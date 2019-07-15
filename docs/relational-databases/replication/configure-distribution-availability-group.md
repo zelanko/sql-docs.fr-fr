@@ -20,12 +20,12 @@ ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a67d663f2f0970750b30686b443538cd66358fc5
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: df6e9aa77744039a6d0fbd00e26e8090b15e4284
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583062"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860631"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Configurer la base de données de distribution de réplication dans un groupe de disponibilité AlwaysOn
 
@@ -240,7 +240,7 @@ Cet exemple supprime un serveur de distribution du groupe de disponibilité d’
 
 ## <a name="remove-a-publisher-from-distribution-database-ag"></a>Supprimer un serveur de publication du groupe de disponibilité de base de données de distribution
 
-Cet exemple supprime un serveur de publication du groupe de disponibilité de la base de données de distribution actuel d’un serveur de distribution, sans que les autres serveurs de publication servis par ce groupe de disponibilité de la base de données de distribution ne soient affectés. Dans cet exemple, la configuration existante est constituée d’une base de données située dans un groupe de disponibilité. DIST1, DIST2 et DIST3 sont les serveurs de distribution, `distribution` est la base de données de distribution du groupe de disponibilité (AG), et PUB1 et PUB2 correspondent aux serveurs de publication servis par la base de données `distribution`. L’exemple supprime PUB1 de ces serveurs de distribution.
+Cet exemple supprime un serveur de publication du groupe de disponibilité de base de données de distribution actuel d’un serveur de distribution, sans que les autres serveurs de publication servis par ce groupe de disponibilité ne soient affectés. Dans cet exemple, la configuration existante est constituée d’une base de données située dans un groupe de disponibilité. DIST1, DIST2 et DIST3 sont les serveurs de distribution, `distribution` est la base de données de distribution du groupe de disponibilité (AG), et PUB1 et PUB2 correspondent aux serveurs de publication servis par la base de données `distribution`. L’exemple supprime PUB1 de ces serveurs de distribution.
 
 ### <a name="publisher-workflow"></a>Flux de travail du serveur de publication
 
@@ -397,9 +397,9 @@ Go
 -- On Publisher, create the publication as one would normally do.
 -- On the Secondary replicas of the Distribution DB, add the Subscriber as a linked server.
 :CONNECT SQLNODE2
-EXEC?master.dbo.sp_addlinkedserver?@server?=?N'SQLNODE5',?@srvproduct=N'SQL Server'
+EXEC master.dbo.sp_addlinkedserver @server = N'SQLNODE5', @srvproduct=N'SQL Server'
  /* For security reasons the linked server remote logins password is changed with ######## */
-EXEC?master.dbo.sp_addlinkedsrvlogin?@rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
+EXEC master.dbo.sp_addlinkedsrvlogin @rmtsrvname=N'SQLNODE5',@useself=N'True',@locallogin=NULL,@rmtuser=NULL,@rmtpassword=NULL 
 ```
 
 ## <a name="see-also"></a>Voir aussi  

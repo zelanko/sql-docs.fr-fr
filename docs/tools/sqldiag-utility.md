@@ -27,15 +27,15 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05336c1b9a7f6830b3dd2c6e6f0b794984bda061
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 7c46fbea6a02a089b07ad359bc3c53bc5022f3e3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100944"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728106"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag (utilitaire)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ sqldiag
   
  1 = utilise la compression NTFS  
   
- **/B** [**+**]*heure_début*  
+ **/B** [ **+** ]*heure_début*  
  Spécifie la date et l'heure de début de la collecte des données de diagnostics dans le format suivant :  
   
  AAAAMMJJ_HH:MM:SS  
@@ -140,7 +140,7 @@ sqldiag
   
  Notez que **SQLdiag** utilise l’heure locale sur l’ordinateur sur lequel l’utilitaire s’exécute.  
   
- **/E** [**+**]*heure_fin*  
+ **/E** [ **+** ]*heure_fin*  
  Spécifie la date et l'heure d'arrêt de la collecte des données de diagnostics dans le format suivant :  
   
  AAAAMMJJ_HH:MM:SS  
@@ -160,11 +160,11 @@ sqldiag
   
  Vous pouvez utiliser*nom_application_SQLdiag* pour démarrer ou arrêter une instance spécifique du service **SQLdiag** .  
   
- Exemple :  
+ Par exemple :  
   
  **SQLDIAG START /A**  _nom_application_SQLdiag_  
   
- Vous pouvez aussi l’utiliser avec l’option **/R** pour enregistrer une instance spécifique de **SQLdiag** en tant que service. Exemple :  
+ Vous pouvez aussi l’utiliser avec l’option **/R** pour enregistrer une instance spécifique de **SQLdiag** en tant que service. Par exemple :  
   
  **SQLDIAG /R /A** _nom_application_SQLdiag_  
   
@@ -223,11 +223,11 @@ sqldiag
  **START** | **STOP** | **STOP_ABORT**  
  Démarre ou arrête le service **SQLdiag** . **STOP_ABORT** oblige le service à s’arrêter le plus rapidement possible, sans terminer la collecte de diagnostics en cours.  
   
- Lorsqu'ils sont utilisés ces arguments destinés au contrôle du service doivent être placés en premier sur les lignes de commande. Exemple :  
+ Lorsqu'ils sont utilisés ces arguments destinés au contrôle du service doivent être placés en premier sur les lignes de commande. Par exemple :  
   
  **SQLDIAG START**  
   
- Seul l’argument **/A** , qui spécifie une instance nommée de **SQLdiag**, peut être utilisé avec **START**, **STOP**ou **STOP_ABORT** pour prendre le contrôle d’une instance spécifique du service **SQLdiag** . Exemple :  
+ Seul l’argument **/A** , qui spécifie une instance nommée de **SQLdiag**, peut être utilisé avec **START**, **STOP**ou **STOP_ABORT** pour prendre le contrôle d’une instance spécifique du service **SQLdiag** . Par exemple :  
   
  **SQLDIAG START /A** _SQLdiag_application_name_  
   
@@ -310,7 +310,7 @@ sqldiag /B +01:00:00 /E +03:00:00
 sqldiag /B +01:00:00 /E 08:30:00  
 ```  
   
- Si l'heure actuelle est 08:00, l'heure de fin arrive avant que ne commence la collecte du diagnostic. Comme **SQLDiag** règle automatiquement les dates de début et de fin au jour suivant quand elles se produisent dans le passé, dans cet exemple la collecte des diagnostics commence à 09:00 aujourd’hui (une heure de début relative a été spécifiée avec **+**) et se poursuit jusqu’à 08:30 le lendemain matin.  
+ Si l'heure actuelle est 08:00, l'heure de fin arrive avant que ne commence la collecte du diagnostic. Comme **SQLDiag** règle automatiquement les dates de début et de fin au jour suivant quand elles se produisent dans le passé, dans cet exemple la collecte des diagnostics commence à 09:00 aujourd’hui (une heure de début relative a été spécifiée avec **+** ) et se poursuit jusqu’à 08:30 le lendemain matin.  
   
 ### <a name="stopping-and-restarting-sqldiag-to-collect-daily-diagnostics"></a>Arrêt et redémarrage de SQLdiag pour collecter des diagnostics quotidiennement  
  Pour collecter un ensemble de diagnostics sur une base quotidienne sans devoir démarrer et arrêter manuellement **SQLdiag**, utilisez l’argument **/L** . L’argument **/L** force **SQLdiag** à s’exécuter de façon continue en redémarrant automatiquement après un arrêt programmé. Quand vous spécifiez l’option **/L** et que **SQLdiag** s’arrête car il a atteint l’heure de fin définie avec l’argument **/E** , ou qu’il s’arrête car il s’exécute en mode d’instantané avec l’argument **/X** , **SQLdiag** redémarre au lieu de se fermer.  
@@ -367,7 +367,7 @@ SQLDIAG START /A Instance1
 > [!NOTE]  
 >  Pour collecter des informations de traces de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] à partir d'instances cluster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , les partages administratifs (ADMIN$) doivent être activés sur le cluster.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4b1afd739d6994a02ff2b1801d24886528688cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: e1c1be85288b622c09e8bb9ab125aef85c8a4f8e
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102991"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690049"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Ajouter des étapes à un travail maître SQL Server Agent
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -58,7 +58,7 @@ Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à mo
   
 4.  Cliquez avec le bouton droit sur le travail auquel vous voulez ajouter des étapes, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail -**_nom_travail_, sous **Sélectionner une page**, sélectionnez **Étapes**. Pour plus d’informations sur les options disponibles dans cette page, consultez [Propriétés du travail - Nouveau travail &#40;page Étapes&#41;](../../ssms/agent/job-properties-new-job-steps-page.md).  
+5.  Dans la boîte de dialogue **Propriétés du travail -** _nom_travail_, sous **Sélectionner une page**, sélectionnez **Étapes**. Pour plus d’informations sur les options disponibles dans cette page, consultez [Propriétés du travail - Nouveau travail &#40;page Étapes&#41;](../../ssms/agent/job-properties-new-job-steps-page.md).  
  
 6.  Lorsque vous avez terminé, cliquez sur **OK**.  
   

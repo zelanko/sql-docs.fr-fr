@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0e2567ae3e2d82c1083803d37fa90c5154f01026
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 1036fcad90dbd2f9efbf46e30295c75291022598
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65093812"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686373"
 ---
 # <a name="clear-query-results-visual-database-tools"></a>Effacer les résultats d'une requête (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ Quand vous avez exécuté une requête dans le **Concepteur de requêtes et de v
   
     Si une requête est en cours d'exécution quand vous effacez les résultats, le Concepteur de requêtes et de vues l'arrête.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Exécuter des requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/run-queries-visual-database-tools.md)  
 [Arrêter une requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/stop-a-query-visual-database-tools.md)  
 [Utiliser des données du volet de résultats &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md)  

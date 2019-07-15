@@ -12,15 +12,15 @@ helpviewer_keywords:
 - traces [SQL Server], starting
 - starting trace automatically
 ms.assetid: d74b848d-e796-49af-a8c5-dd69230f3a78
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 96003d947f9ab3b466f19b01f7b016e3a256c45d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 86e76b5186465eadf95728bf3de4edbb4554288f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751183"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729719"
 ---
 # <a name="start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler"></a>Démarrer automatiquement une trace après s'être connecté à un serveur (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47751183"
 > [!NOTE]  
 >  Si la case **Démarrer le suivi juste après avoir établi la connexion**est cochée, la boîte de dialogue **Propriétés de la trace**ne s’affiche pas et le suivi se lance. Pour modifier les propriétés de la trace, vous devez d'abord désactiver ce paramètre.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

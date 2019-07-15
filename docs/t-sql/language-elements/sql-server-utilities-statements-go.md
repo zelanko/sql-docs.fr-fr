@@ -20,12 +20,12 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c867fd986ea88d6323c56b2ac76c9aecaba57a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 144bcbf882b997dfa07889c2cae5977d0b12b8dc
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981669"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832966"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Instructions d’utilitaires SQL Server - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "65981669"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 GO [count]  
 ```  
   
@@ -78,16 +77,16 @@ GO
   
  Les applications basées sur ODBC ou sur les API OLE DB reçoivent une erreur de syntaxe s'ils tentent d'exécuter une commande GO. Les utilitaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'envoient jamais de commande GO au serveur.  
   
- N'utilisez pas un point-virgule comme terminateur d'instruction après GO.  
-  
-## <a name="permissions"></a>Autorisations  
- GO est une commande d'utilitaire qui ne nécessite pas d'autorisation. Elle peut être exécutée par tout utilisateur.  
-  
-```  
+ N'utilisez pas un point-virgule comme terminateur d'instruction après GO.
+ 
+```
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
-```  
+```
+  
+## <a name="permissions"></a>Autorisations  
+ GO est une commande d'utilitaire qui ne nécessite pas d'autorisation. Elle peut être exécutée par tout utilisateur.    
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée deux traitements. Le premier lot contient uniquement une instruction `USE AdventureWorks2012` pour définir le contexte de la base de données. Les autres instructions utilisent une variable locale. Ainsi, toutes les déclarations de variables locales doivent être groupées en un seul traitement. Pour cela, aucune commande `GO` n'est utilisée avant la dernière instruction qui fait référence à la variable.  

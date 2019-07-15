@@ -10,16 +10,16 @@ ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Configuration Manager, help
 ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 34942a33e71c2d9f17f77a9f595cf873d71fbc4e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2610106e0ab691af885bb8eb3c1d62555db7f56f
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204718"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733188"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Aide sur le Gestionnaire de configuration SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "53204718"
 -   Configurer un protocole réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 > [!NOTE]  
->  Pour vous procurer un didacticiel sommaire sur la manière de configurer les protocoles et de vous connecter au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], consultez [Tutoriel : Bien démarrer avec le moteur de base de données](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
+>  Pour vous procurer un didacticiel sommaire sur la manière de configurer les protocoles et de se connecter au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], consultez [Didacticiel : Mise en route du moteur de base de données](../../relational-databases/tutorial-getting-started-with-the-database-engine.md).  
   
 ## <a name="sql-server-native-client-configuration"></a>Configuration de SQL Server Native Client  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se connectent à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de la bibliothèque réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet de réaliser les tâches suivantes relatives aux applications clientes installées sur cet ordinateur :  
@@ -79,7 +79,7 @@ ms.locfileid: "53204718"
  Étant donné que le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un composant logiciel enfichable pour le programme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console, et non un programme autonome, le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'apparaît pas en tant qu'application lorsque vous exécutez [!INCLUDE[win8](../../includes/win8-md.md)]. Pour ouvrir le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], dans l’icône **Rechercher**, sous **Applications**, tapez **SQLServerManager12.msc** (pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) ou **SQLServerManager11.msc** pour ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]), puis appuyez sur **Entrée**.  
   
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Services SQL Server](../../tools/configuration-manager/sql-server-services.md)   
  [Configuration du réseau SQL Server](../../tools/configuration-manager/sql-server-network-configuration.md)   
  [Configuration de SQL Server Native Client 11.0](../../tools/configuration-manager/sql-native-client-11-0-configuration.md)   

@@ -14,12 +14,12 @@ ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 68e61f26cc33d505ec183e3d863cfa3a6f407275
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 526f97ab2427aa6834614c9b31201b780ae25e9e
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586428"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860535"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modifier les options d’initialisation d’instantané pour la réplication SQL 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ Spécifiez l'emplacement par défaut des instantanés dans la page **Dossier d'i
   
 ### <a name="to-modify-the-default-snapshot-location"></a>Pour modifier l'emplacement par défaut des instantanés  
   
-1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Base de données du serveur de publication>** , cliquez sur le bouton des propriétés ( **?** ) du serveur de publication pour lequel vous voulez modifier l’emplacement par défaut des captures instantanées.    
+1.  Dans la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution - \<Serveur_de_distribution>** , cliquez sur le bouton des propriétés ( **…** ) du serveur de publication pour lequel vous voulez modifier l’emplacement par défaut des captures instantanées.    
 2.  Dans la boîte de dialogue **Propriétés du serveur de publication - \<Serveur de publication>** , entrez une valeur pour la propriété **Dossier des captures instantanées par défaut**.  
   
     > [!NOTE]  

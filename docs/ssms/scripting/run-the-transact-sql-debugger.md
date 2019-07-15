@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 386f6d09-dbec-4dc7-9e8a-cd9a4a50168c
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a41977904a209a4de50ea0529af98453e6e15a65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc8df064a533951502f79da2672afaa591a20d06
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821981"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690137"
 ---
 # <a name="run-the-transact-sql-debugger"></a>Exécuter le débogueur Transact-SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "65821981"
 |**Désactiver tous les points d'arrêt**|Non disponible|Non disponible|Non disponible|Désactive tous les points d'arrêt.|  
 |Non disponible|**Ajouter un espion**|Non disponible|Non disponible|Ajoute l'expression sélectionnée à la fenêtre **Espion** .|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Exécuter pas à pas du code Transact-SQL](../../relational-databases/scripting/step-through-transact-sql-code.md)   
  [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   

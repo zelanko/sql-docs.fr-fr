@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b554b6e6-3435-4b43-89ab-7a4c7a241236
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8faedb57567544a4714fe898c974605246240cdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: b00e8463f69eacbdf4afa4196f3d6f69c410d5dc
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095168"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680963"
 ---
 # <a name="partition-column-list-dialog-box-visual-database-tools"></a>Liste des colonnes, boîte de dialogue (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,6 +33,6 @@ Affiche les types de données des colonnes définies dans le schéma de partitio
 colonne  
 Fournit une liste déroulante dans laquelle vous pouvez choisir la colonne à laquelle appliquer la fonction.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Propriétés de la table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
   

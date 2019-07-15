@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 9978a884-59a2-4e7f-a82a-335149f3a261
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c55f1bdf06781feab128a61ba3cf2b2ae402c516
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e9cad10d5430264af1c1f19d3cf8950f049f3cb
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65820833"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67683689"
 ---
 # <a name="database-engine-scripting"></a>Scripts du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "65820833"
 |Explique comment intégrer les composants SQL Server dans un environnement Windows PowerShell et générer des scripts PowerShell pour gérer des instances et des objets SQL Server.|[SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)|  
 |Explique comment utiliser l’Assistant **Générer et publier des scripts** pour créer des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] qui recréent un ou plusieurs objets d’une base de données.|[Générer des scripts &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilitaire sqlcmd](../../tools/sqlcmd-utility.md)   
  [Tutoriel : Écriture d’instructions Transact-SQL](../../t-sql/tutorial-writing-transact-sql-statements.md)  
   

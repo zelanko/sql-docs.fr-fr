@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c653130f1b2d3cfee447a3c7dec5790d14c9641f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 993cb2dc8cacc7d6eb6a79ec90d063e8e85567cc
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821706"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682053"
 ---
 # <a name="transact-sql-debugger---quickwatch-dialog-box"></a>Débogueur Transact-SQL - Boîte de dialogue Espion express
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "65821706"
  **Type**  
  Affiche le type de données de l'expression.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger.md)   
  [Informations du débogueur Transact-SQL](../../relational-databases/scripting/transact-sql-debugger-information.md)   
  [Espion (fenêtre)](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   

@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Name element
 ms.assetid: 2300e9cf-f0a8-49e6-b1f5-45ffe03ccb5f
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: bbe942dcbea82432e9182af07fe362d32dda8494
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 3e9b4ec0464d1645b4ca0576b71c8fffa2cdbd1a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291266"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727752"
 ---
 # <a name="name-element-for-index-dta"></a>Name, élément pour les index (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "51291266"
 |**Élément parent**|[Index, élément &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/index-element-dta.md)|  
 |**Éléments enfants**|Aucun.|  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Pour obtenir un exemple d’utilisation de cet élément, consultez l’[Exemple de fichier d’entrée XML avec une configuration spécifiée par l’utilisateur &#40;Assistant Paramétrage de base de données&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

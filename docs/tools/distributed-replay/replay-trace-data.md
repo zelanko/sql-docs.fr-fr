@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 56c40b55b49f4d6e5cd50c696029366e9c63a6d8
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 8717043764d67ab16217da7beecdc7bfee6515c3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291451"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729345"
 ---
 # <a name="replay-trace-data"></a>Relire les données de trace
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "51291451"
   
 3.  Lorsque la relecture distribuée est terminée, l'outil d'administration retourne les informations de résumé. Si vous avez spécifié l’option **-o** , l’activité de relecture a été enregistrée dans des fichiers de trace de résultats sur chaque client. Pour plus d’informations sur les fichiers de trace de résultats, consultez [passez en revue les résultats de relecture](../../tools/distributed-replay/review-the-replay-results.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   
  [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [Configure Distributed Replay](../../tools/distributed-replay/configure-distributed-replay.md)  

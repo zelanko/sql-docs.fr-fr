@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 166e5e929863a9c7213f3cda6f43e6c1007865b2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 4255b78991e557ab36d7d0f97ab9be0fed5194a3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125559"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732107"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "54125559"
 |-------------|-----------------|-----------------|--------------------|--------------|  
 |Niveau de journalisation|`<LoggingLevel>`|Spécifie le niveau de journalisation pour le service contrôleur.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Non. Par défaut, la valeur est `CRITICAL`.|  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Cet exemple montre un fichier de configuration du contrôleur qui a été modifié pour supprimer les entrées du journal `INFORMATION` et `WARNING` .  
   
 ```  
@@ -51,7 +51,7 @@ ms.locfileid: "54125559"
 </Options>  
 ```  
   
-##  <a name="DReplayClient"></a> Fichier de configuration du client : DReplayClient.config  
+##  <a name="DReplayClient"></a> Fichier de configuration client : DReplayClient.config  
  Lorsque le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client démarre, il charge des paramètres de configuration à partir du fichier de configuration client, `DReplayClient.config`. Ce fichier se trouve sur chaque client, dans le dossier où vous avez installé le service Distributed Replay Client :  
   
  **\<chemin d’installation du client>\DReplayClient.config**  
@@ -65,7 +65,7 @@ ms.locfileid: "54125559"
 |Répertoire des résultats du client|`<ResultDirectory>`|Correspond au chemin d'accès local sur le client où est enregistré le fichier de trace de résultats de l'activité de relecture (pour le client).<br /><br /> Les fichiers de ce répertoire sont écrasés lors de la prochaine relecture.|Nom du répertoire complet, en commençant par une lettre de lecteur.|Non. Si aucune valeur n'est spécifiée, le fichier de trace de résultats sera enregistré dans le même emplacement que le fichier de configuration client par défaut. Si une valeur est spécifiée et que ce dossier n'existe pas sur le client, le service client ne démarrera pas.|  
 |Niveau de journalisation|`<LoggingLevel>`|Correspond au niveau de journalisation pour le service client.|`INFORMATION` &#124; `WARNING` &#124; `CRITICAL`|Non. Par défaut, la valeur est `CRITICAL`.|  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Cet exemple montre un fichier de configuration client qui a été modifié pour spécifier que le service contrôleur s'exécute sur un autre ordinateur, un ordinateur nommé `Controller1`. Les éléments `WorkingDirectory` et `ResultDirectory` ont été configurés pour utiliser les dossiers `c:\ClientWorkingDir` et `c:\ResultTraceDir`, respectivement. La valeur par défaut du niveau de journalisation a été modifiée pour supprimer les entrées du journal `INFORMATION` et `WARNING` .  
   
 ```  
@@ -94,7 +94,7 @@ ms.locfileid: "54125559"
 |Inclure les activités de session système|`<IncSystemSession>`|Indique si les activités de session système lors de la capture seront incluses lors de la relecture.|`Yes` &#124; `No`|Non. Par défaut, la valeur est `No`.|  
 |Durée d'inactivité maximale|`<MaxIdleTime>`|Limite la durée d'inactivité à un nombre absolu (en secondes).|Entier qui est >= -1.<br /><br /> `-1` n'indique aucune modification de la valeur d'origine dans le fichier de trace d'origine.<br /><br /> `0` indique qu'une activité continue à un instant donné dans le temps.|Non. Par défaut, la valeur est `-1`.|  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Fichier de configuration de prétraitement par défaut :  
   
 ```  
@@ -107,7 +107,7 @@ ms.locfileid: "54125559"
 </Options>  
 ```  
   
-##  <a name="ReplayConfig"></a> Fichier de configuration de relecture : DReplay.exe.replay.config  
+##  <a name="ReplayConfig"></a> Fichier de configuration de la relecture : DReplay.exe.replay.config  
  Lorsque vous utilisez l'outil d'administration pour initialiser l'étape de relecture d'événement, l'outil d'administration charge les paramètres de relecture à partir du fichier de configuration de relecture, `DReplay.exe.replay.config`.  
   
  Utilisez le fichier de configuration par défaut ou le paramètre **-c** de l’outil d’administration pour spécifier l’emplacement d’un fichier de configuration de relecture modifié. Pour plus d’informations sur l’utilisation de l’option de relecture de l’outil d’administration, consultez [Option Replay &#40;outil d’administration Distributed Replay&#41;](../../tools/distributed-replay/replay-option-distributed-replay-administration-tool.md).  
@@ -141,7 +141,7 @@ ms.locfileid: "54125559"
 |Nombre de lignes d'enregistrement|`<RecordRowCount>`|Indique si le nombre de lignes doit être enregistré pour chaque jeu de résultats.|`Yes` &#124; `No`|Non. Par défaut, la valeur est `Yes`.|  
 |Jeu de résultats d'enregistrement|`<RecordResultSet>`|Indique si le contenu de tous les jeux de résultats doit être enregistré.|`Yes` &#124; `No`|Non. Par défaut, la valeur est `No`.|  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Fichier de configuration de relecture par défaut :  
   
 ```  
@@ -181,7 +181,7 @@ ms.locfileid: "54125559"
 4.  Démarrez la capture de trace de relecture distribuée et reprendre la charge de travail normal. 
  
  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options de ligne de commande de l’outil d’administration &#40;Distributed Replay Utility&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Forum de SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   

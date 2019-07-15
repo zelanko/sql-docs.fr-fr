@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ea089a65065aedac59eb7cac7308acdab097ff47
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f1a48d9b2892033ee0e6203800a5b30cbd45b7c3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213068"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731926"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriétés SQL Server (onglet Paramètres de démarrage)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "53213068"
  Pour plus d'informations sur le déplacement de la base de données master, consultez la rubrique « Déplacement des bases de données système » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="optional-parameters"></a>Paramètres facultatifs  
- Tous les paramètres de démarrage pris en charge sont décrits dans la rubrique « Utilisation des options de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] », dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un paramètre de démarrage de -T*trace#* indique qu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être démarrée avec un indicateur de trace déterminé (*trace#*) activé. Les indicateurs de trace permettent de démarrer le serveur avec un comportement non standard. Pour plus d’informations sur les indicateurs de trace, consultez la rubrique « Indicateurs de trace ([!INCLUDE[tsql](../../includes/tsql-md.md)]) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Tous les paramètres de démarrage pris en charge sont décrits dans la rubrique « Utilisation des options de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] », dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un paramètre de démarrage de -T*trace#* indique qu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être démarrée avec un indicateur de trace déterminé (*trace#* ) activé. Les indicateurs de trace permettent de démarrer le serveur avec un comportement non standard. Pour plus d’informations sur les indicateurs de trace, consultez la rubrique « Indicateurs de trace ([!INCLUDE[tsql](../../includes/tsql-md.md)]) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!CAUTION]  
 >  Vous pouvez consulter des paramètres de démarrage et des indicateurs de trace supplémentaires non documentés, décrits sur Internet. Les paramètres de démarrage et les indicateurs de trace non documentés sont créés pour résoudre des problèmes rares ou imposer des conditions obligatoires à des fins de test. L'utilisation de paramètres de démarrage non documentés peut produire des résultats inattendus. N'utilisez pas de paramètres non documentés, sauf sur indication du support technique de Microsoft.  
@@ -80,6 +80,6 @@ ms.locfileid: "53213068"
 -   Le compte de domaine utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est configuré pour l'exécution sous un compte de domaine.  
   
 ## <a name="books-online-references"></a>Références de la documentation en ligne  
- Pour plus d'informations sur les paramètres de démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez « Procédure : Configurer les options de démarrage du serveur (Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Pour plus d’informations sur les paramètres de démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez « Procédure : configurer les options de démarrage du serveur (Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

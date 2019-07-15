@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4493cffa-7b2d-4c24-8ef0-d49329198972
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 456834ab7682ec013a1f8fb7fe120a13b3591862
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 3152bf516975dc88d9b1bf826dc01775d98f4f05
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105910"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682512"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Créer des requêtes Make Table (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +67,7 @@ Il existe deux conditions préalables à l'exécution correcte d'une requête Ma
   
     Pour créer une table de destination dans une autre base de données, spécifiez un nom de table complet avec le nom de la base de données cible, le propriétaire (si nécessaire) ainsi que le nom de la table.  
   
-4.  Spécifiez les colonnes à copier en les ajoutant à la requête. Pour plus d’informations, consultez [Ajouter des colonnes à des requêtes (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Les colonnes ne sont copiées que si vous les ajoutez à la requête. Pour copier des lignes entières, choisissez **#42; (Toutes les colonnes)**.  
+4.  Spécifiez les colonnes à copier en les ajoutant à la requête. Pour plus d’informations, consultez [Ajouter des colonnes à des requêtes (Visual Database Tools)](../../ssms/visual-db-tools/add-columns-to-queries-visual-database-tools.md). Les colonnes ne sont copiées que si vous les ajoutez à la requête. Pour copier des lignes entières, choisissez **#42; (Toutes les colonnes)** .  
   
     Le Concepteur de requêtes et de vues ajoute les colonnes sélectionnées à la colonne **Colonne** du volet Critères.  
   
@@ -84,7 +84,7 @@ Il existe deux conditions préalables à l'exécution correcte d'une requête Ma
   
 Quand vous exécutez une requête Make Table, aucun résultat n’apparaît dans le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). En fait, un message indiquant le nombre de lignes copiées s'affiche.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues (Visual Database Tools)](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Types de requêtes (Visual Database Tools)](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

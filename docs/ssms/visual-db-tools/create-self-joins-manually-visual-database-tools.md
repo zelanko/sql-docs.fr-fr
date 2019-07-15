@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ad4abd99364ec906cb61a37b8e7f47c7095e2081
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: faf8abf07ba1bbdb58cb452fb5c4d40b66ca55b9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090051"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690504"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>Créer manuellement des jointures réflexives (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -118,7 +118,7 @@ Cheryl Carson       Abraham Bennet
   
 3.  Cliquez avec le bouton droit sur la ligne de jointure et cliquez sur **Propriétés** dans le menu contextuel.  
   
-4.  Dans la fenêtre Propriétés, cliquez sur **Condition et type de jointure**, puis cliquez sur le bouton de sélection **(…)**, à droite de la propriété.  
+4.  Dans la fenêtre Propriétés, cliquez sur **Condition et type de jointure**, puis cliquez sur le bouton de sélection **(…)** , à droite de la propriété.  
   
 5.  Dans la [boîte de dialogue Joindre](../../ssms/visual-db-tools/join-dialog-box-visual-database-tools.md) , modifiez éventuellement l’opérateur de comparaison entre les clés primaires. Indiquez par exemple l'opérateur inférieur à (<).  
   
@@ -126,7 +126,7 @@ Cheryl Carson       Abraham Bennet
   
 7.  Spécifiez d'autres options de requête comme les colonnes de sortie, les conditions de recherche et l'ordre de tri.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer automatiquement des jointures réflexives &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-self-joins-automatically-visual-database-tools.md)  
 [Interroger avec des jointures &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-with-joins-visual-database-tools.md)  
   

@@ -23,27 +23,27 @@ helpviewer_keywords:
 - database performance [SQL Server], SQL Server Profiler
 - trace [SQL Server]
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 549b08a7237492064cc6cf50470521ce3be804ee
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 1395cef2b706cc9e37610686ebae6561f2f22396
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439891"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729740"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] est une interface puissante, qui permet de créer et gérer des traces, ainsi que d’analyser et de relire les résultats de trace. Les événements sont enregistrés dans un fichier de trace, qui peut être analysé ou utilisé ultérieurement pour relire une série d’étapes spécifique lors de la tentative de diagnostic d’un problème.  
   
 > [!IMPORTANT]
-> Trace SQL et [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sont déconseillés. L’espace de noms *Microsoft.SqlServer.Management.Trace* qui contient les objets Trace et Replay Microsoft SQL Server est également déconseillé. 
+> Trace SQL et [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] sont dépréciés. L’espace de noms *Microsoft.SqlServer.Management.Trace* qui contient les objets Trace et Replay Microsoft SQL Server est également déconseillé. 
 > [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 
-> Utilisez plutôt des événements étendus. Pour plus d’informations sur [événements étendus](../../relational-databases/extended-events/extended-events.md), consultez [démarrage rapide : événements étendus dans SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) et [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
+> Utilisez plutôt des événements étendus. Pour plus d’informations sur les [événements étendus](../../relational-databases/extended-events/extended-events.md), consultez [Démarrage rapide : événements étendus dans SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md) et [SSMS XEvent Profiler](../../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 
 > [!NOTE]
-> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour les charges de travail Analysis Services n’est pas déconseillé et continuera à être pris en charge.
+> [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour les charges de travail Analysis Services n’est PAS déprécié et continuera à être pris en charge.
 
  ## <a name="where-is-the-profiler"></a>Où se trouve le Générateur de profils ?
  
@@ -59,7 +59,7 @@ Le tableau suivant indique les fonctionnalités que nous vous conseillons d’ut
 |**Relecture de trace**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
-Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] est une interface utilisateur graphique de Trace SQL qui permet de surveiller une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou Analysis Services. Vous pouvez capturer et enregistrer des données sur chaque événement dans un fichier ou dans une table en vue d'une analyse ultérieure. Par exemple, vous pouvez surveiller un environnement de production pour savoir quelles sont les procédures stockées qui affectent les performances en s'exécutant trop lentement. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] est utilisé pour les activités telles que :  
+Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] est une interface utilisateur graphique de Trace SQL qui permet de surveiller une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou Analysis Services. Vous pouvez capturer et enregistrer des données sur chaque événement dans un fichier ou dans une table en vue d'une analyse ultérieure. Par exemple, vous pouvez surveiller un environnement de production pour savoir quelles sont les procédures stockées qui affectent les performances en s'exécutant trop lentement. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] est utilisé pour des activités telles que :  
   
 -   Exécuter pas à pas des requêtes posant problème afin d'en déterminer la cause.  
   
@@ -85,7 +85,7 @@ Pour utiliser le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], 
 -   connexions d'accès, échecs et déconnexions ;    
 -   instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] `SELECT`, `INSERT`, `UPDATE` et `DELETE` ;    
 -   état du traitement d'appel de procédure distante (RPC) ;  
--   le lancement ou la fin d'une procédure stockée ;  
+-   le lancement ou la fin d'une procédure stockée ;  
 -   le lancement ou la fin d'instructions à l'intérieur de procédures stockées ;  
 -   le lancement ou la fin d'un traitement SQL ;  
 -   une erreur consignée dans le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ;  
@@ -187,6 +187,6 @@ Toutes les données générées par un événement sont affichées dans une mêm
  [Sessions, catégorie d’événement](../../relational-databases/event-classes/sessions-event-category.md)   
  [Procédures stockées, catégorie d’événement](../../relational-databases/event-classes/stored-procedures-event-category.md)   
  [TSQL, catégorie d’événement](../../relational-databases/event-classes/tsql-event-category.md)   
- [Analyse des performances et surveillance de l’activité du serveur](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
+ [Analyse des performances et surveillance de l'activité du serveur](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 605e7a5b532e03d55b9d15964697597b06793174
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7da71a2ba80325c768abc10435ff9816ce539b0b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502463"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730475"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Utiliser des chemins d'accès PowerShell SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ Après avoir accédé à un nœud dans un chemin de fournisseur du [!INCLUDE[ssD
   
  Pour afficher les méthodes et propriétés disponibles pour des objets ou classes d’objets spécifiques, utilisez l’applet de commande **Get-Member** .  
   
-### <a name="examples-listing-methods-and-properties"></a>Exemples : affichage de la liste des méthodes et des propriétés  
+### <a name="examples-listing-methods-and-properties"></a>Exemples : Affichage de la liste des méthodes et des propriétés  
  Cet exemple affecte à une variable Windows PowerShell la classe <xref:Microsoft.SqlServer.Management.Smo.Database> SMO et répertorie les méthodes et les propriétés :  
   
 ```  
@@ -71,7 +71,7 @@ Get-Item . | Get-Member -Type Properties
   
  Pour effectuer un travail sur les objets d'un chemin d'accès de fournisseur du [!INCLUDE[ssDE](../includes/ssde-md.md)] , vous pouvez utiliser les méthodes et les propriétés SMO.  
   
-### <a name="examples-using-methods-and-properties"></a>Exemples : utilisation de méthodes et propriétés  
+### <a name="examples-using-methods-and-properties"></a>Exemples : Utilisation des méthodes et des propriétés  
  L’exemple suivant utilise la propriété SMO **Schema** pour obtenir la liste des tables du schéma Sales dans AdventureWorks2012 :  
   
 ```  
@@ -98,7 +98,7 @@ $MyDBVar.Create()
 $MyDBVar.State  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [fournisseur PowerShell SQL Server](sql-server-powershell-provider.md)   
  [Parcourir les chemins d'accès PowerShell SQL Server](navigate-sql-server-powershell-paths.md)   
  [Convertir des URN en chemins d'accès de fournisseur SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)   

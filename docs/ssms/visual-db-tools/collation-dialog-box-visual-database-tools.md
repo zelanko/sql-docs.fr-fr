@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: e4020f79-7abf-4839-b9b2-984ef7049817
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ffdd615647e1dea318d5cec7fa5075b6449b4dae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 94409316db28a3e122457e81037a9a4eadb60509
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65093839"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686317"
 ---
 # <a name="collation-dialog-box-visual-database-tools"></a>Boîte de dialogue Classement (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ Cette boîte de dialogue apparaît :
   
 -   Si vous entrez un nom de classement non valide dans le champ **Classement** de l'onglet **Propriétés des colonnes**  
   
--   Si vous cliquez dans le champ **Classement** de l’onglet **Propriétés des colonnes**, puis sur le bouton de sélection (**...**) à droite du champ.  
+-   Si vous cliquez dans le champ **Classement** de l’onglet **Propriétés des colonnes**, puis sur le bouton de sélection ( **...** ) à droite du champ.  
   
 ## <a name="options"></a>Options  
 **Classement SQL**  
@@ -55,6 +55,6 @@ Utilise les options de comparaison alphabétique. S'applique uniquement si vous 
 **Bouton Paramètres par défaut**  
 Applique à la colonne la séquence de classement par défaut pour la base de données.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Utiliser des colonnes dans des requêtes d’agrégation &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-columns-in-aggregate-queries-visual-database-tools.md)  
   

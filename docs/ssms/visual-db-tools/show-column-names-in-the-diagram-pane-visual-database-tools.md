@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b866d107-6312-44f9-9195-d74bd43b7142
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9897c05fdba098ef336c1edb2b31bfc4c9219c9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: fd9dcb3ce3e5906b34b7accfca5d9db09b97f39f
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099806"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688216"
 ---
 # <a name="show-column-names-in-the-diagram-pane-visual-database-tools"></a>Afficher les noms des colonnes dans le volet Schéma (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,6 +39,6 @@ Vous pouvez choisir de masquer ou d’afficher les noms des colonnes des tables 
   
 2.  Dans le menu contextuel, sélectionnez **Nom uniquement** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
   

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 4d84239a-68c7-4aa2-8602-2b51dd07260f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3f433c5bfd5f6ee2f3a962b47c3d6a4430083976
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 026e2f7bd27f5e21a1cce0afdc3d29704a1ae1e9
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098974"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681243"
 ---
 # <a name="spatial-indexes-dialog-box-visual-database-tools"></a>Index spatiaux, boîte de dialogue (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -90,7 +90,7 @@ Développée, elle affiche les champs de propriétés de **Nom** et **Descriptio
 Indique le nom de l'index spatial. Lorsqu'un nouvel index est créé, il obtient un nom par défaut basé sur la table affichée dans la fenêtre active du Concepteur de tables. Vous pouvez modifier le nom à tout moment.  
   
 **Description**  
-Décrit l'index. Pour écrire une description plus détaillée, cliquez sur **Description**, puis sur le bouton de sélection (**...**) qui s’affiche à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
+Décrit l'index. Pour écrire une description plus détaillée, cliquez sur **Description**, puis sur le bouton de sélection ( **...** ) qui s’affiche à droite du champ de propriété. Vous obtiendrez une zone d'écriture plus large.  
   
 **Catégorie Concepteur de tables**  
 Développée, elle affiche des informations sur les propriétés de cet index spatial.  
@@ -117,6 +117,6 @@ Spécifie si de nouvelles statistiques sont calculées une fois l'index créé. 
 **Verrouillage de ligne autorisé**  
 Spécifie si le verrouillage au niveau des lignes est autorisé dans cet index. L'autorisation ou non du verrouillage au niveau de la ligne affecte les performances de la base de données.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Vue d'ensemble des index spatiaux](../../relational-databases/spatial/spatial-indexes-overview.md)  
   

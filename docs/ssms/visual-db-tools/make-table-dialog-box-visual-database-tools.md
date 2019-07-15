@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 5eb28dc3-828e-486c-9348-596bb5a04c85
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6a4a512a552448c1ef50320dd3269365ab487968
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: b230110cae8bfe1d11bcf847d64faeaa3a00f000
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096729"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67682075"
 ---
 # <a name="make-table-dialog-box-visual-database-tools"></a>Boîte de dialogue Création de table (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ Pour créer une table de destination dans une autre base de données, spécifiez
 > [!NOTE]  
 > Avant d'exécuter la requête, vous pouvez modifier les propriétés de la table à créer dans la fenêtre **Propriétés** . Pour plus d’informations, consultez [Propriétés de la requête &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/query-properties-visual-database-tools.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer des requêtes Make Table &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-make-table-queries-visual-database-tools.md)  
 [Types de requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/types-of-queries-visual-database-tools.md)  
   

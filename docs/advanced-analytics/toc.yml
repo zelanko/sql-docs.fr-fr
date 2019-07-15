@@ -3,6 +3,7 @@
 - name: Bienvenue dans SQL Server >>
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Vue d’ensemble
+  expanded: true
   items:
     - name: 'Machine Learning Services (R, Python)'
       href: ../advanced-analytics/what-is-sql-server-machine-learning.md
@@ -18,8 +19,8 @@
       href: ../advanced-analytics/install/sql-server-machine-learning-services-2019.md
     - name: Installer ML Services sur Windows
       href: ../advanced-analytics/install/sql-machine-learning-services-windows-install.md
-    - name: "Installer ML Services sur Linux\_>>"
-      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=../toc.json
+    - name: Installer ML Services sur Linux
+      href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
     - name: Installer R Services
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
     - name: 'Installer un serveur autonome (R, Python)'

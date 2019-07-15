@@ -16,12 +16,12 @@ ms.assetid: 97f2535b-ec19-4973-823d-bcf3d5aa0216
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25625a5340707efdf21589a735a177e0be667bd1
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 0ce840b73741bcb36868ab8d80cbb3113ffdd510
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586416"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860526"
 ---
 # <a name="specify-synchronization-schedules"></a>Spécifier des planifications de synchronisation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "67586416"
   
     -   **Exécuter à la demande uniquement**  
   
-    -   **\<Définir la planification?>**  
+    -   **\<Définir la planification...>**  
   
-2.  Si vous sélectionnez l’option **\<Définir la planification?>** , spécifiez une planification dans la boîte de dialogue **Propriétés de la planification du travail**, puis cliquez sur **OK**.  
+2.  Si vous sélectionnez l’option **\<Définir la planification...>** , spécifiez une planification dans la boîte de dialogue **Propriétés de la planification du travail**, puis cliquez sur **OK**.  
   
 3.  Terminez l'Assistant.  
 

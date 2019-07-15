@@ -14,16 +14,16 @@ helpviewer_keywords:
 - connection strings [Database Engine], TCP/IP
 - aliases [SQL Server], TCP/IP
 ms.assetid: ee5dbc2c-1fc6-42bd-bdf5-efa792557934
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a237fcd5b03f8013e4a6514b87322695e6a0cf9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c4d3d3680a4756c6210208f25247b8b1b04191f4
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206168"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732717"
 ---
 # <a name="creating-a-valid-connection-string-using-tcp-ip"></a>Création d’une chaîne de connexion valide à l’aide du protocole TCP/IP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "53206168"
  Au moment de la connexion, le composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client lit dans le Registre les valeurs de serveur, protocole et port pour le nom d'alias spécifié, et crée une chaîne de connexion au format `tcp:<servername>[\<instancename>],<port>` ou `tcp:<IPAddress>[\<instancename>],<port>`.  
   
 > [!NOTE]
->  Le pare-feu [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ferme le port 1433 par défaut. Sachant que [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] communique via le port 1433, vous devez rouvrir ce port si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour être à l’écoute des connexions clientes entrantes utilisant TCP/IP. Pour plus d'informations sur la configuration d'un pare-feu, consultez « Procédure : configurer un pare-feu pour accéder à SQL Server » dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou passez en revue la documentation de votre pare-feu.  
+>  Le pare-feu [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ferme le port 1433 par défaut. Sachant que [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] communique via le port 1433, vous devez rouvrir ce port si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour être à l’écoute des connexions clientes entrantes utilisant TCP/IP. Pour plus d'informations sur la configuration d'un pare-feu, consultez « Procédure : configurer un pare-feu pour accéder à SQL Server » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou passez en revue la documentation de votre pare-feu.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prennent intégralement en charge IPv4 (Internet Protocol version 4) et IPv6 (Internet Protocol version 6). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accepte les deux formats IPv4 et IPv6 pour les adresses IP. Pour plus d'informations sur IPv6, consultez « Connexion avec IPv6 » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prennent entièrement en charge les protocoles IPv4 (Internet Protocol version 4) et IPv6 (Internet Protocol version 6). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accepte les deux formats IPv4 et IPv6 pour les adresses IP. Pour plus d'informations sur IPv6, consultez « Connexion avec IPv6 » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="connecting-to-the-local-server"></a>Connexion au serveur local  
- Lorsque vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alors que celui-ci est exécuté sur le même ordinateur que l'ordinateur client, vous pouvez utiliser `(local)` comme nom de serveur. Cette option n'est pas conseillée dans la mesure où elle est source d'ambiguïté ; toutefois, elle peut s'avérer utile lorsqu'il est certain que le client s'exécute sur l'ordinateur visé. Par exemple, lorsque vous créez une application destinée à des utilisateurs itinérants déconnectés, tels que des vendeurs, pour lesquels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur des ordinateurs portables et stocke les données de projet, un client établissant une connexion à `(local)` se connecte toujours à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cours d'exécution sur l'ordinateur portable. Vous pouvez utiliser le mot `localhost` ou un point (**.**) à la place de `(local)`.  
+ Lorsque vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] alors que celui-ci est exécuté sur le même ordinateur que l'ordinateur client, vous pouvez utiliser `(local)` comme nom de serveur. Cette option n'est pas conseillée dans la mesure où elle est source d'ambiguïté ; toutefois, elle peut s'avérer utile lorsqu'il est certain que le client s'exécute sur l'ordinateur visé. Par exemple, lorsque vous créez une application destinée à des utilisateurs itinérants déconnectés, tels que des vendeurs, pour lesquels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur des ordinateurs portables et stocke les données de projet, un client établissant une connexion à `(local)` se connecte toujours à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cours d'exécution sur l'ordinateur portable. Vous pouvez utiliser le mot `localhost` ou un point ( **.** ) à la place de `(local)`.  
   
 ## <a name="verifying-your-connection-protocol"></a>Vérification de votre protocole de connexion  
  La requête suivante retourne le protocole utilisé pour la connexion active.  
@@ -169,9 +169,9 @@ Server             .\<instancename>
 ```  
   
 > [!NOTE]  
->  Pour plus d'informations sur la spécification du protocole réseau en tant que paramètre **sqlcmd**, consultez « Procédure : se connecter au moteur de base de données à l'aide de sqlcmd.exe » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+>  Pour plus d’informations sur la spécification du protocole réseau en tant que paramètre **sqlcmd** , consultez « Procédure : établir une connexion au moteur de base de données à l’aide de sqlcmd.exe » dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d'une chaîne de connexion valide à l'aide du protocole de mémoire partagée](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
  [Création d'une chaîne de connexion valide à l'aide de canaux nommés](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)   
  [Choix d'un protocole réseau](https://msdn.microsoft.com/library/6565fb7d-b076-4447-be90-e10d0dec359a)  

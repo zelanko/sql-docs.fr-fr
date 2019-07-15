@@ -14,15 +14,15 @@ helpviewer_keywords:
 - SQL Server Profiler, starting
 - starting SQL Server Profiler
 ms.assetid: e91c30a9-0d29-4f84-bcb8-e8fb62afadda
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9f1fa1e72ab814f6ff00d39cd72e6ed98cb57fb6
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 06ee31ac87f8bbdc8177ea7899b59a6f0e576365
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291297"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731575"
 ---
 # <a name="profiler-utility"></a>Utilitaire profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ profiler
  Spécifie une table de trace à charger lors du démarrage du générateur de profils. Vous devez spécifier la base de données, l'utilisateur ou le schéma, ainsi que la table.  
   
  **/T"** *template_name* **"**  
- Spécifie le modèle qui sera chargé pour configurer la trace. Le nom du modèle doit être entre guillemets. Le nom du modèle doit être le répertoire de modèles système ou le répertoire de modèles utilisateur. Si deux modèles portant le même nom existent dans les deux répertoires, le modèle du répertoire système est chargé. Si aucun modèle n'existe sous le nom spécifié, le modèle standard est chargé. Notez que l’extension de fichier du modèle (.tdf) ne doit pas être spécifiée dans *template_name*. Exemple :  
+ Spécifie le modèle qui sera chargé pour configurer la trace. Le nom du modèle doit être entre guillemets. Le nom du modèle doit être le répertoire de modèles système ou le répertoire de modèles utilisateur. Si deux modèles portant le même nom existent dans les deux répertoires, le modèle du répertoire système est chargé. Si aucun modèle n'existe sous le nom spécifié, le modèle standard est chargé. Notez que l’extension de fichier du modèle (.tdf) ne doit pas être spécifiée dans *template_name*. Par exemple :  
   
 ```  
 /T "standard"  
@@ -119,14 +119,14 @@ profiler
  **/Z**  *file_size*  
  Spécifie la taille du fichier de trace, en mégaoctets (Mo). La taille par défaut est de 5 Mo. Si la substitution est activée, tous les fichiers de substitution sont limités à la valeur spécifiée dans cet argument.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour démarrer une trace avec un modèle spécifique, utilisez les options **/S** et **/T** simultanément. Par exemple, pour démarrer une trace en utilisant le modèle Standard sur MyServer\MyInstance, entrez ce qui suit à l'invite de commandes :  
   
 ```  
 profiler /S MyServer\MyInstance /T "Standard"  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Référence de l’utilitaire d’invite de commandes &#40;moteur de base de données&#41;](../tools/command-prompt-utility-reference-database-engine.md)  
   
   

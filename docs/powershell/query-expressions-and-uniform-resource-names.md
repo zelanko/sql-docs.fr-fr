@@ -11,15 +11,15 @@ helpviewer_keywords:
 - unique resource names
 - URN
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: aaf8d8f1410295439f5083fa8c33067d61b0ffa1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ada8c5996f0324d3d1f623981b7f83f8f0aa804
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62672364"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730593"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expressions de requête et noms URN
 
@@ -111,7 +111,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  not(\<*PropertyExpression*>)  
  Inverse la valeur d’évaluation de *PropertyExpression*, énumérant tous les objets qui ne correspondent pas à la condition spécifiée dans *PropertyExpression*. Par exemple, not(contains(\@Name, 'xyz')) énumère tous les objets dont le nom ne contient pas la chaîne xyz.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les expressions de requête sont des chaînes qui énumèrent les nœuds dans une hiérarchie de modèle SMO. Chaque nœud possède une expression de filtre qui spécifie les critères pour déterminer les objets qui sont énumérés au niveau de ce nœud. Les expressions de requête sont modélisées sur le langage d'expression XPath. Les expressions de requête implémentent un petit sous-ensemble des expressions qui sont prises en charge par XPath, et possèdent également quelques extensions qui ne sont pas présentes dans XPath. Les expressions XPath sont des chaînes qui spécifient un jeu de critères utilisé pour énumérer une ou plusieurs balises dans un document XML. Pour plus d'informations sur XPath, consultez [W3C XPath Language](http://www.w3.org/TR/xpath20/)(en anglais).  
   
  Les expressions de requête doivent commencer par une référence absolue à l'objet serveur. Les expressions relatives avec une barre oblique (/) de début ne sont pas autorisées. La séquence des objets spécifiés dans une expression de requête doit respecter la hiérarchie des objets de collection dans le modèle objet associé. Par exemple, une expression de requête qui fait référence à des objets dans l'espace de noms Microsoft.SqlServer.Management.Smo doit commencer par un nœud Server, suivi d'un nœud Database, etc.  
@@ -169,7 +169,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[@CreateDat
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_null(@DateLastModified))]  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Invoke-PolicyEvaluation (applet de commande)](invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40moteur de base de données&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   

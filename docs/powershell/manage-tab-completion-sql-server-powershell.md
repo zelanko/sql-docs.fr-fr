@@ -7,21 +7,21 @@ ms.reviewer: ''
 ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: 6296848a-890f-4ad3-8d9f-92ed6a79aa00
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: afe3a53c3bc6208bc723ec5f30afc6f8add1f46a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b02c72e49e2f7c8230f6e60e47c3e3ff9120d8e2
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62672504"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730649"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Gérer la saisie semi-automatique par tabulation (SQL Server PowerShell)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 
-Les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell introduisent trois variables (**$SqlServerMaximumTabCompletion**, **$SqlServerMaximumChildItems**et **$SqlServerIncludeSystemObjects**) pour contrôler la saisie semi-automatique par tabulation de Windows PowerShell. La saisie semi-automatique par tabulation réduit la quantité de caractères que vous devez taper en renvoyant des tableaux d'éléments dont le nom commence par la chaîne que vous tapez.  
+Les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell introduisent trois variables ( **$SqlServerMaximumTabCompletion**, **$SqlServerMaximumChildItems**et **$SqlServerIncludeSystemObjects**) pour contrôler la saisie semi-automatique par tabulation de Windows PowerShell. La saisie semi-automatique par tabulation réduit la quantité de caractères que vous devez taper en renvoyant des tableaux d'éléments dont le nom commence par la chaîne que vous tapez.  
 
 > [!NOTE]
 > Il existe deux modules SQL Server PowerShell : **SqlServer** et **SQLPS**. Le module **SQLPS** fait partie de l’installation de SQL Server (à des fins de compatibilité descendante), mais il n’est plus mis à jour. Le module PowerShell le plus récent est **SqlServer**. Le module **SqlServer** contient les versions mises à jour des applets de commande disponibles dans **SQLPS**, ainsi que de nouvelles applets de commande pour prendre en charge les dernières fonctionnalités SQL.  
@@ -40,7 +40,7 @@ Les composants logiciels enfichables [!INCLUDE[ssNoVersion](../includes/ssnovers
  **$SqlServerMaximumChildItems =** *n*  
  Spécifie le nombre maximal d’objets affichés par **Get-ChildItem**. Si **Get-ChildItem** est exécuté sur un nœud de chemin contenant plus de *n* objets, la liste est tronquée au niveau *n*. *n* est un entier. Le paramètre par défaut 0 signifie que le nombre d'objets répertoriés est illimité.  
   
- **$SqlServerIncludeSystemObjects =** { **$True** | **$False** }  
+ **$SqlServerIncludeSystemObjects =** { **$True** |  **$False** }  
  Si cette variable est définie sur **$True**, les objets système sont affichés par le biais de la saisie semi-automatique par tabulation et de **Get-ChildItem**. Si cette variable est définie sur **$False**, aucun objet système n’est affiché. La valeur par défaut est **$False**.  
   
 ## <a name="set-the-sql-server-tab-completion-variables"></a>Définir les variables de la saisie semi-automatique par tabulation de SQL Server  
@@ -56,7 +56,7 @@ $SqlServerIncludeSystemObjects = $False
 dir variable:sqlserver*  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

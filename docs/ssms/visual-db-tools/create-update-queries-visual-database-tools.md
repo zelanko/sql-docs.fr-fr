@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 178b7b75-8078-4e61-b2a8-4719b9d8033d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e60baa8e5d00235e859fbef97f616a5ae23e6df2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: e138a0f1e2c1e9408885e1a2d057d7790bc8ff39
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095372"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67690473"
 ---
 # <a name="create-update-queries-visual-database-tools"></a>Créer des requêtes Update (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +73,7 @@ WHERE (pub_id = '0766')
   
 Quand vous exécutez une requête Update, aucun résultat n’apparaît dans le [volet Résultats](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). En fait, un message indiquant le nombre de lignes modifiées s'affiche.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Types de requêtes pris en charge &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/supported-query-types-visual-database-tools.md)  
 [Rubriques de procédures relatives à la conception de requêtes et de vues &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  
 [Effectuer des opérations de base concernant les requêtes &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/perform-basic-operations-with-queries-visual-database-tools.md)  

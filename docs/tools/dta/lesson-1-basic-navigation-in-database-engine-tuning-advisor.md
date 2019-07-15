@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données | Microsoft Docs'
+title: 'Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine Tuning Advisor [SQL Server], tutorials
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: d41c8a3dcc995849fa62ea9a06703d915298eeac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 149fc4781c0a93db423a863c98f7eeaf0afcf2da
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201778"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727621"
 ---
-# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Leçon 1 : Navigation de base dans l'Assistant Paramétrage du moteur de base de données
+# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Leçon 1 : navigation de base dans l'Assistant Paramétrage du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 L'Assistant Paramétrage du moteur de base de données fournit une interface graphique utilisateur qui permet d'afficher des sessions de paramétrage et des rapports de recommandations de paramétrage. Cette leçon explique comment démarrer cet outil et comment configurer l'affichage. À la fin de la leçon vous connaîtrez les différentes façons de démarrer cet outil et de configurer son affichage pour l'adapter aux tâches de paramétrage que vous effectuez régulièrement.  
 
@@ -33,7 +33,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l�
 - Téléchargez les [exemples de bases de données AdventureWorks2017.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)
 
 
-Instructions de restauration des bases de données dans SSMS se trouvent ici : Restaurer une base de données
+Les instructions de restauration des bases de données dans SSMS se trouvent ici : [Restaurer une base de données.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
 
   >[!NOTE]
   > Ce didacticiel est destiné à un utilisateur familiarisé avec l’utilisation de SQL Server Management Studio et les tâches d’administration de base de données. 
@@ -86,7 +86,7 @@ Lorsque l'Assistant Paramétrage du moteur de base de données s'ouvre pour la p
     -   Par défaut, l'option **Demander avant d'arrêter l'analyse de la session** est activée pour éviter d'arrêter accidentellement une session de paramétrage avant que l'Assistant Paramétrage du moteur de base de données n'ait terminé d'analyser une charge de travail.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 2 : Utilisation de l'Assistant Paramétrage du moteur de base de données](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
+[Leçon 2 : Utilisation de l’Assistant Paramétrage du moteur de base de données](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
   
   
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - traces [SQL Server], replaying
 - replaying traces
 ms.assetid: 6a0ad817-3d8d-4495-889d-c66a7ef9e8bb
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2e011b894693539fa2c79ffaa2c922567ee7d5fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 13296bb26a65d7ebe17d9d2bc732a28959ae5e45
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736447"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732906"
 ---
 # <a name="replay-a-trace-table-sql-server-profiler"></a>Relire une table de trace (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "47736447"
   
     -   Pour contrôler la façon dont [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère les processus pendant la relecture, configurez les **Options du moniteur d’intégrité**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Autorisations nécessaires pour exécuter SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)   
  [Relire des traces](../../tools/sql-server-profiler/replay-traces.md)   
  [Ouvrir une table de trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
