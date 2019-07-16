@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 268f94665641e29156c20ea55debf26db63e1142
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a73c8e45803bc10d47ef042acebf0650ea183f61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048279"
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,11 +53,11 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Jeu de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**distributor_latency**|**bigint**|Nombre de secondes s'écoulant entre la validation de l'enregistrement du jeton de suivi sur le serveur de publication et la validation de l'enregistrement sur le serveur de distribution.|  
 |**subscriber** (Abonné)|**sysname**|Nom de l'Abonné qui a reçu le jeton de suivi.|  
-|**subscriber_db**|**sysname**|Nom de la base de données d'abonnement dans laquelle l'enregistrement du jeton de suivi a été inséré.|  
+|**bd_abonné**|**sysname**|Nom de la base de données d'abonnement dans laquelle l'enregistrement du jeton de suivi a été inséré.|  
 |**subscriber_latency**|**bigint**|Nombre de secondes s'écoulant entre la validation de l'enregistrement du jeton de suivi sur le serveur de distribution et la validation de l'enregistrement sur l'Abonné.|  
 |**overall_latency**|**bigint**|Nombre de secondes s'écoulant entre la validation de l'enregistrement du jeton de suivi sur le serveur de publication et la validation de l'enregistrement du jeton sur l'Abonné.|  
   

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ab8ddde8-1cea-4b41-a7e4-697e6ddd785a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7f4622eec6b7c5d3a3cc206b43cd31253fe7ee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.openlocfilehash: 26768c83551c22f11b09b7b8b16bfecc5c69d1c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097711"
 ---
 # <a name="sysdmexecprocedurestats-transact-sql"></a>sys.dm_exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "66462666"
 > [!NOTE]
 > À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_procedure_stats**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**Int**|ID de base de données dans lequel réside la procédure stockée.|  
 |**object_id**|**Int**|Numéro d'identification d'objet de la procédure stockée.|  
@@ -76,7 +75,7 @@ ms.locfileid: "66462666"
 |**last_spills**|**bigint**|Le nombre de pages répandues la dernière exécution de la procédure stockée.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|Le nombre minimal de pages par cette procédure stockée a été dispersées jamais en une seule exécution.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|Le nombre maximal de pages par cette procédure stockée a été dispersées jamais en une seule exécution.<br /><br /> **S’applique à** : En commençant par [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
-|**pdw_node_id**|**Int**|L’identificateur pour le nœud se trouvant sur cette distribution.<br /><br />**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
+|**pdw_node_id**|**int**|L’identificateur pour le nœud se trouvant sur cette distribution.<br /><br />**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  
 |**total_page_server_reads**|**bigint**|Le nombre total de lectures de serveur de pages effectuées par les exécutions de cette procédure stockée depuis sa compilation.<br /><br /> **S’applique à** : Très grande échelle de la base de données SQL Azure|  
 |**last_page_server_reads**|**bigint**|Le nombre de lectures de pages de serveur effectuée la dernière exécution de la procédure stockée.<br /><br /> **S’applique à** : Très grande échelle de la base de données SQL Azure|  
 |**min_page_server_reads**|**bigint**|Le nombre minimal de serveur de pages lit que cette procédure stockée effectuées lors d’une seule exécution.<br /><br /> **S’applique à** : Très grande échelle de la base de données SQL Azure|  
@@ -87,7 +86,7 @@ ms.locfileid: "66462666"
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
    
 ## <a name="remarks"></a>Notes  
  Les statistiques de la vue sont mises à jour lorsqu'une exécution de procédure stockée se termine.  

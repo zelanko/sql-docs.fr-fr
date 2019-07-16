@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc1a800ff61bde8e4d446462143bf0d333a16fe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45278a6d9501b75b624e11bbeb11d24d10e482c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056212"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +31,12 @@ ms.locfileid: "62817126"
   
 ## <a name="definition"></a>Définition  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**article_id**|**Int**|Colonne d'identité fournissant un numéro d'identification unique pour l'article|  
-|**nom**|**sysname**|Nom associé à l'article et unique dans la publication|  
+|**article_id**|**int**|Colonne d'identité fournissant un numéro d'identification unique pour l'article|  
+|**name**|**sysname**|Nom associé à l'article et unique dans la publication|  
 |**publication_id**|**smallint**|Identificateur de la publication à laquelle appartient l'article|  
-|**table_id**|**Int**|L’ID de la table publiée à partir de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md).|  
+|**table_id**|**int**|L’ID de la table publiée à partir de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md).|  
 |**publisher_id**|**smallint**|L’ID du serveur de publication non-SQL Server.|  
 |**creation_script**|**nvarchar(255)**|Script du schéma de l'article.|  
 |**del_cmd**|**nvarchar(255)**|Type de commande de réplication utilisé pour répliquer des suppressions avec des articles de table. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
@@ -51,19 +50,19 @@ ms.locfileid: "62817126"
 |**schema_option**|**binary(8)**|Bitmap de l'option de génération de schéma d'un article donné, qui peut être le résultat OR logique au niveau du bit d'au moins l'une des valeurs suivantes :<br /><br /> **0 x 00** = disable scripts par l’Agent d’instantané et utilise le CreationScript fourni.<br /><br /> **0 x 01** = génère la création d’objets (CREATE TABLE, CREATE PROCEDURE, etc.).<br /><br /> **0 x 10** = génère un index cluster correspondant.<br /><br /> **0 x 40** = générer des index non-cluster correspondants.<br /><br /> **0 x 80** = inclut l’intégrité référentielle déclarée dans les clés primaires.<br /><br /> **0 x 1000** = réplique le classement au niveau des colonnes. Remarque : Cette option est définie par défaut pour les serveurs de publication Oracle permettre les comparaisons respectant la casse.<br /><br /> **0 x 4000** = réplique les clés uniques si défini sur un article de table.<br /><br /> **0 x 8000** = réplique une clé primaire et les clés uniques sur une table de l’article en tant que contraintes à l’aide d’instructions ALTER TABLE.|  
 |**dest_owner**|**sysname**|Propriétaire de la table dans la base de données de destination|  
 |**dest_table**|**sysname**|Nom de la table de destination|  
-|**tablespace_name**|**nvarchar(255)**|Identifie l'espace disque logique utilisé par la table d'enregistrement de l'article.|  
+|**TABLESPACE_NAME**|**nvarchar(255)**|Identifie l'espace disque logique utilisé par la table d'enregistrement de l'article.|  
 |**objid**|**Int**|Cette colonne n’est pas utilisée et est incluse uniquement à rendre le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) afficher de la **IHarticles** table compatible avec le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) vue utilisée pour les articles de SQL Server ( [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
-|**sync_objid**|**Int**|Cette colonne n’est pas utilisée et est incluse uniquement à rendre le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) afficher de la **IHarticles** table compatible avec le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) vue utilisée pour les articles de SQL Server ( [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
+|**sync_objid**|**int**|Cette colonne n’est pas utilisée et est incluse uniquement à rendre le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) afficher de la **IHarticles** table compatible avec le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) vue utilisée pour les articles de SQL Server ( [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**description**|**nvarchar(255)**|L’entrée descriptive de l’article.|  
 |**publisher_status**|**Int**|Est utilisé pour indiquer si la vue qui définit l’article publié a été définie en appelant [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md).<br /><br /> **0** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) a été appelée.<br /><br /> **1** = [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) n’a pas été appelée.|  
 |**article_view_owner**|**nvarchar(255)**|Propriétaire de l'objet de synchronisation sur le serveur de publication utilisé par l'Agent de lecture du journal.|  
 |**article_view**|**nvarchar(255)**|Objet de synchronisation sur le serveur de publication utilisé par l'Agent de lecture du journal.|  
 |**ins_scripting_proc**|**Int**|Cette colonne n’est pas utilisée et est incluse uniquement à rendre le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) afficher de la **IHarticles** table compatible avec le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) vue utilisée pour les articles de SQL Server ( [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**del_scripting_proc**|**Int**|Cette colonne n’est pas utilisée et est incluse uniquement à rendre le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) afficher de la **IHarticles** table compatible avec le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) vue utilisée pour les articles de SQL Server ( [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
-|**upd_scripting_proc**|**Int**|Cette colonne n’est pas utilisée et est incluse uniquement à rendre le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) afficher de la **IHarticles** table compatible avec le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) vue utilisée pour les articles de SQL Server ( [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
-|**custom_script**|**Int**|Cette colonne n’est pas utilisée et est incluse uniquement à rendre le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) afficher de la **IHarticles** table compatible avec le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) vue utilisée pour les articles de SQL Server ( [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
+|**upd_scripting_proc**|**int**|Cette colonne n’est pas utilisée et est incluse uniquement à rendre le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) afficher de la **IHarticles** table compatible avec le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) vue utilisée pour les articles de SQL Server ( [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
+|**custom_script**|**int**|Cette colonne n’est pas utilisée et est incluse uniquement à rendre le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) afficher de la **IHarticles** table compatible avec le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) vue utilisée pour les articles de SQL Server ( [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
 |**fire_triggers_on_snapshot**|**bit**|Cette colonne n’est pas utilisée et est incluse uniquement à rendre le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) afficher de la **IHarticles** table compatible avec le [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) vue utilisée pour les articles de SQL Server ( [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)).|  
-|**instance_id**|**Int**|Identifie l'instance active du journal d'article de la table publiée.|  
+|**instance_id**|**int**|Identifie l'instance active du journal d'article de la table publiée.|  
 |**use_default_datatypes**|**bit**|Indique si l’article utilise les mappages de type de données par défaut ; la valeur **1** indique que les mappages de type de données par défaut sont utilisées.|  
   
 ## <a name="see-also"></a>Voir aussi  

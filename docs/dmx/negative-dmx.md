@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fa7904ab168755a8258f0ad1d6dbb790646b552a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a4975e762d698d6f1097372b392a09d9fceb85e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008261"
 ---
 # <a name="--negative-dmx"></a>- (Négatif) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "62501879"
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Numeric_Expression*  
+ *Numeric_expression*  
  Expression DMX (Data Mining Extensions) valide qui retourne une valeur numérique.  
   
 ## <a name="return-value"></a>Valeur de retour  

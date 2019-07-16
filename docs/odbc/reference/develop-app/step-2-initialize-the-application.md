@@ -1,5 +1,5 @@
 ---
-title: 'Étape 2 : Initialiser l’Application | Microsoft Docs'
+title: 'Étape 2 : Initialiser l’Application | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 23a7a230-ae2c-4a5e-9760-d2e17f92c389
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0d25173dc8dc14aa1ed41a4a88496ef654e2ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41030015645bda11242a703a163f26104e66dba0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149193"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114251"
 ---
-# <a name="step-2-initialize-the-application"></a>Étape 2 : Initialiser l’application
+# <a name="step-2-initialize-the-application"></a>Étape 2 : Initialiser l’application
 La deuxième étape consiste à initialiser l’application, comme indiqué dans l’illustration suivante. Exactement ce qui se fait ici varie en fonction de l’application.  
   
  ![Présente l’initialisation d’une application ODBC](../../../odbc/reference/develop-app/media/pr12.gif "pr12")  

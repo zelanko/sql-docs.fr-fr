@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c927003-c49d-4fe1-8e3e-5b2899166268
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2a27b2e7c915a1ac13050d0ed188002cd42746c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c39e81f8faffed606e6ca94315c47d383174c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028868"
 ---
 # <a name="mapping-sybase-ase-schemas-to-sql-server-schemas-sybasetosql"></a>Mappage de schémas Sybase ASE à des schémas SQL Server (SybaseToSQL)
 Dans Sybase Adaptive Server Enterprise (ASE), chaque base de données a un ou plusieurs schémas. Par défaut, SSMA migre tous les objets dans une base de données et le schéma à la même base de données et le même schéma dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Toutefois, vous pouvez personnaliser le mappage entre l’ASE et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou des bases de données SQL Azure et des schémas.  

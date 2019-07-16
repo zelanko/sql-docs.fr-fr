@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4ce0eb96832f4a6b9c1953b0a9a9d0af65cb3b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64d16a9181c475427677371d1e6e180570225b7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096462"
 ---
 # <a name="data-type-limitations"></a>Limitations des types de données
 Les pilotes de base de données Microsoft ODBC Desktop impose les restrictions suivantes sur les types de données :  
@@ -33,6 +32,6 @@ Les pilotes de base de données Microsoft ODBC Desktop impose les restrictions s
 |DECIMAL (valeur numérique exacte)|Non pris en charge.|  
 |Types de données à virgule flottante|Le nombre de décimales dans un nombre à virgule flottante peut être limité par le format de nombre défini dans la section International du Panneau de configuration Windows.|  
 |NUMERIC|Prend en charge la précision maximale et une échelle de 28.|  
-|timestamp|Impossible de convertir le type de données TIMESTAMP à elle-même par la fonction CONVERT.|  
+|TIMESTAMP|Impossible de convertir le type de données TIMESTAMP à elle-même par la fonction CONVERT.|  
 |TINYINT|TINYINT valeurs sont toujours non signés.|  
 |Chaînes de longueur nulle|Quand un fichier dBASE, Microsoft Excel, Paradox ou Textdriver est utilisé, l’insertion d’une chaîne de longueur nulle dans une colonne insère en fait une valeur NULL à la place.|

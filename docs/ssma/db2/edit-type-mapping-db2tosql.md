@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 47e1321802b237f02a63535572b1850dbb4c74f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29669535f3544dafea58e7064e6d2c5281f6102f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989701"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>Modifier le mappage de Type (DB2ToSQL)
 Le **modifier le mappage de Type** boîte de dialogue vous permet de spécifier comment les types sont mappés entre les objets de base de données source et de destination.  

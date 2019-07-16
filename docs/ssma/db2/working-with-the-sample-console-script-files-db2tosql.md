@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: dc7976fae322dddc24eda7cf6ef84ef20a7a9e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca2a595eb57d01554aa8389b002fcd6f8422b9da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086174"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Utilisation des fichiers de Script de Console exemple (DB2ToSQL)
 Quelques exemples de fichiers ont été fournis, ainsi que le produit pour la référence de l’utilisateur et l’utilisation. Cette section décrit la façon de personnaliser facilement ces scripts en fonction des besoins des utilisateurs finaux.  
@@ -33,7 +32,7 @@ Les fichiers de script de console exemple suivants couvrant différents scénari
   
 -   ConversionAndDataMigrationSample.xml  
   
-1.  **ServersConnectionFileSample.xml:**  
+1.  **ServersConnectionFileSample.xml :**  
   
     -   Cet exemple donne les différents modes de connexion disponible à la base de données source et cible et l’utilisateur peut sélectionner n’importe quel mode selon les besoins. Cet exemple contient les définitions de serveur.  
   
@@ -59,7 +58,7 @@ Les fichiers de script de console exemple suivants couvrant différents scénari
   
     Assurez-vous qu’argument de ligne de commande de fichier de connexion serveur est passé à l’application de console et le ServersConnectionFileSample.xml est mis à jour avec les valeurs de paramètre de serveur correct.  
   
-4.  **SqlStatementConversionSample.xml:** Cet exemple permet à l’utilisateur Générer le correspondantes `t-sql` script pour la base de données source `sql` commande fournie en tant qu’entrée.  
+4.  **SqlStatementConversionSample.xml :** Cet exemple permet à l’utilisateur Générer le correspondantes `t-sql` script pour la base de données source `sql` commande fournie en tant qu’entrée.  
   
     Dans le `convert-sql-statement` l’utilisateur doit obligatoirement modifier la valeur de la variable de commande (reportez-vous **VariableValueFileSample.xml**) dans le `context` nom à l’attribut de base de données qui est en cours d’utilisation par l’utilisateur. L’utilisateur sera également être requises pour modifier le `sql` valeur d’attribut à la base de données source `sql` commande nécessitant une qu’il doit être convertie.  
   

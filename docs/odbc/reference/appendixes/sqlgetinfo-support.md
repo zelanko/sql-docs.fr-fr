@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6eb6bedb20e1f61c48776d03df59aa6865cfb2a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f40299dccc0313f662aeadfcb26b71326cdc6d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073904"
 ---
 # <a name="sqlgetinfo-support"></a>SQLGetInfo, prise en charge
 Lorsqu’une application ODBC 2. *x* application appelle **SQLGetInfo** à un ODBC 3 *.x* pilote, le *InfoType* arguments dans le tableau suivant doivent être pris en charge.  
   
 |*InfoType*|Valeur renvoyée|  
 |----------------|-------------|  
-|SQL_ALTER_TABLE (ODBC 2.0) **Remarque :**  Ce type d’information n’est pas déconseillé ; les masques de bits dans la colonne à droite sont déconseillés.|Un masque de bits SQLINTEGER énumérant les clauses dans le **ALTER TABLE** instruction pris en charge par la source de données.<br /><br /> Les masques de bits suivants sont utilisés pour déterminer les clauses sont prises en charge :<br /><br /> SQL_AT_DROP_COLUMN = permet de supprimer des colonnes est pris en charge. Si cela entraîne en cascade ou limiter le comportement est définie par le pilote. (ODBC 2.0)<br /><br /> SQL_AT_ADD_COLUMN = la possibilité d’ajouter la prise en charge de plusieurs colonnes dans une instruction ALTER TABLE unique. Ce bit n’associe pas avec les autres SQL_AT_ADD_COLUMN_XXX ou SQL_AT_CONSTRAINT_XXX bits. (ODBC 2.0)|  
+|SQL_ALTER_TABLE (ODBC 2.0) **Remarque :**  Ce type d’information n’est pas déconseillé ; les masques de bits dans la colonne à droite sont déconseillés.|Un masque de bits SQLINTEGER énumérant les clauses dans le **ALTER TABLE** instruction pris en charge par la source de données.<br /><br /> Les masques de bits suivants sont utilisés pour déterminer les clauses sont prises en charge :<br /><br /> SQL_AT_DROP_COLUMN = permet de supprimer des colonnes est pris en charge. Si cela entraîne en cascade ou limiter le comportement est définie par le pilote. ODBC (2.0)<br /><br /> SQL_AT_ADD_COLUMN = la possibilité d’ajouter la prise en charge de plusieurs colonnes dans une instruction ALTER TABLE unique. Ce bit n’associe pas avec les autres SQL_AT_ADD_COLUMN_XXX ou SQL_AT_CONSTRAINT_XXX bits. ODBC (2.0)|  
 |SQL_FETCH_DIRECTION (ODBC 1.0)<br /><br /> Le type d’informations a été introduit dans ODBC 1.0 ; chaque masque de bits est étiquetée avec la version dans laquelle il a été introduite.|Un masque de bits SQLINTEGER énumérant les options de direction d’extraction prises en charge.<br /><br /> Les masques de bits suivants sont utilisés conjointement avec l’indicateur pour déterminer quelles options sont prises en charge :<br /><br /> SQL_FD_FETCH_NEXT (ODBC 1.0) SQL_FD_FETCH_BOOKMARK (ODBC 1.0) SQL_FD_FETCH_ABSOLUTE (ODBC 1.0) SQL_FD_FETCH_PRIOR (ODBC 1.0) SQL_FD_FETCH_LAST (ODBC 1.0) SQL_FD_FETCH_RELATIVE (ODBC 1.0) SQL_FD_FETCH_BOOKMARK (ODBC 2.0)|  
 |SQL_LOCK_TYPES (ODBC 2.0)|Un masque de bits SQLINTEGER le verrou pris en charge de l’énumération des types pour le *troupeau* argument dans **SQLSetPos**.<br /><br /> Les masques de bits suivants sont utilisés conjointement avec l’indicateur pour déterminer quels types de verrou sont prises en charge :<br /><br /> SQL_LCK_NO_CHANGE SQL_LCK_EXCLUSIVE SQL_LCK_UNLOCK|  
 |SQL_ODBC_API_CONFORMANCE (ODBC 1.0)|Une valeur SQLSMALLINT indiquant le niveau de conformité de ODBC.<br /><br /> SQL_OAC_NONE = None<br /><br /> SQL_OAC_LEVEL1 = 1 niveau pris en charge<br /><br /> SQL_OAC_LEVEL2 = 2 niveau pris en charge|  

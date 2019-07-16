@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066657"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Paramètres du projet (mappage de Type) (AccessToSQL)
 Les paramètres de mappage de Type de projet vous permettent de définir des mappages de type par défaut pour le projet SSMA. Vous pouvez également spécifier des mappages de type pour les objets de base de données individuelle. Pour plus d’informations, consultez [Source de mappage et les Types de données cible](mapping-source-and-target-data-types-accesstosql.md).  
@@ -44,7 +43,7 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
   
 |Type de données Access|Type de données de SQL Server|  
 |--------------------|------------------------|  
-|**binary[\*..\*]**|**varbinary[\*]**|  
+|**binaire [\*... \*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
 |**byte**|**tinyint**|  
 |**currency**|**money**|  
@@ -53,18 +52,18 @@ Le tableau suivant présente le mappage par défaut entre les types de données 
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**entier**|**smallint**|  
-|**long**|**Int**|  
+|**long**|**int**|  
 |**longbinary**|**varbinary(max)**|  
 |**memo**|**nvarchar(max)**|  
 |**Mémo** : pour Access 97|**varchar(max)**|  
 |**single**|**real**|  
-|**text[\*..\*]**|**nvarchar[\*]**|  
+|**texte [\*... \*]**|**nvarchar[\*]**|  
 |**texte [\*... \*]** : pour Access 97|**varchar[\*]**|  
   
 **Ajouter**  
 Cliquez pour ajouter un type de données à la liste de mappage.  
   
-**Modifier**  
+**Edition**  
 Cliquez pour modifier un type de données dans la liste de mappage.  
   
 **Supprimer**  

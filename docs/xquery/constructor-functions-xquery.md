@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b426d7f4f5056c76e7ccc6807785366f0f12287f
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038991"
 ---
 # <a name="constructor-functions-xquery"></a>Fonctions constructeur (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -138,8 +137,8 @@ TYP($atomicvalue as xdt:anyAtomicType?
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Utilisation de la fonction XQuery dateTime() pour extraire les anciennes descriptions de produits  
- Dans cet exemple, un exemple de document XML est attribué au préalable un **xml** variable de type. Ce document contient trois exemples d'éléments <`ProductDescription`>, possédant chacun un élément enfant <`DateCreated`>.  
+### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>R. Utilisation de la fonction XQuery dateTime() pour extraire les anciennes descriptions de produits  
+ Dans cet exemple, un exemple de document XML est attribué au préalable un **xml** variable de type. Ce document contient trois exemples <`ProductDescription`> éléments, chacun d’eux contenant un <`DateCreated`> élément enfant.  
   
  La variable est ensuite interrogée afin que ne soient extraites que les descriptions de produits créées avant une date spécifique. À des fins de comparaison, la requête utilise le **:DateTime()** fonction constructeur à taper les dates.  
   
@@ -174,13 +173,13 @@ select @x.query('
   
  Notez les points suivants dans la requête précédente :  
   
--   La structure de bouclage FOR ... Structure de boucle WHERE est utilisée pour récupérer le \<ProductDescription > élément répondant à la condition spécifiée dans la clause WHERE.  
+-   FOR... Structure de boucle WHERE est utilisée pour récupérer le \<ProductDescription > élément répondant à la condition spécifiée dans la clause WHERE.  
   
 -   Le **dateTime()** fonction constructeur sert à construire **dateTime** tapez des valeurs afin qu’ils puissent être comparées correctement.  
   
 -   La requête construit ensuite le document XML obtenu. Étant donné que vous construisez une séquence d'attributs, des virgules et des parenthèses sont utilisées dans la construction XML.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Product   

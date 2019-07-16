@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a867dc15-5a0d-457c-8304-ac323bcf9377
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d81fdef23f1d35997aaddce8d6e61e5ce51f76dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 990e86f905ac1ce82a25831c29f55153e78da236
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988136"
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>Combiner des données (Complément MDS pour Excel)
 
@@ -51,7 +50,7 @@ ms.locfileid: "65488892"
 -   Pour rechercher des similitudes entre les données managées MDS et les données externes, consultez [Mettre en correspondance les données similaires &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/match-similar-data-mds-add-in-for-excel.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble : Exportation des données vers Excel &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
+ [Présentation : Exportation des données vers Excel &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [Mise en correspondance de la qualité des données dans le complément MDS pour Excel](../../master-data-services/microsoft-excel-add-in/data-quality-matching-in-the-mds-add-in-for-excel.md)  
   
   

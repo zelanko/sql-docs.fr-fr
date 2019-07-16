@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f1bab9e4-1715-4c06-9cb0-06c7e0c9c97f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c7ec642a516d4ad2ac5a0f8d894351fc6670c117
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: de9f30c3c63030aa956366c222b7cbda94e2becb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038983"
 ---
 # <a name="context-functions---position-xquery"></a>Fonctions relatives au contexte : position (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +40,8 @@ fn:position() as xs:integer
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
-### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>A. Utilisation de la fonction XQuery position() pour récupérer les deux premières caractéristiques de produits  
- La requête suivante récupère les deux premières caractéristiques de produits, correspondant aux deux premiers éléments enfants de l'élément <`Features`>, tirées de la description du catalogue retraçant les modèles de produits. Si d'autres caractéristiques sont présentes, elle ajoute un élément <`there-is-more/`> (« Et plus encore ») au résultat.  
+### <a name="a-using-the-position-xquery-function-to-retrieve-the-first-two-product-features"></a>R. Utilisation de la fonction XQuery position() pour récupérer les deux premières caractéristiques de produits  
+ La requête suivante récupère les deux premiers composants, les deux premiers éléments enfants de la <`Features`> élément, à partir de la description du catalogue de produits. S’il existe davantage de fonctionnalités, il ajoute un <`there-is-more/`> élément au résultat.  
   
 ```  
 SELECT CatalogDescription.query('  

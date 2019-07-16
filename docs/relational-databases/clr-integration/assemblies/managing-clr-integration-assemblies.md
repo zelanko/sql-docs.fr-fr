@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ae478cb2efc557acfd86e174d59a160fb8920c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3476ba45f7f563524cdfd9855e80f9c5dd96524
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054448"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Gestion des assemblys d'intégration du CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47686537"
 |colonne|Description|  
 |------------|-----------------|  
 |assembly_id|Identificateur défini pour l'assembly. Ce numéro est affecté à tous les objets se rapportant au même assembly.|  
-|NAME|Nom de l'objet.|  
+|name|Nom de l'objet.|  
 |file_id|Numéro identifiant chaque objet, le premier objet associé à une donnée **assembly_id** possède la valeur 1. Si plusieurs objets sont associés au même **assembly_id**, chaque **file_id** valeur est incrémentée de 1.|  
 |content|Représentation hexadécimale de l'assembly ou du fichier.|  
   
