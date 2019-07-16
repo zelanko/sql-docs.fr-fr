@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7189499084c40d297f30514ba2f9bf5c01ada510
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 98c986c26c8d0d0cc6e2b8ff3573f0a20d938975
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942264"
 ---
 # <a name="spkillfilestreamnontransactedhandles-transact-sql"></a>sp_kill_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_kill_filestream_non_transacted_handles [[ @table_name = ] 'table_name', [[ @h
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-set"></a>Jeu de résultats  
- Aucun.  
+ Aucune.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Le *handle_id* requis par **sp_kill_filestream_non_transacted_handles** n’est pas lié à session_id ni à l’unité de travail qui est utilisé dans d’autres **kill** commandes.  

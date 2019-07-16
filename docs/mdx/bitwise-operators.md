@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1d82ab7eb58b9c7aa76683e09b8017fb21799eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c6e5138cb3f33054c9118e3a3b264639f043005
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016974"
 ---
 # <a name="bitwise-operators"></a>Opérateurs au niveau du bit
 
@@ -28,7 +27,7 @@ ms.locfileid: "63284943"
 |[AND](../mdx/and-mdx.md)|Effectue une conjonction logique sur deux expressions numériques.|  
 |[IS](../mdx/is-mdx.md)|Effectue une comparaison logique sur deux expressions d'objet.|  
 |[NOT](../mdx/not-mdx.md)|Effectue une négation logique sur une expression numérique.|  
-|[OR](../mdx/or-mdx.md)|Effectue une disjonction logique sur deux expressions numériques.|  
+|[OU](../mdx/or-mdx.md)|Effectue une disjonction logique sur deux expressions numériques.|  
 |[XOR](../mdx/xor-mdx.md)|Effectue une exclusion logique sur deux expressions numériques.|  
   
 ## <a name="see-also"></a>Voir aussi  

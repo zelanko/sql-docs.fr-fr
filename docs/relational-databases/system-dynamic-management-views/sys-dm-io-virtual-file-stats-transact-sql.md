@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: fa3e321f-6fe5-45ff-b397-02a0dd3d6b7d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc6511c6a0999dfd366c87fcfa18630614215efa
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 524f0d82b5f426ae41169b8358dd8ad8be66da03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900291"
 ---
 # <a name="sysdmiovirtualfilestats-transact-sql"></a>sys.dm_io_virtual_file_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 
  *database_id* | VALEUR NULL
 
- **S’APPLIQUE À :** SQL Server (à partir de 2008), base de données SQL Azure
+ **S’APPLIQUE À :** SQL Server (à compter de 2008), Azure SQL Database
 
  ID de la base de données. *database_id* est de type int, sans valeur par défaut. Les entrées autorisées sont l'ID d'une base de données ou la valeur NULL. Lorsque vous spécifiez la valeur NULL, toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont renvoyées.  
   
@@ -66,7 +65,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
   
 *FILE_ID* | VALEUR NULL
 
-**S’APPLIQUE À :** SQL Server (à partir de 2008), base de données SQL Azure
+**S’APPLIQUE À :** SQL Server (à compter de 2008), Azure SQL Database
  
 ID du fichier. *FILE_ID* est de type int, sans valeur par défaut. Les entrées autorisées sont l'ID d'un fichier ou la valeur NULL. Lorsque vous spécifiez la valeur NULL, tous les fichiers de la base de données sont renvoyés.  
   
@@ -74,7 +73,7 @@ ID du fichier. *FILE_ID* est de type int, sans valeur par défaut. Les entrées 
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nom de la base de données.</br></br>Pour SQL Data Warehouse, il est le nom de la base de données stockée sur le nœud qui est identifié par pdw_node_id. Chaque nœud a une base de données tempdb qui comporte 13 fichiers. Chaque nœud a également une base de données par distribution, et chaque base de données de la distribution a 5 fichiers. Par exemple, si chaque nœud contient 4 distributions, les résultats montrent 20 fichiers de base de données de distribution par pdw_node_id. 
 |**database_id**|**smallint**|ID de base de données.|  
@@ -89,9 +88,9 @@ ID du fichier. *FILE_ID* est de type int, sans valeur par défaut. Les entrées 
 |**io_stall**|**bigint**|Durée totale (en millisecondes) d'attente des utilisateurs pour les entrées/sorties effectuées sur le fichier.|  
 |**size_on_disk_bytes**|**bigint**|Nombre d'octets utilisés sur le disque pour ce fichier. Pour les fichiers partiellement alloués, ce nombre est le nombre réel d'octets utilisés sur le disque pour les instantanés de la base de données.|  
 |**file_handle**|**varbinary**|Descripteur de fichier Windows pour ce fichier.|  
-|**io_stall_queued_read_ms**|**bigint**|**Ne pas s’applique à :**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les lectures. N'accepte pas la valeur NULL. Pour plus d’informations, consultez [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
-|**io_stall_queued_write_ms**|**bigint**|**Ne pas s’applique à :**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les écritures. N'accepte pas la valeur NULL.|
-|**pdw_node_id**|**Int**|**S’applique à** : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificateur du nœud pour la distribution.
+|**io_stall_queued_read_ms**|**bigint**|**Ne pas s’applique à :** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br /> Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les lectures. N'accepte pas la valeur NULL. Pour plus d’informations, consultez [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).|  
+|**io_stall_queued_write_ms**|**bigint**|**Ne pas s’applique à :** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)].<br /><br />  Latence totale d'E/S introduite par la gouvernance des ressources d'E/S pour les écritures. N'accepte pas la valeur NULL.|
+|**pdw_node_id**|**int**|**S’applique à** : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]</br></br>Identificateur du nœud pour la distribution.
  
   
 ## <a name="permissions"></a>Autorisations  
@@ -99,9 +98,9 @@ ID du fichier. *FILE_ID* est de type int, sans valeur par défaut. Les entrées 
   
 ## <a name="examples"></a>Exemples  
 
-### <a name="a-return-statistics-for-a-log-file"></a>A. Retourner des statistiques pour un fichier journal
+### <a name="a-return-statistics-for-a-log-file"></a>R. Retourner des statistiques pour un fichier journal
 
-**S’applique à :** SQL Server (à partir de 2008), base de données SQL Azure
+**S’applique à :** SQL Server (à compter de 2008), Azure SQL Database
 
  Le code exemple suivant retourne les statistiques pour le fichier journal de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
@@ -110,9 +109,9 @@ SELECT * FROM sys.dm_io_virtual_file_stats(DB_ID(N'AdventureWorks2012'), 2);
 GO  
 ```  
   
-### <a name="b-return-statistics-for-file-in-tempdb"></a>b. Retourner des statistiques pour le fichier dans tempdb
+### <a name="b-return-statistics-for-file-in-tempdb"></a>B. Retourner des statistiques pour le fichier dans tempdb
 
-**S’applique à :** Azure SQL Data Warehouse.
+**S’applique à :** Azure SQL Data Warehouse
 
 ```sql
 SELECT * FROM sys.dm_pdw_nodes_io_virtual_file_stats 
