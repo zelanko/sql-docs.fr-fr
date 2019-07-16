@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc8cae9353ad780a0711c77e138246f0be0d7d15
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 4caa5d8ab850c06aec62b84088463dc21bb40ea2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997493"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,11 +47,11 @@ sp_helprole [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|Nom du rôle dans la base de données en cours.|  
 |**RoleId**|**smallint**|ID de **RoleName**.|  
-|**IsAppRole**|**Int**|0 = **RoleName** n’est pas un rôle d’application.<br /><br /> 1 = **RoleName** est un rôle d’application.|  
+|**IsAppRole**|**int**|0 = **RoleName** n’est pas un rôle d’application.<br /><br /> 1 = **RoleName** est un rôle d’application.|  
   
 ## <a name="remarks"></a>Notes  
  Pour afficher les autorisations associées au rôle, utilisez **sp_helprotect**. Pour afficher les membres d’un rôle de base de données, utilisez **sp_helprolemember**.  

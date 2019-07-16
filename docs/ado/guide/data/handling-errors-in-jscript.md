@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d63f01c937f4a690968fe5edb50ac84958e705ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925170"
 ---
 # <a name="handling-errors-in-jscript"></a>Gestion des erreurs dans JScript
 Code de votre Microsoft® JScript® doit vérifier la **nombre** propriété de la **connexion** l’objet **erreurs** collection. Si la valeur est supérieure à 0, effectuer une itération dans la collection et imprimer les valeurs comme vous le feriez dans les autres langues.  

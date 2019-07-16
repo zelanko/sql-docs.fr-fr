@@ -12,15 +12,14 @@ dev_langs:
 ms.assetid: 385ad90a-37d0-497c-94aa-935d21fed78f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 500beed65583eea1e1e01b34a3bb585198b219e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a839ffc977981c977c2675f25dae4d505e89b081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926054"
 ---
-# <a name="ado-event-instantiation-visual-c"></a>Instanciation des événements ADO Visual C++
+# <a name="ado-event-instantiation-visual-c"></a>Instanciation des événements ADO Visual C++
 Il s’agit d’une description schématique d’instanciation des événements ADO dans Microsoft® Visual C++®. Consultez [exemple de modèle d’événements ADO (VC ++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) pour une description complète.  
   
  Créer des classes dérivées de la **ConnectionEventsVt** et **RecordsetEventsVt** interfaces trouvé dans le fichier adoint.h.  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d5d1a211e473cf2eed96603d91b581a52e9062d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26e33a84ff50fca00151dc124403bac9daa2d89d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905859"
 ---
 # <a name="kpitrend-mdx"></a>KPITrend (MDX)
 
@@ -29,7 +28,7 @@ KPITrend(KPI_Name)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *KPI_Name*  
+ *Nom_icp*  
  Expression de chaîne valide qui précise le nom de l'indicateur de performance clé.  
   
 ## <a name="remarks"></a>Notes  

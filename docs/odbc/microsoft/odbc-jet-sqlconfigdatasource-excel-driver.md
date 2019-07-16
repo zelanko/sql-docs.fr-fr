@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 885b3bea-f4b6-4902-b994-f78a912b612f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dbad3b1e6dda82a9f9fc584683e53f8e2a109cca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab33bfdef2b633cd5a7a3e215a3f6522d8d664ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915700"
 ---
 # <a name="odbc-jet-sqlconfigdatasource-excel-driver"></a>ODBC Jet : SQLConfigDataSource (pilote Excel)
 > [!NOTE]  
@@ -31,7 +30,7 @@ ms.locfileid: "63233597"
 |-------------|-----------------|  
 |DBQ|Pour le pilote Microsoft Excel lorsque vous accédez à Microsoft Excel 5.0 ou ultérieurement les fichiers, le nom du fichier de classeur.<br /><br /> La même option est définie en tant que **base de données** dans la boîte de dialogue d’installation.|  
 |DEFAULTDIR|La spécification de chemin d’accès au répertoire.<br /><br /> La même option est définie en tant que **sélectionner un répertoire** ou **Sélectionner classeur** dans la boîte de dialogue d’installation.|  
-|DESCRIPTION|Une description des données dans la source de données.<br /><br /> La même option est définie en tant que **Description** dans la boîte de dialogue d’installation.|  
+|Description|Une description des données dans la source de données.<br /><br /> La même option est définie en tant que **Description** dans la boîte de dialogue d’installation.|  
 |DRIVER|La spécification de chemin d’accès à la DLL du pilote.|  
 |DRIVERID|Un ID d’entier pour le pilote.<br /><br /> 534 (Microsoft Excel 3.0)<br /><br /> 278 (Microsoft Excel 4.0)<br /><br /> 22 (Microsoft Excel 5.0/7.0)<br /><br /> 790 (Microsoft Excel 97-2003)|  
 |FIL|Fichier de type, par exemple, Excel 3.0, 4.0 d’Excel, Excel 5.0, 7.0 d’Excel, Excel 97, Excel 2000 ou Excel 2003.|  
