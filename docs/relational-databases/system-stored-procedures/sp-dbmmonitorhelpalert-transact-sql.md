@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4639f548ec75844e72c19cb34ec29fc21933e31a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899190"
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,37 +49,37 @@ sp_dbmmonitorhelpalert database_name
   
  Pour renvoyer un avertissement spécifique, indiquez l'une des valeurs suivantes :  
   
-|Valeur|Mesure de performance|Seuil d'avertissement|  
+|Value|Mesure de performance|Seuil d'avertissement|  
 |-----------|------------------------|-----------------------|  
 |1|Transaction non envoyée la plus ancienne|Spécifie le nombre de minutes de transactions pouvant s'accumuler dans la file d'attente d'envoi avant qu'un avertissement ne soit généré sur l'instance de serveur principal. Cet avertissement permet de mesurer le risque de perte de données en termes de temps et s'avère particulièrement approprié en mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|  
 |2|Journal non envoyé|Spécifie la quantité de kilo-octets (Ko) de journal non envoyé qui génère un avertissement sur l'instance de serveur principal. Cet avertissement permet de mesurer le risque de perte de données en termes de Ko et s’avère particulièrement approprié pour le mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|  
 |3|Journal non restauré|Spécifie la quantité de Ko de journal non restauré qui génère un avertissement sur l'instance de serveur miroir. Cet avertissement permet de mesurer le temps de basculement. Le*temps de basculement* est principalement constitué du temps nécessaire à l'ancien serveur miroir pour restaurer par progression tout journal demeuré dans sa file d'attente de restauration par progression et d'un court laps de temps supplémentaire.|  
 |4|Charge de validation par le serveur miroir|Spécifie le nombre de millisecondes de délai moyen par transaction qui sont tolérés avant qu'un avertissement soit généré sur le serveur principal. Ce délai correspond au temps de traitement pendant lequel l'instance de serveur principal attend que l'instance de serveur miroir écrive l'enregistrement du journal de transaction dans la file d'attente de restauration par progression. Cette valeur est utile uniquement en mode haute sécurité.|  
-|5|Période de rétention|Métadonnées qui déterminent la durée de conservation des lignes dans la table de l'état des mises en miroir de base de données.|  
+|5\.|Période de rétention|Métadonnées qui déterminent la durée de conservation des lignes dans la table de l'état des mises en miroir de base de données.|  
   
  Pour plus d’informations sur les ID d’événement correspondant aux avertissements, consultez [utilisez les seuils d’avertissement et d’alertes sur des métriques de performances de mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Pour chaque alerte retournée, renvoie une ligne contenant les colonnes suivantes :  
   
 |colonne|Data type|Description|  
 |------------|---------------|-----------------|  
-|**alert_id**|**Int**|Le tableau ci-dessous répertorie les **alert_id** valeur pour chaque mesure de performance et de l’unité de mesure de la mesure affichée dans le **sp_dbmmonitorresults** jeu de résultats :|  
-|**seuil**|**Int**|Valeur de seuil de l'avertissement. Si une valeur supérieure à ce seuil est renvoyée lorsque l'état des mises en miroir est mis à jour, une entrée est insérée dans le journal des événements Windows. Cette valeur est exprimée en Ko, minutes ou millisecondes, suivant l'avertissement. Si le seuil n'est pas actuellement défini, la valeur est NULL.<br /><br /> **Remarque :** pour afficher les valeurs actuelles, exécutez le [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) procédure stockée.|  
-|**enabled**|**bit**|0 = L'événement est désactivé.<br /><br /> 1 = L'événement est activé.<br /><br /> **Remarque :** période de rétention est toujours activée.|  
+|**alert_id**|**int**|Le tableau ci-dessous répertorie les **alert_id** valeur pour chaque mesure de performance et de l’unité de mesure de la mesure affichée dans le **sp_dbmmonitorresults** jeu de résultats :|  
+|**threshold**|**int**|Valeur de seuil de l'avertissement. Si une valeur supérieure à ce seuil est renvoyée lorsque l'état des mises en miroir est mis à jour, une entrée est insérée dans le journal des événements Windows. Cette valeur est exprimée en Ko, minutes ou millisecondes, suivant l'avertissement. Si le seuil n'est pas actuellement défini, la valeur est NULL.<br /><br /> **Remarque :** Pour afficher les valeurs actuelles, exécutez le [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md) procédure stockée.|  
+|**enabled**|**bit**|0 = L'événement est désactivé.<br /><br /> 1 = L'événement est activé.<br /><br /> **Remarque :** La période de rétention est toujours activée.|  
   
-|Valeur|Mesure de performance|Unité|  
+|Value|Mesure de performance|Unité|  
 |-----------|------------------------|----------|  
 |1|Transaction non envoyée la plus ancienne|Minutes|  
 |2|Journal non envoyé|Ko|  
 |3|Journal non restauré|Ko|  
 |4|Charge de validation par le serveur miroir|Millisecondes|  
-|5|Période de rétention|Heures|  
+|5\.|Période de rétention|Heures|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

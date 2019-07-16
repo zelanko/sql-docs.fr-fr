@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: dcf3231fbff0ec4c3ea32e94f7b974a62faf05e6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 29454fefde7850e5e45ca6a916540e7d38e2b286
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070899"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Guide de référence du langage DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -92,11 +91,11 @@ ms.locfileid: "38032725"
  [Retour à instructions DMX](#BKMK_DMXStatements)  
   
 ###  <a name="BKMK_Queries"></a> Principes de base de requête DMX  
- L’instruction SELECT est la base pour la plupart des requêtes DMX. En fonction des clauses que vous utilisez avec ce type d'instruction, vous pouvez explorer ou copier des modèles d'exploration de données, ou effectuer des prévisions dans ces derniers. La requête de prédiction utilise une forme de SELECT pour créer des prédictions basées sur des modèles d’exploration de données existants. Des fonctions augmentent vos capacités à explorer et interroger les modèles d'exploration de données au-delà des possibilités intrinsèques du modèle d'exploration de données.   
+ L’instruction SELECT est la base pour la plupart des requêtes DMX. En fonction des clauses que vous utilisez avec ce type d'instruction, vous pouvez explorer ou copier des modèles d'exploration de données, ou effectuer des prévisions dans ces derniers. La requête de prédiction utilise une forme de SELECT pour créer des prédictions basées sur des modèles d’exploration de données existants. Des fonctions augmentent vos capacités à explorer et interroger les modèles d'exploration de données au-delà des possibilités intrinsèques du modèle d'exploration de données.  
   
  Les fonctions DMX permettent d'obtenir des informations qui sont découvertes au cours de l'apprentissage de vos modèles, et de calculer de nouvelles informations. Ces fonctions peuvent être utilisées pour différents objectifs, notamment pour retourner des statistiques décrivant les données sous-jacentes ou l'exactitude d'une prévision ou pour retourner l'explication développée d'une prévision.  
   
- **Pour plus d’informations****informations :** [présentation de l’instruction DMX instruction Select](../dmx/understanding-the-dmx-select-statement.md), [fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md), [Data Mining Extensions &#40;DMX&#41; référence de fonction  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **Pour plus d’informations** **informations :**  [Présentation de l’instruction DMX instruction Select](../dmx/understanding-the-dmx-select-statement.md), [fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md), [exploration de données Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
  [Retour à instructions DMX](#BKMK_DMXStatements)  
   
