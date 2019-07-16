@@ -17,26 +17,25 @@ helpviewer_keywords:
 ms.assetid: f91d1c6c-3132-47f6-926c-88f56848cafe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6c5eee7cef00d05e2a296fccd527c3df7a119d6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 84f9e2ce3026792b768d353e05b9e2299cf7ca5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029764"
 ---
 # <a name="sysmergesubsetfilters-transact-sql"></a>sysmergesubsetfilters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient des informations sur les filtres de jointure des articles partitionnés. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom de filtre**|**sysname**|Nom du filtre utilisé pour créer l'article.|  
-|**join_filterid**|**Int**|ID de l'objet représentant le filtre de jointure.|  
+|**filtername**|**sysname**|Nom du filtre utilisé pour créer l'article.|  
+|**join_filterid**|**int**|ID de l'objet représentant le filtre de jointure.|  
 |**pubid**|**uniqueidentifier**|ID de la publication.|  
 |**artid**|**uniqueidentifier**|L’ID de l’article.|  
-|**art_nickname**|**Int**|Surnom de l'article.|  
+|**art_nickname**|**int**|Surnom de l'article.|  
 |**join_articlename**|**sysname**|Nom de la table avec laquelle il faut effectuer une jointure pour déterminer si la ligne lui appartient.|  
 |**join_nickname**|**Int**|Surnom de la table avec laquelle il faut effectuer une jointure pour déterminer si la ligne lui appartient.|  
 |**join_unique_key**|**Int**|Indique une jointure sur une clé unique de **join_tablename**:<br /><br /> 0 = N'est pas une clé unique<br /><br /> 1 = Est une clé unique|  

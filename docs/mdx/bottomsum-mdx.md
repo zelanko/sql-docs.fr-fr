@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0f923761144389a97962f7269cc5164d0dbdbf51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e49fc5a7ffd4c0adff38628a143ded695785e29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016896"
 ---
 # <a name="bottomsum-mdx"></a>BottomSum (MDX)
 
@@ -35,7 +34,7 @@ BottomSum(Set_Expression, Value, Numeric_Expression)
  *Valeur*  
  Expression numérique valide qui précise la valeur par rapport à laquelle chaque tuple est comparé.  
   
- *Numeric_Expression*  
+ *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
 ## <a name="remarks"></a>Notes  

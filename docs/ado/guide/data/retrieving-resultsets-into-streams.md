@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b784553302bf9df30750f239291ca179ecf6cf74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f0c76a668c7191467e9f66ba48c486aceea16df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924347"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Récupération de jeux de résultats dans les flux
 Au lieu de recevoir les résultats dans le traditionnel **Recordset** de l’objet, ADO peut récupérer à la place les résultats de la requête dans un flux de données. ADO **Stream** objet (ou d’autres objets qui prennent en charge le modèle COM **IStream** interface, tels que l’ASP **demande** et **réponse** objets ) peuvent être utilisées pour contenir ces résultats. Une utilisation de cette fonctionnalité consiste à récupérer les résultats au format XML. Avec SQL Server, par exemple, les résultats XML peuvent être retournées de plusieurs façons, par exemple à l’aide de la clause FOR XML avec une requête SQL SELECT ou une requête XPath.  

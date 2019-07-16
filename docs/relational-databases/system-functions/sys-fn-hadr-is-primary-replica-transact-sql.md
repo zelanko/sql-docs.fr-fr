@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f6a70ce4ec31dafb2d02179ed36919030cedefff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a000db8f64fc5895b1f82150e8786341d0c13e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082710"
 ---
 # <a name="sysfnhadrisprimaryreplica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ END
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-sysfnhadrisprimaryreplica"></a>A. Utilisation de sys.fn_hadr_is_primary_replica  
+### <a name="a-using-sysfnhadrisprimaryreplica"></a>R. Utilisation de sys.fn_hadr_is_primary_replica  
  L'exemple suivant retourne 1 si la base de données spécifiée sur l'instance locale est le réplica principal.  
   
 ```  

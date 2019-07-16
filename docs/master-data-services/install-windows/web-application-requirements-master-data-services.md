@@ -12,13 +12,12 @@ keywords:
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 99009d961baf3d1f870783f565cb93c628eb85c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 763695a4fe00b2bb5f50113b5c9c2ba65ddd9417
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944889"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Configuration requise pour l'application Web (Master Data Services)
 
@@ -35,7 +34,7 @@ ms.locfileid: "65480158"
   
 ## <a name="requirements"></a>Configuration requise  
   
-### <a name="operating-system"></a>Système d'exploitation  
+### <a name="operating-system"></a>Système d’exploitation  
  Avant d’installer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], vérifiez les éléments requis suivants :    
     
 -   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)    

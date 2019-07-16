@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 246d894ff38cc0dd74e96bb0fcbdb7b170b51d53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924027"
 ---
 # <a name="streams-and-persistence"></a>Flux et persistance
 Le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet [enregistrer](../../../ado/reference/ado-api/save-method.md) magasins (méthode), ou *persiste*, un **Recordset** dans un fichier et le [ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)méthode restaure le **Recordset** à partir de ce fichier.  
@@ -50,7 +49,7 @@ rs1.Save stm, adPersistXML
 rs2.Open stm  
 ```  
   
-## <a name="scenario-2"></a>Scénario 2  
+## <a name="scenario-2"></a>Scénario 2  
  Ce scénario rend persistant un **Recordset** dans un **Stream** au format XML. Elle lit ensuite les **Stream** dans une chaîne que vous pouvez examiner, manipuler ou afficher.  
   
 ```  

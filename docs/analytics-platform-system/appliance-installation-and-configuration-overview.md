@@ -2,19 +2,18 @@
 title: Appliance installer et configurer - Analytique Platform System | Microsoft Docs
 description: Guide des administrateurs d’appliance Analytique Platform System (APS) via les premières étapes pour configurer et commencer à utiliser votre nouveau matériel.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5b6aa75cdab85fce9ef308d3e853ddb0107c28ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f32cbeccb9a71d1d4c801443b40df5a762b8f38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961488"
 ---
 # <a name="appliance-installation-and-configuration-for-analytics-platform-system"></a>Installation de l’appliance et de configuration pour l’Analytique Platform System
 Guide des administrateurs d’appliance Analytique Platform System (APS) via les premières étapes pour configurer et commencer à utiliser votre nouveau matériel.  
@@ -37,7 +36,7 @@ Si votre fabricant de matériel n’effectue pas l’installation de matériel, 
   
 |||  
 |-|-|  
-|**Tâche**|**Description**|  
+|**Task**|**Description**|  
 |Vérifiez la documentation|Vérifiez que vous avez reçu tous les documents nécessaires et les informations de votre fournisseur de matériel indépendants (IHV). Consultez [informations à obtenir à partir de votre fabricant de matériel &#40;Analytique Platform System&#41;](information-to-obtain-from-your-ihv.md).|  
 |Installer le matériel|Vérifiez que le centre de données peut prendre en charge de l’appliance. Déplacer les composants de l’appliance vers le centre de données. Les commutateurs réseau, PDU, de monter en rack et le câblage. Consultez [Installation matérielle &#40;Analytique Platform System&#41;](hardware-installation.md).|  
   
@@ -45,14 +44,14 @@ Si votre fabricant de matériel n’effectue pas l’installation de matériel, 
   
 |||  
 |-|-|  
-|**Tâche**|**Description**|  
+|**Task**|**Description**|  
 |L’appliance de mise sous tension|Alimentation sur chaque nœud de composant matériel dans l’ordre requis, en attente en fonction des besoins pour confirmer qu’aucune erreur est rencontrée.|  
   
 ## <a name="ConfigureAppliance"></a>3. Configurer l’Appliance  
   
 |||  
 |-|-|  
-|**Tâche**|**Description**|  
+|**Task**|**Description**|  
 |||  
 |Configurer l’appliance à l’aide de l’ordinateur SQL Server PDW**Configuration Manager**|Utilisez le Gestionnaire de Configuration pour définir les mots de passe appliance, fuseaux horaires, paramètres de pare-feu et de réseau, des certificats de sécurité et de performances et d’autres paramètres sur votre appliance. Consultez [Configuration de l’Appliance &#40;Analytique Platform System&#41;](appliance-configuration.md).|  
   
@@ -63,7 +62,7 @@ Si votre fabricant de matériel n’effectue pas l’installation de matériel, 
   
 |||  
 |-|-|  
-|**Tâche**|**Description**|  
+|**Task**|**Description**|  
 |Appliquer des mises à jour de SQL Server PDW|(Facultatif) Vous devrez peut-être appliquer une ou plusieurs mises à jour de SQL Server PDW pour mettre à jour de votre logiciel de SQL Server PDW vers la dernière version. Consultez [appliquer des correctifs de système de plateforme Analytique &#40;Analytique Platform System&#41;](apply-analytics-platform-system-hotfixes.md).|  
 |Configurer Windows Server Update Services|Configurer l’appliance pour recevoir des mises à jour de Windows Server Update Services pour prendre en charge des logiciels. Consultez [Téléchargez et appliquez les mises à jour Microsoft &#40;Analytique Platform System&#41;](download-and-apply-microsoft-updates.md).|  
   
@@ -72,7 +71,7 @@ Une fois que vous avez terminé toutes les étapes précédentes, votre applicat
   
 |||  
 |-|-|  
-|**Tâche**|**Description**|  
+|**Task**|**Description**|  
 |Installer des pilotes de SQL Server PDW et configurez la connectivité|Configurer des ordinateurs locaux pour vous connecter à SQL Server PDW à l’aide de SQL Server Data Tools, sqlcmd, informatique décisionnelle ou autres outils. <!-- MISSING LINKS See [Client Tools (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808).-->|  
 |Créer des rôles serveur et les ouvertures de session et affecter des autorisations|Planifier et créer des rôles d’ouvertures de session et le serveur qui permettra aux utilisateurs de se connecter à SQL Server PDW avec les autorisations appropriées. <!-- MISSING LINKS See [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md).-->|  
 |Configurer la passerelle de gestion de données Azure|La passerelle permet aux utilisateurs d’accéder aux données des points d’accès local en exposant les données de points d’accès comme sécuriser les flux OData Azure. La passerelle est déjà installée sur le nœud de contrôle. Demandez à Microsoft pour obtenir une assistance avec la configuration.|  

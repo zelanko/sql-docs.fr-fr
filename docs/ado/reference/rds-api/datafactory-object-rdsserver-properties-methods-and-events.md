@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cfeb9b5965c61977ab8d152c67a626534bb88910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8609c7bac3d701ef6c6cf087f46e8b236842b71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964379"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet DataFactory (RDSServer)
 > [!IMPORTANT]
 >  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## <a name="properties"></a>Properties  
- Aucun.  
+ Aucune.  
   
 ## <a name="methods"></a>Méthodes  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66718800"
 |[Synchronize21, méthode (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion (pour une utilisation avec ADO 2.1).|  
   
 ## <a name="events"></a>Events  
- Aucun.  
+ Aucune.  
   
 ## <a name="see-also"></a>Voir aussi  
  [DataFactory, objet (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2115600e-5ce7-4be0-9cd3-a1dd1fab0729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: de810e283429f36c52258a53b22addff96be8ba1
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f8904e3c08789eb0cb50b0f5a20b66c851578ac5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064122"
 ---
 # <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,7 +101,7 @@ srcdata
 ## <a name="returns"></a>Valeur renvoyée  
  Numéro de la colonne décrite. La première colonne est la colonne 1. Si une erreur se produit, retourne 0.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction **srv_describe** doit être appelée une fois pour chaque colonne dans la ligne avant le premier appel à **srv_sendrow**. Les colonnes d'une ligne peuvent être décrites dans n'importe quel ordre.  
   
  Pour changer l’emplacement et la longueur des données sources dans les lignes de colonnes avant d’envoyer le jeu de résultats complet, utilisez **srv_setcoldata** et **srv_setcollen**, respectivement.  
@@ -114,7 +113,7 @@ srcdata
 > [!IMPORTANT]  
 >  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [srv_sendrow &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-sendrow-extended-stored-procedure-api.md)   
  [srv_setutype &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
  [srv_setcoldata &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setcoldata-extended-stored-procedure-api.md)  

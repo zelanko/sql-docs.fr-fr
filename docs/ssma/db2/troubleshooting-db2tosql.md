@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ff0ef803274b23a54e3964ae2822dc351a3ce784
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0ab2e7721522e0671d195ec79a35bba72d462c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63077261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059971"
 ---
 # <a name="troubleshooting-db2tosql"></a>Résolution des problèmes (DB2ToSQL)
 Il n’est pas rare de rencontrer à mi-chemin de problèmes de migration exécutant les commandes ou scripts de la console.  
@@ -26,7 +25,7 @@ Les erreurs réparables peuvent porter sur :
   
 2.  Procédure  
   
-3.  Affichage  
+3.  Vue  
   
 4.  Déclencheur  
   

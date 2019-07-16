@@ -17,26 +17,25 @@ helpviewer_keywords:
 ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ad8c5db6a067477e3e4e5d349a8faa2adba5199
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d56debf540de7b1e7f33f741fdd4c3f52d3f04a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62903665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984893"
 ---
 # <a name="msmergepastpartitionmappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSmerge_past_partition_mappings** table stocke une ligne pour chaque id de partition une ligne modifiée donnée appartenait appartenir à, mais n’appartient plus. Cette table est stockée dans la base de données de publication.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|Le numéro de publication, qui est stocké dans **sysmergepublications**.|  
 |**tablenick**|**Int**|Surnom de la table publiée.|  
 |**rowguid**|**uniqueidentifier**|Identificateur de ligne pour la ligne concernée.|  
-|**partition_id**|**Int**|ID de la partition à laquelle la ligne appartient. La valeur est -1 si la modification de ligne s’applique à tous les abonnés.|  
-|**generation**|**bigint**|Valeur de la génération dans laquelle la modification de partition s'est produite.|  
+|**partition_id**|**int**|ID de la partition à laquelle la ligne appartient. La valeur est -1 si la modification de ligne s’applique à tous les abonnés.|  
+|**génération**|**bigint**|Valeur de la génération dans laquelle la modification de partition s'est produite.|  
 |**reason**|**tinyint**|Interne-usage uniquement.|  
   
 ## <a name="see-also"></a>Voir aussi  

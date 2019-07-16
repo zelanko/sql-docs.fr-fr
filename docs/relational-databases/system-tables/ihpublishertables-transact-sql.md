@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d556a80e018a9d3707aa03de7fdefe8c45bcb611
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a75e78c8423b925ca2dfc617cbbae7e4bdcc11d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990158"
 ---
 # <a name="ihpublishertables-transact-sql"></a>IHpublishertables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **IHpublishertables** (table système) représente les métadonnées stockées sur le serveur de publication. Cette table contient une ligne pour chaque table source publiée à partir d’une non - publication SQL Server utilisant le serveur de distribution en cours. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**table_id**|**Int**|Identifie une table publiée.|  
+|**table_id**|**int**|Identifie une table publiée.|  
 |**publisher_id**|**smallint**|Identifie le serveur de publication non-SQL à partir de laquelle la table est publiée.|  
-|**nom**|**sysname**|Nom de la table publiée.|  
+|**name**|**sysname**|Nom de la table publiée.|  
 |**Propriétaire**|**sysname**|Le propriétaire de la table.|  
   
 ## <a name="see-also"></a>Voir aussi  

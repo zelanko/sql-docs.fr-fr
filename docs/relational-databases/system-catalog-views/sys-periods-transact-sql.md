@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 25e66ed3-2270-4c5c-9f5a-2c0f165a57ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eed8badea9b7136cb71c5d89a76494aab190a0d2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: eea7709c67eab0dc9fe1890135f9ae03225cdff2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068092"
 ---
 # <a name="sysperiods-transact-sql"></a>Sys.Periods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -27,14 +26,14 @@ ms.locfileid: "51655959"
   
 |En-tête de colonne|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|NAME|**sysname**|Nom de la période|  
+|name|**sysname**|Nom de la période|  
 |period_type|**tinyint**|La valeur numérique représentant le type de période :<br /><br /> 1 = période de temps système|  
 |period_type_desc|**nvarchar(60)**|La description textuelle du type de colonne :<br /><br /> SYSTEM_TIME_PERIOD|  
-|object_id|**Int**|L’id de la table contenant la colonne period_type|  
-|start_column_id|**Int**|L’id de la colonne qui définit la limite inférieure applicable à la période|  
+|object_id|**int**|L’id de la table contenant la colonne period_type|  
+|start_column_id|**int**|L’id de la colonne qui définit la limite inférieure applicable à la période|  
 |end_column_id|**Int**|L’id de la colonne qui définit la limite supérieure de période|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

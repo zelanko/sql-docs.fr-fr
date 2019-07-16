@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9b57ce165337dc2cef87daf8c2a835bde0c5f85b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04dbf3069896b9a7668d64a2f1d322f0b17ca5f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697854"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918685"
 ---
 # <a name="field-object"></a>Objet Field
 Représente une colonne de données avec un type de données commun.  
@@ -54,6 +53,6 @@ Représente une colonne de données avec un type de données commun.
 -   [Champ objet propriétés, méthodes et événements](../../../ado/reference/ado-api/field-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: 970e4553-b41d-4a12-ad50-0ee65d1f305d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2da7e9873c2c4bb2f0f12a980159dd05fbb9cef9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e2b536b6f1bc22e15948dfb1a0d4df539c099f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62521285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005274"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Exemples de chargement en masse XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ Function ValidateFile(strXmlFile,strUrn,strXsdFile)
 End Function  
 ```  
   
-## <a name="a-bulk-loading-xml-in-a-table"></a>A. Chargement en masse XML dans une table  
+## <a name="a-bulk-loading-xml-in-a-table"></a>R. Chargement en masse XML dans une table  
  Cet exemple établit une connexion à l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui est spécifié dans la propriété ConnectionString (MyServer). L’exemple spécifie également l’errorlogfile, propriété. Par conséquent, la sortie d'erreur est enregistrée dans le fichier spécifié (« C:\error.log »), dont l'emplacement peut également être modifié. Notez également que la méthode à exécuter en tant que ses paramètres à la fois le fichier de schéma de mappage (SampleSchema.xml) et le fichier de données XML (SampleXMLData.xml). Lorsque le chargement en masse s’exécute, la table Cust que vous avez créé dans **tempdb** base de données contient de nouveaux enregistrements basés sur le contenu du fichier de données XML.  
   
 #### <a name="to-test-a-sample-bulk-load"></a>Pour tester un exemple de chargement en masse  
@@ -229,9 +228,9 @@ End Function
   
  Cet exemple charge en masse les données XML dans les deux tables, **Cust** et **CustOrder**:  
   
--   Cust(CustomerID, CompanyName, City)  
+-   Cust (CustomerID, CompanyName, City)  
   
--   CustOrder(OrderID, CustomerID)  
+-   CustOrder (OrderID, CustomerID)  
   
  Le schéma XSD suivant définit la vue XML de ces tables. Le schéma spécifie la relation parent-enfant entre les  **\<client >** et  **\<ordre >** éléments.  
   

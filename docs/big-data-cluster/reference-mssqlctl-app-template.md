@@ -5,17 +5,16 @@ description: Article de référence pour les commandes de modèle d’applicatio
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c0b9ab4dc278e04b2b112608699b9c60682de769
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 47cf8dd96a25bdc1c6b5567272232a74501684aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958213"
 ---
 # <a name="mssqlctl-app-template"></a>Modèle d’application mssqlctl
 
@@ -27,8 +26,8 @@ L’article suivant fournit la référence pour le **modèle d’application** c
 |     |     |
 | --- | --- |
 [mssqlctl app template list](#mssqlctl-app-template-list) | Extraire des modèles pris en charge.
-[mssqlctl app template pull](#mssqlctl-app-template-pull) | Téléchargez les modèles pris en charge.
-## <a name="mssqlctl-app-template-list"></a>mssqlctl app template list
+[extraction de modèle d’application mssqlctl](#mssqlctl-app-template-pull) | Téléchargez les modèles pris en charge.
+## <a name="mssqlctl-app-template-list"></a>liste de modèles d’application mssqlctl
 Extraire des modèles pris en charge dans le référentiel github [URL] spécifié.
 ```bash
 mssqlctl app template list [--url -u] 
@@ -57,7 +56,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-app-template-pull"></a>mssqlctl app template pull
+## <a name="mssqlctl-app-template-pull"></a>extraction de modèle d’application mssqlctl
 Téléchargez les modèles pris en charge dans le référentiel github [URL] spécifié.
 ```bash
 mssqlctl app template pull [--name -n] 

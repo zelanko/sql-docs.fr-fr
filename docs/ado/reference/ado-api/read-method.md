@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 838502de-80f1-4eeb-8838-dd3d9403e567
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f4594e4b85ad66b1ab11a2966bc7a0d79815db09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 992631b8fb3864b6d7404f86d2f65de222f0b1c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917417"
 ---
 # <a name="read-method"></a>Read, méthode
 Lit un nombre spécifié d’octets à partir d’un fichier binaire [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
@@ -36,7 +35,7 @@ Variant = Stream.Read ( NumBytes)
   
 #### <a name="parameters"></a>Paramètres  
  *NumBytes*  
- Facultatif. Un **Long** valeur qui spécifie le nombre d’octets à lire à partir du fichier ou le [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valeur **adReadAll**, qui est la valeur par défaut.  
+ facultatif. Un **Long** valeur qui spécifie le nombre d’octets à lire à partir du fichier ou le [StreamReadEnum](../../../ado/reference/ado-api/streamreadenum.md) valeur **adReadAll**, qui est la valeur par défaut.  
   
 ## <a name="return-value"></a>Valeur de retour  
  Le **en lecture** méthode lit un nombre spécifié d’octets ou l’intégralité du flux à partir d’un **Stream** de l’objet et retourne les données résultantes comme un **Variant**.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0ec8f9-5ba3-4f9f-b80d-2073aa049586
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2604fdc39789be2e0c86cc7d2cbc6491d55ba1ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 928ac3b1d3cd753ded0bcf4337f10a654c9a3dc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924826"
 ---
 # <a name="named-commands"></a>Commandes nommées
 [Création et exécution d’une commande Simple](../../../ado/guide/data/creating-and-executing-a-simple-command.md) montre une manière d’exécuter une commande. Une autre façon : vous pouvez rendre une commande nommée et puis appeler ce nommé commande directement sur le **connexion** objet (affecté à la **ActiveConnection** propriété de la **commande** objet). Une commande d’affectation de noms signifie l’affectation d’un nom pour le **nom** propriété d’un **commande** objet. Par exemple,  

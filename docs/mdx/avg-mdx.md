@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7d6b2e91504c2c9ba796d2c0a55ba19fb3f6493e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa8817e35a589def4631bd455637d05fc62d3a0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017013"
 ---
 # <a name="avg-mdx"></a>Avg (MDX)
 
@@ -32,7 +31,7 @@ Avg( Set_Expression [ , Numeric_Expression ] )
  *Set_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Numeric_Expression*  
+ *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
 ## <a name="remarks"></a>Notes  

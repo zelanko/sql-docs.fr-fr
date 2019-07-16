@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: dbf9eb5a-bd99-42f7-b275-556d0def045d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f7ec6322489ba862d335c5c52021d643da73deb1
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c007beeab554486fe490a0d2f6bfc335e1a50cf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009749"
 ---
 # <a name="clr-user-defined-aggregates---requirements"></a>Agrégats CLR définis par l’utilisateur - Exigences
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Un type dans un assembly CLR (Common Language Runtime) peut être enregistré comme une fonction d'agrégation définie par l'utilisateur, tant qu'il implémente le contrat d'agrégation requis. Ce contrat se compose de la **SqlUserDefinedAggregate** attribut et l’agrégation des méthodes de contrat. Le contrat d’agrégation inclut le mécanisme permettant d’enregistrer l’état intermédiaire de l’agrégation et le mécanisme permettant d’accumuler de nouvelles valeurs, qui se compose de quatre méthodes : **Init**, **Accumulate**,  **Fusion**, et **Terminer**. Lorsque ces conditions sont satisfaites, vous serez en mesure de tirer pleinement parti des agrégats définis par l’utilisateur dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les sections suivantes de cette rubrique fournissent des détails supplémentaires sur la façon de créer et d'utiliser les agrégats définis par l'utilisateur. Pour obtenir un exemple, consultez [Invoking CLR User-Defined les fonctions d’agrégation](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
+  Un type dans un assembly CLR (Common Language Runtime) peut être enregistré comme une fonction d'agrégation définie par l'utilisateur, tant qu'il implémente le contrat d'agrégation requis. Ce contrat se compose de la **SqlUserDefinedAggregate** attribut et l’agrégation des méthodes de contrat. Le contrat d’agrégation inclut le mécanisme permettant d’enregistrer l’état intermédiaire de l’agrégation et le mécanisme permettant d’accumuler de nouvelles valeurs, qui se compose de quatre méthodes : **Init**, **s’accumulent**, **fusion**, et **Terminer**. Lorsque ces conditions sont satisfaites, vous serez en mesure de tirer pleinement parti des agrégats définis par l’utilisateur dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les sections suivantes de cette rubrique fournissent des détails supplémentaires sur la façon de créer et d'utiliser les agrégats définis par l'utilisateur. Pour obtenir un exemple, consultez [Invoking CLR User-Defined les fonctions d’agrégation](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregate-invoking-functions.md).  
   
 ## <a name="sqluserdefinedaggregate"></a>SqlUserDefinedAggregate  
  Pour plus d’informations, consultez [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626).  
@@ -41,7 +40,7 @@ ms.locfileid: "51662468"
 |------------|------------|-----------------|  
 |**Init**|`public void Init();`|Le processeur de requêtes utilise cette méthode pour initialiser le calcul de l'agrégation. Cette méthode est appelée une fois pour chaque groupe dont le processeur de requêtes effectue l'agrégation. Le processeur de requêtes peut choisir de réutiliser la même instance de la classe d'agrégation pour calculer des agrégats de plusieurs groupes. Le **Init** méthode doit effectuer tout nettoyage nécessaire suite aux utilisations précédentes de cette instance et l’activer à redémarrer un nouveau calcul d’agrégation.|  
 |**accumuler**|`public void Accumulate ( input-type value[, input-type value, ...]);`|Un ou plusieurs paramètres représentant les paramètres de la fonction. *INPUT_TYPE* doit être managé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données équivalent natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données spécifié par *input_sqltype* dans le **CREATE AGGREGATE** instruction. Pour plus d’informations, consultez [mappage des données de paramètre CLR](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).<br /><br /> Pour les types définis par l'utilisateur (UDT), le type d'entrée est le même que le type UDT. Le processeur de requêtes utilise cette méthode pour accumuler les valeurs d'agrégation. La méthode est appelée une fois pour chaque valeur dans le groupe qui fait l'objet de l'agrégation. Le processeur de requêtes l’appelle toujours uniquement après avoir appelé la **Init** méthode sur l’instance donnée de la classe d’agrégation. L'implémentation de cette méthode doit mettre à jour l'état de l'instance pour refléter l'accumulation de la valeur d'argument qui est passée.|  
-|**Fusion**|`public void Merge( udagg_class value);`|Cette méthode peut être utilisée pour fusionner une autre instance de cette classe d'agrégation avec l'instance actuelle. Le processeur de requêtes utilise cette méthode pour fusionner plusieurs calculs partiels d'une agrégation.|  
+|**Fusionner**|`public void Merge( udagg_class value);`|Cette méthode peut être utilisée pour fusionner une autre instance de cette classe d'agrégation avec l'instance actuelle. Le processeur de requêtes utilise cette méthode pour fusionner plusieurs calculs partiels d'une agrégation.|  
 |**Mettre fin à**|`public return_type Terminate();`|Cette méthode termine le calcul d'agrégation et retourne le résultat de l'agrégation. Le *return_type* doit être managé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de type de données qui est l’équivalent managé de *return_sqltype* spécifié dans le **CREATE AGGREGATE** instruction. Le *return_type* peut également être un type défini par l’utilisateur.|  
   
 ### <a name="table-valued-parameters"></a>Paramètres table  

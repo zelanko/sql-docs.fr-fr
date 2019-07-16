@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0035e5105f877d27114ded02f0cce5beb92c5881
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a771320793699811ddf79c2a3baca5ecb55309bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66009840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003228"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>Valeurs retournées par SQLGetInfo pour Access
 Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argument et les valeurs correspondantes retournées par **SQLGetInfo**. Ces informations peuvent être extraites en passant le répertoriés en langage C# defines à **SQLGetInfo** dans le *fInfoType* argument. Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez le *de référence du programmeur ODBC*.  
@@ -157,7 +156,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_SCROLL_OPTIONS|Valeurs multiples|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|« ACCÈS »|  
-|SQL_SPECIAL_CHARACTERS|"~\`@#$%^&\*\_-+=\\}{"\';:?/><,.!\'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|« ~\`@#$%^&\*\_-+=\\} {«\';:?/ ><,. ! \'[]&#124;"|  
 |SQL_STRING_FUNCTIONS|Valeurs multiples|  
 |SQL_SUBQUERIES|Valeurs multiples|  
 |SQL_SYSTEM_FUNCTIONS|0|  

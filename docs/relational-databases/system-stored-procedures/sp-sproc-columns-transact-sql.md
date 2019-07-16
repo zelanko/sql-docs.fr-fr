@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032826"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,11 +61,11 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 `[ @fUsePattern = ] 'fUsePattern'` Détermine si le trait de soulignement (_), pourcentage (%) et le crochet ([]) est interprété comme des caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Nom du qualificateur de procédure. Cette colonne peut être NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nom du propriétaire de la procédure. Cette colonne renvoie toujours une valeur.|  
@@ -76,7 +75,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**DATA_TYPE**|**smallint**|Code entier d'un type de données ODBC. Si ce type de données ne peut pas être mappé à un type ISO, la valeur est NULL. Le nom de type de données natif est retourné dans le **TYPE_NAME** colonne.|  
 |**TYPE_NAME**|**sysname**|Représentation sous forme de chaîne du type de données. Nom du type de données, tel qu'il existe dans le SGBD sous-jacent.|  
 |**PRECISION**|**Int**|Nombre de chiffres significatifs. La valeur de retour pour la **précision** colonne est en base 10.|  
-|**LENGTH**|**Int**|Taille de transfert des données.|  
+|**LENGTH**|**int**|Taille de transfert des données.|  
 |**MISE À L’ÉCHELLE**|**smallint**|Nombre de chiffres situés à droite du séparateur décimal.|  
 |**RADIX**|**smallint**|Base des types numériques.|  
 |**NULLABLE**|**smallint**|Précise la possibilité de valeur nulle.<br /><br /> 1 = Le type de données peut être créé en autorisant des valeurs NULL.<br /><br /> 0 = les valeurs NULL ne sont pas autorisées.|  
@@ -84,7 +83,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**COLUMN_DEF**|**nvarchar(** 4000 **)**|Valeur par défaut de la colonne.|  
 |**SQL_DATA_TYPE**|**smallint**|Valeur du type de données SQL, tel qu’il apparaît dans le **TYPE** champ du descripteur. Cette colonne est la même que la colonne **DATA_TYPE**, excepté pour les types de données **datetime** et **interval** ISO. Cette colonne renvoie toujours une valeur.|  
 |**SQL_DATETIME_SUB**|**smallint**|Le sous-code **interval** ISO de **datetime** si la valeur de **SQL_DATA_TYPE** est **SQL_DATETIME** ou **SQL_INTERVAL**. Pour les données de types autres que **datetime** et ISO **intervalle**, ce champ est NULL.|  
-|**CHAR_OCTET_LENGTH**|**Int**|Longueur maximale en octets d’un **caractère** ou **binaire** colonne de type de données. Pour tous les autres types de données, cette colonne retourne une valeur NULL.|  
+|**CHAR_OCTET_LENGTH**|**int**|Longueur maximale en octets d’un **caractère** ou **binaire** colonne de type de données. Pour tous les autres types de données, cette colonne retourne une valeur NULL.|  
 |**ORDINAL_POSITION**|**Int**|Numéro d'ordre de la colonne dans la table. La première colonne de la table est la colonne 1. Cette colonne renvoie toujours une valeur.|  
 |**IS_NULLABLE**|**varchar(254)**|Possibilité de valeurs NULL dans la colonne de la table. Les règles ISO sont utilisées pour déterminer la possibilité de valeur Null. Un SGBD compatible avec la norme ISO ne peut pas renvoyer de chaîne vide.<br /><br /> Affiche YES si la colonne peut comprendre des valeurs NULL et NO dans le cas contraire.<br /><br /> Cette colonne renvoie une chaîne de longueur zéro si la possibilité de valeurs Null n'est pas connue.<br /><br /> La valeur renvoyée pour cette colonne est différente de celle renvoyée pour la colonne NULLABLE.|  
 |**SS_DATA_TYPE**|**tinyint**|Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé par les procédures stockées étendues. Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  

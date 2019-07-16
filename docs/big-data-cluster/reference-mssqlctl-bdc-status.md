@@ -1,21 +1,20 @@
 ---
-title: mssqlctl bdc status reference
+title: référence d’état mssqlctl bdc
 titleSuffix: SQL Server big data clusters
 description: Article de référence pour les commandes d’état mssqlctl bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2f1b7f7c635b621c1c85953e63acc8f80bb52b01
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3f180ac08ba8ea68008c1f6ccd027a5190ce491a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958016"
 ---
 # <a name="mssqlctl-bdc-status"></a>mssqlctl bdc status
 
@@ -27,7 +26,7 @@ L’article suivant fournit la référence pour le **état de bdc** commandes da
 |     |     |
 | --- | --- |
 [afficher d’état mssqlctl bdc](#mssqlctl-bdc-status-show) | Affiche l’état du Cluster de données volumineuses.
-## <a name="mssqlctl-bdc-status-show"></a>mssqlctl bdc status show
+## <a name="mssqlctl-bdc-status-show"></a>afficher d’état mssqlctl bdc
 Affiche l’état du Cluster de données volumineuses.
 ```bash
 mssqlctl bdc status show 

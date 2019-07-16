@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 1b18844e6899615ac978e63cefa6c712f8f194ea
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 5630bd485936a07c3fb8cf64de483fdb93ead3af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962455"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurer un client de science des données pour le développement R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -244,5 +243,5 @@ Cet exemple utilise Visual Studio 2017 Community Edition, avec la charge de trav
 
 Deux didacticiels différents incluent des exercices afin que vous pouvez vous entraîner le basculement du contexte de calcul local à une instance distante de SQL Server.
 
-+ [Tutoriel : Utiliser les fonctions RevoScaleR R avec des données de SQL Server](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
++ [Tutoriel : Utiliser les fonctions RevoScaleR R avec des données de SQL Server](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
 + [Procédure pas à pas pour une solution complète de science des données](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

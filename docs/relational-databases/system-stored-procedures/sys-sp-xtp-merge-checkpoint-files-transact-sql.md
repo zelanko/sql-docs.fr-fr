@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9121485ddbe3f4fd72bf40b4518a7af8b196fa23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73638d41c7a24a37c068d365771b4d0469a174d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041022"
 ---
 # <a name="sysspxtpmergecheckpointfiles-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47725407"
   
 ||  
 |-|  
-|**Remarque**: cette procédure stockée est déconseillée dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Il n’est plus nécessaire et ne peut pas être utilisé, en commençant [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
+|**Remarque**: Cette procédure stockée est déconseillée dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Il n’est plus nécessaire et ne peut pas être utilisé, en commençant [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -57,12 +56,12 @@ sys.sp_xtp_merge_checkpoint_files database_name, @transaction_lower_bound, @tran
  La limite supérieure (bigint) de transactions pour un fichier de données, comme indiqué dans [sys.dm_db_xtp_checkpoint_files &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-checkpoint-files-transact-sql.md). Une erreur est générée pour une valeur transactionId non valide.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="cursors-returned"></a>Curseurs retournés  
- None  
+ Aucun  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle serveur fixe sysadmin et au rôle de base de données fixe db_owner.  
   
 ## <a name="remarks"></a>Notes  

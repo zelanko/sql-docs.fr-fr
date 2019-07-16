@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 9f0851d3ec373161c9277013fc746ebda5b91f89
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 68d57ac2db4149178a61424affef5e8948de0063
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070953"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Fonctions DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,8 +40,8 @@ ms.locfileid: "37998421"
 |[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|Indique si le nœud spécifié contient le cas.|  
 |[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|Indique si un cas appartient ou non au jeu de scénarios de test.|  
 |[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)|Indique si un cas appartient ou non au jeu de cas d'apprentissage.|  
-|[Décalage &#40;DMX&#41;](../dmx/lag-dmx.md)|Retourne la tranche de temps qui sépare la date du cas actuel de la dernière date des données.|  
-|[Prédire &#40;DMX&#41;](../dmx/predict-dmx.md)|Réalise une prévision sur une colonne donnée.|  
+|[Lag &#40;DMX&#41;](../dmx/lag-dmx.md)|Retourne la tranche de temps qui sépare la date du cas actuel de la dernière date des données.|  
+|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|Réalise une prévision sur une colonne donnée.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|Retourne la valeur de probabilité ajustée pour la colonne prédictible spécifiée.|  
 |[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|Prévoit l'appartenances associative dans une colonne.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|Retourne le degré de vraisemblance de l'intégration du cas d'entrée dans le modèle existant. Cette fonction ne peut être utilisée qu'avec des modèles de clustering.|  

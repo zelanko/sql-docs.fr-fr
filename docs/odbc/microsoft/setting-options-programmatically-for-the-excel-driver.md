@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: b5ee3636-4591-427a-a65a-a2d5926fcc1a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 271f61247b6083abd31657fe319bce234bc16f50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47181fca07aff7b2a0d418b8852cfce47cf9e501
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063522"
 ---
 # <a name="setting-options-programmatically-for-the-excel-driver"></a>Définition d’options par programmation pour le pilote Excel
 
 |Option|Description|Méthode|  
 |------------|-----------------|------------|  
-|Nom de la source de données|Un nom qui identifie la source de données, telles que la paie ou Personnel.|Pour définir cette option de manière dynamique, utilisez le **DSN** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
+|Data Source Name|Un nom qui identifie la source de données, telles que la paie ou Personnel.|Pour définir cette option de manière dynamique, utilisez le **DSN** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Base de données|Une source de données Microsoft Access peut être configurée sans sélectionné ou créé une base de données. Si aucune base de données n’est fourni lors de l’installation, l’utilisateur sera invité à choisir un fichier de base de données lors de la connexion à la source de données.|Pour définir cette option de manière dynamique, utilisez le **DBQ** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Description|Une description facultative des données dans la source de données ; par exemple, « date d’embauche, historique de salaire et examen actuel de tous les employés. »|Pour définir cette option de manière dynamique, utilisez le **DESCRIPTION** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  
 |Répertoire|Affiche le répertoire actuellement sélectionné.<br /><br /> Pour les fichiers Microsoft Excel 3.0/4.0, l’affichage du chemin d’accès est étiqueté « Directory », tandis que pour Microsoft Excel 5.0, les fichiers 7.0 ou 97, l’affichage du chemin d’accès est étiqueté « Classeur ».|Pour définir cette option de manière dynamique, utilisez le **DEFAULTDIR** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/odbc-jet-sqlconfigdatasource-excel-driver.md).|  

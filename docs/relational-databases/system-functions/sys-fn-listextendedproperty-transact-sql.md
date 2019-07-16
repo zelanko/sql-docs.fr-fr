@@ -25,14 +25,13 @@ helpviewer_keywords:
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98cde3ea4c7150afd3eb2b547e73cf1b7f88e613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082715"
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ fn_listextendedproperty (
  Est le nom de la propriété. *property_name* est **sysname**. Les entrées autorisées sont les valeurs par défaut, NULL, ou un nom de propriété.  
   
  {par défaut | «*level0_object_type*' | NULL}  
- Type défini par l'utilisateur ou utilisateur. *level0_object_type* est **varchar (128)**, avec NULL comme valeur par défaut. Les entrées valides sont ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, et NULL.  
+ Type défini par l'utilisateur ou utilisateur. *level0_object_type* est **varchar (128)** , avec NULL comme valeur par défaut. Les entrées valides sont ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, et NULL.  
   
 > [!IMPORTANT]  
 >  Les types de niveau 0 USER et TYPE seront éliminés dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement. À la place de USER, utilisez SCHEMA en tant que type de niveau 0. Pour TYPE, utilisez SCHEMA comme type de niveau 0 et TYPE comme type de niveau 1.  
@@ -88,11 +87,11 @@ fn_listextendedproperty (
 ## <a name="tables-returned"></a>Tables retournées  
  Le format des tables renvoyées par l'instruction fn_listextendedproperty est le suivant :  
   
-|Nom de colonne|Type de données|  
+|Nom de la colonne|Type de données|  
 |-----------------|---------------|  
 |objtype|**sysname**|  
 |objname|**sysname**|  
-|NAME|**sysname**|  
+|name|**sysname**|  
 |valeur|**sql_variant**|  
   
  Si la table renvoyée est vide, l'objet ne dispose pas de propriétés étendues, ou l'utilisateur n'est pas habilité à afficher la liste des propriétés étendues associées à cet objet. Lorsque les propriétés étendues de la base de données proprement dite sont retournées, les colonnes objtype et objname ont la valeur NULL.  
@@ -116,12 +115,12 @@ LEFT JOIN sys.fn_listextendedproperty(N'MS_Description', N'user',N'HumanResource
 WHERE o.name = 'Employee';  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d'affichage des propriétés étendues des objets peuvent varier selon le type d'objet.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-displaying-extended-properties-on-a-database"></a>A. Affichage des propriétés étendues d'une base de données  
+### <a name="a-displaying-extended-properties-on-a-database"></a>R. Affichage des propriétés étendues d'une base de données  
  L'exemple suivant affiche toutes les propriétés étendues de l'objet de base de données lui-même.  
   
 ```  

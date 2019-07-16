@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4bb94efa8c8ffb1b0a3b0c52c29de74a2b966e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962559"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Performances pour R Services : résultats et des ressources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -112,7 +111,7 @@ Ce test comparé les avantages de la compression de ligne, la compression de pag
 | *airlineWithPageComp* | PageCompression | 1        | 6,7875       |
 |                       | PageCompression - parallèle | 4        | 5,3225       |
 | *airlineWithRowComp*  | RowCompression  | 1        | 6,1325       |
-|                       | RowCompression - parallel  | 4        | 5,2375       |
+|                       | RowCompression - parallèle  | 4        | 5,2375       |
 
 **Conclusions**
 
@@ -134,15 +133,15 @@ Dans cette expérience, `rxLinMod` a été utilisé avec la table *airlineWithIn
 |           | 2      | 3,45 secondes |              |
 |           | 3      | 3,45 secondes |              |
 |           | 4      | 3,55 secondes |              |
-|           | 5      | 3,55 secondes |              |
-|           | 6      | 3,45 secondes |              |
+|           | 5\.      | 3,55 secondes |              |
+|           | 6\.      | 3,45 secondes |              |
 |           |        |              | 3,475        |
 |           | 1      | 3,45 secondes |              |
 |           | 2      | 3,53 secondes |              |
 |           | 3      | 3,63 secondes |              |
 |           | 4      | 3,49 secondes |              |
-|           | 5      | 3,54 secondes |              |
-|           | 6      | 3,47 secondes |              |
+|           | 5\.      | 3,54 secondes |              |
+|           | 6\.      | 3,47 secondes |              |
 |           |        |              | 3,5075       |
 
 Option de gestion de l’alimentation **Équilibré** :
@@ -153,15 +152,15 @@ Option de gestion de l’alimentation **Équilibré** :
 |           | 2      | 4,15 secondes |              |
 |           | 3      | 3,77 secondes |              |
 |           | 4      | 5 secondes    |              |
-|           | 5      | 3,92 secondes |              |
-|           | 6      | 3,8 secondes  |              |
+|           | 5\.      | 3,92 secondes |              |
+|           | 6\.      | 3,8 secondes  |              |
 |           |        |              | 3,91         |
 |           | 1      | 3,82 secondes |              |
 |           | 2      | 3,84 secondes |              |
 |           | 3      | 3,86 secondes |              |
 |           | 4      | 4,07 secondes |              |
-|           | 5      | 4,86 secondes |              |
-|           | 6      | 3,75 secondes |              |
+|           | 5\.      | 4,86 secondes |              |
+|           | 6\.      | 3,75 secondes |              |
 |           |        |              | 3,88         |
 
 **Conclusions**
@@ -180,7 +179,7 @@ Ce test évalué l’impact de la modification du code R pour éviter un problè
 
 | Nom de la table          | Nom du test   | Temps moyen |
 |---------------------|-------------|--------------|
-| *Airline*           | *FactorCol* | 10,72        |
+| *Compagnie aérienne*           | *FactorCol* | 10,72        |
 | *airlineWithIntCol* | *IntCol*    | 3,4475       |
 
 **Conclusions**
@@ -369,7 +368,7 @@ Voici des liens vers plus d’informations, les outils et les scripts utilisés 
 
 + La [Démonstration : Amélioration des performances de l’OLTP en mémoire](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
 
-+ [Compression de données](../../relational-databases/data-compression/data-compression.md)
++ [Compression des données](../../relational-databases/data-compression/data-compression.md)
 
 + [Activer la compression sur une table ou un index](../../relational-databases/data-compression/enable-compression-on-a-table-or-index.md)
 

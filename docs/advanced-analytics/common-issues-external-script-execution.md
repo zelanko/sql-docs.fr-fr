@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a6943a850a2955a36723d14c0226bd5c503f23ec
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 2d7f82230dbc6b87bcc8f752c99b7c92ef759253
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963120"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problèmes courants avec le service Launchpad et l’exécution du script externe dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +56,7 @@ Toutefois, dans les organisations où sont appliquées des stratégies de sécur
 
 Pour corriger ce problème, vérifiez que le groupe **SQLRUserGroup** dispose du droit système **Permettre l’ouverture d’une session locale**.
 
-Pour plus d’informations, consultez [Windows de configurer les comptes de service et autorisations](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+Pour plus d’informations, consultez [Configurer les comptes de service Windows et les autorisations](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 ## <a name="permissions-to-run-external-scripts"></a>Autorisations pour exécuter des scripts externes
 
@@ -127,9 +126,9 @@ Si vous avez installé et activé apprentissage, mais vous obtenez cette erreur 
 
 4. Le redémarrage du service généralement de résoudre le problème afin que les scripts d’apprentissage automatique peuvent s’exécuter. Si le redémarrage ne résout pas le problème, notez le chemin d’accès et les arguments dans le **chemin d’accès binaire** propriété et procédez comme suit :
 
-    A. Vérifier le fichier .config du Lanceur et assurez-vous que le répertoire de travail est valide.
+    a. Vérifier le fichier .config du Lanceur et assurez-vous que le répertoire de travail est valide.
 
-    B. Vérifiez que le groupe Windows qui est utilisé par Launchpad peut se connecter à l’instance de SQL Server.
+    b. Vérifiez que le groupe Windows qui est utilisé par Launchpad peut se connecter à l’instance de SQL Server.
 
     c. Si vous modifiez les propriétés de service, redémarrez le service Launchpad.
 
