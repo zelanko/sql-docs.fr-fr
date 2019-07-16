@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4cea000b63948207626298c1f0c977ba22ec3865
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ca8b0f6e700e97c5cbc33964cc450ad54ea1a7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899703"
 ---
 # <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "62636288"
 > [!NOTE]  
 >  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_sys_memory**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**total_physical_memory_kb**|**bigint**|Taille totale de mémoire physique disponible pour le système d'exploitation, en kilo-octets (Ko).|  
 |**available_physical_memory_kb**|**bigint**|Taille de mémoire physique disponible, en Ko.|  
@@ -50,14 +49,14 @@ ms.locfileid: "62636288"
 |**system_high_memory_signal_state**|**bit**|État de la notification de ressource de mémoire supérieure système. La valeur 1 indique que le signal de mémoire supérieure a été défini par Windows. Pour plus d’informations, consultez [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) dans MSDN library.|  
 |**system_low_memory_signal_state**|**bit**|État de la notification de ressource de mémoire inférieure système. La valeur 1 indique que le signal de mémoire inférieure a été défini par Windows. Pour plus d’informations, consultez [CreateMemoryResourceNotification](https://go.microsoft.com/fwlink/?LinkId=82427) dans MSDN library.|  
 |**system_memory_state_desc**|**nvarchar (256)**|Description de l'état de la mémoire. Consultez le tableau ci-dessous.|  
-|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
 |Condition|Value|  
 |---------------|-----------|  
-|system_high_memory_signal_state = 1<br /><br /> et<br /><br /> system_low_memory_signal_state = 0|La mémoire physique disponible est élevée|  
-|system_high_memory_signal_state = 0<br /><br /> et<br /><br /> system_low_memory_signal_state = 1|La mémoire physique disponible est faible|  
-|system_high_memory_signal_state = 0<br /><br /> et<br /><br /> system_low_memory_signal_state = 0|L'utilisation de la mémoire physique est constante|  
-|system_high_memory_signal_state = 1<br /><br /> et<br /><br /> system_low_memory_signal_state = 1|L'état de la mémoire physique est en cours de transition<br /><br /> Les signaux de mémoire supérieure et inférieure ne doivent jamais être activés en même temps. Toutefois, il peut arriver que les deux valeurs semblent être activées sur une application en mode utilisateur à la suite de modifications rapides au niveau du système d'exploitation. L'affichage des deux signaux activés sera interprété comme un état de transition.|  
+|system_high_memory_signal_state = 1<br /><br /> and<br /><br /> system_low_memory_signal_state = 0|La mémoire physique disponible est élevée|  
+|system_high_memory_signal_state = 0<br /><br /> and<br /><br /> system_low_memory_signal_state = 1|La mémoire physique disponible est faible|  
+|system_high_memory_signal_state = 0<br /><br /> and<br /><br /> system_low_memory_signal_state = 0|L'utilisation de la mémoire physique est constante|  
+|system_high_memory_signal_state = 1<br /><br /> and<br /><br /> system_low_memory_signal_state = 1|L'état de la mémoire physique est en cours de transition<br /><br /> Les signaux de mémoire supérieure et inférieure ne doivent jamais être activés en même temps. Toutefois, il peut arriver que les deux valeurs semblent être activées sur une application en mode utilisateur à la suite de modifications rapides au niveau du système d'exploitation. L'affichage des deux signaux activés sera interprété comme un état de transition.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
