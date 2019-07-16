@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4bdb60a6d174ab82df7529b6e26d8d5b2c031107
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966844"
 ---
 # <a name="columns-collection-adox"></a>Columns, collection (ADOX)
 Contient tous les [colonne](../../../ado/reference/adox-api/column-object-adox.md) objets d’une table, un index ou une clé.  
   
 ## <a name="remarks"></a>Notes  
- Le [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) méthode pour un **colonnes** collection est unique pour ADOX. Vous pouvez :  
+ Le [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) méthode pour un **colonnes** collection est unique pour ADOX. Vous pouvez :  
   
 -   Ajouter une nouvelle colonne à la collection avec le **Append** (méthode).  
   
- Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
+ Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
   
 -   Accès à une colonne dans la collection avec le [élément](../../../ado/reference/ado-api/item-property-ado.md) propriété.  
   

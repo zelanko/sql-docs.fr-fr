@@ -21,31 +21,30 @@ helpviewer_keywords:
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8655e529f2a254daab46431b4d7b3e44768f33f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 437dbbc4ea7deb32a9723febb443cc67941fdc5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940220"
 ---
 # <a name="sysdatabaseautomatictuningoptions-transact-sql"></a>Sys.Database\_automatique\_tuning_options (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
   Retourne les options de réglage automatique pour cette base de données.  
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**nvarchar(128)**|Le nom de l’option de réglage automatique. Reportez-vous à [AUTOMATIC_TUNING de définir de base de données ALTER &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) pour les options disponibles.|  
+|**name**|**nvarchar(128)**|Le nom de l’option de réglage automatique. Reportez-vous à [AUTOMATIC_TUNING de définir de base de données ALTER &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-database-transact-sql-set-options.md) pour les options disponibles.|  
 |**desired_state**|**smallint**|Indique le mode de fonctionnement souhaité pour l’option d’optimisation automatique, définissez explicitement par l’utilisateur.<br />0 = désactivé<br />1 = activé|  
 |**desired_state_desc**|**nvarchar(60)**|Description textuelle du mode de fonctionnement souhaité de l’option d’optimisation automatique.<br />OFF<br />ON|  
 |**actual_state**|**smallint**|Indique le mode de fonctionnement de l’option d’optimisation automatique.<br />0 = désactivé<br />1 = activé|  
 |**actual_state_desc**|**nvarchar(60)**|Description textuelle du mode de fonctionnement réel de l’option d’optimisation automatique.<br />OFF<br />ON|  
-|**raison**|**smallint**|Indique pourquoi États souhaitées et réels sont différents.<br />2 = DÉSACTIVÉ<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
+|**reason**|**smallint**|Indique pourquoi États souhaitées et réels sont différents.<br />2 = DÉSACTIVÉ<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
 |**reason_desc**|**nvarchar(60)**|Description textuelle de la raison pour laquelle les États souhaitées et réels sont différents.<br />DÉSACTIVÉ = Option est désactivée par le système<br />QUERY_STORE_OFF = Query Store est mis hors tension<br />QUERY_STORE_READ_ONLY = Store de la requête est en mode lecture seule<br />NOT_SUPPORTED = disponible uniquement dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition| 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation `VIEW DATABASE STATE`.  
   
 ## <a name="see-also"></a>Voir aussi  

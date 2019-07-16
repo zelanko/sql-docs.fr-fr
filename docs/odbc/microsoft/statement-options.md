@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd73b769-c8b5-43e0-9f80-b3011b7a6162
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe57ffa0d7628601fcb6dd19218715b32a57322b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bf99aace8b058e429898846466294cc42612070
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948831"
 ---
 # <a name="statement-options"></a>Options des instructions
 > [!IMPORTANT]  
@@ -28,7 +27,7 @@ ms.locfileid: "63270017"
   
  Ces options permettent la personnalisation d’une instruction d’exécution spécifique au sein d’une application.  
   
-|Option d’instruction|Remarques|  
+|Option d’instruction|Notes|  
 |----------------------|-----------|  
 |SQL_BIND_TYPE|Ne peut pas dépasser 2 147 483 647 octets ou la mémoire disponible.|  
 |SQL_CONCURRENCY|Pour connaître les valeurs autorisées, consultez le [Type de curseur et les combinaisons d’accès concurrentiel](../../odbc/microsoft/cursor-type-and-concurrency-combinations.md).|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9edd9ae15e66a39abd84a8a6d8e50a83ed4a39ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa5f1ecf9f3100480081e3744fc7d280a4da282b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088034"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>Utilisation de SQLConfigDatasource avec le pilote ODBC pour Oracle
 > [!IMPORTANT]  
@@ -35,7 +34,7 @@ ms.locfileid: "63259337"
   
 |Paramètre|Max Len|Valeur par défaut|Valeurs valides|Description|  
 |-------------|-------------|-------------------|------------------|-----------------|  
-|BufferSize|7|65535|1000|Jusqu'à 65 535 octets de taille de mémoire tampon d’extraction minimale|  
+|BufferSize|7|65535|1 000|Jusqu'à 65 535 octets de taille de mémoire tampon d’extraction minimale|  
 |CatalogCap|2|1|0 ou 1|Si 1, les identificateurs nonquoted sera converti en majuscules dans le catalogue des fonctions.|  
 |ConnectString|128|""|R/N|Chaîne de connexion. Méthode nécessaire de spécifier le nom du serveur avec le pilote Msorcl10.dll.|  
 |Description|256|""|R/N|Description.|  

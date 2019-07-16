@@ -1,5 +1,5 @@
 ---
-title: SQLAllocStmt Function | Microsoft Docs
+title: SQLAllocStmt, fonction | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84d4a72577af04750d4f1735e84a5e71d3501e8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54aeb0ecd88509f9390103e8e476bb0f3cb60440
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036234"
 ---
 # <a name="sqlallocstmt-function"></a>SQLAllocStmt, fonction
 **Conformité**  
- Version introduite : Conformité aux normes 1.0 ODBC : Déprécié  
+ Version introduite : Conformité aux normes 1.0 ODBC : Déconseillé  
   
  **Résumé**  
  Dans ODBC 3. *x*, ODBC 2. *x* fonction **SQLAllocStmt** a été remplacé par **SQLAllocHandle**. Pour plus d’informations, consultez [SQLAllocHandle, fonction](../../../odbc/reference/syntax/sqlallochandle-function.md).  

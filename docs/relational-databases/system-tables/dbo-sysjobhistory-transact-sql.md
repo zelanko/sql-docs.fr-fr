@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 809e8c80ec1734c24f6930b4042b5e1a84356597
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 85710deec2e7ab5e79ed7a514e3b625c6232484e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902198"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,23 +36,23 @@ Contient des informations sur l'exécution des travaux planifiés par l'Agent [!
 
 Cette table est stockée dans le **msdb** base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**instance_id**|**Int**|Identificateur unique de la ligne.|  
+|**instance_id**|**int**|Identificateur unique de la ligne.|  
 |**job_id**|**uniqueidentifier**|ID de travail.|  
-|**step_id**|**Int**|ID de l'étape dans le travail|  
+|**step_id**|**int**|ID de l'étape dans le travail|  
 |**step_name**|**sysname**|Nom de l'étape|  
 |**sql_message_id**|**Int**|Identificateur de tout message d'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourné en cas d'échec du travail.|  
-|**sql_severity**|**Int**|Gravité des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**sql_severity**|**int**|Gravité des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**message**|**nvarchar(4000)**|Texte éventuel d'une erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**run_status**|**Int**|État de l'exécution du travail :<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **2** = Retry<br /><br /> **3** = annulée<br /><br />**4** = en cours|  
+|**run_status**|**int**|État de l'exécution du travail :<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **2** = nouvelle tentative<br /><br /> **3** = annulée<br /><br />**4** = en cours|  
 |**run_date**|**Int**|Date du début d'exécution du travail ou de l'étape. Pour l'historique des travaux en cours, date et heure de l'écriture de l'historique.|  
-|**run_time**|**Int**|Heure de début de l'étape ou du travail.|  
-|**run_duration**|**Int**|Temps écoulé dans l’exécution du travail ou de l’étape de **HHMMSS** format.|  
-|**operator_id_emailed**|**Int**|Identificateur de l'opérateur averti de la fin du travail.|  
-|**operator_id_netsent**|**Int**|Identificateur de l'opérateur averti par un message de la fin du travail.|  
+|**run_time**|**int**|Heure de début de l'étape ou du travail.|  
+|**run_duration**|**int**|Temps écoulé dans l’exécution du travail ou de l’étape de **HHMMSS** format.|  
+|**operator_id_emailed**|**int**|Identificateur de l'opérateur averti de la fin du travail.|  
+|**operator_id_netsent**|**int**|Identificateur de l'opérateur averti par un message de la fin du travail.|  
 |**operator_id_paged**|**Int**|Identificateur de l'opérateur averti par radiomessagerie de la fin du travail.|  
-|**retries_attempted**|**Int**|Nombre de nouvelles tentatives pour le travail ou l'étape.|  
+|**retries_attempted**|**int**|Nombre de nouvelles tentatives pour le travail ou l'étape.|  
 |**server**|**sysname**|Nom du serveur sur lequel le travail a été exécuté.|  
   
   ## <a name="example"></a>Exemple

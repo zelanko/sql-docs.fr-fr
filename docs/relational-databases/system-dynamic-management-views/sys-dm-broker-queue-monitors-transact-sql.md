@@ -1,5 +1,5 @@
 ---
-title: sys.dm_broker_queue_monitors (Transact-SQL) | Microsoft Docs
+title: Sys.dm_broker_queue_monitors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fed9d261f692e9c9e1eee4f7078ca69e8c74594e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2f363998699846ca5020127f19be6dc0ad59712
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948636"
 ---
 # <a name="sysdmbrokerqueuemonitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,21 +31,21 @@ ms.locfileid: "62760122"
   Retourne une ligne pour chaque moniteur de file d'attente de l'instance. Un moniteur de file d'attente gère l'activation pour une file d'attente.  
   
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**Int**|Identificateur d'objet de la base de données qui contient la file d'attente surveillée par le moniteur. Accepte la valeur NULL.|  
-|**queue_id**|**Int**|Identificateur d'objet de la file d'attente surveillée par le moniteur. Accepte la valeur NULL.|  
+|**queue_id**|**int**|Identificateur d'objet de la file d'attente surveillée par le moniteur. Accepte la valeur NULL.|  
 |**state**|**nvarchar(32)**|État de l’analyse. Accepte la valeur NULL. Il s’agit d’une des opérations suivantes :<br /><br /> **INACTIF**<br /><br /> **INFORMÉ**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|Horodatage de la dernière opération RECEIVE appliquée à la file d'attente qui a retourné un jeu de résultats vide. Accepte la valeur NULL.|  
 |**last_activated_time**|**datetime**|Horodatage de la dernière activation d'une procédure stockée par ce moniteur de file d'attente. Accepte la valeur NULL.|  
-|**tasks_waiting**|**Int**|Nombre de sessions actuellement en attente dans une instruction RECEIVE relative à la file d'attente considérée. Accepte la valeur NULL.<br /><br /> Remarque : Ce nombre inclut n’importe quelle session exécutant une instruction receive, indépendamment de si le moniteur de file d’attente a démarré la session. C'est pourquoi vous utilisez WAITFOR avec RECEIVE. À la base, ces tâches attendent toutes les deux l'arrivée de messages dans la file d'attente.|  
+|**tasks_waiting**|**int**|Nombre de sessions actuellement en attente dans une instruction RECEIVE relative à la file d'attente considérée. Accepte la valeur NULL.<br /><br /> Remarque : Ce nombre inclut n’importe quelle session exécutant une instruction receive, indépendamment de si le moniteur de file d’attente a démarré la session. C'est pourquoi vous utilisez WAITFOR avec RECEIVE. À la base, ces tâches attendent toutes les deux l'arrivée de messages dans la file d'attente.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-current-status-queue-monitor"></a>A. Moniteur d'état des files d'attente  
+### <a name="a-current-status-queue-monitor"></a>R. Moniteur d'état des files d'attente  
  Ce scénario fournit le statut actuel de toutes les files d'attente de messages.  
   
 ```  

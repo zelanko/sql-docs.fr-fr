@@ -2,19 +2,18 @@
 title: Surveiller les requêtes actives - Parallel Data Warehouse | Microsoft Docs
 description: Utilisez les vues système Parallel Data Warehouse et de la Console d’administration pour surveiller les requêtes actives sur le système de plateforme d’Analytique.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d2b1ee84b2ae738d7790e1238176331a221ac473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65d656b02ef0d726292a7d37aef565bf508d7662
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960495"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>Surveillance des requêtes actives - Parallel Data Warehouse
 Cet article explique comment utiliser la Console d’administration et les vues système SQL Server PDW pour surveiller les requêtes actives. Consultez [surveiller l’Appliance à l’aide de la Console d’administration](monitor-the-appliance-by-using-the-admin-console.md) et [vues système](tsql-system-views.md) pour plus d’informations sur ces outils.  

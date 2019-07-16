@@ -2,19 +2,18 @@
 title: Installation matérielle - Analytique Platform System | Microsoft Docs
 description: Cet article décrit comment déplacer, décompresser et installer le matériel de votre appliance SQL Server PDW. Cet article est d’information uniquement et est destiné à vous aider à comprendre le processus. Votre appliance doit être décompressé, installé et vérifié avant qu’il soit retourné à vous. La participation du client est requise pour les éléments tels que les données du centre accès, alimentation électrique et connexions Ethernet.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 169b38a1228f909a79d7866eba20b85b4a56c30b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c864a560bb37d27a5bb8ef306ac66815e8b5149c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960879"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-appliance"></a>Installation matérielle pour l’appliance d’Analytique Platform System
 Cet article décrit comment déplacer, décompresser et installer le matériel de votre appliance SQL Server PDW. Cet article est d’information uniquement et est destiné à vous aider à comprendre le processus. Votre appliance doit être décompressé, installé et vérifié avant qu’il soit retourné à vous. La participation du client est requise pour les éléments tels que les données du centre accès, alimentation électrique et connexions Ethernet.  

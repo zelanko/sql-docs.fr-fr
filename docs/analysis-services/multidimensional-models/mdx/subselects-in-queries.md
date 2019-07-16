@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77aadc5cfc60df17b9553810b5dee2562717b8b3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147884"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208711"
 ---
 # <a name="subselects-in-queries"></a>Instructions de sous-sélection dans les requêtes
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -48,16 +48,16 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
 |||||||  
 |-|-|-|-|-|-|  
 ||All Periods|CY 2005|CY 20062|CY 2007|CY 2008|  
-|All Products|80 450 596,98 $|8 065 435,31 $|24 144 429,65 $|32 202 669,43 $|16 038 062,60 $|  
-|Mountain-200 Black, 38|1 634 647,94 $|(Null)|(Null)|894 207,97 $|740 439,97 $|  
+|All Products|80 450 596,98 $|8 065 435,31 $|24 144 429,65 $|32 202 669,43 $|16 038 062,60 $|  
+|Mountain-200 Black, 38|1 634 647,94 $|(Null)|(Null)|894 207,97 $|740 439,97 $|  
 |Mountain-200 Black, 42|1 285 524,65 $|(Null)|(Null)|722 137,65 $|563 387,00 $|  
-|Mountain-200 Silver, 38|1 181 945,82 $|(Null)|(Null)|634 600,78 $|547 345 03 $|  
-|Mountain-200 Black, 46|995 927,43 $|(Null)|(Null)|514 995,76 $|480 931,68 $|  
-|Mountain-200 Silver, 42|1 005 111,77 $|(Null)|(Null)|529 543,29 $|475 568,49 $|  
-|Mountain-200 Silver, 46|975 932,56 $|(Null)|(Null)|526 759,30 $|449 173,26 $|  
+|Mountain-200 Silver, 38|1 181 945,82 $|(Null)|(Null)|634 600,78 $|547 345 03 $|  
+|Mountain-200 Black, 46|995 927,43 $|(Null)|(Null)|514 995,76 $|480 931,68 $|  
+|Mountain-200 Silver, 42|1 005 111,77 $|(Null)|(Null)|529 543,29 $|475 568,49 $|  
+|Mountain-200 Silver, 46|975 932,56 $|(Null)|(Null)|526 759,30 $|449 173,26 $|  
 |Road-150 Red, 56|792 228,98 $|382 159,24 $|410 069,74 $|(Null)|(Null)|  
-|Mountain-200 Black, 38|1 471 078,72 $|(Null)|789 958,49 $|681 120,23 $|(Null)|  
-|Road-350-W Yellow, 48|1 380 253,88 $|(Null)|(Null)|744 988,37 $|635 265,50 $|  
+|Mountain-200 Black, 38|1 471 078,72 $|(Null)|789 958,49 $|681 120,23 $|(Null)|  
+|Road-350-W Yellow, 48|1 380 253,88 $|(Null)|(Null)|744 988,37 $|635 265,50 $|  
   
  Ce résultat est très proche de ce que nous recherchons ; à ceci près que la requête a retourné 9 produits et non pas 10 et que le total All Products reflète la somme de tous les produits et non la somme des 9 produits principaux (dans ce cas). Une autre tentative de résoudre le problème est présentée dans la requête MDX suivante :  
   
@@ -67,21 +67,21 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   FROM [Adventure Works]  
 ```  
   
- Les résultats retournés sont les suivants :  
+ Les résultats retournés sont les suivants :  
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|CY 2005|CY 2006|CY 2007|CY 2008|  
-|Mountain-200 Black, 38|1 634 647,94 $|(Null)|(Null)|894 207,97 $|740 439,97 $|  
+||All Periods|CY 2005|CY 2006|CY 2007|CY 2008|  
+|Mountain-200 Black, 38|1 634 647,94 $|(Null)|(Null)|894 207,97 $|740 439,97 $|  
 |Mountain-200 Black, 42|1 285 524,65 $|(Null)|(Null)|722 137,65 $|563 387,00 $|  
-|Mountain-200 Silver, 38|1 181 945,82 $|(Null)|(Null)|634 600,78 $|547 345 03 $|  
-|Mountain-200 Black, 46|995 927,43 $|(Null)|(Null)|514 995,76 $|480 931,68 $|  
-|Mountain-200 Silver, 42|1 005 111,77 $|(Null)|(Null)|529 543,29 $|475 568,49 $|  
-|Mountain-200 Silver, 46|975 932,56 $|(Null)|(Null)|526 759,30 $|449 173,26 $|  
+|Mountain-200 Silver, 38|1 181 945,82 $|(Null)|(Null)|634 600,78 $|547 345 03 $|  
+|Mountain-200 Black, 46|995 927,43 $|(Null)|(Null)|514 995,76 $|480 931,68 $|  
+|Mountain-200 Silver, 42|1 005 111,77 $|(Null)|(Null)|529 543,29 $|475 568,49 $|  
+|Mountain-200 Silver, 46|975 932,56 $|(Null)|(Null)|526 759,30 $|449 173,26 $|  
 |Road-150 Red, 56|792 228,98 $|382 159,24 $|410 069,74 $|(Null)|(Null)|  
-|Mountain-200 Black, 38|1 471 078,72 $|(Null)|789 958,49 $|681 120,23 $|(Null)|  
-|Road-350-W Yellow, 48|1 380 253,88 $|(Null)|(Null)|744 988,37 $|635 265,50 $|  
-|Road-150 Red, 62|566 797,97 $|234 018,86 $|332 779,11 $|(Null)|(Null)|  
+|Mountain-200 Black, 38|1 471 078,72 $|(Null)|789 958,49 $|681 120,23 $|(Null)|  
+|Road-350-W Yellow, 48|1 380 253,88 $|(Null)|(Null)|744 988,37 $|635 265,50 $|  
+|Road-150 Red, 62|566 797,97 $|234 018,86 $|332 779,11 $|(Null)|(Null)|  
   
  Ce résultat était très proche du résultat souhaité, car il ne manquait que la somme des produits. À ce stade, on peut commencer à modifier l'expression MDX ci-dessus pour ajouter la ligne manquante ; toutefois, cette tâche pourrait s'avérer fastidieuse.  
   
@@ -105,18 +105,18 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|CY 2005|CY 2006|CY 2007|CY 2008|  
-|All Products|19 997 183,30 $|1 696 815,63 $|2 816 611,28 $|7 930 797,72 $|7 552 958,66 $|  
-|Mountain-200 Silver, 38|2 160 981,60 $|(Null)|(Null)|1 024 359,10 $|1 136 622,49 $|  
-|Mountain-200 Silver, 42|1 914 547,85 $|(Null)|(Null)|903 061,68 $|1 011 486,18 $|  
-|Mountain-200 Silver, 46|1 906 248,55 $|(Null)|(Null)|877 077,79 $|1 029 170,76 $|  
-|Mountain-200 Black, 38|1 811 229,02 $|(Null)|896 511,60 $|914 717,43 $|(Null)|  
-|Mountain-200 Black, 38|2 589 363,78 $|(Null)|(Null)|1 261 406,37 $|1 327 957,41 $|  
-|Mountain-200 Black, 42|2 265 485,38 $|(Null)|(Null)|1 126 055,89 $|1 139 429,49 $|  
-|Mountain-200 Black, 46|1 957 528,24 $|(Null)|(Null)|946 453,88 $|1 011 074,37 $|  
-|Road-150 Red, 62|1 769 096,69 $|828 011,68 $|941 085,01 $|(Null)|(Null)|  
-|Road-150 Red, 56|1 847 818,63 $|868 803,96 $|979 014,67 $|(Null)|(Null)|  
-|Road-350-W Yellow, 48|1 774 883,56 $|(Null)|(Null)|877 665,59 $|897 217,96 $|  
+||All Periods|CY 2005|CY 2006|CY 2007|CY 2008|  
+|All Products|19 997 183,30 $|1 696 815,63 $|2 816 611,28 $|7 930 797,72 $|7 552 958,66 $|  
+|Mountain-200 Silver, 38|2 160 981,60 $|(Null)|(Null)|1 024 359,10 $|1 136 622,49 $|  
+|Mountain-200 Silver, 42|1 914 547,85 $|(Null)|(Null)|903 061,68 $|1 011 486,18 $|  
+|Mountain-200 Silver, 46|1 906 248,55 $|(Null)|(Null)|877 077,79 $|1 029 170,76 $|  
+|Mountain-200 Black, 38|1 811 229,02 $|(Null)|896 511,60 $|914 717,43 $|(Null)|  
+|Mountain-200 Black, 38|2 589 363,78 $|(Null)|(Null)|1 261 406,37 $|1 327 957,41 $|  
+|Mountain-200 Black, 42|2 265 485,38 $|(Null)|(Null)|1 126 055,89 $|1 139 429,49 $|  
+|Mountain-200 Black, 46|1 957 528,24 $|(Null)|(Null)|946 453,88 $|1 011 074,37 $|  
+|Road-150 Red, 62|1 769 096,69 $|828 011,68 $|941 085,01 $|(Null)|(Null)|  
+|Road-150 Red, 56|1 847 818,63 $|868 803,96 $|979 014,67 $|(Null)|(Null)|  
+|Road-350-W Yellow, 48|1 774 883,56 $|(Null)|(Null)|877 665,59 $|897 217,96 $|  
   
  Les résultats ci-dessus sont exactement ce que nous cherchions.  
   
@@ -142,18 +142,18 @@ SELECT [Date].[Calendar Year].MEMBERS on 0
   
 |||||||  
 |-|-|-|-|-|-|  
-||All Periods|CY 2005|CY 2006|CY 2007|CY 2008|  
+||All Periods|CY 2005|CY 2006|CY 2007|CY 2008|  
 |All Products|748 682,49 $|32 204,43 $|73 125,18 $|269 506,56 $|373 846,32 $|  
-|Mountain-200 Silver, 38|90 479,61 $|(Null)|(Null)|41 759,82 $|48 719,79 $|  
-|Mountain-200 Silver, 42|97 439,58 $|(Null)|(Null)|39 439,83 $|57 999,75 $|  
-|Mountain-200 Silver, 46|102 079,56 $|(Null)|(Null)|27 839,88 $|74 239,68 $|  
-|Mountain-200 Black, 38|26 638,28 $|(Null)|12 294,59 $|14 343,69 $|(Null)|  
-|Mountain-200 Black, 38|96 389,58 $|(Null)|(Null)|41 309,82 $|55 079,76 $|  
-|Mountain-200 Black, 42|80 324,65 $|(Null)|(Null)|43 604,81 $|36 719,84 $|  
-|Mountain-200 Black, 46|107 864,53 $|(Null)|(Null)|45 899,80 $|61 964,73 $|  
+|Mountain-200 Silver, 38|90 479,61 $|(Null)|(Null)|41 759,82 $|48 719,79 $|  
+|Mountain-200 Silver, 42|97 439,58 $|(Null)|(Null)|39 439,83 $|57 999,75 $|  
+|Mountain-200 Silver, 46|102 079,56 $|(Null)|(Null)|27 839,88 $|74 239,68 $|  
+|Mountain-200 Black, 38|26 638,28 $|(Null)|12 294,59 $|14 343,69 $|(Null)|  
+|Mountain-200 Black, 38|96 389,58 $|(Null)|(Null)|41 309,82 $|55 079,76 $|  
+|Mountain-200 Black, 42|80 324,65 $|(Null)|(Null)|43 604,81 $|36 719,84 $|  
+|Mountain-200 Black, 46|107 864,53 $|(Null)|(Null)|45 899,80 $|61 964,73 $|  
 |Road-150 Red, 62|46 517,51 $|14 313,08 $|32 204,43 $|(Null)|(Null)|  
-|Road-150 Red, 56|46 517,51 $|17 891,35 $|28 626,16 $|(Null)|(Null)|  
-|Road-350-W Yellow, 48|54 431,68 $|(Null)|(Null)|15 308,91 $|39 122,77 $|  
+|Road-150 Red, 56|46 517,51 $|17 891,35 $|28 626,16 $|(Null)|(Null)|  
+|Road-350-W Yellow, 48|54 431,68 $|(Null)|(Null)|15 308,91 $|39 122,77 $|  
   
  Les résultats ci-dessus indiquent les 10 produits principaux vendus en France via le canal Internet.  
   
@@ -182,7 +182,7 @@ FROM [<identifier> | (< sub-select-statement >)]
   
  Le membre All, dans toutes les dimensions, dans l'espace de sous-cube, est réévalué pour refléter l'impact de la contrainte du nouvel espace.  
   
- L'exemple suivant illustre ce qui est indiqué plus haut ; la première expression MDX aide à afficher les valeurs non filtrées dans le cube, la deuxième expression MDX illustre l'effet du filtrage dans la clause de sous-sélection :  
+ L'exemple suivant illustre ce qui est indiqué plus haut ; la première expression MDX aide à afficher les valeurs non filtrées dans le cube, la deuxième expression MDX illustre l'effet du filtrage dans la clause de sous-sélection :  
   
 ```  
 SELECT { [Customer].[Customer Geography].[All Customers]  
@@ -202,8 +202,8 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|29 358 677,22 $|80 450 596,98 $|  
-|United States|9 389 789,51 $|80 450 596,98 $|  
-|Oregon|1 170 991,54 $|80 450 596,98 $|  
+|États-Unis|9 389 789,51 $|80 450 596,98 $|  
+|Oregon|1 170 991,54 $|80 450 596,98 $|  
 |Portland|110 649,54 $|80 450 596,98 $|  
 |Washington|2 467 248,34 $|80 450 596,98 $|  
 |Seattle|75 164,86 $|80 450 596,98 $|  
@@ -232,7 +232,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |All Customers|2 467 248,34 $|80 450 596,98 $|  
 |United States|2 467 248,34 $|80 450 596,98 $|  
 |Washington|2 467 248,34 $|80 450 596,98 $|  
-|Seattle|75 164,86 $|80 450 596,98 $|  
+|Seattle|75 164,86 $|80 450 596,98 $|  
   
  Les résultats ci-dessus indiquent que seuls les ascendants et descendants de Washington State font partie du sous-espace dans lequel l'instruction de sélection externe a été évaluée ; Oregon et Portland ont été supprimés du sous-cube parce qu'Oregon et tous les autres États frères n'ont pas été mentionnés dans l'instruction de sous-sélection lorsque Washington a été indiqué.  
   
@@ -255,13 +255,13 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|Road|Touring|  
-|All Customers|29 358 677,22 $|604 053,30 $|(Null)|10 251 183,52 $|14 624 108,58 $|3 879 331,82 $|  
-|United States|9 389 789,51 $|217 168,79 $|(Null)|3 547 956,78 $|4 322 438,41 $|1 302 225,54 $|  
+||All Products|Accessory|Composants|Mountain|Road|Touring|  
+|All Customers|29 358 677,22 $|604 053,30 $|(Null)|10 251 183,52 $|14 624 108,58 $|3 879 331,82 $|  
+|États-Unis|9 389 789,51 $|217 168,79 $|(Null)|3 547 956,78 $|4 322 438,41 $|1 302 225,54 $|  
 |Oregon|1 170 991,54 $|30 513,17 $|(Null)|443 607,98 $|565 372,10 $|131 498,29 $|  
-|Portland|110 649,54 $|2 834,17 $|(Null)|47 099,91 $|53 917,17 $|6 798,29 $|  
-|Washington|2 467 248,34 $|62 662,92 $|(Null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
-|Seattle|75 164,86 $|2 695,74 $|(Null)|19 914,53 $|44 820,06 $|7 734,54 $|  
+|Portland|110 649,54 $|2 834,17 $|(Null)|47 099,91 $|53 917,17 $|6 798,29 $|  
+|Washington|2 467 248,34 $|62 662,92 $|(Null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
+|Seattle|75 164,86 $|2 695,74 $|(Null)|19 914,53 $|44 820,06 $|7 734,54 $|  
   
 ```  
 SELECT { [Customer].[Customer Geography].[All Customers]  
@@ -280,11 +280,11 @@ SELECT { [Customer].[Customer Geography].[All Customers]
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Products|Accessory|Components|Mountain|Road|Touring|  
-|All Customers|2 467 248,34 $|62 662,92 $|(Null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
-|United States|2 467 248,34 $|62 662,92 $|(Null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
-|Washington|2 467 248,34 $|62 662,92 $|(Null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
-|Seattle|75 164,86 $|2 695,74 $|(Null)|19 914,53 $|44 820,06 $|7 734,54 $|  
+||All Products|Accessory|Composants|Mountain|Road|Touring|  
+|All Customers|2 467 248,34 $|62 662,92 $|(Null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
+|États-Unis|2 467 248,34 $|62 662,92 $|(Null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
+|Washington|2 467 248,34 $|62 662,92 $|(Null)|945 219,38 $|1 155 880,07 $|303 485,97 $|  
+|Seattle|75 164,86 $|2 695,74 $|(Null)|19 914,53 $|44 820,06 $|7 734,54 $|  
   
  Les résultats ci-dessus indiquent que les valeurs All Products ont été ajustées uniquement sur les valeurs de Washington State, comme attendu.  
   
@@ -307,10 +307,10 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
 |-|-|-|-|-|-|-|  
 ||All Sales Territories|Australia|Canada|Central|Northwest|Southwest|  
 |All Products|7 591 495,49 $|1 281 059,99 $|1 547 298,12 $|600 205,79 $|1 924 763,50 $|2 238 168,08 $|  
-|Mountain-200 Silver, 38|1 449 576,15 $|248 702,93 $|275 052,45 $|141 103,65 $|349 487,01 $|435 230,12 $|  
-|Mountain-200 Black, 38|1 722 896,50 $|218 024,05 $|418 726,43 $|123 929,46 $|486 694,63 $|475 521,93 $|  
-|Mountain-200 Black, 42|1 573 655,14 $|239 137,96 $|319 921,61 $|130 102,75 $|420 445,84 $|464 046,98 $|  
-|Mountain-200 Black, 46|1 420 500,58 $|192 320,16 $|230 875,99 $|117 044,49 $|424 813,66 $|455 446,27 $|  
+|Mountain-200 Silver, 38|1 449 576,15 $|248 702,93 $|275 052,45 $|141 103,65 $|349 487,01 $|435 230,12 $|  
+|Mountain-200 Black, 38|1 722 896,50 $|218 024,05 $|418 726,43 $|123 929,46 $|486 694,63 $|475 521,93 $|  
+|Mountain-200 Black, 42|1 573 655,14 $|239 137,96 $|319 921,61 $|130 102,75 $|420 445,84 $|464 046,98 $|  
+|Mountain-200 Black, 46|1 420 500,58 $|192 320,16 $|230 875,99 $|117 044,49 $|424 813,66 $|455 446,27 $|  
 |Road-150 Red, 56|1 424 867,11 $|382 874,89 $|302 721,64 $|88 025,44 $|243 322,36 $|407 922,78 $|  
   
 ```  
@@ -330,11 +330,11 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
 |-|-|-|-|-|-|-|  
 ||All Sales Territories|Australia|Canada|Northwest|Southwest|United Kingdom|  
 |All Products|7 938 218,56 $|1 096 312,24 $|1 474 255,49 $|2 042 674,72 $|2 238 099,55 $|1 086 876,56 $|  
-|Mountain-200 Silver, 38|1 520 958,53 $|248 702,93 $|275 052,45 $|349 487,01 $|435 230,12 $|212 486,03 $|  
-|Mountain-200 Silver, 42|1 392 237,14 $|198 127,15 $|229 679,01 $|361 233,58 $|407 854,24 $|195 343,16 $|  
-|Mountain-200 Black, 38|1 861 703,23 $|218 024,05 $|418 726,43 $|486 694,63 $|475 521,93 $|262 736,19 $|  
-|Mountain-200 Black, 42|1 702 427,25 $|239 137,96 $|319 921,61 $|420 445,84 $|464 046,98 $|258 874,87 $|  
-|Mountain-200 Black, 46|1 460 892,41 $|192 320,16 $|230 875,99 $|424 813,66 $|455 446,27 $|157 436,31 $|  
+|Mountain-200 Silver, 38|1 520 958,53 $|248 702,93 $|275 052,45 $|349 487,01 $|435 230,12 $|212 486,03 $|  
+|Mountain-200 Silver, 42|1 392 237,14 $|198 127,15 $|229 679,01 $|361 233,58 $|407 854,24 $|195 343,16 $|  
+|Mountain-200 Black, 38|1 861 703,23 $|218 024,05 $|418 726,43 $|486 694,63 $|475 521,93 $|262 736,19 $|  
+|Mountain-200 Black, 42|1 702 427,25 $|239 137,96 $|319 921,61 $|420 445,84 $|464 046,98 $|258 874,87 $|  
+|Mountain-200 Black, 46|1 460 892,41 $|192 320,16 $|230 875,99 $|424 813,66 $|455 446,27 $|157 436,31 $|  
   
  Comme vous pouvez le voir, il y a des différences entre les résultats des deux jeux. La première requête a permis d'identifier les produits qui se sont le mieux vendus dans les 5 régions où les meilleures ventes ont été réalisées, la deuxième requête a permis de déterminer où les 5 produits les plus performants ont été vendus.  
   

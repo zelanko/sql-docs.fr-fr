@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc961ef5f3c22d8da7a97f53b387cd1d0c09c679
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 59011e56766d46f768e579a21207dde2ecf84be5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905283"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Est si la publication est éligible pour l’utilisation de partitions précalculées. où **1** signifie que les partitions précalculées peuvent être utilisées, et **0** signifie qu’ils ne peuvent pas être utilisés.|  
 |**has_dynamic_filters**|**bit**|Est si le filtre de lignes paramétrable au moins a été défini dans la publication. où **1** signifie qu’un ou plusieurs filtres de lignes paramétrable existent, et **0** signifie qu’aucun filtre dynamique n’existe.|  

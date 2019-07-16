@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d009b05fea2a2c587f97dc4b2416588932ad0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032896"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,24 +50,24 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
   
 ## <a name="result-sets-for-row-information"></a>Ensemble de résultats pour les informations de ligne  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nom du serveur hébergeant la base de données qui a effectué l'entrée de la version de ligne.|  
 |**db_name**|**sysname**|Nom de la base de données qui a effectué cette entrée.|  
 |**db_nickname**|**binary(6)**|Surnom de la base de données qui a effectué cette entrée.|  
-|**version**|**Int**|Version de l'entrée.|  
+|**version**|**int**|Version de l'entrée.|  
 |**current_state**|**nvarchar(9)**|Retourne des informations sur l'état actuel de la ligne.<br /><br /> **y** -données de la ligne représente l’état actuel de la ligne.<br /><br /> **n** -données de ligne ne représente pas l’état actuel de la ligne.<br /><br /> **\<n/a >** - non applicable.<br /><br /> **\<inconnu >** -Impossible de déterminer l’état actuel.|  
 |**rowversion_table**|**nchar(17)**|Indique si les versions de ligne sont stockées dans le [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md) table ou la [MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) table.|  
 |**comment**|**nvarchar(255)**|Informations supplémentaires concernant l'entrée de version de cette ligne. En général, ce champ est vide.|  
   
 ## <a name="result-sets-for-column-information"></a>Ensemble de résultats pour les informations de colonne  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**server_name**|**sysname**|Nom du serveur hébergeant la base de données qui a effectué l'entrée de la version de colonne.|  
 |**db_name**|**sysname**|Nom de la base de données qui a effectué cette entrée.|  
 |**db_nickname**|**binary(6)**|Surnom de la base de données qui a effectué cette entrée.|  
-|**version**|**Int**|Version de l'entrée.|  
+|**version**|**int**|Version de l'entrée.|  
 |**colname**|**sysname**|Nom de la colonne d'article que l'entrée de la version de colonne représente.|  
 |**comment**|**nvarchar(255)**|Informations supplémentaires concernant l'entrée de version de cette colonne. En général, ce champ est vide.|  
   

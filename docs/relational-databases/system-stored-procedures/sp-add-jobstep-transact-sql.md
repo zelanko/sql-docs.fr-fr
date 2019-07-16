@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 112afe8f7a8eaea87c860264c820c874788cbc7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a3551716ad6841a7ed14c92afd4ae96d3cc297b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140490"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 
@@ -76,12 +75,12 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |Value|Description|  
 |-----------|-----------------|  
 |«**ACTIVESCRIPTING**»|Script actif<br /><br /> **\*\* Important \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
-|'**CMDEXEC**'|Commande du système d'exécution ou programme exécutable|  
+|«**CMDEXEC**»|Commande du système d'exécution ou programme exécutable|  
 |«**DISTRIBUTION**»|Travail de l'Agent de distribution de réplication|  
 |«**INSTANTANÉ**»|Travail de l'Agent d'instantané de réplication|  
 |«**LOGREADER**»|Travail de l'Agent de lecture du journal de réplications|  
 |«**FUSION**»|Travail de l'Agent de fusion de réplication|  
-|'**QueueReader**'|Travail de l'Agent de lecture de la file d'attente de réplication|  
+|«**QueueReader**»|Travail de l'Agent de lecture de la file d'attente de réplication|  
 |«**ANALYSISQUERY**»|Requête Analysis Services (MDX, DMX).|  
 |«**ANALYSISCOMMAND**»|Commande Analysis Services (XMLA).|  
 |«**Dts**»|[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Exécution du package|  
@@ -162,7 +161,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **sp_add_jobstep** doit être exécuté à partir de la **msdb** base de données.  

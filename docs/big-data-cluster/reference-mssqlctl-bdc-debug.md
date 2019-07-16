@@ -1,23 +1,22 @@
 ---
-title: mssqlctl bdc debug reference
+title: référence de débogage mssqlctl bdc
 titleSuffix: SQL Server big data clusters
 description: Article de référence pour les commandes de débogage mssqlctl bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 20257039a40594cd592bcc4d4f6050027d8858ea
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9e7fc8e54a1473803dbeacb9c671b060b8ff8b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958104"
 ---
-# <a name="mssqlctl-bdc-debug"></a>mssqlctl bdc debug
+# <a name="mssqlctl-bdc-debug"></a>mssqlctl CDM debug
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -27,8 +26,8 @@ L’article suivant fournit la référence pour le **CDM debug** commandes dans 
 |     |     |
 | --- | --- |
 [mssqlctl bdc debug copy-logs](#mssqlctl-bdc-debug-copy-logs) | Copier les journaux.
-[mssqlctl bdc debug dump](#mssqlctl-bdc-debug-dump) | Vidage de journalisation de déclencheur.
-## <a name="mssqlctl-bdc-debug-copy-logs"></a>mssqlctl bdc debug copy-logs
+[vidage du débogage mssqlctl bdc](#mssqlctl-bdc-debug-dump) | Vidage de journalisation de déclencheur.
+## <a name="mssqlctl-bdc-debug-copy-logs"></a>mssqlctl CDM debug-journaux de copie
 Copier les journaux de débogage à partir du Cluster de données volumineuses : configuration de kube est requis sur votre système.
 ```bash
 mssqlctl bdc debug copy-logs --namespace -n 
@@ -60,7 +59,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-bdc-debug-dump"></a>mssqlctl bdc debug dump
+## <a name="mssqlctl-bdc-debug-dump"></a>vidage du débogage mssqlctl bdc
 Déclencher le vidage de la journalisation et le copier à partir du conteneur : configuration de kube est requis sur votre système.
 ```bash
 mssqlctl bdc debug dump --namespace -n 

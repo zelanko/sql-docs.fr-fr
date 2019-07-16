@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af6b399b-e546-4de5-9cd1-5a6e0ec7ddc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 503651db5d71403802c82a4931e4bdf9b1a69fd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bde93002771c219b6358cd1ecd1325fd77208d8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932245"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords, exemple de propriété (VC++)
 Cet exemple utilise le [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propriété pour ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenant les 10 plus chers dans le ***titres*** table.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c5d05f2667b6f7196338b182f2b9cca1a84e7b6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990387"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +31,12 @@ ms.locfileid: "62744168"
   
 ## <a name="definition"></a>Définition  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**column_id**|**Int**|Identifie une colonne publiée.|  
-|**publishercolumn_id**|**Int**|Associe une colonne publiée avec les métadonnées de colonne stockées dans le [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) (table système).|  
-|**nom**|**sysname**|Spécifie le nom de la colonne.|  
-|**article_id**|**Int**|Identifie l'article auquel appartient la colonne.|  
+|**column_id**|**int**|Identifie une colonne publiée.|  
+|**publishercolumn_id**|**int**|Associe une colonne publiée avec les métadonnées de colonne stockées dans le [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) (table système).|  
+|**name**|**sysname**|Spécifie le nom de la colonne.|  
+|**article_id**|**int**|Identifie l'article auquel appartient la colonne.|  
 |**column_ordinal**|**Int**|Identifie la colonne par ordre.|  
 |**mapped_type**|**tinyint**|Type de données colonne de la colonne de destination chez l'abonné.|  
 |**mapped_length**|**bigint**|Longueur de la colonne chez l'abonné.|  
@@ -50,7 +49,7 @@ ms.locfileid: "62744168"
  [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Vues de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
- [sysarticlecolumns &#40;System View&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
+ [sysarticlecolumns &#40;vue système&#41; &#40;Transact-SQL&#41;](../../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md)   
  [sysarticlecolumns &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticlecolumns-transact-sql.md)  
   
   

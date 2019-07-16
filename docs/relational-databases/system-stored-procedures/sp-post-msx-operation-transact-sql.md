@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f36ad40a2b16401218fe2a5927407464fe6ac11b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056372"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +45,19 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @operation = ] 'operation'` Le type d’opération pour l’opération publiée. *opération*est **varchar(64)**, sans valeur par défaut. Opérations dépend de *object_type*.  
+`[ @operation = ] 'operation'` Le type d’opération pour l’opération publiée. *opération*est **varchar(64)** , sans valeur par défaut. Opérations dépend de *object_type*.  
   
 |Type d'objet|Opération|  
 |-----------------|---------------|  
 |**JOB**|INSERT<br /><br /> UPDATE<br /><br /> Suppression<br /><br /> START<br /><br /> STOP|  
-|**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
+|**SERVEUR**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**PLANIFICATION**|INSERT<br /><br /> UPDATE<br /><br /> Suppression|  
   
-`[ @object_type = ] 'object'` Le type d’objet pour lequel une opération post. Les types valides sont **travail**, **SERVER**, et **planification**. *objet* est **varchar(64)**, avec une valeur par défaut **travail**.  
+`[ @object_type = ] 'object'` Le type d’objet pour lequel une opération post. Les types valides sont **travail**, **SERVER**, et **planification**. *objet* est **varchar(64)** , avec une valeur par défaut **travail**.  
   
 `[ @job_id = ] job_id` Numéro d’identification du travail auquel l’opération s’applique. *job_id* est **uniqueidentifier**, sans valeur par défaut. **0 x 00** indique tous les travaux. Si *objet* est **SERVER**, puis *job_id*n’est pas obligatoire.  
   
-`[ @specific_target_server = ] 'target_server'` Le nom du serveur cible pour lequel l’opération spécifiée s’applique. Si *job_id* est spécifié, mais *serveur_cible* n’est pas spécifié, les opérations sont publiées pour tous les serveurs cibles du travail. *serveur_cible* est **nvarchar (30)**, avec NULL comme valeur par défaut.  
+`[ @specific_target_server = ] 'target_server'` Le nom du serveur cible pour lequel l’opération spécifiée s’applique. Si *job_id* est spécifié, mais *serveur_cible* n’est pas spécifié, les opérations sont publiées pour tous les serveurs cibles du travail. *serveur_cible* est **nvarchar (30)** , avec NULL comme valeur par défaut.  
   
 `[ @value = ] value` L’intervalle d’interrogation, en secondes. *value* est de type **int**, avec NULL comme valeur par défaut. Spécifiez ce paramètre uniquement si *opération* est **SET-POLL**.  
   
@@ -68,7 +67,7 @@ sp_post_msx_operation
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **sp_post_msx_operation** doit être exécuté à partir de la **msdb** base de données.  

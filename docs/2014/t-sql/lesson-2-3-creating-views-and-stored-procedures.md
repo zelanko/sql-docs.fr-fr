@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 20f16e9deeb9e07d2c63090c92100871331e0443
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206489"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211182"
 ---
 # <a name="creating-views-and-stored-procedures"></a>Création des vues et des procédures stockées
   Étant donné que Mary peut désormais accéder à la base de données **TestData** , vous pouvez envisager de créer des objets de base de données, tels qu'une vue et une procédure stockée, puis octroyer à Mary l'accès à ses objets. Une vue est une instruction SELECT stockée, et une procédure stockée correspond à une ou plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] qui s'exécutent comme un traitement.  
@@ -77,7 +77,7 @@ ms.locfileid: "48206489"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Octroi de l’accès à un objet de base de données](lesson-2-4-granting-access-to-a-database-object.md)  
+ [Octroi de l'accès à un objet de base de données](lesson-2-4-granting-access-to-a-database-object.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql)   

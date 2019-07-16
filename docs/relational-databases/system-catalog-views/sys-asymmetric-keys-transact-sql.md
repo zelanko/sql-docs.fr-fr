@@ -19,29 +19,28 @@ helpviewer_keywords:
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0cc6153993ffd5febbc9fdaa7a06b477ea3aad1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c05aa2d1543cfc3ebd1cbab6c199cd2992febfe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070474"
 ---
 # <a name="sysasymmetrickeys-transact-sql"></a>sys.asymmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Renvoie une ligne pour chaque clé asymétrique.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de la clé. Unique dans la base de données.|  
-|**principal_id**|**Int**|ID du principal de la base de données propriétaire de la clé.|  
-|**asymmetric_key_id**|**Int**|ID de la clé. Unique dans la base de données.|  
+|**name**|**sysname**|Nom de la clé. Unique dans la base de données.|  
+|**principal_id**|**int**|ID du principal de la base de données propriétaire de la clé.|  
+|**asymmetric_key_id**|**int**|ID de la clé. Unique dans la base de données.|  
 |**pvt_key_encryption_type**|**char(2)**|Mode de chiffrement de la clé.<br /><br /> NA = Non chiffrée<br /><br /> MK = La clé est chiffrée par la clé principale<br /><br /> PW = La clé est chiffrée par un mot de passe défini par l'utilisateur<br /><br /> SK = La clé est chiffrée par la clé principale du service.|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|Description du mode de chiffrement de la clé privée.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**Empreinte numérique**|**varbinary(32)**|Hachage SHA-1 de la clé. Hachage globalement unique.|  
-|**algorithme**|**char(2)**|Algorithme utilisé avec la clé.<br /><br /> 1R = RSA 512 bits<br /><br /> 2R = RSA 1024 bits<br /><br /> 3R = RSA 2048 bits|  
+|**thumbprint**|**varbinary(32)**|Hachage SHA-1 de la clé. Hachage globalement unique.|  
+|**algorithm**|**char(2)**|Algorithme utilisé avec la clé.<br /><br /> 1R = RSA 512 bits<br /><br /> 2R = RSA 1024 bits<br /><br /> 3R = RSA 2048 bits|  
 |**algorithm_desc**|**nvarchar(60)**|Description de l'algorithme utilisé avec la clé.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**Int**|Longueur en bits de la clé.|  
 |**sid**|**varbinary(85)**|SID de connexion pour cette clé. Pour les clés EKM (Gestion de clés extensible), cette valeur sera NULL.|  
@@ -52,7 +51,7 @@ ms.locfileid: "47683257"
 |**cryptographic_provider_guid**|**uniqueidentifier**|GUID du fournisseur de chiffrement. Pour les clés non-EKM (Gestion de clés extensible), cette valeur sera NULL.|  
 |**cryptographic_provider_algid**|**sql_variant**|ID d'algorithme pour le fournisseur de chiffrement. Pour les clés non-EKM (Gestion de clés extensible), cette valeur sera NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

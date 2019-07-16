@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fda788cecbad21a73186b96a6c360ceeae3948e3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537277"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179056"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Parcourir les données et métadonnées de cube
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "52537277"
   
 |Opérateur|Expression de filtre|Description|  
 |--------------|-----------------------|-----------------|  
-|Égal à|Un ou plusieurs membres|Les valeurs doivent être égales à un membre spécifié.<br /><br /> (Fournit plusieurs sélections de membres pour les hiérarchies d'attribut, autres que les hiérarchies parent-enfant, et une seule sélection de membre pour d'autres hiérarchies.)|  
+|Égal|Un ou plusieurs membres|Les valeurs doivent être égales à un membre spécifié.<br /><br /> (Fournit plusieurs sélections de membres pour les hiérarchies d'attribut, autres que les hiérarchies parent-enfant, et une seule sélection de membre pour d'autres hiérarchies.)|  
 |Non égal|Un ou plusieurs membres|Les valeurs ne doivent pas être égales à un membre spécifié.<br /><br /> (Fournit plusieurs sélections de membres pour les hiérarchies d'attribut, autres que les hiérarchies parent-enfant, et une seule sélection de membre pour d'autres hiérarchies.)|  
 |Dans|Un ou plusieurs jeux nommés|Les valeurs doivent se trouver dans un jeu nommé spécifié.<br /><br /> (Pris en charge pour les hiérarchies d'attribut uniquement.)|  
 |Pas dans|Un ou plusieurs jeux nommés|Les valeurs ne doivent pas se trouver dans un jeu nommé spécifié.<br /><br /> (Pris en charge pour les hiérarchies d'attribut uniquement.)|  

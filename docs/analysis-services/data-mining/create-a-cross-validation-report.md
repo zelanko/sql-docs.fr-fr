@@ -1,5 +1,5 @@
 ---
-title: Créer un rapport de Validation croisée | Documents Microsoft
+title: Créer un rapport de Validation croisée | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 88d3af205a1e92ac07a4c841c80f2abea463de9b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184114"
 ---
 # <a name="create-a-cross-validation-report"></a>Créer un rapport de validation croisée
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -86,6 +86,6 @@ ms.locfileid: "34014376"
 4.  Collez la sélection dans un classeur Excel ouvert. Si vous utilisez l'option **Coller** , le rapport est collé dans Excel au format HTML, ce qui conserve la mise en forme des lignes et des colonnes. Si vous collez le rapport en utilisant les options **Collage spécial** pour le texte ou le texte Unicode, le rapport est collé au format séparé par des lignes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mesures dans le rapport de Validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
+ [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

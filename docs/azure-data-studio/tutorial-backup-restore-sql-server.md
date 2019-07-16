@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 93f38f8e703aabc765d3badc91393eb130081c99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 77679106577cd8f8374f932d8ddd22644beb63d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959103"
 ---
 # <a name="backup-and-restore-databases-using-includename-sosincludesname-sos-shortmd"></a>Sauvegarde et restauration de bases de données à l’aide de [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -25,7 +24,7 @@ Dans ce didacticiel, vous allez apprendre à utiliser [!INCLUDE[name-sos](../inc
 > * Sauvegarde une base de données 
 > * Afficher l’état de sauvegarde
 > * Générer le script utilisé pour effectuer la sauvegarde
-> * Restaurer une base de données
+> * Restauration d’une base de données
 > * Afficher l’état de la tâche de restauration
 
 ## <a name="prerequisites"></a>Prerequisites
@@ -86,6 +85,6 @@ Dans ce didacticiel, vous avez appris à :
 > * Sauvegarde une base de données 
 > * Afficher l’état de sauvegarde
 > * Générer le script utilisé pour effectuer la sauvegarde
-> * Restaurer une base de données
+> * Restauration d’une base de données
 > * Afficher l’état de la tâche de restauration
 

@@ -2,19 +2,18 @@
 title: Sessions utilisateur dans Analytique Platform System | Microsoft Docs »
 description: Sessions utilisateur dans Analytique Platform System Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 33bf052e27640ee08784927351579378bffbec2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49c8ea2479c0114364958b18ac299794511154d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959796"
 ---
 # <a name="user-sessions-in-analytics-platform-system"></a>Sessions utilisateur dans le système de plateforme d’Analytique
 Une connexion avec les autorisations appropriées permettre gérer les sessions de toutes les connexions sur une appliance SQL Server PDW, y compris l’exécution de ces actions :  

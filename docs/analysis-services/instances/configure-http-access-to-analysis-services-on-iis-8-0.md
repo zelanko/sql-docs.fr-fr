@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079465"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182161"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurer l’accès HTTP à Analysis Services sur IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "56079465"
   
 -   **Développement d’applications** | **Extensions ISAPI**  
   
- Pour vérifier ou ajouter ces composants, voir **Gestionnaire de serveur** | **Gérer** | **Ajouter des rôles et fonctionnalités**. Parcourez l'Assistant jusqu'à **Rôles serveur**. Faites défiler vers le bas pour accéder à **Serveur web (IIS)**.  
+ Pour vérifier ou ajouter ces composants, voir **Gestionnaire de serveur** | **Gérer** | **Ajouter des rôles et fonctionnalités**. Parcourez l'Assistant jusqu'à **Rôles serveur**. Faites défiler vers le bas pour accéder à **Serveur web (IIS)** .  
   
 1.  Ouvrez **Serveur Web** | **Sécurité** , puis choisissez les méthodes d’authentification.  
   
@@ -91,12 +91,12 @@ ms.locfileid: "56079465"
 > [!NOTE]  
 >  N'oubliez pas de débloquer les ports dans le Pare-feu Windows, afin de permettre les connexions client au serveur distant Analysis Services. Pour plus d’informations, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
-##  <a name="bkmk_copy"></a> Étape 1 : Copier les fichiers MSMDPUMP dans un dossier du serveur web  
+##  <a name="bkmk_copy"></a> Étape 1 : Copiez les fichiers MSMDPUMP.dll dans un dossier sur le serveur Web  
  Chaque point de terminaison HTTP que vous créez doit posséder son propre groupe de fichiers MSMDPUMP. Dans cette étape, vous copiez le fichier exécutable MSMDPUMP, le fichier de configuration et le dossier de ressources des dossiers de programme d'Analysis Services vers un nouveau dossier de répertoire virtuel que vous allez créer dans le système de fichiers de l'ordinateur exécutant IIS.  
   
  Le lecteur doit être formaté à l'aide du système de fichier NTFS. Le chemin d'accès au dossier que vous créez ne doit contenir aucun espace.  
   
-1.  Copiez les fichiers suivants, figurant dans \<lecteur > : \Program Files\Microsoft SQL Server\\< instance\>\OLAP\bin\isapi : MSMDPUMP.DLL, MSMDPUMP.INI et un dossier Resources.  
+1.  Copiez les fichiers suivants, figurant dans \<lecteur > : \Program Files\Microsoft SQL Server\\< instance\>\OLAP\bin\isapi : MSMDPUMP. DLL, MSMDPUMP. INI et un dossier Resources.  
   
      ![Structure de dossiers de fichiers MSMDPUMP](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "structure de dossiers de fichiers MSMDPUMP")  
   
@@ -104,7 +104,7 @@ ms.locfileid: "56079465"
   
 3.  Collez les fichiers que vous avez copiés précédemment dans ce nouveau dossier.  
   
-4.  Vérifiez que le dossier \inetpub\wwwroot\OLAP de votre serveur web contient les éléments suivants : MSMDPUMP.DLL, MSMDPUMP.INI et un dossier Resources. La structure des dossiers doit ressembler à ceci :  
+4.  Vérifiez que le dossier \inetpub\wwwroot\OLAP sur votre serveur web contienne les éléments suivants : MSMDPUMP. DLL, MSMDPUMP. INI et un dossier Resources. La structure des dossiers doit ressembler à ceci :  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
@@ -167,7 +167,7 @@ ms.locfileid: "56079465"
   
  L'**authentification anonyme** est souvent utilisée au cours du test initial car sa simplicité de configuration vous permet de valider rapidement une connectivité HTTP à Analysis Services. En seulement quelques étapes, vous pouvez affecter un compte d'utilisateur unique comme identité, accorder ces autorisations de compte dans Analysis Services, utiliser le compte pour vérifier l'accès aux données dans une application cliente, puis désactiver l'authentification anonyme lorsque le test est terminé.  
   
- Vous pouvez également utiliser l'authentification anonyme dans un environnement de production si les utilisateurs n'ont pas de comptes d'utilisateurs Windows, mais appliquez les meilleures pratiques en verrouillant les autorisations sur le système hôte, comme expliqué dans cet article : [Activer l’authentification anonyme (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Assurez-vous que l'authentification est définie sur le répertoire virtuel, et non sur le site Web parent, afin de limiter encore davantage le niveau d'accès du compte.  
+ Vous pouvez également utiliser l’authentification anonyme dans un environnement de production si les utilisateurs n’ont pas de comptes d’utilisateur Windows, mais suivent les meilleures pratiques en verrouillant les autorisations sur le système hôte, comme indiqué dans cet article : [Activer l’authentification anonyme (IIS 7)](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx). Assurez-vous que l'authentification est définie sur le répertoire virtuel, et non sur le site Web parent, afin de limiter encore davantage le niveau d'accès du compte.  
   
  Si l'authentification anonyme est activée, toute connexion utilisateur au point de terminaison HTTP est autorisée à se connecter en tant qu'utilisateur anonyme. Il se peut que vous ne pourrez pas d’auditer les connexions utilisateur individuelles, ni utiliser l’identité de l’utilisateur pour sélectionner des données à partir d’un modèle. Comme vous pouvez le voir, l'utilisation de l'option Anonyme a une incidence globale, depuis la conception du modèle jusqu'à l'actualisation des données et à leur accès. Toutefois, si les utilisateurs n'ont pas de connexion d'utilisateur Windows pour démarrer, l'utilisation du compte anonyme peut être la seule option.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "56079465"
   
  Si vous configuré un nommé ou instance d’Analysis Services à l’écoute sur un port fixe par défaut, vous devez ajouter le numéro de port au nom du serveur (par exemple, \<NomServeur > AW-SRV01:55555 \< /servername >) et vous devez autoriser entrant connexions dans le pare-feu Windows à ce port.  
   
-## <a name="step-5-grant-data-access-permissions"></a>Étape 5 : Accorder des autorisations d'accès aux données  
+## <a name="step-5-grant-data-access-permissions"></a>Étape 5 : Accorder des autorisations accès aux données  
  Comme indiqué précédemment, vous devez accorder des autorisations sur l'instance Analysis Services. Chaque objet de base de données aura des rôles correspondant à un niveau spécifique d'autorisations (lecture ou lecture/écriture), et chaque rôle comportera des membres comprenant des identités d'utilisateur Windows.  
   
  Pour définir des autorisations, vous pouvez utiliser SQL Server Management Studio. Dans le dossier **Base de données** | **Rôles** , vous pouvez créer des rôles, spécifier des autorisations de base de données, affecter une appartenance à des comptes de groupe ou d’utilisateur Windows, puis accorder des autorisations en lecture ou en écriture sur des objets spécifiques. En général, les autorisations de **lecture** sur un cube sont suffisantes pour les connexions clientes qui utilisent, mais ne mettent pas à jour, les données du modèle.  

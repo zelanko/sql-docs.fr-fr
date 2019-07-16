@@ -12,15 +12,14 @@ dev_langs:
 ms.assetid: 166426e1-555d-4ce4-bae3-248dcac56883
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0f5b5657cc0a6ce0bab8afa9fa9dc9aea272f999
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5666ac53572ac728ff8bb0581eeafae9dce185e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950939"
 ---
-# <a name="system-trace-functions"></a>Fonctions de trace système
+# <a name="system-trace-functions"></a>Fonctions de suivi système
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les fonctions de suivi système suivantes.  

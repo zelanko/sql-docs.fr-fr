@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fb8e5512a9b623a3e97d80289b928d66314f9d72
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 218003efa75ead5ab795fa5ef10ac09c4d97a6a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962624"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Installer de nouveaux packages R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +21,7 @@ Cet article décrit comment installer de nouveaux packages R à une instance de 
 
 | Approche                           | Autorisations               | Distante/locale |
 |------------------------------------|---------------------------|--------------|
-| [Utilisation des gestionnaires de package R conventionnelles](use-r-package-managers-on-sql-server.md)  | Administratifs | Local |
+| [Utilisation des gestionnaires de package R conventionnelles](use-r-package-managers-on-sql-server.md)  | Admin | Local |
 | [Utiliser RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  Administrateur activé par la suite les rôles de base de données | both|
 | [Utiliser T-SQL (créer une bibliothèque externe)](install-r-packages-tsql.md) | Administrateur activé par la suite les rôles de base de données | both 
 

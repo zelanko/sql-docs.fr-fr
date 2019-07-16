@@ -2,19 +2,18 @@
 title: Instructions T-SQL - Parallel Data Warehouse | Microsoft Docs
 description: Instructions T-SQL pour Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 804f4cb744ad036978341de4eedcc3351d5f620c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959956"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Instructions T-SQL pour Parallel Data Warehouse
 Instructions Transact-SQL (T-SQL) pour Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -28,8 +27,8 @@ Instructions Transact-SQL (T-SQL) pour Analytics Platform System (APS) SQL Serve
 * [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
 * [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [CRÉER LA BASE DE DONNÉES INFORMATIONS D’IDENTIFICATION](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-* [CRÉER LA SOURCE DE DONNÉES EXTERNE](../t-sql/statements/create-external-data-source-transact-sql.md)
-* [CRÉER UN FORMAT DE FICHIER EXTERNE](../t-sql/statements/create-external-file-format-transact-sql.md)
+* [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
+* [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
 * [CRÉER UNE TABLE EXTERNE](../t-sql/statements/create-external-table-transact-sql.md)
 * [CRÉER (FONCTION)](../t-sql/statements/create-function-sql-data-warehouse.md)
 * [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md)
@@ -85,7 +84,7 @@ Instructions Transact-SQL (T-SQL) pour Analytics Platform System (APS) SQL Serve
 * [Subqueries](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>Instructions de sécurité
-* Autorisations : [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [REVOKE](../t-sql/statements/revoke-transact-sql.md)
+* Autorisations : [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [RÉVOQUER](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
 * [ALTER CERTIFICATE](../t-sql/statements/alter-certificate-transact-sql.md)
 * [MODIFIER LA CLÉ DE CHIFFREMENT DE BASE DE DONNÉES](../t-sql/statements/alter-database-encryption-key-transact-sql.md)

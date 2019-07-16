@@ -14,21 +14,20 @@ helpviewer_keywords:
 ms.assetid: f9534144-8f42-4946-b0fb-638e9dcde9c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee7cf624e7c118a5d9ef36738c810aecc4ec5684
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8aad5171b98c54aa0c4adbde1a5678e4fd953640
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63281010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093965"
 ---
 # <a name="odbc-subkey"></a>Sous-clé ODBC
 Les valeurs sous la sous-clé ODBC spécifient des options de suivi de ODBC. Ces options sont définies via l’onglet suivi de la boîte de dialogue Administrateur de sources de données ODBC affichée par **SQLManageDataSources**. La sous-clé ODBC lui-même est facultative. Le format de ces valeurs est comme indiqué dans le tableau suivant.  
   
-|Nom|Type de données|Données|  
+|Name|Type de données|Données|  
 |----------|---------------|----------|  
 |Trace|REG_SZ|**0** &#124; **1**|  
-|TraceFile|REG_SZ|*tracefile-path*|  
+|TraceFile|REG_SZ|*chemin d’accès de fichier de trace*|  
   
  Les valeurs ont les significations décrites dans le tableau suivant.  
   

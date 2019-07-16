@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bbf27dcc-9815-4e2f-8ea8-b8c9fe6dedd6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 210ac2e22c56e6bb8ebfa1dc21e968e979e1c7c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6513daf2a2d57b0ed2b9d68f6232112d238de037
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932628"
 ---
 # <a name="find-method-example-vb"></a>Find, exemple de méthode (VB)
 Cet exemple utilise le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) l’objet [trouver](../../../ado/reference/ado-api/find-method-ado.md) méthode pour localiser et compter le nombre de titres de fonctions dans le ***Pubs*** base de données. L’exemple suppose que le fournisseur sous-jacent ne prend pas en charge des fonctionnalités similaires.  

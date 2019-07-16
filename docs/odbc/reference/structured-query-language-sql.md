@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bebfd93e-0dc0-46b3-a531-518beb7ea976
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 86f9dd843171c02654302694c669f40b6b51ab78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cae344e97bf6e5dc8affbf164f80eb8935846e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019031"
 ---
 # <a name="structured-query-language-sql"></a>SQL (Structured Query Language)
 Un SGBD classique permet aux utilisateurs de stocker, accéder et modifier des données d’une façon organisée et efficace. À l’origine, les utilisateurs de SGBD ont été les programmeurs. L’accès aux données stockées exigeaient l’écriture d’un programme dans un langage de programmation tels que COBOL. Bien que ces programmes ont été écrits souvent à présenter une interface conviviale à un utilisateur non technique, l’accès aux données elles-mêmes requis les services d’un programmeur expérimenté. Accès aisé aux données n’était pas pratique.  

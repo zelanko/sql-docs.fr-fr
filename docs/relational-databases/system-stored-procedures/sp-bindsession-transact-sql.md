@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a24c219937341b7c1f9d44515bf52c4de220d4c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fac327d88aa8a6d74e153c1c7b2f3d637bf6f936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046026"
 ---
 # <a name="spbindsession-transact-sql"></a>sp_bindsession (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_bindsession { 'bind_token' | NULL }
   
 ## <a name="arguments"></a>Arguments  
  **'** *bind_token* **'**  
- Est le jeton qui identifie la transaction obtenu à l’origine à l’aide de **sp_getbindtoken** ou Open Data Services **srv_getbindtoken** (fonction). *bind_token*is **varchar(255)**.  
+ Est le jeton qui identifie la transaction obtenu à l’origine à l’aide de **sp_getbindtoken** ou Open Data Services **srv_getbindtoken** (fonction). *bind_token*est **varchar (255)** .  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

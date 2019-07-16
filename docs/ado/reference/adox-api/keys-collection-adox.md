@@ -1,5 +1,5 @@
 ---
-title: Keys Collection (ADOX) | Microsoft Docs
+title: Keys, Collection (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4205a5f1a398d36669c3d383c663dd367e93d817
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a84932192fc7f51f21a7fd65c06c7417ef02da92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965848"
 ---
 # <a name="keys-collection-adox"></a>Keys, collection (ADOX)
 Contient tous les [clé](../../../ado/reference/adox-api/key-object-adox.md) objets d’un [table](../../../ado/reference/adox-api/table-object-adox.md).  
   
 ## <a name="remarks"></a>Notes  
- Le [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) méthode pour un [Keys, collection](../../../ado/reference/adox-api/keys-collection-adox.md) est unique pour ADOX. Vous pouvez :  
+ Le [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) méthode pour un [Keys, collection](../../../ado/reference/adox-api/keys-collection-adox.md) est unique pour ADOX. Vous pouvez :  
   
 -   Ajoutez une nouvelle clé à la collection avec le [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) (méthode).  
   
- Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
+ Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
   
 -   Accéder à une clé dans la collection avec le [élément](../../../ado/reference/ado-api/item-property-ado.md) propriété.  
   

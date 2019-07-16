@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ce54144c3f7f367248cdb9d92484874deaaf78fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22b1b6bf2abbf322cec690d9e466f2ea40fcb72a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059248"
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,17 +52,17 @@ fn_trace_getfilterinfo ( trace_id )
 ## <a name="tables-returned"></a>Tables retournées  
  Retourne les informations suivantes. Pour plus d’informations sur les colonnes, consultez [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**columnid**|**Int**|L’ID de la colonne sur laquelle le filtre est appliqué.|  
-|**logical_operator**|**Int**|Indique si l'opérateur AND ou OR est appliqué.|  
+|**logical_operator**|**int**|Indique si l'opérateur AND ou OR est appliqué.|  
 |**comparison_operator**|**Int**|Spécifie le type de comparaison effectué :<br /><br /> 0 = Égal<br /><br /> 1 = Différent de<br /><br /> 2 = Supérieur à<br /><br /> 3 = Inférieur à<br /><br /> 4 = Supérieur ou égal à<br /><br /> 5 = Inférieur ou égal à<br /><br /> 6 = Identique<br /><br /> 7 = Non identique|  
 |**value**|**sql_variant**|Indique la valeur sur laquelle le filtre est appliqué.|  
   
 ## <a name="remarks"></a>Notes  
  L’utilisateur définit *trace_id* valeur à identifier, modifier et contrôler la trace. Quand il est passé de l’ID d’une trace spécifique, **fn_trace_getfilterinfo** retourne des informations sur n’importe quel filtre cette trace. Si la trace spécifiée n'a pas de filtre, cette fonction retourne un ensemble de lignes vide. Lorsqu'un identificateur non valide lui est passé, cette fonction renvoie un ensemble de lignes vide. Pour plus d’informations sur les traces, consultez [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER TRACE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  

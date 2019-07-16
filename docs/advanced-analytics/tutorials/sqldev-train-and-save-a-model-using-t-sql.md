@@ -7,13 +7,12 @@ ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a76a3a77f3c258372e6ff3a7e472b472fcc2f073
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1953e2a5cfa1671a81630a66a4e6c3589929d1bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961836"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>Leçon 3 : Former et enregistrer un modèle à l’aide de T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -105,5 +104,5 @@ Dans l’étape suivante, vous utiliserez le modèle formé pour générer des p
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Leçon 2 : Créer des caractéristiques de données à l’aide des fonctions R et T-SQL](..//tutorials/sqldev-create-data-features-using-t-sql.md)
+[Leçon 2 : Créer des caractéristiques de données à l’aide des fonctions R et T-SQL](..//tutorials/sqldev-create-data-features-using-t-sql.md)
 

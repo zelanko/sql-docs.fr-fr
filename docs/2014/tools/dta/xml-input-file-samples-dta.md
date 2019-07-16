@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3cf9ec0ff53fced20701b0b5b3379c1ec8dac219
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781791"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186521"
 ---
 # <a name="xml-input-file-samples-dta"></a>Exemples de fichiers d'entrée XML (Assistant Paramétrage de base de données)
   Cette section contient des exemples de fichiers d’entrée XML que vous pouvez utiliser avec l’outil en ligne de commande **dta** . Cet outil forme l'une des interfaces utilisateur de l'Assistant Paramétrage du moteur de base de données, outil qui permet de paramétrer des bases de données en vue d'améliorer les performances des requêtes. L'Assistant Paramétrage du moteur de base de données analyse les effets d'une charge de travail dans une ou plusieurs bases de données. Une charge de travail est un ensemble d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui s'exécutent dans les bases de données que vous souhaitez paramétrer. Une fois que l'Assistant Paramétrage du moteur de base de données a terminé d'analyser les effets de la charge de travail, il crée une recommandation pour ajouter des index, des vues indexées et des partitions afin d'améliorer les performances des requêtes dans vos bases de données.  

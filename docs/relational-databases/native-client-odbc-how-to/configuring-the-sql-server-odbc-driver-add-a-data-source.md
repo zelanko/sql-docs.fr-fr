@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: b4ac6f0e-8e6a-4b1a-9a7e-60e0a69b2180
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 21ba3a1507588e0110bbcf281f2cbbe9f41742a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 95fa469c021b345a5c792659998e4f7acbdd493b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939625"
 ---
 # <a name="configuring-the-sql-server-odbc-driver---add-a-data-source"></a>Configuration du pilote ODBC SQL Server - Ajouter une source de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47787937"
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>Pour ajouter une source de données à l'aide de l'Administrateur ODBC  
   
-1.  À partir de la **le panneau de configuration**, accès **outils d’administration** puis **Sources de données ODBC (64 bits)** ou **Sources de données ODBC (32 bits)**. Vous pouvez également appeler l'exécutable odbcad32.exe.  
+1.  À partir de la **le panneau de configuration**, accès **outils d’administration** puis **Sources de données ODBC (64 bits)** ou **Sources de données ODBC (32 bits)** . Vous pouvez également appeler l'exécutable odbcad32.exe.  
   
 2.  Cliquez sur le **DSN utilisateur**, **DSN système**, ou **fichier DSN** onglet, puis cliquez sur **ajouter**.  
   

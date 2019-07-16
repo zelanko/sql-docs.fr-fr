@@ -5,17 +5,16 @@ description: Article de référence pour les commandes de l’application mssqlc
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ac884a8d77aa241402cedce3eaedeef9f60512a
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a14b548ed8c16776b4883e54f3ca47588dbb3e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958206"
 ---
 # <a name="mssqlctl-app"></a>Application mssqlctl
 
@@ -26,15 +25,15 @@ L’article suivant fournit la référence pour le **application** commandes dan
 ## <a name="commands"></a>Commandes
 |     |     |
 | --- | --- |
-[mssqlctl app template](reference-mssqlctl-app-template.md) | modèles.
-[mssqlctl app init](#mssqlctl-app-init) | Kickstart nouveau squelette d’application.
-[mssqlctl app create](#mssqlctl-app-create) | Créer l’application.
-[mssqlctl app update](#mssqlctl-app-update) | Mettre à jour d’application.
+[modèle d’application mssqlctl](reference-mssqlctl-app-template.md) | modèles.
+[mssqlctl application init](#mssqlctl-app-init) | Kickstart nouveau squelette d’application.
+[créer des applications de mssqlctl](#mssqlctl-app-create) | Créer l’application.
+[mise à jour des application mssqlctl](#mssqlctl-app-update) | Mettre à jour d’application.
 [mssqlctl app list](#mssqlctl-app-list) | Liste des applications.
 [mssqlctl app delete](#mssqlctl-app-delete) | Supprimer l’application.
-[mssqlctl app run](#mssqlctl-app-run) | Exécuter l’application.
+[exécution de l’application mssqlctl](#mssqlctl-app-run) | Exécuter l’application.
 [mssqlctl app describe](#mssqlctl-app-describe) | Décrire l’application.
-## <a name="mssqlctl-app-init"></a>mssqlctl app init
+## <a name="mssqlctl-app-init"></a>mssqlctl application init
 Vous permet de squelette d’application nouveau kickstart et/ou fichiers spec selon les environnements d’exécution.
 ```bash
 mssqlctl app init [--spec -s] 
@@ -85,7 +84,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-app-create"></a>mssqlctl app create
+## <a name="mssqlctl-app-create"></a>créer des applications de mssqlctl
 Créer une application.
 ```bash
 mssqlctl app create --spec -s 
@@ -110,7 +109,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-app-update"></a>mssqlctl app update
+## <a name="mssqlctl-app-update"></a>mise à jour des application mssqlctl
 Mettre à jour une application.
 ```bash
 mssqlctl app update [--spec -s] 
@@ -137,7 +136,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-app-list"></a>mssqlctl app list
+## <a name="mssqlctl-app-list"></a>liste d’applications mssqlctl
 Répertorier une application (s).,
 ```bash
 mssqlctl app list [--name -n] 
@@ -172,7 +171,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-app-delete"></a>mssqlctl app delete
+## <a name="mssqlctl-app-delete"></a>suppression d’application mssqlctl
 Supprimer une application.
 ```bash
 mssqlctl app delete --name -n 
@@ -199,7 +198,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-app-run"></a>mssqlctl app run
+## <a name="mssqlctl-app-run"></a>exécution de l’application mssqlctl
 Exécuter une application.
 ```bash
 mssqlctl app run --name -n 
@@ -238,7 +237,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-app-describe"></a>mssqlctl app describe
+## <a name="mssqlctl-app-describe"></a>application de mssqlctl décrivent
 Décrire une application.
 ```bash
 mssqlctl app describe [--spec -s] 

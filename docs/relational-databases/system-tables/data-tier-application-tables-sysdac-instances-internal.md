@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: d2d52cc4-3463-431a-b779-6fbfdeee1dfc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1e30db7b31a0a29a5e78e7fc5876f43764d66a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8cec14e22779391d954b2a666782e8783f50f3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084741"
 ---
 # <a name="data-tier-application-tables---sysdacinstancesinternal"></a>Tables d’applications de la couche Données - sysdac_instances_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Affiche une ligne pour chaque instance d’application (DAC) de couche données déployée sur une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Cette table est stockée dans le schéma dbo dans la base de données msdb.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |instance_id|**uniqueidentifier**|Identificateur de l'instance DAC.|  
 |nom_instance|**sysname**|Nom de l'instance DAC spécifiée quand l'instance a été déployée.|  

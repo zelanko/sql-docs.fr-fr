@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eeac51c5ba3926eb95c00bd0f3f372aae5c5f3f1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408592"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183884"
 ---
 # <a name="create-an-olap-mining-structure"></a>Create an OLAP Mining Structure
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52408592"
 ##  <a name="bkmk_Reqs"></a> Conditions requises pour la structure et les modèles d'exploration de données OLAP  
  Si vous concevez un modèle d'exploration de données OLAP, votre source de données existe déjà, dans la base de données utilisée pour générer le cube. Vous ne pouvez pas vous connecter à un cube distant et générer des objets d'exploration de données ; les objets de cube doivent être disponibles dans la même solution de la base de données que la structure d'exploration de données que vous allez générer.  
   
- Si vous n’avez pas les fichiers de projet d’origine, ou ne souhaitez pas les modifier, vous pouvez utiliser l’option dans Visual Studio, **Importer à partir du serveur (multidimensionnel ou exploration de données)**, pour obtenir une copie des métadonnées et objets de la solution. Vous pouvez ensuite modifier la cible de déploiement, modifier les sources de données et utiliser des objets de cube sans affecter les objets existants.  
+ Si vous n’avez pas les fichiers de projet d’origine, ou ne souhaitez pas les modifier, vous pouvez utiliser l’option dans Visual Studio, **Importer à partir du serveur (multidimensionnel ou exploration de données)** , pour obtenir une copie des métadonnées et objets de la solution. Vous pouvez ensuite modifier la cible de déploiement, modifier les sources de données et utiliser des objets de cube sans affecter les objets existants.  
   
  Pour plus d’informations, consultez [Importer un projet d’exploration de données à l’aide de l’Assistant Importation d’Analysis Services](../../analysis-services/data-mining/import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   

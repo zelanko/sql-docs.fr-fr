@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5020ae49c3b923c04ded1469915f2e5e5c1e412f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094833"
 ---
 # <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47844617"
   Affiche les expressions de condition exécutées, les cibles des expressions, le résultat de chaque exécution et les détails des erreurs, le cas échéant. Le tableau suivant décrit les colonnes dans la vue syspolicy_execution_history_details.  
   
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |detail_id|**bigint**|Identificateur de cet enregistrement. Chaque enregistrement représente la tentative pour évaluer ou appliquer une expression de condition dans une stratégie. Si elle est appliquée à plusieurs cibles, chaque condition contient un enregistrement de détail pour chaque cible.|  
 |history_id|**bigint**|Identificateur de l'événement d'historique. Chaque événement d'historique représente une tentative d'exécution d'une stratégie. Comme une condition peut avoir plusieurs expressions de condition et plusieurs cibles, un history_id peut créer plusieurs enregistrements de détail. Utilisez la colonne history_id pour joindre cette vue à la [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) vue.|  
@@ -66,7 +65,7 @@ JOIN msdb.dbo.syspolicy_policy_execution_history_details AS PolHistDet
 WHERE PolHistDet.result = 0 ;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
 ## <a name="see-also"></a>Voir aussi  

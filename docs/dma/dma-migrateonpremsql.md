@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: f424e8e799c7550ff426a7b4c2a2022fe4b0c4bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8366b04be48df3e47e9c6d531738ebebfee45da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058823"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Mise à niveau de SQL Server sur site vers SQL Server ou SQL Server sur des machines virtuelles Azure à l’aide de l’Assistant Migration des données
 
@@ -50,7 +49,7 @@ Cet article fournit des instructions détaillées pour la mise à niveau SQL Ser
 
 5. Il est recommandé de chiffrer la connexion en sélectionnant **chiffrer la connexion** dans le **propriétés de connexion** section.
 
-6. Cliquer sur **Suivant**.
+6. Cliquez sur **Suivant**.
 
    ![Spécifier la page source et cible](../dma/media/SourceTarget.png)
 
@@ -65,9 +64,9 @@ Cet article fournit des instructions détaillées pour la mise à niveau SQL Ser
    > [!NOTE]
    > Vous pouvez appliquer les paramètres de migration pour toutes les bases de données que vous migrez, en sélectionnant le serveur dans le volet gauche. Vous pouvez également configurer une base de données avec des paramètres spécifiques en sélectionnant la base de données dans le volet gauche.
 
-    A. Spécifiez le **partagé emplacement accessible par les serveurs SQL source et cible pour l’opération de sauvegarde**. Assurez-vous que le compte de service en cours d’exécution la source SQL Server instance a écrit des privilèges sur l’emplacement partagé et le compte de service cible a privilèges de lecture sur l’emplacement partagé.
+    a. Spécifiez le **partagé emplacement accessible par les serveurs SQL source et cible pour l’opération de sauvegarde**. Assurez-vous que le compte de service en cours d’exécution la source SQL Server instance a écrit des privilèges sur l’emplacement partagé et le compte de service cible a privilèges de lecture sur l’emplacement partagé.
 
-    B. Spécifiez l’emplacement pour restaurer les données et les fichiers journaux transactionnels sur le serveur cible.
+    b. Spécifiez l’emplacement pour restaurer les données et les fichiers journaux transactionnels sur le serveur cible.
 
     ![Ajouter une page de bases de données](../dma/media/AddDatabases.png)
 

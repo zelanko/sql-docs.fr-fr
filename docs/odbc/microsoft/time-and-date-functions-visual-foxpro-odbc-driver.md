@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 537af13edf943e27a634d3a8ba4f0f85c645251f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912404"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Fonctions d’heure et de date (pilote ODBC Visual FoxPro)
 Le tableau suivant répertorie les fonctions de date et heure ODBC pris en charge par le pilote ODBC Visual FoxPro ; lors de la grammaire de Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, le Visual FoxPro équivalent est répertorié.  
@@ -31,23 +30,23 @@ Le tableau suivant répertorie les fonctions de date et heure ODBC pris en charg
 |Grammaire ODBC|Grammaire de Visual FoxPro|  
 |------------------|---------------------------|  
 |CURDATE *( )*|DATE *( )*|  
-|CURTIME *( )*|TIME *( )*|  
+|CURTIME *)*|TIME *( )*|  
 |DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
 |DAYOFMONTH(*date_exp)*|JOUR *)*|  
-|HOUR *(time_exp)*||  
+|HEURE *(time_exp)*||  
 |MINUTE *(time_exp)*||  
 |MONTH *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
 |NOW *( )*|DATETIME *( )*|  
-|SECOND *(time_exp)*|SEC *(time_exp)*|  
-|WEEK *(date_exp)*||  
-|YEAR *(date_exp)*||  
+|DEUXIÈME *(time_exp)*|SEC *(time_exp)*|  
+|SEMAINE *(date_exp)*||  
+|ANNÉE *(date_exp)*||  
   
  Les fonctions de date et heure suivantes ne sont pas prises en charge :  
   
  DAYOFYEAR *(date_exp)*  
   
- QUARTER *(date_exp)*  
+ TRIMESTRE *(date_exp)*  
   
  TIMESTAMPADD *(intervalle, integer_exp, exp_estampille)*  
   

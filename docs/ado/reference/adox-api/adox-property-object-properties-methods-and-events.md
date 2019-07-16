@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 54a39c4c0e3ea975dc86f0531863be333af3aefa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebf2fdef9d526cf2ca991a4b123f8e20db358497
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930354"
 ---
 # <a name="adox-property-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Property ADOX
 ## <a name="properties"></a>Properties  
@@ -31,10 +30,10 @@ ms.locfileid: "66708595"
  [Value, propriété (ADO)](../../../ado/reference/ado-api/value-property-ado.md)  
   
 ## <a name="methods"></a>Méthodes  
- Aucun.  
+ Aucune.  
   
 ## <a name="events"></a>Events  
- Aucun.  
+ Aucune.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Property, objet (ADOX)](../../../ado/reference/adox-api/property-object-adox.md)

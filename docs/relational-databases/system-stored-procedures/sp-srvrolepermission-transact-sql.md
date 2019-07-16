@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f23d8766a89619654ba89bc6d70cec342b11b8fe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032812"
 ---
 # <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 |**setupadmin**|Administrateurs de l'installation et de la configuration|  
 |**processadmin**|Administrateurs de processus|  
 |**diskadmin**|Administrateurs de disques|  
-|**dbcreator**|Créateurs de bases de données|  
+|**dbcreator**|Créateurs de base de données|  
 |**bulkadmin**|Exécute les instructions BULK INSERT.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -61,7 +60,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|Nom d'un rôle serveur fixe|  
 |**Autorisation**|**sysname**|Autorisation associée **ServerRole**|  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0f434c5d323f2203965fd0584dbc1dbc8bd89563
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783881"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188829"
 ---
 # <a name="sql-server-agent"></a>SQL Server Agent
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent est un service Microsoft Windows qui exécute des tâches administratives planifiées appelées *travaux* dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -42,7 +42,7 @@ ms.locfileid: "52783881"
 ##  <a name="Components"></a> Composants SQL Server Agent  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilise les composants ci-après pour définir les tâches à exécuter et quand les exécuter, et pour signaler si elles ont réussi ou échoué.  
   
-### <a name="jobs"></a>travaux  
+### <a name="jobs"></a>Tâches  
  Un *travail* est une suite d'actions effectuées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Utilisez les travaux pour définir une tâche administrative, afin qu'elle soit exécutée une ou plusieurs fois et que son résultat (échec ou réussite) soit contrôlé. Un travail peut être exécuté sur un serveur local ou sur plusieurs serveurs distants.  
   
 > [!IMPORTANT]  
@@ -116,7 +116,7 @@ ms.locfileid: "52783881"
 ##  <a name="Security"></a> Sécurité pour l’Administration de SQL Server Agent  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilise le **SQLAgentUserRole**, **SQLAgentReaderRole**, et **SQLAgentOperatorRole** base de données fixe dans le **msdb** base de données pour contrôler l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour les utilisateurs qui ne sont pas membres de la `sysadmin` rôle serveur fixe. Outre ces rôles de base de données fixes, les sous-systèmes et les proxys aident les administrateurs de base de données à garantir que chaque étape de travail est exécutée avec les autorisations minimales nécessaires à la réalisation de cette tâche.  
   
-### <a name="roles"></a>Rôles  
+### <a name="roles"></a>contrôleur  
  Membres de la **SQLAgentUserRole**, **SQLAgentReaderRole**, et **SQLAgentOperatorRole** base de données fixe dans **msdb**, et membres de la `sysadmin` rôle de serveur fixe a accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Un utilisateur qui n'appartient à aucun de ces rôles ne peut pas utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour plus d’informations sur les rôles utilisés par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, consultez [Implémenter la sécurité de SQL Server Agent](implement-sql-server-agent-security.md).  
   
 ### <a name="subsystems"></a>Sous-systèmes  
@@ -143,7 +143,7 @@ ms.locfileid: "52783881"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent applique les restrictions des sous-systèmes même si le principal de sécurité du proxy a généralement l'autorisation d'exécuter cette tâche dans l'étape de travail. Par exemple, un proxy pour un utilisateur qui est membre du rôle de serveur fixe sysadmin ne peut pas exécuter d'étape de travail [!INCLUDE[ssIS](../../includes/ssis-md.md)] , à moins que le proxy ait accès au sous-système [!INCLUDE[ssIS](../../includes/ssis-md.md)] , même si l'utilisateur peut exécuter des packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
-### <a name="proxies"></a>Proxys  
+### <a name="proxies"></a>Serveurs proxy  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilise les proxys pour gérer les contextes de sécurité. Un proxy peut être utilisé dans plusieurs étapes de travail. Membres de la `sysadmin` rôle serveur fixe peut créer des proxys.  
   
  Chaque proxy correspond à des informations d'identification de sécurité. Chaque proxy peut être associé à un ensemble de sous-systèmes et de connexions. Le proxy peut être utilisé uniquement pour les étapes de travail qui utilisent un sous-système associé au proxy. Pour créer une étape de travail qui utilise un proxy spécifique, le propriétaire du travail doit utiliser une connexion associée à ce proxy ou être membre d'un rôle sans restriction d'accès aux proxys. Membres de la `sysadmin` rôle serveur fixe ont un accès illimité aux proxys. Les membres des rôles **SQLAgentUserRole**, **SQLAgentReaderRole**ou **SQLAgentOperatorRole** peuvent utiliser uniquement les proxys pour lesquels un accès spécifique leur a été accordé. Chaque utilisateur membre de l'un des rôles de base de données fixes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent doit disposer d'un accès à des proxys spécifiques de façon à pouvoir créer les étapes de travail qui les utilisent.  

@@ -1,5 +1,5 @@
 ---
-title: Rechercher un nœud spécifique dans un réseau de dépendances | Documents Microsoft
+title: Rechercher un nœud spécifique dans un réseau de dépendances | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad00f715533e5da24cbec9c61dc79a045fa035ef
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014466"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183247"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Rechercher un nœud spécifique dans un réseau de dépendances
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,6 +33,6 @@ ms.locfileid: "34014466"
 3.  Sélectionnez le nœud approprié dans la liste, puis cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Tâches et procédures de la visionneuse de modèle d’exploration de données](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

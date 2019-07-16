@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c5ce10a437ecba5e865ce1e2436ee5041839b7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f987e03ad8dda27e436f22ef54fc3c2646579f4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051550"
 ---
 # <a name="save-metadata-accesstosql"></a>Enregistrer les métadonnées (AccessToSQL)
 Le **enregistrer les métadonnées** boîte de dialogue vous invite à charger les métadonnées dans votre projet SSMA avant de l’enregistrer. Vous pouvez ainsi vous disposez d’un fichier de projet complet que vous pouvez utiliser hors connexion et l’envoyer à d’autres personnes, tels que du personnel de support technique.  
@@ -34,7 +33,7 @@ SSMA charge les métadonnées dans le projet en fonction des besoins. Métadonn�
 **Tout sélectionner**  
 Sélectionne les bases de données tout répertoriées.  
   
-**Désactiver**  
+**Effacer**  
 Efface la case à cocher pour toutes les bases de données avec les métadonnées manquantes. Impossible d’effacer la case à cocher si une entrée de métadonnées a été chargée.  
   
 **Enregistrer**  

@@ -2,19 +2,18 @@
 title: À l’aide d’une base de données intermédiaire - Parallel Data Warehouse | Microsoft Docs
 description: SQL Server Parallel Data Warehouse (PDW) utilise une base de données intermédiaire pour stocker des données temporairement pendant le processus de chargement.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 52ede16185515c3df00ff21ece784d62eec984ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 824ad4dedee0224023f50b6855b2de1e53581304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960033"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>À l’aide d’une base de données intermédiaire dans Parallel Data Warehouse (PDW)
 SQL Server Parallel Data Warehouse (PDW) utilise une base de données intermédiaire pour stocker des données temporairement pendant le processus de chargement. Par défaut, SQL Server PDW utilise la base de données de destination en tant que la base de données intermédiaire, ce qui peut entraîner la fragmentation des tables. Pour réduire la fragmentation de la table, vous pouvez créer une base de données mise en lots définie par l’utilisateur. Ou bien, lors de la restauration à partir d’un échec de chargement n’est pas un problème, vous pouvez utiliser le mode de chargement de fastappend pour améliorer les performances en ignorant la table temporaire et de chargement directement dans la table de destination.  
@@ -63,7 +62,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
 ## <a name="Examples"></a>Exemples  
   
-### <a name="a-create-a-staging-database"></a>A. Créer une base de données intermédiaire 
+### <a name="a-create-a-staging-database"></a>R. Créer une base de données intermédiaire 
 L’exemple suivant crée une base de données intermédiaire, Stagedb, pour une utilisation avec tous les chargements sur l’appliance. Supposons que vous estimez que cinq répliquées des tables de taille de que 5 Go chargera simultanément. Cette concurrence entraîne l’allocation d’au moins 25 Go pour la taille répliquée. Supposons que vous estimez que six distribué des tables de tailles 100, 200, 400, 500, 500 et 550 Go chargera simultanément. Cette concurrence entraîne allouer au moins 2250 Go pour la taille de la table distribuée.  
   
 ```sql  

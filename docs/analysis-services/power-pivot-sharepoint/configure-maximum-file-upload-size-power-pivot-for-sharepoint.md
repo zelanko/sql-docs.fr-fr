@@ -1,5 +1,5 @@
 ---
-title: Configurer la taille de téléchargement de fichier maximale (PowerPivot pour SharePoint) | Documents Microsoft
+title: Configurer la taille de téléchargement de fichier maximale (Power Pivot pour SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 15ce366acc4244db16f0b58bbdc8226e9327416c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027226"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164277"
 ---
 # <a name="configure-maximum-file-upload-size-power-pivot-for-sharepoint"></a>Configurer la taille maximale de téléchargement de fichiers (PowerPivot pour SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Les classeurs contiennent souvent des quantités importantes de données qui se traduisent par des fichiers dépassant la taille de fichier maximale autorisée pour les chargements SharePoint. Lorsque vous essayez de télécharger un fichier qui dépasse la limite supérieure, l'erreur suivante s'affiche dans SharePoint :  
+  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Les classeurs contiennent souvent des quantités importantes de données qui se traduisent par des fichiers dépassant la taille de fichier maximale autorisée pour les chargements SharePoint. Lorsque vous essayez de télécharger un fichier qui dépasse la limite supérieure, l'erreur suivante s'affiche dans SharePoint :  
   
 -   « La taille du fichier spécifié est supérieure à la taille maximale de fichier prise en charge. »  
   

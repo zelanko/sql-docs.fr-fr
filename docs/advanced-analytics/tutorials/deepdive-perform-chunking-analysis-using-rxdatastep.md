@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: dfa11ed4db8985d64bbac511ed7a4ee88166cebe
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6ccc64c98f0519b33b6ba9da180c01e4478492f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962204"
 ---
 # <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Effectuer une analyse de segmentation à l’aide de rxDataStep (didacticiel sur SQL Server et RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -90,7 +89,7 @@ Dans cette leçon, vous utilisez le **rxDataStep** fonction pour traiter les don
 
     **Résultats partiels**
 
-    |      |    1  |   2   |  3   |  4   |  5  |   6   |  7 |
+    |      |    1  |   2   |  3   |  4   |  5  |   6\.   |  7 |
     | --- | ---  | --- | ---  |  ---  | ---  | ---  | --- |
     | 1 | 8228 | 8924 | 6916 | 6932 | 6944 | 5602 | 6454 |
     | 2  | 8321  | 5351 | 7329 | 7411 | 7409 | 6487 | 7692 |
@@ -104,7 +103,7 @@ Dans cette leçon, vous utilisez le **rxDataStep** fonction pour traiter les don
 
     **Résultats**
 
-    1  |   2  |   3  |   4  |   5  |   6  |   7
+    1  |   2  |   3  |   4  |   5  |   6\.  |   7
     ---  |   ---  |   ---  |   ---  |   ---  |   ---  |   ---
     97975 | 77725 | 78875 | 81304 | 82987 | 86159 | 94975 
 

@@ -1,5 +1,5 @@
 ---
-title: Traductions dans les modèles tabulaires (Analysis Services) | Documents Microsoft
+title: Traductions dans les modèles tabulaires (Analysis Services) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddd49ce6d3edc3f1e2f72a3fe7f5ab61621eef62
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044173"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162394"
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Traductions dans les modèles tabulaires (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Ajoute la prise en charge des chaînes de traduction pour les modèles tabulaires. Un objet unique dans le modèle peut avoir plusieurs traductions de nom ou de description, ce qui permet de prendre en charge des versions multilingues dans la définition du modèle.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Ajoute la prise en charge de chaîne pour les modèles tabulaires. Un objet unique dans le modèle peut avoir plusieurs traductions de nom ou de description, ce qui permet de prendre en charge des versions multilingues dans la définition du modèle.  
   
  Les chaînes traduites sont destinées aux métadonnées d’objet uniquement (noms et descriptions des tables et colonnes) qui s’affichent dans un outil client tel qu’une liste de tableau croisé dynamique Excel.  Pour utiliser des chaînes traduites, la connexion cliente spécifie la culture. Dans la fonctionnalité **Analyse dans Excel** , vous pouvez choisir la langue dans la liste déroulante. Pour d’autres outils, vous devrez peut-être spécifier la culture dans la chaîne de connexion.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "34044173"
     |-|-|  
     |Remplacer les traductions existantes|Remplace toutes les légendes ou descriptions existantes de la même langue que le fichier importé.|  
     |Ignorer les objets non valides|Spécifie si les différences de métadonnées doivent être ignorées ou marquées comme erreur.|  
-    |Écrire les résultats d’importation dans un fichier journal|Par défaut, les fichiers journaux sont enregistrés dans le dossier du projet. Le chemin d’accès exact du fichier est fourni une fois l’importation terminée. Nom du fichier journal est SSDT_Translations_Log_\<horodatage >.|  
+    |Écrire les résultats d’importation dans un fichier journal|Par défaut, les fichiers journaux sont enregistrés dans le dossier du projet. Le chemin d’accès exact du fichier est fourni une fois l’importation terminée. Le nom du fichier journal est SSDT_Translations_Log_\<timestamp >.|  
     |Sauvegarder les traductions dans un fichier JSON avant l’importation|Sauvegarde une traduction existante qui correspond à la culture des chaînes importées.  Si la culture en cours d’importation n’est pas présente dans le modèle, la sauvegarde est vide.<br /><br /> Si vous devez restaurer ce fichier ultérieurement, vous pouvez remplacer le contenu de model.bim par ce fichier JSON.|  
   
 4.  Cliquez sur **Importer**.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4589eac1a564ee06f96d175eda8dcf63d860a262
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cc901f2ccd68fbdee19fc7887638f7f89ff04efa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006846"
 ---
 # <a name="startservice-method-sqlservice-class"></a>Méthode StartService (classe SqlService)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +57,10 @@ object.StartService()
  4  
  Contrôle de service non valide. Le code de contrôle demandé n'est pas valide ou est inacceptable pour le service.  
   
- 5  
+ 5\.  
  Le service n'accepte pas le contrôle. Le code de contrôle demandé ne peut pas être envoyé au service car l'état du service (Win32_BaseService:State) est égal à 0, 1 ou 2.  
   
- 6  
+ 6\.  
  Service inactif. Le service n'a pas été démarré.  
   
  7  

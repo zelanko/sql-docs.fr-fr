@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: d58f3fe1-45e3-4e46-8e9c-000971829d99
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: aca83b74b4665bd72bc3dd3b1d1bba4744735c13
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c4a1ef6b38cc6fda74800ffb20e042780866910c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091087"
 ---
 # <a name="ibcpsessionbcpcontrol-ole-db"></a>IBCPSession::BCPControl (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +54,7 @@ HRESULT BCPControl(
 |BCP_OPTION_FILEFMT|Numéro de version du format de fichier de données. Il peut s'agir de 80 ([!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]), 90 ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]), 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]), de 110 ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) ou 120 ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]). 120 est la valeur par défaut. Cela s'avère utile pour exporter et importer des données dans des formats pris en charge par une version antérieure du serveur.  Par exemple, pour importer des données obtenues à partir d'une colonne de texte sur un serveur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] dans une colonne **varchar(max)** sur un serveur [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou ultérieur, vous devez spécifier 80. De la même façon, si vous spécifiez 80 lorsque vous exportez des données à partir d'une colonne **varchar(max)** , celles-ci sont enregistrées de la même façon que les colonnes de texte (au format [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ) et peuvent être importées dans une colonne de texte d'un serveur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] .|  
 |BCP_OPTION_FIRST|Première ligne de données du fichier ou de la table à copier. La valeur par défaut est 1 ; une valeur inférieure à 1 rétablit la valeur par défaut de cette option.|  
 |BCP_OPTION_FIRSTEX|Pour les opérations bcp out, spécifie la première ligne de la table de base de données à copier dans le fichier de données.<br /><br /> Pour les opérations bcp in, spécifie la première ligne du fichier de données à copier dans la table de base de données.<br /><br /> Le paramètre *iValue* est supposé être l'adresse d'un entier 64 bits signé contenant la valeur. La valeur maximale qui peut être passée à BCPFIRSTEX est 2^63-1.|  
-|BCP_OPTION_FMTXML|Permet de spécifier que le fichier de format généré doit être au format XML. Par défaut, cette option est désactivée et les fichiers de format sont enregistrés en tant que fichiers texte. Le fichier de format XML fournit une plus grande souplesse, mais aussi quelques contraintes supplémentaires. Par exemple, vous ne pouvez pas spécifier simultanément le préfixe et la terminaison d'un champ, ce qui est possible dans les fichiers de format plus anciens.<br /><br /> Remarque : Les fichiers de format XML sont uniquement pris en charge quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] outils sont installés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.|  
+|BCP_OPTION_FMTXML|Permet de spécifier que le fichier de format généré doit être au format XML. Par défaut, cette option est désactivée et les fichiers de format sont enregistrés en tant que fichiers texte. Le fichier de format XML fournit une plus grande souplesse, mais aussi quelques contraintes supplémentaires. Par exemple, vous ne pouvez pas spécifier simultanément le préfixe et la terminaison d'un champ, ce qui est possible dans les fichiers de format plus anciens.<br /><br /> Remarque : Fichiers de format XML sont uniquement pris en charge quand [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] outils sont installés avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.|  
 |BCP_OPTION_HINTS|L'argument *iValue* contient un pointeur de chaîne de caractères larges. La chaîne adressée spécifie des indicateurs de traitement de copie en bloc [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui retourne un jeu de résultats. Si une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] est spécifiée qui retourne plusieurs jeux de résultats, tous les jeux de résultats après le premier sont ignorés.|  
 |BCP_OPTION_KEEPIDENTITY|Quand l’argument *iValue* a la valeur true, cette option spécifie que les méthodes de copie en bloc insèrent des valeurs de données fournies pour les colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] définies avec une contrainte d’identité. Le fichier d'entrée doit fournir des valeurs pour les colonnes d'identité. Si cela n'est pas défini, de nouvelles valeurs d'identités sont générées pour les lignes insérées. Toutes les données présentes dans le fichier pour les colonnes d'identité sont ignorées.|  
 |BCP_OPTION_KEEPNULLS|Spécifie si les valeurs de données vides dans le fichier sont converties en valeurs NULL dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Lorsque la valeur TRUE est affectée à l'argument *iValue* , les valeurs vides seront converties en valeurs NULL dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . L'option par défaut consiste à convertir les valeurs vides en une valeur par défaut pour la colonne dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si une valeur par défaut existe.|  
@@ -74,7 +73,7 @@ HRESULT BCPControl(
  Valeur pour le paramètre *eOption*spécifié. L'argument *iValue* est un cast de valeur entière à un pointeur void permettant d'autoriser l'expansion future vers des valeurs 64 bits.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+ S_OK  
  S_OK  
   
  E_FAIL  

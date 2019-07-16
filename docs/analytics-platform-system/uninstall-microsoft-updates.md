@@ -2,19 +2,18 @@
 title: Désinstaller les mises à jour de Microsoft - Analytique Platform System | Microsoft Docs »
 description: Désinstaller les mises à jour de Microsoft dans Analytique Platform System (APS).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4739d05b1878c8b7fc9f66f2e0b8145ff1044e54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f910eeb7f3b38d29f7ae7b084de981c22a6f3f4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959833"
 ---
 # <a name="uninstall-microsoft-updates-in-analytics-platform-system"></a>Désinstaller les mises à jour de Microsoft d’Analytique Platform System
 Cet article décrit comment désinstaller une mise à jour de Microsoft précédemment installée sur l’appliance Analytique Platform System.  

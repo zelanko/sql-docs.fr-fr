@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9003457-0762-48b3-942f-0820266b158f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 162cac52920b076e4388a74a251cd347137f49cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 452259b6e4e406d7a406211a9e9b42ebbf60da53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925222"
 ---
 # <a name="handling-ado-events"></a>Gestion des événements ADO
 Le modèle d’événement ADO prend en charge certaines opérations synchrones et asynchrones qui émettent *événements*, ou des notifications, avant le démarrage de l’opération ou une fois terminé. Un événement est en fait un appel à une routine de gestionnaire d’événements que vous définissez dans votre application.  

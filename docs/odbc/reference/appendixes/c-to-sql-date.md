@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8edb075be1bf64dad8f4ef18924a6396b7c64e80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02ee7c1fb396dc1c9c0708cf6c0e7a52ff1c11ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019411"
 ---
 # <a name="c-to-sql-date"></a>C en SQL : Date
 L’identificateur pour le type de données ODBC C date est :  
@@ -29,12 +28,12 @@ L’identificateur pour le type de données ODBC C date est :
   
  Le tableau suivant présente les types de données à laquelle les données C de date peut-être être convertie à ODBC SQL. Pour obtenir une explication des colonnes et des termes dans la table, consultez [conversion des données à partir de C en Types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|Identificateur de type SQL|Test|SQLSTATE|  
+|Identificateur de type SQL|Tester|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longueur d’octet de colonne > = 10<br /><br /> Colonne de longueur d’octet < 10<br /><br /> Valeur de données n’est pas une date valide|n/a<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longueur de colonne caractère > = 10<br /><br /> Colonne de longueur < 10 caractères<br /><br /> Valeur de données n’est pas une date valide|n/a<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|Valeur de données est une date valide<br /><br /> Valeur de données n’est pas une date valide|n/a<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Valeur de données est une date valide [a]<br /><br /> Valeur de données n’est pas une date valide|n/a<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longueur d’octet de colonne > = 10<br /><br /> Colonne de longueur d’octet < 10<br /><br /> Valeur de données n’est pas une date valide|N/A<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longueur de colonne caractère > = 10<br /><br /> Colonne de longueur < 10 caractères<br /><br /> Valeur de données n’est pas une date valide|N/A<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|Valeur de données est une date valide<br /><br /> Valeur de données n’est pas une date valide|N/A<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Valeur de données est une date valide [a]<br /><br /> Valeur de données n’est pas une date valide|N/A<br /><br /> 22007|  
   
  [a] la partie heure de l’horodatage est définie à zéro.  
   

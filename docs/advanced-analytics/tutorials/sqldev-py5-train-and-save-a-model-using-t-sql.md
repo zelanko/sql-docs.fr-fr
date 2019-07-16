@@ -7,13 +7,12 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 2e0505cf847a091a5650b392aab56f486cee16aa
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f2793c6773dc38ebeb4a420e24c38504deb412d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961854"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Former et enregistrer un modèle de Python à l’aide de T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -116,12 +115,12 @@ Pour faciliter le reformer le modèle sur les nouvelles données, vous encapsule
 
     Traitement des données et l’ajustement du modèle peuvent prendre quelques minutes. Les messages éventuellement redirigés vers de Python **stdout** flux sont affichés dans le **Messages** fenêtre de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Exemple :
 
-    *Message (s) STDOUT du script externe :*
+    *Message (s) STDOUT du script externe :* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. Ouvrez la table *nyc\_taxi_models*. Vous pouvez voir qu’une nouvelle ligne a été ajoutée, avec le modèle sérialisé dans la colonne _model_.
 
-    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561....*
+    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561...*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -180,12 +179,12 @@ Cette procédure stockée utilise le nouveau **revoscalepy** package, qui est un
 
     Traitement des données et l’ajustement du modèle peuvent prendre un certain temps. Les messages éventuellement redirigés vers de Python **stdout** flux sont affichés dans le **Messages** fenêtre de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Exemple :
 
-    *Message (s) STDOUT du script externe :*
+    *Message (s) STDOUT du script externe :* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. Ouvrez la table *nyc_taxi_models*. Vous pouvez voir qu’une nouvelle ligne a été ajoutée, avec le modèle sérialisé dans la colonne _model_.
 
-    *revoscalepy_model* *0x8003637265766F7363616c....*
+    *revoscalepy_model* *0x8003637265766F7363616c...*
 
 Dans l’étape suivante, vous utilisez les modèles formés pour créer des prédictions.
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 793ad72c-a992-4a8d-8584-bcb6b3b476f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 91227f3f5d1ef6238b18064b4c978d238f85e4b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 71a070de7c74d353be395628566c0bd3f63fd99a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042740"
 ---
 # <a name="fnsyscollectorgetexecutionstats-transact-sql"></a>fn_syscollector_get_execution_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,19 +46,19 @@ fn_syscollector_get_execution_stats ( log_id )
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|avg_row_count_in|**Int**|Nombre moyen de lignes qui ont entré les tâches de flux de données du package.<br /><br /> Remarque : Une tâche de flux de données est un [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] composant qui traite les données. Ces données étant au format relationnel, elles comprennent un groupe de données d'entrée composé de lignes. Il s'agit du nombre de lignes qui ont entré la tâche. Une fois les données transformées, elles sont générées en sortie sous forme d'un jeu de résultats composé de lignes. La tâche de flux de données transforme les données et génère en sortie un jeu de résultats composé de lignes. Cette sortie est le nombre de lignes qui ont quitté la tâche.|  
+|avg_row_count_in|**Int**|Nombre moyen de lignes qui ont entré les tâches de flux de données du package.<br /><br /> Remarque : Une tâche de flux de données est un composant [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui traite les données. Ces données étant au format relationnel, elles comprennent un groupe de données d'entrée composé de lignes. Il s'agit du nombre de lignes qui ont entré la tâche. Une fois les données transformées, elles sont générées en sortie sous forme d'un jeu de résultats composé de lignes. La tâche de flux de données transforme les données et génère en sortie un jeu de résultats composé de lignes. Cette sortie est le nombre de lignes qui ont quitté la tâche.|  
 |min_row_count_in|**Int**|Nombre minimal de lignes qui ont entré les données de flux de tâches du package.|  
 |max_row_count_in|**Int**|Nombre maximal de lignes qui ont entré les données de flux de tâches du package.|  
-|avg_row_count_out|**Int**|Nombre moyen de lignes qui ont quitté les tâches de flux de données du package.|  
+|avg_row_count_out|**int**|Nombre moyen de lignes qui ont quitté les tâches de flux de données du package.|  
 |min_row_count_out|**Int**|Nombre minimal de lignes qui ont quitté les données de flux de tâches du package.|  
-|max_row_count_out|**Int**|Nombre maximal de lignes qui ont quitté les tâches de flux de données du package.|  
-|avg_duration|**Int**|Durée moyenne, en millisecondes, passée dans le composant de flux de données du package.|  
-|min_duration|**Int**|Durée minimale, en millisecondes, passée dans le composant de flux de données du package.|  
+|max_row_count_out|**int**|Nombre maximal de lignes qui ont quitté les tâches de flux de données du package.|  
+|avg_duration|**int**|Durée moyenne, en millisecondes, passée dans le composant de flux de données du package.|  
+|min_duration|**int**|Durée minimale, en millisecondes, passée dans le composant de flux de données du package.|  
 |max_duration|**Int**|Durée maximale, en millisecondes, passée dans le composant de flux de données du package.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation SELECT pour **dc_operator**.  
   
 ## <a name="see-also"></a>Voir aussi  

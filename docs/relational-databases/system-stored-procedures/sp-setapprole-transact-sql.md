@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 44e7b670ef5f16b6df861e939f9b8b2d9ace8dd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104426"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (Transact-SQL)
 
@@ -66,7 +65,7 @@ sp_setapprole [ @rolename = ] 'role',
 `[ @cookie = ] @cookie OUTPUT` Spécifie un paramètre de sortie pour qu’il contienne le cookie. Le cookie est généré uniquement si la valeur de **@fCreateCookie** est **true**. **varbinary(8000)**  
   
 > [!NOTE]  
-> Le paramètre **OUTPUT** de cookie pour **sp_setapprole** est actuellement documenté comme **varbinary(8000)** , ce qui correspond à la longueur maximale correcte. Cependant, l’implémentation actuelle retourne **varbinary(50)**. Les applications doivent continuer à réserver **varbinary (8000)** afin que l’application continue à fonctionner correctement si le cookie de taille de retour augmente dans une version ultérieure.
+> Le paramètre **OUTPUT** de cookie pour **sp_setapprole** est actuellement documenté comme **varbinary(8000)** , ce qui correspond à la longueur maximale correcte. Cependant, l’implémentation actuelle retourne **varbinary(50)** . Les applications doivent continuer à réserver **varbinary (8000)** afin que l’application continue à fonctionner correctement si le cookie de taille de retour augmente dans une version ultérieure.
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour
 
@@ -88,7 +87,7 @@ Nécessite l’appartenance au **public** et connaissance du mot de passe pour l
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-activating-an-application-role-without-the-encrypt-option"></a>A. Activation d'un rôle d'application sans l'option encrypt
+### <a name="a-activating-an-application-role-without-the-encrypt-option"></a>R. Activation d'un rôle d'application sans l'option encrypt
 
  Dans l'exemple ci-dessous, un rôle d'application nommé `SalesAppRole` est activé avec le mot de passe en texte brut `AsDeF00MbXX`, créé avec les autorisations spécialement conçues pour l'application utilisée par l'utilisateur en cours.
 

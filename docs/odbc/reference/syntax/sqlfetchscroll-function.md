@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f3d82cc11763722f552896a29bb3831d892054b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003044"
 ---
 # <a name="sqlfetchscroll-function"></a>Fonction SQLFetchScroll
 **Conformité**  
@@ -164,8 +163,8 @@ SQLRETURN SQLFetchScroll(
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
 |*Avant de démarrer*|1|  
-|*CurrRowsetStart + la RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
-|*CurrRowsetStart + RowsetSize*[1] *> LastResultRow*|*Après la fin*|  
+|*CurrRowsetStart + la RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + la RowsetSize*[1]|  
+|*CurrRowsetStart + la RowsetSize*[1] *> LastResultRow*|*Après la fin*|  
 |*Après la fin*|*Après la fin*|  
   
  [1] si la taille de l’ensemble de lignes a été modifiée depuis le précédent appel pour extraire les lignes, il s’agit de la taille de l’ensemble de lignes qui a été utilisée avec l’appel précédent.  
@@ -177,8 +176,8 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*Avant de démarrer*|*Avant de démarrer*|  
 |*CurrRowsetStart = 1*|*Avant de démarrer*|  
-|*1 < CurrRowsetStart <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
+|*1 < CurrRowsetStart < = la RowsetSize* <sup>[2].</sup>|*1* <sup>[1]</sup>|  
+|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - la RowsetSize* <sup>[2]</sup>|  
 |*Après la fin et LastResultRow < la RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*Après la fin LastResultRow et > = La RowsetSize* <sup>[2]</sup>|*LastResultRow - la RowsetSize + 1* <sup>[2].</sup>|  
   
@@ -192,11 +191,11 @@ SQLRETURN SQLFetchScroll(
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
 |*(Avant de démarrer et FetchOffset > 0) OU (après la fin et FetchOffset < 0)*|*--* <sup>[1]</sup>|  
-|*BeforeStart AND FetchOffset <= 0*|*Avant de démarrer*|  
+|*BeforeStart et FetchOffset < = 0*|*Avant de démarrer*|  
 |*CurrRowsetStart = 1 AND FetchOffset < 0*|*Avant de démarrer*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Avant de démarrer*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
-|*1 <= CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
+|*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Après la fin*|  
 |*Après la fin et FetchOffset > = 0*|*Après la fin*|  
   
@@ -211,9 +210,9 @@ SQLRETURN SQLFetchScroll(
   
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; <= LastResultRow*|*LastResultRow + FetchOffset + 1*|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Avant de démarrer*|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > La RowsetSize* <sup>[2]</sup>|*Avant de démarrer*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = la RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Avant de démarrer*|  
 |*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*Après la fin*|  
@@ -247,7 +246,7 @@ SQLRETURN SQLFetchScroll(
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
 |*BookmarkRow + FetchOffset < 1*|*Avant de démarrer*|  
-|*1 <= BookmarkRow + FetchOffset \<= LastResultRow*|*BookmarkRow + FetchOffset*|  
+|*1 < = BookmarkRow + FetchOffset \<= LastResultRow*|*BookmarkRow + FetchOffset*|  
 |*BookmarkRow + FetchOffset > LastResultRow*|*Après la fin*|  
   
  Pour plus d’informations sur les signets, consultez [signets (ODBC)](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
@@ -334,7 +333,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
   
 |SQLExtendedFetch argument|Value|  
 |-------------------------------|-----------|  
-|StatementHandle|Au paramètre StatementHandle dans **SQLFetchScroll**.|  
+|Au paramètre StatementHandle|Au paramètre StatementHandle dans **SQLFetchScroll**.|  
 |FetchOrientation|FetchOrientation dans **SQLFetchScroll**.|  
 |FetchOffset|Si FetchOrientation n’est pas SQL_FETCH_BOOKMARK, la valeur de l’argument FetchOffset dans **SQLFetchScroll** est utilisé.<br /><br /> Si FetchOrientation est SQL_FETCH_BOOKMARK, la valeur stockée à l’adresse spécifiée par l’attribut d’instruction SQL_ATTR_FETCH_BOOKMARK_PTR est utilisée.|  
 |RowCountPtr|L’adresse spécifiée par l’attribut d’instruction SQL_ATTR_ROWS_FETCHED_PTR.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 219a6d2e837280ca3220382bea56d2ab610ce87a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 145170afee5ab791602695c662ce1e80e86cae7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915671"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>Types de données pris en charge (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -29,19 +28,19 @@ ms.locfileid: "63270887"
   
 |Type de données|Oracle 7.3|Oracle8|  
 |---------------|----------------|-------------|  
-|BFILE|n/a|Non pris en charge|  
-|BLOB|n/a|Non pris en charge|  
+|BFILE|N/A|Non pris en charge|  
+|BLOB|N/A|Non pris en charge|  
 |CHAR|Pris en charge|Pris en charge|  
-|CLOB|n/a|Non pris en charge|  
+|CLOB|N/A|Non pris en charge|  
 |DATE|Pris en charge|Pris en charge|  
 |FLOAT|Pris en charge|Pris en charge|  
 |INTEGER|Pris en charge|Pris en charge|  
 |LONG|Pris en charge|Pris en charge|  
 |LONG RAW|Pris en charge|Pris en charge|  
-|NCHAR|n/a|Non pris en charge|  
-|NCLOB|n/a|Non pris en charge|  
+|NCHAR|N/A|Non pris en charge|  
+|NCLOB|N/A|Non pris en charge|  
 |NUMBER|Pris en charge|Pris en charge|  
-|NVARCHAR2|n/a|Non pris en charge|  
+|NVARCHAR2|N/A|Non pris en charge|  
 |RAW|Pris en charge|Pris en charge|  
 |VARCHAR2|Pris en charge|Pris en charge|  
 |MLSLABEL|Non pris en charge.|Non pris en charge.|  

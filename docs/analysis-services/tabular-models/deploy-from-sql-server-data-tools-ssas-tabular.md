@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09d859cf8b5c372b9588266b9210837012396ea6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072136"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162866"
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>Déployer à partir de SQL Server Data Tools
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "53072136"
   
 #### <a name="to-deploy-a-tabular-model"></a>Pour déployer un modèle tabulaire
   
--   Dans SSDT, sur le **Build** menu, cliquez sur **déployer \<nom_projet >**.  
+-   Dans SSDT, sur le **Build** menu, cliquez sur **déployer \<nom_projet >** .  
   
      La boîte de dialogue **Déployer** apparaît et indique l’état du déploiement des métadonnées et du traitement (sauf si la propriété Option de traitement a la valeur Ne pas traiter) de chaque table incluse dans le modèle. Une fois le processus de déploiement est terminé, utilisez SSMS pour vous connecter à l’instance Analysis Services et vérifiez que le nouvel objet de base de données model a été créé ou un client d’application pour se connecter au modèle déployé reporting.  
   

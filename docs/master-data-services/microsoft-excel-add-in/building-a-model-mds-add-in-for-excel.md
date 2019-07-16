@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8ae26ec3-c5d5-4c4f-a810-2951a7454439
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: e3a946626223a464b63b2099912c0f89d95ff32b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6f3f669f0f1699618399bbfdccaf33f6e4c13a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092491"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Génération d'un modèle (Complément MDS pour Excel)
 
@@ -62,7 +61,7 @@ ms.locfileid: "65488926"
   
 -   [Règles d’entreprise &#40;Master Data Services&#41;](../../master-data-services/business-rules-master-data-services.md)  
   
--   [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md)  
+-   [Présentation : exportation de données &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md)  
   
 -   [Hiérarchies &#40;Master Data Services&#41;](../../master-data-services/hierarchies-master-data-services.md)  
   

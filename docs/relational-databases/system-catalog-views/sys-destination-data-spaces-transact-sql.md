@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 92df932b-ad5c-43f8-81f4-b158823ab189
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bc3df492cbc85c1c98ab920d63b6694bdc4de859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68a9e46232246c5f3a088765f77f44a9bc018269
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62858456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079370"
 ---
 # <a name="sysdestinationdataspaces-transact-sql"></a>sys.destination_data_spaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne par destination d'espace de données d'un schéma de partition.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**partition_scheme_id**|**Int**|ID du schéma de partition dont l'opération de partitionnement est réalisée à destination de l'espace de données.|  
 |**destination_id**|**Int**|ID (ordinal à partir de 1) du mappage de destination, unique dans le schéma de partition.|  
-|**data_space_id**|**Int**|ID de l'espace de données avec lequel sont mappées les données pour la destination de ce schéma.|  
+|**data_space_id**|**int**|ID de l'espace de données avec lequel sont mappées les données pour la destination de ce schéma.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

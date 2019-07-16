@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 954cb83176ea64be11bd37b44303091f15604dcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899718"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +49,9 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ||||  
 |-|-|-|  
-|**Colonne**|**Data type**|**Description**|  
-|**database_id**|**Int**|ID de la base de données. Ne peut pas avoir la valeur null.|  
-|**file_id**|**Int**|ID du fichier. Ne peut pas avoir la valeur null.|  
+|**Colonne**|**Type de données**|**Description**|  
+|**database_id**|**int**|ID de la base de données. Ne peut pas avoir la valeur null.|  
+|**file_id**|**int**|ID du fichier. Ne peut pas avoir la valeur null.|  
 |**volume_mount_point**|**nvarchar(512)**|Point de montage à la racine duquel le volume est attaché. Peut retourner une chaîne vide.|  
 |**volume_id**|**nvarchar(512)**|Identificateur du volume du système d'exploitation. Peut retourner une chaîne vide|  
 |**logical_volume_name**|**nvarchar(512)**|Nom du volume logique. Peut retourner une chaîne vide|  
@@ -72,7 +71,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-return-total-space-and-available-space-for-all-database-files"></a>A. Retour de l'espace total et de l'espace disponible pour tous les fichiers de base de données  
+### <a name="a-return-total-space-and-available-space-for-all-database-files"></a>R. Retour de l'espace total et de l'espace disponible pour tous les fichiers de base de données  
  L'exemple suivant retourne l'espace total et l'espace disponible (en octets) pour tous les fichiers de base de données dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ```sql  

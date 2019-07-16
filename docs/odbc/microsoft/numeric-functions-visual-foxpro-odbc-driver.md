@@ -15,39 +15,38 @@ helpviewer_keywords:
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73379b769da61fe14ba18815446337d0172c2805
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34d2ceb19bce2e466ff5cae7647125e94fdb7c03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044995"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>Fonctions numériques (pilote ODBC Visual FoxPro)
 Le tableau suivant décrit les fonctions numériques ODBC pris en charge par le pilote ODBC Visual FoxPro ; lors de la grammaire de Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, le Visual FoxPro équivalent est répertorié.  
   
 |Grammaire ODBC|Grammaire de Visual FoxPro|  
 |------------------|---------------------------|  
-|ABS *(numeric_exp)*||  
-|ACOS *(float_exp)*||  
-|ASIN *(float_exp)*||  
+|ABS *(positions numeric_exp)*||  
+|ACOS *(exp_float)*||  
+|ASIN *(exp_float)*||  
 |ATAN *(exp_float)*||  
-|ATAN2 *(exp_float1, exp_float2)*|ATN2 (*float_exp1, float_exp2*)|  
+|ATAN2 *(exp_float1, exp_float2)*|ATN2 (*exp_float1, exp_float2*)|  
 |CEILING *(positions numeric_exp)*||  
-|COS *(float_exp)*||  
-|COT *(float_exp)*||  
-|DEGRÉS *(positions numeric_exp)*|RTOD *(numeric_exp)*|  
-|EXP *(float_exp)*||  
-|FLOOR *(numeric_exp)*||  
+|COS *(exp_float)*||  
+|COT *(exp_float)*||  
+|DEGRÉS *(positions numeric_exp)*|RTOD *(positions numeric_exp)*|  
+|EXP *(exp_float)*||  
+|FLOOR *(positions numeric_exp)*||  
 |JOURNAL *(exp_float)*||  
-|LOG10 *(float_exp)*||  
+|LOG10 *(exp_float)*||  
 |MOD *(exp_entier1, exp_entier2)*||  
 |PI *( )*||  
-|RADIANS *(numeric_exp)*|DTOR *(numeric_exp)*|  
+|RADIANS *(positions numeric_exp)*|DTOR *(positions numeric_exp)*|  
 |RAND *([integer_exp])*||  
 |ROUND *(positions numeric_exp integer_exp)*||  
-|SIGN *(numeric_exp)*||  
-|SIN *(float_exp)*||  
+|CONNEXION *(positions numeric_exp)*||  
+|SIN *(exp_float)*||  
 |SQRT *(exp_float)*||  
 |TAN *(exp_float)*||  
   

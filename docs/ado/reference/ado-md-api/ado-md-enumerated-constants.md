@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d9e66999-96f3-48ec-93b2-d9442da56d9b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6018cc0d5b4c74e15cf39c5b57e71ce57d1a39ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32c1905ffa7466da8c053cfb23a22cbc5d1a382e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939996"
 ---
 # <a name="ado-md-enumerated-constants"></a>Constantes énumérées ADO MD
 Pour faciliter le débogage, les constantes énumérées ADO MD répertorient une valeur pour chaque constante. Toutefois, cette valeur est purement indicative et peut changer d’une version d’ADO MD vers un autre. Votre code doit uniquement dépendre du nom, pas la valeur réelle, de constantes énumérées.  

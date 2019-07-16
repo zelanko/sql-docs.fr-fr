@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b251da97fe14abb8b10abe974c40b9adf0b37898
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699883"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923722"
 ---
 # <a name="updating-and-persisting-data"></a>Mise à jour et enregistrement des données
 Les chapitres précédents ont présenté comment utiliser ADO pour accéder aux données d’une source de données, pour vous déplacer dans les données et même comment modifier les données. Bien sûr, si l’objectif de votre application est de permettre aux utilisateurs d’apporter des modifications aux données, vous devez comprendre comment enregistrer ces modifications. Vous pouvez soit conserver la **Recordset** passe à un fichier en utilisant le **enregistrer** (méthode), ou vous pouvez envoyer les modifications dans la source de données pour le stockage à l’aide la **mise à jour** ou  **UpdateBatch** méthodes.  

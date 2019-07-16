@@ -3,18 +3,17 @@ title: Bien démarrer avec la sécurité de SQL Server sur Linux
 description: Cet article décrit les actions de sécurité standard.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 9fe29cadaa14168871e7448350d41bc89afed05b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019499"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Procédure pas à pas pour les fonctionnalités de sécurité de SQL Server sur Linux
 
@@ -137,9 +136,9 @@ Create a security policy adding the function as both a filter and a block predic
 
 ```
 CRÉER SalesFilter de stratégie de sécurité   
-ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+Ajouter Security.fn_securitypredicate(SalesPersonID) de PRÉDICAT de filtre    
   SUR Sales.SalesOrderHeader,   
-ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+Ajouter Security.fn_securitypredicate(SalesPersonID) de PRÉDICAT de bloc    
   SUR Sales.SalesOrderHeader   
 WITH (STATE = ON);   
 ```
@@ -160,7 +159,7 @@ Alter the security policy to disable the policy.  Now both users can access all 
 
 ```
 ALTER SalesFilter de stratégie de sécurité   
-WITH (STATE = OFF);    
+AVEC (ÉTAT = OFF) ;    
 ``` 
 
 
@@ -182,7 +181,7 @@ CRÉER utilisateur TestUser sans connexion ;
 GRANT SELECT ON Person.EmailAddress à TestUser ;    
  
 EXÉCUTER en tant qu’utilisateur = « TestUser » ;   
-SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
+Sélectionnez EmailAddressID, EmailAddress à partir de Person.EmailAddress ;       
 RÉTABLIR ;    
 ```
  
@@ -223,7 +222,7 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
+CRÉER LA CLÉ PRINCIPALE LE CHIFFREMENT PAR MOT DE PASSE = ' ***';  
 GO  
 
 CRÉER le certificat MyServerCert avec l’objet = 'Ma base de données clé certificat de chiffrement' ;  
@@ -265,7 +264,7 @@ par
   ENCRYPTION   
    (  
    ALGORITHME = AES_256,  
-   SERVER CERTIFICATE = BackupEncryptCert  
+   CERTIFICAT de serveur = BackupEncryptCert  
    ),  
   STATS = 10  
 GO  

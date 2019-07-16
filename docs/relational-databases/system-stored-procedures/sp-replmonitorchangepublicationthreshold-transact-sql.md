@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 587c66322a7d40f42f81bceb48e1c0d422322d46
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d23822fc27e02d5f40824f738c70044c61020eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950657"
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @metric_id = ] metric_id` Est l’ID de la mesure de seuil de publication en cours de modification. *metric_id* est **int**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Value|Nom de la mesure|  
+|Value|Nom de métrique|  
 |-----------|-----------------|  
 |**1**|**expiration** : contrôle l'expiration imminente des abonnements aux publications transactionnelles.|  
 |**2**|**latency** : contrôle les performances des abonnements aux publications transactionnelles.|  

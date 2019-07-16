@@ -3,18 +3,17 @@ title: Vue d’ensemble de SQL Server sur Linux
 description: Cet article décrit comment SQL Server s’exécute sur Linux et fournit des informations sur comment en savoir plus.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 71b7c0d4d1a6a3198ecaa11fff12ed6074f0d8d9
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: e3bd50cba4bcab81e7dcf00db9394704c5486160
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105459"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server sur Linux
 

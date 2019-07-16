@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 777f0e09-8ee5-4cb2-a3ac-939d02c3cd22
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 80de1581116ddc477ee1d5b8197532a853ee3da7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2c927bdff462922d1846188366fbb92ce0d3663c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022425"
 ---
 # <a name="spaddsrvrolemember-transact-sql"></a>sp_addsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,10 +43,10 @@ sp_addsrvrolemember [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @loginame **=** ] **'**_connexion_**'**  
+ [ @loginame **=** ] **'** _connexion_ **'**  
  Nom de la connexion ajoutée au rôle serveur fixe. *connexion* est **sysname**, sans valeur par défaut. *connexion* peut être un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un compte de connexion Windows. Si la connexion Windows n'a pas encore été autorisée à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], elle l'est automatiquement.  
   
- [ @rolename **=** ] **'**_rôle_**'**  
+ [ @rolename **=** ] **'** _rôle_ **'**  
  Nom du rôle serveur fixe auquel est ajoutée la connexion. *rôle* est **sysname**, avec NULL comme valeur par défaut et doit être une des valeurs suivantes :  
   
 -   sysadmin  

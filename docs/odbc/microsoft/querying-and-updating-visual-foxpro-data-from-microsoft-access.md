@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2d314e78-9edf-44b2-bd8b-96784236bcbe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1097e03c414d919a606ffd21ae50ffddf51173b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2681ecd0fe6f586954236c4fb5fddcf576b206be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988060"
 ---
 # <a name="querying-and-updating-visual-foxpro-data-from-microsoft-access"></a>Interrogation et mise à jour de données Visual FoxPro à partir de Microsoft Access
 Vous pouvez interroger et mettre à jour les données stockées dans une base de données Visual FoxPro à partir d’une base de données Microsoft Access à l’aide de l’option de Table de liens.  

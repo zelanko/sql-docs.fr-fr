@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58450f8e43c5f1f736fb4388008f7af3325e430d
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: e2d58132b71e16f31e7369ae8f5b09fa3dac240f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900659"
 ---
 # <a name="sysdmhadrcluster-transact-sql"></a>sys.dm_hadr_cluster (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "55570732"
  > [!TIP]
  > À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], cette vue de gestion dynamique prend en charge le basculement Instances de Cluster AlwaysOn en plus des groupes de disponibilité AlwaysOn.
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**cluster_name**|**nvarchar(128)**|Nom du cluster WSFC qui héberge les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] activées pour [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].|  
 |**quorum_type**|**tinyint**|Type de quorum utilisé par ce cluster WSFC, prend l'une des valeurs suivantes :<br /><br /> 0 = Nœud majoritaire. Cette configuration de quorum permet de faire face aux échecs de la moitié des nœuds (arrondi) moins un. Par exemple, sur un cluster à sept nœuds, cette configuration de quorum peut faire face aux échecs de trois nœuds.<br /><br /> 1 = Nœud et disque majoritaire. Si le disque témoin reste en ligne, cette configuration de quorum peut faire face aux échecs de la moitié des nœuds (arrondi). Par exemple, un cluster à six nœuds dans lequel le disque témoin est en ligne peut faire face aux échecs de trois nœuds. Si le disque témoin est mis hors connexion ou échoue, cette configuration de quorum peut faire face aux échecs de la moitié des nœuds (arrondi) moins un. Par exemple, un cluster à six nœuds avec un disque témoin défectueux peut faire face aux échecs de deux nœuds (3-1 = 2).<br /><br /> 2 = Nœud et partage de fichiers majoritaires. Cette configuration de quorum s'exécute de façon similaire à la configuration Nœud et disque majoritaires, mais utilise un témoin de partage de fichiers au lieu d'un disque témoin.<br /><br /> 3 = aucune majorité : Disque uniquement. Si le disque quorum est en ligne, cette configuration de quorum peut faire face aux échecs de tous les nœuds sauf un.<br /><br /> 4 = Quorum inconnu. Quorum inconnu pour le cluster.<br /><br /> 5 = témoin de cloud. Cluster utilise Microsoft Azure pour l’arbitrage de quorum. Si le témoin de cloud est disponible, le cluster peut soutenir l’échec de la moitié des nœuds (arrondi).|  

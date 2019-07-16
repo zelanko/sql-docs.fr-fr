@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 3126872e3333383d0cea53f38b3cfd06be86b704
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 887bae28ffe35ad006bceb08a1b62b824795be0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962793"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>Packages par défaut R et Python dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -28,8 +27,8 @@ Packages R sont installés avec [SQL Server 2016 R Services](../install/sql-r-se
 |----------------|--------------|--------------|-------------|
 | [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | Utilisée pour les contextes de calcul à distance, de diffusion en continu, l’exécution parallèle des fonctions rx pour importer des données et de transformation, de modélisation, de visualisation et d’analyse. |
 | [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |Utilisé pour inclure un script R dans les procédures stockées. |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.2 | Ajoute des algorithmes d’apprentissage automatique dans R. | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a.  | 9.2 | Utilisé pour écrire des instructions MDX dans R. |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| (pays-bas) | 9.2 | Ajoute des algorithmes d’apprentissage automatique dans R. | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | (pays-bas)  | 9.2 | Utilisé pour écrire des instructions MDX dans R. |
 
 MicrosoftML et olapR sont disponibles par défaut dans SQL Server 2017 Machine Learning Services. Sur une instance de SQL Server 2016 R Services, vous pouvez ajouter ces packages via un [mise à niveau du composant](../install/upgrade-r-and-python.md). Une mise à niveau du composant obtient également les versions plus récentes des packages (par exemple, des versions plus récentes de RevoScaleR incluent des fonctions de gestion des packages sur SQL Server).
 
@@ -50,7 +49,7 @@ La distribution de R open source inclus dans votre installation est [Microsoft R
 
 Le tableau suivant récapitule les versions de R fournis par MRO à l’aide du programme d’installation de SQL Server.
 
-|Version             | Version de R       |
+|Libérer             | Version de R       |
 |--------------------|-----------------|
 | [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
 | [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
@@ -63,7 +62,7 @@ SQL Server 2017 ajoute des composants de Python. Lorsque vous sélectionnez l’
 
 SQL Server 2017 Machine Learning est la première version R et Python prennent en charge.
 
-|Version             | Version de anaconda| Packages Microsoft    |
+|Libérer             | Version de anaconda| Packages Microsoft    |
 |--------------------|-----------------|-----------------------|
 | SQL Server 2017 Machine Learning Services  | 4.2 sur Python 3.5 | revoscalepy, microsoftml |
 
@@ -89,9 +88,9 @@ Chemins de fichier incluent également les noms d’instance. SQL Server install
 
 |Version et la langue  | Chemin d’accès par défaut|
 |----------------------|------------|
-| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
+| SQL Server 2016 |C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library|
 | SQL Server 2017 avec R|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
-| SQL Server 2017 avec Python |C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
+| SQL Server 2017 avec Python |C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
 
 
 #### <a name="file-path-for-standalone-server-installations"></a>Chemin d’accès de fichier pour les installations de serveur autonome
@@ -100,9 +99,9 @@ Le tableau suivant répertorie les chemins d’accès par défaut des fichiers b
 
 |Version| Installation|Chemin d’accès par défaut|
 |-------|-------------|------------|
-| SQL Server 2016|R Server (autonome)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
-|SQL Server 2017|Machine Learning Server, avec R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|
-|SQL Server 2017|Machine Learning Server, avec Python |C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER|
+| SQL Server 2016|R Server (autonome)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
+|SQL Server 2017|Machine Learning Server, avec R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|
+|SQL Server 2017|Machine Learning Server, avec Python |C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER|
 
 > [!NOTE]
 > Si vous trouvez d’autres dossiers ayant des noms similaires sous-dossier et fichiers, vous avez probablement une installation autonome de Microsoft R Server ou [Machine Learning Server](https://docs.microsoft.com/machine-learning-server/). Ces produits serveurs ont différents programmes d’installation et les chemins d’accès (à savoir C:\Program Files\Microsoft\R Server\R_SERVER ou C:\Program Files\Microsoft\ML SERVER\R_SERVER). Pour plus d’informations, consultez [installer Machine Learning Server pour Windows](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) ou [installer R Server 9.1 pour Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).

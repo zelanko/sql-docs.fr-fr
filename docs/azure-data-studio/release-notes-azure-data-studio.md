@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959388"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
@@ -149,7 +148,7 @@ Le 13 février 2019 &nbsp;  /  &nbsp; version : 1.4.5
 
 | Modifier | Détails |
 | :----- | :------ |
-| Ajouté **pack d’administration pour SQL Server** pack d’extension. | Cela rend plus facile d’installer les extensions dépendant de l’administrateur de SQL Server. notamment :<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
+| Ajouté **pack d’administration pour SQL Server** pack d’extension. | Cela rend plus facile d’installer les extensions dépendant de l’administrateur de SQL Server. notamment :<br/>&bull; &nbsp; [Agent SQL Server](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
 | Filtrage ajouté étendu la prise en charge des événements dans l’extension de Profiler. | &nbsp; |
 | Added enregistrer en tant que fonctionnalité XML qui peut enregistrer des résultats de T-SQL au format XML. | &nbsp; |
 | Améliorations de l’Assistant d’Application de couche données ajoutées. | &bull; &nbsp; Bouton Générer un script ajouté<br/>&bull; &nbsp; Ajout d’affichage pour donner des avertissements de perte de données pendant le déploiement. |
@@ -417,7 +416,7 @@ Le *préliminaire peut* se concentre sur la stabilisation et de correctifs de bo
 
 - Corriger [émettre 703](https://github.com/Microsoft/azuredatastudio/issues/703): Entrée de texte HTML similaire dans modifier des données entraîne la valeur à afficher incorrectement jusqu'à ce que l’actualisation
 - Corriger [émettre 821](https://github.com/Microsoft/azuredatastudio/issues/821): dépendance de package azuredatastudio.deb
-- Corriger [émettre 1260](https://github.com/Microsoft/azuredatastudio/issues/1260): Keyword 'distinct' not highlighted
+- Corriger [émettre 1260](https://github.com/Microsoft/azuredatastudio/issues/1260): Mot clé « distinct » ne pas mis en surbrillance
 - Corriger [émettre 1332](https://github.com/Microsoft/azuredatastudio/issues/1332): Modifier des données rétablir ligne ne fonctionne pas
 - Corriger [émettre 1215](https://github.com/Microsoft/azuredatastudio/issues/1215): Extension de l’Agent SQL et de la barre d’état
 - Corriger [émettre 1316](https://github.com/Microsoft/azuredatastudio/issues/1316): Redimensionnement de SQL Agent n’après modifier la taille de windows

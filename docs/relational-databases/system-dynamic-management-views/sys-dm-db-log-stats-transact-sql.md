@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43e5b145122f5b2586d8eb976162afb0615f89d9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b23eea391c7de1f02eacec7f8c8625211dfeea3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004836"
 ---
 # <a name="sysdmdblogstats-transact-sql"></a>sys.dm_db_log_stats (Transact-SQL)   
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ Retourne les attributs de niveau résumé et des informations sur les fichiers j
 
 *database_id* | NULL | **Par défaut**
 
-Est l’ID de la base de données. `database_id` a la valeur `int`. Les entrées valides sont le numéro d’ID d’une base de données, `NULL`, ou `DEFAULT`. La valeur par défaut est `NULL`. `NULL` et `DEFAULT` sont des valeurs équivalentes dans le contexte de base de données actuelle.  
+Est l’ID de la base de données. `database_id` a la valeur `int`. Les entrées valides sont le numéro d’ID d’une base de données, `NULL`, ou `DEFAULT`. La valeur par défaut est `NULL`. `NULL` et `DEFAULT` sont des valeurs équivalentes dans le contexte de base de données actuelle.  
 La fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md) peut être spécifiée. Lorsque vous utilisez `DB_ID` sans spécifier un nom de base de données, le niveau de compatibilité de la base de données actuelle doit être supérieur ou égal à 90.
 
   
 ## <a name="tables-returned"></a>Tables retournées  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |database_id    |**Int**    |ID de la base de données |  
 |recovery_model |**nvarchar(60)**   |   Mode de récupération de la base de données. Les valeurs possibles sont : <br /> SIMPLE<br /> BULK_LOGGED <br /> FULL |  
@@ -76,12 +75,12 @@ La fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md) peut
 ## <a name="remarks"></a>Notes
 Lors de l’exécution `sys.dm_db_log_stats` par rapport à une base de données qui fait partie d’un groupe de disponibilité comme réplica secondaire, uniquement un sous-ensemble des champs décrits ci-dessus s’affichera.  Actuellement, seuls `database_id`, `recovery_model`, et `log_backup_time` s’affichera lors de l’exécuter sur une base de données secondaire.   
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
   
 ## <a name="examples"></a>Exemples  
 
-### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>A. Détermination des bases de données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance avec un grand nombre de fichiers journaux virtuels   
+### <a name="a-determining-databases-in-a-includessnoversionincludesssnoversion-mdmd-instance-with-high-number-of-vlfs"></a>R. Détermination des bases de données dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance avec un grand nombre de fichiers journaux virtuels   
 La requête suivante retourne les bases de données avec plus de 100 fichiers journaux virtuels dans les fichiers journaux. Grand nombre de fichiers journaux virtuels peut affecter le temps de démarrage, restauration et récupération de base de données.
 
 ```sql  

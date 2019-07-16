@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7aa635da-e6b7-439f-8e9b-c3860e24de5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6829f4f5197fca28944e5bc9d2f636f6624c9d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5022b689129be776f6b15352850e4b466196063a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085452"
 ---
 # <a name="odbc-function-summary"></a>Récapitulatif des fonctions ODBC
 Le tableau suivant répertorie les fonctions ODBC, regroupées par type de tâche et inclut la désignation de la conformité et une brève description de l’objectif de chaque fonction. Pour plus d’informations sur les désignations de la conformité, consultez [ODBC et l’interface CLI Standard](../../../odbc/reference/odbc-and-the-standard-cli.md). Pour plus d’informations sur la syntaxe et la sémantique pour chaque fonction, consultez [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md).  

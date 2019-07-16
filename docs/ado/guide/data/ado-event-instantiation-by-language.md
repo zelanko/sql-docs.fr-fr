@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7a4faf70fa96eaf31ed518cbd9b679dc7ea66390
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2881ca390aebc18cf5e80b390591c81a575c8de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926179"
 ---
 # <a name="ado-event-instantiation-by-language"></a>Instanciation des événements ADO par langage
 Chaque langage de programmation crée des instances d’événements ADO différemment. Tous les exemples suivants créent un **ConnectComplete** Gestionnaire d’événements.  
   
 -   [Visual Basic](../../../ado/guide/data/ado-event-instantiation-visual-basic.md)  
   
--   [Visual C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
+-   [Visual C++](../../../ado/guide/data/ado-event-instantiation-visual-c.md)  
   
 -   [VBScript](../../../ado/guide/data/ado-event-instantiation-vbscript.md)  
   

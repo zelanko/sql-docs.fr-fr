@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66811d2364db546c3bddd787c1e0794f936f97c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bb1115290f53c19fae1aacb0a976cfcef63e086
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094234"
 ---
 # <a name="setting-parameter-values"></a>Définition de valeurs de paramètres
 Pour définir la valeur d’un paramètre, l’application définit simplement la valeur de la variable liée au paramètre. Il n’est pas important lorsque cette valeur est définie, tant qu’elle est définie avant l’exécution de l’instruction. L’application peut définir la valeur avant ou après la variable de liaison, et elle peut modifier la valeur autant de fois qu’il le souhaite. Lorsque l’instruction est exécutée, le pilote récupère simplement la valeur actuelle de la variable. Cela est particulièrement utile lorsqu’une instruction préparée est exécutée plusieurs fois ; l’application définit de nouvelles valeurs pour tout ou partie des variables chaque fois que l’instruction est exécutée. Pour obtenir un exemple de cela, consultez [exécution préparée](../../../odbc/reference/develop-app/prepared-execution-odbc.md), plus haut dans cette section.  
@@ -35,12 +34,12 @@ Pour définir la valeur d’un paramètre, l’application définit simplement l
   
  Le tableau suivant montre les valeurs de la variable liée et de la mémoire tampon de longueur / d’indicateur qui définit de l’application pour un large éventail de valeurs de paramètre.  
   
-|Paramètre<br /><br /> valeur|Paramètre<br /><br /> (SQL)<br /><br /> type de données|Variable (C)<br /><br /> type de données|Valeur dans<br /><br /> lié<br /><br /> variable|Valeur dans<br /><br /> longueur / d’indicateur<br /><br /> buffer[d]|  
+|Paramètre<br /><br /> valeur|Paramètre<br /><br /> (SQL)<br /><br /> type de données|Variable (C)<br /><br /> type de données|Valeur dans<br /><br /> lié<br /><br /> variable|Valeur dans<br /><br /> longueur / d’indicateur<br /><br /> mémoire tampon [d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
 |"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0[a]|SQL_NTS ou 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  
 |10|SQL_INTEGER|SQL_C_CHAR|10\0[a]|SQL_NTS ou 2|  
-|À 13 H|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0[b]|--|  
+|À 13 H|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0 [b]|--|  
 |À 13 H|SQL_TYPE_TIME|SQL_C_CHAR|{t '13:00:00'}\0[a], [c]|SQL_NTS ou 14|  
 |NULL|SQL_SMALLINT|SQL_C_SSHORT|--|SQL_NULL_DATA|  
   

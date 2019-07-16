@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eda345764ef6f8b917f1496e05c8cb73471c9624
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cec04c6cd1fac02dd2ef128fe556fe4e011e2b0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091059"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,10 +37,10 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Notes  
- Aucune autre opération ne peut être appelée dans l’interface [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) après avoir appelé la méthode **BCPDone**. La seule possibilité consiste à appeler la méthode [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) pour démarrer une nouvelle opération de copie en bloc. Cela s’apparente à l’appel de la méthode [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md).  
+ Aucune autre opération ne peut être appelée dans l’interface [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) après avoir appelé la méthode **BCPDone**. La seule possibilité consiste à appeler la méthode [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) pour démarrer une nouvelle opération de copie en bloc. Cela s'apparente à l'appel de la méthode [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) .  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+ S_OK  
  S_OK  
   
  E_UNEXPECTED  
@@ -50,7 +49,7 @@ HRESULT BCPDone(void);
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment utiliser l'interface **IBCPSession** .  
   
- L'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante doit être exécutée avant d'exécuter cet exemple :  
+ L'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante doit être exécutée avant d'exécuter cet exemple :  
   
 ```  
 create table fltest(col1 int, col2 int, col3 image)  

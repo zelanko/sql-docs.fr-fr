@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: f98f6be4502254910b5c144f08a95181ccf1b2a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 810d03ab97fd584e1ddaab45e06a21377b81685d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959408"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Démarrage rapide : Utilisez [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter et interroger des données dans Azure SQL Data Warehouse
 
@@ -139,7 +138,7 @@ L’éditeur de requête est toujours connecté à la *master* base de données,
    ![Sélectionnez les résultats](media/quickstart-sql-dw/select-results.png)
 
 
-## <a name="clean-up-resources"></a>Nettoyer les ressources
+## <a name="clean-up-resources"></a>Supprimer des ressources
 
 Autres articles de cette collection reposent sur ce démarrage rapide. Si vous envisagez de continuer à utiliser d’autres Démarrages rapides, ne nettoyez pas les ressources créées dans ce démarrage rapide. Si vous ne souhaitez pas continuer, procédez comme suit pour supprimer les ressources créées par ce démarrage rapide dans le portail Azure.
 Nettoyer les ressources en supprimant les groupes de ressources que vous n’avez plus besoin. Pour plus d’informations, consultez [nettoyer les ressources](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).

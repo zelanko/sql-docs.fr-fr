@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 352d6be6f924fc8285a25d3f83ef5bee74c03acb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946213"
 ---
 # <a name="type-casting-rules-in-xquery"></a>Règles de conversion de types dans XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- La requête suivante renvoie une erreur statique car l'on ne connaît pas le nombre d'éléments de niveau racine (<`root`>) présents dans l'instance du document.  
+ La requête suivante retourne une erreur statique, car vous ne savez pas combien de haut niveau <`root`> sont des éléments dans l’instance de document.  
   
 ```  
 declare @x xml(myCollection)  
@@ -106,7 +105,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- Si vous indiquez un élément singleton <`root`> dans l'expression, la requête fonctionne. Elle renvoie ainsi une séquence de valeurs de type simple typé en xs:string.  
+ En spécifiant un singleton <`root`> élément dans l’expression, la requête aboutit. Elle renvoie ainsi une séquence de valeurs de type simple typé en xs:string.  
   
 ```  
 declare @x xml(myCollection)  
@@ -116,7 +115,7 @@ select @x.query('/root[1]/A cast as xs:string?')
 go  
 ```  
   
- Dans l'exemple suivant, la variable de type xml inclut un mot clé document précisant la collection de schémas XML. Cela indique que l'instance XML doit être un document ne possédant qu'un seul élément de premier niveau. Dans ce cas, si vous créez deux éléments <`root`> dans l'instance XML, une erreur est alors renvoyée.  
+ Dans l'exemple suivant, la variable de type xml inclut un mot clé document précisant la collection de schémas XML. Cela indique que l'instance XML doit être un document ne possédant qu'un seul élément de premier niveau. Si vous créez deux <`root`> éléments dans l’instance XML, elle retournera une erreur.  
   
 ```  
 declare @x xml(document myCollection)  

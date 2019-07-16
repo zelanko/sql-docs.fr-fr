@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9f49520-72d7-4234-8635-260d0ce4199c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be472a4a99324927128514fa9f8cbf19d44d49cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7600734fef44071b1f5e35c136a6b9facdb8b390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63262250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949034"
 ---
 # <a name="level-2-api-functions-odbc-driver-for-oracle"></a>Fonctions de l’API du niveau 2 (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -31,7 +30,7 @@ ms.locfileid: "63262250"
   
  Fonctions à ce niveau fournissent la conformité de l’interface niveau 1 ainsi que des fonctionnalités supplémentaires telles que la prise en charge les signets, les paramètres dynamiques et exécution asynchrone de fonctions ODBC.  
   
-|Fonction d’API|Remarques|  
+|Fonction d’API|Notes|  
 |------------------|-----------|  
 |**SQLBindParameter**|Associe une mémoire tampon à un marqueur de paramètre dans une instruction SQL.|  
 |**SQLBrowseConnect**|Retourne les niveaux successifs d’attributs et valeurs d’attribut.|  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 30162cbc63d64f9c5224fd2d030e1dbc50f5dae1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b97ebb64b5287249c39797629ff32a221380858
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63456575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055609"
 ---
 # <a name="-positive-mdx"></a>+ (Positif) (MDX)
 
@@ -29,7 +28,7 @@ ms.locfileid: "63456575"
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Numeric_Expression*  
+ *Numeric_expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne une valeur numérique.  
   
 ## <a name="return-value"></a>Valeur de retour  

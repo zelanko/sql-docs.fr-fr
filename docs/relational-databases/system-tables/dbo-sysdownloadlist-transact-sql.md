@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d0568403cb7f5bdf48d9be33e1b40f0be3fc1c33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03e888cc3d36b909035247d5f1c16dd1ab61e0d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061196"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient la file d'attente des instructions de téléchargement pour l'ensemble des serveurs cibles.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**Int**|Colonne d'identité indiquant la séquence naturelle d'insertion des lignes|  
 |**source_server**|**sysname**|Nom du serveur source|  
-|**operation_code**|**tinyint**|Code d'opération pour le travail :<br /><br /> **1** = INS (INSERTION)<br /><br /> **2** = UPD (MISE À JOUR)<br /><br /> **3** = SUPPR (SUPPRESSION)<br /><br /> **4** = START<br /><br /> **5** = ARRÊTER|  
+|**operation_code**|**tinyint**|Code d'opération pour le travail :<br /><br /> **1** = INS (INSERTION)<br /><br /> **2** = UPD (MISE À JOUR)<br /><br /> **3** = SUPPR (SUPPRESSION)<br /><br /> **4** = DÉMARRAGE<br /><br /> **5** = ARRÊTER|  
 |**object_type**|**tinyint**|Code du type d'objet.|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|Numéro d'identification de l'objet.|  
 |**target_server**|**sysname**|Nom du serveur cible|  

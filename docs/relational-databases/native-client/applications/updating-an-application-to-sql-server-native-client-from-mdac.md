@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4de00026a0d48a9850d7c13b18525c1a1d84820f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 269afec77614cdcd92e23b1fa66915c44cfa28e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069513"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Mise à jour d'une application vers SQL Server Native Client à partir de MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ ms.locfileid: "52511811"
   
 -   Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client retourne des synonymes dans les ensembles de lignes de schéma TABLES et TABLE_INFO, avec la valeur SYNONYM attribuée à TABLE_TYPE.  
   
--   Valeurs de retour de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **udt**, ou d’autres types d’objets volumineux ne peuvent pas être retournés pour les versions client antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Si vous souhaitez utiliser ces types comme valeurs de retour, vous devez utiliser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
+-   Valeurs de retour de type de données **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml**, **udt**, ou d’autres types d’objets volumineux ne peuvent pas être retournés pour les versions client antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Si vous souhaitez utiliser ces types comme valeurs de retour, vous devez utiliser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
 -   Contrairement à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, MDAC permet l'exécution des instructions suivantes au démarrage de transactions manuelles et implicites. Elles doivent être exécutées en mode de validation automatique.  
   
@@ -92,11 +91,11 @@ ms.locfileid: "52511811"
   
     -   Kill  
   
-    -   Backup  
+    -   Sauvegarde  
   
 -   Lorsque des applications MDAC se connectent à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les types de données introduits dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] apparaissent en tant que types de données compatibles avec [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)], comme indiqué dans le tableau suivant.  
   
-    |Type SQL Server 2005|Type SQL Server 2000|  
+    |Type SQL Server 2005|Type SQL Server 2000|  
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
@@ -112,7 +111,7 @@ ms.locfileid: "52511811"
   
 -   Avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, ITransactionLocal::BeginTransaction entraîne une transaction doit être démarré immédiatement. Avec MDAC le démarrage de transaction est différé jusqu'à ce que l'application exécute une instruction qui requiert une transaction en mode de transaction implicite. Pour plus d’informations, consultez [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
--   Vous pouvez rencontrer des erreurs lors de l’utilisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote de Client natif avec System.Data.Odbc pour accéder à un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ordinateur du serveur qui expose de nouveaux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-types de données spécifiques ou de fonctionnalités. System.Data.Odbc fournit une implémentation ODBC générique et par la suite n’expose pas les extensions ou les fonctionnalités spécifiques du fournisseur. (Le pilote de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client est mis à jour pour prendre en charge les fonctionnalités les plus récentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en mode natif.) Pour contourner ce problème, vous pouvez rétablir MDAC ou migrer vers System.Data.SqlClient.  
+-   Vous pouvez rencontrer des erreurs lors de l’utilisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote de Client natif avec System.Data.Odbc pour accéder à un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ordinateur du serveur qui expose de nouveaux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-types de données spécifiques ou de fonctionnalités. System.Data.Odbc fournit une implémentation ODBC générique et par la suite n’expose pas les extensions ou les fonctionnalités spécifiques du fournisseur. (Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote Native Client est mis à jour pour prendre en charge en mode natif de la dernière version [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fonctionnalités.) Pour contourner ce problème, vous pouvez rétablir MDAC ou migrer vers System.Data.SqlClient.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client et MDAC prennent en charge l'isolation de la transaction de lecture validée à l'aide du contrôle de version de ligne, mais seul [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client prend en charge l'isolation de la transaction d'instantané. (En termes de programmation, l'isolation de la transaction de lecture validée à l'aide du contrôle de version de ligne est la même chose que la transaction de lecture validée.)  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63a3ff2cdb075dc8ce48aaa6c6951458d12710b0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e77488a379543dd6f2749a07048fa67a92d530ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041033"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 |**1**|La synchronisation démarre à partir de la dernière validation réussie. Toutes les générations nouvelles ou incomplètes effectuées depuis la dernière validation réussie sont réappliquées à l'Abonné.|  
 |**2**|La synchronisation démarre à partir de la date définie *resync_date_str*. Toutes les générations nouvelles ou incomplètes effectuées depuis la date sont réappliquées à l'Abonné.|  
   
-`[ @resync_date_str = ] resync_date_string` Définit la date lorsque la resynchronisation doit démarrer. *resync_date_string* est **nvarchar (30)**, avec NULL comme valeur par défaut. Ce paramètre est utilisé lorsque le *resync_type* est une valeur de **2**. La date définie est convertie en son équivalent **datetime** valeur.  
+`[ @resync_date_str = ] resync_date_string` Définit la date lorsque la resynchronisation doit démarrer. *resync_date_string* est **nvarchar (30)** , avec NULL comme valeur par défaut. Ce paramètre est utilisé lorsque le *resync_type* est une valeur de **2**. La date définie est convertie en son équivalent **datetime** valeur.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

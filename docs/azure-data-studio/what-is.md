@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: 18fbf279a4d32121f552fda345d8024d1d408e31
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: 1dd66b432ff489b5576b9ce7f69c1860cb9240d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67313966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958936"
 ---
 # <a name="what-is-azure-data-studio"></a>Qu’est Azure Data Studio ?
 
@@ -82,7 +81,7 @@ Pour en savoir plus sur la création d’extensions, consultez [création d’ex
 |Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Authentification dans Azure|Oui|Oui|
-|Tableau de bord|Oui||
+|tableau de bord|Oui||
 |Extensions|Oui||
 |Terminal intégré|Oui||
 |Explorateur d’objets|Oui|Oui|
@@ -150,7 +149,7 @@ Pour en savoir plus sur la création d’extensions, consultez [création d’ex
 |Requête de plusieurs serveur||Oui|
 |Gestion basée sur des stratégies||Oui|
 |PolyBase||Oui|
-|Magasin des requêtes||Oui|
+|Magasin de requêtes||Oui|
 |Serveurs inscrits||Oui|
 |REPLICATION||Oui|
 |Gestion de la sécurité||Oui|

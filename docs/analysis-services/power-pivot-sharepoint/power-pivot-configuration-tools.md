@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2d15054f3d6ebbcd25627df42aab5b9248db1f6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207498"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163905"
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53207498"
   
  Les outils ne peuvent être utilisés qu'avec une instance [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]. Ne les utilisez pas avec des installations de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .  
   
-|Créer une vue d’abonnement|Version prise en charge de SharePoint|Détails de la configuration|  
+|Nom|Version prise en charge de SharePoint|Détails de la configuration|  
 |----------|-------------------------------------|----------------------------|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint 2013|SharePoint 2013|[Configurer ou réparer PowerPivot pour SharePoint 2013 &#40;outil de configuration de PowerPivot&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Outil de configuration|SharePoint 2010 avec SharePoint 2010|[Configurer ou réparer Power Pivot pour SharePoint 2010 (outil de configuration de Power Pivot)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
@@ -66,7 +66,7 @@ ms.locfileid: "53207498"
 |La page principale est une nouvelle option pour **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel Services**. L'option prend en charge la nouvelle architecture dans laquelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute à l'extérieur de la batterie de serveurs SharePoint. Vous pouvez configurer Excel Services afin d'utiliser un ou plusieurs serveurs [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui s'exécutent en mode SharePoint.<br /><br /> ![Serveur PowerPivot dans le nouvel outil de configuration](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-mainpage.gif "serveur PowerPivot dans le nouvel outil de configuration")||  
 ||L’outil 2010 inclut la page **Inscrire SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) sur le serveur local** pour configurer une instance locale de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Cette page ne fait pas partie de l'outil 2013 car il n'existe aucune instance locale de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].<br /><br /> ![En tant que compte de service dans l’ancien outil de configuration](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "en tant que compte de service dans l’ancien outil de configuration")|  
 ||La page **Créer une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** comporte une option supplémentaire pour **Mettre les classeurs à niveau pour activer l’actualisation des données**. Cette option n'est pas disponible dans l'outil 2013.<br /><br /> ![mettre à niveau les classeurs dans l’ancien outil de configuration](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "mettre à niveau les classeurs dans l’ancien outil de configuration")|  
-|L’outil 2013 comprend une nouvelle page **Configurer les serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**. Cette page prend en charge la nouvelle architecture dans laquelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute à l'extérieur de la batterie de serveurs SharePoint. Par défaut, le nom du serveur entré dans la page principale dans la zone de texte **Serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel Services**, est également répertorié dans **Configurer les serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.<br /><br /> ![Inscrire PowerPivot serveurs nouvel outil de configuration](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "PowerPivot inscrire les serveurs nouvel outil de configuration")||  
+|L’outil 2013 comprend une nouvelle page **Configurer les serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** . Cette page prend en charge la nouvelle architecture dans laquelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécute à l'extérieur de la batterie de serveurs SharePoint. Par défaut, le nom du serveur entré dans la page principale dans la zone de texte **Serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel Services**, est également répertorié dans **Configurer les serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .<br /><br /> ![Inscrire PowerPivot serveurs nouvel outil de configuration](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "PowerPivot inscrire les serveurs nouvel outil de configuration")||  
 |L’outil 2013 comprend une nouvelle page **Inscrire le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour le suivi de l’utilisation d’Excel Services**. Excel Services dans SharePoint 2010 ne suit pas les données d’utilisation de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].||  
 ||L’outil 2010 comprend la page **Ajouter MSOLAP.5 en tant que fournisseur approuvé** pour inscrire MSOLAP afin qu’Excel Services dans SharePoint 2010 puisse charger des modèles [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Cette page ne fait pas partie de l'outil 2013. Excel Services dans SharePoint 2013 n'utilise pas le fournisseur MSOLAP pour charger les modèles.|  
   
@@ -77,14 +77,14 @@ ms.locfileid: "53207498"
   
  De plus, l'outil peut détecter si la batterie de serveurs est configurée ou si des fonctionnalités requises sont manquantes. Si les fichiers programme SharePoint sont installés, mais que la batterie de serveurs n'est pas configurée, l'outil fournit des actions pour configurer la batterie et l'installation de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] .  
   
- Vous pouvez examiner l’onglet **Script** pour apprendre et comprendre la configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et SharePoint à l’aide de Windows PowerShell. Pour plus d'informations, consultez les documents suivants :  
+ Vous pouvez examiner l’onglet **Script** pour apprendre et comprendre la configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et SharePoint à l’aide de Windows PowerShell. Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Configuration de Power Pivot à l’aide de Windows PowerShell](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  
   
 -   [Référence PowerShell pour Power Pivot pour SharePoint](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
 > [!NOTE]
->  L'outil ne configure pas Reporting Services. Si vous ajoutez Reporting Services à votre environnement SharePoint, vous devez l'installer et le configurer séparément. Pour plus d'informations, consultez les documents suivants :  
+>  L'outil ne configure pas Reporting Services. Si vous ajoutez Reporting Services à votre environnement SharePoint, vous devez l'installer et le configurer séparément. Pour plus d’informations, consultez les rubriques suivantes :  
 > 
 >  -   [Installer le premier serveur de rapports en mode SharePoint](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md).  
 > -   [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](http://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  

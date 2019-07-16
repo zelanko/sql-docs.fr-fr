@@ -1,21 +1,20 @@
 ---
-title: mssqlctl bdc reference
+title: référence du bdc mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Article de référence pour les commandes de bdc mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96ecf1c987baffec0ff71b8b6ef5eccb204b3108
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a9da2de60248246bee3daeeaee40d3071da69c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957955"
 ---
 # <a name="mssqlctl-bdc"></a>mssqlctl bdc
 
@@ -26,16 +25,16 @@ L’article suivant fournit la référence pour le **bdc** commandes dans le **m
 ## <a name="commands"></a>Commandes
 |     |     |
 | --- | --- |
-[mssqlctl bdc create](#mssqlctl-bdc-create) | Créer un Cluster de données volumineux.
+[créer mssqlctl bdc](#mssqlctl-bdc-create) | Créer un Cluster de données volumineux.
 [mssqlctl bdc delete](#mssqlctl-bdc-delete) | Supprimer le Cluster de données volumineux.
 [mssqlctl bdc config](reference-mssqlctl-bdc-config.md) | Commandes de configuration.
-[mssqlctl bdc endpoint](reference-mssqlctl-bdc-endpoint.md) | Commandes de point de terminaison.
+[point de terminaison mssqlctl bdc](reference-mssqlctl-bdc-endpoint.md) | Commandes de point de terminaison.
 [mssqlctl bdc status](reference-mssqlctl-bdc-status.md) | Commandes d’état.
 [mssqlctl bdc debug](reference-mssqlctl-bdc-debug.md) | Commandes de débogage.
-[mssqlctl bdc storage-pool](reference-mssqlctl-bdc-storage-pool.md) | Commandes de pool de stockage.
-[mssqlctl bdc control](reference-mssqlctl-bdc-control.md) | Commandes de contrôle.
+[pool de stockage mssqlctl bdc](reference-mssqlctl-bdc-storage-pool.md) | Commandes de pool de stockage.
+[contrôle du bdc mssqlctl](reference-mssqlctl-bdc-control.md) | Commandes de contrôle.
 [mssqlctl bdc pool](reference-mssqlctl-bdc-pool.md) | Commandes de pool.
-## <a name="mssqlctl-bdc-create"></a>mssqlctl bdc create
+## <a name="mssqlctl-bdc-create"></a>créer mssqlctl bdc
 Créer un Cluster de données volumineuses de SQL Server - Configuration de kube est requise sur votre système, ainsi que les variables d’environnement ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'DOCKER_USERNAME', 'DOCKER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'].
 ```bash
 mssqlctl bdc create [--config-profile -c] 
@@ -76,7 +75,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-bdc-delete"></a>mssqlctl bdc delete
+## <a name="mssqlctl-bdc-delete"></a>suppression du bdc mssqlctl
 Supprimer le Cluster de données volumineuses de SQL Server - Configuration de kube est requise sur votre système, ainsi que les variables d’environnement ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD'].
 ```bash
 mssqlctl bdc delete --name -n 
