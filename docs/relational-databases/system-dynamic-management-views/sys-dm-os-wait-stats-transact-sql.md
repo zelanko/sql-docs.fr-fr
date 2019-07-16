@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
+title: Sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/16/2019
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4fa43746db12f8a1ee2957e3846bf1082ff219
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MT
+ms.openlocfilehash: fc1c8cff535d44cedeb5f42301f010278b87c96d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899739"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,19 +35,19 @@ Retourne des informations sur toutes les attentes subies par les threads qui se 
 > [!NOTE] 
 > À appeler à partir **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** , utilisez le nom **sys.dm_pdw_nodes_os_wait_stats**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar(60)**|Nom du type d'attente. Pour plus d’informations, consultez [Types d’attentes](#WaitTypes), plus loin dans cette rubrique.|  
 |waiting_tasks_count|**bigint**|Nombre d'attentes sur ce type d'attente. Ce compteur est incrémenté au début de chaque attente.|  
 |wait_time_ms|**bigint**|Temps d'attente total en millisecondes pour ce type d'attente. Ce temps comprend signal_wait_time_ms.|  
 |max_wait_time_ms|**bigint**|Temps d'attente maximal sur ce type d'attente.|  
 |signal_wait_time_ms|**bigint**|Différence entre le moment où le thread qui attend a été signalé et le moment où il a commencé à s'exécuter.|  
-|pdw_node_id|**Int**|L’identificateur pour le nœud se trouvant sur cette distribution. <br/> **S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
+|pdw_node_id|**int**|L’identificateur pour le nœud se trouvant sur cette distribution. <br/> **S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] |  
   
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
 
 ##  <a name="WaitTypes"></a> Types d’attentes  
  **Attentes de ressources** attentes de ressources se produisent lorsqu’un processus de travail demande l’accès à une ressource qui n’est pas disponible, car la ressource est utilisée par un autre travail ou n’est pas encore disponible. Ces attentes sont par exemple des attentes de verrous, de verrous internes, de réseau et d'E/S de disque. Les attentes de verrous et de verrous internes sont des attentes sur des objets de synchronisation.  
@@ -331,7 +330,7 @@ Cette commande remet tous les compteurs à 0.
 |HADR_NOTIFICATION_WORKER_STARTUP_SYNC |Une tâche en arrière-plan attend la fin du démarrage d'une tâche en arrière-plan qui traite les notifications de clustering de basculement Windows Server. Usage interne uniquement., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |Une tâche en arrière-plan attend la fin d'une tâche en arrière-plan qui traite les notifications de clustering de basculement Windows Server. Usage interne uniquement., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_PARTNER_SYNC |Attente de contrôle d’accès concurrentiel sur la liste des partenaires., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HADR_READ_ALL_NETWORKS |En attente de l'obtention de l'accès en lecture ou en écriture à la liste des réseaux WSFC. À usage interne uniquement Remarque : Le moteur conserve une liste des réseaux WSFC qui est utilisée dans les vues de gestion dynamique (par exemple, sys.dm_hadr_cluster_networks) ou pour toujours sur Transact-SQL de valider les informations de réseau instructions faisant référence à WSFC. Cette liste est mise à jour au démarrage du moteur, liées de WSFC notifications et Always On redémarrage interne (par exemple, perte et regagnant le quorum WSFC). Les tâches sont généralement bloquées lorsqu'une mise à jour est en cours dans cette liste. , <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_READ_ALL_NETWORKS |En attente de l'obtention de l'accès en lecture ou en écriture à la liste des réseaux WSFC. À usage interne uniquement Remarque : Le moteur conserve une liste des réseaux WSFC qui est utilisée dans les vues de gestion dynamique (par exemple, sys.dm_hadr_cluster_networks) ou pour toujours sur Transact-SQL de valider les informations de réseau instructions faisant référence à WSFC. Cette liste est mise à jour au démarrage du moteur, liées de WSFC notifications et Always On redémarrage interne (par exemple, perte et regagnant le quorum WSFC). Les tâches sont généralement bloquées lorsqu'une mise à jour est en cours dans cette liste. . <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |En attente de la connexion de la base de données secondaire à la base de données primaire avant d'effectuer la récupération. Il s’agit d’une attente prévue, qui peut se prolonger si la connexion vers le serveur principal est lente à établir., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_RECOVERY_WAIT_FOR_UNDO |La récupération de base de données attend que la base de données secondaire termine la phase de rétablissement et d'initialisation afin de la ramener au point de journal commun avec la base de données primaire. Il s’agit une attente prévue après le basculement. Annuler progression permettre être suivie par le biais du Moniteur système de Windows (perfmon.exe) et les vues de gestion dynamique., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_REPLICAINFO_SYNC |En attente de contrôle d’accès concurrentiel mettre à jour l’état de réplica actuel., <br /> **S'applique à**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

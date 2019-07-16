@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f25b61ca54b3a4ac15584ecf31874f90787c735d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34649bba37f922e7597bf09870e3e9d3bcf522dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924629"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>Persistance des recordsets hiérarchiques
 Vous pouvez enregistrer une liste hiérarchique **Recordset** dans un fichier au format ADTG ou XML en appelant le [enregistrer](../../../ado/reference/ado-api/save-method.md) (méthode). Toutefois, deux limitations s’appliquent lors de l’enregistrement hiérarchique **Recordset**s au format XML : Vous ne pouvez pas enregistrer au format XML si l’hiérarchique **Recordset** contient en attente de mises à jour, et vous ne pouvez pas enregistrer un paramétrable hiérarchique **Recordset**.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 48d70126d071879754011fed7342d03dd72185a5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e6568b15a12949180ca0e2df41063c100abc3290
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085297"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,27 +54,27 @@ sp_help_operator
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**Int**|Numéro d'identification de l'opérateur.|  
-|**nom**|**sysname**|Nom de l’opérateur.|  
+|**id**|**int**|Numéro d'identification de l'opérateur.|  
+|**name**|**sysname**|Nom de l’opérateur.|  
 |**enabled**|**tinyint**|L'opérateur est disponible pour recevoir des notifications :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
 |**email_address**|**nvarchar(100)**|Adresse de messagerie de l'opérateur.|  
-|**last_email_date**|**Int**|Date de la dernière notification envoyée par courrier électronique à l'opérateur.|  
+|**last_email_date**|**int**|Date de la dernière notification envoyée par courrier électronique à l'opérateur.|  
 |**last_email_time**|**Int**|Heure de la dernière notification envoyée par courrier électronique à l'opérateur.|  
 |**pager_address**|**nvarchar(100)**|Adresse de radiomessagerie de l'opérateur.|  
-|**last_pager_date**|**Int**|Date de la dernière notification envoyée par radiomessagerie à l'opérateur.|  
-|**last_pager_time**|**Int**|Heure de la dernière notification envoyée par radiomessagerie à l'opérateur.|  
+|**last_pager_date**|**int**|Date de la dernière notification envoyée par radiomessagerie à l'opérateur.|  
+|**last_pager_time**|**int**|Heure de la dernière notification envoyée par radiomessagerie à l'opérateur.|  
 |**weekday_pager_start_time**|**Int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie pendant la semaine.|  
 |**weekday_pager_end_time**|**Int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie pendant la semaine.|  
 |**saturday_pager_start_time**|**Int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le samedi.|  
-|**saturday_pager_end_time**|**Int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le samedi.|  
+|**saturday_pager_end_time**|**int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le samedi.|  
 |**sunday_pager_start_time**|**Int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le dimanche.|  
-|**sunday_pager_end_time**|**Int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le dimanche.|  
+|**sunday_pager_end_time**|**int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le dimanche.|  
 |**pager_days**|**tinyint**|Un masque de bits (**1** = dimanche, **64** = samedi) de jours de la semaine qui indique quand l’opérateur est disponible pour recevoir des notifications par radiomessagerie.|  
 |**netsend_address**|**nvarchar(100)**|Adresse de l'opérateur pour les notifications envoyées par le réseau|  
-|**last_netsend_date**|**Int**|Date de la dernière notification envoyée à l'opérateur via le réseau.|  
-|**last_netsend_time**|**Int**|Heure de la dernière notification envoyée à l'opérateur via le réseau.|  
+|**last_netsend_date**|**int**|Date de la dernière notification envoyée à l'opérateur via le réseau.|  
+|**last_netsend_time**|**int**|Heure de la dernière notification envoyée à l'opérateur via le réseau.|  
 |**category_name**|**sysname**|Nom de la catégorie à laquelle appartient cet opérateur.|  
   
 ## <a name="remarks"></a>Notes  

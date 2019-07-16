@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053103"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +65,9 @@ sp_depends [ @objname = ] '<object>'
   
  Le jeu de résultats suivant affiche les objets sur lesquels  *\<objet >* varie.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**nvarchar(257** **)**|Nom de l'élément pour lequel il existe une dépendance.|  
+|**name**|**nvarchar(257** **)**|Nom de l'élément pour lequel il existe une dépendance.|  
 |**type**|**nvarchar(16)**|Type de l’élément.|  
 |**updated**|**nvarchar(7)**|Indique si l'élément est mis à jour.|  
 |**selected**|**nvarchar(8)**|Indique si l'objet est utilisé dans une instruction SELECT.|  
@@ -76,9 +75,9 @@ sp_depends [ @objname = ] '<object>'
   
  Le jeu de résultats suivant affiche les objets qui dépendent de  *\<objet >* .  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**nvarchar(257** **)**|Nom de l'élément pour lequel il existe une dépendance.|  
+|**name**|**nvarchar(257** **)**|Nom de l'élément pour lequel il existe une dépendance.|  
 |**type**|**nvarchar(16)**|Type de l’élément.|  
   
 ## <a name="permissions"></a>Autorisations  
@@ -86,7 +85,7 @@ sp_depends [ @objname = ] '<object>'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-dependencies-on-a-table"></a>A. Établissement de la liste des dépendances d'une table  
+### <a name="a-listing-dependencies-on-a-table"></a>R. Établissement de la liste des dépendances d'une table  
  L'exemple suivant établit la liste des objets de base de données qui dépendent de la table `Sales.Customer` de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Le nom de schéma et le nom de la table sont tous deux spécifiés.  
   
 ```  

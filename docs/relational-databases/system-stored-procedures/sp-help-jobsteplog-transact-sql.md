@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b6480c498914c4ec0bc02ba21552615bbdd28f6e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e3af6ff05b971e6b9a0dedc1ec2e14f4ba87e00c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090043"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,11 +58,11 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Identificateur unique de la tâche.|  
 |**job_name**|**sysname**|Nom du travail.|  
-|**step_id**|**Int**|Identificateur de l'étape du travail. Par exemple, si l’étape est la première étape du travail, son *id_de_l* est 1.|  
+|**step_id**|**int**|Identificateur de l'étape du travail. Par exemple, si l’étape est la première étape du travail, son *id_de_l* est 1.|  
 |**step_name**|**sysname**|Nom de l’étape du travail.|  
 |**step_uid**|**uniqueidentifier**|Identificateur unique de l'étape du travail (généré par le système).|  
 |**date_created**|**datetime**|Date de création de l'étape.|  
@@ -89,7 +88,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returns-job-step-log-information-for-all-steps-in-a-specific-job"></a>A. Retourne des informations sur toutes les étapes d'un travail spécifique  
+### <a name="a-returns-job-step-log-information-for-all-steps-in-a-specific-job"></a>R. Retourne des informations sur toutes les étapes d'un travail spécifique  
  L'exemple ci-dessous retourne toutes les informations du journal d'étapes du travail `Weekly Sales Data Backup`.  
   
 ```  

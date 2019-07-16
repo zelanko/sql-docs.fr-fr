@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 935b63a38cbef585c33d2241652f4951189b61b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.openlocfilehash: aa9e8d8105852c4b4d67acec965fd037a5c05ac4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097739"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -37,10 +36,10 @@ ms.locfileid: "66462547"
 > Une requête initiale de **sys.dm_exec_function_stats** peut produire des résultats inexacts s’il existe une charge de travail en cours d’exécution sur le serveur. Des résultats plus précis peuvent être déterminés en réexécutant la requête.  
   
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|ID de base de données dans lequel la fonction réside.|  
-|**object_id**|**Int**|Numéro d’identification de la fonction.|  
+|**database_id**|**int**|ID de base de données dans lequel la fonction réside.|  
+|**object_id**|**int**|Numéro d’identification de la fonction.|  
 |**type**|**char(2)**|Type de l'objet :   FN = les fonctions scalaires|  
 |**type_desc**|**nvarchar(60)**|Description du type d'objet : SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|Cela peut être utilisé pour mettre en corrélation avec des requêtes de **sys.dm_exec_query_stats** qui ont été exécutées à partir de cette fonction.|  
@@ -76,7 +75,7 @@ ms.locfileid: "66462547"
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant retourne des informations sur les dix principales fonctions identifié par le temps moyen écoulé.  

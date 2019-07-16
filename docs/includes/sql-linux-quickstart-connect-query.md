@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215635"
+---
 ## <a name="connect-locally"></a>Se connecter localement
 
 La procédure suivante utilise **sqlcmd** pour se connecter localement à votre nouvelle instance de SQL Server.
@@ -44,7 +52,7 @@ La procédure suivante crée une base de données nommée `TestDB`.
    ```
 
 > [!TIP]
-> Pour plus d’informations sur l’écriture de requêtes d’instructions Transact-SQL, consultez la page [Didacticiel : écrire des instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Pour en savoir plus sur l’écriture d’instructions Transact-SQL et les requêtes, consultez [didacticiel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Insérer des données
 
@@ -100,7 +108,7 @@ QUIT
 
 ## <a name="performance-best-practices"></a>Meilleures pratiques de performances
 
-Après avoir installé SQL Server sur Linux, passez en revue les meilleures pratiques pour la configuration Linux et SQL Server pour améliorer les performances pour les scénarios de production. Pour plus d’informations, consultez [performances meilleures pratiques et des instructions de configuration de SQL Server sur Linux](../linux/sql-server-linux-performance-best-practices.md).
+Après avoir installé SQL Server sur Linux, passez en revue les meilleures pratiques pour la configuration Linux et SQL Server pour améliorer les performances pour les scénarios de production. Pour plus d’informations, consultez les [Bonnes pratiques en matière de performances et instructions de configuration de SQL Server sur Linux](../linux/sql-server-linux-performance-best-practices.md).
 
 ## <a name="cross-platform-data-tools"></a>Outils de données entre les plates-formes
 
@@ -108,9 +116,10 @@ En plus de **sqlcmd**, vous pouvez utiliser les outils multiplateformes suivants
 
 |||
 |---|---|
-| [Studio de données Azure](../azure-data-studio/index.md) | Un utilitaire de gestion de base de données de l’interface graphique utilisateur inter-plateformes. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Une interface de ligne de commande interplateforme pour l’exécution des commandes Transact-SQL. |
+| [Azure Data Studio](../azure-data-studio/index.md) | Un utilitaire de gestion de base de données de l’interface graphique utilisateur inter-plateformes. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Un éditeur de code de l’interface graphique utilisateur interplateforme qui exécutent des instructions Transact-SQL avec l’extension mssql. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Un outil automation et la configuration multiplateforme basé sur les applets de commande. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Une interface de ligne de commande interplateforme pour l’exécution des commandes Transact-SQL. |
 
 ## <a name="connecting-from-windows"></a>Connexion à partir de Windows
 
@@ -122,7 +131,7 @@ Pour d’autres outils qui s’exécutent sur Windows, mais se connectent à SQL
 
 - [SQL Server Management Studio (SSMS)](../linux/sql-server-linux-manage-ssms.md)
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
-- [SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
+- [Outils SQL Server Data Tools (SSDT)](../linux/sql-server-linux-develop-use-ssdt.md)
 
 ## <a name="other-deployment-scenarios"></a>Autres scénarios de déploiement
 

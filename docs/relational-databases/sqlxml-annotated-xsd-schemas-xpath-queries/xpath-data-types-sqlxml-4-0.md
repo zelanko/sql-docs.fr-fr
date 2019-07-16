@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c5cb588e96bcabad464339b7227ada3aef86221
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c9f66bf1ded94b0877309917e9f03e71512ac8f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051594"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Types de données XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ ms.locfileid: "62678060"
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|N/A|NoneEmployeeID|  
 |booléenne|booléenne|CONVERT(bit, EmployeeID)|  
-|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|nombre|CONVERT(float(53), EmployeeID)|  
+|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|chaîne|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/A (aucun type de données XPath n'équivaut au type de données XDR fixed14.4)|CONVERT(money, EmployeeID)|  
 |date|chaîne|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
@@ -131,11 +130,11 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ||X est inconnu|X est **chaîne**|X est **nombre**|X est **booléenne**|  
 |string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
 |number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN(X) > 0|X != 0|-|  
+|boolean(X)|-|LEN (X) > 0|X != 0|-|  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-convert-a-data-type-in-an-xpath-query"></a>A. Convertir un type de données dans une requête XPath  
+### <a name="a-convert-a-data-type-in-an-xpath-query"></a>R. Convertir un type de données dans une requête XPath  
  Dans la requête XPath suivante spécifiée par rapport à un schéma XSD annoté, la requête sélectionne tous les **employé** nœuds avec le **EmployeeID** valeur de E-1, où « E- » est le préfixe spécifié à l’aide de l’attribut le **SQL : ID-préfixe** annotation.  
   
  `Employee[@EmployeeID="E-1"]`  

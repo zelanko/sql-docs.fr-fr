@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6c0f5d54f8a6d3ac1dd35c7d02b05e1b5900278
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083562"
 ---
 # <a name="sql-server-migration-assistant"></a>Assistant Migration SQL Server
 Migration Assistant Microsoft SQL Server (SSMA) est un outil conçu pour automatiser la migration de base de données vers SQL Server à partir de Microsoft Access, DB2, MySQL, Oracle et SAP ASE.  
@@ -37,11 +36,11 @@ Pour des sources prises en charge, passez en revue les informations sur le centr
 
 SSMA prennent en charge les versions suivantes de la cible.
 
-- SQL Server 2008
-- SQL Server 2008 R2
-- SQL Server 2012
+- SQL Server 2008
+- SQL Server 2008 R2
+- SQL Server 2012
 - SQL Server 2014
-- SQL Server 2016
+- SQL Server 2016
 - SQL Server 2017 sur Windows et Linux
 - SQL Server 2019 sur Windows et Linux
 - Azure SQL Database
@@ -78,11 +77,11 @@ Cette documentation, ainsi que les exemples d’applications qu’elle contient,
   
 Un exemple présenté dans cette documentation sert principalement à illustrer un concept ou l’utilisation raisonnable d’une instruction ou d’une clause particulière. La plupart des exemples ne reprennent pas la totalité du code normalement utilisé dans un système en production puisque certaines parties de la validation des données et de la gestion des erreurs sont retirées pour mettre l’accent sur un concept ou une instruction particulière. Aucun support technique n’est disponible pour ces exemples, ni pour le code source fourni.  
   
-Sauf mention contraire, les exemples de sociétés, d'organisations, de produits, de noms de domaine, d'adresses de messagerie, de personnes, de lieux et d'événements sont fictifs et toute ressemblance avec des sociétés, des organisations, des produits, des noms de domaine, des adresses de messagerie, des personnes, des lieux ou des événements réels serait tout à fait fortuite. L’utilisateur est tenu d’observer la réglementation relative aux droits d’auteur applicable dans son pays. Aucune partie de cette documentation ne peut être reproduite, stockée ou introduite dans un système de restitution, ou transmise à quelque fin ou par quelque moyen que ce soit (électronique, mécanique, photocopie, enregistrement ou autre) sans la permission expresse et écrite de Microsoft Corporation.  
+Sauf mention contraire, les exemples de sociétés, d'organisations, de produits, de noms de domaine, d'adresses de messagerie, de personnes, de lieux et d'événements sont fictifs et toute ressemblance avec des sociétés, des organisations, des produits, des noms de domaine, des adresses de messagerie, des personnes, des lieux ou des événements réels serait tout à fait fortuite. L'utilisateur est tenu d'observer la réglementation relative aux droits d'auteur applicable dans son pays. Aucune partie de cette documentation ne peut être reproduite, stockée ou introduite dans un système de restitution, ou transmise à quelque fin ou par quelque moyen que ce soit (électronique, mécanique, photocopie, enregistrement ou autre) sans la permission expresse et écrite de Microsoft Corporation.  
   
 Les produits mentionnés dans cette documentation peuvent faire l’objet de brevets, de dépôts de brevets en cours, de marques, de droits d’auteur ou d’autres droits de propriété intellectuelle et industrielle de Microsoft. Sauf stipulation expresse contraire d’un contrat de licence écrit de Microsoft, la fourniture de cette documentation n’a pas pour effet de vous concéder une licence sur ces brevets, marques, ni de vous céder des droits d’auteur ou autres droits de propriété intellectuelle quels qu’ils soient.  
   
-© 2019 Microsoft Corporation. Tous droits réservés.  
+© Microsoft Corporation, aux 2019. Tous droits réservés.  
   
 Microsoft, Windows, Windows NT, Windows Server, Active Directory, ActiveX, BackOffice, bCentral, BizTalk, DirectX, Excel, Hotmail, IntelliSense, J/Direct, Jscript, Microsoft Press, MSDN, MS-DOS, Outlook, PivotChart, PivotTable, PowerPoint, SharePoint, SQL Server, Visual Basic, Visual C#, Visual C++, Visual FoxPro, Visual InterDev, Visual J#, Visual J++, Visual SourceSafe, Visual Studio, Win32, Win32s, Windows Mobile, Windows Server System et WinFX sont soit des marques déposées de Microsoft Corporation, soit des marques de Microsoft Corporation aux États-Unis d’Amérique et/ou dans d’autres pays/régions.  
   

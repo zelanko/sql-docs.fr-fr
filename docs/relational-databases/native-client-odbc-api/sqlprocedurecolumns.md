@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73a6ae0a7209eaef4438aee865f8e887af4ed176
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 743423e3f38d30440c355c05aa084e2b54ea0908
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131237"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "63014278"
   
  Le tableau suivant répertorie les colonnes retournées par le jeu de résultats et la façon dont elles ont été étendues pour gérer les types de données **udt** et **xml** via le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client :  
   
-|Nom de colonne|Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|Retourne le nom du catalogue contenant le type défini par l'utilisateur (UDT).|  
 |SS_UDT_SCHEMA_NAME|Retourne le nom du schéma contenant l'UDT.|  
@@ -46,7 +45,7 @@ ms.locfileid: "63014278"
 ## <a name="sqlprocedurecolumns-and-table-valued-parameters"></a>SQLProcedureColumns et paramètres table  
  SQLProcedureColumns gère les paramètres de la table d’une manière semblable aux types CLR définis par l’utilisateur. Dans les lignes retournées pour les paramètres table, les colonnes ont les valeurs suivantes :  
   
-|Nom de colonne|Description/valeur|  
+|Nom de la colonne|Description/valeur|  
 |-----------------|------------------------|  
 |DATA_TYPE|SQL_SS_TABLE|  
 |TYPE_NAME|Nom du type de table pour le paramètre table.|  

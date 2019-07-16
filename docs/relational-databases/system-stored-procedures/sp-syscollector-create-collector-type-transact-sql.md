@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f7b50d9cf05f1242ae853f7aa24e7e681bdc245f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd8c82a401f78f4907bb891ede845017c00ac5ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032634"
 ---
 # <a name="spsyscollectorcreatecollectortype-transact-sql"></a>sp_syscollector_create_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_syscollector_create_collector_type
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  Est le GUID pour le type de collecteur. *collector_type_uid* est **uniqueidentifier** et si sa valeur est NULL, il sera automatiquement créée et retournée en tant que sortie.  
   
  [ @name =] '*nom*'  
  Nom du type de collecteur. *nom* est **sysname** et doit être spécifié.  
   
- [ @parameter_schema = ] '*parameter_schema*'  
+ [ @parameter_schema =] '*parameter_schema*'  
  Schéma XML pour ce type de collecteur. *parameter_schema* est **xml** avec NULL comme valeur par défaut.  
   
- [ @parameter_formatter = ] '*parameter_formatter*'  
+ [ @parameter_formatter =] '*parameter_formatter*'  
  Modèle à utiliser pour transformer le XML utilisé dans la page de propriétés du jeu d'éléments de collecte. *parameter_formatter* est **xml** avec NULL comme valeur par défaut.  
   
  [@collection_package_id = ] *collection_package_id*  

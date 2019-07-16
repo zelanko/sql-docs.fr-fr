@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb02dd54ea57af668e56fe910ca92830fb09c418
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92b8ca2b8c780e48cd9f3bf815ca86e3bd27081e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135632"
 ---
 # <a name="data-sources"></a>Sources de données
 Un *source de données* est simplement la source des données. Il peut être un fichier, une base de données sur un système SGBD, ou même un flux de données actives. Les données peuvent être situées sur le même ordinateur que le programme ou sur un autre ordinateur situé sur un réseau. Par exemple, une source de données peut être un SGBD Oracle s’exécutant sur un système d’exploitation OS/2®, accédé par Novell Netware,® ; un SGBD de DB2 d’IBM accessibles via une passerelle ; une collection de fichiers Xbase dans un répertoire du serveur ; ou un fichier de base de données Microsoft® Access local.  

@@ -1,5 +1,5 @@
 ---
-title: RecordType Property (ADO) | Microsoft Docs
+title: RecordType, propriété (ADO) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c68a8d5664002651271026e9448c40c4100afc4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e832ec871a353b994c1858bb01a2a2ab557f3869
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917316"
 ---
 # <a name="recordtype-property-ado"></a>RecordType, propriété (ADO)
 Indique le type de [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet.  

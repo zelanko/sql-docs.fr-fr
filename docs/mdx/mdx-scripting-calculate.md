@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 389c5f470cb3bf00cfe668a9405e36cd4ac8950e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4a8be73a94ccbca1eb0deeacc0e7cc33c5cfaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003446"
 ---
 # <a name="mdx-scripting---calculate"></a>Écriture de scripts MDX - CALCULATE
 
@@ -29,7 +28,7 @@ CALCULATE
 ```  
   
 ## <a name="arguments"></a>Arguments  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  L'instruction CALCULATE est automatiquement incluse en tant que première instruction d'un script MDX d'un cube lorsque vous créez un cube à l'aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Elle indique à chaque cellule au sein du cube de s'agréger à partir de cellules de granularité plus faible. Après avoir agrégé une cellule, si vous remplissez par la suite les cellules à plus faible granularité à l'aide d'expressions, cette opération aura une incidence sur la valeur agrégée des cellules à plus forte granularité. Cette agrégation est quasiment toujours souhaitable mais vous pouvez la supprimer ou forcer l'exécution d'autres instructions avant cette instruction.  

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2e5bdee7bfd46e99424169e0890c6aa6bf4d4187
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a97fe48c710fb2945cd377da92808404addd094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990080"
 ---
 # <a name="logshippingmonitoralert-transact-sql"></a>log_shipping_monitor_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Stocke l'ID du travail d'alerte de la copie des journaux de transaction. Cette table est stockée dans le **msdb** base de données.   
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**alert_job_id**|**uniqueidentifier**|ID de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du travail d'alerte de l'envoi des journaux.|  
   

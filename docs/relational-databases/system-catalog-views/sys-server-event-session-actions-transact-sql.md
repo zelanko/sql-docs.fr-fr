@@ -20,28 +20,27 @@ helpviewer_keywords:
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 434d0b3c220685e317f8069183c7be28d0254018
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50ba26f679dd6a3040dea242127661bf7d954a5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124931"
 ---
 # <a name="sysservereventsessionactions-transact-sql"></a>sys.server_event_session_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne une ligne pour chaque action d'un événement d'une session d'événements.  
+  Renvoie une ligne pour chaque action sur chaque événement d’une session d’événements.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**Int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
-|event_id|**Int**|ID de l'événement. Cet ID est unique dans l'objet de la session d'événements. N'accepte pas la valeur NULL.|  
-|NAME|**sysname**|Le nom de l’action. Autorise la valeur NULL.|  
+|event_session_id|**int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
+|event_id|**int**|ID de l'événement. Cet ID est unique dans l'objet de la session d'événements. N'accepte pas la valeur NULL.|  
+|name|**sysname**|Le nom de l’action. Autorise la valeur NULL.|  
 |package|**sysname**|Nom du package d'événement qui contient l'événement. Autorise la valeur NULL.|  
 |module|**sysname**|Nom du module qui contient l'événement. Autorise la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  

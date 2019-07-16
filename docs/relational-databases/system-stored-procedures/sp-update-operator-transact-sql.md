@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac1fb436ded0d829d9b6a9c8fe4e642f8de8cb16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084840"
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ sp_update_operator
  Un nombre indiquant l’état actuel de l’opérateur (**1** si actuellement activé, **0** si ce n’est pas le cas). *activé* est **tinyint**, avec NULL comme valeur par défaut. S'il n'est pas activé, l'opérateur ne recevra pas de notifications d'alerte.  
   
  [ @email_address=] '*email_address*'  
- Adresse de courrier électronique de l'opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *email_address* est **nvarchar (100)**, avec NULL comme valeur par défaut.  
+ Adresse de courrier électronique de l'opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *email_address* est **nvarchar (100)** , avec NULL comme valeur par défaut.  
   
  [ @pager_address=] '*numéro_récepteur_radiomessagerie*'  
- L’adresse de radiomessagerie de l’opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *numéro_récepteur_radiomessagerie* est **nvarchar (100)**, avec NULL comme valeur par défaut.  
+ L’adresse de radiomessagerie de l’opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *numéro_récepteur_radiomessagerie* est **nvarchar (100)** , avec NULL comme valeur par défaut.  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
  Indique l'heure à partir de laquelle une notification peut être envoyée à cet opérateur sur son récepteur de radiomessagerie, du lundi au vendredi. *heure_début_radiomessagerie_semaine*est **int**, avec NULL comme valeur par défaut et il doit être entré au format HHMMSS pour une utilisation avec une horloge de 24 heures.  
@@ -90,7 +89,7 @@ sp_update_operator
  [ @pager_days=] *jours_radiomessagerie*  
  Indique les jours où l'opérateur est en mesure de recevoir des notifications par radiomessagerie (en fonction des heures de début/fin précisées). *jours_radiomessagerie*est **tinyint**, avec NULL comme valeur par défaut et doit être une valeur comprise entre **0** via **127**. *jours_radiomessagerie* est calculée en ajoutant les valeurs représentant les jours voulus. Par exemple, du lundi au vendredi est **2**+**4**+**8**+**16** + **32** = **64**.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Dimanche|  
 |**2**|Lundi|  
@@ -101,7 +100,7 @@ sp_update_operator
 |**64**|Samedi|  
   
  [ @netsend_address=] '*adresse_envoiréseau*'  
- Adresse réseau de l'opérateur à qui est envoyé le message réseau. *adresse_envoiréseau*est **nvarchar (100)**, avec NULL comme valeur par défaut.  
+ Adresse réseau de l'opérateur à qui est envoyé le message réseau. *adresse_envoiréseau*est **nvarchar (100)** , avec NULL comme valeur par défaut.  
   
  [ @category_name=] '*catégorie*'  
  Nom de la catégorie pour cette alerte. *catégorie* est **sysname**, avec NULL comme valeur par défaut.  
@@ -112,7 +111,7 @@ sp_update_operator
 ## <a name="remarks"></a>Notes  
  La procédure sp_update_operator doit être exécutée à partir de la base de données msdb.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d'exécution de cette procédure sont octroyées par défaut aux membres du rôle de serveur fixe sysadmin.  
   
 ## <a name="examples"></a>Exemples  

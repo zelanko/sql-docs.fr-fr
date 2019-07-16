@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d138d5ef09c4de32b0fb279287898a4933eb4e84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfefde49bb86833025fc14c2ea84782e8caa84a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107090"
 ---
 # <a name="conversions-ole-db"></a>Conversions (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47612558"
   
 -   Le format de **datetime** et **datetimeoffset** chaînes est :  
   
-     *aaaa*-*mm*-*jj*[ *hh*:*mm*:*ss*[. *9999999*] [+ *hh*:*mm*]]  
+     *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
 -   Le format des chaînes **time** est :  
   
@@ -46,7 +45,7 @@ ms.locfileid: "47612558"
 > [!NOTE]  
 >  Les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client et SQLOLEDB autorisaient l'implémentation de conversions OLE en cas d'échec des processus de conversion standard. C'est pourquoi certaines conversions réalisées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 et versions ultérieures diffèrent de la spécification OLE DB.  
   
- Les conversions de chaînes autorisent une souplesse en matière d'espace et de largeur de champ. Pour plus d’informations, consultez la section « Formats de données : chaînes et littéraux » dans [prise en charge du Type de données pour les améliorations OLE DB Date / heure](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Les conversions de chaînes autorisent une souplesse en matière d'espace et de largeur de champ. Pour plus d’informations, consultez les « Formats de données : Section de chaînes et littéraux » dans [prise en charge du Type de données pour les améliorations OLE DB Date / heure](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  Les règles suivantes sont les règles générales de conversion :  
   

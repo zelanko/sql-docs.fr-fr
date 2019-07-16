@@ -20,21 +20,20 @@ helpviewer_keywords:
 ms.assetid: 0e1b0e32-1cce-40f7-83c8-860ec660138a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64532403f495a65cd61fbf6a8bc95369a0a4add3
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060556"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque objet séquence dans une base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |\<héritée de colonnes >||Hérite de toutes les colonnes de [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**start_value**|**sql_variant non NULL**|Valeur de départ pour l'objet séquence. Si l'objet séquence est redémarré à l'aide d'ALTER SEQUENCE, il redémarrera à cette valeur. Lorsque l’objet séquence cycles il passe à la **minimum_value** ou **maximum_value**, et non le **start_value**.|  

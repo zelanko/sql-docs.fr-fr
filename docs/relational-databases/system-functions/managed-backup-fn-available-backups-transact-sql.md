@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7e8e2af3150b6c0e8663c28a1342b68be57e043d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1c7bb6e33dfd2ee6640e9588011d3686a72a0188
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140668"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 Si une base de données est supprimée, puis recréée, les jeux de sauvegarde de toutes les bases de données sont retournés. La sortie est classée par database_guid, qui identifie de façon unique chaque base de données.   
 S'il existe des ruptures dans la séquence des LSN, indiquant qu'il existe une rupture dans la séquence de journaux de transactions consécutifs, la table contiendra une ligne spéciale pour chaque segment LSN manquant.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|URL du fichier de sauvegarde.|  
 |backup_type|NVARCHAR(6)|« DB » pour la base de données de sauvegarde « LOG » pour la sauvegarde du journal|  

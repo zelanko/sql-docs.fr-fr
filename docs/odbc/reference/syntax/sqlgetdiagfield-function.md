@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1446a999029b2c39bfbe4c6c43cf48ad3a09e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 620ccce9a035139482b2d9b4630bb2242f720af8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103777"
 ---
 # <a name="sqlgetdiagfield-function"></a>Fonction SQLGetDiagField
 
@@ -105,7 +104,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_SUCCESS_WITH_INFO : \**DiagInfoPtr* était trop petite pour contenir le champ de diagnostic demandé. Par conséquent, les données dans le champ de diagnostic a été tronquées. Pour déterminer qu’une troncation s’est produite, l’application doit comparer *BufferLength* au nombre réel d’octets disponibles, ce qui est écrite dans **StringLengthPtr*.  
   
--   SQL_INVALID_HANDLE: Le handle a indiqué par *HandleType* et *gérer* n’était pas un handle valide.  
+-   SQL_INVALID_HANDLE : Le handle a indiqué par *HandleType* et *gérer* n’était pas un handle valide.  
   
 -   SQL_ERROR : Parmi les options suivantes s’est produite :  
   
@@ -190,7 +189,7 @@ SQLRETURN SQLGetDiagField(
   
 |Instruction SQL<br /><br /> Exécutée|Valeur de<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|Valeur de<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
-|*alter-domain-statement*|« ALTER DOMAINE »|SQL_DIAG_ALTER_DOMAIN|  
+|*domaine-instruction ALTER*|« ALTER DOMAINE »|SQL_DIAG_ALTER_DOMAIN|  
 |*alter-table-statement*|« ALTER TABLE »|SQL_DIAG_ALTER_TABLE|  
 |*assertion-definition*|« CREATE ASSERTION »|SQL_DIAG_CREATE_ASSERTION|  
 |*character-set-definition*|« CRÉER LE JEU DE CARACTÈRES »|SQL_DIAG_CREATE_CHARACTER_SET|  
@@ -199,27 +198,27 @@ SQLRETURN SQLGetDiagField(
 |*create-index-statement*|« CREATE INDEX »|SQL_DIAG_CREATE_INDEX|  
 |*create-table-statement*|« CREATE TABLE »|SQL_DIAG_CREATE_TABLE|  
 |*create-view-statement*|« CREATE VIEW »|SQL_DIAG_CREATE_VIEW|  
-|*cursor-specification*|« SELECT CURSEUR »|SQL_DIAG_SELECT_CURSOR|  
+|*spécification de curseur*|« SELECT CURSEUR »|SQL_DIAG_SELECT_CURSOR|  
 |*delete-statement-positioned*|« CURSEUR DYNAMIQUE DE SUPPRESSION »|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
 |*delete-statement-searched*|« DELETE WHERE »|SQL_DIAG_DELETE_WHERE|  
 |*drop-assertion-statement*|« DROP ASSERTION »|SQL_DIAG_DROP_ASSERTION|  
 |*drop-character-set-stmt*|« JEU DE CARACTÈRES DE DÉPÔT »|SQL_DIAG_DROP_CHARACTER_SET|  
 |*drop-collation-statement*|« DROP CLASSEMENT »|SQL_DIAG_DROP_COLLATION|  
-|*drop-domain-statement*|« DROP DOMAINE »|SQL_DIAG_DROP_DOMAIN|  
+|*instruction DROP-domaine*|« DROP DOMAINE »|SQL_DIAG_DROP_DOMAIN|  
 |*drop-index-statement*|« DROP INDEX »|SQL_DIAG_DROP_INDEX|  
 |*drop-schema-statement*|« DROP SCHEMA »|SQL_DIAG_DROP_SCHEMA|  
-|*drop-table-statement*|« DROP TABLE »|SQL_DIAG_DROP_TABLE|  
+|*instruction DROP-table*|« DROP TABLE »|SQL_DIAG_DROP_TABLE|  
 |*drop-translation-statement*|« DÉPÔT TRADUCTION »|SQL_DIAG_DROP_TRANSLATION|  
-|*drop-view-statement*|« DROP VIEW »|SQL_DIAG_DROP_VIEW|  
+|*instruction DROP-vue*|« DROP VIEW »|SQL_DIAG_DROP_VIEW|  
 |*grantstatement*|« GRANT »|SQL_DIAG_GRANT|
-|*insert-statement*|« INSERT »|SQL_DIAG_INSERT|  
-|*ODBC-procedure-extension*|« APPELER »|SQL_DIAG_ CALL|  
-|*revoke-statement*|« REVOKE »|SQL_DIAG_REVOKE|  
+|*instruction d’insertion*|« INSERT »|SQL_DIAG_INSERT|  
+|*Extension de procédure ODBC*|« APPELER »|APPEL DE SQL_DIAG_|  
+|*instruction REVOKE*|« REVOKE »|SQL_DIAG_REVOKE|  
 |*schema-definition*|« CRÉER UN SCHÉMA »|SQL_DIAG_CREATE_SCHEMA|  
 |*translation-definition*|« CRÉER LA TRADUCTION »|SQL_DIAG_CREATE_TRANSLATION|  
 |*update-statement-positioned*|« MISE À JOUR DYNAMIQUE CURSOR »|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*update-statement-searched*|« UPDATE WHERE »|SQL_DIAG_UPDATE_WHERE|  
-|Unknown|*chaîne vide*|SQL_DIAG_UNKNOWN_STATEMENT|  
+|Inconnu|*chaîne vide*|SQL_DIAG_UNKNOWN_STATEMENT|  
 
 <!--
 These two malformed table rows were fixed by educated GUESS only.

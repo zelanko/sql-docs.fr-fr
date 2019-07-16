@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 336565da-4203-4745-bce2-4f011c08e357
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c54e545bdbd1ae137c24f79c71b53502480cbca9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de3496661f2ab329e5bf662a9cb8fa749cb81bfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129323"
 ---
 # <a name="notification-of-asynchronous-function-completion"></a>Notification de la fin d’une fonction asynchrone
 Dans le Kit de développement Windows 8, ODBC ajouté un mécanisme pour informer les applications lors de l’opération asynchrone terminée, nous appellerons « notification en cas d’opération ». (Consultez [exécution asynchrone (méthode de Notification)](../../../odbc/reference/develop-app/asynchronous-execution-notification-method.md) pour plus d’informations.) Cette rubrique décrit certains des problèmes pour les développeurs de pilotes.  

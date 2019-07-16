@@ -7,13 +7,12 @@ ms.date: 11/09/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 01fb7962a5be08f40fe1c790b335c24d34979a2a
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 551d7c81220175efd1143323cce0a9bcdb4ad3f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962908"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Installer les Services SQL Server Machine Learning avec R et Python sur une machine virtuelle Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,6 +53,6 @@ Pour cela, vous devez autoriser les comptes de travail SQL utilisés par Launchp
   
   [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] utilise le protocole des canaux nommés pour les connexions entre les ordinateurs client et serveur, ainsi que pour certaines connexions internes. Si ce protocole n’est pas activé, vous devez l’installer et l’activer sur la machine virtuelle Azure et sur tous les clients de science des données susceptibles de se connecter au serveur.
   
-+ Activer TCP/IP
++ Activation de TCP/IP
 
   TCP/IP est requis pour les connexions de bouclage. Si vous obtenez l’erreur « DBNETLIB ; SQL Server n’existe pas ou l’accès refusé », activez TCP/IP sur l’ordinateur virtuel qui prend en charge de l’instance.

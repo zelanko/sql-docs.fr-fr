@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 190ed0cd-0c5e-4607-9db4-9e77cacf17d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70839b61a7649bcd40839a4bd8fac168ac21b0fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d43f30f15502a41882190dcdd19984d9ec042d4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037396"
 ---
 # <a name="sysxmlschemaelements-transact-sql"></a>sys.xml_schema_elements (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque composant de schéma XML qui est un Type, **symbol_space** de **E**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**\<héritée de colonnes >**|**--**|Hérite des colonnes de [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_default_fixed**|**bit**|1 = La valeur par défaut est une valeur fixe. Cette valeur ne peut pas être remplacée dans une instance XML.<br /><br /> 0 = La valeur par défaut n'est pas une valeur fixe pour cet élément. (Valeur par défaut.)|  

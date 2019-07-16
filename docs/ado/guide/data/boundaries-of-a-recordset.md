@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0dd4a0f-478d-4c5e-b5d5-7535f211d064
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 967ccb49cd2bbaa805420e7c982cc11721931022
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f4efddad1b55ce57c62ce52418539ec06599bb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925913"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites d’un recordset
 **Jeu d’enregistrements** prend en charge la **BOF** et **EOF** propriétés pour délimiter le début et la fin, respectivement, du jeu de données. Vous pouvez considérer **BOF** et **EOF** sous forme d’enregistrements « fantômes » qui sont placés au début et à la fin de la **Recordset**. Comptage **BOF** et **EOF**, notre exemple **Recordset** ressemblerait maintenant à ceci :  
@@ -30,7 +29,7 @@ ms.locfileid: "66702348"
 |BOF|||  
 |7|Poires secs organiques d’oncle Bob|30.0000|  
 |14|Tofu|23.2500|  
-|28|Rssle Sauerkraut|45.6000|  
+|28|Rssle choucroute|45.6000|  
 |51|Manjimup pommes en poudre|53.0000|  
 |74|Longlife Tofu|10.0000|  
 |EOF|||  

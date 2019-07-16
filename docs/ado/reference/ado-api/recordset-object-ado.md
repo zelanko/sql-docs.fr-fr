@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ede1415f-c3df-4cc5-a05b-2576b2b84b60
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cc95d6ef7e61dcde373a646359d134dce0b3389d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e76bc993b6f3fed781b8458bc7cf4a70081cd167
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931366"
 ---
 # <a name="recordset-object-ado"></a>Recordset, objet (ADO)
 Représente l’ensemble des enregistrements à partir d’une table de base ou les résultats d’une commande exécutée. À tout moment, le **Recordset** objet fait référence à un seul enregistrement dans le jeu en tant que l’enregistrement en cours.  
@@ -79,6 +78,6 @@ Debug.Print objRs(0)              '  the Value of Item(0).
   
 ## <a name="see-also"></a>Voir aussi  
  [Objet Connection (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Annexe A : fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md)

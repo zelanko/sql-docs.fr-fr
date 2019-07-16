@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b1a14d1cf8c9eac0ace93e3aac6e16219fd60eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62961911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139921"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_indexes [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @table_server= ] '*table_server*'  
+ [ @table_server=] '*serveur_de_la_table*'  
  Nom du serveur lié exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour lequel les informations de table sont demandées. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
   
  [ @table_name=] '*table_name*'  
@@ -60,7 +59,7 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @index_name=] '*index_name*'  
  Nom de l'index pour lequel les informations sont demandées. *index* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ @is_unique= ] '*is_unique*'  
+ [ @is_unique=] '*is_unique*'  
  Type d'index pour lequel les informations sont demandées. *is_unique* est **bits**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
@@ -71,7 +70,7 @@ sp_indexes [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |TABLE_CAT|**sysname**|Nom de la base de données qui contient la table spécifiée.|  
 |TABLE_SCHEM|**sysname**|Schéma de la table.|  
@@ -84,7 +83,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |COLUMN_NAME|**sysname**|Nom correspondant de chaque colonne de la table TABLE_NAME renvoyée.|  
 |ASC_OR_DESC|**varchar**|Ordre utilisé dans les classements :<br /><br /> A = Croissant<br /><br /> D = Décroissant<br /><br /> NULL = Non applicable<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours A.|  
 |CARDINALITY|**Int**|Est le nombre de lignes dans la table ou de valeurs uniques dans l’index.|  
-|PAGES|**Int**|Nombre de pages pour le stockage de l'index ou de la table.|  
+|PAGES|**int**|Nombre de pages pour le stockage de l'index ou de la table.|  
 |FILTER_CONDITION|**nvarchar(** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur.|  
   
 ## <a name="permissions"></a>Autorisations  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 15ee82c04372528d29289a3ed6c5c55271acf5fb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209601"
 ---
 # <a name="training-and-testing-data-sets"></a>Jeux de données d'apprentissage et de test
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "50145614"
 -   en créant et modifiant par programmation les structures à l'aide des objets AMO (Analysis Management Objects) ou du langage de définition de données (DDL) XML.  
   
 ### <a name="using-the-data-mining-wizard-to-divide-a-mining-structure"></a>Utilisation de l'Assistant Exploration de données pour diviser une structure d'exploration de données  
- Par défaut, après avoir défini les sources de données pour une structure d'exploration de données, l'Assistant Exploration de données divise les données en deux jeux : l'un avec 70 % des données source pour l'apprentissage du modèle et l'autre avec 30 % des données source pour tester le modèle. Ces valeurs par défaut ont été choisies parce qu’un rapport 70-30 est souvent utilisé dans l’exploration de données, mais avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous pouvez modifier ce rapport en fonction de vos besoins.  
+ Par défaut, après avoir défini les sources de données pour une structure d'exploration de données, l'Assistant Exploration de données divise les données en deux jeux : l'un avec 70 % des données source pour l'apprentissage du modèle et l'autre avec 30 % des données source pour tester le modèle. Ces valeurs par défaut ont été choisies parce qu’un rapport 70-30 est souvent utilisé dans l’exploration de données, mais avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous pouvez modifier ce rapport en fonction de vos besoins.  
   
  Vous pouvez également configurer l'Assistant pour définir un nombre maximal de cas d'apprentissage ou vous pouvez associer les limites pour permettre un pourcentage maximal de cas jusqu'à un nombre maximal spécifié de cas. Lorsque vous spécifiez à la fois un pourcentage maximal de cas et un nombre maximal de cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise la plus petite des deux limites comme taille du jeu de test. Par exemple, si vous spécifiez une exclusion de 30 % pour les scénarios de test et un nombre maximal de scénarios de test égal à 1000, la taille du jeu de test ne dépassera jamais 1 000 scénarios. Cela peut être utile si vous souhaitez garantir que la taille de votre jeu de test reste cohérente même si des données d'apprentissage supplémentaires sont ajoutées au modèle.  
   

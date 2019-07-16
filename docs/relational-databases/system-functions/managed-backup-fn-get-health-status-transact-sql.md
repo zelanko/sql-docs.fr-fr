@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 98ebc20d497165d4e2d80438bcd711490fd6bc8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b921846b0fc27e59ff0874cdbf0827095bfc7db4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140661"
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Retourne une table de 0, d'une ou plusieurs lignes de nombre agrégé des erreurs signalées par des Événements étendus pour une période donnée.  
   
- La fonction permet d'indiquer l'état d'intégrité des services sous Smart Admin.  La [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est actuellement prise en charge sous Smart Admin. Ainsi, les erreurs retournées sont liées à la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
+ La fonction est utilisée pour signaler l’état d’intégrité des services sous Smart Admin.  Actuellement [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] est pris en charge sous l’égide de Smart Admin. Ainsi, les erreurs retournées sont liées à la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   
  
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -55,20 +54,20 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|INT|Nombre d'erreurs de connexion lorsque le programme se connecte au compte de stockage Windows Azure.|  
-|number_of_sql_errors|INT|Nombre d'erreurs retourné lorsque le programme se connecte au moteur SQL Server.|  
-|number_of_invalid_credential_errors|INT|Nombre d'erreurs retourné lorsque le programme tente de s'authentifier en utilisant les informations d'identification SQL.|  
-|number_of_other_errors|INT|Nombre d'erreurs dans des catégories autres que la connectivité, SQL ou les informations d'identification.|  
-|number_of_corrupted_or_deleted_backups|INT|Nombre de fichiers de sauvegarde supprimés ou endommagés.|  
-|number_of_backup_loops|INT|Nombre de fois où l'agent de sauvegarde analyse toutes les bases de données configurées avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
-|number_of_retention_loops|INT|Nombre de fois où les bases de données sont analysées pour évaluer la période de rétention définie.|  
+|number_of_storage_connectivity_errors|int|Nombre d'erreurs de connexion lorsque le programme se connecte au compte de stockage Windows Azure.|  
+|number_of_sql_errors|int|Nombre d'erreurs retourné lorsque le programme se connecte au moteur SQL Server.|  
+|number_of_invalid_credential_errors|int|Nombre d'erreurs retourné lorsque le programme tente de s'authentifier en utilisant les informations d'identification SQL.|  
+|number_of_other_errors|int|Nombre d'erreurs dans des catégories autres que la connectivité, SQL ou les informations d'identification.|  
+|number_of_corrupted_or_deleted_backups|int|Nombre de fichiers de sauvegarde supprimés ou endommagés.|  
+|number_of_backup_loops|int|Nombre de fois où l'agent de sauvegarde analyse toutes les bases de données configurées avec la [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
+|number_of_retention_loops|int|Nombre de fois où les bases de données sont analysées pour évaluer la période de rétention définie.|  
   
 ## <a name="best-practices"></a>Bonnes pratiques  
  Ces nombres agrégés peuvent servir à surveiller l'intégrité du système. Par exemple, si la colonne number_ of_retention_loops indique 0 pour 30 minutes, il est possible que la gestion de la rétention soit trop longue, ou ne fonctionne pas correctement. Les colonnes contenant des erreurs peuvent indiquer des problèmes et les journaux des événements étendus doivent être vérifiées pour en savoir plus de tous les problèmes. Vous pouvez également utiliser la procédure stockée **managed_backup.sp_get_backup_diagnostics** pour obtenir une liste des événements étendus et consulter les détails de l’erreur.  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert **sélectionnez** autorisations sur la fonction.  
   
 ## <a name="examples"></a>Exemples  

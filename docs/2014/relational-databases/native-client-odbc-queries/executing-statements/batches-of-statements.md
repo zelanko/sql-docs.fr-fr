@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8951469279e5c3577aef355e339397b329bb5d63
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368711"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206769"
 ---
 # <a name="batches-of-statements"></a>Lots d'instructions
   Un lot de [!INCLUDE[tsql](../../../includes/tsql-md.md)] contient des déclarations de deux ou plus, séparées par un point-virgule ( ;), intégrées dans une chaîne unique passée à **SQLExecDirect** ou [SQLPrepare, fonction](https://go.microsoft.com/fwlink/?LinkId=59360). Exemple :  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4417e57c-31dd-475e-8fe9-eab00a459c80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db7dc5482347ad9b7f194b3c9c8c6cd7fc3f9f6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16e7e4d133fdfafd7a005c19b0a2943b2ea9ef6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086451"
 ---
 # <a name="sqlfetchscroll-cursor-library"></a>SQLFetchScroll (bibliothèque de curseurs)
 > [!IMPORTANT]  
@@ -64,7 +63,7 @@ ms.locfileid: "63199599"
 |Curseur avant uniquement|SQL_FETCH_NEXT|  
 |Statique|SQL_FETCH_NEXT<br /><br /> SQL_FETCH_PRIOR<br /><br /> SQL_FETCH_FIRST<br /><br /> SQL_FETCH_LAST<br /><br /> SQL_FETCH_RELATIVE<br /><br /> SQL_FETCH_ABSOLUTE<br /><br /> SQL_FETCH_BOOKMARK|  
   
-## <a name="errors"></a>Erreurs  
+## <a name="errors"></a>Errors  
  Lorsque **SQLFetchScroll** est appelée et l’autre des appels à **SQLFetch** retourne SQL_ERROR, la bibliothèque de curseur se poursuit comme suit. Une fois terminé ces étapes, la bibliothèque de curseurs continue le traitement.  
   
 1.  Appels **SQLGetDiagRec** pour obtenir des informations d’erreur à partir du pilote et enregistre ceci comme un enregistrement de diagnostic dans le Gestionnaire de pilotes.  

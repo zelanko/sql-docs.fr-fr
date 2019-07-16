@@ -1,5 +1,5 @@
 ---
-title: Créer un emplacement approuvé pour les sites Power Pivot dans l’Administration centrale | Documents Microsoft
+title: Créer un emplacement approuvé pour les sites Power Pivot dans l’Administration centrale | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24a779a751ac93c4c132c2dbf8ae63987de2666a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208231"
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Créer un emplacement approuvé pour les sites Power Pivot dans l’Administration centrale
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Excel Services vous permet de spécifier les emplacements qui constituent des référentiels valides pour les classeurs que vous ouvrez sur un serveur SharePoint. Ces emplacements sont appelés « emplacements approuvés ». Vous pouvez utiliser des paramètres de configuration différents pour chaque emplacement approuvé créé. Dans le cas d’un déploiement de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint, vous pouvez envisager de créer un emplacement approuvé pour les sites qui contiennent des classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , afin d’appliquer les paramètres les mieux adaptés à l’accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] tout en conservant les paramètres par défaut pour le reste de la batterie de serveurs.  
   
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Prérequis  
  Vous devez être administrateur de service ou de batterie de serveurs pour désigner une URL comme emplacement approuvé.  
   
- Vous devez connaître l’adresse URL du site SharePoint contenant la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou une autre bibliothèque qui stocke vos classeurs. Pour obtenir cette adresse, ouvrez le site contenant la bibliothèque, cliquez avec le bouton droit sur **Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, sélectionnez **Propriétés**, puis copiez la première partie de l’adresse (URL) qui contient le nom du serveur et le chemin d’accès au site.  
+ Vous devez connaître l’adresse URL du site SharePoint contenant la Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou une autre bibliothèque qui stocke vos classeurs. Pour obtenir cette adresse, ouvrez le site contenant la bibliothèque, cliquez avec le bouton droit sur **Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , sélectionnez **Propriétés**, puis copiez la première partie de l’adresse (URL) qui contient le nom du serveur et le chemin d’accès au site.  
   
 ##  <a name="overview"></a> Vue d'ensemble  
  Une installation initiale d'Excel Services spécifie 'http://' comme son emplacement approuvé, ce qui signifie que les classeurs de n'importe quel site de la batterie peuvent être ouverts sur le serveur. Si vous avez besoin d'un contrôle plus strict sur les emplacements à considérer comme dignes de confiance, vous pouvez créer de nouveaux emplacements approuvés qui mappent à des sites spécifiques dans votre batterie, puis faire varier les paramètres et les autorisations pour chacun.  
@@ -62,7 +62,7 @@ ms.locfileid: "34027346"
   
 ## <a name="see-also"></a>Voir aussi  
  [Galerie Power Pivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
- [Créer et personnaliser la galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
- [Utiliser la galerie Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
+ [Créer et personnaliser une Galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Utiliser la galerie PowerPivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   
   

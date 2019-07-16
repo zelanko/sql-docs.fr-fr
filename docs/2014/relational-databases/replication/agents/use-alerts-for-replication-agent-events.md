@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762581"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210730"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Utiliser les alertes pour les événements des agents de réplication
   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et l'Agent [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permettent de surveiller les événements, par exemple, les événements de l'Agent de réplication, à l'aide d'alertes. L'Agent[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] surveille, dans le journal des applications, des événements associés à des alertes. Si un tel événement se produit, l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] répond automatiquement, en exécutant une tâche que vous avez définie et/ou en envoyant un e-mail ou un message par radio-messagerie à un opérateur spécifié. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut un ensemble d'alertes prédéfinies d'Agents de réplication que vous pouvez configurer pour exécuter une tâche et/ou avertir un opérateur. Pour plus d'informations sur la définition d'une tâche à exécuter, consultez la section « Automatisation d'une réponse à une alerte » de la présente rubrique.  
@@ -39,9 +39,9 @@ ms.locfileid: "52762581"
 |14151|**Réplication : échec de l'agent**|Arrêt de l'Agent en raison d'une erreur.|Oui|  
 |14152|**Réplication : nouvelle tentative de l'agent**|L'agent s'arrête après l'échec du renouvellement d'une opération (l'Agent a rencontré une erreur de type serveur non disponible, interblocage, échec de la connexion, ou dépassement du délai d'attente).|Oui|  
 |14157|**Réplication : suppression de l'abonnement expiré**|Suppression de l'abonnement expiré|Non|  
-|20572|**Réplication : Abonnement réinitialisé après l’échec de la validation**|Le travail de réponse « Réinitialiser les abonnements après échec de la validation des données » a réussi à réinitialiser un abonnement.|Non|  
-|20574|**Réplication : Échec de la validation des données par l’abonné**|L'Agent de distribution ou de fusion n'a pas réussi la validation des données.|Oui|  
-|20575|**Réplication : L’abonné a passé la validation des données**|L'Agent de distribution ou de fusion a réussi la validation des données.|Oui|  
+|20572|**Réplication : abonnement réinitialisé après l’échec de validation**|Le travail de réponse « Réinitialiser les abonnements après échec de la validation des données » a réussi à réinitialiser un abonnement.|Non|  
+|20574|**Réplication : l’Abonné n’a pas réussi la validation des données**|L'Agent de distribution ou de fusion n'a pas réussi la validation des données.|Oui|  
+|20575|**Réplication : l’Abonné a passé la validation des données**|L'Agent de distribution ou de fusion a réussi la validation des données.|Oui|  
 |20578|**Réplication : arrêt personnalisé de l'Agent**|||  
 |22815|**Alerte de détection de conflit d'égal à égal**|L'Agent de distribution a détecté un conflit lorsqu'il essaie d'appliquer une modification à un nœud d'égal à égal.|Oui|  
   
@@ -60,7 +60,7 @@ ms.locfileid: "52762581"
 ### <a name="framework-for-automating-responses"></a>Infrastructure d'automatisation des réponses  
  Généralement, lorsqu'une alerte survient, la seule information dont vous disposez pour vous aider à comprendre la raison de l'alerte et l'action appropriée à entreprendre, se trouve dans le message d'alerte lui-même. L'analyse de ces informations peut être fastidieuse et sujette à erreurs. La réplication facilite l'automatisation des réponses en fournissant des informations supplémentaires sur l'alerte dans la table système **sysreplicationalerts** ; les données fournies sont déjà analysées dans une forme facilement utilisable pour les programmes personnalisés.  
   
- Si, par exemple, les données de la table **Sales.SalesOrderHeader** de l'Abonné A ne peuvent pas être validées, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut déclencher le message 20574, qui vous avertit de l'échec. Le message que vous recevez peut se présenter comme suit : « L'Abonné 'A' avec un abonnement à l'article 'SalesOrderHeader' de la publication 'MyPublication' n'a pas réussi la validation de données. »  
+ Si, par exemple, les données de la table **Sales.SalesOrderHeader** de l'Abonné A ne peuvent pas être validées, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut déclencher le message 20574, qui vous avertit de l'échec. Le message que vous recevez sera : « Abonné 'A', abonnement à l’article 'SalesOrderHeader' de la publication 'MyPublication' échec de validation des données. »  
   
  Si vous créez une réponse basée sur le message, vous devez extraire manuellement du message, le nom de l'Abonné, le nom de l'article, le nom de la publication et l'erreur. Cependant, puisque l'Agent de distribution et l'Agent de fusion écrivent ces mêmes informations dans la table **sysreplicationalerts** , ainsi que les détails comme le type d'Agent, l'heure de l'alerte, la base de données de publication, la base de données Abonné et le type de publication, le travail de réponse peut obtenir directement ces informations à partir de la table. Il n'est pas possible d'associer la ligne exacte correspondant à une instance précise de l'alerte, mais la table possède une colonne **status** qui peut être utilisée pour assurer le suivi des entrées. Les entrées de cette table sont conservées pendant la période de rétention de l'historique.  
   

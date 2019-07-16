@@ -1,5 +1,5 @@
 ---
-title: Dans les modèles multidimensionnels, les vues de Source de données | Documents Microsoft
+title: Dans les modèles multidimensionnels, les vues de Source de données | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c5947bb9de4088a97d68df7b919e3de947bd1d02
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021536"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209042"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Vues de sources de données dans les modèles multidimensionnels
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,6 +49,6 @@ ms.locfileid: "34021536"
   
 ## <a name="see-also"></a>Voir aussi  
  [Assistant Génération de schéma &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)   
- [Sources de données prises en charge &#40;SSAS – Multidimensionnel&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+ [Sources de données prises en charge &#40;SSAS - Modèle multidimensionnel&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 06091ffc26ea036a4a0bd7e30196545bcaca60d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936947"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,22 +49,28 @@ sys.dm_exec_query_statistics_xml(session_id)
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|
 |session_id|**smallint**|ID de la session. N'accepte pas la valeur NULL.|
-|request_id|**Int**|ID de la demande. N'accepte pas la valeur NULL.|
-|sql_handle|**varbinary(64)**|Table de hachage du texte SQL de la demande. Autorise la valeur Null.|
-|plan_handle|**varbinary(64)**|Table de hachage du plan de requête. Autorise la valeur Null.|
-|query_plan|**xml**|Showplan XML avec des statistiques partielles. Autorise la valeur Null.|
+|request_id|**int**|ID de la demande. N'accepte pas la valeur NULL.|
+|sql_handle|**varbinary(64)**|Est un jeton qui identifie de façon unique le lot ou une procédure stockée qui fait partie de la requête. Autorise la valeur Null.|
+|plan_handle|**varbinary(64)**|Est un jeton qui identifie de façon unique un plan d’exécution de requête pour un lot en cours d’exécution. Autorise la valeur Null.|
+|query_plan|**xml**|Contient la représentation sous forme de plan d’exécution du plan de requête d’exécution qui est spécifié avec runtime *plan_handle* contenant des statistiques partielles. Le plan d'exécution de requêtes est au format XML. Un plan est généré pour chaque traitement contenant par exemple des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, des appels de procédures stockées et des appels de fonctions définies par l'utilisateur. Autorise la valeur Null.|
 
 ## <a name="remarks"></a>Notes
 Cette fonction système est disponible à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Consultez la base de connaissances [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-Cette fonction système fonctionne dans les répertoires **standard** et **léger** infrastructure de profilage des statistiques d’exécution de requête. Pour plus d’informations, consultez [Infrastructure du profilage de requête](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md).  
+Cette fonction système fonctionne dans les répertoires **standard** et **léger** infrastructure de profilage des statistiques d’exécution de requête. Pour plus d’informations, consultez [Infrastructure du profilage de requête](../../relational-databases/performance/query-profiling-infrastructure.md).  
+
+Dans les conditions suivantes, aucune sortie Showplan n’est retournée dans le **query_plan** colonne de la table retournée pour **sys.dm_exec_query_statistics_xml**:  
+  
+-   Si le plan de requête qui correspond à spécifié *session_id* n’est plus exécuté, le **query_plan** colonne de la table retournée est null. Par exemple, ceci peut se produire s’il existe un délai entre le moment où le descripteur de plan est capturé et lorsqu’il a été utilisé avec **sys.dm_exec_query_statistics_xml**.  
+    
+En raison d’une limitation du nombre de niveaux imbriqués autorisés dans les **xml** type de données, **sys.dm_exec_query_statistics_xml** ne peut pas retourner des plans de requête qui correspondent ou sont supérieurs à 128 niveaux d’éléments imbriqués. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette condition empêchait les retours par le plan de requête et générait l'erreur 6335. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 et versions ultérieures, le **query_plan** colonne retourne NULL.   
 
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW SERVER STATE` sur le serveur.  
 
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>A. Examinez les statistiques de plan et l’exécution des requêtes actives pour un lot en cours d’exécution  
+### <a name="a-looking-at-live-query-plan-and-execution-statistics-for-a-running-batch"></a>R. Examinez les statistiques de plan et l’exécution des requêtes actives pour un lot en cours d’exécution  
  L’exemple suivant interroge **sys.dm_exec_requests** pour rechercher la requête vous intéresse et copie son `session_id` à partir de la sortie.  
   
 ```sql  

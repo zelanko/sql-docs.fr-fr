@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 269fbab0-e5f2-4a98-86c0-2d7b647acaae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 914bd4759552680a57c345dc3a7c3bc1bcc103a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa936eb9f8ef3328945d4ece63fb36432a5fd618
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100593"
 ---
 # <a name="procedure-call-escape-sequence"></a>Séquence d’échappement d’appel de procédure
 ODBC utilise les séquences d’échappement pour les appels de procédure. La syntaxe de cette séquence d’échappement est comme suit :  
@@ -33,7 +32,7 @@ ODBC utilise les séquences d’échappement pour les appels de procédure. La s
   
  &#124;*ODBC-ÉCHAP-initiateur* [ ? =] appeler *procédure ODBC ÉCHAP-marque de fin*  
   
- *procedure* ::= *procedure-name* &#124; *procedure-name* (*procedure-parameter-list*)  
+ *procédure* :: = *nom de la procédure* &#124; *nom de la procédure* (*liste de paramètres de procédure*)  
   
  *identificateur de la procédure* :: = *nom défini par l’utilisateur*  
   
@@ -41,7 +40,7 @@ ODBC utilise les séquences d’échappement pour les appels de procédure. La s
   
  &#124; *-nom du propriétaire*. *identificateur de la procédure*  
   
- &#124; *catalog-name catalog-separator* *procedure-identifier*  
+ &#124;*nom-catalogue le séparateur de catalogue* *-identificateur de la procédure*  
   
  &#124;*nom-catalogue le séparateur de catalogue* [ *-nom du propriétaire*]. *identificateur de la procédure*  
   
@@ -61,9 +60,9 @@ ODBC utilise les séquences d’échappement pour les appels de procédure. La s
   
  *procedure-parameter* ::= *dynamic-parameter* &#124; *literal* &#124; *empty-string*  
   
- *empty-string* ::=  
+ *une chaîne vide* :: =  
   
- *ODBC-esc-initiator* ::= {  
+ *ODBC-ÉCHAP-initiateur* :: = {}  
   
  *ODBC ÉCHAP-marque de fin* :: =}  
   

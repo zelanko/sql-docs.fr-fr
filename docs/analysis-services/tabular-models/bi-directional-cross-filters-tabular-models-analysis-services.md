@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eee2e859abf5b7924cb072c4653ac3e83e7b7824
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072306"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163179"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>Des filtres croisés bidirectionnels dans les modèles tabulaires
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "53072306"
   
 -   Excel (pour une utilisation avec la fonctionnalité Analyser dans Excel)  
   
-### <a name="create-a-project"></a>Créer un projet  
+### <a name="create-a-project"></a>Création d’un projet  
   
 1.  Démarrez SQL Server Data Tools pour Visual Studio 2015.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "53072306"
   
 3.  Choisissez la base de données ContosoRetailDW.  
   
-4.  Cliquer sur **Suivant**.  
+4.  Cliquez sur **Suivant**.  
   
 5.  Dans Sélection de la table, enfoncez la touche Ctrl et sélectionnez les tables suivantes :  
   

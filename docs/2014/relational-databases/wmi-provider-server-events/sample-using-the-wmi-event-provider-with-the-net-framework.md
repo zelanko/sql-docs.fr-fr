@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : À l’aide du fournisseur d’événements WMI avec le .NET Framework | Microsoft Docs'
+title: 'Aperçu : À l’aide du fournisseur d’événements WMI avec le .NET Framework | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 4e336eb9c89c05656d75cc13cec4d46ddde68d28
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760761"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211598"
 ---
-# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Exemple : À l’aide du fournisseur d’événements WMI avec le .NET Framework
+# <a name="sample-using-the-wmi-event-provider-with-the-net-framework"></a>Aperçu : Utilisation du fournisseur d’événements WMI avec le .NET Framework
   L'exemple suivant crée une application en C# qui utilise le fournisseur d'événements WMI pour retourner des données d'événement pour tous les événements du langage de définition de données (DDL) qui se produisent sur une instance d'installation par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="example"></a>Exemple  

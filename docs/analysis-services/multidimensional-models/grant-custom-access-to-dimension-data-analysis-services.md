@@ -1,5 +1,5 @@
 ---
-title: Octroyer un accès personnalisé à des données de dimension (Analysis Services) | Documents Microsoft
+title: Octroyer un accès personnalisé aux données de dimension (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb93b4aeeaae9d659a225763286fc15a7d9f52a3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024726"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208875"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Octroyer un accès personnalisé à des données de dimension (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Après avoir activé l'accès en lecture à un cube, vous pouvez définir des autorisations supplémentaires qui accordent ou refusent explicitement l'accès aux membres de dimension (y compris les mesures contenues dans la dimension de mesures contenant toutes les mesures utilisées dans un cube). Par exemple, étant donné plusieurs catégories de revendeurs, vous pouvez définir des autorisations pour exclure les données d'un type spécifique. L'illustration suivante est une représentation avant/après du refus de l'accès au type d'entreprise Warehouse dans la dimension Reseller.  
   
- ![Les tableaux croisés dynamiques avec et sans un membre de dimension](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "des tableaux croisés dynamiques avec et sans un membre de dimension")  
+ ![Les tableaux croisés dynamiques avec et sans un membre de dimension](../../analysis-services/multidimensional-models/media/ssas-permsdimdenied.png "tableaux croisés dynamiques avec et sans un membre de dimension")  
   
  Par défaut, si vous pouvez lire les données d’un cube [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous disposez automatiquement d’autorisations d’accès en lecture pour toutes les mesures et tous les membres de dimension associés à ce cube. Ce comportement peut être suffisant pour de nombreux scénarios, cependant parfois des exigences de sécurité demandent une stratégie d'autorisation segmentée, avec différents niveaux d'accès pour différents utilisateurs dans la même dimension.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34024726"
 > [!NOTE]  
 >  Les instructions suivantes supposent une connexion client qui émet des requêtes dans MDX. Si le client utilise DAX, comme Power View dans Power BI, la sécurité de la dimension n’est pas évidente dans les résultats de la requête. Pour plus d’informations, consultez [Présentation de Power View pour les modèles multidimensionnels](understanding-power-view-for-multidimensional-models.md) .
       
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Prérequis  
  Vous ne pouvez pas utiliser toutes les mesures, ni tous les membres de dimension dans les scénarios d'accès personnalisés. Une connexion échoue si un rôle restreint l'accès à une mesure ou un membre par défaut, ou s'il restreint l'accès à des mesures qui font partie d'expressions de mesure.  
   
  **Vérifier les obstructions en matière de sécurité des dimensions : mesures par défaut, membres par défaut et mesures utilisées dans les expressions de mesure**  
@@ -117,8 +117,8 @@ ms.locfileid: "34024726"
   
 ## <a name="see-also"></a>Voir aussi  
  [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [Octroyer un accès personnalisé aux données des cellules &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [Accorder des autorisations sur les structures d’exploration de données et modèles &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Accorder des autorisations sur un objet de source de données & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Octroyer un accès personnalisé à des données de cellule &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [Octroyer des autorisations sur des modèles et des structures d’exploration de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Octroyer des autorisations sur un objet de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

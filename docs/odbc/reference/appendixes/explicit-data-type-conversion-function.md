@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5789450-b668-4753-96c8-6789e955e7ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77cb69877324b36120b3a277688bb1ad737f5c4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6982f7b7caa71abc08c5b84ef1bb6211dcadaecd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913612"
 ---
 # <a name="explicit-data-type-conversion-function"></a>Fonctions de conversion de types de données explicites
 Conversion de type de données explicite est spécifiée en termes de définitions de type de données SQL.  
@@ -29,7 +28,7 @@ Conversion de type de données explicite est spécifiée en termes de définitio
   
  Le format de la **convertir** fonction est :  
   
- **CONVERT(** _value_exp_, _data_type_ **)**  
+ **CONVERTIR (** _value_exp_, _data_type_ **)**  
   
  La fonction retourne la valeur spécifiée par *value_exp* converti spécifié *data_type*, où *data_type* est un des mots clés suivants :  
   

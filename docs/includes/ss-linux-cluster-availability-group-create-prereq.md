@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 7d392ee6791c120243b304ab24b2f8268499617d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215579"
+---
 ## <a name="prerequisites"></a>Prérequis
 
 Avant de créer le groupe de disponibilité, vous devez :
@@ -61,7 +69,7 @@ Installez SQL Server. Les liens suivants pointent vers les instructions d’inst
 
 ## <a name="enable-alwayson-availability-groups-and-restart-mssql-server"></a>Activer les groupes de disponibilité AlwaysOn et redémarrer mssql-server
 
-Activer les groupes de disponibilité AlwaysOn sur chaque nœud qui héberge une instance de SQL Server. Puis redémarrez `mssql-server`. Exécutez le script suivant :
+Activer les groupes de disponibilité AlwaysOn sur chaque nœud qui héberge une instance de SQL Server. Puis redémarrez `mssql-server`. Exécutez le script qui suit :
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1

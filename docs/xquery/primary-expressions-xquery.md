@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 15a5b859b260288cccad5e0ed01640c3e070d6fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946381"
 ---
 # <a name="primary-expressions-xquery"></a>Expressions primaires (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ Go
   
  `<a>I don't know</a>`  
   
- Les fonctions booléennes intégrées, **true()** et **false()**, peut être utilisé pour représenter des valeurs booléennes, comme indiqué dans l’exemple suivant.  
+ Les fonctions booléennes intégrées, **true()** et **false()** , peut être utilisé pour représenter des valeurs booléennes, comme indiqué dans l’exemple suivant.  
   
 ```  
 DECLARE @var XML  
@@ -157,7 +156,7 @@ SELECT @x.query('<value>{sql:variable("@price") }</value>')
 ## <a name="context-item-expressions"></a>Expressions d'élément contextuel  
  L'élément contextuel est l'élément en cours de traitement dans le cadre d'une expression de chemin d'accès. Il est initialisé dans une instance non-NULL de type XML avec le nœud de document. Il peut également être modifié par la méthode nodes(), dans le contexte des expressions XPath ou prédicats [].  
   
- L'élément contextuel est renvoyé par une expression contenant un point (.). Par exemple, la requête suivante évalue chaque élément <`a`> de façon à déterminer la présence de l'attribut `attr`. Si l'attribut est présent, l'élément est renvoyé. Notez que la condition exprimée dans le prédicat indique que le nœud de contexte est spécifié par un simple point.  
+ L'élément contextuel est renvoyé par une expression contenant un point (.). Par exemple, la requête suivante évalue chaque élément <`a`> la présence de l’attribut `attr`. Si l'attribut est présent, l'élément est renvoyé. Notez que la condition exprimée dans le prédicat indique que le nœud de contexte est spécifié par un simple point.  
   
 ```  
 DECLARE @var XML  

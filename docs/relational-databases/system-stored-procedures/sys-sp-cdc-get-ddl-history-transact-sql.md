@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 657d7b6cc21c573d2d9535d36392f9b7eb94200f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083734"
 ---
 # <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Nom du schéma de table source.|  
 |source_table|**sysname**|Nom de la table source.|  
@@ -65,7 +64,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 ## <a name="remarks"></a>Notes  
  Les modifications DDL à la table source qui modifient la structure de colonne de table source, comme l’ajout ou suppression d’une colonne ou modifier le type de données d’une colonne existante, sont conservées dans le [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) table. Ces modifications peuvent être signalées en utilisant cette procédure stockée. Les entrées dans cdc.ddl_history sont effectuées au moment où le processus de capture lit la transaction DDL dans le journal.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle de base de données fixe db_owner pour retourner les lignes de toutes les instances de capture dans la base de données. Pour tous les autres utilisateurs, requiert l'autorisation SELECT sur toutes les colonnes capturées dans la table source et, si un rôle de régulation pour l'instance de capture a été défini, l'appartenance à ce rôle de base de données.  
   
 ## <a name="examples"></a>Exemples  

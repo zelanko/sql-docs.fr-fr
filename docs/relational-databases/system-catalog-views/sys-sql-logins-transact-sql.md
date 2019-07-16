@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13c271c7585d0ebe1a7af5c387414187b0072b3d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 362ccc5c85523b3d37cb792a42e8be4cd87d7510
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109002"
 ---
 # <a name="syssqllogins-transact-sql"></a>sys.sql_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
 
-  Retourne une ligne pour chaque connexion d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  Retourne une ligne pour chaque connexion d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**\<héritée de colonnes >**|--|Hérite de **sys.server_principals**.|  
 |**is_policy_checked**|**bit**|La stratégie de mot de passe est vérifiée.|  
@@ -47,7 +46,7 @@ ms.locfileid: "47662677"
   
  Quand il est contenu les utilisateurs de base de données sont activés, connexions peuvent être effectuées sans comptes de connexion. Pour identifier ces comptes, consultez [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Toute connexion d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut voir son propre nom de connexion et la connexion d'administrateur système (sa). Pour voir d'autres connexions, vous devez disposer de l'autorisation ALTER ANY LOGIN, ou d'une autorisation sur la connexion.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

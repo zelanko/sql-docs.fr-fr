@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 43d5466a-89e2-4e59-b87e-a2a78e59a1de
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23a751336e9709a37121163263570e62b0c49f0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 014c9d6f965e62c4651634a92a473a9573642f71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018420"
 ---
 # <a name="query-store-catalog-views-transact-sql"></a>Vues de catalogue Store de requête (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -49,6 +48,6 @@ ms.locfileid: "62501594"
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées du Magasin des requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Analyse des performances à l’aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   
   

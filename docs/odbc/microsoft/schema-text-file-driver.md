@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 27f1b65e-e04d-457f-bd49-02deb3873613
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8474c2ac06e3bed58262f31f44eaa3dd08ff63b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c52780ab67acf072a3ee61ce1ebd07fc18c0d40e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987932"
 ---
 # <a name="schema-text-file-driver"></a>Schéma (pilote du fichier texte)
 Le schéma inclut des informations sur chaque table (fichier texte) dans une source de données, y compris le format de la table, le nombre de lignes à analyser pour déterminer les types de colonnes, si la première ligne de la table contient des noms de colonne, si le fichier source est écrit à l’aide d’un fabricant OEM ou De page de codes ANSI et chaque colonne nom, type de données et la largeur.

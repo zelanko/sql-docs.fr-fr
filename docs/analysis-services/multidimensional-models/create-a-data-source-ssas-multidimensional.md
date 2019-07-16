@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410316"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209077"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Créer une source de données (SSAS Multidimensionnel)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "52410316"
   
          La nouvelle connexion apparaît dans le volet **Connexions de données** de la page **Sélectionner la méthode de définition de la connexion** dans l’Assistant Source de données.  
   
-6.  Cliquer sur **Suivant**.  
+6.  Cliquez sur **Suivant**.  
   
 7.  Sous **Informations d’emprunt d’identité**, spécifiez les informations d’identification ou l’identité d’utilisateur Windows qu’Analysis Services utilisera au moment de la connexion à la source de données externe. Si vous utilisez l'authentification de base de données, ces paramètres sont ignorés pour la connexion.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "52410316"
   
      Le compte que vous spécifiez doit disposer d'autorisations en lecture sur la source de données.  
   
-8.  Cliquer sur **Suivant**.  Dans **Fin de l’Assistant**, entrez un nom de source de données ou utilisez le nom par défaut. Le nom par défaut correspond au nom de la base de données spécifiée dans la connexion. Le volet **Aperçu** affiche la chaîne de connexion pour cette nouvelle source de données.  
+8.  Cliquez sur **Suivant**.  Dans **Fin de l’Assistant**, entrez un nom de source de données ou utilisez le nom par défaut. Le nom par défaut correspond au nom de la base de données spécifiée dans la connexion. Le volet **Aperçu** affiche la chaîne de connexion pour cette nouvelle source de données.  
   
 9. Cliquez sur **Terminer**.  La nouvelle source de données apparaît dans le dossier **Sources de données** , dans l’Explorateur de solutions.  
   

@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d40e3fd6-9057-4371-8236-95cef300603e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24661690a0252b1018e2ddc52ba99a44cb5cedbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 655b6045e8178e74e994e61691ede28052d8fb5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63029054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106967"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Prise en charge des types de données pour les améliorations de date et d’heure OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -175,7 +174,7 @@ enum SQLVARENUM {
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Mappage des types de données dans ITableDefinition::CreateTable  
  Le mappage de type suivant est utilisé avec les structures DBCOLUMNDESC utilisées par ITableDefinition::CreateTable :  
   
-|Type de données OLE DB (*wType*)|Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Remarques|  
+|Type de données OLE DB (*wType*)|Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|Notes|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
 |DBTYPE_DBTIMESTAMP|**datetime2**(p)|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur de OLE DB Native Client inspecte les membres *bScale* membre pour déterminer la précision en fractions de seconde.|  

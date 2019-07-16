@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0d4d19f7b32297401ff036e61806308b54e44c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124079"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Arguments  
  «*query_text*»  
- Requête dont la version paramétrable doit être générée. «*query_text*' doit être placé entre guillemets simples et précédé du spécificateur Unicode N. N'*query_text*» est la valeur affectée à la @querytext paramètre. Il s’agit du type **nvarchar (max)**.  
+ Requête dont la version paramétrable doit être générée. «*query_text*' doit être placé entre guillemets simples et précédé du spécificateur Unicode N. N'*query_text*» est la valeur affectée à la @querytext paramètre. Il s’agit du type **nvarchar (max)** .  
   
  @templatetext  
- Est un paramètre output de type **nvarchar (max)**, fourni tel qu’indiqué, permettant de recevoir la forme paramétrable de *query_text* comme un littéral de chaîne.  
+ Est un paramètre output de type **nvarchar (max)** , fourni tel qu’indiqué, permettant de recevoir la forme paramétrable de *query_text* comme un littéral de chaîne.  
   
  @parameters  
- Est un paramètre output de type **nvarchar (max)**, fourni tel qu’indiqué, permettant de recevoir un littéral de chaîne des données et les noms de types de paramètres qui ont été paramétrés dans @templatetext.  
+ Est un paramètre output de type **nvarchar (max)** , fourni tel qu’indiqué, permettant de recevoir un littéral de chaîne des données et les noms de types de paramètres qui ont été paramétrés dans @templatetext.  
   
 ## <a name="remarks"></a>Notes  
  sp_get_query_template retourne une erreur dans les cas suivants :  
@@ -61,7 +60,7 @@ sp_get_query_template
   
  Si sp_get_query_template retourne une erreur, il ne modifie pas les valeurs de la @templatetext et @parameters paramètres de sortie.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données public.  
   
 ## <a name="examples"></a>Exemples  

@@ -1,5 +1,5 @@
 ---
-title: 'C en SQL : Timestamp | Microsoft Docs'
+title: 'C en SQL : Horodatage | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,28 +14,27 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa75299f4d8e8f15293064d0bf3fb3979fe382d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037705"
 ---
-# <a name="c-to-sql-timestamp"></a>C en SQL : Horodateur
+# <a name="c-to-sql-timestamp"></a>C en SQL : Timestamp
 L’identificateur pour le type de données ODBC C timestamp est :  
   
  SQL_C_TYPE_TIMESTAMP  
   
  Le tableau suivant présente les types de données à laquelle les données timestamp C peuvent être converties à ODBC SQL. Pour obtenir une explication des colonnes et des termes dans la table, consultez [conversion des données à partir de C en Types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|Identificateur de type SQL|Test|SQLSTATE|  
+|Identificateur de type SQL|Tester|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longueur d’octet de colonne > = longueur d’octet de caractère<br /><br /> 19 < = longueur d’octet de colonne < longueur d’octet de caractère<br /><br /> Colonne de longueur d’octet < 19<br /><br /> Valeur de données n’est pas une date valide|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longueur de colonne caractère > = longueur de caractères de données<br /><br /> 19 < = longueur de colonne caractère < longueur des données de caractères<br /><br /> Colonne de longueur < 19 caractères<br /><br /> Valeur de données n’est pas une date valide|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|Champs d’heure sont égales à zéro<br /><br /> Champs d’heure sont différentes de zéro<br /><br /> Valeur de données ne contient pas une date valide|n/a<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIME|Champs de fractions de seconde sont égales à zéro [a]<br /><br /> Fractional seconds fields are nonzero[a]<br /><br /> Valeur de données ne contient-elle pas une heure valide|n/a<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Champs de fractions de secondes ne sont pas tronqués.<br /><br /> Champs de fractions de seconde sont tronquées<br /><br /> Valeur de données n’est pas une date valide|n/a<br /><br /> 22008<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longueur d’octet de colonne > = longueur d’octet de caractère<br /><br /> 19 < = longueur d’octet de colonne < longueur d’octet de caractère<br /><br /> Colonne de longueur d’octet < 19<br /><br /> Valeur de données n’est pas une date valide|N/A<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longueur de colonne caractère > = longueur de caractères de données<br /><br /> 19 < = longueur de colonne caractère < longueur des données de caractères<br /><br /> Colonne de longueur < 19 caractères<br /><br /> Valeur de données n’est pas une date valide|N/A<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|Champs d’heure sont égales à zéro<br /><br /> Champs d’heure sont différentes de zéro<br /><br /> Valeur de données ne contient pas une date valide|N/A<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIME|Champs de fractions de seconde sont égales à zéro [a]<br /><br /> Champs de fractions de seconde sont différentes de zéro [a]<br /><br /> Valeur de données ne contient-elle pas une heure valide|N/A<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Champs de fractions de secondes ne sont pas tronqués.<br /><br /> Champs de fractions de seconde sont tronquées<br /><br /> Valeur de données n’est pas une date valide|N/A<br /><br /> 22008<br /><br /> 22007|  
   
  [a] la date, les champs de la structure d’horodatage sont ignorés.  
   

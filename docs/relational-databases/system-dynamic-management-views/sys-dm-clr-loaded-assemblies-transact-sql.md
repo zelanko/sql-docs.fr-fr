@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8523d8db-d8a0-4b1f-ae19-6705d633e0a6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c5a65210f7789d49a05785c05df45cda7272040
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1cd677e516048aa52badec7fc9875e5a5b13f25a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138658"
 ---
 # <a name="sysdmclrloadedassemblies-transact-sql"></a>sys.dm_clr_loaded_assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +33,13 @@ ms.locfileid: "47715927"
  Les assemblys sont des fichiers DLL de code managé qui sont utilisés pour définir et déployer des objets de base de données managés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dès lors qu'un utilisateur exécute un de ces objets de base de données managés, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR chargent l'assembly (et ses références) dans lequel l'objet de base de données managé est défini. L'assembly reste chargé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour augmenter les performances, de sorte que les objets de base de données managés contenus dans l'assembly puissent être appelés ultérieurement, sans avoir à recharger l'assembly. L'assembly n'est pas déchargé tant que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne présente pas une mémoire insuffisante. Pour plus d’informations sur les assemblys et intégration du CLR, consultez [CLR hébergé environnement](../../relational-databases/clr-integration/clr-integration-architecture-clr-hosted-environment.md). Pour plus d’informations sur les objets de base de données managés, consultez [création d’objets de base de données avec Common Language Runtime &#40;CLR&#41; intégration](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md).  
 
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**Int**|ID de l'assembly chargé. Le **assembly_id** peut être utilisée pour rechercher plus d’informations sur l’assembly dans le [sys.assemblies &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) vue de catalogue. Notez que le [!INCLUDE[tsql](../../includes/tsql-md.md)] [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md) catalogue affiche les assemblys dans la base de données actuelle uniquement. Le **sqs.dm_clr_loaded_assemblies** affiche tous les assemblys chargés sur le serveur.|  
-|**appdomain_address**|**Int**|Adresse du domaine d’application (**AppDomain**) dans lequel l’assembly est chargé. Tous les assemblys appartenant à un seul utilisateur sont toujours chargés dans le même **AppDomain**. Le **appdomain_address** peut être utilisé pour rechercher plus d’informations sur la **AppDomain** dans le [sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) vue.|  
+|**appdomain_address**|**int**|Adresse du domaine d’application (**AppDomain**) dans lequel l’assembly est chargé. Tous les assemblys appartenant à un seul utilisateur sont toujours chargés dans le même **AppDomain**. Le **appdomain_address** peut être utilisé pour rechercher plus d’informations sur la **AppDomain** dans le [sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md) vue.|  
 |**load_time**|**datetime**|Heure à laquelle l'assembly a été chargé. Notez que l’assembly reste chargé tant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est sous pression de mémoire et décharge le **AppDomain**. Vous pouvez surveiller **load_time** à comprendre à quelle fréquence [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est fourni avec une mémoire insuffisante et décharge le **AppDomain**.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  

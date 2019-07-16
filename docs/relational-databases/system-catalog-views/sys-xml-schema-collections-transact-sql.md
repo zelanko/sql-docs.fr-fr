@@ -19,23 +19,22 @@ ms.assetid: f3f7f3dc-029f-4942-ab3c-75fa9814e40f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9f7756d13f3a844d3cb8fb146a691698b69ba280
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ef3a2d6bca9591637223aa4f5659e42ac27c5d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115051"
 ---
 # <a name="sysxmlschemacollections-transact-sql"></a>sys.xml_schema_collections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Renvoie une ligne par collection de schémas XML. Une collection de schémas XML est un ensemble nommé de définitions XSD. La collection de schémas XML elle-même est contenue dans un schéma relationnel et identifiée par un nom [!INCLUDE[tsql](../../includes/tsql-md.md)] d'étendue sur le schéma. Les tuples suivants sont uniques : xml_collection_id et schema_id et  name.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|xml_collection_id|**Int**|ID de la collection de schémas XML. Unique dans la base de données.|  
+|xml_collection_id|**int**|ID de la collection de schémas XML. Unique dans la base de données.|  
 |schema_id|**Int**|ID du schéma relationnel qui contient cette collection de schémas XML.|  
 |principal_id|**Int**|ID du propriétaire spécifique s’il est différent du propriétaire du schéma. Par défaut, le propriétaire du schéma détient les objets contenus dans le schéma. Toutefois, un autre propriétaire peut être spécifié à l’aide de l’instruction ALTER AUTHORIZATION pour modifier la propriété.<br /><br /> NULL = Pas d'autre propriétaire individuel.|  
 |name|**sysname**|Nom de la collection de schémas XML.|  

@@ -20,28 +20,27 @@ helpviewer_keywords:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d14c76210dcd74c2ebee59df8961624389a0ac61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9d3000b38f8cc59ef1349a1e0cd9219a3eb385f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133192"
 ---
 # <a name="sysservereventsessiontargets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne une ligne pour chaque cible d'événement d'une session d'événements.  
+  Renvoie une ligne pour chaque cible d’événement pour une session d’événements.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**Int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
-|target_id|**Int**|ID de la cible. Cet ID est unique au sein de l'objet de la session d'événements. N'accepte pas la valeur NULL.|  
-|NAME|**sysname**|Nom de la cible d'événement. N'accepte pas la valeur NULL.|  
+|target_id|**int**|ID de la cible. Cet ID est unique au sein de l'objet de la session d'événements. N'accepte pas la valeur NULL.|  
+|name|**sysname**|Nom de la cible d'événement. N'accepte pas la valeur NULL.|  
 |package|**sysname**|Nom du package d'événement qui contient la cible d'événement. N'accepte pas la valeur NULL.|  
 |module|**sysname**|Nom du module qui contient la cible d'événement. N'accepte pas la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  

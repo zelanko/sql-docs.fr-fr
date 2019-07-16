@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5eec141a82b4cf7aca5fd8c112249c362a1242d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4654733b2f8f0b59ee01ae881d55519d9ca48c23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003461"
 ---
 # <a name="mdx-reserved-words"></a>Mots réservés MDX
 
@@ -25,7 +24,7 @@ ms.locfileid: "63187576"
 |-|-|-|-|  
 |ABSOLUTE|DESC|LEAVES|SELF_BEFORE_AFTER|  
 |ACTIONPARAMETERSET|DESCENDANTS|LEVEL|SESSION|  
-|ADDCALCULATEDMEMBERS|DESCRIPTION|LEVELS|SET|  
+|ADDCALCULATEDMEMBERS|Description|LEVELS|SET|  
 |AFTER|DIMENSION|LINKMEMBER|SETTOARRAY|  
 |AGGREGATE|DIMENSIONS|LINREGINTERCEPT|SETTOSTR|  
 |ALL|DISTINCT|LINREGPOINT|SORT|  
@@ -53,7 +52,7 @@ ms.locfileid: "63187576"
 |CALCULATIONPASSVALUE|FREEZE|NULL|TRUE|  
 |CALCULATIONS|FROM|ON|TUPLETOSTR|  
 |CALL|GENERATE|OPENINGPERIOD|TYPE|  
-|CELL|GLOBAL|\- ou -|UNION|  
+|CELL|GLOBAL|Ou|UNION|  
 |CELLFORMULASETLIST|GROUP|PAGES|UNIQUE|  
 |CHAPTERS|GROUPING|PARALLELPERIOD|UNIQUENAME|  
 |CHILDREN|HEAD|PARENT|UPDATE|  

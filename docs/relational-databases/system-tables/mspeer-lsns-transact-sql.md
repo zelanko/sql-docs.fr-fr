@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 08926758b2d217bde6f858405ebde1c2b38b4d66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0d31de11ed7d41ecca409589f3daa25c85f1146
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085774"
 ---
 # <a name="mspeerlsns-transact-sql"></a>MSpeer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "63026744"
   
 ## <a name="definition"></a>Définition  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**Int**|Identifie un numéro de séquence d'enregistrement d'égal à égal.|  
 |**last_updated**|**datetime**|Le **datetime** à laquelle la dernière mise à jour de la ligne a été effectuée.|  
@@ -41,8 +40,8 @@ ms.locfileid: "63026744"
 |**originator_publication**|**sysname**|Nom de la publication d'où provient la transaction|  
 |**originator_publication_id**|**Int**|Identificateur de la publication d'où provient la transaction|  
 |**originator_db_version**|**Int**|Identifie le numéro de version de la base de données d'origine.|  
-|**originator_lsn**|**Int**|Identifie le numéro de séquence d'enregistrement dans la publication d'origine.|  
-|**originator_version**|**Int**|Spécifie le numéro de version du serveur de publication.|  
+|**originator_lsn**|**int**|Identifie le numéro de séquence d'enregistrement dans la publication d'origine.|  
+|**originator_version**|**int**|Spécifie le numéro de version du serveur de publication.|  
 |**originator_id**|**smallint**|Identifie chaque nœud dans la topologie pour les besoins de la détection de conflit. Pour plus d’informations, voir [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 7bd6c42882c9adc938904621b7939bea1b0e68de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959545"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
@@ -84,7 +83,7 @@ Non. En plus de la prochaine génération de multios et d’outils CLI et l’in
 |Fonctionnalité|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Authentification dans Azure|Oui|Oui|
-|Tableau de bord|Oui| |
+|tableau de bord|Oui| |
 |Extensions|Oui| |
 |Terminal intégré|Oui||
 |Explorateur d’objets|Oui|Oui|
@@ -153,7 +152,7 @@ Non. En plus de la prochaine génération de multios et d’outils CLI et l’in
 |Requête de plusieurs serveur||Oui|
 |Gestion basée sur des stratégies||Oui|
 |PolyBase||Oui|
-|Magasin des requêtes||Oui|
+|Magasin de requêtes||Oui|
 |Serveurs inscrits||Oui|
 |REPLICATION||Oui|
 |Gestion de la sécurité||Oui|

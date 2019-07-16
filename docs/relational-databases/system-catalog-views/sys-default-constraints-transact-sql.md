@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c52f9b211c6cb6b7df8404ba462f51e898841911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 816f5c563713eaa59337d765a7ccadafbd5c73a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079381"
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contient une ligne pour chaque objet qui est une définition default (créée dans le cadre d’une instruction CREATE TABLE ou ALTER TABLE au lieu d’une instruction CREATE DEFAULT), avec **sys.objects.type** = D.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**\<Colonnes héritent de sys.objects >**||Pour obtenir la liste des colonnes qui hérite de cette vue, consultez [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**parent_column_id**|**Int**|ID de la colonne dans **parent_object_id** auquel appartient cette valeur par défaut.|  

@@ -1,21 +1,20 @@
 ---
-title: mssqlctl bdc config reference
+title: référence de configuration mssqlctl bdc
 titleSuffix: SQL Server big data clusters
 description: Article de référence pour les commandes de bdc mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5c4182f216b13d4b56d1c37f6d003ad2ea6f5cf6
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f6aee38bd11d226ba324153b76c750ba57eb9fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958175"
 ---
 # <a name="mssqlctl-bdc-config"></a>mssqlctl bdc config
 

@@ -17,30 +17,29 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084761"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tables d’applications de la couche Données - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient des informations sur les actions entreprises pour gérer les applications de la couche Données (DAC). Cette table est stockée dans le **dbo** schéma de la **msdb** base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**action_id**|**Int**|Identificateur de l'action.|  
-|**sequence_id**|**Int**|Identifie une étape dans une action.|  
+|**action_id**|**int**|Identificateur de l'action.|  
+|**sequence_id**|**int**|Identifie une étape dans une action.|  
 |**instance_id**|**uniqueidentifier**|Identificateur de l'instance DAC. Cette colonne peut être jointe sur la **instance_id** colonne [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
-|**action_type**|**tinyint**|Identificateur du type d'action :<br /><br /> **0** = deploy<br /><br /> **1** = créer<br /><br /> **2** = changement de nom<br /><br /> **3** = detach<br /><br /> **4** = delete|  
+|**action_type**|**tinyint**|Identificateur du type d'action :<br /><br /> **0** = déployer<br /><br /> **1** = créer<br /><br /> **2** = changement de nom<br /><br /> **3** = detach<br /><br /> **4** = delete|  
 |**action_type_name**|**varchar(19)**|Nom du type d'action :<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
-|**dac_object_type**|**tinyint**|Identificateur du type d'objet affecté par l'action :<br /><br /> **0** = dacpac<br /><br /> **1** = login<br /><br /> **2** = database|  
-|**dac_object_type_name**|**varchar(8)**|Nom du type d'objet affecté par l'action :<br /><br /> **dacpac** = DAC instance<br /><br /> **login**<br /><br /> **database**|  
+|**dac_object_type**|**tinyint**|Identificateur du type d'objet affecté par l'action :<br /><br /> **0** = dacpac<br /><br /> **1** = connexion<br /><br /> **2** = base de données|  
+|**dac_object_type_name**|**varchar(8)**|Nom du type d'objet affecté par l'action :<br /><br /> **dacpac** = instance DAC<br /><br /> **login**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Code qui identifie l'état actuel de l'action :<br /><br /> **0** = en attente<br /><br /> **1** = succès<br /><br /> **2** = Échec|  
-|**action_status_name**|**varchar(11)**|État actuel de l'action :<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
+|**action_status_name**|**varchar(11)**|État actuel de l'action :<br /><br /> **En attente**<br /><br /> **Réussite**<br /><br /> **Échec**|  
 |**Obligatoire**|**bit**|Utilisé par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] lors de la restauration d’une opération DAC.|  
 |**dac_object_name_pretran**|**sysname**|Nom de l'objet avant la validation de la transaction qui contient l'action. Utilisé uniquement pour les bases de données et les connexions.|  
 |**dac_object_name_posttran**|**sysname**|Nom de l'objet après la validation de la transaction qui contient l'action. Utilisé uniquement pour les bases de données et les connexions.|  
@@ -59,7 +58,7 @@ ms.locfileid: "62471138"
 |-|-|-|-|  
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|create|dacpac|  
-|12|1|create|login|  
+|12|1|create|connexion|  
 |12|2|create|base de données|  
 |12|3|renommer|base de données|  
   

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 388d400160e3fa7b3240c7a9c014bcf36ae25f3a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816665"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212097"
 ---
 # <a name="specify-a-merge-article-resolver"></a>Spécifier un programme de résolution d'articles de fusion
   Cette rubrique explique comment spécifier un programmes de résolution d'articles de fusion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -57,15 +57,15 @@ ms.locfileid: "52816665"
     -   le serveur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] IIS (Internet Information Services) pour un abonnement extrait qui utilise la synchronisation Web.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Après l’inscription du programme de résolution, spécifiez qu’un article doit l’utiliser sous l’onglet **Résolveur** de la boîte de dialogue **Propriétés de l’article - \<Article>**, accessible dans l’Assistant Nouvelle publication et dans la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
+ Après l’inscription du programme de résolution, spécifiez qu’un article doit l’utiliser sous l’onglet **Résolveur** de la boîte de dialogue **Propriétés de l’article - \<Article>** , accessible dans l’Assistant Nouvelle publication et dans la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-resolver"></a>Pour spécifier un programme de résolution  
   
-1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez une table.  
+1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table.  
   
 2.  Cliquez sur **Propriétés de l'article**puis sur **Définir les propriétés de l'article de la table en surbrillance**.  
   
-3.  Dans la page **Propriétés de l’article - \<Article>**, cliquez sur l’onglet **Résolveur**.  
+3.  Dans la page **Propriétés de l’article - \<Article>** , cliquez sur l’onglet **Résolveur**.  
   
 4.  Sélectionnez **Utiliser un résolveur personnalisé (inscrit sur le serveur de distribution)** puis, dans la liste, cliquez sur le programme de résolution.  
   
@@ -87,10 +87,10 @@ ms.locfileid: "52816665"
   
 2.  Pour déterminer si le programme de résolution souhaité est déjà inscrit, exécutez [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) au niveau du serveur de publication dans toute base de données. Une description du programme de résolution personnalisé est alors affichée, de même que le CLSID de chaque programme de résolution s'appuyant sur l'architecture COM inscrit sur le serveur de distribution ou des informations sur l'assembly managé pour chaque gestionnaire de logique métier inscrit sur le serveur de distribution.  
   
-3.  Si le programme de résolution personnalisé souhaité n’est pas encore inscrit, exécutez [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) au niveau du serveur de distribution. Spécifiez le nom du programme de résolution pour **@article_resolver**; pour un gestionnaire de logique métier, il s'agit du nom convivial de l'assembly. Pour les programmes de résolution COM, spécifiez le CLSID de la DLL pour **@resolver_clsid**et pour un gestionnaire de logique métier, affectez la valeur `true` pour **@is_dotnet_assembly**, le nom de l’assembly pour **@dotnet_assembly_name**et le nom qualifié complet de la classe qui remplace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> pour **@dotnet_class_name**.  
+3.  Si le programme de résolution personnalisé souhaité n’est pas encore inscrit, exécutez [sp_registercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql) au niveau du serveur de distribution. Spécifiez le nom du programme de résolution pour **@article_resolver** ; pour un gestionnaire de logique métier, il s'agit du nom convivial de l'assembly. Pour les programmes de résolution COM, spécifiez le CLSID de la DLL pour **@resolver_clsid** et pour un gestionnaire de logique métier, affectez la valeur `true` pour **@is_dotnet_assembly** , le nom de l’assembly pour **@dotnet_assembly_name** et le nom qualifié complet de la classe qui remplace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> pour **@dotnet_class_name** .  
   
     > [!NOTE]  
-    >  Si un assembly de gestionnaire de logique métier n'est pas déployé dans le même répertoire que l'exécutable de l'Agent de fusion, que l'application qui démarre de façon synchronisée l'Agent de fusion ou dans le GAC (Global Assembly Cache), vous devez spécifier le chemin d'accès complet avec le nom de l'assembly pour **@dotnet_assembly_name**.  
+    >  Si un assembly de gestionnaire de logique métier n'est pas déployé dans le même répertoire que l'exécutable de l'Agent de fusion, que l'application qui démarre de façon synchronisée l'Agent de fusion ou dans le GAC (Global Assembly Cache), vous devez spécifier le chemin d'accès complet avec le nom de l'assembly pour **@dotnet_assembly_name** .  
   
 4.  Si le programme de résolution est un programme de résolution s'appuyant sur l'architecture COM :  
   
@@ -124,15 +124,15 @@ ms.locfileid: "52816665"
   
 2.  Sur le serveur de publication, exécutez [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) et notez le nom du programme de résolution personnalisé souhaité dans le champ **value** du jeu de résultats.  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Affectez la valeur **article_resolver**, y compris le chemin d'accès complet pour les gestionnaires de logique métier, à **@property**, et le nom du programme de résolution personnalisé souhaité de l'étape 2 à **@value**.  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Affectez la valeur **article_resolver**, y compris le chemin d'accès complet pour les gestionnaires de logique métier, à **@property** , et le nom du programme de résolution personnalisé souhaité de l'étape 2 à **@value** .  
   
-4.  Pour modifier toute entrée requise pour le programme de résolution personnalisé, réexécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Affectez la valeur **resolver_info** à **@property** et toute entrée requise pour le programme de résolution personnalisé à **@value**. Pour les programmes de résolution personnalisés s'appuyant sur des procédures stockées, **@resolver_info** est le nom de la procédure stockée. Pour plus d’informations sur l’entrée nécessaire, consultez [Programmes de résolution COM Microsoft](../merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
+4.  Pour modifier toute entrée requise pour le programme de résolution personnalisé, réexécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Affectez la valeur **resolver_info** à **@property** et toute entrée requise pour le programme de résolution personnalisé à **@value** . Pour les programmes de résolution personnalisés s'appuyant sur des procédures stockées, **@resolver_info** est le nom de la procédure stockée. Pour plus d’informations sur l’entrée nécessaire, consultez [Programmes de résolution COM Microsoft](../merge/advanced-merge-replication-conflict-com-based-resolvers.md).  
   
 #### <a name="to-unregister-a-custom-conflict-resolver"></a>Pour annuler l'inscription d'un outil personnalisé de résolution des conflits  
   
 1.  Sur le serveur de publication, exécutez [sp_enumcustomresolvers &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql) et notez le nom du programme de résolution personnalisé à supprimer dans le champ **value** du jeu de résultats.  
   
-2.  Exécutez [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) sur le serveur de distribution. Spécifiez le nom complet du programme de résolution personnalisé de l'étape 1 pour **@article_resolver**.  
+2.  Exécutez [sp_unregistercustomresolver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql) sur le serveur de distribution. Spécifiez le nom complet du programme de résolution personnalisé de l'étape 1 pour **@article_resolver** .  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
  Cet exemple crée un article et spécifie que l'Outil de résolution des conflits de moyenne [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit être utilisé pour calculer la moyenne de la colonne **UnitPrice** en cas de conflit.  
@@ -143,7 +143,7 @@ ms.locfileid: "52816665"
   
  [!code-sql[HowTo#sp_changemerge_resolver](../../../snippets/tsql/SQL15/replication/howto/tsql/mergearticleresolvers.sql#sp_changemerge_resolver)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Advanced Merge Replication Conflict Detection and Resolution](../merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Implémenter un gestionnaire de logique métier pour un article de fusion](../implement-a-business-logic-handler-for-a-merge-article.md)  
   

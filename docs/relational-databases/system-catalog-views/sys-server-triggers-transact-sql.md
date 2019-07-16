@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b13aeed62a84258fcfbf5820c17dca59f4b5852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 995a9b5fe4786e1e188a8bbdc612cce743e77a18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133011"
 ---
 # <a name="sysservertriggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +33,11 @@ ms.locfileid: "62660750"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom du déclencheur.|  
+|**name**|**sysname**|Nom du déclencheur.|  
 |**object_id**|**Int**|ID de l'objet.|  
 |**parent_class**|**tinyint**|Classe du parent. Est toujours :<br /><br /> 100 = serveur|  
 |**parent_class_desc**|**nvarchar(60)**|Description d'une classe de parent. Est toujours :<br /><br /> SERVER.|  
-|**parent_id**|**Int**|Toujours 0 pour les déclencheurs sur SERVER.|  
+|**parent_id**|**int**|Toujours 0 pour les déclencheurs sur SERVER.|  
 |**type**|**char(2)**|Type d’objet :<br /><br /> TA = Déclencheur assembly (CLR)<br /><br /> TR = Déclencheur SQL|  
 |**type_desc**|**nvarchar(60)**|Description de la classe du type d'objet.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|Date de création du déclencheur.|  

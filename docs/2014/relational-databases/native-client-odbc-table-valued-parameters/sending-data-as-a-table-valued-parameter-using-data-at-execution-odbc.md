@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118359"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205463"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Envoi de données en tant que paramètre table à l'aide de données en cours d'exécution (ODBC)
   Ceci est similaire à la [tous en mémoire](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) procédure, mais utilise data-at-execution pour le paramètre table.  

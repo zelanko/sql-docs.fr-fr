@@ -7,15 +7,14 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e036aa2a4c104eaf92e3e9aaf4513f2542bf23b4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: cf64f8ad137f8dea94bbc08d4a72981393de44ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961906"
 ---
-# <a name="tutorial-python-data-analytics-for-sql-developers"></a>Didacticiel : Analytique de données Python pour les développeurs SQL
+# <a name="tutorial-python-data-analytics-for-sql-developers"></a>Tutoriel : Analytique de données Python pour les développeurs SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Dans ce didacticiel pour les programmeurs SQL, en savoir plus sur l’intégration de Python en créant et déploiement d’un ordinateur basé sur Python learning à l’aide de la solution un [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) base de données sur SQL Server. Vous allez utiliser T-SQL, SQL Server Management Studio et une instance du moteur de base de données avec [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) et prise en charge du langage Python.
@@ -42,7 +41,7 @@ Si vous êtes un programmeur SQL vous débutez avec Python ou Python développeu
 
 + [Leçon 1 : Explorer et visualiser les données à l’aide de Python](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [Leçon 2 : Créer des caractéristiques de données à l’aide de fonctions SQL personnalisées](sqldev-py4-create-data-features-using-t-sql.md)
++ [Leçon 2 : Créer des caractéristiques de données à l’aide de fonctions SQL personnalisées](sqldev-py4-create-data-features-using-t-sql.md)
 
 + [Leçon 3 : Former et enregistrer un modèle de Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
@@ -54,7 +53,7 @@ Une fois que le modèle a été enregistré dans la base de données, vous pouve
 
 + [Services SQL Server 2017 Machine Learning avec Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [Autorisations](../security/user-permission.md)
++ [autorisations](../security/user-permission.md)
 
 + [Base de données de démonstration NYC Taxi](demo-data-nyctaxi-in-sql.md)
 

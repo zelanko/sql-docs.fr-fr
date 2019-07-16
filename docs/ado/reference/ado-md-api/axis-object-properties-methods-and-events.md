@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e0dac54b808bac4b9928d2ab2a4e8fcd50f970d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e4fcd8137344f3902df25e27b011c36872f26790
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930506"
 ---
 # <a name="axis-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Axis
 ## <a name="propertiescollections"></a>Propriétés et des Collections  
@@ -32,10 +31,10 @@ ms.locfileid: "62743095"
  [Collection de propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
 ## <a name="methods"></a>Méthodes  
- Aucun.  
+ Aucune.  
   
-## <a name="events"></a>Événements  
- Aucun.  
+## <a name="events"></a>Events  
+ Aucune.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Axis, objet (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)
