@@ -5,17 +5,16 @@ description: Article de référence pour les commandes de mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a30f78b24a85f85b85beb914dc0f26af652242fd
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5567b46376acc5aee6c42cdae19eef133c7af506
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957897"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -26,13 +25,13 @@ L’article suivant fournit la référence pour le **mssqlctl** outil pour [clus
 ## <a name="commands"></a>Commandes
 |     |     |
 | --- | --- |
-|[mssqlctl app](reference-mssqlctl-app.md) | Créer, supprimer, exécuter et gérer des applications. |
+|[application de mssqlctl](reference-mssqlctl-app.md) | Créer, supprimer, exécuter et gérer des applications. |
 |[mssqlctl bdc](reference-mssqlctl-bdc.md) | Sélectionnez, gérer et exploiter des Clusters de données volumineuses de SQL Server. |
 |[mssqlctl hdfs](reference-mssqlctl-hdfs.md) | Le module HDFS fournit le système de fichiers de commandes pour accéder à un système HDFS. |
 [mssqlctl login](#mssqlctl-login) | Connectez-vous au point de terminaison de contrôleur du cluster.
 [déconnexion de mssqlctl](#mssqlctl-logout) | Se déconnecter de cluster.
 |[mssqlctl sql](reference-mssqlctl-sql.md) | L’interface de base de données SQL CLI permet à l’utilisateur d’interagir avec SQL Server par le biais de T-SQL. |
-## <a name="mssqlctl-login"></a>mssqlctl login
+## <a name="mssqlctl-login"></a>mssqlctl connexion
 Lorsque votre cluster est déployé, il répertorie le point de terminaison du contrôleur au cours du déploiement, vous devez utiliser pour vous connecter.  Si vous ne connaissez pas le point de terminaison du contrôleur, vous pouvez la connexion en utilisant la configuration de kube de votre cluster sur votre système dans l’emplacement par défaut de <user home>/.kube/config ou utiliser le var env KUBECONFIG, par exemple, exporter KUBECONFIG=path/to/.kube/config.
 ```bash
 mssqlctl login [--cluster-name -n] 

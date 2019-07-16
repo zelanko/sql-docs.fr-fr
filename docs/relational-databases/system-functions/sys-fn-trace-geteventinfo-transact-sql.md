@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5bcb1856b9ee6206040b292ecd4642bac3066f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62296eb8d1ef53969e33f3807bd81f47025a4893
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059277"
 ---
 # <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,15 +50,15 @@ fn_trace_geteventinfo ( trace_id )
   
 ## <a name="tables-returned"></a>Tables retournées  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**ID d’événement**|**Int**|ID de l'événement tracé|  
+|**ID d’événement**|**int**|ID de l'événement tracé|  
 |**columnid**|**Int**|Numéros d'identification (ID) de toutes les colonnes rassemblées pour chaque événement|  
   
 ## <a name="remarks"></a>Notes  
  Quand il est passé de l’ID d’une trace spécifique, **fn_trace_geteventinfo** retourne des informations relatives à cette trace. Lorsqu'un identificateur non valide lui est passé, cette fonction renvoie un ensemble de lignes vide.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER TRACE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
