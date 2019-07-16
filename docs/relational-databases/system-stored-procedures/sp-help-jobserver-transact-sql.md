@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ba2120b4c48ac9df9cc901b4ee789d95f9fc0357
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6a1a2ce1208dcf359bb0586c3de1fe294644e3a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054879"
 ---
 # <a name="sphelpjobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,22 +56,22 @@ sp_help_jobserver
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**Int**|Numéro d'identification du serveur cible.|  
+|**server_id**|**int**|Numéro d'identification du serveur cible.|  
 |**server_name**|**nvarchar(30)**|Nom de l'ordinateur du serveur cible.|  
 |**enlist_date**|**datetime**|Date d'inscription du serveur cible sur le serveur maître.|  
 |**last_poll_date**|**datetime**|Date à laquelle le serveur cible a interrogé pour la dernière fois le serveur maître.|  
   
  Si **sp_help_jobserver** est exécutée avec *afficher_les_détails_de_dernière_exécution* définie sur **1**, le jeu de résultats comporte ces colonnes supplémentaires.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**last_run_date**|**Int**|Date du début de la dernière exécution du travail sur ce serveur cible.|  
 |**last_run_time**|**Int**|Heure du début de la dernière exécution du travail sur ce serveur.|  
-|**last_run_duration**|**Int**|Durée du travail lors de sa dernière exécution sur ce serveur cible (en secondes).|  
+|**last_run_duration**|**int**|Durée du travail lors de sa dernière exécution sur ce serveur cible (en secondes).|  
 |**last_outcome_message**|**nvarchar(1024)**|Décrit le dernier résultat du travail.|  
-|**last_run_outcome**|**Int**|Résultat du travail à l'issue de sa dernière exécution sur ce serveur.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
+|**last_run_outcome**|**int**|Résultat du travail à l'issue de sa dernière exécution sur ce serveur.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
   
 ## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c0cd34d0a10fc8809280be0abcc0761cebd72ae
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006121"
 ---
 # <a name="sphelpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 |setupadmin|Administrateurs de l'installation et de la configuration|  
 |processadmin|Administrateurs de processus|  
 |diskadmin|Administrateurs de disques|  
-|dbcreator|Créateurs de bases de données|  
+|dbcreator|Créateurs de base de données|  
 |bulkadmin|Exécute les instructions BULK INSERT.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -58,7 +57,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|Nom du rôle de serveur|  
 |Description|**sysname**|Description de ServerRole|  
@@ -77,7 +76,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-the-fixed-server-roles"></a>A. Liste des rôles serveur fixes  
+### <a name="a-listing-the-fixed-server-roles"></a>R. Liste des rôles serveur fixes  
  La requête suivante retourne la liste des rôles serveur fixes.  
   
 ```  
