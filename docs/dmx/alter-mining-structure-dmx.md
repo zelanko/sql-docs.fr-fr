@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 487fb5c04d623f2a4ef408cf35784dd57b067f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913841"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,14 +51,14 @@ USING <algorithm> [(<parameter list>)]
  *critères de filtre imbriquée*  
  Expression de filtre appliquée aux colonnes dans une table imbriquée.  
   
- *algorithme*  
+ *algorithm*  
  Nom d'un algorithme d'exploration de données, tel que défini par le fournisseur.  
   
 > [!NOTE]  
 >  Une liste des algorithmes pris en charge par le fournisseur actuel peut être récupérée à l’aide de [de lignes DMSCHEMA_MINING_SERVICES](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). Pour afficher les algorithmes pris en charge dans l’instance actuelle de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], consultez [propriétés d’exploration de données](../analysis-services/server-properties/data-mining-properties.md).  
   
  *liste de paramètres*  
- Facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
+ facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
   
  *critères de filtre*  
  Expression de filtre appliquée aux colonnes dans la table de cas.  
@@ -161,7 +160,7 @@ ADD MINING MODEL [Naive Bayes]
 USING Microsoft_Naive_Bayes (MAXIMUM_STATES = 50)  
 ```  
   
-## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Exemple 2 : Ajouter un modèle filtré à une Structure  
+## <a name="example-2-add-a-filtered-model-to-a-structure"></a>Exemple 2 : Ajouter un modèle filtré à une Structure  
  L’exemple suivant ajoute un modèle d’exploration de données, `Naive Bayes Women`, à la **New Mailing** structure d’exploration de données. Le nouveau modèle a la même structure de base que le modèle d'exploration de données ajouté dans l'exemple 1, à la différence près que ce modèle restreint les cas de la structure d'exploration de données aux clients qui sont des femmes de plus de 50 ans.  
   
 ```  
@@ -177,7 +176,7 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Exemple 3 : Ajouter un modèle filtré à une Structure avec une Table imbriquée  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Exemple 3 : Ajouter un modèle filtré à une Structure avec une Table imbriquée  
  L'exemple suivant ajoute un modèle d'exploration de données à une version modifiée de la structure d'exploration de données du panier d'achat. La structure d’exploration de données utilisée dans l’exemple a été modifiée pour ajouter un **région** colonne qui contient les attributs pour la région du client, et un **Income Group** colonne, qui classe le revenu du client à l’aide de les valeurs **haute**, **modéré**, ou **faible**.  
   
  La structure d'exploration de données inclut également une table imbriquée qui répertorie les articles que le client a achetés.  

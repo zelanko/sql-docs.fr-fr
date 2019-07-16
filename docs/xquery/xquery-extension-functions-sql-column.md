@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c5b7babb3f34f906a241669bbde753e3beaace92
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946010"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>Fonctions d’extension XQuery : sql:column()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sql:column("columnName")
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-sqlcolumn-to-retrieve-the-relational-value-inside-xml"></a>A. Utilisation de sql:column() pour récupérer une valeur relationnelle dans du code XML  
+### <a name="a-using-sqlcolumn-to-retrieve-the-relational-value-inside-xml"></a>R. Utilisation de sql:column() pour récupérer une valeur relationnelle dans du code XML  
  Concernant la construction XML, l'exemple suivant illustre la méthode à suivre pour récupérer des valeurs dans une colonne relationnelle non XML afin de lier les données XML et les données relationnelles.  
   
  La requête construit du code XML se présentant sous la forme suivante :  

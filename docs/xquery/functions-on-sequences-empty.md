@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d9afc542b8d743c3e4e0ae35bb87f10e2f0835f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004673"
 ---
 # <a name="functions-on-sequences---empty"></a>Fonctions sur les séquences : empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ fn:empty($arg as item()*) as xs:boolean
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. Utilisation de la fonction XQuery empty() pour déterminer la présence d'un attribut  
+### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>R. Utilisation de la fonction XQuery empty() pour déterminer la présence d'un attribut  
  Dans le processus de fabrication du modèle de produit 7, cette requête retourne tous les postes de travail qui n’ont pas un **MachineHours** attribut.  
   
 ```  
@@ -65,7 +64,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID      Result          
@@ -97,7 +96,7 @@ FROM Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID Result                         

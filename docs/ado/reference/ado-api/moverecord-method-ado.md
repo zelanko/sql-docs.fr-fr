@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe9dc770f537b9b9f8b53461c30b890a4144a821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918075"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord, méthode (ADO)
 Déplace l’entité représentée par un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) vers un autre emplacement.  
@@ -36,7 +35,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- Facultatif. Un **chaîne** valeur qui contient une URL qui identifie le **enregistrement** à déplacer. Si *Source* est omis ou spécifie une chaîne vide, l’objet représenté par ce **enregistrement** est déplacé. Par exemple, si le **enregistrement** représente un fichier, le contenu du fichier est déplacés vers l’emplacement spécifié par *Destination*.  
+ facultatif. Un **chaîne** valeur qui contient une URL qui identifie le **enregistrement** à déplacer. Si *Source* est omis ou spécifie une chaîne vide, l’objet représenté par ce **enregistrement** est déplacé. Par exemple, si le **enregistrement** représente un fichier, le contenu du fichier est déplacés vers l’emplacement spécifié par *Destination*.  
   
  *Destination*  
  Facultatif. Un **chaîne** valeur qui contient une URL en spécifiant l’emplacement où *Source* sera déplacé.  
@@ -45,7 +44,7 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  Facultatif. Un **chaîne** valeur qui contient l’ID utilisateur, si nécessaire, autorise l’accès *Destination*.  
   
  *Mot de passe*  
- Facultatif. Un **chaîne** qui contient le mot de passe, si nécessaire, vérifie *nom d’utilisateur*.  
+ facultatif. Un **chaîne** qui contient le mot de passe, si nécessaire, vérifie *nom d’utilisateur*.  
   
  *Options*  
  Facultatif. Un [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) valeur dont la valeur par défaut est **adMoveUnspecified**. Spécifie le comportement de cette méthode.  

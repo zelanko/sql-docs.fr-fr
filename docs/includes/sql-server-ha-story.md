@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bac867f5f3532f931d2708c46979659e2851645f
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212281"
 ---
 Cet article fournit une vue d’ensemble des solutions de continuité d’activité dans le cadre de la haute disponibilité et de la récupération d’urgence dans SQL Server. 
 

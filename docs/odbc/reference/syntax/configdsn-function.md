@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9387ffefe2fdcc9b30824018a763b87b81b831dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78be24ea75fad04c7b7c1bdae103dfd3f92c78ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016718"
 ---
 # <a name="configdsn-function"></a>ConfigDSN, fonction
 **Conformité**  
@@ -54,7 +53,7 @@ BOOL ConfigDSN(
   
  ODBC_ADD_DSN : Ajouter une nouvelle source de données.  
   
- ODBC_CONFIG_DSN: Configurer (modifier) une source de données existante.  
+ ODBC_CONFIG_DSN : Configurer (modifier) une source de données existante.  
   
  ODBC_REMOVE_DSN : Supprimer une source de données existante.  
   

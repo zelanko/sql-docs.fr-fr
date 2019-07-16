@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347e8d170006cb289b421171851140b18e64f14b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f1c1c856cadbb4f005a99d5a5d49dc0c1280a8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898419"
 ---
 # <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_updateextendedproperty
  Valeur associée à la propriété. *valeur* est **sql_variant**, avec NULL comme valeur par défaut. La taille de *valeur* peut ne pas être plus de 7 500 octets.  
   
  [ @level0type=] {'*level0_object_type*'}  
- Type défini par l'utilisateur ou utilisateur. *level0_object_type* est **varchar (128)**, avec NULL comme valeur par défaut. Les entrées valides sont ASSEMBLY, contrat, NOTIFICATION d’événement, groupe de fichiers, TYPE DE MESSAGE, fonction de PARTITION, schéma de PARTITION, le repère de PLAN, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, utilisateur, déclencheur, TYPE et NULL.  
+ Type défini par l'utilisateur ou utilisateur. *level0_object_type* est **varchar (128)** , avec NULL comme valeur par défaut. Les entrées valides sont ASSEMBLY, contrat, NOTIFICATION d’événement, groupe de fichiers, TYPE DE MESSAGE, fonction de PARTITION, schéma de PARTITION, le repère de PLAN, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, utilisateur, déclencheur, TYPE et NULL.  
   
 > [!IMPORTANT]  
 >  Les types de niveau 0 USER et TYPE seront éliminés dans une version ultérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement. À la place de USER, utilisez SCHEMA en tant que type de niveau 0. Pour TYPE, utilisez SCHEMA comme type de niveau 0 et TYPE comme type de niveau 1.  
@@ -88,14 +87,14 @@ sp_updateextendedproperty
   
  Étant donné un valide *property_name* et *valeur*, si tous les types d’objets et les noms sont null, la propriété mise à jour appartient à la base de données actuelle.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les membres des rôles de base de données fixes db_owner et db_ddladmin peuvent mettre à jour les propriétés étendues de n'importe quel objet, avec toutefois la restriction suivante : db_ddladmin ne peut pas ajouter de propriétés à la base de données elle-même, ni aux utilisateurs ou rôles.  
   
  Les utilisateurs peuvent mettre à jour les propriétés étendues des objets qu'ils possèdent ou pour lesquels ils disposent d'autorisations ALTER ou CONTROL.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-updating-an-extended-property-on-a-column"></a>A. Mise à jour d'une propriété étendue sur une colonne  
+### <a name="a-updating-an-extended-property-on-a-column"></a>R. Mise à jour d'une propriété étendue sur une colonne  
  L'exemple suivant met à jour la valeur de la propriété `Caption` sur la colonne `ID` de la table `T1`.  
   
 ```  
@@ -138,7 +137,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [Sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  

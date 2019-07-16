@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0ae7b8eb0468dd401009ef58c83b87606b0679a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da74bbb64a76f6c3ff6c55754798b975dab83826
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003334"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (pilote ODBC Visual FoxPro)
 > [!NOTE]  
@@ -32,7 +31,7 @@ ms.locfileid: "63313070"
   
  Le pilote ODBC Visual FoxPro prend en charge les fonctions de toutes les API niveau principal ODBC et niveau 1. Le tableau suivant indique si le pilote prend en charge une fonction spécifique de niveau 2.  
   
-|*Fonction*|Pris en charge|  
+|*Function*|Pris en charge|  
 |----------------|---------------|  
 |SQL_API_SQLBROWSECONNECT|Non|  
 |SQL_API_SQLCOLUMNPRIVELEGES|Non|  

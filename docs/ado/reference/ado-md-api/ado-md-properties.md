@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e4b7d4f79b3ba3572a20cb8876909f90e4e5870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc69511e41d00aa96e69181a654194f31f7dcc02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930552"
 ---
 # <a name="ado-md-properties"></a>Propriétés ADO MD
 
@@ -35,8 +34,8 @@ ms.locfileid: "66709995"
 |[DimensionCount](../../../ado/reference/ado-md-api/dimensioncount-property-ado-md.md)|Indique le nombre de dimensions sur un axe.|  
 |[DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md)|Indique si aucun enfant ne suit immédiatement le membre sur l'axe.|  
 |[FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md)|Indique les informations de filtre pour l’ensemble de cellules en cours.|  
-|[Élément](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)|Récupère une cellule à partir d’un ensemble de cellules à l’aide de ses coordonnées.|  
-|[Élément](../../../ado/reference/ado-api/item-property-ado.md)|Retourne un membre spécifique d’une collection par nom ou un nombre ordinal.|  
+|[Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md)|Récupère une cellule à partir d’un ensemble de cellules à l’aide de ses coordonnées.|  
+|[Item](../../../ado/reference/ado-api/item-property-ado.md)|Retourne un membre spécifique d’une collection par nom ou un nombre ordinal.|  
 |[FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)|Indique l’affichage de mise en forme d’une valeur de cellule.|  
 |[LevelDepth](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)|Indique le nombre de niveaux entre la racine de la hiérarchie et un membre.|  
 |[LevelName](../../../ado/reference/ado-md-api/levelname-property-ado-md.md)|Indique le nom du niveau d’un membre.|  

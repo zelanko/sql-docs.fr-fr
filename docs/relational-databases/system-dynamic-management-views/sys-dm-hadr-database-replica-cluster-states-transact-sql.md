@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 253959175db3519c00874db43466fa21c31cf5e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900671"
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Retourne une ligne contenant des informations destinées à vous fournir l’analyse de l’intégrité des bases de données de disponibilité dans les groupes de disponibilité Always On dans chaque groupe de disponibilité Always On sur le cluster de Clustering de basculement Windows Server (WSFC). Requête **sys.dm_hadr_database_replica_states** pour répondre aux questions suivantes :  
+  Retourne une ligne contenant les informations destinées à vous fournir l'analyse de l'intégrité des bases de données de disponibilité dans chaque groupe de disponibilité Always On sur le cluster de basculement Windows Server (WSFC). Requête **sys.dm_hadr_database_replica_states** pour répondre aux questions suivantes :  
   
 -   Toutes les bases de données d'un groupe de service sont-elles prêtes pour un basculement ?  
   
@@ -39,9 +38,9 @@ ms.locfileid: "47636677"
   
 -   Si le réplica principal n'est pas disponible actuellement, quel réplica secondaire permettrait la perte minimale de données s'il devenait le réplica principal ?  
   
--   Lorsque la valeur de la [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** colonne est « AVAILABILITY_REPLICA », quel réplica secondaire dans un groupe de disponibilité retarde la troncation du journal sur une base de données primaire ?     
+-   Lorsque la valeur de la [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** colonne est « AVAILABILITY_REPLICA », quel réplica secondaire dans un groupe de disponibilité retarde la troncation du journal sur une base de données primaire ?  
    
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|Identificateur du réplica de disponibilité dans le groupe de disponibilité.|  
 |**group_database_id**|**uniqueidentifier**|Identificateur de la base de données dans le groupe de disponibilité. Cet identificateur est identique sur chaque réplica auquel cette base de données est attachée.|  
@@ -54,7 +53,7 @@ ms.locfileid: "47636677"
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e80aef6d8a0ee33aa7a9a0d9bb71abc3ddf1e15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c783eaf32e0f1ca37e14022ab981864747ca171
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004923"
 ---
 # <a name="sysdmdbftsindexphysicalstats-transact-sql"></a>sys.dm_db_fts_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -35,8 +34,8 @@ ms.locfileid: "62742021"
   
 ||||  
 |-|-|-|  
-|**Nom de colonne**|**Type**|**Description**|  
-|**object_id**|INT|ID d'objet de la table qui contient l'index.|  
+|**Nom de la colonne**|**Type**|**Description**|  
+|**object_id**|int|ID d'objet de la table qui contient l'index.|  
 |**fulltext_index_page_count**|**bigint**|Taille logique de l'extraction, en nombre de pages d'index.|  
 |**keyphrase_index_page_count**|**bigint**|Taille logique de l'extraction, en nombre de pages d'index.|  
 |**similarity_index_page_count**|**bigint**|Taille logique de l'extraction, en nombre de pages d'index.|  
@@ -54,7 +53,7 @@ ms.locfileid: "62742021"
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
 
 ## <a name="examples"></a>Exemples  
  L'exemple suivant indique comment interroger la taille logique de chaque index sémantique ou de recherche en texte intégral dans chaque table associée à un index sémantique ou de recherche en texte intégral :  

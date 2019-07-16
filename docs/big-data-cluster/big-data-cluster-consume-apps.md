@@ -5,17 +5,16 @@ description: Consommer une application déployée sur SQL Server 2019 cluster de
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 308bbe40ba49566bf6cbccad13f8edab0db3d363
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 919ffb2cd4916451245f29c7d783ca05dbfa6998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958882"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Utiliser une application déployée sur un cluster de données volumineux de SQL Server à l’aide d’un service web RESTful
 
@@ -26,7 +25,7 @@ Cet article décrit comment utiliser une application déployée sur un cluster d
 ## <a name="prerequisites"></a>Prérequis
 
 - [Cluster de données volumineux de SQL Server 2019](deployment-guidance.md)
-- [mssqlctl command-line utility](deploy-install-mssqlctl.md)
+- [utilitaire de ligne de commande mssqlctl](deploy-install-mssqlctl.md)
 - Une application déployée à l’aide [ `mssqlctl` ](big-data-cluster-create-apps.md) ou [application déployer une extension](app-deployment-extension.md)
 
 ## <a name="capabilities"></a>Fonctionnalités

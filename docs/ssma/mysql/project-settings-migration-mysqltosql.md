@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4a423404a8f5db4e20331c3b187365a889bea48a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63261817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908864"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Paramètres du projet (Migration) (MySQLToSQL)
 La page de la Migration de la **paramètres du projet** boîte de dialogue contient les paramètres qui personnalisent comment SSMA migre les données de MySQL vers SQL Server.  
@@ -32,7 +31,7 @@ Le volet de la Migration est disponible dans le **paramètres du projet** et **p
   
 |Terme|Définition|  
 |--------|--------------|  
-|**Taille de lot**|Spécifie le lot taille utilisée pendant la migration des données.<br /><br />**Par défaut en Mode**:  1000<br /><br />**Mode optimiste**:  1000<br /><br />**Mode plein**:  1000|  
+|**Taille de lot**|Spécifie le lot taille utilisée pendant la migration des données.<br /><br />**Par défaut en Mode**:  1 000<br /><br />**Mode optimiste**:  1 000<br /><br />**Mode plein**:  1 000|  
 |**Contraintes de validation**|Spécifie si SSMA doit vérifier les contraintes lors de l’insertion des données dans des tables SQL Server.<br /><br />**Par défaut en Mode**:  False<br /><br />**Mode optimiste**:  False<br /><br />**Mode plein**:  False|  
 |**Exécuter les déclencheurs**|Spécifie si SSMA doit exécuter les déclencheurs d’insertion lorsqu’il ajoute des données dans des tables SQL Server.<br /><br />**Par défaut en Mode**:  False<br /><br />**Mode optimiste**:  False<br /><br />**Mode plein**:  False|  
 |**Conserver l'identité**|Spécifie si SSMA conserve les valeurs d’identité MySQL lorsqu’il ajoute des données à SQL Server. La valeur False provoque des valeurs d’identité doit être assignée par la destination.<br /><br />**Par défaut en Mode**:  True<br /><br />**Mode optimiste**:  True<br /><br />**Mode plein**:  True|  

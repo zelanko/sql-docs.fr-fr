@@ -2,7 +2,6 @@
 title: Statistiques automatiques (Analytique Platform System)
 description: Décrit la fonctionnalité de statistiques automatique introduite dans AU7 de système de plateforme Analytique.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caed6b9d126e09bc70a61c73b5100d689f81b011
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961270"
 ---
 # <a name="configure-auto-statistics"></a>Configurer automatiquement les statistiques
 
@@ -55,7 +54,7 @@ ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS_ASYNC ON
  
 Option de AUTO_UPDATE STATISTICS_ASYNC fonctionne uniquement si l’option AUTO_UPDATE_STATISTICS est activée.  Par conséquent, les statistiques ne sont pas mis à jour lorsque l’option AUTO_UPDATE_STATISTICS est désactivée (OFF) et AUTO_UPDATE_STATISTICS_ASYNC a la valeur ON. 
 
-### <a name="error-messages"></a>Messages d’erreur
+### <a name="error-messages"></a>messages d'erreur
 Vous pouvez recevoir le message d’erreur « cette option n’est pas prise en charge dans PDW ».  Cette erreur se produit lorsque l’administrateur système n’a pas activé automatiquement les statistiques, et que vous essayez de définir automatiquement les options de statistiques dans ALTER DATABASE. 
 
 ### <a name="limitations-and-restrictions"></a>Limitations et restrictions

@@ -1,5 +1,5 @@
 ---
-title: 'Étape 5 : DataControl est devient utilisable (didacticiel RDS) | Microsoft Docs'
+title: 'Étape 5 : DataControl est devient utilisable (didacticiel RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: ed5c4a24-9804-4c85-817e-317652acb9b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f654bc1ccd913c5fc31f81cae67ffdb84e80f952
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1202a25c603b5dd4f9a824b031b5af91f5940052
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922054"
 ---
-# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Étape 5 : DataControl devient utilisable (tutoriel RDS)
+# <a name="step-5-datacontrol-is-made-usable-rds-tutorial"></a>Étape 5 : DataControl devient utilisable (tutoriel RDS)
 Retourné **Recordset** objet est disponible pour utilisation. Vous pouvez examiner, accédez ou le modifier comme vous le feriez pour n’importe quel autre **Recordset**. Vous pouvez faire avec le **Recordset** dépend de votre environnement. Visual Basic et Visual C++ ont des contrôles visuels que vous peuvent utiliser un **Recordset** directement ou indirectement à l’aide d’un contrôle d’activation de données.  
   
 > [!IMPORTANT]
@@ -45,5 +44,5 @@ Sub RDSTutorial5()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Étape 6 : Les modifications sont envoyées au serveur (didacticiel RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
+ [Étape 6 : Les modifications sont envoyées au serveur (didacticiel RDS)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)   
  [Didacticiel RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cede3c4419f4e11d2110e7c3f735c3dec2474ec4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: 6b009fc8d08b9494a6ad3a33169fbb7d783b92be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902904"
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,9 +45,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur tous les travaux d’instantané de données filtrées qui correspondent à la chaîne *dynamic_ snapshot_jobid*et *dynamic_snapshot_jobname*pour toutes les publications.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%** , qui retourne des informations sur tous les travaux d’instantané de données filtrées qui correspondent à la chaîne *dynamic_ snapshot_jobid*et *dynamic_snapshot_jobname*pour toutes les publications.  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Est le nom d’un travail de capture instantanée de données filtrées. *dynamic_snapshot_jobname*est **sysname**, avec comme valeur par défaut **%**», qui retourne tous les travaux dynamiques d’une publication avec spécifié *dynamic_ snapshot_jobid*. Si aucun nom de travail n'est défini explicitement lors de la création du travail, le nom du travail a le format suivant :  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Est le nom d’un travail de capture instantanée de données filtrées. *dynamic_snapshot_jobname*est **sysname**, avec comme valeur par défaut **%** », qui retourne tous les travaux dynamiques d’une publication avec spécifié *dynamic_ snapshot_jobid*. Si aucun nom de travail n'est défini explicitement lors de la création du travail, le nom du travail a le format suivant :  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -58,7 +57,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**Int**|Identifie le travail d'instantané de données filtrées.|  
 |**job_name**|**sysname**|Nom du travail d'instantané de données filtrées.|  
@@ -66,16 +65,16 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 |**dynamic_filter_login**|**sysname**|Valeur utilisée pour évaluer la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) fonction dans un filtre de lignes paramétrable défini pour la publication.|  
 |**dynamic_filter_hostname**|**sysname**|Valeur utilisée pour évaluer la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) fonction dans un filtre de lignes paramétrable défini pour la publication.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Chemin d'accès au dossier où les fichiers d'instantané sont lus si un filtre de lignes paramétrable est utilisé.|  
-|**frequency_type**|**Int**|Fréquence à laquelle l'Agent s'exécute. La valeur peut être l'une des valeur suivantes.<br /><br /> **1** = une fois<br /><br /> **2** = à la demande<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = Monthly<br /><br /> **32** = fréquence mensuelle relative<br /><br /> **64** = démarrage automatique<br /><br /> **128** = périodique|  
-|**frequency_interval**|**Int**|Jours d'exécution de l'Agent. La valeur peut être l'une des valeur suivantes.<br /><br /> **1** = dimanche<br /><br /> **2** = lundi<br /><br /> **3** = mardi<br /><br /> **4** = mercredi<br /><br /> **5** = jeudi<br /><br /> **6** = vendredi<br /><br /> **7** = samedi<br /><br /> **8** = jour<br /><br /> **9** = jours de la semaine<br /><br /> **10** = jours de week-end|  
-|**frequency_subday_type**|**Int**|Est le type qui définit la fréquence à laquelle l’agent s’exécute lorsque *frequency_type* est **4** (quotidienne), et peut prendre l’une des valeurs suivantes.<br /><br /> **1** = à l’heure spécifiée<br /><br /> **2** = secondes<br /><br /> **4** = minutes<br /><br /> **8** = heures|  
+|**frequency_type**|**int**|Fréquence à laquelle l'Agent s'exécute. La valeur peut être l'une des valeur suivantes.<br /><br /> **1** = une fois<br /><br /> **2** = à la demande<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = fréquence mensuelle relative<br /><br /> **64** = démarrage automatique<br /><br /> **128** = périodique|  
+|**frequency_interval**|**int**|Jours d'exécution de l'Agent. La valeur peut être l'une des valeur suivantes.<br /><br /> **1** = dimanche<br /><br /> **2** = lundi<br /><br /> **3** = mardi<br /><br /> **4** = mercredi<br /><br /> **5** = jeudi<br /><br /> **6** = vendredi<br /><br /> **7** = samedi<br /><br /> **8** = jour<br /><br /> **9** = jours de la semaine<br /><br /> **10** = jours de week-end|  
+|**frequency_subday_type**|**int**|Est le type qui définit la fréquence à laquelle l’agent s’exécute lorsque *frequency_type* est **4** (quotidienne), et peut prendre l’une des valeurs suivantes.<br /><br /> **1** = à l’heure spécifiée<br /><br /> **2** = secondes<br /><br /> **4** = minutes<br /><br /> **8** = heures|  
 |**frequency_subday_interval**|**Int**|Nombre d’intervalles de *frequency_subday_type* qui se produisent entre chaque exécution planifiée de l’agent.|  
-|**frequency_relative_interval**|**Int**|Est la semaine où l’agent s’exécute dans un mois donné lorsque *frequency_type* est **32** (mensuel relatif), et peut prendre l’une des valeurs suivantes.<br /><br /> **1** = premier<br /><br /> **2** = seconde<br /><br /> **4** = troisième<br /><br /> **8** = quatrième<br /><br /> **16** = dernier|  
-|**frequency_recurrence_factor**|**Int**|Nombre de semaines ou de mois entre les exécutions planifiées de l'Agent.|  
+|**frequency_relative_interval**|**int**|Est la semaine où l’agent s’exécute dans un mois donné lorsque *frequency_type* est **32** (mensuel relatif), et peut prendre l’une des valeurs suivantes.<br /><br /> **1** = premier<br /><br /> **2** = seconde<br /><br /> **4** = troisième<br /><br /> **8** = quatrième<br /><br /> **16** = dernier|  
+|**frequency_recurrence_factor**|**int**|Nombre de semaines ou de mois entre les exécutions planifiées de l'Agent.|  
 |**active_start_date**|**Int**|Date de la première exécution planifiée de l'Agent, au format AAAAMMJJ.|  
-|**active_end_date**|**Int**|Date de la dernière exécution planifiée de l'Agent, au format AAAAMMJJ.|  
-|**active_start_time**|**Int**|Heure de la première exécution planifiée de l'Agent, au format HHMMSS.|  
-|**active_end_time**|**Int**|Heure de la dernière exécution planifiée de l'Agent, au format HHMMSS.|  
+|**active_end_date**|**int**|Date de la dernière exécution planifiée de l'Agent, au format AAAAMMJJ.|  
+|**active_start_time**|**int**|Heure de la première exécution planifiée de l'Agent, au format HHMMSS.|  
+|**active_end_time**|**int**|Heure de la dernière exécution planifiée de l'Agent, au format HHMMSS.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

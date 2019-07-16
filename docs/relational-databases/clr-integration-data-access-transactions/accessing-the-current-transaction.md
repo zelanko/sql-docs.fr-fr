@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e9d28588237030c45bd352994ac77d511db139e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab30ca777997a8d7dff819c3c797cae740922ca4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913528"
 ---
 # <a name="accessing-the-current-transaction"></a>Accès à la transaction actuelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Si une transaction est active au point le code du common language runtime (CLR) en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est entré, la transaction est exposée à travers le **System.Transactions.Transaction** classe. La propriété **Transaction.Current** est utilisée pour accéder à la transaction actuelle. Dans la plupart des cas il n'est pas nécessaire d'accéder explicitement à la transaction. Pour les connexions de base de données, ADO.NET vérifie **Transaction.Current** automatiquement lorsque la méthode **Connection.Open** est appelée et inscrit de façon transparente la connexion dans cette transaction (à moins que le mot clé **Enlist** n'ait la valeur « false » dans la chaîne de connexion).  
+  Si une transaction est active au point auquel du code Common Language Runtime (CLR) qui s'exécute sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est entré, la transaction est exposée à travers la classe **System.Transactions.Transaction** . La propriété **Transaction.Current** est utilisée pour accéder à la transaction actuelle. Dans la plupart des cas il n'est pas nécessaire d'accéder explicitement à la transaction. Pour les connexions de base de données, ADO.NET vérifie **Transaction.Current** automatiquement lorsque la méthode **Connection.Open** est appelée et inscrit de façon transparente la connexion dans cette transaction (à moins que le mot clé **Enlist** n'ait la valeur « false » dans la chaîne de connexion).  
   
  Vous souhaiter peut-être utiliser l'objet **Transaction** directement dans les scénarios suivants :  
   
@@ -42,9 +41,9 @@ ms.locfileid: "47631739"
 ## <a name="canceling-an-external-transaction"></a>Annulation d'une transaction externe  
  Vous pouvez annuler des transactions externes à partir d'une procédure ou fonction managée des manières suivantes :  
   
--   La procédure ou fonction managée peut renvoyer une valeur en utilisant un paramètre de sortie. L’appel [!INCLUDE[tsql](../../includes/tsql-md.md)] procédure peut vérifier la valeur renvoyée et, le cas échéant, exécuter **ROLLBACK TRANSACTION**.  
+-   La procédure ou fonction managée peut renvoyer une valeur en utilisant un paramètre de sortie. La procédure [!INCLUDE[tsql](../../includes/tsql-md.md)] appelante peut vérifier la valeur renvoyée et, le cas échéant, exécuter **ROLLBACK TRANSACTION**.  
   
--   La procédure ou fonction managée peut lever une exception personnalisée. L’appel [!INCLUDE[tsql](../../includes/tsql-md.md)] procédure peut intercepter l’exception levée par la procédure ou fonction managée dans un bloc try/catch et exécuter **ROLLBACK TRANSACTION**.  
+-   La procédure ou fonction managée peut lever une exception personnalisée. La procédure [!INCLUDE[tsql](../../includes/tsql-md.md)] appelante peut intercepter l'exception levée par la procédure ou fonction managée dans un bloc try/catch et exécuter **ROLLBACK TRANSACTION**.  
   
 -   La procédure ou fonction managée peut annuler la transaction actuelle en appelant la méthode **Transaction.Rollback** si une certaine condition est remplie.  
   

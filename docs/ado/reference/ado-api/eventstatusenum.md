@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e7ce25eda44c3581362bd145fa13efaa8359f20d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8883679a85d1e134b1759c90cde524bb97995130
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932868"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 Spécifie l’état actuel de l’exécution d’un événement.  
@@ -32,7 +31,7 @@ Spécifie l’état actuel de l’exécution d’un événement.
 |**adStatusCantDeny**|3|Indique que l’opération ne peut pas demander l’annulation de l’opération en attente.|  
 |**adStatusErrorsOccurred**|2|Indique que l’opération qui a provoqué l’événement a échoué en raison d’une erreur ou des erreurs.|  
 |**adStatusOK**|1|Indique que l’opération qui a provoqué l’événement a réussi.|  
-|**adStatusUnwantedEvent**|5|Empêche les notifications suivantes avant que la méthode d’événement ait terminé l’exécution.|  
+|**adStatusUnwantedEvent**|5\.|Empêche les notifications suivantes avant que la méthode d’événement ait terminé l’exécution.|  
   
 ## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
  Package : **com.ms.wfc.data**  

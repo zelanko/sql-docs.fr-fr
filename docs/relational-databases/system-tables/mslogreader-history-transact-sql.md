@@ -17,35 +17,34 @@ helpviewer_keywords:
 ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8229d107a84dad47ca0cf83703a8cfb5dd3b5501
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9fbd2240bdeba50d8ae41bce8d3a8d58b28de036
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907292"
 ---
 # <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSlogreader_history** table contient des lignes d’historique pour les Agents de lecture du journal associé à un serveur de distribution local. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**agent_id**|**Int**|ID de l'Agent de lecture du journal.|  
-|**runstatus**|**Int**|État d'exécution :<br /><br /> 1 = Démarrage.<br /><br /> 2 = Succès.<br /><br /> 3 = En cours.<br /><br /> 4 = Inactif.<br /><br /> 5 = Nouvel essai.<br /><br /> 6 = Échec.|  
+|**agent_id**|**int**|ID de l'Agent de lecture du journal.|  
+|**runstatus**|**int**|État d'exécution :<br /><br /> 1 = Démarrage.<br /><br /> 2 = Succès.<br /><br /> 3 = En cours.<br /><br /> 4 = Inactif.<br /><br /> 5 = Nouvel essai.<br /><br /> 6 = Échec.|  
 |**start_time**|**datetime**|Heure de démarrage de l'exécution de la tâche|  
 |**time**|**datetime**|Heure de consignation du message dans le journal|  
-|**duration**|**Int**|Durée, en secondes, de la session de message.|  
-|**Commentaires**|**nvarchar(255)**|Texte du message.|  
+|**duration**|**int**|Durée, en secondes, de la session de message.|  
+|**comments**|**nvarchar(255)**|Texte du message.|  
 |**xact_seqno**|**varbinary(16)**|Numéro de séquence de la dernière transaction réalisée.|  
-|**delivery_time**|**Int**|La première transaction de temps est remise.|  
+|**delivery_time**|**int**|La première transaction de temps est remise.|  
 |**delivered_transactions**|**Int**|Nombre total des transactions transmises dans la session.|  
-|**delivered_commands**|**Int**|Nombre total des commandes transmises dans la session.|  
+|**delivered_commands**|**int**|Nombre total des commandes transmises dans la session.|  
 |**average_commands**|**Int**|Nombre moyen des commandes transmises dans la session.|  
 |**delivery_rate**|**float**|Moyenne des commandes transmises par seconde.|  
-|**delivery_latency**|**Int**|Temps de latence entre l'entrée de la commande dans la base de données publiée et son entrée dans la base de données de distribution. En millisecondes.|  
-|**ID_erreur**|**Int**|L’ID de l’erreur dans le **MSrepl_error** (table système).|  
+|**delivery_latency**|**int**|Temps de latence entre l'entrée de la commande dans la base de données publiée et son entrée dans la base de données de distribution. En millisecondes.|  
+|**error_id**|**int**|L’ID de l’erreur dans le **MSrepl_error** (table système).|  
 |**timestamp**|**timestamp**|Colonne timestamp de cette table|  
 |**updateable_row**|**bit**|La valeur **1** si la ligne d’historique peut être remplacée.|  
   

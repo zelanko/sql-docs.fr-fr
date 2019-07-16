@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cdd0c4efafbab577aef1016d367ca2210ea3d863
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6201ddd9a04fd95ae27b987710f94701161577cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005281"
 ---
 # <a name="sql-server-xml-bulk-load-object-model-sqlxml-40"></a>Modèle objet de chargement en masse XML de SQL Server (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "56011431"
  Procède au chargement en masse des données à l'aide du fichier de schéma et du fichier de données (ou flux) fournis en guise de paramètres.  
   
 ## <a name="properties"></a>Properties  
- BulkLoad  
+ Chargement en bloc  
  Spécifie si un chargement en masse doit avoir lieu. Cette propriété est utile si vous souhaitez générer uniquement les schémas (voir les propriétés SchemaGen, SGDropTables et SGUseID qui suivent) et pas effectuer un chargement en masse. Il s'agit d'une propriété booléenne. Lorsque la propriété est définie sur TRUE, le processus de chargement en masse XML s'exécute. Lorsqu'elle est définie sur FALSE, aucun processus de chargement en masse XML n'a lieu.  
   
  La valeur par défaut est TRUE.  
@@ -140,7 +139,7 @@ ms.locfileid: "56011431"
  La valeur par défaut est FALSE.  
   
  TempFilePath  
- Spécifie le chemin d'accès où le chargement en masse XML crée les fichiers temporaires pour un chargement en masse transactionnel. (Cette propriété est utile uniquement lorsque la propriété Transaction a la valeur TRUE.) Vous devez vous assurer que le compte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] employé pour le chargement en masse XML a accès à ce chemin. Si cette propriété n'est pas définie, le chargement en masse XML stocke les fichiers temporaires à l'emplacement spécifié dans la variable d'environnement TEMP.  
+ Spécifie le chemin d'accès où le chargement en masse XML crée les fichiers temporaires pour un chargement en masse transactionnel. (Cette propriété est utile uniquement lorsque la propriété de Transaction est définie sur TRUE). Vous devez vous assurer que le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compte qui est utilisé pour le chargement en masse XML a accès à ce chemin d’accès. Si cette propriété n'est pas définie, le chargement en masse XML stocke les fichiers temporaires à l'emplacement spécifié dans la variable d'environnement TEMP.  
   
  Transaction  
  Spécifie si le chargement en masse doit avoir lieu sous la forme d'une transaction, auquel cas la restauration est garantie si le chargement en masse échoue. Il s'agit d'une propriété booléenne. Si la propriété est définie sur TRUE, le chargement en masse intervient dans un contexte transactionnel. La propriété TempFilePath est utile uniquement lorsque la Transaction est définie sur TRUE.  

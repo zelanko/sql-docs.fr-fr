@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4ac6e524-2c92-48e8-b871-0a4b5c8fda18
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bb09e954640554c5375539b4104ab58ae71ddaab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b6e591ecc9f366f3914986b0ae11e0e301b782d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924293"
 ---
 # <a name="schema-section"></a>Section de schéma
 La section de schéma est requise. Comme le montre l’exemple précédent, ADO écrit des métadonnées détaillées concernant chaque colonne pour préserver la sémantique des valeurs de données autant que possible pour la mise à jour. Toutefois, pour charger le code XML, ADO requiert uniquement les noms des colonnes et l’ensemble de lignes auquel elles appartiennent. Voici un exemple de schéma minimal :  
@@ -107,7 +106,7 @@ La section de schéma est requise. Comme le montre l’exemple précédent, ADO 
 </s:AttributeType>  
 ```  
   
- équivaut à  
+ est équivalent à  
   
 ```  
 <s:AttributeType name="Phone" dt:type="string"/>  

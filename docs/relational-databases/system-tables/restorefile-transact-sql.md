@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7414ca1c7d3ef3455aeb3b41c677ebc946a0e3d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 788d0296087ee8980be0b0ecf56c43f09fb3780c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910188"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne par fichier restauré (y compris les fichiers restaurés indirectement, par nom de groupe de fichiers). Cette table est stockée dans le **msdb** base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**restore_history_id**|**Int**|Numéro d'identification unique de l'opération de restauration correspondante. Références **RestoreHistory (restore_history_id)**.|  
-|**file_number**|**NUMERIC(10,0)**|Numéro d'identification du fichier restauré. Ce numéro doit être unique dans chaque base de données. Sa valeur peut être NULL.<br /><br /> Si un instantané d'une base de données est rétabli, cette valeur est renseignée de la même façon que pour une restauration complète.|  
+|**restore_history_id**|**int**|Numéro d'identification unique de l'opération de restauration correspondante. Références **RestoreHistory (restore_history_id)** .|  
+|**file_number**|**numeric(10,0)**|Numéro d'identification du fichier restauré. Ce numéro doit être unique dans chaque base de données. Sa valeur peut être NULL.<br /><br /> Si un instantané d'une base de données est rétabli, cette valeur est renseignée de la même façon que pour une restauration complète.|  
 |**destination_phys_drive**|**nvarchar(260)**|Lecteur ou partition vers laquelle le fichier a été restauré. Sa valeur peut être NULL.<br /><br /> Si un instantané d'une base de données est rétabli, cette valeur est renseignée de la même façon que pour une restauration complète.|  
 |**destination_phys_name**|**nvarchar(260)**|Nom du fichier, sans indication de lecteur ou de partition sur lequel le fichier a été restauré. Sa valeur peut être NULL.<br /><br /> Si un instantané d'une base de données est rétabli, cette valeur est renseignée de la même façon que pour une restauration complète.|  
   

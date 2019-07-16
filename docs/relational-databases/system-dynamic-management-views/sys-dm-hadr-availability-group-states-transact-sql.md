@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b06ffc7a8400d3b02698009b2452282658cf959e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900777"
 ---
 # <a name="sysdmhadravailabilitygroupstates-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47745357"
 > [!NOTE]  
 >  Pour obtenir la liste complète des, interrogez la [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) vue de catalogue.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|Identificateur unique du groupe de disponibilité.|  
 |**primary_replica**|**varchar(128)**|Nom de l'instance de serveur qui héberge le réplica principal actuel.<br /><br /> NULL = N'est pas le réplica principal ou impossible de communiquer avec le cluster de basculement WSFC.|  
@@ -43,12 +42,12 @@ ms.locfileid: "47745357"
 |**primary_recovery_health_desc**|**nvarchar(60)**|Description de **primary_replica_health**, l’un des :<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|Indique l’état de récupération d’un réplica de réplica secondaire, parmi :<br /><br /> 0 = en cours<br /><br /> 1 = En ligne<br /><br /> NULL<br /><br /> Sur le réplica principal, le **secondary_recovery_health** colonne est NULL.|  
 |**secondary_recovery_health_desc**|**nvarchar(60)**|Description de **secondary_recovery_health**, l’un des :<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**synchronization_health**|**tinyint**|Reflète un cumul de la **synchronization_health** de tous les réplicas de disponibilité du groupe de disponibilité. Voici les valeurs possibles et leurs descriptions.<br /><br /> 0 : pas sain. Aucun des réplicas de disponibilité ne présente un **synchronization_health** (2 = sain).<br /><br /> 1 : partiellement sain. L'état de synchronization de certains des réplicas de disponibilité est sain.<br /><br /> 2 : sain. L'état de synchronization de chaque réplica de disponibilité est sain.<br /><br /> Pour plus d’informations sur l’intégrité de synchronisation de réplica, consultez le **synchronization_health** colonne [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
+|**synchronization_health**|**tinyint**|Reflète un cumul de la **synchronization_health** de tous les réplicas de disponibilité du groupe de disponibilité. Voici les valeurs possibles et leurs descriptions.<br /><br /> 0 : Non sain. Aucun des réplicas de disponibilité ne présente un **synchronization_health** (2 = sain).<br /><br /> 1 : Partiellement sain. L'état de synchronization de certains des réplicas de disponibilité est sain.<br /><br /> 2 : Sain. L'état de synchronization de chaque réplica de disponibilité est sain.<br /><br /> Pour plus d’informations sur l’intégrité de synchronisation de réplica, consultez le **synchronization_health** colonne [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
 |**synchronization_health_desc**|**nvarchar(60)**|Description de **synchronization_health**, l’un des :<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

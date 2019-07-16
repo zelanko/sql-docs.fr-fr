@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9d46e5ee0b350e7164c0dfec55666d4b6c8e34a7
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: e817b17de8a8af93a13628334337686abbe66b5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900688"
 ---
 # <a name="sysdmhadrautopagerepair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +34,12 @@ ms.locfileid: "55771325"
   
   Le tableau suivant définit la signification des différentes colonnes :  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**Int**|ID de la base de données à laquelle cette ligne correspond.|  
-|**file_id**|**Int**|ID du fichier dans lequel la page est située.|  
+|**file_id**|**int**|ID du fichier dans lequel la page est située.|  
 |**page_id**|**bigint**|ID de la page dans le fichier.|  
-|**error_type**|**Int**|Type de l'erreur. Les valeurs peuvent être :<br /><br /> **-** 1 = toutes les erreurs 823 de matériel<br /><br /> 1 = 824 erreurs autre qu’une somme de contrôle incorrecte ou une page endommagée (par exemple, un ID de page incorrect)<br /><br /> 2 = Somme de contrôle incorrecte<br /><br /> 3 = Page endommagée|  
+|**error_type**|**int**|Type de l'erreur. Les valeurs peuvent être :<br /><br /> **-** 1 = toutes les erreurs 823 de matériel<br /><br /> 1 = 824 erreurs autre qu’une somme de contrôle incorrecte ou une page endommagée (par exemple, un ID de page incorrect)<br /><br /> 2 = Somme de contrôle incorrecte<br /><br /> 3 = Page endommagée|  
 |**page_status**|**Int**|État de la tentative de réparation de page :<br /><br /> 2 = En file d'attente pour demande au serveur partenaire.<br /><br /> 3 = Demande envoyée au serveur partenaire.<br /><br /> 4 = Page a été correctement réparée.<br /><br /> 5 = la page n’a pas pu être réparée pendant la dernière tentative / réparation de page automatique va tenter à nouveau de réparer la page.|  
 |**modification_time**|**datetime**|Heure de la dernière modification de l'état de page.|  
   

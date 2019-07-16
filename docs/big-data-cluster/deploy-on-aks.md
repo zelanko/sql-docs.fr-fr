@@ -5,17 +5,16 @@ description: Découvrez comment configurer Azure Kubernetes Service (AKS) pour l
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: d39f62345a539094c585b196c9b6030b673f8e89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958485"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configurer Azure Kubernetes Service pour les déploiements de cluster SQL Server big data
 
@@ -82,7 +81,7 @@ Utilisez la dernière version disponible de Kubernetes. La dernière version dis
 
 Avant d’exécuter la commande, mettez à jour le script. Remplacez `<Azure data center>` avec l’emplacement de votre cluster.
 
-   **bash**
+   **Bash**
 
    ```bash
    az aks get-versions \
@@ -110,7 +109,7 @@ Choisissez la dernière version disponible pour votre cluster. Enregistrer le nu
 
    Vérifiez que vous créez le cluster AKS dans le même groupe de ressources que vous avez utilisé dans les sections précédentes.
 
-   **bash:**
+   **Bash :**
 
    ```bash
    az aks create --name kubcluster \

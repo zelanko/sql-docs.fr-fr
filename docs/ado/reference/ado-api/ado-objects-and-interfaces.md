@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48b1f3794828af7f60c1d00313506fa9f9c522c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920909"
 ---
 # <a name="ado-objects-and-interfaces"></a>Objets et interfaces ADO
 Les relations entre ces objets sont représentées dans le [modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -35,8 +34,8 @@ Les relations entre ces objets sont représentées dans le [modèle objet ADO](.
 |[Commande](../../../ado/reference/ado-api/command-object-ado.md)|Définit une commande spécifique que vous avez l’intention d’exécuter par rapport à une source de données.<br /><br /> Le **commande** objet n’est pas sécurisé pour le script.|  
 |[Connexion](../../../ado/reference/ado-api/connection-object-ado.md)|Représente une connexion ouverte à une source de données.<br /><br /> Le **connexion** objet est sécurisé pour le script.|  
 |[IDSOShapeExtensions, interface](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)|Obtient l’objet de Source de données OLE DB sous-jacent pour le fournisseur SHAPE.|  
-|[Erreur](../../../ado/reference/ado-api/error-object.md)|Contient des détails sur les erreurs d’accès aux données qui se rapportent à une seule opération impliquant le fournisseur.<br /><br /> Le **erreur** objet n’est pas sécurisé pour le script.|  
-|[Field](../../../ado/reference/ado-api/field-object.md)|Représente une colonne de données avec un type de données commun.|  
+|[Error](../../../ado/reference/ado-api/error-object.md)|Contient des détails sur les erreurs d’accès aux données qui se rapportent à une seule opération impliquant le fournisseur.<br /><br /> Le **erreur** objet n’est pas sécurisé pour le script.|  
+|[Champ](../../../ado/reference/ado-api/field-object.md)|Représente une colonne de données avec un type de données commun.|  
 |[Paramètre](../../../ado/reference/ado-api/parameter-object.md)|Représente un paramètre ou un argument associé à un **commande** objet basé sur une procédure stockée ou une requête paramétrable.<br /><br /> Le **paramètre** objet n’est pas sécurisé pour le script.|  
 |[Propriété](../../../ado/reference/ado-api/property-object-ado.md)|Représente une caractéristique dynamique d’un objet ADO qui est définie par le fournisseur.|  
 |[Enregistrement](../../../ado/reference/ado-api/record-object-ado.md)|Représente une ligne d’un **Recordset**, ou un répertoire ou un fichier dans un système de fichiers. Le **enregistrement** objet est sécurisé pour le script.|  

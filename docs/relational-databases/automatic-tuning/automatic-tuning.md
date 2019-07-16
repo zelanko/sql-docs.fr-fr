@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934555"
 ---
-# <a name="automatic-tuning"></a>Paramétrage automatique
+# <a name="automatic-tuning"></a>Réglage automatique
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 L’optimisation automatique est une fonctionnalité de base de données qui fournit des insights sur les éventuels problèmes de performances des requêtes, recommande des solutions et corrige automatiquement les problèmes identifiés.
@@ -32,7 +31,7 @@ Le réglage automatique dans [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.m
 
 Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] surveille les requêtes qui sont exécutées automatiquement et sur la base de données améliore les performances de la charge de travail. Le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] dispose d’un mécanisme d’intelligence intégrée qui peut automatiquement régler et améliorer les performances de vos requêtes en adaptant de manière dynamique la base de données à votre charge de travail. Il existe deux fonctionnalités de paramétrage automatique qui sont disponibles :
 
- -  **Correction automatique du plan** identifie les requêtes problématiques, l’exécution des plans et résout des problèmes de performances du plan de l’exécution des requêtes. **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (En commençant par [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **Correction automatique du plan** identifie les requêtes problématiques, l’exécution des plans et résout des problèmes de performances du plan de l’exécution des requêtes. **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
  -  **Gestion automatique des index** identifie les index qui doivent être ajoutés à votre base de données et ceux qui doit être supprimés. **S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>Pourquoi le réglage automatique ?
@@ -96,7 +95,7 @@ Plans forcés manuellement ne doivent pas être forcées indéfiniment, étant d
 
 Dans [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], vous pouvez rechercher les régressions de choix de plan à l’aide de vues de système de Store de la requête. Dans [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], le [!INCLUDE[ssde_md](../../includes/ssde_md.md)] détecte et montre les régressions de choix de plan potentiels et les actions recommandées qui doivent être appliquées dans le [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) vue. La vue affiche des informations sur le problème, l’importance du problème et des détails tels que la requête identifiée, l’ID du plan régressé, l’ID du plan qui a été utilisé comme base de référence pour la comparaison et le [!INCLUDE[tsql_md](../../includes/tsql-md.md)] instruction qui peut être exécutée pour corriger le problème.
 
-| Type | description | DATETIME | score | détails | ... |
+| type | description | datetime | de votre application | détails | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Temps processeur a été remplacée par 4 ms à 14 ms | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Temps processeur passé de 37 ms à 84 ms | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -133,7 +132,7 @@ CROSS APPLY OPENJSON (Details, '$.planForceDetails')
 
 [!INCLUDE[ssresult-md](../../includes/ssresult-md.md)]     
 
-| reason | score | script | requête\_id | plan actuel\_id | recommandé plan\_id | estimé\_obtenir | erreur\_susceptibles d’engendrer des
+| reason | de votre application | script | requête\_id | plan actuel\_id | recommandé plan\_id | estimé\_obtenir | erreur\_susceptibles d’engendrer des
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | Temps processeur a été remplacée par 3 ms à 46 ms | 36 | EXEC sp\_requête\_stocker\_forcer\_plan 12, 17 ; | 12 | 28 | 17 | 11.59 | 0
 
@@ -189,5 +188,5 @@ Sans la gestion automatique des index, il devra interroger manuellement [sys.dm_
  [Plans d’exécution](../../relational-databases/performance/execution-plans.md)    
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Outils de surveillance et d’optimisation des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
- [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Analyse des performances à l’aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [Assistant Paramétrage de requête](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)

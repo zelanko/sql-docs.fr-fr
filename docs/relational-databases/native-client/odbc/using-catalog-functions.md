@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1fa87ff82d9fb47cc51f5add1380ae26270cd7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: c24e98f15793820df59bf372a73e42204814fb19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913069"
 ---
 # <a name="using-catalog-functions"></a>Utilisation des fonctions de catalogue
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "54255384"
   
      Retourne la liste des catalogues contenus dans un serveur lié.  
   
- Une fois que vous avez un nom de serveur lié et un nom de catalogue, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge l’obtention des informations à partir du catalogue à l’aide d’un nom en deux parties de _linked_server_name_**.** _catalogue_ pour *CatalogName* fonctions de catalogue sur ODBC suivante :  
+ Une fois que vous avez un nom de serveur lié et un nom de catalogue, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge l’obtention des informations à partir du catalogue à l’aide d’un nom en deux parties de _linked_server_name_ **.** _catalogue_ pour *CatalogName* fonctions de catalogue sur ODBC suivante :  
   
 -   **SQLColumnPrivileges**  
   
@@ -62,7 +61,7 @@ ms.locfileid: "54255384"
   
 -   **SQLTables**  
   
- Les deux parties _linked_server_name_**.** _catalogue_ est également pris en charge pour *FKCatalogName* et *PKCatalogName* sur [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
+ Les deux parties _linked_server_name_ **.** _catalogue_ est également pris en charge pour *FKCatalogName* et *PKCatalogName* sur [SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md).  
   
  L'utilisation de SQLLinkedServers et SQLLinkedCatalogs requiert les fichiers suivants :  
   

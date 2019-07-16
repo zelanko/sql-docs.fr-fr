@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8145b4000a621ecb09abff074e4b5e06aea7c80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1890d554367b2a21bcd46a6d2ebddf00013957e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926422"
 ---
 # <a name="visual-c-ado-programming"></a>Programmation ADO Visual C++
 La référence d’API ADO décrit les fonctionnalités de l’application interface de programmation ADO (API) à l’aide d’une syntaxe similaire à Microsoft Visual Basic. Bien qu’elle s’adresse à tous les utilisateurs, les programmeurs ADO utilisent divers langages tels que Visual Basic, Visual C++ (avec et sans le **#import** directive) et Visual J ++ (avec le package de la classe ADO/WFC).  
@@ -223,7 +222,7 @@ Dim rst As ADODB.Recordset
 Dim rst As New ADODB.Recordset  
 ```
   
- -ou-  
+ ou  
   
 ```vb
 Dim rst As ADODB.Recordset  
@@ -242,14 +241,14 @@ _RecordsetPtr  rs;
 _RecordsetPtr  rs("ADODB.Recordset");  
 ```
   
- -ou-  
+ ou  
   
 ```cpp
 _RecordsetPtr  rs;  
 rs.CreateInstance("ADODB.Recordset");  
 ```
   
- -ou-  
+ ou  
   
 ```cpp
 _RecordsetPtr  rs;  
@@ -327,7 +326,7 @@ End Sub
   
  L’élément visuel suivant C++ exemple montre comment utiliser un **SafeArray** utilisé avec un **_variant_t**.  
   
-#### <a name="notes"></a>Remarques  
+#### <a name="notes"></a>Notes  
  Les notes suivantes correspondent aux sections commentées dans l’exemple de code.  
   
 1.  Une fois encore, la fonction inline TESTHR() est définie pour tirer parti du mécanisme de gestion des erreurs existant.  
@@ -436,7 +435,7 @@ End Sub
   
  Cet exemple Visual C++ illustre le **obtenir**/**Put**/**PutRef**_propriété_.  
   
-#### <a name="notes"></a>Remarques  
+#### <a name="notes"></a>Notes  
  Les notes suivantes correspondent aux sections commentées dans l’exemple de code.  
   
 1.  Cet exemple utilise deux formes d’un argument de chaîne manquante : une constante explicite, **strMissing**et une chaîne que le compilateur utilisera pour créer une table temporaire **_bstr_t** qui existe pour l’étendue de la  **Ouvrez** (méthode).  
@@ -555,7 +554,7 @@ void main() {
 ### <a name="casting-ado-object-pointers-with-idispatch-"></a>Conversion de pointeurs d’objet ADO avec (IDispatch *)  
  L’exemple Visual C++ suivant illustre l’utilisation (IDispatch *) pour les pointeurs d’objet ADO cast.  
   
-#### <a name="notes"></a>Remarques  
+#### <a name="notes"></a>Notes  
  Les notes suivantes correspondent aux sections commentées dans l’exemple de code.  
   
 1.  Spécifiez une ouverture **connexion** objet dans un explicitement codé **Variant**. Effectuer un cast avec (IDispatch \*) afin du bon constructeur est appelé. En outre, définissez explicitement la seconde **_variant_t** paramètre à la valeur par défaut de **true**, de sorte que le décompte de références d’objet soit correct lorsque la **Recordset::Open** opération se termine.  

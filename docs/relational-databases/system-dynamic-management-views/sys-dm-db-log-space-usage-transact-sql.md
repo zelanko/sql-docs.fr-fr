@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f6b40060-c17d-472f-b0a3-3b350275d487
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bd4a98d25526a189e62e9458d9e28baea74347f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0f844237d4181a883beedf58b84b5134c4c529c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004841"
 ---
 # <a name="sysdmdblogspaceusage-transact-sql"></a>sys.dm_db_log_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ Retourne l’espace des informations d’utilisation pour le journal des transac
 > [!NOTE]
 > Tous les fichiers journaux des transactions sont combinées.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|ID de la base de données.|  
 |total_log_size_in_bytes |**bigint** |La taille du journal  |
@@ -48,11 +47,11 @@ Retourne l’espace des informations d’utilisation pour le journal des transac
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>A. Déterminer la quantité de journal espace dans tempdb   
+### <a name="a-determine-the-amount-of-free-log-space-in-tempdb"></a>R. Déterminer la quantité de journal espace dans tempdb   
 La requête suivante retourne l’espace libre total du journal en mégaoctets (Mo) disponible dans tempdb.
 
 ```sql

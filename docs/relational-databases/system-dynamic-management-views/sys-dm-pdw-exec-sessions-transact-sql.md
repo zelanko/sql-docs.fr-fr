@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 31c262b3-7e4d-44c4-af71-aaef0fd1a980
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 331bb44faa2938241de98a6bff08f1e660583c4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62689833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899409"
 ---
 # <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "62689833"
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |session_id|**nvarchar(32)**|L’id de la requête actuelle ou la dernière requête exécuter (si la session est ARRÊTÉE et l’exécution de la requête au moment de l’arrêt). Clé pour cette vue.|Unique dans toutes les sessions dans le système.|  
-|status|**nvarchar(10)**|Pour les sessions en cours, identifie si la session est actuellement actif ou inactif. Pour des sessions précédentes, la session état peut être fermée ou arrêtée (si la session a dû être fermée).|'ACTIVE', 'CLOSED', 'IDLE', 'TERMINATED'|  
+|status|**nvarchar(10)**|Pour les sessions en cours, identifie si la session est actuellement actif ou inactif. Pour des sessions précédentes, la session état peut être fermée ou arrêtée (si la session a dû être fermée).|'ACTIVE', 'FERMÉ', 'INACTIVE', 'TERMINÉ'|  
 |request_id|**nvarchar(32)**|L’id de la requête actuelle ou de la dernière exécution de la requête.|Unique pour toutes les requêtes dans le système. Null si aucun n’a pas été exécuté.|  
 |security_id|**varbinary(85)**|ID de sécurité de l’entité de la session en cours d’exécution.||  
 |login_name|**nvarchar(128)**|Le nom de connexion du principal qui exécute la session.|Toute chaîne conforme aux conventions d’affectation de noms utilisateur.|  
@@ -37,7 +36,7 @@ ms.locfileid: "62689833"
 |is_transactional|**bit**|Capture si une session est actuellement dans une transaction ou non.|0 pour la validation automatique, 1 pour transactionnelle.|  
 |client_id|**nvarchar(255)**|Capture des informations de client pour la session.|N’importe quelle chaîne valide.|  
 |app_name|**nvarchar(255)**|Capture des informations de nom d’application si vous le souhaitez définie en tant que partie du processus de connexion.|N’importe quelle chaîne valide.|  
-|sql_spid|**Int**|Numéro d’identification du SPID. Utilisez le `session_id` cette session. Utilisez le `sql_spid` colonne pour joindre au **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Avertissement \* \***  cette colonne contient des SPID fermés.||  
+|sql_spid|**int**|Numéro d’identification du SPID. Utilisez le `session_id` cette session. Utilisez le `sql_spid` colonne pour joindre au **sys.dm_pdw_nodes_exec_sessions**.<br /><br /> **\*\* Avertissement \* \***  cette colonne contient des SPID fermés.||  
   
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section de métadonnées dans le [limites de capacité](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) rubrique.  
   

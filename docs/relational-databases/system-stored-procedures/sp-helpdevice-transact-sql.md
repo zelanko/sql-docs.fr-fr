@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c856e11b55040bf699eace2fb1f917f058c2fc9a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902990"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +49,14 @@ sp_helpdevice [ [ @devname = ] 'name' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**device_name**|**sysname**|Nom de périphérique logique.|  
 |**physical_name**|**nvarchar(260)**|Nom de fichier physique.|  
 |**description**|**nvarchar(255)**|Description du périphérique.|  
-|**status**|**Int**|Un nombre qui correspond à la description d’état dans le **description** colonne.|  
+|**status**|**int**|Un nombre qui correspond à la description d’état dans le **description** colonne.|  
 |**cntrltype**|**smallint**|Type de contrôleur du périphérique :<br /><br /> 2 = unité de disque<br /><br /> 5 = périphérique à bandes|  
-|**size**|**Int**|Taille du périphérique (en pages de 2 Ko).|  
+|**size**|**int**|Taille du périphérique (en pages de 2 Ko).|  
   
 ## <a name="remarks"></a>Notes  
  Si *nom* est spécifié, **sp_helpdevice** affiche des informations sur l’unité de vidage spécifiée. Si *nom* n’est pas spécifié, **sp_helpdevice** affiche des informations sur toutes les unités de vidage dans le **sys.backup_devices** vue de catalogue.  

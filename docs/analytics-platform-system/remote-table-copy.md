@@ -2,19 +2,18 @@
 title: Copie de la table distante - Parallel Data Warehouse | Microsoft Docs
 description: À l’aide de la copie de la table distante dans Analytique Platform System Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ed517a471368e4192ad7393a92274424d37f975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28bd5deda25650d36467281ccbffa7b666f4c695
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960202"
 ---
 # <a name="remote-table-copy"></a>Copie de la Table distante
 Décrit comment utiliser la fonctionnalité de copie de table distante pour copier des tables de bases de données SQL Server PDW aux bases de données de SQL Server SMP (non-appliance) à distance. Utiliser la copie de la table distante permet des scénarios hub- and -spoke pour SQL Server PDW.  

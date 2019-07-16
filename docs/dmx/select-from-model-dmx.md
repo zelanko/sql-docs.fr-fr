@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: aac800e225eb5323b1bffeafda77d059f0a837e2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5611ce3da4f12bca5cb271cabe8af3e149dcbf35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928329"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM &lt;modèle&gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,19 +31,19 @@ SELECT <expression list> [TOP <n>] FROM <model>
   
 ## <a name="arguments"></a>Arguments  
  *liste d’expressions*  
- Liste séparée par des virgules des expressions, ou des colonnes de type Predict ou Predict only.   
+ Liste séparée par des virgules des expressions, ou des colonnes de type Predict ou Predict only.  
   
  *n*  
- Facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *model*  
  Identificateur du modèle  
   
  *liste de conditions*  
- Facultatif. Conditions pour restreindre les valeurs retournées de la liste des colonnes.  
+ facultatif. Conditions pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Facultatif. Expression qui retourne une valeur scalaire.  
+ facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  Les colonnes dans le *liste d’expressions* doit être défini comme predict ou predict only, ou liés à une colonne prédictible.  
@@ -65,7 +64,7 @@ FROM Forecasting
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SÉLECTIONNEZ &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

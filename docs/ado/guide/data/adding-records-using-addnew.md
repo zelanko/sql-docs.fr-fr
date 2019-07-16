@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0be4014809500c4d83b2019dc16bd083b8ed6452
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36f6bad9a8f0d74a81d02ce64c78d7a91ddc0fa8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926280"
 ---
 # <a name="adding-records-using-addnew-method"></a>Ajout d’enregistrements à l’aide de AddNew (méthode)
 Voici la syntaxe de base de la **AddNew** méthode :
 
- *recordset*.AddNew *FieldList*, *Values*
+ *jeu d’enregistrements*. AddNew *FieldList*, *valeurs*
 
  Le *FieldList* et *valeurs* arguments sont facultatifs. *Liste de champs* est un nom unique ou un tableau de noms ou les positions ordinales des champs dans le nouvel enregistrement.
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 49be961d1bc34bcc06b046e95b73d0b5c8ed33ac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5c4ba291619ae756fa9803606eda4427a155ae39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896491"
 ---
 # <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**@publisher** =] **'***publisher***'**  
+ [ **@publisher** =] **'***publisher***'**  
  Nom du serveur de publication hétérogène. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
- [**@propertyname** =] **'***propertyname***'**  
+ [ **@propertyname** =] **'***propertyname***'**  
  Nom de la propriété qui est définie. *PropertyName* est **sysname**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
@@ -54,12 +53,12 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  Lorsque *propertyname* est omis toutes les propriétés paramétrables sont retournées.  
   
- [**@propertyvalue** =] **'***propertyvalue***'**  
+ [ **@propertyvalue** =] **'***propertyvalue***'**  
  Nouvelle valeur du paramètre de la propriété. *PropertyValue* est **sysname**, avec NULL comme valeur par défaut. Lorsque *propertyvalue* est omis, le paramètre actuel de la propriété est retournée.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**propertyname**|**sysname**|Retourne les propriétés de publication suivantes qui peuvent être définies :<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**PropertyValue**|**sysname**|Est le paramètre actuel de la propriété dans le **propertyname** colonne.|  

@@ -5,17 +5,16 @@ description: Cet article décrit comment utiliser l’accélérateur de Code PRO
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c26a6efa1f96ac5016d1560f0ae4d9e02f0d369d
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957684"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Wrangling de données à l’aide de la PROSE Code accélérateur
 
@@ -114,7 +113,7 @@ Pour plus d’informations, consultez le [documentation](https://aka.ms/prose-co
 Un autre scénario courant consiste à détecter les modèles dans une colonne de chaîne à des fins de nettoyage ou de regroupement. Par exemple, peut avoir une colonne de date avec des dates dans plusieurs formats différents. Afin de normaliser les valeurs, vous souhaiterez peut-être écrire des instructions conditionnelles à l’aide d’expressions régulières.
 
 
-|   |Name                      |BirthDate      |
+|   |Nom                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Inconnu        |

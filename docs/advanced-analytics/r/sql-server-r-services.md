@@ -7,14 +7,13 @@ ms.date: 09/10/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: bc506d245878d459a3c4639ff4e5a6c2f2a9f8f6
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: efc1b939f3231aeca18e0b6547970af6b8eb39cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962427"
 ---
 # <a name="r-services-in-sql-server-2016"></a>R Services dans SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -35,7 +34,7 @@ SQL Server 2016 est R uniquement. Le tableau suivant décrit les fonctionnalité
 | Composant | Description |
 |-----------|-------------|
 | Service SQL Server Launchpad | Un service qui gère les communications entre les runtimes R externes et de l’instance de SQL Server. |
-| Packages R | [**RevoScaleR** ](ref-r-revoscaler.md) est la bibliothèque principale pour évolutive fonctions R. dans cette bibliothèque sont parmi les plus couramment utilisées. Transformations de données et de manipulation, de synthèse statistique, de visualisation et de nombreuses formes de modélisation et les analyses sont trouvent dans ces bibliothèques. En outre, les fonctions dans ces bibliothèques distribuer automatiquement les charges de travail entre les cœurs disponibles pour le traitement parallèle, avec la possibilité de travailler sur des segments de données coordonnées et gérées par le moteur de calcul.  <br/>[**MicrosoftML (R)** ](ref-r-microsoftml.md) ajoute des algorithmes d’apprentissage automatique pour créer des modèles personnalisés pour l’analyse de texte, l’analyse de l’image et l’analyse des sentiments. <br/>[**sqlRUtils** ](ref-r-sqlrutils.md) fournit des fonctions d’assistance pour placer des scripts R dans une procédure stockée T-SQL, l’inscription d’une procédure stockée avec une base de données et l’exécution de la procédure stockée à partir d’un environnement de développement R.<br/>[**olapR** ](ref-r-olapr.md) permet de spécifier des requêtes MDX dans R.|
+| Packages R | [**RevoScaleR** ](ref-r-revoscaler.md) est la bibliothèque principale pour évolutive fonctions R. dans cette bibliothèque sont parmi les plus couramment utilisées. La transformation et la manipulation des données, le résumé statistique, la visualisation et de nombreuses formes de modélisation et d’analyse sont rendues possibles avec ces bibliothèques. De plus, les fonctions de ces bibliothèques répartissent automatiquement les charges de travail entre les cœurs disponibles pour un traitement parallèle, avec la possibilité de travailler sur des blocs de données qui sont coordonnés et gérés par le moteur de calcul.  <br/>[**MicrosoftML (R)** ](ref-r-microsoftml.md) ajoute des algorithmes d’apprentissage automatique pour créer des modèles personnalisés pour l’analyse de texte, l’analyse de l’image et l’analyse des sentiments. <br/>[**sqlRUtils** ](ref-r-sqlrutils.md) fournit des fonctions d’assistance pour placer des scripts R dans une procédure stockée T-SQL, l’inscription d’une procédure stockée avec une base de données et l’exécution de la procédure stockée à partir d’un environnement de développement R.<br/>[**olapR** ](ref-r-olapr.md) permet de spécifier des requêtes MDX dans R.|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) est open source distribution Microsoft de R. Le package et un interpréteur sont inclus. Utilisez toujours la version de MRO installé par le programme d’installation. |
 | Outils R | Invites de commandes et fenêtres de console R sont des outils standard dans une distribution de R.  |
 | Exemples de R et scripts |  Les packages RevoScaleR et R Open source incluent les jeux de données intégrées afin que vous pouvez créer et exécuter le script à l’aide de données préalablement installées |
@@ -61,8 +60,8 @@ Démarrer avec le programme d’installation, attacher les fichiers binaires à 
 
 **Étape 2 :** Acquérez une expérience pratique en utilisant l’un de ces didacticiels :
 
-+ [Tutoriel : Découvrez l’analytique en base de données à l’aide de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
-+ [Tutoriel : Procédure pas à pas de bout en bout avec R](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [Tutoriel : Découvrez l’analytique en base de données à l’aide de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutoriel : Procédure pas à pas de bout en bout avec R](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
 **Étape 3 :** Ajouter vos packages R favoris et les utiliser avec des packages fournis par Microsoft
 

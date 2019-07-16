@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5e7b1af4-996b-47c5-9161-c5575ad4fec9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e18698d7fba50ce6a63938df574408367b8b20cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7094c2dba004e35593f5ab11b1162efbdf3283c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925313"
 ---
 # <a name="field-related-error-information"></a>Informations sur les erreurs liées aux champs
 Si une erreur est directement liée à un champ, par exemple, si les données sont manquantes ou si elle est de type incorrect pour le champ - vous pouvez récupérer plus d’informations sur la cause du problème en examinant le **champ** l’objet **état**  propriété. Cette propriété a été améliorée pour fournir des informations spécifiques sur le problème. Ainsi, par exemple, lorsqu’un appel à **UpdateBatch** échoue, la cause du problème peut être déterminé en examinant la **état** propriété de la **champs** dans chacune du concernés enregistrements. La propriété contient une des valeurs dans le **FieldStatusEnum** constante. Le tableau suivant contient les valeurs qui sont particulièrement intéressants lorsqu’une erreur se produit.  
@@ -27,7 +26,7 @@ Si une erreur est directement liée à un champ, par exemple, si les données so
 |Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adFieldCantConvertValue**|2|Indique que le champ ne peut pas être récupéré ou stocké sans perte de données.|  
-|**adFieldDataOverflow**|6|Indique que les données retournées par le fournisseur a dépassé le type de données du champ.|  
+|**adFieldDataOverflow**|6\.|Indique que les données retournées par le fournisseur a dépassé le type de données du champ.|  
 |**adFieldDefault**|13|Indique que la valeur par défaut pour le champ a été utilisée lors de la définition de données.|  
 |**adFieldIgnore**|15|Indique que ce champ a été ignoré lorsque les valeurs de données de paramètre dans la source. Aucune valeur n’a été définie par le fournisseur.|  
 |**adFieldIntegrityViolation**|10|Indique que le champ ne peut pas être modifié car il s’agit d’une entité calculée ou dérivée.|  

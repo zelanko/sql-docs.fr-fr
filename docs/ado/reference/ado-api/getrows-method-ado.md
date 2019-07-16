@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6babeebec1eac78949f0a80eb0701b5b5ba1dcc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918448"
 ---
 # <a name="getrows-method-ado"></a>GetRows, méthode (ADO)
 Récupère plusieurs enregistrements d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet dans un tableau.  
@@ -39,12 +38,12 @@ array = recordset.GetRows(Rows, Start, Fields )
   
 #### <a name="parameters"></a>Paramètres  
  *Lignes*  
- Facultatif. Un [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) valeur qui indique le nombre d’enregistrements à récupérer. La valeur par défaut est **adGetRowsRest**.  
+ facultatif. Un [GetRowsOptionEnum](../../../ado/reference/ado-api/getrowsoptionenum.md) valeur qui indique le nombre d’enregistrements à récupérer. La valeur par défaut est **adGetRowsRest**.  
   
  *Démarrer*  
- Facultatif. Un **chaîne** valeur ou **Variant** qui prend la valeur de signet pour l’enregistrement à partir duquel le **GetRows** opération doit commencer. Vous pouvez également utiliser un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valeur.  
+ facultatif. Un **chaîne** valeur ou **Variant** qui prend la valeur de signet pour l’enregistrement à partir duquel le **GetRows** opération doit commencer. Vous pouvez également utiliser un [BookmarkEnum](../../../ado/reference/ado-api/bookmarkenum.md) valeur.  
   
- *Fields*  
+ *Champs*  
  Facultatif. Un **Variant** qui représente un seul nom de champ ou position ordinale ou un tableau de noms de champs ou des nombres de la position ordinale. ADO retourne uniquement les données dans ces champs.  
   
 ## <a name="remarks"></a>Notes  

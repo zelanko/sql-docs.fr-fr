@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 95f41cff-c52a-4182-8ac6-bf49369d214c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 50235db46a664d1507823c057dc0cb61eda90974
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56468767e60d49d0fc92864cd613a4f36e84132a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950527"
 ---
 # <a name="spxmlpreparedocument-transact-sql"></a>sp_xml_preparedocument (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ OUTPUT
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-preparing-an-internal-representation-for-a-well-formed-xml-document"></a>A. Préparation d'une représentation interne pour un document XML correctement mis en forme  
+### <a name="a-preparing-an-internal-representation-for-a-well-formed-xml-document"></a>R. Préparation d'une représentation interne pour un document XML correctement mis en forme  
  L'exemple suivant retourne un descripteur pour la représentation interne nouvellement créée du document XML fourni en entrée. L'appel à `sp_xml_preparedocument` contient un mappage de préfixes d'espaces de noms par défaut.  
   
 ```  

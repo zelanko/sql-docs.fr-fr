@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c8de92033c58f2583fc7ba93e6c326d4a406c90a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 8eff7603fa0d0be0e90af201e524554f5e336ea8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937795"
 ---
 # <a name="general-prediction-functions-dmx"></a>Fonctions de prédiction générales (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "37985431"
 |-|-|  
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)|  
 |[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|[TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)|  
-|[Prédire &#40;DMX&#41;](../dmx/predict-dmx.md)|[TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)|  
+|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|[TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)|  
 |[RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|[TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)|  
 |[RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)||  
   
@@ -42,7 +41,7 @@ ms.locfileid: "37985431"
   
 -   [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)  
   
--   [Prédire &#40;DMX&#41;](../dmx/predict-dmx.md)  
+-   [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
 -   [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)  
   
@@ -70,7 +69,7 @@ ms.locfileid: "37985431"
 |[SELECT FROM \<modèle >](../dmx/select-from-model-dmx.md)|Fonctions de prédiction spécifiques à l'algorithme que vous utilisez pour générer le modèle.|Pour obtenir la liste des fonctions de prédiction pour chaque type de modèle, consultez [requêtes d’exploration de données](../analysis-services/data-mining/data-mining-queries.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Référence DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   

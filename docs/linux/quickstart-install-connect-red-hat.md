@@ -4,18 +4,17 @@ titleSuffix: SQL Server
 description: Ce démarrage rapide montre comment installer SQL Server 2017 ou SQL Server 2019 sur Red Hat Enterprise Linux et ensuite créer et interroger une base de données avec sqlcmd.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 07/16/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 4e61449a8645dca651e3422306ae5b049b7a7e9d
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 38df65ffefbc0ed264d631214025059449d84b35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910507"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Démarrage rapide : Installer SQL Server et de créer une base de données sur Red Hat
 

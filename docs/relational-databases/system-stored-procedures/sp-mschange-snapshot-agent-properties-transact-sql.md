@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7947a788-3fd7-469f-84db-b03ba89a153c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f5c9091e3a949e5a358f5bd1305d096491782012
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9c4dcd79945644f0bc44d9ca3e948fa4f85d4e40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905184"
 ---
 # <a name="spmschangesnapshotagentproperties-transact-sql"></a>sp_MSchange_snapshot_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -100,18 +99,18 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day` L’heure de la journée à laquelle l’Agent d’instantané cesse d’être planifié, représentée au format HHMMSS. *active_end_time_of_day* est **int**, sans valeur par défaut.  
   
-`[ @snapshot_job_name = ] 'snapshot_agent_name'` Est le nom d’un nom de travail d’Agent d’instantané existant si un travail existant est utilisé. *snapshot_agent_name* est **nvarchar (100)**, sans valeur par défaut.  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` Est le nom d’un nom de travail d’Agent d’instantané existant si un travail existant est utilisé. *snapshot_agent_name* est **nvarchar (100)** , sans valeur par défaut.  
   
 `[ @publisher_security_mode = ] publisher_security_mode` Le mode de sécurité utilisé par l’agent lors de la connexion au serveur de publication. *publisher_security_mode* est **int**, sans valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification, et **1** Spécifie l’authentification Windows. La valeur **0** doit être spécifié pour les non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @publisher_login = ] 'publisher_login'` Est le nom de connexion utilisé lors de la connexion au serveur de publication. *publisher_login* est **sysname**, sans valeur par défaut. *publisher_login* doit être spécifié lorsque *publisher_security_mode* est **0**. Si *publisher_login* est NULL et le serveur de publication *_ ** security_mode* est **1**, le compte Windows spécifié dans *job_login* sera utilisé lors de la connexion au serveur de publication.  
   
-`[ @publisher_password = ] 'publisher_password'` Est le mot de passe utilisé lors de la connexion au serveur de publication. *publisher_password* est **nvarchar (524)**, sans valeur par défaut.  
+`[ @publisher_password = ] 'publisher_password'` Est le mot de passe utilisé lors de la connexion au serveur de publication. *publisher_password* est **nvarchar (524)** , sans valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
   
-`[ @job_login = ] 'job_login'` Est la connexion pour le compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)**, sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané. *Cela ne peut pas être modifié pour non -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *serveur de publication.*  
+`[ @job_login = ] 'job_login'` Est la connexion pour le compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)** , sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions des agents au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané. *Cela ne peut pas être modifié pour non -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *serveur de publication.*  
   
 `[ @job_password = ] 'job_password'` Est le mot de passe pour le compte Windows sous lequel l’agent s’exécute. *job_password* est **sysname**, sans valeur par défaut. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
   

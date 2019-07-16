@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a4e96c45-6dcd-471a-a494-b5c619459855
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36e9d82a85c651044decbd951d49a0234568d5bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2b8fc2ac96821427aaf0ef2550fb6624a923d7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000934"
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,29 +39,29 @@ sp_help_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Arguments  
- Aucun.  
+ Aucune.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**status**|**bit**|État collectif des agents de la base de données d'envoi des journaux :<br /><br /> **0** = échecs sains et sans agent.<br /><br /> **1** = autres cas.|  
 |**is_primary**|**bit**|Indique si cette ligne est destinée à une base de données principale :<br /><br /> **1** = la ligne est destinée à une base de données primaire.<br /><br /> **0** = la ligne est destinée à une base de données secondaire.|  
 |**server**|**sysname**|Nom du serveur principal ou secondaire où réside cette base de données.|  
 |**database_name**|**sysname**|Nom de la base de données.|  
-|**time_since_last_backup**|**Int**|Temps écoulé, en minutes, depuis la dernière sauvegarde du journal.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.|  
+|**time_since_last_backup**|**int**|Temps écoulé, en minutes, depuis la dernière sauvegarde du journal.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.|  
 |**last_backup_file**|**nvarchar(500)**|Nom du dernier fichier de sauvegarde valide du journal.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.|  
-|**backup_threshold**|**Int**|Durée écoulée (en minutes) depuis la dernière sauvegarde avant qu'une erreur threshold_alert ne soit générée. **backup_threshold** est **int**, avec une valeur par défaut **60 minutes**.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.<br /><br /> Cette valeur peut être modifiée à l’aide de [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
+|**backup_threshold**|**int**|Durée écoulée (en minutes) depuis la dernière sauvegarde avant qu'une erreur threshold_alert ne soit générée. **backup_threshold** est **int**, avec une valeur par défaut **60 minutes**.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.<br /><br /> Cette valeur peut être modifiée à l’aide de [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
 |**is_backup_alert_enabled**|**bit**|Spécifie si une alerte est déclenchée quand **backup_threshold** est dépassé. La valeur d’un (**1**), la valeur par défaut signifie que l’alerte sera déclenchée.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.<br /><br /> Cette valeur peut être modifiée à l’aide de [sp_add_log_shipping_primary_database &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-shipping-primary-database-transact-sql.md).|  
-|**time_since_last_copy**|**Int**|Temps écoulé, en minutes, depuis la dernière copie de la sauvegarde du journal.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.|  
+|**time_since_last_copy**|**int**|Temps écoulé, en minutes, depuis la dernière copie de la sauvegarde du journal.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.|  
 |**last_copied_file**|**nvarchar(500)**|Nom du dernier fichier de sauvegarde du journal copié avec succès.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.|  
 |**time_since_last_restore**|**Int**|Temps écoulé, en minutes, depuis la dernière restauration de la sauvegarde du journal.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.|  
 |**last_restored_file**|**nvarchar(500).**|Nom du dernier fichier de sauvegarde du journal restauré avec succès.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.|  
-|**last_restored_latency**|**Int**|Temps écoulé, en minutes, entre la création de la dernière sauvegarde et la restauration de cette sauvegarde.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.|  
-|**restore_threshold**|**Int**|Nombre de minutes pouvant s'écouler entre les opérations de restauration avant qu'une alerte ne soit générée. **restore_threshold** ne peut pas être NULL.|  
+|**last_restored_latency**|**int**|Temps écoulé, en minutes, entre la création de la dernière sauvegarde et la restauration de cette sauvegarde.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.|  
+|**restore_threshold**|**int**|Nombre de minutes pouvant s'écouler entre les opérations de restauration avant qu'une alerte ne soit générée. **restore_threshold** ne peut pas être NULL.|  
 |**is_restore_alert_enabled**|**bit**|Indique si une alerte est générée lorsque **restore_threshold** est dépassé. La valeur d’un (**1**), la valeur par défaut signifie que l’alerte est déclenchée.<br /><br /> NULL = les informations ne sont pas disponibles ou ne sont pas appropriées.<br /><br /> Pour définir le seuil de restauration, utilisez [sp_add_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-add-log-shipping-secondary-database-transact-sql.md).|  
   
 ## <a name="remarks"></a>Notes  

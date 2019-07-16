@@ -2,19 +2,18 @@
 title: Topologie d’appliances - Analytique Platform System | Microsoft Docs
 description: Affiche des informations résumées sur l’ensemble du système plateforme Analytique.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fac27805730a7afa9541ed835f7900acf6e309d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54754aa1f90bd4b69e49b2d080c96f0b2e6effb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63275987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961434"
 ---
 # <a name="appliance-topology---analytics-platform-system"></a>Topologie d’appliances - Analytique Platform System
 Affiche des informations résumées sur l’ensemble du système plateforme Analytique.  

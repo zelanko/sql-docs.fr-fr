@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ef80206f9ff82cf1ab2917e90f61432be15c190
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909075"
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**@parameter_name** =] **'***nom_paramètre***'**  
+ [ **@parameter_name** =] **'***nom_paramètre***'**  
  Nom du paramètre de configuration à extraire. Si spécifié, la valeur du paramètre de configuration est retournée dans le **@parameter_value** paramètre de sortie. En cas de non **@parameter_name** est spécifié, cette procédure stockée retourne un jeu de résultats contenant tous les paramètres de configuration de messagerie de base de données dans l’instance.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -51,7 +50,7 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
   
 ||||  
 |-|-|-|  
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |**paramname**|**nvarchar (256)**|Le nom du paramètre de configuration.|  
 |**paramvalue**|**nvarchar (256)**|La valeur du paramètre de configuration.|  
 |**description**|**nvarchar (256)**|Description du paramètre de configuration.|  
@@ -59,11 +58,11 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## <a name="remarks"></a>Notes  
  La procédure stockée **sysmail_help_configure_sp** répertorie les paramètres de configuration de messagerie de base de données en cours pour l’instance.  
   
- Quand un **@parameter_name** est spécifié, mais aucun paramètre de sortie n’est fourni pour **@parameter_value**, cette procédure stockée ne produit aucune sortie.  
+ Quand un **@parameter_name** est spécifié, mais aucun paramètre de sortie n’est fourni pour **@parameter_value** , cette procédure stockée ne produit aucune sortie.  
   
  La procédure stockée **sysmail_help_configure_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être appelée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

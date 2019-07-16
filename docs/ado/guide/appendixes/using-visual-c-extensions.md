@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f89b08d968b5f601c37f89b15196d6ef03db434
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926450"
 ---
 # <a name="visual-c-extensions"></a>Extensions Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>L’Interface IADORecordBinding
@@ -92,7 +91,7 @@ Update(CADORecordBinding *binding)
 ### <a name="fixed-length-data"></a>Données de longueur fixe
  **ADO_FIXED_LENGTH_ENTRY**(*Ordinal, type de données, mémoire tampon, état, modifier*)
 
- **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Modify*)
+ **ADO_FIXED_LENGTH_ENTRY2**(*Ordinal, type de données, mémoire tampon, modifier*)
 
 ### <a name="numeric-data"></a>Données numériques
  **ADO_NUMERIC_ENTRY**(*Ordinal, type de données, mémoire tampon, précision, échelle, état, modifier*)
@@ -102,11 +101,11 @@ Update(CADORecordBinding *binding)
 ### <a name="variable-length-data"></a>Données de longueur variable
  **ADO_VARIABLE_LENGTH_ENTRY**(*Ordinal, type de données, mémoire tampon, taille, état, longueur, modifier*)
 
- **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, DataType, Buffer, Size, Status, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, type de données, mémoire tampon, taille, état, modifier*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, DataType, Buffer, Size, Length, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, type de données, mémoire tampon, taille, longueur, modifier*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, type de données, mémoire tampon, la taille, modifier*)
 
 ### <a name="end-binding-entries"></a>Fin d’entrées de liaison
  **END_ADO_BINDING**()
@@ -116,7 +115,7 @@ Update(CADORecordBinding *binding)
 |*Classe*|Classe dans lequel les entrées de liaison et les variables de C/C++ sont définies.|
 |*Ordinal*|Nombre ordinal, à partir d’un, de la **Recordset** champ correspondant à la variable C/C++.|
 |*DataType*|Type de données ADO équivalent de la variable C/C++ (consultez [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) pour obtenir la liste des types de données valides). La valeur de la **Recordset** champ sera converti en ce type de données si nécessaire.|
-|*Buffer*|Nom de la variable C/C++ dans lequel le **Recordset** champ est stocké.|
+|*mémoire tampon*|Nom de la variable C/C++ dans lequel le **Recordset** champ est stocké.|
 |*Taille*|Taille maximale en octets de *tampon*. Si *tampon* contiendra une chaîne de longueur variable, prévoyez de l’espace pour un zéro de fin.|
 |*État*|Nom d’une variable qui indique si le contenu de *tampon* sont valides et si la conversion du champ à *DataType* a réussi.<br /><br /> Les deux valeurs plus importantes de cette variable sont **adFldOK**, ce qui signifie que la conversion a réussi ; et **adFldNull**, ce qui signifie que la valeur du champ serait un VARIANT de type VT_NULL et pas simplement vide.<br /><br /> Les valeurs possibles pour *état* sont répertoriées dans le tableau suivant, « Valeurs d’état ».|
 |*Modifier*|Indicateur booléen ; Si la valeur est TRUE, indique à ADO est autorisé à mettre à jour le correspondantes **Recordset** champ avec la valeur contenue dans *tampon*.<br /><br /> Définissez la valeur booléenne *modifier* paramètre TRUE pour permettre à ADO mettre à jour le champ lié, et FALSE si vous souhaitez examiner le champ sans le modifier.|
@@ -136,8 +135,8 @@ Update(CADORecordBinding *binding)
 |**adFldCantConvertValue**|2|Valeur n’a pas pu être convertie pour des raisons autres que l’authentification incompatibilité ou données de dépassement.|
 |**adFldNull**|3|Lors de l’obtention d’un champ, indique une valeur null a été retournée.<br /><br /> Lorsque vous définissez un champ, indique le champ doit être défini sur **NULL** lorsque le champ ne peut pas encoder **NULL** lui-même (par exemple, un tableau de caractères ou un nombre entier).|
 |**adFldTruncated**|4|Données de longueur variable ou des chiffres numériques ont été tronquées.|
-|**adFldSignMismatch**|5|Valeur est signée et le type de données de variable n’est pas signé.|
-|**adFldDataOverFlow**|6|Valeur est supérieure à pourraient être stockées dans le type de données de variable.|
+|**adFldSignMismatch**|5\.|Valeur est signée et le type de données de variable n’est pas signé.|
+|**adFldDataOverFlow**|6\.|Valeur est supérieure à pourraient être stockées dans le type de données de variable.|
 |**adFldCantCreate**|7|Type de colonne inconnu et champ déjà ouvert.|
 |**adFldUnavailable**|8|Valeur du champ n’a pas pu être déterminé-, par exemple sur un nouveau champ non assigné sans valeur par défaut.|
 |**adFldPermissionDenied**|9|Lors de la mise à jour, aucune autorisation pour écrire des données.|

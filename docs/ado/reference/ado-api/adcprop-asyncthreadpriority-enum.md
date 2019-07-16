@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0965617-17d8-41e0-98d0-f824274735a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18ffebe5cbf781212b6b8962f9f48d61281c7d30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22a8cd4bb8d1bdddbaaa68e92349d9c728557ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921464"
 ---
 # <a name="adcpropasyncthreadpriorityenum"></a>ADCPROP_ASYNCTHREADPRIORITY_ENUM
 Pour un RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) d’objet, spécifie la priorité de l’exécution du thread asynchrone qui extrait des données.  
@@ -32,7 +31,7 @@ Pour un RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 
 |--------------|-----------|-----------------|  
 |**adPriorityAboveNormal**|4|Définit la priorité entre normal et le plus élevé.|  
 |**adPriorityBelowNormal**|2|Définit la priorité minimum ou normal.|  
-|**adPriorityHighest**|5|Définit la priorité le plus élevé possible.|  
+|**adPriorityHighest**|5\.|Définit la priorité le plus élevé possible.|  
 |**AdPriorityLowest**|1|Définit la priorité le plus bas possible.|  
 |**adPriorityNormal**|3|Définit la priorité à la normale.|  
   

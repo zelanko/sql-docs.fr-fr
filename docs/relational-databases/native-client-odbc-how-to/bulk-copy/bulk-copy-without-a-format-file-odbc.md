@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4ee969a7-44ba-40d0-b9ab-8306f1a2b19d
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0f017daa75375f8522284ae71b2f6efb6e7263c2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d27eae0e6bf4bc5f5932bbf578f1162822516805
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987650"
 ---
 # <a name="bulk-copy-without-a-format-file-odbc"></a>Effectuer une copie en bloc sans fichier de format (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "51665458"
   
     -   Nom d'un fichier de données devant recevoir tous les messages d'erreur de copie en bloc (spécifiez NULL si vous ne souhaitez pas de fichier de message).  
   
-    -   la direction de la copie : DB_IN du fichier vers la vue ou la table, ou DB_OUT vers le fichier à partir de la table ou de la vue.  
+    -   La direction de la copie : DB_IN du fichier à la vue ou table ou DB_OUT vers le fichier à partir de la table ou vue.  
   
 5.  Appelez [bcp_exec](../../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md) pour exécuter l’opération de copie en bloc.  
   

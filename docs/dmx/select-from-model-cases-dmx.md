@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fc4a61868114f86a198878f5f54a59f3e96a5b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928430"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;modèle&gt;. CAS (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +37,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- Facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *liste d’expressions*  
  Liste d'expressions séparées par des virgules. Une expression peut comprendre des identificateurs de colonne, des fonctions définies par l'utilisateur, des fonctions VBA, etc.  
@@ -52,7 +51,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Facultatif. Expression qui retourne une valeur scalaire.  
+ facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  Si l'extraction est activée à la fois sur le modèle d'exploration de données et la structure d'exploration de données, les utilisateurs membres d'un rôle qui a des autorisations d'extraction sur le modèle et la structure peuvent accéder aux colonnes de la structure d'exploration de données qui ne sont pas incluses dans le modèle d'exploration de données. Par conséquent, pour protéger les données sensibles ou personnelles, vous devez construire votre vue de source de données pour masquer les informations personnelles et accorder **AllowDrillthrough** autorisation sur une structure d’exploration de données uniquement lorsque cela est nécessaire.  
@@ -72,7 +71,7 @@ SELECT * FROM [TM Decision Tree].Cases
 WHERE IsTestCase();  
 ```  
   
-### <a name="example-2-drillthrough-to-training-cases-in-a-specific-node"></a>Exemple 2 : Extraction des cas d’apprentissage dans un nœud spécifique  
+### <a name="example-2-drillthrough-to-training-cases-in-a-specific-node"></a>Exemple 2 : Extraction des cas d’apprentissage dans un nœud spécifique  
  L'exemple suivant retourne uniquement les cas utilisés pour l'apprentissage de Cluster 2. Le nœud pour Cluster 2 a la valeur '002' pour la colonne NODE_UNIQUE_NAME. L'exemple retourne également une colonne de structure, [Customer Key], qui ne faisait pas partie du modèle d'exploration de données, et fournit l'alias `CustomerID` pour la colonne. Notez que le nom de la colonne de structure est passé en tant que valeur de chaîne ; par conséquent, il doit être entre guillemets, et non entre crochets.  
   
 ```  

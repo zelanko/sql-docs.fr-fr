@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 232b071c11d4a2a0bb2e42b6f9787d07f99e21e2
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 5ad42a174f558202544650fb1580574f290d4466
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946084"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery et le typage statique
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "54226586"
   
  En cas d'instances XML non typées, il existe des types particuliers pour indiquer que les données ne sont pas typées. Ces informations servent à vérifier le type statique et à effectuer certaines conversions implicites.  
   
- En cas de données typées, le type d'entrée est inféré à partir de la collection de schémas XML qui contraint l'instance du type de données XML. Par exemple, si le schéma autorise uniquement les éléments de type **xs : Integer**, les résultats d’une expression de chemin d’accès à l’aide de cet élément seront zéro ou plusieurs éléments de type **xs : Integer**. Cela s’exprime actuellement à l’aide d’une expression comme `element(age,xs:integer)*` où l’astérisque (\*) indique la cardinalité du type résultant. Dans cet exemple, l’expression peut entraîner zéro ou plusieurs éléments de nom « age » et le type **xs : Integer**. Autres cardinalités sont exactement un et sont exprimées en utilisant le nom du type seulement, zéro ou un élément et exprimée à l’aide d’un point d’interrogation (**?**) et 1 ou plus et à l’aide d’un signe plus (**+**) .  
+ En cas de données typées, le type d'entrée est inféré à partir de la collection de schémas XML qui contraint l'instance du type de données XML. Par exemple, si le schéma autorise uniquement les éléments de type **xs : Integer**, les résultats d’une expression de chemin d’accès à l’aide de cet élément seront zéro ou plusieurs éléments de type **xs : Integer**. Cela s’exprime actuellement à l’aide d’une expression comme `element(age,xs:integer)*` où l’astérisque (\*) indique la cardinalité du type résultant. Dans cet exemple, l’expression peut entraîner zéro ou plusieurs éléments de nom « age » et le type **xs : Integer**. Autres cardinalités sont exactement un et sont exprimées en utilisant le nom du type seulement, zéro ou un élément et exprimée à l’aide d’un point d’interrogation ( **?** ) et 1 ou plus et à l’aide d’un signe plus ( **+** ) .  
   
  Il arrive parfois que l'inférence de type statique induise le renvoi d'une séquence vide par une expression. Par exemple, si une expression de chemin d’accès sur un type de données XML typé recherche un \<nom > élément à l’intérieur un \<client >, élément (/ customer/name), mais le schéma n’autorise pas un \<nom > à l’intérieur d’un \<client >, l’inférence de type statique déduit que le résultat sera vide. Cela permet de détecter des requêtes incorrectes et est signalée comme une erreur statique, sauf si l’expression a été () ou **(()) de données**.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "54226586"
   
  Si elle est obligatoire après une conversion implicite, la vérification des types statiques permet de s'assurer que seules les valeurs dotées de types autorisés et d'une cardinalité correcte sont transmises à une opération. Pour « string » + 1, il reconnaît que le type statique de « string » est **xs : String**. Étant donné que cela n’est pas un type autorisé pour le **+** opération, une erreur de type est déclenchée.  
   
- En cas d'ajout du résultat d'une expression arbitraire E1 à une expression arbitraire E2 (E1 + E2), l'inférence de type statique détermine tout d'abord les types statiques de E1 et de E2, puis vérifie que ces types statiques sont autorisés avec l'opération. Par exemple, si le type statique de E1 peut être soit un **xs : String** ou un **xs : Integer**, la vérification des types statiques génère une erreur de type, même si certaines valeurs au moment de l’exécution peut-être être des entiers. Les mêmes serait le cas si le type statique de E1 était **xs : Integer&#42;**. Étant donné que le **+** opération n’accepte qu’un seul nombre entier et E1 peut en renvoyer zéro ou supérieur à 1, la vérification des types statiques génère une erreur.  
+ En cas d'ajout du résultat d'une expression arbitraire E1 à une expression arbitraire E2 (E1 + E2), l'inférence de type statique détermine tout d'abord les types statiques de E1 et de E2, puis vérifie que ces types statiques sont autorisés avec l'opération. Par exemple, si le type statique de E1 peut être soit un **xs : String** ou un **xs : Integer**, la vérification des types statiques génère une erreur de type, même si certaines valeurs au moment de l’exécution peut-être être des entiers. Les mêmes serait le cas si le type statique de E1 était **xs : Integer&#42;** . Étant donné que le **+** opération n’accepte qu’un seul nombre entier et E1 peut en renvoyer zéro ou supérieur à 1, la vérification des types statiques génère une erreur.  
   
  Comme nous l'avons déjà mentionné, il arrive fréquemment que l'inférence de type déduise un type plus large que ce que sait l'utilisateur à l'égard des données transmises. Dans ces cas-là, l'utilisateur doit réécrire la requête. Certains cas typiques sont les suivantes :  
   
@@ -73,8 +72,8 @@ ms.locfileid: "54226586"
 ## <a name="type-checking-of-union-types"></a>Contrôle des types union  
  La manipulation des types union demande un soin particulier du fait du contrôle du type. Deux des problèmes rencontrés sont expliqués dans les exemples suivants.  
   
-### <a name="example-function-over-union-type"></a>Exemple : Fonction sur un Type Union  
- Considérez une définition d'élément pour <`r`> d'un type union :  
+### <a name="example-function-over-union-type"></a>Exemple : Fonction sur un Type Union  
+ Prendre en compte pour une définition de l’élément <`r`> d’un type union :  
   
 ```  
 <xs:element name="r">  
@@ -84,10 +83,10 @@ ms.locfileid: "54226586"
 </xs:element>  
 ```  
   
- Dans le contexte XQuery, la fonction « moyenne » `fn:avg (//r)` renvoie une erreur statique, car le compilateur XQuery ne peut pas ajouter les valeurs de types différents (**xs : int**, **xs : float** ou **xs : Double**) pour le <`r`> éléments dans l’argument de **fn:avg()**. Pour résoudre ce problème, réécrivez l'appel de fonction sous la forme `fn:avg(for $r in //r return $r cast as xs:double ?)`.  
+ Dans le contexte XQuery, la fonction « moyenne » `fn:avg (//r)` renvoie une erreur statique, car le compilateur XQuery ne peut pas ajouter les valeurs de types différents (**xs : int**, **xs : float** ou **xs : Double**) pour le <`r`> éléments dans l’argument de **fn:avg()** . Pour résoudre ce problème, réécrivez l'appel de fonction sous la forme `fn:avg(for $r in //r return $r cast as xs:double ?)`.  
   
-### <a name="example-operator-over-union-type"></a>Exemple : Opérateur sur un Type Union  
- L'opération addition (« + ») requiert les types exacts des opérandes. Par conséquent, l'expression `(//r)[1] + 1` retourne une erreur statique qui a la définition de type décrite précédemment pour l'élément <`r`>. Une solution consiste à la réécrire sous la forme `(//r)[1] cast as xs:int? +1`, où « ?  » indique 0 ou 1 occurrence. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requiert « cast as » avec « ? », parce qu'une conversion peut générer la séquence vide comme résultat des erreurs d'exécution.  
+### <a name="example-operator-over-union-type"></a>Exemple : Opérateur sur un Type Union  
+ L'opération addition (« + ») requiert les types exacts des opérandes. Par conséquent, l’expression `(//r)[1] + 1` renvoie une erreur statique qui a la définition de type décrite précédemment pour l’élément <`r`>. Une solution consiste à la réécrire sous la forme `(//r)[1] cast as xs:int? +1`, où « ?  » indique 0 ou 1 occurrence. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] requiert « cast as » avec « ? », parce qu'une conversion peut générer la séquence vide comme résultat des erreurs d'exécution.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Références relatives au langage Xquery &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

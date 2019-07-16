@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1184a7d8-d557-4140-843b-6633ae6deacc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3d127e2da3397e96059c7d04305a983766ca1db6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1591843667ef01c6c88f5dfafb734f044679b2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198336"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909829"
 ---
 # <a name="automatic-population-of-the-ipd"></a>Remplissage automatique de l’IPD
 Certains pilotes sont capables de définition des champs de l’IPD après la préparation d’une requête paramétrable. Les champs de descripteur sont automatiquement remplies avec des informations sur le paramètre, y compris le type de données, précision, échelle et d’autres caractéristiques. Cela équivaut à la prise en charge **SQLDescribeParam**. Ces informations peuvent être particulièrement utiles pour une application lorsqu’il n’a aucun autre moyen de le découvrir, par exemple quand une requête ad hoc est effectuée avec les paramètres de l’application ne connaît pas.  

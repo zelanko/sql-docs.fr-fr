@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5fc38ed5f4c7fb7e2d12eaa1853b57eb0cdbc13a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3558fc1fecd343fff480cca3b45c468860a801f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963836"
 ---
 # <a name="onreadystatechange-event-rds"></a>onReadyStateChange, événement (RDS)
 Le **onReadyStateChange** événement est appelé chaque fois que la valeur de la [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) modifications apportées aux propriétés.  
@@ -35,7 +34,7 @@ onReadyStateChange
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- Aucun.  
+ Aucune.  
   
 ## <a name="remarks"></a>Notes  
  Le **ReadyState** propriété reflète la progression d’un [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet comme il récupère de manière asynchrone des données dans son [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet. Utilisez le **onReadyStateChange** événement pour surveiller les modifications dans le **ReadyState** propriété chaque fois qu’ils se produisent. Cela est plus efficace que de manière périodique et vérifiant la valeur de propriété.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 90783d893d4765957361356895907f6659c08d9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a5d11102989e3194f3b878b94610e4802084f97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922994"
 ---
 # <a name="referencing-the-ado-libraries"></a>Référencement des bibliothèques ADO
 La dernière version de ADO est empaquetée en tant que *msado15.dll*. Les dernières versions de ADO MD et ADOX sont empaquetées en tant que *msadom.dll* et *msadox.dll*, respectivement. Ces bibliothèques sont installées par défaut dans *$installDir*, où *$installDir* désigne le chemin du répertoire dans lequel la bibliothèque ADO a été installée sur votre ordinateur. Pour utiliser les bibliothèques ADO dans votre application, vous devez les référencer explicitement dans le projet d’application.  

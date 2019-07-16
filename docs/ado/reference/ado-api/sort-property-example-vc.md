@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 58199284-747b-4312-b97f-797ee7bd4435
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6234ca377497ad3f03bd0d05441ae361b80bc220
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2092b830501ca22b28e867090623a4343f27eca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930969"
 ---
 # <a name="sort-property-example-vc"></a>Sort, exemple de propriétés (VC++)
 Cet exemple utilise le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) l’objet [tri](../../../ado/reference/ado-api/sort-property.md) propriété pour réorganiser les lignes d’un **Recordset** dérivé le ***auteurs*** table de le **Pubs** base de données. Une routine utilitaire secondaire imprime chaque ligne.  

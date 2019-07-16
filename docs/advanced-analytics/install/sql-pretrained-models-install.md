@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 002713c8c3eb92a33cbb1461eaacb8a0d63a5c3f
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 78e2a544766875b03144eb85b12aacee59295a2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962877"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installer PRÉFORMÉE modèles machine learning sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +57,7 @@ Les noms de fichiers de modèle sont répertoriées ci-dessous :
 
 + AlexNet\_Updated.model
 + ImageNet1K\_mean.xml
-+ pretrained.model
++ pretrained.Model
 + ResNet\_101\_Updated.model
 + ResNet\_18\_Updated.model
 + ResNet\_50\_Updated.model
@@ -78,7 +77,7 @@ Cliquez sur [ https://aka.ms/mlm4sql ](https://aka.ms/mlm4sql) pour télécharge
    PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
    ```
 
-**Output**
+**Sortie**
 
 Sur une connecté à internet SQL Server 2017 Machine Learning instance par défaut avec R et Python, vous devez voir des messages semblables à ce qui suit.
 

@@ -64,7 +64,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 
 |||
 |-|-|-|
-|** _\* SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**\* _SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;

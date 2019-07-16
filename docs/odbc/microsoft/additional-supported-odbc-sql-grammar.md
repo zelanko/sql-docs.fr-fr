@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a5939ee2b8163e5e71899d5074b851dfda87484
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901397"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Grammaire SQL ODBC supplémentaire prise en charge
 Les pilotes ODBC prendre entièrement en charge la grammaire minimale ODBC 2.5 et les clauses suivantes dans la grammaire Core et étendus ODBC 2.5. Informations supplémentaires peuvent être affichées en accédant à la [instruction TABLE ALTER](../../odbc/microsoft/alter-table-statement.md), [des noms de corrélation](../../odbc/microsoft/correlation-names.md), et [appel de procédure](../../odbc/microsoft/procedure-invocation.md) rubriques.  
@@ -40,7 +39,7 @@ Les pilotes ODBC prendre entièrement en charge la grammaire minimale ODBC 2.5 e
   
 -   [Arithmétique des dates](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet: Date, Time et Timestamp littéraux](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet : Date, Time et Timestamp littéraux](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [DROP INDEX, instruction](../../odbc/microsoft/drop-index-statement.md)  
   
@@ -56,7 +55,7 @@ Les pilotes ODBC prendre entièrement en charge la grammaire minimale ODBC 2.5 e
   
 -   IN (*valuelist*) (cœurs)  
   
--   [Jet: Jointures externes](../../odbc/microsoft/jet-outer-joins.md) (étendu)  
+-   [Jet : Jointures externes](../../odbc/microsoft/jet-outer-joins.md) (étendu)  
   
 -   Instruction SELECT (étendu) (y compris GROUP BY, HAVING et clauses UNION)  
   

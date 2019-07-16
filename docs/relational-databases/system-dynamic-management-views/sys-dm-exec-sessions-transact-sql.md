@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49638971a01d2082938d4759bb9f597d7bfdf254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 209914c7b8b5b67f5b9d3129bf09f2b222b7bf4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936906"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,25 +36,25 @@ ms.locfileid: "66462630"
   
 > **REMARQUE :** À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_sessions**.  
   
-|Nom de colonne|Type de données|Description et des informations spécifiques à la version|  
+|Nom de la colonne|Type de données|Description et des informations spécifiques à la version|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifie la session associée à chaque connexion principale active. N'accepte pas la valeur NULL.|  
 |login_time|**datetime**|Heure à laquelle la session a été établie. N'accepte pas la valeur NULL.|  
 |host_name|**nvarchar(128)**|Nom de la station de travail cliente spécifique à une session. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.<br /><br /> **Remarque relative à la sécurité :** L'application cliente fournit le nom de la station de travail et peut fournir des données incorrectes. Ne vous fiez pas à HOST_NAME pour garantir la sécurité.|  
 |program_name|**nvarchar(128)**|Nom du programme client qui a lancé la session. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.|  
-|host_process_id|**Int**|ID de processus du programme client qui a lancé la session. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.|  
-|client_version|**Int**|Version du protocole TDS de l'interface utilisée par le client pour se connecter au serveur. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.|  
+|host_process_id|**int**|ID de processus du programme client qui a lancé la session. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.|  
+|client_version|**int**|Version du protocole TDS de l'interface utilisée par le client pour se connecter au serveur. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.|  
 |client_interface_name|**nvarchar(32)**|Nom de la bibliothèque/pilote utilisé par le client pour communiquer avec le serveur. La valeur est NULL pour les sessions internes. Autorise la valeur NULL.|  
 |security_id|**varbinary(85)**|ID de sécurité Microsoft Windows associé à la connexion. N'accepte pas la valeur NULL.|  
 |login_name|**nvarchar(128)**|Nom de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous lequel la session s'exécute actuellement. Pour connaître le nom de connexion d'origine qui a créé la session, consulez original_login_name. Peut être un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentifié nom de connexion ou un nom d’utilisateur de domaine authentifié Windows. N'accepte pas la valeur NULL.|  
 |nt_domain|**nvarchar(128)**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Domaine Windows du client si la session utilise l'authentification Windows ou une connexion approuvée. La valeur est NULL pour les sessions internes et les utilisateurs qui n'appartiennent pas à un domaine. Autorise la valeur NULL.|  
 |nt_user_name|**nvarchar(128)**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nom d'utilisateur Windows du client si la session utilise l'authentification Windows ou une connexion approuvée. La valeur est NULL pour les sessions internes et les utilisateurs qui n'appartiennent pas à un domaine. Autorise la valeur NULL.|  
-|status|**nvarchar(30)**|État de la session. Valeurs possibles :<br /><br /> **En cours d’exécution** -une ou plusieurs requêtes en cours d’exécution<br /><br /> **En état de veille** -aucune demande en cours d’exécution<br /><br /> **Dormant** -Session a été réinitialisée en raison du regroupement de connexions et est désormais dans un état de préconnexion.<br /><br /> **Preconnect** -Session est dans le classifieur du gouverneur de ressources.<br /><br /> N'accepte pas la valeur NULL.|  
+|status|**nvarchar(30)**|État de la session. Valeurs possibles :<br /><br /> **En cours d’exécution** -une ou plusieurs requêtes en cours d’exécution<br /><br /> **En état de veille** -aucune demande en cours d’exécution<br /><br /> **Dormant** -Session a été réinitialisée en raison du regroupement de connexions et est désormais dans un état de préconnexion.<br /><br /> **Preconnect** -Session est dans le classifieur du gouverneur de ressources.<br /><br /> N'accepte pas la valeur NULL.|  
 |context_info|**varbinary(128)**|Valeur CONTEXT_INFO pour la session. Les informations de contexte sont définies par l’utilisateur à l’aide de la [SET CONTEXT_INFO](../../t-sql/statements/set-context-info-transact-sql.md) instruction. Autorise la valeur NULL.|  
-|cpu_time|**Int**|Temps processeur, en millisecondes, utilisé par cette session. N'accepte pas la valeur NULL.|  
-|memory_usage|**Int**|Nombre de pages de mémoire de 8 Ko utilisées par cette session. N'accepte pas la valeur NULL.|  
-|total_scheduled_time|**Int**|Durée totale, en millisecondes, pour laquelle l'exécution de la session (demandes comprises) a été planifiée. N'accepte pas la valeur NULL.|  
-|total_elapsed_time|**Int**|Temps écoulé, en millisecondes, depuis que la session a été établie. N'accepte pas la valeur NULL.|  
+|cpu_time|**int**|Temps processeur, en millisecondes, utilisé par cette session. N'accepte pas la valeur NULL.|  
+|memory_usage|**int**|Nombre de pages de mémoire de 8 Ko utilisées par cette session. N'accepte pas la valeur NULL.|  
+|total_scheduled_time|**int**|Durée totale, en millisecondes, pour laquelle l'exécution de la session (demandes comprises) a été planifiée. N'accepte pas la valeur NULL.|  
+|total_elapsed_time|**int**|Temps écoulé, en millisecondes, depuis que la session a été établie. N'accepte pas la valeur NULL.|  
 |endpoint_id|**Int**|ID du point de terminaison associé à la session. N'accepte pas la valeur NULL.|  
 |last_request_start_time|**datetime**|Heure à laquelle la dernière demande de la session a commencé. Cela inclut la demande en cours. N'accepte pas la valeur NULL.|  
 |last_request_end_time|**datetime**|Heure à laquelle s'est terminée pour la dernière fois une demande de la session. Autorise la valeur NULL.|  
@@ -76,8 +75,8 @@ ms.locfileid: "66462630"
 |ansi_nulls|**bit**|Paramètre ANSI_NULLS pour la session. N'accepte pas la valeur NULL.|  
 |concat_null_yields_null|**bit**|Paramètre CONCAT_NULL_YIELDS_NULL pour la session. N'accepte pas la valeur NULL.|  
 |transaction_isolation_level|**smallint**|Niveau d'isolement des transactions de la session.<br /><br /> 0 = Non spécifié<br /><br /> 1 = Lecture non validée<br /><br /> 2 = Lecture validée<br /><br /> 3 = Répétable<br /><br /> 4 = Sérialisable<br /><br /> 5 = Instantané<br /><br /> N'accepte pas la valeur NULL.|  
-|lock_timeout|**Int**|Paramètre LOCK_TIMEOUT pour la session. Cette valeur est exprimée en millisecondes. N'accepte pas la valeur NULL.|  
-|deadlock_priority|**Int**|Paramètre DEADLOCK_PRIORITY pour la session. N'accepte pas la valeur NULL.|  
+|lock_timeout|**int**|Paramètre LOCK_TIMEOUT pour la session. Cette valeur est exprimée en millisecondes. N'accepte pas la valeur NULL.|  
+|deadlock_priority|**int**|Paramètre DEADLOCK_PRIORITY pour la session. N'accepte pas la valeur NULL.|  
 |row_count|**bigint**|Nombre de lignes retournées dans la session jusqu'à présent. N'accepte pas la valeur NULL.|  
 |prev_error|**Int**|ID de la dernière erreur retournée dans la session. N'accepte pas la valeur NULL.|  
 |original_security_id|**varbinary(85)**|ID de sécurité [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows qui est associé à original_login_name. N'accepte pas la valeur NULL.|  
@@ -88,8 +87,8 @@ ms.locfileid: "66462630"
 |group_id|**Int**|ID du groupe de charge de travail auquel cette session appartient. N'accepte pas la valeur NULL.|  
 |database_id|**smallint**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID de la base de données active pour chaque session.|  
 |authenticating_database_id|**Int**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID de la base de données authentifiant le principal. Pour les comptes de connexion, la valeur sera de 0. Pour les utilisateurs de base de données non autonome, la valeur sera l'ID de la base de données autonome.|  
-|open_transaction_count|**Int**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de transactions ouvertes par session.|  
-|pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|open_transaction_count|**int**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Nombre de transactions ouvertes par session.|  
+|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
 |page_server_reads|**bigint**|**S’applique à** : Très grande échelle de la base de données SQL Azure<br /><br /> Nombre de lectures de pages de serveur effectuées, par des demandes dans cette session, pendant cette session. N'accepte pas la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
@@ -125,7 +124,7 @@ Tous les utilisateurs peuvent voir leurs propres informations de session.
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-finding-users-that-are-connected-to-the-server"></a>A. Recherche des utilisateurs connectés au serveur  
+### <a name="a-finding-users-that-are-connected-to-the-server"></a>R. Recherche des utilisateurs connectés au serveur  
  L'exemple suivant recherche les utilisateurs connectés au serveur et retourne le nombre de sessions pour chaque utilisateur.  
   
 ```sql  

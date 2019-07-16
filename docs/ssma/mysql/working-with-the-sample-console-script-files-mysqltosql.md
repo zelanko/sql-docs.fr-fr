@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d00385c7346d7602719326dbe700f7cd44c63fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904897"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Utilisation des fichiers de Script de Console exemple (MySQLToSQL)
 Quelques exemples de fichiers ont été fournis, ainsi que le produit pour la référence de l’utilisateur et l’utilisation. Cette section décrit la façon de personnaliser facilement ces scripts en fonction des besoins des utilisateurs finaux.  
@@ -35,7 +34,7 @@ Les fichiers de script de console exemple suivants couvrant différents scénari
   
 -   ConversionAndDataMigrationSample.xml  
   
--   **ServersConnectionFileSample.xml:**  
+-   **ServersConnectionFileSample.xml :**  
   
     -   Cet exemple donne les différents modes de connexion disponible à la base de données source et cible et l’utilisateur peut sélectionner n’importe quel mode selon les besoins. Cet exemple contient les définitions de serveur.  
   
@@ -61,7 +60,7 @@ Les fichiers de script de console exemple suivants couvrant différents scénari
   
     -   Assurez-vous qu’argument de ligne de commande de fichier de connexion serveur est passé à l’application de console et le ServersConnectionFileSample.xml est mis à jour avec les valeurs de paramètre de serveur correct.  
   
--   **SqlStatementConversionSample.xml:**  
+-   **SqlStatementConversionSample.xml :**  
     Cet exemple permet à l’utilisateur Générer le correspondantes `t-sql` script pour la base de données source `sql` commande fournie en tant qu’entrée.  
   
     Dans le `convert-sql-statement` l’utilisateur doit obligatoirement modifier la valeur de la variable de commande (reportez-vous **VariableValueFileSample.xml**) dans le `context` nom à l’attribut de base de données qui est en cours d’utilisation par l’utilisateur. L’utilisateur sera également être requises pour modifier le `sql` valeur d’attribut à la base de données source `sql` commande nécessitant une qu’il doit être convertie.  
@@ -80,7 +79,7 @@ Les fichiers de script de console exemple suivants couvrant différents scénari
   
     Mappage de schéma de base de données source vers le schéma cible.  
   
-    **Attribute**  
+    **Attribut**  
   
     -   `source-schema:` Spécifie la base de données source dont a besoin pour être converti.  
   
@@ -94,7 +93,7 @@ Les fichiers de script de console exemple suivants couvrant différents scénari
   
     2.  Si l’utilisateur a évaluer plusieurs objets ou des bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `convert-schema` 4 d’exemple de la commande de l’exemple de fichier de script de console.  
   
-    **Attribute**  
+    **Attribut**  
   
     `object-name`: Spécifiez la base de données source / nom qui nécessite d’être converti de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le `object-name`  
   
@@ -106,7 +105,7 @@ Les fichiers de script de console exemple suivants couvrant différents scénari
   
     2.  Si l’utilisateur a évaluer plusieurs objets ou des bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `synchronize-target` exemple 3 de la commande de l’exemple de fichier de script de console.  
   
-    **Attribute**  
+    **Attribut**  
   
     `object-name:` Spécifiez la base de données sql server / nom qui nécessite la création de l’objet. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le `object-name`  
   
@@ -118,7 +117,7 @@ Les fichiers de script de console exemple suivants couvrant différents scénari
   
     2.  Si l’utilisateur a évaluer plusieurs objets ou des bases de données qu’il peut spécifier plusieurs `metabase-object` nœuds, comme illustré dans le `migrate-data` exemple 2 de la commande de l’exemple de fichier de script de console.  
   
-    **Attribute**  
+    **Attribut**  
   
     `object-name:` Spécifie la source de données / tables nom qui nécessite à migrer. Vérifiez que le correspondant `object-type` est modifié en fonction du type d’objet qui est spécifié dans le `object-name`  
   

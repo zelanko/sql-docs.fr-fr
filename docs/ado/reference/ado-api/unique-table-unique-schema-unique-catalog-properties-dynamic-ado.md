@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f653af8294002bf73b98bd4adc096fac8ba1658
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911679"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Table unique, schéma Unique, Unique catalogue propriétés dynamique (ADO)
 Vous permet de contrôle précis des modifications apportées à une table de base de données dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) qui a été formé par une opération de jointure sur plusieurs tables de base.  

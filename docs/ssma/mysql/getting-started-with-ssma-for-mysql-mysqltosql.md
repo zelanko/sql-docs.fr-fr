@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984539"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Bien démarrer avec SSMA pour MySQL (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) pour MySQL vous permet de rapidement convertir des schémas de base de données MySQL en schémas SQL Server ou de la base de données SQL Azure, télécharger les schémas qui en résulte dans SQL Server ou Azure SQL DB et migrer des données de MySQL vers SQL Server ou de la base de données SQL Azure.  
@@ -38,7 +37,7 @@ Une fois SSMA est installé et une licence, vous pouvez utiliser SSMA pour migre
   
 Pour démarrer une migration, vous devez :  
   
-1.  Créez un projet.  
+1.  Créer un nouveau projet.  
   
 2.  Se connecter à une base de données MySQL.  
   
@@ -97,7 +96,7 @@ Le tableau suivant présente la migration des commandes de barre d’outils :
   
 |||  
 |-|-|  
-|**Button**|**Fonction**|  
+|**Button**|**Function**|  
 |**Créer des rapports**|Convertit les objets sélectionnés de MySQL pour les objets SQL Server ou de la base de données SQL Azure et crée ensuite un rapport qui indique le succès de la conversion a.<br /><br />Cette commande est désactivée, sauf si les objets sont sélectionnés dans l’Explorateur de métadonnées de MySQL.|  
 |**Convertir le schéma**|Convertit les objets sélectionnés de MySQL pour les objets SQL Server ou de la base de données SQL Azure.<br /><br />Cette commande est désactivée, sauf si les objets sont sélectionnés dans l’Explorateur de métadonnées de MySQL.|  
 |**Migrer des données**|Migre les données à partir de la base de données MySQL vers SQL Server ou de la base de données SQL Azure. Avant d’exécuter cette commande, vous devez convertir les schémas de MySQL en schémas SQL Server ou de la base de données SQL Azure et puis charger les objets dans SQL Server ou de la base de données SQL Azure.<br /><br />Cette commande est désactivée, sauf si les objets sont sélectionnés dans l’Explorateur de métadonnées de MySQL.|  
@@ -109,8 +108,8 @@ Le tableau suivant présente les menus SSMA.
 |||  
 |-|-|  
 |**Menu**|**Description**|  
-|**Fichier**|Contient des commandes pour l’utilisation de projets, la connexion à MySQL et la connexion à SQL Server ou de la base de données SQL Azure.|  
-|**Modifier**|Contient des commandes pour la recherche et de travailler avec du texte dans les pages de détails. Pour ouvrir **gérer les signets** boîte de dialogue, dans le menu Edition cliquez sur Gérer les signets. Dans la boîte de dialogue, vous verrez une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
+|**File**|Contient des commandes pour l’utilisation de projets, la connexion à MySQL et la connexion à SQL Server ou de la base de données SQL Azure.|  
+|**Edition**|Contient des commandes pour la recherche et de travailler avec du texte dans les pages de détails. Pour ouvrir **gérer les signets** boîte de dialogue, dans le menu Edition cliquez sur Gérer les signets. Dans la boîte de dialogue, vous verrez une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
 |**Affichage**|Contient le **synchroniser les explorateurs de métadonnées** commande. Qui synchronise les objets entre l’Explorateur de métadonnées de MySQL et SQL Server ou Explorateur de métadonnées de base de données SQL Azure. Contient également des commandes pour afficher et masquer le **sortie** et **liste d’erreurs** volets et une option **dispositions** pour gérer les mises en page.|  
 |**Outils**|Contient des commandes pour créer des rapports, convertir le schéma, Actualiser à partir de la base de données, migrer des objets et des données et enregistrer en tant que Script. Permet également d’accéder à la **paramètres globaux, des paramètres de projet par défaut** et **paramètres du projet** boîtes de dialogue.|  
 |**Aide**|Fournit l’accès à l’aide de SSMA et en le **sur** boîte de dialogue.|  

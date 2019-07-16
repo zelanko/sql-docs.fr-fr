@@ -5,17 +5,16 @@ description: Découvrez comment Explorer et gérer le serveur SQL Azure, Azure S
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
-manager: jroth
 ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 91e766fae5dca7a3d9e2dec56af17161d684e145
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959716"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Explorer et gérer les ressources de SQL Azure avec Azure Resource Explorer
 
@@ -25,7 +24,7 @@ Dans ce document, vous découvrez comment vous pouvez Explorer et gérer Azure S
 >L’Explorateur de ressources Azure prendra en charge dans la version préliminaire de SQL Server 2019 en octobre. Après cela, vous pouvez installer l’extension de la version préliminaire via [Gestionnaire d’extensions](extensions.md) ou via **fichier** > **installer le Package à partir du Package VSIX**.
 
 
-## <a name="connect-to-azure"></a>Se connecter à Azure
+## <a name="connect-to-azure"></a>Connexion à Azure
 
 Après avoir installé le plug-in de la version préliminaire SQL, une icône Azure apparaît dans la barre de menu de gauche. Cliquez sur l’icône pour ouvrir l’Explorateur de ressources Azure. Si vous ne voyez pas l’icône Windows Azure, cliquez avec le bouton droit sur la barre de menu de gauche, puis sélectionnez **Azure Resource Explorer**.
 
@@ -78,7 +77,7 @@ Une fois connecté à un compte Azure, tous les abonnements associés qui compte
 
 2. Sélectionnez les cases à cocher pour les abonnements de compte que vous souhaitez parcourir, puis cliquez sur **OK**.
 
-   ![Sélectionner un abonnement](media/azure-resource-explorer/select-subscription.png)
+   ![Sélectionnez un abonnement](media/azure-resource-explorer/select-subscription.png)
 
 ## <a name="explore-azure-sql-resources"></a>Explorez les ressources de SQL Azure
 

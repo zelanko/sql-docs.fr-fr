@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dbafa8dd407269fa23ca37574f18a12be519c448
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c9f883b7eafc59a3d9d93541e07fe4c4db08b9c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950595"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,21 +41,21 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**PhaseID**|**Int**|Phase de la session de synchronisation, qui peut prendre l'une des valeurs suivantes :<br /><br /> **0** = d’initialisation ou de la ligne de synthèse<br /><br /> **1** = téléchargement<br /><br /> **2** = téléchargement|  
+|**PhaseID**|**int**|Phase de la session de synchronisation, qui peut prendre l'une des valeurs suivantes :<br /><br /> **0** = d’initialisation ou de la ligne de synthèse<br /><br /> **1** = téléchargement<br /><br /> **2** = téléchargement|  
 |**ArticleName**|**sysname**|Nom de l'article en cours de synchronisation. **ArticleName** contient également des informations de résumé pour les lignes du jeu de résultats qui ne représentent pas les détails de l’article.|  
 |**PercentComplete**|**decimal**|Indique le pourcentage de modifications appliqué dans une ligne de détails d'article donnée pour des sessions en cours d'exécution ou ayant échoué.|  
 |**RelativeCost**|**decimal**|Indique le temps consacré à la synchronisation de l'article en pourcentage de la durée de synchronisation totale pour la session.|  
-|**Duration**|**Int**|Durée de la session de l'Agent.|  
-|**Inserts**|**Int**|Nombre d'insertions dans une session.|  
+|**Duration**|**int**|Durée de la session de l'Agent.|  
+|**Inserts**|**int**|Nombre d'insertions dans une session.|  
 |**Mises à jour**|**Int**|Nombre de mises à jour dans une session.|  
-|**Suppressions**|**Int**|Nombre de suppressions dans une session.|  
+|**Suppressions**|**int**|Nombre de suppressions dans une session.|  
 |**Conflits**|**Int**|Nombre de conflits qui se sont produits dans une session.|  
-|**ErrorID**|**Int**|ID d'une erreur de session.|  
-|**SeqNo**|**Int**|Ordre des sessions dans le jeu de résultats.|  
+|**ErrorID**|**int**|ID d'une erreur de session.|  
+|**SeqNo**|**int**|Ordre des sessions dans le jeu de résultats.|  
 |**RowType**|**Int**|Indique le type d'informations que représente chaque ligne du jeu de résultats.<br /><br /> **0** = initialisation<br /><br /> **1** = résumé du téléchargement<br /><br /> **2** = détails de chargement de l’article<br /><br /> **3** = résumé du téléchargement<br /><br /> **4** = détails de téléchargement de l’article|  
-|**SchemaChanges**|**Int**|Nombre de modifications de schéma dans une session.|  
+|**Modifications de schéma**|**Int**|Nombre de modifications de schéma dans une session.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

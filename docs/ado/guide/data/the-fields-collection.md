@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1969ef21c3c30c46a891fa84acfcd58d460b07c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 197a57b8a9b9ea2927a057733992a02c731a335a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923938"
 ---
 # <a name="the-fields-collection"></a>Fields, collection
 Le **champs** collection est une des collections intrinsèques d’ADO. Une collection est un ensemble ordonné d’éléments qui peuvent être référencés en tant qu’unité. Pour plus d’informations sur les collections ADO, consultez [le modèle d’objet ADO](../../../ado/guide/data/ado-objects-and-collections.md).  
@@ -67,7 +66,7 @@ objField = objRecordset.Fields.Item(0)
 objField = objRecordset.Fields(0)  
 ```  
   
- Si ces méthodes sont équivalentes, ce qui convient le mieux ? Ça dépend. À l’aide d’un index pour récupérer un **champ** à partir de la collection est plus rapide car elle accède à la **champ** directement sans avoir à effectuer une recherche de chaîne. En revanche, l’ordre des **champs** au sein de la collection doit être connu, et si l’ordre est modifié, la référence à la **du champ** index devra être modifiée en conséquence. Bien que légèrement plus lentes, en utilisant le nom de la **champ** est plus flexible, car elle ne dépend pas de l’ordre de la **champs** dans la collection.  
+ Si ces méthodes sont équivalentes, ce qui convient le mieux ? Cela dépend. À l’aide d’un index pour récupérer un **champ** à partir de la collection est plus rapide car elle accède à la **champ** directement sans avoir à effectuer une recherche de chaîne. En revanche, l’ordre des **champs** au sein de la collection doit être connu, et si l’ordre est modifié, la référence à la **du champ** index devra être modifiée en conséquence. Bien que légèrement plus lentes, en utilisant le nom de la **champ** est plus flexible, car elle ne dépend pas de l’ordre de la **champs** dans la collection.  
   
 ## <a name="using-the-refresh-method"></a>À l’aide de la méthode d’actualisation  
  Contrairement à d’autres collections ADO, à l’aide de la **Actualiser** méthode sur le **champs** collection n’a aucun effet visible. Pour récupérer les modifications de la structure de base de données sous-jacente, vous devez utiliser soit le **Requery** (méthode), ou si le **Recordset** objet ne prend pas en charge les signets, la **MoveFirst**(méthode), ce qui provoque la commande à exécuter à nouveau sur le fournisseur.  

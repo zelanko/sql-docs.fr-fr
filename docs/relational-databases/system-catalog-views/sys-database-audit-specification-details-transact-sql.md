@@ -19,29 +19,28 @@ helpviewer_keywords:
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 865fb25a08bdf549c09a9bb4e4e23cff929f12ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4dcf9664adcdeba495b53f1a1392781df3fa60bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940287"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient des informations sur les spécifications de l’audit de la base de données dans un audit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance de serveur, pour toutes les bases de données. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md). Pour obtenir la liste de tous les audit_action_id et de leurs noms, interroger [sys.dm_audit_actions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_specification_id**|**Int**|ID de la spécification d'audit.|  
-|**audit_action_id**|**Int**|ID de l'action d'audit.|  
+|**audit_action_id**|**int**|ID de l'action d'audit.|  
 |**audit_action_name**|**sysname**|Nom de l'action d'audit ou du groupe d'actions d'audit|  
 |**Classe**|**Int**|Identifie la classe d'objets auditée.|  
 |**class_ desc**|**Nvarchar(60)**|Description de la classe d'objets auditée :<br /><br /> - SCHEMA<br /><br /> - TABLE|  
-|**major_id**|**Int**|ID majeur de l'objet audité, tel qu'un ID de table d'une action d'audit de table.|  
+|**major_id**|**int**|ID majeur de l'objet audité, tel qu'un ID de table d'une action d'audit de table.|  
 |**minor_id**|**Int**|ID secondaire de l'objet audité, interprété d'après la classe, telle que l'ID de colonne d'une action d'audit de table.|  
-|**audited_principal_id**|**Int**|Principal audité.|  
+|**audited_principal_id**|**int**|Principal audité.|  
 |**audited_result**|**Nvarchar(60)**|Résultats de l'action d'audit :<br /><br /> - SUCCESS AND FAILURE - SUCCESS<br /><br /> - FAILURE|  
 |**is_group**|**Bit**|Indique si l'objet est un groupe :<br /><br /> 0 - Pas un groupe<br /><br /> 1 - Groupe|  
   

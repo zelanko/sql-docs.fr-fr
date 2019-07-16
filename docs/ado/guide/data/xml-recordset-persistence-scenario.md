@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 893921a7100ca22cae219f5a0e88d543499053b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55ea62fac0cb2fe73b368429bb164cd28147fa7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923362"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Scénario de persistance des recordsets XML
 Dans ce scénario, vous allez créer une application Active Server Pages (ASP) qui enregistre le contenu d’un objet Recordset directement à l’objet ASP Response.  
@@ -38,10 +37,10 @@ Dans ce scénario, vous allez créer une application Active Server Pages (ASP) q
   
 -   Recevoir et afficher les données  
   
-## <a name="step-1-set-up-the-application"></a>Étape 1 : Configuration de l’Application  
+## <a name="step-1-set-up-the-application"></a>Étape 1 : Configuration de l’Application  
  Créer un répertoire virtuel IIS nommé « XMLPersist » avec des autorisations de script. Créez deux nouveaux fichiers texte dans le dossier vers lequel pointe le répertoire virtuel, un nommé « XMLResponse.asp, » l’autre nommé « Default.htm. »  
   
-## <a name="step-2-get-the-data"></a>Étape 2 : Obtenir les données  
+## <a name="step-2-get-the-data"></a>Étape 2 : Obtenir les données  
  Dans cette étape, vous allez écrire le code pour ouvrir un jeu d’enregistrements ADO et préparer son envoi au client. Ouvrez le fichier XMLResponse.asp avec un éditeur de texte, tel que le bloc-notes et insérez le code suivant.  
   
 ```  
@@ -70,7 +69,7 @@ Dans ce scénario, vous allez créer une application Active Server Pages (ASP) q
   
  Conserver le fichier ouvert et passez à l’étape suivante.  
   
-## <a name="step-3-send-the-data"></a>Étape 3 : Envoyer les données  
+## <a name="step-3-send-the-data"></a>Étape 3 : Envoyer les données  
  Maintenant que vous avez un jeu d’enregistrements, vous devez l’envoyer au client en l’enregistrant au format XML à l’objet ASP Response. Ajoutez le code suivant au bas de XMLResponse.asp.  
   
 ```  
@@ -89,7 +88,7 @@ Dans ce scénario, vous allez créer une application Active Server Pages (ASP) q
   
  Enregistrez et fermez XMLResponse.asp avant de passer à l’étape suivante. Copiez également le fichier de adovbs.inc du dossier d’installation par défaut ADO bibliothèque dans le même dossier où vous avez enregistré le fichier XMLResponse.asp.  
   
-## <a name="step-4-receive-and-display-the-data"></a>Étape 4 : Recevoir et afficher les données  
+## <a name="step-4-receive-and-display-the-data"></a>Étape 4 : Recevoir et afficher les données  
  Dans cette étape, vous allez créer un fichier HTML avec un embedded [objet DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet qui pointe vers le fichier XMLResponse.asp pour obtenir le jeu d’enregistrements. Ouvrez le fichier default.htm avec un éditeur de texte, tel que le bloc-notes et ajoutez le code suivant. Remplacez « sqlserver » dans l’URL par le nom de votre serveur.  
   
 ```  

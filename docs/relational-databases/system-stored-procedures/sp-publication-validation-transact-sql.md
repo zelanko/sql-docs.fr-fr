@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c7e6323c8a20aec7d464f7aa6f11a27fc24728d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896621"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +41,19 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**@publication=**] **'**_publication'_  
+ [ **@publication=** ] **'** _publication'_  
  Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [**@rowcount_only=**] *rowcount_only*  
+ [ **@rowcount_only=** ] *rowcount_only*  
  Indique s'il faut ou non retourner uniquement le nombre de lignes de la table. *rowcount_only* est **smallint** et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**0**|Effectue une somme de contrôle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Remarque : Lorsqu'un article est filtré horizontalement, l'opération de comptage de ligne est effectuée à la place de l'opération de somme de contrôle.|  
+|**0**|Effectue une somme de contrôle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Remarque : Lorsqu’un article est filtré horizontalement, une opération du nombre de lignes est effectuée au lieu d’une opération de somme de contrôle.|  
 |**1** (par défaut)|Effectue un contrôle du nombre de lignes uniquement.|  
-|**2**|Effectue un comptage du nombre de lignes et une somme de contrôle binaire.<br /><br /> Remarque : Pour les Abonnés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0, seule la validation du nombre de lignes est effectuée.|  
+|**2**|Effectue un comptage du nombre de lignes et une somme de contrôle binaire.<br /><br /> Remarque : Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés version 7.0, seule la validation du nombre de lignes est effectuée.|  
   
- [**@full_or_fast=**] *full_or_fast*  
+ [ **@full_or_fast=** ] *full_or_fast*  
  Méthode utilisée pour calculer le nombre de lignes. *full_or_fast* est **tinyint** et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  

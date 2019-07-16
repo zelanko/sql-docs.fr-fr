@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0de43bfdce0f5ec232beaf0f9e10dc5d7fec067c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a06e51f5c5077a70f9b5a76ecdf4922d8e006f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921106"
 ---
 # <a name="ado-collections"></a>Collections ADO
 Les relations entre ces collections et les objets ADO sont représentées dans le [modèle objet ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -29,7 +28,7 @@ Les relations entre ces collections et les objets ADO sont représentées dans l
 |||  
 |-|-|  
 |[Erreurs](../../../ado/reference/ado-api/errors-collection-ado.md)|Contient tous les **erreur** objets créés en réponse à une erreur liée au fournisseur.|  
-|[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Contient tous les **champ** objets d’un **Recordset** objet.|  
+|[Champs](../../../ado/reference/ado-api/fields-collection-ado.md)|Contient tous les **champ** objets d’un **Recordset** objet.|  
 |[Paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md)|Contient tous les **paramètre** objets d’un **commande** objet.|  
 |[Propriétés](../../../ado/reference/ado-api/properties-collection-ado.md)|Contient tous les **propriété** objets pour une instance spécifique d’un objet.|  
   

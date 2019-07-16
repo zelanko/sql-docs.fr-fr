@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac993a6d-0283-4823-8793-6b217677dfa3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b2e58eb534088482493e6f36c3841f36644183af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6966209300e6959e7ba9cb1afa11eb42b855d82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909013"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-mysqltosql"></a>Chargement d’objets de base de données convertis dans SQL Server (MySQLToSQL)
 Après avoir converti les bases de données MySQL vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous pouvez charger les objets de base de données qui en résulte dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez avoir créer les objets SSMA, ou vous pouvez générer un script les objets et exécuter les scripts vous-même. En outre, SSMA vous permet de mettre à jour des métadonnées de la cible avec le contenu réel de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure.  

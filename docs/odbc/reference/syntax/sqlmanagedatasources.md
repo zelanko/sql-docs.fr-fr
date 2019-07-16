@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 529c503bc10d3ed0b69a4c280c7fa63e72893f8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 819856a584c6133e28e222a704b720337f99cd9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018966"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformité**  
- Version introduite : ODBC 2.0  
+ Version introduite : ODBC VERSION 2.0  
   
  **Résumé**  
  **SQLManageDataSources** affiche une boîte de dialogue avec laquelle les utilisateurs peuvent configurer, ajouter et supprimer des sources de données dans les informations système.  
@@ -94,7 +93,7 @@ BOOL SQLManageDataSources(
   
  Une source de données système est inscrit dans l’entrée HKEY_LOCAL_MACHINE dans les informations système plutôt que dans l’entrée HKEY_CURRENT_USER. Il n’est pas lié à un seul utilisateur qui se connecte avec son nom d’utilisateur particulier et son mot de passe, mais peut être utilisé par n’importe quel utilisateur de cet ordinateur ou par un service du système automatique. La source de données système est, toutefois, lié à un seul ordinateur. Il ne prend pas en charge la fonctionnalité de l’utilisation de sources de données à distance entre les machines. Sources de données système sont inscrits comme suit dans les informations système :  
   
- HKEY_LOCAL_MACHINE    SOFTWARE       ODBC          Odbc.ini  
+ HKEY_LOCAL_MACHINE SOFTWARE ODBC Odbc.ini  
   
 ## <a name="file-dsns"></a>Sources de données fichier  
  Une source de données de fichier n’a pas un nom de source de données, comme le fait d’une source de données machine et n’est pas inscrit à n’importe quel ordinateur ou un utilisateur. Les informations de connexion pour cette source de données sont contenues dans un fichier .dsn qui peut être copié vers n’importe quel ordinateur. Une source de données de fichier peut être partageable, auquel cas le fichier .dsn réside sur un réseau et peut être utilisée simultanément par plusieurs utilisateurs sur le réseau tant que l’utilisateur a le pilote approprié installé. Une source de données de fichier peut également être partageable, auquel cas il peut être utilisé uniquement sur un seul ordinateur.  

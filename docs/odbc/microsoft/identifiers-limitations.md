@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3466382-71cb-4f82-8318-092a8fcef3df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c781113124d456e1ba866546d6ada7a17371d71f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 251ae0e4e94cec903e2c4b5cf687ed9b8b41dfc8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952399"
 ---
 # <a name="identifiers-limitations"></a>Limitations des identificateurs
 Si un identificateur contient un espace ou symbole spécial, l’identificateur doit être encadrée de guillemets précédent. Un nom valide est une chaîne, pas plus de 64 caractères, dont le premier caractère ne doit pas être un espace. Noms valides ne peuvent pas contenir les caractères de contrôle ou les caractères spéciaux suivants : « &#124; # * ? [ ] . ! $ .  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 10cf92089a87f2d57fc303d8b722df70941fb455
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907128"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>Commandes de menu et autres touches de raccourci (AccessToSQL)
 Les sections suivantes décrivent les raccourcis clavier pour accéder aux commandes de menu et autres touches de raccourci utilisées dans les différentes boîtes de dialogue de SSMA pour l’application Access.  

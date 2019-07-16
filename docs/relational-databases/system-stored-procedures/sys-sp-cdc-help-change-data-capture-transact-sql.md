@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 91fd41f5-1b4d-44fe-a3b5-b73eff65a534
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: aabd005381dc2e18b01fb88d125ddeeb3f8b6428
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fdf0086fe3a87823a419f3535888ea3211ee9ef1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905176"
 ---
 # <a name="sysspcdchelpchangedatacapture-transact-sql"></a>sys.sp_cdc_help_change_data_capture (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,13 +64,13 @@ sys.sp_cdc_help_change_data_capture
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Nom du schéma de table source.|  
 |source_table|**sysname**|Nom de la table source.|  
 |capture_instance|**sysname**|Nom de l'instance de capture.|  
-|object_id|**Int**|ID de la table de modifications associée à la table source.|  
-|source_object_id|**Int**|ID de la table source.|  
+|object_id|**int**|ID de la table de modifications associée à la table source.|  
+|source_object_id|**int**|ID de la table source.|  
 |start_lsn|**binary(10)**|Numéro séquentiel dans le journal qui représente le point de terminaison inférieur pour interroger la table de modifications.<br /><br /> NULL = le point de terminaison inférieur n'a pas été établi.|  
 |end_lsn|**binary(10)**|Numéro séquentiel dans le journal qui représente le point de terminaison supérieur pour interroger la table de modifications. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cette colonne a toujours pour valeur NULL.|  
 |supports_net_changes|**bit**|La prise en charge des modifications nettes est activée.|  
@@ -86,12 +85,12 @@ sys.sp_cdc_help_change_data_capture
 ## <a name="remarks"></a>Notes  
  Lorsque les deux *source_schema* et *source_name* par défaut avec la valeur NULL ou sont explicitement la valeur NULL, cette procédure stockée retourne des informations pour l’ensemble de la base de données des instances de capture que l’appelant a sélectionnez l’accès à. Lorsque *source_schema* et *source_name* sont non NULL, seules les informations sur la table activée nommée spécifique sont retournées.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Lorsque *source_schema* et *source_name* ont la valeur NULL, l’autorisation de l’appelant détermine les tables activées qui sont inclus dans le jeu de résultats. Les appelants doivent avoir l'autorisation SELECT sur toutes les colonnes capturées de l'instance de capture et être membres d'un rôle de régulation défini pour les informations de table à inclure. Les membres du rôle de base de données db_owner peuvent afficher des informations concernant toutes les instances de capture définies. Lorsque des informations pour une table activée spécifique sont demandées, les mêmes critères SELECT et d'appartenance sont appliqués pour la table nommée.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-change-data-capture-configuration-information-for-a-specified-table"></a>A. Retour d'informations de configuration de capture des données modifiées pour une table spécifiée  
+### <a name="a-returning-change-data-capture-configuration-information-for-a-specified-table"></a>R. Retour d'informations de configuration de capture des données modifiées pour une table spécifiée  
  L'exemple suivant retourne la configuration de capture des données modifiées pour la table `HumanResources.Employee`.  
   
 ```  

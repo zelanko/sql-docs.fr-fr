@@ -11,28 +11,27 @@ dev_langs:
 ms.assetid: 2625466b-d0ef-4c71-bedc-6d13491a8351
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e93d397d10a99f844454494c4bf0d82b7fe6d660
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899416"
 ---
 # <a name="sysdmpdwexecconnections-transact-sql"></a>sys.dm_pdw_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Retourne des informations sur les connexions établies à cette instance de [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et les détails de chaque connexion.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|session_id|**Int**|Identifie la session associée à cette connexion. Utilisez `SESSION_ID()` pour retourner le `session_id` de la connexion actuelle.|  
+|session_id|**int**|Identifie la session associée à cette connexion. Utilisez `SESSION_ID()` pour retourner le `session_id` de la connexion actuelle.|  
 |connect_time|**datetime**|Cachet temporel d'établissement de la connexion. N'accepte pas la valeur NULL.|  
 |encrypt_option|**nvarchar(40)**|Indique la valeur TRUE (la connexion est chiffrée) ou FALSE (la connexion n’est pas enctypred).|  
 |auth_scheme|**nvarchar(40)**|Spécifie le schéma d'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/Windows utilisé avec cette connexion. N'accepte pas la valeur NULL.|  
 |client_id|**varchar(48)**|Adresse IP du client se connectant à ce serveur. Autorise la valeur NULL.|  
-|sql_spid|**Int**|L’ID de processus serveur, de la connexion. Utilisez `@@SPID` pour retourner le `sql_spid` de la connexion actuelle. Pour plus de dédié, utilisez le `session_id` à la place.|  
+|sql_spid|**int**|L’ID de processus serveur, de la connexion. Utilisez `@@SPID` pour retourner le `sql_spid` de la connexion actuelle. Pour plus de dédié, utilisez le `session_id` à la place.|  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert **VIEW SERVER STATE** autorisation sur le serveur.  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: fdc778a34a513c2aca12da0dd0e1245e50dc5d6a
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 43063bb56607d1b5a21ae04b40ee4c7a17825521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900133"
 ---
 # <a name="sysdmosjobobject-azure-sql-database"></a>Sys.dm_os_job_object (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ Un objet de tâche est une construction de Windows qui implémente la gouvernanc
 |-------------|---------------|-----------------|  
 |cpu_rate|**int**|Spécifie la partie de cycles de processeur que les threads SQL Server peuvent utiliser pendant chaque intervalle de planification. La valeur est indiquée sous forme de pourcentage de cycles disponibles dans un intervalle de planification du cycle de 10000. Par exemple, la valeur 100 signifie que les threads peuvent utiliser des cœurs de processeur est à leur capacité maximale.|
 |cpu_affinity_mask|**bigint**|Un masque de bits qui décrit les processeurs logiques du processus SQL Server peut utiliser au sein du groupe de processeur. Par exemple, cpu_affinity_mask 255 (1111 1111 en binaire) signifie que les huit premiers processeurs logiques peuvent être utilisés.|
-|cpu_affinity_group|**Int**|Le numéro du groupe de processeur qui est utilisé par SQL Server.|
+|cpu_affinity_group|**int**|Le numéro du groupe de processeur qui est utilisé par SQL Server.|
 |memory_limit_mb|**bigint**|La quantité maximale de mémoire allouée, en Mo, que tous les processus de l’objet de travail, y compris SQL Server, permettent de manière cumulative.| 
 |process_memory_limit_mb |**bigint**|La quantité maximale de mémoire allouée, en Mo, qu’un seul processus de l’objet de travail, telles que SQL Server, peut utiliser.|
 |workingset_limit_mb |**bigint**|La quantité maximale de mémoire, en Mo, qui permet de la plage de travail de SQL Server.|

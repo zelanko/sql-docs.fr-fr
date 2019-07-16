@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b69d1ae90224b94d5db5f9658942e1beed0b61d1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a80ff5308edee02d24d214a6520a090750600edc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950576"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,11 +58,11 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**metric_id**|**Int**|ID de la mesure de performance de réplication qui peut correspondre à l'une des valeurs suivantes.<br /><br /> **1expiration** -supervise l’expiration imminente des abonnements aux publications transactionnelles.<br /><br /> **2latency** -contrôle les performances des abonnements aux publications transactionnelles.<br /><br /> **4mergeexpiration** -supervise l’expiration imminente des abonnements aux publications de fusion.<br /><br /> **5mergeslowrunduration** -contrôle la durée des synchronisations de fusion sur les connexions lentes (accès à distance).<br /><br /> **6mergefastrunduration** -contrôle la durée des synchronisations de fusion sur les connexions haut débit (LAN).<br /><br /> **7mergefastrunspeed** -supervise le taux de synchronisation des synchronisations de fusion sur les connexions haut débit (LAN).<br /><br /> **8mergeslowrunspeed** -supervise le taux de synchronisation des synchronisations de fusion sur les connexions lentes (accès à distance).|  
+|**metric_id**|**int**|ID de la mesure de performance de réplication qui peut correspondre à l'une des valeurs suivantes.<br /><br /> **1expiration** -supervise l’expiration imminente des abonnements aux publications transactionnelles.<br /><br /> **2latency** -contrôle les performances des abonnements aux publications transactionnelles.<br /><br /> **4mergeexpiration** -supervise l’expiration imminente des abonnements aux publications de fusion.<br /><br /> **5mergeslowrunduration** -contrôle la durée des synchronisations de fusion sur les connexions lentes (accès à distance).<br /><br /> **6mergefastrunduration** -contrôle la durée des synchronisations de fusion sur les connexions haut débit (LAN).<br /><br /> **7mergefastrunspeed** -supervise le taux de synchronisation des synchronisations de fusion sur les connexions haut débit (LAN).<br /><br /> **8mergeslowrunspeed** -supervise le taux de synchronisation des synchronisations de fusion sur les connexions lentes (accès à distance).|  
 |**title**|**sysname**|Nom de la mesure de performance de réplication.|  
-|**value**|**Int**|Valeur seuil de la mesure de performance.|  
+|**value**|**int**|Valeur seuil de la mesure de performance.|  
 |**shouldalert**|**bit**|Indique si une alerte doit être créée lorsque la mesure dépasse le seuil défini pour cette publication. la valeur **1** indique qu’une alerte doit être déclenchée.|  
 |**isenabled**|**bit**|Indique si la surveillance est activée pour cette mesure de performance de réplication pour cette publication. la valeur **1** indique qu’il est activé.|  
   

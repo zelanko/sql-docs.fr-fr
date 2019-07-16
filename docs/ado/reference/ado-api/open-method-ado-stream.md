@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c1d1863b28367ba825541c6e334613f65d3bc657
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917837"
 ---
 # <a name="open-method-ado-stream"></a>Open, méthode (Stream ADO)
 Ouvre un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet à manipuler des flux de données binaires ou texte.  
@@ -36,13 +35,13 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- Facultatif. Un **Variant** valeur qui spécifie la source de données pour le **Stream**. *Source* peut contenir une chaîne d’URL absolue qui pointe vers un nœud existant dans une arborescence bien connu, tel qu’un système de fichiers ou de messagerie. Une URL doit être spécifiée à l’aide du mot clé URL (« URL =*schéma*://*server*/*dossier*»). Vous pouvez également *Source* peut contenir une référence à un déjà ouverte [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet, qui ouvre le flux par défaut associé à la **enregistrement**. Si *Source* n’est pas spécifié, un **Stream** est instancié et ouvert, associé à aucune source sous-jacent par défaut. Pour plus d’informations sur les schémas d’URL et leurs fournisseurs associés, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
+ facultatif. Un **Variant** valeur qui spécifie la source de données pour le **Stream**. *Source* peut contenir une chaîne d’URL absolue qui pointe vers un nœud existant dans une arborescence bien connu, tel qu’un système de fichiers ou de messagerie. Une URL doit être spécifiée à l’aide du mot clé URL (« URL =*schéma*://*server*/*dossier*»). Vous pouvez également *Source* peut contenir une référence à un déjà ouverte [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet, qui ouvre le flux par défaut associé à la **enregistrement**. Si *Source* n’est pas spécifié, un **Stream** est instancié et ouvert, associé à aucune source sous-jacent par défaut. Pour plus d’informations sur les schémas d’URL et leurs fournisseurs associés, consultez [URL absolues et relatives](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
  *Mode*  
- Facultatif. Un [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valeur qui spécifie le mode d’accès pour le résultant **Stream** (par exemple, en lecture/écriture ou en lecture seule). Valeur par défaut est **adModeUnknown**. Consultez le [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété pour plus d’informations sur les modes d’accès. Si *Mode* n’est pas spécifié, il est hérité par l’objet source. Par exemple, si la source de **enregistrement** est ouvert en mode en lecture seule, le **Stream** sera également ouvert en mode lecture seule par défaut.  
+ facultatif. Un [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valeur qui spécifie le mode d’accès pour le résultant **Stream** (par exemple, en lecture/écriture ou en lecture seule). Valeur par défaut est **adModeUnknown**. Consultez le [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété pour plus d’informations sur les modes d’accès. Si *Mode* n’est pas spécifié, il est hérité par l’objet source. Par exemple, si la source de **enregistrement** est ouvert en mode en lecture seule, le **Stream** sera également ouvert en mode lecture seule par défaut.  
   
  *OpenOptions*  
- Facultatif. Un [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) valeur. Valeur par défaut est **adOpenStreamUnspecified**.  
+ facultatif. Un [StreamOpenOptionsEnum](../../../ado/reference/ado-api/streamopenoptionsenum.md) valeur. Valeur par défaut est **adOpenStreamUnspecified**.  
   
  *UserName*  
  Facultatif. Un **chaîne** valeur qui contient l’ID d’utilisateur qui, s’il est nécessaire, accède à la **Stream** objet.  

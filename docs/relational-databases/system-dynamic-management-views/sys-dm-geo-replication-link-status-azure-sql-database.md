@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: d763d679-470a-4c21-86ab-dfe98d37e9fd
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e94406cf30d1a942581f5fcfd30438c84ea2b159
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 8302de76b45ca09e86c87c29ab99c30898168de5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900889"
 ---
 # <a name="sysdmgeoreplicationlinkstatus-azure-sql-database"></a>sys.dm_geo_replication_link_status (Azure SQL Database)
 
@@ -37,7 +36,7 @@ ms.locfileid: "67716699"
 |partner_server|**sysname**|Nom du serveur de base de données SQL contenant la base de données lié.|  
 |partner_database|**sysname**|Nom de la base de données liée sur le serveur SQL Database lié.|  
 |last_replication|**datetimeoffset**|Horodatage de l’accusé de réception de la dernière transaction par la base de données secondaire en fonction de l’horloge de la base de données primaire. Cette valeur est disponible sur la base de données primaire.|  
-|replication_lag_sec|**Int**|Différence de temps en secondes entre la valeur last_replication et l’horodateur de validation de cette transaction sur le serveur principal basé sur l’horloge de la base de données primaire.  Cette valeur est disponible sur la base de données primaire.|  
+|replication_lag_sec|**int**|Différence de temps en secondes entre la valeur last_replication et l’horodateur de validation de cette transaction sur le serveur principal basé sur l’horloge de la base de données primaire.  Cette valeur est disponible sur la base de données primaire.|  
 |replication_state|**tinyint**|L’état de géo-réplication pour cette base de données :.<br /><br /> 1 = Seeding. La cible de géo-réplication est en cours d’amorçage, mais les deux bases de données ne sont pas encore synchronisés. Jusqu'à ce que l’amorçage terminé, vous ne peut pas se connecter à la base de données secondaire. Suppression de base de données secondaire du site principal annulera l’opération d’amorçage.<br /><br /> 2 = mise à jour. La base de données secondaire est dans un état transactionnellement cohérent et est constamment synchronisé avec la base de données primaire.<br /><br /> 4 = messages interrompus. Il ne s'agit pas d'une relation de copie continue active. Cet état indique généralement que la bande passante disponible pour l'interlien est insuffisante pour le niveau d'activité de transaction dans la base de données primaire. Toutefois, la relation de copie continue est toujours intacte.|  
 |replication_state_desc|**nvarchar (256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
 |role|**tinyint**|Rôle de géo-réplication, une des :<br /><br /> 0 = primary. Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.<br /><br /> 1 = la base de données secondaire.  Le database_id fait référence à la base de données primaire dans le partenariat de géo-réplication.|  

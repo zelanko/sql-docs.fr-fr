@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 75063e36-a91b-496f-9936-88f3d57bd447
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e9ed2152873f40fd2f2ded34a11a2cfded2fbe2a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 379dae51b913fc02a16a562037776620b1e0433c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904473"
 ---
 # <a name="sysresourcegovernorexternalresourcepools-transact-sql"></a>Sys.resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,16 +31,16 @@ ms.locfileid: "47823538"
 
 Retourne la configuration de pool de ressources externes stockées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque ligne de la vue détermine la configuration d'un pool.
   
-|Nom de colonne|Type de données|Description|
+|Nom de la colonne|Type de données|Description|
 |-----------------|---------------|-----------------|
-|pool_id|**Int**|ID unique du pool de ressources. N'accepte pas la valeur NULL.<br /><br /> **Remarque :** peut être renommée dans le futur.|
-|NAME|**sysname**|Nom du pool de ressources. N'accepte pas la valeur NULL.|
-|max_cpu_percent|**Int**|Bande passante processeur moyenne maximale pour toutes les demandes dans le pool de ressources en cas de contention du processeur. N'accepte pas la valeur NULL.|
+|pool_id|**int**|ID unique du pool de ressources. N'accepte pas la valeur NULL.<br /><br /> **Remarque :** Peut être renommée dans le futur.|
+|name|**sysname**|Nom du pool de ressources. N'accepte pas la valeur NULL.|
+|max_cpu_percent|**int**|Bande passante processeur moyenne maximale pour toutes les demandes dans le pool de ressources en cas de contention du processeur. N'accepte pas la valeur NULL.|
 |max_memory_percent|**Int**|Pourcentage de la mémoire totale du serveur qui peut être utilisé par les demandes dans ce pool de ressources. N'accepte pas la valeur NULL. La valeur maximale effective dépend des valeurs minimales du pool. Par exemple, max_memory_percent peut avoir la valeur 100, alors que sa valeur maximale effective est inférieure.|
-|max_processes|**Int**|Nombre maximal de processus externes simultanées. La valeur par défaut 0 spécifie qu'il n'y a pas de limite. N'accepte pas la valeur NULL.|
+|max_processes|**int**|Nombre maximal de processus externes simultanées. La valeur par défaut 0 spécifie qu'il n'y a pas de limite. N'accepte pas la valeur NULL.|
 |version|**bigint**|Numéro de version interne.|
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Requiert l'autorisation VIEW SERVER STATE.
 
@@ -53,9 +52,9 @@ Requiert l'autorisation VIEW SERVER STATE.
 
 [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)
 
-[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)
+[gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)
 
-[Sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
+[sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)
 
 [external scripts enabled (option de configuration de serveur)](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 

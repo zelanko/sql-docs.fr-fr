@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 225d0cd15aa170edc146eda0615a708ab0fe3ce2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d5188d701cd7930ff93c37aab74e11bba949d9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896393"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>Paramètres globaux (Journalisation) (MySQLToSQL)
 Utilisez le **paramètres globaux** boîte de dialogue pour spécifier les paramètres de journalisation pour SSMA. En règle générale, vous modifieriez ces paramètres uniquement lorsque vous travaillez avec le support technique.  
@@ -32,10 +31,10 @@ Les options suivantes sont disponibles sous **au niveau des Messages**:
 |**Collecteur**|Collecte des métadonnées sur le schéma source et l’enregistre dans le projet.|  
 |**Converter**|Convertit des objets de base de données source, tels que les tables et procédures stockées, des structures de correspondant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] structures.|  
 |**Utilitaire de migration de données**|Migre les données à partir de la base de données source dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Formatter**|Sous-composant du convertisseur qui génère des scripts pour la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schéma.|  
+|**Formateur**|Sous-composant du convertisseur qui génère des scripts pour la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schéma.|  
 |**Interface utilisateur graphique**|Messages qui s’affichent lorsque vous utilisez l’outil SSMA.|  
-|**Linker**|Résout les identificateurs SQL et fournit des informations à d’autres composants.|  
-|**Autres**|Tous les messages qui ne sont pas dans une autre catégorie.|  
+|**Éditeur de liens**|Résout les identificateurs SQL et fournit des informations à d’autres composants.|  
+|**Autre**|Tous les messages qui ne sont pas dans une autre catégorie.|  
 |**Analyseur**|Analyse du schéma source.|  
 |**Synchronisateur**|Charge la source des objets de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**TreeConverter**|Convertit des objets dans les métadonnées de source dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] métadonnées.|  
@@ -45,7 +44,7 @@ Pour chaque option sous **au niveau des Messages**, configurez l’un des niveau
 |||  
 |-|-|  
 |**Erreur irrécupérable**|Écrire uniquement les messages d’erreur irrécupérable dans le journal.|  
-|**Erreur**|Écrire des messages d’erreur et une erreur irrécupérable dans le journal.|  
+|**Error**|Écrire des messages d’erreur et une erreur irrécupérable dans le journal.|  
 |**Avertissement**|Écrire des messages d’avertissement, erreur et une erreur irrécupérable dans le journal.|  
 |**Info**|Écrire des information, avertissement, messages d’erreur et erreur irrécupérable dans le journal.|  
 |**Débogage**|Écrire tous les messages, y compris les messages, dans le journal de débogage.|  

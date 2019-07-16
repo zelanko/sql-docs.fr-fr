@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4fae0d54-83b6-4ead-99cc-bcf532daa121
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c07c42a1f864c3dc6888003cd31b06fce9e6893c
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: e7d4399a8cf279ed2283061fff9064ffcc1adfba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924736"
 ---
 # <a name="operation-of-parameterized-commands"></a>Fonctionnement des commandes paramétrées
 Si vous travaillez avec un enfant **Recordset**, en particulier par rapport à la taille du parent **Recordset**, mais ont besoin d’accéder uniquement quelques chapitres enfant, il peut s’avérer plus efficace d’utiliser un commande paramétrable.  

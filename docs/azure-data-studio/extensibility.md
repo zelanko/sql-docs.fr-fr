@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: ea432d05ea1fde8ec0d2585d0618ea6feba86ccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959597"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Prise en main [!INCLUDE[name-sos](../includes/name-sos-short.md)] extensibilité
 
@@ -54,7 +53,7 @@ IntelliSense est prise en charge à l’intérieur d’azuredatastudio.
 
 Contribuer onglet, conteneur, widget insight au tableau de bord.
 
-![Tableau de bord](media/extensibility/dashboard-page.png)
+![tableau de bord](media/extensibility/dashboard-page.png)
 
 `dashboard.tabs`
 
@@ -268,14 +267,14 @@ Pour obtenir des informations générales sur le contexte dans Visual Studio Cod
 
 Dans Azure Data Studio, nous avons un contexte spécifique autour des connexions de base de données disponibles pour les extensions.
 
-### <a name="dashboard"></a>Tableau de bord
+### <a name="dashboard"></a>tableau de bord
 
 Dans le tableau de bord, nous fournissons les variables de contexte suivantes :
 
 |variable de contexte| description|
 |:---|:---|
-|`connectionProvider` | Une chaîne de l’identificateur pour le fournisseur de la connexion actuelle. Ex. `connectionProvider == 'MSSQL'` .|
-|`serverName`|Chaîne du nom du serveur de la connexion actuelle. Ex. `serverName == 'localhost'` .|
-|`databaseName` | Chaîne du nom de base de données de la connexion actuelle. Ex. `databaseName == 'master'` .|
+|`connectionProvider` | Une chaîne de l’identificateur pour le fournisseur de la connexion actuelle. Ex. `connectionProvider == 'MSSQL'`.|
+|`serverName`|Chaîne du nom du serveur de la connexion actuelle. Ex. `serverName == 'localhost'`.|
+|`databaseName` | Chaîne du nom de base de données de la connexion actuelle. Ex. `databaseName == 'master'`.|
 |`connection` | L’objet de profil de connexion complète pour la connexion actuelle (IConnectionProfile)|
 |`dashboardContext` | Une chaîne du contexte de la page du tableau de bord est actuellement placé. « Base de données » ou « server ». Ex. `dashboardContext == 'database'`|

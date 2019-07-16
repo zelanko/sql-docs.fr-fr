@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fdf3b766e48843a15e73b7a41b7c434ba604e0af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab9f0266120a298ab6f033c7d2e2a4b4fe4903fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65478223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906376"
 ---
 # <a name="delete-an-attribute-master-data-services"></a>Supprimer un attribut (Master Data Services)
 
@@ -57,7 +56,7 @@ ms.locfileid: "65478223"
     > [!NOTE]  
     >  Vous ne pouvez pas supprimer les attributs Name ni Code.  
   
-7.  Cliquez sur **Supprimer**.  
+7.  Cliquez sur **Delete**.  
   
 8.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37000833-68f4-45f1-b2dd-7f75893d09d9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 982c379f24731f80f30249b98ed2a571111de1f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71bc18b13061b844b35314239ffe4973155a0c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920727"
 ---
 # <a name="append-and-createparameter-methods-example-jscript"></a>Append et CreateParameter, exemple de méthodes (JScript)
 Cet exemple utilise le [Append](../../../ado/reference/ado-api/append-method-ado.md) et [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) méthodes pour exécuter une procédure stockée avec un paramètre d’entrée. Coupez et collez le code suivant dans le bloc-notes ou un autre éditeur de texte et enregistrez-le en tant que **nom AppendJS.asp**.  
@@ -146,5 +145,5 @@ body {
  [Append, méthode (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
  [CreateParameter, méthode (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Objet de champ](../../../ado/reference/ado-api/field-object.md)   
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Parameter, objet](../../../ado/reference/ado-api/parameter-object.md)

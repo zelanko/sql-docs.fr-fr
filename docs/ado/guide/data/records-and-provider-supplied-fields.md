@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77f95e0a-0cf2-411a-a792-593f77330fbd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b7ce62ebedbd5d0622c8b69720f7153d7711a48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54d55926d2bec89b0764b751bf165586e8d3c6c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924517"
 ---
 # <a name="records-and-provider-supplied-fields"></a>Enregistrements et champs fournis par le fournisseur
 Quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objet est ouvert, sa source peut être la ligne actuelle d’ouvert [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), une URL absolue ou une URL relative en association avec une ouverture [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet .  
@@ -56,12 +55,12 @@ Quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) o
 ## <a name="resource-recordset-columns"></a>Colonnes de jeu d’enregistrements de ressources  
  Un *jeu d’enregistrements de ressource* se compose des colonnes suivantes.  
   
-|Nom de colonne|type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |RESOURCE_PARSENAME|AdVarWChar|En lecture seule. Indique l’URL de la ressource.|  
 |RESOURCE_PARENTNAME|AdVarWChar|En lecture seule. Indique l’URL absolue de l’enregistrement parent.|  
 |RESOURCE_ABSOLUTEPARSENAME|AdVarWChar|En lecture seule. Indique l’URL absolue de la ressource, qui est la concaténation de PARENTNAME et PARSENAME.|  
-|RESOURCE_ISHIDDEN|AdBoolean|True si la ressource est masquée. Aucune ligne n’est retournée, sauf si la commande qui crée l’ensemble de lignes explicitement sélectionne les lignes où la propriété RESOURCE_ISHIDDEN a la valeur True.|  
+|PROPRIÉTÉ RESOURCE_ISHIDDEN|AdBoolean|True si la ressource est masquée. Aucune ligne n’est retournée, sauf si la commande qui crée l’ensemble de lignes explicitement sélectionne les lignes où la propriété RESOURCE_ISHIDDEN a la valeur True.|  
 |RESOURCE_ISREADONLY|AdBoolean|True si la ressource est en lecture seule. Tente d’ouvrir cette ressource avec DBBINDFLAG_WRITE et échoue avec DB_E_READONLY. Cette propriété peut être modifiée même lorsque la ressource n’a été ouverte pour la lecture.|  
 |RESOURCE_CONTENTTYPE|AdVarWChar|Indique l’utilisation probable du document-par exemple, un dossier d’avocat. Cela peut correspondre au modèle Office ayant servi à créer le document.|  
 |RESOURCE_CONTENTCLASS|AdVarWChar|Indique le type MIME du document, indiquant le format comme «`text/html`».|  
@@ -73,7 +72,7 @@ Quand un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) o
 |RESOURCE_ISCOLLECTION|AdBoolean|En lecture seule. True si la ressource est une collection, comme un répertoire. False si la ressource est un fichier simple.|  
 |RESOURCE_ISSTRUCTUREDDOCUMENT|AdBoolean|True si la ressource est un document structuré. False si la ressource n’est pas un document structuré. Il peut être une collection ou un fichier simple.|  
 |DEFAULT_DOCUMENT|AdVarWChar|En lecture seule. Indique que cette ressource contient une URL vers le document simple par défaut d’un dossier ou un document structuré. Utilisé lorsque le flux par défaut est demandé à partir d’une ressource. Cette propriété est vide pour un fichier simple.|  
-|CHAPTERED_CHILDREN|adChapter|En lecture seule. Facultatif. Indique le chapitre de l’ensemble de lignes qui contient les enfants de la ressource. (Le *fournisseur OLE DB pour la publication Internet* n’utilise pas cette colonne.)|  
+|CHAPTERED_CHILDREN|adChapter|En lecture seule. facultatif. Indique le chapitre de l’ensemble de lignes qui contient les enfants de la ressource. (Le *fournisseur OLE DB pour la publication Internet* n’utilise pas cette colonne.)|  
 |RESOURCE_DISPLAYNAME|AdVarWChar|En lecture seule. Indique le nom complet de la ressource.|  
 |RESOURCE_ISROOT|AdBoolean|En lecture seule. True si la ressource est la racine d’une collection ou un document structuré.|  
   

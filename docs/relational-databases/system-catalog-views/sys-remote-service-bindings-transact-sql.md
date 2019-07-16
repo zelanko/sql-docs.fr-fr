@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: 4e1a885d-eed1-4993-9c87-e6fd781f437d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2a0b326eef888ebf36fded7ae4ab95fe9f1b6bc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c326a5dd3a964209af0cc4834b91bca9071da9e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904583"
 ---
 # <a name="sysremoteservicebindings-transact-sql"></a>sys.remote_service_bindings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cet affichage catalogue contient une ligne pour chaque liaison de service distant. 
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de la liaison de service distant. Cette colonne n'accepte pas la valeur NULL.|  
+|**name**|**sysname**|Nom de la liaison de service distant. Cette colonne n'accepte pas la valeur NULL.|  
 |**remote_service_binding_id**|**Int**|Identificateur de la liaison de service distant. Cette colonne n'accepte pas la valeur NULL.|  
-|**principal_id**|**Int**|Identificateur du principal de base de données qui est propriétaire de la liaison de service distant. Accepte la valeur NULL.|  
+|**principal_id**|**int**|Identificateur du principal de base de données qui est propriétaire de la liaison de service distant. Accepte la valeur NULL.|  
 |**remote_service_name**|**nvarchar (256)**|Nom du service distant auquel cette liaison s'applique. Accepte la valeur NULL.|  
-|**service_contract_id**|**Int**|Identificateur du contrat auquel cette liaison s'applique. La valeur 0 est un caractère générique signifiant que la liaison s'applique à tous les contrats associés au service. Cette colonne n'accepte pas la valeur NULL.|  
-|**remote_principal_id**|**Int**|Identificateur de l'utilisateur spécifié dans la liaison de service distant. Service Broker utilise un certificat appartenant à cet utilisateur pour communiquer avec le service spécifié sur les contrats concernés. Accepte la valeur NULL.|  
+|**service_contract_id**|**int**|Identificateur du contrat auquel cette liaison s'applique. La valeur 0 est un caractère générique signifiant que la liaison s'applique à tous les contrats associés au service. Cette colonne n'accepte pas la valeur NULL.|  
+|**remote_principal_id**|**int**|Identificateur de l'utilisateur spécifié dans la liaison de service distant. Service Broker utilise un certificat appartenant à cet utilisateur pour communiquer avec le service spécifié sur les contrats concernés. Accepte la valeur NULL.|  
 |**is_anonymous_on**|**bit**|Cette liaison de service distant utilise la sécurité ANONYMOUS. L'identité de l'utilisateur qui commence la conversation n'est pas fournie au service cible. Cette colonne n'accepte pas la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  

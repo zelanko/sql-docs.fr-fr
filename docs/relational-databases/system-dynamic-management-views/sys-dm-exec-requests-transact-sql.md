@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 961878494958f0f7ef5d1814c0836a98f5da5682
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: c4e12ee4d40cb200124748c07bcc3e78a5076a07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936955"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -50,10 +49,10 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 |connection_id|**uniqueidentifier**|ID de la connexion à laquelle la demande est parvenue. Autorise la valeur NULL.|  
 |blocking_session_id|**smallint**|ID de la session qui bloque la demande. Si cette colonne est NULL, la demande n'est pas bloquée, ou les informations de session de la session bloquant la demande ne sont pas disponibles (ou ne peuvent pas être identifiées).<br /><br /> -2 = La ressource qui bloque la demande appartient à une transaction distribuée orpheline.<br /><br /> -3 = La ressource qui bloque la demande appartient à une transaction de récupération différée.<br /><br /> -4 = L'ID de session du propriétaire du verrou qui bloque la demande n'a pas pu être déterminé pour le moment en raison de transitions d'état de verrou interne.|  
 |wait_type|**nvarchar(60)**|Si la demande est actuellement bloquée, cette colonne retourne le type d'attente. Autorise la valeur NULL.<br /><br /> Pour plus d’informations sur les types d’attentes, consultez [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md).|  
-|wait_time|**Int**|Si la demande est actuellement bloquée, cette colonne retourne la durée de l'attente, en millisecondes. N'accepte pas la valeur NULL.|  
+|wait_time|**int**|Si la demande est actuellement bloquée, cette colonne retourne la durée de l'attente, en millisecondes. N'accepte pas la valeur NULL.|  
 |last_wait_type|**nvarchar(60)**|Si la demande a été bloquée précédemment, cette colonne indique le type de la dernière attente. N'accepte pas la valeur NULL.|  
 |wait_resource|**nvarchar (256)**|Si la demande est actuellement bloquée, cette colonne retourne la ressource attendue par la demande. N'accepte pas la valeur NULL.|  
-|open_transaction_count|**Int**|Nombre de transactions ouvertes pour cette demande. N'accepte pas la valeur NULL.|  
+|open_transaction_count|**int**|Nombre de transactions ouvertes pour cette demande. N'accepte pas la valeur NULL.|  
 |open_resultset_count|**Int**|Nombre de jeux de résultats ouverts pour cette demande. N'accepte pas la valeur NULL.|  
 |transaction_id|**bigint**|ID de la transaction dans laquelle cette demande s'exécute. N'accepte pas la valeur NULL.|  
 |context_info|**varbinary(128)**|Valeur CONTEXT_INFO de la session. Autorise la valeur NULL.|  
@@ -66,7 +65,7 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 |reads|**bigint**|Nombre de lectures effectuées par la demande. N'accepte pas la valeur NULL.|  
 |writes|**bigint**|Nombre d'écritures effectuées par la demande. N'accepte pas la valeur NULL.|  
 |logical_reads|**bigint**|Nombre de lectures logiques effectuées par la demande. N'accepte pas la valeur NULL.|  
-|text_size|**Int**|Valeur du paramètre TEXTSIZE pour la demande. N'accepte pas la valeur NULL.|  
+|text_size|**int**|Valeur du paramètre TEXTSIZE pour la demande. N'accepte pas la valeur NULL.|  
 |langage|**nvarchar(128)**|Valeur du paramètre de langue pour la demande. Autorise la valeur NULL.|  
 |date_format|**nvarchar(3)**|Valeur du paramètre DATEFORMAT pour la demande. Autorise la valeur NULL.|  
 |date_first|**smallint**|Valeur du paramètre DATEFIRST pour la demande. N'accepte pas la valeur NULL.|  
@@ -79,10 +78,10 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 |ansi_nulls|**bit**|1 = ANSI_NULLS est activé (ON) pour la demande. Sinon, la valeur est 0.<br /><br /> N'accepte pas la valeur NULL.|  
 |concat_null_yields_null|**bit**|1 = CONCAT_NULL_YIELDS_NULL est activé (ON) pour la demande. Sinon, la valeur est 0.<br /><br /> N'accepte pas la valeur NULL.|  
 |transaction_isolation_level|**smallint**|Niveau d'isolation avec lequel la transaction pour cette demande est créée. N'accepte pas la valeur NULL.<br /><br /> 0 = Non spécifié<br /><br /> 1 = Lecture non validée<br /><br /> 2 = Lecture validée<br /><br /> 3 = Répétable<br /><br /> 4 = Sérialisable<br /><br /> 5 = Instantané|  
-|lock_timeout|**int**|Délai d'attente de verrou externe pour la demande, en millisecondes. N'accepte pas la valeur NULL.|  
-|deadlock_priority|**Int**|Paramètre DEADLOCK_PRIORITY de la demande. N'accepte pas la valeur NULL.|  
+|lock_timeout|**Int**|Délai d'attente de verrou externe pour la demande, en millisecondes. N'accepte pas la valeur NULL.|  
+|deadlock_priority|**int**|Paramètre DEADLOCK_PRIORITY de la demande. N'accepte pas la valeur NULL.|  
 |row_count|**bigint**|Nombre de lignes retournées au client par cette demande. N'accepte pas la valeur NULL.|  
-|prev_error|**Int**|Dernière erreur générée pendant l'exécution de la demande. N'accepte pas la valeur NULL.|  
+|prev_error|**int**|Dernière erreur générée pendant l'exécution de la demande. N'accepte pas la valeur NULL.|  
 |nest_level|**int**|Niveau d'imbrication actuel du code en cours d'exécution sur la demande. N'accepte pas la valeur NULL.|  
 |granted_query_memory|**int**|Nombre de pages allouées à l'exécution d'une requête dans la demande. N'accepte pas la valeur NULL.|  
 |executing_managed_code|**bit**|Indique si une demande spécifique est en train d'exécuter des objets CLR (Common Language Runtime) tels que des routines, des types et des déclencheurs. Cette valeur est définie pour toute la durée pendant laquelle un objet CLR réside dans la pile, même lorsqu'elle exécute [!INCLUDE[tsql](../../includes/tsql-md.md)] à partir du CLR. N'accepte pas la valeur NULL.|  
@@ -91,8 +90,8 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 |query_plan_hash|**binary(8)**|Valeur de hachage binaire calculée sur le plan d'exécution de requête et utilisée pour identifier des plans d'exécution de requête semblables. Vous pouvez utiliser le hachage de plan de requête pour rechercher le coût cumulatif de requêtes avec les plans d'exécution semblables.|  
 |statement_sql_handle|**varbinary(64)**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Handle SQL de la requête individuelle.<br /><br />Cette colonne est NULL si la requête Store n’est pas activée pour la base de données. |  
 |statement_context_id|**bigint**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> La clé étrangère facultative à sys.query_context_settings.<br /><br />Cette colonne est NULL si la requête Store n’est pas activée pour la base de données. |  
-|dop |**int** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Le degré de parallélisme de la requête. |  
-|parallel_worker_count |**int** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Le nombre de travailleurs parallèles réservés, s’il s’agit d’une requête parallèle.  |  
+|dop |**Int** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Le degré de parallélisme de la requête. |  
+|parallel_worker_count |**Int** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Le nombre de travailleurs parallèles réservés, s’il s’agit d’une requête parallèle.  |  
 |external_script_request_id |**uniqueidentifier** |**S'applique à**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> L’ID de demande de script externe associé à la requête actuelle. |  
 |is_resumable |**bit** |**S'applique à**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indique si la demande est une opération d’index pouvant être reprise. |  
 |page_resource |**binary(8)** |**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Une représentation hexadécimale sur 8 octets de la ressource de page si le `wait_resource` colonne contiendrait une page. |  

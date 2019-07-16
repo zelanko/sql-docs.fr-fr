@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 49456201-b085-4851-9686-e814136b07be
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 659701a984a675418b8654e9f747efe5d9e07762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aee5946f3087956a0117b88f4044ef8a6c9bd9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924139"
 ---
 # <a name="specifying-connection-properties"></a>Spécification des propriétés d’une connexion
 Vous pouvez fournir une grande partie des informations spécifiées par un [chaîne de connexion](../../../ado/guide/data/creating-a-connection-string.md) en définissant des propriétés de la **connexion** objet avant l’ouverture de la connexion. Par exemple, vous pourriez obtenir le même effet comme indiqué par la chaîne de connexion dans [création d’une chaîne de connexion](../../../ado/guide/data/creating-a-connection-string.md) en utilisant le code suivant.  

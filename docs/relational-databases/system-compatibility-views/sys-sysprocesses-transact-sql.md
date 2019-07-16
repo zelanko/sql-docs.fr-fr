@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 60a36d36-54b3-4bd6-9cac-702205a21b16
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2e1beebcb250f6a12ba612784ccb335c7b036774
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 60f4cf3945ed026a311e8e8dc0ab37f95ec8aabb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986499"
 ---
 # <a name="syssysprocesses-transact-sql"></a>sys.sysprocesses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47780327"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |spid|**smallint**|ID de la session [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |kpid|**smallint**|ID de thread Windows.|  
@@ -49,7 +48,7 @@ ms.locfileid: "47780327"
 |uid|**smallint**|ID de l'utilisateur qui a exécuté la commande. Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
 |cpu|**Int**|Temps UC cumulé pour l'exécution du processus. L'entrée est mise à jour pour tous les processus, indépendamment de la valeur de l'option SET STATISTICS TIME (ON ou OFF).|  
 |physical_io|**bigint**|Nombre total d'opérations d'écriture et de lecture sur disque pour le processus.|  
-|memusage|**Int**|Nombre de pages du cache de procédures actuellement allouées à ce processus. Un nombre négatif indique que le processus libère de la mémoire allouée par un autre processus.|  
+|memusage|**int**|Nombre de pages du cache de procédures actuellement allouées à ce processus. Un nombre négatif indique que le processus libère de la mémoire allouée par un autre processus.|  
 |login_time|**datetime**|Heure à laquelle le processus client s'est connecté au serveur.|  
 |last_batch|**datetime**|Dernière exécution par un processus client d'un appel de procédure stockée distante ou d'une instruction EXECUTE.|  
 |ecid|**smallint**|ID du contexte d'exécution utilisé pour identifier de façon unique les sous-threads exécutés pour le compte d'un seul et même processus.|  
@@ -67,7 +66,7 @@ ms.locfileid: "47780327"
 |loginame|**nchar(128)**|Nom de connexion.|  
 |context_info|**binary(128)**|Données stockées dans un lot à l'aide de l'instruction SET CONTEXT_INFO.|  
 |sql_handle|**binary(20)**|Représente le lot ou l'objet en cours d'exécution.<br /><br /> **Remarque** cette valeur est dérivée de l’adresse du lot ou de la mémoire de l’objet. Cette valeur n'est pas calculée à l'aide de l'algorithme de hachage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|stmt_start|**Int**|Décalage de début de l'instruction SQL en cours pour la colonne sql_handle spécifiée.|  
+|stmt_start|**int**|Décalage de début de l'instruction SQL en cours pour la colonne sql_handle spécifiée.|  
 |stmt_end|**Int**|Décalage de fin de l'instruction SQL actuelle pour la colonne sql_handle spécifiée.<br /><br /> -1 = L'instruction en cours s'exécute jusqu'à la fin des résultats renvoyés par la fonction fn_get_sql pour la colonne sql_handle spécifiée.|  
 |request_id|**Int**|ID de demande. Utilisé pour identifier les requêtes qui s'exécutent dans une session spécifique.|
 |page_resource |**binary(8)** |**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br /><br /> Une représentation hexadécimale sur 8 octets de la ressource de page si le `waitresource` colonne contiendrait une page. |  

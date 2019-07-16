@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 3cde890f16e14866238f24e5d8a6bd52efdc9ecc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10ebcf94c673df4e8016ae2d0c84d7a5bd89824f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959628"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>API d’extensibilité Data Studio Azure
 
@@ -35,7 +34,7 @@ ms.locfileid: "66782420"
 
 ### `Connection`
 - `options: { [name: string]: string }` Le dictionnaire des options de connexion
-- `providerName: string` Le nom du fournisseur de connexion (par exemple) "MSSQL")
+- `providerName: string` Le nom du fournisseur de connexion (par exemple) « MSSQL »)
 - `connectionId: string` L’identificateur unique pour la connexion
 
 ### <a name="example-code"></a>Exemple de code

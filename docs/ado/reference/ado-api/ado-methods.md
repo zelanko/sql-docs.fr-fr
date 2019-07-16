@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 67b428a06679bdb0cade14314195d576a1ccc596
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920928"
 ---
 # <a name="ado-methods"></a>Méthodes ADO
 
@@ -32,7 +31,7 @@ ms.locfileid: "66696855"
 |[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Annule l’exécution d’une attente, l’appel de méthode asynchrone.|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Annule une mise à jour par lot en attente.|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Annule toutes les modifications qui ont été apportées à la ligne actuelle ou nouvelle d’un **Recordset** objet, ou le **champs** collection d’un **enregistrement** objet, avant d’appeler le  **Mise à jour** (méthode).|  
-|[Désactiver](../../../ado/reference/ado-api/clear-method-ado.md)|Supprime tous les le **erreur** objets à partir de la **erreurs** collection.|  
+|[Effacer](../../../ado/reference/ado-api/clear-method-ado.md)|Supprime tous les le **erreur** objets à partir de la **erreurs** collection.|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Crée un doublon **Recordset** objet depuis une **Recordset** objet. Si vous le souhaitez, spécifie que le clone doit être en lecture seule.|  
 |[Fermer](../../../ado/reference/ado-api/close-method-ado.md)|Ferme un objet ouvert et tous les objets dépendants.|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|Compare deux signets et retourne une indication de leurs valeurs relatives.|  
@@ -45,8 +44,8 @@ ms.locfileid: "66696855"
 |[DeleteRecord](../../../ado/reference/ado-api/deleterecord-method-ado.md)|Supprime un fichier ou répertoire et tous ses sous-répertoires.|  
 |[Exécuter (commande ADO)](../../../ado/reference/ado-api/execute-method-ado-command.md)|Exécute la requête, une instruction SQL ou une procédure stockée spécifiée dans le **CommandText** propriété.|  
 |[Exécuter (objet Connection ADO)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|Exécute la requête spécifiée, l’instruction SQL, le procédure stockée ou texte propre au fournisseur.|  
-|[Find](../../../ado/reference/ado-api/find-method-ado.md)|Recherche un **Recordset** pour la ligne répondant aux critères spécifiés.|  
-|[Flush](../../../ado/reference/ado-api/flush-method-ado.md)|Force le contenu de la **Stream** restants dans la mémoire tampon de ADO à l’objet sous-jacent auquel le **Stream** est associé.|  
+|[Rechercher](../../../ado/reference/ado-api/find-method-ado.md)|Recherche un **Recordset** pour la ligne répondant aux critères spécifiés.|  
+|[Vider](../../../ado/reference/ado-api/flush-method-ado.md)|Force le contenu de la **Stream** restants dans la mémoire tampon de ADO à l’objet sous-jacent auquel le **Stream** est associé.|  
 |[get_OLEDBCommand, méthode](../../../ado/reference/ado-api/get-oledbcommand-method.md)|Retourne la commande OLE DB sous-jacent, tout d’abord propagation n’importe quel paramètre d’informations sur la commande ADO à la commande OLE DB.|  
 |[GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md)|Retourne un **Recordset** dont les lignes représentent les fichiers et sous-répertoires dans le répertoire représenté par ce **enregistrement**.|  
 |[GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md)|Retourne l’ensemble ou une partie du contenu d’un texte de grande taille ou les données binaires **champ** objet.|  
@@ -68,7 +67,7 @@ ms.locfileid: "66696855"
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Lit un nombre spécifié de caractères à partir d’un texte **Stream** objet.|  
 |[Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md)|Met à jour les objets dans une collection afin de refléter les objets disponibles à partir d’et spécifiques au fournisseur.|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Met à jour les données dans un **Recordset** objet en exécutant à nouveau la requête sur laquelle repose l’objet.|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Actualise les données en cours **Recordset** objet, ou **champs** collection d’un **enregistrement** objet, à partir de la base de données sous-jacente.|  
+|[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|Actualise les données en cours **Recordset** objet, ou **champs** collection d’un **enregistrement** objet, à partir de la base de données sous-jacente.|  
 |[Enregistrer](../../../ado/reference/ado-api/save-method.md)|Enregistre le **Recordset** dans un fichier ou **Stream** objet.|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Enregistre le contenu binaire d’un **Stream** dans un fichier.|  
 |[Rechercher](../../../ado/reference/ado-api/seek-method.md)|Recherche l’index d’un **Recordset** pour localiser rapidement la ligne qui correspond aux valeurs spécifiées et la position de ligne actuelle pour cette ligne.|  

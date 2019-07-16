@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c69c9ea5e3274b22748839e0eda4af60289fabc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 94442202816751022aca97755021bd5a54940269
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913023"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Types CLR volumineux définis par l'utilisateur (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -77,12 +76,12 @@ ms.locfileid: "52416116"
   
 |Type de colonne|DBCOLUMN_TYPE|DBCOLUMN_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE|DBCOLUMN_FLAGS_ISLONG|DBCOLUMNS_ISSEARCHABLE|DBCOLUMN_OCTETLENGTH|  
 |-----------------|--------------------|--------------------------|-------------------------|---------------------|-----------------------------|-----------------------------|---------------------------|  
-|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|*n*|NULL|NULL|Désactiver|DB_ALL_EXCEPT_LIKE|n|  
+|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|*n*|NULL|NULL|Effacer|DB_ALL_EXCEPT_LIKE|n|  
 |DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|DBTYPE_UDT|~0|NULL|NULL|Définissez|DB_ALL_EXCEPT_LIKE|0|  
   
  Les colonnes suivantes sont également définies pour les types UDT :  
   
-|Identificateur de colonne|Type|Description|  
+|Identificateur de colonne|type|Description|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Pour les colonnes UDT, il s'agit du nom du catalogue où le type UDT est défini.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Pour les colonnes UDT, il s'agit du nom du schéma où le type UDT est défini.|  
@@ -94,7 +93,7 @@ ms.locfileid: "52416116"
   
 |Type de paramètre|*wType*|*ulColumnSize*|*bPrecision*|*bScale*|*dwFlags*<br /><br /> DBCOLUMNFLAGS_ISLONG|  
 |--------------------|-------------|--------------------|------------------|--------------|-----------------------------------------|  
-|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|*n*|~0|~0|Désactiver|  
+|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|*n*|~0|~0|Effacer|  
 |DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|DBTYPE_UDT|~0|~0|~0|Définissez|  
   
 ## <a name="columns-rowset-schema-rowsets"></a>Ensemble de lignes COLUMNS (ensembles de lignes de schéma)  
@@ -102,12 +101,12 @@ ms.locfileid: "52416116"
   
 |Type de colonne|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_ISLONG|CHARACTER_OCTET_LENGTH|  
 |-----------------|----------------|-----------------------------------------|------------------------------|  
-|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|Désactiver|*n*|  
+|DBTYPE_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|DBTYPE_UDT|Effacer|*n*|  
 |DBTYPE_UDT<br /><br /> (longueur supérieure à 8 000 octets)|DBTYPE_UDT|Définissez|0|  
   
  Les colonnes supplémentaires suivantes sont définies pour les types UDT :  
   
-|Identificateur de colonne|Type|Description|  
+|Identificateur de colonne|type|Description|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Pour les colonnes UDT, il s'agit du nom du catalogue où le type UDT est défini.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Pour les colonnes UDT, il s'agit du nom du schéma où le type UDT est défini.|  
@@ -139,8 +138,8 @@ ms.locfileid: "52416116"
 |2|Les données sont converties d'une chaîne hexadécimale en données binaires.|  
 |3|Les données sont converties données binaires en chaîne hexadécimale.|  
 |4|La validation peut se produire lors de l’utilisation de **CreateAccessor** ou de **GetNextRows**. L'erreur est DB_E_ERRORSOCCURRED. L'état de liaison a la valeur DBBINDSTATUS_UNSUPPORTEDCONVERSION.|  
-|5|BY_REF peut être utilisé.|  
-|6|Les paramètres UDT peuvent être liés en tant que DBTYPE_IUNKNOWN dans le DBBINDING. La liaison à DBTYPE_IUNKNOWN indique que l’application veut traiter les données en tant que flux avec l’interface ISequentialStream. Lorsqu’un consommateur spécifie *wType* dans une liaison en tant que type DBTYPE_IUNKNOWN et la colonne correspondante ou de sortie, le paramètre de la procédure stockée est un UDT, SQL Server Native Client retournera ISequentialStream. Pour un paramètre d’entrée, SQL Server Native Client recherchera le pour l’interface ISequentialStream.<br /><br /> Vous pouvez choisir de ne pas lier la longueur de données UDT à l'aide de la liaison DBTYPE_IUNKNOWN en cas types UDT volumineux. Toutefois, la longueur doit être liée pour de petits types UDT. Un paramètre DBTYPE_UDT peut être spécifié en tant que type UDT volumineux si une ou plusieurs des conditions suivantes sont réunies :<br />*ulParamParamSize* est ~ 0.<br />DBPARAMFLAGS_ISLONG est défini dans le struct DBPARAMBINDINFO.<br /><br /> Pour les données de ligne, la liaison DBTYPE_IUNKNOWN est uniquement autorisée pour les types UDT volumineux. Vous pouvez déterminer si une colonne est un type UDT volumineux à l’aide de la méthode IColumnsInfo::GetColumnInfo sur un ensemble de lignes ou l’interface IColumnsInfo de l’objet de commande. Une colonne DBTYPE_UDT est une colonne UDT volumineuse si une ou plusieurs des conditions suivantes sont réunies :<br />L’indicateur DBCOLUMNFLAGS_ISLONG est défini sur le membre *dwFlags* de la structure DBCOLUMNINFO. <br />*ulColumnSize* membre de DBCOLUMNINFO est ~ 0.|  
+|5\.|BY_REF peut être utilisé.|  
+|6\.|Les paramètres UDT peuvent être liés en tant que DBTYPE_IUNKNOWN dans le DBBINDING. La liaison à DBTYPE_IUNKNOWN indique que l’application veut traiter les données en tant que flux avec l’interface ISequentialStream. Lorsqu’un consommateur spécifie *wType* dans une liaison en tant que type DBTYPE_IUNKNOWN et la colonne correspondante ou de sortie, le paramètre de la procédure stockée est un UDT, SQL Server Native Client retournera ISequentialStream. Pour un paramètre d’entrée, SQL Server Native Client recherchera le pour l’interface ISequentialStream.<br /><br /> Vous pouvez choisir de ne pas lier la longueur de données UDT à l'aide de la liaison DBTYPE_IUNKNOWN en cas types UDT volumineux. Toutefois, la longueur doit être liée pour de petits types UDT. Un paramètre DBTYPE_UDT peut être spécifié en tant que type UDT volumineux si une ou plusieurs des conditions suivantes sont réunies :<br />*ulParamParamSize* est ~ 0.<br />DBPARAMFLAGS_ISLONG est défini dans le struct DBPARAMBINDINFO.<br /><br /> Pour les données de ligne, la liaison DBTYPE_IUNKNOWN est uniquement autorisée pour les types UDT volumineux. Vous pouvez déterminer si une colonne est un type UDT volumineux à l’aide de la méthode IColumnsInfo::GetColumnInfo sur un ensemble de lignes ou l’interface IColumnsInfo de l’objet de commande. Une colonne DBTYPE_UDT est une colonne UDT volumineuse si une ou plusieurs des conditions suivantes sont réunies :<br />L’indicateur DBCOLUMNFLAGS_ISLONG est défini sur le membre *dwFlags* de la structure DBCOLUMNINFO. <br />*ulColumnSize* membre de DBCOLUMNINFO est ~ 0.|  
   
  DBTYPE_NULL et DBTYPE_EMPTY peuvent être liés pour des paramètres d'entrée, mais pas pour des résultats ou des paramètres de sortie. S'ils sont liés pour des paramètres d'entrée, l'état doit avoir la valeur DBSTATUS_S_ISNULL pour DBTYPE_NULL ou DBSTATUS_S_DEFAULT pour DBTYPE_EMPTY. DBTYPE_BYREF ne peut pas être utilisé avec DBTYPE_NULL ou DBTYPE_EMPTY.  
   

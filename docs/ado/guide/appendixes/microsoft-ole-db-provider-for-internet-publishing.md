@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48c6e95a644c643721a7cb1c6f15c5eaf1e5a995
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926754"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Fournisseur Microsoft OLE DB pour une vue d’ensemble de la publication Internet
 Le fournisseur Microsoft OLE DB pour la publication Internet permet à ADO pour accéder aux ressources prises en charge par Microsoft FrontPage ou Microsoft Internet Information Server. Les ressources incluent les fichiers de sources de web tels que les fichiers HTML ou des dossiers web de Windows 2000.
@@ -41,7 +40,7 @@ MSDAIPP.DSO
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- -ou-
+ ou
 
 ```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"

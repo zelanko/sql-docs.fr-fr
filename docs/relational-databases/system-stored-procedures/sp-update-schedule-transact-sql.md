@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7bf2a2e589a7e3dc69ee805f1958dad4cbecb8c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 51e21d189a9302c2dc7b74a013846460e9cb7bc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946644"
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_update_schedule
   
 |Valeur de *freq_type*|Effet sur *freq_interval*|  
 |---------------------------|--------------------------------|  
-|**1** (once)|*freq_interval* n’est pas utilisé.|  
+|**1** (une fois)|*freq_interval* n’est pas utilisé.|  
 |**4** (quotidienne)|Chaque *freq_interval* jours.|  
 |**8** (hebdomadaire)|*freq_interval* prend une ou plusieurs des opérations suivantes (combinées avec un **OR** opérateur logique) :<br /><br /> **1** = dimanche<br /><br /> **2** = lundi<br /><br /> **4** = mardi<br /><br /> **8** = mercredi<br /><br /> **16** = jeudi<br /><br /> **32** = vendredi<br /><br /> **64** = samedi|  
 |**16** (mensuellement)|Sur le *freq_interval* jour du mois.|  

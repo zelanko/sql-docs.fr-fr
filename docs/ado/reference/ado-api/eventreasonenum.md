@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ba7675f5fe0abe02130de3c6bfc905070b24ec10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918877"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 Spécifie la raison pour laquelle un événement se produise.  
@@ -39,8 +38,8 @@ Spécifie la raison pour laquelle un événement se produise.
 |**adRsnMovePrevious**|14|Une opération a déplacé le pointeur vers l’enregistrement précédent dans le **Recordset**.|  
 |**adRsnRequery**|7|Une opération à nouveau interrogée le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).|  
 |**adRsnResynch**|8|Une opération a resynchronisé les **Recordset** avec la base de données.|  
-|**adRsnUndoAddNew**|5|Une opération a annulé l’ajout d’un nouvel enregistrement.|  
-|**adRsnUndoDelete**|6|Une opération a annulé la suppression d’un enregistrement.|  
+|**adRsnUndoAddNew**|5\.|Une opération a annulé l’ajout d’un nouvel enregistrement.|  
+|**adRsnUndoDelete**|6\.|Une opération a annulé la suppression d’un enregistrement.|  
 |**adRsnUndoUpdate**|4|Une opération a annulé la mise à jour d’un enregistrement.|  
 |**adRsnUpdate**|3|Une opération de mise à jour un enregistrement existant.|  
   

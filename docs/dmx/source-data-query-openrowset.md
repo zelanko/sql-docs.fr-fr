@@ -1,5 +1,5 @@
 ---
-title: OPENROWSET (DMX) | Documents Microsoft
+title: OPENROWSET (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 43431be3f68bc7146d9e5a6cc137100ec384c960
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 8be3fe8cbf30121ec2895f59306c925a422d5c39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938124"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;requête de source de données&gt; -OPENROWSET
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +38,7 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  Syntaxe de requête qui retourne un ensemble de lignes.  
   
 ## <a name="remarks"></a>Notes  
- Le fournisseur d’exploration de données établit une connexion à l’objet de source de données à l’aide de *Nom_Fournisseur* et *provider_string,* et s’exécute la requête spécifiée dans *query_syntax* pour récupérer l’ensemble de lignes à partir de la source de données.  
+ Le fournisseur d’exploration de données établit une connexion à l’objet de source de données à l’aide de *provider_name* et *provider_string,* et exécutera la requête spécifiée dans *query_syntax* pour récupérer l’ensemble de lignes à partir de la source de données.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant peut être utilisé au sein d'une instruction PREDICTION JOIN pour récupérer des données provenant de la base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] à l'aide d'une instruction [!INCLUDE[tsql](../includes/tsql-md.md)] SELECT.  
@@ -55,7 +54,7 @@ OPENROWSET
   
 ## <a name="see-also"></a>Voir aussi  
  [&#60;requête de source de données&#62;](../dmx/source-data-query.md)   
- [Data Mining Extensions &#40;DMX&#41; instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
+ [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

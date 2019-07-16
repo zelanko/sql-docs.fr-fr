@@ -18,13 +18,12 @@ ms.assetid: 33666f28-c370-47e2-a932-190316ed5f69
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: baeb646853294266e4dbca2a649236e1046ffa1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 280ab197ef9347c6a209be7ef05e8f1ce2dfd23e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900874"
 ---
 # <a name="sysdmftssemanticsimilaritypopulation-transact-sql"></a>sys.dm_fts_semantic_similarity_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,16 +34,16 @@ ms.locfileid: "65947168"
     
 ||||  
 |-|-|-|  
-|**Nom de colonne**|**Type**|**Description**|  
+|**Nom de la colonne**|**Type**|**Description**|  
 |**database_id**|**Int**|ID de la base de données qui contient l'index de texte intégral en cours de remplissage.|  
 |**catalog_id**|**Int**|ID du catalogue de texte intégral qui contient cet index de texte intégral.|  
 |**table_id**|**Int**|ID de la table pour laquelle l'index de recherche en texte intégral est rempli.|  
-|**document_count**|**Int**|Nombre de documents totaux dans le remplissage|  
+|**document_count**|**int**|Nombre de documents totaux dans le remplissage|  
 |**document_processed_count**|**Int**|Nombre de documents traités depuis le démarrage de ce cycle de remplissage|  
 |**completion_type**|**Int**|État de la manière dont ce remplissage s'est terminé.|  
 |**completion_type_description**|**nvarchar(120)**|Description du type d'achèvement.|  
-|**worker_count**|**Int**|Nombre de threads de travail associés à l'extraction de ressemblance|  
-|**status**|**Int**|État de ce remplissage. Remarque : certains états sont transitoires. Il peut s'agir :<br /><br /> 3 = Démarrage<br /><br /> 5 = Traitement normal<br /><br /> 7 = A arrêté le traitement<br /><br /> 11 = Remplissage abandonné|  
+|**worker_count**|**int**|Nombre de threads de travail associés à l'extraction de ressemblance|  
+|**status**|**int**|État de ce remplissage. Remarque : certains états sont transitoires. Il peut s'agir :<br /><br /> 3 = Démarrage<br /><br /> 5 = Traitement normal<br /><br /> 7 = A arrêté le traitement<br /><br /> 11 = Remplissage abandonné|  
 |**status_description**|**nvarchar(120)**|Description de l'état du remplissage.|  
 |**start_time**|**datetime**|Heure de début du remplissage.|  
 |**incremental_timestamp**|**timestamp**|Représente le cachet temporel de départ d'un remplissage complet. Pour tous les autres types de remplissage, cette valeur est le dernier point de contrôle validé représentant la progression des remplissages.|  

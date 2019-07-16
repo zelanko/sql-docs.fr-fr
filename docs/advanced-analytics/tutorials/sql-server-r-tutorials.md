@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 99dc3aa20bd3f31766ed66a6cdabea5cf38553f6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 467c9320880f1b113cecd36101345f6ee99f7b75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961932"
 ---
 # <a name="sql-server-r-language-tutorials"></a>Didacticiels sur le langage SQL Server R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,9 +31,9 @@ Cet article décrit les didacticiels de langage R pour la base de données analy
 | Lien | Description |
 |------|-------------|
 | [Démarrage rapide : À l’aide de R dans T-SQL](rtsql-using-r-code-in-transact-sql-quickstart.md) | Première de plusieurs guides de démarrage rapide, avec celle-ci illustrant la syntaxe de base pour appeler une fonction R à l’aide d’un éditeur de requête T-SQL comme SQL Server Management Studio. |
-| [Didacticiel : Découvrez l’analytique de R en base de données pour les scientifiques de données](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Pour les développeurs R familiarisés avec SQL Server, ce didacticiel explique comment effectuer les tâches de science des données courantes dans SQL Server. Charger et visualiser les données, former et enregistrer un modèle dans SQL Server et utiliser le modèle pour l’analytique prédictive. |
-| [Didacticiel : Découvrez l’analytique de R en base de données pour les développeurs SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Générer et déployer une solution complète de R, à l’aide uniquement [!INCLUDE[tsql](../../includes/tsql-md.md)] outils. Se concentre sur le déplacement d’une solution en production. Vous découvrirez comment encapsuler du code R dans une procédure stockée, enregistrer un modèle R dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et effectuer des appels paramétrables au modèle R pour la prédiction. |
-| [Didacticiel : Présentation approfondie RevoScalepR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | Découvrez comment utiliser les fonctions dans les packages RevoScaleR. Déplacer des données entre R et SQL Server et commutateur contextes de calcul pour répondre à une tâche particulière. Créer des modèles et des tracés et déplacez-les entre votre environnement de développement et le serveur de base de données. |
+| [Tutoriel : Découvrez l’analytique de R en base de données pour les scientifiques de données](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Pour les développeurs R familiarisés avec SQL Server, ce didacticiel explique comment effectuer les tâches de science des données courantes dans SQL Server. Charger et visualiser les données, former et enregistrer un modèle dans SQL Server et utiliser le modèle pour l’analytique prédictive. |
+| [Tutoriel : Découvrez l’analytique de R en base de données pour les développeurs SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Générer et déployer une solution complète de R, à l’aide uniquement [!INCLUDE[tsql](../../includes/tsql-md.md)] outils. Se concentre sur le déplacement d’une solution en production. Vous découvrirez comment encapsuler du code R dans une procédure stockée, enregistrer un modèle R dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et effectuer des appels paramétrables au modèle R pour la prédiction. |
+| [Tutoriel : Présentation approfondie RevoScalepR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | Découvrez comment utiliser les fonctions dans les packages RevoScaleR. Déplacer des données entre R et SQL Server et commutateur contextes de calcul pour répondre à une tâche particulière. Créer des modèles et des tracés et déplacez-les entre votre environnement de développement et le serveur de base de données. |
 
 <a name ="bkmk_samples"></a>
 

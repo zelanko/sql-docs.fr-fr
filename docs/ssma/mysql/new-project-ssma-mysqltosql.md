@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7a3846ee-b221-47a5-ac8c-d08a962931af
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d6a8943ab1cc22da90208c10a5dcbfe5b8f5e369
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ef40fbc5acafeaaba76953940f763c663cb121c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908856"
 ---
 # <a name="new-project-ssma-mysqltosql"></a>Nouveau projet (SSMA) (MySQLToSQL)
 Utilisez le **nouveau projet** boîte de dialogue pour créer un nouveau projet SSMA. Pour accéder à la **nouveau projet** boîte de dialogue le **fichier** menu, cliquez sur **nouveau projet**.  
@@ -25,7 +24,7 @@ Utilisez le **nouveau projet** boîte de dialogue pour créer un nouveau projet 
   
 Entrez le nom du projet. SSMA permet d’ajouter l’extension de fichier.  
   
-**Emplacement**  
+**Lieu**  
   
 Entrez ou recherchez le dossier ou un emplacement réseau pour enregistrer le projet.  
   

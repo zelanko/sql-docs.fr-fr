@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: db83ed2c-a8e3-460c-8682-64667e4d5d01
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 859bf3f53051a500e86742cb681885b8067f6a0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ffc515350bfff4307da382c05aae50ed1930802
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917361"
 ---
 # <a name="record-object-ado"></a>Record, objet (ADO)
 Représente une ligne à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou le fournisseur de données, ou un objet retourné par un fournisseur de données semi-structurées, comme un fichier ou répertoire.  
@@ -83,7 +82,7 @@ Représente une ligne à partir d’un [Recordset](../../../ado/reference/ado-ap
 -   [Propriétés, méthodes et événements de l’objet Record](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Enregistrements et flux](../../../ado/guide/data/records-and-streams.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

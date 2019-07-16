@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fd92aa77-21e3-41ac-8f3e-08608a734b7f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 15107082c9556b42e53a0746c8400e83f22abf3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10d45c885570d048aea33480990161fb0413ca4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63261806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908784"
 ---
 # <a name="project-settings-gui--mysqltosql"></a>Paramètres du projet (GUI) (MySQLToSQL)
 Les paramètres de projet de l’interface graphique utilisateur vous permettent de configurer la manière dont les données apparaissent sur le **données** onglet et pour inclure des rapports de données avec des rapports d’évaluation.  

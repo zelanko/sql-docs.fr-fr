@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e01b14407198ed88654527bd247a116c200fb1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 560cecf8b6cc0aff5b503602c521e503e7cc7fcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934011"
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_dropextendedproperty
  Nom de la propriété à supprimer. *property_name* est **sysname** et ne peut pas être NULL.  
   
  [ @level0type=] {'*level0_object_type*'}  
- Nom du type d'objet de niveau 0 spécifié. *level0_object_type* est **varchar (128)**, avec NULL comme valeur par défaut.  
+ Nom du type d'objet de niveau 0 spécifié. *level0_object_type* est **varchar (128)** , avec NULL comme valeur par défaut.  
   
  Les entrées valides sont ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE et NULL.  
   
@@ -81,18 +80,18 @@ sp_dropextendedproperty
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Les objets d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont répartis sur trois niveaux (0, 1 et 2) pour la définition des propriétés étendues. Le niveau 0 est le niveau le plus élevé et est composé d'objets relevant de l'étendue de la base de données. Les objets de niveau 1 figurent dans l'étendue du schéma ou de l'utilisateur tandis que les objets de niveau 2 se trouvent dans les objets de niveau 1. Vous pouvez définir des propriétés étendues pour les objets de tous ces niveaux. Les références à un objet d'un niveau donné doivent être qualifiées par les types et les noms de tous les objets de niveau supérieur.  
+ Pour les besoins de définition des propriétés étendues, les objets dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données sont répartis sur trois niveaux : 0, 1 et 2. Le niveau 0 est le niveau le plus élevé et est composé d'objets relevant de l'étendue de la base de données. Les objets de niveau 1 figurent dans l'étendue du schéma ou de l'utilisateur tandis que les objets de niveau 2 se trouvent dans les objets de niveau 1. Vous pouvez définir des propriétés étendues pour les objets de tous ces niveaux. Les références à un objet d'un niveau donné doivent être qualifiées par les types et les noms de tous les objets de niveau supérieur.  
   
  Étant donné un valide *property_name*, si tous les types d’objets et les noms sont null et une propriété existe sur la base de données actuelle, que la propriété est supprimée. Consultez l'exemple B fourni plus loin dans cette rubrique.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les membres des rôles de base de données fixes db_owner et db_ddladmin peuvent supprimer des propriétés étendues de n'importe quel objet, avec toutefois la restriction suivante : db_ddladmin ne peut pas ajouter de propriétés à la base de données elle-même, ni aux utilisateurs ou rôles.  
   
  Les utilisateurs peuvent supprimer des propriétés étendues sur des objets qu'ils possèdent ou pour lesquels ils bénéficient d'autorisations ALTER ou CONTROL.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-dropping-an-extended-property-on-a-column"></a>A. Suppression d'une propriété étendue d'une colonne  
+### <a name="a-dropping-an-extended-property-on-a-column"></a>R. Suppression d'une propriété étendue d'une colonne  
  L'exemple suivant supprime la propriété `caption` de la colonne `id` de la table `T1` contenue dans le schéma `dbo`.  
   
 ```  
@@ -134,7 +133,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées du moteur de base de données &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
  [Sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  

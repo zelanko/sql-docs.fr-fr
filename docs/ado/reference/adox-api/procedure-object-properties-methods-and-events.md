@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 913cbb549632383c239d6f7049e448b5ba5de6f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bec9c19f406586136ce4181805cf5d1c4333fcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965460"
 ---
 # <a name="procedure-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Procedure
 ## <a name="properties"></a>Properties  
@@ -31,10 +30,10 @@ ms.locfileid: "66706168"
  [Propriété Name](../../../ado/reference/adox-api/name-property-adox.md)  
   
 ## <a name="methods"></a>Méthodes  
- Aucun.  
+ Aucune.  
   
 ## <a name="events"></a>Events  
- Aucun.  
+ Aucune.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procedure, objet (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)

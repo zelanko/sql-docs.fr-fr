@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e0e7b7ba-3943-43cb-a2cd-0e4667187973
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6c4ba53351fb130ac09cd9d0e7612b670857ea33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98670a6f63392a3f208eb7719b0be52a9422d59a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920254"
 ---
 # <a name="cachesize-property-example-vc"></a>CacheSize, exemple de propriété (VC++)
 Cet exemple utilise le [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) propriété pour afficher la différence de performances pour une opération effectuée avec et sans cache de 30 enregistrements.  

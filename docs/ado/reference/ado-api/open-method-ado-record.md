@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4d105d648c7877e7099dea637c2a2c6a094985f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917922"
 ---
 # <a name="open-method-ado-record"></a>Open, méthode (objet Record ADO)
 Ouvre une existante [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) de l’objet ou crée un nouvel élément représenté par le **enregistrement**, par exemple un fichier ou répertoire.  
@@ -36,19 +35,19 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- Facultatif. Un **Variant** qui peut représenter l’URL de l’entité pour être représenté par ce **enregistrement** objet, un **commande**, ouvert [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou un autre **enregistrement** objet, une chaîne qui contient une instruction SQL SELECT ou un nom de table.  
+ facultatif. Un **Variant** qui peut représenter l’URL de l’entité pour être représenté par ce **enregistrement** objet, un **commande**, ouvert [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou un autre **enregistrement** objet, une chaîne qui contient une instruction SQL SELECT ou un nom de table.  
   
  *ActiveConnection*  
- Facultatif. Un **Variant** qui représente la chaîne de connexion ou ouvrez [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
+ facultatif. Un **Variant** qui représente la chaîne de connexion ou ouvrez [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet.  
   
  *Mode*  
- Facultatif. Un [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valeur qui spécifie le mode d’accès pour le résultant **enregistrement** objet. Valeur par défaut est **adModeUnknown**.  
+ facultatif. Un [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) valeur qui spécifie le mode d’accès pour le résultant **enregistrement** objet. Valeur par défaut est **adModeUnknown**.  
   
  *CreateOptions*  
- Facultatif. Un [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) valeur qui spécifie si un fichier ou répertoire existant doit être ouvert ou un nouveau fichier ou un répertoire doit être créée. Valeur par défaut est **adFailIfNotExists**. Si la valeur est la valeur par défaut, le mode d’accès est obtenu à partir de la [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété. Ce paramètre est ignoré lors de la *Source* paramètre ne contient pas une URL.  
+ facultatif. Un [RecordCreateOptionsEnum](../../../ado/reference/ado-api/recordcreateoptionsenum.md) valeur qui spécifie si un fichier ou répertoire existant doit être ouvert ou un nouveau fichier ou un répertoire doit être créée. Valeur par défaut est **adFailIfNotExists**. Si la valeur est la valeur par défaut, le mode d’accès est obtenu à partir de la [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété. Ce paramètre est ignoré lors de la *Source* paramètre ne contient pas une URL.  
   
  *Options*  
- Facultatif. Un [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) valeur qui spécifie les options pour l’ouverture du **enregistrement**. Valeur par défaut est **adOpenRecordUnspecified**. Ces valeurs peuvent être combinées.  
+ facultatif. Un [RecordOpenOptionsEnum](../../../ado/reference/ado-api/recordopenoptionsenum.md) valeur qui spécifie les options pour l’ouverture du **enregistrement**. Valeur par défaut est **adOpenRecordUnspecified**. Ces valeurs peuvent être combinées.  
   
  *UserName*  
  Facultatif. Un **chaîne** valeur qui contient l’ID utilisateur, si nécessaire, autorise l’accès *Source*.  

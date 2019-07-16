@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926675"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Fournisseur Microsoft OLE DB pour le Service Microsoft Active Directory
 Le fournisseur Active Directory Service Interfaces (ADSI) permet à ADO pour se connecter à des services d’annuaire hétérogènes via ADSI. Ainsi, les applications ADO accès en lecture seule pour les services de répertoire Microsoft Windows NT 4.0 et Microsoft Windows 2000, en plus de n’importe quel service d’annuaire compatible LDAP et les Services d’annuaire Novell. ADSI en soi est basée sur un modèle de fournisseur, afin que s’il existe un nouveau fournisseur accorder l’accès à un autre répertoire, l’application ADO sera en mesure d’y accéder en toute transparence. Le fournisseur ADSI est libre de threads et Unicode.  
@@ -63,9 +62,9 @@ ADSDSOObject
 |Value|Description|  
 |-----------|-----------------|  
 |*Root*|Indique le **ADsPath** objet à partir duquel commencer la recherche (autrement dit, la racine de la recherche).|  
-|*Filter*|Indique le filtre de recherche au format RFC 1960.|  
+|*Filtrer*|Indique le filtre de recherche au format RFC 1960.|  
 |*Attributs*|Indique une liste délimitée par des virgules d’attributs à retourner.|  
-|*Portée*|Facultatif. Un **chaîne** qui spécifie la portée de la recherche. Les valeurs possibles sont les suivantes :<br /><br /> -Base - rechercher uniquement l’objet de base (racine de la recherche).<br />-OneLevel - ne rechercher qu’un seul niveau.<br />-Sous-arborescence - recherche l’intégralité du sous-arbre.|  
+|*Portée*|facultatif. Un **chaîne** qui spécifie la portée de la recherche. Les valeurs possibles sont les suivantes :<br /><br /> -Base - rechercher uniquement l’objet de base (racine de la recherche).<br />-OneLevel - ne rechercher qu’un seul niveau.<br />-Sous-arborescence - recherche l’intégralité du sous-arbre.|  
   
  Exemple :  
   
@@ -99,10 +98,10 @@ objectClass='user' AND objectCategory='Person'"
 |[Signet](../../../ado/reference/ado-api/bookmark-property-ado.md)|lecture/écriture|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lecture/écriture|  
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|  
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|  
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|  
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|toujours **adOpenStatic**|  
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|toujours **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Lecture seule|  
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|lecture/écriture|  
+|[Filtrer](../../../ado/reference/ado-api/filter-property.md)|lecture/écriture|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lecture/écriture|  
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|non disponible|  
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lecture/écriture|  
@@ -133,7 +132,7 @@ objectClass='user' AND objectCategory='Person'"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Oui|  
 |[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Oui|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Oui|  
+|[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|Oui|  
 |[Prise en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|  
 |[Update](../../../ado/reference/ado-api/update-method.md)|Non|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Non|  

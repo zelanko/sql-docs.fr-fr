@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cb79375475e4827e1e1c4d3b76721f1614e864e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c404cbb1f29adbdcb49ef6bed8bb57a047f64f3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911322"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec, fonction
 **Conformité**  
@@ -98,7 +97,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_SUCCESS_WITH_INFO : Le \* *MessageText* tampon est trop petit pour contenir le message de diagnostic demandé. Aucun enregistrement de diagnostic ont été générés. Pour déterminer qu’une troncation s’est produite, l’application doit comparer *BufferLength* au nombre réel d’octets disponibles, ce qui est écrite dans **StringLengthPtr*.  
   
--   SQL_INVALID_HANDLE: Le handle a indiqué par *HandleType* et *gérer* n’était pas un handle valide.  
+-   SQL_INVALID_HANDLE : Le handle a indiqué par *HandleType* et *gérer* n’était pas un handle valide.  
   
 -   SQL_ERROR : Parmi les options suivantes s’est produite :  
   

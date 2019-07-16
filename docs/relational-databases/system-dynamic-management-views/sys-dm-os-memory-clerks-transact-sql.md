@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1d556c67-5c12-46d5-aa8c-7ec1bb858df7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b308f17a7b5555f77f36174c7d11dd9979cf4ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d03c1f06133257543a20ba70edce801faba0ae92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899942"
 ---
 # <a name="sysdmosmemoryclerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "47725897"
 > [!NOTE]  
 >  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_memory_clerks**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**memory_clerk_address**|**varbinary(8)**|Spécifie l'adresse mémoire unique du régisseur de mémoire. Il s'agit de la colonne clé primaire. N'accepte pas la valeur NULL.|  
 |**type**|**nvarchar(60)**|Spécifie le type de régisseur de mémoire. Chaque régisseur de mémoire a un type spécifique, par exemple les régisseurs de mémoire CLR MEMORYCLERK_SQLCLR. N'accepte pas la valeur NULL.|  
-|**nom**|**nvarchar (256)**|Spécifie le nom affecté en interne au régisseur de mémoire. Un composant peut avoir plusieurs régisseurs de mémoire d'un type particulier. Un composant peut choisir d'utiliser des noms spécifiques pour identifier les régisseurs de mémoire du même type. N'accepte pas la valeur NULL.|  
+|**name**|**nvarchar (256)**|Spécifie le nom affecté en interne au régisseur de mémoire. Un composant peut avoir plusieurs régisseurs de mémoire d'un type particulier. Un composant peut choisir d'utiliser des noms spécifiques pour identifier les régisseurs de mémoire du même type. N'accepte pas la valeur NULL.|  
 |**memory_node_id**|**smallint**|Spécifie l'identificateur du nœud de mémoire. N'accepte pas la valeur NULL.|  
 |**single_pages_kb**|**bigint**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].|  
 |**pages_kb**|**bigint**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Spécifie la quantité de mémoire de page allouée, en kilo-octets (Ko), pour ce régisseur de mémoire. N'accepte pas la valeur NULL.|  
@@ -53,12 +52,12 @@ ms.locfileid: "47725897"
 |**page_size_in_bytes**|**bigint**|Spécifie la granularité de l'allocation de page pour ce régisseur de mémoire. N'accepte pas la valeur NULL.|  
 |**page_allocator_address**|**varbinary(8)**|Spécifie l'adresse de l'allocateur de page mémoire. Cette adresse est unique pour un régisseur de mémoire et peut être utilisée dans **sys.dm_os_memory_objects** pour localiser des objets de mémoire qui sont liés à ce régisseur. N'accepte pas la valeur NULL.|  
 |**host_address**|**varbinary(8)**|Spécifie l'adresse mémoire de l'hôte associé à ce régisseur de mémoire. Pour plus d’informations, consultez [sys.dm_os_hosts &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Composants, tels que [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, accès [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des ressources de mémoire via l’interface de l’hôte.<br /><br /> 0x00000000 = Le régisseur de mémoire appartient à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> N'accepte pas la valeur NULL.|  
-|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions 
+## <a name="permissions"></a>Autorisations 
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
   
 ## <a name="remarks"></a>Notes  
  Le gestionnaire de mémoire de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se compose d'une hiérarchie à trois niveaux. La base de la hiérarchie est constituée par les nœuds de mémoire. Le niveau intermédiaire est constitué de régisseurs de mémoire, de caches mémoire et de pools de mémoires. Le niveau supérieur comprend les objets de mémoire. Ces objets sont généralement utilisés pour allouer de la mémoire dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

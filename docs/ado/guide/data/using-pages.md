@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6afd68ddf99799288939eeb0c6522275ec4d273f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d697fa5b411d9000c03a700f6b4fe0e4b39aa5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923511"
 ---
 # <a name="using-pages"></a>Utilisation de pages
 Utilisez le **PageCount** propriété afin de déterminer le nombre de pages de données est dans le **Recordset** objet. *Pages* sont des groupes d’enregistrements dont la taille est égale à la **PageSize** paramètre de propriété. Même si la dernière page est incomplète, car il existe moins d’enregistrements que le **PageSize** valeur, elle est considérée comme une page supplémentaire dans le **PageCount** valeur. Si le **Recordset** objet ne prend pas en charge cette propriété, **PageCount** sera -1 pour indiquer que le **PageCount** est indéterminable.  

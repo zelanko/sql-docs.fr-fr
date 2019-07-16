@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 28f17186-b842-4cf9-b320-a9bb941c481b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1e45986cdd44d0ab9bffc1ea11fe1a9ced350e3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 615b64322699ca24e03368430c8d80f16ce51d4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964050"
 ---
 # <a name="filtervalue-property-rds"></a>FilterValue, propriété (RDS)
 Indique la valeur avec laquelle filtrer les enregistrements.  
@@ -51,7 +50,7 @@ DataControl.FilterValue = String
   
 ## <a name="see-also"></a>Voir aussi  
  [FilterColumn, FilterCriterion, FilterValue, SortColumn et SortDirection, propriétés et exemple de méthode de réinitialisation (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [FilterColumn Property (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
+ [FilterColumn, propriété (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
  [FilterCriterion, propriété (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
  [SortColumn, propriété (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [SortDirection, propriété (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)

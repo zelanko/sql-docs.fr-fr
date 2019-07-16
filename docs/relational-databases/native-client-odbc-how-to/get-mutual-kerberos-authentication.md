@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 64149fd4-239b-40e4-91e2-f9011f7d9f66
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24dbb618f9b938ef9e96ee825102fe08de574ca9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8713c25e4c1bf62e205db33e0b1b7c0bcf6a959f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898446"
 ---
 # <a name="get-mutual-kerberos-authentication"></a>Obtenir une authentification Kerberos mutuelle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47697887"
   
  Cet exemple vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Pour vous connecter à une instance nommée, modifiez la définition de la source de données ODBC pour spécifier l'instance en utilisant le format suivant : serveur\namedinstance. Par défaut, [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] est installé dans une instance nommée.  
   
- Remplacez « MyServer » par un nom d’ordinateur qui possède une instance de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure).  
+ Remplacez « MyServer » par un nom d’ordinateur qui possède une instance de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (ou version ultérieure).  
   
  Vous devez également spécifier un SPN fourni par le client. Remplacez « CP_SPN » par un SPN fourni par le client.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0489bb43ee3b41ebf4334da0d6b8045e117acc39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932893"
 ---
 # <a name="execute-method-ado-connection"></a>Execute, méthode (objet Connection ADO)
 Exécute la requête spécifiée, l’instruction SQL, le procédure stockée ou texte propre au fournisseur.  
@@ -43,10 +42,10 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
  Un **chaîne** valeur qui contient l’instruction SQL, procédure stockée, une URL ou texte propre au fournisseur à exécuter. **Si vous le souhaitez**, les noms de table peuvent être utilisés, mais uniquement si le fournisseur est SQL prenant en charge. Par exemple, si un nom de table de « Customers » est utilisés, ADO ajoute automatiquement la syntaxe SQL Select standard pour former et de passer de « SELECT * FROM Customers » en tant qu’un [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction au fournisseur.  
   
  *RecordsAffected*  
- Facultatif. Un **Long** variable sur laquelle le fournisseur retourne le nombre d’enregistrements affectée de l’opération.  
+ facultatif. Un **Long** variable sur laquelle le fournisseur retourne le nombre d’enregistrements affectée de l’opération.  
   
  *Options*  
- Facultatif. Un **Long** valeur qui indique la manière dont le fournisseur doit évaluer l’argument CommandText. Peut être un masque de bits d’une ou plusieurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valeurs.  
+ facultatif. Un **Long** valeur qui indique la manière dont le fournisseur doit évaluer l’argument CommandText. Peut être un masque de bits d’une ou plusieurs [CommandTypeEnum](../../../ado/reference/ado-api/commandtypeenum.md) ou [ExecuteOptionEnum](../../../ado/reference/ado-api/executeoptionenum.md) valeurs.  
   
  **Remarque** utilisation le **ExecuteOptionEnum** valeur **adExecuteStream** pour améliorer les performances en réduisant le traitement interne et pour les applications que vous portez à partir de Visual Basic 6.0.  
   

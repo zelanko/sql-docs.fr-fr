@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63457625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901370"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE, commande SQL
 Modifie par programmation la structure d’une table.  
@@ -64,10 +63,10 @@ ALTER TABLE TableName1
  *TableName1*  
  Spécifie le nom de la table dont la structure est modifiée.  
   
- ADD [COLUMN] *FieldName1*  
+ Ajouter [colonne] *FieldName1*  
  Spécifie le nom du champ à ajouter.  
   
- ALTER [COLUMN] *FieldName1*  
+ ALTER [colonne] *FieldName1*  
  Spécifie le nom d’un champ existant à modifier.  
   
  *FieldType* [( *nFieldWidth* [, *nPrecision*]])  
@@ -119,7 +118,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
    memo1 M, memo2 M NOCPTRANS)  
 ```  
   
- ALTER [COLUMN] *FieldName2*  
+ ALTER [colonne] *FieldName2*  
  Spécifie le nom d’un champ existant à modifier.  
   
  DÉFINIR par défaut *eExpression2*  
@@ -172,7 +171,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  BALISE de clé étrangère DROP *TagName6*[Enregistrer]  
  Supprime une clé étrangère dont l’étiquette index est *TagName6*. Si vous omettez d’enregistrement, la balise de l’index est supprimée de l’index structurel. Inclure enregistrer pour empêcher la suppression de la balise de l’index de l’index structurel.  
   
- RENAME COLUMN *FieldName4*TO *FieldName5*  
+ COLONNE de changement de nom *FieldName4*à *FieldName5*  
  Vous permet de modifier le nom d’un champ dans la table. *FieldName4* Spécifie le nom du champ qui est renommé. *FieldName5* Spécifie le nouveau nom du champ.  
   
 > [!CAUTION]  

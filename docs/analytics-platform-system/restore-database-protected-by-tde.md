@@ -2,19 +2,18 @@
 title: Restaurer une base de données protégée par TDE - Parallel Data Warehouse | Microsoft Docs
 description: Utilisez les étapes suivantes pour restaurer une base de données est chiffrée à l’aide du chiffrement transparent des données dans Analytique Platform System Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c2f676f75c5a8c79bfc2f2417ff30c9806e3c80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960167"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Restaurer une base de données protégée par TDE dans Parallel Data Warehouse
 Utilisez les étapes suivantes pour restaurer une base de données est chiffrée à l’aide du chiffrement transparent des données.  

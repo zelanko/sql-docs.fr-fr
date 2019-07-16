@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 62118034106187081ba41be91026ecd6d7330ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 755e9c6baa708033f166f7026164590c2119e44d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896921"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>Créer une vue d’abonnement pour exporter des données (Master Data Services)
 
@@ -68,7 +67,7 @@ ms.locfileid: "65485061"
   
 |colonne|Description|  
 |------------|-----------------|  
-|État|État de la vue.<br /><br /> Quand vous cliquez sur **Enregistrer**, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que la vue est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’une vue, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
+|Statut|État de la vue.<br /><br /> Quand vous cliquez sur **Enregistrer**, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que la vue est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’une vue, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
 |Nom|Nom de la vue d’abonnement.|  
 |Modèle|Nom du modèle.|  
 |Options de version|Nom de la version.|  
@@ -76,7 +75,7 @@ ms.locfileid: "65485061"
 |Entité|Nom de la hiérarchie dérivée.|  
 |Sources de données|Nom de l’entité.|  
 |Format|Type des données figurant dans la vue.|  
-|Level|Spécifie le nombre de niveaux de la vue ; cette valeur est uniquement utilisée pour les formats de vue de niveau Explicite ou Dérivé.|  
+|Niveau|Spécifie le nombre de niveaux de la vue ; cette valeur est uniquement utilisée pour les formats de vue de niveau Explicite ou Dérivé.|  
 |Inclure les membres supprimés|Indique si les membres supprimés de façon réversible sont inclus dans la vue.|  
   
  Lorsque vous cliquez sur une vue, les informations ci-après s’affichent.  

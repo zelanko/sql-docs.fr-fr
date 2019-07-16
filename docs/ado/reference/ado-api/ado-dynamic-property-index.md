@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 80d389dd-46ef-459f-b0d4-6f712fc4f32d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8dd1263d19972124166e1e11d91c8370fc3a9ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9eb88905f56abf9c1c702f5fd73cbe61a1bcde3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696735"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921080"
 ---
 # <a name="ado-dynamic-property-index"></a>Index des propriétés dynamiques ADO
 Fournisseurs de données, les fournisseurs de services et les composants de service peuvent ajouter des propriétés dynamiques pour la **propriétés** collections de non ouverts [connexion](../../../ado/reference/ado-api/connection-object-ado.md) et [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objets. Un fournisseur donné peut également insérer des propriétés supplémentaires lorsque ces objets sont ouverts. Certaines de ces propriétés sont répertoriées dans le [propriétés dynamiques ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md) section. D’autres sont répertoriées sous les fournisseurs spécifiques dans le [annexe a : Fournisseurs](../../../ado/guide/appendixes/appendix-a-providers.md) section.  
@@ -39,8 +38,8 @@ Fournisseurs de données, les fournisseurs de services et les composants de serv
 |Définition de colonne|DBPROP_COLUMNDEFINITION|  
 |Connect Timeout|DBPROP_INIT_TIMEOUT|  
 |Catalogue actuel|DBPROP_CURRENTCATALOG|  
-|Source de données|DBPROP_INIT_DATASOURCE|  
-|Nom de la source de données|DBPROP_DATASOURCENAME|  
+|source de données|DBPROP_INIT_DATASOURCE|  
+|Data Source Name|DBPROP_DATASOURCENAME|  
 |Objet de Source de données modèle de thread|DBPROP_DSOTHREADMODEL|  
 |Nom SGBD|DBPROP_DBMSNAME|  
 |Version SGBD|DBPROP_DBMSVER|  
@@ -91,7 +90,7 @@ Fournisseurs de données, les fournisseurs de services et les composants de serv
 |Terme de table|DBPROP_TABLETERM|  
 |Transaction DDL|DBPROP_SUPPORTEDTXNDDL|  
 |ID d'utilisateur|DBPROP_AUTH_USERID|  
-|Nom d'utilisateur|DBPROP_USERNAME|  
+|User Name|DBPROP_USERNAME|  
 |Handle de fenêtre|DBPROP_INIT_HWND|  
   
 ## <a name="recordset-dynamic-properties"></a>Propriétés dynamiques du Recordset  

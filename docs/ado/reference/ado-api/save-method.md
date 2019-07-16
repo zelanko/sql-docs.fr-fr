@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0953b76ff642387679c907e6f0b3364cbac898df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931176"
 ---
 # <a name="save-method"></a>Save, méthode
 Enregistre le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) dans un fichier ou [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
@@ -36,10 +35,10 @@ recordset.Save Destination, PersistFormat
   
 #### <a name="parameters"></a>Paramètres  
  *Destination*  
- Facultatif. Un **Variant** qui représente le nom de chemin d’accès complet du fichier où le **Recordset** doit être enregistré, ou une référence à un **Stream** objet.  
+ facultatif. Un **Variant** qui représente le nom de chemin d’accès complet du fichier où le **Recordset** doit être enregistré, ou une référence à un **Stream** objet.  
   
  *PersistFormat*  
- Facultatif. Un [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valeur qui spécifie le format dans lequel le **Recordset** doit être enregistré (XML ou ADTG). La valeur par défaut est **adPersistADTG**.  
+ facultatif. Un [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) valeur qui spécifie le format dans lequel le **Recordset** doit être enregistré (XML ou ADTG). La valeur par défaut est **adPersistADTG**.  
   
 ## <a name="remarks"></a>Notes  
  Le [méthode Save](../../../ado/reference/ado-api/save-method.md) méthode peut uniquement être appelée sur une ouverte **Recordset**. Utilisez le [méthode Open (objet Recordset ADO)](../../../ado/reference/ado-api/open-method-ado-recordset.md) méthode à la restauration ultérieure le **Recordset** à partir de *Destination*.  

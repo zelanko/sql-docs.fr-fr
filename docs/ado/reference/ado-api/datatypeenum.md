@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7cb3e56d0219973be97b694ee2b22dbbb58eb0d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933223"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Spécifie le type de données d’un [champ](../../../ado/reference/ado-api/field-object.md), [paramètre](../../../ado/reference/ado-api/parameter-object.md), ou [propriété](../../../ado/reference/ado-api/property-object-ado.md). L’indicateur de type OLE DB correspondant est indiqué entre parenthèses dans la colonne description du tableau suivant.  
@@ -35,13 +34,13 @@ Spécifie le type de données d’un [champ](../../../ado/reference/ado-api/fiel
 |**adBSTR**|8|Indique une chaîne de caractères se terminant par null (Unicode) (DBTYPE_BSTR).|  
 |**adChapter**|136|Indique une valeur de chapitre de 4 octets qui identifie les lignes dans un ensemble de lignes enfant (DBTYPE_HCHAPTER).|  
 |**adChar**|129|Indique une valeur de chaîne (DBTYPE_STR).|  
-|**adCurrency**|6|Indique une valeur monétaire (DBTYPE_CY). La devise est un nombre à virgule fixe avec quatre chiffres à droite de la virgule décimale. Il est stocké dans un entier signé de 8 octets à l’échelle par 10 000.|  
+|**adCurrency**|6\.|Indique une valeur monétaire (DBTYPE_CY). La devise est un nombre à virgule fixe avec quatre chiffres à droite de la virgule décimale. Il est stocké dans un entier signé de 8 octets à l’échelle par 10 000.|  
 |**adDate**|7|Indique une valeur de date (DBTYPE_DATE). Une date est stockée en tant que double, dont la partie entière est le nombre de jours depuis le 30 décembre 1899, et dont la partie fractionnaire est la fraction d’un jour.|  
 |**adDBDate**|133|Indique une valeur de date (AAAAMMJJ) (DBTYPE_DBDATE).|  
 |**adDBTime**|134|Indique une valeur d’heure (hhmmss) (DBTYPE_DBTIME).|  
 |**adDBTimeStamp**|135|Indique un horodatage date/heure (aaaammjjhhmmss plus une fraction en milliardièmes) (DBTYPE_DBTIMESTAMP).|  
 |**adDecimal**|14|Indique une valeur numérique exacte avec une précision et échelle fixes (DBTYPE_DECIMAL).|  
-|**adDouble**|5|Indique la valeur à virgule flottante double précision (DBTYPE_R8).|  
+|**adDouble**|5\.|Indique la valeur à virgule flottante double précision (DBTYPE_R8).|  
 |**adEmpty**|0|Ne spécifie aucune valeur (DBTYPE_EMPTY).|  
 |**adError**|10|Indique un code d’erreur 32 bits (DBTYPE_ERROR).|  
 |**adFileTime**|64|Indique une valeur 64 bits représentant le nombre d’intervalles de 100 nanosecondes depuis le 1er janvier 1601 (DBTYPE_FILETIME).|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0230329d10d2414724379d4b9d38c4851a031bca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912332"
 ---
 # <a name="update---sql-command"></a>UPDATE, commande SQL
 Met à jour des enregistrements dans une table avec les nouvelles valeurs.  
@@ -39,9 +38,9 @@ SET Column_Name1 = eExpression1
  Mise à jour [ *DatabaseName1 !* ] *TableName1*  
  Spécifie la table dans laquelle des enregistrements sont mis à jour avec de nouvelles valeurs.  
   
- *DatabaseName1!* Spécifie le nom d’une base de données autre que la base de données spécifié avec la source de données contenant la table. Vous devez inclure le nom de la base de données contenant la table si la base de données n’est pas celui en cours. Inclure le séparateur de point d’exclamation ( !) après le nom de la base de données et avant le nom de table.  
+ *DatabaseName1 !* Spécifie le nom d’une base de données autre que la base de données spécifié avec la source de données contenant la table. Vous devez inclure le nom de la base de données contenant la table si la base de données n’est pas celui en cours. Inclure le séparateur de point d’exclamation ( !) après le nom de la base de données et avant le nom de table.  
   
- SET *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
+ Définissez *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
  Spécifie les colonnes qui sont mises à jour et leurs nouvelles valeurs. Si vous omettez la clause WHERE, chaque ligne dans la colonne est mise à jour avec la même valeur.  
   
  OÙ *FilterCondition1*[AND &#124; ou *FilterCondition2*...]  

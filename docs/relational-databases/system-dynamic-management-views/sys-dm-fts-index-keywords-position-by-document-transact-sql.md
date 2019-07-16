@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 12c557029b0b479fbb780fdd93ae05faa4c26735
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900954"
 ---
 # <a name="sysdmftsindexkeywordspositionbydocument-transact-sql"></a>sys.dm_fts_index_keywords_position_by_document (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,10 @@ OBJECT_ID('table_name')
 ```  
   
 ## <a name="arguments"></a>Arguments  
- db_id('*database_name*')  
+ DB_ID ('*database_name*»)  
  Un appel à la [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) (fonction). Cette fonction accepte un nom de base de données et retourne l’ID de base de données, quels sys.dm_fts_index_keywords_position_by_document utilise pour rechercher la base de données spécifié.  
   
- object_id('*table_name*')  
+ object_id («*table_name*»)  
  Un appel à la [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) (fonction). Cette fonction accepte un nom de table et retourne l'ID de la table contenant l'index de recherche en texte intégral à examiner.  
   
 ## <a name="table-returned"></a>Table retournée  
@@ -54,9 +53,9 @@ OBJECT_ID('table_name')
 |------------|---------------|-----------------|  
 |mot clé|**varbinary(128)**|Qui représente le mot clé de chaîne binaire.|  
 |display_term|**nvarchar(4000)**|Format explicite du mot clé. Ce format est dérivé du format interne stocké dans l'index de recherche en texte intégral.|  
-|column_id|**Int**|ID de la colonne à partir de laquelle le mot clé actuel a été indexé en texte intégral.|  
+|column_id|**int**|ID de la colonne à partir de laquelle le mot clé actuel a été indexé en texte intégral.|  
 |document_id|**bigint**|ID de la ligne ou du document à partir duquel le terme actuel a été indexé en texte intégral. Cet ID correspond à la valeur de clé de texte intégral de cette ligne ou de ce document.|  
-|position|**Int**|La position du mot clé dans le document.|  
+|position|**int**|La position du mot clé dans le document.|  
   
 ## <a name="remarks"></a>Notes  
  Utiliser la DMV pour identifier l’emplacement des mots indexés dans les documents indexés. Cette vue de gestion dynamique peut être utilisé pour dépanner des problèmes lorsque **sys.dm_fts_index_keywords_by_document** indique les mots sont dans l’index de recherche en texte intégral, mais lorsque vous exécutez une requête à l’aide de ces mots, le document n’est pas retourné.  

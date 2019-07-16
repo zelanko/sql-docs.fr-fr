@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4bc15042a0f8f1cf08abadb0ee4a5fe1d5f36631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920788"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction, interface
 Le **ADOStreamConstruction** interface est utilisée pour construire une ADO **Stream** objet à partir d’un OLE DB **IStream** objet dans une application C/C++.  
@@ -33,10 +32,10 @@ Le **ADOStreamConstruction** interface est utilisée pour construire une ADO **S
 |[Stream, propriété](../../../ado/reference/ado-api/stream-property.md)|En lecture/écriture. Obtient/définit une OLE DB **Stream** objet.|  
   
 ## <a name="methods"></a>Méthodes  
- Aucun.  
+ Aucune.  
   
 ## <a name="events"></a>Events  
- Aucun.  
+ Aucune.  
   
 ## <a name="remarks"></a>Notes  
  Étant donné un OLE DB **IStream** objet (`pStream`), la construction de ADO **Stream** objet (`adoStr`) s’élève à trois opérations ci-après :  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 8b241d1f90a24ae69ab180404621a2feda393c01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940236"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
 
@@ -33,16 +32,16 @@ ms.locfileid: "59242327"
 
   Contient des statistiques pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)] base de données **connectivité** événements, qui fournissent une vue d’ensemble de réussites de connexion de base de données et d’échecs. Pour plus d’informations sur les événements de connectivité, consultez Types d’événements dans [sys.event_log &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   
-|Statistique|Type|Description|  
+|Statistique|type|Description|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|Nom de la base de données.|  
 |**start_time**|**datetime2**|Date et heure UTC indiquant le début de l'intervalle d'agrégation. L'heure est toujours un multiple de 5 minutes. Exemple :<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Date et heure UTC indiquant la fin de l'intervalle d'agrégation. **End_time** est toujours exactement à cinq minutes plus tard correspondant **start_time** dans la même ligne.|  
 |**success_count**|**Int**|Nombre de connexions réussies.|  
 |**total_failure_count**|**Int**|Nombre total d'échecs de connexion. C’est la somme de **connection_failure_count**, **terminated_connection_count**, et **throttled_connection_count**et n’inclut pas les événements de blocage.|  
-|**connection_failure_count**|**Int**|Nombre d'échecs de connexion.|  
-|**terminated_connection_count**|**Int**|**_Applicable uniquement pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Nombre de connexions terminées.|  
-|**throttled_connection_count**|**Int**|**_Applicable uniquement pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Nombre de connexions limitées.|  
+|**connection_failure_count**|**int**|Nombre d'échecs de connexion.|  
+|**terminated_connection_count**|**int**|**_Applicable uniquement pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Nombre de connexions terminées.|  
+|**throttled_connection_count**|**int**|**_Applicable uniquement pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Nombre de connexions limitées.|  
   
 ## <a name="remarks"></a>Notes  
   

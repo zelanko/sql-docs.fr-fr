@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: bf80e5c6-0588-4eb7-86ff-aa7c73461335
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf5f584a556db9e32fcaf1f53b907adcb8d08e25
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2a01e41c67c937a0a6d85e9f5c46427ab149b65b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940206"
 ---
 # <a name="sysdatabaseauditspecifications-transact-sql"></a>Sys.database_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient des informations sur les spécifications de l'audit de la base de données dans un audit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une instance de serveur. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|Créer une vue d’abonnement|**sysname**|Nom de la spécification d’audit.|  
-|database_specification_id|**Int**|ID de la spécification de base de données.|  
+|Nom|**sysname**|Nom de la spécification d’audit.|  
+|database_specification_id|**int**|ID de la spécification de base de données.|  
 |create_date|**datetime**|Date de création de la spécification d'audit.|  
 |modified_date|**datetime**|Date de dernière modification de la spécification d'audit.|  
 |is_state_enabled|**bit**|État de la spécification d'audit :<br /><br /> 0 - DÉSACTIVÉ<br /><br /> 1 - ACTIVÉE|  
@@ -47,7 +46,7 @@ ms.locfileid: "52522981"
 ## <a name="permissions"></a>Autorisations  
  Les principaux avec le **ALTER ANY DATABASE AUDIT** ou **VIEW DEFINITION** autorisations, le rôle dbo et les membres du rôle de base de données fixe db_owners ont accès à cette vue de catalogue. En outre, le principal ne doit pas être refusé **VIEW DEFINITION** autorisation.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a26fda3dc3edc1870b7a587d926d8e26d69f186e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946576"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Fonctions de valeurs numériques : ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-ceiling-xquery-function"></a>A. Utilisation de la fonction ceiling() de XQuery  
+### <a name="a-using-the-ceiling-xquery-function"></a>R. Utilisation de la fonction ceiling() de XQuery  
  Pour le modèle de produit 7, cette requête renvoie une liste des postes de travail que compte le processus de fabrication du modèle de produit. Pour chaque poste de travail, la requête renvoie l'ID, les heures de main-d'œuvre et la taille des lots, le cas échéant. La requête utilise le **ceiling** fonction pour retourner les heures de main-d'œuvre sous forme de valeurs de type **décimal**.  
   
 ```  
@@ -82,7 +81,7 @@ WHERE ProductModelID=7
   
     -   Le {$i/@LotSize } expression récupère l’attribut LotSize du document, le cas échéant.  
   
-    -   Voici le résultat obtenu :  
+    -   Voici le résultat obtenu :  
   
 ```  
 ProductModelID Result    

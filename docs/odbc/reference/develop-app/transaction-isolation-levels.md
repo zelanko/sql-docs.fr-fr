@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0d638d55-ffd0-48fb-834b-406f466214d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63e08aa2e75d560ce73c549d307418432ffe16af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83197b1b487db6c52a8fe9b7a57dd6af55c33571
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985105"
 ---
 # <a name="transaction-isolation-levels"></a>Niveaux d'isolement des transactions
 *Niveaux d’isolation de transaction* sont une mesure de l’étendue à quelle transaction isolation réussit. En particulier, les niveaux d’isolement sont définies par la présence ou l’absence des phénomènes suivants :  

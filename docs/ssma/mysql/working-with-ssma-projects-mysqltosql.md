@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9e4394e9-f177-41d9-839e-5d53a9c9b840
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 518f899118d5a7d2dce4f56d185fce9d5b1e47df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37a763c0acca891d8bbbc1a310edcb6f8b987436
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287849"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904902"
 ---
 # <a name="working-with-ssma-projects-mysqltosql"></a>Utilisation de projets SSMA (MySQLToSQL)
 Pour migrer des bases de données MySQL vers SQL Server ou SQL Azure, vous devez d’abord créer un projet SSMA. Le projet est un fichier qui contient les informations suivantes :  
@@ -66,9 +65,9 @@ SSMA contient plusieurs paramètres pour la conversion et le chargement de base 
 ## <a name="creating-new-projects"></a>Création de projets  
 Pour migrer des données à partir de bases de données MySQL vers SQL Server ou SQL Azure, vous devez créer un projet.  
   
-##### <a name="to-create-a-new-project"></a>Pour créer un nouveau projet  
+##### <a name="to-create-a-new-project"></a>Pour créer un projet  
   
-1.  Sélectionnez **nouveau projet** à partir de la **fichier** menu. La boîte de dialogue **Nouveau projet** s'affiche. Dans le menu **Fichier**, sélectionnez **Nouveau projet**. La boîte de dialogue **Nouveau projet** s'affiche.  
+1.  Sélectionnez **nouveau projet** à partir de la **fichier** menu. La boîte de dialogue **Nouveau projet** s’affiche. Dans le menu **Fichier**, sélectionnez **Nouveau projet**. La boîte de dialogue **Nouveau projet** s’affiche.  
   
 2.  Dans la zone **Nom** , tapez le nom de votre projet.  
   

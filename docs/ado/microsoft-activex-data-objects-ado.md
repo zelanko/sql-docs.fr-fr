@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05cc5d08785b116f4e4dd27b8a0a61b34a14d473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ca9c22cb54c54441f848ecbf367e92e30c1fd83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921870"
 ---
 # <a name="microsoft-activex-data-objects-ado"></a>Microsoft ActiveX Data Objects (ADO)
 
@@ -38,7 +37,7 @@ Chaque section de cet article décrit un composant d’ADO.
   
  Comme ADO, ADO MD utilise un fournisseur OLE DB sous-jacent pour accéder aux données. Pour travailler avec ADO MD, le fournisseur doit être un fournisseur de données multidimensionnelles (MDP) comme défini par la spécification OLE DB pour OLAP. Fournisseurs MDP présente des données dans des vues multidimensionnelles par opposition aux fournisseurs de données tabulaires (TDP) qui présentent les données sous forme de tableaux. Reportez-vous à la documentation de votre fournisseur OLE DB pour OLAP pour des informations plus détaillées sur la syntaxe spécifique et les comportements pris en charge par votre fournisseur.  
   
-## <a name="rds"></a>RDS  
+## <a name="rds"></a>SERVICES BUREAU À DISTANCE  
  Service de données à distance (RDS) est une fonctionnalité d’ADO, avec lequel vous pouvez déplacer des données à partir d’un serveur vers une application cliente ou d’une page Web, manipuler les données sur le client et retourner des mises à jour sur le serveur dans un seul aller-retour.  
   
 > [!IMPORTANT]
@@ -62,7 +61,7 @@ Chaque section de cet article décrit un composant d’ADO.
   
  [Glossaire ADO](../ado/ado-glossary.md)  
   
-## <a name="support"></a>Support technique  
+## <a name="support"></a>Assistance  
  Gratuitement aide à ADO problèmes, essayez de validation dans le groupe de discussion public ADO. Ce groupe de discussion est surveillée par des professionnels du support technique Microsoft Product Support Services (PSS) qui couvrent ADO et par d’autres développeurs expérimentés de ADO.  
   
  Vous trouverez plus d’informations sur les options de prise en charge sur le site Web de prendre en charge et de Microsoft Help.

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99acfb2507701f0e4b47aff5b0595b61fc45c425
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 624fa1976792a700342a114f82aa5ca6b75c70ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931561"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 Spécifie les attributs d’un [propriété](../../../ado/reference/ado-api/property-object-ado.md) objet.  
@@ -32,7 +31,7 @@ Spécifie les attributs d’un [propriété](../../../ado/reference/ado-api/prop
 |**adPropRequired**|1|Indique que l’utilisateur doit spécifier une valeur pour cette propriété avant l’initialisation de la source de données.|  
 |**adPropOptional**|2|Indique que l’utilisateur n’a pas besoin de spécifier une valeur pour cette propriété avant l’initialisation de la source de données.|  
 |**adPropRead**|512|Indique que l’utilisateur peut lire la propriété.|  
-|**adPropWrite**|1024|Indique que l’utilisateur peut définir la propriété.|  
+|**adPropWrite**|1 024|Indique que l’utilisateur peut définir la propriété.|  
   
 ## <a name="adowfc-equivalent"></a>Équivalent de ADO/WFC  
  Package : **com.ms.wfc.data**  

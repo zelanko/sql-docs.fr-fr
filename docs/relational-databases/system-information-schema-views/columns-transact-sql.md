@@ -18,37 +18,36 @@ helpviewer_keywords:
 ms.assetid: bbf7ac4a-7444-4351-a590-a9f71e0bc495
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6a14751ea8a0b268c846935e5058c10d79b4d60
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 021e9e66b281a8bbca6d5c9e21e78ffa4069c5c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950796"
 ---
 # <a name="columns-transact-sql"></a>COLUMNS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie une ligne pour chaque colonne accessible à l'utilisateur actuel dans la base de données actuelle.  
   
- Pour récupérer des informations à partir de ces vues, spécifiez le nom qualifié complet de **INFORMATION_SCHEMA**_.view_name_.  
+ Pour récupérer des informations à partir de ces vues, spécifiez le nom qualifié complet de **INFORMATION_SCHEMA** _.view_name_.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la table.|  
 |**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la table.<br /><br /> **&#42;&#42;Important &#42; &#42;**  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**TABLE_NAME**|**nvarchar(** 128 **)**|Nom de la table.|  
 |**COLUMN_NAME**|**nvarchar(** 128 **)**|Nom de colonne.|  
-|**ORDINAL_POSITION**|**Int**|Numéro d’identification de colonne.|  
-|**COLUMN_DEFAULT**|**nvarchar (** 4000 **)**|Valeur par défaut de la colonne.|  
-|**IS_NULLABLE**|**varchar (** 3 **)**|Valeur NULL possible dans la colonne. Si cette colonne accepte des valeurs NULL, elle renvoie YES. Dans le cas contraire, elle renvoie NO.|  
+|**ORDINAL_POSITION**|**int**|Numéro d’identification de colonne.|  
+|**COLUMN_DEFAULT**|**nvarchar(** 4000 **)**|Valeur par défaut de la colonne.|  
+|**IS_NULLABLE**|**varchar(** 3 **)**|Valeur NULL possible dans la colonne. Si cette colonne accepte des valeurs NULL, elle renvoie YES. Dans le cas contraire, elle renvoie NO.|  
 |**DATA_TYPE**|**nvarchar(** 128 **)**|Type de données fourni par le système.|  
 |**CHARACTER_MAXIMUM_LENGTH**|**Int**|Longueur maximale (en caractères) des données de type binaire, caractère, texte et image.<br /><br /> -1 pour **xml** et les données de type de valeur élevée. Renvoie NULL dans les autres cas. Pour plus d’informations, consultez [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
-|**CHARACTER_OCTET_LENGTH**|**Int**|Longueur maximale, en octets, des données de type binaire, caractère, texte et image.<br /><br /> -1 pour **xml** et les données de type de valeur élevée. Renvoie NULL dans les autres cas.|  
+|**CHARACTER_OCTET_LENGTH**|**int**|Longueur maximale, en octets, des données de type binaire, caractère, texte et image.<br /><br /> -1 pour **xml** et les données de type de valeur élevée. Renvoie NULL dans les autres cas.|  
 |**NUMERIC_PRECISION**|**tinyint**|Précision des données numériques approchées ou exactes, des données de type entier ou monétaire. Renvoie NULL dans les autres cas.|  
 |**NUMERIC_PRECISION_RADIX**|**smallint**|Base de précision des données numériques approchées ou exactes, des données de type entier ou monétaire. Renvoie NULL dans les autres cas.|  
-|**NUMERIC_SCALE**|**Int**|Échelle des données numériques approchées ou exactes, des données de type entier ou monétaire. Renvoie NULL dans les autres cas.|  
+|**NUMERIC_SCALE**|**int**|Échelle des données numériques approchées ou exactes, des données de type entier ou monétaire. Renvoie NULL dans les autres cas.|  
 |**DATETIME_PRECISION**|**smallint**|Code de sous-type pour **datetime** et ISO **intervalle** types de données. Renvoie NULL pour les autres types de données.|  
 |**CHARACTER_SET_CATALOG**|**nvarchar(** 128 **)**|Retourne **master**. Cela indique la base de données dans lequel se trouve le jeu de caractères, si la colonne est de données de type caractère ou **texte** type de données. Renvoie NULL dans les autres cas.|  
 |**CHARACTER_SET_SCHEMA**|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  

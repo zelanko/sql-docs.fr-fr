@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: dc503340e741e2503803cc51ad4a57c15e2a8a7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa5096a19753bf860453b23476116fd422f3c6cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941134"
 ---
 # <a name="commit-a-version-master-data-services"></a>Activer une version (Master Data Services)
 

@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dd11fcb72496465685ce763f48518f7bcd0c2c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6af744a468c4853bf6fb3111b83c6480e175e321
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62634574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913226"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Types CLR volumineux définis par l’utilisateur (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -111,7 +110,7 @@ ms.locfileid: "62634574"
 ## <a name="column-metadata-returned-by-sqlcolumns-and-sqlprocedurecolumns-catalog-metadata"></a>Métadonnées de colonne retournées par SQLColumns et SQLProcedureColumns (métadonnées de catalogue)  
  Les valeurs de colonne suivantes sont retournées pour les types définis par l'utilisateur (UDT) :  
   
-|Nom de colonne|SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|  
+|Nom de la colonne|SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|  
 |-----------------|-------------------------------------------------------------------|----------------------------------------------------------|  
 |DATA_TYPE|SQL_SS_UDT|SQL_SS_UDT|  
 |TYPE_NAME|Le nom de l’UDT.|Le nom de l’UDT.|  
@@ -173,7 +172,7 @@ ms.locfileid: "62634574"
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  Les valeurs requises pour les UDT sont les suivantes :  
   
-|Type de données SQL|*Parametertype*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
+|Type de données SQL|*Type de paramètre*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-------------------|---------------------|---------------------|------------------------|  
 |SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT|*n*|0|  
 |SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -215,7 +214,7 @@ ms.locfileid: "62634574"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Les valeurs retournées pour les UDT sont les suivantes :  
   
-|Type de données SQL|type|SubType|Longueur|Précision|Échelle|  
+|Type de données SQL|type|SubType|Longueur|Precision|Scale|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -235,7 +234,7 @@ ms.locfileid: "62634574"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Les valeurs autorisées pour les UDT sont les suivantes :  
   
-|Type de données SQL|type|SubType|Longueur|Précision|Échelle|  
+|Type de données SQL|type|SubType|Longueur|Precision|Scale|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

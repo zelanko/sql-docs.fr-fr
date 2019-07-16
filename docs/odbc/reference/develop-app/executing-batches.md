@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 53e1afcc780ff06d1d453f94deac984163099444
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84d3cf65284d767d437987c8ff2b21793466106e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901261"
 ---
 # <a name="executing-batches"></a>Exécution de lots
 Avant qu’une application exécute un lot d’instructions, elle doit tout d’abord vérifier si elles sont prises en charge. Pour ce faire, l’application appelle **SQLGetInfo** avec les options SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS et SQL_PARAM_ARRAY_SELECTS. La première option retourne si les générateurs de nombre de lignes et résultat instructions de génération de jeu sont prises en charge dans les lots explicites et de procédures, pendant les deux dernières options de retour d’informations sur la disponibilité des nombres de lignes et résultat définit dans paramétrées exécution.  

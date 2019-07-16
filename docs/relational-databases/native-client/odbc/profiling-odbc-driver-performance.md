@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8f44e194-d556-4119-a759-4c9dec7ecead
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 366909575681db12ee0f309637786c5dca58c78d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6e35918f266d6dcf77c559c7243e519a0ec95cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913152"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Profilage des performances du pilote ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -112,7 +111,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
 |ServerRndTrips|Nombre de fois où le pilote a envoyé des commandes au serveur et a obtenu une réponse.|  
 |BuffersSent|Nombre de paquets TDS (Tabular Data Stream) envoyés à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] par le pilote après SQL_PERF_START. Les commandes de taille importante peuvent nécessiter plusieurs mémoires tampons ; par conséquent, si une commande de taille importante est envoyée au serveur et si elle occupe six paquets, ServerRndTrips est incrémenté d'une unité et BuffersSent de six unités.|  
 |BuffersRec|Nombre de paquets TDS reçus par le pilote à partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] une fois que l'application a commencé à utiliser le pilote.|  
-|BytesSent|Nombre d'octets de données envoyés à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans des paquets TDS une fois que l'application a commencé à utiliser le pilote.|  
+|Octets envoyés|Nombre d'octets de données envoyés à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans des paquets TDS une fois que l'application a commencé à utiliser le pilote.|  
 |BytesRec|Nombre d'octets de données des paquets TDS reçus par le pilote à partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] une fois que l'application a commencé à utiliser le pilote.|  
   
 ### <a name="time-statistics"></a>Statistiques relatives au temps  

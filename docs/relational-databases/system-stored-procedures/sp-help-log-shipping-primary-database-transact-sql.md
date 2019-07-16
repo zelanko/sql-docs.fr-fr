@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 109e031e95b7535733bd9cb71baa4d20128ceb5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937914"
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_help_log_shipping_primary_database
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |**primary_id**|ID de la base de données primaire pour la configuration de la copie des journaux de transaction.|  
 |**primary_database**|Nom de la base de données primaire dans la configuration d'envoi de journaux.|  

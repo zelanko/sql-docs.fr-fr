@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e8bc63c7-8967-438a-9a49-512478a87a15
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0fbb20e623c37528285b8c1dd248ad24217cb2bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f94440d9ddd0d0b5091f2a106f603397147ebda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918640"
 ---
 # <a name="filter-and-recordcount-properties-example-vb"></a>Filter et RecordCount, exemple de propriétés (VB)
 Cet exemple montre comment ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sur la table Publishers dans le ***Pubs*** base de données. Il utilise ensuite le [filtre](../../../ado/reference/ado-api/filter-property.md) propriété pour limiter le nombre d’enregistrements visibles aux éditeurs d’un pays/une région particulière. Le **RecordCount** propriété est utilisée pour afficher la différence entre les jeux d’enregistrements filtrés et non filtrés.  

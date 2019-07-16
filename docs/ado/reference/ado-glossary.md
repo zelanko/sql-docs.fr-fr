@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1af86e92d689f262833e1bc00d8caf0fb0c78b39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96307c0106a99ae1b95d58d9ec08cf2732863eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911691"
 ---
 # <a name="ado-glossary"></a>Glossaire ADO
 Cette rubrique définit les termes pertinents se rapportant à ADO.  
@@ -45,7 +44,7 @@ Cette rubrique définit les termes pertinents se rapportant à ADO.
  opération asynchrone  
  Une opération qui retourne le contrôle au programme appelant sans attendre que l’opération se termine. Avant que l’opération soit terminée, l’exécution de code se poursuit. Voir aussi *opération synchrone*.  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
  entrée de liaison  
  Un mappage entre un champ dans une table et une variable. Dans les extensions ADO de Visual C++, **Recordset** champs sont mappés à des variables C/C++.  
   
@@ -279,17 +278,17 @@ Cette rubrique définit les termes pertinents se rapportant à ADO.
  procédure stockée  
  Collection précompilée du code tel que des instructions SQL et des instructions de flux de contrôle facultatives stockées sous un nom et traitées en tant qu’unité. Procédures stockées sont stockées dans une base de données ; ils peuvent être exécutées avec un appel à partir d’une application et autoriser les variables déclarées par l’utilisateur, l’exécution conditionnelle et autres puissantes fonctionnalités de programmation.  
   
- stub  
+ Stub  
  Un objet spécifique de l’interface qui fournit le marshaling des paramètres et la communication nécessaires pour un objet d’application recevoir des appels à partir d’un client qui est en cours d’exécution dans un environnement d’exécution différents, tels que sur un thread différent ou dans un autre processus. Le stub se trouve à l’objet application et communique avec un proxy correspondant se trouve avec le client qui l’appelle. Voir aussi proxy.  
   
- sub-node  
+ sous-nœud  
  Consultez les enfants.  
   
  opération synchrone  
  Une opération démarrée par du code qui se termine avant que l’opération suivante peut démarrer. Voir aussi l’opération asynchrone.  
   
 ## <a name="t-z"></a>T-Z  
- trEE  
+ Arborescence  
  Une structure qui représente une relation hiérarchique entre les éléments (nœuds). Il existe un nœud au niveau supérieur d’une arborescence (racine). En dessous de la racine, il peut y avoir plusieurs enfants. Chaque enfant peut être à son tour le parent d’autres enfants, constituant ainsi des ramifications comme un arbre. Un dossier contenant des documents et autres dossiers est un exemple typique d’une structure arborescente. Voir aussi hiérarchie, nœud, racine, enfant, parent.  
   
  Serveur Web  

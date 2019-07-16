@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b492476eadfde4c0c2666096714a8cd0f634db1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7304062298a95406a223ba58026379a3bebf392f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931473"
 ---
 # <a name="recordcount-property-ado"></a>RecordCount, propriété (ADO)
 
@@ -47,7 +46,7 @@ En revanche, si l’objet Recordset ne *pas* prennent en charge les signets ou l
 - **adApproxPosition** se rapporte au positionnement approximatif.
 
 > [!NOTE]
-> Dans les versions ADO 2.8 et versions antérieures, le fournisseur SQLOLEDB extrait tous les enregistrements lorsqu’un curseur côté serveur est utilisé, en dépit du fait qu’elle retourne **True** pour les deux **prend en charge (adApproxPosition)** et **Prend en charge (adBookmark)**.
+> Dans les versions ADO 2.8 et versions antérieures, le fournisseur SQLOLEDB extrait tous les enregistrements lorsqu’un curseur côté serveur est utilisé, en dépit du fait qu’elle retourne **True** pour les deux **prend en charge (adApproxPosition)** et **Prend en charge (adBookmark)** .
   
 Le type de curseur de la **Recordset** objet détermine si le nombre d’enregistrements permettre être compté. Le **RecordCount** propriété retourne -1 pour un curseur avant uniquement ; le nombre réel pour une analyse statique ou curseur keyset ; et soit -1 ou le nombre réel pour un curseur dynamique, en fonction de la source de données.
   

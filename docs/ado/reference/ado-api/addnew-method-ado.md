@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: da8ef8208ae3edd1219eb81ec93e77ba5a275f87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2f9efa8f5042fab603c794edada5aacab001936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921327"
 ---
 # <a name="addnew-method-ado"></a>AddNew, méthode (ADO)
 Crée un nouvel enregistrement pour être une mise à jour [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -39,10 +38,10 @@ recordset.AddNew FieldList, Values
  Un **Recordset** objet.  
   
  *FieldList*  
- Facultatif. Un nom unique ou un tableau de noms ou les positions ordinales des champs dans le nouvel enregistrement.  
+ facultatif. Un nom unique ou un tableau de noms ou les positions ordinales des champs dans le nouvel enregistrement.  
   
  *Valeurs*  
- Facultatif. Une valeur unique, ou un tableau de valeurs pour les champs dans le nouvel enregistrement. Si *Fieldlist* est un tableau, *valeurs* doit également être un tableau avec le même nombre de membres ; sinon, une erreur se produit. L’ordre des noms de champ doit correspondre à l’ordre des valeurs de champ dans chaque tableau.  
+ facultatif. Une valeur unique, ou un tableau de valeurs pour les champs dans le nouvel enregistrement. Si *Fieldlist* est un tableau, *valeurs* doit également être un tableau avec le même nombre de membres ; sinon, une erreur se produit. L’ordre des noms de champ doit correspondre à l’ordre des valeurs de champ dans chaque tableau.  
   
 ## <a name="remarks"></a>Notes  
  Utilisez le **AddNew** méthode pour créer et initialiser un nouvel enregistrement. Utilisez le [prend en charge](../../../ado/reference/ado-api/supports-method.md) méthode avec **adAddNew** (un [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) valeur) pour vérifier si vous pouvez ajouter des enregistrements à actuel **Recordset**objet.  

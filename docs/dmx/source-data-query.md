@@ -8,23 +8,22 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fdd0a3091440295e393d969f1b8161b83fb58d95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 83dbe0c2ea6eb066f208223acd2c6062f964fcf3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938089"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;requête de source de données&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  Pour former un modèle d’exploration de données et créer des prédictions à partir d’un modèle d’exploration de données, vous devez accéder aux données qui sont externes à la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. Vous utilisez le \<requête de source de données > clause dans Extensions DMX (Data Mining) pour définir ces données externes. Le [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md), [SELECT FROM &#60;modèle&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), et [SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) toutes les instructions utilisent  **\<requête de source de données >**.  
+  Pour former un modèle d’exploration de données et créer des prédictions à partir d’un modèle d’exploration de données, vous devez accéder aux données qui sont externes à la [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. Vous utilisez le \<requête de source de données > clause dans Extensions DMX (Data Mining) pour définir ces données externes. Le [INSERT INTO &#40;DMX&#41;](../dmx/insert-into-dmx.md), [SELECT FROM &#60;modèle&#62; PREDICTION JOIN &#40;DMX&#41;](../dmx/select-from-model-prediction-join-dmx.md), et [SELECT FROM NATURAL PREDICTION JOIN](../dmx/select-from-model-prediction-join-dmx.md) toutes les instructions utilisent  **\<requête de source de données >** .  
   
 ## <a name="query-types"></a>Types de requêtes  
  Les trois méthodes les plus courantes pour spécifier les données source sont :  
   
- [OPENQUERY &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openquery.md)  
+ [OPENQUERY &#40;DMX&#41;](../dmx/source-data-query-openquery.md)  
  Cette instruction interroge des données qui sont externes à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], en utilisant une source de données existante.  
   
  Bien que **OPENQUERY** est similaire à celui à **OPENROWSET**, **OPENQUERY** présente les avantages suivants :  
@@ -33,13 +32,13 @@ ms.locfileid: "38063959"
   
 -   L'administrateur a davantage de contrôle sur le mode d'accès aux données sur le serveur. Par exemple, il peut déterminer les fournisseurs à charger dans le serveur et les données externes accessibles.  
   
- [OPENROWSET &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openrowset.md)  
+ [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
  Cette instruction interroge des données qui sont externes à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], en utilisant une source de données existante.  
   
- [FORME &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-shape.md)  
+ [FORME &#40;DMX&#41;](../dmx/source-data-query-shape.md)  
  Cette instruction interroge plusieurs sources de données pour créer une table imbriquée. À l’aide de **forme**, vous pouvez combiner des données provenant de plusieurs sources dans une table hiérarchique unique. Ceci vous permet de bénéficier de la capacité de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] d'imbriquer les tables en incorporant une table dans une autre.  
   
- Pour spécifier les données source, vous pouvez également utiliser les options suivantes :   
+ Pour spécifier les données source, vous pouvez également utiliser les options suivantes :  
   
 -   Une instruction DMX valide  
   

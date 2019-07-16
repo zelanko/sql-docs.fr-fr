@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909021"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Mappage des jeux de caractères MySQL et SQL Server (MySQLToSQL)
 Jeu de caractères (jeu de caractères) peut être spécifié pour les types de données caractères, les expressions et les littéraux de MySQL.  
@@ -86,32 +85,32 @@ Mappage de jeu de caractères varie à différents niveaux de nœud, à savoir 
     |hp8|HP West Europe|CHAR/VARCHAR (valeur par défaut)|  
     |koi8r|KOI8-R Relcom russe|CHAR/VARCHAR (valeur par défaut)|  
     |Latin 1|Europe de l’ouest cp1252|CHAR/VARCHAR (valeur par défaut)|  
-    |latin2|Europe centrale ISO 8859-2|CHAR/VARCHAR (valeur par défaut)|  
+    |Latin2|Europe centrale ISO 8859-2|CHAR/VARCHAR (valeur par défaut)|  
     |swe7|7 bits suédois|CHAR/VARCHAR (valeur par défaut)|  
-    |ascii|US ASCII|CHAR/VARCHAR (valeur par défaut)|  
+    |ASCII|US ASCII|CHAR/VARCHAR (valeur par défaut)|  
     |ujis|EUC-JP japonais|NCHAR/NVARCHAR (valeur par défaut)|  
     |SJIS|Shift-JIS japonais|NCHAR/NVARCHAR (valeur par défaut)|  
     |Hébreu|ISO 8859-8 hébreu|CHAR/VARCHAR (valeur par défaut)|  
-    |tis620|TIS620 Thai|CHAR/VARCHAR (valeur par défaut)|  
+    |tis620|TIS620 thaï|CHAR/VARCHAR (valeur par défaut)|  
     |eucKR|Coréen EUC-KR|NCHAR/NVARCHAR (valeur par défaut)|  
     |koi8u|KOI8-U ukrainien|CHAR/VARCHAR (valeur par défaut)|  
     |gb2312|GB2312 Chinois simplifié|NCHAR/NVARCHAR (valeur par défaut)|  
     |Grec|ISO 8859-7 grec|CHAR/VARCHAR (valeur par défaut)|  
     |CP 1250|Europe centrale de Windows|CHAR/VARCHAR (valeur par défaut)|  
-    |gbk|Chinois simplifié de GBK|NCHAR/NVARCHAR (valeur par défaut)|  
+    |GBK|Chinois simplifié de GBK|NCHAR/NVARCHAR (valeur par défaut)|  
     |Latin5|ISO 8859-9 turc|CHAR/VARCHAR (valeur par défaut)|  
     |armscii8|ARMSCII-8 arménien|CHAR/VARCHAR (valeur par défaut)|  
     |utf8|UTF-8 Unicode|NCHAR/NVARCHAR (valeur par défaut)|  
-    |ucs2|UCS-2 Unicode|NCHAR/NVARCHAR (valeur par défaut)|  
+    |UCS2|UCS-2 Unicode|NCHAR/NVARCHAR (valeur par défaut)|  
     |cp866|Russe de déni de service|CHAR/VARCHAR (valeur par défaut)|  
     |keybcs2|DOS Kamenicky tchèque-slovaque|CHAR/VARCHAR (valeur par défaut)|  
     |macce|Europe centrale Mac|CHAR/VARCHAR (valeur par défaut)|  
     |MacRoman|Europe de l’ouest Mac|CHAR/VARCHAR (valeur par défaut)|  
     |cp852|Déni de service Central européenne|CHAR/VARCHAR (valeur par défaut)|  
     |latin7|ISO 8859-13 Baltique|CHAR/VARCHAR (valeur par défaut)|  
-    |CP 1251|Windows Cyrillic|CHAR/VARCHAR (valeur par défaut)|  
+    |CP 1251|Windows cyrillique|CHAR/VARCHAR (valeur par défaut)|  
     |CP 1256|Arabe de Windows|CHAR/VARCHAR (valeur par défaut)|  
-    |CP 1257|Windows Baltic|CHAR/VARCHAR (valeur par défaut)|  
+    |CP 1257|Windows Baltique|CHAR/VARCHAR (valeur par défaut)|  
     |binary|Jeu de caractères binaires pseudo|CHAR/VARCHAR (valeur par défaut)|  
     |geostd8|GEOSTD8 géorgien|CHAR/VARCHAR (valeur par défaut)|  
     |cp932|SJIS pour le japonais de Windows|NCHAR/NVARCHAR (valeur par défaut)|  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02577370218a799faf86a7f8986859c415962f5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897736"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>Développement de la reconnaissance des pools de connexions dans un pilote ODBC
 Cette rubrique décrit les détails du développement d’un pilote ODBC qui contient des informations sur la façon dont le pilote doit fournir des services de regroupement de connexion.  

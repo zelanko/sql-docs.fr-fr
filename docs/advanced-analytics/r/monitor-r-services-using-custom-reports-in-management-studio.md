@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 55fcb4e145481f98b0cba065ddab75e7cfa0a538
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71a8e0adf814128e78651b43ad14a43fc231f87c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962588"
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Surveiller Machine Learning Services à l’aide de rapports personnalisés dans Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +39,7 @@ Pour utiliser ces rapports :
 * Ouvrez les rapports dans SQL Server Management Studio.
 
 
-### <a name="step-1-download-the-reports"></a>Étape 1. Télécharger les rapports
+### <a name="step-1-download-the-reports"></a>Étape 1. Télécharger les rapports
 
 1. Ouvrez le dépôt GitHub qui contient [exemples du produit SQL Server](https://github.com/Microsoft/sql-server-samples)et télécharger les exemples de rapports. 
 
@@ -51,7 +50,7 @@ Pour utiliser ces rapports :
 
 2. Pour télécharger les exemples, vous pouvez également vous connecter à GitHub et effectuer un branchement local des exemples. 
 
-### <a name="step-2-copy-the-reports-to-management-studio"></a>Étape 2. Copier les rapports dans Management Studio
+### <a name="step-2-copy-the-reports-to-management-studio"></a>Étape 2. Copier les rapports dans Management Studio
 
 3. Recherchez le dossier des rapports personnalisés utilisé par SQL Server Management Studio. Par défaut, les rapports personnalisés sont stockés dans ce dossier :
     
