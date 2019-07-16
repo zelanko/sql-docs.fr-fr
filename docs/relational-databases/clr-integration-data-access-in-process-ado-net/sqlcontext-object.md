@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3293cbed44cc6eeae12c3c48247de8748ddad894
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 746ce8cec228b6fe9a9d36c4e0287ad7c2f3c517
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951678"
 ---
 # <a name="sqlcontext-object"></a>Objet SqlContext
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +29,13 @@ ms.locfileid: "51664868"
   
  **SqlContext** fournit l’accès aux composants suivants :  
   
--   **SqlPipe**: le **SqlPipe** objet représente le « canal » via les résultats sont envoyés au client. Pour plus d’informations sur la **SqlPipe** d’objets, consultez [objet SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
+-   **SqlPipe**: Le **SqlPipe** objet représente le « canal » via les résultats sont envoyés au client. Pour plus d’informations sur la **SqlPipe** d’objets, consultez [objet SqlPipe](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
   
--   **SqlTriggerContext**: le **SqlTriggerContext** objet peut uniquement être récupéré à partir d’un déclencheur CLR. Il fournit des informations sur l'opération qui a provoqué l'activation du déclencheur et un mappage des colonnes mises à jour. Pour plus d’informations sur la **SqlTriggerContext** d’objets, consultez [objet SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
+-   **SqlTriggerContext**: Le **SqlTriggerContext** objet peut uniquement être récupéré à partir d’un déclencheur CLR. Il fournit des informations sur l'opération qui a provoqué l'activation du déclencheur et un mappage des colonnes mises à jour. Pour plus d’informations sur la **SqlTriggerContext** d’objets, consultez [objet SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
   
--   **IsAvailable**: le **IsAvailable** propriété est utilisée pour déterminer la disponibilité du contexte.  
+-   **IsAvailable**: Le **IsAvailable** propriété est utilisée pour déterminer la disponibilité du contexte.  
   
--   **WindowsIdentity**: le **WindowsIdentity** propriété est utilisée pour récupérer l’identité Windows de l’appelant.  
+-   **WindowsIdentity**: Le **WindowsIdentity** propriété est utilisée pour récupérer l’identité Windows de l’appelant.  
   
 ## <a name="determining-context-availability"></a>Détermination de la disponibilité du contexte  
  Requête la **SqlContext** classe pour voir si le code en cours d’exécution est en cours d’exécution dans le processus. Pour ce faire, vérifiez la **IsAvailable** propriété de la **SqlContext** objet. Le **IsAvailable** propriété est en lecture seule et retourne **True** si le code appelant s’exécute à l’intérieur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et si d’autres **SqlContext** membres sont accessibles. Si le **IsAvailable** retourne de la propriété **False**, toutes les autres **SqlContext** membres lèvent une **InvalidOperationException**, le cas échéant . Si **IsAvailable** retourne **False**, toute tentative d’ouverture d’un objet de connexion qui a « connexion contextuelle = true » dans la chaîne de connexion échoue.  

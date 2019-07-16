@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7cd89d826177074bca18a047545a32acee115a9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7b1441f06a5825467431a7c11ee9a8e3e46df6fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910264"
 ---
 # <a name="calling-a-stored-procedure"></a>Appel d'une procédure stockée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "54128359"
   
  La séquence d'échappement ODBC CALL permettant d'appeler une procédure est la suivante :  
   
- {[**? =**]**appeler**_nom_procédure_[([*paramètre*] [**,**[*paramètre*]] ...)]}  
+ {[ **? =** ]**appeler**_nom_procédure_[([*paramètre*] [ **,** [*paramètre*]] ...)]}  
   
  où *nom_procédure* Spécifie le nom d’une procédure et *paramètre* spécifie un paramètre de procédure. Les paramètres nommés sont pris en charge uniquement dans les instructions à l'aide de la séquence d'échappement ODBC CALL.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "54128359"
   
  Les paramètres d'entrée et d'entrée/sortie peuvent être omis dans les appels de procédure. Si une procédure est appelée avec des parenthèses mais sans paramètre, le pilote instruit la source de données d'utiliser la valeur par défaut comme premier paramètre. Exemple :  
   
- {**appeler** _nom_procédure_**()**}  
+ {**appeler** _nom_procédure_ **()** }  
   
  Si la procédure n'a pas de paramètre, elle peut échouer. Si une procédure est appelée sans parenthèses, le pilote n'envoie aucune valeur de paramètre. Exemple :  
   

@@ -17,37 +17,36 @@ helpviewer_keywords:
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907412"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSdistribution_agents** table contient une ligne pour chaque Agent de Distribution en cours d’exécution sur le serveur de distribution local. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**Int**|ID de l'Agent de distribution.|  
-|**nom**|**nvarchar(100)**|Nom de l'Agent de distribution.|  
-|**publisher_database_id**|**Int**|Identificateur de la base de données du serveur de publication.|  
+|**name**|**nvarchar(100)**|Nom de l'Agent de distribution.|  
+|**publisher_database_id**|**int**|Identificateur de la base de données du serveur de publication.|  
 |**publisher_id**|**smallint**|L’ID du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
 |**publication**|**sysname**|Nom de la publication.|  
 |**subscriber_id**|**smallint**|ID de l'Abonné, utilisé uniquement par les agents reconnus. Pour les agents anonymes, cette colonne est réservée.|  
-|**subscriber_db**|**sysname**|Nom de la base de données d'abonnement|  
-|**subscription_type**|**Int**|Le type d’abonnement :<br /><br /> **0** = push.<br /><br /> **1** = par extraction.<br /><br /> **2** = anonyme.|  
+|**bd_abonné**|**sysname**|Nom de la base de données d'abonnement|  
+|**subscription_type**|**int**|Le type d’abonnement :<br /><br /> **0** = push.<br /><br /> **1** = par extraction.<br /><br /> **2** = anonyme.|  
 |**local_job**|**bit**|Indique s’il existe un travail SQL Server Agent sur le serveur de distribution local.|  
 |**job_id**|**binary(16)**|Numéro d’identification.|  
 |**subscription_guid**|**binary(16)**|ID des abonnements de cet agent|  
-|**profile_id**|**Int**|L’ID de configuration à partir de la [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) table.|  
+|**profile_id**|**int**|L’ID de configuration à partir de la [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) table.|  
 |**anonymous_subid**|**uniqueidentifier**|ID d'un agent anonyme.|  
 |**subscriber_name**|**sysname**|Nom de l'Abonné, utilisé par des agents anonymes uniquement|  
-|**virtual_agent_id**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**virtual_agent_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**anonymous_agent_id**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**creation_date**|**datetime**|Date et heure de création de l'Agent de distribution ou de l'Agent de fusion|  
 |**queue_id**|**sysname**|Identificateur permettant de localiser la file d'attente pour les abonnements de mise à jour en attente. Pour les abonnements qui ne sont pas en attente, la valeur est NULL. Pour les publications [!INCLUDE[msCoName](../../includes/msconame-md.md)] basées sur Message Queuing, la valeur est un GUID qui identifie de manière unique la file d'attente à utiliser pour l'abonnement. Pour les publications de la file d’attente basée sur SQL Server, la colonne contient la valeur **SQL**.<br /><br /> Remarque : À l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing a été déconseillée et n’est plus pris en charge.|  
@@ -56,7 +55,7 @@ ms.locfileid: "62817131"
 |**offload_server**|**sysname**|Nom de réseau du serveur à utiliser pour l'activation de l'agent à distance|  
 |**dts_package_name**|**sysname**|Nom du package DTS. Par exemple, pour un package nommé **DTSPub_Package**, spécifiez `@dts_package_name = N'DTSPub_Package'`.|  
 |**dts_package_password**|**nvarchar(524)**|Mot de passe du package.|  
-|**dts_package_location**|**Int**|L’emplacement du package. L’emplacement du package peut être **distributeur** ou **abonné**.|  
+|**dts_package_location**|**int**|L’emplacement du package. L’emplacement du package peut être **distributeur** ou **abonné**.|  
 |**sid**|**varbinary(85)**|Numéro d'identification de sécurité (SID) de l'Agent de distribution ou de fusion lors de sa première exécution.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**subscriber_security_mode**|**smallint**|Mode de sécurité utilisé par l'Agent lors de la connexion à l'Abonné. Les valeurs possibles sont les suivantes :<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’authentification SQL Server<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’authentification Windows.|  
@@ -64,7 +63,7 @@ ms.locfileid: "62817131"
 |**subscriber_password**|**nvarchar(524)**|Indique la valeur chiffrée du mot de passe qui est utilisé lors de la connexion à l'Abonné.|  
 |**reset_partial_snapshot_progress**|**bit**|Indique si un instantané partiellement téléchargée sera annulée pour que la totalité du processus d'instantané puisse recommencer.|  
 |**job_step_uid**|**uniqueidentifier**|Étape de l’ID unique de la tâche de l’Agent SQL Server dans laquelle l’agent est démarré.|  
-|**subscriptionstreams**|**tinyint**|Définit le nombre de connexions autorisées par l'Agent de distribution pour appliquer des traitements de modifications en parallèle à un Abonné. Une plage de valeurs allant de 1 à 64 est prise en charge.|  
+|**flux d’abonnements**|**tinyint**|Définit le nombre de connexions autorisées par l'Agent de distribution pour appliquer des traitements de modifications en parallèle à un Abonné. Une plage de valeurs allant de 1 à 64 est prise en charge.|  
 |**memory_optimized**|**bit**|1 indique que l’abonné peut être utilisé pour les tables optimisées en mémoire.|  
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar(524)**||  

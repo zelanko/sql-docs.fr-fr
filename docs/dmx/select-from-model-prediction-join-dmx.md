@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b592aef0ba3831c5513e039ee4552d826468e819
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928321"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modèle&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
 ## <a name="arguments"></a>Arguments  
  *n*  
- Facultatif. Entier qui spécifie le nombre de lignes à retourner.  
+ facultatif. Entier qui spécifie le nombre de lignes à retourner.  
   
  *Sélectionnez la liste d’expressions*  
  Liste séparée par des virgules des identificateurs de colonnes et expressions dérivées du modèle d'exploration de données.  
@@ -49,13 +48,13 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
  Requête source  
   
  *liste de mappage de jointure*  
- Facultatif. Expression logique qui compare les colonnes du modèle aux colonnes de la requête source.  
+ facultatif. Expression logique qui compare les colonnes du modèle aux colonnes de la requête source.  
   
  *expression de condition*  
- Facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
+ facultatif. Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Facultatif. Expression qui retourne une valeur scalaire.  
+ facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  La clause ON définit le mappage entre les colonnes de la requête source et les colonnes du modèle d'exploration de données. Ce mappage sert à diriger les colonnes depuis la requête source vers les colonnes du modèle d'exploration de données de sorte que les colonnes puissent être utilisées en valeurs d'entrée pour créer des prédictions. Colonnes dans le \< *liste de mappage de jointure*> sont liées à l’aide d’un signe égal (=), comme indiqué dans l’exemple suivant :  
@@ -105,7 +104,7 @@ NATURAL PREDICTION JOIN
   2 AS [Total Children]) AS t  
 ```  
   
-## <a name="example-2-using-openquery"></a>Exemple 2 : À l’aide de OPENQUERY  
+## <a name="example-2-using-openquery"></a>Exemple 2 : À l’aide de OPENQUERY  
  L'exemple suivant montre comment créer une requête de prédiction par lot à l'aide d'une liste de clients potentiels stockés dans un dataset externe. Étant donné que la table fait partie d’une vue de source de données qui a été définie sur une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la requête peut utiliser [OPENQUERY](../dmx/source-data-query-openquery.md) pour récupérer les données. Étant donné que les noms des colonnes dans la table sont différentes de celles figurant dans le modèle d’exploration de données, le **ON** clause doit être utilisée pour mapper les colonnes de la table pour les colonnes dans le modèle.  
   
  La requête retourne le prénom et le nom de toutes les personnes de la table, ainsi qu'une colonne booléenne qui indique si chaque personne est susceptible d'acheter une bicyclette, où 0 signifie « n'achètera probablement pas de bicyclette » et 1 signifie « achètera probablement une bicyclette ». La dernière colonne contient la probabilité du résultat prédit.  
