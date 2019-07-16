@@ -1,5 +1,5 @@
 ---
-title: Indexes Collection (ADOX) | Microsoft Docs
+title: Index de Collection (ADOX) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6898c7fbf326209e7b2071b4bdedf383cefc0642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966046"
 ---
 # <a name="indexes-collection-adox"></a>Indexes, collection (ADOX)
 Contient tous les [Index](../../../ado/reference/adox-api/index-object-adox.md) objets d’une table.  
   
 ## <a name="remarks"></a>Notes  
- Le [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) méthode pour un **index** collection est unique pour ADOX. Vous pouvez :  
+ Le [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) méthode pour un **index** collection est unique pour ADOX. Vous pouvez :  
   
 -   Ajouter un nouvel index à la collection avec le **Append** (méthode).  
   
- Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
+ Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
   
 -   Accéder à un index dans la collection avec le [élément](../../../ado/reference/ado-api/item-property-ado.md) propriété.  
   

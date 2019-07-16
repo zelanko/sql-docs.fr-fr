@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de5b4a62dbb86008f686cb0d630386340238f42c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d2a7562efce015f5fb693cbb9a2f6114826e6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895550"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Jeton*  
+ *token*  
  Valeur indiquant un jeton de type BCP.  
   
  *field*  
@@ -62,37 +61,37 @@ RETCODE bcp_gettypename (
 |**SQLNUMERIC**|Avant ou après|**numeric**|  
 |**SQLINT1**|Avant ou après|**tinyint**|  
 |**SQLINT2**|Avant ou après|**smallint**|  
-|**SQLINT4**|Avant ou après|**Int**|  
+|**SQLINT4**|Avant ou après|**int**|  
 |**SQLMONEY**|Avant ou après|**money**|  
 |**SQLFLT8**|Avant ou après|**float**|  
 |**SQLDATETIME**|Avant ou après|**datetime**|  
 |**SQLBITN**|Avant ou après|**bit-null**|  
 |**SQLBIT**|Avant ou après|**bit**|  
-|**SQLBIGCHAR**|non|**char**|  
-|**SQLCHARACTER**|non|**char**|  
-|**SQLBIGVARCHAR**|non|**varchar**|  
-|**SQLVARCHAR**|non|**varchar**|  
+|**SQLBIGCHAR**|Non|**char**|  
+|**SQLCHARACTER**|Non|**char**|  
+|**SQLBIGVARCHAR**|Non|**varchar**|  
+|**SQLVARCHAR**|Non|**varchar**|  
 |**SQLTEXT**|Avant ou après|**texte**|  
-|**SQLBIGBINARY**|non|**binaire**|  
-|**SQLBINARY**|non|**Binaire**|  
-|**SQLBIGVARBINARY**|non|**varbinary**|  
-|**SQLVARBINARY**|non|**varbinary**|  
+|**SQLBIGBINARY**|Non|**binaire**|  
+|**SQLBINARY**|Non|**Binary**|  
+|**SQLBIGVARBINARY**|Non|**varbinary**|  
+|**SQLVARBINARY**|Non|**varbinary**|  
 |**SQLIMAGE**|Avant ou après|**Image**|  
-|**SQLINTN**|Avant ou après|**int null**|  
+|**SQLINTN**|Avant ou après|**int-null**|  
 |**SQLDATETIMN**|Avant ou après|**datetime-null**|  
-|**SQLMONEYN**|Avant ou après|**valeur null de l’argent**|  
+|**SQLMONEYN**|Avant ou après|**money-null**|  
 |**SQLFLTN**|Avant ou après|**float-null**|  
 |**SQLAOPSUM**|Avant ou après|**Sum**|  
 |**SQLAOPAVG**|Avant ou après|**Avg**|  
-|**SQLAOPCNT**|Avant ou après|**Count**|  
+|**SQLAOPCNT**|Avant ou après|**Compter**|  
 |**SQLAOPMIN**|Avant ou après|**Min**|  
 |**SQLAOPMAX**|Avant ou après|**Max**|  
 |**SQLDATETIM4**|Avant ou après|**smalldatetime**|  
 |**SQLMONEY4**|Avant ou après|**smallmoney**|  
 |**SQLFLT4**|Avant ou après|**réel**|  
 |**SQLUNIQUEID**|Avant ou après|**uniqueidentifier**|  
-|**SQLNCHAR**|non|**NCHAR**|  
-|**SQLNVARCHAR**|non|**Nvarchar**|  
+|**SQLNCHAR**|Non|**NCHAR**|  
+|**SQLNVARCHAR**|Non|**Nvarchar**|  
 |**SQLNTEXT**|Avant ou après|**ntext**|  
 |**SQLVARIANT**|Avant ou après|**sql_variant**|  
 |**SQLINT8**|Avant ou après|**Bigint**|  

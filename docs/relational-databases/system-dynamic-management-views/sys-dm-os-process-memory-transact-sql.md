@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03830b00df02332069383e496c0b22d198b95d7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e498dae70921fbf76f82c27c870be3b63320664
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899845"
 ---
 # <a name="sysdmosprocessmemory-transact-sql"></a>sys.dm_os_process_memory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "63013016"
 > [!NOTE]  
 >  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_process_memory**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**physical_memory_in_use_kb**|**bigint**|Indique le travail de processus en Ko, tel que signalé par le système d'exploitation, ainsi que les allocations faisant l'objet d'un suivi effectuées à l'aide d'API de pages de grande taille. N'accepte pas la valeur NULL.|  
 |**large_page_allocations_kb**|**bigint**|Spécifie la mémoire physique qui est allouée en utilisant des API de pages de grande taille. N'accepte pas la valeur NULL.|  
@@ -50,17 +49,17 @@ ms.locfileid: "63013016"
 |**virtual_address_space_committed_kb**|**bigint**|Indique la quantité d'espace d'adressage virtuel réservée qui a été validée ou mappée aux pages physiques. N'accepte pas la valeur NULL.|  
 |**virtual_address_space_available_kb**|**bigint**|Indique la quantité d'espace d'adressage virtuel qui est actuellement disponible. N'accepte pas la valeur NULL.<br /><br /> **Remarque :** Régions libres qui sont inférieures à la granularité d’allocation peuvent exister. Ces régions ne sont pas disponibles pour les allocations.|  
 |**page_fault_count**|**bigint**|Indique le nombre de défauts de page qui sont générés par le processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. N'accepte pas la valeur NULL.|  
-|**memory_utilization_percentage**|**Int**|Spécifie le pourcentage de mémoire validée qui se trouve dans la plage de travail. N'accepte pas la valeur NULL.|  
+|**memory_utilization_percentage**|**int**|Spécifie le pourcentage de mémoire validée qui se trouve dans la plage de travail. N'accepte pas la valeur NULL.|  
 |**available_commit_limit_kb**|**bigint**|Indique la quantité de mémoire disponible pour être validée par le processus. N'accepte pas la valeur NULL.|  
 |**process_physical_memory_low**|**bit**|Indique que le processus répond à une notification de mémoire physique insuffisante. N'accepte pas la valeur NULL.|  
 |**process_virtual_memory_low**|**bit**|Indique qu'une condition de mémoire virtuelle insuffisante a été détectée. N'accepte pas la valeur NULL.|  
-|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
 ## <a name="permissions"></a>Autorisations  
  Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite l'autorisation VIEW SERVER STATE sur le serveur.  
   
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

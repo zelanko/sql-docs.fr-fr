@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: e07bb8a9-37de-4a39-a257-950d7c3ae8fb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9560225279793efc290cae216f7757e0262e2357
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4fc446efc410ff13d5697c7ab195e3e3895b4839
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900431"
 ---
 # <a name="sysdmhadrnameidmap-transact-sql"></a>sys.dm_hadr_name_id_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Montre le mappage des groupes de disponibilité Always On que l’instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a joint à trois identificateurs uniques : un groupe de disponibilité ID de groupe, un ID de ressource WSFC et un ID de groupe WSFC. L'objectif de ce mappage est de gérer le scénario dans lequel la ressource/le groupe WSFC est renommé.  
    
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**ag_name**|**nvarchar (256)**|Nom du groupe de disponibilité. Il s’agit d’un nom spécifié par l’utilisateur qui doit être unique au sein du cluster de basculement Windows Server Cluster ().|  
 |**ag_id**|**uniqueidentifier**|Identificateur unique (GUID) du groupe de disponibilité.|  
 |**ag_resource_id**|**nvarchar (256)**|ID unique du groupe de disponibilité en tant que ressource dans le cluster WSFC.|  
 |**ag_group_id**|**nvarchar (256)**|Identificateur unique du groupe WSFC du groupe de disponibilité.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

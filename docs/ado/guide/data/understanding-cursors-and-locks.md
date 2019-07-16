@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1a828bbbc42638cddaec609fc101b4cf70f7e356
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41fd90d4f30c080951bd5d68407e38adac482418
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923794"
 ---
 # <a name="understanding-cursors-and-locks"></a>Présentation des curseurs et des verrous
 Il est important de comprendre le fonctionnement des curseurs pour vous pouvez de sélectionner le type de curseur meilleures et plus efficace pour les exigences d’accès aux données d’une application. Une configuration de curseur moins optimal peut rendre les opérations d’accès aux données lentes et laborieux.  

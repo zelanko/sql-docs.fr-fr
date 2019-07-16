@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14837bc5ba3368fbb0d33680ee1c54936ab0a224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898848"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (pilote ODBC Visual FoxPro)
 > [!NOTE]  
@@ -43,8 +42,8 @@ ms.locfileid: "63213327"
   
  SQL_ALTER_TABLE retourne SQL_AT_ADD_COLUMN ou SQL_AT_DROP_COLUMN.  
   
-## <a name="b"></a>B  
- SQL_BOOKMARK_PERSISTENCE returns SQL_BP_SCROLL.  
+## <a name="b"></a>b  
+ SQL_BOOKMARK_PERSISTENCE retourne SQL_BP_SCROLL.  
   
 ## <a name="c"></a>C  
  SQL_COLUMN_ALIAS retourne « Y ».  
@@ -73,7 +72,7 @@ ms.locfileid: "63213327"
   
  SQL_CONVERT_LONGVARCHAR retourne 0.  
   
- SQL_CONVERT_NUMERIC returns 0.  
+ SQL_CONVERT_NUMERIC retourne 0.  
   
  SQL_CONVERT_REAL retourne 0.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "63213327"
  SQL_DRIVER_VER retourne « 01.00.0000 ».  
   
 ## <a name="e"></a>E  
- SQL_EXPRESSIONS_IN_ORDERBY returns 'N'.  
+ SQL_EXPRESSIONS_IN_ORDERBY retourne ' n ».  
   
 ## <a name="f"></a>F  
  SQL_FETCH_DIRECTION retourne :  
@@ -159,10 +158,10 @@ ms.locfileid: "63213327"
   
  SQL_GROUP_BY retourne SQL_GB_NO_RELATION.  
   
-## <a name="i-j"></a>I-J  
+## <a name="i-j"></a>J’AI-J  
  SQL_IDENTIFIER_CASE retourne sql_ic_mixed en.  
   
- SQL_IDENTIFIER_QUOTE_CHAR returns `.  
+ SQL_IDENTIFIER_QUOTE_CHAR retourne '.  
   
 ## <a name="k"></a>K  
  SQL_KEYWORDS retourne « ».  
@@ -179,21 +178,21 @@ ms.locfileid: "63213327"
   
  SQL_MAX_COLUMN_NAME_LEN returns 128.  
   
- SQL_MAX_COLUMNS_IN_GROUP_BY returns 16.  
+ SQL_MAX_COLUMNS_IN_GROUP_BY retourne 16.  
   
- SQL_MAX_COLUMNS_IN_ORDER_BY returns 16.  
+ SQL_MAX_COLUMNS_IN_ORDER_BY retourne 16.  
   
  SQL_MAX_COLUMNS_IN_INDEX retourne 0.  
   
  SQL_MAX_COLUMNS_IN_SELECT returns 254.  
   
- SQL_MAX_COLUMNS_IN_TABLE returns 254.  
+ SQL_MAX_COLUMNS_IN_TABLE retourne 254.  
   
- SQL_MAX_CURSOR_NAME_LEN returns 254.  
+ SQL_MAX_CURSOR_NAME_LEN retourne 254.  
   
  SQL_MAX_INDEX_SIZE retourne 0.  
   
- SQL_MAX_OWNER_NAME_LEN returns 0.  
+ SQL_MAX_OWNER_NAME_LEN retourne 0.  
   
  SQL_MAX_PROCEDURE_NAME_LEN returns 0. Le pilote ODBC Visual FoxPro n’autorise pas un accès direct à des procédures stockées de Visual FoxPro.  
   
@@ -203,13 +202,13 @@ ms.locfileid: "63213327"
   
  SQL_MAX_ROW_SIZE_INCLUDES_LONG retourne ' n ».  
   
- SQL_MAX_STATEMENT_LEN returns 8192.  
+ SQL_MAX_STATEMENT_LEN retourne 8192.  
   
- SQL_MAX_TABLE_NAME_LEN returns 128.  
+ SQL_MAX_TABLE_NAME_LEN retourne 128.  
   
- SQL_MAX_TABLES_IN_SELECT returns 16.  
+ SQL_MAX_TABLES_IN_SELECT retourne 16.  
   
- SQL_MAX_USER_NAME_LEN returns 0.  
+ SQL_MAX_USER_NAME_LEN retourne 0.  
   
  SQL_MULT_RESULT_SETS retourne « Y ».  
   
@@ -269,17 +268,17 @@ ms.locfileid: "63213327"
 -   SQL_FN_NUM_TAN  
   
 ## <a name="o"></a>O  
- SQL_ODBC_API_CONFORMANCE returns SQL_OAC_LEVEL1.  
+ SQL_ODBC_API_CONFORMANCE retourne SQL_OAC_LEVEL1.  
   
  SQL_ODBC_SAG_CLI_CONFORMANCE returns SQL_OSCC_COMPLIANT.  
   
- SQL_ODBC_SQL_CONFORMANCE returns SQL_OSC_MINIMUM. Syntaxe SQL minimale est pris en charge.  
+ SQL_ODBC_SQL_CONFORMANCE retourne SQL_OSC_MINIMUM. Syntaxe SQL minimale est pris en charge.  
   
  Retourne SQL_ODBC_SQL_OPT_IEF « N ».  
   
  SQL_ODBC_VER est implémentée par le Gestionnaire de pilotes.  
   
- SQL_ORDER_BY_COLUMNS_IN_SELECT returns "N".  
+ Retourne SQL_ORDER_BY_COLUMNS_IN_SELECT « N ».  
   
  Retourne SQL_OUTER_JOINS « N ».  
   
@@ -288,9 +287,9 @@ ms.locfileid: "63213327"
  SQL_OWNER_USAGE retourne 0. Le pilote ODBC Visual FoxPro ne prend pas en charge les propriétaires pour ses objets.  
   
 ## <a name="p"></a>P  
- SQL_POS_OPERATIONS returns SQL_POS_POSITION.  
+ SQL_POS_OPERATIONS retourne SQL_POS_POSITION.  
   
- SQL_POSITIONED_STATEMENTS returns 0.  
+ SQL_POSITIONED_STATEMENTS retourne 0.  
   
  SQL_PROCEDURE_TERM retourne « ».  
   
@@ -299,7 +298,7 @@ ms.locfileid: "63213327"
 ## <a name="q"></a>Q  
  SQL_QUALIFIER_LOCATION retourne SQL_QL_START.  
   
- SQL_QUALIFIER_NAME_SEPARATOR returns '!' or '\\'. Le séparateur entre la base de données et de la table est ' !' pour les sources de données connectés à [bases de données](../../odbc/microsoft/visual-foxpro-terminology.md), et '\\» pour les sources de données qui sont des répertoires de [gratuit tables](../../odbc/microsoft/visual-foxpro-terminology.md).  
+ SQL_QUALIFIER_NAME_SEPARATOR retourne ' !' ou '\\'. Le séparateur entre la base de données et de la table est ' !' pour les sources de données connectés à [bases de données](../../odbc/microsoft/visual-foxpro-terminology.md), et '\\» pour les sources de données qui sont des répertoires de [gratuit tables](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
  SQL_QUALIFIER_TERM retourne « database » ou « directory ». Le qualificateur est « base de données » pour les sources de données connectées à [bases de données](../../odbc/microsoft/visual-foxpro-terminology.md)et « répertoire » pour les sources de données qui sont des répertoires de [gratuit tables](../../odbc/microsoft/visual-foxpro-terminology.md).  
   
@@ -317,9 +316,9 @@ ms.locfileid: "63213327"
   
  SQL_SEARCH_PATTERN_ESCAPE retourne «\\».  
   
- SQL_SERVER_NAME returns "".  
+ Sql_server_name retourne « ».  
   
- SQL_SPECIAL_CHARACTERS returns "~@#$%^".  
+ SQL_SPECIAL_CHARACTERS retourne « ~ @# $% ^ ».  
   
  SQL_STATIC_SENSITIVITY retourne 0. Le pilote ODBC Visual FoxPro ne prend pas en charge des mises à jour.  
   
@@ -448,7 +447,7 @@ ms.locfileid: "63213327"
   
 -   SQL_FN_TD_YEAR .  
   
- SQL_TXN_CAPABLE returns SQL_TC_DML.  
+ SQL_TXN_CAPABLE retourne SQL_TC_DML.  
   
  SQL_TXN_ISOLATION_OPTION retourne SQL_TXN_READ_COMMITTED.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f65dc60-0ff8-46e6-9988-5bc5b9603ad0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8cc48c9015edf14ebdf67d767ca7bb6c928a7d2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c546fd0abb82b87cd3d992b5afd270156e84f1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906246"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-the-wizard"></a>Déployer un package de déploiement de modèle à l'aide de l'Assistant
 
@@ -51,7 +50,7 @@ ms.locfileid: "65477354"
   
 5.  Recherchez votre package de déploiement (fichier .pkg), puis cliquez sur **Ouvrir**.  
   
-6.  Cliquer sur **Suivant**.  
+6.  Cliquez sur **Suivant**.  
   
 7.  Une fois le package chargé, cliquez sur **Suivant**.  
   

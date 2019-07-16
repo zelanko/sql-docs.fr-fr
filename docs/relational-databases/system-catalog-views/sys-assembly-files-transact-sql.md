@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 1a384a2c-5556-4d12-a2ba-4da781363143
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0279d6c2850dff07b365e7543f387f6cf6e9f328
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7f4f6b017b1251b873f0e45ab7688d9fd2c6bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62516081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001155"
 ---
 # <a name="sysassemblyfiles-transact-sql"></a>sys.assembly_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chacun des fichiers composant un assembly.  
     
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**assembly_id**|**Int**|ID de l'assembly auquel ce fichier appartient.|  
-|**nom**|**nvarchar(260)**|Nom du fichier d'assembly.|  
-|**file_id**|**Int**|ID du fichier. Unique au sein d'un assembly. L'ID de fichier 1 représente la DLL de l'assembly.|  
+|**assembly_id**|**int**|ID de l'assembly auquel ce fichier appartient.|  
+|**name**|**nvarchar(260)**|Nom du fichier d'assembly.|  
+|**file_id**|**int**|ID du fichier. Unique au sein d'un assembly. L'ID de fichier 1 représente la DLL de l'assembly.|  
 |**content**|**varbinary(max)**|Contenu d'un fichier.|  
   
 ## <a name="permissions"></a>Autorisations  

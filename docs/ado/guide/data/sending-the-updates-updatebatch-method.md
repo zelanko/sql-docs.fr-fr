@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87123797-831f-48e0-94b5-f669f9ca194a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6759f007e652a6a52a1633b021553faa2978f6b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 182e444587ce9bb3ca73166fb05dfac2506a39aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924254"
 ---
 # <a name="sending-the-updates-updatebatch-method"></a>Envoi des mises à jour : UpdateBatch, méthode
 Le code suivant, un jeu d’enregistrements s’ouvre en mode batch, en définissant la propriété LockType adLockBatchOptimistic et CursorLocation adUseClient. Il ajoute deux nouveaux enregistrements et modifie la valeur d’un champ dans un enregistrement existant, en enregistrant les valeurs d’origine et appelle ensuite la méthode UpdateBatch pour renvoyer les modifications apportées à la source de données.  

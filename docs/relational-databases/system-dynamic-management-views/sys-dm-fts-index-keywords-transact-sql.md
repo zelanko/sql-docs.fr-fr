@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: de956e2dffebd801205bf4ac46a7f503e1acbe8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900946"
 ---
 # <a name="sysdmftsindexkeywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,20 +45,20 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- db_id('*database_name*')  
+ DB_ID ('*database_name*»)  
  Un appel à la [DB_ID()](../../t-sql/functions/db-id-transact-sql.md) (fonction). Cette fonction accepte un nom de base de données et retourne l’ID de la base de données, ce qui **sys.dm_fts_index_keywords** utilise pour rechercher la base de données spécifié. Si *database_name* est omis, la fonction retourne l’ID de la base de données active.  
   
- object_id('*table_name*')  
+ object_id («*table_name*»)  
  Un appel à la [OBJECT_ID()](../../t-sql/functions/object-id-transact-sql.md) (fonction). Cette fonction accepte un nom de table et retourne l'ID de la table contenant l'index de recherche en texte intégral à examiner.  
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**keyword**|**nvarchar(4000)**|La représentation hexadécimale du mot clé stocké à l’intérieur de l’index de recherche en texte intégral.<br /><br /> Remarque : OxFF représente le caractère spécial qui indique la fin d’un fichier ou un jeu de données.|  
 |**display_term**|**nvarchar(4000)**|Format explicite du mot clé. Ce format est dérivé du format hexadécimal.<br /><br /> Remarque : Le **display_term** valeur de OxFF est « END OF FILE ».|  
-|**column_id**|**Int**|ID de la colonne à partir de laquelle le mot clé actuel a été indexé en texte intégral.|  
-|**document_count**|**Int**|Nombre de documents ou de lignes contenant le terme actuel.|  
+|**column_id**|**int**|ID de la colonne à partir de laquelle le mot clé actuel a été indexé en texte intégral.|  
+|**document_count**|**int**|Nombre de documents ou de lignes contenant le terme actuel.|  
   
 ## <a name="remarks"></a>Notes  
  Les informations retournées par **sys.dm_fts_index_keywords** est utile pour déterminer les éléments suivants, entre autres choses :  
@@ -82,7 +81,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-displaying-high-level-full-text-index-content"></a>A. Affichage du contenu de l'index de recherche en texte intégral au niveau supérieur  
+### <a name="a-displaying-high-level-full-text-index-content"></a>R. Affichage du contenu de l'index de recherche en texte intégral au niveau supérieur  
  L'exemple suivant affiche des informations sur le contenu du niveau supérieur de l'index de recherche en texte intégral de la table `HumanResources.JobCandidate`.  
   
 ```  
