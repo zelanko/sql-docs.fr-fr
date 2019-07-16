@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aa5c6dc2517a05fb25ccdb2ab7f5cd58976ac4e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cc293c966b044c7d580907d55c7b94f96e077dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949210"
 ---
 # <a name="positions-collection-ado-md"></a>Positions, collection (ADO MD)
 Contient le [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) objets qui définissent un point sur un axe.  

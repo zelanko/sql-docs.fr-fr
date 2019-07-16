@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 70269d26-b085-4a98-8a9f-b4742c2848bd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea23e4639cb5dd6872092021f04ab35af28f27d5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: db49815f367c9fe0100189e418db90e0bcddd9ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078457"
 ---
 # <a name="tableprivileges-transact-sql"></a>TABLE_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,15 +33,15 @@ ms.locfileid: "53589253"
   
  Pour récupérer des informations à partir de ces vues, spécifiez le nom qualifié complet de **INFORMATION_SCHEMA.** _nom_vue_.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**FOURNISSEUR D’AUTORISATIONS**|**nvarchar(** 128 **)**|Personne qui accorde le privilège|  
 |**BÉNÉFICIAIRE**|**nvarchar(** 128 **)**|Personne qui reçoit le privilège|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la table.|  
 |**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient la table.<br /><br /> <strong>\*\* Important \* \*</strong>  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**TABLE_NAME**|**sysname**|Nom de la table.|  
-|**PRIVILEGE_TYPE**|**varchar (** 10 **)**|Type de privilège|  
-|**IS_GRANTABLE**|**varchar (** 3 **)**|Indique si le bénéficiaire peut accorder des autorisations à d'autres personnes.|  
+|**PRIVILEGE_TYPE**|**varchar(** 10 **)**|Type de privilège|  
+|**IS_GRANTABLE**|**varchar(** 3 **)**|Indique si le bénéficiaire peut accorder des autorisations à d'autres personnes.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues système &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

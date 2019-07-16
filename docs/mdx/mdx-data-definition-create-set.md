@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4d1e58d016649c3c21a056a82315bd0d0fb3564f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91b040a1c625387ed25855d3c3eb26955088f5c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038331"
 ---
 # <a name="mdx-data-definition---create-set"></a>Définition de données MDX - CREATE SET
 
@@ -41,7 +40,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Property_Name*  
+ *Property_name*  
  Chaîne valide qui fournit le nom d'une propriété de jeu.  
   
  *Property_Value*  

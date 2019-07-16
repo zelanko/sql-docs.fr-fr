@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925645"
 ---
 # <a name="data-section"></a>Section de données
 La section de données définit les données de l’ensemble de lignes ainsi que tout en attente de mises à jour, les insertions ou les suppressions. La section de données peut contenir zéro ou plusieurs lignes. Il ne peut contenir que des données à partir d’un ensemble de lignes où la ligne est définie par le schéma. En outre, comme mentionné précédemment, les colonnes sans aucune donnée peuvent être omis. Si un attribut ou un sous-élément est utilisé dans la section de données et que cette construction n’a pas été définie dans la section de schéma, il est ignoré en mode silencieux.  
@@ -32,7 +31,7 @@ La section de données définit les données de l’ensemble de lignes ainsi que
   
  Les caractères suivants sont réservés dans XML et doivent être remplacées par des entités de caractères : {', », &,\<, >}.  
   
-## <a name="binary"></a>Binaire  
+## <a name="binary"></a>Binary  
  Données binaires sont bin.hex encodé (autrement dit, un octet correspond à deux caractères, un caractère par quartet).  
   
 ## <a name="datetime"></a>DateTime  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f842060c6ca621fc52fa34f08838541dc65e993
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42a98fe7af16c4e8aab22d6ace02f359dfe02c54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096206"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,39 +44,39 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @plan_id = ] 'plan\_id'` Spécifie l’ID de plan du plan de maintenance. *plan_id* is **UNIQUEIDENTIFIER**. La valeur par défaut est NULL.  
+`[ @plan_id = ] 'plan\_id'` Spécifie l’ID de plan du plan de maintenance. *plan_id* est **UNIQUEIDENTIFIER**. La valeur par défaut est NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  Si *plan_id* est spécifié, **sp_help_maintenance_plan** renvoie trois tables : Plan, base de données et le travail.  
   
 ### <a name="plan-table"></a>Table Plan  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**uniqueidentifier**|Identificateur du plan de maintenance.|  
 |**plan_name**|**sysname**|Nom du plan de maintenance.|  
 |**date_created**|**datetime**|Date de création du plan de maintenance.|  
 |**Propriétaire**|**sysname**|Propriétaire du plan de maintenance.|  
-|**max_history_rows**|**Int**|Nombre maximal de lignes allouées pour l'enregistrement de l'historique du plan de maintenance dans la table système.|  
-|**remote_history_server**|**Int**|Le nom du serveur distant sur lequel le rapport d’historique peut être écrit.|  
-|**max_remote_history_rows**|**Int**|Nombre maximal de lignes allouées dans la table système d'un serveur distant sur lequel le rapport de l'historique peut être écrit.|  
-|**user_defined_1**|**Int**|La valeur par défaut est NULL.|  
+|**max_history_rows**|**int**|Nombre maximal de lignes allouées pour l'enregistrement de l'historique du plan de maintenance dans la table système.|  
+|**remote_history_server**|**int**|Le nom du serveur distant sur lequel le rapport d’historique peut être écrit.|  
+|**max_remote_history_rows**|**int**|Nombre maximal de lignes allouées dans la table système d'un serveur distant sur lequel le rapport de l'historique peut être écrit.|  
+|**user_defined_1**|**int**|La valeur par défaut est NULL.|  
 |**user_defined_2**|**nvarchar(100)**|La valeur par défaut est NULL.|  
 |**user_defined_3**|**datetime**|La valeur par défaut est NULL.|  
 |**user_defined_4**|**uniqueidentifier**|La valeur par défaut est NULL.|  
   
 ### <a name="database-table"></a>Table Database  
   
-|Nom de colonne|Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |**database_name**|Nom de toutes les bases de données associées au plan de maintenance. *database_name* est de type **sysname**.|  
   
 ### <a name="job-table"></a>Table Job  
   
-|Nom de colonne|Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |**job_id**|Identificateur de tous les travaux associés au plan de maintenance. *job_id* est **uniqueidentifier**.|  
   

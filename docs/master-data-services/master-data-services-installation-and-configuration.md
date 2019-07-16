@@ -10,13 +10,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3d9346d301357fff052566cf66b7ce133b5e4ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985285"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installation et configuration de Master Data Services
 
@@ -132,7 +131,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
 
     >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Ajoute la prise en charge de SQL Server Managed Instance. Définissez la valeur de **Instance de SQL Server** à l’hôte d’un Azure SQL Database managed instance. Par exemple, `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Sélectionnez le **type d’authentification** puis cliquez sur **tester la connexion** pour confirmer que vous pouvez vous connecter à la base de données à l’aide des informations d’identification pour le type d’authentification que vous avez sélectionné. Cliquer sur **Suivant**.
+4. Sélectionnez le **type d’authentification** puis cliquez sur **tester la connexion** pour confirmer que vous pouvez vous connecter à la base de données à l’aide des informations d’identification pour le type d’authentification que vous avez sélectionné. Cliquez sur **Suivant**.
 
     >Pour [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], pour vous connecter à Azure SQL Database managed instance, utilisez un des types d’authentification suivants :
     >
@@ -146,7 +145,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  Tapez un nom dans le champ **Nom de la base de données** . (Facultatif) Pour sélectionner un classement Windows, décochez la case **Classement par défaut de SQL Server**, puis cliquez sur une ou plusieurs des options disponibles comme **Respecter la casse**. Cliquer sur **Suivant**.
+4.  Tapez un nom dans le champ **Nom de la base de données** . (Facultatif) Pour sélectionner un classement Windows, décochez la case **Classement par défaut de SQL Server**, puis cliquez sur une ou plusieurs des options disponibles comme **Respecter la casse**. Cliquez sur **Suivant**.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   

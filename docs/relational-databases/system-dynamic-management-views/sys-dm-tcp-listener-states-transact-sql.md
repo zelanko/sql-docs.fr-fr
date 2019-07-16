@@ -1,5 +1,5 @@
 ---
-title: sys.dm_tcp_listener_states (Transact-SQL) | Microsoft Docs
+title: Sys.dm_tcp_listener_states (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f45c634b2a5ab057fd9c2ae878e544a6b7d84f7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 396d2e1c2d0387e716123ce6f87ea5cef4ecbbe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090647"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +35,9 @@ ms.locfileid: "62960023"
 > [!NOTE]
 > L'écouteur du groupe de disponibilité peut écouter le même port que l'écouteur de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans ce cas, les écouteurs sont répertoriées séparément, de la même façon que pour un écouteur Service Broker.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**listener_id**|**Int**|ID interne de. l’écouteur N'accepte pas la valeur NULL.<br /><br /> Clé primaire.|  
+|**listener_id**|**int**|ID interne de. l’écouteur N'accepte pas la valeur NULL.<br /><br /> Clé primaire.|  
 |**ip_address**|**nvarchar(48)**|Adresse IP d'écouteur en ligne et actuellement écoutée. Les adresses IPv4 et IPv6 sont autorisées. Si un écouteur possède les deux types d'adresses, ils sont répertoriés séparément. Un caractère générique IPv4 est affiché en tant que « 0.0.0.0 ». Un caractère générique IPv6 est affiché en tant que « :: ».<br /><br /> N'accepte pas la valeur NULL.|  
 |**is_ipv4**|**bit**|Type d'adresse IP<br /><br /> 1 = IPv4<br /><br /> 0 = IPv6|  
 |**port**|**Int**|Numéro de port sur lequel l'écouteur écoute. N'accepte pas la valeur NULL.|  

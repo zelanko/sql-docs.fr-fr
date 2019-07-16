@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 83d73bb9d075825472cda96a7dcd54e25549de5e
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 2e976e66212fffa63547db160a06941456229d93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962706"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Créer un référentiel de package R local à l’aide de miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +32,7 @@ L’objectif de la création d’un référentiel de packages local consiste à 
 
 Référentiels de packages sont utiles dans ces scénarios :
 
-- **Sécurité**: Nombre d’utilisateurs R est habitué à télécharger et installer de nouveaux packages R à volonté, à partir de CRAN ou d’un de ses sites de mise en miroir. Toutefois, pour des raisons de sécurité, les serveurs de production en cours d’exécution [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ne disposent généralement pas de connectivité internet.
+- **Sécurité** : Nombre d’utilisateurs R est habitué à télécharger et installer de nouveaux packages R à volonté, à partir de CRAN ou d’un de ses sites de mise en miroir. Toutefois, pour des raisons de sécurité, les serveurs de production en cours d’exécution [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ne disposent généralement pas de connectivité internet.
 
 - **Simplifier l’installation hors connexion**: Pour installer le package à un serveur en mode hors connexion nécessite que vous téléchargez également toutes les dépendances de package, Using miniCRAN rend plus facile d’obtenir toutes les dépendances dans le format correct.
 

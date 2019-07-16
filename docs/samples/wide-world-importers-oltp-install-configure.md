@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fc303892fdefda350a2bb6513a71226264e50fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067672"
 ---
 # <a name="installation-and-configuration"></a>Installation et configuration
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ La base de données peut se servir de l’indexation de texte intégral. Toutefo
 
 ### <a name="sql-server-audit"></a>SQL Server Audit
 
-S’applique à : SQL Server
+S'applique à : SQL Server
 
 Activation de l’audit dans SQL Server requiert une configuration de serveur. Pour activer l’audit de SQL Server pour l’exemple de WideWorldImporters, exécutez l’instruction suivante dans la base de données :
 
@@ -86,7 +85,7 @@ Dans la base de données SQL Azure, l’Audit est configuré via le [Azure porta
 
 ### <a name="row-level-security"></a>Sécurité au niveau des lignes
 
-S’applique à : Azure SQL Database
+S'applique à : Azure SQL Database
 
 La sécurité au niveau des lignes n’est pas activée par défaut dans le téléchargement de fichier bacpac de WideWorldImporters. Pour activer la sécurité de niveau ligne dans la base de données, exécutez la procédure stockée suivante :
 

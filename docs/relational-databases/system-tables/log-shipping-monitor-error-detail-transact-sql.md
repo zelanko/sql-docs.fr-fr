@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c38a625-60d2-4ee2-bcf3-2ba367914220
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e0228072bee91f96e816a1d0f369f85fa486728
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e441e5165262a4455e34cb9a0adb55b9679578f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990057"
 ---
 # <a name="logshippingmonitorerrordetail-transact-sql"></a>log_shipping_monitor_error_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +31,11 @@ ms.locfileid: "62719600"
   
  Les tables liées à l'historique et à la surveillance sont également utilisées au niveau du serveur principal et des serveurs secondaires.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**uniqueidentifier**|ID principal pour la sauvegarde ou ID secondaire pour la copie ou la restauration.|  
 |**agent_type**|**tinyint**|Type d'opération de copie des journaux de transaction.<br /><br /> 0 = Sauvegarde.<br /><br /> 1 = Copie.<br /><br /> 2 = Restauration.|  
-|**session_id**|**Int**|ID de session pour le travail de sauvegarde/copie/restauration.|  
+|**session_id**|**int**|ID de session pour le travail de sauvegarde/copie/restauration.|  
 |**database_name**|**sysname**|Nom de la base de données associée à cet enregistrement d'erreur. Base de données primaire pour la sauvegarde, base de données secondaire pour la restauration ou vide pour la copie.|  
 |**sequence_number**|**Int**|Numéro incrémentiel indiquant l'ordre correct des informations dans le cas d'erreurs qui s'étendent sur plusieurs enregistrements.|  
 |**log_time**|**datetime**|Date et heure de création de l'enregistrement.|  

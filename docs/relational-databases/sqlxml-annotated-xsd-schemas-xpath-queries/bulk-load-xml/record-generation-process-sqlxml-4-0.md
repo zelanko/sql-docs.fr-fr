@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c89d3859ad7f9f8f32dfc1cddd1ed805aa466867
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 73b7a8b42832c2d0a6c8c6d9589f953a93f39ce8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005298"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Processus de génération d'enregistrements (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ ms.locfileid: "56038420"
 >  Dans ce modèle, comme un enregistrement est inséré lorsque la balise de fin est atteinte (ou lorsque le nœud est hors de portée), vous devez définir toutes les données associées à l'enregistrement dans l'étendue du nœud.  
   
 ## <a name="record-subset-and-the-key-ordering-rule"></a>Sous-ensemble d’enregistrements et de la clé de tri de règle  
- Lorsque vous spécifiez un schéma de mappage qui utilise  **\<SQL : Relationship >**, le terme de sous-ensemble fait référence au jeu d’enregistrements qui est généré sur le côté étranger de la relation. Dans l’exemple suivant, les enregistrements CustOrder sont sur le côté étranger,  **\<SQL : Relationship >**.  
+ Lorsque vous spécifiez un schéma de mappage qui utilise  **\<SQL : Relationship >** , le terme de sous-ensemble fait référence au jeu d’enregistrements qui est généré sur le côté étranger de la relation. Dans l’exemple suivant, les enregistrements CustOrder sont sur le côté étranger,  **\<SQL : Relationship >** .  
   
  Prenons l'exemple d'une base de données contenant les tables suivantes :  
   
@@ -149,9 +148,9 @@ ms.locfileid: "56038420"
   
  L'exemple de données XML et les étapes de création d'un exemple fonctionnel sont fournis ci-dessous.  
   
--   Quand un  **\<client >** nœud d’élément dans le fichier de données XML entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table Cust. Chargement en masse XML copie ensuite les valeurs de colonne nécessaires (CustomerID, CompanyName et City) à partir de la  **\<CustomerID >**,  **\<CompanyName >** et le  **\<Ville >** éléments enfants en tant que ces éléments entrent dans l’étendue.  
+-   Quand un  **\<client >** nœud d’élément dans le fichier de données XML entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table Cust. Chargement en masse XML copie ensuite les valeurs de colonne nécessaires (CustomerID, CompanyName et City) à partir de la  **\<CustomerID >** ,  **\<CompanyName >** et le  **\<Ville >** éléments enfants en tant que ces éléments entrent dans l’étendue.  
   
--   Quand un  **\<ordre >** nœud d’élément entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table CustOrder. Chargement en masse XML copie la valeur de la **OrderID** à cet enregistrement d’attribut. La valeur requise pour la colonne CustomerID est obtenue à partir de la  **\<CustomerID >** élément enfant de le  **\<client >** élément. Chargement en masse XML utilise les informations qui sont spécifiées dans  **\<SQL : Relationship >** pour obtenir la valeur de clé étrangère CustomerID pour cet enregistrement, sauf si le **CustomerID** attribut a été spécifié dans le  **\<ordre >** élément. La règle générale est que si l’élément enfant spécifie explicitement une valeur pour l’attribut de clé étrangère, chargement en masse XML utilise cette valeur et n’obtient pas la valeur de l’élément parent en utilisant le **\<SQL : Relationship >**. Que ce  **\<ordre >** nœud d’élément est hors de portée, le chargement en masse XML envoie l’enregistrement à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et traite ensuite tous les subséquent  **\<ordre >** nœuds d’élément de la même manière.  
+-   Quand un  **\<ordre >** nœud d’élément entre dans l’étendue, le chargement en masse XML génère un enregistrement pour la table CustOrder. Chargement en masse XML copie la valeur de la **OrderID** à cet enregistrement d’attribut. La valeur requise pour la colonne CustomerID est obtenue à partir de la  **\<CustomerID >** élément enfant de le  **\<client >** élément. Chargement en masse XML utilise les informations qui sont spécifiées dans  **\<SQL : Relationship >** pour obtenir la valeur de clé étrangère CustomerID pour cet enregistrement, sauf si le **CustomerID** attribut a été spécifié dans le  **\<ordre >** élément. La règle générale est que si l’élément enfant spécifie explicitement une valeur pour l’attribut de clé étrangère, chargement en masse XML utilise cette valeur et n’obtient pas la valeur de l’élément parent en utilisant le **\<SQL : Relationship >** . Que ce  **\<ordre >** nœud d’élément est hors de portée, le chargement en masse XML envoie l’enregistrement à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et traite ensuite tous les subséquent  **\<ordre >** nœuds d’élément de la même manière.  
   
 -   Enfin, le  **\<client >** nœud d’élément est hors de portée. À ce stade, le chargement en masse XML envoie l'enregistrement de client à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le chargement en masse XML suit ce processus pour tous les clients suivants dans le flux de données XML.  
   

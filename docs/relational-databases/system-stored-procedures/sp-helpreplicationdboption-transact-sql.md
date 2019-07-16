@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe71adc1be14b40d18baf50eecd68c2bef65c836
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997571"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @dbname = ] 'dbname'` Est le nom de la base de données. *dbname* est **sysname**, avec une valeur par défaut **%**. Si **%**, puis le jeu de résultats contient toutes les bases de données sur le serveur de publication, sinon seules les informations sur la base de données spécifiée sont retournées. Aucune information n'est retournée sur les bases de données pour lesquelles l'utilisateur ne possède pas les autorisations appropriées, comme décrit ci-dessous.  
+`[ @dbname = ] 'dbname'` Est le nom de la base de données. *dbname* est **sysname**, avec une valeur par défaut **%** . Si **%** , puis le jeu de résultats contient toutes les bases de données sur le serveur de publication, sinon seules les informations sur la base de données spécifiée sont retournées. Aucune information n'est retournée sur les bases de données pour lesquelles l'utilisateur ne possède pas les autorisations appropriées, comme décrit ci-dessous.  
   
 `[ @type = ] 'type'` Restreint le jeu de résultats aux seules les bases de données sur lequel l’option de réplication spécifié *type* valeur a été activée. *type* est **sysname**, et peut prendre l’une des valeurs suivantes.  
   
@@ -54,10 +53,10 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de la base de données.|  
-|**id**|**Int**|Identificateur de la base de données.|  
+|**name**|**sysname**|Nom de la base de données.|  
+|**id**|**int**|Identificateur de la base de données.|  
 |**transpublish**|**bit**|Si la base de données a été activée pour la publication transactionnelle ou d’instantané sachant que la valeur **1** signifie que la publication transactionnelle ou instantané est activée.|  
 |**mergepublish**|**bit**|Si la base de données a été activée pour la fusion de publication ; sachant que la valeur **1** signifie que la publication de fusion est activée.|  
 |**dbowner**|**bit**|Si l’utilisateur est membre de la **db_owner** fixe le rôle de base de données ; où la valeur **1** indique que l’utilisateur est un membre de ce rôle.|  

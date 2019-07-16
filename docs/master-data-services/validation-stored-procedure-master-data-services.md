@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 332d3c86-4440-4f12-a6cb-ffbfbccde52c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1b01db51186bcdbc3c7279b88ebff4b72bcd1899
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7861b0fffa8c85f48ba3d95d417e31817c030ae9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017356"
 ---
 # <a name="validation-stored-procedure-master-data-services"></a>Procédure stockée de validation (Master Data Services)
 

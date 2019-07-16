@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f60ce03d303941855b0b1eaa242b03966db1e79f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946106"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Requêtes XQuery impliquant une hiérarchie
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,10 +29,10 @@ ms.locfileid: "51670838"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. Extraction, à partir des instructions de fabrication, des postes de travail ainsi que de la première étape de fabrication réalisée sur ces différents postes  
+### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>R. Extraction, à partir des instructions de fabrication, des postes de travail ainsi que de la première étape de fabrication réalisée sur ces différents postes  
  Pour le modèle de produit 7, la requête construit le document XML qui comprend le <`ManuInstr`> élément, avec **ProductModelID** et **ProductModelName** attributs et un ou plusieurs <`Location`> éléments enfants.  
   
- Chaque élément <`Location`> dispose de son propre ensemble d'attributs et d'un élément enfant <`step`>. Cet élément enfant <`step`> représente la première étape de fabrication réalisée sur le poste de travail.  
+ Chaque <`Location`> élément possède son propre ensemble d’attributs et d’un <`step`> élément enfant. Cela <`step`> élément enfant est la première étape de fabrication sur le poste de travail.  
   
 ```sql
 SELECT Instructions.query('  
@@ -62,7 +61,7 @@ WHERE ProductModelID=7
   
 -   Le **SQL :Column()** est utilisé pour inclure une valeur relationnelle dans le code XML qui est en cours de construction.  
   
--   Lors de la construction de l'élément <`Location`>, $wc/@* récupère tous les attributs des postes de travail.  
+-   Lors de la construction du <`Location`> élément, $wc/@* récupère tous les attributs emplacement du centre de travail.  
   
 -   Le **string()** fonction retourne la valeur de chaîne dans le <`step`> élément.  
   
@@ -85,7 +84,7 @@ WHERE ProductModelID=7
 ```  
   
 ### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. Recherche de tous les numéros de téléphone de la colonne AdditionalContactInfo  
- La requête suivante récupère tous les numéros de téléphone supplémentaires définis pour un contact client spécifique en recherchant l'élément <`telephoneNumber`> dans l'ensemble de la hiérarchie. Dans la mesure où l'élément <`telephoneNumber`> peut apparaître n'importe où dans la hiérarchie, la requête utilise l'opérateur descendant-and-self (//) dans la recherche.  
+ La requête suivante récupère les numéros de téléphone supplémentaires pour un contact client spécifique en parcourant la hiérarchie entière pour le <`telephoneNumber`> élément. Étant donné que le <`telephoneNumber`> élément peut apparaître n’importe où dans la hiérarchie, la requête utilise l’opérateur descendant- and -self (/ /) dans la recherche.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -99,7 +98,7 @@ FROM  Person.Contact
 WHERE ContactID = 1  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```xml
 \<act:number   
@@ -112,7 +111,7 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- Pour récupérer uniquement les numéros de téléphone de premier niveau, et plus particulièrement les éléments enfants <`telephoneNumber`> de <`AdditionalContactInfo`>, l'expression FOR de la requête devient  
+ Pour récupérer uniquement les numéros de téléphone de premier niveau, en particulier le <`telephoneNumber`> éléments enfants de <`AdditionalContactInfo`>, l’expression FOR de la requête passe à  
   
  `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber` .  
   

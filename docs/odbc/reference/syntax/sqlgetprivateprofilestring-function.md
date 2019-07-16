@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17ac06d65d519be86ec077e6c6d39896c7f5ad46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d58fe69e487b4f61384f9bd146b17c6d9ada9ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061473"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString, fonction
 **Conformité**  
- Version introduite : ODBC 2.0  
+ Version introduite : ODBC VERSION 2.0  
   
  **Résumé**  
  **SQLGetPrivateProfileString** Obtient une liste de noms de valeurs ou de données correspond à la valeur des informations système.  

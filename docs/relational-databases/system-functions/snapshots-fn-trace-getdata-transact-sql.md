@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 525d33568170543538473d403985ff8cb8b54c30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a85a911d4c9f5cd4565e9839f3be44a4e2366079
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067754"
 ---
 # <a name="snapshotsfntracegetdata-transact-sql"></a>snapshots.fn_trace_getdata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +49,11 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|\<Toutes les colonnes de trace >|\<Varie >|Données de trace de la table snapshots.trace_data de la base de données de l'entrepôt de données de gestion.<br /><br /> Pour obtenir la liste des colonnes pour la trace spécifiée, utilisez la requête suivante :<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **Remarque :** les colonnes qui sont retournées par la fonction snapshots.fn_trace_gettable correspondent aux valeurs dans la colonne name dans la vue système sys.trace_columns. La seule différence est que la colonne GroupID n'est pas retournée par la fonction.|  
+|\<Toutes les colonnes de trace >|\<Varie >|Données de trace de la table snapshots.trace_data de la base de données de l'entrepôt de données de gestion.<br /><br /> Pour obtenir la liste des colonnes pour la trace spécifiée, utilisez la requête suivante :<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **Remarque :** Les colonnes qui sont retournées par la fonction snapshots.fn_trace_gettable correspondent aux valeurs dans la colonne name dans la vue système sys.trace_columns. La seule différence est que la colonne GroupID n'est pas retournée par la fonction.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation SELECT pour mdw_reader.  
   
 ## <a name="see-also"></a>Voir aussi  

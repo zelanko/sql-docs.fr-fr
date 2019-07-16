@@ -2,19 +2,18 @@
 title: Installer les packs d’administration SCOM - Analytique Platform System | Microsoft Docs
 description: Suivez ces étapes pour télécharger et installer les packs d’administration de System Center Operations Manager (SCOM) pour SQL Server PDW. Les packs d’administration sont requises pour analyser SQL Server PDW à partir de SCOM.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac213e71d3754ccf610ba5c0874cea32c3737760
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63215514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960818"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Installer des packs d’administration de SQL Server Operations Manager (SCOM) pour le système de plateforme d’Analytique
 Suivez ces étapes pour télécharger et installer les packs d’administration de System Center Operations Manager (SCOM) pour SQL Server PDW. Les packs d’administration sont requises pour analyser SQL Server PDW à partir de SCOM.  
@@ -33,7 +32,7 @@ Pour les versions antérieures de PDW sans APS, téléchargez le[Pack d’analys
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
-## <a name="Step2"></a>Étape 2 : Installer les packs d’administration  
+## <a name="Step2"></a>Étape 2 : Installer les packs d’administration  
   
 ### <a name="install-the-sql-server-appliance-base-management-pack"></a>Installez le Pack de gestion de la Base de SQL Server Appliance  
   

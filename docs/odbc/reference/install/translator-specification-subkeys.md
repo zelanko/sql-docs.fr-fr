@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec94f3e02b720617e8f7369b12a916c2bbbe7b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093797"
 ---
 # <a name="translator-specification-subkeys"></a>Sous-clés de spécification de convertisseur
 Chaque convertisseur répertorié dans la sous-clé de convertisseurs de ODBC a une sous-clé de son propre. Cette sous-clé a le même nom que la valeur correspondante sous la sous-clé ODBC traducteurs. Les valeurs sous cette sous-clé répertorient les chemins complets du traducteur et le programme d’installation de traducteur DLL et le décompte d’utilisation. Les formats des valeurs sont comme indiqué dans le tableau suivant.  
   
 |Nom|Type de données|Données|  
 |----------|---------------|----------|  
-|Convertisseur|REG_SZ|*translator-DLL-path*|  
-|Installation|REG_SZ|*setup-DLL-path*|  
+|Convertisseur|REG_SZ|*chemin de DLL de traduction*|  
+|Installation|REG_SZ|*le programme d’installation-DLL-path*|  
 |UsageCount|REG_DWORD|*nombre*|  
   
  Pour plus d’informations sur les compteurs d’utilisation, consultez [nombre d’utilisations](../../../odbc/reference/install/usage-counting.md) plus haut dans cette section.  

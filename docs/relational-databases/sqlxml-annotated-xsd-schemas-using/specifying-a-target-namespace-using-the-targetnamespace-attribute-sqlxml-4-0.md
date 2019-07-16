@@ -19,14 +19,13 @@ ms.assetid: f3df9877-6672-4444-8245-2670063c9310
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a52ce206eee69fa585a72788e46f8f7174d936a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4d0ec8118fd7496c34d4107f0e824145ca6ae0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066993"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Spécification d'un espace de noms cible à l'aide de l'attribut targetNamespace (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "65980828"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-a-target-namespace"></a>A. Spécification d'un espace de noms cible  
+### <a name="a-specifying-a-target-namespace"></a>R. Spécification d'un espace de noms cible  
  Le schéma XSD suivant spécifie un espace de noms cible à l’aide de la **xsd : targetNamespace** attribut. Le schéma définit également la **elementFormDefault** et **attributeFormDefault** pour les valeurs d’attribut **« unqualified »** (la valeur par défaut pour ces attributs). Il s’agit d’une déclaration globale et affecte tous les éléments locaux ( **\<ordre >** dans le schéma) et les attributs (**CustomerID**, **ContactName**et  **OrderID** dans le schéma).  
   
 ```  

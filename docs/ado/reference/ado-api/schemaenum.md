@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4aa145a3c42c5ed807a63dc551e67afe6af95cde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931111"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Spécifie le type de schéma **Recordset** qui le [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) récupère de la méthode.  
@@ -40,12 +39,12 @@ Spécifie le type de schéma **Recordset** qui le [OpenSchema](../../../ado/refe
 |**adSchemaAsserts**|0|Retourne les assertions définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes ASSERTIONS)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|Retourne les attributs physiques associés aux catalogues accessibles à partir du SGBD.<br /><br /> (Ensemble de lignes de catalogues)|CATALOG_NAME|  
 |**adSchemaCharacterSets**|2|Retourne les jeux de caractères définies dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes CHARACTER_SETS)|CHARACTER_SET_CATALOG CHARACTER_SET_SCHEMA CHARACTER_SET_NAME|  
-|**adSchemaCheckConstraints**|5|Retourne les contraintes check définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (CHECK_CONSTRAINTS) Ensemble de lignes)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
+|**adSchemaCheckConstraints**|5\.|Retourne les contraintes check définies dans le catalogue qui sont détenues par un utilisateur donné.<br /><br /> (CHECK_CONSTRAINTS) Ensemble de lignes)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCollations**|3|Retourne les classements de caractères définies dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes de classements)|COLLATION_CATALOG COLLATION_SCHEMA COLLATION_NAME|  
 |**adSchemaColumnPrivileges**|13|Retourne les privilèges sur les colonnes de tables définies dans le catalogue qui sont disponibles pour ou accordés par un utilisateur donné.<br /><br /> (Ensemble de lignes COLUMN_PRIVILEGES)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME GRANTOR GRANTEE|  
 |**adSchemaColumns**|4|Retourne les colonnes des tables (vues comprises) définies dans le catalogue qui sont accessibles à un utilisateur donné.<br /><br /> (Ensemble de lignes COLUMNS)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
-|**adSchemaColumnsDomainUsage**|11|Retourne les colonnes définies dans le catalogue qui dépendent d’un domaine défini dans le catalogue et détenues par un utilisateur donné.<br /><br /> (COLUMN_DOMAIN_USAGE Rowset)|DOMAIN_CATALOG DOMAIN_SCHEMA NOM_DOMAINE COLUMN_NAME|  
-|**adSchemaConstraintColumnUsage**|6|Retourne les colonnes utilisées par les contraintes référentielles, les contraintes uniques, les contraintes de validation et les assertions, définies dans le catalogue et détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes CONSTRAINT_COLUMN_USAGE)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaColumnsDomainUsage**|11|Retourne les colonnes définies dans le catalogue qui dépendent d’un domaine défini dans le catalogue et détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes COLUMN_DOMAIN_USAGE)|DOMAIN_CATALOG DOMAIN_SCHEMA NOM_DOMAINE COLUMN_NAME|  
+|**adSchemaConstraintColumnUsage**|6\.|Retourne les colonnes utilisées par les contraintes référentielles, les contraintes uniques, les contraintes de validation et les assertions, définies dans le catalogue et détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes CONSTRAINT_COLUMN_USAGE)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaConstraintTableUsage**|7|Retourne les tables qui sont utilisées par les contraintes référentielles, les contraintes uniques, les contraintes check et les assertions définies dans le catalogue et détenues par un utilisateur donné.<br /><br /> (Ensemble de lignes CONSTRAINT_TABLE_USAGE)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|Retourne des informations sur les cubes disponibles dans un schéma (ou le catalogue, si le fournisseur ne prend pas en charge les schémas).<br /><br /> (CUBES ensemble de lignes *)|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
 |**adSchemaDBInfoKeywords**|30|Retourne une liste de mots clés spécifiques au fournisseur.<br /><br /> (IDBInfo::GetKeywords)|\<Aucun >|  

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1b5ade681827e28a67262c8514be35e1e914015
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b8bec28a2e7778a449cb36aeee81481a311c6b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018064"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -37,11 +36,11 @@ ms.locfileid: "47658877"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**uid**|**smallint**|ID d'utilisateur, unique dans cette base de données.<br /><br /> 1 = Propriétaire de la base de données<br /><br /> Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**nom**|**sysname**|Nom d'utilisateur ou de groupe, unique dans cette base de données.|  
+|**name**|**sysname**|Nom d'utilisateur ou de groupe, unique dans cette base de données.|  
 |**sid**|**varbinary(85)**|Identificateur de sécurité pour cette entrée.|  
 |**Rôles**|**varbinary(2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**createdate**|**datetime**|Date de l'ajout du compte.|  
@@ -51,14 +50,14 @@ ms.locfileid: "47658877"
 |**gid**|**smallint**|ID du groupe auquel l'utilisateur appartient. Si **uid** est identique à **gid**, cette entrée définit un groupe. Déborde ou retourne la valeur NULL si le nombre total d'utilisateurs et de groupes dépasse 32 767.|  
 |**environ**|**varchar(255)**|Réservé.|  
 |**hasdbaccess**|**Int**|1 = Le compte a accès à la base de données.|  
-|**IsLogin**|**Int**|1 = Le compte est un groupe Windows ou un utilisateur Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bénéficiant d'un compte de connexion.|  
-|**isntname**|**Int**|1 = Le compte est un utilisateur ou groupe Windows.|  
-|**isntgroup**|**Int**|1 = Le compte est un groupe Windows.|  
+|**IsLogin**|**int**|1 = Le compte est un groupe Windows ou un utilisateur Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bénéficiant d'un compte de connexion.|  
+|**isntname**|**int**|1 = Le compte est un utilisateur ou groupe Windows.|  
+|**isntgroup**|**int**|1 = Le compte est un groupe Windows.|  
 |**isntuser**|**Int**|1 = Le compte est un utilisateur Windows.|  
 |**issqluser**|**Int**|1 = Le compte est un utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**isaliased**|**Int**|1 = Le compte est l'alias d'un autre utilisateur.|  
-|**issqlrole**|**Int**|1 = Le compte est un rôle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**isapprole**|**Int**|1 = Le compte est un rôle d’application.|  
+|**isaliased**|**int**|1 = Le compte est l'alias d'un autre utilisateur.|  
+|**issqlrole**|**int**|1 = Le compte est un rôle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**isapprole**|**int**|1 = Le compte est un rôle d’application.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage des Tables système avec les vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

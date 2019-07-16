@@ -5,17 +5,16 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f7b7daefb0f5e9514372fadd9377b05c84784e34
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: b3b5b5a8a1386086f03681db49b72aca5a294d3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961666"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Quelles sont les nouveautés dans SQL Server Machine Learning Services
 
@@ -31,7 +30,7 @@ Cette version ajoute les fonctionnalités les plus demandées pour les opératio
 > [!NOTE]
 > Pour les nouveautés nouvelle documentation sur Java dans SQL Server 2019, consultez le [Nouveautés Extensions en langage SQL Server ?](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
 
-| Version | Mise à jour de fonctionnalité |
+| Libérer | Mise à jour de fonctionnalité |
 |---------|----------------|
 | CTP 3.0 | Aucune modification. |
 | CTP 2.5 | Aucune modification. |
@@ -102,7 +101,7 @@ En outre, **SQL Server 2016 R Server (autonome)** a été publié comme un moyen
 
 Pour la fonctionnalité annonces global, consultez [What ' s New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
-| Version |Mise à jour de fonctionnalité |
+| Libérer |Mise à jour de fonctionnalité |
 |---------|----------------|
 | Ajouts CU | [**Calcul de score en temps réel** ](real-time-scoring.md) s’appuie sur les bibliothèques C++ natives pour lire un modèle stocké dans un format binaire optimisé, puis générer des prédictions sans avoir à appeler le runtime R. Cela rend les opérations de notation beaucoup plus rapides. Avec la notation en temps réel, vous pouvez exécuter une procédure stockée ou exécuter une notation en temps réel à partir de code R. Calcul de score en temps réel est également disponible pour SQL Server 2016, si l’instance est mis à niveau vers la dernière version de [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
 | Version initiale | [**Intégration de R pour la base de données analytique**](r/sql-server-r-services.md). <br/><br/> Packages R pour R appelant les fonctions dans T-SQL et vice versa. Fonctions RevoScaleR fournissent analytique R à l’échelle en divisant les données en composants, la coordination et la gestion distribuée de traitement et l’agrégation des résultats. Dans SQL Server 2016 R Services (en base de données), le moteur de RevoScaleR est intégré à une instance du moteur de base de données, chambres data et analytique ensemble dans le même contexte de traitement. <br/><br/>Intégration de T-SQL et R via [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Vous pouvez appeler n’importe quel code R à l’aide de cette procédure stockée. Cette infrastructure sécurisée permet le déploiement d’entreprise des modèles de Rn et des scripts qui peuvent être appelées à partir d’une application à l’aide d’une procédure stockée simple. Gains de performances supplémentaires sont réalisés par les données de diffusion en continu à partir de SQL pour les processus R et la parallélisation des anneaux MPI. <br/><br/>Vous pouvez utiliser le code T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) (fonction) pour effectuer [notation native](sql-native-scoring.md) sur un modèle préentraîné qui a été précédemment enregistré dans le format binaire requis.|

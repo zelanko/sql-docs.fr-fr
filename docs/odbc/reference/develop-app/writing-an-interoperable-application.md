@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8b42b8ae-7862-4b63-a0b3-2a204e0c43a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e559eab5787a64b6bdf0850147d7d9128fc435c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f24e50b7f6dd8b129a2777ce1132ec426b7ea182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078981"
 ---
 # <a name="writing-an-interoperable-application"></a>Écriture d’une application interopérable
 Chaque fois qu’une application utilise le même code sur plus d’un pilote, ce code doit être interopérable entre ces pilotes. Dans la plupart des cas, il s’agit d’une tâche facile. Par exemple, le code pour extraire les lignes avec un curseur avant uniquement est identique pour tous les pilotes. Dans certains cas, cela peut être plus difficile. Par exemple, le code pour construire des identificateurs pour une utilisation dans les instructions SQL doit prendre en compte la casse de l’identificateur, des guillemets et des conventions d’affectation de noms une seule partie, les deux parties et les trois parties.  

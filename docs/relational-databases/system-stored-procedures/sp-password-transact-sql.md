@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c1904b1549613e53c685d784628696e84b134a03
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c02b9327dbff75e3c0816bb3eec19e3cb3135d50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008921"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_password [ [ @old = ] 'old_password' , ]
 `[ @new = ] 'new_password'` Est le nouveau mot de passe. *new_password* est **sysname**, sans valeur par défaut. *old_password* doit être spécifié si les paramètres nommés ne sont pas utilisés.  
   
 > [!IMPORTANT]  
->  N'utilisez pas de mot de passe NULL, Utilisez un mot de passe fort. Pour plus d’informations, consultez [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
+>  N'utilisez pas de mot de passe NULL, Utilisez un mot de passe fort. Pour plus d’informations, consultez la page [Mots de passe forts](../../relational-databases/security/strong-passwords.md).  
   
 `[ @loginame = ] 'login'` Est le nom de la connexion affectée par la modification de mot de passe. *login* est de type **sysname**, avec NULL comme valeur par défaut. *connexion* doit déjà exister et peut être spécifié uniquement par les membres de la **sysadmin** ou **securityadmin** rôles serveur fixes.  
   
@@ -69,7 +68,7 @@ sp_password [ [ @old = ] 'old_password' , ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-changing-the-password-of-a-login-without-knowing-the-old-password"></a>A. Modification du mot de passe d'une connexion sans disposer de l'ancien  
+### <a name="a-changing-the-password-of-a-login-without-knowing-the-old-password"></a>R. Modification du mot de passe d'une connexion sans disposer de l'ancien  
  L'exemple suivant montre l'utilisation de `ALTER LOGIN` pour remplacer le mot de passe de la connexion `Victoria` par `B3r1000d#2-36`. Cette méthode est recommandée. L'utilisateur qui exécute cette commande doit avoir l'autorisation CONTROL SERVER.  
   
 ```  

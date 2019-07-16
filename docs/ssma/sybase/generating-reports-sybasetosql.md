@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19278f6a-6d58-4867-9d71-c6228040466e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bb377e36f73bad59da35fabc2f6e9189544230e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a63ad1dad1a1dcab28e2a8ffb5c96d9564210475
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029133"
 ---
 # <a name="generating-reports-sybasetosql"></a>Génération de rapports (SybaseToSQL)
 Les rapports de certaines activités effectuées à l’aide des commandes sont générées dans la Console SSMA au niveau d’arborescence objet.  
@@ -35,10 +34,10 @@ Utilisez la procédure suivante pour générer des rapports :
     |**Sl. Non.**|**Commande**|**Titre de rapport**|  
     |1|generate-assessment-report|AssessmentReport&lt;n&gt;. XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|migrer des données|DataMigrationReport&lt;n&gt;.XML|  
-    |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
-    |5|synchronize-target|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |3|migrer des données|DataMigrationReport&lt;n&gt;. XML|  
+    |4|instruction CONVERT-sql|ConvertSQLReport&lt;n&gt;.XML|  
+    |5\.|synchroniser la cible|TargetSynchronizationReport&lt;n&gt;.XML|  
+    |6\.|actualisation de base de données|SourceDBRefreshReport&lt;n&gt;. XML|  
   
     > [!IMPORTANT]  
     > Un rapport de sortie est différent de rapport d’évaluation. Le premier est un rapport sur les performances d’une commande exécutée lors de la, ce dernier est un rapport XML pour la consommation par programmation.  
@@ -61,7 +60,7 @@ Utilisez la procédure suivante pour générer des rapports :
     ||||  
     |-|-|-|  
     |**Sl. Non.**|**Commande et paramètre**|**Description de la sortie**|  
-    |1|report-errors="false"|Aucun détail d’erreur / avertissement / messages d’informations.|  
+    |1|signaler les erreurs = « false »|Aucun détail d’erreur / avertissement / messages d’informations.|  
     |2|report-errors="true"|Détails de l’erreur / avertissement / messages d’informations.|  
   
     > [!NOTE]  
@@ -109,11 +108,11 @@ La commande **cible synchroniser** a **erreurs de rapports pour** paramètre, qu
   
 **en cas d’erreur :** Spécifie s’il faut spécifier des erreurs de synchronisation comme des avertissements ou erreurs. Options disponibles pour en cas d’erreur :  
   
--   report-total-as-warning  
+-   Rapport total en tant qu’avertissement  
   
--   report-each-as-warning  
+-   rapport-each-sous-avertissement  
   
--   fail-script  
+-   Échec-script  
   
 ### <a name="refresh-from-database"></a>actualisation-de-base de données :  
 La commande **actualisation à partir de base de données** a **erreurs de rapports pour** paramètre, qui spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation. Ensuite, un fichier par nom **SourceDBRefreshReport&lt;n&gt;. XML** est créé à l’emplacement spécifié, où **&lt;n&gt;** est le nombre de fichiers uniques qui incrémente par un chiffre à chaque exécution de la même commande.  
@@ -139,11 +138,11 @@ La commande **actualisation à partir de base de données** a **erreurs de rappo
   
 **en cas d’erreur :** Spécifie s’il faut spécifier des erreurs d’actualisation comme des avertissements ou erreurs. Options disponibles pour en cas d’erreur :  
   
--   report-total-as-warning  
+-   Rapport total en tant qu’avertissement  
   
--   report-each-as-warning  
+-   rapport-each-sous-avertissement  
   
--   fail-script  
+-   Échec-script  
   
 ## <a name="see-also"></a>Voir aussi  
 [Exécution de la Console SSMA (Sybasetosql)](https://msdn.microsoft.com/ea8950b7-fabc-4aa4-89f8-9573a2617d70)  

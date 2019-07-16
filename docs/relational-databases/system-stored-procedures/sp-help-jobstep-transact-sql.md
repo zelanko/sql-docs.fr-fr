@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5faad4f4e0de6f9c56115bff59933360f551ab55
-ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
+ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67866272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090053"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,10 +66,10 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**step_name**|**sysname**|Nom de l’étape du travail.|  
 |**subsystem**|**nvarchar(40)**|Sous-système dans lequel la commande d'étape doit être exécutée.|  
 |**commande**|**nvarchar(max)**|Commande exécutée dans l'étape.|  
-|**flags**|**int**|Masque de bits des valeurs qui contrôle le comportement de l'étape.|  
+|**flags**|**Int**|Masque de bits des valeurs qui contrôle le comportement de l'étape.|  
 |**cmdexec_success_code**|**int**|Pour un **CmdExec** étape, voici le code de sortie d’une commande réussie.|  
 |**on_success_action**|**tinyint**|Action à effectuer si l'étape est exécutée correctement :<br /><br /> **1** = quitter le travail rapportant une réussite.<br /><br /> **2** = quitter le travail rapportant un échec.<br /><br /> **3** = passer à l’étape suivante.<br /><br /> **4** = passer à l’étape.|  
-|**on_success_step_id**|**int**|Si **on_success_action** 4, cela indique la prochaine étape à exécuter.|  
+|**on_success_step_id**|**Int**|Si **on_success_action** 4, cela indique la prochaine étape à exécuter.|  
 |**on_fail_action**|**tinyint**|Action à exécuter si l'étape échoue. Les valeurs sont les mêmes que **on_success_action**.|  
 |**on_fail_step_id**|**int**|Si **on_fail_action** 4, cela indique la prochaine étape à exécuter.|  
 |**server**|**sysname**|Réservé.|  
@@ -80,11 +79,11 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_interval**|**Int**|Intervalle (en minutes) entre les tentatives.|  
 |**os_run_priority**|**int**|Réservé.|  
 |**output_file_name**|**nvarchar(200)**|Fichier de commande de sortie doit être écrite ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, et **PowerShell** étapes uniquement).|  
-|**last_run_outcome**|**int**|Résultat de l'étape lors de sa dernière exécution.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **2** = Retry<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
+|**last_run_outcome**|**int**|Résultat de l'étape lors de sa dernière exécution.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **2** = nouvelle tentative<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
 |**last_run_duration**|**Int**|Durée (hhmmss) de l'étape lors de sa dernière exécution.|  
-|**last_run_retries**|**int**|Nombre de tentatives de la commande lors de la dernière exécution de l'étape.|  
+|**last_run_retries**|**Int**|Nombre de tentatives de la commande lors de la dernière exécution de l'étape.|  
 |**last_run_date**|**Int**|Date de début de la dernière exécution de l'étape.|  
-|**last_run_time**|**Int**|Heure de début de la dernière exécution de l'étape.|  
+|**last_run_time**|**int**|Heure de début de la dernière exécution de l'étape.|  
 |**proxy_id**|**int**|Proxy pour les étapes du travail.|  
   
 ## <a name="remarks"></a>Notes  

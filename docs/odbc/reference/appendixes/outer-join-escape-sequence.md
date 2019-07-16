@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 576fe7268ccf71a8c926f6b1124ebbf8a8c711b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100643"
 ---
 # <a name="outer-join-escape-sequence"></a>Séquence d’échappement pour les jointures externes
 ODBC utilise les séquences d’échappement pour les jointures externes. La syntaxe de cette séquence d’échappement est comme suit :  
@@ -36,7 +35,7 @@ ODBC utilise les séquences d’échappement pour les jointures externes. La syn
   
  *ODBC-ÉCHAP-initiateur* JO *jointure externe ODBC ÉCHAP-marque de fin*  
   
- *outer-join* ::= *table-name* [*correlation-name*] {LEFT &#124; RIGHT &#124; FULL}  
+ *jointure externe* :: = *nom de la table* [*nom de corrélation*] {gauche &#124; droite &#124; complète}  
   
  JOINTURE externe {*nom de la table* [*nom de corrélation*] &#124; *jointure externe*} ON  
   
@@ -46,7 +45,7 @@ ODBC utilise les séquences d’échappement pour les jointures externes. La syn
   
  *nom de corrélation* :: = *nom défini par l’utilisateur*  
   
- *ODBC-esc-initiator* ::= {  
+ *ODBC-ÉCHAP-initiateur* :: = {}  
   
  *ODBC ÉCHAP-marque de fin* :: =}  
   

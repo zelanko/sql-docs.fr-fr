@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 92540447-131c-491c-b033-c064c7d950e1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0071b7c0f955befba458a41ce813a8aff5aabe8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc2732797551317a392b0ab55d9ecbeb28d990a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091942"
 ---
 # <a name="systriggerevents-transact-sql"></a>sys.trigger_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47748937"
 > [!NOTE]  
 >  **Sys.trigger_events** ne s’applique pas aux notifications d’événements.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**\<Colonnes héritent de sys.events >**|Non applicable|Hérite le **object_id**, **type**, **type_desc** colonnes à partir de [sys.events](../../relational-databases/system-catalog-views/sys-events-transact-sql.md).|  
 |**is_first**|**bit**|Le déclencheur est marqué comme étant le premier à s'exécuter pour cet événement.|  
@@ -44,7 +43,7 @@ ms.locfileid: "47748937"
 |**event_group_type**|**Int**|Groupe d'événements sur lequel le déclencheur est créé, ou Null si le déclencheur n'est pas créé sur un groupe d'événements.|  
 |**event_group_type_desc**|**nvarchar(60)**|Description du groupe d'événements sur lequel le déclencheur est créé, ou Null si le déclencheur n'est pas créé sur un groupe d'événements.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

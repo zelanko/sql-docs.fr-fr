@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e6a07dda-a665-4f5b-a8d6-9ff479700513
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce901e6a8639c8a2caea6e55cbaa18fedb56f4a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b36c02d772682088a799cfca66f5bbf3e169a67f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63132730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096542"
 ---
 # <a name="creating-and-opening-tables-text-file-driver"></a>Création et ouverture de tables (pilote de fichier texte)
 Lorsque le pilote de texte est utilisé, une nouvelle table est créée à l’aide du format spécifié dans le fichier Odbcinst.ini. Si non spécifié, les tables sont créées dans le format CSVDELIMITED. Par défaut, les colonnes d’entiers par défaut à 11 caractères et FLOAT colonnes par défaut 22 caractères. Colonnes DATE utilisent le format AAAA-MM-JJ. Colonnes CHAR et LONGCHAR sont la largeur spécifiée dans l’instruction CREATE.

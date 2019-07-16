@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097684"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` La propriété à modifier pour la publication concernée. *propriété* est **sysname**, et peut être une des valeurs répertoriée dans le tableau suivant.  
   
-`[ @value = ] 'value'` La nouvelle valeur pour la propriété spécifiée. *valeur* est **nvarchar (255)**, et peut être une des valeurs répertoriée dans le tableau suivant.  
+`[ @value = ] 'value'` La nouvelle valeur pour la propriété spécifiée. *valeur* est **nvarchar (255)** , et peut être une des valeurs répertoriée dans le tableau suivant.  
   
  Le tableau ci-dessous décrit les propriétés modifiables de la publication ainsi que les limites liées aux valeurs de ces propriétés.  
   
@@ -54,7 +53,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Les abonnements anonymes sont autorisés.|  
 ||**false**|Les abonnements anonymes ne sont pas autorisés.|  
-|**allow_partition_realignment**|**true**|Les opérations de suppression sont envoyées à l'Abonné pour refléter les résultats d'une modification de partition en supprimant des données qui ne font plus partie de la partition de l'Abonné. Il s'agit du comportement par défaut.|  
+|**allow_partition_realignment**|**true**|Les opérations de suppression sont envoyées à l'Abonné pour refléter les résultats d'une modification de partition en supprimant des données qui ne font plus partie de la partition de l'Abonné. Il s’agit du comportement par défaut.|  
 ||**false**|Les données d'une ancienne partition demeurent sur l'Abonné : les modifications apportées à ces données sur le serveur de publication ne sont pas répliquées sur l'Abonné. À la place, les modifications apportées à l'Abonné sont répliquées vers le serveur de publication. Cela permet de conserver dans un abonnement des données issues d'une ancienne partition afin qu'elles soient accessibles à des fins d'historique.|  
 |**allow_pull**|**true**|Les abonnements par extraction de données (pull) sont autorisés pour la publication concernée.|  
 ||**false**|Les abonnements par extraction de données (pull) sont pas autorisés pour la publication concernée.|  

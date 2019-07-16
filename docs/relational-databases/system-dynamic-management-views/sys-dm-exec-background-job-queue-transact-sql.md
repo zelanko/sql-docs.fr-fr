@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_background_job_queue (Transact-SQL) | Microsoft Docs
+title: Sys.dm_exec_background_job_queue (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142329f80b55a18eb6724449f3e1ad68dfb72acb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0722716466caf2c38007890c10df519b1246dfa7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097921"
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,12 +34,12 @@ ms.locfileid: "63013586"
   
 > **REMARQUE** À appeler à partir **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** ou **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** , utilisez le nom **sys.dm_pdw_nodes_exec_background_job_queue**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**time_queued**|**datetime**|Moment auquel le travail a été ajouté à la file d'attente.|  
-|**job_id**|**Int**|Identificateur du travail.|  
-|**database_id**|**Int**|Base de données sur laquelle le travail doit s'exécuter.|  
-|**object_id1**|**Int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
+|**job_id**|**int**|Identificateur du travail.|  
+|**database_id**|**int**|Base de données sur laquelle le travail doit s'exécuter.|  
+|**object_id1**|**int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
 |**object_id2**|**Int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
 |**object_id3**|**Int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
 |**object_id4**|**Int**|Cette valeur dépend du type de travail. Pour plus d'informations, consultez la section Notes.|  
@@ -54,7 +53,7 @@ ms.locfileid: "63013586"
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
   
 ## <a name="remarks"></a>Notes  
  Seules les informations pour les travaux de mise à jour des statistiques asynchrone apparaissent dans cette vue. Pour plus d’informations sur la mise à jour asynchrone des statistiques, consultez [statistiques](../../relational-databases/statistics/statistics.md).  

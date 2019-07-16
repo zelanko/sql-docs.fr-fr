@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d47de7882a6eeeca72ad0da8521ab298c7ea8364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69ed86e55cadf6c594ca764874bc1257c6d1a9a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035337"
 ---
 # <a name="cdcindexcolumns-transact-sql"></a>cdc.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +32,12 @@ ms.locfileid: "62471207"
  Nous vous recommandons de ne pas interroger les tables système directement. À la place, exécutez le [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) procédure stockée.  
 
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**Int**|ID de la table de modifications.|  
 |**column_name**|**sysname**|Nom de la colonne d'index.|  
 |**index_ordinal**|**tinyint**|Ordinal (de base 1) de la colonne dans l'index.|  
-|**column_id**|**Int**|ID de la colonne dans la table source.|  
+|**column_id**|**int**|ID de la colonne dans la table source.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [cdc.change_tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  

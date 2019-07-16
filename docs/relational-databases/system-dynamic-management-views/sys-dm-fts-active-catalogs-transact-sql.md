@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3157284e23c2ec2ccee6df89b24c557403ecc5a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91a811fd2c868194ad0fc45d75cae7649a324672
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950996"
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,23 +36,23 @@ ms.locfileid: "65944398"
 >  Les colonnes suivantes seront supprimées dans une future version de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused, previous_status, previous_status_description, row_count_in_thousands, état, status_description et worker_count. Évitez par conséquent d'utiliser ces colonnes dans un nouveau travail de développement et prévoyez la modification des applications qui les utilisent actuellement.  
   
  
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|ID de la base de données contenant le catalogue de texte intégral actif.|  
-|**catalog_id**|**Int**|ID du catalogue de texte intégral actif.|  
+|**database_id**|**int**|ID de la base de données contenant le catalogue de texte intégral actif.|  
+|**catalog_id**|**int**|ID du catalogue de texte intégral actif.|  
 |**memory_address**|**varbinary(8)**|Adresse des mémoires tampons allouées pour l'activité de remplissage liée à ce catalogue de texte intégral.|  
-|**nom**|**nvarchar(128)**|Nom du catalogue de texte intégral actif.|  
+|**name**|**nvarchar(128)**|Nom du catalogue de texte intégral actif.|  
 |**is_paused**|**bit**|Indique si le remplissage du catalogue de texte intégral actif a été suspendu.|  
-|**status**|**Int**|État actuel du catalogue de texte intégral. Il peut s'agir :<br /><br /> 0 = En cours d'initialisation<br /><br /> 1 = Prêt<br /><br /> 2 = En pause<br /><br /> 3 = Erreur temporaire<br /><br /> 4 = Doit être remonté<br /><br /> 5 = Arrêt<br /><br /> 6 = Suspendu pour sauvegarde<br /><br /> 7 = Sauvegarde en cours via le catalogue<br /><br /> 8 = Catalogue endommagé|  
+|**status**|**int**|État actuel du catalogue de texte intégral. Il peut s'agir :<br /><br /> 0 = En cours d'initialisation<br /><br /> 1 = Prêt<br /><br /> 2 = En pause<br /><br /> 3 = Erreur temporaire<br /><br /> 4 = Doit être remonté<br /><br /> 5 = Arrêt<br /><br /> 6 = Suspendu pour sauvegarde<br /><br /> 7 = Sauvegarde en cours via le catalogue<br /><br /> 8 = Catalogue endommagé|  
 |**status_description**|**nvarchar(120)**|Description de l'état actuel du catalogue de texte intégral actif.|  
 |**previous_status**|**Int**|État précédent du catalogue de texte intégral. Il peut s'agir :<br /><br /> 0 = En cours d'initialisation<br /><br /> 1 = Prêt<br /><br /> 2 = En pause<br /><br /> 3 = Erreur temporaire<br /><br /> 4 = Doit être remonté<br /><br /> 5 = Arrêt<br /><br /> 6 = Suspendu pour sauvegarde<br /><br /> 7 = Sauvegarde en cours via le catalogue<br /><br /> 8 = Catalogue endommagé|  
 |**previous_status_description**|**nvarchar(120)**|Description de l'état précédent du catalogue de texte intégral actif.|  
 |**worker_count**|**Int**|Nombre de threads opérant actuellement sur ce catalogue de texte intégral.|  
 |**active_fts_index_count**|**Int**|Nombre d'index de recherche en texte intégral en cours d'alimentation.|  
-|**auto_population_count**|**Int**|Nombre de tables en cours d'alimentation automatique pour ce catalogue de texte intégral.|  
+|**auto_population_count**|**int**|Nombre de tables en cours d'alimentation automatique pour ce catalogue de texte intégral.|  
 |**manual_population_count**|**Int**|Nombre de tables en cours d'alimentation manuelle pour ce catalogue de texte intégral.|  
-|**full_incremental_population_count**|**Int**|Nombre de tables en cours de remplissage complet ou incrémentiel pour ce catalogue de texte intégral.|  
-|**row_count_in_thousands**|**Int**|Nombre estimé de lignes (en milliers) dans tous les index de texte intégral de ce catalogue de texte intégral.|  
+|**full_incremental_population_count**|**int**|Nombre de tables en cours de remplissage complet ou incrémentiel pour ce catalogue de texte intégral.|  
+|**row_count_in_thousands**|**int**|Nombre estimé de lignes (en milliers) dans tous les index de texte intégral de ce catalogue de texte intégral.|  
 |**is_importing**|**bit**|Indique si le catalogue de texte intégral est en cours d'importation :<br /><br /> 1 = le catalogue est en cours d'importation.<br /><br /> 2 = le catalogue n'est pas en cours d'importation.|  
   
 ## <a name="remarks"></a>Notes  
@@ -62,7 +61,7 @@ ms.locfileid: "65944398"
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
    
 ## <a name="physical-joins"></a>Jointures physiques  
  ![Jointures significatives de cette vue de gestion dynamique](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "jointures significatives de cette vue de gestion dynamique")  

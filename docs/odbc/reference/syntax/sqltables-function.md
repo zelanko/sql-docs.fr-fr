@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a69ffbde7ec4ff1d7eebbb73f0b60a619755c37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e99dd2f5cf3186120297d7679f87e973d5164a57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039531"
 ---
 # <a name="sqltables-function"></a>Fonction SQLTables
 **Conformité**  
@@ -151,13 +150,13 @@ SQLRETURN SQLTables(
   
  Le tableau suivant répertorie les colonnes du jeu de résultats. Les colonnes supplémentaires au-delà de la colonne 5 (Remarques) peuvent être définies par le pilote. Une application doit accéder à des colonnes spécifiques aux pilotes à rebours à partir de la fin de l’ensemble au lieu de spécifier une position ordinale explicite de résultats. Pour plus d’informations, consultez [les données retournées par les fonctions de catalogue](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Nom de colonne|Numéro de colonne|Type de données|Commentaires|  
+|Nom de la colonne|Numéro de colonne|Type de données|Commentaires|  
 |-----------------|-------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Nom de catalogue ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de catalogues.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nom du schéma ; NULL si non applicable à la source de données. Si un pilote prend en charge les schémas pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de schémas.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar|Nom de la table.|  
 |TABLE_TYPE (ODBC 1.0)|4|Varchar|Nom du type de table ; les valeurs suivantes : « TABLE », « Vue », « TABLE système », « GLOBAL temporaire », « Temporaire LOCAL », « ALIAS », « SYNONYME » ou un nom de type spécifique à la source de données.<br /><br /> La signification de « ALIAS » et « SYNONYME » est spécifiques au pilote.|  
-|REMARQUES (ODBC 1.0)|5|Varchar|Une description de la table.|  
+|REMARQUES (ODBC 1.0)|5\.|Varchar|Une description de la table.|  
   
 ## <a name="example"></a>Exemple  
  L’exemple de code suivant ne libère pas les connexions et descripteurs. Consultez [SQLFreeHandle, fonction](../../../odbc/reference/syntax/sqlfreehandle-function.md) et [SQLFreeStmt, fonction](../../../odbc/reference/syntax/sqlfreestmt-function.md) pour obtenir des exemples de code libérer les handles et des instructions.  

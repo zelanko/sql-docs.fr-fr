@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: 5effd31d37af5fbe119f1ad23781b994fa89c240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d87df240d4b83e53ef8f670609d2c896df7fe62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054671"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identifier la référence (SKU) de Azure SQL Database/Managed Instance droite pour votre base de données locale
 
@@ -30,7 +29,7 @@ Cet article se concentre sur la fonctionnalité de recommandations de DMA SKU de
 
 - Base de données unique
 - Pools élastiques
-- instance managée
+- Instance gérée
 
 Les recommandations de référence (SKU) fonctionnalité vous permet d’identifier les deux la valeur minimale recommandée d’Azure SQL database unique ou une instance gérée référence (SKU) en fonction des compteurs de performances collectés à partir des ou les ordinateurs hébergeant vos bases de données. La fonctionnalité fournit des recommandations relatives à la tarification du niveau, de niveau de calcul et de taille maximale de données, ainsi que coût estimé par mois. Il offre également la possibilité pour les bases de données en bloc approvisionner uniques et des instances gérées dans Azure pour toutes les bases de données recommandées.
 
@@ -97,11 +96,11 @@ En outre, sélectionnez un des arguments suivants :
   - **/SkuRecommendationPreventPriceRefresh**: Si la valeur est True, empêche l’actualisation de prix et part du principe que les prix par défaut. Utilisez si en cours d’exécution en mode hors connexion. Si vous n’utilisez pas ce paramètre, vous devez spécifier les paramètres ci-dessous pour obtenir les prix les plus récents basés sur une région spécifiée.
 - Obtenir les derniers cours
   - **/SkuRecommendationCurrencyCode**: La devise dans laquelle afficher les prix (par exemple) « USD »).
-  - **/SkuRecommendationOfferName**: Nom de l’offre (par exemple) "MS-AZR-0003P"). Pour plus d’informations, consultez le [détails de l’offre Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) page.
-    - **/SkuRecommendationRegionName**: Le nom de la région (par exemple, « WestUS »).
-    - **/SkuRecommendationSubscriptionId**: L'ID de l'abonnement.
+  - **/ SkuRecommendationOfferName**: Nom de l’offre (par exemple) « MS-AZR - 0003P »). Pour plus d’informations, consultez le [détails de l’offre Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) page.
+    - **/ SkuRecommendationRegionName**: Le nom de la région (par exemple, « WestUS »).
+    - **/ SkuRecommendationSubscriptionId**: L'ID de l'abonnement.
     - **/AzureAuthenticationTenantId**: Le client d’authentification.
-    - **/AzureAuthenticationClientId**: L’ID client de l’application AAD utilisée pour l’authentification.
+    - **/ AzureAuthenticationClientId**: L’ID client de l’application AAD utilisée pour l’authentification.
     - L’une des options d’authentification suivantes :
       - Interactif
         - **AzureAuthenticationInteractiveAuthentication**: La valeur true pour une fenêtre contextuelle d’authentification.

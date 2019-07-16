@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f2be7711a7e495608d2a35d42e617663e11bc3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3291edb34087e46739cf984d2412821fa66b7a07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63041146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053223"
 ---
 # <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque audit du serveur qui indique l'état actuel de l'audit. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**Int**|ID de l'audit. Mappe à la **audit_id** champ dans le **sys.audits** vue de catalogue.|  
-|**nom**|**sysname**|Nom de l’audit. Identique à la **nom** champ dans le **sys.server_audits** vue de catalogue.|  
+|**audit_id**|**int**|ID de l'audit. Mappe à la **audit_id** champ dans le **sys.audits** vue de catalogue.|  
+|**name**|**sysname**|Nom de l’audit. Identique à la **nom** champ dans le **sys.server_audits** vue de catalogue.|  
 |**status**|**smallint**|État numérique de l'audit du serveur :<br /><br /> 0 = non démarré<br /><br /> 1 =<br />        Démarré<br /><br /> 2 =<br />      Échec de l’exécution<br /><br /> 3 = target créer échouent<br /><br /> 4 = en cours d’arrêt|  
 |**status_desc**|**nvarchar (256)**|Chaîne qui indique l'état de l'audit du serveur :<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Horodateur (en temps UTC) de la dernière modification d'état de l'audit.|  

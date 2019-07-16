@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5660cfe2f264e0971d30cd2eaf1aadf68581321e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d95226e9d895bf78e15176744f651b7e830a1a10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901343"
 ---
 # <a name="executing-a-statement"></a>Exécution d’une instruction
 Il existe quatre façons d’exécuter une instruction, en fonction de quand elles sont compilées (préparation) par le moteur de base de données et qui les définit :  

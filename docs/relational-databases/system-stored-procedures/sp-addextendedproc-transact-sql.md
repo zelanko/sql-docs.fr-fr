@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b895692bf9ce65d9e063fb1d484cf84734897c86
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072754"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,15 +43,15 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @functname = ] 'procedure'` Est le nom de la fonction à appeler dans la bibliothèque de liens dynamiques (DLL). *procédure* est **nvarchar (517)**, sans valeur par défaut. *procédure* peut éventuellement inclure le nom du propriétaire sous la forme *propriétaire_fonction*.  
+`[ @functname = ] 'procedure'` Est le nom de la fonction à appeler dans la bibliothèque de liens dynamiques (DLL). *procédure* est **nvarchar (517)** , sans valeur par défaut. *procédure* peut éventuellement inclure le nom du propriétaire sous la forme *propriétaire_fonction*.  
   
-`[ @dllname = ] 'dll'` Est le nom de la DLL qui contient la fonction. *DLL* est **varchar (255)**, sans valeur par défaut. Il est recommandé de spécifier le chemin complet d'accès à la DLL.  
+`[ @dllname = ] 'dll'` Est le nom de la DLL qui contient la fonction. *DLL* est **varchar (255)** , sans valeur par défaut. Il est recommandé de spécifier le chemin complet d'accès à la DLL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Après la création d’une procédure stockée étendue, il doit être ajouté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de **sp_addextendedproc**. Pour plus d’informations, consultez [Ajout d’une procédure stockée étendue à SQL Server](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md).  

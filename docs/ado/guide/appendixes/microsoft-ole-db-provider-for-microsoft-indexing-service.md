@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dea7ec95efc1f560a2279868b2116d02d7ad6fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926664"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Fournisseur Microsoft OLE DB pour Microsoft, vue d’ensemble du Service d’indexation
 Le fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft fournit un accès en lecture seule par programmation pour le système de fichiers et des données Web indexées par le Service d’indexation Microsoft. Les applications ADO peuvent émettre des requêtes SQL pour récupérer des informations de propriété de contenu et de fichier.
@@ -76,10 +75,10 @@ MSIDXS
 |[Signet](../../../ado/reference/ado-api/bookmark-property-ado.md)*|lecture/écriture|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lecture/écriture|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|toujours **adOpenStatic**|
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|toujours **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Lecture seule|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|lecture/écriture|
+|[Filtrer](../../../ado/reference/ado-api/filter-property.md)|lecture/écriture|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lecture/écriture|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|non disponible|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lecture/écriture|
@@ -109,7 +108,7 @@ MSIDXS
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Oui|
 |[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Oui|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Oui|
+|[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|Oui|
 |[Prise en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Non|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Non|

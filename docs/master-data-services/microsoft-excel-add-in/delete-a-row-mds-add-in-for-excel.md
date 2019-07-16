@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7c2eae25d729cf93206203da784185ed484c3b1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ea865049ecbcfa41390671880e0b5bbeae38cb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092396"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>Supprimer une ligne (Complément MDS pour Excel)
 
@@ -43,6 +42,6 @@ ms.locfileid: "65488011"
 3.  Dans la boîte de dialogue de confirmation, cliquez sur **Oui**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble : L’importation de données à partir d’Excel &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+ [Présentation : L’importation de données à partir d’Excel &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

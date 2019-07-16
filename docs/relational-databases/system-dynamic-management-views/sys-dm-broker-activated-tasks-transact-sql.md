@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17e6f87f-8f56-489d-9aed-216afc8ef310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf3910b432d803ce74e0bf24d83a974072028f33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f80ec78e37707058a354a03bb2605a38abdfa803
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099187"
 ---
 # <a name="sysdmbrokeractivatedtasks-transact-sql"></a>sys.dm_broker_activated_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +31,15 @@ ms.locfileid: "47704873"
   Retourne une ligne pour chaque procédure stockée activée par Service Broker.  
  
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**spid**|**Int**|ID de la session de la procédure stockée activée. Accepte la valeur NULL.|  
+|**spid**|**int**|ID de la session de la procédure stockée activée. Accepte la valeur NULL.|  
 |**database_id**|**smallint**|ID de la base de données dans laquelle la file d'attente est définie. Accepte la valeur NULL.|  
-|**queue_id**|**Int**|ID de l'objet de la file d'attente pour lequel la procédure stockée a été activée. Accepte la valeur NULL.|  
+|**queue_id**|**int**|ID de l'objet de la file d'attente pour lequel la procédure stockée a été activée. Accepte la valeur NULL.|  
 |**procedure_name**|**nvarchar(650)**|Nom de la procédure stockée activée. Accepte la valeur NULL.|  
-|**execute_as**|**Int**|ID de l'utilisateur sous le nom duquel la procédure stockée s'exécute. Accepte la valeur NULL.|  
+|**execute_as**|**int**|ID de l'utilisateur sous le nom duquel la procédure stockée s'exécute. Accepte la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="physical-joins"></a>Jointures physiques  

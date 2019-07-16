@@ -1,5 +1,5 @@
 ---
-title: SQLAllocConnect Mapping | Microsoft Docs
+title: SQLAllocConnect, mappage | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ac89dd1f-c565-47cc-8fa3-6fa5f80b5d63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdb63e9610d00c0736f640b6f4c4d743f3335c7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65c23f41ea9176c460c8fb32ece5e74dfb803541
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280979"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065022"
 ---
 # <a name="sqlallocconnect-mapping"></a>SQLAllocConnect, mappage
 Lorsqu’une application appelle **SQLAllocConnect** via un ODBC 3. *x* pilote, l’appel à **SQLAllocConnect**(*henv*, *phdbc*) est mappé à **SQLAllocHandle** comme suit :  

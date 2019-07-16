@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66361572427c3264a1b25fe1c851685a07b2e029
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 853a364b61b63d58da93111c75db0d7d723ee49b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073914"
 ---
 # <a name="sqlgetdescfield-and-sqlgetdescrec-cursor-library"></a>SQLGetDescField et SQLGetDescRec (bibliothèque de curseurs)
 > [!IMPORTANT]  
@@ -29,7 +28,7 @@ ms.locfileid: "63188755"
   
  La bibliothèque de curseurs exécute **SQLGetDescRec** pour retourner les métadonnées pour les colonnes à signets. La bibliothèque de curseurs exécute **SQLGetDescField** pour retourner les mêmes champs retournés par **SQLGetDescRec**, qui sont SQL_DESC_NAME, SQL_DESC_TYPE, SQL_DESC_DATETIME_INTERVAL_CODE, SQL_DESC_OCTET_ LONGUEUR, SQL_DESC_PRECISION, SQL_DESC_SCALE et SQL_DESC_NULLABLE. Par souci de cohérence, **SQLGetDescField** retourne également la définition de SQL_DESC_UNNAMED.  
   
- La bibliothèque de curseurs exécute **SQLGetDescField** lorsqu’elle est appelée pour retourner les champs de la valeur des éléments suivants sont définis pour la liaison de colonnes à signets : SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR, and SQL_DESC_LENGTH.  
+ La bibliothèque de curseurs exécute **SQLGetDescField** lorsqu’elle est appelée pour retourner les champs de la valeur des éléments suivants sont définis pour la liaison de colonnes à signets : SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR, SQL_DESC_OCTET_LENGTH_PTR et SQL_DESC_LENGTH.  
   
  La bibliothèque de curseurs exécute **SQLGetDescField** lorsqu’elle est appelée pour retourner la valeur du champ SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE ou SQL_DESC_ROW_STATUS_PTR. Ces champs peuvent être retournées pour n’importe quelle ligne, pas seulement la ligne du signet.  
   

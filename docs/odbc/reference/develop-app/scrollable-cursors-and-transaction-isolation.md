@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92e3694690ef1cba210da29766e7528762e691f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061602"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Curseurs avec défilement et isolation des transactions
 Le tableau suivant répertorie les facteurs régissant la visibilité des modifications.  
@@ -42,16 +41,16 @@ Le tableau suivant répertorie les facteurs régissant la visibilité des modifi
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Statique|||||||  
 |Insert|Peut-être [b]|Non|Non|Non|Non|Non|  
-|Update|Peut-être [b]|Non|Non|Non|Non|Non|  
-|DELETE|Peut-être [b]|Non|Non|Non|Non|Non|  
+|Mettre à jour|Peut-être [b]|Non|Non|Non|Non|Non|  
+|Supprimer|Peut-être [b]|Non|Non|Non|Non|Non|  
 |Curseur piloté par jeu de clés|||||||  
 |Insert|Peut-être [b]|Non|Non|Non|Non|Non|  
-|Update|Oui|Oui|Oui|Oui|Non|Non|  
-|DELETE|Peut-être [b]|Oui|Oui|Oui|Non|Non|  
+|Mettre à jour|Oui|Oui|Oui|Oui|Non|Non|  
+|Supprimer|Peut-être [b]|Oui|Oui|Oui|Non|Non|  
 |dynamique|||||||  
 |Insert|Oui|Oui|Oui|Oui|Oui|Non|  
-|Update|Oui|Oui|Oui|Oui|Non|Non|  
-|DELETE|Oui|Oui|Oui|Oui|Non|Non|  
+|Mettre à jour|Oui|Oui|Oui|Oui|Non|Non|  
+|Supprimer|Oui|Oui|Oui|Oui|Non|Non|  
   
  [a] les lettres entre parenthèses indiquent le niveau d’isolation de la transaction contenant le curseur ; le niveau d’isolation de l’autre transaction (dans lequel la modification apportée) n’est pas pertinent.  
   

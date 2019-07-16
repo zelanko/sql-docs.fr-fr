@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af4095ff-06c3-4b04-83bf-19f9ee098dc2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 816394bb8469148504c1b2b416e77fec814bef8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6dc440e27b362fef9c9794cf0005c6af0b435efc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019307"
 ---
 # <a name="c-to-sql-numeric"></a>C en SQL : Numeric
 Les identificateurs pour les types de données ODBC C numériques sont :  
@@ -55,14 +54,14 @@ Les identificateurs pour les types de données ODBC C numériques sont :
   
  Le tableau suivant présente les types de données à laquelle les données de C numériques peuvent être converties à ODBC SQL. Pour obtenir une explication des colonnes et des termes dans la table, consultez [conversion des données à partir de C en Types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|Identificateur de type SQL|Test|SQLSTATE|  
+|Identificateur de type SQL|Tester|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Nombre de chiffres < = longueur d’octet de colonne<br /><br /> Nombre de chiffres > longueur d’octet de colonne|n/a<br /><br /> 22001|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Nombre de caractères < = longueur de caractère de colonne<br /><br /> Nombre de caractères > longueur de caractère de colonne|n/a<br /><br /> 22001|  
-|SQL_DECIMAL[b]<br /><br /> SQL_NUMERIC[b]<br /><br /> SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b]<br /><br /> SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b]|Données converti sans troncation ou avec tronquées de chiffres fractionnaires<br /><br /> Les données converties avec troncation des chiffres entières|n/a<br /><br /> 22003|  
-|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Les données sont dans la plage du type de données à laquelle le nombre est converti<br /><br /> Données sont en dehors de la plage du type de données à laquelle le nombre est converti|n/a<br /><br /> 22003|  
-|SQL_BIT|Les données sont 0 ou 1<br /><br /> Données sont supérieures à 0, inférieure à 2 et non égal à 1<br /><br /> Données sont inférieur à 0 ou supérieur ou égal à 2|n/a<br /><br /> 22001<br /><br /> 22003|  
-|SQL_INTERVAL_YEAR[a]<br /><br /> SQL_INTERVAL_MONTH[a]<br /><br /> SQL_INTERVAL_DAY[a]<br /><br /> SQL_INTERVAL_HOUR[a]<br /><br /> SQL_INTERVAL_MINUTE[a]<br /><br /> SQL_INTERVAL_SECOND[a]|Données ne pas tronquées.<br /><br /> Données ont été tronquées.|n/a<br /><br /> 22015|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Nombre de chiffres < = longueur d’octet de colonne<br /><br /> Nombre de chiffres > longueur d’octet de colonne|N/A<br /><br /> 22001|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Nombre de caractères < = longueur de caractère de colonne<br /><br /> Nombre de caractères > longueur de caractère de colonne|N/A<br /><br /> 22001|  
+|SQL_DECIMAL[b]<br /><br /> SQL_NUMERIC[b]<br /><br /> SQL_TINYINT [b]<br /><br /> SQL_SMALLINT[b]<br /><br /> SQL_INTEGER[b]<br /><br /> SQL_BIGINT [b]|Données converti sans troncation ou avec tronquées de chiffres fractionnaires<br /><br /> Les données converties avec troncation des chiffres entières|N/A<br /><br /> 22003|  
+|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Les données sont dans la plage du type de données à laquelle le nombre est converti<br /><br /> Données sont en dehors de la plage du type de données à laquelle le nombre est converti|N/A<br /><br /> 22003|  
+|SQL_BIT|Les données sont 0 ou 1<br /><br /> Données sont supérieures à 0, inférieure à 2 et non égal à 1<br /><br /> Données sont inférieur à 0 ou supérieur ou égal à 2|N/A<br /><br /> 22001<br /><br /> 22003|  
+|SQL_INTERVAL_YEAR[a]<br /><br /> SQL_INTERVAL_MONTH[a]<br /><br /> SQL_INTERVAL_DAY[a]<br /><br /> SQL_INTERVAL_HOUR[a]<br /><br /> SQL_INTERVAL_MINUTE[a]<br /><br /> SQL_INTERVAL_SECOND[a]|Données ne pas tronquées.<br /><br /> Données ont été tronquées.|N/A<br /><br /> 22015|  
   
  [a] ces conversions sont prises en charge uniquement pour les types de données numériques exactes (SQL_C_STINYINT, SQL_C_UTINYINT, SQL_C_SSHORT, SQL_C_USHORT, SQL_C_SLONG, SQL_C_ULONG ou SQL_C_NUMERIC). Ils ne sont pas pris en charge pour les types de données numérique approximatif (SQL_C_FLOAT ou SQL_C_DOUBLE). Impossible de convertir les types de données C numériques exacts à un intervalle de type SQL dont la précision intervalle n’est pas un champ unique.  
   

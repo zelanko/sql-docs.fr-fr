@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e84a14b1-3c2a-4f7d-a966-9e08a93948df
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d9dd8315945d07aa4c6e99dc8661c26c7d92fb95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef68a36f64fbaf72f18af9fba6f2e2781422574c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925858"
 ---
 # <a name="command-object-overview"></a>Vue d’ensemble de l’objet Command
 Avec un **commande** de l’objet, vous pouvez procédez comme suit :  

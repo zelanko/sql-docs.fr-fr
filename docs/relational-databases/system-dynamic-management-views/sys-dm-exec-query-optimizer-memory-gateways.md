@@ -19,29 +19,28 @@ helpviewer_keywords:
 - sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e5c54d116f4d4d8a71ba3660a31b324d9952970
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf134f630e4112f0cef87b7138b92fc83959e230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097675"
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Retourne l’état actuel des sémaphores de ressources utilisé pour limiter l’optimisation des requêtes simultanées.
 
-|colonne|Type|Description|  
+|colonne|type|Description|  
 |----------|---------------|-----------------|  
-|**pool_id**|**Int**|ID du pool de ressources sous le gouverneur de ressources|  
-|**nom**|**sysname**|Compiler porte nom (petite passerelle, moyenne, grande passerelle)|
-|**max_count**|**Int**|Le nombre maximal configuré de compilations simultanées|
+|**pool_id**|**int**|ID du pool de ressources sous le gouverneur de ressources|  
+|**name**|**sysname**|Compiler porte nom (petite passerelle, moyenne, grande passerelle)|
+|**max_count**|**int**|Le nombre maximal configuré de compilations simultanées|
 |**active_count**|**Int**|Le nombre actuellement actif des compile dans cette porte|
 |**waiter_count**|**Int**|Le nombre d’objets waiter dans cette porte|
 |**threshold_factor**|**bigint**|Facteur de seuil qui définit la portion de mémoire maximale utilisée par l’optimisation des requêtes.  Pour la petite passerelle, threshold_factor indique l’utilisation de mémoire d’optimiseur maximale en octets pour une seule requête avant qu’il soit nécessaire pour obtenir un accès dans la petite passerelle.  Pour la passerelle de taille moyenne et grande threshold_factor montre la partie de la mémoire totale du serveur disponible pour cette porte. Il est utilisé en tant que diviseur lors du calcul du seuil d’utilisation de mémoire pour la porte.|
-|**seuil**|**bigint**|Mémoire du seuil suivante en octets.  La requête est nécessaire pour accéder à cette passerelle si sa consommation de mémoire atteint ce seuil.  « -1 » si la requête n’est pas requise pour avoir un accès à cette passerelle.|
+|**threshold**|**bigint**|Mémoire du seuil suivante en octets.  La requête est nécessaire pour accéder à cette passerelle si sa consommation de mémoire atteint ce seuil.  « -1 » si la requête n’est pas requise pour avoir un accès à cette passerelle.|
 |**is_active**|**bit**|Indique si la requête est nécessaire pour passer de la porte en cours ou non.|
 
 
@@ -58,7 +57,7 @@ Attend sur un résultat de la passerelle dans la compilation différée. En plus
 
 ## <a name="examples"></a>Exemples  
 
-### <a name="a-viewing-statistics-on-resource-semaphores"></a>A. Affichage des statistiques sur les sémaphores de ressources  
+### <a name="a-viewing-statistics-on-resource-semaphores"></a>R. Affichage des statistiques sur les sémaphores de ressources  
 Quelles sont les statistiques de passerelle optimiseur mémoire actuelle pour cette instance de SQL Server ?
 
 ```  

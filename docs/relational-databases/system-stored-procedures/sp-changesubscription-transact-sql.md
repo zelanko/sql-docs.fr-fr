@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cddc14c14054ecfa81a963d15a7a604e8d71d085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016527"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +56,9 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'` Est le nom de la base de données d’abonnement. *destination_db* est **sysname**, sans valeur par défaut.  
   
-`[ @property = ] 'property'` Est la propriété à modifier pour l’abonnement donné. *propriété* est **nvarchar (30)**, et peut prendre l’une des valeurs dans la table.  
+`[ @property = ] 'property'` Est la propriété à modifier pour l’abonnement donné. *propriété* est **nvarchar (30)** , et peut prendre l’une des valeurs dans la table.  
   
-`[ @value = ] 'value'` Nouvelle valeur pour le texte spécifié *propriété*. *valeur* est **nvarchar (4000)**, et peut prendre l’une des valeurs dans la table.  
+`[ @value = ] 'value'` Nouvelle valeur pour le texte spécifié *propriété*. *valeur* est **nvarchar (4000)** , et peut prendre l’une des valeurs dans la table.  
   
 |Propriété|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -74,7 +73,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**0**|Utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion à l'Abonné.|  
 |**subscriber_provider**||Identificateur de programme unique (PROGID) avec lequel le fournisseur OLE DB de la source de données non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est inscrit. *Cette propriété est uniquement valide pour les non -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *abonnés.*|  
 |**subscriber_providerstring**||Chaîne de connexion propre au fournisseur OLE DB qui identifie la source de données. *Cette propriété est uniquement valide pour les non -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *abonnés.*|  
-|**subscriptionstreams**||Nombre de connexions autorisées par Agent de distribution pour appliquer en parallèle des traitements de modifications à un Abonné. Une plage de valeurs à partir de **1** à **64** est pris en charge pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication. Cette propriété doit être **0** pour non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés, les serveurs de publication Oracle ou les abonnements d’égal à égal.|  
+|**flux d’abonnements**||Nombre de connexions autorisées par Agent de distribution pour appliquer en parallèle des traitements de modifications à un Abonné. Une plage de valeurs à partir de **1** à **64** est pris en charge pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication. Cette propriété doit être **0** pour non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés, les serveurs de publication Oracle ou les abonnements d’égal à égal.|  
 |**subscriber_type**|**1**|Serveur de la source de données ODBC.|  
 ||**3**|Fournisseur OLE DB|  
 |**memory_optimized**|**bit**|Indique que l’abonnement prend en charge les tables optimisées en mémoire. *memory_optimized* est **bits**, où 1 est égale à true (l’abonnement prend en charge les tables optimisées en mémoire).|  

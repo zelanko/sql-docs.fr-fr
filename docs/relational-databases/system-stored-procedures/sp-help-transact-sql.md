@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: fabfac2d228be78efb2fc728d1b405ec7edce035
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085042"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,21 +52,21 @@ sp_help [ [ @objname = ] 'name' ]
   
 1.  Si **sp_help** est exécuté sans arguments, les informations récapitulatives sur les objets de tous les types qui existent dans la base de données actuelle est retournée.  
   
-    |Nom de colonne|Type de données|Description|  
+    |Nom de la colonne|Type de données|Description|  
     |-----------------|---------------|-----------------|  
-    |**Nom**|**nvarchar(** 128 **)**|Nom de l'objet|  
+    |**Nom**|**nvarchar(** 128 **)**|Nom d’objet|  
     |**Propriétaire**|**nvarchar(** 128 **)**|Propriétaire de l'objet (il s'agit du principal de la base de données propriétaire de l'objet. Est accordé par défaut au propriétaire du schéma qui contient l'objet.)|  
     |**Object_type**|**nvarchar(** 31 **)**|Type d'objet|  
   
 2.  Si *nom* est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données ou le type de données défini par l’utilisateur, **sp_help** retourne ce jeu de résultats.  
   
-    |Nom de colonne|Type de données|Description|  
+    |Nom de la colonne|Type de données|Description|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar(** 128 **)**|Nom du type de données.|  
     |**Storage_type**|**nvarchar(** 128 **)**|Nom de type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
     |**Longueur**|**smallint**|Longueur physique du type de données (en octets).|  
-    |**PREC**|**Int**|Précision (nombre total de chiffres).|  
-    |**Échelle**|**Int**|Nombre de chiffres à droite du séparateur décimal.|  
+    |**PREC**|**int**|Précision (nombre total de chiffres).|  
+    |**Échelle**|**int**|Nombre de chiffres à droite du séparateur décimal.|  
     |**Nullable**|**varchar(** 35 **)**|Indique si les valeurs NULL sont autorisées : Oui ou Non.|  
     |**Default_name**|**nvarchar(** 128 **)**|Nom par défaut de ce type de données.<br /><br /> NULL = aucune valeur par défaut n'est liée.|  
     |**Nom_règle**|**nvarchar(** 128 **)**|Nom d'une règle associée à ce type.<br /><br /> NULL = aucune valeur par défaut n'est liée.|  
@@ -77,7 +76,7 @@ sp_help [ [ @objname = ] 'name' ]
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-    |Nom de colonne|Type de données|Description|  
+    |Nom de la colonne|Type de données|Description|  
     |-----------------|---------------|-----------------|  
     |**Nom**|**nvarchar(** 128 **)**|Nom de la table|  
     |**Propriétaire**|**nvarchar(** 128 **)**|Propriétaire de la table|  
@@ -90,12 +89,12 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Jeu de résultats supplémentaire retourné sur des objets de colonne :  
   
-        |Nom de colonne|Type de données|Description|  
+        |Nom de la colonne|Type de données|Description|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|Nom de colonne.|  
         |**Type**|**nvarchar(** 128 **)**|Type de données de la colonne.|  
         |**Calculée**|**varchar(** 35 **)**|Indique si les valeurs dans la colonne sont calculées : Oui ou Non.|  
-        |**Longueur**|**Int**|Longueur de colonne en octets.<br /><br /> Remarque : Si le type de données de colonne est un type de valeur élevée (**varchar (max)** , **nvarchar (max)** , **varbinary (max)** , ou **xml**), la valeur sera afficher en tant que -1.|  
+        |**Longueur**|**int**|Longueur de colonne en octets.<br /><br /> Remarque : Si le type de données de colonne est un type de valeur élevée (**varchar (max)** , **nvarchar (max)** , **varbinary (max)** , ou **xml**), la valeur sera afficher en tant que -1.|  
         |**PREC**|**char(** 5 **)**|Précision de la colonne|  
         |**Échelle**|**char(** 5 **)**|Échelle de la colonne|  
         |**Nullable**|**varchar(** 35 **)**|Indique si les valeurs NULL sont autorisées dans la colonne : Oui ou Non.|  
@@ -105,28 +104,28 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Jeu de résultats supplémentaire retourné sur des colonnes d'identité :  
   
-        |Nom de colonne|Type de données|Description|  
+        |Nom de la colonne|Type de données|Description|  
         |-----------------|---------------|-----------------|  
         |**Identity**|**nvarchar(** 128 **)**|Nom de la colonne dont le type de données déclaré est identité.|  
         |**Valeur initiale**|**numeric**|Valeur de départ de la colonne identité.|  
         |**Incrément**|**numeric**|Incrément à appliquer aux valeurs de la colonne.|  
-        |**Pas pour la réplication**|**Int**|Propriété d’identité n’est pas appliquée lorsqu’une connexion de réplication, tel que **sqlrepl**, insère des données dans la table :<br /><br /> 1 = True<br /><br /> 0 = False|  
+        |**Pas pour la réplication**|**int**|Propriété d’identité n’est pas appliquée lorsqu’une connexion de réplication, tel que **sqlrepl**, insère des données dans la table :<br /><br /> 1 = True<br /><br /> 0 = False|  
   
     -   Jeu de résultats supplémentaire retourné sur des colonnes :  
   
-        |Nom de colonne|Type de données|Description|  
+        |Nom de la colonne|Type de données|Description|  
         |-----------------|---------------|-----------------|  
         |**RowGuidCol**|**sysname**|Nom de la colonne d'identification unique.|  
   
     -   Jeu de résultats supplémentaire retourné sur des groupes de fichiers :  
   
-        |Nom de colonne|Type de données|Description|  
+        |Nom de la colonne|Type de données|Description|  
         |-----------------|---------------|-----------------|  
         |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|Groupe de fichiers dans lequel se trouvent les données : Principal, secondaire ou journal des transactions.|  
   
     -   Jeu de résultats supplémentaire retourné sur les index :  
   
-        |Nom de colonne|Type de données|Description|  
+        |Nom de la colonne|Type de données|Description|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|Nom de l’index.|  
         |**Index_description**|**varchar(** 210 **)**|Description de l'index.|  
@@ -134,7 +133,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Jeu de résultats supplémentaire retourné sur des contraintes :  
   
-        |Nom de colonne|Type de données|Description|  
+        |Nom de la colonne|Type de données|Description|  
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar(** 146 **)**|Type de contrainte.|  
         |**constraint_name**|**nvarchar(** 128 **)**|Nom de la contrainte.|  
@@ -146,19 +145,19 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   Jeu de résultats supplémentaire retourné sur des objets de référence :  
   
-        |Nom de colonne|Type de données|Description|  
+        |Nom de la colonne|Type de données|Description|  
         |-----------------|---------------|-----------------|  
         |**Table est référencée par**|**nvarchar(** 516 **)**|Identifie les autres objets de base de données qui font référence à la table.|  
   
     -   Jeu de résultats supplémentaire retourné sur les procédures stockées, les fonctions ou les procédures stockées étendues.  
   
-        |Nom de colonne|Type de données|Description|  
+        |Nom de la colonne|Type de données|Description|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar(** 128 **)**|Nom du paramètre de la procédure stockée.|  
         |**Type**|**nvarchar(** 128 **)**|Type de données du paramètre de la procédure stockée.|  
         |**Longueur**|**smallint**|Longueur maximale de stockage physique, en octets.|  
         |**PREC**|**Int**|Précision ou nombre total de chiffres.|  
-        |**Échelle**|**Int**|Nombre de chiffres situés à droite du séparateur décimal.|  
+        |**Échelle**|**int**|Nombre de chiffres situés à droite du séparateur décimal.|  
         |**Param_order**|**smallint**|Ordre du paramètre.|  
   
 ## <a name="remarks"></a>Notes  
@@ -173,7 +172,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-information-about-all-objects"></a>A. Retour d'informations sur tous les objets  
+### <a name="a-returning-information-about-all-objects"></a>R. Retour d'informations sur tous les objets  
  L'exemple suivant fournit des informations sur chaque objet de la base de données `master`.  
   
 ```  

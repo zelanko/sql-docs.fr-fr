@@ -17,32 +17,31 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 46700bb94749269eb56e60cade035fdf4c8f388c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094828"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **sysmergepartitioninfoview** vue expose les informations de partitionnement pour les articles de table. Cette vue est stockée dans la base de données de publication sur le serveur de publication et dans la base de données d'abonnement au niveau de l'Abonné.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Le nom de l’article.|  
+|**name**|**sysname**|Le nom de l’article.|  
 |**type**|**tinyint**|Indique le type d'article, qui peut être l'un des suivants :<br /><br /> **0x0A** = table.<br /><br /> **0 x 20** = schéma de procédure uniquement.<br /><br /> **0 x 40** = view schema only ou schéma de vue indexée uniquement.<br /><br /> **0 x 80** = schéma de fonction uniquement.|  
-|**objid**|**Int**|Identificateur de l'objet publié.|  
+|**objid**|**int**|Identificateur de l'objet publié.|  
 |**sync_objid**|**Int**|ID d'objet de la vue représentant l'ensemble de données synchronisées.|  
 |**view_type**|**tinyint**|Type de vue :<br /><br /> **0** ne = pas d’une vue ; utilisez l’intégralité de l’objet de base.<br /><br /> **1** = vue permanente.<br /><br /> **2** = vue temporaire.|  
 |**artid**|**uniqueidentifier**|Numéro d'identification unique de l'article donné.|  
 |**description**|**nvarchar(255)**|Brève description de l'article.|  
 |**pre_creation_command**|**tinyint**|L’action par défaut à effectuer lorsque l’article est créé dans la base de données d’abonnement :<br /><br /> **0** = aucune - si la table existe déjà sur l’abonné, aucune action n’est effectuée.<br /><br /> **1** = Supprimer - supprime la table avant de la recréer.<br /><br /> **2** = supprimer - entraîne une suppression basée sur la clause WHERE dans le filtre de sous-ensemble.<br /><br /> **3** = Truncate : identique à 2, mais supprime des pages au lieu de lignes. Toutefois, n'accepte pas la clause WHERE.|  
 |**pubid**|**uniqueidentifier**|ID de la publication à laquelle appartient l'article actif.|  
-|**surnom**|**Int**|Le mappage de surnom pour l'identification de l'article.|  
-|**column_tracking**|**Int**|L’indique si le suivi des colonnes est implémentée pour l’article.|  
+|**surnom**|**int**|Le mappage de surnom pour l'identification de l'article.|  
+|**column_tracking**|**int**|L’indique si le suivi des colonnes est implémentée pour l’article.|  
 |**status**|**tinyint**|Indique l'état de l'article, qui peut être l'un des suivants :<br /><br /> **1** = Unsynced - le script de traitement initial pour publier la table sera exécuté lors de la prochaine exécution de l’Agent d’instantané.<br /><br /> **2** = active - le script de traitement initial pour publier la table a été exécuté.|  
 |**conflict_table**|**sysname**|Nom de la table locale qui contient les enregistrements en conflit pour l'article actif. Cette table est fournie à titre d'information uniquement et son contenu peut être modifié ou supprimé à l'aide des routines personnalisées de résolution de conflits ou directement par l'administrateur.|  
 |**creation_script**|**nvarchar(255)**|Script de création de l'article.|  
@@ -68,31 +67,31 @@ ms.locfileid: "54124681"
 |**resolver_info**|**nvarchar(255)**|Espace de stockage réservé aux informations complémentaires nécessaires aux outils personnalisés de résolution des conflits.|  
 |**view_sel_proc**|**nvarchar(290)**|Nom de la procédure stockée utilisée par l'Agent de fusion pour effectuer le remplissage initial d'un article dans une publication filtrée dynamiquement et pour énumérer les lignes modifiées dans une publication filtrée.|  
 |**gen_cur**|**bigint**|Génère le nombre de modifications locales apportées à la table de base d'un article.|  
-|**vertical_partition**|**Int**|Indique si le filtrage de colonne est activé sur un article de table. **0** indique l’absence de filtrage vertical et publie toutes les colonnes.|  
+|**vertical_partition**|**int**|Indique si le filtrage de colonne est activé sur un article de table. **0** indique l’absence de filtrage vertical et publie toutes les colonnes.|  
 |**identity_support**|**Int**|Spécifie si la gestion automatique de plages d'identités est activée. **1** signifie que la gestion de plage d’identités est activée, et **0** signifie qu’il n’existe aucune identité de la plage prise en charge.|  
 |**before_image_objid**|**Int**|ID d'objet de la table de suivi. La table de suivi contient certaines valeurs de colonne clé lorsque l'optimisation des modifications de partition est activée pour la publication.|  
 |**before_view_objid**|**Int**|ID d'objet d'une table de vue. La vue est associée à une table qui détermine si une ligne appartenait à un Abonné particulier avant sa suppression ou sa mise à jour. Ceci n'est vrai que lorsque l'optimisation des modifications de partition est activée pour la publication.|  
-|**verify_resolver_signature**|**Int**|Spécifie si une signature numérique est vérifiée avant d'utiliser un résolveur dans une réplication de fusion :<br /><br /> **0** = signature n’est pas vérifiée.<br /><br /> **1** = signature est vérifiée pour déterminer s’il est d’une source approuvée.|  
+|**verify_resolver_signature**|**int**|Spécifie si une signature numérique est vérifiée avant d'utiliser un résolveur dans une réplication de fusion :<br /><br /> **0** = signature n’est pas vérifiée.<br /><br /> **1** = signature est vérifiée pour déterminer s’il est d’une source approuvée.|  
 |**allow_interactive_resolver**|**bit**|Spécifie si l'utilisation du composant résolveur interactif sur un article est activée. **1** signifie que le composant résolveur interactif peut être utilisé sur l’article.|  
 |**fast_multicol_updateproc**|**bit**|Spécifie si l'Agent de fusion est activé pour appliquer des modifications à plusieurs colonnes d'une même ligne à partir d'une seule instruction UPDATE.<br /><br /> **0** = émet une instruction UPDATE distincte pour chaque colonne modifiée.<br /><br /> **1** = émis à l’instruction UPDATE qui provoque la mise à jour de plusieurs colonnes dans une instruction.|  
-|**check_permissions**|**Int**|L’image bitmap des autorisations au niveau des tables qui seront vérifiées lorsque l’Agent de fusion applique les modifications au serveur de publication. *check_permissions* peut avoir une des valeurs suivantes :<br /><br /> **0 x 00** = les autorisations ne sont pas vérifiées.<br /><br /> **0 x 10** = des vérifications d’autorisations sur le serveur de publication avant que les insertions sont exécutées sur l’abonné puissent être téléchargées.<br /><br /> **0 x 20** = les autorisations sont vérifiées sur le serveur de publication avant de pouvoir télécharger les mises à jour effectuées sur l’abonné.<br /><br /> **0 x 40** = les autorisations sont vérifiées sur le serveur de publication avant que DELETE exécutées sur l’abonné puissent être téléchargées.|  
-|**maxversion_at_cleanup**|**Int**|Génération maximale faisant l'objet d'un nettoyage lors de la prochaine exécution de l'Agent de fusion.|  
-|**processing_order**|**Int**|Indique l’ordre de traitement des articles dans une publication de fusion ; sachant que la valeur **0** indique que l’article n’est pas ordonné, et les articles sont traités dans l’ordre à partir de la valeur la plus basse à la plus élevée. Si deux articles ont la même valeur, ils sont traités simultanément. Pour plus d’informations, consultez [propriétés de spécifier la réplication de fusion](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
+|**check_permissions**|**int**|L’image bitmap des autorisations au niveau des tables qui seront vérifiées lorsque l’Agent de fusion applique les modifications au serveur de publication. *check_permissions* peut avoir une des valeurs suivantes :<br /><br /> **0 x 00** = les autorisations ne sont pas vérifiées.<br /><br /> **0 x 10** = des vérifications d’autorisations sur le serveur de publication avant que les insertions sont exécutées sur l’abonné puissent être téléchargées.<br /><br /> **0 x 20** = les autorisations sont vérifiées sur le serveur de publication avant de pouvoir télécharger les mises à jour effectuées sur l’abonné.<br /><br /> **0 x 40** = les autorisations sont vérifiées sur le serveur de publication avant que DELETE exécutées sur l’abonné puissent être téléchargées.|  
+|**maxversion_at_cleanup**|**int**|Génération maximale faisant l'objet d'un nettoyage lors de la prochaine exécution de l'Agent de fusion.|  
+|**processing_order**|**Int**|Indique l’ordre de traitement des articles dans une publication de fusion ; sachant que la valeur **0** indique que l’article n’est pas ordonné, et les articles sont traités dans l’ordre à partir de la valeur la plus basse à la plus élevée. Si deux articles ont la même valeur, ils sont traités simultanément. Pour plus d’informations, consultez [Spécifier les propriétés de la réplication de fusion](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
 |**upload_options**|**tinyint**|Indique si des modifications peuvent être effectuées sur l'Abonné ou téléchargés à partir de l'Abonné ; peut prendre l'une des valeurs suivantes :<br /><br /> **0** = il n’existe aucune restriction sur les mises à jour effectuées sur l’abonné ; toutes les modifications sont téléchargées sur le serveur de publication.<br /><br /> **1** = les modifications sont autorisées sur l’abonné, mais elles ne sont pas téléchargées sur le serveur de publication.<br /><br /> **2** = les modifications ne sont pas autorisées sur l’abonné.|  
 |**published_in_tran_pub**|**bit**|Indique qu'un article d'une publication de fusion est également publié dans une publication transactionnelle.<br /><br /> **0** = l’article n’est pas publié dans un article transactionnel.<br /><br /> **1** = l’article est également publié dans un article transactionnel.|  
 |**légère**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**procname_postfix**|**nchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**well_partitioned_lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**before_upd_view_objid**|**Int**|ID de la vue de la table avant les mises à jour.|  
-|**delete_tracking**|**bit**|Indique si les suppressions sont répliquées.<br /><br /> **0** = suppressions ne sont pas répliquées.<br /><br /> **1** = les suppressions sont répliquées, ce qui est le comportement par défaut pour la réplication de fusion.<br /><br /> Lorsque la valeur de *delete_tracking* est **0**, de lignes supprimées sur l’abonné doivent être supprimées manuellement sur le serveur de publication et de lignes supprimées sur le serveur de publication doivent être supprimées manuellement sur l’abonné.<br /><br /> Remarque : La valeur **0** entraîne une non-convergence.|  
-|**compensate_for_errors**|**bit**|Indique si des actions de compensation interviennent lorsque des erreurs se produisent pendant la synchronisation.<br /><br /> **0** = compensation actions sont désactivées.<br /><br /> **1** = les modifications qui ne peut pas être appliquées à un abonné ou un serveur de publication entraînent toujours des actions de compensation pour annuler ces modifications, ce qui est le comportement par défaut pour la réplication de fusion.<br /><br /> Remarque : La valeur **0** entraîne une non-convergence.|  
+|**before_upd_view_objid**|**int**|ID de la vue de la table avant les mises à jour.|  
+|**delete_tracking**|**bit**|Indique si les suppressions sont répliquées.<br /><br /> **0** = suppressions ne sont pas répliquées.<br /><br /> **1** = les suppressions sont répliquées, ce qui est le comportement par défaut pour la réplication de fusion.<br /><br /> Lorsque la valeur de *delete_tracking* est **0**, de lignes supprimées sur l’abonné doivent être supprimées manuellement sur le serveur de publication et de lignes supprimées sur le serveur de publication doivent être supprimées manuellement sur l’abonné.<br /><br /> Remarque : La valeur **0** entraîne une non-convergence.|  
+|**compensate_for_errors**|**bit**|Indique si des actions de compensation interviennent lorsque des erreurs se produisent pendant la synchronisation.<br /><br /> **0** = compensation actions sont désactivées.<br /><br /> **1** = les modifications qui ne peut pas être appliquées à un abonné ou un serveur de publication entraînent toujours des actions de compensation pour annuler ces modifications, ce qui est le comportement par défaut pour la réplication de fusion.<br /><br /> Remarque : La valeur **0** entraîne une non-convergence.|  
 |**pub_range**|**bigint**|Taille de la plage d'identité du serveur de publication.|  
 |**range**|**bigint**|Taille des valeurs d'identité consécutives qui seraient affectées aux abonnés dans le cas d'un ajustement.|  
-|**seuil**|**Int**|Seuil de la plage d'identité exprimé en pourcentage.|  
+|**threshold**|**Int**|Seuil de la plage d'identité exprimé en pourcentage.|  
 |**stream_blob_columns**|**bit**|Indique si la fonction d'optimisation de diffusion est utilisée pour les colonnes d'objets binaires volumineux. **1** signifie que l’optimisation est tentée.|  
 |**preserve_rowguidcol**|**bit**|Indique si la réplication utilise une colonne rowguid existante. La valeur **1** signifie qu’une colonne ROWGUIDCOL existante est utilisée. **0** signifie que la réplication a ajouté la colonne ROWGUIDCOL.|  
-|**partition_view_id**|**Int**|Identifie la vue définissant une partition d'abonné.|  
-|**repl_view_id**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**partition_view_id**|**int**|Identifie la vue définissant une partition d'abonné.|  
+|**repl_view_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**partition_deleted_view_rule**|**sysname**|Instruction utilisée à l'intérieur d'un déclencheur de réplication de fusion pour extraire l'ID de partition pour chaque ligne supprimée ou mise à jour en fonction de ses anciennes valeurs de colonne.|  
 |**partition_inserted_view_rule**|**sysname**|Instruction utilisée à l'intérieur d'un déclencheur de réplication de fusion pour extraire l'ID de partition pour chaque ligne insérée ou mise à jour en fonction de ses anciennes valeurs de colonne.|  
 |**membership_eval_proc_name**|**sysname**|Le nom de la procédure qui évalue les ID de partition actuel de lignes dans [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md).|  
@@ -100,12 +99,12 @@ ms.locfileid: "54124681"
 |**column_list_blob**|**sysname**|Liste séparée par des virgules des colonnes publiées dans un article, y compris les colonnes d'objets binaires volumineux.|  
 |**expand_proc**|**sysname**|Nom de la procédure qui réévalue les ID de partition de toutes les lignes enfants d'une ou plusieurs lignes parents nouvellement insérées ayant fait l'objet d'une modification de partition ou qui ont été supprimées.|  
 |**logical_record_parent_nickname**|**Int**|Surnom du parent de niveau supérieur d'un article donné dans un enregistrement logique.|  
-|**logical_record_view**|**Int**|Vue qui génère la colonne rowguid d'article de parent de niveau supérieur correspondant à chaque colonne rowguid enfant.|  
+|**logical_record_view**|**int**|Vue qui génère la colonne rowguid d'article de parent de niveau supérieur correspondant à chaque colonne rowguid enfant.|  
 |**logical_record_deleted_view_rule**|**sysname**|Semblable à **logical_record_view**, à ceci près qu’il affiche des lignes enfants de la table « supprimée » dans mettre à jour et supprimer les déclencheurs.|  
 |**logical_record_level_conflict_detection**|**bit**|Indique si les conflits doivent être détectés au niveau des enregistrements logiques ou au niveau des lignes ou des colonnes.<br /><br /> **0** = niveau ligne ou colonne-détection des conflits.<br /><br /> **1** = logiques détection de conflit d’enregistrement est utilisée, où une modification d’une ligne sur le serveur de publication et de modification dans une fonction en ligne la même logique enregistrement sur l’abonné est gérée comme un conflit.<br /><br /> Lorsque cette valeur est égale à 1, seule la résolution de conflits au niveau de l'enregistrement logique peut être utilisée.|  
 |**logical_record_level_conflict_resolution**|**bit**|Indique si les conflits doivent être résolus au niveau de l'enregistrement logique ou au niveau de la ligne ou de la colonne.<br /><br /> **0** = ou colonne-au niveau des lignes résolution est utilisée.<br /><br /> **1** = en cas de conflit, l’enregistrement logique complet du gagnant remplace l’enregistrement logique ensemble sur le côté perdant.<br /><br /> La valeur 1 peut-être utilisée aussi bien pour la détection au niveau de l'enregistrement logique que pour la détection au niveau de la ligne ou de la colonne.|  
 |**partition_options**|**tinyint**|Définit le mode de partitionnement des données de l'article, ce qui permet l'optimisation des performances lorsque toutes les lignes appartiennent à une seule partition ou à un seul abonnement. Le *partition_options* peut prendre l’une des valeurs suivantes.<br /><br /> **0** = le filtrage de l’article est statique ou ne génère pas un sous-ensemble unique de données pour chaque partition, autrement dit, une partition en « chevauchement ».<br /><br /> **1** = les partitions se chevauchent et les mises à jour DML effectuées sur l’abonné ne peut pas modifier la partition à laquelle appartient une ligne.<br /><br /> **2** = le filtrage de l’article génère des partitions sans chevauchement, mais plusieurs abonnés peuvent recevoir la même partition.<br /><br /> **3** = le filtrage de l’article génère des partitions sans chevauchement qui sont uniques pour chaque abonnement.|  
-|**nom**|**sysname**|Nom d'une partition.|  
+|**name**|**sysname**|Nom d'une partition.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Gérer les Partitions d’une Publication de fusion avec des filtres paramétrés](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   

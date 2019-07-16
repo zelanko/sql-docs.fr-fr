@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf1f5b633b432d24ea143d857dcd7fbdf72968fd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b5bd5257e06b784418625616c71cfb7d3e5510a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090662"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "53204538"
   
 -   Déclencheurs DDL au niveau du serveur  
   
-**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,7 +65,7 @@ sys.dm_sql_referencing_entities (
   
  *schema_name* est obligatoire sauf lorsque la classe référencée est PARTITION_FUNCTION.  
   
- *schema_name.referenced_entity_name* est **nvarchar (517)**.  
+ *schema_name.referenced_entity_name* est **nvarchar (517)** .  
   
  *< Referenced_class >* :: = {objet | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  Classe de l'entité référencée. Une seule classe peut être spécifiée par instruction.  
@@ -75,11 +74,11 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |referencing_schema_name|**sysname**|Schéma auquel l'entité de référence appartient. Autorise la valeur NULL.<br /><br /> NULL pour les déclencheurs DDL au niveau de la base de données et au niveau du serveur.|  
 |referencing_entity_name|**sysname**|Nom de l’entité de référence. N'accepte pas la valeur NULL.|  
-|referencing_id|**Int**|ID de l'entité de référence. N'accepte pas la valeur NULL.|  
+|referencing_id|**int**|ID de l'entité de référence. N'accepte pas la valeur NULL.|  
 |referencing_class|**tinyint**|Classe de l'entité de référence. N'accepte pas la valeur NULL.<br /><br /> 1 = objet<br /><br /> 12 = déclencheur DDL au niveau de la base de données<br /><br /> 13 = déclencheur DDL au niveau du serveur|  
 |referencing_class_desc|**nvarchar(60)**|Description de la classe d’entité de référence.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|Indique que la résolution de l'ID d'entité référencée se produit au moment de l'exécution, car elle dépend du schéma de l'appelant.<br /><br /> 1 = l'entité de référence a la possibilité de référencer l'entité ; toutefois, la résolution de l'ID d'entité référencée dépend de l'appelant et ne peut pas être déterminée. Cela se produit uniquement pour les références non liées au schéma à une procédure stockée, procédure stockée étendue ou fonction définie par l'utilisateur appelée dans une instruction EXECUTE.<br /><br /> 0 = l'entité référencée ne dépend pas de l'appelant.|  
@@ -102,8 +101,8 @@ sys.dm_sql_referencing_entities (
   
 |Type d'entité|Entité de référence|Entité référencée|  
 |-----------------|------------------------|-----------------------|  
-|Table de charge de travail|Oui*|Oui|  
-|Affichage|Oui|Oui|  
+|Table|Oui*|Oui|  
+|Vue|Oui|Oui|  
 |Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Oui|Oui|  
 |Procédure stockée CLR|Non|Oui|  
 |Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Oui|Oui|  
@@ -117,7 +116,7 @@ sys.dm_sql_referencing_entities (
 |Synonyme|Non|Oui|  
 |Type (alias et type CLR défini par l'utilisateur)|Non|Oui|  
 |Collection de schémas XML|Non|Oui|  
-|Fonction de partition|Non|Oui|  
+|Partition (fonction)|Non|Oui|  
   
  \* Une table est suivie comme entité de référence uniquement lorsqu’il fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, de type défini par l’utilisateur ou de collection de schémas XML dans la définition d’une colonne calculée, une contrainte CHECK ou une contrainte par défaut.  
   
@@ -143,7 +142,7 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. Retour des entités qui font référence à une entité donnée  
+### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>R. Retour des entités qui font référence à une entité donnée  
  L'exemple suivant retourne les entités dans la base de données active qui font référence à la table spécifiée.  
   
 ```sql  
@@ -154,7 +153,7 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>b. Retour des entités qui font référence à un type donné  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>B. Retour des entités qui font référence à un type donné  
  L'exemple suivant retourne les entités qui référencent le type d'alias `dbo.Flag`. Le jeu de résultats montre que deux procédures stockées utilisent ce type. Le `dbo.Flag` type est également utilisé dans la définition de plusieurs colonnes dans le `HumanResources.Employee` table ; Toutefois, étant donné que le type n’est pas dans la définition d’une colonne calculée, une contrainte CHECK ou une contrainte par défaut dans la table, ne retourne aucune ligne pour le `HumanResources.Employee`table.  
   
 ```sql  

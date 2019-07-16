@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d789ec1dd936b7eb40ecae56226a5879754a2260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017994"
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>Capture de données modifiées - sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque session d'analyse du journal dans la base de données actuelle. La dernière ligne retournée représente la session active. Vous pouvez utiliser cette vue pour retourner des informations d'état sur la session d'analyse du journal actuelle, ou des informations de synthèse sur toutes les sessions depuis le dernier démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
    
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**Int**|ID de la session.<br /><br /> 0 = les données retournées dans cette ligne sont un agrégat de toutes les sessions depuis le dernier démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**session_id**|**int**|ID de la session.<br /><br /> 0 = les données retournées dans cette ligne sont un agrégat de toutes les sessions depuis le dernier démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**start_time**|**datetime**|Heure de début de la session.<br /><br /> Lorsque **session_id** = 0, heure de début de la collecte de données agrégées.|  
 |**end_time**|**datetime**|Heure à laquelle la session est terminée.<br /><br /> NULL = la session est active.<br /><br /> Lorsque **session_id** = 0, heure de la dernière session s’est terminée.|  
 |**duration**|**bigint**|Durée (en secondes) de la session.<br /><br /> 0 = la session ne contient pas de transactions de capture des données modifiées.<br /><br /> Lorsque **session_id** = 0, la somme de la durée (en secondes) de toutes les sessions avec les transactions de capture de données modifiées.|  
-|**scan_phase**|**nvarchar(200)**|Phase actuelle de la session. Voici les valeurs possibles et leurs descriptions :<br /><br /> 1 : configuration de la lecture<br />2 : première analyse, création de table de hachage<br />3 : deuxième analyse<br />4 : deuxième analyse<br />5 : analyse ensuite<br />6 : contrôle de version de schéma<br />7 : la dernière analyse<br />8 : terminé<br /><br /> Lorsque **session_id** = 0, cette valeur est toujours « Agrégation ».|  
+|**scan_phase**|**nvarchar(200)**|Phase actuelle de la session. Voici les valeurs possibles et leurs descriptions :<br /><br /> 1 : Lecture de la configuration<br />2 : Première analyse, création de table de hachage<br />3 : Deuxième analyse<br />4 : Deuxième analyse<br />5 : Deuxième analyse<br />6 : Contrôle de version de schéma<br />7 : Dernière analyse<br />8 : Terminé<br /><br /> Lorsque **session_id** = 0, cette valeur est toujours « Agrégation ».|  
 |**error_count**|**Int**|Nombre d'erreurs rencontrées.<br /><br /> Lorsque **session_id** = 0, le nombre total d’erreurs dans toutes les sessions.|  
 |**start_lsn**|**nvarchar(23)**|Numéro séquentiel dans le journal de démarrage pour la session.<br /><br /> Lorsque **session_id** = 0, le LSN de départ pour la dernière session.|  
 |**current_lsn**|**nvarchar(23)**|Numéro séquentiel dans le journal actuel qui est analysé.<br /><br /> Lorsque **session_id** = 0, le numéro LSN actuel est 0.|  
@@ -52,14 +51,14 @@ ms.locfileid: "47698587"
 |**first_begin_cdc_lsn**|**nvarchar(23)**|Premier numéro séquentiel dans le journal qui contenait des transactions de capture des données modifiées.<br /><br /> Lorsque **session_id** = 0, le premier numéro séquentiel qui contenait des transactions de capture de données modifiées.|  
 |**last_commit_cdc_lsn**|**nvarchar(23)**|Numéro séquentiel dans le journal du dernier enregistrement du journal de validation qui contenait des transactions de capture des données modifiées.<br /><br /> Lorsque **session_id** = 0, le dernier enregistrement du journal LSN de validation pour toute session qui contenait transactions de capture de données modifiées|  
 |**last_commit_cdc_time**|**datetime**|Heure de traitement du dernier enregistrement du journal de validation qui contenait des transactions de capture des données modifiées.<br /><br /> Lorsque **session_id** = 0, heure du dernier journal de validation enregistrer pour toute session qui contenait transactions de capture de données modifiées.|  
-|**latence**|**Int**|La différence, en secondes, entre **end_time** et **last_commit_cdc_time** dans la session. Ce compteur est rempli à la fin de la phase 7.<br /><br /> Lorsque **session_id** = 0, la dernière valeur de latence différente de zéro enregistrée par une session.|  
-|**empty_scan_count**|**Int**|Nombre de sessions consécutives qui ne contenaient aucune transaction de capture des données modifiées.|  
+|**latence**|**int**|La différence, en secondes, entre **end_time** et **last_commit_cdc_time** dans la session. Ce compteur est rempli à la fin de la phase 7.<br /><br /> Lorsque **session_id** = 0, la dernière valeur de latence différente de zéro enregistrée par une session.|  
+|**empty_scan_count**|**int**|Nombre de sessions consécutives qui ne contenaient aucune transaction de capture des données modifiées.|  
 |**failed_sessions_count**|**Int**|Nombre de sessions qui ont échoué.|  
   
 ## <a name="remarks"></a>Notes  
  Les valeurs dans cette vue de gestion dynamique sont réinitialisées à chaque démarrage de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation VIEW DATABASE STATE pour interroger le **sys.dm_cdc_log_scan_sessions** vue de gestion dynamique. Pour plus d’informations sur les autorisations sur les vues de gestion dynamique, consultez [fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ## <a name="examples"></a>Exemples  

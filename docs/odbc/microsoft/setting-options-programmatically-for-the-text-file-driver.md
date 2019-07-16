@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 04bd9a37d87c91fe3f42cbb1fdf464660ba5a299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e1a28e5c7ccf3c701e5f97440cd97ed843ab53dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063506"
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>Définition d’options par programmation pour le pilote de fichier texte
 
 |Option|Description|Méthode|  
 |------------|-----------------|------------|  
-|Nom de la source de données|Un nom qui identifie la source de données, telles que la paie ou Personnel.|Pour définir cette option de manière dynamique, utilisez le **DSN** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
+|Data Source Name|Un nom qui identifie la source de données, telles que la paie ou Personnel.|Pour définir cette option de manière dynamique, utilisez le **DSN** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Définir le Format|Affiche le **définition du Format texte** boîte de dialogue et vous permet de spécifier le schéma pour des tables individuelles dans le répertoire de source de données.|Cette option ne peut pas définir de manière dynamique par un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Description|Une description facultative des données dans la source de données ; par exemple, « date d’embauche, historique de salaire et examen actuel de tous les employés. »|Pour définir cette option de manière dynamique, utilisez le **DESCRIPTION** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |Répertoire|Sélectionne le répertoire cible.|Pour définir cette option de manière dynamique, utilisez le **DEFAULTDIR** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  

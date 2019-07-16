@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d5247959cacb4df4fd51275c3f826280bffbb9fd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7470baabb9a35a923995d8306b314f9272de0b5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070371"
 ---
 # <a name="spcleanuplogshippinghistory-transact-sql"></a>sp_cleanup_log_shipping_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_cleanup_log_shipping_history
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun.  
+ Aucune.  
   
 ## <a name="remarks"></a>Notes  
  **sp_cleanup_log_shipping_history** doit être exécuté à partir de la **master** base de données sur n’importe quel serveur d’envoi de journaux. Cette procédure stockée nettoie les copies locales et distantes de **log_shipping_monitor_history_detail** et **log_shipping_monitor_error_detail** selon la période de rétention de l’historique.  

@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 683adbb172802d3709250c3cac46efdbed6cc544
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026841"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Ces statistiques sont utiles pour comprendre et ajuster le nombre de compartiments. Elles peuvent également être utilisées pour détecter les cas où la clé d'index possède un grand nombre de doublons.  
   
- Une longueur de chaîne moyenne élevée indique que de nombreuses lignes sont hachées dans le même compartiment. Cela peut se produire si :  
+ Une longueur de chaîne moyenne élevée indique que de nombreuses lignes sont hachées dans le même compartiments. Cela peut se produire si :  
   
 -   Le nombre de compartiments vides est faible ou les longueurs de chaîne moyenne et maximale sont similaires. Il est probable que le nombre de compartiments est trop bas. Cela entraîne le hachage de plusieurs clés d'index dans le même compartiment.  
   
@@ -46,23 +45,23 @@ Les chaînes de type Long peuvent affecter les performances des opérations DML 
   
 Pour plus d’informations, consultez [index de hachage pour les Tables optimisées en mémoire](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
   
-|Nom de colonne|Type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |object_id|**Int**|ID d'objet d'une table parent.|  
 |xtp_object_id|**bigint**|ID de la table optimisée en mémoire.|  
-|index_id|**Int**|ID d'index.|  
+|index_id|**int**|ID d'index.|  
 |total_bucket_count|**bigint**|Nombre total de compartiments de hachage dans l'index.|  
 |empty_bucket_count|**bigint**|Nombre total de compartiments de hachage vides dans l'index.|  
 |avg_chain_length|**bigint**|Longueur moyenne des chaînes de ligne sur tous les compartiments de hachage dans l'index.|  
 |max_chain_length|**bigint**|Longueur maximale des chaînes de ligne dans les compartiments de hachage.|  
 |xtp_object_id|**bigint**|ID d’objet OLTP en mémoire qui correspond à la table optimisée en mémoire.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur le serveur.  
 
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-troubleshooting-hash-index-bucket-count"></a>A. Résolution de problèmes liés au nombre de compartiments d’index de hachage
+### <a name="a-troubleshooting-hash-index-bucket-count"></a>R. Résolution de problèmes liés au nombre de compartiments d’index de hachage
 
 La requête suivante peut être utilisée pour résoudre les problèmes le nombre de compartiments des index de hachage d’une table existante. La requête retourne des statistiques sur le pourcentage de compartiments vides et la longueur de chaîne pour tous les index de hachage sur les tables utilisateur.
 
@@ -113,7 +112,7 @@ Certaines fonctionnalités utilisent des tables internes qui tirent parti des in
   ORDER BY [user_table], [internal_table_type], [index]; 
 ```
 
-Notez que la valeur de BUCKET_COUNT d’index sur les tables internes ne peut pas être modifié, par conséquent, la sortie de cette requête doit être considérée comme une information uniquement. Aucune action n'est requise.  
+Notez que la valeur de BUCKET_COUNT d’index sur les tables internes ne peut pas être modifié, par conséquent, la sortie de cette requête doit être considérée comme une information uniquement. Aucune action n’est requise.  
 
 Cette requête n’est pas censée retourner toutes les lignes, sauf si vous utilisez une fonctionnalité qui tire parti des index de hachage sur les tables internes. Le tableau suivant mémoire optimisé contient un index columnstore. Après avoir créé cette table, vous verrez des index de hachage sur les tables internes.
 

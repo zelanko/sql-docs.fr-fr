@@ -1,5 +1,5 @@
 ---
-title: sys.dm_broker_forwarded_messages (Transact-SQL) | Microsoft Docs
+title: Sys.dm_broker_forwarded_messages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5576376d-6364-417a-8475-aa770e060845
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4ce05635464cc9b02e419c4f0a5b162a14042d51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87f471a91aad067dd1662f243cdbafd73d335979
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099155"
 ---
 # <a name="sysdmbrokerforwardedmessages-transact-sql"></a>sys.dm_broker_forwarded_messages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62759898"
   Retourne une ligne pour chaque message de Service Broker qu'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en train de retransmettre.  
   
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**conversation_id**|**uniqueidentifier**|Identificateur de la conversation à laquelle appartient le message. Accepte la valeur NULL.|  
 |**is_initiator**|**bit**|Indique si le message provient de l'initiateur de la conversation.  Accepte la valeur NULL.<br /><br /> 0 = Non activé par l'initiateur<br /><br /> 1 = Activé par l'initiateur|  
@@ -45,7 +44,7 @@ ms.locfileid: "62759898"
 |**message_fragment_number**|**Int**|Si le message est fragmenté, numéro du fragment transporté par le message. Accepte la valeur NULL.|  
 |**hops_remaining**|**tinyint**|Nombre de tentatives de retransmission du message jusqu'à sa destination finale. Cette valeur est décrémentée de 1 à chaque transfert du message. Accepte la valeur NULL.|  
 |**time_to_live**|**Int**|Durée maximale d'activité du message. Lorsque cette valeur atteint 0, le message est supprimé. Accepte la valeur NULL.|  
-|**time_consumed**|**Int**|Durée totale d'activité du message. Chaque fois que le message est transféré, cette valeur est augmentée du temps de transfert correspondant. Cette colonne n'accepte pas la valeur NULL.|  
+|**time_consumed**|**int**|Durée totale d'activité du message. Chaque fois que le message est transféré, cette valeur est augmentée du temps de transfert correspondant. Cette colonne n'accepte pas la valeur NULL.|  
 |**message_id**|**uniqueidentifier**|ID du message. Accepte la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  

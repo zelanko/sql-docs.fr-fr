@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3a2dd68c36887c373c7102b150ffc1032750eb52
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099828"
 ---
 # <a name="functions-on-string-values---concat"></a>Fonctions sur les valeurs de chaîne : oncat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,8 +49,8 @@ fn:concat ($string as xs:string?
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Utilisation de la fonction XQuery concat() pour concaténer des chaînes  
- Pour un modèle de produit spécifique, cette requête renvoie une chaîne obtenue d'après la concaténation de la période et de la description de la garantie. Dans le document de la description du catalogue, l'élément <`Warranty`> est constitué des éléments enfants <`WarrantyPeriod`> et <`Description`>.  
+### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>R. Utilisation de la fonction XQuery concat() pour concaténer des chaînes  
+ Pour un modèle de produit spécifique, cette requête renvoie une chaîne obtenue d'après la concaténation de la période et de la description de la garantie. Dans le document de description de catalogue, le <`Warranty`> élément se compose de <`WarrantyPeriod`> et <`Description`> éléments enfants.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -78,7 +77,7 @@ WHERE  PD.ProductModelID=28
   
 -   Le document sur lequel porte la requête utilise des espaces de noms. Par conséquent, le **espace de noms** mot clé est utilisé pour définir le préfixe pour l’espace de noms. Pour plus d’informations, consultez [prologue XQuery](../xquery/modules-and-prologs-xquery-prolog.md).  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  

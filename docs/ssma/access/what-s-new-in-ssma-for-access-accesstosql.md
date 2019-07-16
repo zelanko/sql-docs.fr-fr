@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0f0084f93fa648e5db79ef70dd5f05a259b94b67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50723f7b7161bbed960ce2f94e1b7bbf79d420d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938410"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Nouveautés de SSMA pour Access (AccessToSQL)
 
@@ -31,7 +30,7 @@ La version v8.2 de SSMA pour Access a été améliorée avec des correctifs cibl
 > [!IMPORTANT]
 > Avec SSMA v7.4 et versions ultérieures, .net 4.5.2 est un préalable de l’installation.
 
-## <a name="ssma-v81"></a>SSMA v8.1
+## <a name="ssma-v81"></a>V8.1 SSMA
 
 La version v8.1 de SSMA pour Access a été améliorée avec des correctifs ciblés visant qui est conçues pour améliorer la qualité et conversion des mesures.
 
@@ -131,7 +130,7 @@ La version v7.1 de SSMA pour Access contient les modifications suivantes :
 * SSMA prend désormais en charge les mises à jour automatiques pour télécharger la dernière version de SSMA dès qu’il est disponible.
 * Fichiers binaires installables SSMA sont maintenant fournies via fichiers de package Windows installer (.msi).
 
-## <a name="may-2016"></a>Mai 2016
+## <a name="may-2016"></a>Mai 2016
 
 La version de mai 2016 de SSMA pour Access contient les modifications suivantes :  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5312413386dae9915b9ac6649b4210541d45b1db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022317"
 ---
 # <a name="spmonitor-transact-sql"></a>sp_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_monitor
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |**last_run**|Temps **sp_monitor** de la dernière exécution.|  
 |**current_run**|Temps **sp_monitor** est en cours d’exécution.|  
@@ -65,7 +64,7 @@ sp_monitor
   
  Pour chaque colonne, les statistiques sont imprimées sous la forme *nombre*(*nombre*)-*nombre*% ou *nombre*(*nombre*). La première *nombre* fait référence au nombre de secondes (pour **cpu_busy**, **io_busy**, et **inactif**) ou le nombre total (pour les autres variables) dans la mesure où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a été redémarré. Le *nombre* entre parenthèses correspond au nombre de secondes ou nombre total depuis la dernière fois **sp_monitor** a été exécuté. Le pourcentage est le pourcentage de temps depuis **sp_monitor** de la dernière exécution. Par exemple, si le rapport affiche **cpu_busy** 4250 (215)-68 %, le processeur a été occupés secondes 4250 depuis [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dernier démarrage, pendant 215 secondes depuis **sp_monitor** était la dernière exécution et 68 % du Nombre total de temps écoulé depuis **sp_monitor** de la dernière exécution.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

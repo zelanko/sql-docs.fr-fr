@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd695638-1a0b-4e27-8a6a-9510ebb5a5ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d081d53458ec59eb2ac9f05c5c1d47d6991b5010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31263162526b6bd2e0a116a473f09f9e2caeba94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077284"
 ---
 # <a name="desktop-database-driver-compatibility"></a>Compatibilité des pilotes pour les bases de données de poste de travail
 Unicode est une méthode d’encodage de caractères logiciel traite tous les caractères comme ayant une largeur fixe de deux octets. Cette méthode est utilisée comme alternative à l’encodage de caractères Windows ANSI, c'est-à-dire, car il représente les caractères dans un seul octet, limitée à 256 caractères. Étant donné que Unicode peut représenter plus de 65 000 caractères, il prend en charge de nombreuses langues dont les caractères ne sont pas représentées au format ANSI.  

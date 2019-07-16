@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c8a5b88f3fdca03be7740ba086e7ff61edbf684
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 203ad92dd6abfc71b0fdeddc466752612e666cee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100452"
 ---
 # <a name="length-of-the-product-cycle"></a>Longueur du cycle produit
 La dernière question sur l’interopérabilité est le temps. Développement d’une application interopérable généralement prend plus de temps que de développer un noninteroperable. La raison est que l’application doit vérifier les fonctionnalités de SGBD, effectuer les mêmes tâches différemment pour différents SGBD, contourner les fonctionnalités prises en charge par certains SGBD, mais pas pour d’autres et ainsi de suite.  

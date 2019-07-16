@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097843"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +45,26 @@ dm_exec_cursors (session_id | 0 )
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**Int**|ID de la session propriétaire de ce curseur.|  
-|**cursor_id**|**Int**|ID de l'objet curseur.|  
-|**nom**|**nvarchar (256)**|Nom du curseur, défini par l'utilisateur.|  
+|**cursor_id**|**int**|ID de l'objet curseur.|  
+|**name**|**nvarchar (256)**|Nom du curseur, défini par l'utilisateur.|  
 |**properties**|**nvarchar (256)**|Spécifie les propriétés du curseur. Les valeurs des propriétés suivantes sont concaténées pour former la valeur de cette colonne :<br />Interface déclaration<br />Type de curseur <br />Accès simultané au curseur<br />Étendue du curseur<br />Niveau d'imbrication du curseur<br /><br /> Par exemple, la valeur retournée dans cette colonne peut être « TSQL &#124; dynamique &#124; Optimistic &#124; Global (0) ».|  
 |**sql_handle**|**varbinary(64)**|Descripteur du texte du traitement qui a déclaré le curseur.|  
-|**statement_start_offset**|**Int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution commencent. Peut être utilisé conjointement avec le **sql_handle**, le **statement_end_offset**et le [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) fonction de gestion dynamique pour récupérer l’actuellement l’exécution d’instruction pour la demande.|  
+|**statement_start_offset**|**int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution commencent. Peut être utilisé conjointement avec le **sql_handle**, le **statement_end_offset**et le [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) fonction de gestion dynamique pour récupérer l’actuellement l’exécution d’instruction pour la demande.|  
 |**statement_end_offset**|**Int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution se terminent. Peut être utilisé conjointement avec le **sql_handle**, le **statement_start_offset**et le **sys.dm_exec_sql_text** fonction de gestion dynamique pour récupérer l’actuellement l’exécution d’instruction pour la demande.|  
 |**plan_generation_num**|**bigint**|Numéro de séquence permettant de distinguer les instances de plans après une recompilation.|  
 |**creation_time**|**datetime**|Heure de création du curseur.|  
 |**is_open**|**bit**|Indique si le curseur est ouvert.|  
 |**is_async_population**|**bit**|Spécifie si le thread d'arrière-plan remplit toujours de manière asynchrone un curseur KEYSET ou STATIC.|  
 |**is_close_on_commit**|**bit**|Spécifie si le curseur a été déclaré à l'aide de CURSOR_CLOSE_ON_COMMIT.<br /><br /> 1 = Le curseur est fermé à la fin de la transaction.|  
-|**fetch_status**|**Int**|Retourne le dernier état d'extraction du curseur. C’est la dernière retournée@FETCH_STATUS valeur.|  
-|**fetch_buffer_size**|**Int**|Retourne des informations sur la taille du tampon d'extraction.<br /><br /> 1 = Curseurs Transact-SQL. Il est possible de définir une valeur supérieure pour les curseurs des API.|  
-|**fetch_buffer_start**|**Int**|Pour les curseurs FAST_FORWARD et DYNAMIC, retourne 0 si le curseur n'est pas ouvert ou s'il est positionné devant la première ligne. Sinon, retourne -1.<br /><br /> Pour les curseurs STATIC et KEYSET, retourne 0 si le curseur n'est pas ouvert et -1 si le curseur est positionné au-delà de la dernière ligne.<br /><br /> Sinon, retourne le numéro de la ligne où il est positionné.|  
-|**ansi_position**|**Int**|Position du curseur dans le tampon d'extraction.|  
+|**fetch_status**|**int**|Retourne le dernier état d'extraction du curseur. C’est la dernière retournée@FETCH_STATUS valeur.|  
+|**fetch_buffer_size**|**int**|Retourne des informations sur la taille du tampon d'extraction.<br /><br /> 1 = Curseurs Transact-SQL. Il est possible de définir une valeur supérieure pour les curseurs des API.|  
+|**fetch_buffer_start**|**int**|Pour les curseurs FAST_FORWARD et DYNAMIC, retourne 0 si le curseur n'est pas ouvert ou s'il est positionné devant la première ligne. Sinon, retourne -1.<br /><br /> Pour les curseurs STATIC et KEYSET, retourne 0 si le curseur n'est pas ouvert et -1 si le curseur est positionné au-delà de la dernière ligne.<br /><br /> Sinon, retourne le numéro de la ligne où il est positionné.|  
+|**ansi_position**|**int**|Position du curseur dans le tampon d'extraction.|  
 |**worker_time**|**bigint**|Temps, en microsecondes, passés par les travaux qui exécutent ce curseur.|  
-|**reads**|**bigint**|Nombre de lectures effectuées par le curseur.|  
+|**Lectures**|**bigint**|Nombre de lectures effectuées par le curseur.|  
 |**writes**|**bigint**|Nombre d'écritures effectuées par le curseur.|  
 |**dormant_duration**|**bigint**|Millisecondes écoulées depuis le début de la dernière requête (ouverture ou extraction) sur ce curseur.|  
   
@@ -86,7 +85,7 @@ dm_exec_cursors (session_id | 0 )
 |----------|-----------------|  
 |Keyset|Le curseur est déclaré comme Keyset.|  
 |dynamique|Le curseur est déclaré comme dynamique.|  
-|Snapshot|Le curseur est déclaré comme instantané ou statique.|  
+|Instantané|Le curseur est déclaré comme instantané ou statique.|  
 |Fast_Forward|Le curseur est déclaré comme curseur avant.|  
   
  Le tableau ci-dessous fournit des informations sur l'accès concurrentiel au curseur et inclut les valeurs possibles pour la colonne des propriétés.  
@@ -106,7 +105,7 @@ dm_exec_cursors (session_id | 0 )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-detecting-old-cursors"></a>A. Détection des anciens curseurs  
+### <a name="a-detecting-old-cursors"></a>R. Détection des anciens curseurs  
  Cet exemple retourne des informations sur les curseurs ouverts sur le serveur pendant une durée supérieure aux 36 heures spécifiées.  
   
 ```  

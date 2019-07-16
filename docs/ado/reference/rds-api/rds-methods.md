@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2b733230abfe7d9fc3c9e73831f097955cd056b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d045858ddd0cde818eedb983f10527fe7e94a2fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963685"
 ---
 # <a name="rds-methods"></a>Méthodes RDS
 > [!IMPORTANT]
@@ -36,9 +35,9 @@ ms.locfileid: "66694744"
 |[Execute21, méthode (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|Exécuter la requête et créer un ensemble de lignes de données avancés (pour une utilisation avec ADO 2.1).|  
 |[InvokeService (RDS)](../../../ado/reference/rds-api/invokeservice-rds.md)|Retourne un pointeur vers l’interface demandée sur une version plus performante de l’objet.|  
 |[MoveFirst, MoveLast, MoveNext, MovePrevious (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)|Déplace vers le premier, au dernier enregistrement suivant ou précédent dans une certaine **Recordset** objet.|  
-|[Query (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Utilise une chaîne de requête SQL valide pour retourner un **Recordset**.|  
-|[Refresh (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|Actualise la source de données spécifiée dans le **Connect** propriété et des mises à jour les résultats de requête.|  
-|[Reset (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Exécute le tri ou le filtre sur une côté client **Recordset**, en se basant sur les propriétés de tri et filtre spécifiées.|  
+|[Requête (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Utilise une chaîne de requête SQL valide pour retourner un **Recordset**.|  
+|[Actualiser (RDS)](../../../ado/reference/rds-api/refresh-method-rds.md)|Actualise la source de données spécifiée dans le **Connect** propriété et des mises à jour les résultats de requête.|  
+|[Réinitialisation (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)|Exécute le tri ou le filtre sur une côté client **Recordset**, en se basant sur les propriétés de tri et filtre spécifiées.|  
 |[SubmitChanges (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Soumet les modifications de localement mis en cache et être mise à jour en attente **Recordset** à la source de données spécifiée dans le **Connect** propriété.|  
 |[Synchronize, méthode (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion (pour une utilisation avec ADO 2.5 et versions ultérieur).|  
 |[Synchronize21, méthode (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Synchroniser le jeu d’enregistrements donné avec la base de données spécifiée par la chaîne de connexion (pour une utilisation avec ADO 2.1).|

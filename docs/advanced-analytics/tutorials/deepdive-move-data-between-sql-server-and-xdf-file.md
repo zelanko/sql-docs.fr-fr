@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 40852f62cc985f300d04eac4dbef5810f823e124
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f5800f315ee09328908b612c18faf6c77a7ac13c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962211"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>Déplacer des données entre SQL Server et un fichier XDF (didacticiel sur SQL Server et RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,9 +35,9 @@ Dans cet exercice, vous utilisez à nouveau les données de fraude de carte de c
     ```
     **Résultats**
     
-    CA|- ou -|WA
+    CA|Ou|WA
     ----|----|----
-    5|38|48
+    5\.|38|48
     
 2. Définir les données que vous souhaitez déplacer à partir de SQL Server, à l’aide un [!INCLUDE[tsql](../../includes/tsql-md.md)] requête.  Plus tard vous utilisez cette variable en tant que le *inData* argument pour **rxImport**.
   

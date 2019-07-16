@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00d20f8a6dd4d79b3100549d9286e7534bc8ce6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 500a81146397fa5c50bd8b74c600d04887ecc99c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096352"
 ---
 # <a name="defining-text-format-text-file-driver"></a>Définition du format du texte (pilote de fichier texte)
 Lorsque le pilote de texte est utilisé, vous pouvez utiliser la **définition du Format texte** boîte de dialogue pour définir le format pour les colonnes dans un fichier sélectionné. Cette boîte de dialogue vous permet de spécifier le schéma pour chaque table de données. Ces informations sont écrit dans un fichier Schema.ini dans le répertoire de source de données. Un fichier Schema.ini distinct est créé pour chaque répertoire de source de données de texte.  
@@ -29,14 +28,14 @@ Lorsque le pilote de texte est utilisé, vous pouvez utiliser la **définition d
   
  Les options suivantes sont disponibles dans le **définition du Format texte** boîte de dialogue :  
   
-|Option|Informations|  
+|Option|Information|  
 |------------|-----------------|  
 |**Ajouter**|Ajoute une colonne en utilisant les valeurs dans **Type de données**, **nom**, et **largeur** à partir de la boîte de dialogue, et si applicable, le séparateur de Date valeur Schema.ini.|  
 |**Caractères**|**ANSI** ou **OEM**. OEM spécifie un jeu de caractères non-ANSI. L’emplacement par défaut pour les OEM si le format de l’élément sélectionné dans le **Tables** liste n’a pas été précédemment définie par cette boîte de dialogue.|  
 |**En-tête de nom de colonne**|Indique si les colonnes de la première ligne de la table sélectionnée doivent être utilisés comme noms de colonne. Soit **TRUE** ou **FALSE**. Valeur par défaut est FALSE si le format de l’élément sélectionné dans le **Tables** liste n’a pas été précédemment définie par cette boîte de dialogue.|  
 |**Colonnes**|Répertorie les noms de colonne pour chaque colonne dans la table sélectionnée. L’ordre des colonnes reflète l’ordre des colonnes dans la table. Cette liste est activée si un fichier a été sélectionné dans le **Tables** liste.|  
 |**Type de données**|Peut être BIT, BYTE, CHAR, devise, DATE, FLOAT, entier, LONGCHAR, SHORT ou unique. Types de données de date peuvent être dans les formats suivants : « jj-mmm-aa », « mm-jj-aa », « mmm jj-aa », « aaaa-mm-jj » ou « aaaa-mmm-jj ». « mm » désigne les numéros de mois ; « mmm » désigne des lettres pour le mois.|  
-|**Delimiter**|Spécifie le caractère délimiteur personnalisé à utiliser pour séparer les colonnes. Lorsque le **personnalisé délimitée par des** format est sélectionné. Le délimiteur peut être qu’un seul caractère de longueur et guillemets doubles (") ne peut pas servir en tant que le caractère délimiteur. (Le délimiteur ne peut pas être spécifié au format hexadécimal ou décimal).|  
+|**Délimiteur**|Spécifie le caractère délimiteur personnalisé à utiliser pour séparer les colonnes. Lorsque le **personnalisé délimitée par des** format est sélectionné. Le délimiteur peut être qu’un seul caractère de longueur et guillemets doubles (") ne peut pas servir en tant que le caractère délimiteur. (Le délimiteur ne peut pas être spécifié au format hexadécimal ou décimal).|  
 |**Format**|Longueur fixe ou délimité. S’ils sont délimités, indique le type de délimiteur utilisé : une virgule (CSV), onglet ou un caractère spécial (personnalisé). Par défaut est **délimitation CSV** si le format de l’élément sélectionné dans le **Tables** liste n’a pas été précédemment définie par cette boîte de dialogue.<br /><br /> Si **Format** est de longueur fixe et **en-tête de nom de colonne** est TRUE, la première ligne doit être délimitée par des virgules.|  
 |**Estimation**|Génère automatiquement des valeurs de type, nom et la largeur de données pour les colonnes de la colonne dans la table sélectionnée en analysant le contenu de la table en fonction de la **Format** zone de sélection. Activé quand le format de table est délimité. Toute définie précédemment des colonnes dans le **colonnes** liste sont effacées et remplacées par nouvelles entrées. Si **en-tête de nom de colonne** est ne pas sélectionnée, les noms de colonne sont générés automatiquement en tant que « F1 », « F2 » et ainsi de suite. Aucune valeur par défaut n’est affichée dans le **Type de données** boîte.<br /><br /> Cette fonctionnalité fonctionne uniquement sur les colonnes qui sont inférieures à 64 513 octets.|  
 |**Modifier**|Modifie la colonne sélectionnée en utilisant les valeurs dans **Type de données**, **nom**, et **largeur**.|  

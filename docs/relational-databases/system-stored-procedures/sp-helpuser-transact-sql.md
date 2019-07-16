@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a170c5e43329d90a4977db12a98bd9d2e556e91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048161"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ## <a name="result-sets"></a>Jeux de résultats  
  Le tableau suivant présente le jeu de résultats lorsque ni un compte d’utilisateur ni un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou un utilisateur de Windows est spécifié pour *auxquels celui-ci a*.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**UserName**|**sysname**|Utilisateurs dans la base de données en cours.|  
 |**RoleName**|**sysname**|Rôles auxquels **nom d’utilisateur** appartient.|  
@@ -63,14 +62,14 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
  Le tableau ci-dessous indique l'ensemble de résultats obtenu, lorsqu'aucun compte d'utilisateur n'est spécifié et que des alias existent dans la base de données en cours.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Connexions affectées comme alias aux utilisateurs de la base de données en cours.|  
 |**UserNameAliasedTo**|**sysname**|Nom d'utilisateur dans la base de données en cours dont la connexion est affectée comme alias.|  
   
  Le tableau suivant présente le jeu de résultats lorsqu’un rôle est spécifié pour *auxquels celui-ci a*.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Nom_rôle**|**sysname**|Nom du rôle dans la base de données en cours.|  
 |**Role_id**|**smallint**|ID du rôle dans la base de données en cours.|  
@@ -87,7 +86,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-all-users"></a>A. Création de la liste de tous les utilisateurs  
+### <a name="a-listing-all-users"></a>R. Création de la liste de tous les utilisateurs  
  L'exemple ci-dessous répertorie tous les utilisateurs dans la base de données en cours.  
   
 ```  

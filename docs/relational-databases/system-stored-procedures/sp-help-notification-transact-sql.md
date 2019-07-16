@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906107"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,11 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @object_type = ] 'object_type'` Le type d’informations à retourner. *object_type*est **char (9)**, sans valeur par défaut. *object_type* peuvent être des alertes, qui répertorie les alertes affectées au nom d’opérateur fourni *,* ou OPERATORS, qui répertorie les opérateurs responsables du nom d’alerte fourni *.*  
+`[ @object_type = ] 'object_type'` Le type d’informations à retourner. *object_type*est **char (9)** , sans valeur par défaut. *object_type* peuvent être des alertes, qui répertorie les alertes affectées au nom d’opérateur fourni *,* ou OPERATORS, qui répertorie les opérateurs responsables du nom d’alerte fourni *.*  
   
 `[ @name = ] 'name'` Nom d’opérateur (si *object_type* est OPERATORS) ou un nom de l’alerte (si *object_type* est ALERTS). *nom* est **sysname**, sans valeur par défaut.  
   
-`[ @enum_type = ] 'enum_type'` Le *object_type*informations qui sont retournées. *type_de_liste* prend la valeur ACTUAL dans la plupart des cas. *type_de_liste*est **char (10)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @enum_type = ] 'enum_type'` Le *object_type*informations qui sont retournées. *type_de_liste* prend la valeur ACTUAL dans la plupart des cas. *type_de_liste*est **char (10)** , sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -74,29 +73,29 @@ sp_help_notification
 ## <a name="result-sets"></a>Jeux de résultats  
  Si *object_type* est **alertes**, le jeu de résultats répertorie toutes les alertes pour un opérateur donné.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**alert_id**|**Int**|Numéro d'identification de l'alerte.|  
+|**alert_id**|**int**|Numéro d'identification de l'alerte.|  
 |**alert_name**|**sysname**|Nom de l’alerte.|  
-|**use_email**|**Int**|Un message électronique est utilisé pour avertir l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
-|**use_pager**|**Int**|La radiomessagerie est utilisée pour avertir l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
-|**use_netsend**|**Int**|Le réseau est utilisé pour avertir l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**use_email**|**int**|Un message électronique est utilisé pour avertir l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**use_pager**|**int**|La radiomessagerie est utilisée pour avertir l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**use_netsend**|**int**|Le réseau est utilisé pour avertir l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
 |**has_email**|**Int**|Nombre de notifications envoyées par messagerie électronique pour cette alerte.|  
-|**has_pager**|**Int**|Nombre de notifications envoyées par radiomessagerie pour cette alerte.|  
+|**has_pager**|**int**|Nombre de notifications envoyées par radiomessagerie pour cette alerte.|  
 |**has_netsend**|**Int**|Nombre de **net send** notifications envoyées pour cette alerte.|  
   
  Si **object_type** est **opérateurs**, le jeu de résultats répertorie tous les opérateurs pour une alerte donnée.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**operator_id**|**Int**|Numéro d'identification de l'opérateur.|  
+|**operator_id**|**int**|Numéro d'identification de l'opérateur.|  
 |**operator_name**|**sysname**|Nom de l’opérateur.|  
 |**use_email**|**Int**|Un message électronique est utilisé pour envoyer la notification à l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
 |**use_pager**|**Int**|La radiomessagerie est utilisée pour envoyer la notification à l'opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
 |**use_netsend**|**Int**|Le réseau est utilisé pour avertir l’opérateur :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
 |**has_email**|**Int**|L'opérateur possède une adresse électronique :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
 |**has_pager**|**Int**|L'opérateur possède une adresse de radiomessagerie :<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
-|**has_netsend**|**Int**|Une notification d'envoi réseau est configurée pour l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
+|**has_netsend**|**int**|Une notification d'envoi réseau est configurée pour l'opérateur.<br /><br /> **1** = Oui<br /><br /> **0** = Non|  
   
 ## <a name="remarks"></a>Notes  
  Cette procédure stockée doit être exécutée à partir de la **msdb** base de données.  
@@ -106,7 +105,7 @@ sp_help_notification
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-alerts-for-a-specific-operator"></a>A. Affichage d'une liste d'alertes pour un opérateur spécifique  
+### <a name="a-listing-alerts-for-a-specific-operator"></a>R. Affichage d'une liste d'alertes pour un opérateur spécifique  
  L'exemple suivant retourne toutes les alertes dont l'opérateur `François Ajenstat` est notifié.  
   
 ```  

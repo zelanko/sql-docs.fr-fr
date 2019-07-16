@@ -7,13 +7,12 @@ ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0c6c4384dd6c02e35fe77a6fb2bfc4017a445b1b
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: f30c00503a0dd183619550d3ab0e92c0be1449dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962775"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Installer de nouveaux packages de Python sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +45,7 @@ Installation du package s’effectue par instance. Si vous avez plusieurs instan
 
 Le package est installé dans cet exemple est [CNTK](https://docs.microsoft.com/cognitive-toolkit/), une infrastructure pour l’apprentissage profond de Microsoft qui prend en charge la personnalisation, la formation et le partage des différents types de réseaux neuronaux.
 
-### <a name="step-1-download-the-windows-version-of-the-python-package"></a>Étape 1. Téléchargez la version Windows du package Python
+### <a name="step-1-download-the-windows-version-of-the-python-package"></a>Étape 1. Téléchargez la version Windows du package Python
 
 + Si vous installez les packages Python sur un serveur sans accès à internet, vous devez télécharger le fichier WHL vers un autre ordinateur et copiez-le sur le serveur.
 
@@ -59,7 +58,7 @@ Le package est installé dans cet exemple est [CNTK](https://docs.microsoft.com/
 
 Cette page contient des téléchargements pour plusieurs plateformes et pour plusieurs versions de Python : [Configurer CNTK](https://docs.microsoft.com/cognitive-toolkit/Setup-CNTK-on-your-machine)
 
-### <a name="step-2-open-a-python-command-prompt"></a>Étape 2. Ouvrez une invite de commande Python
+### <a name="step-2-open-a-python-command-prompt"></a>Étape 2. Ouvrez une invite de commande Python
 
 Recherchez l’emplacement de bibliothèque de Python par défaut utilisé par SQL Server. Si vous avez installé plusieurs instances, recherchez le dossier PYTHON_SERVICE pour l’instance où vous souhaitez ajouter le package.
 
@@ -72,7 +71,7 @@ Ouvrez l’invite de commande Python associé à l’instance.
 > [!TIP]
 > Pour les futures, débogage et test, vous souhaiterez configurer un environnement Python spécifique à la bibliothèque de l’instance.
 
-### <a name="step-3-install-the-package-using-pip"></a>Étape 3. Installez le package à l’aide de pip
+### <a name="step-3-install-the-package-using-pip"></a>Étape 3. Installez le package à l’aide de pip
 
 + Si vous êtes habitué à l’aide de la ligne de commande Python, utilisez PIP.exe pour installer de nouveaux packages. Vous pouvez trouver la **pip** programme d’installation dans le `Scripts` sous-dossier. 
 
@@ -80,7 +79,7 @@ Ouvrez l’invite de commande Python associé à l’instance.
 
   Le chemin d’accès complet de le **Scripts** dossier dans une installation par défaut est la suivante :
 
-    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
+    C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + Si vous utilisez Visual Studio 2017 ou Visual Studio 2015 avec les extensions de Python, vous pouvez exécuter `pip install` à partir de la **environnements Python** fenêtre. Cliquez sur **Packages**et dans la zone de texte, indiquez le nom ou l’emplacement du package à installer. Vous n’avez pas besoin de taper `pip install`; il est renseigné pour vous automatiquement. 
 
@@ -105,7 +104,7 @@ Successfully installed cntk-2.1
 ```
 
 
-### <a name="step-4-load-the-package-or-its-functions-as-part-of-your-script"></a>Étape 4. Charger le package ou ses fonctions dans le cadre de votre script
+### <a name="step-4-load-the-package-or-its-functions-as-part-of-your-script"></a>Étape 4. Charger le package ou ses fonctions dans le cadre de votre script
 
 Lors de l’installation est terminée, vous pouvez commencer immédiatement à l’aide du package comme décrit dans l’étape suivante.
 

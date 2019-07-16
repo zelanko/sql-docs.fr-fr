@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5b6d6498-bac6-4266-94b9-d16ef5089cf0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 926fc5a64e165360eac5e43704826ed4de816ff3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d0fa4c5ef671d643f85fa2a1a2d0caa62d00d86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102302"
 ---
 # <a name="sysnumberedprocedures-transact-sql"></a>sys.numbered_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -36,9 +35,9 @@ ms.locfileid: "63018722"
 > [!IMPORTANT]  
 >  Les procédures numérotées ont été déconseillées. L'utilisation de procédures numérotées est déconseillée. Un événement DEPRECATION_ANNOUNCEMENT est déclenché lorsqu'une requête qui utilise cette vue de catalogue est compilée.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|ID de l'objet de la procédure stockée.|  
+|**object_id**|**int**|ID de l'objet de la procédure stockée.|  
 |**procedure_number**|**smallint**|Numéro de cette procédure dans l'objet (supérieur ou égal à 2).|  
 |**definition**|**nvarchar(max)**|Texte SQL Server qui définit cette procédure.<br /><br /> NULL = chiffré.|  
   

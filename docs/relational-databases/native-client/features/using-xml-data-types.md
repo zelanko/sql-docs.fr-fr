@@ -29,14 +29,13 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfbe6f41150e7d437a6ee1df20e62e41b799c8c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e202e2b8a7766d4dde711a7f89d27177d176b3a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073652"
 ---
 # <a name="using-xml-data-types"></a>Utilisation de types de données XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +93,7 @@ ms.locfileid: "62668835"
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Transfert direct<sup>6,7</sup>|N/A <sup>2</sup>|N/A|N/A <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Transfert direct<sup>6,10</sup>|N/A <sup>2</sup>|OK<sup>3</sup>|N/A <sup>2</sup>|  
   
- <sup>1</sup>si un type de serveur autre que DBTYPE_XML est spécifié avec **ICommandWithParameters::SetParameterInfo** et le type d’accesseur est DBTYPE_XML, une erreur se produit lorsque l’instruction est exécutée (DB_E_ERRORSOCCURRED, le état du paramètre est DBSTATUS_E_BADACCESSOR) ; dans le cas contraire, les données sont envoyées au serveur, mais le serveur retourne une erreur indiquant qu’il n’existe aucune conversion implicite de XML en type de données du paramètre.  
+ <sup>1</sup>Si un type de serveur autre que DBTYPE_XML est spécifié avec **ICommandWithParameters::SetParameterInfo** et si le type d’accesseur est DBTYPE_XML, une erreur se produit lors de l’exécution de l’instruction (DB_E_ERRORSOCCURRED, l’état du paramètre est DBSTATUS_E_BADACCESSOR) ; sinon, les données sont envoyées au serveur, mais celui-ci retourne une erreur indiquant qu’aucune conversion implicite de XML vers le type de données du paramètre n’a lieu.  
   
  <sup>2</sup>dépasse le cadre de cette rubrique.  
   
@@ -139,7 +138,7 @@ ms.locfileid: "62668835"
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Ensembles de lignes de schéma COLUMNS et PROCEDURE_PARAMETERS  
  Les ajouts réalisés dans les ensembles de lignes de schéma COLUMNS et PROCEDURE_PARAMETERS incluent les colonnes suivantes.  
   
-|Nom de colonne|type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nom d'un catalogue dans lequel une collection de schémas XML est définie. Possède la valeur NULL pour une colonne non XML ou une colonne XML non typée.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nom d'un schéma dans lequel une collection de schémas XML est définie. Possède la valeur NULL pour une colonne non XML ou une colonne XML non typée.|  
@@ -151,7 +150,7 @@ ms.locfileid: "62668835"
 #### <a name="the-ssxmlschema-schema-rowset"></a>Ensemble de lignes de schéma SS_XMLSCHEMA  
  Un nouvel ensemble de lignes de schéma SS_XMLSCHEMA permettant d'extraire des informations de schéma XML est proposé pour les clients. L'ensemble de lignes SS_XMLSCHEMA contient les colonnes suivantes.  
   
-|Nom de colonne|type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catalogue auquel une collection XML appartient.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Schéma auquel une collection XML appartient.|  
@@ -200,7 +199,7 @@ ms.locfileid: "62668835"
 #### <a name="the-icolumnsrowset-interface"></a>Interface IColumnsRowset  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute les éléments suivants [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-colonnes spécifiques à l’ensemble de lignes retourné par la **IColumnRowset::GetColumnsRowset** (méthode). Ces colonnes contiennent le nom en trois parties d'une collection de schémas XML. Dans le cas des colonnes non XML ou des colonnes XML non typées, ces trois colonnes possèdent toutes la valeur NULL par défaut.  
   
-|Nom de colonne|type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catalogue auquel une collection de schémas XML appartient.<br /><br /> Possède la valeur NULL sinon.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Schéma auquel une collection de schémas XML appartient. Possède la valeur NULL sinon.|  
@@ -216,7 +215,7 @@ ms.locfileid: "62668835"
 #### <a name="the-irowsetchange-interface"></a>Interface IRowsetChange  
  Il existe deux moyens pour un consommateur de mettre à jour une instance XML dans une colonne. Le premier est de faire appel à l’objet de stockage **ISequentialStream** créé par le fournisseur. Le consommateur peut appeler la méthode **ISequentialStream::Write** pour mettre à jour directement l’instance XML retournée par le fournisseur.  
   
- La deuxième approche repose sur la méthode **IRowsetChange::SetData** ou **IRowsetChange::InsertRow**. Dans cette approche, vous pouvez spécifier une instance XML dans la mémoire tampon du consommateur dans une liaison de type DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML ou DBTYPE_IUNKNOWN.  
+ La deuxième approche repose sur la méthode **IRowsetChange::SetData** ou **IRowsetChange::InsertRow**. Dans ce cas précis, une instance XML issue de la mémoire tampon du consommateur peut être spécifiée dans une liaison de type DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML ou DBTYPE_IUNKNOWN.  
   
  Dans le cas du type DBTYPE_BSTR, DBTYPE_WSTR ou DBTYPE_VARIANT, le fournisseur stocke l'instance XML résidant dans la mémoire tampon du consommateur à l'intérieur de la colonne appropriée.  
   
@@ -259,7 +258,7 @@ ms.locfileid: "62668835"
   
 -   SQL_C_BINARY : Format est UTF-16 avec aucun caractère null de fin. Une marque d'ordre d'octet (BOM) est ajoutée aux données reçues du serveur. Si le serveur retourne une chaîne vide, une marque d'ordre d'octet est quand même retournée à l'application. Si la longueur de la mémoire tampon est un nombre impair d'octets, les données sont tronquées comme il se doit. Si la valeur tout entière est retournée en plusieurs segments, vous pouvez les concaténer pour reconstituer la valeur correcte.  
   
--   SQL_C_CHAR: Le format est caractères multioctets encodés dans la page de codes client avec le caractère null de fin. Toute conversion à partir de code UTF-16 sur le serveur risque d'endommager les données. Cette liaison est donc fortement déconseillée.  
+-   SQL_C_CHAR : Le format est caractères multioctets encodés dans la page de codes client avec le caractère null de fin. Toute conversion à partir de code UTF-16 sur le serveur risque d'endommager les données. Cette liaison est donc fortement déconseillée.  
   
  Lorsque vous procédez à des conversions entre des types de données C vers SQL, SQL_C_WCHAR, SQL_C_BINARY et SQL_C_CHAR peuvent tous être convertis en SQL_SS_XML avec les caractéristiques suivantes :  
   
@@ -267,7 +266,7 @@ ms.locfileid: "62668835"
   
 -   SQL_C_BINARY : Aucune conversion n’est effectuée, et les données sont transmises au serveur « tel quel ». Les données UTF-16 doivent commencer par une marque d'ordre d'octet (BOM) sans quoi l'encodage risque d'être mal reconnu par le serveur.  
   
--   SQL_C_CHAR: Les données sont converties en UTF-16 sur le client et envoyées au serveur uniquement en tant que SQL_C_WCHAR (y compris l’ajout d’une marque BOM). Si le contenu XML n'est pas encodé dans la page de codes du client, les données risquent d'être endommagées.  
+-   SQL_C_CHAR : Les données sont converties en UTF-16 sur le client et envoyées au serveur uniquement en tant que SQL_C_WCHAR (y compris l’ajout d’une marque BOM). Si le contenu XML n'est pas encodé dans la page de codes du client, les données risquent d'être endommagées.  
   
  Le standard XML exigent que les données XML encodées UTF-16 commencent par une marque d'ordre d'octet (BOM), soit le code de caractère UTF-16 0xFEFF. Lorsque vous travaillez avec une liaison SQL_C_BINARY, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ne nécessitent ni ajouter une nomenclature, puisque l’encodage provient implicitement par la liaison. L'objectif recherché est la simplification de l'utilisation d'autres processeurs et systèmes de stockage XML. Dans ce cas, une marque d'ordre d'octet doit être présente avec les données XML encodées UTF-16 et l'application n'a pas à se soucier de l'encodage réel puisque la majorité des processeurs XML (y compris [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) détectent l'encodage par inspection des premiers octets de la valeur. Données XML reçues de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à l’aide de SQL_C_BINARY des liaisons sont toujours encodées en UTF-16 avec une nomenclature et sans déclaration d’encodage incorporée.  
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 07551472-87ee-4765-951f-1364ed32f0c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30c116878049c4f6a8f36e988731ab641e03c6d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b5cef56cec30e5ad09500135e05884bf55d5dde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076223"
 ---
 # <a name="sql-modules"></a>Modules SQL
 La deuxième technique pour l’envoi d’instructions SQL au SGBD est dans des modules. En bref, un module se compose d’un groupe de procédures qui sont appelées à partir de l’hôte de langage de programmation. Chaque procédure contient une instruction SQL unique, et les données sont passées vers et à partir de la procédure au moyen de paramètres.  

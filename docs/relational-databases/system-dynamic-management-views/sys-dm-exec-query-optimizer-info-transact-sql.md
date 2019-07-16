@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a35e2f44825546d651917c4fbe4030d2a2a05e5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097691"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,17 +35,17 @@ ms.locfileid: "63013214"
 > [!NOTE]  
 >  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Créer une vue d’abonnement|Type de données|Description|  
+|Nom|Type de données|Description|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar(4000)**|Nom de l'événement statistique de l'optimiseur.|  
 |**occurrence**|**bigint**|Nombre d'occurrences de l'événement d'optimisation pour ce compteur.|  
 |**value**|**float**|Valeur moyenne de la propriété par occurrence de l'événement.|  
-|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
     
 ## <a name="remarks"></a>Notes  
  **Sys.dm_exec_query_optimizer_info** contient les propriétés suivantes (compteurs). Toutes les valeurs d'occurrence sont cumulatives et sont définies à 0 au redémarrage du système. Tous les champs de valeurs sont initialisés à NULL au redémarrage du système. Toutes les colonnes de valeurs qui indiquent une moyenne utilisent la valeur d'occurrence de la ligne comme dénominateur pour le calcul de la moyenne. Toutes les optimisations de requêtes sont mesurées lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détermine les modifications de **dm_exec_query_optimizer_info**, y compris les deux requêtes utilisateur - et -générées par le système. L’exécution d’un plan déjà mis en cache ne modifie pas les valeurs **dm_exec_query_optimizer_info**, seules les optimisations sont significatives.  
@@ -70,7 +69,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
 |search 2 tasks|Interne uniquement|Interne uniquement|  
 |gain stage 0 to stage 1|Interne uniquement|Interne uniquement|  
 |gain stage 1 to stage 2|Interne uniquement|Interne uniquement|  
-|délai d'expiration|Interne uniquement|Interne uniquement|  
+|timeout|Interne uniquement|Interne uniquement|  
 |memory limit exceeded|Interne uniquement|Interne uniquement|  
 |insert stmt|Nombre d'optimisations destinées à des instructions INSERT.|Non applicable|  
 |delete stmt|Nombre d'optimisations destinées à des instructions DELETE.|Non applicable|  
@@ -95,7 +94,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-viewing-statistics-on-optimizer-execution"></a>A. Affichage de statistiques sur l'exécution de l'optimiseur  
+### <a name="a-viewing-statistics-on-optimizer-execution"></a>R. Affichage de statistiques sur l'exécution de l'optimiseur  
  Quelles sont les statistiques d'exécution de l'optimiseur actuelles pour cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ?  
   
 ```  

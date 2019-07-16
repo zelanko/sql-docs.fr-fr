@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: cf80ef73ae3f55f58978d95b0d12b8c69b81dfff
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: a260598d62a3c5fc1304e8b71b8631546731ed07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070870"
 ---
 # <a name="data-mining-extensions-dmx-syntax-conventions"></a>Conventions de syntaxe DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "38037327"
 |\<étiquette> ::=|Nom d'un bloc de syntaxe. Cette convention est utilisée pour regrouper et étiqueter des sections de syntaxe longue ou une unité de syntaxe pouvant apparaître à plusieurs emplacements au sein d'une instruction. Chaque emplacement dans lequel le bloc de syntaxe peut être utilisé est indiqué par une étiquette encadrée de chevrons, tel que \<étiquette >.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence](../dmx/data-mining-extensions-dmx-reference.md)  
+ [Informations de référence sur le langage DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)  
   
   
 

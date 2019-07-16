@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10df35f4f29de4ac3899efa0e86e48af861f1e65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 535f2feaf17d2060c1c65e7aba17951bb3339a5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080052"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Grammaire ODBC SQL prise en charge (pilote ODBC Visual FoxPro)
 Le pilote ODBC Visual FoxPro Microsoft prend en charge les éléments suivants :  
@@ -35,9 +34,9 @@ Le pilote ODBC Visual FoxPro Microsoft prend en charge les éléments suivants 
   
  Le tableau suivant répertorie les éléments pris en charge par le pilote, selon le niveau de grammaire SQL de ODBC.  
   
-|Level|Éléments|Élément|  
+|Niveau|Éléments|Item|  
 |-----------|--------------|----------|  
-|Minimum|Langage de définition de données (DDL)|CREATE TABLE et DROP TABLE|  
+|Minimale|Langage de définition de données (DDL)|CREATE TABLE et DROP TABLE|  
 ||Langage de Manipulation de données (DML)|SÉLECTIONNER, insérer, mettre à jour et supprimer|  
 ||Expressions|Simple (tel que A > B + C)|  
 ||Types de données|CHAR, VARCHAR ou LONG VARCHAR|  

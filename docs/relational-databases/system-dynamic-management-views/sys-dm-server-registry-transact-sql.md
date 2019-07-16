@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e4e0b1069977c14216952e537d4bd12b28190529
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8b91540724b30ac42f0f8c4302e58b3d40ec066
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62684016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090721"
 ---
 # <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne les informations relatives à la configuration et à l'installation qui sont stockées dans le Registre de Windows pour l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Retourne une ligne par clé de Registre. Utilisez cette vue de gestion dynamique pour retourner des informations telles que les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disponibles sur l'ordinateur hôte ou les valeurs de configuration réseau pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar (256)**|Nom de la clé de Registre. Autorise la valeur NULL.|  
 |value_name|**nvarchar (256)**|Nom de la valeur de la clé. Ceci est l’élément indiqué dans le **nom** colonne de l’Éditeur du Registre. Autorise la valeur NULL.|  
@@ -44,7 +43,7 @@ ms.locfileid: "62684016"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-display-the-sql-server-services"></a>A. Affichage des services SQL Server  
+### <a name="a-display-the-sql-server-services"></a>R. Affichage des services SQL Server  
  L'exemple suivant retourne les valeurs de clé de Registre pour les services SQL Server et SQL Server Agent pour l'instance actuelle de SQL Server.  
   
 ```  

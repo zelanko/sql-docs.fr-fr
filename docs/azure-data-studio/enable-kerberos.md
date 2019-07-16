@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
-manager: jroth
-ms.openlocfilehash: d06af565a581ea8ed9dbbdd6330271ef9f6c7218
-ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
+ms.openlocfilehash: 5c8fae6bf1333742b40e9c8aae4ee575736058cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67556895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959663"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Se connecter [!INCLUDE[name-sos](../includes/name-sos-short.md)] à votre serveur SQL à l’aide de l’authentification Windows - Kerberos 
 
@@ -92,7 +91,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 * Success
 ```
    
-### <a name="redhat-enterprise-linux"></a>RedHat Enterprise Linux
+### <a name="redhat-enterprise-linux"></a>Red Hat Enterprise Linux
 ```bash
 sudo yum install realmd krb5-workstation
 ```

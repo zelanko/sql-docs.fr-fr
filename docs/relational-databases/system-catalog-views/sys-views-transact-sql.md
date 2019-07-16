@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: f8a8ea39-5a09-4662-801e-b43519467def
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1ce0082f409b303136f3523eb551bd2c24f5d94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5f7d4c9c6bb44d978007170abfff5a7730b028a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095528"
 ---
 # <a name="sysviews-transact-sql"></a>sys.views (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contient une ligne pour chaque objet de vue, avec **sys.objects.type** = V.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**\<héritée de colonnes >**||Pour obtenir la liste des colonnes qui hérite de cette vue, consultez [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)|  
 |**is_replicated**|**bit**|1 = La vue est répliquée.|  
@@ -43,7 +42,7 @@ ms.locfileid: "47731777"
 |**with_check_option**|**bit**|1 = WITH CHECK OPTION est spécifié dans la définition de la vue.|  
 |**is_date_correlation_view**|**bit**|1 = Le système a créé automatiquement la vue pour stocker les informations de corrélation entre les colonnes de date/heure (datetime). L'attribution de la valeur ON à l'option DATE_CORRELATION_OPTIMIZATION a permis la création de cette vue.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

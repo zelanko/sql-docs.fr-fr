@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2ca3505d952e1bffa68d23fe2de5b51c050640c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096222"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -124,12 +123,12 @@ sp_addsubscription [ @publication = ] 'publication'
 |read only (valeur par défaut)|L'abonnement est en lecture seule. Les modifications effectuées chez l'abonné ne sont pas renvoyées au serveur de publication.|  
 |sync tran|Active la prise en charge des abonnements de mise à jour immédiate. Non pris en charge pour les serveurs de publication Oracle.|  
 |queued tran|Active l'abonnement pour la mise à jour en attente. Les modifications de données peuvent être effectuées chez l'abonné, stockées dans une file d'attente, puis propagées vers le serveur de publication. Non pris en charge pour les serveurs de publication Oracle.|  
-|failover|Active l'abonnement pour la mise à jour immédiate avec mise à jour en attente sous forme de basculement. Les modifications de données peuvent être effectuées chez l'abonné, puis propagées immédiatement vers le serveur de publication. Si le serveur de publication et l'abonné ne sont pas connectés, il est possible de changer de mode de mise à jour afin que les modifications de données effectuées chez l'abonné soient stockées dans une file d'attente jusqu'à ce que l'abonné et le serveur de publication soient reconnectés. Non pris en charge pour les serveurs de publication Oracle.|  
+|Basculement|Active l'abonnement pour la mise à jour immédiate avec mise à jour en attente sous forme de basculement. Les modifications de données peuvent être effectuées chez l'abonné, puis propagées immédiatement vers le serveur de publication. Si le serveur de publication et l'abonné ne sont pas connectés, il est possible de changer de mode de mise à jour afin que les modifications de données effectuées chez l'abonné soient stockées dans une file d'attente jusqu'à ce que l'abonné et le serveur de publication soient reconnectés. Non pris en charge pour les serveurs de publication Oracle.|  
 |queued failover|Active l'abonnement en tant qu'abonnement de mise à jour en attente, avec possibilité de passer au mode de mise à jour immédiate. Les modifications de données peuvent être effectuées chez l'abonné et stockées dans une file d'attente, jusqu'à ce qu'une connexion soit établie entre l'abonné et le serveur de publication. Lorsqu'une connexion permanente est établie, il est possible de passer au mode de mise à jour immédiate. Non pris en charge pour les serveurs de publication Oracle.|  
   
  Notez que les valeurs synctran et queued tran ne sont pas autorisés si l’objet d’un abonnement de publication autorise DTS.  
   
- [ @loopback_detection=] '*loopback_detection*'  
+ [ @loopback_detection=] '*détection_de_boucle*'  
  Indique si l'Agent de distribution envoie des transactions à un abonné qui en est l'auteur. *détection_de_boucle* est **nvarchar (5)** , et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
@@ -199,7 +198,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  Invite de commandes facultative à exécuter. *optional_command_line* est **nvarchar (4000)** , avec NULL comme valeur par défaut.  
   
- [ @reserved=] '*reserved*'  
+ [ @reserved=] '*réservé*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
@@ -214,7 +213,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @offloadserver= ] '*remote_agent_server_name*'  
  Indique le nom réseau du serveur à utiliser pour l'activation à distance. *remote_agent_server_name*est **sysname**, avec NULL comme valeur par défaut.  
   
- [ @dts_package_name= ] '*dts_package_name*'  
+ [ @dts_package_name=] '*l’argument dts_package_name*'  
  Spécifie le nom du package DTS (Data Transformation Services). *l’argument dts_package_name* est un **sysname** avec NULL comme valeur par défaut. Par exemple, pour spécifier un package de DTSPub_Package, le paramètre est : `@dts_package_name = N'DTSPub_Package'`. Ce paramètre est disponible avec les abonnements envoyés. Pour ajouter des informations de package DTS à un abonnement extrait, utilisez sp_addpullsubscription_agent.  
   
  [ @dts_package_password= ] '*dts_package_password*'  
@@ -226,7 +225,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @dts_package_location= ] '*dts_package_location*'  
  Spécifie l'emplacement du package. *dts_package_location* est un **nvarchar (12)** , avec une valeur par défaut du serveur de distribution. L'emplacement du package peut prendre la valeur distributor ou subscriber.  
   
- [ @distribution_job_name= ] '*distribution_job_name*'  
+ [ @distribution_job_name=] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @publisher=] '*publisher*'  
@@ -249,13 +248,13 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicename=] '*backupdevicename*'  
  Indique le nom de l'unité utilisée lors de l'initialisation d'un Abonné à partir d'une sauvegarde. *backupdevicename* est **nvarchar (1000)** , avec NULL comme valeur par défaut.  
   
- [ @mediapassword= ] '*mediapassword*'  
+ [ @mediapassword=] '*mediapassword*'  
  Indique un mot de passe pour le support spécifié, si un mot de passe a été défini lors du formatage du support. *MEDIAPASSWORD* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password= ] '*password*'  
+ [ @password=] '*mot de passe*'  
  Indique un mot de passe pour la sauvegarde, si un mot de passe a été défini lors de la création de celle-ci. *mot de passe*est **sysname**, avec NULL comme valeur par défaut.  
   
  [ @fileidhint= ] *fileidhint*  
@@ -264,7 +263,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @unload= ] *unload*  
  Indique si une unité de sauvegarde sur bande doit être déchargée une fois l'initialisation de la sauvegarde terminée. *décharger* est **bits**, valeur par défaut est 1. 1 indique que la bande doit être déchargée. *décharger* est uniquement utilisé lorsque *backupdevicetype* est une bande.  
   
- [ @subscriptionlsn= ] *subscriptionlsn*  
+ [ @subscriptionlsn=] *subscriptionlsn*  
  Spécifie le numéro séquentiel dans le journal auquel un abonnement doit commencer à remettre des modifications à un nœud dans une topologie de réplication transactionnelle d'égal à égal. Utilisé avec un @sync_type valeur Initialize from lsn pour vous assurer que toutes les transactions appropriées sont répliquées vers un nouveau nœud. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
  [ @subscriptionstreams= ] *subscriptionstreams*  

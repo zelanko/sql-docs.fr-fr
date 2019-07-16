@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 5f3ea9905f0a44e7863154b93283ea8ef2f49f7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3cccabc3558da3534384dacfc77e42b8d078574
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927750"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>Nouveautés de SSMA pour MySQL (MySQLToSql)
 
@@ -35,7 +34,7 @@ La version v8.1 de SSMA pour MySQL a été améliorée avec un ensemble ciblé d
 > [!IMPORTANT]
 > Avec SSMA v7.4 et versions ultérieures, .net 4.5.2 est un préalable de l’installation.
 
-## <a name="ssma-v81"></a>SSMA v8.1
+## <a name="ssma-v81"></a>V8.1 SSMA
 
 La version v8.1 de SSMA pour MySQL a été améliorée avec des correctifs ciblés visant qui est conçues pour améliorer la qualité et conversion des mesures.
 
@@ -140,7 +139,7 @@ La version v7.1 de SSMA pour MySQL contient les modifications suivantes :
 * SSMA prend désormais en charge les mises à jour automatiques pour télécharger la dernière version de SSMA dès qu’il est disponible.
 * Fichiers binaires installables SSMA sont maintenant fournies via fichiers de package Windows installer (.msi).
 
-## <a name="may-2016"></a>Mai 2016  
+## <a name="may-2016"></a>Mai 2016  
 La version de mai 2016 de SSMA pour MySQL contient les modifications suivantes :
 
 * Prise en charge pour SQL Server 2016.

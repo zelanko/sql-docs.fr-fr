@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 052870e3-3f3f-4f07-91da-b649348225f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8eb98d7c17663894e1bacdc27e431d6a54f45d3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7abe4dd2f0bfb0b5302022d8e50cddc7df84f192
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020469"
 ---
 # <a name="retrieving-results-basic"></a>Récupération des résultats (de base)
 Un *jeu de résultats* est un ensemble de lignes sur la source de données qui correspond à certains critères. Il est une table conceptuelle qui résulte d’une requête et qui sont disponible pour une application au format tabulaire. **Sélectionnez** instructions, fonctions de catalogue et certaines procédures créent des jeux de résultats. Dans l’exemple suivant, la première instruction SQL crée un jeu de résultats contenant toutes les lignes et toutes les colonnes dans la table Orders, et la deuxième instruction SQL crée un jeu de résultats contenant les colonnes OrderID, commercial et l’état des lignes dans la table Orders dans lequel le statut est ouvert :  

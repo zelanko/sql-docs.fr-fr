@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 96b791d98aa7fee588e4f72b76a733f48917f77a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4aae5c9725768a9c4c85fc7aaeaf4884dfba0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962661"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>Événements étendus pour SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,7 +46,7 @@ Pour plus d’informations sur la procédure à suivre, consultez la section [co
 
 ##  <a name="bkmk_xeventtable"></a> Tableau des événements étendus
 
-|Événement|Description|Remarques|  
+|Événement|Description|Notes|  
 |-----------|-----------------|---------|  
 |connection_accept|Se produit lorsqu’une nouvelle connexion est acceptée. Cet événement permet de journaliser toutes les tentatives de connexion.||  
 |failed_launching|Le lancement a échoué.|Indique une erreur.|  
@@ -88,13 +87,13 @@ SQL Server Machine Learning Services lance des services qui s’exécutent en de
   
     Pour capturer les événements liés à Launchpad, placez le fichier *.config* dans le répertoire Binn de l’instance SQL Server.  Dans une installation par défaut, il s’agit de la configuration :
 
-    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn` .  
+    `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
 + **BXLServer** est le processus satellite qui prend en charge d’extensibilité SQL avec des langages de script externes, tels que R ou Python. Une instance distincte de BxlServer est démarrée pour chaque instance de langage externe.
   
     Pour capturer les événements liés à BXLServer, placez le *.config* fichier dans le répertoire d’installation de R ou Python.  Dans une installation par défaut, il s’agit de la configuration :
      
-    **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
+    **R :** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
     **Python :** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
 
@@ -124,7 +123,7 @@ Le fichier de configuration lui-même a le format suivant :
 + Pour configurer la trace, modifiez le *nom de la session* espace réservé, l’espace réservé pour le nom de fichier (`[SessionName].xel`) et les noms des événements que vous souhaitez capturer, par exemple, `[XEvent Name 1]`, `[XEvent Name 1]`).  
 + N’importe quel nombre de balises de package d’événement peut sembler et est collecté tant que l’attribut de nom est correct.
 
-### <a name="example-capturing-launchpad-events"></a>Exemple : Capture d’événements de Launchpad
+### <a name="example-capturing-launchpad-events"></a>Exemple : Capture d’événements de Launchpad
 
 L’exemple suivant montre la définition d’une trace d’événements pour le service Launchpad :
 
@@ -147,7 +146,7 @@ L’exemple suivant montre la définition d’une trace d’événements pour le
 + Placez le fichier *.config* dans le répertoire Binn de l’instance SQL Server.
 + Ce fichier doit être nommé `Launchpad.xevents.xml`.
 
-### <a name="example-capturing-bxlserver-events"></a>Exemple : Capture des événements de BXLServer  
+### <a name="example-capturing-bxlserver-events"></a>Exemple : Capture des événements de BXLServer  
 
 L'exemple suivant montre la définition d'une trace d'événements pour le service BXLServer.
   

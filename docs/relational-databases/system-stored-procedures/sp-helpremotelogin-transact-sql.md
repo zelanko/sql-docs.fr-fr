@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93f50869-2627-4642-899f-8f626f8833f4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1181ab030078b0f7ba61a72448991ed677e22d76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d71139786ac1442588f016bf8c576b92853cf3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997582"
 ---
 # <a name="sphelpremotelogin-transact-sql"></a>sp_helpremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |server|**sysname**|Nom d'un serveur distant défini sur le serveur local.|  
 |local_user_name|**sysname**|Connexion du serveur local à laquelle sont mappées les connexions distantes.|  
@@ -70,7 +69,7 @@ sp_helpremotelogin [ [ @remoteserver = ] 'remoteserver' ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-reporting-help-on-a-single-server"></a>A. Affichage de l'aide sur un seul serveur  
+### <a name="a-reporting-help-on-a-single-server"></a>R. Affichage de l'aide sur un seul serveur  
  L'exemple suivant affiche des informations sur tous les utilisateurs distants du serveur distant `Accounts`.  
   
 ```  

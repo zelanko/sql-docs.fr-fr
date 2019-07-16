@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edf912bf3b8073a05dd900cd00511715020ee0c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfbf23f0be369ae540dac33d33a3e3c1505d5ebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076279"
 ---
 # <a name="processing-a-sql-statement"></a>Traitement d’une instruction SQL
 Avant d’aborder les techniques pour l’utilisation de SQL par programme, il est nécessaire pour examiner la manière dont est traitée une instruction SQL. Les étapes sont communes à tous les trois techniques, bien que chaque technique leur exécution à des moments différents. L’illustration suivante montre les étapes impliquées dans le traitement d’une instruction SQL, qui sont décrites dans le reste de cette section.  

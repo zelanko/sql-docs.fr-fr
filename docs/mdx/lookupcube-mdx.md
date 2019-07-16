@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8f8338a542bf9e15816205930704c45a536a5629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec18b600c369de872df5f6eadf06ef6c30c88efa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098514"
 ---
 # <a name="lookupcube-mdx"></a>LookupCube (MDX)
 
@@ -36,7 +35,7 @@ LookupCube(Cube_Name, String_Expression )
  *Cube_Name*  
  Une expression de chaîne valide qui spécifie le nom d’un cube.  
   
- *Numeric_Expression*  
+ *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
  *String_Expression*  

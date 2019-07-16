@@ -17,29 +17,28 @@ helpviewer_keywords:
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 045f9ab13b701b8dbd5e0895531932c21767853f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62903312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909056"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSmerge_replinfo** table contient une ligne pour chaque abonnement. Cette table effectue le suivi des informations relatives aux abonnements. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**repid**|**uniqueidentifier**|ID unique du réplica.|  
 |**use_interactive_resolver**|**bit**|Indique si le résolveur interactif est utilisé au cours de la réconciliation.<br /><br /> **0** = ne pas utiliser le résolveur interactif.<br /><br /> **1** = utiliser le résolveur interactif.|  
-|**validation_level**|**Int**|Type de validation à réaliser sur l'abonnement. Le niveau de validation spécifié peut prendre l'une des valeurs suivantes :<br /><br /> **0** ne = aucune validation.<br /><br /> **1** = validation du nombre de lignes uniquement.<br /><br /> **2** = validation du nombre de lignes et somme de contrôle.<br /><br /> **3** = nombre de lignes et de validation de somme de contrôle binaire.|  
+|**validation_level**|**int**|Type de validation à réaliser sur l'abonnement. Le niveau de validation spécifié peut prendre l'une des valeurs suivantes :<br /><br /> **0** ne = aucune validation.<br /><br /> **1** = validation du nombre de lignes uniquement.<br /><br /> **2** = validation du nombre de lignes et somme de contrôle.<br /><br /> **3** = nombre de lignes et de validation de somme de contrôle binaire.|  
 |**resync_gen**|**bigint**|Numéro de génération utilisé pour la resynchronisation de l'abonnement. La valeur **-1** indique que l’abonnement n’est pas marquée pour resynchronisation.|  
 |**login_name**|**sysname**|Nom de l'utilisateur qui a créé l'abonnement.|  
-|**hostname**|**sysname**|Valeur utilisée par le filtre de lignes paramétré lors de la génération de la partition de l'abonnement.|  
+|**Nom d’hôte**|**sysname**|Valeur utilisée par le filtre de lignes paramétré lors de la génération de la partition de l'abonnement.|  
 |**merge_jobid**|**binary(16)**|Identificateur du travail de fusion pour cet abonnement.|  
-|**sync_info**|**Int**|Interne-usage uniquement.|  
+|**sync_info**|**int**|Interne-usage uniquement.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

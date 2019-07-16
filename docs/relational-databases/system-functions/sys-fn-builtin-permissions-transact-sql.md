@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 460e620f9b91b3b616b487f6324e640dbaf4f83a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046526"
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,16 +67,16 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  Équivalent à DEFAULT.  
   
- **'**<securable_class>**'**  
+ **'** <securable_class> **'**  
  Lorsqu’elle est appelée avec le nom d’une classe sécurisable, sys.fn_builtin_permissions retournera toutes les autorisations qui s’appliquent à la classe. < securable_class > est un littéral de chaîne qui requiert des guillemets. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>Tables retournées  
   
-|Nom de colonne|Type de données|Classement|Description|  
+|Nom de la colonne|Type de données|Collation|Description|  
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|Classement du serveur.|Description de la classe sécurisable.|  
 |permission_name|**nvarchar(60)**|Classement du serveur.|Nom de l’autorisation.|  
-|Type|**varchar(4)**|Classement du serveur.|Code du type d'autorisation compacte. Consultez le tableau qui suit.|  
+|type|**varchar(4)**|Classement du serveur.|Code du type d'autorisation compacte. Consultez le tableau qui suit.|  
 |covering_permission_name|**nvarchar(60)**|Classement du serveur.|S'il n'est pas NULL, il s'agit du nom de l'autorisation de cette classe, qui implique les autres autorisations de la classe.|  
 |parent_class_desc|**nvarchar(60)**|Classement du serveur.|S'il n'est pas NULL, il s'agit du nom de la classe parente qui contient la classe actuelle.|  
 |parent_covering_permission_name|**nvarchar(60)**|Classement du serveur.|S'il n'est pas NULL, il s'agit du nom de l'autorisation de la classe parente, qui implique toutes les autres autorisations de cette classe.|  
@@ -332,12 +331,12 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  
 [!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-all-built-in-permissions"></a>A. Liste de toutes les autorisations intégrées   
+### <a name="a-listing-all-built-in-permissions"></a>R. Liste de toutes les autorisations intégrées   
 Utilisez `DEFAULT` ou une chaîne vide pour retourner toutes les autorisations.   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0fa68012f419939c3f77980020795f23c4ca4672
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a7164afe24d15abf195ebff96e4e96a82877deae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079991"
 ---
 # <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSreplication_subscriptions** table contient une ligne d’informations de réplication pour chaque Agent de Distribution de la base de données d’abonné locale. Cette table est stockée dans la base de données d’abonnement.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher** (serveur de publication)|**sysname**|Le nom du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
@@ -38,13 +37,13 @@ ms.locfileid: "52794531"
 |**independent_agent**|**bit**|Indique s'il existe un Agent de distribution autonome pour cette publication.|  
 |**subscription_type**|**Int**|Le type d’abonnement :<br /><br /> 0 = Par envoi de données (push).<br /><br /> 1 = Par extraction de données (pull).<br /><br /> 2 = Anonyme.|  
 |**distribution_agent**|**sysname**|Nom de l'Agent de distribution.|  
-|**Time**|**smalldatetime**|Heure de la dernière mise à jour effectuée par l'Agent de distribution.|  
+|**Heure**|**smalldatetime**|Heure de la dernière mise à jour effectuée par l'Agent de distribution.|  
 |**description**|**nvarchar(255)**|Description de l'abonnement.|  
 |**transaction_timestamp**|**varbinary(16)**|Interne-usage uniquement.|  
 |**update_mode**|**tinyint**|Type de mise à jour.|  
-|**agent_id**|**binary (16)**|ID de l'Agent.|  
-|**subscription_guid**|**binary (16)**|Identificateur global de la version de l'abonnement sur la publication.|  
-|**subid**|**binary (16)**|Identificateur global d'un abonnement anonyme.|  
+|**agent_id**|**binary(16)**|ID de l'Agent.|  
+|**subscription_guid**|**binary(16)**|Identificateur global de la version de l'abonnement sur la publication.|  
+|**subid**|**binary(16)**|Identificateur global d'un abonnement anonyme.|  
 |**immediate_sync**|**bit**|Indique si des fichiers de synchronisation sont créés ou recréés lors de chaque exécution de l'Agent d'instantané.|  
   
 ## <a name="see-also"></a>Voir aussi  

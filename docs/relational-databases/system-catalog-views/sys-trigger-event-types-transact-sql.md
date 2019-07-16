@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: 054aed54-7151-4760-934a-149fa434f1ae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f97837a7e6bdc9b84f15512cf20a3791e5cf433c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb845732f3766e715df0e92d751a18b1aa8f2969
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091950"
 ---
 # <a name="systriggereventtypes-transact-sql"></a>sys.trigger_event_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque événement ou groupe d'événements sur lequel un déclencheur peut être activé.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**type**|**Int**|Type d'événement ou groupe d'événements qui active un déclencheur.|  
 |**type_name**|**nvarchar(64)**|Nom d'un événement ou groupe d'événements. Cela peut être spécifié dans la clause FOR d’une [CREATE TRIGGER](../../t-sql/statements/create-trigger-transact-sql.md) instruction.|  
-|**parent_type**|**Int**|Type de groupe d'événements qui est le parent de l'événement ou du groupe d'événements.|  
+|**parent_type**|**int**|Type de groupe d'événements qui est le parent de l'événement ou du groupe d'événements.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

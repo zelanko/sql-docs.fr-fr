@@ -18,13 +18,12 @@ helpviewer_keywords:
 - sys.dm_database_replica_states dynamic management view
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9c07ac791d7729ffa2b61664c3294c891dd554f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a927b31e12aaf01c5fe30bfcf530bd049989e48f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66213740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005032"
 ---
 # <a name="sysdmdatabasereplicastates-azure-sql-database"></a>sys.dm_database_replica_states (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66213740"
 > [!IMPORTANT]
 > Selon l'action et les états de niveau supérieur, les informations d'état de la base de données peuvent être non disponibles ou obsolètes. En outre, les valeurs ont uniquement une pertinence locale. 
    
-|Nom de colonne|Type de données|Description (sur le réplica principal)|  
+|Nom de la colonne|Type de données|Description (sur le réplica principal)|  
 |-----------------|---------------|----------------------------------------|  
 |**database_id**|**Int**|Identificateur de la base de données.|  
 |**group_id**|**uniqueidentifier**|Identificateur du groupe de disponibilité auquel la base de données appartient.|  

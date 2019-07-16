@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cb95142a49fffef666be2e775e6e419c4df55290
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 1e844425f0c512cfe7c15354bf1aeb100d6104e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004526"
 ---
 # <a name="general-xquery-use-cases"></a>Cas d'emploi généraux des requêtes XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "54256214"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-query-catalog-descriptions-to-find-products-and-weights"></a>A. Interrogation des descriptions d'un catalogue pour rechercher des produits et des poids  
+### <a name="a-query-catalog-descriptions-to-find-products-and-weights"></a>R. Interrogation des descriptions d'un catalogue pour rechercher des produits et des poids  
  La requête suivante renvoie les ID de modèle de produit et les poids, le cas échéant, de la description du catalogue de produits. La requête construit du code XML se présentant sous la forme suivante :  
   
 ```  
@@ -59,7 +58,7 @@ WHERE CatalogDescription is not null
   
 -   Le corps de la requête construit le code XML requis.  
   
--   Dans la clause WHERE, le **exist()** méthode est utilisée pour rechercher uniquement les lignes qui contiennent des descriptions de catalogue de produits. Autrement dit, le code XML qui contient l'élément <`ProductDescription`>.  
+-   Dans la clause WHERE, le **exist()** méthode est utilisée pour rechercher uniquement les lignes qui contiennent des descriptions de catalogue de produits. Autrement dit, le code XML qui contient le <`ProductDescription`> élément.  
   
  Voici le résultat obtenu :  
   
@@ -72,7 +71,7 @@ WHERE CatalogDescription is not null
 <Product ProductModelID="35"/>  
 ```  
   
- La requête suivante récupère les mêmes informations, mais uniquement pour les modèles de produit dont la description du catalogue mentionne le poids, l'élément <`Weight`>, dans les caractéristiques techniques, l'élément <`Specifications`>. Cet exemple utilise WITH XMLNAMESPACES pour déclarer le préfixe pd et sa liaison d'espace de noms. De cette façon, la liaison n’est pas décrite dans les deux le **query()** (méthode) et dans le **exist()** (méthode).  
+ La requête suivante récupère les mêmes informations, mais uniquement pour les modèles de produit dont la description du catalogue mentionne le poids, le <`Weight`> élément, dans les spécifications, la <`Specifications`> élément. Cet exemple utilise WITH XMLNAMESPACES pour déclarer le préfixe pd et sa liaison d'espace de noms. De cette façon, la liaison n’est pas décrite dans les deux le **query()** (méthode) et dans le **exist()** (méthode).  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -89,8 +88,8 @@ WHERE CatalogDescription.exist('/pd:ProductDescription/pd:Specifications//Weight
   
  Dans la requête précédente, la **exist()** méthode de la **xml** type de données dans la clause WHERE vérifie s’il existe un <`Weight`> élément dans le <`Specifications`> élément.  
   
-### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>b. Recherche des ID des modèles de produit dont les descriptions englobent des illustrations de face et de petite taille  
- La description XML du catalogue de produits comporte les illustrations du produit, l'élément <`Picture`>. Chaque illustration a plusieurs propriétés dont l'angle de prise de vue, l'élément <`Angle`>, et la taille, l'élément <`Size`>.  
+### <a name="b-find-product-model-ids-for-product-models-whose-catalog-descriptions-include-front-angle-and-small-size-pictures"></a>B. Recherche des ID des modèles de produit dont les descriptions englobent des illustrations de face et de petite taille  
+ La description de catalogue de produits XML inclut les images de produit, le <`Picture`> élément. Chaque illustration a plusieurs propriétés dont Ceux-ci incluent l’angle de l’image, le <`Angle`> élément et la taille, le <`Size`> élément.  
   
  Pour les modèles de produit dont les descriptions du catalogue englobent des illustrations de face et de petite taille, la requête construit le code XML sous la forme suivante :  
   
@@ -137,7 +136,7 @@ AND   CatalogDescription.value('(/pd:ProductDescription/pd:Picture/pd:Size)[1]',
 ```  
   
 ### <a name="c-create-a-flat-list-of-the-product-model-name-and-feature-pairs-with-each-pair-enclosed-in-the-features-element"></a>C. Créer une liste plate du produit paires nom et caractéristique du modèle, chaque paire étant comprise dans le \<fonctionnalités > élément  
- Dans la description du catalogue de produits, le code XML englobe plusieurs caractéristiques du produit. Toutes ces caractéristiques sont incluses dans l'élément <`Features`>. La requête utilise [Construction XML (XQuery)](../xquery/xml-construction-xquery.md) pour construire le code XML requis. L'expression entre accolades est remplacée par le résultat.  
+ Dans la description du catalogue de produits, le code XML englobe plusieurs caractéristiques du produit. Toutes ces fonctionnalités sont incluses dans le <`Features`> élément. La requête utilise [Construction XML (XQuery)](../xquery/xml-construction-xquery.md) pour construire le code XML requis. L'expression entre accolades est remplacée par le résultat.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -156,7 +155,7 @@ WHERE ProductModelID=19
   
  Notez les points suivants dans la requête précédente :  
   
--   $pd/p1:Features/* renvoie uniquement les enfants du nœud d'élément <`Features`>, mais $pd/p1:Features/node() renvoie tous les nœuds, notamment les nœuds d'élément et de texte, les instructions de traitement et les commentaires.  
+-   $pd / P1 : Features / * renvoie uniquement l’élément enfants du nœud <`Features`>, mais $pd / P1 :Features/Node() renvoie tous les nœuds. notamment les nœuds d'élément et de texte, les instructions de traitement et les commentaires.  
   
 -   Les deux boucles FOR génèrent un produit cartésien à partir duquel le nom du produit et ses caractéristiques sont renvoyés.  
   
@@ -224,7 +223,7 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="e-retrieve-product-model-feature-descriptions"></a>E. Récupération de la description des caractéristiques d'un modèle de produit  
- La requête suivante construit le document XML qui comprend un <`Product`> élément qui a **ProducModelID**, **ProductModelName** attributs et les premier deux caractéristiques du produit. Plus précisément, les deux premières caractéristiques du produit sont les deux premiers éléments enfants de l'élément <`Features`>. En présence d'un nombre supérieur de caractéristiques, la requête renvoie un élément vide <`There-is-more/`>.  
+ La requête suivante construit le document XML qui comprend un <`Product`> élément qui a **ProducModelID**, **ProductModelName** attributs et les premier deux caractéristiques du produit. Plus précisément, les premier deux caractéristiques du produit sont les deux premiers éléments enfants de la <`Features`> élément. S’il existe davantage de fonctionnalités, il retourne un vide <`There-is-more/`> élément.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -250,10 +249,10 @@ WHERE CatalogDescription is not NULL
   
  Notez les points suivants dans la requête précédente :  
   
--   La structure de bouclage FOR ... La boucle RETURN récupère les deux premières caractéristiques du produit. Le **position()** fonction est utilisée pour rechercher la position des éléments dans la séquence.  
+-   FOR... La boucle RETURN récupère les premier deux caractéristiques du produit. Le **position()** fonction est utilisée pour rechercher la position des éléments dans la séquence.  
   
 ### <a name="f-find-element-names-from-the-product-catalog-description-that-end-with-ons"></a>F. Recherche de noms d'élément se terminant par « ons », d'après les descriptions du catalogue de produits  
- La requête suivante parcourt les descriptions du catalogue et renvoie tous les éléments de l'élément <`ProductDescription`> dont le nom se termine par « ons ».  
+ La requête suivante recherche dans les descriptions du catalogue et retourne tous les éléments dans le <`ProductDescription`> élément dont le nom se termine par « ons ».  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  
@@ -300,7 +299,7 @@ WHERE CatalogDescription.value('
   
  Notez les points suivants dans la requête précédente :  
   
--   La clause WHERE sert à récupérer uniquement les lignes où la description du catalogue contient le mot « Aerodynamic » dans l'élément <`Summary`>.  
+-   La clause WHERE est utilisée pour récupérer uniquement les lignes où la description du catalogue contient le mot « Aerodynamic » dans le <`Summary`> élément.  
   
 -   Le **contains()** fonction sert à déterminer si le mot est inclus dans le texte.  
   
@@ -322,7 +321,7 @@ ProductModelID Result
 ```  
   
 ### <a name="h-find-product-models-whose-catalog-descriptions-do-not-include-product-model-pictures"></a>H. Recherche de modèles de produit dont les descriptions du catalogue ne s'accompagnent pas d'illustrations  
- La requête suivante récupère les ID des modèles de produit dont les descriptions du catalogue ne s'accompagnent pas d'un élément <`Picture`>.  
+ La requête suivante extrait ProductModelIDs modèles de produit dont descriptions du catalogue ne pas inclure un <`Picture`> élément.  
   
 ```  
 SELECT  ProductModelID  
@@ -337,7 +336,7 @@ AND     CatalogDescription.exist('declare namespace p1="https://schemas.microsof
   
 -   Si le **exist()** méthode dans la clause WHERE renvoie False (0), l’ID de modèle de produit est retourné. Dans le cas contraire, aucune donnée n'est renvoyée.  
   
--   Dans la mesure où toutes les descriptions des produits comportent un élément <`Picture`>, le jeu de résultats est vide dans ce cas.  
+-   Étant donné que toutes les descriptions de produit incluent un <`Picture`> élément, le jeu de résultats est vide dans ce cas.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Requêtes XQuery impliquant une hiérarchie](../xquery/xqueries-involving-hierarchy.md)   

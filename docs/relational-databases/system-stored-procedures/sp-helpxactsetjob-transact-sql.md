@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db259133a2ddd7ebe18b6d198c0f91e8ffc7b8bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62959609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048187"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,21 +42,21 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**jobnumber**|**Int**|Numéro de travail Oracle.|  
+|**numéro_travail**|**int**|Numéro de travail Oracle.|  
 |**lastdate**|**varchar(22)**|Dernière date d'exécution du travail.|  
 |**thisdate**|**varchar(22)**|Heure de la modification|  
 |**nextdate**|**varchar(22)**|Date de la prochaine exécution du travail.|  
 |**broken**|**varchar(1)**|Indicateur signalant si le travail est interrompu.|  
 |**interval**|**varchar(200)**|Intervalle du travail.|  
-|**failures**|**Int**|Nombre d'échecs du travail.|  
+|**failures**|**int**|Nombre d'échecs du travail.|  
 |**xactsetjobwhat**|**varchar(200)**|Nom de la procédure exécutée par le travail.|  
 |**xactsetjob**|**varchar(1)**|État du travail, qui peut être l'un des suivants :<br /><br /> **1** -le travail est activé.<br /><br /> **0** -le travail est désactivé.|  
-|**xactsetlonginterval**|**Int**|Intervalle long pour le travail.|  
+|**xactsetlonginterval**|**int**|Intervalle long pour le travail.|  
 |**xactsetlongthreshold**|**Int**|Seuil long pour le travail.|  
-|**xactsetshortinterval**|**Int**|Intervalle court pour le travail.|  
-|**xactsetshortthreshold**|**Int**|Seuil court pour le travail.|  
+|**xactsetshortinterval**|**int**|Intervalle court pour le travail.|  
+|**xactsetshortthreshold**|**int**|Seuil court pour le travail.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

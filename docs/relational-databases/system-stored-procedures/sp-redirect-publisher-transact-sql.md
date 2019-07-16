@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5458d7a7693c742768a9a8a5e0c2f8583f1ca9ba
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cde6f00d16bcff4ee56513f515cf2ecac93a1b5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002510"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_redirect_publisher
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **sp_redirect_publisher** est utilisé pour autoriser un serveur de publication de réplication à être redirigées vers le principal actuel d’un groupe de disponibilité Always On en associant la paire serveur de publication/base de données avec un écouteur d’un groupe de disponibilité. Exécutez **sp_redirect_publisher** une fois que l’écouteur de groupe de disponibilité a été configuré pour le groupe de disponibilité qui contient la base de données publiée.  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a873ce0f-6955-417a-96a1-b2ef11a83633
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed7479109ef50ee3744b3a9acafc17a799670cd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936788"
 ---
 # <a name="sysdmexecxmlhandles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,13 +47,13 @@ dm_exec_xml_handles (session_id | 0 )
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**Int**|ID de session de la session qui détient ce handle de document XML.|  
-|**document_id**|**Int**|ID de handle de document XML renvoyé par **sp_xml_preparedocument**.|  
-|**namespace_document_id**|**Int**|ID de handle interne utilisé pour le document de l’espace de noms associé qui a été passé en tant que troisième paramètre à **sp_xml_preparedocument**. NULL s'il n'y a pas de document d'espace de noms.|  
+|**session_id**|**int**|ID de session de la session qui détient ce handle de document XML.|  
+|**document_id**|**int**|ID de handle de document XML renvoyé par **sp_xml_preparedocument**.|  
+|**namespace_document_id**|**int**|ID de handle interne utilisé pour le document de l’espace de noms associé qui a été passé en tant que troisième paramètre à **sp_xml_preparedocument**. NULL s'il n'y a pas de document d'espace de noms.|  
 |**sql_handle**|**varbinary(64)**|Handle du texte du code SQL où le handle a été défini.|  
-|**statement_start_offset**|**Int**|Nombre de caractères dans l’en cours d’exécution par lots ou procédure stockée à laquelle le **sp_xml_preparedocument** appel se produit. Peut être utilisé conjointement avec le **sql_handle**, le **statement_end_offset**et le **sys.dm_exec_sql_text** fonction de gestion dynamique pour récupérer l’actuellement l’exécution d’instruction pour la demande.|  
+|**statement_start_offset**|**int**|Nombre de caractères dans l’en cours d’exécution par lots ou procédure stockée à laquelle le **sp_xml_preparedocument** appel se produit. Peut être utilisé conjointement avec le **sql_handle**, le **statement_end_offset**et le **sys.dm_exec_sql_text** fonction de gestion dynamique pour récupérer l’actuellement l’exécution d’instruction pour la demande.|  
 |**statement_end_offset**|**Int**|Nombre de caractères dans l’en cours d’exécution par lots ou procédure stockée à laquelle le **sp_xml_preparedocument** appel se produit. Peut être utilisé conjointement avec le **sql_handle**, le **statement_start_offset**et le **sys.dm_exec_sql_text** fonction de gestion dynamique pour récupérer l’actuellement l’exécution d’instruction pour la demande.|  
 |**creation_time**|**datetime**|Horodatage lorsque **sp_xml_preparedocument** a été appelée.|  
 |**original_document_size_bytes**|**bigint**|Taille du document XML non analysé, en octets.|  

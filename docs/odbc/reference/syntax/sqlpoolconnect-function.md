@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 297c856cc2481a6d3266d7654797f81b9b9f5c11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c390dacb5072c5d516e95b4fe6b789bfffbbd2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005801"
 ---
 # <a name="sqlpoolconnect-function"></a>SQLPoolConnect, fonction
 **Conformité**  
@@ -58,7 +57,7 @@ SQLRETURN  SQLPoolConnect(
  [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le nombre total de caractères (sans le caractère de fin de la valeur null) disponibles à renvoyer dans \* *wszOutConnectString*. Si le nombre de caractères à retourner est supérieur ou égal à *cchConnectStringBuffer*, la fin de chaîne de connexion dans \* *wszOutConnectString* est tronqué à *cchConnectStringBuffer* moins la longueur d’un caractère du caractère nul de terminaison.  
   
 ## <a name="returns"></a>Valeur renvoyée  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, or, SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
  Semblable à [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) pour tout d’entrée d’une erreur de validation, à ceci près que le Gestionnaire de pilotes utilisera un **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN et un **gérer** de *hDbcInfoToken*.  

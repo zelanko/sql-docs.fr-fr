@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: db245c80-981a-4638-bd03-69d04bc67af0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 733b958ee883aa62034b4acc1eec67100b35a74d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d27f168640b25652ed0fd40154ebfb677ef9300
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068644"
 ---
 # <a name="file-data-sources"></a>Sources de données de fichier
 *Sources de données de fichiers* sont stockées dans un fichier et d’autoriser les informations de connexion à utiliser à plusieurs reprises par un utilisateur unique ou partagée par plusieurs utilisateurs. Lorsqu’une source de données de fichier est utilisée, le Gestionnaire de pilotes établit la connexion à la source de données en utilisant les informations dans un fichier .dsn. Ce fichier peut être manipulé comme tout autre fichier. Une source de données de fichier n’a pas un nom de source de données, comme le fait d’une source de données machine et n’est pas inscrit à n’importe quel ordinateur ou un utilisateur.  

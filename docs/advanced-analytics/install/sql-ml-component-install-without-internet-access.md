@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: da9676f029bb917adf15690b6870583fb0465fc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09934e01d6118bfa48a7c3f62e8086763ebf44c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962918"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installer SQL Server d’apprentissage R et Python sur des ordinateurs sans accès à internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +37,7 @@ Pour installer SQL Server 2017 Machine Learning Services (R et Python) sur un se
 
 Sur un ordinateur ayant une connexion internet, téléchargez les fichiers CAB proposant des fonctionnalités de R et Python pour la version initiale et le support d’installation SQL Server 2017. 
 
-Version  |Télécharger le lien  |
+Libérer  |Télécharger le lien  |
 ---------|---------------|
 Microsoft R Open     |[SRO_3.3.3.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851496)|
 Microsoft R Server      |[SRS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851507)|
@@ -55,17 +54,17 @@ Serveur Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fw
 
 ## <a name="sql-server-2016-offline-install"></a>Installation hors connexion SQL Server 2016
 
-Analytique en base de données de SQL Server 2016 est R uniquement, avec deux fichiers CAB pour les packages de produit et de distribution Microsoft de R open source, respectivement. Démarrez en installant l’une de ces versions : RTM, SP 1, SP 2. Une fois qu’une installation de base est en place, les mises à jour cumulatives peuvent être appliquées comme prochaine étape.
+Analytique en base de données de SQL Server 2016 est R uniquement, avec deux fichiers CAB pour les packages de produit et de distribution Microsoft de R open source, respectivement. Démarrez en installant l’une de ces versions : RTM, SERVICE PACK 1, SERVICE PACK 2. Une fois qu’une installation de base est en place, les mises à jour cumulatives peuvent être appliquées comme prochaine étape.
 
 Sur un ordinateur ayant une connexion internet, téléchargez les fichiers CAB utilisés par le programme d’installation pour installer la base de données analytique sur SQL Server 2016. 
 
 ### <a name="1---download-2016-cabs"></a>1 - télécharger des fichiers CAB 2016
 
-Version  | Microsoft R Open | Microsoft R Server |
+Libérer  | Microsoft R Open | Microsoft R Server |
 ---------|-----------------|---------------------|
 **SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
-**SQL Server 2016 SP 2**  |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317) |
+**SQL Server 2016 Service Pack 2**  |[SRO_3.2.2.16000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.17000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=850317) |
 
 ### <a name="2---get-sql-server-2016-installation-media"></a>2 - obtenir le support d’installation de SQL Server 2016
 
@@ -127,7 +126,7 @@ Nous vous recommandons d’appliquer la mise à jour cumulative la plus récente
 
 5. Suivez les instructions de l’Assistant en acceptant les termes du contrat de licence pour les distributions de R et Python. Pendant l’installation, vous êtes invité à choisir l’emplacement du dossier contenant les fichiers CAB mis à jour.
 
-## <a name="set-environment-variables"></a>Jeu de variables d’environnement
+## <a name="set-environment-variables"></a>Définition des variables d'environnement
 
 Pour R fonctionnalité d’intégration uniquement, vous devez définir le **MKL_CBWR** variable d’environnement [résultat homogène](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) des calculs d’Intel Math Kernel Library (MKL).
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 615625ca396e5f2ae094962457cc9e746730ddcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067415"
 ---
 # <a name="data-buffer-type"></a>Type de tampon de données
 Le type de données C d’une mémoire tampon est spécifié par l’application. Avec une seule variable, cela se produit lorsque l’application alloue la variable. Avec mémoire générique - autrement dit, mémoire vers laquelle pointe un pointeur de type void - cela se produit lorsque l’application effectue un cast de la mémoire à un type particulier. Le pilote détecte ce type de deux manières :  

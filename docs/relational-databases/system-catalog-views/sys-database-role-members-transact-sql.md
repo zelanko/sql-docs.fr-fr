@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: ed1b019d-ca48-4db3-85df-cf6d2db591cf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 75d3e7924658bbb3cca4be6367d0a1a2a77d404c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1bbbcf04cdb141cff25565360d82714eed1e98f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079475"
 ---
 # <a name="sysdatabaserolemembers-transact-sql"></a>sys.database_role_members (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Retourne une ligne pour chaque membre de chaque rôle de base de données.  Les utilisateurs de base de données, les rôles d’application et les autres rôles de base de données peuvent être membres d’un rôle de base de données. Pour ajouter des membres à un rôle, utilisez la [ALTER ROLE](../../t-sql/statements/alter-role-transact-sql.md) instruction avec la `ADD MEMBER` option. Joindre avec [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) pour retourner les noms de la `principal_id` valeurs.
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**Int**|ID du principal de base de données du rôle.|  
-|**member_principal_id**|**Int**|ID du principal de base de données du membre.|  
+|**member_principal_id**|**int**|ID du principal de base de données du membre.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Tout utilisateur peut consulter sa propre appartenance au rôle. Afficher d’autres rôles appartenances requiert l’appartenance dans le `db_securityadmin` rôle de base de données fixe ou `VIEW DEFINITION` sur la base de données.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

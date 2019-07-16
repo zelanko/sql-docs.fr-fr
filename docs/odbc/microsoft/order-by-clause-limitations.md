@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fd4ddc7c-9c7e-4a0c-a781-e5427dfb2e18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2835396a7b8266d812ca5a1049679c7d82549389
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b58afff444c09622027f50a87bd77fcd6ed45640
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63024350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100779"
 ---
 # <a name="order-by-clause-limitations"></a>ORDER BY, clause - limitations
 Si une instruction SELECT contient une clause GROUP BY et une clause ORDER BY, la clause ORDER BY peut contenir uniquement une colonne du jeu de résultats ou une expression dans la clause GROUP BY.

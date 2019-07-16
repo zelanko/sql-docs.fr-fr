@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0cfd6464-09c7-4f03-9d25-58001c096a9e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f37fc61b294cc460fe1d1e41b301ac2c7b1c1077
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5bc48bb3edbeaad5593f574676e61ab2ca7f727f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044523"
 ---
 # <a name="sysmailhelpprincipalprofilesp-transact-sql"></a>sysmail_help_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,11 +57,11 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
 ||||  
 |-|-|-|  
-|Nom de colonne|Type de données|Description|  
-|**principal_id**|**Int**|Identificateur de l'utilisateur de la base de données.|  
+|Nom de la colonne|Type de données|Description|  
+|**principal_id**|**int**|Identificateur de l'utilisateur de la base de données.|  
 |**principal_name**|**sysname**|Le nom de l’utilisateur de base de données.|  
-|**profile_id**|**Int**|Numéro d'identification du profil de messagerie de la base de données.|  
-|**profile_name**|**sysname**|Nom du profil de messagerie de la base de données.|  
+|**profile_id**|**int**|Numéro d'identification du profil de messagerie de la base de données.|  
+|**nom_profil**|**sysname**|Nom du profil de messagerie de la base de données.|  
 |**is_default**|**bit**|Indicateur signalant s'il s'agit du profil par défaut de l'utilisateur.|  
   
 ## <a name="remarks"></a>Notes  
@@ -75,7 +74,7 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-information-for-a-specific-association"></a>A. Affichage d'une liste d'informations pour une association spécifique  
+### <a name="a-listing-information-for-a-specific-association"></a>R. Affichage d'une liste d'informations pour une association spécifique  
  L'exemple suivant illustre l'affichage d'une liste d'informations sur toutes les associations entre le profil `AdventureWorks Administrator` et le principal `ApplicationLogin` de la base de données `msdb`.  
   
 ```  

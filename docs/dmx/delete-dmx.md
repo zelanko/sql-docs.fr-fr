@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: bc78718c813ef1aa599c1ab299c634d018bc88d6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: c1c75a6ff18b26bee65365acbc068de87678a9c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070765"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,11 +40,11 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
  Le tableau ci-dessous décrit le résultat obtenu en utilisant différentes formes de la syntaxe.  
   
-|.|Résultats|  
+|.|Résultat|  
 |---------------|------------|  
-|SUPPRIMER à partir de la STRUCTURE d’exploration de données*\<structure >*<br /><br /> ou Gestionnaire de configuration<br /><br /> SUPPRIMER à partir de la STRUCTURE d’exploration de données*\<structure >*. CONTENU|Effectue ProcessClear sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données et de ses modèles d'exploration de données associés.|  
-|SUPPRIMER à partir de la STRUCTURE d’exploration de données*\<structure >*. CAS|Effectue ProcessClearStructureOnly sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données, en laissant ses modèles d'exploration de données associés intacts. Une fois la structure d'exploration de données supprimée, l'extraction dans les modèles d'exploration de données associés échoue.|  
-|SUPPRIMER à partir de modèle d’exploration de données*\<modèle >*<br /><br /> ou Gestionnaire de configuration<br /><br /> SUPPRIMER à partir de modèle d’exploration de données*\<modèle >*. CONTENU|Exécute ProcessClear sur le modèle d’exploration de données, mais laisse les valeurs d’état intactes. Les valeurs d'état correspondent aux états possibles d'une colonne. Par exemple, les valeurs d'état d'une colonne Gender seraient Male ou Female.|  
+|SUPPRIMER à partir de la STRUCTURE d’exploration de données *\<structure >*<br /><br /> ou Gestionnaire de configuration<br /><br /> SUPPRIMER à partir de la STRUCTURE d’exploration de données *\<structure >* . CONTENU|Effectue ProcessClear sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données et de ses modèles d'exploration de données associés.|  
+|SUPPRIMER à partir de la STRUCTURE d’exploration de données *\<structure >* . CAS|Effectue ProcessClearStructureOnly sur la structure d’exploration de données. Tout le contenu est supprimé de la structure d'exploration de données, en laissant ses modèles d'exploration de données associés intacts. Une fois la structure d'exploration de données supprimée, l'extraction dans les modèles d'exploration de données associés échoue.|  
+|SUPPRIMER à partir de modèle d’exploration de données *\<modèle >*<br /><br /> ou Gestionnaire de configuration<br /><br /> SUPPRIMER à partir de modèle d’exploration de données *\<modèle >* . CONTENU|Exécute ProcessClear sur le modèle d’exploration de données, mais laisse les valeurs d’état intactes. Les valeurs d'état correspondent aux états possibles d'une colonne. Par exemple, les valeurs d'état d'une colonne Gender seraient Male ou Female.|  
   
  Pour plus d’informations sur les types de traitement, consultez [élément Type &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla).  
   

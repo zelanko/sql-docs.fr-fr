@@ -3,18 +3,17 @@ title: Configurer des référentiels de Linux pour SQL Server 2017 et 2019
 description: Vérifiez et configurez des référentiels de code source pour SQL Server 2019 et SQL Server 2017 sur Linux. Le référentiel source a une incidence sur la version de SQL Server qui est appliqué pendant l’installation et mise à niveau.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 05299a2efd374dc7d58b5e32fcdea918b12fc1d3
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 33616b9a7767156e4cfd69d233f7dcfe5fc080f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967520"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurer des référentiels pour l’installation et la mise à niveau de SQL Server sur Linux
 

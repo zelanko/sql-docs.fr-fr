@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 077a6c6a-2c57-42c9-a4fd-4cf0e65cf7e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0bf63b831dace7678f5d3fdf952a9d6d5f60aa6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 241f4f3da12f63c15d917a0e47cb13ad0e96e6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063354"
 ---
 # <a name="sql-conformance-levels-odbc-driver-for-oracle"></a>Niveaux de conformité de SQL (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -37,9 +36,9 @@ ms.locfileid: "63313390"
     |||||  
     |-|-|-|-|  
     |Abs|Journal|round|tan|  
-    |plafond|Log10|second|truncate|  
+    |plafond|LOG10|second|truncate|  
     |Cos|Mod|connexion||  
-    |Exp|Pi|sin||  
+    |Exp|PI|sin||  
     |Floor|Power|sqrt||  
   
 -   Fonctions de date :  
@@ -48,16 +47,16 @@ ms.locfileid: "63313390"
     |-|-|-|-|  
     |CURDATE|DayOfWeek|MonthName|second|  
     |Curtime|Jour de l'année|minute|week|  
-    |DAYNAME|Heure|maintenant|year|  
-    |DayOfMonth|Month|Trimestre||  
+    |DAYNAME|Heure|now|year|  
+    |DayOfMonth|Mois|Trimestre||  
   
 -   Fonctions de chaîne :  
   
     |||||  
     |-|-|-|-|  
-    |Ascii|Gauche|Oui|UCase|  
-    |Char|Longueur|rtrim||  
-    |Concat|Ltrim|soundex||  
+    |ASCII|Gauche|Oui|UCase|  
+    |Char|Longueur|RTrim||  
+    |Concat|LTrim|SOUNDEX||  
     |LCase|Remplacer|substring||  
   
 -   Fonction de conversion de type :  

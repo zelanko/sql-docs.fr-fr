@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0158da62ed360e926cdb5382b89b1491c0723550
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f30e0cf7622de5124cb151288417bb508354ce0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037719"
 ---
 # <a name="c-to-sql-character"></a>C en SQL : Caractère
 Les identificateurs pour le caractère de type de données ODBC C sont :  
@@ -34,18 +33,18 @@ Les identificateurs pour le caractère de type de données ODBC C sont :
 > [!NOTE]  
 >  Lorsque les données de caractères C sont converties en données Unicode SQL, la longueur des données Unicode doit être un nombre pair.  
   
-|Identificateur de type SQL|Test|SQLSTATE|  
+|Identificateur de type SQL|Tester|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longueur d’octet de données < = longueur de colonne.<br /><br /> Longueur d’octet de données > longueur de colonne.|n/a<br /><br /> 22001|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longueur des données de caractère < = longueur de colonne.<br /><br /> Longueur des données de caractères > longueur de colonne.|n/a<br /><br /> 22001|  
-|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|Données converties sans troncation<br /><br /> Les données converties avec troncation de chiffres fractionnaires [e]<br /><br /> Conversion de données entraînerait une perte de chiffres dans son ensemble (par opposition aux fractions de seconde) [e]<br /><br /> Valeur de données n’est pas un *littéral numérique*|n/a<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
-|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Les données sont dans la plage du type de données à laquelle le nombre est converti<br /><br /> Données sont en dehors de la plage du type de données à laquelle le nombre est converti<br /><br /> Valeur de données n’est pas un *littéral numérique*|n/a<br /><br /> 22003<br /><br /> 22018|  
-|SQL_BIT|Les données sont 0 ou 1<br /><br /> Données sont supérieures à 0, inférieure à 2 et non égal à 1<br /><br /> Données sont inférieur à 0 ou supérieur ou égal à 2<br /><br /> Données ne sont pas un *littéral numérique*|n/a<br /><br /> 22001<br /><br /> 22003<br /><br /> 22018|  
-|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|(Longueur d’octet de données) / 2 < = longueur d’octet de colonne<br /><br /> (Longueur d’octet de données) / 2 > longueur d’octet de colonne<br /><br /> Valeur de données n’est pas une valeur hexadécimale|n/a<br /><br /> 22001<br /><br /> 22018|  
-|SQL_TYPE_DATE|Valeur de données est valide *littéral de date ODBC*<br /><br /> Valeur de données est valide *littéral de timestamp ODBC*; partie heure est égale à zéro<br /><br /> Valeur de données est valide *littéral de timestamp ODBC*; partie heure est différent de zéro [a]<br /><br /> Valeur de données n’est pas valide *littéral de date ODBC* ou *littéral de l’horodatage ODBC*|n/a<br /><br /> n/a<br /><br /> 22008<br /><br /> 22018|  
-|SQL_TYPE_TIME|Valeur de données est valide *littéral d’heure ODBC*<br /><br /> Valeur de données est valide *littéral de timestamp ODBC*; fractions de seconde partie des secondes est zéro [b]<br /><br /> Valeur de données est valide *littéral de timestamp ODBC*; fractions de seconde partie des secondes est différente de zéro [b]<br /><br /> Valeur de données n’est pas valide *littéral d’heure ODBC* ou *littéral de l’horodatage ODBC*|n/a<br /><br /> n/a<br /><br /> 22008<br /><br /> 22018|  
-|SQL_TYPE_TIMESTAMP|Valeur de données est valide *littéral de timestamp ODBC*; fractions de seconde partie secondes ne pas tronqué<br /><br /> Valeur de données est valide *littéral de timestamp ODBC*; fractions de seconde partie secondes tronqué<br /><br /> Valeur de données est valide *littéral de date ODBC*[c]<br /><br /> Valeur de données est valide *littéral d’heure ODBC*[d]<br /><br /> Valeur de données n’est pas valide *littéral de date ODBC*, *littéral d’heure ODBC*, ou *littéral de l’horodatage ODBC*|n/a<br /><br /> 22008<br /><br /> n/a<br /><br /> n/a<br /><br /> 22018|  
-|Tous les types d’intervalle SQL|Valeur de données est valide *valeur d’intervalle*; n’est pas tronqué<br /><br /> Valeur de données est valide *valeur d’intervalle*; la valeur dans un des champs est tronquée<br /><br /> La valeur de données n’est pas un littéral d’intervalle valide|n/a<br /><br /> 22015<br /><br /> 22018|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longueur d’octet de données < = longueur de colonne.<br /><br /> Longueur d’octet de données > longueur de colonne.|N/A<br /><br /> 22001|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longueur des données de caractère < = longueur de colonne.<br /><br /> Longueur des données de caractères > longueur de colonne.|N/A<br /><br /> 22001|  
+|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|Données converties sans troncation<br /><br /> Les données converties avec troncation de chiffres fractionnaires [e]<br /><br /> Conversion de données entraînerait une perte de chiffres dans son ensemble (par opposition aux fractions de seconde) [e]<br /><br /> Valeur de données n’est pas un *littéral numérique*|N/A<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
+|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Les données sont dans la plage du type de données à laquelle le nombre est converti<br /><br /> Données sont en dehors de la plage du type de données à laquelle le nombre est converti<br /><br /> Valeur de données n’est pas un *littéral numérique*|N/A<br /><br /> 22003<br /><br /> 22018|  
+|SQL_BIT|Les données sont 0 ou 1<br /><br /> Données sont supérieures à 0, inférieure à 2 et non égal à 1<br /><br /> Données sont inférieur à 0 ou supérieur ou égal à 2<br /><br /> Données ne sont pas un *littéral numérique*|N/A<br /><br /> 22001<br /><br /> 22003<br /><br /> 22018|  
+|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|(Longueur d’octet de données) / 2 < = longueur d’octet de colonne<br /><br /> (Longueur d’octet de données) / 2 > longueur d’octet de colonne<br /><br /> Valeur de données n’est pas une valeur hexadécimale|N/A<br /><br /> 22001<br /><br /> 22018|  
+|SQL_TYPE_DATE|Valeur de données est valide *littéral de date ODBC*<br /><br /> Valeur de données est valide *littéral de timestamp ODBC*; partie heure est égale à zéro<br /><br /> Valeur de données est valide *littéral de timestamp ODBC*; partie heure est différent de zéro [a]<br /><br /> Valeur de données n’est pas valide *littéral de date ODBC* ou *littéral de l’horodatage ODBC*|N/A<br /><br /> N/A<br /><br /> 22008<br /><br /> 22018|  
+|SQL_TYPE_TIME|Valeur de données est valide *littéral d’heure ODBC*<br /><br /> Valeur de données est valide *littéral de timestamp ODBC*; fractions de seconde partie des secondes est zéro [b]<br /><br /> Valeur de données est valide *littéral de timestamp ODBC*; fractions de seconde partie des secondes est différente de zéro [b]<br /><br /> Valeur de données n’est pas valide *littéral d’heure ODBC* ou *littéral de l’horodatage ODBC*|N/A<br /><br /> N/A<br /><br /> 22008<br /><br /> 22018|  
+|SQL_TYPE_TIMESTAMP|Valeur de données est valide *littéral de timestamp ODBC*; fractions de seconde partie secondes ne pas tronqué<br /><br /> Valeur de données est valide *littéral de timestamp ODBC*; fractions de seconde partie secondes tronqué<br /><br /> Valeur de données est valide *littéral de date ODBC*[c]<br /><br /> Valeur de données est valide *littéral d’heure ODBC*[d]<br /><br /> Valeur de données n’est pas valide *littéral de date ODBC*, *littéral d’heure ODBC*, ou *littéral de l’horodatage ODBC*|N/A<br /><br /> 22008<br /><br /> N/A<br /><br /> N/A<br /><br /> 22018|  
+|Tous les types d’intervalle SQL|Valeur de données est valide *valeur d’intervalle*; n’est pas tronqué<br /><br /> Valeur de données est valide *valeur d’intervalle*; la valeur dans un des champs est tronquée<br /><br /> La valeur de données n’est pas un littéral d’intervalle valide|N/A<br /><br /> 22015<br /><br /> 22018|  
   
  [a] la partie heure de l’horodatage est tronquée.  
   

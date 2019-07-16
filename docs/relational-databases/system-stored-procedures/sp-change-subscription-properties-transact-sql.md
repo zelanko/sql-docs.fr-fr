@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6152e7f1c1b64cfdeafffe7d5d9eb021bfd4c4a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045781"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |Value|Type de publication|  
 |-----------|----------------------|  
 |**0**|Transactionnelle|  
-|**1**|Snapshot|  
+|**1**|Instantané|  
 |**2**|Fusion|  
 |NULL (par défaut)|La réplication détermine le type de publication. La procédure stockée devant consulter plusieurs tables, cette option est plus lente que lorsque le type de publication exact est fourni.|  
   
@@ -81,7 +80,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**ftp_login**||Pour compatibilité descendante uniquement.|  
 |**ftp_password**||Pour compatibilité descendante uniquement.|  
 |**ftp_port**||Pour compatibilité descendante uniquement.|  
-|**hostname**||Nom d’hôte utilisé lors de la connexion au serveur de publication.|  
+|**Nom d’hôte**||Nom d’hôte utilisé lors de la connexion au serveur de publication.|  
 |**internet_login**||Connexion que l'Agent de fusion utilise pour se connecter, à l'aide de l'authentification de base, au serveur Web qui héberge la synchronisation Web.|  
 |**internet_password**||Mot de passe qu'utilise l'Agent de fusion lors de la connexion au serveur Web qui héberge la synchronisation Web avec l'authentification de base.|  
 |**internet_security_mode**|**1**|Utilise l'authentification intégrée Windows pour la synchronisation Web. Il est recommandé d'utiliser l'authentification de base pour la synchronisation Web. Pour plus d’informations, consultez [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md).|  

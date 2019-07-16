@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096021"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="arguments"></a>Arguments  
 `[ @eventid = ] event_id` Est l’ID de l’événement à activer. *event_id* est **int**, sans valeur par défaut. L’ID doit être un des numéros d’événements de 82 à 91, qui représentent les événements définis par l’utilisateur en tant que jeu avec [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
-`[ @userinfo = ] 'user_info'` Chaîne facultative définie par l’utilisateur consiste à identifier la raison de l’événement. *user_info* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
+`[ @userinfo = ] 'user_info'` Chaîne facultative définie par l’utilisateur consiste à identifier la raison de l’événement. *user_info* est **nvarchar (128)** , avec NULL comme valeur par défaut.  
   
-`[ @userdata = ] user_data` Correspond aux données spécifié par l’utilisateur facultatives pour l’événement. *user_data* est **varbinary (8000)**, avec NULL comme valeur par défaut.  
+`[ @userdata = ] user_data` Correspond aux données spécifié par l’utilisateur facultatives pour l’événement. *user_data* est **varbinary (8000)** , avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Le tableau suivant décrit les valeurs de code que les utilisateurs peuvent recevoir à la fin de l'exécution de la procédure stockée.  

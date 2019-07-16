@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e29b2ad4c4049890bef1ee319d37847a0e21cacd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e5dbdf757038abbf2c98d3987ee14a9cb9184a61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081319"
 ---
 # <a name="nullability-and-three-value-logic-comparisons"></a>Possibilité de valeur Null et comparaisons logiques de trois valeurs
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47676148"
 ## <a name="operations-functions-and-null-values"></a>Opérations, fonctions et valeurs Null  
  Tous les opérateurs arithmétiques (+, -, \*, /, %), opérateurs au niveau du bit (~, &, et |), et la plupart des fonctions retournent NULL si un des opérandes ou arguments de **SqlTypes** ont la valeur NULL. Le **IsNull** propriété retourne toujours une valeur true ou false.  
   
-## <a name="precision"></a>Précision  
+## <a name="precision"></a>Precision  
  Les types de données décimaux dans le CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] ont des valeurs maximales différentes de celles des types de données numériques et décimaux dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. De plus, dans le CLR [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], les types de données décimaux supposent la précision maximale. Dans le CLR pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], toutefois, **SqlDecimal** fournit la même précision maximale et de mise à l’échelle et de la même sémantique que le type de données décimal dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="overflow-detection"></a>Détection de dépassement de capacité  

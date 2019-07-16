@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 64f5763284ec35caee46565ec596e72870b5631f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3573b876a10b4400969bf63200682e91bfc45fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046339"
 ---
 # <a name="sysfncdcmaplsntotime-transact-sql"></a>sys.fn_cdc_map_lsn_to_time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
   
 ## <a name="arguments"></a>Arguments  
  *lsn_value*  
- Valeur LSN à mettre en correspondance. *lsn_value* est **Binary (10)**.  
+ Valeur LSN à mettre en correspondance. *lsn_value* est **Binary (10)** .  
   
 ## <a name="return-type"></a>Type de retour  
  **datetime**  
@@ -52,7 +51,7 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
 ## <a name="remarks"></a>Notes  
  Cette fonction peut être utilisée pour déterminer l’heure à laquelle une modification a été validée en fonction de la **__ $start_lsn** valeur retournée dans la ligne de données modifiées.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

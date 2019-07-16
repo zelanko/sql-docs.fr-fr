@@ -19,31 +19,30 @@ helpviewer_keywords:
 ms.assetid: fd17cac9-5d1f-4b44-b2dc-ee9346d8bf1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 77b434a20f408aa79e8d75b03ea9bce0a9f2e6b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52d929496bf3db83dc63cdde6d86bf1a2ee1a3f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902223"
 ---
 # <a name="dbosysjobactivity-transact-sql"></a>dbo.sysjobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enregistre l'état et l'activité des travaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  Cette table est stockée dans le **msdb** base de données.
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**Int**|ID de la session stockée dans le **syssessions** table dans le **msdb** base de données.|  
+|**session_id**|**int**|ID de la session stockée dans le **syssessions** table dans le **msdb** base de données.|  
 |**job_id**|**uniqueidentifier**|ID du travail.|  
 |**run_requested_date**|**datetime**|Date et heure auxquelles le travail devait s'exécuter.|  
 |**run_requested_source**|**sysname(nvarchar(128))**|Demandeur de l'exécution du travail.<br /><br /> **1** = SOURCE_SCHEDULER<br /><br /> **2** = SOURCE_ALERTER<br /><br /> **3** = SOURCE_BOOT<br /><br /> **4** = SOURCE_USER<br /><br /> **6** = SOURCE_ON_IDLE_SCHEDULE|  
 |**queued_date**|**datetime**|Date et heure auxquelles ce travail a intégré une file d'attente. Si le travail est exécuté directement, cette colonne affiche la valeur NULL.|  
 |**start_execution_date**|**datetime**|Date et heure auxquelles l'exécution du travail a été prévue.|  
-|**last_executed_step_id**|**Int**|ID de la dernière étape exécutée dans le travail.|  
+|**last_executed_step_id**|**int**|ID de la dernière étape exécutée dans le travail.|  
 |**last_executed_step_**<br /><br /> **date**|**datetime**|Date et heure auxquelles l'exécution de la dernière étape du travail a démarré.|  
 |**stop_execution_date**|**datetime**|Date et heure auxquelles l'exécution du travail s'est terminée.|  
-|**job_history_id**|**Int**|Utilisé pour identifier une ligne dans le **sysjobhistory** table.|  
+|**job_history_id**|**int**|Utilisé pour identifier une ligne dans le **sysjobhistory** table.|  
 |**next_scheduled_run_date**|**datetime**|Prochaines date et heure prévues pour l'exécution du travail.|  
 
 ## <a name="example"></a>Exemple

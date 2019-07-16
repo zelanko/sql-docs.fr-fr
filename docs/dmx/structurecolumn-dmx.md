@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b6f552f009a93caab2437a5ae6a1533833d6054b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7b6b436527aa36fb8f048a3b3c8fc55b970ef284
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065394"
 ---
 # <a name="structurecolumn-dmx"></a>StructureColumn (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -94,7 +93,7 @@ ProductName
 WITH FILTER(EXISTS (Products))  
 ```  
   
-### <a name="sample-query-1-returning-a-column-from-the-mining-structure"></a>Exemple de requête 1 : Renvoi d’une colonne à partir de la Structure d’exploration de données  
+### <a name="sample-query-1-returning-a-column-from-the-mining-structure"></a>Exemple de requête 1 : Renvoi d’une colonne à partir de la Structure d’exploration de données  
  L'exemple de requête suivant retourne les colonnes `CustomerName` et `Age`, définies comme faisant une partie intégrante du modèle d'exploration de données. Cependant, la requête retourne également la colonne `Age` qui appartient à la structure mais pas au modèle d'exploration de données.  
   
 ```  
@@ -104,7 +103,7 @@ WHERE Age > 30
   
  Notez que le filtrage de lignes pour restreindre les cas aux clients âgés de plus 30 ans a lieu au niveau du modèle. Par conséquent, cette expression ne retournerait pas les cas qui sont inclus dans les données de structure mais ne sont pas utilisés par le modèle. Comme la condition de filtre utilisée pour créer le modèle (`EXISTS (Products)`) restreint les cas uniquement aux clients qui ont acheté des produits, il peut y avoir des cas dans la structure qui ne sont pas retournés par cette requête.  
   
-### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>Exemple de requête 2 : Appliquez un filtre à la colonne de Structure  
+### <a name="sample-query-2-applying-a-filter-to-the-structure-column"></a>Exemple de requête 2 : Appliquez un filtre à la colonne de Structure  
  L'exemple de requête suivant ne retourne pas que les colonnes du modèle `CustomerName` et `Age`, et le table imbriquée `Products`, mais il retourne aussi la valeur de la colonne `Quantity` dans la table imbriquée qui ne fait pas partie du modèle.  
   
 ```  
@@ -115,7 +114,7 @@ WHERE StructureColumn('Occupation') = 'Architect'
   
  Notez que, dans cet exemple, un filtre est appliqué à la colonne de structure pour restreindre les cas aux clients dont l’occupation est 'architecte de' (`WHERE StructureColumn('Occupation') = 'Architect'`). Étant donné que la condition de filtre de modèle est toujours appliquée aux cas lorsque le modèle est créé, seuls les cas qui contiennent au moins une ligne éligible dans la table `Products` sont inclus dans les cas de modèles. Par conséquent, le filtre de la table imbriquée `Products` et le filtre sur le cas `('Occupation')` sont appliqués.  
   
-### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Exemple de requête 3 : Sélection de colonnes dans une Table imbriquée  
+### <a name="sample-query-3-selecting-columns-from-a-nested-table"></a>Exemple de requête 3 : Sélection de colonnes dans une Table imbriquée  
  L'exemple de requête ci-dessous retourne les noms des clients qui ont été utilisés comme cas d'apprentissage à partir du modèle. Pour chaque client, la requête retourne également une table imbriquée qui contient les détails d'achat. Bien que le modèle inclut la `ProductName` colonne, le modèle n’utilise pas la valeur de la `ProductName` colonne. Le modèle vérifie seulement si le produit a été acheté normaux (`NOT``OnSale`) prix. Cette requête retourne non seulement le nom du produit mais aussi la quantité achetée, qui n'est pas incluse dans le modèle.  
   
 ```  
@@ -126,7 +125,7 @@ FROM MyModel.CASES
   
  Notez que vous ne pouvez pas retourner la colonne `ProductName` ou la colonne `Quantity` sauf si l'extraction est activée sur le modèle d'exploration de données.  
   
-### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>Exemple de requête 4 : Filtrer sur et retourner les colonnes de Table imbriquée  
+### <a name="sample-query-4-filtering-on-and-returning-nested-table-columns"></a>Exemple de requête 4 : Filtrer sur et retourner les colonnes de Table imbriquée  
  L'exemple de requête suivant retourne les colonnes de cas et de table imbriquée inclus dans la structure d'exploration de données mais pas dans le modèle. Le modèle a déjà fait l'objet d'un filtre sur la présence de produits `OnSale`, mais cette requête ajoute un filtre sur la colonne de structure d'exploration de données, `Quantity` :  
   
 ```  
@@ -138,7 +137,7 @@ WHERE EXISTS (SELECT * FROM Products WHERE StructureColumn('Quantity')>1)
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

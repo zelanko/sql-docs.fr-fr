@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37209a75c03a051e3def4d26fa0d4e7f85d0e91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897749"
 ---
 # <a name="scalar-function-calls"></a>Appels de fonctions scalaires
 Fonctions scalaires retournent une valeur pour chaque ligne. Par exemple, la fonction scalaire de valeur absolue prend une colonne numérique en tant qu’argument et retourne la valeur absolue de chaque valeur dans la colonne. Est la séquence d’échappement pour appeler une fonction scalaire  
@@ -43,7 +42,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  Pour une interopérabilité maximale, les applications doivent utiliser le **convertir** fonction scalaire pour vous assurer que la sortie d’une fonction scalaire est le type requis. Le **convertir** fonction convertit les données à partir d’un type de données SQL vers le type de données SQL spécifié. La syntaxe de la **convertir** est (fonction)  
   
- **CONVERT(** _value_exp_ **,** _data_type_ **)**  
+ **CONVERTIR (** _value_exp_ **,** _data_type_ **)**  
   
  où *value_exp* est un nom de colonne, le résultat d’une autre fonction scalaire ou une valeur littérale, et *data_type* est un mot clé qui correspond à la **#define** nom qui est utilisé par un Identificateur de type de données SQL comme défini dans [annexe d : Types de données](../../../odbc/reference/appendixes/appendix-d-data-types.md). Par exemple, l’instruction SQL suivante utilise le **convertir** (fonction) pour vous assurer que la sortie de la **CURDATE** (fonction) est une date, au lieu d’un horodatage ou caractères de données :  
   

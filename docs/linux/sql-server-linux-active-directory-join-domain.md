@@ -6,16 +6,15 @@ author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4cee4ca0edcc5a49a34b6c352ae0121bed3b40ca
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027341"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Jointure de SQL Server sur un hôte Linux à un domaine Active Directory
 
@@ -141,7 +140,7 @@ Utilisez les étapes suivantes pour joindre un ordinateur hôte SQL Server à un
 
 1. Utilisez [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) pour joindre votre ordinateur hôte à votre domaine Active Directory. Vous devez d’abord installer les deux le **realmd** et packages de client Kerberos sur l’ordinateur hôte de SQL Server à l’aide du Gestionnaire de package de votre distribution Linux :
 
-   **RHEL:**
+   **RHEL :**
 
    ```base
    sudo yum install realmd krb5-workstation

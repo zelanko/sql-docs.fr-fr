@@ -22,23 +22,22 @@ ms.assetid: 79787bb7-d729-448e-b56a-0a467bbb304f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd799d99d92607363f0203c5c288cbd5a0da6838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa89a799711c354da1ba61b27653ad25c046200a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070451"
 ---
 # <a name="sysfulltextstopwords-transact-sql"></a>sys.fulltext_stopwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contient une ligne par mot vide pour toutes les listes de mots vides de la base de données.  
  
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**stoplist_id**|**Int**|ID de la liste de mots vides auquel **stopword** appartient. Cet ID est unique dans la base de données.|  
+|**stoplist_id**|**int**|ID de la liste de mots vides auquel **stopword** appartient. Cet ID est unique dans la base de données.|  
 |**stopword**|**nvarchar(64)**|Terme à considérer pour une correspondance de mot vide.|  
 |**language**|**sysname**|Représente la valeur de l’alias dans [sys.fulltext_languages](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)correspondant à la valeur de l’identificateur de paramètres régionaux (**LCID**), ou est la représentation sous forme de chaîne du LCID numérique.|  
 |**language_id**|**Int**|LCID utilisé pour l'analyse lexicale.|  

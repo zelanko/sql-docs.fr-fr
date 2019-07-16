@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d223267bbc181b325343014609525cbb2777881b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054979"
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne le jeu de résultats suivant :  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**Int**|Numéro d'identification de la session de l'Agent.|  
 |**job_id**|**uniqueidentifier**|Identificateur du travail.|  
@@ -65,16 +64,16 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**run_requested_source**|**sysname**|Source de la requête pour exécuter le travail. Une des valeurs suivantes :<br /><br /> **1** = exécuter selon une planification<br /><br /> **2** = exécution en réponse à une alerte<br /><br /> **3** = exécution au démarrage<br /><br /> **4** = exécution par l’utilisateur<br /><br /> **6** = exécution en fonction de planification inactive de l’UC|  
 |**queued_date**|**datetime**|Moment où la requête a intégré une file d'attente. NULL si le travail a été exécuté directement.|  
 |**start_execution_date**|**datetime**|Moment où le travail a été attribué à un thread exécutable.|  
-|**last_executed_step_id**|**Int**|ID de l'étape du travail exécutée en dernier lieu.|  
+|**last_executed_step_id**|**int**|ID de l'étape du travail exécutée en dernier lieu.|  
 |**last_exectued_step_date**|**datetime**|Heure à laquelle l'étape du travail exécutée en dernier lieu a démarré son exécution.|  
 |**stop_execution_date**|**datetime**|Heure à laquelle l'exécution du travail s'est terminée.|  
 |**next_scheduled_run_date**|**datetime**|Date et heure prévues pour la prochaine exécution du travail.|  
-|**job_history_id**|**Int**|Identificateur de l'historique des travaux dans la table d'historique des travaux.|  
+|**job_history_id**|**int**|Identificateur de l'historique des travaux dans la table d'historique des travaux.|  
 |**message**|**nvarchar(1024)**|Message produit lors de la dernière exécution du travail.|  
-|**run_status**|**Int**|État retourné de la dernière exécution du travail :<br /><br /> **0** = erreur échoué<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = état inconnu|  
+|**run_status**|**int**|État retourné de la dernière exécution du travail :<br /><br /> **0** = erreur échoué<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = état inconnu|  
 |**operator_id_emailed**|**Int**|Numéro d'identification de l'opérateur notifié par courrier électronique en fin de travail.|  
-|**operator_id_netsent**|**Int**|Numéro d’identification de l’opérateur notifié par **envoi réseau** à l’achèvement du travail.|  
-|**operator_id_paged**|**Int**|Numéro d'identification de l'opérateur notifié par radiomessagerie en fin de travail.|  
+|**operator_id_netsent**|**int**|Numéro d’identification de l’opérateur notifié par **envoi réseau** à l’achèvement du travail.|  
+|**operator_id_paged**|**int**|Numéro d'identification de l'opérateur notifié par radiomessagerie en fin de travail.|  
   
 ## <a name="remarks"></a>Notes  
  Cette procédure fournit un instantané de l'état actuel des travaux. Les résultats renvoyés représentent des informations correspondant au moment du traitement de la requête.  

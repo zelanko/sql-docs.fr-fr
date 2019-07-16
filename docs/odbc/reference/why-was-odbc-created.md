@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ba6eb993-316b-4650-bab8-d76583c00e53
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 871919554975f04fae0aeaa1b8e6ec684c6650a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cfdd0babe84d309391b3e1ca546c4e05fdf1331
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049169"
 ---
 # <a name="why-was-odbc-created"></a>Pourquoi ODBC a-t-il été créé ?
 Historiquement, les entreprises utilisent un SGBD unique. Tous les accès de base de données a été effectuée via le serveur frontal de ce système ou les applications écrites pour fonctionner exclusivement avec ce système. Toutefois, quand l’utilisation d’ordinateurs a augmenté et plus de matériel informatique et de logiciels sont devenues disponibles, entreprises ont commencé acquérir des différents SGBD. Les raisons étaient nombreuses : Personnes a acheté ce qui était moins coûteux, ce qui a été le plus rapide, ce qu’ils déjà savais, ce qui était la plus récente sur le marché, ce qui a fonctionné mieux pour une application unique. Pour d’autres raisons ont été réorganisations et les fusions, où les départements qui avait précédemment un SGBD unique devaient désormais plusieurs.  

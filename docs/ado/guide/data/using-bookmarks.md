@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c7e14e063d1aabcfce6391a85c0fcddbf0ff4e9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923611"
 ---
 # <a name="using-bookmarks"></a>Utilisation de signets
 Il est souvent utile de retourner directement à un enregistrement spécifique après avoir déplacé dans le **Recordset** sans avoir à faire défiler tous les enregistrements et comparer des valeurs. Par exemple, si vous tentez de rechercher un enregistrement à l’aide de la **trouver** méthode mais la recherche ne renvoie aucun enregistrement, vous accédez automatiquement à chaque extrémité de la **Recordset**. Si votre fournisseur les prend en charge, les signets peuvent être utilisés pour marquer votre position avant d’utiliser le **trouver** méthode afin de pouvoir revenir à votre emplacement. Un signet est un **Variant** type valeur qui identifie de façon unique un enregistrement dans un **Recordset** objet.  

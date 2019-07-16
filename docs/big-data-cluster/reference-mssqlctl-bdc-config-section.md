@@ -1,21 +1,20 @@
 ---
-title: mssqlctl bdc config section reference
+title: référence de section de configuration de bdc mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Article de référence pour les commandes de section config mssqlctl bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3ca96ddbbf64b04e8ccd8854a8338fe6e118debb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3f3ba7854b4df63495926e4cc207de7cbe6a9378
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958190"
 ---
 # <a name="mssqlctl-bdc-config-section"></a>mssqlctl bdc config section
 
@@ -26,9 +25,9 @@ L’article suivant fournit la référence pour le **section de configuration bd
 ## <a name="commands"></a>Commandes
 |     |     |
 | --- | --- |
-[mssqlctl bdc config section show](#mssqlctl-bdc-config-section-show) | Obtient une section d’un profil de configuration.
-[mssqlctl bdc config section set](#mssqlctl-bdc-config-section-set) | Définit une section pour un profil de configuration.
-## <a name="mssqlctl-bdc-config-section-show"></a>mssqlctl bdc config section show
+[afficher de section config mssqlctl bdc](#mssqlctl-bdc-config-section-show) | Obtient une section d’un profil de configuration.
+[section de configuration mssqlctl bdc défini](#mssqlctl-bdc-config-section-set) | Définit une section pour un profil de configuration.
+## <a name="mssqlctl-bdc-config-section-show"></a>afficher de section config mssqlctl bdc
 Obtient la section spécifiée à partir du profil de configuration sélectionné selon le chemin d’accès json donnée.
 ```bash
 mssqlctl bdc config section show --json-path -j 
@@ -66,7 +65,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-bdc-config-section-set"></a>mssqlctl bdc config section set
+## <a name="mssqlctl-bdc-config-section-set"></a>section de configuration mssqlctl bdc défini
 Définit la section spécifiée dans le profil de configuration sélectionné selon le chemin d’accès json donnée.  Tous les examplesbelow sont indiqués dans Bash.  Si vous utilisez une autre ligne de commande, sachez que vous devrez peut-être escapequotations en conséquence.  Vous pouvez également utiliser la fonctionnalité fichiers de correctifs.
 ```bash
 mssqlctl bdc config section set --config-profile -c 

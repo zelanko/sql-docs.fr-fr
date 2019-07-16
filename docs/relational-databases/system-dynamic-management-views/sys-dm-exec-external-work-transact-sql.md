@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a53a32f01dcf4646ee0bc12843c188b9b0e8e4c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 049bf084381adaa0bf7e817eb7ae3bdb24feb118
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097756"
 ---
-# <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
+# <a name="sysdmexecexternalwork-transact-sql"></a>Sys.dm_exec_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Retourne des informations sur la charge de travail par travail, sur chaque nœud de calcul.  
@@ -40,11 +39,11 @@ ms.locfileid: "63013195"
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|Identificateur unique pour les requêtes PolyBase associé.|Consultez *request_ID* dans [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|step_index|**Int**|La demande que l’exécution de ce processus de travail.|Consultez *step_index* dans [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
-|dms_step_index|**Int**|Étape dans le plan DMS ce processus de travail est en cours d’exécution.|Consultez [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
-|compute_node_id|**Int**|Le nœud le processus de travail s’exécute sur.|Consultez [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
+|step_index|**int**|La demande que l’exécution de ce processus de travail.|Consultez *step_index* dans [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
+|dms_step_index|**int**|Étape dans le plan DMS ce processus de travail est en cours d’exécution.|Consultez [sys.dm_exec_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md).|  
+|compute_node_id|**int**|Le nœud le processus de travail s’exécute sur.|Consultez [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |type|**nvarchar(60)**|Le type de travail externe.|Fichier de fractionnement|  
-|work_id|**Int**|ID du fractionnement réels.|Supérieur ou égal à 0.|  
+|work_id|**int**|ID du fractionnement réels.|Supérieur ou égal à 0.|  
 |input_name|**nvarchar(4000)**|Nom de l’entrée à lire|Nom de fichier lors de l’utilisation de Hadoop.|  
 |read_location|**bigint**|Décalage ou lire l’emplacement.|Offset du fichier à lire.|  
 |bytes_processed|**bigint**|Nombre total d’octets traité par ce processus de travail.|Supérieur ou égal à 0.|  
@@ -52,7 +51,7 @@ ms.locfileid: "63013195"
 |status|**nvarchar(32)**|État du processus de travail|En attente, traitement, terminé, échec, abandonnée|  
 |start_time|**datetime**|Début du travail||  
 |end_time|**datetime**|Fin du travail||  
-|total_elapsed_time|**Int**|Durée totale en millisecondes||  
+|total_elapsed_time|**int**|Durée totale en millisecondes||  
   
 ## <a name="see-also"></a>Voir aussi  
  [Résolution des problèmes avec les vues de gestion dynamique de PolyBase](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   

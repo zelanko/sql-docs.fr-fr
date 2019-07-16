@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 782b4490-372b-4366-aad7-a486fb8a07c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c9a3d63f0bf1923905c5281655aff2af294b8284
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5fe4081d0786ace40dd027606a830982798075e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044954"
 ---
 # <a name="data-type-support"></a>Prise en charge du type de données
 Pilotes ODBC doivent prendre en charge au moins une des SQL_CHAR et SQL_VARCHAR. Prise en charge pour les autres types de données est déterminée par le niveau de conformité de la source du pilote ou de données SQL-92. Une application doit appeler **SQLGetTypeInfo** pour déterminer les types de données pris en charge par le pilote.  

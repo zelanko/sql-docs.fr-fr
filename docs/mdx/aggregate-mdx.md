@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 11e10d5a03702329a5ed59ed42acee0abc2d27c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c75ab71456dc8b7ffc3efdf6bd157693de14881
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017170"
 ---
 # <a name="aggregate-mdx"></a>Aggregate (MDX)
 
@@ -32,7 +31,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Numeric_Expression*  
+ *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
 ## <a name="remarks"></a>Notes  
@@ -50,7 +49,7 @@ Aggregate(Set_Expression [ ,Numeric_Expression ])
 |Distinct Count|Agrège les données de faits qui contribuent au sous-cube lorsque l'axe de secteur comporte un jeu.<br /><br /> Retourne le comptage de valeurs pour chaque membre du jeu. Le résultat obtenu dépend de la sécurité dans les cellules agrégées et non de la sécurité dans les cellules requises pour le calcul. La sécurité des cellules dans le jeu déclenche une erreur ; la sécurité des cellules inférieure à la granularité du jeu spécifié est ignorée. Les calculs sur le jeu génèrent une erreur. Les calculs inférieurs à la granularité du jeu sont ignorés. Le comptage de valeurs dans un jeu qui inclut un membre et un ou plusieurs de ses enfants retourne le comptage de valeurs dans les faits qui contribuent au membre enfant.|  
 |Attributs qui ne peuvent pas être agrégés|Retourne la somme des valeurs.|  
 |Fonctions d'agrégation mixtes|Non pris en charge, déclenche une erreur.|  
-|Opérateurs unaires|Non respectés ; les valeurs sont agrégées par addition.|  
+|Les opérateurs unaires.|Non respectés ; les valeurs sont agrégées par addition.|  
 |Mesures calculées|Ordre de résolution défini pour garantir l'application de la mesure calculée.|  
 |Membres calculés|Application des règles normales, ce qui signifie que le dernier ordre de résolution est prioritaire.|  
 |Attributions|L'agrégation des attributions a lieu selon la mesure d'agrégation des mesures. Si la fonction d'agrégation des mesures est un comptage de valeurs, l'attribution est totalisée.|  

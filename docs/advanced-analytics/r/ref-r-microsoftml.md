@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: e3dc94026f90ef769abb3889a716b5dadb317c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962501"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (bibliothèque R dans SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -126,7 +125,7 @@ Cette section répertorie les fonctions par catégorie pour vous donner une idé
 
 | Nom de la fonction | Description |
 |---------------|-------------|
-|[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Spécifie les algorithmes d’optimisation pour le [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) algorithme d’apprentissage automatique.|
+|[optimiseur](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Spécifie les algorithmes d’optimisation pour le [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) algorithme d’apprentissage automatique.|
 
 
 ## <a name="8-package-state-functions"></a>Fonctions de l’état de 8-package

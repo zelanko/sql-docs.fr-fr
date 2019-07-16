@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 02d320990b255cdee2a6d75ac88a93ab98ce5ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 036ae77a6d65ff396df60f54b38eeffba4e202f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086203"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Quelles sont les nouveautés de SSMA pour DB2 (DB2ToSQL)
 
@@ -35,7 +34,7 @@ La version v8.2 de SSMA pour DB2 est étendue pour résoudre les problèmes avec
 > [!IMPORTANT]
 > Avec SSMA v7.4 et versions ultérieures, .net 4.5.2 est un préalable de l’installation.
 
-## <a name="ssma-v81"></a>SSMA v8.1
+## <a name="ssma-v81"></a>V8.1 SSMA
 
 La version v8.1 de SSMA pour DB2 a été améliorée pour fournir des correctifs ciblés visant qui est conçues pour améliorer la qualité et conversion des mesures.
 
@@ -139,7 +138,7 @@ La version v7.1 de SSMA pour DB2 contient les modifications suivantes :
 * Prise en charge des mises à jour automatiques télécharger la dernière version de SSMA dès qu’il est disponible.
 * Fichiers binaires installables SSMA sont maintenant fournies via fichiers de package Windows installer (.msi).
 
-## <a name="may-2016"></a>Mai 2016
+## <a name="may-2016"></a>Mai 2016
 
 La version de mai 2016 de SSMA pour DB2 contient les modifications suivantes :  
 

@@ -7,13 +7,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f180f6223f255734f353348c0d5fef58d19b0cbd
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3f032a9e2a60a0428a2aac76ae8c3ee6baa62775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963150"
 ---
 # <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>Comment créer un pool de ressources pour machine learning dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +37,7 @@ Le processus comprend plusieurs étapes :
 
     **Exemples de résultats**
 
-    |pool_id|NAME|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
+    |pool_id|name|min_cpu_percent|max_cpu_percent|min_memory_percent|max_memory_percent|cap_cpu_percent|min_iops_per_volume|max_iops_per_volume|
     |-|-|-|-|-|-|-|-|-|
     |2|par défaut|0|100|0|100|100|0|0|
 
@@ -50,7 +49,7 @@ Le processus comprend plusieurs étapes :
 
     **Exemples de résultats**
 
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|par défaut|100|20|0|2|
  
@@ -160,9 +159,9 @@ Pour vérifier que les modifications ont été apportées, vous devez vérifier 
 
     **Exemples de résultats**
 
-    |group_id|NAME|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
+    |group_id|name|importance|request_max_memory_grant_percent|request_max_cpu_time_sec|request_memory_grant_timeout_sec|max_dop|group_max_requests pool_id|pool_idd|external_pool_id|
     |-|-|-|-|-|-|-|-|-|-|
-    |1|interne|Moyenne|25|0|0|0|0|1|2|
+    |1|internal|Moyenne|25|0|0|0|0|1|2|
     |2|par défaut|Moyenne|25|0|0|0|0|2|2|
     |256|ds_wg|Moyenne|25|0|0|0|0|2|256|
   
@@ -174,7 +173,7 @@ Pour vérifier que les modifications ont été apportées, vous devez vérifier 
 
     **Exemples de résultats**
     
-    |external_pool_id|NAME|max_cpu_percent|max_memory_percent|max_processes|version|
+    |external_pool_id|name|max_cpu_percent|max_memory_percent|max_processes|version|
     |-|-|-|-|-|-|
     |2|par défaut|100|20|0|2|
     |256|ds_ep|100|40|0|1|

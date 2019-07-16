@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055191"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
-`[ @operation = ] 'operation'` Opération valide pour le travail spécifié. *opération* est **varchar(64)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @operation = ] 'operation'` Opération valide pour le travail spécifié. *opération* est **varchar(64)** , avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -63,16 +62,16 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**INSERT**|Opération qui insère un travail ou actualise un travail existant. Cette opération comporte toutes les étapes et planifications du travail, le cas échéant.|  
 |**NOUVEAU S’INSCRIRE**|Opération serveur qui fait renvoyer les informations d'inscription par le serveur cible, y compris la fréquence d'interrogation et le fuseau horaire, au domaine multiserveur. Le serveur cible télécharge également le **MSXOperator** détails.|  
 |**SET-POLL**|Opération de serveur qui définit l'intervalle, en secondes, que doivent respecter les serveurs cibles pour l'interrogation du domaine multiserveur. Si spécifié, *valeur* est interprété comme la valeur d’intervalle requis, et peut être une valeur à partir de **10** à **28800**.|  
-|**START**|Opération de travail qui requiert le début de l'exécution d'un travail.|  
+|**DÉMARRER**|Opération de travail qui requiert le début de l'exécution d'un travail.|  
 |**ARRÊTER**|Opération de travail qui nécessite l'interruption de l'exécution d'un travail.|  
-|**SYNC-TIME**|Opération de serveur qui commande au serveur cible de synchroniser son horloge système avec le domaine multiserveur. Cette opération étant coûteuse, il est préférable de l'exécuter le plus rarement possible.|  
+|**HEURE DE SYNCHRONISATION**|Opération de serveur qui commande au serveur cible de synchroniser son horloge système avec le domaine multiserveur. Cette opération étant coûteuse, il est préférable de l'exécuter le plus rarement possible.|  
 |**UPDATE**|Opération de travail qui met à jour uniquement la **sysjobs** informations pour un travail, pas les étapes de travail ou les planifications. Est appelée automatiquement par **sp_update_job**.|  
   
-`[ @object_type = ] 'object_type'` Le type d’objet pour le travail spécifié. *object_type* est **varchar(64)**, avec NULL comme valeur par défaut. *object_type* peut être soit JOB soit SERVER. Pour plus d’informations sur *object_type*valeurs, consultez [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` Le type d’objet pour le travail spécifié. *object_type* est **varchar(64)** , avec NULL comme valeur par défaut. *object_type* peut être soit JOB soit SERVER. Pour plus d’informations sur *object_type*valeurs, consultez [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
 `[ @object_name = ] 'object_name'` Le nom de l’objet. *object_name* est **sysname**, avec NULL comme valeur par défaut. Si *object_type* est le travail, *object_name*est le nom du travail. Si *object_type*est serveur, *object_name*est le nom du serveur.  
   
-`[ @target_server = ] 'target_server'` Le nom du serveur cible. *serveur_cible* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
+`[ @target_server = ] 'target_server'` Le nom du serveur cible. *serveur_cible* est **nvarchar (128)** , avec NULL comme valeur par défaut.  
   
 `[ @has_error = ] has_error` Est indique si le travail doit signaler les erreurs. *a_erreur* est **tinyint**, avec NULL comme valeur par défaut, qui n’indique aucune erreur ne doit être signalée. **1** indique que toutes les erreurs doivent être signalées.  
   
@@ -85,7 +84,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**Int**|Numéro d'identification entier unique de l'instruction.|  
 |**source_server**|**nvarchar(30)**|Nom de l'ordinateur du serveur qui émet l'instruction. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0, il est toujours le nom d’ordinateur du serveur maître (MSX).|  

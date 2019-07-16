@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02c9a75c-2103-4f68-a1db-e31f7e0f1f03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b071494697d21a37f4420889a8f60cc35fe3d8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f7c90dacc375877b4e449b8d59533ce75ff8a4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076834"
 ---
 # <a name="deferred-buffers"></a>Mémoires tampons différées
 Un *tampon différée* est celle dont la valeur est utilisée à un moment *après* elle est spécifiée dans un appel de fonction. Par exemple, **SQLBindParameter** sert à associer, ou *lier,* un tampon de données avec un paramètre dans une instruction SQL. L’application spécifie le numéro du paramètre et transmet l’adresse, la longueur d’octet et le type de la mémoire tampon. Le pilote enregistre ces informations mais n’examine pas le contenu de la mémoire tampon. Plus tard, lorsque l’application s’exécute l’instruction, le pilote récupère les informations et l’utilise pour récupérer les données de paramètre et les envoyer à la source de données. Par conséquent, l’entrée de données dans la mémoire tampon est différée. Mémoires tampons différées sont spécifiés dans une fonction et utilisés dans un autre, il est une erreur de programmation d’application pour libérer une mémoire tampon différée, tandis que le pilote attend toujours qu’elle existe ; Pour plus d’informations, consultez [allocation et libération de mémoires tampons](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md), plus loin dans cette section.  

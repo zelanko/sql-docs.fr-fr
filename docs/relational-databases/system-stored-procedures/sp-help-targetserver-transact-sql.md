@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085075"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_help_targetserver
 ## <a name="result-sets"></a>Jeux de résultats  
  Si *nom_serveur* n’est pas spécifié, **sp_help_targetserver** retourne ce jeu de résultats.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**Int**|Numéro d’identification du serveur.|  
 |**server_name**|**nvarchar(30)**|Nom du serveur.|  
@@ -57,18 +56,18 @@ sp_help_targetserver
 |**time_zone_adjustment**|**Int**|Définition du fuseau horaire, en heures, par rapport à l'heure de Greenwich (GMT).|  
 |**enlist_date**|**datetime**|Date d'inscription du serveur spécifié.|  
 |**last_poll_date**|**datetime**|Date à laquelle le serveur a été interrogé pour la dernière fois pour des travaux.|  
-|**status**|**Int**|État du serveur spécifié.|  
-|**unread_instructions**|**Int**|Indique si le serveur a des instructions non lues. Si toutes les lignes ont été téléchargés, cette colonne est **0**.|  
+|**status**|**int**|État du serveur spécifié.|  
+|**unread_instructions**|**int**|Indique si le serveur a des instructions non lues. Si toutes les lignes ont été téléchargés, cette colonne est **0**.|  
 |**local_time**|**datetime**|Heure et date locales sur le serveur cible, qui sont fonction de l'heure locale du serveur cible lors de la dernière interrogation du serveur maître.|  
 |**enlisted_by_nt_user**|**nvarchar(100)**|Utilisateur Microsoft Windows ayant inscrit le serveur cible.|  
-|**poll_interval**|**Int**|Fréquence (en secondes) à laquelle le serveur cible interroge le service SQLServerAgent principal afin de télécharger des travaux et charger des états de travaux.|  
+|**poll_interval**|**int**|Fréquence (en secondes) à laquelle le serveur cible interroge le service SQLServerAgent principal afin de télécharger des travaux et charger des états de travaux.|  
   
 ## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, l'utilisateur doit être membre du rôle de serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-information-for-all-registered-target-servers"></a>A. Affichage d'informations pour tous les serveurs cibles enregistrés  
+### <a name="a-listing-information-for-all-registered-target-servers"></a>R. Affichage d'informations pour tous les serveurs cibles enregistrés  
  L'exemple suivant produit une liste d'informations pour tous les serveurs cibles enregistrés.  
   
 ```  

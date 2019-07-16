@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 7e9d8fe2dba82e83594c73e442a2e52260900ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091255"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogue de base de données WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,18 +28,18 @@ WideWorldImporters utilise des schémas à des fins différentes, telles que le 
 
 Ces schémas contiennent les données. Un nombre de tables est nécessaires à tous les autres schémas et se trouvent dans le schéma d’Application.
 
-|schéma|Description|
+|Schéma|Description|
 |-----------------------------|---------------------|
 |Application|Les utilisateurs de l’application, les contacts et les paramètres. Il contient également des tables de référence avec des données qui sont utilisées par plusieurs schémas|
 |Purchasing|Élément du stock achats à partir des fournisseurs et des détails sur les fournisseurs.|  
-|Ventes|Stock élément vente aux clients de vente au détail et plus d’informations sur les clients et les ventes de personnes. |  
+|Sales|Stock élément vente aux clients de vente au détail et plus d’informations sur les clients et les ventes de personnes. |  
 |Warehouse|Inventaire d’élément de stock et les transactions.|  
 
 ### <a name="secure-access-schemas"></a>Schémas d’accès sécurisé
 
 Ces schémas sont utilisés pour les applications externes qui ne sont pas autorisées à accéder directement aux tables de données. Elles contiennent des vues et procédures stockées utilisées par des applications externes.
 
-|schéma|Description|
+|Schéma|Description|
 |-----------------------------|---------------------|
 |Site Web|Tous les accès à la base de données depuis le site Web d’entreprise consiste à utiliser de ce schéma.|
 |Rapports|Tous les accès à la base de données à partir de rapports Reporting Services sont à ce schéma.|
@@ -52,7 +51,7 @@ Notez que les rapports Power BI et les schémas ne sont pas utilisés dans la ve
 
 Schémas à usage spécial
 
-|schéma|Description|
+|Schéma|Description|
 |-----------------------------|---------------------|
 |Intégration|Objets et les procédures requises pour l’intégration de l’entrepôt de données (par exemple, migrer les données vers la base de données WideWorldImportersDW).|
 |Séquences|Contient des séquences utilisées par toutes les tables dans l’application.|
@@ -65,7 +64,7 @@ Toutes les tables dans la base de données sont dans les schémas de données.
 
 Détails des paramètres et des personnes (utilisateurs et contacts), ainsi que des tables de référence communes (communes à plusieurs autres schémas).
 
-|Table de charge de travail|Description|
+|Table|Description|
 |-----------------------------|---------------------|
 |SystemParameters|Contient des paramètres configurables de l’échelle du système.|
 |Personnes|Contient les noms d’utilisateur, informations de contact, pour tous ceux qui utilisent l’application et pour les personnes gérant le Wide World Importers à des organisations clientes. Cela inclut le personnel, les clients, les fournisseurs et les autres contacts. Pour les personnes qui ont reçu l’autorisation d’utiliser le système ou un site Web, les informations comprennent des détails de connexion.|
@@ -80,7 +79,7 @@ Détails des paramètres et des personnes (utilisateurs et contacts), ainsi que 
 
 Détails des fournisseurs et des achats de l’élément du stock.
 
-|Table de charge de travail|Description|
+|Table|Description|
 |-----------------------------|---------------------|
 |Suppliers|Table de l’entité principale pour les fournisseurs (organisations)|
 |SupplierCategories|Catégories pour les fournisseurs (par exemple, attrapes, jouets, vêtements, empaquetage, etc.).|
@@ -93,7 +92,7 @@ Détails des fournisseurs et des achats de l’élément du stock.
 
 Détails des clients, les vendeurs et des ventes de l’élément du stock.
 
-|Table de charge de travail|Description|
+|Table|Description|
 |-----------------------------|---------------------|
 |Customers|Tables de l’entité principale pour les clients (entreprises ou les particuliers)|
 |CustomerCategories|Catégories pour les clients (ie fantaisie magasins, supermarchés, etc.)|
@@ -109,7 +108,7 @@ Détails des clients, les vendeurs et des ventes de l’élément du stock.
 
 Détails de stock, leurs exploitations et aux transactions.
 
-|Table de charge de travail|Description|
+|Table|Description|
 |-----------------------------|---------------------|
 |StockItems|Table de l’entité principale pour les articles en stock|
 |StockItemHoldings|Colonnes non temporelle pour les articles en stock. Il s’agit des colonnes mises à jour fréquemment.|

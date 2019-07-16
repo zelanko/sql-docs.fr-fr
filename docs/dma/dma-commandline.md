@@ -14,17 +14,16 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 18ac429a536b657b7f7c0cf91c100eed8a152e52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed669adc19dddc96ba953ba73f73805925968d19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058912"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Exécutez l’Assistant Migration des données à partir de la ligne de commande
 
-Avec la version 2.1 et versions ultérieures, lorsque vous installez Data Migration Assistant, il installe également dmacmd.exe dans *% ProgramFiles%\\Microsoft Data Migration Assistant\\*. Utilisez dmacmd.exe pour évaluer vos bases de données en mode sans assistance et renvoyer le résultat au fichier JSON ou CSV. Cette méthode est particulièrement utile lors de l’évaluation de plusieurs bases de données ou des bases de données énormes. 
+Avec la version 2.1 et versions ultérieures, lorsque vous installez Data Migration Assistant, il installe également dmacmd.exe dans *% ProgramFiles%\\Microsoft Data Migration Assistant\\* . Utilisez dmacmd.exe pour évaluer vos bases de données en mode sans assistance et renvoyer le résultat au fichier JSON ou CSV. Cette méthode est particulièrement utile lors de l’évaluation de plusieurs bases de données ou des bases de données énormes. 
 
 > [!NOTE]
 > Dmacmd.exe prend en charge uniquement les évaluations en cours d’exécution. Migrations ne sont pas prises en charge pour l’instant.
@@ -44,19 +43,19 @@ DmaCmd.exe /AssessmentName="string"
 |Argument  |Description  | Requis (Y/N)
 |---------|---------|---------------|
 | `/help or /?`     | Comment utiliser le texte d’aide dmacmd.exe        | N
-|`/AssessmentName`     |   Nom du projet d’évaluation   | O
-|`/AssessmentDatabases`     | Liste délimitée par des chaînes de connexion. Nom de la base de données (catalogue Initial) respecte la casse. | O
+|`/AssessmentName`     |   Nom du projet d’évaluation   | Y
+|`/AssessmentDatabases`     | Liste délimitée par des chaînes de connexion. Nom de la base de données (catalogue Initial) respecte la casse. | Y
 |`/AssessmentSourcePlatform`     | Plateforme de la source pour l’évaluation : <br>Valeurs prises en charge pour l’évaluation : SqlOnPrem, RdsSqlServer (valeur par défaut) <br>Valeurs prises en charge pour l’évaluation de la disponibilité cible : SqlOnPrem, RdsSqlServer (valeur par défaut), Cassandra (version préliminaire)   | N
 |`/AssessmentTargetPlatform`     | Plateforme cible pour l’évaluation :  <br> Valeurs prises en charge pour l’évaluation : AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 et SqlServerWindows2017 (valeur par défaut)  <br> Valeurs prises en charge pour l’évaluation de la disponibilité cible : ManagedSqlServer (valeur par défaut), CosmosDB (version préliminaire)   | N
 |`/AssessmentEvaluateFeatureParity`  | Exécuter des règles de parité de fonctionnalité. Si la plateforme de la source est RdsSqlServer, évaluation de parité de fonctionnalité n’est pas pris en charge pour la plateforme cible AzureSqlDatabase  | N
-|`/AssessmentEvaluateCompatibilityIssues`     | Exécuter les règles de compatibilité  | O <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendations est requises.)
-|`/AssessmentEvaluateRecommendations`     | Exécuter les recommandations de fonctionnalité        | O <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendations est requises)
+|`/AssessmentEvaluateCompatibilityIssues`     | Exécuter les règles de compatibilité  | Y <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendations est requises.)
+|`/AssessmentEvaluateRecommendations`     | Exécuter les recommandations de fonctionnalité        | Y <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendations est requises)
 |`/AssessmentOverwriteResult`     | Remplacer le fichier de résultat    | N
-|`/AssessmentResultJson`     | Chemin d’accès complet au fichier de résultat JSON     | O <br> (AssessmentResultJson ou AssessmentResultCsv est requis)
-|`/AssessmentResultCsv`    | Chemin d’accès complet au fichier CSV   | O <br> (AssessmentResultJson ou AssessmentResultCsv est requis)
+|`/AssessmentResultJson`     | Chemin d’accès complet au fichier de résultat JSON     | Y <br> (AssessmentResultJson ou AssessmentResultCsv est requis)
+|`/AssessmentResultCsv`    | Chemin d’accès complet au fichier CSV   | Y <br> (AssessmentResultJson ou AssessmentResultCsv est requis)
 |`/Action`    | Utilisez SkuRecommendation pour obtenir des recommandations de référence (SKU), AssessTargetReadiness permet d’effectuer l’évaluation de la disponibilité cible.   | N
-|`/SourceConnections`    | Liste délimitée par des espaces des chaînes de connexion. Nom de la base de données (catalogue Initial) est facultatif. Si aucun nom de base de données est fourni, toutes les bases de données sur la source sont évaluées.   | O <br> (Obligatoire si Action est « AssessTargetReadiness »)
-|`/TargetReadinessConfiguration`    | Chemin d’accès complet au fichier XML décrivant les valeurs de nom, les connexions à la source et le fichier de résultats.   | O <br> (TargetReadinessConfiguration ou SourceConnections est requises)
+|`/SourceConnections`    | Liste délimitée par des espaces des chaînes de connexion. Nom de la base de données (catalogue Initial) est facultatif. Si aucun nom de base de données est fourni, toutes les bases de données sur la source sont évaluées.   | Y <br> (Obligatoire si Action est « AssessTargetReadiness »)
+|`/TargetReadinessConfiguration`    | Chemin d’accès complet au fichier XML décrivant les valeurs de nom, les connexions à la source et le fichier de résultats.   | Y <br> (TargetReadinessConfiguration ou SourceConnections est requises)
 |`/FeatureDiscoveryReportJson`    | Chemin d’accès à la découverte de la fonctionnalité rapports JSON. Si ce fichier est généré, il peut être utilisé pour réexécuter l’évaluation de la disponibilité cible sans vous connecter à la source. | N
 |`/ImportFeatureDiscoveryReportJson`    | Chemin d’accès au rapport JSON de détection de fonctionnalité créé précédemment. Au lieu de connexions de source, ce fichier sera utilisé.   | N
 
@@ -251,23 +250,23 @@ Ces commandes prennent en charge les recommandations pour la base de données Az
 
 |Argument  |Description  | Requis (Y/N)
 |---------|---------|---------------|
-|`/Action=SkuRecommendation` | Exécuter l’évaluation de référence (SKU) à l’aide de la ligne de commande DMA | O
-|`/SkuRecommendationInputDataFilePath` | Chemin d’accès complet au fichier de compteur de performances collectées à partir de l’ordinateur qui héberge vos bases de données | O
-|`/SkuRecommendationTsvOutputResultsFilePath` | Chemin d’accès complet au fichier TSV | O <br> (Nécessite le chemin d’accès de fichier TSV ou JSON ou HTML)
-|`/SkuRecommendationJsonOutputResultsFilePath` | Chemin d’accès complet au fichier de résultat JSON | O <br> (Nécessite le chemin d’accès de fichier TSV ou JSON ou HTML)
-|`/SkuRecommendationHtmlResultsFilePath` | Chemin d’accès complet au fichier HTML | O <br> (Nécessite le chemin d’accès de fichier TSV ou JSON ou HTML)
-|`/SkuRecommendationPreventPriceRefresh` | Empêche l’actualisation de prix. Utilisez si en cours d’exécution en mode hors connexion (par exemple, true). | O <br> (Sélectionnez soit cet argument pour connaître les prix statiques ou tous les arguments ci-dessous doivent être sélectionnés pour obtenir les derniers cours)
-|`/SkuRecommendationCurrencyCode` | La devise dans laquelle afficher les prix (par exemple) « USD ») | O <br> (Pour connaître les prix)
-|`/SkuRecommendationOfferName` | Nom de l’offre (par exemple) "MS-AZR-0003P"). Pour plus d’informations, consultez le [détails de l’offre Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) page. | O <br> (Pour connaître les prix)
-|`/SkuRecommendationRegionName` | Nom de la région (par exemple) « WestUS ») | O <br> (Pour connaître les prix)
-|`/SkuRecommendationSubscriptionId` | L'ID de l'abonnement. | O <br> (Pour connaître les prix)
+|`/Action=SkuRecommendation` | Exécuter l’évaluation de référence (SKU) à l’aide de la ligne de commande DMA | Y
+|`/SkuRecommendationInputDataFilePath` | Chemin d’accès complet au fichier de compteur de performances collectées à partir de l’ordinateur qui héberge vos bases de données | Y
+|`/SkuRecommendationTsvOutputResultsFilePath` | Chemin d’accès complet au fichier TSV | Y <br> (Nécessite le chemin d’accès de fichier TSV ou JSON ou HTML)
+|`/SkuRecommendationJsonOutputResultsFilePath` | Chemin d’accès complet au fichier de résultat JSON | Y <br> (Nécessite le chemin d’accès de fichier TSV ou JSON ou HTML)
+|`/SkuRecommendationHtmlResultsFilePath` | Chemin d’accès complet au fichier HTML | Y <br> (Nécessite le chemin d’accès de fichier TSV ou JSON ou HTML)
+|`/SkuRecommendationPreventPriceRefresh` | Empêche l’actualisation de prix. Utilisez si en cours d’exécution en mode hors connexion (par exemple, true). | Y <br> (Sélectionnez soit cet argument pour connaître les prix statiques ou tous les arguments ci-dessous doivent être sélectionnés pour obtenir les derniers cours)
+|`/SkuRecommendationCurrencyCode` | La devise dans laquelle afficher les prix (par exemple) « USD ») | Y <br> (Pour connaître les prix)
+|`/SkuRecommendationOfferName` | Nom de l’offre (par exemple) « MS-AZR - 0003P »). Pour plus d’informations, consultez le [détails de l’offre Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) page. | Y <br> (Pour connaître les prix)
+|`/SkuRecommendationRegionName` | Nom de la région (par exemple) « WestUS ») | Y <br> (Pour connaître les prix)
+|`/SkuRecommendationSubscriptionId` | L'ID de l'abonnement. | Y <br> (Pour connaître les prix)
 |`/SkuRecommendationDatabasesToRecommend` | Liste séparée par espace des bases de données pour recommander (par exemple, pour « Database1 » « Database2 » « Database3 »). Noms respectent la casse et doivent être entourées de guillemets doubles. Si omis, les recommandations sont fournies pour toutes les bases de données. | N
-|`/AzureAuthenticationTenantId` | Le client d’authentification. | O <br> (Pour connaître les prix)
-|`/AzureAuthenticationClientId` | L’ID client de l’application AAD utilisée pour l’authentification. | O <br> (Pour connaître les prix)
-|`/AzureAuthenticationInteractiveAuthentication` | La valeur true pour afficher la fenêtre. | O <br> (Pour connaître les prix) <br>(Choisissez une des options de 3 authentification - option 1)
-|`/AzureAuthenticationCertificateStoreLocation` | (Par exemple, la valeur est l’emplacement du magasin de certificats « CurrentUser »). | O <br>(Pour connaître les prix) <br> (Choisissez une des options de 3 authentification - option 2)
-|`/AzureAuthenticationCertificateThumbprint` | La valeur est l’empreinte numérique du certificat. | O <br> (Pour connaître les prix) <br>(Choisissez une des options de 3 authentification - option 2)
-|`/AzureAuthenticationToken` | Définir sur le jeton de certificat. | O <br> (Pour connaître les prix) <br>(Choisissez une des options de 3 authentification - option 3)
+|`/AzureAuthenticationTenantId` | Le client d’authentification. | Y <br> (Pour connaître les prix)
+|`/AzureAuthenticationClientId` | L’ID client de l’application AAD utilisée pour l’authentification. | Y <br> (Pour connaître les prix)
+|`/AzureAuthenticationInteractiveAuthentication` | La valeur true pour afficher la fenêtre. | Y <br> (Pour connaître les prix) <br>(Choisissez une des options de 3 authentification - option 1)
+|`/AzureAuthenticationCertificateStoreLocation` | (Par exemple, la valeur est l’emplacement du magasin de certificats « CurrentUser »). | Y <br>(Pour connaître les prix) <br> (Choisissez une des options de 3 authentification - option 2)
+|`/AzureAuthenticationCertificateThumbprint` | La valeur est l’empreinte numérique du certificat. | Y <br> (Pour connaître les prix) <br>(Choisissez une des options de 3 authentification - option 2)
+|`/AzureAuthenticationToken` | Définir sur le jeton de certificat. | Y <br> (Pour connaître les prix) <br>(Choisissez une des options de 3 authentification - option 3)
 
 ## <a name="examples-of-sku-assessments-using-the-cli"></a>Exemples d’évaluations de référence (SKU) à l’aide de l’interface CLI
 

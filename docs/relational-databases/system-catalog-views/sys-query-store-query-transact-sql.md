@@ -20,25 +20,24 @@ helpviewer_keywords:
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac66d9cd1e7585304aeab182ddf6ccabc8560bc0
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: d5b7eea64a807af96094767ef5aca00167d5946c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067963"
 ---
-# <a name="sysquerystorequery-transact-sql"></a>sys.query_store_query (Transact-SQL)
+# <a name="sysquerystorequery-transact-sql"></a>Sys.query_store_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contient des informations sur la requête et ses associés globale agrégée statistiques d’exécution.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**query_id**|**bigint**|Clé primaire.|  
-|**query_text_id**|**bigint**|Clé étrangère. Joins to [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
-|**context_settings_id**|**bigint**|Clé étrangère. Joins to [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
+|**query_text_id**|**bigint**|Clé étrangère. Joint à [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
+|**context_settings_id**|**bigint**|Clé étrangère. Joint à [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**object_id**|**bigint**|ID de l’objet de base de données qui fait partie de la requête (procédure stockée, déclencheur, UDAgg/CLR UDF, etc..). 0 si la requête n’est pas exécutée en tant que partie d’un objet de base de données (requêtes ad-hoc).<br/>**Remarque :** Azure SQL Data Warehouse retourne toujours zéro (0).|  
 |**batch_sql_handle**|**varbinary(64)**|ID du lot instruction la requête fait partie de. Rempli uniquement si la requête fait référence à des tables temporaires ou des variables de table.<br/>**Remarque :** Azure SQL Data Warehouse retournera toujours *NULL*.|  
 |**query_hash**|**binary(8)**|Hachage MD5 de la requête individuelle, en fonction de l’arborescence logique de requête. Inclut des indicateurs d’optimiseur.|  

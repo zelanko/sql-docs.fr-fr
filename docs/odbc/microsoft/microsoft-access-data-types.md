@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ff069ef0602e419eda93df0ca5a72dbf7c8ef1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045159"
 ---
 # <a name="microsoft-access-data-types"></a>Types de données Microsoft Access
 Le tableau suivant montre les types de données Microsoft Access, types de données utilisés pour créer des tables et les types de données ODBC SQL.  
@@ -39,7 +38,7 @@ Le tableau suivant montre les types de données Microsoft Access, types de donn�
 |GUID|GUID|SQL_GUID|  
 |BINAIRE LONGUE|LONGBINARY|SQL_LONGVARBINARY|  
 |TEXTE LONG|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
-|MEMO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
+|MÉMO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
 |NOMBRE (taille du champ = unique)|UNIQUE|SQL_REAL|  
 |NOMBRE (taille du champ = DOUBLE)|Double|SQL_DOUBLE|  
 |NOMBRE (taille du champ = octet)|OCTET NON SIGNÉ|SQL_TINYINT|  

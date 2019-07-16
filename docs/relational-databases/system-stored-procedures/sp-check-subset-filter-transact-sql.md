@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee22bbf5028959d0aab178924d38465c9d98b432
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fa956275619286c059dacf25a5b9b2b83ed732e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070525"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +44,15 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @filtered_table = ] 'filtered_table'` Est le nom d’une table filtrée. *filtered_table* est **nvarchar (400)**, sans valeur par défaut.  
+`[ @filtered_table = ] 'filtered_table'` Est le nom d’une table filtrée. *filtered_table* est **nvarchar (400)** , sans valeur par défaut.  
   
-`[ @subset_filterclause = ] 'subset_filterclause'` La clause de filtre testée. *subset_filterclause* est **nvarchar (1000)**, sans valeur par défaut.  
+`[ @subset_filterclause = ] 'subset_filterclause'` La clause de filtre testée. *subset_filterclause* est **nvarchar (1000)** , sans valeur par défaut.  
   
 `[ @has_dynamic_filters = ] has_dynamic_filters` Indique si la clause de filtre est un filtre de lignes paramétrable. *has_dynamic_filters* est **bits**, avec NULL comme valeur par défaut et est un paramètre de sortie. Retourne une valeur de **1** lorsque la clause de filtre est un filtre de lignes paramétrable.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Est si la publication est éligible pour l’utilisation de partitions précalculées. où **1** signifie que les partitions précalculées peuvent être utilisées, et **0** signifie qu’ils ne peuvent pas être utilisés.|  
 |**has_dynamic_filters**|**bit**|Si la clause de filtre fournie comprend au moins un filtre de lignes paramétrable ; où **1** signifie qu’un filtre de lignes paramétrable est utilisé, et **0** signifie qu’une telle fonction n’est pas utilisée.|  

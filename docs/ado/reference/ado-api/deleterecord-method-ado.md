@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f67f074596bfcf93eb7017a7afe273285f721aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919084"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord, méthode (ADO)
 Supprime une entité représentée par un [enregistrement](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -36,10 +35,10 @@ Record.DeleteRecord Source, Async
   
 #### <a name="parameters"></a>Paramètres  
  *Source*  
- Facultatif. Un **chaîne** valeur qui contient une URL identifiant l’entité (par exemple, le fichier ou le répertoire) à supprimer. Si *Source* est omis ou spécifie une chaîne vide, l’entité représentée par l’actuel [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) est supprimé. Si l’enregistrement est une collection ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **adCollectionRecord**, par exemple un répertoire) tous les enfants (par exemple, les sous-répertoires) seront également supprimés.  
+ facultatif. Un **chaîne** valeur qui contient une URL identifiant l’entité (par exemple, le fichier ou le répertoire) à supprimer. Si *Source* est omis ou spécifie une chaîne vide, l’entité représentée par l’actuel [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) est supprimé. Si l’enregistrement est une collection ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **adCollectionRecord**, par exemple un répertoire) tous les enfants (par exemple, les sous-répertoires) seront également supprimés.  
   
  *Async*  
- Facultatif. Un **booléenne** valeur qui, lorsque **True**, spécifie que l’opération de suppression est asynchrone.  
+ facultatif. Un **booléenne** valeur qui, lorsque **True**, spécifie que l’opération de suppression est asynchrone.  
   
 ## <a name="remarks"></a>Notes  
  Opérations sur l’objet représenté par ce **enregistrement** peuvent échouer après l’exécution de cette méthode. Après avoir appelé **DeleteRecord**, le **enregistrement** doit être fermé, car le comportement de la **enregistrement** peut devenir imprévisible selon quand le fournisseur met à jour le **Enregistrement** avec la source de données.  
