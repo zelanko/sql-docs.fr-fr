@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: d857e5a67c703672a9ac3d9ad48872034367ff08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e2a949511eea455c20880e053b64659b8f9c15f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992348"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Nettoyer les données à l'aide de la connaissance des données de référence (externes)
 
@@ -61,7 +60,7 @@ ms.locfileid: "66802164"
   
 1.  Créez un projet de qualité des données, puis sélectionnez l'activité **Nettoyage** . Consultez [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
   
-2.  Dans la page **Mapper**, mappez les 4 domaines suivants avec les colonnes appropriées de vos données sources : **Ligne d’adresse**, **Ville**, **État** et **Code postal**. Cliquer sur **Suivant**.  
+2.  Dans la page **Mapper**, mappez les 4 domaines suivants avec les colonnes appropriées de vos données sources : **Ligne d’adresse**, **Ville**, **État** et **Code postal**. Cliquez sur **Suivant**.  
   
     > [!NOTE]  
     >  Lorsque vous avez mappé les 4 domaines du domaine composite de **Contrôle d'adresse** , le nettoyage des données sera effectué au niveau du domaine composite, et non au niveau du domaine individuel.  
@@ -78,13 +77,13 @@ ms.locfileid: "66802164"
   
      **Valeur d’origine :**  
   
-    |Adresse|Ville|État|Code postal|  
+    |Adresse|City|État|Code postal|  
     |------------------|----------|-----------|---------|  
     |1 MSFT way|Redmond||98052|  
   
      **Valeurs suggérées :**  
   
-    |Adresse|Ville|État|Code postal|  
+    |Adresse|City|État|Code postal|  
     |------------------|----------|-----------|---------|  
     |1 Microsoft Way|Redmond|WA|98052|  
     |PO Box 1|Redmond|WA|98073|  

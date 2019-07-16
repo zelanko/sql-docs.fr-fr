@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f809b09-3c1b-415e-80c5-a603e8e25d5b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d213b0bfb108eec38fc524eece6626fd302d4267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 022d19a291b4fab93925fd103620c4bc16839872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005750"
 ---
 # <a name="sqlprimarykeys-function"></a>Fonction SQLPrimaryKeys
 **Conformité**  
@@ -121,14 +120,14 @@ SQLRETURN SQLPrimaryKeys(
   
  Le tableau suivant répertorie les colonnes du jeu de résultats. Les colonnes supplémentaires au-delà de la colonne 6 (PK_NAME) peuvent être définies par le pilote. Une application doit accéder à des colonnes spécifiques aux pilotes à rebours à partir de la fin du jeu de résultats au lieu d’en spécifiant une position ordinale explicite. Pour plus d’informations, consultez [les données retournées par les fonctions de catalogue](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Nom de colonne|Numéro de colonne|Type de données|Commentaires|  
+|Nom de la colonne|Numéro de colonne|Type de données|Commentaires|  
 |-----------------|-------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Nom du catalogue de table de clé primaire ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de catalogues.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nom du schéma de table de clé primaire ; NULL si non applicable à la source de données. Si un pilote prend en charge les schémas pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de schémas.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar non NULL|Nom de la table de clé primaire.|  
 |COLUMN_NAME (ODBC 1.0)|4|Varchar non NULL|Nom de colonne de clé primaire. Le pilote retourne une chaîne vide pour une colonne qui n’a pas de nom.|  
-|KEY_SEQ (ODBC 1.0)|5|Smallint non NULL|Numéro de séquence de colonne de clé (à partir de 1).|  
-|PK_NAME (ODBC 2.0)|6|Varchar|Nom de la clé primaire. NULL si non applicable à la source de données.|  
+|KEY_SEQ (ODBC 1.0)|5\.|Smallint non NULL|Numéro de séquence de colonne de clé (à partir de 1).|  
+|PK_NAME (ODBC 2.0)|6\.|Varchar|Nom de la clé primaire. NULL si non applicable à la source de données.|  
   
 ## <a name="code-example"></a>Exemple de code  
  Consultez [SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md).  

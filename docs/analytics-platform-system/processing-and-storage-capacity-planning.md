@@ -2,19 +2,18 @@
 title: Capacité de stockage et traitement - Analytique Platform System | Microsoft Docs
 description: Besoins de votre entreprise déterminent le nombre d’unités d’échelle de données et la taille des disques de nœud de calcul dont vous avez besoin dans votre appliance Analytique Platform System (APS).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db2b68230e0e2a1fa9a5645ff40c25cc5146392c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960235"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacité de stockage et de traitement d’Analytique Platform System
 Besoins de votre entreprise déterminent le nombre d’unités d’échelle de données et la taille des disques de nœud de calcul dont vous avez besoin dans votre appliance Analytique Platform System (APS). Utilisez ces calculs de traitement et de stockage pour guider votre capacité d’achat et planification des décisions.  
@@ -32,18 +31,18 @@ Voici des exemples des configurations HPE pris en charge pour les données à l�
   
 Majoration est le pourcentage de capacité de gain en augmentant la Uunits de mise à l’échelle de données à partir d’une ligne à la suivante. Par exemple, augmenter les unités d’échelle de données à partir de 6 à 8 donne une augmentation de 33 % des cœurs de processeur et mémoire.  Elle augmente également l’espace disque qui n’est pas indiqué dans cette table.  
   
-|Unités d’échelle de données|Nœuds de calcul|Cœurs de processeur|Mémoire (Go)|Majoration|  
+|Unités d’échelle de données|Nœuds de calcul|Cœurs d’unité centrale|Mémoire (Go)|Majoration|  
 |--------------------|-----------------|-------------|-----------------|----------|  
 |1|2|32|512|-|  
-|2|4|64|1024|100%|  
-|3|6|96|1536|50|  
-|4|8|128|2048|33%|  
-|5|10|160|2560|25%|  
-|6|12|192|3072|20%|  
+|2|4|64|1 024|100%|  
+|3|6\.|96|1536|50|  
+|4|8|128|2 048|33%|  
+|5\.|10|160|2560|25%|  
+|6\.|12|192|3072|20%|  
 |8|16|256|4096|33%|  
 |10|20|320|5120|25%|  
 |12|24|384|6144|20%|  
-|16|32|512|8192|33%|  
+|16|32|512|8 192|33%|  
 |20|40|640|10240|25%|  
 |24|48|768|12288|20%|  
 |28|56|896|14336|17%|  
@@ -66,11 +65,11 @@ Majoration est le pourcentage de capacité de gain en augmentant la Uunits de mi
 |Unités d’échelle de données|Nœuds de calcul|Cœurs de processeur|Mémoire (Go)|Majoration|  
 |--------------------|-----------------|-------------|-----------------|----------|  
 |1|3|48|768|-|  
-|2|6|96|1536|100%|  
+|2|6\.|96|1536|100%|  
 |3|9|144|2,304|50|  
 |4|12|192|3,072|33%|  
-|5|15|240|3,840|25%|  
-|6|18|288|4,608|20%|  
+|5\.|15|240|3,840|25%|  
+|6\.|18|288|4,608|20%|  
 |7|21|336|5,376|17%|  
 |8|24|384|6,144|14%|  
 |9|27|432|6,912|13%|  
@@ -83,12 +82,12 @@ Cette table estime que vous pouvez charger et stocker jusqu'à 6 plusieurs péta
   
 |fournisseur|Taille du lecteur|Nœud de par calcul de stockage de données physiques|Nombre maximal de nœuds de calcul par rack|Stockage de données maximal physiques par rack|Estimation du stockage de données maximal d’utilisateurs par rack|Racks maximales|Estimation du stockage de données maximal d’utilisateurs par appareil|  
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
-|HPE|1 TO|16 TO|8|128 TO|320 TO|7|2,240 TO|  
-|HPE|2 TO|32 TO|8|256 TO|640 TO|7|4,480 TO|  
-|HPE|4 TO|64 TO|8|512 TO|1280 TO|7|8,960 TO|  
-|DELL|1 TO|16 TO|9|144 TO|360 TO|6|2,160 TO|  
-|DELL|2 TO|32 TO|9|288 TO|720 TO|6|4 320 TO|  
-|DELL|4 TO|64 TO|9|576 TO|1 440 TO|6|8,640 TO|   
+|HPE|1 To|16 TO|8|128 TO|320 TO|7|2,240 TO|  
+|HPE|2 To|32 TO|8|256 TO|640 TO|7|4,480 TO|  
+|HPE|4 To|64 TO|8|512 TO|1280 TO|7|8,960 TO|  
+|DELL|1 To|16 TO|9|144 TO|360 TO|6\.|2,160 TO|  
+|DELL|2 To|32 TO|9|288 TO|720 TO|6\.|4 320 TO|  
+|DELL|4 To|64 TO|9|576 TO|1 440 TO|6\.|8,640 TO|   
   
 Explication :  
   

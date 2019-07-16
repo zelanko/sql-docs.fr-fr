@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 86efa9f7951277e6effdae9f59669fb7101f6f67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095858"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +43,12 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'object_name'` Est le nom de la table et colonne ou le type de données d’alias à partir de laquelle la règle est dissociée. *object_name* est **nvarchar(776)**, sans valeur par défaut. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essaie d'abord de résoudre en noms de colonnes les identificateurs en deux parties, puis en types de données alias. Lorsque vous dissociez une règle d'un type de données alias, les colonnes de ce type de données ayant la même règle sont également dissociées. Les colonnes de ce type de données auxquelles des règles sont directement liées ne sont pas affectées.  
+`[ @objname = ] 'object_name'` Est le nom de la table et colonne ou le type de données d’alias à partir de laquelle la règle est dissociée. *object_name* est **nvarchar(776)** , sans valeur par défaut. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essaie d'abord de résoudre en noms de colonnes les identificateurs en deux parties, puis en types de données alias. Lorsque vous dissociez une règle d'un type de données alias, les colonnes de ce type de données ayant la même règle sont également dissociées. Les colonnes de ce type de données auxquelles des règles sont directement liées ne sont pas affectées.  
   
 > [!NOTE]  
 >  *object_name* peut contenir des crochets **[]** comme délimitée par des caractères d’identificateur. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'` Est utilisé seulement pour dissocier une règle d’un type de données alias. *l’argument futureonly_flag* est **varchar(15)**, avec NULL comme valeur par défaut. Lorsque *futureonly_flag* est **futureonly**, les colonnes existantes de ce type de données ne perdent pas de la règle spécifiée.  
+`[ @futureonly = ] 'futureonly_flag'` Est utilisé seulement pour dissocier une règle d’un type de données alias. *l’argument futureonly_flag* est **varchar(15)** , avec NULL comme valeur par défaut. Lorsque *futureonly_flag* est **futureonly**, les colonnes existantes de ce type de données ne perdent pas de la règle spécifiée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -66,7 +65,7 @@ sp_unbindrule [ @objname = ] 'object_name'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-unbinding-a-rule-from-a-column"></a>A. Dissociation d'une règle d'une colonne  
+### <a name="a-unbinding-a-rule-from-a-column"></a>R. Dissociation d'une règle d'une colonne  
  L'exemple suivant dissocie la règle de la colonne `startdate` de la table `employees`.  
   
 ```  

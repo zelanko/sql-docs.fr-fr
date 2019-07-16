@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: beda27214f6ef805b84e9897e7f0dd48f424a79f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bda45d55505356594f23a8bb1ece2e95153206a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022655"
 ---
 # <a name="systracecolumns-transact-sql"></a>sys.trace_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,17 +36,17 @@ ms.locfileid: "47835477"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt les affichages catalogue des événements étendus.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**trace_column_id**|**smallint**|ID unique de cette colonne.|  
-|**nom**|**nvarchar(128)**|Nom unique de cette colonne. Ce paramètre n'est pas localisé.|  
+|**name**|**nvarchar(128)**|Nom unique de cette colonne. Ce paramètre n'est pas localisé.|  
 |**type_name**|**nvarchar(128)**|Nom de type de données de cette colonne.|  
-|**max_size**|**Int**|Taille de données maximale de cette colonne en octets.|  
+|**max_size**|**int**|Taille de données maximale de cette colonne en octets.|  
 |**is_filterable**|**bit**|Indique si la colonne peut être utilisée dans la spécification de filtre.<br /><br /> 0 = faux<br /><br /> 1 = vrai|  
 |**is_repeatable**|**bit**|Indique si la colonne peut être référencée dans les données de « colonne répétée ».<br /><br /> 0 = faux<br /><br /> 1 = vrai|  
 |**is_repeated_base**|**bit**|Indique si cette colonne est utilisée en tant que clé unique pour référencer des données répétées.<br /><br /> 0 = faux<br /><br /> 1 = vrai|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

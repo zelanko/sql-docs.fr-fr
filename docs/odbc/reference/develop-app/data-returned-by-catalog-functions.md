@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 399e1a64-8766-4c44-81ff-445399b7a1de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10e3726d26e03da2f9f731babc105244dbf1ff05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14499071bd180a7ea709fda3eb26aeae46f229c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077023"
 ---
 # <a name="data-returned-by-catalog-functions"></a>Données retournées par les fonctions de catalogue
 Chaque fonction de catalogue retourne des données dans un jeu de résultats. Ce jeu de résultats n’est pas différent de tout autre ensemble de résultats. Il est généralement généré par prédéfini, paramétrés **sélectionnez** instruction qui est codé en dur dans le pilote ou stocké dans une procédure dans la source de données. Pour plus d’informations sur la façon de récupérer des données à partir d’un jeu de résultats, consultez [a un résultat défini créé ?](../../../odbc/reference/develop-app/was-a-result-set-created.md).  

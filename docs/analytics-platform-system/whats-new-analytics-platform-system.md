@@ -2,19 +2,18 @@
 title: Quelles sont les nouveautés d’Analytique Platform System - un entrepôt de données de la montée en puissance
 description: Voir quelles sont les nouveautés dans Microsoft Analytique Platform System, une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b56791e9fd59aef57c2d107e21eb76896ebb4910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78b2b0e7fd05bbfa430c7a8939378091850537ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959804"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quelles sont les nouveautés d’Analytique Platform System, un entrepôt de données MPP montée en puissance
 Consultez les nouveautés introduite dans les dernières mises à jour de matériel pour Microsoft Analytique Platform System (APS). APS est une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse. 
@@ -112,7 +111,7 @@ Points d’accès prend en charge un sous-ensemble de T-SQL [commandes DBCC](htt
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Remplace certains appels de métadonnées avec les objets de catalogue
 À l’aide des objets de catalogue pour les appels de métadonnées au lieu d’utiliser SMO vous a montré amélioration des performances dans les points d’accès. À partir de CU7.1, certaines de ces appels de métadonnées maintenant utilisent les objets de catalogue par défaut. Ce comportement peut être désactivé en [commutateur de fonctionnalité](appliance-feature-switch.md) si les clients à l’aide de requêtes de métadonnées rencontrez des problèmes.
 
-### <a name="bug-fixes"></a>Correctifs de bogues
+### <a name="bug-fixes"></a>Résolution des bogues
 Nous avons mis à niveau vers SQL Server 2016 SP2 CU2 avec CU7.1 de points d’accès. La mise à niveau résout certains problèmes décrits ci-dessous.
 
 | Titre | Description |
@@ -149,7 +148,7 @@ Microsoft conseille à tous les clients pour installer le BIOS mis à jour. Micr
 ## <a name="aps-2016"></a>APS 2016
 Cette section décrit les nouvelles fonctionnalités pour APS 2016-AU6.
 
-### <a name="sql-server-2016"></a>SQL Server 2016
+### <a name="sql-server-2016"></a>SQL Server 2016
 
 APS AU6 s’exécute sur la dernière version de SQL Server 2016 et utilise le niveau de compatibilité de base de données 130 par défaut. SQL Server 2016 permet la prise en charge de nouvelles fonctionnalités telles que :
 
@@ -161,7 +160,7 @@ APS AU6 prend en charge ces améliorations de compatibilité de T-SQL.  Ces él�
 
 - [Classements SQL au niveau des colonnes][] sont désormais pris en charge, en plus des classements de Windows.
 - [Index non cluster sur les index columnstore en cluster][] améliorer les performances des requêtes qui recherchent des valeurs spécifiques dans l’index cluster columnstore. 
-- [SELECT...INTO][] 
+- [SÉLECTIONNEZ... DANS][] 
 - [sp_spaceused()][] affiche l’espace disque utilisé ou réservé dans une table ou une base de données.
 - [Tableaux larges][] prise en charge est identique à SQL Server 2016. La limite de 32 Ko pour la taille de ligne n’existe plus. 
 
@@ -206,7 +205,7 @@ Un nouveau matériel à partir de HPE ou DELL inclut toutes les dernières mises
 - Mettre à jour vers inférieur de barrettes DIMM DDR4
 - Améliorer le débit DIMM
 
-**Integration**
+**Intégration**
 
 - Entièrement prise en charge du nom de domaine complet (FQDN) permet de configurer une approbation de domaine à l’appliance. 
 - Pour utiliser le nom de domaine complet, vous devez effectuer une mise à niveau complète et participer au cours de la mise à niveau. 
@@ -233,7 +232,7 @@ The proper formats have at least two big advantages.  One big advantage is that 
 [NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
 [VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
+[SÉLECTIONNEZ... DANS]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Tableaux larges]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql

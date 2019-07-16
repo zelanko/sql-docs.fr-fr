@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5a727eaf511e65d46fb5c297c65bb1517cfb72c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7741b6757cef08dcc4d5a05574f22c4f4538d97f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921189"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Exemples de code ADO dans Visual C++
 Utilisez les exemples de code suivants pour apprendre à utiliser les méthodes ADO, les propriétés et les événements lors de l’écriture dans Microsoft Visual C++.  
@@ -142,7 +141,7 @@ Utilisez les exemples de code suivants pour apprendre à utiliser les méthodes 
   
 -   [Exemple de propriété de version](../../../ado/reference/ado-api/version-property-example-vc.md)  
   
-## <a name="other"></a>Autres  
+## <a name="other"></a>Autre  
   
 -   [Exemple de modèle d’événements ADO](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
   

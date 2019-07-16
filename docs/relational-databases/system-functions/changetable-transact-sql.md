@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a0ad02f508aea78faa8f3da80e68f8ea6b3c7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042901"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ CHANGETABLE (
  *last_sync_version* doivent être validés pour vous assurer qu’il n’est pas trop ancien, car certaines ou toutes les informations de modification peuvent avoir été nettoyées en fonction de la période de rétention configurée pour la base de données. Pour plus d’informations, consultez [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) et [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  VERSION *table*, {< primary_key_values >}  
- Retourne les informations de suivi des modifications les plus récentes pour une ligne spécifiée. Les valeurs de clé primaire doivent identifier la ligne. <primary_key_values> identifie les colonnes de clé primaire et spécifie les valeurs. Les noms des colonnes clés primaires peuvent être spécifiés dans n'importe quel ordre.  
+ Retourne les informations de suivi des modifications les plus récentes pour une ligne spécifiée. Les valeurs de clé primaire doivent identifier la ligne. < primary_key_values > identifie les colonnes clés primaires et spécifie les valeurs. Les noms des colonnes clés primaires peuvent être spécifiés dans n'importe quel ordre.  
   
  *Table*  
  Table définie par l'utilisateur sur laquelle obtenir les informations de suivi des modifications. Le suivi des modifications doit être activé sur la table. Un nom de table en une, deux, trois ou quatre parties peut être utilisé. Le nom de table peut être un synonyme de la table.  
@@ -75,7 +74,7 @@ CHANGETABLE (
  *column_name*  
  Spécifie le nom de la colonne ou des colonnes clés primaires. Plusieurs noms de colonne peuvent être spécifiés dans un ordre quelconque.  
   
- *Value*  
+ *Valeur*  
  Valeur de la clé primaire. S’il existe plusieurs colonnes de clé primaire, les valeurs doivent être spécifiées dans le même ordre que les colonnes apparaissent dans le *column_name* liste.  
   
  [EN] *table_alias* [(*column_alias* [,... *n* ])]  
@@ -95,7 +94,7 @@ CHANGETABLE (
 ### <a name="changetable-changes"></a>CHANGETABLE CHANGES  
  Lorsque CHANGES est spécifié, zéro, une ou plusieurs lignes contenant les colonnes suivantes sont retournées.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valeur de version associée à la dernière modification apportée à la ligne|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Valeurs de version associées à la dernière opération d'insertion.|  
@@ -107,7 +106,7 @@ CHANGETABLE (
 ### <a name="changetable-version"></a>CHANGETABLE VERSION  
  Lorsque VERSION est spécifié, une ligne contenant les colonnes suivantes est retournée.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valeur de la version actuelle des modifications associée à la ligne.<br /><br /> La valeur est NULL si aucune modification n'a pas été apportée pendant un délai dépassant la période de rétention de suivi des modifications, ou si la ligne n'a pas été modifiée depuis l'activation du suivi des modifications.|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Modifiez les informations de contexte que vous pouvez éventuellement spécifier à l'aide de la clause WITH dans le cadre d'une instruction INSERT, UPDATE ou DELETE.|  
@@ -142,7 +141,7 @@ CHANGETABLE (
   
  La valeur de SYS_CHANGE_VERSION peut être NULL si aucune modification n'a pas été apportée pendant une période plus longue que la période de rétention (par exemple, le nettoyage a supprimé les informations de modification) ou si la ligne n'a jamais été modifiée depuis l'activation du suivi des modifications pour la table.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert les autorisations suivantes sur la table qui est spécifié par le *table* valeur pour obtenir des informations de suivi des modifications :  
   
 -   Autorisation SELECT sur les colonnes clés primaires  
@@ -151,7 +150,7 @@ CHANGETABLE (
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>A. Retour de lignes pour une synchronisation initiale des données  
+### <a name="a-returning-rows-for-an-initial-synchronization-of-data"></a>R. Retour de lignes pour une synchronisation initiale des données  
  L'exemple suivant montre comment obtenir des données pour une synchronisation initiale des données de table. La requête retourne toutes les données de ligne et leurs versions associées. Vous pouvez ensuite insérer ou ajouter ces données au système qui contiendra les données synchronisées.  
   
 ```sql  

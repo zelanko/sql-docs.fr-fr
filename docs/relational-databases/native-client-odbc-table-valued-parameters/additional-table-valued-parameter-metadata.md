@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6c193188-5185-4373-9a0d-76cfc150c828
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf5de70ab6305f73b70224ae8552a739860b535d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb388b80f3f6edff93eafc2a9fa1b5156091fc79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020313"
 ---
 # <a name="additional-table-valued-parameter-metadata"></a>Métadonnées de paramètres table supplémentaires
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47723427"
   
  Le tableau suivant répertorie les colonnes significatives pour les paramètres table.  
   
-|Nom de colonne|Type de données|Valeur/commentaires|  
+|Nom de la colonne|Type de données|Valeur/commentaires|  
 |-----------------|---------------|---------------------|  
 |DATA_TYPE|Smallint non NULL|SQL_SS_TABLE|  
 |TYPE_NAME|WVarchar (128) non NULL|Nom du type du paramètre table.|  

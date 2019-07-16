@@ -2,19 +2,18 @@
 title: Obtenir et configurer un serveur de sauvegarde - Parallel Data Warehouse | Microsoft Docs
 description: Cet article décrit comment configurer un système de Windows non-appliance comme un serveur de sauvegarde pour une utilisation avec les fonctionnalités de sauvegarde et de restauration dans Analytique Platform System (APS) et Parallel Data Warehouse (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f79cb13658328927cab81bbf8d559066c5a4d5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63040825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961647"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>Obtenir et configurer un serveur de sauvegarde pour Parallel Data Warehouse
 Cet article décrit comment configurer un système de Windows non-appliance comme un serveur de sauvegarde pour une utilisation avec les fonctionnalités de sauvegarde et de restauration dans Analytique Platform System (APS) et Parallel Data Warehouse (PDW).  
@@ -40,7 +39,7 @@ La configuration système requise pour le serveur de sauvegarde dépend presque 
   
 Utilisez le [feuille de planification de capacité sauvegarde serveur](backup-capacity-planning-worksheet.md) pour aider à déterminer vos besoins en capacité.  
   
-## <a name="Step2"></a>Étape 2 : Acquérir le serveur de sauvegarde  
+## <a name="Step2"></a>Étape 2 : Acquérir le serveur de sauvegarde  
 Maintenant que vous comprenez mieux vos besoins en capacité, vous pouvez planifier les serveurs et les composants réseau dont vous aurez besoin d’acheter ou mettre en service. Incorporer la liste suivante des exigences de votre plan d’achat, puis acheter votre serveur ou configurer un serveur existant.  
   
 ### <a name="software-requirements"></a>Configuration logicielle requise  
@@ -61,7 +60,7 @@ Bien que non obligatoire, InfiniBand est le type de connexion recommandée pour 
   
 3.  Acheter 2 câbles FDR InfiniBand pour une carte de port double ou 1 câble FDR InfiniBand pour une carte de port unique. Les câbles FDR InfiniBand se connectera le chargement du serveur au réseau InfiniBand appliance. La longueur du câble dépend de la distance entre le serveur de chargement et les commutateurs InfiniBand du matériel, en fonction de votre environnement.  
   
-## <a name="Step3"></a>Étape 3 : Connectez le serveur aux réseaux InfiniBand  
+## <a name="Step3"></a> Étape 3 : Connectez le serveur aux réseaux InfiniBand  
 Suivez ces étapes pour connecter le serveur de chargement pour le réseau InfiniBand. Si le serveur n’utilise pas le réseau InfiniBand, ignorez cette étape.  
   
 1.  Le serveur de rack suffisamment à l’appliance afin que vous pouvez vous connecter au réseau InfiniBand appliance.  
@@ -76,7 +75,7 @@ Suivez ces étapes pour connecter le serveur de chargement pour le réseau Infin
   
 5.  Configurez les paramètres DNS et InfiniBand pour les cartes réseau. Pour obtenir des instructions de configuration, consultez [configurer des cartes réseau InfiniBand](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Étape 4 : Configurer le partage de fichiers de sauvegarde  
+## <a name="Step4"></a>Étape 4 : Configurer le partage de fichiers de sauvegarde  
 PDW accéderont au serveur de sauvegarde via un partage de fichiers UNC. Pour configurer le partage de fichiers :  
   
 1.  Créez un dossier sur le serveur de sauvegarde pour stocker vos sauvegardes.  
@@ -101,7 +100,7 @@ PDW accéderont au serveur de sauvegarde via un partage de fichiers UNC. Pour co
   
     -   [sp_pdw_remove_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-remove-network-credentials-sql-data-warehouse.md)  
   
-## <a name="Step5"></a>Étape 5 : Démarrer la sauvegarde de vos données  
+## <a name="Step5"></a>Étape 5 : Démarrer la sauvegarde de vos données  
 Vous êtes maintenant prêt à démarrer la sauvegarde des données sur le serveur de sauvegarde.  
   
 Pour sauvegarder des données, utilisez un client de requête pour se connecter à SQL Server PDW, puis envoyez sauvegarde de base de données ou de restauration de base de données des commandes. Utiliser le disque = clause pour spécifier l’emplacement de sauvegarde et de serveur de sauvegarde.  

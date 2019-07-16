@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e8285713df1fb17b2e82dcfa6edac0fd6db5500a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950662"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +41,17 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**@dbname=**] **'***dbname***'**  
+ [ **@dbname=** ] **'***dbname***'**  
  Base de données pour laquelle l'option de base de données de réplication doit être définie. *db_name* est **sysname**, sans valeur par défaut.  
   
- [**@optname=**] **'***optname***'**  
+ [ **@optname=** ] **'***optname***'**  
  Option de base de données de réplication à activer ou à désactiver. *optname* est **sysname**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**publication de fusion**|La base de données peut être utilisée pour les publications de fusion.|  
 |**publish**|La base de données peut être utilisée pour les autres types de publications.|  
-|**subscribe**|La base de données est une base de données d'abonnement.|  
+|**s’abonner**|La base de données est une base de données d'abonnement.|  
 |**synchroniser avec la sauvegarde**|La base de données est activée pour la sauvegarde coordonnée. Pour plus d’informations, consultez [activer les sauvegardes coordonnées pour la réplication transactionnelle &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
 `[ @value = ] 'value'` Indique s’il faut activer ou désactiver l’option de base de données de réplication donné. *valeur* est **sysname**et peut être **true** ou **false**. Lorsque cette valeur est **false** et *optname* est **publication de fusion**, les abonnements à la base de données publiée de fusion sont également supprimés.  

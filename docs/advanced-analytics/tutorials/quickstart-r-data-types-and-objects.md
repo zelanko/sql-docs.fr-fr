@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: df1c4c50e21ba5db5459da958f915be560500dc7
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: baa7a378c85668ac87ff8dc28422d4a6bbbcd225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962025"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Démarrage rapide : Gérer les types de données et des objets à l’aide de R dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -140,7 +139,7 @@ En réalité, la colonne de trois valeurs est convertie en une matrice à une se
 |---|---|---|---|
 |12|13|14|15|
 |120|130|140|150|
-|1200|1300|1400|1500|
+|1 200|1300|1400|1 500|
 
 Notez, cependant, que se passe-t-il lorsque vous modifiez la taille du tableau `y`.
 
@@ -163,7 +162,7 @@ R retourne maintenant une seule valeur comme résultat.
 |---|
 |1542|
 
-Pourquoi ? Dans ce cas, étant donné que les deux arguments peuvent être gérés comme des vecteurs de la même longueur, R retourne le produit interne sous forme de matrice.  C’est le comportement attendu selon les règles de l’algèbre linéaire, mais cela peut poser problème si votre application en aval s’attend à ce que le schéma de sortie reste toujours le même !
+Pourquoi ? Dans ce cas, étant donné que les deux arguments peuvent être gérés comme des vecteurs de la même longueur, R retourne le produit interne sous forme de matrice.  C’est le comportement attendu selon les règles de l’algèbre linéaire, mais cela peut poser problème si votre application en aval s’attend à ce que le schéma de sortie reste toujours le même !
 
 > [!TIP]
 > 
@@ -200,8 +199,8 @@ Pour remplir la trame de données, R répète les éléments récupérés de la 
 |10|2|
 |100|3|
 |1|4|
-|10|5|
-|100|6|
+|10|5\.|
+|100|6\.|
 
 N’oubliez pas qu’une trame de données est une liste de vecteurs, même si elle a l’apparence d’une table.
 

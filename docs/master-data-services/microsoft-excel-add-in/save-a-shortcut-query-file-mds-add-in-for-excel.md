@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98385f84-67cc-421a-b729-91847954e03e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 142d2a0ba403600d45f338596b5a581980ec79f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fa72bced2173f9de3d3edb9c3323294bb13c5f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074413"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Enregistrer un fichier de requête de raccourci (Complément MDS pour Excel)
 
@@ -33,7 +32,7 @@ ms.locfileid: "65486090"
   
 1.  Dans le groupe **Enregistrer et envoyer** , cliquez sur la flèche sous **Enregistrer la requête** et sélectionnez **Enregistrer en tant que requête**.  
   
-2.  Facultatif. Pour renommer la requête, cliquez sur la flèche sous **Enregistrer la requête** et cliquez sur **Gérer les requêtes**. Sélectionnez la requête et cliquez sur **Renommer**.  
+2.  facultatif. Pour renommer la requête, cliquez sur la flèche sous **Enregistrer la requête** et cliquez sur **Gérer les requêtes**. Sélectionnez la requête et cliquez sur **Renommer**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
   

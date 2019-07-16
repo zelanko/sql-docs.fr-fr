@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db6aff35944b8811e79627c6076ab61e838edf3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912320"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Commandes et fonctions Visual FoxPro non prises en charge (pilote ODBC Visual FoxPro)
 Le tableau suivant répertorie les commandes FoxPro et fonctions qui ne sont pas pris en charge par le pilote ODBC Visual FoxPro, mais sont pris en charge par Microsoft® Visual FoxPro.  
@@ -35,7 +34,7 @@ Le tableau suivant répertorie les commandes FoxPro et fonctions qui ne sont pas
 |-|-|-|  
 |#DEFINE... #UNDEF|#IF... #ENDIF Directive de préprocesseur|#IFDEF &#124; #IFNDEF|  
 |#INCLUDE, Directive préprocesseur|:: Opérateur de résolution de portée|! Commande (voir exécution &#124; ! Commande)|  
-|? &#124; ?? Command|??? Command|\ &#124; \\\ Command|  
+|? &#124; ?? Command|??? Command|\ &#124; \\\ Commande|  
 |@ ... Commande de zone|@ ... Commande de la classe|@ ... Commande Effacer|  
 |@ ... MODIFIER - modifier les commandes de zones|@ ... REMPLIR, commande|@ ... GET|  
 |@ ... Commande de MENU|@ ... Commande invite|@ ... Par exemple de commande|  
@@ -52,7 +51,7 @@ Le tableau suivant répertorie les commandes FoxPro et fonctions qui ne sont pas
 |AMEMBERS (fonction))|ANSITOOEM (fonction))|APRINTERS (fonction))|  
 |ASELOBJ (fonction))|Commande d’assistance||  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
   
 ||||  
 |-|-|-|  
@@ -237,7 +236,7 @@ Le tableau suivant répertorie les commandes FoxPro et fonctions qui ne sont pas
 |RENOMMER une commande de connexion|RENOMMER une commande de TABLE|RESTAURER à partir de la commande|  
 |Commande de rapport|REQUERY (fonction))|RESTAURER la fenêtre de commande|  
 |RESTAURER les commandes de MACROS|RESTAURER les commandes d’écran|RGBSCHEME (fonction))|  
-|Commande de reprise|RVB (fonction))|RUN &#124; ! Command|  
+|Commande de reprise|RVB (fonction))|EXÉCUTEZ &#124; ! Command|  
 |Commande RMDIR|LIGNE (fonction))||  
 |Commande RUNSCRIPT|RDLEVEL (fonction))||  
   

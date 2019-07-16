@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5830d394330778fae6aab795286c7fbc9e211072
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9682535c82f8a579259993e82560dfe6bc930f93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061361"
 ---
-# <a name="systrustedassemblies-transact-sql"></a>Sys.trusted_assemblies (Transact-SQL)  
+# <a name="systrustedassemblies-transact-sql"></a>sys.trusted_assemblies (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Contient une ligne pour chaque assembly de confiance pour le serveur.
@@ -34,12 +33,12 @@ Contient une ligne pour chaque assembly de confiance pour le serveur.
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 
-|Nom de colonne |Type de données |Description |
+|Nom de la colonne |Type de données |Description |
 |--- |--- |--- |
 |hachage |varbinary (8000) |SHA2_512 hachage du contenu de l’assembly. |
 |description |nvarchar(4000) |Description définie par l’utilisateur facultative de l’assembly. Microsoft recommande d’utiliser le nom canonique qui encode le nom simple numéro de version, culture, clé publique et architecture de l’assembly à approuver. Cette valeur identifie l’assembly sur le côté du common language runtime (CLR) et est identique à la valeur clr_name dans sys.assemblies de manière unique. |
 |create_date |datetime2 |Date de que l’assembly a été ajouté à la liste des assemblys de confiance. |
-|created_by |nvarchar (128) |Nom de connexion du principal qui a ajouté l’assembly à la liste. |
+|created_by |nvarchar(128) |Nom de connexion du principal qui a ajouté l’assembly à la liste. |
 | | | |
 
 

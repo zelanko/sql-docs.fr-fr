@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9aa8b150a26e64d4a61efe80ab635110e540af33
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: ed4583b30ed1e4538a36079f9f7794704b819cda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946165"
 ---
 # <a name="xqueries-handling-relational-data"></a>Requêtes XQuery pour la gestion des données relationnelles
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Vous spécifiez la requête XQuery portant sur une **xml** colonne de type ou une variable en utilisant l’une de le [les méthodes de Type de données XML](../t-sql/xml/xml-data-type-methods.md). Ceux-ci incluent **query()**, **value()**, **exist()**, ou **modify()**. La requête XQuery est exécutée par rapport à l'instance XML identifiée dans la requête qui génère le document XML.  
+  Vous spécifiez la requête XQuery portant sur une **xml** colonne de type ou une variable en utilisant l’une de le [les méthodes de Type de données XML](../t-sql/xml/xml-data-type-methods.md). Ceux-ci incluent **query()** , **value()** , **exist()** , ou **modify()** . La requête XQuery est exécutée par rapport à l'instance XML identifiée dans la requête qui génère le document XML.  
   
  Le document XML généré par l'exécution d'une requête XQuery peut comprendre des valeurs extraites à partir d'autres colonnes d'ensemble de lignes ou variables Transact-SQL. Pour lier des données relationnelles non-XML au document XML obtenu, SQL Server fournit les pseudo-fonctions suivantes comme extensions XQuery :  
   
@@ -36,7 +35,7 @@ ms.locfileid: "51291016"
   
  Vous pouvez utiliser ces extensions XQuery lorsque vous spécifiez une requête XQuery dans la **query()** méthode de la **xml** type de données. Par conséquent, le **query()** méthode peut produire du code XML qui combine des données à partir de XML et non-**xml** types de données.  
   
- Vous pouvez également utiliser ces fonctions lorsque vous utilisez le **xml** méthodes de type de données **modify()**, **value()**, **query()**, et  **EXIST()** pour exposer une valeur relationnelle dans du code XML.  
+ Vous pouvez également utiliser ces fonctions lorsque vous utilisez le **xml** méthodes de type de données **modify()** , **value()** , **query()** , et  **EXIST()** pour exposer une valeur relationnelle dans du code XML.  
   
  Pour plus d’informations, consultez [fonction SQL :Column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) et [fonction SQL :variable() (XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   

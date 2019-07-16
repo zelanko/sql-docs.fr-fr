@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b15aa278e2fe38afe93f5628433a6c8f4b41cd8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f5523c54286ed2e7cc554745dc269599115793e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094176"
 ---
 # <a name="driver-specification-subkeys"></a>Sous-clés de spécification de pilote
 Chaque pilote répertorié dans la sous-clé de pilotes ODBC a une sous-clé de son propre. Cette sous-clé a le même nom que la valeur correspondante sous la sous-clé de pilotes ODBC. Les valeurs sous cette sous-clé de répertorient les chemins d’accès complets du pilote et de la configuration du pilote DLL, les valeurs des mots clés du pilote retournés par **SQLDrivers**et le décompte d’utilisation. Les formats des valeurs sont comme indiqué dans le tableau suivant.  
@@ -29,13 +28,13 @@ Chaque pilote répertorié dans la sous-clé de pilotes ODBC a une sous-clé de 
 |Nom|Type de données|Données|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&#124;**N**}{**Y**&#124;**N**}{**Y**&#124;**N**}|  
+|ConnectFunctions|REG_SZ|{**Y**&#124;**N**} {**Y**&#124;**N**} {**Y**&#124;**N**}|  
 |CreateDSN|REG_SZ|*driver-description*|  
-|Pilote|REG_SZ|*driver-DLL-path*|  
+|Pilote|REG_SZ|*chemin de DLL de pilote*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  
-|FileExtns|REG_SZ|**\*.** *file-extension1*[ **,\*.** *file-extension2*]...|  
+|FileExtns|REG_SZ|**\*.** *fichier-extension1*[ **,\*.** *fichier-extension2*]...|  
 |FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|Installation|REG_SZ|*setup-DLL-path*|  
+|Installation|REG_SZ|*le programme d’installation-DLL-path*|  
 |SQLLevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |UsageCount|REG_DWORD|*nombre*|  
   

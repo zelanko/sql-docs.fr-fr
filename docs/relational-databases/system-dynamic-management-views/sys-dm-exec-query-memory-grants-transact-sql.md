@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
+title: Sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097706"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "63013233"
 > [!NOTE]  
 > À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_query_memory_grants**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**smallint**|ID (SPID) de la session dans laquelle cette requête est en cours d'exécution.|  
 |**request_id**|**Int**|ID de la demande. Unique dans le contexte de la session.|  
-|**scheduler_id**|**Int**|ID du planificateur qui planifie cette requête.|  
+|**scheduler_id**|**int**|ID du planificateur qui planifie cette requête.|  
 |**dop**|**smallint**|Degré de parallélisme de cette requête.|  
 |**request_time**|**datetime**|Date et heure auxquelles cette requête a demandé l'allocation de mémoire.|  
 |**grant_time**|**datetime**|Date et heure auxquelles la mémoire a été allouée pour cette requête. NULL si la mémoire n'a pas encore été allouée.|  
@@ -52,16 +51,16 @@ ms.locfileid: "63013233"
 |**used_memory_kb**|**bigint**|Mémoire physique utilisée à ce moment, en kilo-octets.|  
 |**max_used_memory_kb**|**bigint**|Mémoire physique maximale utilisée jusqu'à ce moment, en kilo-octets.|  
 |**query_cost**|**float**|Coût estimé de la requête.|  
-|**timeout_sec**|**Int**|Délai d'expiration, en secondes, avant que cette requête abandonne la demande d'allocation de la mémoire.|  
+|**timeout_sec**|**int**|Délai d'expiration, en secondes, avant que cette requête abandonne la demande d'allocation de la mémoire.|  
 |**resource_semaphore_id**|**smallint**|ID non unique du sémaphore de ressource sur lequel attend cette requête.<br /><br /> **Remarque :** Cet ID est unique dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Cette modification peut affecter l'exécution de la requête de résolution des problèmes. Pour plus d’informations, consultez la section « Remarques » plus loin dans cette rubrique.|  
 |**queue_id**|**smallint**|ID de la file d'attente dans laquelle cette requête attend l'allocation de mémoire. NULL si la mémoire est déjà allouée.|  
-|**wait_order**|**Int**|Ordre séquentiel des requêtes en attente dans le texte spécifié **queue_id**. Cette valeur peut changer pour une requête donnée si d’autres requêtes bénéficient d’allocations de mémoire ou de délai d’attente. NULL si la mémoire est déjà allouée.|  
+|**wait_order**|**int**|Ordre séquentiel des requêtes en attente dans le texte spécifié **queue_id**. Cette valeur peut changer pour une requête donnée si d’autres requêtes bénéficient d’allocations de mémoire ou de délai d’attente. NULL si la mémoire est déjà allouée.|  
 |**is_next_candidate**|**bit**|Candidat pour l'allocation mémoire suivante.<br /><br /> 1 = Oui<br /><br /> 0 = Non<br /><br /> NULL = La mémoire est déjà allouée.|  
 |**wait_time_ms**|**bigint**|Temps d'attente en millisecondes. NULL si la mémoire est déjà allouée.|  
 |**plan_handle**|**varbinary(64)**|Identificateur de ce plan de requête. Utilisez **sys.dm_exec_query_plan** pour extraire le plan XML réel.|  
 |**sql_handle**|**varbinary(64)**|Identificateur de texte [!INCLUDE[tsql](../../includes/tsql-md.md)] pour cette requête. Utilisez **sys.dm_exec_sql_text** pour obtenir le texte réel [!INCLUDE[tsql](../../includes/tsql-md.md)] texte.|  
-|**group_id**|**Int**|ID du groupe de charge de travail dans lequel cette requête est exécutée.|  
-|**pool_id**|**Int**|ID du pool de ressources auquel appartient ce groupe de charge de travail.|  
+|**group_id**|**int**|ID du groupe de charge de travail dans lequel cette requête est exécutée.|  
+|**pool_id**|**int**|ID du pool de ressources auquel appartient ce groupe de charge de travail.|  
 |**is_small**|**tinyint**|Si la valeur est définie sur 1, cette allocation utilise le sémaphore de ressource le plus petit. Si la valeur est définie sur 0, c'est que le sémaphore de ressource ordinaire est utilisé.|  
 |**ideal_memory_kb**|**bigint**|Taille de l'allocation mémoire, en kilo-octets (Ko) pour l'ajuster à la mémoire physique. Elle est basée sur l'estimation de la cardinalité.|  
 |**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
@@ -69,7 +68,7 @@ ms.locfileid: "63013233"
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
    
 ## <a name="remarks"></a>Notes  
  Un scénario de débogage type pour le délai d'attente de la requête peut ressembler à ce qui suit :  

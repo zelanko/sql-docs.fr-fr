@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30547551cc1793622eaa981c07bbc002d07a094d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20310c60759aea17d61b9252fd73d226567a7a54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027227"
 ---
 # <a name="like-predicate-escape-character"></a>Caractère d’échappement du prédicat LIKE
 Dans un **comme** prédicat, le symbole de pourcentage (%) correspond à zéro ou plus de n’importe quel caractère et le trait de soulignement (_) correspond à tout caractère. Pour faire correspondre un signe pourcent ou de traits de soulignement dans un **comme** prédicat, un caractère d’échappement doit être placée avant le signe de pourcentage ou un trait de soulignement. La séquence d’échappement qui définit le **comme** caractère d’échappement de prédicat est :  
   
- **{escape '** *escape-character* **'}**  
+ **{escape '** *-caractère d’échappement* **'}**  
   
  où *-caractère d’échappement* est n’importe quel caractère pris en charge par la source de données.  
   

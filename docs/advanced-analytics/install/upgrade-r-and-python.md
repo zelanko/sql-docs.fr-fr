@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 93384c8152109b01720ae7e861731638316d4966
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 6210cfe67b4c360f14fc3e68929a5ac4f5f5d570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962826"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Mettre à niveau machine learning (R et Python) des composants dans les instances SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -55,10 +54,10 @@ Composant |Version initiale | [R Server 9.0.1](https://docs.microsoft.com/machin
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) sur R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[modèles préformés](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| (pays-bas) | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[modèles préformés](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| (pays-bas) | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| (pays-bas) | 1.0 |  1.0 |  1.0 |  1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | (pays-bas) | 1.0 |  1.0 |  1.0 |  1.0 |
 
 
 [**SQL Server 2017 Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md)
@@ -226,13 +225,13 @@ Une fois que vous exécutez Microsoft Machine Learning Server, un utilitaire de 
 
 Vous pouvez restaurer une instance liée à une installation initiale des composants R et Python, établie par le programme d’installation de SQL Server. Il existe trois parties pour le retour à la maintenance de SQL Server.
 
-+ [Étape 1 : Annuler la liaison à partir de Microsoft Machine Learning Server](#step-1-unbind)
++ [Étape 1 : Annuler la liaison à partir de Microsoft Machine Learning Server](#step-1-unbind)
 + [Étape 2 : Restauration de l’instance de l’état d’origine](#step-2-restore)
 + [Étape 3 : Réinstaller les packages que vous avez ajouté à l’installation](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 
-### <a name="step-1-unbind"></a>Étape 1 : Séparer
+### <a name="step-1-unbind"></a>Étape 1 : Séparer
 
 Vous avez deux options pour annuler la liaison : ré-exécutez de nouveau le programme d’installation ou d’utiliser l’utilitaire de ligne de commande SqlBindR.
 
@@ -257,7 +256,7 @@ Vous avez deux options pour annuler la liaison : ré-exécutez de nouveau le pr
 
 <a name="step-2-restore"></a> 
 
-###  <a name="step-2-repair-the-sql-server-instance"></a>Étape 2 : Réparez l’instance de SQL Server
+###  <a name="step-2-repair-the-sql-server-instance"></a>Étape 2 : Réparez l’instance de SQL Server
 
 Exécutez le programme d’installation de SQL Server pour réparer l’instance du moteur de base de données ayant les fonctionnalités de R et Python. Mises à jour existantes sont conservées, mais si vous avez manqué toute maintenance des mises à jour des packages R et Python de SQL Server, cette étape s’applique les correctifs.
 
@@ -265,7 +264,7 @@ Il s’agit plus de travail, mais vous pouvez également désinstaller complète
 
 <a name="step-3-reinstall-packages"></a> 
 
-### <a name="step-3-add-any-third-party-packages"></a>Étape 3 : Ajouter tous les packages tiers
+### <a name="step-3-add-any-third-party-packages"></a>Étape 3 : Ajouter tous les packages tiers
 
 Vous avez peut-être ajouté des autres packages tiers ou open source à votre bibliothèque de package. Dans la mesure où en inversant la liaison bascule à l’emplacement de la bibliothèque de package par défaut, vous devez réinstaller les packages à la bibliothèque R et Python est maintenant à l’aide. Pour plus d’informations, consultez [par défaut des packages](../package-management/default-packages.md), [installer de nouveaux packages R](../r/install-additional-r-packages-on-sql-server.md), et [installer de nouveaux packages Python](../python/install-additional-python-packages-on-sql-server.md).
 
@@ -277,7 +276,7 @@ Vous avez peut-être ajouté des autres packages tiers ou open source à votre b
 
 ### <a name="parameters"></a>Paramètres
 
-|Nom|Description|
+|Name|Description|
 |------|------|
 |*list*| Affiche une liste de tous les ID d’instances de bases de données SQL sur l’ordinateur actuel|
 |*bind*| Met à niveau l’instance de base de données SQL spécifiée vers la version la plus récente de R Server, et garantit que l’instance obtient automatiquement les mises à niveau ultérieures de R Server|

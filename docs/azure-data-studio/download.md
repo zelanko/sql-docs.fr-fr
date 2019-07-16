@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.custom: seodec18
 ms.date: 07/11/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: 741c36331e6c0c8827e34517dd7ee4e5d04abf93
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: a2a4d4e755908d544e79b751d64ee99cad6fc96c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959690"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Téléchargez et installez Azure Data Studio
 
@@ -194,7 +193,7 @@ Si vous souhaitez déplacer vos paramètres personnalisés, les raccourcis clavi
 
 2. Cliquez sur le **paramètres utilisateur** onglet en haut et cliquez sur **révéler dans l’Explorateur**
 
-   ![reveal-in-explorer](./media/download/reveal-in-explorer.png)
+   ![révéler dans l’Explorateur](./media/download/reveal-in-explorer.png)
 
 3. Copiez tous les fichiers dans ce dossier et enregistrez dans un facile à trouver un emplacement sur votre disque local, comme votre dossier Documents.
 

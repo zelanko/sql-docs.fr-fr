@@ -5,19 +5,18 @@ description: Article de référence pour les commandes de montage du pool de sto
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4204e87e96fd0d91a9bfbf64813583ef92d3202b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: b6a412c6d7cab9fb869a9aa8ee1b62ae0ed3f717
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958001"
 ---
-# <a name="mssqlctl-bdc-storage-pool-mount"></a>mssqlctl bdc storage-pool mount
+# <a name="mssqlctl-bdc-storage-pool-mount"></a>montage de pool de stockage mssqlctl bdc
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -26,9 +25,9 @@ L’article suivant fournit la référence pour le **montage du pool de stockage
 ## <a name="commands"></a>Commandes
 |     |     |
 | --- | --- |
-[mssqlctl bdc storage-pool mount create](#mssqlctl-bdc-storage-pool-mount-create) | Créer des montages de magasins distants dans HDFS.
+[créer de montage de pool de stockage mssqlctl bdc](#mssqlctl-bdc-storage-pool-mount-create) | Créer des montages de magasins distants dans HDFS.
 [mssqlctl bdc storage-pool mount delete](#mssqlctl-bdc-storage-pool-mount-delete) | Supprimer les montages de magasins distants dans HDFS.
-[mssqlctl bdc storage-pool mount status](#mssqlctl-bdc-storage-pool-mount-status) | État de mount(s).
+[statut de montage du pool de stockage mssqlctl bdc](#mssqlctl-bdc-storage-pool-mount-status) | État de mount(s).
 ## <a name="mssqlctl-bdc-storage-pool-mount-create"></a>créer de montage de pool de stockage mssqlctl bdc
 Créer des montages de magasins distants dans HDFS. Les informations d’identification pour accéder à la banque à distance, cas échéant, doivent être spécifiées à l’aide de la variable d’environnement MOUNT_CREDENTIALS sous forme de liste séparée par des virgules de clé = paires de valeur. Les virgules de clés ou valeurs doivent être échappés.
 ```bash
@@ -62,7 +61,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-bdc-storage-pool-mount-delete"></a>mssqlctl bdc storage-pool mount delete
+## <a name="mssqlctl-bdc-storage-pool-mount-delete"></a>suppression de montage mssqlctl bdc pool de stockage
 Supprimer les montages de magasins distants dans HDFS.
 ```bash
 mssqlctl bdc storage-pool mount delete --mount-path 
@@ -87,7 +86,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-bdc-storage-pool-mount-status"></a>mssqlctl bdc storage-pool mount status
+## <a name="mssqlctl-bdc-storage-pool-mount-status"></a>statut de montage du pool de stockage mssqlctl bdc
 État de mount(s).
 ```bash
 mssqlctl bdc storage-pool mount status [--mount-path] 

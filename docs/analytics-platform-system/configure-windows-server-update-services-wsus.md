@@ -2,19 +2,18 @@
 title: Configurer WSUS - Analytique Platform System | Microsoft Docs
 description: Ces instructions vous guident dans les étapes d’utilisation de l’Assistant de Configuration de Windows Server Update Services (WSUS) pour configurer WSUS pour l’Analytique Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16dc05500964bb37e3252edf81aff85042b7abdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63134792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961123"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurer Windows Server Update Services (WSUS) dans le système de plateforme d’Analytique
 Ces instructions vous guident dans les étapes d’utilisation de l’Assistant de Configuration de Windows Server Update Services (WSUS) pour configurer WSUS pour l’Analytique Platform System. Vous devez configurer WSUS avant de pouvoir appliquer des mises à jour logicielles à l’appliance. WSUS est déjà installé sur l’ordinateur virtuel VMM de l’appliance.  
@@ -83,7 +82,7 @@ Pour configurer WSUS, vous devez :
   
     #### <a name="to-update-by-using-microsoft-update"></a>Pour mettre à jour à l’aide de Microsoft Update  
   
-    1.  Si vous choisissez de synchroniser avec Microsoft Update, vous n’avez pas besoin d’apporter des modifications à la **choisir le serveur en amont** page. Cliquer sur **Suivant**.  
+    1.  Si vous choisissez de synchroniser avec Microsoft Update, vous n’avez pas besoin d’apporter des modifications à la **choisir le serveur en amont** page. Cliquez sur **Suivant**.  
   
         ![WSUS-synchronisation du serveur en amont](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   

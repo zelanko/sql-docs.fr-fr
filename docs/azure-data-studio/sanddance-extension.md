@@ -10,18 +10,17 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 466b2b60548d1dcef104979d1e291d44bf53b3de
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: a96bde6a66642bf02cc076c3d4d4f3ac44e02a3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67563991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959331"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance pour Azure Data Studio (version préliminaire)
 Azure Data Studio offre désormais un moyen de créer des visualisations rapides pour les fichiers .csv, .tsv que vous utilisez. Cela inclut les fichiers locaux ou des fichiers sur HDFS dans votre Cluster SQL Server 2019 Big Data. Cette extension est utile lorsque vous essayez d’avoir un rapide aperçu des données et de comprendre ce qui se passe. Nous utilisons une technologie appelée SandDance de Microsoft Research, ce qui peut générer des visualisations sur place des données.
 
-![sanddance-animation](https://user-images.githubusercontent.com/11507384/54236654-52d42800-44d1-11e9-859e-6c5d297a46d2.gif)
+![animation de sanddance](https://user-images.githubusercontent.com/11507384/54236654-52d42800-44d1-11e9-859e-6c5d297a46d2.gif)
 
 À l’aide de vues faciles à comprendre, vous permet de SandDance rechercher insights sur vos données, qui, dans l’aide de tour parler est pris en charge par les données, générer des cas basées sur la preuve, tester des hypothèses, aller plus loin dans l’aire de conception explications, prennent en charge des décisions d’achats, ou lier des données dans un contexte plus large, dans la réalité.
 

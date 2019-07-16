@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f8968661442adabe4c04608ca5a5bb5362341c4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f0a304020b972b29d521bd32da3f98b8d3fdfc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989992"
 ---
 # <a name="logshippingmonitorhistorydetail-transact-sql"></a>log_shipping_monitor_history_detail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +31,11 @@ ms.locfileid: "62719621"
   
  Les tables liées à l'historique et à la surveillance sont également utilisées au niveau du serveur principal et des serveurs secondaires.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**uniqueidentifier**|ID principal pour la sauvegarde ou ID secondaire pour la copie ou la restauration.|  
 |**agent_type**|**tinyint**|Type d'opération de copie des journaux de transaction.<br /><br /> 0 = Sauvegarde.<br /><br /> 1 = Copie.<br /><br /> 2 = Restauration.|  
-|**session_id**|**Int**|ID de session pour le travail de sauvegarde/copie/restauration.|  
+|**session_id**|**int**|ID de session pour le travail de sauvegarde/copie/restauration.|  
 |**database_name**|**sysname**|Nom de la base de données associée à cet enregistrement. Base de données primaire pour la sauvegarde, base de données secondaire pour la restauration ou vide pour la copie.|  
 |**session_status**|**tinyint**|État de la session.<br /><br /> 0 = Démarrage.<br /><br /> 1 = Exécution.<br /><br /> 2 = Réussite.<br /><br /> 3 = Erreur.<br /><br /> 4 = Avertissement.|  
 |**log_time**|**datetime**|Date et heure de création de l'enregistrement.|  

@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80918c74613e0fb608a9d48c1e56ad2cf206b06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940297"
 ---
 # <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque fournisseur de chiffrement inscrit.  
     
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**provider_id**|**Int**|Numéro d'identification du fournisseur de services de chiffrement.|  
-|**nom**|**sysname**|Nom du fournisseur de chiffrement.|  
+|**provider_id**|**int**|Numéro d'identification du fournisseur de services de chiffrement.|  
+|**name**|**sysname**|Nom du fournisseur de chiffrement.|  
 |**guid**|**uniqueidentifier**|GUID unique du fournisseur.|  
 |**version**|**nvarchar(50)**|Version du fournisseur dans le format '*aa.bb.cccc.dd*».|  
 |**dll_path**|**nvarchar(512)**|Chemin d'accès à la DLL qui implémente l'interface de programmation d'applications (API, Application Program Interface) EKM (Extensible Key Management).|  
@@ -45,7 +44,7 @@ ms.locfileid: "47791237"
 ## <a name="remarks"></a>Notes  
  Le **sys.cryptographic_providers** n’est visible au public.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

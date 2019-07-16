@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 650fb8c3b043940658bcc50720c0e5dd1da822db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d39ea859f1fd2cc3064d8d8c71c91ba6324f162c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989978"
 ---
 # <a name="logshippingmonitorprimary-transact-sql"></a>log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,18 +31,18 @@ ms.locfileid: "62719471"
   
  Les tables liées à l'historique et à la surveillance sont également utilisées au niveau du serveur principal et des serveurs secondaires.   
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**primary_id**|**uniqueidentifier**|ID de la base de données primaire pour la configuration de la copie des journaux de transaction.|  
 |**primary_server**|**sysname**|Le nom de l’instance principale de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration d’envoi de journaux.|  
 |**primary_database**|**sysname**|Nom de la base de données primaire dans la configuration d'envoi de journaux.|  
-|**backup_threshold**|**Int**|Le nombre de minutes qui peuvent s'écouler entre les opérations de sauvegarde avant le déclenchement d'une alerte.|  
-|**threshold_alert**|**Int**|Alerte à déclencher lorsque le seuil de sauvegarde est dépassé.|  
+|**backup_threshold**|**int**|Le nombre de minutes qui peuvent s'écouler entre les opérations de sauvegarde avant le déclenchement d'une alerte.|  
+|**threshold_alert**|**int**|Alerte à déclencher lorsque le seuil de sauvegarde est dépassé.|  
 |**threshold_alert_enabled**|**bit**|Détermine si les alertes du seuil de sauvegarde sont activées. 1 = Activé.<br /><br /> 0 = Désactivées.|  
 |**last_backup_file**|**nvarchar(500)**|Chemin d'accès absolu de la sauvegarde la plus récente des journaux de transactions.|  
 |**last_backup_date**|**datetime**|Heure et date de la dernière opération de sauvegarde des journaux de transactions sur la base de données primaire.|  
 |**last_backup_date_utc**|**datetime**|Date et heure de la dernière opération de sauvegarde des journaux de transactions sur la base de données primaire, exprimée en temps universel coordonné (UTC).|  
-|**history_retention_period**|**Int**|Durée de conservation (en minutes) avant suppression des enregistrements historiques de copie des journaux de transaction pour une base de données primaire donnée.|  
+|**history_retention_period**|**int**|Durée de conservation (en minutes) avant suppression des enregistrements historiques de copie des journaux de transaction pour une base de données primaire donnée.|  
   
 ## <a name="remarks"></a>Notes  
  En plus d’êtres stockées sur le serveur moniteur distant, les informations relatives au serveur principal sont stockées sur le serveur principal dans son **log_shipping_monitor_primary** table.  

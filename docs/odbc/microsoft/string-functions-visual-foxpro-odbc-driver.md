@@ -15,33 +15,32 @@ helpviewer_keywords:
 ms.assetid: 1974fd26-ef0d-45d5-860b-298917c8e9c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a9e1c94eec150cc24522cd6e4c57eb35b4a2126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db1fbaffbee0f74625f4a11cad3b961f194e3829
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948775"
 ---
 # <a name="string-functions-visual-foxpro-odbc-driver"></a>Fonctions de chaîne (pilote ODBC Visual FoxPro)
 Le tableau suivant répertorie les fonctions de manipulation de chaîne ODBC pris en charge par le pilote ODBC Visual FoxPro ; lors de la grammaire de Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, le Visual FoxPro équivalent est répertorié.  
   
 |Grammaire ODBC|Grammaire de Visual FoxPro|  
 |------------------|---------------------------|  
-|ASCII *(string_exp)*|ASC *(string_exp)*|  
-|CHAR *(code)*|CHR *(string_exp)*|  
+|ASCII *(exp_chaîne)*|ASC *(exp_chaîne)*|  
+|CHAR *(code)*|CHR *(exp_chaîne)*|  
 |CONCAT *(string_exp1, string_exp2)*|*string_exp1 + string_exp2*|  
 |DIFFÉRENCE *(string_exp1, string_exp2)*||  
 |Insérer *(string_exp1, début, longueur, string_exp2)*|STUFF *(string_exp1, début, longueur, string_exp2)*|  
-|LCASE *(string_exp)*|INFÉRIEUR *(exp_chaîne)*|  
+|LCASE *(exp_chaîne)*|INFÉRIEUR *(exp_chaîne)*|  
 |GAUCHE *(exp_chaîne, décompte)*||  
-|LONGUEUR *(exp_chaîne)*|LEN *(string_exp)*|  
-|LTRIM *(string_exp)*||  
+|LONGUEUR *(exp_chaîne)*|LEN *(exp_chaîne)*|  
+|LTRIM *(exp_chaîne)*||  
 |RÉPÉTEZ *(exp_chaîne, décompte)*|RÉPLIQUER *(exp_chaîne, décompte)*|  
 |Remplacez *(string_exp1, string_exp2, exp_chaîne3)*|STRTRAN *(string_exp1, string_exp2, exp_chaîne3)*|  
 |DROITE *(exp_chaîne, décompte)*||  
-|RTRIM *(string_exp)*||  
-|SOUNDEX *(string_exp)*||  
+|RTRIM *(exp_chaîne)*||  
+|SOUNDEX *(exp_chaîne)*||  
 |ESPACE *(nombre)*||  
 |SOUS-chaîne *(exp_chaîne, début, longueur)*|SUBSTR *(exp_chaîne, début, longueur)*|  
-|UCASE *(exp_chaîne)*|UPPER *(string_exp)*|
+|UCASE *(exp_chaîne)*|ANGLE *(exp_chaîne)*|

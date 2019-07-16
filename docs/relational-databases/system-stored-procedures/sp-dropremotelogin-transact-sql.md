@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
-manager: jroth
-ms.openlocfilehash: 820ebc7e2bd79d0c321e327a2e5713151f3e24f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933821"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
 
@@ -68,7 +67,7 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>A. Suppression de toutes les connexions distantes d'un serveur distant  
+### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>R. Suppression de toutes les connexions distantes d'un serveur distant  
  Le code exemple suivant supprime l'entrée du serveur distant `ACCOUNTS`, supprimant ainsi tous les mappages entre les connexions sur le serveur local et les connexions distantes sur le serveur distant.  
   
 ```sql

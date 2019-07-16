@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 19e9abcf3af93ef85934d536de6ca726139afde0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63311842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908801"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Commandes de menu et autres touches de raccourci (MySQLToSQL)
 Les sections suivantes décrivent les raccourcis clavier pour accéder aux commandes de menu et autres touches de raccourci utilisées dans les différentes boîtes de dialogue de SSMA pour MySQL application.  
@@ -181,5 +180,5 @@ Pour accéder au menu contextuel de l’objet sélectionné dans l’Explorateur
 |Atteindre la déclaration.|F12|  
   
 ## <a name="see-also"></a>Voir aussi  
-[Shortcut Keys &#40;MySQLToSQL&#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
+[Touches de raccourci &#40;MySQLToSQL&#41;](../../ssma/mysql/shortcut-keys-mysqltosql.md)  
   
