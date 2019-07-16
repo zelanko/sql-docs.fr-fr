@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 13adf2e5-2150-40a6-b346-e74a33ce29c6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8222454d5e016733abef3c086e38add777cd304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62684289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004896"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +71,7 @@ sys.dm_db_index_operational_stats (
     
  Spécifiez la valeur NULL pour retourner des informations mises en cache pour tous les index d'une table de base ou d'une vue. Si vous spécifiez NULL pour *index_id*, vous devez également spécifier NULL pour *partition_number*.    
     
- *partition_number* | NULL | 0 | DEFAULT    
+ *partition_number* | NULL | 0 | PAR DÉFAUT    
  Numéro de partition dans l’objet. *partition_number* est **int**. Les entrées valides sont les *partion_number* d’un index ou le segment, NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.    
     
  Spécifiez la valeur NULL pour retourner des informations mises en cache pour toutes les partitions de l'index ou du segment de mémoire.    
@@ -81,12 +80,12 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="table-returned"></a>Table retournée    
     
-|Nom de colonne|Type de données|Description|    
+|Nom de la colonne|Type de données|Description|    
 |-----------------|---------------|-----------------|    
 |**database_id**|**smallint**|ID de la base de données.|    
-|**object_id**|**Int**|ID de la table ou de la vue.|    
-|**index_id**|**Int**|ID de l'index ou du segment de mémoire.<br /><br /> 0 = Segment de mémoire| 
-|**partition_number**|**Int**|Numéro de partition (basé sur la valeur 1) au sein de l'index ou du segment de mémoire.| 
+|**object_id**|**int**|ID de la table ou de la vue.|    
+|**index_id**|**int**|ID de l'index ou du segment de mémoire.<br /><br /> 0 = Segment de mémoire| 
+|**partition_number**|**int**|Numéro de partition (basé sur la valeur 1) au sein de l'index ou du segment de mémoire.| 
 |**hobt_id**|**bigint**|**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> ID du segment de données ou de l’ensemble de lignes B-tree qui assure le suivi des données internes pour un index columnstore.<br /><br /> NULL - ce n’est pas un ensemble de lignes columnstore interne.<br /><br /> Pour plus d’informations, consultez [sys.internal_partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)|       
 |**leaf_insert_count**|**bigint**|Nombre cumulatif d'insertions de niveau feuille.|    
 |**leaf_delete_count**|**bigint**|Nombre cumulatif de suppressions de niveau feuille. leaf_delete_count est incrémenté uniquement pour les enregistrements supprimés ne sont pas marqués comme fantôme tout d’abord. Pour les enregistrements supprimés sont tout d’abord, dédoublés **leaf_ghost_count** est incrémenté à la place.|    
@@ -200,7 +199,7 @@ sys.dm_db_index_operational_stats (
     
 ## <a name="examples"></a>Exemples    
     
-### <a name="a-returning-information-for-a-specified-table"></a>A. Retour d'informations sur une table spécifique    
+### <a name="a-returning-information-for-a-specified-table"></a>R. Retour d'informations sur une table spécifique    
  L'exemple suivant retourne des informations concernant tous les index et toutes les partitions de la table `Person.Address` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] : L'exécution de cette requête nécessite au minimum l'autorisation CONTROL sur la table `Person.Address`.    
     
 > [!IMPORTANT]    

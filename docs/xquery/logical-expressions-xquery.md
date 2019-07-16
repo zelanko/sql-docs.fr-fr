@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd6417c10be286164b9d56a0c2587dfd63a1de23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004506"
 ---
 # <a name="logical-expressions-xquery"></a>Expressions logiques (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ expression1 or expression2
   
  L’opérateur logique **et** et **ou** opérateur est ensuite appliqué aux valeurs booléennes qui en résulte des expressions avec la sémantique de la logique standard.  
   
- La requête suivante récupère, à partir du catalogue de produits, les illustrations de face et de petit format, soit l'élément <`Picture`>, pour un modèle de produit spécifique. Notez que pour chaque document de description de produit, le catalogue peut stocker une ou plusieurs illustrations avec différents attributs tels que taille et angle de prise de vue.  
+ La requête suivante récupère à partir du catalogue de produits englobent petites images, le <`Picture`> élément, pour un modèle de produit spécifique. Notez que pour chaque document de description de produit, le catalogue peut stocker une ou plusieurs illustrations avec différents attributs tels que taille et angle de prise de vue.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -62,7 +61,7 @@ FROM  Production.ProductModel
 where ProductModelID=19  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <PD:Picture   

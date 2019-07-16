@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9bebbf4c89a04474cbf2d0c88704603cb4c3fef3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a78db07f5ba445c54108558b2ff222bd217c2bbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924244"
 ---
 # <a name="service-providers-and-components"></a>Fournisseurs et composants de services
 Fournisseurs de services sont des composants qui étendent les fonctionnalités des fournisseurs de données en implémentant les interfaces étendues qui ne sont pas prise en charge par le magasin de données.  

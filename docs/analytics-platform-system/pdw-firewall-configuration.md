@@ -2,19 +2,18 @@
 title: Configuration du pare-feu PDW - Analytique Platform System | Microsoft Docs
 description: La page pare-feu du Gestionnaire de Configuration PDW SQL Server vous permet d’activer ou désactiver les règles de pare-feu qui autorisent ou empêchent l’accès à des ports spécifiques sur l’appliance Analytique Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d92d92752b4de105857f5611fbe95262476a4e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f650aac34e3a5299cabae500a8ee73250c3974d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960417"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Configuration du pare-feu entrepôt de données parallèle d’Analytique Platform System
 
@@ -35,7 +34,7 @@ Le **pare-feu** page du Gestionnaire de Configuration PDW SQL Server vous permet
 ## <a name="external-ports"></a>Ports externes  
 Les ports suivants sont ouverts pour les connexions client provenant en dehors de PDW.  
   
-|Objectif|N° de port|Nodes|  
+|Objectif|N° de port|Nœuds|  
 |-----------|-----------|---------|  
 |Accès Client SQL pour PDW (TDS)|17001|LISTE CTL|  
 |Accès au Client de chargeur (dwloader & SSIS)|8001|LISTE CTL|  
@@ -51,7 +50,7 @@ Les ports suivants sont ouverts pour les connexions client provenant en dehors d
 ## <a name="internal-ports"></a>Ports internes  
 Les ports suivants sont utilisés par PDW pour la communication interne, mais ne sont pas ouverts pour les connexions en provenance d’en dehors de l’appliance PDW.  
   
-|Objectif|N° de port|Nodes|  
+|Objectif|N° de port|Nœuds|  
 |-----------|-----------|---------|  
 |Trafic du canal de contrôle DMS|16450|CTL, CMP|  
 |Trafic du canal de données DMS|16550|CTL, CMP|  

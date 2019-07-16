@@ -5,17 +5,16 @@ description: Découvrez comment déployer des clusters de données volumineuses 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e04986691b52149f0918b1559f1f3db1d99cab38
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0f2993d15cecd87879cabc50918d784a16750b30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958418"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Comment déployer des clusters de données volumineuses de SQL Server sur Kubernetes
 
@@ -84,7 +83,7 @@ Options sont définies dans les fichiers de configuration JSON de déploiement d
 |---|---|
 | **aks-dev-test** | Service Azure Kubernetes (AKS) |
 | **kubeadm-dev-test** | Plusieurs ordinateurs (kubeadm) |
-| **minikube-dev-test** | minikube |
+| **minikube-dev-test** | Minikube |
 
 Vous pouvez déployer un cluster de données volumineux en exécutant **mssqlctl bdc créer**. Cela vous invite à choisir une des configurations par défaut et vous guide ensuite dans le déploiement.
 
@@ -299,8 +298,8 @@ Storage  default        Ready
 
 En plus de ce résumé de l’état, vous pouvez également obtenir un état plus détaillé avec les commandes suivantes :
 
-- [mssqlctl bdc control status](reference-mssqlctl-bdc-control-status.md)
-- [mssqlctl bdc pool status](reference-mssqlctl-bdc-pool-status.md)
+- [état du contrôle mssqlctl bdc](reference-mssqlctl-bdc-control-status.md)
+- [état du pool mssqlctl bdc](reference-mssqlctl-bdc-pool-status.md)
 
 La sortie de ces commandes comprennent des URL vers des tableaux de bord Kibana et Grafana pour une analyse plus détaillée. 
 
