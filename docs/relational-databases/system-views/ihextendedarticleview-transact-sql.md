@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 19ef0a12-3214-4bb0-9c25-a665897e65a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7bc5734c0c8bed79516d94b96e7c6060e3650066
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0abca8ca826ec986a9cbf71f4fb577291e095e39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029542"
 ---
 # <a name="ihextendedarticleview-transact-sql"></a>IHextendedArticleView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **IHextendedArticleView** vue expose des informations sur les articles dans une publication non-SQL Server. Cette vue est stockée dans le **distribution** base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|Identificateur unique du serveur de publication.|  
 |**publication_id**|**Int**|Identificateur unique de la publication.|  
@@ -41,14 +40,14 @@ ms.locfileid: "52771401"
 |**description**|**nvarchar(255)**|Description de l'article.|  
 |**creation_script**|**nvarchar(255)**|Script de création du schéma de l'article.|  
 |**del_cmd**|**nvarchar(255)**|Commande exécutée pour une opération DELETE.|  
-|**Filter**|**Int**|Identificateur de la procédure stockée utilisée pour définir la partition horizontale.|  
+|**filter**|**int**|Identificateur de la procédure stockée utilisée pour définir la partition horizontale.|  
 |**filter_clause**|**ntext**|Clause WHERE utilisée pour filtrer horizontalement l'article.|  
 |**ins_cmd**|**nvarchar(255)**|Commande exécutée pour une opération INSERT.|  
 |**pre_creation_cmd**|**tinyint**|Commande de pré-création pour les instructions DROP TABLE, DELETE TABLE ou TRUNCATE :<br /><br /> **0** = none.<br /><br /> **1** = DROP.<br /><br /> **2** = DELETE.<br /><br /> **3** = TRUNCATE.|  
 |**status**|**tinyint**|Masque de bits de l'état et des options d'article, qui peut être le résultat OR logique au niveau du bit d'au moins l'une des valeurs suivantes :<br /><br /> **1** = article est actif.<br /><br /> **8** = inclut le nom de colonne dans les instructions INSERT.<br /><br /> **16** = utilise des instructions paramétré.<br /><br /> **24** = inclut le nom de colonne dans les instructions INSERT et utilise des instructions paramétrables.<br /><br /> Par exemple, un article actif utilisant des instructions paramétrables a une valeur de **17** dans cette colonne. La valeur **0** signifie que l’article est inactif et qu’aucune propriété supplémentaire est définie.|  
 |**type**|**tinyint**|Type d'article :<br /><br /> **1** = article basé sur le journal.<br /><br /> **3** = article basé sur journal avec filtre manuel.<br /><br /> **5** = article basé sur le journal avec vue manuelle.<br /><br /> **7** = article basé sur le journal avec filtre manuel et vue manuelle.|  
 |**upd_cmd**|**nvarchar(255)**|Commande exécutée pour une opération UPDATE.|  
-|**schema_option**|**binaire**|Indique ce qui doit faire l'objet d'un script. Consultez [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) pour obtenir la liste des options de schéma pris en charge.|  
+|**schema_option**|**binaire**|Indique ce qui doit être scriptée. Consultez [sp_addarticle &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) pour obtenir la liste des options de schéma pris en charge.|  
 |**dest_owner**|**sysname**|Propriétaire de l'objet publié dans la base de données de destination.|  
   
 ## <a name="see-also"></a>Voir aussi  
