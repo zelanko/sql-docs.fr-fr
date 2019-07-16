@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f258d7e49f86ed8015d8e51f2373633b7d7f10c4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d25713ba8fb298ce465910eae786befb710961d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899591"
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,15 +32,15 @@ ms.locfileid: "51663136"
   
   S’applique uniquement à SQL Server s’exécutant sur Windows. Pour afficher des informations similaires pour SQL Server s’exécutant sur un ordinateur hôte non Windows, tels que Linux, utilisez [sys.dm_os_host_info &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/sys-dm-os-host-info-transact-sql.md). 
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**windows_release**|**nvarchar (256)**|Pour Windows, retourne le numéro de version. Pour obtenir la liste de valeurs et les descriptions, consultez [Version de système d’exploitation (Windows)](/windows/desktop/SysInfo/operating-system-version). Ne peut pas avoir la valeur NULL.|  
 |**windows_service_pack_level**|**nvarchar (256)**| Pour Windows, retourne le numéro de service pack. Ne peut pas avoir la valeur NULL. |  
-|**windows_sku**|**Int**|Pour Windows, retourne l’ID d’unité de conservation des Stock (SKU) Windows. Pour obtenir la liste des ID de référence (SKU) et des descriptions, consultez [GetProductInfo, fonction](https://msdn.microsoft.com/library/ms724358.aspx). Est NULLable. |  
+|**windows_sku**|**int**|Pour Windows, retourne l’ID d’unité de conservation des Stock (SKU) Windows. Pour obtenir la liste des ID de référence (SKU) et des descriptions, consultez [GetProductInfo, fonction](https://msdn.microsoft.com/library/ms724358.aspx). Est NULLable. |  
 |**os_language_version**|**Int**| Pour Windows, retourne l’identificateur de paramètres régionaux (LCID) Windows du système d’exploitation. Pour obtenir la liste des valeurs LCID et des descriptions, consultez [ID de paramètres régionaux assignés par Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Ne peut pas avoir la valeur NULL.|  
   
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 L’autorisation SELECT sur sys.dm_os_windows_info est accordée au rôle public par défaut. Si révoqué, nécessite l’autorisation VIEW SERVER STATE sur le serveur.  
 
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions

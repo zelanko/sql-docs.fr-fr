@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c8ac59b6a9798f04efaf756c83b6862e9fa9871
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b677e0f6c9be058650a46aee3465811b8f3eecc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990143"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62719608"
   
 ## <a name="definition"></a>Définition  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**article_id**|**Int**|Identifie un article publié de manière unique.|  
 |**srvid**|**smallint**|L’ID de serveur de l’abonné.|  
@@ -43,8 +42,8 @@ ms.locfileid: "62719608"
 |**queued_reinit**|**bit**|Indique si l'article est marqué pour l'initialisation ou la réinitialisation. La valeur **1** indique que l’abonnement à l’article est marqué pour l’initialisation ou la réinitialisation.|  
 |**status**|**tinyint**|L’état de l’abonnement :<br /><br /> **0** = inactif.<br /><br /> **1** = abonné.<br /><br /> **2** = actif.|  
 |**sync_type**|**tinyint**|Type de synchronisation initiale :<br /><br /> **1** = automatique.<br /><br /> **2** = none.|  
-|**subscription_type**|**Int**|Le type d’abonnement :<br /><br /> **0** = push - l’agent de distribution s’exécute sur l’abonné.<br /><br /> **1** = par extraction - l’agent de distribution s’exécute sur le serveur de distribution.|  
-|**update_mode**|**tinyint**|Mode de mise à jour :<br /><br /> **0** = lecture seule.<br /><br /> **1** = Immediate-updating.|  
+|**subscription_type**|**int**|Le type d’abonnement :<br /><br /> **0** = push - l’agent de distribution s’exécute sur l’abonné.<br /><br /> **1** = par extraction - l’agent de distribution s’exécute sur le serveur de distribution.|  
+|**update_mode**|**tinyint**|Mode de mise à jour :<br /><br /> **0** = lecture seule.<br /><br /> **1** = mise à jour immédiate.|  
 |**loopback_detection**|**bit**|S'applique aux abonnements qui font partie d'une topologie de réplication transactionnelle bidirectionnelle. La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **0** = renvoie les transactions.<br /><br /> **1** = ne pas renvoyer.|  
   
 ## <a name="see-also"></a>Voir aussi  

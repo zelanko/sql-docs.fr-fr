@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 2766005287a522a84d209d995be0de9a94e45c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aaadf6f4226b2c9a457c7437412f35c1bbe20fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054707"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Vue d’ensemble de l’Assistant Migration de données
 Permet de Data Migration Assistant (DMA) mettre à niveau vers une plate-forme de données moderne en détectant les problèmes de compatibilité qui peuvent avoir un impact sur les fonctionnalités de base de données dans votre nouvelle version de SQL Server ou de la base de données SQL Azure. DMA recommande les améliorations des performances et la fiabilité de votre environnement cible et vous permet de déplacer votre schéma, les données et les objets de relation contenant-contenus de votre serveur source à votre serveur cible.
@@ -31,7 +30,7 @@ Permet de Data Migration Assistant (DMA) mettre à niveau vers une plate-forme d
 ## <a name="get-data-migration-assistant"></a>Obtenir Data Migration Assistant
 Pour installer le DMA, téléchargez la dernière version de l’outil à partir de la [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=53595), puis exécutez le **DataMigrationAssistant.msi** fichier.
 
-## <a name="capabilities"></a>Fonctions
+## <a name="capabilities"></a>Fonctionnalités
 - Évaluer les instances de SQL Server sur site vers les bases de données SQL Azure. Le flux de travail d’évaluation vous aide à détecter les problèmes suivants qui peuvent affecter la migration de base de données SQL Azure et fournit des instructions détaillées sur la façon de les résoudre.
 
   - Problèmes de blocage de migration : Détecte les problèmes de compatibilité qui bloquent la migration bases de données de SQL Server sur site pour les bases de données SQL Azure. DMA fournit des recommandations pour vous aider à résoudre ces problèmes.
@@ -67,17 +66,17 @@ DMA remplace toutes les versions précédentes du Conseiller de mise à niveau d
 
 **Sources**
 - SQL Server 2005
-- SQL Server 2008
-- SQL Server 2008 R2
-- SQL Server 2012 
+- SQL Server 2008
+- SQL Server 2008 R2
+- SQL Server 2012 
 - SQL Server 2014
-- SQL Server 2016
+- SQL Server 2016
 - SQL Server 2017 sur Windows
 
 **Cibles**
-- SQL Server 2012
+- SQL Server 2012
 - SQL Server 2014
-- SQL Server 2016
+- SQL Server 2016
 - SQL Server 2017 sur Windows et Linux
 - Azure SQL Database
 - Azure SQL Database Managed Instance

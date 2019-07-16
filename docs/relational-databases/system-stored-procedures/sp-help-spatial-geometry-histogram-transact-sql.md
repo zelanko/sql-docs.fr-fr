@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 914c68d313d77d1cb363f44daee2935976161418
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 640d292dfbef7adae9fc99b53cb3b450f698b651
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085125"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Une valeur de table est retournée. La grille suivante décrit le contenu de colonne de la table.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**Int**|Représente l'ID unique de chaque cellule ; le comptage démarre à 1.|  
 |**cell**|**geometry**|Polygone rectangulaire qui représente chaque cellule. La forme de cellule est identique à la forme de cellule utilisée pour l'indexation spatiale.|  

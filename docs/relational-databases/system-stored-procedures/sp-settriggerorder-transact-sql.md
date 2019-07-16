@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9dca1aca3883b16b13f4e0abdb842deaf5bbfdd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55fedd154195b4f5abf230120a0e16e6a41ce6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032931"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` Est le nom du déclencheur et le schéma auquel il appartient, le cas échéant, dont l’ordre doit être défini ou modifié. [_triggerschema_**.**] *triggername* est **sysname**. Si le nom ne correspond pas à un déclencheur ou si le nom correspond à un déclencheur INSTEAD OF, la procédure retourne une erreur. *triggerschema* ne peut pas être spécifié pour les déclencheurs DDL ou d’ouverture de session.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` Est le nom du déclencheur et le schéma auquel il appartient, le cas échéant, dont l’ordre doit être défini ou modifié. [_triggerschema_ **.** ] *triggername* est **sysname**. Si le nom ne correspond pas à un déclencheur ou si le nom correspond à un déclencheur INSTEAD OF, la procédure retourne une erreur. *triggerschema* ne peut pas être spécifié pour les déclencheurs DDL ou d’ouverture de session.  
   
 `[ @order = ] 'value'` Est le paramètre pour le nouvel ordre du déclencheur. *valeur* est **varchar (10)** et il peut prendre l’une des valeurs suivantes.  
   
@@ -61,7 +60,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  Un déclencheur peut être désigné comme la **première** ou **dernière** déclencheur pour un type d’instruction uniquement après que le déclencheur a été défini en tant que déclencheur pour ce type d’instruction. Par exemple, déclencher **TR1** peut être désignée **première** pour INSERT sur la table **T1** si **TR1** est défini comme un déclencheur INSERT. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne une erreur si **TR1**, ce qui a été défini uniquement comme un déclencheur INSERT, est défini comme un **première**, ou **dernière**, déclencheur pour une instruction de mise à jour. Pour plus d'informations, consultez la section Notes.  
   
- **@namespace=** { **'DATABASE'** | **'SERVER'** | NULL }  
+ **@namespace=** { **'DATABASE'**  |  **« SERVER »** | NULL}  
  Lorsque *triggername* est un déclencheur DDL, **@namespace** Spécifie si *triggername* a été créé avec étendue de base de données ou de serveur. Si *triggername* est un déclencheur d’ouverture de session, SERVER doit être spécifié. Pour plus d’informations sur l’étendue du déclencheur DDL, consultez [déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md). Si non spécifié, ou si la valeur NULL est spécifiée, *triggername* est un déclencheur DML.  
   
 ||  
@@ -109,7 +108,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-setting-the-firing-order-for-a-dml-trigger"></a>A. Définition de l'ordre d'activation d'un déclencheur DML  
+### <a name="a-setting-the-firing-order-for-a-dml-trigger"></a>R. Définition de l'ordre d'activation d'un déclencheur DML  
  L'exemple suivant spécifie que le déclencheur `uSalesOrderHeader` est le premier déclencheur à activer après une opération `UPDATE` sur la table `Sales.SalesOrderHeader`.  
   
 ```  

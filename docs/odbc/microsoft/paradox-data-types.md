@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8478e80ae2ebd19a3e0f2aa8307e0985b2c092d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043692"
 ---
 # <a name="paradox-data-types"></a>Types de données Paradox
 Le pilote ODBC Paradox mappe les types de données Paradox aux types de données ODBC SQL. Le tableau suivant répertorie tous les types de données Paradox et montre le SQL ODBC qu’ils sont mappés à des types de données.  
@@ -31,9 +30,9 @@ Le pilote ODBC Paradox mappe les types de données Paradox aux types de données
 |Type de données Paradox|Type de données ODBC|  
 |-----------------------|--------------------|  
 |ALPHANUMÉRIQUE|SQL_VARCHAR|  
-|AUTOINCREMENT[1]|SQL_INTEGER|  
+|AUTOINCREMENT [1]|SQL_INTEGER|  
 |BCD[1]|SQL_DOUBLE|  
-|BYTES[1]|SQL_BINARY|  
+|OCTETS [1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
 |IMAGE [2]|SQL_LONGVARBINARY|  
 |LOGIQUE [1]|SQL_BIT|  
@@ -59,6 +58,6 @@ Le pilote ODBC Paradox mappe les types de données Paradox aux types de données
 |ALPHANUMÉRIQUE|Création d’une colonne d’alphanumériques de zéro ou de longueur non spécifiée retourne en fait une colonne de 255 octets.|  
 |BYTES|Si vous insérez NULL dans une colonne binaire avec le pilote Paradox5, il est modifié en 0.|  
 |LONG|La valeur négative maximale prise en charge par le pilote Paradox pour le type de données de type Long dans Paradox 5. *x* n’est pas -2 ^ 31 (-2147483648), comme il convient depuis Long maps pour les données ODBC tapez SQL_INTEGER. La valeur négative maximale prise en charge pour Long est réellement -2 ^ 31 + 1 (-2147483647).|  
-|timestamp|Lorsqu’une valeur est insérée dans une colonne TIMESTAMP par le pilote Paradox, puis extraites par la suite de la colonne, la valeur récupérée peut être différente de la valeur insérée autant que de 1 seconde en raison de l’arrondi.|  
+|TIMESTAMP|Lorsqu’une valeur est insérée dans une colonne TIMESTAMP par le pilote Paradox, puis extraites par la suite de la colonne, la valeur récupérée peut être différente de la valeur insérée autant que de 1 seconde en raison de l’arrondi.|  
   
  Vous trouverez davantage de limites sur les types de données dans [Limitations des types de données](../../odbc/microsoft/data-type-limitations.md).

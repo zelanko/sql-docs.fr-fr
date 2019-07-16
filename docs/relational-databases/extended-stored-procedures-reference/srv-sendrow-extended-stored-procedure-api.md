@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d1ed05a99d46f523f2e7d119f097c5f5161d4ba2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 47bfaa2ceb0885379bd5633f0160d2a9b24cf3c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660778"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036034"
 ---
 # <a name="srvsendrow-extended-stored-procedure-api"></a>srv_sendrow (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ srvproc
 ## <a name="returns"></a>Valeur renvoyée  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction **srv_sendrow** est appelée une fois pour chaque ligne envoyée au client. Toutes les lignes doivent être envoyées au client avant que les messages, valeurs d'état ou états d'achèvement ne soient envoyés avec **srv_sendmsg**, **srv_status**ou **srv_senddone**.  
   
  L'envoi d'une ligne dont toutes les colonnes n'ont pas été définies avec **srv_describe** oblige l'application de l'API de procédure stockée étendue à déclencher un message d'erreur d'information et à retourner FAIL au client. Dans ce cas, la ligne n'est pas envoyée.  
@@ -60,9 +59,9 @@ srvproc
 >  L'API de procédure stockée étendue ne prend pas en charge l'envoi de lignes calculées au client. En outre, si une ligne contenant des données **ntext**, **text**ou **image** est envoyée au client, le pointeur de texte et l'horodateur de texte ne sont pas inclus.  
   
 > [!IMPORTANT]  
->  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [srv_describe &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
   
   

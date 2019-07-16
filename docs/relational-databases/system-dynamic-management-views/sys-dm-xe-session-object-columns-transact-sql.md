@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e87e0d981d2ee6f18368394329cf524da7e49a22
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 039c3b0be4feab53215bae22836b7fd5be4ecfb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090235"
 ---
 # <a name="sysdmxesessionobjectcolumns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Indique les valeurs de configuration d'objets liés à une session.  
+  Montre les valeurs de configuration pour les objets liés à une session.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|Adresse mémoire de la session d'événements. A une relation plusieurs-à-un avec sys.dm_xe_sessions.address. N'accepte pas la valeur NULL.|  
 |column_name|**nvarchar (256)**|Nom de la valeur de configuration. N'accepte pas la valeur NULL.|  
-|column_id|**Int**|ID de la colonne. Unique dans l'objet. N'accepte pas la valeur NULL.|  
+|column_id|**int**|ID de la colonne. Unique dans l'objet. N'accepte pas la valeur NULL.|  
 |column_value|**nvarchar(3072)**|Valeur configurée de la colonne. Autorise la valeur NULL.|  
 |object_type|**nvarchar(60)**|Type de l’objet. N'accepte pas la valeur NULL. object_type fait partie de :<br /><br /> événement<br /><br /> target|  
 |object_name|**nvarchar (256)**|Nom de l'objet auquel appartient cette colonne. N'accepte pas la valeur NULL.|  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44e773248cd2d61e211f6de98d5a0f81acc78bd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 884a33339db10ee8e07d8b432d1765720d45734a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019452"
 ---
 # <a name="insert---sql-command"></a>INSERT, commande SQL
 Ajoute un enregistrement à la fin d’une table qui contient les valeurs de champ spécifié.  
@@ -41,10 +40,10 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
   
  Si la table que vous spécifiez est ouverte, INSERT ajoute le nouvel enregistrement à la table. Si la table est ouverte dans une zone de travail autres que la zone de travail actuel, il n’est pas sélectionné après l’ajout de l’enregistrement ; la zone de travail actuel est sélectionnée.  
   
- [( *fname1*[, *fname2*[, ...]])]  
+ [( *fname1*[, *fname2*[,...]])]  
  Spécifie, dans le nouvel enregistrement, les noms des champs dans lesquels les valeurs sont insérées.  
   
- VALUES ( *eExpression1*[, *eExpression2*[, ...]])  
+ VALEURS ( *eExpression1*[, *eExpression2*[,...]])  
  Spécifie les valeurs de champ insérés dans le nouvel enregistrement. Si vous omettez les noms de champ, vous devez spécifier les valeurs de champ dans l’ordre défini par la structure de table.  
   
 ## <a name="remarks"></a>Notes  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6819b28ba57f1e6314535a6a90ad13de39b4842c
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 95a44698c12abf0de64c8d6f7d316e9156dc139c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019107"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Conversion de données de SQL en types de données C
 Lorsqu’une application appelle **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**, le pilote récupère les données à partir de la source de données. Si nécessaire, il convertit les données à partir du type de données dans lequel, récupérés par le pilote pour le type de données spécifié par le *TargetType* argument dans **SQLBindCol** ou **SQLGetData.** Enfin, il stocke les données dans l’emplacement vers lequel pointé le *TargetValuePtr* argument dans **SQLBindCol** ou **SQLGetData** (et le champ SQL_DESC_DATA_PTR de la ARD).  
@@ -53,9 +52,9 @@ Lorsqu’une application appelle **SQLFetch**, **SQLFetchScroll**, ou **SQLGetDa
   
  Cette section contient les rubriques suivantes.  
   
--   [SQL pour c : Character](../../../odbc/reference/appendixes/sql-to-c-character.md)  
+-   [SQL pour c : Caractère](../../../odbc/reference/appendixes/sql-to-c-character.md)  
   
--   [SQL pour c : Numeric](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
+-   [SQL pour c : Numérique](../../../odbc/reference/appendixes/sql-to-c-numeric.md)  
   
 -   [SQL pour c : Bit](../../../odbc/reference/appendixes/sql-to-c-bit.md)  
   

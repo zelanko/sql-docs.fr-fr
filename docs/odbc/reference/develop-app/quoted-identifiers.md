@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0a81237eddd4836394cc9797a79690ba4b49a35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bc4d8378c243edf9f01cca58ff8be11d675711a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079002"
 ---
 # <a name="quoted-identifiers"></a>Identificateurs entre guillemets
 Dans une instruction SQL, les identificateurs contenant des caractères spéciaux ou des mots clés de correspondance doivent être placés entre *guillemets identificateur*; les identificateurs placés entre ces caractères sont appelés *d’identificateursentreguillemets*(également appelé *identificateurs délimités* dans SQL-92). Par exemple, l’identificateur de comptes fournisseurs est citée dans l’exemple suivant **sélectionnez** instruction :  

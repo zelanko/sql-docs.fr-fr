@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: af00a85aa1515ae5d43e6842fede00880bf9a573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4117d8c16e96252f792e14d282d285527008874f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959393"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Démarrage rapide : Se connecter et interroger à l’aide de SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Ce démarrage rapide montre comment utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter à SQL Server, puis utiliser les instructions Transact-SQL (T-SQL) pour créer le *TutorialDB* utilisé dans [!INCLUDE[name-sos](../includes/name-sos-short.md)] didacticiels.
@@ -48,7 +47,7 @@ Si vous n’avez pas accès à un serveur SQL, sélectionnez votre plateforme pa
     - **Nom d’utilisateur :** Nom d’utilisateur pour le serveur SQL Server  
     - **Mot de passe :** Mot de passe pour le serveur SQL Server  
     - **Nom de la base de données :** laissez ce champ vide 
-    - **Groupe de serveurs :** \<Default\>  
+    - **Groupe de serveurs :** \<Par défaut\>  
 
    ![Nouvel écran de connexion](media/quickstart-sql-server/new-connection-screen.png)
 

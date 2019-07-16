@@ -7,13 +7,12 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: aa4d6c38423a805ef672761e3f202061ed842304
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: ad6377e73633d34b322e5f455f0dd08143c53529
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962334"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>Configuration du service Launchpad de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,7 +44,7 @@ Pour plus d’informations sur les autorisations requises pour exécuter les ser
 
 En règle générale, il n’existe aucune raison de modifier la configuration du service. Les propriétés qui peut être changées incluent le compte de service, le nombre de processus externes (20 par défaut), ou le mot de passe réinitialisé la stratégie pour les comptes de travail.
 
-1. Ouvrez le [Gestionnaire de configuration SQL Server](../../relational-databases/sql-server-configuration-manager.md).
+1. Ouvrez le [Gestionnaire de configuration de SQL Server](../../relational-databases/sql-server-configuration-manager.md).
 
 2. Sous SQL Server Services, cliquez sur SQL Server Launchpad et sélectionnez **propriétés**.
   + Pour modifier le compte de service, cliquez sur le **ouverture de session** onglet.

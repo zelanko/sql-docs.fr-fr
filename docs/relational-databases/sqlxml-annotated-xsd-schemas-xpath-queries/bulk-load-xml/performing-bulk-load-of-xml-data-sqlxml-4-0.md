@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f22b729aa34640f2e264fddcb79ce44de25e3e13
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9176bb636577c2339309c9a70e2359c2109e5c20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086888"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Exécution du chargement en masse de données XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "56011130"
  [Enregistrer le processus de génération &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/record-generation-process-sqlxml-4-0.md)  
  Décrit le processus et les règles régissant la génération des enregistrements pour le chargement en masse XML.  
   
- [Annotation Interpretation &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+ [Interprétation des annotations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
  Décrit la façon dont le chargement en masse XML interprète les annotations dans les schémas XSD et XDR.  
   
  [Modèle objet chargement en masse SQL Server XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)  

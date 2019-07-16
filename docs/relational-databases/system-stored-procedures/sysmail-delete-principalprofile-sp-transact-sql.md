@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8fc14700-e17a-4073-9a96-7fc23e775c69
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ae63fabdca36e70daa6da28daa136a5dfcec8e1f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 86f9566ce86423939aff22fc37331c5c9db89904
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909209"
 ---
 # <a name="sysmaildeleteprincipalprofilesp-transact-sql"></a>sysmail_delete_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ sysmail_delete_principalprofile_sp  { [ @principal_id = ] principal_id | [ @prin
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @principal_id = ] principal_id` Est l’ID de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à supprimer. *principal_id* est **int**, avec NULL comme valeur par défaut. Pour rendre un profil public en profil privé, fournissez l’identificateur principal **0** ou le nom principal **'public'**. Soit *principal_id* ou *principal_name* doit être spécifié.  
+`[ @principal_id = ] principal_id` Est l’ID de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à supprimer. *principal_id* est **int**, avec NULL comme valeur par défaut. Pour rendre un profil public en profil privé, fournissez l’identificateur principal **0** ou le nom principal **'public'** . Soit *principal_id* ou *principal_name* doit être spécifié.  
   
-`[ @principal_name = ] 'principal_name'` Est le nom de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à supprimer. *principal_name* est **sysname**, avec NULL comme valeur par défaut. Pour rendre un profil public en profil privé, fournissez l’identificateur principal **0** ou le nom principal **'public'**. Soit *principal_id* ou *principal_name* doit être spécifié.  
+`[ @principal_name = ] 'principal_name'` Est le nom de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à supprimer. *principal_name* est **sysname**, avec NULL comme valeur par défaut. Pour rendre un profil public en profil privé, fournissez l’identificateur principal **0** ou le nom principal **'public'** . Soit *principal_id* ou *principal_name* doit être spécifié.  
   
 `[ @profile_id = ] profile_id` Est l’ID du profil pour l’association à supprimer. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
   

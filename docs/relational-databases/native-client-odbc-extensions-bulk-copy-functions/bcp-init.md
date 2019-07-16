@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74400acc3030967a985fca6041a60b96947ef64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e47c7c4f5324da021db2624e5e936493fd54ea45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895530"
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ RETCODE bcp_init (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *pas*  
+ *hdbc*  
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *szTable*  
@@ -84,7 +83,7 @@ RETCODE bcp_init (
   
 -   Lors de la copie vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la position ordinale d'une colonne du fichier de données doit être identique à la position ordinale de la colonne de la table de base de données. Lors de la copie à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **bcp_exec** place les données selon la position ordinale de la colonne dans la table de base de données.  
   
--   Si un type de données de base de données est variable en longueur (par exemple, **varbinary (22)**) ou si une colonne de base de données peut contenir des valeurs null, les données dans le fichier de données sont préfixées par un indicateur de longueur/null. La largeur de l'indicateur varie selon le type de données et la version de la copie en bloc.  
+-   Si un type de données de base de données est variable en longueur (par exemple, **varbinary (22)** ) ou si une colonne de base de données peut contenir des valeurs null, les données dans le fichier de données sont préfixées par un indicateur de longueur/null. La largeur de l'indicateur varie selon le type de données et la version de la copie en bloc.  
   
  Pour modifier les valeurs de format de données spécifiés pour un fichier de données, appelez [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) et [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md).  
   

@@ -2,19 +2,18 @@
 title: Éléments de langage T-SQL - Parallel Data Warehouse | Microsoft Docs
 description: Éléments de langage T-SQL pour Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f019599e5dde2759da9f1e8f94e71b2fe2b9c9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959942"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Éléments de langage T-SQL pour Parallel Data Warehouse
 Éléments de langage T-SQL pour Analytics Platform System (APS) SQL Server Parallel Data Warehouse (PDW).
@@ -69,7 +68,7 @@ ms.locfileid: "63035000"
 * [N’EST PAS](../t-sql/queries/is-null-transact-sql.md)
 * [LIKE](../t-sql/language-elements/like-transact-sql.md)
 * [NOT](../t-sql/language-elements/not-transact-sql.md)
-* [OR](../t-sql/language-elements/or-transact-sql.md)
+* [OU](../t-sql/language-elements/or-transact-sql.md)
 
 ### <a name="bitwise-operators"></a>Opérateurs de bits
 * [& (AND au niveau du bit)](../t-sql/language-elements/bitwise-and-transact-sql.md)

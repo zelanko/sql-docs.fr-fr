@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4b7534a806a856dee922ead1055da6a7567a4d8c
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: ea963c07a15cd5c2db3cca113680026d3100936b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942575"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -47,7 +46,7 @@ ms.locfileid: "67716602"
 |**direction**|Type de bande passante utilisé, un des suivants :<br /><br /> Entrée : Les données sont déplacées dans le [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Sortie : Les données sont déplacées hors de la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**class**|Classe de bande passante utilisée, une des suivantes :<br />Interne : Données qui sont déplacent au sein de la plateforme Azure.<br />Externes : Données qui se déplacent hors de la plateforme Azure.<br /><br /> Cette classe est retournée uniquement si la base de données est engagée dans une relation de copie continue entre des régions ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Si une base de données n’est pas inclus dans une relation de copie continue, les lignes « Interlink » ne sont pas retournés. Pour plus d’informations, consultez la section « Remarques » plus loin dans cette rubrique.|  
 |**time_period**|La période de temps lorsque l’utilisation s’est produite est pointe ou fixes. La période de pointe (Peak) repose sur la zone dans laquelle le serveur a été créée. Par exemple, si un serveur a été créé dans la zone « US_Northwest », la période de pointe est définie comme étant entre 10h00 et et 18 h 00. PST.|  
-|**quantity**|Quantité de bande passante, en kilo-octets (Ko), qui a été utilisée.|  
+|**Quantité**|Quantité de bande passante, en kilo-octets (Ko), qui a été utilisée.|  
   
 ## <a name="permissions"></a>Autorisations
 

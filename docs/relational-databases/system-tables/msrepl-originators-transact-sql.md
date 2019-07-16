@@ -17,26 +17,25 @@ helpviewer_keywords:
 ms.assetid: a3ac20a6-73f6-4fdc-ad5f-5f72746c9871
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e12c62d9cbbc1f856e862fc64331f6cbb280ee7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4e5d98606d14e660b0dcbad43eecf97ce6446767
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079180"
 ---
 # <a name="msreploriginators-transact-sql"></a>MSrepl_originators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSrepl_originators** table contient une ligne pour chaque abonné de mettre à jour à partir de laquelle la transaction a débuté. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**Int**|Identifie l'Abonné associé à la mise à jour|  
-|**publisher_database_id**|**Int**|Identifie la base de données de publication.|  
+|**id**|**int**|Identifie l'Abonné associé à la mise à jour|  
+|**publisher_database_id**|**int**|Identifie la base de données de publication.|  
 |**srvname**|**sysname**|Nom du serveur de mise à jour.|  
 |**dbname**|**sysname**|Nom de la base de données de mise à jour.|  
-|**publication_id**|**Int**|Identifie la publication.|  
+|**publication_id**|**int**|Identifie la publication.|  
 |**dbversion**|**Int**|Identifie la version de base de données.|  
   
 ## <a name="see-also"></a>Voir aussi  

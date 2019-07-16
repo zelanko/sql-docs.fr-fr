@@ -17,14 +17,13 @@ ms.assetid: 78f318a4-7a36-473b-9852-a4bae6940ce5
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba0a36903a63afb8be5c846d02784ef5872fefb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ea2514071755db267065c1e5855b6c09ebf4a25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066910"
 ---
 # <a name="using-annotations-in-xsd-schemas-sqlxml-40"></a>Utilisation des annotations dans les schémas XSD (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65980676"
 >  Tous les exemples de cette section spécifient des requêtes XPath simples sur le schéma XSD annoté décrit dans chaque exemple. Ces exemples présument que vous connaissiez le langage XPath.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [XSD Annotations &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
+ [Annotations XSD &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
  Répertorie les annotations que vous pouvez utiliser avec les schémas XSD, leurs descriptions et les annotations équivalentes pour XDR.  
   
  [Mappage par défaut d’éléments XSD et d’attributs aux Tables et colonnes &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-4-0.md)  

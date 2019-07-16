@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936656"
 ---
 # <a name="type-property-example-field-vc"></a>Type, exemple de propriété (objet Field) (VC++)
 Cet exemple montre la [Type](../../../ado/reference/ado-api/type-property-ado.md) propriété en affichant le nom de la constante qui correspond à la valeur de la **Type** propriété de tous les le [champ](../../../ado/reference/ado-api/field-object.md) des objets dans le ***Employés*** table. La fonction FieldType est requise pour exécuter cette procédure.  
@@ -166,7 +165,7 @@ void PrintComError(_com_error &e) {
  **Nom : job_id**  
  **Type : adSmallInt**  
  **Nom : job_lvl**  
- **Type: adUnsignedTinyInt**  
+ **Type : adUnsignedTinyInt**  
  **Nom : pub_id**  
  **Type : adChar**  
  **Nom : hire_date**  

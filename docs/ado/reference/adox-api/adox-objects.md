@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3f5287e9-f62c-40c4-bb59-985102be956e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89c414c684ee41e7b7607acc1142d01c961566a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16ff3c926b1c0457f0f0dda382881aad45fb4efd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928503"
 ---
 # <a name="adox-objects"></a>Objets ADOX
 ## <a name="adox-object-summary"></a>Liste des objets ADOX  
@@ -30,10 +29,10 @@ ms.locfileid: "66708416"
 |[Colonne](../../../ado/reference/adox-api/column-object-adox.md)|Représente une colonne de table, d’index ou de clé.|  
 |[Grouper](../../../ado/reference/adox-api/group-object-adox.md)|Représente un compte de groupe qui dispose des autorisations d’accès au sein d’une base de données sécurisée.|  
 |[Index](../../../ado/reference/adox-api/index-object-adox.md)|Représente un index à partir d’une table de base de données.|  
-|[Clé](../../../ado/reference/adox-api/key-object-adox.md)|Représente un champ de clé primaire, étrangère ou unique à partir d’une table de base de données.|  
+|[Key](../../../ado/reference/adox-api/key-object-adox.md)|Représente un champ de clé primaire, étrangère ou unique à partir d’une table de base de données.|  
 |[Procédure](../../../ado/reference/adox-api/procedure-object-adox.md)|Représente une procédure stockée.|  
 |[Table](../../../ado/reference/adox-api/table-object-adox.md)|Représente une table de base de données, y compris les colonnes, les index et les clés.|  
-|[Utilisateur](../../../ado/reference/adox-api/user-object-adox.md)|Représente un compte d’utilisateur qui dispose des autorisations d’accès au sein d’une base de données sécurisée.|  
+|[User](../../../ado/reference/adox-api/user-object-adox.md)|Représente un compte d’utilisateur qui dispose des autorisations d’accès au sein d’une base de données sécurisée.|  
 |[Affichage](../../../ado/reference/adox-api/view-object-adox.md)|Représente un ensemble filtré d’enregistrements ou une table virtuelle.|  
   
  Les relations entre ces objets sont illustrées dans le [modèle objet ADOX](../../../ado/reference/adox-api/adox-object-model.md).  

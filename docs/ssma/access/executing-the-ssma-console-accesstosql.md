@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63473528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006571"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>Exécution de la Console SSMA (AccessToSQL)
 Microsoft vous offre un ensemble complet de commandes de fichier de script et les options de ligne de commande pour exécuter et contrôler les activités SSMA. Les sections suivantes détaillent les mêmes.  
@@ -25,7 +24,7 @@ Les commandes de projet gèrent la création de projets, ouvrir, enregistrer et 
   
 **Commande**  
   
-create-new-project: Crée un nouveau projet SSMA.  
+Créer-nouveau projet : Crée un nouveau projet SSMA.  
   
 **Script**  
   
@@ -33,25 +32,25 @@ create-new-project: Crée un nouveau projet SSMA.
   
 -   `project-name` Indique le nom du projet. {string}  
   
--   `overwrite-if-exists`Attribut facultatif indique si un projet existant doit être remplacé. {boolean}  
+-   `overwrite-if-exists`Attribut facultatif indique si un projet existant doit être remplacé. {valeur booléenne}  
   
 -   `project-type` est un attribut facultatif.  Les options suivantes sont disponibles pour le type de projet :  
   
-    -   sql-server-2005  
+    -   SQL-server-2005  
   
     -   sql-server-2008  
   
-    -   sql-server-2012  
+    -   SQL-server-2012  
   
-    -   sql-server-2014  
+    -   SQL-server-2014  
   
-    -   sql-server-2016  
+    -   SQL-server-2016  
   
     -   sql-azure  
   
     Valeur par défaut est « sql server 2008 ».  
   
-**Exemple :**  
+**Exemple :**  
   
 ```xml  
 <create-new-project  
@@ -132,7 +131,7 @@ Pour plus d’informations sur la « Création de fichiers de Script », consu
   
 **Commande**  
   
-connect-source-database  
+se connecter--base de données source  
   
 -   Effectue la connexion à la base de données source et charge les métadonnées de niveau élevée de la base de données source mais pas toutes les métadonnées.  
   
@@ -203,7 +202,7 @@ ou Gestionnaire de configuration
 ```  
 **Commande**  
   
-reconnect-source-database  
+se reconnecter--base de données source  
   
 -   Se reconnecte à la base de données source mais ne se charge pas toutes les métadonnées contrairement à la commande connect--base de données source.  
   
@@ -218,7 +217,7 @@ reconnect-source-database
 ```  
 **Commande**  
   
-connect-target-database  
+se connecter--base de données cible  
   
 -   Se connecte à la base de données SQL Server ou SQL Azure cible et charge entièrement les métadonnées de niveau élevée de la base de données cible mais pas les métadonnées.  
   
@@ -235,7 +234,7 @@ Définition de serveur est récupérée à partir de l’attribut de nom défini
 ```  
 **Commande**  
   
-reconnect-target-database  
+se reconnecter--base de données cible  
   
 -   Se reconnecte à la base de données cible, mais ne se charge pas toutes les métadonnées, contrairement à la commande connect--base de données cible.  
   
@@ -531,7 +530,7 @@ La sortie de console par défaut définissant pour les commandes de migration es
   
 **Commande**  
   
-synchronize-target  
+synchroniser la cible  
   
 1.  Synchronise les objets cibles avec la base de données cible.  
   
@@ -547,11 +546,11 @@ synchronize-target
   
 3.  `on-error:` Spécifie s’il faut spécifier des erreurs de synchronisation comme des avertissements ou erreurs. Options disponibles pour en cas d’erreur :  
   
-    -   report-total-as-warning  
+    -   Rapport total en tant qu’avertissement  
   
-    -   report-each-as-warning  
+    -   rapport-each-sous-avertissement  
   
-    -   fail-script  
+    -   Échec-script  
   
 4.  `report-errors-to:` Spécifie l’emplacement du rapport d’erreurs pour l’opération de synchronisation (attribut facultatif) si seul le chemin d’accès du dossier est indiqué, puis de fichiers par nom **TargetSynchronizationReport.XML** est créé.  
   
@@ -596,7 +595,7 @@ ou Gestionnaire de configuration
 ```  
 **Commande**  
   
-refresh-from-database  
+actualisation de base de données  
   
 -   Actualise les objets de la source à partir de la base de données.  
   
@@ -612,11 +611,11 @@ Nécessite un ou plusieurs nœuds de la métabase en tant que paramètre de lign
   
 3.  `on-error:` Spécifie s’il faut spécifier des erreurs d’actualisation comme des avertissements ou erreurs. Options disponibles pour en cas d’erreur :  
   
-    -   report-total-as-warning  
+    -   Rapport total en tant qu’avertissement  
   
-    -   report-each-as-warning  
+    -   rapport-each-sous-avertissement  
   
-    -   fail-script  
+    -   Échec-script  
   
 4.  `report-errors-to:` Spécifie l’emplacement du rapport d’erreurs pour l’opération d’actualisation (attribut facultatif) si seul le chemin d’accès du dossier est indiqué, puis de fichiers par nom **SourceDBRefreshReport.XML** est créé.  
   
@@ -661,7 +660,7 @@ La génération du Script de commandes vous permettent d’enregistrer la sortie
   
 **Commande**  
   
-save-as-script  
+Enregistrer en tant que script  
   
 Utilisé pour enregistrer les Scripts des objets dans un fichier mentionné lorsque la métabase = cible, il s’agit d’une alternative à la commande de synchronisation là où nous obtenir les scripts dans et exécutez le même sur la base de données cible.  
   

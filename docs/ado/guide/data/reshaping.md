@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b1c965b7-3dad-4de6-9e0e-502ca8785be3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6d7137d67c14cd435ffe814a3bfbf0e42a7be976
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 213ed5f05133733b8336f184599ca8ef3e4028a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924350"
 ---
 # <a name="reshaping"></a>Remise en forme
 Un **Recordset** créé par une clause d’une forme commande peut-être être affectée un *alias* nom (généralement avec le mot clé AS). L’alias d’une forme **Recordset** peut être référencée dans une commande totalement différente. Autrement dit, vous pouvez réutiliser ou *remodeler*, un préalablement mis en forme **Recordset** dans une nouvelle commande de forme. Pour prendre en charge cette fonctionnalité, ADO fournit une propriété, [Reshape Name](../../../ado/reference/ado-api/reshape-name-property-dynamic-ado.md).  

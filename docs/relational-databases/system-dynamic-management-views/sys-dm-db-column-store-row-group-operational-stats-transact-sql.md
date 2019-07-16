@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 31b71c68-50a0-4fd8-a7fe-2d2292be1163
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b4d3c98f54f6f72d111f96e58e1ddafaab27e949
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03e97e38eb396aa24c9779d07f269a60f117ab09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005039"
 ---
 # <a name="sysdmdbcolumnstorerowgroupoperationalstats-transact-sql"></a>sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -29,20 +28,20 @@ ms.locfileid: "47782817"
  Les index columnstore en mémoire n’apparaissent pas dans cette vue DMV.  
  
  
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|ID de la table contenant l’index columnstore.|  
-|**index_id**|**Int**|ID de l'index columnstore.|  
+|**object_id**|**int**|ID de la table contenant l’index columnstore.|  
+|**index_id**|**int**|ID de l'index columnstore.|  
 |**partition_number**|**Int**|Numéro de partition (basé sur la valeur 1) au sein de l'index ou du segment de mémoire.|  
-|**row_group_id**|**Int**|ID du rowgroup dans l’index columnstore. Il est unique au sein d’une partition.|  
+|**row_group_id**|**int**|ID du rowgroup dans l’index columnstore. Il est unique au sein d’une partition.|  
 |**scan_count**|**Int**|Nombre d’analyses via le groupe de lignes depuis le dernier redémarrage SQL.|  
 |**delete_buffer_scan_count**|**Int**|Nombre de fois où que le tampon de suppression a été utilisé pour déterminer les lignes supprimées dans ce groupe de lignes. Cela inclut l’accès à la table de hachage en mémoire et de l’arbre b sous-jacent.|  
-|**index_scan_count**|**Int**|Nombre de fois que la partition d’index columnstore a été analysée. Cela est identique pour tous les rowgroups dans la partition.|  
+|**index_scan_count**|**int**|Nombre de fois que la partition d’index columnstore a été analysée. Cela est identique pour tous les rowgroups dans la partition.|  
 |**rowgroup_lock_count**|**bigint**|Nombre cumulatif de demandes de verrous pour ce groupe de lignes depuis le dernier redémarrage SQL.|  
 |**rowgroup_lock_wait_count**|**bigint**|Nombre cumulatif de fois où le moteur de base de données a attendu sur ce verrou de groupe de lignes depuis le dernier redémarrage SQL.|  
 |**rowgroup_lock_wait_in_ms**|**bigint**|Nombre cumulatif de millisecondes le moteur de base de données a attendu sur ce verrou de groupe de lignes depuis le dernier redémarrage SQL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations suivantes sont nécessaires :  
   
 -   Autorisation CONTROL sur la table spécifiée par object_id.  
@@ -63,7 +62,7 @@ ms.locfileid: "47782817"
  [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
- [Sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
+ [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3f62d2119764466cabb542d26849712d733453ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917739"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 Spécifie si le [paramètre](../../../ado/reference/ado-api/parameter-object.md) représente un paramètre d’entrée, un paramètre de sortie, à la fois une entrée et un paramètre de sortie, ou la valeur de retour d’une procédure stockée.  

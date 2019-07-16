@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 52440d9e-89fd-4c15-a008-a1ea99f41387
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 44e8d02cd90000a3a473a2e864345c483e5fda9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8b46b6dd56744d0c55a7276e000db2a49889d1fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005261"
 ---
 # <a name="architecture-of-client-side-and-server-side-xml-formatting-sqlxml-40"></a>Architecture de la mise en forme XML côté client et côté serveur (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "56028940"
   
  ![Architecture de mise en forme XML côté client. ](../../../relational-databases/sqlxml/formatting/media/clientsidexml.gif "Mise en forme de l’architecture de données XML du côté client.")  
   
- Dans cet exemple, le client utilise le fournisseur SQLXMLOLEDB. Dans la chaîne de connexion, vous devez définir la propriété du fournisseur de données SQLOLEDB. (C'est la seule valeur acceptée dans SQLXML 4.0.) La commande exécutée sur le client est envoyée au serveur. L'ensemble de lignes généré sur le serveur est envoyé au client. La mise en forme du document XML de l'ensemble de lignes est effectuée sur le client.  
+ Dans cet exemple, le client utilise le fournisseur SQLXMLOLEDB. Dans la chaîne de connexion, vous devez définir la propriété du fournisseur de données SQLOLEDB. (Ceci est la seule valeur acceptée dans SQLXML 4.0). La commande est exécutée sur le client est envoyée au serveur. L'ensemble de lignes généré sur le serveur est envoyé au client. La mise en forme du document XML de l'ensemble de lignes est effectuée sur le client.  
   
  Dans SQLXML 4.0, le fournisseur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (SQLNCLI11) ou le fournisseur SQLOLEDB peut être utilisé en tant que fournisseur de données. Vous pouvez éventuellement accéder à n'importe quelle source de données. Tant que la requête retourne un ensemble de lignes unique, la transformation XML peut être appliquée sur le client.  
   

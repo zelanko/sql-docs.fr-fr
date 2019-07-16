@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 75d95fbe9c289eab419360bef35263b41930c9f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19b78ff53b5640d74b49d2e5956c39aa1df2e230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068070"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque repère de plan dans la base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**plan_guide_id**|**Int**|Identificateur unique du repère de plan dans la base de données.|  
-|**nom**|**sysname**|Nom du repère de plan.|  
+|**plan_guide_id**|**int**|Identificateur unique du repère de plan dans la base de données.|  
+|**name**|**sysname**|Nom du repère de plan.|  
 |**create_date**|**datetime**|Date et heure de création du repère de plan.|  
 |**modify_date**|**DateTime**|Date de la dernière modification du repère de plan.|  
 |**is_disabled**|**bit**|1 = Repère de plan désactivé.<br /><br /> 0 = Repère de plan activé.|  

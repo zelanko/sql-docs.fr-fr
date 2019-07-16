@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa80ff3359e3bbbed9e28044cce7514006c40f10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5f4b7101718ea8372c9635a064dc81e1d8f6c1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023392"
 ---
 # <a name="optimistic-concurrency"></a>Accès concurrentiel optimiste
 *L’accès concurrentiel optimiste* tire son nom l’hypothèse optimiste que collisions entre les transactions seront produit rarement, une collision d’on dit avoir eu lieu lorsqu’une autre transaction met à jour ou supprime une ligne de données entre le moment où il est en lecture par la transaction en cours et le temps, il est mis à jour ou supprimé. Il est l’opposé de *d’accès concurrentiel pessimiste,* ou de verrouillage, dans lequel le développeur d’applications est convaincu que ces collisions sont très courants.  

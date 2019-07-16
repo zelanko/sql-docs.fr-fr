@@ -19,37 +19,36 @@ helpviewer_keywords:
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026847"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Retourne l'état actuel des transactions validées qui ont supprimé une ou plusieurs lignes. Le thread garbage collection inactif s'exécute toutes les minutes, ou lorsque le nombre de transactions DML validées dépasse un seuil interne depuis le dernier cycle de garbage collection. Pendant le cycle de garbage collection, il déplace les transactions validées dans une ou plusieurs files d'attente associées aux générations. Les transactions qui ont généré des versions obsolètes sont regroupées en une unité de 16 transactions pouvant appartenir à 16 générations, comme suit :  
   
--   Génération 0 : stocke toutes les transactions validées avant la transaction active la plus ancienne. Les versions de ligne générées par ces transactions sont immédiatement disponibles pour le garbage collection.  
+-   Génération 0 : Cela enregistre toutes les transactions validées antérieures à la plus ancienne transaction active. Les versions de ligne générées par ces transactions sont immédiatement disponibles pour le garbage collection.  
   
--   Générations 1-14 : stockent toutes les transactions avec un horodateur supérieur à la transaction active la plus ancienne. Les versions de ligne ne peuvent pas être récupérées par le garbage collector. Chaque génération peut contenir jusqu'à 16 transactions. 224 (14 * 16) transactions au total peuvent exister dans ces générations.  
+-   Générations 1-14 : Stocke les transactions avec un horodateur supérieur à la plus ancienne transaction active. Les versions de ligne ne peuvent pas être récupérées par le garbage collector. Chaque génération peut contenir jusqu'à 16 transactions. 224 (14 * 16) transactions au total peuvent exister dans ces générations.  
   
--   Génération 15 : les transactions restantes avec un horodateur supérieur à la transaction active la plus ancienne vont dans la génération 15. Similairement à la génération 0, il n'y a pas de limite au nombre de transactions dans la génération 15.  
+-   Générations 15 : Les transactions restantes avec un horodateur supérieur à la transaction active la plus ancienne vont dans la génération 15. Similairement à la génération 0, il n'y a pas de limite au nombre de transactions dans la génération 15.  
   
  En cas de sollicitation de la mémoire, le thread de garbage collection force la mise à jour de l'indicateur de la transaction active la plus ancienne, ce qui force le garbage collection.  
   
  Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Nom de colonne|Type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Identificateur unique pour le cycle de garbage collection.|  
 |ticks_at_cycle_start|**bigint**|Graduations au démarrage du cycle.|  
 |ticks_at_cycle_end|**bigint**|Graduations à la fin du cycle.|  
-|base_generation|**bigint**|Valeur de génération de base actuelle dans la base de données. Cela représente l'horodateur de la transaction active la plus ancienne utilisé pour identifier les transactions pour le garbage collection. L'ID de la transaction active la plus ancienne est mis à jour par incréments de 16. Par exemple, si vous avez un ID de transaction 124, 125, 126 … 139, la valeur sera 124. Lorsque vous ajoutez une autre transaction, par exemple 140, la valeur sera 140.|  
+|base_generation|**bigint**|Valeur de génération de base actuelle dans la base de données. Cela représente l'horodateur de la transaction active la plus ancienne utilisé pour identifier les transactions pour le garbage collection. L'ID de la transaction active la plus ancienne est mis à jour par incréments de 16. Par exemple, si vous avez un ID de transaction 124, 125, 126 … 139, la valeur sera 124. Lorsque vous ajoutez une autre transaction, par exemple 140, la valeur sera 140.|  
 |xacts_copied_to_local|**bigint**|Nombre de transactions copiées du pipeline de transactions dans le tableau de génération de la base de données.|  
 |xacts_in_gen_0- xacts_in_gen_15|**bigint**|Nombre de transactions dans chaque génération.|  
   

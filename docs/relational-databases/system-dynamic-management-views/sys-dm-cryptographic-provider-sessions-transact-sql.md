@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9a4de02b-1a07-4850-979a-0861fddb7f9d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9257b158546ee9a64f38e5143cf6030c4dc3060c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff099e48540b7255e2453bfb9b90c9515196449c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005096"
 ---
 # <a name="sysdmcryptographicprovidersessions-transact-sql"></a>sys.dm_cryptographic_provider_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +47,11 @@ sys.dm_cryptographic_provider_sessions(session_identifier)
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**provider_id**|**Int**|Numéro d'identification du fournisseur de services de chiffrement.|  
+|**provider_id**|**int**|Numéro d'identification du fournisseur de services de chiffrement.|  
 |**session_handle**|**varbytes(8)**|Descripteur de session de chiffrement.|  
-|**identité**|**nvarchar(128)**|Identité utilisée pour l'authentification auprès du fournisseur de chiffrement.|  
+|**identity**|**nvarchar(128)**|Identité utilisée pour l'authentification auprès du fournisseur de chiffrement.|  
 |**spid**|**short**|ID de session (SPID) de la connexion. Pour plus d’informations, consultez [@@SPID &#40;Transact-SQL&#41;](../../t-sql/functions/spid-transact-sql.md).|  
   
 ## <a name="remarks"></a>Notes  

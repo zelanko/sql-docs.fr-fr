@@ -18,26 +18,25 @@ helpviewer_keywords:
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a110059cd635e2bc89a6e794082d706da1269179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae1c39d5c3ddc36f4ca3007cf9e17c2543055b85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099203"
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Retourne une table qui mappe le champ class_type dans le journal d'audit au champ class_desc dans sys.dm_audit_actions. Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**class_type**|**char(2)**|Type de classe de l'entité auditée. Correspond au class_type écrit dans le journal d’audit et retourné par la **get_audit_file()** (fonction). N'accepte pas la valeur NULL.|  
 |**class_type_desc**|**nvarchar(120)**|Nom de l'entité pouvant être auditée. N'accepte pas la valeur NULL.|  
 |**securable_class_desc**|**nvarchar(120)**|Objet sécurisable mappé au class_type audité. Est NULL si le class_type n'est pas mappé à un objet sécurisable. Peut être lié à class_desc dans sys.dm_audit_actions.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Principal doit avoir **sélectionnez** autorisation. Par défaut, cette autorisation est accordée à Public.  
   
 ## <a name="see-also"></a>Voir aussi  

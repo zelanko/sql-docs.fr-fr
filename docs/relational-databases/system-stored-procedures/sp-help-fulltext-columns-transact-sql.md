@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 92c8656b-f7fd-4904-9796-acc9ffed4106
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 076a3df69245cb269593e1a2298f18c9266ab217
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8009c9d2aa5f4b8f8be873633420bd1b088ece16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055094"
 ---
 # <a name="sphelpfulltextcolumns-transact-sql"></a>sp_help_fulltext_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,15 +52,15 @@ sp_help_fulltext_columns [ [ @table_name = ] 'table_name' ] ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Propriétaire de la table. Nom de l'utilisateur de la base de données qui a créé la table.|  
-|**TABLE_ID**|**Int**|ID de la table.|  
+|**TABLE_ID**|**int**|ID de la table.|  
 |**TABLE_NAME**|**sysname**|Nom de la table.|  
 |**FULLTEXT_COLUMN_NAME**|**sysname**|Colonne d'une table indexée de texte intégral désignée pour l'indexation.|  
-|**FULLTEXT_COLID**|**Int**|ID de la colonne indexées sur le texte intégral.|  
+|**FULLTEXT_COLID**|**int**|ID de la colonne indexées sur le texte intégral.|  
 |**FULLTEXT_BLOBTP_COLNAME**|**sysname**|Colonne d'une table indexée sur le texte intégral qui désigne le type de document de la colonne indexée sur le texte intégral. Cette valeur s’applique uniquement lorsque la colonne indexée en texte intégral est un **varbinary (max)** ou **image** colonne.|  
-|**FULLTEXT_BLOBTP_COLID**|**Int**|Identification de la colonne du type de document. Cette valeur s’applique uniquement lorsque la colonne indexée en texte intégral est un **varbinary (max)** ou **image** colonne.|  
+|**FULLTEXT_BLOBTP_COLID**|**int**|Identification de la colonne du type de document. Cette valeur s’applique uniquement lorsque la colonne indexée en texte intégral est un **varbinary (max)** ou **image** colonne.|  
 |**FULLTEXT_LANGUAGE**|**sysname**|Langue utilisée pour la recherche en texte intégral sur la colonne.|  
   
 ## <a name="permissions"></a>Autorisations  

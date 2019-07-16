@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c768b67c-82a4-47f5-850b-0ea282358d50
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dec718bfea5748db1baa4bb5d9be8c01b85ace26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b2d0004204829225d7767c53a7d2406ff557f36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899879"
 ---
 # <a name="sysdmosnodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +40,7 @@ Le tableau suivant fournit des informations sur ces nœuds.
 > [!NOTE]
 > Pour appeler cette DMV à partir de [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_nodes**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |node_id|**smallint**|Identificateur du nœud.|  
 |node_state_desc|**nvarchar (256)**|Description de l'état du nœud. Les valeurs sont affichées avec, en premier, les valeurs qui s'excluent mutuellement, suivies par les valeurs pouvant être associées. Exemple :<br /> En ligne, Ressources de thread réduites, Préemptif différé<br /><br />Il existe quatre valeurs node_state_desc qui s’excluent mutuellement. Ils sont répertoriés ci-dessous avec leurs descriptions.<br /><ul><li>ONLINE : Nœud est en ligne<li>OFFLINE : Nœud est hors connexion<li>IDLE : Nœud n’a aucune demande en attente de travail et est entré dans un état inactif.<li>IDLE_READY : Nœud n’a pas de demandes de travail en attente et est prêt à entrer dans un état inactif.</li></ul><br />Il existe trois valeurs node_state_desc pouvant être associées, répertoriés ci-dessous avec leurs descriptions.<br /><ul><li>DAC : Ce nœud est réservé pour le [connexion d’administration dédiée](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md).<li>THREAD_RESOURCES_LOW : Aucun nouveau thread ne peut être créés sur ce nœud en raison d’une condition de mémoire insuffisante.<li>AJOUTÉ À CHAUD : Indique les nœuds ont été ajoutés en réponse à un événement de l’UC chaud.</li></ul>|  
@@ -52,8 +51,8 @@ Le tableau suivant fournit des informations sur ces nœuds.
 |cpu_affinity_mask|**bigint**|Bitmap qui identifie les unités centrales auxquelles ce nœud est associé.|  
 |online_scheduler_count|**smallint**|Nombre de planificateurs en ligne qui sont gérés par ce nœud.|  
 |idle_scheduler_count|**smallint**|Nombre de planificateurs en ligne qui n'ont aucun thread de travail actif.|  
-|active_worker_count|**Int**|Nombre de threads de travail qui sont actifs sur tous les planificateurs gérés par ce nœud.|  
-|avg_load_balance|**Int**|Nombre moyen de tâches par planificateur sur ce nœud.|  
+|active_worker_count|**int**|Nombre de threads de travail qui sont actifs sur tous les planificateurs gérés par ce nœud.|  
+|avg_load_balance|**int**|Nombre moyen de tâches par planificateur sur ce nœud.|  
 |timer_task_affinity_mask|**bigint**|Bitmap qui identifie les planificateurs auxquels des tâches de minuterie peuvent être assignées.|  
 |permanent_task_affinity_mask|**bigint**|Bitmap qui identifie les planificateurs auxquels des tâches permanentes peuvent être assignées.|  
 |resource_monitor_state|**bit**|Un moniteur de ressource est assigné à chaque nœud. Le moniteur de ressource peut être en cours d'exécution ou inactif. La valeur 1 indique qu'il est en cours d'exécution et la valeur 0 indique qu'il est inactif.|  
@@ -65,7 +64,7 @@ Le tableau suivant fournit des informations sur ces nœuds.
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
 
 ## <a name="see-also"></a>Voir aussi    
  [Vues de gestion dynamique liées à système d’exploitation SQL Server &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   

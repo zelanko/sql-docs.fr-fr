@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d2622328b29141e145a9877952b9d2a97c0994ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef7a5456f0bae470bcbf1f12f37843aa6c311d78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984922"
 ---
 # <a name="dbosysnotifications-transact-sql"></a>dbo.sysnotifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque notification.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**alert_id**|**Int**|ID de l'alerte.|  
-|**operator_id**|**Int**|ID de l'opérateur à qui la notification doit être envoyée.|  
+|**alert_id**|**int**|ID de l'alerte.|  
+|**operator_id**|**int**|ID de l'opérateur à qui la notification doit être envoyée.|  
 |**notification_method**|**tinyint**|Méthode de notification :<br /><br /> **1** = courrier électronique<br /><br /> **2** = radiomessagerie<br /><br /> **4** = **netsend**<br /><br /> **7** = all|  
   
   

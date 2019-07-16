@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075747"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @type = ] 'type'` Le type de procédure stockée personnalisée ou du script en cours d’inscription. *type* est **varchar (16)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` Le type de procédure stockée personnalisée ou du script en cours d’inscription. *type* est **varchar (16)** , sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -50,7 +49,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |**delete**|La procédure stockée personnalisée inscrite est exécutée lorsqu'une instruction DELETE est répliquée.|  
 |**custom_script**|Le script est exécuté à la fin du déclencheur DDL (Data Definition Language).|  
   
-`[ @value = ] 'value'` Nom d’une procédure stockée ou le nom et le chemin complet vers le [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script qui est en cours d’inscription. *valeur* est **nvarchar (1024)**, sans valeur par défaut.  
+`[ @value = ] 'value'` Nom d’une procédure stockée ou le nom et le chemin complet vers le [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script qui est en cours d’inscription. *valeur* est **nvarchar (1024)** , sans valeur par défaut.  
   
 > [!NOTE]  
 >  En spécifiant NULL pour *valeur*paramètre annule un script précédemment enregistré, ce qui est le même que l’exécution [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  

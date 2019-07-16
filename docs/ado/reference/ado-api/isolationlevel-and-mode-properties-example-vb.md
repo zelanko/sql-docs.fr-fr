@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c32e63fc0c58d6772396da86adeb5ca434eb7585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5826cc8edcb857ffeb10cc197134708d20468b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918414"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel et Mode, propriétés-exemple (VB)
 Cet exemple utilise le [Mode](../../../ado/reference/ado-api/mode-property-ado.md) propriété pour ouvrir une connexion exclusive et le [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) propriété pour ouvrir une transaction effectuée indépendamment des autres transactions.  

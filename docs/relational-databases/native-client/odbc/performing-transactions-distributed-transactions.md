@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 179885276bdda206e4414bd22675e97449df9129
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: fc61ad955be287faad20289245ca4520efcd4bbd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913176"
 ---
 # <a name="create-a-distributed-transaction"></a>Créer une transaction distribuée
 
@@ -44,7 +43,7 @@ Microsoft Distributed Transaction Coordinator (MSDTC) permet aux applications d�
 
 MSDTC est installé pour Microsoft SQL Server local, mais il n’est pas disponible pour le service de cloud de Microsoft Azure SQL Database.
 
-MSDTC est appelée par le pilote SQL Server Native Client pour Open Database Connectivity (ODBC), lorsque votre C++ programme gère une transaction distribuée. Le pilote ODBC Native Client possède un gestionnaire de transactions compatible avec l’Open groupe Distributed Transaction de traitement (DTP) XA standard. Cette conformité est requis par MSDTC. En règle générale, toutes les commandes de gestion de transaction sont envoyées via ce pilote ODBC Native Client. La séquence est comme suit :
+MSDTC est appelée par le pilote SQL Server Native Client pour Open Database Connectivity (ODBC), lorsque votre C++ programme gère une transaction distribuée. Le pilote ODBC Native Client possède un gestionnaire de transactions compatible avec l’Open groupe Distributed Transaction de traitement (DTP) XA standard. Cette conformité est requis par MSDTC. En règle générale, toutes les commandes de gestion de transaction sont envoyées via ce pilote ODBC Native Client. La séquence est la suivante :
 
 1. Votre C++ application Native Client ODBC démarre une transaction en appelant [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), avec le mode de validation automatique désactivé.
 

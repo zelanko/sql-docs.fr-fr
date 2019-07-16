@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c4697d2dcbad80d1da0fd8ed6c81750ac90695b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 530db4d31d3db4773713816f1b68404990997512
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081314"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mappage des données de paramètres CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,44 +39,44 @@ ms.locfileid: "52534122"
 ||||  
 |-|-|-|  
 |**Type de données SQL Server**|Type (dans System.Data.SqlTypes ou Microsoft.SqlServer.Types)|**Type de données CLR (.NET Framework)**|  
-|**bigint**|**SqlInt64**|**Int64, Nullable\<Int64 >**|  
+|**bigint**|**SqlInt64**|**Int64, Nullable\<Int64>**|  
 |**binaire**|**SqlBytes, SqlBinary**|**Byte[]**|  
 |**bit**|**SqlBoolean**|**Booléen, Nullable\<booléenne >**|  
-|**char**|None|None|  
-|**cursor**|None|None|  
+|**char**|Aucun|Aucun|  
+|**cursor**|Aucun|Aucun|  
 |**date**|**SqlDateTime**|**Date/heure, Nullable\<DateTime >**|  
 |**datetime**|**SqlDateTime**|**Date/heure, Nullable\<DateTime >**|  
-|**datetime2**|None|**Date/heure, Nullable\<DateTime >**|  
+|**datetime2**|Aucun|**Date/heure, Nullable\<DateTime >**|  
 |**DATETIMEOFFSET**|**Aucun**|**DateTimeOffset, Nullable\<DateTimeOffset >**|  
 |**decimal**|**SqlDecimal**|**Decimal, Nullable\<décimal >**|  
 |**float**|**SqlDouble**|**Double, Nullable\<Double >**|  
-|**geography**|**SqlGeography**<br /><br /> **SqlGeography** est défini dans Microsoft.SqlServer.Types.dll, qui est installée avec SQL Server et peut être téléchargé à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [du feature pack](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
-|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** est défini dans Microsoft.SqlServer.Types.dll, qui est installée avec SQL Server et peut être téléchargé à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [du feature pack](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
-|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** est défini dans Microsoft.SqlServer.Types.dll, qui est installée avec SQL Server et peut être téléchargé à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [du feature pack](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
-|**image**|None|None|  
-|**Int**|**SqlInt32**|**Int32, Nullable\<Int32 >**|  
+|**geography**|**SqlGeography**<br /><br /> **SqlGeography** est défini dans Microsoft.SqlServer.Types.dll, qui est installée avec SQL Server et peut être téléchargé à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [du feature pack](https://www.microsoft.com/download/details.aspx?id=52676).|Aucun|  
+|**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** est défini dans Microsoft.SqlServer.Types.dll, qui est installée avec SQL Server et peut être téléchargé à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [du feature pack](https://www.microsoft.com/download/details.aspx?id=52676).|Aucun|  
+|**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** est défini dans Microsoft.SqlServer.Types.dll, qui est installée avec SQL Server et peut être téléchargé à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [du feature pack](https://www.microsoft.com/download/details.aspx?id=52676).|Aucun|  
+|**image**|Aucun|Aucun|  
+|**int**|**SqlInt32**|**Int32, Nullable\<Int32>**|  
 |**money**|**SqlMoney**|**Decimal, Nullable\<décimal >**|  
 |**nchar**|**SqlChars, SqlString**|**Chaîne, Char]**|  
-|**ntext**|None|None|  
+|**ntext**|Aucun|Aucun|  
 |**numeric**|**SqlDecimal**|**Decimal, Nullable\<décimal >**|  
 |**nvarchar**|**SqlChars, SqlString**<br /><br /> **SQLChars** est une meilleure correspondance pour le transfert de données et des accès, et **SQLString** est une meilleure correspondance pour effectuer des opérations de chaîne.|**Chaîne, Char]**|  
 |**nvarchar (1), nchar (1)**|**SqlChars, SqlString**|**Char, String, Char [], Nullable\<char >**|  
 |**real**|**SqlSingle** (la plage de **SqlSingle**, cependant, est supérieure à **réel**)|**Unique, Nullable\<unique >**|  
-|**rowversion**|None|**Byte[]**|  
-|**smallint**|**SqlInt16**|**Int16, Nullable\<Int16 >**|  
+|**rowversion**|Aucun|**Byte[]**|  
+|**smallint**|**SqlInt16**|**Int16, Nullable\<Int16>**|  
 |**smallmoney**|**SqlMoney**|**Decimal, Nullable\<décimal >**|  
-|**sql_variant**|None|**Objet**|  
-|**table**|None|None|  
-|**texte**|None|None|  
-|**time**|None|**TimeSpan, Nullable\<TimeSpan >**|  
-|**timestamp**|None|None|  
+|**sql_variant**|Aucun|**Objet**|  
+|**table**|Aucun|Aucun|  
+|**texte**|Aucun|Aucun|  
+|**time**|Aucun|**TimeSpan, Nullable\<TimeSpan >**|  
+|**timestamp**|Aucun|Aucun|  
 |**tinyint**|**SqlByte**|**Byte, Nullable\<Byte>**|  
 |**uniqueidentifier**|**SqlGuid**|**GUID, Nullable\<Guid >**|  
-|**Type(UDT) défini par l’utilisateur**|None|La même classe liée au type défini par l'utilisateur dans le même assembly ou un assembly dépendant.|  
+|**Type(UDT) défini par l’utilisateur**|Aucun|La même classe liée au type défini par l'utilisateur dans le même assembly ou un assembly dépendant.|  
 |**varbinary**|**SqlBytes, SqlBinary**|**Byte[]**|  
 |**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**byte, Byte[], Nullable\<byte>**|  
-|**varchar**|None|None|  
-|**xml**|**SqlXml**|None|  
+|**varchar**|Aucun|Aucun|  
+|**xml**|**SqlXml**|Aucun|  
   
 ## <a name="automatic-data-type-conversion-with-out-parameters"></a>Conversion automatique de types de données avec les paramètres de sortie  
  Une méthode CLR peut retourner des informations pour le code ou le programme appelant en marquant un paramètre d’entrée avec la **out** modificateur (Microsoft Visual c#) ou  **\<Out() > ByRef** (Microsoft Visual Basic) Si le paramètre d’entrée est un type de données CLR dans le **System.Data.SqlTypes** espace de noms et le programme appelant spécifie son équivalent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de type de données en tant que le paramètre d’entrée, une conversion de type se produit automatiquement Lorsque la méthode CLR retourne le type de données.  
@@ -111,9 +110,9 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**Type de données CLR (SQL Server)**|**Type de données SQL Server**|  
-|**Décimal**|SMALLMONEY|  
-|**SqlMoney**|SMALLMONEY|  
-|**Décimal**|money|  
+|**Decimal**|smallmoney|  
+|**SqlMoney**|smallmoney|  
+|**Decimal**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  
   

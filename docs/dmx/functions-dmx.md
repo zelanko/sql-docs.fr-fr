@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3f0fce34f57591d9c6c3f3a9c7382266d655f364
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 32cf59ea3ca8c7f153170881ac5eb970e50c90b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076403"
 ---
 # <a name="functions-dmx"></a>Fonctions (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "37985446"
   
  Les plupart des fonctions DMX retournent une valeur scalaire, comme la prise en charge d'une prévision, mais certaines retournent un résultat tabulaire. Par exemple, la fonction PredictHistogram retourne une table qui contient la prise en charge et la probabilité pour chaque état de la colonne prédictible spécifiée. Les résultats sont affichés dans une nouvelle colonne tabulaire.  
   
- **Pour plus d’informations :** [fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **Pour plus d’informations :** [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
 ## <a name="visual-basic-for-applications-vba-and-excel-functions"></a>Fonctions Visual Basic for Applications (VBA) et Excel  
  Outre les fonctions DMX, il est également possible d'appeler un grand nombre de fonctions VBA et Excel à l'aide des instructions DMX. Par exemple, vous pouvez utiliser la fonction lCase pour modifier le mode d’affichage de la colonne Attribute_Name dans le contenu du modèle TM_Decision_Tree. Cela est illustré par l'exemple de code suivant.  
@@ -49,10 +48,10 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>Procédures stockées  
  Vous pouvez utiliser les langages de programmation clr (common langage runtime) pour créer des procédures stockées qui étendent les fonctionnalités de DMX. Par exemple, un modèle d’exploration de données d’arbre de régression retourne des coefficients, tel que A, B et ainsi de suite, qui décrivent l’équation de régression, mais le modèle ne retourne pas de l’équation elle-même, tels que A + Bx = y. Cependant, vous pouvez écrire une procédure stockée qui utilise l'objet de modèle d'exploration de données pour naviguer dans le schéma de contenu, et pour retourner l'équation de régression en tant que résultat. Une instruction DMX peut donc retourner la liste des équations de régression en tant que résultats de requête.  
   
- **Pour plus d’informations :** [gestion des assemblys de modèle multidimensionnel](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
+ **Pour plus d’informations :** [Gestion des assemblys de modèles multidimensionnels](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Référence DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   

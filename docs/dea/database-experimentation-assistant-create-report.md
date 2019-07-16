@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: ff0a31fc4d825966fefafc11d8780862634f1937
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d53d8734e0c01fa2056b9d560f3bc65b7f64d9a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058975"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>Créer des rapports d’analyse dans l’Assistant expérimentation de base de données
 
@@ -36,7 +35,7 @@ Sous **rapports d’analyse**, sélectionnez **nouveau rapport d’analyse**.
 
 Entrez ou sélectionnez les informations suivantes :
 
-- **Nom du rapport**: Entrez un nom pour votre rapport. Le nom du rapport est utilisé à la fois pour A et les bases de données B. Exemple : *A (ou B)*  + *nom_élément_rapport* + *identificateur unique*. 
+- **Nom du rapport**: Entrez un nom pour votre rapport. Le nom du rapport est utilisé à la fois pour A et les bases de données B. Exemple : *A (ou B)*  + *nom_élément_rapport* + *identificateur unique*. 
 - **Nom du serveur** : Entrez le nom de l’ordinateur de serveur que vous souhaitez inclure dans A, B et les bases de données analysis.
 - **Nom de l’instance SQL Server**: Entrez le nom de l’instance de SQL Server à utiliser pour le rapport.
 - **Trace de serveur source**: Entrez le fichier de trace (.trc) première de SQL Server (2008 R2).

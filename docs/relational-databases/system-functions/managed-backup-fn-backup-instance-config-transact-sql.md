@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2be102c3d1b967d4376385b2bc20f61e16ecbde7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41c689d03ebae3afe16dc51d8a47c54e923d3a82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067763"
 ---
 # <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ managed_backup.fn_backup_db_config ()
 ```  
   
 ##  <a name="Arguments"></a> Arguments  
- None  
+ Aucun  
   
 ## <a name="table-returned"></a>Table retournée  
   
@@ -56,12 +55,12 @@ managed_backup.fn_backup_db_config ()
 |retention_days|INT|Période de rétention par défaut définie au niveau de l'instance.|  
 |storage_url|NVARCHAR (1024)|URL du compte de stockage par défaut définie au niveau de l'instance.|  
 |encryption_algorithm|SYSNAME|Nom de l’algorithme de chiffrement. A la valeur NULL, si le chiffrement n'est pas spécifié.|  
-|encryptor_type|NVARCHAR (32)|Type de chiffreur utilisé : certificat ou clé asymétrique A la valeur NULL, si aucun chiffreur n'est spécifié.|  
+|encryptor_type|NVARCHAR (32)|Type de chiffreur utilisé : certificat ou clé asymétrique. A la valeur NULL, si aucun chiffreur n'est spécifié.|  
 |encryptor_name|SYSNAME|Nom du certificat ou de la clé asymétrique. A la valeur NULL, si aucun nom n'est spécifié.|  
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **db_backupoperator** rôle de base de données avec **ALTER ANY CREDENTIAL** autorisations. L’utilisateur ne doit pas être refusé **VIEW ANY DEFINITION** autorisations.  
   
 ## <a name="examples"></a>Exemples  

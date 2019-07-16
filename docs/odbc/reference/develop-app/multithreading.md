@@ -1,5 +1,5 @@
 ---
-title: Multithreading | Microsoft Docs
+title: Le multithreading | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a16262d562ca2088f38cd863a6f44e537e65d40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eaa07ce22436bc8bfae215c0431480081ee0f06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086353"
 ---
 # <a name="multithreading"></a>Multithreading
 Sur les systèmes d’exploitation multithread, les pilotes doivent être thread-safe. Autrement dit, il doit être possible pour les applications d’utiliser le même handle sur plusieurs threads. Cette opération est spécifique au pilote, et il est probable que les pilotes sérialisera toute tentative d’utiliser simultanément le même handle sur deux threads différents.  

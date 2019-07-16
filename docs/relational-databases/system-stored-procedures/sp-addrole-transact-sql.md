@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a1cc9a65d1d4b6baba4d457d28ee36f0ac6156a1
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 1711ec3941a5fced5ef9e0c32808d6153b673e2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030923"
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
- Les noms des rôles de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent compter de 1 à 128 caractères, y compris des lettres, des symboles et des chiffres. Les noms de rôles de base de données ne peut pas : contenir une barre oblique inverse (\\), la valeur null, ou une chaîne vide (**''**).  
+ Les noms des rôles de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent compter de 1 à 128 caractères, y compris des lettres, des symboles et des chiffres. Les noms de rôles de base de données ne peut pas : contenir une barre oblique inverse (\\), la valeur null, ou une chaîne vide ( **''** ).  
   
  Après avoir ajouté un rôle de base de données, utilisez [sp_addrolemember &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) pour ajouter des entités de sécurité au rôle. Lorsque vous utilisez les instructions GRANT, DENY ou REVOKE pour appliquer des autorisations au rôle de base de données, les membres de ce rôle héritent de ces autorisations comme si elles avaient été appliquées directement à leur compte.  
   

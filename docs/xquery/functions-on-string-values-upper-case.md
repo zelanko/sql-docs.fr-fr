@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5bd01ad2-7adf-48fb-bf42-41e200419d37
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9d20e638fbbedfe1985ac66ee1cfd336fa291196
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 0dcbcbc0cd6c0cf479aee7a7c3fd8c5e53a53d28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004617"
 ---
 # <a name="functions-on-string-values---upper-case"></a>Fonctions sur les valeurs de chaîne : upper-case
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ fn:upper-case($arg as xs:string?) as xs:string
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-changing-a-string-to-upper-case"></a>A. Conversion d'une chaîne en majuscules.  
+### <a name="a-changing-a-string-to-upper-case"></a>R. Conversion d'une chaîne en majuscules.  
  L’exemple suivant modifie la chaîne d’entrée ' abcDEF ! @4» en majuscules.  
   
 ```  
@@ -55,7 +54,7 @@ DECLARE @x xml = N'abcDEF!@4';
 SELECT @x.value('fn:upper-case(/text()[1])', 'nvarchar(10)');  
 ```  
   
-### <a name="b-search-for-a-specific-character-string"></a>b. Recherche d'une chaîne de caractères spécifique  
+### <a name="b-search-for-a-specific-character-string"></a>B. Recherche d'une chaîne de caractères spécifique  
  Cet exemple montre comment utiliser la fonction upper-case pour effectuer une recherche non sensible à la casse.  
   
 ```  

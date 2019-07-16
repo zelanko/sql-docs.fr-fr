@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: be78d051-0d56-46d3-bb89-327e218dadd6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a73d31c8444fd90f59f93a88c9cdf81012cca479
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32e22f93dff6edb90c89896fca3495d27ac34dc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092395"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Mise en correspondance de la qualité des données dans le complément MDS pour Excel
 
@@ -57,7 +56,7 @@ ms.locfileid: "65488211"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   [Vue d’ensemble : L’importation de données à partir d’Excel &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+-   [Présentation : L’importation de données à partir d’Excel &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
 -   [Correspondance de données](../../data-quality-services/data-matching.md)  
   

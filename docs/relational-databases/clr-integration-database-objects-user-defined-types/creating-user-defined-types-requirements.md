@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 7fc3da1474546f0719af20c52f44248baa8ce5da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028257"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Création de types définis par l’utilisateur - Exigences
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ ms.locfileid: "49119747"
  Indique si toutes les instances de cet UDT ont la même longueur.  
   
  **MaxByteSize**  
- Taille maximale de l'instance, en octets. Vous devez spécifier **MaxByteSize** avec la **UserDefined** format de sérialisation. Pour un type UDT avec la sérialisation définie par l’utilisateur spécifié, **MaxByteSize** fait référence à la taille totale de l’UDT dans sa forme sérialisée, tel que défini par l’utilisateur. La valeur de **MaxByteSize** doit être dans la plage comprise entre 1 et 8000, ou la valeur -1 pour indiquer que l’UDT est supérieure à 8 000 octets (la taille totale ne peut pas dépasser la taille d’objet LOB maximale). Envisagez un UDT doté d’une propriété d’une chaîne de 10 caractères (**System.Char**). Lorsque l'UDT est sérialisé à l'aide de BinaryWriter, la taille totale de la chaîne sérialisée est de 22 octets : 2 octets par caractère Unicode UTF-16, multipliés par le nombre maximal de caractères, plus 2 octets de contrôle de la charge mémoire générée par la sérialisation d'un flux binaire. Par conséquent, lors de la détermination de la valeur de **MaxByteSize**, la taille totale de l’UDT sérialisé doit être pris en compte : la taille des données sérialisées sous forme binaire, plus la charge mémoire générée par la sérialisation.  
+ Taille maximale de l'instance, en octets. Vous devez spécifier **MaxByteSize** avec la **UserDefined** format de sérialisation. Pour un type UDT avec la sérialisation définie par l’utilisateur spécifié, **MaxByteSize** fait référence à la taille totale de l’UDT dans sa forme sérialisée, tel que défini par l’utilisateur. La valeur de **MaxByteSize** doit être dans la plage comprise entre 1 et 8000, ou la valeur -1 pour indiquer que l’UDT est supérieure à 8 000 octets (la taille totale ne peut pas dépasser la taille d’objet LOB maximale). Envisagez un UDT doté d’une propriété d’une chaîne de 10 caractères (**System.Char**). Lorsque l’UDT est sérialisé à l’aide de BinaryWriter, la taille totale de la chaîne sérialisée est de 22 octets : 2 octets par caractère Unicode UTF-16, multiplié par le nombre maximal de caractères de plus de contrôle 2 octets de surcharge induite par la sérialisation d’un flux binaire. Par conséquent, lors de la détermination de la valeur de **MaxByteSize**, la taille totale de l’UDT sérialisé doit être pris en compte : la taille des données sérialisées sous forme binaire, plus la charge mémoire générée par la sérialisation.  
   
  **ValidationMethodName**  
  Nom de la méthode utilisée pour valider des instances du type défini par l'utilisateur.  
@@ -141,9 +140,9 @@ ms.locfileid: "49119747"
   
 -   Inférieur à (\<)  
   
--   Supérieur ou égal à (>=)  
+-   Supérieur ou égal à (> =)  
   
--   Inférieur ou égal à (<=)  
+-   Inférieur ou égal à (< =)  
   
 ### <a name="implementing-nullability"></a>Implémentation de la possibilité de valeur NULL  
  En plus de spécifier correctement les attributs de vos assemblys, votre classe doit également prendre en charge la possibilité de valeur NULL. Les UDT chargés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont null prenant en charge, mais pour l’UDT puisse reconnaître une valeur null, la classe doit implémenter la **INullable** interface. Pour plus d’informations et un exemple montrant comment implémenter la possibilité de valeur NULL dans un UDT, consultez [Coding User-Defined Types](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  

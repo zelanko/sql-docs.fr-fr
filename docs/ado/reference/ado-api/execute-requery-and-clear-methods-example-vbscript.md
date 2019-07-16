@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3a7bbf07-2fca-4892-95f4-eec93f2d5e91
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 85420043030110d3f214ef86d95aae1a5e99a37e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27a177b6a3d23f20790490e1f16fac2be4ec958f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918815"
 ---
 # <a name="execute-requery-and-clear-methods-example-vbscript"></a>Execute, Requery et Clear, exemple de méthodes (VBScript)
 Cet exemple montre la **Execute** exécution à partir de la méthode un [commande](../../../ado/reference/ado-api/command-object-ado.md) objet et un [connexion](../../../ado/reference/ado-api/connection-object-ado.md) objet. Il utilise également le [Requery](../../../ado/reference/ado-api/requery-method.md) méthode pour récupérer les données actuelles dans un [recordset](../../../ado/reference/ado-api/recordset-object-ado.md)et le [effacer](../../../ado/reference/ado-api/clear-method-ado.md) méthode pour effacer le contenu de la [erreurs](../../../ado/reference/ado-api/errors-collection-ado.md)collection. Les procédures ExecuteCommand et PrintOutput sont requis pour exécuter cette procédure.  

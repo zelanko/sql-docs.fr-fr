@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8eeede59-a828-44bf-866c-1ca9a77a2c5e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a89a24ddbbe14938824819e24fd9112597168507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057209"
 ---
 # <a name="reserved-keywords"></a>Mots clés réservés
 Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC. Ces mots ne limitent pas la grammaire minimale SQL ; Toutefois, pour garantir la compatibilité avec les pilotes qui gèrent la grammaire SQL de base, les applications doivent éviter en utilisant l’une de ces mots clés. Le signe #**définir** valeur SQL_ODBC_KEYWORDS contient une liste séparée par des virgules de ces mots clés.  
@@ -34,7 +33,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |ALLOCATE|LAST|  
 |ALTER|LEADING|  
 |AND|LEFT|  
-|ANY|LEVEL|  
+|TOUTES|LEVEL|  
 |ARE|LIKE|  
 |AS|LOCAL|  
 |ASC|LOWER|  
@@ -61,7 +60,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |CLOSE|ONLY|  
 |COALESCE|OPEN|  
 |COLLATE|OPTION|  
-|COLLATION|- ou -|  
+|COLLATION|Ou|  
 |COLUMN|ORDER|  
 |COMMIT|OUTER|  
 |CONNECT|OUTPUT|  
@@ -79,7 +78,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |CURRENT_TIME|PROCEDURE|  
 |CURRENT_TIMESTAMP|PUBLIC|  
 |CURRENT_USER|READ|  
-|CURSOR|real|  
+|CURSOR|REAL|  
 |DATE|REFERENCES|  
 |DAY|RELATIVE|  
 |DEALLOCATE|RESTRICT|  
@@ -112,7 +111,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |EXTRACT|TEMPORARY|  
 |FALSE|THEN|  
 |FETCH|TIME|  
-|FIRST|timestamp|  
+|FIRST|TIMESTAMP|  
 |FLOAT|TIMEZONE_HOUR|  
 |FOR|TIMEZONE_MINUTE|  
 |FOREIGN|TO|  
@@ -128,7 +127,7 @@ Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC.
 |GROUP|UPDATE|  
 |HAVING|UPPER|  
 |HOUR|USAGE|  
-|IDENTITY|Utilisateur|  
+|IDENTITÉ|Utilisateur|  
 |IMMEDIATE|USING|  
 |IN|Value|  
 |INCLUDE|VALUES|  

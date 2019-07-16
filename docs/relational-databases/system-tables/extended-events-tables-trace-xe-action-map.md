@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 208a1413-ce7f-4521-b765-d74723627302
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7308df1dafe80d4c4b342c6b5797db6354f98416
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47931e56759191e8386a6890ec683adf0d5f69c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056274"
 ---
 # <a name="extended-events-tables---tracexeactionmap"></a>Tables d’événements étendus - trace_xe_action_map
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47827177"
   Contient une ligne pour chaque action Événements étendus mappée à un ID de colonne Trace SQL. Cette table est stockée dans la base de données master, dans le schéma sys.  
   
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |trace_column_id|**smallint**|ID de la colonne Trace SQL en cours de mappage.|  
 |package_name|**nvarchar(60)**|Nom du package Événements étendus où réside l'action mappée.|  

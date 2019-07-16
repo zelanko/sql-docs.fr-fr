@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 42d64a5a62fd1d1371604c7d8311ba42dabf7861
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8aad9f67b155c1f247426053b948cc6dd29e4cbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006900"
 ---
 # <a name="spreplcmds-transact-sql"></a>sp_replcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +44,20 @@ sp_replcmds [ @maxtrans = ] maxtrans
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**article id**|**Int**|L’ID de l’article.|  
+|**id d’article**|**int**|L’ID de l’article.|  
 |**partial_command**|**bit**|Indique s'il s'agit d'une commande partielle|  
 |**commande**|**varbinary(1024)**|La valeur de commande.|  
 |**xactid**|**binary(10)**|ID de transaction.|  
 |**xact_seqno**|**varbinary(16)**|Numéro de séquence de transaction.|  
-|**publication_id**|**Int**|ID de la publication.|  
-|**command_id**|**Int**|ID de la commande dans [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
-|**command_type**|**Int**|Type de commande.|  
+|**publication_id**|**int**|ID de la publication.|  
+|**command_id**|**int**|ID de la commande dans [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
+|**command_type**|**int**|Type de commande.|  
 |**originator_srvname**|**sysname**|Serveur d'origine de la transaction.|  
 |**originator_db**|**sysname**|Base de données d'origine de la transaction.|  
-|**pkHash**|**Int**|À usage interne uniquement|  
-|**originator_publication_id**|**Int**|ID de la publication d'origine de la transaction.|  
+|**pkHash**|**int**|À usage interne uniquement|  
+|**originator_publication_id**|**int**|ID de la publication d'origine de la transaction.|  
 |**originator_db_version**|**Int**|Version de la base de données d'origine de la transaction.|  
 |**originator_lsn**|**varbinary(16)**|Identifie le numéro séquentiel dans le journal (LSN) de la commande dans la publication d'origine.|  
   

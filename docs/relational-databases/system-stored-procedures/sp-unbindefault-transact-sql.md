@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d34b13931151e5b4490cd64292d66ae38756c125
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095882"
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +43,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'object_name'` Est le nom de la table et colonne ou le type de données d’alias à partir de laquelle la valeur par défaut doit être dissociée. *object_name* est **nvarchar(776)**, sans valeur par défaut. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essaie d'abord de résoudre en noms de colonnes les identificateurs en deux parties, puis en types de données alias.  
+`[ @objname = ] 'object_name'` Est le nom de la table et colonne ou le type de données d’alias à partir de laquelle la valeur par défaut doit être dissociée. *object_name* est **nvarchar(776)** , sans valeur par défaut. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] essaie d'abord de résoudre en noms de colonnes les identificateurs en deux parties, puis en types de données alias.  
   
  Lorsque vous supprimez la liaison d'une valeur par défaut avec un type de données alias, toutes les colonnes de ce type de données ayant la même valeur par défaut sont également dissociées. Les colonnes de ce type de données auxquelles des valeurs par défaut sont directement liées ne sont pas affectées.  
   
 > [!NOTE]  
 >  *object_name* peut contenir des crochets **[]** comme délimitée par des caractères d’identificateur. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'` Est utilisé seulement pour dissocier une valeur par défaut d’un type de données alias. *l’argument futureonly_flag* est **varchar(15)**, avec NULL comme valeur par défaut. Lorsque *futureonly_flag* est **futureonly**, les colonnes existantes du type de données ne perdent pas la valeur par défaut spécifiée.  
+`[ @futureonly = ] 'futureonly_flag'` Est utilisé seulement pour dissocier une valeur par défaut d’un type de données alias. *l’argument futureonly_flag* est **varchar(15)** , avec NULL comme valeur par défaut. Lorsque *futureonly_flag* est **futureonly**, les colonnes existantes du type de données ne perdent pas la valeur par défaut spécifiée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -64,7 +63,7 @@ sp_unbindefault [ @objname = ] 'object_name'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-unbinding-a-default-from-a-column"></a>A. Suppression de la liaison d'une valeur par défaut avec une colonne  
+### <a name="a-unbinding-a-default-from-a-column"></a>R. Suppression de la liaison d'une valeur par défaut avec une colonne  
  Cet exemple supprime la liaison de la valeur par défaut avec la colonne `hiredate` de la table `employees`.  
   
 ```  

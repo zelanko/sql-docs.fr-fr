@@ -8,14 +8,13 @@ ms.date: 03/27/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
-manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f7b176cf4aa50292c3b3968107ded5fcdd3533d8
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: e2cbffcab6fd34d08e8338522e8dcc97ac50f4c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961974"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutoriel : Créer des modèles basés sur une partition dans R sur SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -36,7 +35,7 @@ Dans ce didacticiel, découvrez basé sur partition de modélisation à l’aide
 
 ## <a name="prerequisites"></a>Prérequis
  
-Pour suivre ce didacticiel, vous devez disposer des éléments suivants :
+Pour suivre ce didacticiel, vous avez besoin des éléments suivants :
 
 + Suffisamment de ressources système. Le jeu de données est volumineux et les opérations d’apprentissage sont gourmandes en ressources. Si possible, utilisez un système ayant au moins 8 Go de RAM. Ou bien, vous pouvez utiliser les petits jeux de données à contourner les contraintes de ressources. Instructions pour réduire le jeu de données sont en ligne. 
 
@@ -166,7 +165,7 @@ GO
 
 <a name="parallel"></a>
 
-### <a name="parallel-execution"></a>Exécution parallèle
+### <a name="parallel-execution"></a>Exécution en parallèle
 
 Notez que le [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) incluent des entrées  **@parallel= 1**, utilisé pour permettre un traitement parallèle. Contrairement aux versions antérieures, dans SQL Server 2019, paramètre  **@parallel= 1** fournit une indication plus forte à l’optimiseur de requête, rendre l’exécution en parallèle un résultat beaucoup plus probable.
 

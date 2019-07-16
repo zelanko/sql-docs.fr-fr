@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 032b424c0ac7706962d17520b47d6b8ec447a536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042823"
 ---
 # <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +44,9 @@ fn_syscollector_get_execution_details ( log_id )
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|id|**Int**|Identificateur unique de l'entrée d'enregistrement.|  
+|id|**int**|Identificateur unique de l'entrée d'enregistrement.|  
 |événement|**sysname**|Nom de l'événement qui a généré l'entrée d'enregistrement.|  
 |computer|**nvarchar**|Ordinateur sur lequel le package s'exécutait lors de la création de l'entrée d'enregistrement.|  
 |operator|**nvarchar**|Nom d'utilisateur de la personne ou de l'agent qui exécutait le package qui a généré l'entrée du journal.|  
@@ -56,11 +55,11 @@ fn_syscollector_get_execution_details ( log_id )
 |executionid|**uniqueidentifier**|GUID de l'instance d'exécution de l'exécutable qui a généré l'entrée du journal.|  
 |starttime|**datetime**|Heure de début de l'exécution du package.|  
 |endtime|**datetime**|Heure de fin d'exécution du package.|  
-|datacode|**Int**|Valeur entière qui identifie l'événement associé à l'entrée du journal. La valeur « 0 » indique que l'événement ne fournit aucun identificateur.|  
+|datacode|**int**|Valeur entière qui identifie l'événement associé à l'entrée du journal. La valeur « 0 » indique que l'événement ne fournit aucun identificateur.|  
 |databytes|**image**|Tableau d'octets qui identifie une valeur de retour.|  
 |message|**nvarchar**|Description de l'événement et des informations associées à l'événement.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation SELECT pour **dc_operator**.  
   
 ## <a name="see-also"></a>Voir aussi  

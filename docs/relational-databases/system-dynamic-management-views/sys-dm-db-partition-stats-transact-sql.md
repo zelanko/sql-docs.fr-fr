@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74e3de1c32cb1ca1833121b4de1cef4db66f9e49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096285"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "66462655"
 > [!NOTE]  
 >  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_db_partition_stats**. Le partition_id dans sys.dm_pdw_nodes_db_partition_stats diffère de la partition_id dans la vue de catalogue sys.partitions pour Azure SQL Data Warehouse.
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|ID de la partition. Unique dans la base de données. C’est la même valeur que la **partition_id** dans le **sys.partitions** affichage à l’exception d’Azure SQL Data Warehouse catalogue.|  
 |**object_id**|**Int**|ID d'objet de la table ou de la vue indexée à laquelle appartient la partition.|  
@@ -52,8 +51,8 @@ ms.locfileid: "66462655"
 |**used_page_count**|**bigint**|Nombre total de pages utilisées pour la partition. Calculée en tant que **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  
 |**reserved_page_count**|**bigint**|Nombre total de pages réservées pour la partition. Calculée en tant que **in_row_reserved_page_count** + **lob_reserved_page_count** + **row_overflow_reserved_page_count**.|  
 |**row_count**|**bigint**|Nombre approximatif de lignes dans la partition.|  
-|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
-|**distribution_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Id numérique unique associé à la distribution.|  
+|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|**distribution_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Id numérique unique associé à la distribution.|  
   
 ## <a name="remarks"></a>Notes  
  **Sys.dm_db_partition_stats** affiche des informations sur l’espace utilisé pour stocker et gérer les données LOB de données en ligne et les données de dépassement de ligne pour toutes les partitions dans une base de données. Une seule ligne est affichée par partition.  
@@ -71,7 +70,7 @@ ms.locfileid: "66462655"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>A. Renvoi de tous les nombres pour toutes les partitions de tous les index et segments de mémoire d'une base de données  
+### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>R. Renvoi de tous les nombres pour toutes les partitions de tous les index et segments de mémoire d'une base de données  
  Le code exemple suivant affiche tous les nombres pour toutes les partitions de tous les index et segments de mémoire de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

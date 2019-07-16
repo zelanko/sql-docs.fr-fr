@@ -17,25 +17,24 @@ helpviewer_keywords:
 ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1deb05541e46ec1007d234dc622b14ea1e20eb3f
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: 03687ea50b04c96aa4dbafab9d02d2bbc33a14b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079420"
 ---
-# <a name="sysdatabasescopedcredentials-transact-sql"></a>sys.database_scoped_credentials (Transact-SQL)
+# <a name="sysdatabasescopedcredentials-transact-sql"></a>Sys.database_scoped_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Retourne une ligne pour chaque base de données étendue des informations d’identification dans la base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |name|**sysname**|Nom de la base de données limitées d’informations d’identification. Est unique dans la base de données.|  
 |credential_id|**Int**|ID de l’information d’identification de niveau base de données. Est unique dans la base de données.|  
-|principal_id|**Int**|ID du principal de la base de données propriétaire de la clé.|  
+|principal_id|**int**|ID du principal de la base de données propriétaire de la clé.|  
 |credential_identity|**nvarchar(4000)**|Nom de l'identité à utiliser. Il s'agit généralement d'un utilisateur Windows. Il n'est pas nécessaire qu'elle soit unique.|  
 |create_date|**datetime**|Heure à laquelle les informations d’identification de niveau base de données a été créée.|  
 |modify_date|**datetime**|Heure de dernière modification à laquelle les informations d’identification de niveau base de données.|  

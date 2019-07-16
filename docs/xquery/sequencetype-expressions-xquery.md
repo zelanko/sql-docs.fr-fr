@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59c6718ce034f8a0b9d37bc62591a7ffc44ce999
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946281"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Expressions  SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +39,11 @@ ms.locfileid: "54255124"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- Notez que le `instance of` opérateur, le `Occurrence indicator`, spécifie la cardinalité, nombre d’éléments dans la séquence résultante. Si cela n'est pas spécifié, il est supposé que la cardinalité est de 1. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], uniquement le point d’interrogation (**?)**  indicateur d’occurrence est pris en charge. Le **?** indicateur d’occurrence indique que `Expression` peut retourner zéro ou un élément. Si le **?** indicateur d’occurrence est spécifié, `instance of` retourne True lorsque la `Expression` type correspond à spécifié `SequenceType`, que `Expression` retourne un singleton ou une séquence vide.  
+ Notez que le `instance of` opérateur, le `Occurrence indicator`, spécifie la cardinalité, nombre d’éléments dans la séquence résultante. Si cela n'est pas spécifié, il est supposé que la cardinalité est de 1. Dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], uniquement le point d’interrogation ( **?)**  indicateur d’occurrence est pris en charge. Le **?** indicateur d’occurrence indique que `Expression` peut retourner zéro ou un élément. Si le **?** indicateur d’occurrence est spécifié, `instance of` retourne True lorsque la `Expression` type correspond à spécifié `SequenceType`, que `Expression` retourne un singleton ou une séquence vide.  
   
  Si le **?** indicateur d’occurrence n’est pas spécifié, `sequence of` renvoie True uniquement lorsque le `Expression` type correspond la `Type` spécifié et `Expression` retourne un singleton.  
   
- **Remarque** le symbole plus (**+**) et l’astérisque (**&#42;**) indicateurs d’occurrence ne sont pas pris en charge dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Remarque** le symbole plus ( **+** ) et l’astérisque ( **&#42;** ) indicateurs d’occurrence ne sont pas pris en charge dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Les exemples suivants illustrent l’utilisation de la**instance de** opérateur XQuery.  
   
@@ -139,7 +138,7 @@ where ProductModelID=19
  La requête renvoie la valeur True.  
   
 ### <a name="example-c"></a>Exemple C  
- Lors de l'utilisation de types d'union, l'expression `instance of` dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] présente une limite : en particulier, lorsque le type d'un élément ou d'un attribut est un type d'union, `instance of` peut ne pas déterminer le type exact. De ce fait, une requête renvoie False, sauf si le type atomique utilisé dans le type de séquence est le parent le plus élevé du type réel de l'expression dans la hiérarchie simpleType. En d'autres termes, les types atomiques spécifiés dans le type de séquence doivent être un enfant direct de anySimpleType. Pour plus d’informations sur la hiérarchie des types, consultez [règles de conversion de Type dans XQuery](../xquery/type-casting-rules-in-xquery.md).  
+ Lorsque vous utilisez les types d’union, le `instance of` expression dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a une limitation : Plus précisément, lorsque le type d’un élément ou un attribut est un type d’union, `instance of` ne peut pas déterminer le type exact. De ce fait, une requête renvoie False, sauf si le type atomique utilisé dans le type de séquence est le parent le plus élevé du type réel de l'expression dans la hiérarchie simpleType. En d'autres termes, les types atomiques spécifiés dans le type de séquence doivent être un enfant direct de anySimpleType. Pour plus d’informations sur la hiérarchie des types, consultez [règles de conversion de Type dans XQuery](../xquery/type-casting-rules-in-xquery.md).  
   
  L'exemple de requête ci-après effectue les opérations suivantes :  
   
@@ -164,7 +163,7 @@ CREATE XML SCHEMA COLLECTION MyTestSchema AS '
 Go  
 ```  
   
- La requête suivante renvoie False, car le type de séquence spécifié dans l'expression `instance of` n'est pas le parent le plus élevé du type réel de l'expression spécifiée. En d'autres termes, la valeur de <`TestElement`> est un type integer. Le parent le plus élevé est xs:decimal. Toutefois, il n'est pas spécifié comme second opérande de l'opérateur `instance of`.  
+ La requête suivante renvoie False, car le type de séquence spécifié dans l'expression `instance of` n'est pas le parent le plus élevé du type réel de l'expression spécifiée. Autrement dit, la valeur de la <`TestElement`> est de type entier. Le parent le plus élevé est xs:decimal. Toutefois, il n'est pas spécifié comme second opérande de l'opérateur `instance of`.  
   
 ```  
 SET QUOTED_IDENTIFIER ON  
@@ -191,7 +190,7 @@ go
 ### <a name="example-d"></a>Exemple D  
  Dans cet exemple, vous allez tout d’abord créer une collection de schémas XML et permet de taper un **xml** variable. Typée **xml** variable est ensuite interrogée pour illustrer le `instance of` fonctionnalité.  
   
- La collection de schémas XML suivante définit un type simple, myType, et un élément, <`root`>, de type myType :  
+ La collection de schémas XML suivante définit un type simple, myType et un élément, <`root`>, de type myType :  
   
 ```  
 drop xml schema collection SC  
@@ -239,7 +238,7 @@ go
   
 -   Crée un typé **xml** variable et assigne un exemple de code XML d’instance.  
   
--   Spécifier une requête par rapport à la variable. L'expression de requête extrait la première valeur d'ID de commande de l'attribut OrderList de type IDRERS du premier <`Customer`>. La valeur extraite est de type IDREF. Par conséquent, `instance of` retourne la valeur True.  
+-   Spécifier une requête par rapport à la variable. L’expression de requête récupère la première valeur d’ID de commande à partir du code de type OrderList idrers du premier <`Customer`>. La valeur extraite est de type IDREF. Par conséquent, `instance of` retourne la valeur True.  
   
 ```  
 create xml schema collection SC as  
@@ -315,7 +314,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   Lorsque vous utilisez une forme de la **element()** séquence type qui spécifie un nom de type, tel que `element(ElementName, TypeName)`, le type doit être qualifié avec un point d’interrogation ( ?). Par exemple, `element(Title, xs:string?)` indique que l'élément peut être NULL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge la détection au moment de l’exécution de la **xsi : nil** propriété à l’aide de `instance of`.  
   
--   Si la valeur de `Expression` provient d'un élément ou d'un attribut typé en tant qu'union, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut uniquement identifier le type de primitive, non dérivé, duquel le type de la valeur a été dérivé. Par exemple, si <`e1`> est défini de manière à posséder le type statique (xs:integer | xs:string), la syntaxe ci-après renvoie False.  
+-   Si la valeur de `Expression` provient d'un élément ou d'un attribut typé en tant qu'union, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut uniquement identifier le type de primitive, non dérivé, duquel le type de la valeur a été dérivé. Par exemple, si <`e1`> est défini comme ayant le type statique (xs : Integer | xs : String), ce qui suit renvoie la valeur False.  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  

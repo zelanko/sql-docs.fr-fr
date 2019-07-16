@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 448322fc79f4a85256b1d0b5b682fcc5147263c5
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 6c302f7cc9830b15ed058c160618ea0e40705444
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962735"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurer un client de science des données pour le développement de Python sur SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

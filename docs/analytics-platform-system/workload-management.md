@@ -2,19 +2,18 @@
 title: Gestion de la charge de travail d’Analytique Platform System | Microsoft Docs
 description: Gestion de la charge de travail d’Analytique Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adc3928e1b7464d93970d280af6acf303ebc6d16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959749"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Gestion de la charge de travail d’Analytique Platform System
 
@@ -62,8 +61,8 @@ Le tableau suivant décrit les classes de ressources et leurs allocations de res
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
 |par défaut|Moyenne|400 MO|1|Par défaut, chaque connexion est autorisée une petite quantité de mémoire et des ressources d’accès concurrentiel pour ses demandes.<br /><br />Lorsqu’une connexion est ajoutée à une classe de ressource, la nouvelle classe est prioritaire. Lorsqu’une connexion est supprimée à partir de toutes les classes de ressources, la connexion revient à l’allocation de ressources par défaut.|  
 |MediumRC|Moyenne|1 200 MO|3|Exemples de requêtes nécessitant la classe de ressources de taille moyenne :<br /><br />Opérations de CTAS importante des jointures de hachage.<br /><br />Sélectionnez les opérations qui nécessitent davantage de mémoire pour éviter la mise en cache sur le disque.<br /><br />Chargement des données dans les index columnstore en cluster.<br /><br />Création, reconstruction et la réorganisation d’index cluster columnstore pour les tables plus petites qui possèdent des colonnes de 10 à 15.|  
-|Largerc|Élevée|2,8 GO|7|Exemples de requêtes nécessitant la classe de ressources de grande taille :<br /><br />Opérations de CTAS très volumineuses qui ont des jointures de hachage énorme, ou contient les agrégations importantes, telles que les clauses ORDER BY ou GROUP BY volumineux.<br /><br />Sélectionnez les opérations nécessitant de très grandes quantités de mémoire pour des opérations telles que les jointures de hachage, ou des agrégations telles que les clauses ORDER BY ou GROUP BY<br /><br />Chargement des données dans les index columnstore en cluster.<br /><br />Création, reconstruction et la réorganisation d’index cluster columnstore pour les tables plus petites qui possèdent des colonnes de 10 à 15.|  
-|xlargerc|Élevée|8.4 GO|22|La classe de ressources de très grande taille est pour les demandes qui peuvent nécessiter la consommation des ressources de très grande taille au moment de l’exécution.|  
+|Largerc|Élevé|2,8 GO|7|Exemples de requêtes nécessitant la classe de ressources de grande taille :<br /><br />Opérations de CTAS très volumineuses qui ont des jointures de hachage énorme, ou contient les agrégations importantes, telles que les clauses ORDER BY ou GROUP BY volumineux.<br /><br />Sélectionnez les opérations nécessitant de très grandes quantités de mémoire pour des opérations telles que les jointures de hachage, ou des agrégations telles que les clauses ORDER BY ou GROUP BY<br /><br />Chargement des données dans les index columnstore en cluster.<br /><br />Création, reconstruction et la réorganisation d’index cluster columnstore pour les tables plus petites qui possèdent des colonnes de 10 à 15.|  
+|xlargerc|Élevé|8.4 GO|22|La classe de ressources de très grande taille est pour les demandes qui peuvent nécessiter la consommation des ressources de très grande taille au moment de l’exécution.|  
   
 <sup>*</sup>Utilisation de la mémoire maximale est une approximation.  
   
@@ -82,7 +81,7 @@ Exemples d’allouer jusqu'à 32 emplacements de concurrence pour les demandes s
   
 -   emplacements de 30 = moyenne 10  
   
--   32 slots = 32 default  
+-   les 32 emplacements = 32 par défaut  
   
 -   les 32 emplacements = 1 extra-large + 1 moyen volumineux + 1  
   

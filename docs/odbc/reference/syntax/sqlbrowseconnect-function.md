@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3af78971a17035091ab8a72bf0c9a8fe90250dd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2960c42690a9528763321bc882bb788b437cb66a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036202"
 ---
 # <a name="sqlbrowseconnect-function"></a>Fonction SQLBrowseConnect
 **Conformité**  
@@ -49,7 +48,7 @@ SQLRETURN SQLBrowseConnect(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *ConnectionHandle*  
+ *Handle de connexion*  
  [Entrée] Handle de connexion.  
   
  *InConnectionString*  
@@ -113,11 +112,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>Argument de InConnectionString  
  Une chaîne de connexion de demande de navigation a la syntaxe suivante :  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
+ *chaîne de connexion* :: = *attribut*[`;`] &#124; *attribut* `;` *chaîne de connexion*;<br>
  *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
  *attribute-keyword* ::= `DSN` &#124; `UID` &#124; `PWD` &#124; *driver-defined-attribute-keyword*<br>
  *attribute-value* ::= *character-string*<br>
- *driver-defined-attribute-keyword* ::= *identifier*<br>
+ *défini-attribut-mot clé Driver* :: = *identificateur*<br>
   
  où *chaîne de caractères* a zéro ou plusieurs caractères ; *identificateur* a un ou plusieurs caractères ; *mot clé de l’attribut* ne respecte pas la casse ; *attribut-valeur* peut respecter la casse ; et la valeur de la **DSN** mot clé n’est pas constitué uniquement d’espaces. En raison de la connexion chaîne et l’initialisation de grammaire, mots clés et l’attribut valeurs du fichier qui contient les caractères **[]{}(), ? \*= ! @** doit être évitée. En raison de la grammaire dans les informations système, les noms de source de données et les mots clés ne peut pas contenir la barre oblique inverse (\\) caractères. Pour une application ODBC 2. *x* pilote, accolades sont obligatoires pour la valeur d’attribut pour le mot clé DRIVER.  
   

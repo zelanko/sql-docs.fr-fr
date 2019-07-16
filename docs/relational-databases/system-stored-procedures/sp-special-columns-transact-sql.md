@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c82970caa25089320a1dc5daf68076f27478081f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032844"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_special_columns [ @table_name = ] 'table_name'
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si *propriétaire* n’est pas spécifié et l’utilisateur actuel ne possède pas d’une table de l’objet *nom*, cette procédure recherche une table de l’objet *nom* appartenant à la base de données propriétaire. Si la table existe, ses colonnes sont retournées.  
   
- [ @qualifier=] '*qualifier*'  
+ [ @qualifier=] '*qualificateur*'  
  Nom du qualificateur de la table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (*qualifier.owner.name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
  [ @col_type=] '*col_type*'  
@@ -71,11 +70,11 @@ sp_special_columns [ @table_name = ] 'table_name'
  Est la version ODBC utilisée. *ODBCVer* est **int (** 4 **)** , avec une valeur par défaut 2. Cela indique ODBC version 2.0. Pour plus d’informations sur la différence entre la version 2.0 et ODBC version 3.0, consultez la spécification ODBC SQLSpecialColumns pour ODBC version 3.0.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|Étendue réelle de l'identificateur de ligne. Peut prendre les valeurs 0, 1 ou 2. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Retourne toujours 0. Ce champ retourne toujours une valeur.<br /><br /> 0 = SQL_SCOPE_CURROW. La validité du numéro d'identification de ligne est garantie uniquement pendant qu'il est positionné sur cette ligne. Il se peut qu'une sélection ultérieure qui utiliserait le numéro d'identification de la ligne ne retourne pas de ligne si celle-ci a été mise à jour ou supprimée au cours d'une autre transaction.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. La validité du numéro d'identification de ligne est garantie pour la durée de la transaction en cours.<br /><br /> 2 = SQL_SCOPE_SESSION. L'identificateur de ligne est valide pour la durée de la session (parmi les limites de transaction).|  
 |COLUMN_NAME|**sysname**|Nom de colonne pour chaque colonne de la *table*retourné. Ce champ retourne toujours une valeur.|  

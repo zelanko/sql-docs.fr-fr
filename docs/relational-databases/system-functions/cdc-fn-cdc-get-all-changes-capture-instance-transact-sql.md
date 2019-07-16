@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cd8520a26b28c16876163cf8f2c0f7a57b3c33ad
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043052"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque modification appliquée à la table source dans la plage spécifiée de numéros séquentiels dans le journal. Si une ligne source est modifiée à plusieurs reprises pendant l'intervalle, chaque modification est représentée dans le jeu de résultats retourné. En plus de retourner les données de modification, quatre colonnes de métadonnées fournissent les informations nécessaires pour appliquer les modifications à une autre source de données. Les options de filtrage de lignes régissent le contenu des colonnes de métadonnées aussi bien que les lignes retournées dans le jeu de résultats. Lorsque l'option de filtrage de lignes 'all' est spécifiée, chaque modification a exactement une ligne pour identifier la modification. Lorsque l'option 'all update old' est spécifiée, les opérations de mise à jour sont représentées sous la forme de deux lignes : une qui contient les valeurs des colonnes capturées avant la mise à jour et une autre qui contient les valeurs des colonnes capturées après la mise à jour.  
   
- Cette fonction d'énumération est créée lorsqu'une table source est activée pour la capture des données modifiées. Le nom de fonction est dérivé et utilise le format **cdc.fn_cdc_get_all_changes_**_capture_instance_ où *capture_instance* est la valeur spécifiée pour la capture instance de la table source est activée pour la capture de données modifiées.  
+ Cette fonction d'énumération est créée lorsqu'une table source est activée pour la capture des données modifiées. Le nom de fonction est dérivé et utilise le format **cdc.fn_cdc_get_all_changes_** _capture_instance_ où *capture_instance* est la valeur spécifiée pour la capture instance de la table source est activée pour la capture de données modifiées.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,16 +46,16 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Arguments  
  *from_lsn*  
- Valeur LSN qui représente le point de terminaison inférieur de la plage de numéros séquentiels dans le journal à inclure dans le jeu de résultats. *from_lsn* est **Binary (10)**.  
+ Valeur LSN qui représente le point de terminaison inférieur de la plage de numéros séquentiels dans le journal à inclure dans le jeu de résultats. *from_lsn* est **Binary (10)** .  
   
  Seules les lignes de la [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) modifier la table avec une valeur dans **__ $start_lsn** supérieur ou égal à *from_lsn* sont inclus dans le jeu de résultats.  
   
  *to_lsn*  
- Valeur LSN qui représente le point de terminaison supérieur de la plage de numéros séquentiels dans le journal à inclure dans le jeu de résultats. *to_lsn* est **Binary (10)**.  
+ Valeur LSN qui représente le point de terminaison supérieur de la plage de numéros séquentiels dans le journal à inclure dans le jeu de résultats. *to_lsn* est **Binary (10)** .  
   
  Seules les lignes de la [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) modifier la table avec une valeur dans **__ $start_lsn** inférieure ou égale à *from_lsn* ou égale à *to_lsn* sont inclus dans le jeu de résultats.  
   
- <row_filter_option> ::= { all | all update old }  
+ < row_filter_option > :: = {toutes les | tous les mettre à jour ancien}  
  Option qui régit le contenu des colonnes de métadonnées aussi bien que les lignes retournées dans le jeu de résultats.  
   
  Il peut s'agir de l'une des options suivantes :  
@@ -69,7 +68,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Numéro séquentiel dans le journal de validation associé à la modification qui préserve l'ordre de validation de la modification. Les modifications validées dans la même transaction partagent la même valeur LSN de validation.|  
 |**__$seqval**|**binary(10)**|Valeur de classement utilisée pour classer les modifications d'une ligne dans une transaction.|  
@@ -83,7 +82,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="remarks"></a>Notes  
  Si la plage de numéros séquentiels dans le journal spécifiée n'est pas située dans la chronologie de suivi des modifications pour l'instance de capture, la fonction retourne l'erreur 208 (« Un nombre insuffisant d'arguments a été fourni pour la procédure ou fonction cdc.fn_cdc_get_all_changes. »).  
   
- Colonnes de type de données **image**, **texte**, et **ntext** sont toujours associées à une valeur NULL lorsque la valeur **__ $operation** = 1 ou **__ $ opération** = 3. Colonnes de type de données **varbinary (max)**, **varchar (max)**, ou **nvarchar (max)** bénéficient d’une valeur NULL lorsque la valeur **__ $operation** = 3 à moins que la colonne a changé pendant la mise à jour. Lorsque **__ $operation** = 1, ces colonnes sont affectées de leur valeur au moment de la suppression. Les colonnes calculées incluses dans une instance de capture ont toujours une valeur NULL.  
+ Colonnes de type de données **image**, **texte**, et **ntext** sont toujours associées à une valeur NULL lorsque la valeur **__ $operation** = 1 ou **__ $ opération** = 3. Colonnes de type de données **varbinary (max)** , **varchar (max)** , ou **nvarchar (max)** bénéficient d’une valeur NULL lorsque la valeur **__ $operation** = 3 à moins que la colonne a changé pendant la mise à jour. Lorsque **__ $operation** = 1, ces colonnes sont affectées de leur valeur au moment de la suppression. Les colonnes calculées incluses dans une instance de capture ont toujours une valeur NULL.  
   
 ## <a name="examples"></a>Exemples  
  Plusieurs [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] modèles sont disponibles qui montrent comment utiliser les fonctions de requête de capture de données modifiées. Ces modèles sont disponibles sur le **vue** menu [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [Explorateur de modèles](../../ssms/template/template-explorer.md).  

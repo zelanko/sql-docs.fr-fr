@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 829aabfa7028814e20bcecd47a53495f6dc6bc6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73a2bf2973d8c4f8f9bf9ac886728fb45250343f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62694815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038145"
 ---
 # <a name="mdx-data-definition---update-member"></a>Définition de données MDX - UPDATE MEMBER
 
@@ -41,7 +40,7 @@ UPDATE MEMBER Cube_Name.Member_Name
  *MDX_Expression*  
  Expression MDX (Multidimensional Expressions) valide pour laquelle le membre doit être mis à jour.  
   
- *Property_Name*  
+ *Property_name*  
  Chaîne valide qui spécifie le nom d'une propriété de membre calculé.  
   
  *Property_Value*  

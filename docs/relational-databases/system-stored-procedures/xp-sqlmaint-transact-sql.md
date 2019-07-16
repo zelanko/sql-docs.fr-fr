@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2157462ca1f9509034f33208cce7aed2983ae4f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62644785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091910"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ xp_sqlmaint 'switch_string'
  Le **- ?** commutateur n’est pas valide pour **xp_sqlmaint**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Aucun. Retourne une erreur si le **sqlmaint** utilitaire échoue.  
+ Aucune. Retourne une erreur si le **sqlmaint** utilitaire échoue.  
   
 ## <a name="remarks"></a>Notes  
  Si cette procédure est appelée par un utilisateur connecté à l’aide de l’authentification SQL Server, le **- U »***login_id***»** et **-P »***mot de passe***»** commutateurs sont ajoutés au début *chaîne_de_commutateurs* avant l’exécution. Si l’utilisateur est connecté avec l’authentification Windows, *chaîne_de_commutateurs* est transmis sans modification à **sqlmaint**.  

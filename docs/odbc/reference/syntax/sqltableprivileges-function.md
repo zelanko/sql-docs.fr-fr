@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3581c5ae7b9f4e41d0f8646f4e6e1d2cca1a2ca8
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: e63677180cc86f022550477bd598eaa61013d694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039522"
 ---
 # <a name="sqltableprivileges-function"></a>Fonction SQLTablePrivileges
 **Conformité**  
@@ -126,7 +125,7 @@ SQLRETURN SQLTablePrivileges(
 |Nom de la colonne|Numéro de colonne|Type de données|Commentaires|  
 |-----------------|-------------------|---------------|--------------|  
 |TABLE_CAT (ODBC 1.0)|1|Varchar|Nom de catalogue ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de catalogues.|  
-|TABLE_SCHEM  (ODBC 1.0)|2|Varchar|Nom du schéma ; NULL si non applicable à la source de données. Si un pilote prend en charge les schémas pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de schémas.|  
+|TABLE_SCHEM (ODBC 1.0)|2|Varchar|Nom du schéma ; NULL si non applicable à la source de données. Si un pilote prend en charge les schémas pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de schémas.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar non NULL|Nom de la table.|  
 |FOURNISSEUR D’AUTORISATIONS (ODBC 1.0)|4|Varchar|Nom de l’utilisateur qui dispose du privilège ; NULL si non applicable à la source de données.<br /><br /> Pour toutes les lignes dans lequel la valeur dans la colonne GRANTEE est le propriétaire de l’objet, la colonne GRANTOR sera « _système ».|  
 |BÉNÉFICIAIRE (ODBC 1.0)|5\.|Varchar non NULL|Nom de l’utilisateur auquel l’autorisation a été accordée.|  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1897fd4a-8d51-461e-8ef2-c60be9e563f2
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d65d8686dcb5651e19a2e18fec4f0e82e51402
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e5a79a4ab38fd1cb7d118624fd170219aa90a94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096254"
 ---
 # <a name="sysdmdbstatshistogram-transact-sql"></a>Sys.dm_db_stats_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -51,11 +50,11 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|object_id |**Int**|ID de l'objet (table ou vue indexée) pour lequel retourner les propriétés de l'objet de statistiques.|  
+|object_id |**int**|ID de l'objet (table ou vue indexée) pour lequel retourner les propriétés de l'objet de statistiques.|  
 |stats_id |**Int**|ID de l'objet de statistiques. Unique dans la table ou la vue indexée. Pour plus d’informations, consultez [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|  
-|step_number |**Int** |Nombre d’étape dans l’histogramme. |
+|step_number |**int** |Nombre d’étape dans l’histogramme. |
 |range_high_key |**sql_variant** |Valeur de colonne de limite supérieure pour une étape d'histogramme. La valeur de colonne est également appelée « valeur de clé ».|
 |RANGE_ROWS |**real** |Nombre estimé de lignes dont la valeur de colonne est comprise dans une étape d'histogramme, à l'exception de la limite supérieure. |
 |equal_rows |**real** |Nombre estimé de lignes dont la valeur de colonne est égale à la limite supérieure de l'étape d'histogramme. |
@@ -88,7 +87,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  L'optimiseur de requête définit les étapes d'histogramme en fonction de leur importance statistique. Il utilise un algorithme de nombre maximal de différences pour réduire le nombre d'étapes dans l'histogramme tout en augmentant la différence entre les valeurs limites. Le nombre maximal d'étapes est 200. Le nombre d'étapes d'histogramme peut être inférieur au nombre de valeurs distinctes, même pour les colonnes comportant moins de 200 points de limite. Par exemple, une colonne avec 100 valeurs distinctes peut avoir un histogramme comportant moins de 100 points de limite.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 
 L'utilisateur doit avoir sélectionné des autorisations sur les colonnes de statistiques, ou bien il doit être le propriétaire de la table, ou encore il doit être membre du rôle serveur fixe `sysadmin`, du rôle de base de données fixe `db_owner` ou du rôle de base de données fixe `db_ddladmin`.
 

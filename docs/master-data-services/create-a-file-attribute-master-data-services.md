@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d224886b-2ef1-4658-8b01-2213cc4b8df6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fe7a8c24d30193ee7748a75325b907d2a045937a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea016778880ad4254d75a567659c9d7fc428592d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906721"
 ---
 # <a name="create-a-file-attribute-master-data-services"></a>Créer un attribut de fichier (Master Data Services)
 
@@ -41,8 +40,8 @@ ms.locfileid: "65477113"
   
 |colonne|Description|  
 |------------|-----------------|  
-|État|État de l’attribut.<br /><br /> Quand vous cliquez sur Enregistrer, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que l’attribut est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’un attribut, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
-|Créer une vue d’abonnement|Nom de l'attribut.|  
+|Statut|État de l’attribut.<br /><br /> Quand vous cliquez sur Enregistrer, l’image ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour") s’affiche, indiquant que l’attribut est en cours de mise à jour.<br /><br /> Si des erreurs se produisent pendant la création ou la modification d’un attribut, l’image ![Icône d’état d’erreur](../master-data-services/media/mds-statusicon-error.png "Icône d’état d’erreur") apparaît.<br /><br /> Sinon, l’état est OK ; dans cas, l’image ![Icône d’état OK](../master-data-services/media/mds-statusicon-ok.png "Icône d’état OK") s’affiche.|  
+|Name|Nom de l'attribut.|  
 |Nom complet|Nom de l’attribut.|  
 |Description|Description de l’attribut.|  
 |Largeur d’affichage en pixels|Largeur de l’attribut.|  

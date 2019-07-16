@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77fdb63f346ada40346544a53c3ff69db0a8a9a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab8b94835fb9a6103436026a669c86f2401d57b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036427"
 ---
 # <a name="connection-handles"></a>Handles de connexion
 Un *connexion* se compose d’un pilote et une source de données. Un handle de connexion identifie chaque connexion. Le handle de connexion définit non seulement le pilote à utiliser, mais la source de données à utiliser avec ce pilote. Dans un segment de code qui implémente ODBC (le Gestionnaire de pilotes ou un pilote), le handle de connexion identifie une structure qui contient les informations de connexion, comme suit :  

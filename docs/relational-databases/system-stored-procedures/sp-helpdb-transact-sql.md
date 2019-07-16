@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903018"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,28 +46,28 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de la base de données.|  
+|**name**|**sysname**|Nom de la base de données.|  
 |**db_size**|**nvarchar(13)**|Taille totale de la base de données.|  
 |**Propriétaire**|**sysname**|Base de données propriétaire, tel que **sa**.|  
 |**dbid**|**smallint**|ID de la base de données.|  
 |**created**|**nvarchar(11)**|Date de création de la base de données.|  
 |**status**|**nvarchar(600)**|Liste de valeurs, séparées par des virgules, d'options de base de données actuellement définies pour la base de données.<br /><br /> Les options définies par des valeurs booléennes ne sont affichées que si elles sont activées. Les options non booléennes sont répertoriées avec leurs valeurs correspondantes sous la forme de *option_name*=*valeur*.<br /><br /> Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
-|**compatibility_level**|**tinyint**|Niveau de compatibilité de la base de données : 60, 65, 70, 80 ou 90.|  
+|**compatibility_level**|**tinyint**|Niveau de compatibilité de base de données : 60, 65, 70, 80 ou 90.|  
   
  Si *nom* est spécifié, il est un jeu de résultats supplémentaire qui indique l’allocation de fichier pour la base de données spécifié.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**nchar(128)**|Nom de fichier logique.|  
+|**name**|**nchar(128)**|Nom de fichier logique.|  
 |**fileid**|**smallint**|ID de fichier.|  
 |**filename**|**nchar(260)**|Nom de fichier du système d'exploitation (nom de fichier physique).|  
 |**filegroup**|**nvarchar(128)**|Groupe de fichiers auquel le fichier appartient.<br /><br /> NULL = Il s'agit d'un fichier journal. Ils ne font jamais partie d'un groupe de fichiers.|  
 |**size**|**nvarchar(18)**|Taille du fichier exprimée en mégaoctets.|  
 |**maxsize**|**nvarchar(18)**|Taille maximale du fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
 |**growth**|**nvarchar(18)**|Incrément de croissance du fichier. Ce compteur indique la quantité d’espace ajoutée au fichier que chaque nouvel espace de temps est nécessaire.|  
-|**usage**|**varchar(9)**|Utilisation du fichier. Pour un fichier de données, la valeur est **'données uniquement'** et pour le fichier journal est la valeur **journal uniquement**.|  
+|**Utilisation**|**varchar(9)**|Utilisation du fichier. Pour un fichier de données, la valeur est **'données uniquement'** et pour le fichier journal est la valeur **journal uniquement**.|  
   
 ## <a name="remarks"></a>Notes  
  Le **état** rapports quelles options ont été définies à ON dans la base de données du jeu de colonnes dans le résultat. Toutes les options de base de données ne sont pas signalées par le **état** colonne. Pour afficher une liste complète des paramètres d’option de base de données actuelle, utilisez la **sys.databases** vue de catalogue.  
@@ -80,7 +79,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-information-about-a-single-database"></a>A. Renvoi d'informations sur une base de données unique  
+### <a name="a-returning-information-about-a-single-database"></a>R. Renvoi d'informations sur une base de données unique  
  Cet exemple affiche des informations sur la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  

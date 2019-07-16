@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a3170d1b191538f23b374a59af19084effa73e81
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 893c7b0a4c7c88c0fdc7bf89b01b61bfaae6f2f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046497"
 ---
 # <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
 ## <a name="remarks"></a>Notes  
  Cette fonction est utilisée pour identifier la position ordinale d'une colonne capturée dans le masque de mise à jour de capture des données modifiées. Il est principalement utilisé conjointement avec la fonction [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) pour extraire des informations à partir du masque de mise à jour lors de l’interrogation des données modifiées.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation SELECT sur toutes les colonnes capturées de la table source. Si un rôle de base de données pour le composant de capture des données modifiées est spécifié pour l'instance de capture, l'appartenance à ce rôle est également requise.  
   
 ## <a name="examples"></a>Exemples  

@@ -1,5 +1,5 @@
 ---
-title: FilterColumn Property (RDS) | Microsoft Docs
+title: FilterColumn, propriété (RDS) | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: eed6a3f1ad03ae9cfb09695cfc7152df726c8244
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e88cb6f8d563df66a8faaa84d5aeafaa9d359e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964077"
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn, propriété (RDS)
 Indique la colonne sur laquelle évaluer les critères de filtre.  
@@ -50,7 +49,7 @@ DataControl.FilterColumn = String
 ## <a name="see-also"></a>Voir aussi  
  [FilterColumn, FilterCriterion, FilterValue, SortColumn et SortDirection, propriétés et exemple de méthode de réinitialisation (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [FilterCriterion, propriété (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
- [FilterValue Property (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
+ [FilterValue, propriété (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
  [SortColumn, propriété (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
  [SortDirection, propriété (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
 

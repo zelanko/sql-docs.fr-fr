@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29530153-b963-4a7c-8665-2335f1d604a8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8a79d6e39cb71c7dd7c5e055d9aa71cba23bc9c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1af45d9ac4674af98097083e2da89a217f17a58f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921013"
 ---
 # <a name="ado-events-model-example-vc"></a>Exemple de modèle d’événements ADO (VC ++)
 La section Visual C++ de [instanciation des événements ADO par langage](../../../ado/guide/data/ado-event-instantiation-by-language.md) fournit une description générale de guide pratique pour instancier le modèle d’événement ADO. Voici un exemple spécifique de l’instanciation du modèle d’événement dans l’environnement créé par le **#import** directive.  

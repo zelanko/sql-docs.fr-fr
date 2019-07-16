@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2a4bd312-839a-45a8-a299-fc8609be9a2a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e105db14e9b22b34439050ae6e08d5094f397b17
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 55b018941fbd8bb4cecef7c5f10ea41bea566534
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051032"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,10 +45,10 @@ HRESULT Abort(
  *eOperation*[in]  
  L'opération à abandonner. Elle doit avoir la valeur suivante :  
   
- DBASYNCHOP_OPEN-la demande d’annulation s’applique à l’ouverture asynchrone ou le remplissage d’un ensemble de lignes ou à l’initialisation asynchrone d’un objet de source de données.  
+ DBASYNCHOP_OPEN : la demande d'annulation s'applique à l'ouverture ou au remplissage asynchrone d'un ensemble de lignes ou à l'initialisation asynchrone d'un objet source de données.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+ S_OK  
  La demande d'annulation de l'opération asynchrone a été traitée. Cela ne garantit pas que l'opération ait été annulée. Pour déterminer si l'opération a bien été annulée, le consommateur doit appeler [ISSAsynchStatus::GetStatus](../../relational-databases/native-client-ole-db-interfaces/issasynchstatus-getstatus-ole-db.md) et vérifier la présence de DB_E_CANCELED ; toutefois, il est possible qu'il ne soit pas retourné dans l'appel suivant.  
   
  DB_E_CANTCANCEL  

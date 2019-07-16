@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 604feac612c2c937593cdd484a05d45462396823
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1f874aa26001b7d595f319a59d5c116907aa096e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054966"
 ---
 # <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +51,9 @@ sp_help_jobcount
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne le jeu de résultats suivant :  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**JobCount**|**Int**|Nombre de travaux pour la planification spécifiée.|  
+|**JobCount**|**int**|Nombre de travaux pour la planification spécifiée.|  
   
 ## <a name="remarks"></a>Notes  
  Cette procédure indique le nombre de travaux attachés à la planification spécifiée.  

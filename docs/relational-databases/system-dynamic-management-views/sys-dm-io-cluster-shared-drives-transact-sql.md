@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c8fcced8-c780-49dc-99bd-6beb3ca532c4
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: da578c61af08ff8167779d5ed86e671bba29e23a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6633988bf660de8225b201266a4f2ef7ebea55e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900387"
 ---
 # <a name="sysdmioclustershareddrives-transact-sql"></a>sys.dm_io_cluster_shared_drives (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47646457"
 > [!NOTE]  
 >  À appeler à partir [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_io_cluster_shared_drives**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**DriveName**|**nchar(2)**|Nom (ou lettre) du lecteur qui représente un disque individuel appartenant au groupe de disques partagés en clusters. Colonne n'acceptant pas la valeur NULL.|  
 |**pdw_node_id**|**Int**|**S’applique à**: ssPDW<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
@@ -47,7 +46,7 @@ ms.locfileid: "47646457"
 > [!NOTE]  
 >  Cette vue sera abandonnée dans une version ultérieure. Nous vous recommandons d’utiliser [sys.dm_io_cluster_valid_path_names &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-valid-path-names-transact-sql.md) à la place.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'utilisateur doit disposer de l'autorisation VIEW SERVER STATE pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="examples"></a>Exemples  

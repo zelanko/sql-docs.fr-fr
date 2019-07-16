@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63d206e6b6f32aeb12e2e04b9edc2ef1d84599b2
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 52d3db15c46af273e2f151e769a6b04be322ce5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061838"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +55,16 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  Si un message est écrit dans le journal des applications Windows, il est également écrite dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fichier journal des erreurs.  
   
-`[ \@replace = ] 'replace'` Si spécifié comme chaîne *remplacer*, un message d’erreur existant est remplacé par le nouveau niveau de texte et la gravité de message. *Remplacez* est **varchar(7)** avec NULL comme valeur par défaut. Cette option doit être spécifiée si *msg_id* existe déjà. Si vous remplacez un message en anglais, Message en anglais, le niveau de gravité est remplacé pour tous les messages dans tous les autres langages qui ont le même *msg_id*.  
+`[ \@replace = ] 'replace'` Si spécifié comme chaîne *remplacer*, un message d’erreur existant est remplacé par le nouveau niveau de texte et la gravité de message. *Remplacez* est **varchar(7)** avec NULL comme valeur par défaut. Cette option doit être spécifiée si *msg_id* existe déjà. Si vous remplacez un U.S. Message en anglais, le niveau de gravité est remplacé pour tous les messages dans tous les autres langages qui ont le même *msg_id*.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
- Pour les versions non anglaises de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la version anglaise d'un message doit exister préalablement à l'ajout d'un message dans une autre langue. Le degré de gravité des deux versions du message doit correspondre.  
+ Pour les versions non anglaises de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aux États-Unis Version anglaise d’un message doit déjà exister avant le message peut être ajouté à l’aide d’un autre langage. Le degré de gravité des deux versions du message doit correspondre.  
   
  Lors de la localisation des messages qui contiennent des paramètres, utilisez les numéros de paramètres correspondant aux paramètres des messages d'origine. Insérez un point d'exclamation (!) après chaque numéro de paramètre.  
   
@@ -80,7 +79,7 @@ Nécessite l’appartenance dans le **sysadmin** ou **serveradmin** rôles serve
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-defining-a-custom-message"></a>A. Définition d'un message personnalisé  
+### <a name="a-defining-a-custom-message"></a>R. Définition d'un message personnalisé  
  L’exemple suivant ajoute un message personnalisé à **sys.messages**.  
   
 ```  
@@ -92,8 +91,8 @@ EXEC sp_addmessage 50001, 16,
 GO  
 ```  
   
-### <a name="b-adding-a-message-in-two-languages"></a>b. Ajout d'un message en deux langues  
- L'exemple suivant ajoute d'abord un message en anglais, puis ajoute ce même message en français`.`  
+### <a name="b-adding-a-message-in-two-languages"></a>B. Ajout d'un message en deux langues  
+ L’exemple suivant ajoute d’abord un message dans des États-Unis Anglais, puis ajoute le même message en Français`.`  
   
 ```  
 USE master;  
@@ -109,7 +108,7 @@ GO
 ```  
   
 ### <a name="c-changing-the-order-of-parameters"></a>C. Modification de l'ordre des paramètres  
- L'exemple suivant ajoute d'abord un message en anglais, puis un message localisé dans lequel l'ordre des paramètres est modifié.  
+ L’exemple suivant ajoute d’abord un message dans des États-Unis Anglais, puis ajoute un message localisé dans lequel l’ordre des paramètres est modifié.  
   
 ```  
 USE master;  

@@ -7,20 +7,19 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 8e5f874e43e70ce1bddfe21b745199fef44aa04a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3d4d8108fda500d48425abfb52fd9f72c6faa147
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963056"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architecture d’extensibilité dans SQL Server Machine Learning Services 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server dispose d’une infrastructure d’extensibilité pour l’exécution de script externe comme R ou Python sur le serveur. Script s’exécute dans un environnement d’exécution de langage en tant qu’extension du moteur de base de données principal. 
 
-## <a name="background"></a>Arrière-plan
+## <a name="background"></a>Présentation
 
 L’infrastructure d’extensibilité a été introduite dans SQL Server 2016 pour prendre en charge le runtime R. SQL Server 2017 ajoute la prise en charge de Python
 
@@ -40,7 +39,7 @@ N’importe quel script R ou Python peut être exécuté en appelant une procéd
 
 + Les développeurs R et Python avec établie compétences dans les outils spécifiques et différents IDE peuvent écrire du code dans ces outils et ensuite le portage de code pour SQL Server.
 
-## <a name="architecture-diagram"></a>Diagramme de l'architecture
+## <a name="architecture-diagram"></a>Diagramme de l’architecture
 
 L’architecture est conçue de telle sorte que les scripts externes exécutés dans un processus séparé à partir de SQL Server, mais avec des composants qui gèrent en interne la chaîne de demandes de données et les opérations sur SQL Server. Selon la version de SQL Server, les extensions de langage pris en charge incluent R et Python. 
 
@@ -57,7 +56,7 @@ Le [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] est un ser
 | Lanceurs approuvés | Extension | Versions de SQL Server |
 |-------------------|-----------|---------------------|
 | RLauncher.dll pour le langage R | [Extension de R](extension-r.md) | SQL Server 2016, SQL Server 2017 |
-| Pythonlauncher.dll pour Python 3.5 | [Extension Python](extension-python.md) | SQL Server 2017 |
+| Pythonlauncher.dll pour Python 3.5 | [Extension Python](extension-python.md) | SQL Server 2017 |
 
 Le service [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] s’exécute sous son propre compte d’utilisateur. Si vous modifiez le compte qui exécute Launchpad, veillez à le faire à l’aide du Gestionnaire de Configuration SQL Server pour vous assurer que les modifications sont écrites dans les fichiers associés.
 

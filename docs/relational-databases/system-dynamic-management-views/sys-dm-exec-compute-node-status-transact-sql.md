@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55023b301b1c6bae53f890e273f5a415fde42355
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1a219ab9606327bd67e26d237a9f8b7b5c2cb8fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097874"
 ---
 # <a name="sysdmexeccomputenodestatus-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -36,14 +35,14 @@ ms.locfileid: "51671058"
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|compute_node_id|**Int**|Id numérique unique associé au nœud.|Unique sur le cluster de montée en puissance, quel que soit le type.|  
-|process_id|**Int**|||  
-|nom_processus|**nvarchar(255)**|Nom logique du nœud.|N’importe quelle chaîne de longueur appropriée.|  
+|compute_node_id|**int**|Id numérique unique associé au nœud.|Unique sur le cluster de montée en puissance, quel que soit le type.|  
+|process_id|**int**|||  
+|process_name|**nvarchar(255)**|Nom logique du nœud.|N’importe quelle chaîne de longueur appropriée.|  
 |allocated_memory|**bigint**|Mémoire totale allouée sur ce nœud.||  
 |available_memory|**bigint**|Mémoire totale disponible sur ce nœud.||  
 |process_cpu_usage|**bigint**|Utilisation du processeur de processus totale, en graduations.||  
 |total_cpu_usage|**bigint**|Utilisation totale du processeur, en graduations.||  
-|Thread_Count|**bigint**|Nombre total de threads en cours d’utilisation sur ce nœud.||  
+|thread_count|**bigint**|Nombre total de threads en cours d’utilisation sur ce nœud.||  
 |handle_count|**bigint**|Nombre total de handles en cours d’utilisation sur ce nœud.||  
 |total_elapsed_time|**bigint**|Temps total écoulé depuis le système de démarrer ou redémarrer.|Temps total écoulé depuis le système de démarrer ou redémarrer. Si total_elapsed_time dépasse la valeur maximale d’un entier (24,8 jours en millisecondes), cela entraînera l’échec de matérialisation en raison d’un dépassement de capacité. La valeur maximale en millisecondes est équivalente à 24,8 jours environ.|  
 |is_available|**bit**|Indicateur précisant si ce nœud est disponible.||  

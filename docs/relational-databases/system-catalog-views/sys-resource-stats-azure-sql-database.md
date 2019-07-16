@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6918c712e5440aa79bef045f2d64b2578eb42a69
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 06e3a3e632473c33a3f4652b2f4169ce3c7ca1e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097050"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "67716316"
 |avg_log_write_percent|**numeric**|Utilisation moyenne de la ressource d'écriture en pourcentage de la limite de la couche de service.|  
 |max_worker_percent|**decimal(5,2)**|Nombre maximal d’ouvriers simultanés (demandes) en pourcentage de la limite de niveau de service de la base de données.<br /><br /> Valeur maximale est actuellement calculée pour l’intervalle de cinq minutes basée sur les échantillons de 15 secondes des nombres de travail simultanés.|  
 |max_session_percent|**decimal(5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite de niveau de service de la base de données.<br /><br /> Valeur maximale est actuellement calculée pour l’intervalle de cinq minutes basée sur les échantillons de 15 secondes du nombre de sessions simultanées.|  
-|dtu_limit|**Int**|Base de données max DTU paramètre actuel de cette base de données pendant cet intervalle. |  
+|dtu_limit|**int**|Base de données max DTU paramètre actuel de cette base de données pendant cet intervalle. |  
 |allocated_storage_in_megabytes|**float**|La quantité de mise en forme d’espace de fichier en Mo mis à disposition pour stocker les données de la base de données. Espace du fichier de mise en forme est également appelée espace de données alloué.  Pour plus d'informations, consultez : [Gestion de l’espace fichier dans la base de données SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  

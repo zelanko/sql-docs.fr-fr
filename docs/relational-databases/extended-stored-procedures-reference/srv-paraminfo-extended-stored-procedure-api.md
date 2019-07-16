@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ee2afd4e-0d91-462b-9403-98d481546330
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e473b213321af7366881f0f9a0f32c5ac4ab70cd
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 85efd235861522754cbcdc209d6cf28558907d76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058772"
 ---
 # <a name="srvparaminfo-extended-stored-procedure-api"></a>srv_paraminfo (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,10 +87,10 @@ pfNull
 ## <a name="returns"></a>Valeur renvoyée  
  Si les informations sur le paramètre ont été obtenues avec succès, la valeur SUCCEED est retournée ; sinon, FAIL. La valeur FAIL est retournée en l’absence de procédure stockée distante active ou en l’absence d’un *n*ième paramètre de procédure stockée.  
   
-## <a name="remarks"></a>Notes   
- **Remarque relative à la sécurité** Il est recommandé de revoir en détail le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+## <a name="remarks"></a>Notes  
+ **Remarque relative à la sécurité** Il est recommandé de revoir en détail le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Guide de référence du programmeur sur les procédures stockées étendues](../../relational-databases/extended-stored-procedures-reference/database-engine-extended-stored-procedures-reference.md)  
   
   

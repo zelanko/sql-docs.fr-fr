@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2cffffa064bbfc5d5d1b106a06fb5429d6ca2c72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf7c7ff03ec1318b1fe2fca8454f8ff39cd336a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083740"
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,19 +54,19 @@ sys.sp_cdc_get_captured_columns
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|Nom du schéma de table source.|  
 |source_table|**sysname**|Nom de la table source.|  
 |capture_instance|**sysname**|Nom de l'instance de capture.|  
 |column_name|**sysname**|Nom de la colonne source capturée.|  
-|column_id|**Int**|ID de la colonne dans la table source.|  
+|column_id|**int**|ID de la colonne dans la table source.|  
 |column_ordinal|**Int**|Position de la colonne dans la table source.|  
 |data_type|**sysname**|Type de données de la colonne.|  
-|character_maximum_length|**Int**|Longueur maximale en caractères de la colonne basée sur les caractères ; sinon, NULL.|  
+|character_maximum_length|**int**|Longueur maximale en caractères de la colonne basée sur les caractères ; sinon, NULL.|  
 |numeric_precision|**tinyint**|Précision de la colonne si elle est numérique ; sinon, NULL.|  
 |numeric_precision_radix|**smallint**|Base de précision de la colonne si elle est numérique ; sinon, NULL.|  
-|numeric_scale|**Int**|Échelle de la colonne si elle est numérique ; sinon, NULL.|  
+|numeric_scale|**int**|Échelle de la colonne si elle est numérique ; sinon, NULL.|  
 |datetime_precision|**smallint**|Précision de la colonne si elle est basée sur datetime ; sinon, NULL.|  
   
 ## <a name="remarks"></a>Notes  
@@ -75,7 +74,7 @@ sys.sp_cdc_get_captured_columns
   
  Utilisez [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) pour obtenir plus d’informations sur la définition de données (instructions DDL language) appliquées à une table source. Toute modification DDL qui a modifié la structure d'une colonne source faisant l'objet d'un suivi est retournée dans le jeu de résultats.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe db_owner. Pour tous les autres utilisateurs, requiert l'autorisation SELECT sur toutes les colonnes capturées dans la table source et, si un rôle de régulation pour l'instance de capture a été défini, l'appartenance à ce rôle de base de données. Lorsque l'appelant n'a pas l'autorisation de consulter les données sources, la fonction retourne l'erreur 22981 (L'objet n'existe pas ou l'accès est refusé.).  
   
 ## <a name="examples"></a>Exemples  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a80b87b3-b904-4cda-8582-0761c2617c57
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 87af739d7e1b2d45d226c32c7a2fd99fa0ae37bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b40f4053633c7ef50d14004f2f5f045c23cae4cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945251"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Autorisations de zone fonctionnelle (Master Data Services)
 

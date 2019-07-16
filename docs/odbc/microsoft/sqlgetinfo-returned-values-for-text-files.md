@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 36188b0cb646106d2b54ea8bcec8e417aa05c659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d2578c9abe6e2e3b1f99b0e680fc0fcf8c104f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898809"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>Valeurs retournées par SQLGetInfo pour les fichiers texte
 Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argument et les valeurs correspondantes retournées par **SQLGetInfo**. Ces informations peuvent être extraites en passant le répertoriés en langage C# defines à **SQLGetInfo** dans le *fInfoType* argument. Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez le [de référence du programmeur ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  

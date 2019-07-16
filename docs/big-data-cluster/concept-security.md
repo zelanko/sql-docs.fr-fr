@@ -5,17 +5,16 @@ description: Cet article décrit les concepts de sécurité pour SQL Server 2019
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49577ce5a29a0c014fea7c8c9a0c5c320a9b7174
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958663"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Concepts de sécurité pour les clusters de données volumineuses de SQL Server
 

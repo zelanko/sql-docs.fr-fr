@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 70e0939d-4d97-4ae0-ba16-934e0a80e718
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e01ca29eec9062f6dd7592e4c3b1d4bb2125d999
-ms.sourcegitcommit: cead0faa2fa91d849a41d25e247a0ceba4310d4a
+ms.openlocfilehash: 3dd4551d2dac629912eb4fe799d6a9e58ec1792b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56893439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001133"
 ---
 # <a name="syspdwnodespdwphysicaldatabases-transact-sql"></a>sys.pdw_nodes_pdw_physical_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -29,11 +28,11 @@ ms.locfileid: "56893439"
 |-----------------|---------------|-----------------|  
 |database_id|**Int**|L’ID d’objet pour la base de données. Notez que cette valeur n’est pas identique à un database_id dans le [sys.databases &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vue.|  
 |physical_name|**sysname**|Le nom physique de la base de données sur les nœuds de Shell/calcul. Cette valeur est identique à une valeur dans la colonne physical_name le [sys.pdw_database_mappings &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md) vue.|  
-|pdw_node_id|**Int**|Id numérique unique associé au nœud.|  
+|pdw_node_id|**int**|Id numérique unique associé au nœud.|  
   
 ## <a name="examples-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-returning"></a>A. Retour  
+### <a name="a-returning"></a>R. Retour  
  La requête suivante retourne le nom et l’ID de chaque base de données dans master et le nom de base de données correspondante sur chaque nœud de calcul.  
   
 ```  
@@ -47,7 +46,7 @@ JOIN sys.pdw_nodes_pdw_physical_databases AS PD
 ORDER BY D.database_id, PD.pdw_node_ID;  
 ```  
   
-### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>b. À l’aide de sys.pdw_nodes_pdw_physical_databases pour recueillir des informations relatives aux objets détaillées  
+### <a name="b-using-syspdwnodespdwphysicaldatabases-to-gather-detailed-object-information"></a>B. À l’aide de sys.pdw_nodes_pdw_physical_databases pour recueillir des informations relatives aux objets détaillées  
  La requête suivante affiche des informations sur les index et inclut des informations utiles sur la base de données que les objets appartiennent à des objets dans la base de données.  
   
 ```  
@@ -87,7 +86,7 @@ SELECT TOP 1 encryption_state
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Data Warehouse et les vues de catalogue Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
   

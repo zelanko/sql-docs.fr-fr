@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c3e0b022996ab5b0f6de91773871fc7357c29e7f
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: edd2ea7a215f01c25539753dff4bd170cf9d422f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900421"
 ---
 # <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +36,11 @@ ms.locfileid: "58511386"
   
 -   Lorsque plusieurs instances de SQL Server sont hébergées sur le même nœud WSFC, la DLL de ressource utilise cette vue de gestion dynamique pour déterminer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle se connecter.  
    
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar (256)**|ID unique du groupe de disponibilité en tant que ressource dans le cluster WSFC.|  
 |**instance_name**|**nvarchar (256)**|Nom -*server*/*instance*-d’une instance de serveur qui héberge un réplica du groupe de disponibilité.|  
-|**node_name**|**nvarchar (256)**|Nom du nœud WSFC.|  
+|**nom_nœud**|**nvarchar (256)**|Nom du nœud WSFC.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  

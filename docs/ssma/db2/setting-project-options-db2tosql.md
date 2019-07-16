@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 16bf79c185a23399d48d141b5d773e2e0d41dc3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060030"
 ---
 # <a name="setting-project-options-db2tosql"></a>Définition des Options de projet (DB2ToSQL)
 Pour chaque projet SSMA, vous pouvez définir les options de niveau projet. Ces options spécifient la conversion de l’objet, le chargement d’objet, paramètres de migration des données et d’interface utilisateur. Avant de convertir des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vérifiez que les options de configuration sont appropriées pour le projet.  

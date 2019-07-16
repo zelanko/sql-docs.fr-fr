@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 335bdd657c0aa2f687d89f31dfcdd45d757e0cbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3ba92322f64550f8a773b49ba533e96e113e17f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047887"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Ajouter des attributs à un groupe de suivi des modifications (Master Data Services)
 
@@ -66,7 +65,7 @@ ms.locfileid: "65484814"
   
 9. Cliquez sur **Enregistrer l'attribut**.  
   
-     Pour l’attribut modifié, la colonne **Activer le groupe de suivi des modifications** de la grille est remplacée par **Oui (Groupe : numéro de groupe saisi)**.  
+     Pour l’attribut modifié, la colonne **Activer le groupe de suivi des modifications** de la grille est remplacée par **Oui (Groupe : numéro de groupe saisi)** .  
   
 10. Répétez cette procédure pour tous les attributs que vous souhaitez inclure dans le groupe. Utilisez le même numéro de groupe de suivi des modifications pour chaque attribut dans le groupe.  
   

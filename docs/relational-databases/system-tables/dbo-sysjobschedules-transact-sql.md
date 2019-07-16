@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d055e9b76d248319bddb37241b1b79428ee5f3b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7f2dfc6196bfba6c274eb45a45745159447cc39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061180"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>dbo.sysjobschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,9 +33,9 @@ ms.locfileid: "62470807"
   
 > **REMARQUE :** Le **sysjobschedules** table actualise toutes les 20 minutes, ce qui peut affecter les valeurs retournées par la **sp_help_jobschedule** procédure stockée.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**schedule_id**|**Int**|ID de la planification.|  
+|**schedule_id**|**int**|ID de la planification.|  
 |**job_id**|**uniqueidentifier**|ID du travail.|  
 |**next_run_date**|**Int**|Date à laquelle est planifiée la prochaine exécution du travail. La date se présente sous la forme AAAAMMJJ.|  
 |**next_run_time**|**Int**|Heure à laquelle est planifiée la prochaine exécution du travail. L'heure se présente sous la forme HHMMSS et est exprimée sur 24 heures.|  

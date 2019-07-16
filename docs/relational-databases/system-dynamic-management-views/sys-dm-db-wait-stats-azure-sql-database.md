@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 00abd0a5-bae0-4d71-b173-f7a14cddf795
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e5b81c48e017312048f15b600382af5f95aec821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63003517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090876"
 ---
 # <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "63003517"
   
  Des types spécifiques de temps d'attente pendant l'exécution des requêtes peuvent indiquer des goulots d'étranglement ou des points de blocage dans la requête. De la même façon, des temps d'attente élevés, ou des nombres d'attente à l'échelle du serveur peuvent indiquer des goulots d'étranglement ou des zones réactives en interaction avec l'instance du serveur. Par exemple, des attentes de verrou indiquent une contention de données par les requêtes ; des attentes de verrou interne d'E/S de page indiquent des temps de réponse E/S lents ; des attentes de mise à jour de verrous internes de page indiquent une mise en page de fichier incorrecte.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |wait_type|**nvarchar(60)**|Nom du type d'attente. Pour plus d’informations, consultez [Types d’attentes](#WaitTypes), plus loin dans cette rubrique.|  
 |waiting_tasks_count|**bigint**|Nombre d'attentes sur ce type d'attente. Ce compteur est incrémenté au début de chaque attente.|  

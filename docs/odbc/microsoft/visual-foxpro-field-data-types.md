@@ -13,27 +13,26 @@ helpviewer_keywords:
 ms.assetid: 50b733dc-679a-4b10-bc5d-98bb474dead2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 07aa06eae9f1e75a047bdd302754d884790436e1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 217058bf328677bf375d346ae7201c6eb81efa4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087956"
 ---
 # <a name="visual-foxpro-field-data-types"></a>Types de données Visual FoxPro
 Le tableau suivant répertorie les valeurs pour le *FieldType* argument dans l’instruction ALTER TABLE et CREATE TABLE et indique si *nFieldWidth* et *nPrecision* sont des arguments Obligatoire.  
   
 |*FieldType*|*NFieldWidth*|*nPrecision*|Description|  
 |-----------------|-------------------|------------------|-----------------|  
-|B|-|d|Double|  
+|b|-|d|Double|  
 |C|N|-|Champ de caractères de largeur *n*|  
 |D|-|-|Date|  
 |F|N|d|Flottante d’un champ numérique de la largeur *n* avec *d* décimales|  
-|G|-|-|Général|  
+|G|-|-|Généralités|  
 |I|-|-|Entier|  
 |L|-|-|Logical|  
 |M|-|-|Mémo|  
 |N|N|d|Un champ numérique de la largeur *n* avec *d* décimales|  
 |T|-|-|DateTime|  
-|O|-|-|Monétaire (Currency)|
+|Y|-|-|Currency|

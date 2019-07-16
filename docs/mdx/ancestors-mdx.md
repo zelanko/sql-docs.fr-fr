@@ -1,5 +1,5 @@
 ---
-title: Ancestors (MDX) | Microsoft Docs
+title: Ancêtres (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0c108ea102e03000481d18bfc69f657e6bd8a0ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8551e6fdac54b3eb4c20f13f6722936df1c92feb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017099"
 ---
 # <a name="ancestors-mdx"></a>Ancestors (MDX)
 
@@ -39,7 +38,7 @@ Ancestors(Member_Expression, Distance)
  *Level_Expression*  
  Expression MDX (Multidimensional Expressions) valide qui retourne un niveau.  
   
- *Distance*  
+ *distance*  
  Expression numérique valide qui spécifie la distance depuis le membre spécifié.  
   
 ## <a name="remarks"></a>Notes  

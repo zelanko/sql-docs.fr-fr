@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7220b0fe10f88ec9ba78d31a8507d12eba7aafff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039003"
 ---
 # <a name="context-functions---last-xquery"></a>Fonctions relatives au contexte : last (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ fn:last() as xs:integer
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. Utilisation de la fonction XQuery last() pour récupérer les deux dernières étapes de fabrication.  
+### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>R. Utilisation de la fonction XQuery last() pour récupérer les deux dernières étapes de fabrication.  
  La requête suivante récupère les deux dernières étapes de fabrication d'un modèle de produit spécifique. La valeur, le nombre d’étapes de fabrication, retourné par la **last()** fonction est utilisée dans cette requête pour récupérer les deux dernières étapes de fabrication.  
   
 ```  
@@ -62,7 +61,7 @@ WHERE ProductModelID=7
   
  Dans la requête précédente, la **last()** fonctionner dans /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` retourne le nombre d’étapes de fabrication. Cette valeur permet de récupérer la dernière étape de fabrication sur ce poste de travail.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID Result    

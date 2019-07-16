@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7605390f-b485-48cc-8d97-e364a066067b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0fdeb7bb85fb00656390dcc537ccebd3b9142bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c1b91f8c1d8f032516a7b2e04a8533f4b792b3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030047"
 ---
 # <a name="using-database-mail"></a>Utilisation de la messagerie de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47784907"
 ## <a name="examples"></a>Exemples  
  Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
- Pour les programmes qui utilisent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] messagerie de base de données, vous devez inclure le **importations** instruction pour qualifier l’espace de noms de messagerie. Insérez l'instruction après les autres instructions **Imports** , avant toute autre déclaration dans l'application, par exemple :  
+ Pour les programmes qui utilisent la messagerie de base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous devez inclure l'instruction **Imports** pour qualifier l'espace de noms de la messagerie. Insérez l'instruction après les autres instructions **Imports** , avant toute autre déclaration dans l'application, par exemple :  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

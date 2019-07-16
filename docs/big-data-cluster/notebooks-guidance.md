@@ -5,17 +5,16 @@ description: Cet article explique comment exécuter les blocs-notes Jupyter dans
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea907e507c9b37b8a6b911b7e1705ce31f231796
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 166964f97f5201d906ea2d1f6262b7a221eb2cba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958299"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Comment utiliser des blocs-notes en version préliminaire de SQL Server 2019
 
@@ -84,7 +83,7 @@ La cellule est modifiée en mode édition et tapez maintenant markdown et vous v
 
 Cliquez en dehors de la cellule de texte pour afficher le texte markdown.
 
-![Markdown text](media/notebooks-guidance/notebook-markdown-preview.png)
+![Texte markdown](media/notebooks-guidance/notebook-markdown-preview.png)
 
 
 ### <a name="configure-python-for-notebooks"></a>Configuration de Python pour les blocs-notes
@@ -102,7 +101,7 @@ Une fois l’installation terminée, vous trouverez une notification dans l’hi
 | Noyau SQL | Écrire du Code SQL ciblé sur votre base de données relationnelle.
 |PySpark3 et le noyau PySpark| Écrire du code Python à l’aide de calcul Spark à partir du cluster.
 |Noyau Spark|Écrire du code Scala et R à l’aide de calcul Spark à partir du cluster.
-|Python Kernel|Écrire du code Python pour un développement local.
+|Noyau Python|Écrire du code Python pour un développement local.
 
 `Attach to` fournit le contexte pour le noyau à attacher. Si vous utilisez le noyau de SQL, vous pouvez `Attach to` un de vos instances de SQL Server.
 
@@ -124,7 +123,7 @@ La cellule est modifiée en mode édition et tapez maintenant markdown et vous v
 
 Cliquez en dehors de la cellule de texte pour afficher le texte markdown.
 
-![Markdown text](media/notebooks-guidance/notebook-markdown-preview.png)
+![Texte markdown](media/notebooks-guidance/notebook-markdown-preview.png)
 
 ### <a name="trusted-and-non-trusted"></a>Approuvés et Non approuvés
 
@@ -135,14 +134,14 @@ Si vous ouvrez un bloc-notes à partir d’une autre source, il s’ouvre dans *
 ### <a name="run-cells"></a>Exécution des cellules
 Si vous souhaitez exécuter toutes les cellules dans le bloc-notes, puis cliquez sur le **cellules exécuter** bouton dans la barre d’outils.
 
-![Markdown text](media/notebooks-guidance/run-cell.png)
+![Texte markdown](media/notebooks-guidance/run-cell.png)
 
 
 ### <a name="clear-results"></a>Effacer les résultats
 
 Si vous souhaitez effacer les résultats de toutes les cellules exécutées dans le bloc-notes, vous pouvez cliquer sur le **effacer les résultats** bouton dans la barre d’outils.
 
-![Markdown text](media/notebooks-guidance/clear-results.png)
+![Texte markdown](media/notebooks-guidance/clear-results.png)
 
 ### <a name="save"></a>Enregistrer
 

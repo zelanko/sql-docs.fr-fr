@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe585b1f-edda-421f-81d6-8a03a3a535d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 28fe1f158a34aa599fcadba2f8921aa5c4adacc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 62f4cf0f471a17c927d1eb8ad2801a378657b0cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006906"
 ---
 # <a name="spreplcounters-transact-sql"></a>sp_replcounters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +39,10 @@ sp_replcounters
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Sauvegarde de la base de données**|**sysname**|Nom de la base de données.|  
-|**Transactions répliquées**|**Int**|Nombre de transactions qui attendent dans le journal d'être remises à la base de données de distribution.|  
+|**Transactions répliquées**|**int**|Nombre de transactions qui attendent dans le journal d'être remises à la base de données de distribution.|  
 |**Taux de réplication transactions/seconde**|**float**|Nombre moyen de transactions transmises par seconde à la base de données de distribution.|  
 |**Latence de réplication**|**float**|Temps moyen (en secondes) que les transactions restent dans le journal avant d'être distribuées.|  
 |**Replbeginlsn**|**binary(10)**|Numéro séquentiel dans le journal (LSN) du point de troncature courant dans le journal.|  

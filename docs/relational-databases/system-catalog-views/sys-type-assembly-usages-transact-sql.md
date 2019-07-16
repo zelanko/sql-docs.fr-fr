@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 79b8bf25-6e4e-4a07-ae93-7a4e44f65171
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2c31453ae904db1033eacdd2564c05eb71531019
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48dbb35fcecde99dad30e71fdcd2c85a2ab92e3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061283"
 ---
 # <a name="systypeassemblyusages-transact-sql"></a>sys.type_assembly_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +33,12 @@ ms.locfileid: "47672997"
   
 
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**user_type_id**|**Int**|ID du type<br /><br /> Pour retourner le nom du type, joindre à la [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) vue sur cette colonne de catalogue.|  
 |**assembly_id**|**Int**|ID de l'assembly|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

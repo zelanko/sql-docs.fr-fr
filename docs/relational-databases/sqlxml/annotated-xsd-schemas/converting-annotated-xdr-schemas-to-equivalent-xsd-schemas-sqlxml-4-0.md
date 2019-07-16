@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 151c94a8-66d3-4c46-a5ff-a22df456940a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 71c2f79ae39ff8617d491d015db7eecb23647d30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85483de3a30699829a22be4f0fc57d2806e127ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041103"
 ---
 # <a name="converting-annotated-xdr-schemas-to-equivalent-xsd-schemas-sqlxml-40"></a>Conversion de schémas XDR annotés en schémas XSD équivalents (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,6 +59,6 @@ cvtschema XDRFileName, [-y], [-w] [-?]
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage des Types de données XSD aux Types de données XPath &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/mapping-xsd-data-types-to-xpath-data-types-sqlxml-4-0.md)   
- [XSD Annotations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
+ [Annotations XSD &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-using/xsd-annotations-sqlxml-4-0.md)  
   
   

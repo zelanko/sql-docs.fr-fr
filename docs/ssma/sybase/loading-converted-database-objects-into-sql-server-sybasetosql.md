@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4c59256f-99a8-4351-9559-a455813dbd06
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 96e2bee47c97e85421b074e870c9dab1dd46220a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5185e8b1364fe2a5bae92c40c99e8f52bcd32ba7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028932"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-sybasetosql"></a>Chargement d’objets de base de données convertis dans SQL Server (SybaseToSQL)
 Après avoir converti les objets de base de données Sybase Adaptive Server Enterprise (ASE) à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, vous pouvez charger les objets de base de données qui en résulte dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez avoir créer les objets SSMA, ou vous pouvez générer un script les objets et exécuter les scripts vous-même. En outre, SSMA vous permet de mettre à jour des métadonnées de la cible avec le contenu réel de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure.  

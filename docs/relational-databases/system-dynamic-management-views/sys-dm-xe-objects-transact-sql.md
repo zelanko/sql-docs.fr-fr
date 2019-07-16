@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3132b45713b3493aa2e82a48123e5f3693e6e8dc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 023ee54178c5f303797c6db83cc646353304b051
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090273"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +41,17 @@ ms.locfileid: "52543820"
   
 -   Types. Les types encapsulent la longueur et les caractéristiques de la collection Byte, ce qui est nécessaire à l'interprétation des données.  
 
- |Nom de colonne|Type de données|Description|  
+ |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(60)**|Nom de l'objet. nom est unique au sein d’un package pour un type d’objet spécifique. N'accepte pas la valeur NULL.|  
-|object_type|**nvarchar(60)**|Type de l’objet. object_type est une des opérations suivantes :<br /><br /> événement<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> Type<br /><br /> N'accepte pas la valeur NULL.|  
+|name|**nvarchar(60)**|Nom de l'objet. nom est unique au sein d’un package pour un type d’objet spécifique. N'accepte pas la valeur NULL.|  
+|object_type|**nvarchar(60)**|Type de l’objet. object_type est une des opérations suivantes :<br /><br /> événement<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> N'accepte pas la valeur NULL.|  
 |package_guid|**uniqueidentifier**|GUID pour le package qui expose cette action. Il y a une relation plusieurs-à-un avec sys.dm_xe_packages.package_id. N'accepte pas la valeur NULL.|  
 |description|**nvarchar (256)**|Description de l'action Description est définie par l’auteur du package. N'accepte pas la valeur NULL.|  
-|Fonctionnalités|**Int**|Bitmap qui décrit les fonctionnalités de l'objet. Autorise la valeur NULL.|  
+|Fonctionnalités|**int**|Bitmap qui décrit les fonctionnalités de l'objet. Autorise la valeur NULL.|  
 |capabilities_desc|**nvarchar (256)**|Répertorie toutes les fonctionnalités de l'objet. Autorise la valeur NULL.<br /><br /> **Fonctions qui s’appliquent à tous les types d’objet**<br /><br /> -<br />                                **Privé**. Le seul objet disponible pour une utilisation interne, qui n'est pas accessibles via CREATE/ALTER EVENT SESSION DDL. Les événements d'audit et les cibles sont classés dans cette catégorie, en plus d'un petit nombre d'objets utilisés en interne.<br /><br /> ===============<br /><br /> **Fonctionnalités d’événement**<br /><br /> -<br />                                **No_block**. L'événement est dans un chemin de code critique qui ne peut en aucun cas être bloqué. Les événements ayant cette fonction ne peuvent être ajoutés à aucune session d'événements qui spécifie NO_EVENT_LOSS.<br /><br /> ===============<br /><br /> **Fonctions qui s’appliquent à tous les types d’objet**<br /><br /> -<br />                                **Process_whole_buffers**. La cible consomme des mémoires tampons d'événements à la fois, plutôt qu'un événement après l'autre.<br /><br /> -<br />                        **Singleton**. Une seule instance de la cible peut exister dans un processus. Bien que plusieurs sessions d'événements puissent référencer la même cible singleton, il existe réellement une seule instance, qui voit chaque événement une seule fois. C'est important si la cible est ajoutée à plusieurs sessions qui collectent toutes le même événement.<br /><br /> -<br />                                **Synchronous**. La cible est exécutée sur le thread qui produit l'événement, avant que le contrôle soit renvoyé à la ligne de code appelant.|  
 |type_name|**nvarchar(60)**|Nom pour les objets pred_source et pred_compare. Autorise la valeur NULL.|  
 |type_package_guid|**uniqueidentifier**|GUID pour le package qui expose le type sur lequel fonctionne cet objet. Autorise la valeur NULL.|  
-|type_size|**Int**|Taille du type de données, en octets. Uniquement pour les types d'objets valides. Autorise la valeur NULL.|  
+|type_size|**int**|Taille du type de données, en octets. Uniquement pour les types d'objets valides. Autorise la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  

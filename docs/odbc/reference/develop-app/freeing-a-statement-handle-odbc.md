@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee18e2f1-2690-4cc1-9e5c-e20244e5d480
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc16e820671aa69c15365413d44fb9bcf807236b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 638cf9fb3c7af73130cf1413559b9baee2a354c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069780"
 ---
 # <a name="freeing-a-statement-handle-odbc"></a>Libération d’un handle d’instruction dans ODBC
 Comme mentionné précédemment, il est plus efficace de réutiliser des instructions que to déposez-les et allouer de nouveaux. Avant d’exécuter une nouvelle instruction SQL sur une instruction, les applications doivent être sûr que les paramètres actuels de l’instruction sont appropriées. Cela inclut les attributs d'instruction, les liaisons de paramètres et les liaisons de jeux de résultats. En règle générale, les paramètres et jeux de résultats pour l’ancienne instruction SQL doivent être indépendantes (en appelant **SQLFreeStmt** avec les options SQL_RESET_PARAMS et SQL_UNBIND) et élastique pour la nouvelle instruction SQL.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2426d68-71bc-4ef7-a5cb-ee9d6c1c9671
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f07f835361fcf29143376fe468a55f0bf26e31e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7cd157edd6111dec29ae238a1c383879e66ac0b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067433"
 ---
 # <a name="data-buffer-address"></a>Adresse du tampon de données
 L’application transmet l’adresse du tampon de données pour le pilote dans un argument nommé souvent *ValuePtr* ou un nom similaire. Par exemple, dans l’exemple suivant appel à **SQLBindCol**, l’application spécifie l’adresse de la *Date* variable :  

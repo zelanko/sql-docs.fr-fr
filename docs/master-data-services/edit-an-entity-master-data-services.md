@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6a5b9f14-6dfc-49d7-a771-e96461d4feae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ddba17337d8b9ec3cda5e85b9e769ea88915ee91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88a4850c80404ebeb002c5d17af69b0f10dc5bf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086478"
 ---
 # <a name="edit-an-entity-master-data-services"></a>Modifier une entité (Master Data Services)
 
@@ -59,7 +58,7 @@ ms.locfileid: "65488463"
   
      Pour plus d'informations, consultez [Data Compression](../relational-databases/data-compression/data-compression.md)  
   
-## <a name="status"></a>État  
+## <a name="status"></a>Statut  
  La colonne d’état de la grille affiche l’état de l’opération sur l’entité. Lorsque vous cliquez sur **Enregistrer l’entité**, l’image ci-après s’affiche pour indiquer que l’entité est en cours de mise à jour.  
   
  ![Icône d’état de mise à jour](../master-data-services/media/mds-statusicon-updating.png "Icône d’état de mise à jour")  

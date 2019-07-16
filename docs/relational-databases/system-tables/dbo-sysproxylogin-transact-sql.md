@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 00a3b3b53bcede7f43aad556465358b957331f45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fb62d70c1b0a41edf684a8216205fb43e070eea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984877"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Enregistre les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont associées avec chaque compte proxy de SQL Server Agent. Cette table est stockée dans le **msdb** base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**proxy_id**|**Int**|Identificateur du compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette valeur correspond à la **proxy_id** colonne dans le **sysproxies** table.|  
+|**proxy_id**|**int**|Identificateur du compte proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette valeur correspond à la **proxy_id** colonne dans le **sysproxies** table.|  
 |**sid**|**varbinary(85)**|Microsoft Windows *identificateur_sécurisé* pour la connexion SQL Server.|  
-|**principal_id**|**Int**|ID de l'utilisateur ou du groupe qui a l'autorisation d'utiliser le compte proxy pour une étape du sous-système spécifié.|  
+|**principal_id**|**int**|ID de l'utilisateur ou du groupe qui a l'autorisation d'utiliser le compte proxy pour une étape du sous-système spécifié.|  
 |**flags**|**Int**|Type de connexion :<br /><br /> **0** = utilisateur de Windows ou un groupe, et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.<br /><br /> **1**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôle de système fixe<br /><br /> **2** = **msdb** rôle de base de données|  
   
 ## <a name="remarks"></a>Notes  

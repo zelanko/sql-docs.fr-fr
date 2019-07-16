@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3edbd41bc5361d864abcc7d631a90521af98ef01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942816"
 ---
 # <a name="updating-data-overview"></a>Vue d’ensemble de la mise à jour des données
 Les applications peuvent mettre à jour les données en exécutant des instructions SQL ou en appelant **SQLSetPos** ou **SQLBulkOperations**. **Mise à jour**, **supprimer**, et **insérer** instructions agir directement sur la source de données et sont généralement prises en charge par les pilotes. Rechercher les mises à jour et les instructions delete contient une spécification des lignes à modifier. Positionné de mise à jour et supprimer des instructions et **SQLSetPos** agissent sur la source de données via un curseur et sont moins couramment pris en charge.  

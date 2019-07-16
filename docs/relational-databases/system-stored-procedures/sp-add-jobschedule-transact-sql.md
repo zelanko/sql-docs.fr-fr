@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e20d30b63a1cc387c6b997c8a8a11bab835e21f8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fb19fc3dc6b97e6381e9839c22a05ee71a93bfb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078190"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="arguments"></a>Arguments  
 `[ @job_id = ] job_id` Numéro d’identification du travail auquel ajouter la planification. *job_id* est **uniqueidentifier**, sans valeur par défaut.  
   
-`[ @job_name = ] 'job_name'` Nom du travail auquel ajouter la planification. *job_name* est **nvarchar (128)**, sans valeur par défaut.  
+`[ @job_name = ] 'job_name'` Nom du travail auquel ajouter la planification. *job_name* est **nvarchar (128)** , sans valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
-`[ @name = ] 'name'` Nom de la planification. *nom* est **nvarchar (128)**, sans valeur par défaut.  
+`[ @name = ] 'name'` Nom de la planification. *nom* est **nvarchar (128)** , sans valeur par défaut.  
   
 `[ @enabled = ] enabled_flag` Indique l’état actuel de la planification. *enabled_flag* est **tinyint**, avec une valeur par défaut **1** (activé). Si **0**, la planification n’est pas activée. Lorsque la planification n'est pas activée, le travail n'est pas exécuté.  
   
@@ -77,9 +76,9 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_interval = ] frequency_interval` Jour de la tâche est exécutée. *frequency_interval* est **int**, avec une valeur par défaut 0 et dépend de la valeur de *frequency_type* comme indiqué dans le tableau suivant :  
   
-|Value|Effet|  
+|Value|Résultat|  
 |-----------|------------|  
-|**1** (once)|*frequency_interval* n’est pas utilisé.|  
+|**1** (une fois)|*frequency_interval* n’est pas utilisé.|  
 |**4** (quotidienne)|Chaque *frequency_interval* jours.|  
 |**8** (hebdomadaire)|*frequency_interval* prend une ou plusieurs des opérations suivantes (combinées avec un opérateur logique OR) :<br /><br /> 1 = Dimanche<br /><br /> 2 = Lundi<br /><br /> 4 = mardi<br /><br /> 8 = mercredi<br /><br /> 16 = jeudi<br /><br /> 32 = vendredi<br /><br /> 64 = samedi|  
 |**16** (mensuellement)|Sur le *frequency_interval* jour du mois.|  
@@ -131,7 +130,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Il est désormais possible de gérer la planification des travaux indépendamment des travaux. Pour ajouter une planification à un travail, utilisez **sp_add_schedule** pour créer le calendrier et **sp_attach_schedule** pour l’associer à un travail.  

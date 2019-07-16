@@ -12,13 +12,12 @@ apilocation:
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 870acddcd825c9c112274d294fa4c97848a85236
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8a873fbc1b5031d6f26f0a3809675276c7806fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021987"
 ---
 # <a name="sql-server-express-localdb-header-and-version-information"></a>En-tête et informations de version SQL Server Express LocalDB
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "62669654"
 ## <a name="localdb-versioning"></a>Contrôle de version de LocalDB  
  L'installation de LocalDB utilise un jeu unique de binaires par version principale de SQL Server. Ces versions de LocalDB sont conservées et des correctifs de logiciel sont appliqués indépendamment. Cela signifie que l'utilisateur doit spécifier la version de base de LocalDB (autrement dit, la version principale de SQL Server) qu'il utilisera. La version est spécifiée dans le format de la version standard défini par le .NET Framework **System.Version** classe :  
   
- *major.minor[.build[.revision]]*  
+ *[.Build.revision]]*  
   
  Les deux premiers nombres dans la chaîne de version (*majeure* et *mineure*) sont obligatoires. Les deux derniers nombres dans la chaîne de version (*build* et *révision*) sont facultatifs et la valeur par défaut zéro si l’utilisateur les omet. Cela signifie que si l’utilisateur ne spécifie que « 12.2 » comme le numéro de version de base de données locale, il est considéré comme si l’utilisateur spécifié « 12.2.0.0 » avait été.  
   

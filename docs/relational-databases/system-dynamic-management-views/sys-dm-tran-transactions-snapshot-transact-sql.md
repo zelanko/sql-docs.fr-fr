@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d24ed8e2fdcf3a9475f999bf127eae3e8553dc86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a40ad81505419239d7a09d01a0c27fceff2a24f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090471"
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,21 +67,21 @@ dm_tran_transactions_snapshot
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Numéro de séquence (XSN) d'une transaction d'instantané.|  
 |**snapshot_id**|**Int**|Identificateur d'instantané pour chaque instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] lancée en mode de lecture validée à l'aide du contrôle de version de ligne. Cette valeur permet de générer une vue cohérente, d'un point de vue transactionnel, de la base de données prenant en charge chaque requête qui est exécutée en mode de lecture validée à l'aide du contrôle de version de ligne.|  
 |**snapshot_sequence_num**|**bigint**|Numéro de séquence d'une transaction qui était active lorsque la transaction d'instantané a commencé.|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
   
 ## <a name="remarks"></a>Notes  
  Lorsqu'une transaction d'instantané démarre, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] enregistre toutes les transactions qui sont actives à ce moment précis. **Sys.dm_tran_transactions_snapshot** fournit ces informations pour toutes les transactions d’instantané actuellement actives.  
   
- Chaque transaction est identifiée par un numéro de séquence qui lui est affecté au moment où elle commence. Les transactions commencent au moment où une instruction BEGIN TRANSACTION ou BEGIN WORK est exécutée. Toutefois, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] assigne la séquence de transaction nombre avec l’exécution de la première [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction qui accède aux données après l’instruction BEGIN TRANSACTION ou BEGIN WORK. Les numéros de séquence des transactions sont incrémentés d'une unité à la fois.  
+ Chaque transaction est identifiée par un numéro de séquence qui lui est affecté au moment où elle commence. Les transactions commencent au moment où une instruction BEGIN TRANSACTION ou BEGIN WORK est exécutée. Toutefois, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'attribue le numéro de séquence de la transaction que lors de l'exécution de la première instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] qui accède aux données suite à l'instruction BEGIN TRANSACTION ou BEGIN WORK. Les numéros de séquence des transactions sont incrémentés d'une unité à la fois.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

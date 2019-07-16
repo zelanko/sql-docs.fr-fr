@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: c4603bf5fec8f1df8ae1e7fe0e711bf7b6e8f1e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 475c3dc1366e69dbc164547bbf5dfc8c06515c56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050468"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Exécutez l’Assistant expérimentation de base de données à une invite de commandes
 
@@ -43,9 +42,9 @@ Pour démarrer une nouvelle capture de la charge de travail, exécutez la comman
 
 3.  Démarrer une capture de trace sur l’ordinateur cible en cours d’exécution SQL Server à l’aide de StartReplayCaptureTrace.sql.
        
-    A.  Dans SQL Server Management Studio (SSMS), ouvrez < Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql.
+    a.  Dans SQL Server Management Studio (SSMS), ouvrez < Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql.
     
-    B.  Exécutez `Set @durationInMins=0` afin que la capture de trace ne s’arrête pas automatiquement après un délai spécifié.
+    b.  Exécutez `Set @durationInMins=0` afin que la capture de trace ne s’arrête pas automatiquement après un délai spécifié.
     
     c.  Pour définir la taille de fichier maximale par fichier de trace, exécutez `Set @maxfilesize`. La taille recommandée est de 200 (en Mo).
     
@@ -56,9 +55,9 @@ Pour démarrer une nouvelle capture de la charge de travail, exécutez la comman
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
         
-    A.  Pour surveiller l’état, ouvrez une fenêtre d’invite de commandes et exécutez `DReplay status -f 1`.
+    a.  Pour surveiller l’état, ouvrez une fenêtre d’invite de commandes et exécutez `DReplay status -f 1`.
         
-    B.  Pour arrêter la relecture, telles que si vous voyez que le pourcentage de réussite est plus faible que prévu, ouvrez une fenêtre d’invite de commandes et exécutez `DReplay cancel`.
+    b.  Pour arrêter la relecture, telles que si vous voyez que le pourcentage de réussite est plus faible que prévu, ouvrez une fenêtre d’invite de commandes et exécutez `DReplay cancel`.
 
 5.  Arrêtez la capture de trace sur l’instance de SQL Server cible.
 6.  Dans SSMS, ouvrez `<Dea_InstallPath>\Scripts\StopCaptureTrace.sql`.

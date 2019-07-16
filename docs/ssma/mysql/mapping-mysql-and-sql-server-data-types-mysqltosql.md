@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ffe475b53048a97f878bfad1d8bef68d6fb3cfc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908989"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>Mappage des types de données MySQL et SQL Server (MySQLToSQL)
 Les types de base de données MySQL diffèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou types de base de données SQL Azure. Lorsque vous convertissez des objets de base de données MySQL à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de SQL Azure, vous devez spécifier le mappage des types de données de MySQL vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les procédures suivantes.  

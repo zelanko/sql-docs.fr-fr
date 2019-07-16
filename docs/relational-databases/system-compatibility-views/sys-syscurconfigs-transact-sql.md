@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3ef0f49229ab374a0ca9e2dce12d7fa6ea5f59bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b0fad344831d8073badb2618eb2c34a1cdc2161
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089181"
 ---
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,9 +35,9 @@ ms.locfileid: "62693842"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**value**|**Int**|Valeur modifiable par l'utilisateur pour la variable. Utilisée par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uniquement en cas d'exécution de RECONFIGURE.|  
+|**value**|**int**|Valeur modifiable par l'utilisateur pour la variable. Utilisée par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uniquement en cas d'exécution de RECONFIGURE.|  
 |**config**|**smallint**|Numéro de variable de configuration.|  
 |**comment**|**nvarchar(255)**|Explication de l'option de configuration.|  
 |**status**|**smallint**|Bitmap indiquant l'état de l'option. Il peut prendre les valeurs suivantes :<br /><br /> 0 = Statique. Le paramètre prend effet au redémarrage du serveur.<br /><br /> 1 = Dynamique. La variable prend effet lorsque l'instruction RECONFIGURE est exécutée.<br /><br /> 2 = Avancé. Variable s’affiche uniquement lorsque le **afficher les options avancées** est définie.<br /><br /> 3 = Dynamique et avancé.|  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf1b17b4-47d5-4eba-83f9-fb0555806867
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7d819d162269aa385f4103e349e8c0308157b2dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3493fce1ca3326b422c99bc79afdcf74faa691cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079664"
 ---
 # <a name="model-deployment-options-master-data-services"></a>Options de déploiement de modèle (Master Data Services)
 
@@ -36,11 +35,11 @@ ms.locfileid: "65486067"
   
  Le tableau suivant doit vous aider à déterminer quel choix opérer lors du déploiement d'un modèle à l'aide de l'Assistant Déploiement de modèle de l'administration de système ou de l'outil MDSModelDeploy.  
   
-|Option|Description|Remarques|  
+|Option|Description|Notes|  
 |------------|-----------------|-----------|  
-|Nouvelle|Crée un nouveau modèle avec un nom unique. Les nouveaux identificateurs sont créés pour tous les objets de modèle.|Si vous créez un modèle avec de nouveaux identificateurs, vous ne pouvez pas utiliser les outils de déploiement de modèle pour appliquer des mises à jour ultérieures au modèle. Si vous utilisez l'Assistant de l'application Web pour déployer un package de modèle, vous avez la possibilité de créer un modèle uniquement s'il existe déjà un modèle portant le même nom ou le même ID.|  
-|Clone|Crée un modèle qui est un clone exact du modèle dans le package. Cela fonctionne uniquement si le modèle (nom ou identificateur) n'existe pas dans l'environnement cible. Utilisez Clone quand vous souhaitez utiliser le même modèle dans plusieurs environnements et mettre à jour le modèle cloné au fil du temps.|Il s'agit du comportement par défaut de l'Assistant dans l'application Web. S'il existe déjà un modèle avec le même nom ou le même ID, vous êtes invité à créer un modèle à la place.|  
-|Update|Met à jour un modèle existant avec le modèle dans le package. Les identificateurs doivent être identiques dans les deux modèles. Cela permet de mettre à jour un modèle que vous avez précédemment cloné.|Vous pouvez uniquement mettre à jour les modèles qui ont été précédemment clonés. (Les noms et les ID doivent correspondre.)|  
+|Nouveau|Crée un nouveau modèle avec un nom unique. Les nouveaux identificateurs sont créés pour tous les objets de modèle.|Si vous créez un modèle avec de nouveaux identificateurs, vous ne pouvez pas utiliser les outils de déploiement de modèle pour appliquer des mises à jour ultérieures au modèle. Si vous utilisez l'Assistant de l'application Web pour déployer un package de modèle, vous avez la possibilité de créer un modèle uniquement s'il existe déjà un modèle portant le même nom ou le même ID.|  
+|Cloner|Crée un modèle qui est un clone exact du modèle dans le package. Cela fonctionne uniquement si le modèle (nom ou identificateur) n'existe pas dans l'environnement cible. Utilisez Clone quand vous souhaitez utiliser le même modèle dans plusieurs environnements et mettre à jour le modèle cloné au fil du temps.|Il s'agit du comportement par défaut de l'Assistant dans l'application Web. S'il existe déjà un modèle avec le même nom ou le même ID, vous êtes invité à créer un modèle à la place.|  
+|Mettre à jour|Met à jour un modèle existant avec le modèle dans le package. Les identificateurs doivent être identiques dans les deux modèles. Cela permet de mettre à jour un modèle que vous avez précédemment cloné.|Vous pouvez uniquement mettre à jour les modèles qui ont été précédemment clonés. (Les noms et les ID doivent correspondre.)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Déployer un package de déploiement de modèle à l'aide de MDSModelDeploy](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)   

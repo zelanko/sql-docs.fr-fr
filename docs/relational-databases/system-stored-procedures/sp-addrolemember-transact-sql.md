@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18680069663b0979662b3288b5d02439fdf55297
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030904"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,10 +43,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>Arguments  
- [ @rolename= ] '*role*'  
+ [ @rolename=] '*rôle*'  
  Nom du rôle de base de données dans la base de données actuelle. *rôle* est un **sysname**, sans valeur par défaut.  
   
- [ @membername= ] '*security_account*'  
+ [ @membername=] '*auxquels celui-ci a*'  
  Compte de sécurité ajouté au rôle. *celui-ci* est un **sysname**, sans valeur par défaut. *celui-ci* peut être un utilisateur de base de données, d’un rôle de base de données, d’une connexion de Windows ou d’un groupe de Windows.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -75,7 +74,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-adding-a-windows-login"></a>A. Ajout d'une connexion Windows  
+### <a name="a-adding-a-windows-login"></a>R. Ajout d'une connexion Windows  
  L’exemple suivant ajoute la connexion Windows `Contoso\Mary5` à la `AdventureWorks2012` base de données en tant qu’utilisateur `Mary5`. L'utilisateur `Mary5` est ensuite ajouté au rôle `Production`.  
   
 > [!NOTE]  

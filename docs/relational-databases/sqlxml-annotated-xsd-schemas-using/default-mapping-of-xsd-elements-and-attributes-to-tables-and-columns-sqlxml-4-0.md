@@ -26,14 +26,13 @@ ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d07235635f4858d1690170b9112b2ffa3c4fa0a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74823924864d15324b6e4f2183609fa6e761d6f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067185"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>Mappage par défaut d'éléments et d'attributs XSD à des tables et des colonnes (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65981001"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-default-mapping"></a>A. Spécification du mappage par défaut  
+### <a name="a-specifying-default-mapping"></a>R. Spécification du mappage par défaut  
  Dans cet exemple, aucune annotation n'est spécifiée dans le schéma XSD. Le  **\<Person.Contact >** élément est de type complexe et, par conséquent, est mappé par défaut à la table Person.Contact dans la base de données AdventureWorks. Tous les attributs (ContactID, FirstName, LastName) de la  **\<Person.Contact >** élément sont de type simple et sont mappés par défaut aux colonnes portant le même nom dans la table Person.Contact.  
   
 ```  

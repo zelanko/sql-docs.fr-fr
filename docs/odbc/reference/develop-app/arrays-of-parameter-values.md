@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 03479a0187c7720a595b550290a8f5ac8197fa9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e65928cd078a3f05032f4e4fb400e3e2eb1f27a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077072"
 ---
 # <a name="arrays-of-parameter-values"></a>Tableaux de valeurs de paramètre
 Il est souvent utile pour les applications de passer des tableaux de paramètres. Par exemple, à l’aide de tableaux de paramètres et une commande paramétrable **insérer** instruction, une application peut insérer un nombre de lignes à la fois. Il existe plusieurs avantages à l’utilisation de tableaux. Tout d’abord, le trafic réseau est réduit, car les données pour de nombreuses instructions sont envoyées dans un paquet unique (si la source de données prend en charge les tableaux de paramètres en mode natif). En second lieu, certaines sources de données peuvent exécuter des instructions SQL à l’aide des tableaux plus rapidement que l’exécution le même nombre d’instructions SQL séparées. Enfin, lorsque les données sont stockées dans un tableau, comme c’est souvent le cas pour les données d’écran, l’application peut lier toutes les lignes dans une colonne particulière avec un seul appel à **SQLBindParameter** et les mettre à jour en exécutant une instruction unique.  

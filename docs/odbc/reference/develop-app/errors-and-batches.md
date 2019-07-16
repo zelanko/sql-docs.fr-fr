@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 97179574407dca56026f9d5216e4978069cffc1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6902b82c74e953d6009d7e5352608477d92122d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62942982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051132"
 ---
 # <a name="errors-and-batches"></a>Erreurs et lots
 Lorsqu’une erreur se produit lors de l’exécution d’un lot d’instructions SQL, un des quatre résultats suivants sont possibles. (Chaque résultat possible est spécifique à la source de données et peut même dépend les instructions incluses dans le lot.)  

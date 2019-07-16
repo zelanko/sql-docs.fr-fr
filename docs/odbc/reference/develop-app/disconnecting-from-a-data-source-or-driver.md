@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83dbf0bf-b400-41fb-8537-9b016050dc3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2189c0fcc65fd4192e94da140e2d55ac86826137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a01220b6a4f15ee3770b844f41e7ddc5399f5f86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62935998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039758"
 ---
 # <a name="disconnecting-from-a-data-source-or-driver"></a>Déconnexion d’une source de données ou d’un pilote
 Lorsqu’une application a terminé d’utiliser une source de données, il appelle **SQLDisconnect**. **SQLDisconnect** libère toutes les instructions qui sont allouées sur la connexion et déconnecte le pilote de la source de données. Elle retourne une erreur si une transaction est en cours.  
