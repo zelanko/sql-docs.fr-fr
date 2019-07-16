@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e491439f-8eff-4bf6-a808-8dba243af8c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 858a42d7d4523bfcba3d7ecc64828bc8ebeda581
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86fb1c06f34f3c8c6688c234b8c2714cd61c089e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938524"
 ---
 # <a name="dimension-object-properties-methods-and-events"></a>Propriétés, méthodes et événements de l’objet Dimension
 ## <a name="propertiescollections"></a>Propriétés et des Collections  
@@ -33,10 +32,10 @@ ms.locfileid: "66709307"
  [UniqueName, propriété](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Méthodes  
- Aucun.  
+ Aucune.  
   
 ## <a name="events"></a>Events  
- Aucun.  
+ Aucune.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Dimension, objet (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)
