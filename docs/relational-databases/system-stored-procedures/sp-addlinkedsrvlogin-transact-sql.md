@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072670"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  Nom d'un serveur lié auquel s'applique le mappage de la connexion. *nom_du_serveur_distant* est **sysname**, sans valeur par défaut.  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
- Détermine s’il faut se connecter à *nom_du_serveur_distant* en empruntant l’identité des connexions locales ou en envoyant explicitement une connexion et un mot de passe. Le type de données est **varchar (** 8 **)**, avec TRUE comme valeur par défaut.  
+ Détermine s’il faut se connecter à *nom_du_serveur_distant* en empruntant l’identité des connexions locales ou en envoyant explicitement une connexion et un mot de passe. Le type de données est **varchar (** 8 **)** , avec TRUE comme valeur par défaut.  
   
  La valeur TRUE Spécifie que les connexions utilisent leurs propres informations d’identification pour se connecter à *nom_du_serveur_distant*, avec le *l’argument utildist* et *rmtpassword* ignorés des arguments. La valeur FALSE indique que le *l’argument utildist* et *rmtpassword* arguments sont utilisés pour se connecter à *nom_du_serveur_distant* spécifié *locallogin* . Si *l’argument utildist* et *rmtpassword* sont également défini sur NULL, aucune connexion ou le mot de passe est utilisé pour se connecter au serveur lié.  
   
@@ -91,14 +90,14 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-connecting-all-local-logins-to-the-linked-server-by-using-their-own-user-credentials"></a>A. Établissement des connexions locales au serveur lié avec leurs propres informations d'identification.  
+### <a name="a-connecting-all-local-logins-to-the-linked-server-by-using-their-own-user-credentials"></a>R. Établissement des connexions locales au serveur lié avec leurs propres informations d'identification.  
  Le code exemple suivant crée un mappage pour que toutes les connexions au serveur local soient établies via le serveur lié `Accounts` avec leurs propres informations d'identification.  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts';  
 ```  
   
- ou  
+ Ou  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts', 'true';  

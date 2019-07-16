@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14e35b85b594cadf90a467c5017ac31033bc464b
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: f676acf9b3ee91bb5a1fb46cae2f7c693dc66983
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061822"
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@restricted = ] 'restricted'` Prise en charge pour la compatibilité descendante uniquement. Utilisez *accès_par_défaut*.  
   
-`[ \@sync_method = ] _'sync_method'` Est le mode de synchronisation. *sync_method* est **nvarchar(13)**, et peut prendre l’une des valeurs suivantes.  
+`[ \@sync_method = ] _'sync_method'` Est le mode de synchronisation. *sync_method* est **nvarchar(13)** , et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -102,39 +101,39 @@ sp_addpublication [ @publication = ] 'publication'
 |**caractère d’instantané de base de données**|Produit une copie en bloc en mode caractère de toutes les tables à partir d'un instantané de base de données. Les instantanés de base de données ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prise en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
 |NULL (par défaut)|Valeur par défaut est **natif** pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication. Pour non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication, valeur par défaut est **caractère** lorsque la valeur de *repl_freq* est **instantané** et **concurrent_c** pour tous les autres cas.|  
   
-`[ \@repl_freq = ] 'repl_freq'` Est le type de fréquence de réplication, *repl_freq* est **nvarchar (10)**, et peut prendre l’une des valeurs suivantes.  
+`[ \@repl_freq = ] 'repl_freq'` Est le type de fréquence de réplication, *repl_freq* est **nvarchar (10)** , et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**continue** (valeur par défaut)|Le serveur de publication fournit la sortie de toutes les transactions enregistrées dans le journal. Pour les non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les éditeurs, ceci nécessite que *sync_method* être définie sur **concurrent_c**.|  
 |**snapshot**|Le serveur de publication fournit uniquement les événements de synchronisation planifiés. Pour les non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les éditeurs, ceci nécessite que *sync_method* être définie sur **caractère**.|  
   
-`[ \@description = ] 'description'` Est une description facultative pour la publication. *Description* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ \@description = ] 'description'` Est une description facultative pour la publication. *Description* est **nvarchar (255)** , avec NULL comme valeur par défaut.  
   
-`[ \@status = ] 'status'` Spécifie si les données de publication sont disponibles. *état* est **nvarchar (8)**, et peut prendre l’une des valeurs suivantes.  
+`[ \@status = ] 'status'` Spécifie si les données de publication sont disponibles. *état* est **nvarchar (8)** , et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**active**|Les données de publication sont disponibles immédiatement pour les Abonnés.|  
-|**inactive** (default)|Les données de la publication ne sont pas disponibles pour les Abonnés lors de la première création de la publication (ils peuvent s'abonner, mais les abonnements ne sont pas traités).|  
+|**inactif** (valeur par défaut)|Les données de la publication ne sont pas disponibles pour les Abonnés lors de la première création de la publication (ils peuvent s'abonner, mais les abonnements ne sont pas traités).|  
   
  *Non pris en charge pour les serveurs de publication Oracle*.  
   
-`[ \@independent_agent = ] 'independent_agent'` Spécifie s’il existe un Agent de Distribution autonome pour cette publication. *independent_agent* est **nvarchar (5)**, avec FALSE comme valeur par défaut. Si **true**, il existe un Agent de Distribution autonome pour cette publication. Si **false**, la publication utilise un Agent de Distribution partagé, et chaque paire de base de données de serveur de publication/abonné de base de données a un seul Agent partagé.  
+`[ \@independent_agent = ] 'independent_agent'` Spécifie s’il existe un Agent de Distribution autonome pour cette publication. *independent_agent* est **nvarchar (5)** , avec FALSE comme valeur par défaut. Si **true**, il existe un Agent de Distribution autonome pour cette publication. Si **false**, la publication utilise un Agent de Distribution partagé, et chaque paire de base de données de serveur de publication/abonné de base de données a un seul Agent partagé.  
   
-`[ \@immediate_sync = ] 'immediate_synchronization'` Spécifie si les fichiers de synchronisation pour la publication sont créés chaque fois que l’Agent d’instantané s’exécute. *qu’immediate_synchronization* est **nvarchar (5)**, avec FALSE comme valeur par défaut. Si **true**, les fichiers de synchronisation sont créés ou recréés chaque fois que l’Agent d’instantané s’exécute. Les Abonnés peuvent obtenir les fichiers de synchronisation immédiatement si l'Agent d'instantané a fini de s'exécuter avant la création de l'abonnement. Les nouveaux abonnements obtiennent les fichiers de synchronisation les plus récents, générés lors de la dernière exécution de l'Agent d'instantané. *independent_agent* doit être **true** pour *qu’immediate_synchronization* être **true**. Si **false**, les fichiers de synchronisation sont créés uniquement s’il existe de nouveaux abonnements. Vous devez appeler [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) pour chaque abonnement lorsque vous ajoutez progressivement un nouvel article à une publication existante. Les abonnés ne peuvent recevoir les fichiers de synchronisation après s'être abonnés qu'après le lancement et l'exécution des Agents d'instantané.  
+`[ \@immediate_sync = ] 'immediate_synchronization'` Spécifie si les fichiers de synchronisation pour la publication sont créés chaque fois que l’Agent d’instantané s’exécute. *qu’immediate_synchronization* est **nvarchar (5)** , avec FALSE comme valeur par défaut. Si **true**, les fichiers de synchronisation sont créés ou recréés chaque fois que l’Agent d’instantané s’exécute. Les Abonnés peuvent obtenir les fichiers de synchronisation immédiatement si l'Agent d'instantané a fini de s'exécuter avant la création de l'abonnement. Les nouveaux abonnements obtiennent les fichiers de synchronisation les plus récents, générés lors de la dernière exécution de l'Agent d'instantané. *independent_agent* doit être **true** pour *qu’immediate_synchronization* être **true**. Si **false**, les fichiers de synchronisation sont créés uniquement s’il existe de nouveaux abonnements. Vous devez appeler [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) pour chaque abonnement lorsque vous ajoutez progressivement un nouvel article à une publication existante. Les abonnés ne peuvent recevoir les fichiers de synchronisation après s'être abonnés qu'après le lancement et l'exécution des Agents d'instantané.  
   
-`[ \@enabled_for_internet = ] 'enabled_for_internet'` Spécifie si la publication est activée pour Internet et détermine si le protocole de transfert de fichiers (FTP) peut être utilisé pour transférer les fichiers de capture instantanée à un abonné. *enabled_for_internet* est **nvarchar (5)**, avec FALSE comme valeur par défaut. Si **true**, les fichiers de synchronisation pour la publication sont placés dans le répertoire C:\Program Files\Microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp. L'utilisateur doit créer le répertoire FTP.  
+`[ \@enabled_for_internet = ] 'enabled_for_internet'` Spécifie si la publication est activée pour Internet et détermine si le protocole de transfert de fichiers (FTP) peut être utilisé pour transférer les fichiers de capture instantanée à un abonné. *enabled_for_internet* est **nvarchar (5)** , avec FALSE comme valeur par défaut. Si **true**, les fichiers de synchronisation pour la publication sont placés dans le répertoire C:\Program Files\Microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp. L'utilisateur doit créer le répertoire FTP.  
   
-`[ \@allow_push = ] 'allow_push'` Spécifie si les abonnements peuvent être créés pour la publication concernée. *allow_push* est **nvarchar (5)**, par défaut est TRUE, ce qui permet des abonnements envoyés sur la publication.  
+`[ \@allow_push = ] 'allow_push'` Spécifie si les abonnements peuvent être créés pour la publication concernée. *allow_push* est **nvarchar (5)** , par défaut est TRUE, ce qui permet des abonnements envoyés sur la publication.  
   
-`[ \@allow_pull = ] 'allow_pull'` Spécifie si les abonnements par extraction peuvent être créés pour la publication concernée. *allow_pull* est **nvarchar (5)**, avec FALSE comme valeur par défaut. Si **false**, abonnements par extraction ne sont pas autorisés pour la publication.  
+`[ \@allow_pull = ] 'allow_pull'` Spécifie si les abonnements par extraction peuvent être créés pour la publication concernée. *allow_pull* est **nvarchar (5)** , avec FALSE comme valeur par défaut. Si **false**, abonnements par extraction ne sont pas autorisés pour la publication.  
   
-`[ \@allow_anonymous = ] 'allow_anonymous'` Spécifie si les abonnements anonymes peuvent être créés pour la publication concernée. *allow_anonymous* est **nvarchar (5)**, avec FALSE comme valeur par défaut. Si **true**, *qu’immediate_synchronization* doit également être définie sur **true**. Si **false**, les abonnements anonymes ne sont pas autorisés pour la publication.  
+`[ \@allow_anonymous = ] 'allow_anonymous'` Spécifie si les abonnements anonymes peuvent être créés pour la publication concernée. *allow_anonymous* est **nvarchar (5)** , avec FALSE comme valeur par défaut. Si **true**, *qu’immediate_synchronization* doit également être définie sur **true**. Si **false**, les abonnements anonymes ne sont pas autorisés pour la publication.  
   
-`[ \@allow_sync_tran = ] 'allow_sync_tran'` Spécifie si les abonnements de mise à jour immédiate sont autorisés pour la publication. *allow_sync_tran* est **nvarchar (5)**, avec FALSE comme valeur par défaut. **true** est *ne pas pris en charge pour les serveurs de publication Oracle*.  
+`[ \@allow_sync_tran = ] 'allow_sync_tran'` Spécifie si les abonnements de mise à jour immédiate sont autorisés pour la publication. *allow_sync_tran* est **nvarchar (5)** , avec FALSE comme valeur par défaut. **true** est *ne pas pris en charge pour les serveurs de publication Oracle*.  
   
-`[ \@autogen_sync_procs = ] 'autogen_sync_procs'` Indique si la procédure stockée de synchronisation pour les abonnements mis à jour est générée par le serveur de publication. *proc_sync_autogén* est **nvarchar (5)**, et peut prendre l’une des valeurs suivantes.  
+`[ \@autogen_sync_procs = ] 'autogen_sync_procs'` Indique si la procédure stockée de synchronisation pour les abonnements mis à jour est générée par le serveur de publication. *proc_sync_autogén* est **nvarchar (5)** , et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -155,15 +154,15 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@pre_snapshot_script = ] 'pre_snapshot_script'` Spécifie un pointeur vers un **.sql** emplacement du fichier. *pre_snapshot_script* est **nvarchar (255),** avec NULL comme valeur par défaut. L'Agent de distribution exécute le script de pré-instantané avant l'exécution des scripts d'objet répliqué, lors de l'application d'un instantané sur un Abonné. Le script est exécuté dans le contexte de sécurité utilisé par l'Agent de distribution lors de sa connexion à la base de données d'abonnement.  
   
-`[ \@post_snapshot_script = ] 'post_snapshot_script'` Spécifie un pointeur vers un **.sql** emplacement du fichier. *post_snapshot_script* est **nvarchar (255)**, avec NULL comme valeur par défaut. L'Agent de distribution exécute le script de post-instantané après que tous les autres scripts et données d'objet répliqué ont été appliqués lors d'une synchronisation initiale. Le script est exécuté dans le contexte de sécurité utilisé par l'Agent de distribution lors de sa connexion à la base de données d'abonnement.  
+`[ \@post_snapshot_script = ] 'post_snapshot_script'` Spécifie un pointeur vers un **.sql** emplacement du fichier. *post_snapshot_script* est **nvarchar (255)** , avec NULL comme valeur par défaut. L'Agent de distribution exécute le script de post-instantané après que tous les autres scripts et données d'objet répliqué ont été appliqués lors d'une synchronisation initiale. Le script est exécuté dans le contexte de sécurité utilisé par l'Agent de distribution lors de sa connexion à la base de données d'abonnement.  
   
-`[ \@compress_snapshot = ] 'compress_snapshot'` Spécifie que l’instantané qui est écrite dans le  **\@alt_snapshot_folder** emplacement consiste à être compressées dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] format CAB. *compress_snapshot* est **nvarchar (5)**, avec FALSE comme valeur par défaut. **false** indique que l’instantané ne sera pas compressé ; **true** Spécifie que l’instantané sera compressé. Les fichiers d'instantané de plus de 2 Go (gigaoctets) ne peuvent pas être compressés. Les fichiers d'instantané compressés sont décompressés là où s'exécute l'Agent de distribution ; les abonnements par extraction de données (pull) sont en général utilisés avec des instantanés compressés et les fichiers sont décompressés sur l'Abonné. L'instantané se trouvant dans le dossier par défaut ne peut pas être compressé.  
+`[ \@compress_snapshot = ] 'compress_snapshot'` Spécifie que l’instantané qui est écrite dans le  **\@alt_snapshot_folder** emplacement consiste à être compressées dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] format CAB. *compress_snapshot* est **nvarchar (5)** , avec FALSE comme valeur par défaut. **false** indique que l’instantané ne sera pas compressé ; **true** Spécifie que l’instantané sera compressé. Les fichiers d'instantané de plus de 2 Go (gigaoctets) ne peuvent pas être compressés. Les fichiers d'instantané compressés sont décompressés là où s'exécute l'Agent de distribution ; les abonnements par extraction de données (pull) sont en général utilisés avec des instantanés compressés et les fichiers sont décompressés sur l'Abonné. L'instantané se trouvant dans le dossier par défaut ne peut pas être compressé.  
   
 `[ \@ftp_address = ] 'ftp_address'` Est l’adresse réseau du service FTP du serveur de distribution. *ftp_address* est **sysname**, avec NULL comme valeur par défaut. Indique l'emplacement à partir duquel l'Agent de distribution ou l'Agent de fusion d'un abonné peut extraire les fichiers d'instantané de la publication. Dans la mesure où cette propriété est stockée pour chaque publication, chaque publication peut avoir un autre *ftp_address*. La publication doit prendre en charge la propagation des instantanés à l'aide du protocole FTP.  
   
 `[ \@ftp_port = ] ftp_port` Est le numéro de port du service FTP du serveur de distribution. *ftp_port* est **int**, avec la valeur par défaut est 21. Spécifie l'emplacement à partir duquel l'Agent de distribution ou l'Agent de fusion d'un Abonné peut extraire les fichiers d'instantané de la publication. Dans la mesure où cette propriété est stockée pour chaque publication, chaque publication peut avoir ses propres *ftp_port*.  
   
-`[ \@ftp_subdirectory = ] 'ftp_subdirectory'` Spécifie où les fichiers d’instantanés seront disponibles pour l’Agent de Distribution ou l’Agent de fusion d’un abonné peut extraire si la publication prend en charge la propagation d’instantanés via FTP. *ftp_subdirectory* est **nvarchar (255)**, avec NULL comme valeur par défaut. Dans la mesure où cette propriété est stockée pour chaque publication, chaque publication peut avoir ses propres *ftp_subdirctory* ou choisir de n’avoir aucun sous-répertoire avec une valeur NULL.  
+`[ \@ftp_subdirectory = ] 'ftp_subdirectory'` Spécifie où les fichiers d’instantanés seront disponibles pour l’Agent de Distribution ou l’Agent de fusion d’un abonné peut extraire si la publication prend en charge la propagation d’instantanés via FTP. *ftp_subdirectory* est **nvarchar (255)** , avec NULL comme valeur par défaut. Dans la mesure où cette propriété est stockée pour chaque publication, chaque publication peut avoir ses propres *ftp_subdirctory* ou choisir de n’avoir aucun sous-répertoire avec une valeur NULL.  
   
 `[ \@ftp_login = ] 'ftp_login'` Le nom d’utilisateur est utilisé pour se connecter au service FTP. *ftp_login* est **sysname**, avec ANONYMOUS comme valeur par défaut.  
   
@@ -173,7 +172,7 @@ sp_addpublication [ @publication = ] 'publication'
   
  **true** est *ne pas pris en charge pour les serveurs de publication Oracle*.  
   
-`[ \@allow_subscription_copy = ] 'allow_subscription_copy'` Active ou désactive la possibilité de copier les bases de données d’abonnement qui s’abonnent à cette publication. *allow_subscription_copy* est**nvarchar (5)**, avec FALSE comme valeur par défaut.  
+`[ \@allow_subscription_copy = ] 'allow_subscription_copy'` Active ou désactive la possibilité de copier les bases de données d’abonnement qui s’abonnent à cette publication. *allow_subscription_copy* est**nvarchar (5)** , avec FALSE comme valeur par défaut.  
   
 `[ \@conflict_policy = ] 'conflict_policy'` Spécifie la stratégie de résolution de conflits à suivre lorsque l’option d’abonné avec mise à jour en file d’attente est utilisée. *conflict_policy* est **nvarchar (100)** avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
@@ -186,11 +185,11 @@ sp_addpublication [ @publication = ] 'publication'
   
  *Non pris en charge pour les serveurs de publication Oracle*.  
   
-`[ \@centralized_conflicts = ] 'centralized_conflicts'` Spécifie si les enregistrements en conflit sont stockés sur le serveur de publication. *centralized_conflicts* est **nvarchar (5)**, avec TRUE comme valeur par défaut. Si **true**, les enregistrements en conflit sont stockés sur le serveur de publication. Si **false**, les enregistrements en conflit sont stockés sur le serveur de publication et sur l’abonné qui a provoqué le conflit. *Non pris en charge pour les serveurs de publication Oracle*.  
+`[ \@centralized_conflicts = ] 'centralized_conflicts'` Spécifie si les enregistrements en conflit sont stockés sur le serveur de publication. *centralized_conflicts* est **nvarchar (5)** , avec TRUE comme valeur par défaut. Si **true**, les enregistrements en conflit sont stockés sur le serveur de publication. Si **false**, les enregistrements en conflit sont stockés sur le serveur de publication et sur l’abonné qui a provoqué le conflit. *Non pris en charge pour les serveurs de publication Oracle*.  
   
 `[ \@conflict_retention = ] conflict_retention` Spécifie la période de rétention de conflit, en jours. Il s'agit de la période pendant laquelle les métadonnées en conflit sont stockées pour la réplication transactionnelle d'égal à égal et les abonnements mis à jour en attente. *conflict_retention* est **int**, avec une valeur par défaut de 14. *Non pris en charge pour les serveurs de publication Oracle*.  
   
-`[ \@queue_type = ] 'queue_type'` Spécifie le type de file d’attente est utilisé. *queue_type* est **nvarchar (10)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ \@queue_type = ] 'queue_type'` Spécifie le type de file d’attente est utilisé. *queue_type* est **nvarchar (10)** , avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -213,7 +212,7 @@ sp_addpublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de l’ajout d’une publication à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
   
-`[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` Indique si les abonnés peuvent initialiser un abonnement à cette publication à partir d’une sauvegarde plutôt qu’un instantané initial. *allow_initialize_from_backup* est **nvarchar (5)**, et peut prendre l’une des valeurs suivantes :  
+`[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` Indique si les abonnés peuvent initialiser un abonnement à cette publication à partir d’une sauvegarde plutôt qu’un instantané initial. *allow_initialize_from_backup* est **nvarchar (5)** , et peut prendre l’une des valeurs suivantes :  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -236,7 +235,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 -   Lorsqu’une instruction DDL ajoute une nouvelle colonne, sysarticlecolumns n’inclut pas la nouvelle colonne. Les instructions DML n'essayeront pas de répliquer les données pour la nouvelle colonne. Le paramètre est respecté parce que la réplication ou la réplication DDL est acceptable.  
   
-`[ \@enabled_for_p2p = ] 'enabled_for_p2p'` Permet à la publication à utiliser dans une topologie de réplication d’égal à égal. *enabled_for_p2p* est **nvarchar (5)**, avec FALSE comme valeur par défaut. **true** indique que la publication prend en charge la réplication d’égal à égal. Lors de la définition *enabled_for_p2p* à **true**, les restrictions suivantes s’appliquent :  
+`[ \@enabled_for_p2p = ] 'enabled_for_p2p'` Permet à la publication à utiliser dans une topologie de réplication d’égal à égal. *enabled_for_p2p* est **nvarchar (5)** , avec FALSE comme valeur par défaut. **true** indique que la publication prend en charge la réplication d’égal à égal. Lors de la définition *enabled_for_p2p* à **true**, les restrictions suivantes s’appliquent :  
   
 -   *allow_anonymous* doit être **false**.  
   

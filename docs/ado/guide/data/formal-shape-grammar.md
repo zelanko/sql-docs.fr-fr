@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0af2421a0d1f80922560be556062c89074c21838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925349"
 ---
 # <a name="formal-shape-grammar"></a>Grammaire formelle de la commande SHAPE
 Il s’agit de la grammaire formelle pour la création de n’importe quelle commande de la forme :  
@@ -43,22 +42,22 @@ Il s’agit de la grammaire formelle pour la création de n’importe quelle com
 |Terme|Définition|  
 |----------|----------------|  
 |\<shape-command>|FORME [\<table-exp > [[AS] \<alias >]] [\<forme-action >]|  
-|\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> TABLE \<quoted-name >&#124;<br /><br /> \<quoted-name>|  
+|\<table-exp >|{\<provider-command-text>} &#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> TABLE \<quoted-name >&#124;<br /><br /> \<quoted-name>|  
 |\<shape-action>|APPEND \<liste de champs d’un alias >&#124;<br /><br /> CALCUL \<liste de champs d’un alias > [BY \<liste de champs >]|  
-|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
-|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
+|\<aliased-field-list>|\<champ d’un alias > [, \<alias-champ... >]|  
+|\<aliased-field>|\<champ-exp > [[AS] \<alias >]|  
 |\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
 |<relation_exp>|\<table-exp > [[AS] \<alias >]<br /><br /> RELATE \<relation-cond-list >|  
-|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
+|\<relation-cond-list>|\<cond-relation > [, \<cond-relation >...]|  
 |\<relation-cond>|\<nom de champ > TO \<enfant-ref >|  
 |\<child-ref>|\<field-name> &#124;<br /><br /> PARAMÈTRE \<-ref param >|  
 |\<param-ref>|\<number>|  
 |\<field-list>|\<field-name> [, \<field-name>]|  
-|\<aggregate-exp>|Somme (\<qualified-champ-name >)&#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV (\<qualified-champ-name >)&#124;<br /><br /> N’importe quel (\<qualified-champ-name >)|  
+|\<aggregate-exp>|Somme (\<qualified-champ-name >)&#124;<br /><br /> AVG (\<qualified-champ-name >)&#124;<br /><br /> MIN (\<qualified-champ-name >)&#124;<br /><br /> MAX (\<qualified-champ-name >)&#124;<br /><br /> NOMBRE (\<alias qualifié > &#124; \<nom qualifié >)&#124;<br /><br /> STDEV (\<qualified-champ-name >)&#124;<br /><br /> N’importe quel (\<qualified-champ-name >)|  
 |\<calculated-exp>|CALC (\<expression >)|  
-|\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
+|\<qualified-field-name>|\<alias >. [\<alias >...] \<-nom du champ >|  
 |\<alias>|\<quoted-name>|  
-|\<field-name>|\<quoted-name> [[AS] \<alias>]|  
+|\<field-name>|\<nom entre guillemets > [[AS] \<alias >]|  
 |\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<name>|  
 |\<qualified-name>|alias [.alias...]|  
 |\<name>|alpha [alpha &#124; chiffre &#124; _ &#124; # &#124; : &#124; ...]|  

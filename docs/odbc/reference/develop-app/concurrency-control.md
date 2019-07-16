@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 75e4adb3-3d43-49c5-8c5e-8df96310d912
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e54298e9c25777f10b92f322f1b1e6a3d94c243
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c541bf28c1d4c7ec2e2041201bd7c168625bb34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083262"
 ---
 # <a name="concurrency-control"></a>Contrôle d'accès concurrentiel
 *Accès concurrentiel* est la possibilité de deux transactions utilisent les mêmes données en même temps, et avec accrue des transactions isolation est généralement une concurrence réduite. Il s’agit, car l’isolation des transactions est généralement implémentée par verrouillage de lignes et car plus de lignes sont verrouillés, moins de transactions peuvent être effectuées au moins temporairement bloqué par une ligne verrouillée. Pendant une concurrence réduite est généralement considérée comme un compromis pour les plus élevées niveaux d’isolement nécessaires pour maintenir l’intégrité de base de données, il peut devenir un problème dans les applications interactives avec une activité élevée en lecture/écriture qui utilisent des curseurs.  

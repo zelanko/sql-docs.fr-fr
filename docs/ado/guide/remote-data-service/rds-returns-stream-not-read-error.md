@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 598326335c32f18b5d7f5a764d387e5b5ea536f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c89756e86a702217d5d9d8495bf62b0d27f52321
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922472"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS retourne &quot;Stream non lu&quot; erreur
 « L’objet Stream est illisible, car elle est vide, ou la position actuelle est à la fin de la Stream. Pour les flux non vide, définissez la position actuelle avec la propriété Position. Pour déterminer si un Stream est vide, vérifiez la propriété de taille. »  

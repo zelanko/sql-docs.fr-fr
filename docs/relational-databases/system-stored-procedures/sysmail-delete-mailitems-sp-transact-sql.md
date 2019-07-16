@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 23ecda5fd8d91f20133eb2295d38dc9d9ace66f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069102"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="remarks"></a>Notes  
- Messages de la messagerie de base de données et leurs pièces jointes sont stockés dans le **msdb** base de données. Les messages doivent être supprimés périodiquement pour empêcher **msdb** augmente plus grand que prévu et pour se conformer à votre programme de rétention de document aux organisations. Utilisez le **sysmail_delete_mailitems_sp** procédure stockée pour supprimer définitivement des messages électroniques à partir de tables de la messagerie de base de données. Un argument facultatif vous permet de supprimer uniquement les messages les plus anciens en fournissant une date et une heure. Les messages antérieurs à cet argument sont alors supprimés. Un autre argument facultatif vous permet de supprimer uniquement les messages électroniques d’un certain type, spécifié en tant que le **sent_status** argument. Vous devez fournir un argument pour **@sent_before** ou **@sent_status**. Pour supprimer tous les messages, utilisez  **@sent_before = getdate()**.  
+ Messages de la messagerie de base de données et leurs pièces jointes sont stockés dans le **msdb** base de données. Les messages doivent être supprimés périodiquement pour empêcher **msdb** augmente plus grand que prévu et pour se conformer à votre programme de rétention de document aux organisations. Utilisez le **sysmail_delete_mailitems_sp** procédure stockée pour supprimer définitivement des messages électroniques à partir de tables de la messagerie de base de données. Un argument facultatif vous permet de supprimer uniquement les messages les plus anciens en fournissant une date et une heure. Les messages antérieurs à cet argument sont alors supprimés. Un autre argument facultatif vous permet de supprimer uniquement les messages électroniques d’un certain type, spécifié en tant que le **sent_status** argument. Vous devez fournir un argument pour **@sent_before** ou **@sent_status** . Pour supprimer tous les messages, utilisez  **@sent_before = getdate()** .  
   
  La suppression d'un message entraîne également la suppression des pièces jointes qui sont associées à ce message. Suppression du courrier électronique ne supprime pas les entrées correspondantes dans **sysmail_event_log**. Utilisez [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) pour supprimer des éléments à partir du journal.  
   
@@ -58,7 +57,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-deleting-all-e-mails"></a>A. Suppression de tous les messages électroniques  
+### <a name="a-deleting-all-e-mails"></a>R. Suppression de tous les messages électroniques  
  L'exemple suivant supprime tous les messages électroniques du système de la messagerie de base de données.  
   
 ```  

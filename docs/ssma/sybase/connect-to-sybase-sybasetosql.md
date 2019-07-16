@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083391"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Se connecter à Sybase (SybaseToSQL)
 Utilisez le **se connecter à Sybase** boîte de dialogue se connecter à l’instance de Sybase Adaptive Server Enterprise (ASE) que vous souhaitez migrer.  
@@ -53,7 +52,7 @@ Chaînes de connexion sont constitués de paires nom / valeur de paramètre. Les
     |Paramètre|Paramètre de Sybase 12,5|Paramètre de Sybase 15|  
     |-----------|-------------------------|-----------------------|  
     |Nom du serveur|Nom du serveur|Serveur|  
-    |d’|Adresse de Port du serveur|d’|  
+    |Port|Adresse de Port du serveur|Port|  
     |Nom d’utilisateur|ID d'utilisateur|ID d'utilisateur|  
     |Mot de passe|Mot de passe|Mot de passe|  
     |Fournisseur|Fournisseur|Fournisseur|  
@@ -72,9 +71,9 @@ Chaînes de connexion sont constitués de paires nom / valeur de paramètre. Les
     |-----------|-----------------------------|  
     |Nom du pilote|Pilote|  
     |Nom du serveur|Serveur|  
-    |Nom d'utilisateur|UID|  
+    |User Name|UID|  
     |Mot de passe|Pwd|  
-    |Numéro de port|d’|  
+    |Numéro de port|Port|  
   
     Pour Sybase ASE 12,5 ou 15, un exemple de chaîne de connexion est le suivant :  
   
@@ -85,9 +84,9 @@ Chaînes de connexion sont constitués de paires nom / valeur de paramètre. Les
     |Paramètre|Paramètre de Sybase 12,5/15|  
     |-----------|-----------------------------|  
     |Nom du serveur|Serveur|  
-    |Nom d'utilisateur|UID|  
+    |User Name|UID|  
     |Mot de passe|Pwd|  
-    |Numéro de port|d’|  
+    |Numéro de port|Port|  
   
     Un exemple de la chaîne de connexion pour le fournisseur ADO.NET est comme suit :  
   

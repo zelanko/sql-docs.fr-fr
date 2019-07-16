@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7d6981879f08b65c334eae9cd81e73223bc353bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072661"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,12 +67,12 @@ sp_addlogin [ @loginame = ] 'login'
  Est la langue par défaut du compte de connexion. *langage* est **sysname**, avec NULL comme valeur par défaut. Si *langage* n’est pas spécifié, la valeur par défaut *langage* du nouveau compte de connexion est définie sur la langue par défaut actuelle du serveur.  
   
  [ @sid=] '*sid*'  
- Correspond au numéro d'identification de sécurité. *SID* est **varbinary (16)**, avec NULL comme valeur par défaut. Si *sid* est NULL, le système génère un SID pour la nouvelle connexion. Malgré l’utilisation d’un **varbinary** type de données, valeurs autres que NULL doit être de 16 octets exactement et ne doit pas déjà exister. Spécification *sid* est utile, par exemple, lorsque vous scripting ou déplacez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions d’un serveur vers une autre, vous souhaitez que les connexions à avoir le même SID sur des serveurs différents.  
+ Correspond au numéro d'identification de sécurité. *SID* est **varbinary (16)** , avec NULL comme valeur par défaut. Si *sid* est NULL, le système génère un SID pour la nouvelle connexion. Malgré l’utilisation d’un **varbinary** type de données, valeurs autres que NULL doit être de 16 octets exactement et ne doit pas déjà exister. Spécification *sid* est utile, par exemple, lorsque vous scripting ou déplacez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexions d’un serveur vers une autre, vous souhaitez que les connexions à avoir le même SID sur des serveurs différents.  
   
  [ @encryptopt=] '*encryption_option*'  
- Spécifie si le mot de passe est transmis en texte clair ou sous forme de hachage du mot de passe en texte clair. Notez qu'il n'y a aucun chiffrement. Le mot « chiffrement » est utilisé dans cette description à des fins de compatibilité ascendante. Si un mot de passe en texte clair est transmis, il est haché. Le hachage est stocké. *encryption_option* est **varchar (20)**, et peut prendre l’une des valeurs suivantes.  
+ Spécifie si le mot de passe est transmis en texte clair ou sous forme de hachage du mot de passe en texte clair. Notez qu'il n'y a aucun chiffrement. Le mot « chiffrement » est utilisé dans cette description à des fins de compatibilité ascendante. Si un mot de passe en texte clair est transmis, il est haché. Le hachage est stocké. *encryption_option* est **varchar (20)** , et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |NULL|Le mot de passe est transmis en clair. Il s'agit du paramètre par défaut.|  
 |**skip_encryption**|Le mot de passe est déjà haché. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit stocker la valeur sans hacher à nouveau.|  
@@ -104,12 +103,12 @@ sp_addlogin [ @loginame = ] 'login'
 |[sp_defaultdb](../../relational-databases/system-stored-procedures/sp-defaultdb-transact-sql.md)|Modifie la base de données par défaut d'un utilisateur.|  
 |[sp_defaultlanguage](../../relational-databases/system-stored-procedures/sp-defaultlanguage-transact-sql.md)|Modifie la langue par défaut d'un utilisateur.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY LOGIN.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-sql-server-login"></a>A. Création d'un nom de connexion SQL Server  
+### <a name="a-creating-a-sql-server-login"></a>R. Création d'un nom de connexion SQL Server  
  L'exemple suivant crée une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour l'utilisateur `Victoria`, avec le mot de passe `B1r12-36`, sans spécifier de base de données par défaut.  
   
 ```  

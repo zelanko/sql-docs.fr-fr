@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 92452940-b2a7-456e-94fc-3780c71da33c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 14bb7fd2e4a6dd8e6eb8f369342923ce1a9728c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72526eca57d08152d7eaa773be50d68d4b3688e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932468"
 ---
 # <a name="getstring-method-ado"></a>GetString, méthode (ADO)
 Retourne le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sous forme de chaîne.  
@@ -48,10 +47,10 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  Facultatif. Un séparateur utilisé entre les colonnes, si spécifié, sinon le caractère de tabulation.  
   
  *RowDelimiter*  
- Facultatif. Délimiteur utilisé entre les lignes, dans le cas contraire, le caractère de retour chariot.  
+ facultatif. Délimiteur utilisé entre les lignes, dans le cas contraire, le caractère de retour chariot.  
   
  *NullExpr*  
- Facultatif. Une expression utilisée à la place d’une valeur null, si spécifié, sinon la chaîne vide.  
+ facultatif. Une expression utilisée à la place d’une valeur null, si spécifié, sinon la chaîne vide.  
   
 ## <a name="remarks"></a>Notes  
  Données de ligne, mais aucune donnée de schéma, est enregistré dans la chaîne. Par conséquent, un **Recordset** ne peut pas être rouverte à l’aide de cette chaîne.  

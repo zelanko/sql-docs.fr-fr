@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb281923e5b6d48a23cb6aa3f60bf36bbe9764da
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8af56ae768ca883e22d7c9e18150e75025086d63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085260"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 `[ @return_granted = ] 'return_granted'` ID de connexion. *return_granted* est **bits**, avec 1 comme valeur par défaut. Si **0** est spécifié et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisée, les connexions disponibles qui apparaissent sur le serveur de publication mais pas sur le serveur de distribution sont retournées. Si **0** est spécifié et l’authentification Windows est utilisée, les connexions ne sont pas spécifiquement d’interdiction d’accès à l’éditeur ou serveur de distribution sont retournées.  
   
-`[ @login = ] 'login'` L’ID de connexion de sécurité standard. *connexion* est **sysname**, avec une valeur par défaut **%**.  
+`[ @login = ] 'login'` L’ID de connexion de sécurité standard. *connexion* est **sysname**, avec une valeur par défaut **%** .  
   
 `[ @initial_list = ] initial_list` Spécifie s’il faut retourner tous les membres avec accès à une publication ou uniquement ceux qui y avaient accès avant de nouveaux membres ont été ajoutés à la liste. *initial_list* est de type bit, avec une valeur par défaut **0**.  
   
@@ -55,11 +54,11 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**nvarchar (256)**|Nom de connexion réel.|  
-|**Isntname**|**Int**|**0** = connexion n’est pas un utilisateur de Windows.<br /><br /> **1** = connexion est un utilisateur Windows.|  
-|**Isntgroup**|**Int**|**0** = connexion n’est pas un groupe Windows.<br /><br /> **1** = connexion est un groupe Windows.|  
+|**isntname**|**int**|**0** = connexion n’est pas un utilisateur de Windows.<br /><br /> **1** = connexion est un utilisateur Windows.|  
+|**isntgroup**|**int**|**0** = connexion n’est pas un groupe Windows.<br /><br /> **1** = connexion est un groupe Windows.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
