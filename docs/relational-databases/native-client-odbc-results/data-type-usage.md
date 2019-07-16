@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f52e461a6f7f0cb318a58cb439d7b15b9d780a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1faec789d9b0da874415fb06fa69b972e5b46fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937114"
 ---
 # <a name="data-type-usage"></a>Utilisation des types de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47686607"
 |**tinyint**|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **tinyint** type de données n’est pas signé. Un **tinyint** colonne est liée à une variable du type de données SQL_C_UTINYINT par défaut.|  
 |Types de données alias|Lors de la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, le pilote ODBC ajoute la valeur NULL à une définition de colonne qui ne déclare pas explicitement la possibilité de valeur NULL d’une colonne. Par conséquent, la possibilité de valeur NULL stockée dans la définition d'un type de données alias est ignorée.<br /><br /> Lors de la connexion à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, type de colonnes avec un type de données alias qui a une base de données de **char** ou **binaire** et pour lesquelles aucune possibilité de valeur null déclarée sont créées en tant que type de données **varchar** ou **varbinary**. [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md), [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md), et [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) retournent SQL_VARCHAR ou SQL_VARBINARY comme données de type pour ces colonnes. Les données qui sont récupérées de ces colonnes ne sont pas complétées.<br /><br /> Remarque : Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client ne prend pas en charge la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 et versions antérieures.|  
 |Types de données LONG|*Data-at-execution* paramètres sont limitées pour SQL_LONGVARBINARY et les types de données SQL_LONGVARCHAR.|  
-|Types de valeur élevée|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client exposera **varchar (max)**, **varbinary (max)**, et **nvarchar (max)** types en tant que SQL_VARCHAR, SQL_VARBINARY et SQL_ WVARCHAR (respectivement) dans API qui acceptent ou retournent des types de données ODBC SQL.|  
+|Types de valeur élevée|Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client exposera **varchar (max)** , **varbinary (max)** , et **nvarchar (max)** types en tant que SQL_VARCHAR, SQL_VARBINARY et SQL_ WVARCHAR (respectivement) dans API qui acceptent ou retournent des types de données ODBC SQL.|  
 |Type défini par l'utilisateur (UDT)|Les colonnes UDT sont mappées en tant que SQL_SS_UDT. Si une colonne UDT est mappée explicitement à un autre type dans l'instruction SQL à l'aide des méthodes ToString() ou ToXMLString() du type UDT, ou via les fonctions CAST/CONVERT, le type de la colonne dans le jeu de résultats reflète le type réel vers lequel la colonne a été convertie.<br /><br /> Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client ne peut se lier à une colonne UDT sous forme binaire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend uniquement en charge la conversion entre les types de données SQL_SS_UDT et SQL_C_BINARY.|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit automatiquement le code XML en texte Unicode. Le type XML est mappé en tant que SQL_SS_XML.|  
   
