@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020989"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Sélection et configuration des objets affectés (SybaseToSQL)
 À cette page, vous pouvez sélectionner les tables et les clés étrangères, les modifications dans lequel doivent être comparées quand SSMA vérifie les résultats de l’exécution pour les objets choisi à l’étape précédente. En outre, vous pouvez personnaliser les paramètres de vérification.  
@@ -27,16 +26,16 @@ Dans l’arborescence d’objets Sybase situé sur le côté gauche de la fenêt
   
 Si le testeur de SSMA ne peut pas vérifier la valeur d’un de ces objets, vous verrez le lien intitulé **certains des objets sélectionnés contiennent des erreurs** sous l’arborescence d’objets. Cliquez sur ce lien pour afficher les raisons pourquoi ces objets ne peuvent pas être comparées et pour effacer la sélection d’objets incorrectes.  
   
-## <a name="table"></a>Table de charge de travail  
+## <a name="table"></a>Table  
 L’onglet de la Table contient la vue de grille de la table sélectionnée. La grille contient les informations suivantes sur la table sélectionnée :  
   
 -   Nom de la colonne  
   
 -   Type de données  
   
--   Précision  
+-   Precision  
   
--   Échelle  
+-   Scale  
   
 -   Règle  
   

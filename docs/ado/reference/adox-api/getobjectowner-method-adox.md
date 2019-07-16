@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8965adf0-9075-4125-8142-73eb700029c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3b5ab8c21ee02f646bf4b8e4f4941fafd6edfde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff85491cf7ca30e3f95526aa7043f321a65cccc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966278"
 ---
 # <a name="getobjectowner-method-adox"></a>GetObjectOwner, méthode (ADOX)
 Retourne le propriétaire d’un objet dans un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md).  
@@ -45,7 +44,7 @@ Owner = Catalog.GetObjectOwner(ObjectName, ObjectType [,ObjectTypeId])
  Un **Long** valeur qui peut être une de le [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) constantes, qui spécifie le type de l’objet pour lequel obtenir le propriétaire.  
   
  *ObjectTypeId*  
- Facultatif. Un **Variant** valeur qui spécifie le GUID d’un type d’objet de fournisseur non défini par la spécification OLE DB. Ce paramètre est obligatoire si *ObjectType* a la valeur **adPermObjProviderSpecific**; sinon, il n’est pas utilisé.  
+ facultatif. Un **Variant** valeur qui spécifie le GUID d’un type d’objet de fournisseur non défini par la spécification OLE DB. Ce paramètre est obligatoire si *ObjectType* a la valeur **adPermObjProviderSpecific**; sinon, il n’est pas utilisé.  
   
 ## <a name="remarks"></a>Notes  
  Une erreur se produit si le fournisseur ne prend pas en charge le retour propriétaires d’objets.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f48a3c7568a9db8b599f6d5a1997607fb16e6020
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069882"
 ---
 # <a name="features-to-watch-for"></a>Fonctionnalités à considérer avec attention
 Cette section décrit un certain nombre de fonctionnalités qui application adoptent souvent les développeurs pour reçoivent. En fait, ces fonctionnalités varient largement prise en charge et la manière de prise en charge entre les SGBD ; Échec pour qu’il est susceptible de causer des problèmes dans les applications interopérables.  

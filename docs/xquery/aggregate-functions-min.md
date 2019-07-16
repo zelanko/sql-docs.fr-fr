@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: db0b7d94-3fa6-488f-96d6-6a9a7d6eda23
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69381eb0ffdd3638079d824d8d4c150563375a6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29e5718debadb4725bc9d9ebcd499c261ed23d54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63046963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985751"
 ---
 # <a name="aggregate-functions---min"></a>Fonctions d’agrégation : min
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ fn:min($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>A. Utilisation de la fonction XQuery min() pour rechercher le poste de travail enregistrant le moins d'heures de main-d'œuvre  
+### <a name="a-using-the-min-xquery-function-to-find-the-work-center-location-that-has-the-fewest-labor-hours"></a>R. Utilisation de la fonction XQuery min() pour rechercher le poste de travail enregistrant le moins d'heures de main-d'œuvre  
  La requête suivante récupère tous les postes de travail du processus de fabrication du modèle de produit (ProductModelID=7) qui enregistre le moins d'heures de main-d'œuvre. Généralement, comme le montre l'exemple suivant, un seul poste est renvoyé. Si plusieurs postes de travail enregistraient le même nombre minimal de main-d'œuvre, ils seraient tous renvoyés.  
   
 ```  

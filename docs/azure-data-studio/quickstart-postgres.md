@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-manager: jroth
-ms.openlocfilehash: be8683ae563e4e0676f53203cb40386cf8aa4840
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959464"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Démarrage rapide : Se connecter et interroger à l’aide de PostgreSQL [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 Ce démarrage rapide montre comment utiliser [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter à Postgres et utiliser des instructions SQL pour créer la base de données *tutorialdb* et l’interroger.
@@ -50,11 +49,11 @@ Pour effectuer ce démarrage rapide, vous devez [!INCLUDE[name-sos](../includes/
    | **Nom d'utilisateur** | Postgres | Le nom d’utilisateur pour la connexion. |
    | **Mot de passe (connexion SQL)** | *password* | Le mot de passe pour le compte que vous vous connectez à l’aide. |
    | **Mot de passe** | *Vérifier* | Cochez cette case si vous ne souhaitez pas entrer le mot de passe chaque fois que vous vous connectez. |
-   | **Nom de la base de données** | \<Default\> | Renseignez ceci si vous souhaitez que la connexion pour spécifier une base de données. |
-   | **Groupe de serveurs** | \<Default\> | Cette option vous permet d’affecter cette connexion à un groupe de serveurs spécifiques que vous créez. | 
+   | **Nom de la base de données** | \<Par défaut\> | Renseignez ceci si vous souhaitez que la connexion pour spécifier une base de données. |
+   | **Groupe de serveurs** | \<Par défaut\> | Cette option vous permet d’affecter cette connexion à un groupe de serveurs spécifiques que vous créez. | 
    | **Nom (facultatif)** | *Laisser vide* | Cette option vous permet de spécifier un nom convivial pour votre serveur. | 
 
-5. Sélectionnez **Se connecter**. 
+5. Sélectionnez **Connecter**. 
 
 Une fois connecté, votre serveur s’ouvre dans le **serveurs** encadré.
 

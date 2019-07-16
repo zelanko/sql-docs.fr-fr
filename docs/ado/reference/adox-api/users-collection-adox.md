@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bbf05e0b177cc61ed9de757db46f8950aaa7dccd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a6146a942e572e28692ceaafd77d6958cdab9dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964952"
 ---
 # <a name="users-collection-adox"></a>Users, collection (ADOX)
 Contient tous les stockées [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) objets d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) ou [groupe](../../../ado/reference/adox-api/group-object-adox.md).  
@@ -31,11 +30,11 @@ Contient tous les stockées [utilisateur](../../../ado/reference/adox-api/user-o
 ## <a name="remarks"></a>Notes  
  Le **utilisateurs** collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les utilisateurs du catalogue. Le **utilisateurs** collection pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) représente uniquement les utilisateurs qui ont une appartenance au groupe spécifique.  
   
- Le [Append](../../../ado/reference/adox-api/append-method-adox-users.md) méthode pour un **utilisateurs** collection est unique pour ADOX. Vous pouvez :  
+ Le [Append](../../../ado/reference/adox-api/append-method-adox-users.md) méthode pour un **utilisateurs** collection est unique pour ADOX. Vous pouvez :  
   
 -   Ajouter un nouvel utilisateur à la collection à l’aide de la **Append** (méthode).  
   
- Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
+ Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
   
 -   Accéder à un utilisateur dans la collection avec le [élément](../../../ado/reference/ado-api/item-property-ado.md) propriété.  
   

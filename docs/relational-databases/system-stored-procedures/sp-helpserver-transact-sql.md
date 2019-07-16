@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8f42de7-c738-41c3-8bf5-dbd559dc7184
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 844e96d765f9ed06f88b140b906b78eb4ea16ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62635886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997434"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,15 +66,15 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom du serveur.|  
+|**name**|**sysname**|Nom du serveur.|  
 |**network_name**|**sysname**|Nom réseau du serveur.|  
 |**status**|**varchar(** 70 **)**|État du serveur.|  
 |**id**|**char(** 4 **)**|Numéro d'identification du serveur.|  
 |**collation_name**|**sysname**|Classement du serveur.|  
-|**connect_timeout**|**Int**|Valeur du délai d'expiration de la connexion au serveur lié.|  
-|**query_timeout**|**Int**|Valeur du délai d'expiration des requêtes sur le serveur lié.|  
+|**connect_timeout**|**int**|Valeur du délai d'expiration de la connexion au serveur lié.|  
+|**query_timeout**|**int**|Valeur du délai d'expiration des requêtes sur le serveur lié.|  
   
 ## <a name="remarks"></a>Notes  
  Un même serveur peut avoir plusieurs états.  
@@ -85,7 +84,7 @@ sp_helpserver [ [ @server = ] 'server' ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-displaying-information-about-all-servers"></a>A. Affichage d’informations sur tous les serveurs  
+### <a name="a-displaying-information-about-all-servers"></a>R. Affichage d’informations sur tous les serveurs  
  L'exemple suivant affiche des informations sur tous les serveurs en utilisant la procédure `sp_helpserver` sans paramètre.  
   
 ```  

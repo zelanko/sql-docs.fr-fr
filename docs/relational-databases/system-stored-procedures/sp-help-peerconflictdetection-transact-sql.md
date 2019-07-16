@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 59e04107-5eaa-44a1-beb6-ac4f2dbbcb28
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a4fa967ec7809b8f638d9d032912969f24df1258
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b08e3312f34fcc26d6effff92e09b3739508171e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085294"
 ---
 # <a name="sphelppeerconflictdetection-transact-sql"></a>sp_help_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sp_help_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Voir aussi  
  [Détection de conflit dans la réplication d’égal à égal](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Réplication transactionnelle d’égal à égal](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

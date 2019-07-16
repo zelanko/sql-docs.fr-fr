@@ -3,18 +3,17 @@ title: Messagerie de base de données et les alertes par courrier électronique 
 description: Cet article décrit comment utiliser la messagerie de base de données et les alertes par courrier électronique avec SQL Server sur Linux
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
-ms.openlocfilehash: 031fdff258e6dba4976fec4e0b1c5ed10aa48f47
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 31f8931f6e0eddc67b2e58ae794631a9ae6555b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077449"
 ---
 # <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Messagerie de base de données et les alertes par courrier électronique à l’Agent SQL sur Linux
 

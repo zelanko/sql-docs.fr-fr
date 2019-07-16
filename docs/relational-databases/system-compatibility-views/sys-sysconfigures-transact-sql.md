@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146bf10a-c898-4676-a2a1-673fb1cee7a2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 61936891ecd31b3bf5421a8cac49aad9f0dd37f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c785ee1c4d3c5382aa42adf48ad9880f00297137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089201"
 ---
 # <a name="syssysconfigures-transact-sql"></a>sys.sysconfigures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "47635317"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**value**|**Int**|Valeur modifiable par l'utilisateur pour la variable. Utilisée par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] uniquement en cas d'exécution de RECONFIGURE.|  
-|**config**|**Int**|Numéro de variable de configuration.|  
-|**Commentaire**|**nvarchar(255)**|Explication de l'option de configuration.|  
+|**value**|**int**|Valeur modifiable par l'utilisateur pour la variable. Utilisée par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] uniquement en cas d'exécution de RECONFIGURE.|  
+|**config**|**int**|Numéro de variable de configuration.|  
+|**comment**|**nvarchar(255)**|Explication de l'option de configuration.|  
 |**status**|**smallint**|Bitmap qui indique l’état de l’option. Il peut prendre les valeurs suivantes :<br /><br /> 0 = Statique. Le paramètre prend effet au redémarrage du serveur.<br /><br /> 1 = Dynamique. La variable prend effet lorsque l'instruction RECONFIGURE est exécutée.<br /><br /> 2 = Avancé. Variable s’affiche uniquement lorsque le **afficher les options avancées** est définie. Le paramètre prend effet au redémarrage du serveur.<br /><br /> 3 = Dynamique et avancé.|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a449c0e635c7fe0e63bc1f4d8b1b0b91712135d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920386"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF, propriétés (ADO)
 -   **BOF** indique que la position actuelle est avant le premier enregistrement dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -50,10 +49,10 @@ ms.locfileid: "66696291"
   
 ||MoveFirst,<br /><br /> MoveLast|MovePrevious,<br /><br /> Déplacer < 0|Déplacer le 0|MoveNext,<br /><br /> Déplacer > 0|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**, **EOF**=**False**|Autorisé|Error|Error|Autorisé|  
-|**BOF**=**False**, **EOF**=**True**|Autorisé|Autorisé|Error|Error|  
+|**BOF**=**True**, **EOF**=**False**|Allowed|Error|Error|Allowed|  
+|**BOF**=**False**, **EOF**=**True**|Allowed|Allowed|Error|Error|  
 |Les deux **True**|Error|Error|Error|Error|  
-|Les deux **False**|Autorisé|Autorisé|Autorisé|Autorisé|  
+|Les deux **False**|Allowed|Allowed|Allowed|Allowed|  
   
  Ce qui permet un **déplacer** méthode ne garantit pas que la méthode parviendra à localiser un enregistrement ; cela signifie simplement que l’appel spécifié **déplacer** méthode ne générera pas d’une erreur.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66696291"
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|La valeur **True**|La valeur **True**|  
-|**Move** 0|Aucune modification|Aucune modification|  
+|**Déplacer** 0|Aucune modification|Aucune modification|  
 |**MovePrevious**, **déplacer** < 0|La valeur **True**|Aucune modification|  
 |**MoveNext**, **déplacer** > 0|Aucune modification|La valeur **True**|  
   

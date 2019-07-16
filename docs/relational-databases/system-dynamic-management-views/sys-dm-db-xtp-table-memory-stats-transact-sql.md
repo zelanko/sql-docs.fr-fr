@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: ad0efc06-3d9c-4861-9dfa-a7a87822d0c8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ade5650c1c47f6d52602b04f14af3ad79dbe609
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097940"
 ---
 # <a name="sysdmdbxtptablememorystats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -36,9 +35,9 @@ ms.locfileid: "63004094"
   
  Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|object_id|**Int**|ID d'objet de la table. NULL pour les tables système de l'OLTP en mémoire.|  
+|object_id|**int**|ID d'objet de la table. NULL pour les tables système de l'OLTP en mémoire.|  
 |memory_allocated_for_table_kb|**bigint**|Mémoire allouée pour cette table.|  
 |memory_used_by_table_kb|**bigint**|Mémoire utilisée par la table, y compris les versions de ligne.|  
 |memory_allocated_for_indexes_kb|**bigint**|Mémoire allouée aux index sur cette table.|  

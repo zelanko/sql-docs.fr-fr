@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5906dc6d964603576831a5c7009cd0224f0ffb08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658891"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928445"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modèle &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +42,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  Condition pour restreindre les valeurs retournées de la liste des colonnes.  
   
  *expression*  
- Facultatif. Expression qui retourne une valeur scalaire.  
+ facultatif. Expression qui retourne une valeur scalaire.  
   
 ## <a name="remarks"></a>Notes  
  Le **SELECT DISTINCT FROM** instruction fonctionne uniquement avec une seule colonne ou avec un ensemble de colonnes associées. Cette clause ne fonctionne pas avec un ensemble de colonnes non associées.  
@@ -60,7 +59,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
 |-----------------|------------|  
 |Discret|Valeurs uniques de la colonne|  
 |Discrétisé|Point milieu de chaque compartiment discrétisé de la colonne.|  
-|Continu|Point milieu des valeurs de la colonne|  
+|Continue|Point milieu des valeurs de la colonne|  
   
 ## <a name="discrete-column-example"></a>Exemple de colonne discrète  
  L’exemple de code suivant est basé sur le `[TM Decision Tree]` modèle que vous créez dans le [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). La requête retourne les valeurs uniques qui existent dans la colonne discrète `Gender`.  

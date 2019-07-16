@@ -9,13 +9,12 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0fd90b553aaefad61d9285f8630650b2b38763d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38ba117051ad10d788c2357dfb70d36c2b5e50d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091269"
 ---
 # <a name="wideworldimporters-data-generation"></a>Génération de données WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ Vous pouvez utiliser la `Application.Configuration_PopulateLargeSaleTable` proc�
 
 ### <a name="procedure-details"></a>Détails de la procédure
 
-#### <a name="name"></a>Nom   
+#### <a name="name"></a>Nom
 
     Application.Configuration_PopulateLargeSaleTable
 
@@ -75,7 +74,7 @@ Vous pouvez utiliser la `Application.Configuration_PopulateLargeSaleTable` proc�
 
   `@EstimatedRowsFor2012` **bigint** (valeur par défaut 12000000)
 
-#### <a name="result"></a>Résultats
+#### <a name="result"></a>Résultat
 
 Environ le nombre requis de lignes est inséré dans la `Fact.Sale` table dans l’année 2012. La procédure limite artificiellement le nombre de lignes à 50 000 par jour. Vous pouvez modifier cette limitation, mais la limitation vous permet d’éviter les overinflations accidentelles de la table.
 

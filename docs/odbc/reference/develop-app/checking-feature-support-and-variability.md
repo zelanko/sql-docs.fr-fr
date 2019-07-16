@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff45f220-9b8b-4c44-82f8-a8e9913fffea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b9af2cfd73556baca4870428cdcdfcee3e07191d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21495e538a554a477336d1a92926c11fe762c5af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63217610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062663"
 ---
 # <a name="checking-feature-support-and-variability"></a>Vérification de la prise en charge et de la variabilité des fonctionnalités
 Pour vérifier la prise en charge de la fonctionnalité et de variabilité, les applications appellent généralement **SQLGetInfo**, **SQLGetFunctions**, et **SQLGetTypeInfo**. Un bon point de départ est de niveaux de conformité grammaire SQL et les API du pilote. Il s’agit des grands niveaux de prise en charge de la fonctionnalité. L’application peut ensuite appeler **SQLGetInfo** avec d’autres options pour déterminer la prise en charge ou la variabilité des fonctionnalités dont il a besoin, **SQLGetFunctions** pour déterminer si le fonctions besoins au-delà retourné niveau de conformité sont pris en charge, et **SQLGetTypeInfo** pour déterminer quels types de données SQL sont prises en charge.  

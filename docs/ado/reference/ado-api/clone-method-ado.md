@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ad49265f-1c05-4271-9bbf-7c00010ac18c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fbeedf9e56c1f0606a7c8f842baedc9d11ad3929
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7439f9a4a04582f4cf4c4878892ed0f4f33e228c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920017"
 ---
 # <a name="clone-method-ado"></a>Clone, méthode (ADO)
 Crée un doublon [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet depuis une **Recordset** objet. Si vous le souhaitez, spécifie que le clone doit être en lecture seule.  
@@ -45,7 +44,7 @@ Set rstDuplicate = rstOriginal.Clone (LockType)
  Une variable objet qui identifie le **Recordset** objet à dupliquer.  
   
  *LockType*  
- Facultatif. Un [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valeur qui spécifie le type de verrou de l’original **Recordset**, ou en lecture seule **Recordset**. Les valeurs valides sont **adLockUnspecified** ou **adLockReadOnly**.  
+ facultatif. Un [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md) valeur qui spécifie le type de verrou de l’original **Recordset**, ou en lecture seule **Recordset**. Les valeurs valides sont **adLockUnspecified** ou **adLockReadOnly**.  
   
 ## <a name="remarks"></a>Notes  
  Utilisez le **Clone** dupliqué de la méthode de création de plusieurs **Recordset** objets, en particulier si vous voulez conserver plusieurs enregistrements en cours dans un ensemble donné d’enregistrements. À l’aide de la **Clone** méthode est plus efficace que la création et ouverture d’un nouvel **Recordset** objet qui utilise la même définition que l’original.  

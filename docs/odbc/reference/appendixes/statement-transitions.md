@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db8ec0edfa1a5ae1b6b94ed07f63c930bc896f5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0d46bad2e0b37c5e6751a4895cdf1899aee4b01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070105"
 ---
 # <a name="statement-transitions"></a>Transitions d’instruction
 Instructions ODBC ont les états suivants.  
@@ -140,7 +139,7 @@ Instructions ODBC ont les états suivants.
   
 |S2<br /><br /> Aucun résultat|S3<br /><br /> Résultats|  
 |-----------------------|--------------------|  
-|--[1] 07005[2]|-- [s] S11 x|  
+|--[1] 07005[2]|--S11 [s] x|  
   
  [1] *FieldIdentifier* a été SQL_DESC_COUNT.  
   
@@ -150,7 +149,7 @@ Instructions ODBC ont les états suivants.
   
 |S0<br /><br /> Non alloué|S1<br /><br /> allouée|S2-S3<br /><br /> Prepared|S4<br /><br /> Exécutée|S5-S7<br /><br /> Curseur|S8-S10<br /><br /> Besoin de données|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|(IH)|S5 [s]  S11 [x]|S1 [e] S5 [s] S11 [x]|S1 [e] et [1] S5 [s] et [1] S11 [x] et [1] 24000 [2]|Consultez le tableau suivant|HY010|O de HY010 NS [c]|  
+|(IH)|S5 [s] S11 [x]|S1 [e] S5 [s] S11 [x]|S1 [e] et [1] S5 [s] et [1] S11 [x] et [1] 24000 [2]|Consultez le tableau suivant|HY010|O de HY010 NS [c]|  
   
  [1] le résultat actuel est la dernière ou un seul résultat, ou aucun résultat actuel. Pour plus d’informations sur plusieurs résultats, consultez [plusieurs résultats](../../../odbc/reference/develop-app/multiple-results.md).  
   
@@ -168,8 +167,8 @@ Instructions ODBC ont les états suivants.
   
 |S0<br /><br /> Non alloué|S1<br /><br /> allouée|S2-S3<br /><br /> Prepared|S4<br /><br /> Exécutée|S5-S7<br /><br /> Curseur|S8-S10<br /><br /> Besoin de données|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH[1]|--|--|--|--|HY010|NS [c] et [3] HY010 [o] ou [4]|  
-|IH[2]|HY010|Consultez le tableau suivant|24000|-- [s]  S11 x|HY010|NS [c] et [3] HY010 [o] ou [4]|  
+|IH [1]|--|--|--|--|HY010|NS [c] et [3] HY010 [o] ou [4]|  
+|IH [2]|HY010|Consultez le tableau suivant|24000|--S11 [s] x|HY010|NS [c] et [3] HY010 [o] ou [4]|  
   
  [1] cette ligne affiche les transitions quand le *SourceDescHandle* argument était un ARD, APD ou IPD.  
   
@@ -183,7 +182,7 @@ Instructions ODBC ont les états suivants.
   
 |S2<br /><br /> Aucun résultat|S3<br /><br /> Résultats|  
 |-----------------------|--------------------|  
-|24000[1]|-- [s]  S11 [x]|  
+|24000[1]|--S11 [s] [x]|  
   
  [1] Cette ligne affiche les transitions quand le *SourceDescHandle* argument était un IRD.  
   
@@ -197,19 +196,19 @@ Instructions ODBC ont les états suivants.
   
 |S0<br /><br /> Non alloué|S1<br /><br /> allouée|S2-S3<br /><br /> Prepared|S4<br /><br /> Exécutée|S5-S7<br /><br /> Curseur|S8-S10<br /><br /> Besoin de données|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|Consultez le tableau suivant|24000|-- [s]  S11 [x]|HY010|O de HY010 NS [c]|  
+|IH|HY010|Consultez le tableau suivant|24000|--S11 [s] [x]|HY010|O de HY010 NS [c]|  
   
 ## <a name="sqldescribecol-prepared-states"></a>SQLDescribeCol (États préparées)  
   
 |S2<br /><br /> Aucun résultat|S3<br /><br /> Résultats|  
 |-----------------------|--------------------|  
-|07005|-- [s]  S11 [x]|  
+|07005|--S11 [s] [x]|  
   
 ## <a name="sqldescribeparam"></a>SQLDescribeParam  
   
 |S0<br /><br /> Non alloué|S1<br /><br /> allouée|S2-S3<br /><br /> Prepared|S4<br /><br /> Exécutée|S5-S7<br /><br /> Curseur|S8-S10<br /><br /> Besoin de données|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|-- [s]  S11 [x]|HY010|HY010|HY010|NS [c] HY010 [o]|  
+|IH|HY010|--S11 [s] [x]|HY010|HY010|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
@@ -383,7 +382,7 @@ Instructions ODBC ont les états suivants.
 |S0<br /><br /> Non alloué|S1<br /><br /> allouée|S2-S3<br /><br /> Prepared|S4<br /><br /> Exécutée|S5-S7<br /><br /> Curseur|S8-S10<br /><br /> Besoin de données|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
 |--[1]|--|--|--|--|--|--|  
-|IH[2]|--[3]|--[3]|--|--|--[3]|--[3]|  
+|IH [2]|--[3]|--[3]|--|--|--[3]|--[3]|  
   
  [1] cette ligne affiche les transitions quand *HandleType* était SQL_HANDLE_ENV, SQL_HANDLE_DBC ou SQL_HANDLE_DESC.  
   
@@ -453,13 +452,13 @@ Instructions ODBC ont les états suivants.
   
 |S0<br /><br /> Non alloué|S1<br /><br /> allouée|S2-S3<br /><br /> Prepared|S4<br /><br /> Exécutée|S5-S7<br /><br /> Curseur|S8-S10<br /><br /> Besoin de données|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|-- [s]  S11 [x]|-- [s]  S11 [x]|-- [s]  S11 [x]|HY010|NS [c] HY010 [o]|  
+|IH|HY010|--S11 [s] [x]|--S11 [s] [x]|--S11 [s] [x]|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlnumresultcols"></a>SQLNumResultCols  
   
 |S0<br /><br /> Non alloué|S1<br /><br /> allouée|S2-S3<br /><br /> Prepared|S4<br /><br /> Exécutée|S5-S7<br /><br /> Curseur|S8-S10<br /><br /> Besoin de données|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|HY010|-- [s]  S11 [x]|-- [s]  S11 [x]|-- [s]  S11 [x]|HY010|NS [c] HY010 [o]|  
+|IH|HY010|--S11 [s] [x]|--S11 [s] [x]|--S11 [s] [x]|HY010|NS [c] HY010 [o]|  
   
 ## <a name="sqlparamdata"></a>SQLParamData  
   
@@ -555,7 +554,7 @@ Instructions ODBC ont les états suivants.
   
 |S0<br /><br /> Non alloué|S1<br /><br /> allouée|S2-S3<br /><br /> Prepared|S4<br /><br /> Exécutée|S5-S7<br /><br /> Curseur|S8-S10<br /><br /> Besoin de données|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH[1]|--|--|--|--|HY010|HY010|  
+|IH [1]|--|--|--|--|HY010|HY010|  
   
  [1] cette ligne affiche les transitions où le *DescriptorHandle* argument est un ARD, APD IPD, ou (pour **SQLSetDescField**) un IRD lorsque le *FieldIdentifier* argument est SQL_ DESC_ARRAY_STATUS_PTR ou SQL_DESC_ROWS_PROCESSED_PTR. C’est une erreur d’appeler **SQLSetDescField** pour un IRD lorsque *FieldIdentifier* est une autre valeur.  
   
@@ -581,7 +580,7 @@ Instructions ODBC ont les états suivants.
   
 |S0<br /><br /> Non alloué|S1<br /><br /> allouée|S2-S3<br /><br /> Prepared|S4<br /><br /> Exécutée|S5-S7<br /><br /> Curseur|S8-S10<br /><br /> Besoin de données|S11-S12<br /><br /> Async|  
 |------------------------|----------------------|------------------------|---------------------|----------------------|--------------------------|-----------------------|  
-|IH|--|--[1] HY011[2]|--[1] 24000[2]|--[1] 24000[2]|HY010 [np] ou [1] HY011 [p] et [2]|HY010 [np] ou [1] HY011 [p] et [2]|  
+|IH|--|--HY011 [1] [2]|--[1] 24000[2]|--[1] 24000[2]|HY010 [np] ou [1] HY011 [p] et [2]|HY010 [np] ou [1] HY011 [p] et [2]|  
   
  [1] le *attribut* argument n’était pas SQL_ATTR_CONCURRENCY, SQL_ATTR_CURSOR_TYPE, SQL_ATTR_SIMULATE_CURSOR, SQL_ATTR_USE_BOOKMARKS, SQL_ATTR_CURSOR_SCROLLABLE et SQL_ATTR_CURSOR_SENSITIVITY.  
   

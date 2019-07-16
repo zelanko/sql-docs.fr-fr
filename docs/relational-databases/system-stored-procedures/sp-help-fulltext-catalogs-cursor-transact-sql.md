@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: d44478d1-0cc4-415e-9d1a-6dccb64674fa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29bb5d24681ec159e6663080c7c15c0a67a73fc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 280d5eaf75c8b6775222a1dbde028f74feac842f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055145"
 ---
 # <a name="sphelpfulltextcatalogscursor-transact-sql"></a>sp_help_fulltext_catalogs_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,13 +53,13 @@ sp_help_fulltext_catalogs_cursor [ @cursor_return= ] @cursor_variable OUTPUT ,
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**fulltext_catalog_id**|**smallint**|Identificateur du catalogue de texte intégral.|  
-|**NOM**|**sysname**|Nom du catalogue de texte intégral.|  
+|**NAME**|**sysname**|Nom du catalogue de texte intégral.|  
 |**PATH**|**nvarchar(260)**|À partir de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], cette clause n'a aucun effet.|  
-|**STATUS**|**Int**|État du remplissage de l'index de recherche en texte intégral du catalogue :<br /><br /> 0 = Inactif<br /><br /> 1 = Remplissage complet en cours<br /><br /> 2 = En pause<br /><br /> 3 = Accéléré<br /><br /> 4 = Récupération<br /><br /> 5 = Arrêt<br /><br /> 6 = Remplissage incrémentiel en cours<br /><br /> 7 = Indexation en cours<br /><br /> 8 = Disque plein Suspendu<br /><br /> 9 = Suivi des modifications|  
-|**NUMBER_FULLTEXT_TABLES**|**Int**|Nombre de tables indexées en texte intégral associées au catalogue.|  
+|**ÉTAT**|**int**|État du remplissage de l'index de recherche en texte intégral du catalogue :<br /><br /> 0 = Inactif<br /><br /> 1 = Remplissage complet en cours<br /><br /> 2 = En pause<br /><br /> 3 = Accéléré<br /><br /> 4 = Récupération<br /><br /> 5 = Arrêt<br /><br /> 6 = Remplissage incrémentiel en cours<br /><br /> 7 = Indexation en cours<br /><br /> 8 = Disque plein Suspendu<br /><br /> 9 = Suivi des modifications|  
+|**NUMBER_FULLTEXT_TABLES**|**int**|Nombre de tables indexées en texte intégral associées au catalogue.|  
   
 ## <a name="permissions"></a>Autorisations  
  Les autorisations d'exécution reviennent par défaut au rôle **public** .  

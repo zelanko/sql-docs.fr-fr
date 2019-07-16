@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ae733d560c227ccf282dfe4caed3935d9ffaebe
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096207"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +81,9 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @ts_col = ] 'timestamp_col'` Est le nom de la **timestamp** colonne sur le serveur de publication. *l’argument timestamp_col* est **sysname**, avec NULL comme valeur par défaut.  
   
-`[ @filter_clause = ] 'filter_clause'` Est une restriction clause (WHERE) qui définit un filtre horizontal. Lorsque vous entrez la clause de restriction, omettez le mot clé où. *filter_clause*est **nvarchar (4000)**, avec NULL comme valeur par défaut.  
+`[ @filter_clause = ] 'filter_clause'` Est une restriction clause (WHERE) qui définit un filtre horizontal. Lorsque vous entrez la clause de restriction, omettez le mot clé où. *filter_clause*est **nvarchar (4000)** , avec NULL comme valeur par défaut.  
   
-`[ @primary_key_bitmap = ] 'primary_key_bitmap'` Est un bitmap de la clé primaire dans la table. *bitmap_clé_primaire* est **varbinary (4000)**, sans valeur par défaut.  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'` Est un bitmap de la clé primaire dans la table. *bitmap_clé_primaire* est **varbinary (4000)** , sans valeur par défaut.  
   
 `[ @identity_support = ] identity_support` Active et désactive la gestion des plages d’identités automatique lors de la mise à jour en file d’attente est utilisée. *identity_support* est un **bits**, avec une valeur par défaut **0**. **0** signifie qu’il n’existe aucune identité de la plage prise en charge, **1** permet une gestion de plage d’identité automatique.  
   

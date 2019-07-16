@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 27f62ab5-46c4-417e-814d-8d6437034d1c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa06da06ae057839a9d0e6433e57edb1f8a603d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f05caa24afe4b1c083adab9b6199ac5f34e1a46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097914"
 ---
 # <a name="sysdmexecbackgroundjobqueuestats-transact-sql"></a>sys.dm_exec_background_job_queue_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,19 +35,19 @@ ms.locfileid: "63013512"
 > [!NOTE]  
 >  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_background_job_queue_stats**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**queue_max_len**|**Int**|Longueur maximale de la file d'attente.|  
 |**enqueued_count**|**Int**|Nombre de demandes placées dans la file d'attente.|  
 |**started_count**|**Int**|Nombre de demandes dont l'exécution a commencé.|  
-|**ended_count**|**Int**|Nombre de demandes dont l'exécution s'est terminée sur un succès ou un échec.|  
-|**failed_lock_count**|**Int**|Nombre de demandes ayant échoué à cause d'un problème de contention de verrouillage ou de blocage.|  
-|**failed_other_count**|**Int**|Nombre de demandes ayant échoué pour d'autres raisons.|  
+|**ended_count**|**int**|Nombre de demandes dont l'exécution s'est terminée sur un succès ou un échec.|  
+|**failed_lock_count**|**int**|Nombre de demandes ayant échoué à cause d'un problème de contention de verrouillage ou de blocage.|  
+|**failed_other_count**|**int**|Nombre de demandes ayant échoué pour d'autres raisons.|  
 |**failed_giveup_count**|**Int**|Nombre de demandes ayant échoué parce que le nombre limite de tentatives était atteint.|  
-|**enqueue_failed_full_count**|**Int**|Nombre de tentatives d'empilement ayant échoué parce que la file d'attente était saturée.|  
+|**enqueue_failed_full_count**|**int**|Nombre de tentatives d'empilement ayant échoué parce que la file d'attente était saturée.|  
 |**enqueue_failed_duplicate_count**|**Int**|Nombre de tentatives d'empilement en double.|  
-|**elapsed_avg_ms**|**Int**|Temps moyen écoulé par demande en millisecondes.|  
-|**elapsed_max_ms**|**Int**|Temps écoulé pour la demande la plus longue, en millisecondes.|  
+|**elapsed_avg_ms**|**int**|Temps moyen écoulé par demande en millisecondes.|  
+|**elapsed_max_ms**|**int**|Temps écoulé pour la demande la plus longue, en millisecondes.|  
 |**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
 ## <a name="remarks"></a>Notes  
@@ -57,11 +56,11 @@ ms.locfileid: "63013512"
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
 
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-determining-the-percentage-of-failed-background-jobs"></a>A. Détermination du pourcentage des travaux d'arrière-plan ayant échoué  
+### <a name="a-determining-the-percentage-of-failed-background-jobs"></a>R. Détermination du pourcentage des travaux d'arrière-plan ayant échoué  
  L'exemple suivant retourne le pourcentage de travaux d'arrière-plan ayant échoué pour toutes les requêtes exécutées.  
   
 ```  

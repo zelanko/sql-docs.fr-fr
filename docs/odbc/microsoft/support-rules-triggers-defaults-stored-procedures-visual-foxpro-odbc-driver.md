@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90a39ad540f3320ed78e981030679b59d911eeef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080773"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Prise en charge des règles, des déclencheurs, des valeurs par défaut et des procédures stockées (pilote ODBC Visual FoxPro)
 Impossible de créer des règles de Visual FoxPro, des déclencheurs, des valeurs par défaut ou des procédures stockées qui utilisent le pilote ODBC Visual FoxPro. Toutefois, votre application peut interagir avec les règles existantes, des déclencheurs, des valeurs par défaut ou des procédures stockées comme elle insère, met à jour ou supprime des données Visual FoxPro stockées dans une base de données.  
@@ -71,7 +70,7 @@ Impossible de créer des règles de Visual FoxPro, des déclencheurs, des valeur
 |ATLINE (fonction))|ATN2 (fonction))||  
 |Commande moyenne|ACOS (fonction))||  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
   
 ||||  
 |-|-|-|  
@@ -202,7 +201,7 @@ Impossible de créer des règles de Visual FoxPro, des déclencheurs, des valeur
 |Commande de paramètres|Fonction principale)|Commande de privé|  
 |PI (fonction))|PROGRAMME (fonction))|Fonction appropriée)|  
 |Commande de procédure|Fonction va)||  
-|Commande publique|PADL( ) &#124; PADR( ) &#124; PADC( ) Functions||  
+|Commande publique|() PADL &#124; () PADR &#124; PADC () fonctions||  
   
 ## <a name="r"></a>R  
   
@@ -221,7 +220,7 @@ Impossible de créer des règles de Visual FoxPro, des déclencheurs, des valeur
   
 ||||  
 |-|-|-|  
-|SCAN ... Commande ENDSCAN|Commande de nuage de points|S (fonction))|  
+|L’ANALYSE... Commande ENDSCAN|Commande de nuage de points|S (fonction))|  
 |SECONDES (fonction))|Commande de recherche|SEEK (fonction))|  
 |Sélectionnez la commande|Sélectionnez () (fonction)|Commande SELECT-SQL|  
 |SET BLOCKSIZE, commande|SET CARRY, commande|SET siècle, commande|  
@@ -274,7 +273,7 @@ Impossible de créer des règles de Visual FoxPro, des déclencheurs, des valeur
 |-|-|-|  
 |WEEK (fonction))|||  
   
-## <a name="y"></a>O  
+## <a name="y"></a>Y  
   
 ||||  
 |-|-|-|  

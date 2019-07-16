@@ -2,19 +2,18 @@
 title: Maintenance de logiciels - Analytique Platform System | Microsoft Docs
 description: Analytique Platform System (APS) de maintenance logicielle.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 444d7f29e7f65da7e5d98dde310b2c1f8ad8dd4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97f0ccaed9cded73241f473d81400b30acbe402c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960089"
 ---
 # <a name="software-servicing-in-analytics-platform-system"></a>Maintenance des logiciels d’Analytique Platform System
 Cette section résume les logiciels de maintenance configuration requise pour les appliances Analytique Platform System, y compris les correctifs logiciels WSUS et Analytique Platform System.  

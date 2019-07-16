@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 300d387d-be03-4be3-8c7c-6caf56d678ce
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bff71bc42e77a1f5a0f55875b7fdddb13a3e3964
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: abe6a9bf7f2f336ffe612057dd6db05f74b4adea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044973"
 ---
 # <a name="odbc-component-files"></a>Fichiers des composants ODBC
 Les fichiers de pilote ODBC sont requis par chaque composant de base de données de bureau ODBC Drivers 4.0.  

@@ -10,14 +10,13 @@ dev_langs:
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a24007abad9148a02da3542587967ae9dcc63f16
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18798dece1c801ad0cc4854b7fccc15529a56d5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056450"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "58535650"
 > [!IMPORTANT]  
 >  Le [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité faisant l’objet **sp_pdw_log_user_data_masking** êtes certain [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité. **sp_pdw_log_user_data_masking** n’affecte pas les journaux de transaction de base de données, ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les journaux d’erreurs.  
   
- **Arrière-plan :** Dans la configuration par défaut [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] contiennent des journaux d’activité complète [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions et peut dans certains cas incluent les données utilisateur contenues dans les opérations telles que **insérer**, **mise à jour**, et **Sélectionnez** instructions. En cas de problème sur l’appliance, cela permet l’analyse des conditions qui a provoqué le problème sans avoir à reproduire le problème. Afin d’éviter les données utilisateur en cours d’écriture [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité, les clients peuvent choisir d’activer sur le masquage des données utilisateur à l’aide de cette procédure stockée. Les instructions sont toujours écrits dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité, mais tous les littéraux dans les instructions qui contiennent des données utilisateur seront masqués ; remplacé avec des valeurs de constante prédéfinies.  
+ **Contexte** : Dans la configuration par défaut [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] contiennent des journaux d’activité complète [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions et peut dans certains cas incluent les données utilisateur contenues dans les opérations telles que **insérer**, **mise à jour**, et **Sélectionnez** instructions. En cas de problème sur l’appliance, cela permet l’analyse des conditions qui a provoqué le problème sans avoir à reproduire le problème. Afin d’éviter les données utilisateur en cours d’écriture [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité, les clients peuvent choisir d’activer sur le masquage des données utilisateur à l’aide de cette procédure stockée. Les instructions sont toujours écrits dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité, mais tous les littéraux dans les instructions qui contiennent des données utilisateur seront masqués ; remplacé avec des valeurs de constante prédéfinies.  
   
  Lorsque le chiffrement transparent des données est activé sur l’appliance, masquage des données utilisateur dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] journaux d’activité est automatiquement activée.  
   

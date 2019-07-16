@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 955d6fa9-0b31-4335-a3cd-e4c4d90ad308
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63e4b13912cbed91d092a36f6dadbef0e19df3e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4d24c94cc4c6dca00fc0e3fd9cd93626da6e4fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62743893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076453"
 ---
 # <a name="ihconstrainttypes-transact-sql"></a>IHconstrainttypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **IHconstrainttypes** (table système) contient une ligne pour chaque type de contrainte non SQL Server pris en charge pour les éditeurs non SQL Server. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**type**|**nvarchar(255)**|Nom d'un type de contrainte non SQL Server pris en charge.|  
   

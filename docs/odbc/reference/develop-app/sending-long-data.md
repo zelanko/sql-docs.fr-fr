@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: acb4ff1637c1530527af88affaf437334596016b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094343"
 ---
 # <a name="sending-long-data"></a>Envoi de données de type Long
 Définir des SGBD *données de type long* sous forme de n’importe quel caractère ou binaire sur une certaine taille, telles que de 254 caractères. Il se peut qu’il ne soit pas possible de stocker la totalité d’un élément de données de type long dans la mémoire, telles que lorsque l’élément représente un document texte long ou une image bitmap. Étant donné que ces données ne peuvent pas être stockées dans une seule mémoire tampon, la source de données l’envoie au pilote dans des parties avec **SQLPutData** lorsque l’instruction est exécutée. Paramètres pour lesquels les données sont envoyées au moment de l’exécution sont appelés *data-at-execution paramètres*.  

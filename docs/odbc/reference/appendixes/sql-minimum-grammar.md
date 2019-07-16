@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b1f59efd809c604458bd7b99882705db240e9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057012"
 ---
 # <a name="sql-minimum-grammar"></a>Grammaire minimale de SQL
 Cette section décrit la syntaxe SQL minimale un pilote ODBC doit prendre en charge. La syntaxe décrite dans cette section est un sous-ensemble de la syntaxe de niveau d’entrée de SQL-92.  
@@ -29,28 +28,28 @@ Cette section décrit la syntaxe SQL minimale un pilote ODBC doit prendre en cha
  Les pilotes qui fonctionnent uniquement avec les sources de données en lecture seule ne peuvent pas en charge les parties de la grammaire inclus dans cette section qui traitent de la modification des données. Une application peut déterminer si une source de données est en lecture seule en appelant **SQLGetInfo** avec le type d’information SQL_DATA_SOURCE_READ_ONLY.  
   
 ## <a name="statement"></a>.  
- *create-table-statement* ::=  
+ *instruction de table créer* :: =  
   
  CREATE TABLE *nom de table de base*  
   
- (*-identificateur de la colonne le type de données* [*, type de données identificateur de colonne*]...)  
+ ( *-identificateur de la colonne le type de données* [ *, type de données identificateur de colonne*]...)  
   
 > [!IMPORTANT]  
 >  Comme un *type de données* dans un *-table-instruction create*, les applications doivent utiliser un type de données à partir de la colonne TYPE_NAME du jeu de résultats retourné par **SQLGetTypeInfo**.  
   
- *delete-statement-searched* ::=  
+ *Delete-instruction recherché* :: =  
   
  DELETE FROM *nom de la table* [où *condition de recherche*]  
   
- *drop-table-statement* ::=  
+ *instruction DROP-table* :: =  
   
  DROP TABLE *nom de table de base*  
   
- *insert-statement* ::=  
+ *instruction d’insertion* :: =  
   
- INSERT INTO *nom de la table* [( *identificateur de colonne* [, *identificateur de colonne*]...)]      VALEURS (*-valeur à insérer*[, *-valeur à insérer*]...)  
+ INSERT INTO *nom de la table* [( *identificateur de colonne* [, *identificateur de colonne*]...)]      VALEURS ( *-valeur à insérer*[, *-valeur à insérer*]...)  
   
- *select-statement* ::=  
+ *instruction SELECT* :: =  
   
  SELECT [ALL &#124; DISTINCT] *select-list*  
   
@@ -78,7 +77,7 @@ Cette section décrit la syntaxe SQL minimale un pilote ODBC doit prendre en cha
   
  Définissez *identificateur de colonne* = {*expression* &#124; NULL}  
   
- [, *column-identifier* = {*expression* &#124; NULL}]...  
+ [, *identificateur de colonne* = {*expression* &#124; NULL}]...  
   
  [Où *condition de recherche*]  
   

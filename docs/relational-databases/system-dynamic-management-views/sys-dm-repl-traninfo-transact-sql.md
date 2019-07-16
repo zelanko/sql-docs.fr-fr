@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9aa68c8c0dbc702b7f0db3e3186c7ddb56266dbc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067833"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne des informations sur chaque transaction de capture de données répliquées ou modifiées.  
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**fp2p_pub_exists**|**tinyint**|Indique si la transaction se trouve dans une base de données publiée à l'aide de la réplication transactionnelle d'égal à égal. Si tel est le cas, la valeur est 1 ; sinon, 0.|  
 |**db_ver**|**Int**|Version de base de données.|  
@@ -41,14 +40,14 @@ ms.locfileid: "51664962"
 |**begin_lsn**|**nvarchar(64)**|Numéro séquentiel dans le journal (NSE) de l'enregistrement du début pour la transaction.|  
 |**commit_lsn**|**nvarchar(64)**|Numéro de séquence de l'enregistrement du journal de validation pour la transaction.|  
 |**dbid**|**smallint**|ID de la base de données.|  
-|**rows**|**Int**|ID de la commande répliquée à l'intérieur de la transaction.|  
+|**rows**|**int**|ID de la commande répliquée à l'intérieur de la transaction.|  
 |**xdesid auquel**|**nvarchar(64)**|ID de transaction.|  
 |**artcache_table_address**|**varbinary(8)**|Adresse en mémoire de la dernière structure de table d'article mis en cache utilisée pour cette transaction.|  
 |**server**|**nvarchar(514)**|Nom du serveur.|  
 |**server_len_in_bytes**|**smallint**|Longueur des caractères, en octets, du nom du serveur.|  
 |**database**|**nvarchar(514)**|Nom de la base de données.|  
 |**db_len_in_bytes**|**smallint**|Longueur des caractères, en octets, du nom de la base de données.|  
-|**donneur d’ordre**|**nvarchar(514)**|Nom du serveur sur lequel la transaction a débuté.|  
+|**originator**|**nvarchar(514)**|Nom du serveur sur lequel la transaction a débuté.|  
 |**originator_len_in_bytes**|**smallint**|Longueur des caractères, en octets, du serveur sur lequel la transaction a débuté.|  
 |**orig_db**|**nvarchar(514)**|Nom de la base de données où la transaction a débuté.|  
 |**orig_db_len_in_bytes**|**smallint**|Longueur des caractères, en octets, de la base de données où la transaction a débuté.|  
@@ -60,15 +59,15 @@ ms.locfileid: "51664962"
 |**fcomplete**|**tinyint**|Spécifie si la commande est une mise à jour partielle.|  
 |**fcompensated**|**tinyint**|Spécifie si la transaction est impliquée dans une restauration partielle.|  
 |**fprocessingtext**|**tinyint**|Spécifie si la transaction inclut une colonne avec un type de données binary large.|  
-|**max_cmds_in_tran**|**Int**|Nombre maximum de commandes dans une transaction logique, comme le spécifie l'Agent de lecture du journal.|  
+|**max_cmds_in_tran**|**int**|Nombre maximum de commandes dans une transaction logique, comme le spécifie l'Agent de lecture du journal.|  
 |**begin_time**|**datetime**|Heure de démarrage de la transaction.|  
 |**commit_time**|**datetime**|Heure de que la transaction a été validée.|  
 |**session_id**|**Int**|ID de la session d'analyse du journal des captures de données modifiées. Cette colonne est mappée à la **session_id** colonne [sys.dm_cdc_logscan_sessions](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-log-scan-sessions.md).|  
-|**session_phase**|**Int**|Nombre qui indique la phase de la session au moment où l'erreur s'est produite. Cette colonne est mappée à la **phase_number** colonne [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).|  
+|**session_phase**|**int**|Nombre qui indique la phase de la session au moment où l'erreur s'est produite. Cette colonne est mappée à la **phase_number** colonne [sys.dm_cdc_errors](../../relational-databases/system-dynamic-management-views/change-data-capture-sys-dm-cdc-errors.md).|  
 |**is_known_cdc_tran**|**bit**|Indique que la transaction est suivie par la capture de données modifiées.<br /><br /> 0 = Transaction de réplication de transactions.<br /><br /> 1 = Transaction de capture de données modifiées.|  
 |**error_count**|**Int**|Nombre d'erreurs rencontrées.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW DATABASE STATE sur la base de données de publication ou sur la base de données activée pour la capture de données modifiées.  
   
 ## <a name="remarks"></a>Notes  

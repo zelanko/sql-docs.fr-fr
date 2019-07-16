@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f5375fa1-4711-4f7e-9ba4-54c427f71325
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c44797b663007600b66db3d40d910d7f2459ad89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 220703626f5cbe7aa1b7f8aa3d6ee24fee238827
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917300"
 ---
 # <a name="refresh-method-example-vb"></a>Refresh, exemple de méthode (VB)
 Cet exemple montre comment utiliser le [Actualiser](../../../ado/reference/ado-api/refresh-method-ado.md) méthode pour actualiser le [paramètres](../../../ado/reference/ado-api/parameters-collection-ado.md) collection pour une procédure stockée [commande](../../../ado/reference/ado-api/command-object-ado.md) objet.  

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 457385a43c9f5b2864e5596f2da33f4ed38e7756
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62854340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070994"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +40,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  *liste des définitions de colonne*  
  Liste des définitions de colonnes séparées par des virgules.  
   
- *holdout-maxpercent*  
+ *maxpercent d’exclusion*  
  Entier compris entre 1 et 100 qui indique le pourcentage de données à réserver au test.  
   
  *holdout-maxcases*  
@@ -60,7 +59,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  Vous devez spécifier une valeur initiale si vous devez vous assurer qu'une partition peut être reproduite.  
   
- Valeur par défaut : REPEATABLE(0)  
+ Par défaut : REPEATABLE(0)  
   
 ## <a name="remarks"></a>Notes  
  Vous définissez une structure d'exploration de données en spécifiant une liste de colonnes, en spécifiant éventuellement des relations hiérarchiques entre les colonnes, puis en partitionnant éventuellement la structure d'exploration de données en jeux de données d'apprentissage et de test.  
@@ -150,7 +149,7 @@ CREATE MINING STRUCTURE [New Mailing]
 )  
 ```  
   
-### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Exemple 2 : En spécifiant le pourcentage d’exclusion et la valeur initiale  
+### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Exemple 2 : En spécifiant le pourcentage d’exclusion et la valeur initiale  
  La clause suivante peut être ajoutée après la liste des définitions de colonnes pour définir un jeu de données qui peut être utilisé pour tester tous les modèles d'exploration de données associés à la structure d'exploration de données. L'instruction crée un jeu de test qui contient 25 % du nombre total de cas d'entrée, sans limite sur le nombre maximal de cas. La valeur 5 000 est utilisée comme valeur initiale pour la création de la partition. Lorsque vous spécifiez une valeur initiale, les mêmes cas sont choisis pour le jeu de test chaque fois vous traitez la structure d'exploration de données, tant que les données sous-jacentes ne changent pas.  
   
 ```  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a1922fd8b9cdfb327186afe453fc1904d698579
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a87e7819d96151ea918b8b5f33fb5f4c9e1fbd3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096995"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,31 +32,31 @@ ms.locfileid: "62470711"
   Contient des informations sur les planifications de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette table est stockée dans le **msdb** base de données.  
   
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**schedule_id**|**Int**|ID de la planification de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**schedule_id**|**int**|ID de la planification de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**schedule_uid**|**uniqueidentifier**|Identificateur unique de la planification du travail. Cette valeur permet d'identifier une planification pour les travaux distribués.|  
-|**originating_server_id**|**Int**|ID du serveur principal duquel provient la planification du travail.|  
-|**nom**|**sysname (nvarchar(128))**|Nom de la planification du travail défini par l'utilisateur. Ce nom doit être unique au sein d'un travail.|  
+|**originating_server_id**|**int**|ID du serveur principal duquel provient la planification du travail.|  
+|**name**|**sysname (nvarchar(128))**|Nom de la planification du travail défini par l'utilisateur. Ce nom doit être unique au sein d'un travail.|  
 |**owner_sid**|**varbinary(85)**|Microsoft Windows *identificateur_sécurisé* de l’utilisateur ou le groupe propriétaire de la planification du travail.|  
 |**enabled**|**Int**|État de la planification du travail :<br /><br /> **0** = non activé.<br /><br /> **1** = activé.<br /><br /> Si la planification n'est pas activée, aucun travail n'est exécuté sur la planification.|  
-|**freq_type**|**Int**|Fréquence d'exécution d'un travail pour cette planification.<br /><br /> **1** = une seule fois<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = Monthly<br /><br /> **32** = mensuellement, fonction **freq_interval**<br /><br /> **64** = s’exécute au démarrage du service SQL Server Agent<br /><br /> **128** = s’exécute lorsque l’ordinateur est inactif|  
-|**freq_interval**|**Int**|Jours d'exécution du travail. Dépend de la valeur de **freq_type**. La valeur par défaut est **0**, ce qui indique que **freq_interval** n’est pas utilisé. Consultez le tableau ci-dessous pour les valeurs possibles et leurs effets.|  
-|**freq_subday_type**|**Int**|Unités pour la **freq_subday_interval**. Voici les valeurs possibles et leurs descriptions.<br /><br /> <br /><br /> **1** : À une heure spécifiée<br /><br /> **2** : Secondes<br /><br /> **4** : Minutes<br /><br /> **8** : Heures|  
-|**freq_subday_interval**|**Int**|Nombre de **freq_subday_type** périodes entre chaque exécution du travail.|  
-|**freq_relative_interval**|**Int**|Lorsque **freq_interval** se produit chaque mois, si **freq_interval** est **32** (fréquence mensuelle relative). Peut avoir l'une des valeurs suivantes :<br /><br /> **0** = **freq_relative_interval** n’est pas utilisé<br /><br /> **1** = premier<br /><br /> **2** = seconde<br /><br /> **4** = troisième<br /><br /> **8** = quatrième<br /><br /> **16** = dernier|  
+|**freq_type**|**Int**|Fréquence d'exécution d'un travail pour cette planification.<br /><br /> **1** = une seule fois<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuellement, fonction **freq_interval**<br /><br /> **64** = s’exécute au démarrage du service SQL Server Agent<br /><br /> **128** = s’exécute lorsque l’ordinateur est inactif|  
+|**freq_interval**|**int**|Jours d'exécution du travail. Dépend de la valeur de **freq_type**. La valeur par défaut est **0**, ce qui indique que **freq_interval** n’est pas utilisé. Consultez le tableau ci-dessous pour les valeurs possibles et leurs effets.|  
+|**freq_subday_type**|**int**|Unités pour la **freq_subday_interval**. Voici les valeurs possibles et leurs descriptions.<br /><br /> <br /><br /> **1** : À une heure spécifiée<br /><br /> **2** : Secondes<br /><br /> **4** : Minutes<br /><br /> **8** : Heures|  
+|**freq_subday_interval**|**int**|Nombre de **freq_subday_type** périodes entre chaque exécution du travail.|  
+|**freq_relative_interval**|**int**|Lorsque **freq_interval** se produit chaque mois, si **freq_interval** est **32** (fréquence mensuelle relative). Peut avoir l'une des valeurs suivantes :<br /><br /> **0** = **freq_relative_interval** n’est pas utilisé<br /><br /> **1** = premier<br /><br /> **2** = seconde<br /><br /> **4** = troisième<br /><br /> **8** = quatrième<br /><br /> **16** = dernier|  
 |**freq_recurrence_**<br /><br /> **factor**|**Int**|Nombre de semaines ou mois entre chaque exécution d’une tâche planifiée. **freq_recurrence_factor** est utilisé uniquement si **freq_type** est **8**, **16**, ou **32**. Si cette colonne contient **0**, **freq_recurrence_factor** n’est pas utilisé.|  
-|**active_start_date**|**Int**|Date de démarrage de l'exécution d'un travail. La date est au format AAAAMMJJ. NULL indique la date du jour.|  
+|**active_start_date**|**int**|Date de démarrage de l'exécution d'un travail. La date est au format AAAAMMJJ. NULL indique la date du jour.|  
 |**active_end_date**|**Int**|Date d'arrêt de l'exécution d'un travail. La date se présente sous la forme AAAAMMJJ.|  
-|**active_start_time**|**Int**|Heure sur n’importe quel jour entre **active_start_date** et **active_end_date** que le travail commence à exécuter. L'heure est au format HHMMSS, exprimée sur 24 h.|  
-|**active_end_time**|**Int**|Heure sur n’importe quel jour entre **active_start_date** et **active_end_date** cette tâche arrête l’exécution. L'heure est au format HHMMSS, exprimée sur 24 h.|  
+|**active_start_time**|**int**|Heure sur n’importe quel jour entre **active_start_date** et **active_end_date** que le travail commence à exécuter. L'heure est au format HHMMSS, exprimée sur 24 h.|  
+|**active_end_time**|**int**|Heure sur n’importe quel jour entre **active_start_date** et **active_end_date** cette tâche arrête l’exécution. L'heure est au format HHMMSS, exprimée sur 24 h.|  
 |**date_created**|**datetime**|Date et heure de création de la planification.|  
 |**date_modified**|**datetime**|Date et heure de dernière modification de la planification.|  
-|**version_number**|**Int**|Numéro de version en cours de la planification. Par exemple, si une planification a été modifiée 10 fois, le **numéro_version** est 10.|  
+|**version_number**|**int**|Numéro de version en cours de la planification. Par exemple, si une planification a été modifiée 10 fois, le **numéro_version** est 10.|  
   
 |Valeur de freq_type|Effet sur freq_interval|  
 |-------------------------|------------------------------|  
-|**1** (once)|**freq_interval** n’est pas utilisé (**0**)|  
+|**1** (une fois)|**freq_interval** n’est pas utilisé (**0**)|  
 |**4** (quotidienne)|Chaque **freq_interval** jours|  
 |**8** (hebdomadaire)|**freq_interval** prend une ou plusieurs des opérations suivantes :<br /><br /> **1** = dimanche<br /><br /> **2** = lundi<br /><br /> **4** = mardi<br /><br /> **8** = mercredi<br /><br /> **16** = jeudi<br /><br /> **32** = vendredi<br /><br /> **64** = samedi|  
 |**16** (mensuellement)|Sur le **freq_interval** jour du mois|  

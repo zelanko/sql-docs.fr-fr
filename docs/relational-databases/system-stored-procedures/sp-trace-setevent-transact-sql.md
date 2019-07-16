@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b90fe62de358c226fba4b3b4a26f941c75ce5a47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095956"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Ce tableau répertorie les événements qui peuvent être ajoutés ou supprimés d'une trace.  
   
-|Numéro d'événement|Nom d'événement|Description|  
+|Numéro d'événement|Nom de l'événement|Description|  
 |------------------|----------------|-----------------|  
 |0-9|Réservé|Réservé|  
 |10|RPC:Completed|Se produit lorsqu'un appel de procédure distante (RPC) s'est terminé.|  
@@ -82,7 +81,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |36|SP:CacheRemove|Indique qu'un élément est supprimé du cache de procédure.|  
 |37|SP:Recompile|Indique qu'une procédure stockée a été recompilée.|  
 |38|SP:CacheHit|Indique qu'une procédure stockée est trouvée dans le cache de procédure.|  
-|39|Déprécié|Déprécié|  
+|39|Déconseillé|Déconseillé|  
 |40|SQL:StmtStarting|Se produit lorsque l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] a démarré.|  
 |41|SQL:StmtCompleted|Se produit lorsque l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] est terminée.|  
 |42|SP:Starting|Indique que la procédure stockée a démarré.|  
@@ -206,18 +205,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|Intervient lors de la création, de la modification ou de la suppression de principaux du serveur.|  
 |178|Audit Database Operation Event|Se produit lorsque surviennent diverses opérations dans une base de données, tel qu'un point de contrôle ou une notification de requête d'abonnement.|  
 |180|Audit Database Object Access Event|Se produit lors de l'accès à des objets de base de données, tels que des schémas.|  
-|181|Classe d'événements TM: BEGIN Tran starting|Intervient lors du démarrage d'une requête BEGIN TRANSACTION.|  
-|182|Classe d'événements TM: BEGIN Tran terminée|Intervient lors de l'achèvement d'une requête BEGIN TRANSACTION.|  
-|183|Classe d'événements TM: Promote Tran starting|Intervient lors du démarrage d'une requête PROMOTE TRANSACTION.|  
-|184|Classe d'événements TM: Promote Tran terminée|Intervient lors de l'achèvement d'une requête PROMOTE TRANSACTION.|  
-|185|Classe d'événements TM: COMMIT Tran starting|Intervient lors du démarrage d'une requête COMMIT TRANSACTION.|  
-|186.|Classe d'événements TM: COMMIT Tran terminée|Intervient lors de l'achèvement d'une requête COMMIT TRANSACTION.|  
-|187|Classe d'événements TM: ROLLBACK Tran starting|Intervient lors du démarrage d'une requête ROLLBACK TRANSACTION.|  
-|188|Classe d'événements TM: ROLLBACK Tran terminée|Intervient lors de l'achèvement d'une requête ROLLBACK TRANSACTION.|  
+|181|TM : BEGIN Tran starting|Intervient lors du démarrage d'une requête BEGIN TRANSACTION.|  
+|182|TM : BEGIN Tran terminée|Intervient lors de l'achèvement d'une requête BEGIN TRANSACTION.|  
+|183|TM : Promote Tran starting|Intervient lors du démarrage d'une requête PROMOTE TRANSACTION.|  
+|184|TM : Promote Tran terminée|Intervient lors de l'achèvement d'une requête PROMOTE TRANSACTION.|  
+|185|TM : COMMIT Tran starting|Intervient lors du démarrage d'une requête COMMIT TRANSACTION.|  
+|186.|TM : COMMIT Tran terminée|Intervient lors de l'achèvement d'une requête COMMIT TRANSACTION.|  
+|187|TM : ROLLBACK Tran starting|Intervient lors du démarrage d'une requête ROLLBACK TRANSACTION.|  
+|188|TM : ROLLBACK Tran terminée|Intervient lors de l'achèvement d'une requête ROLLBACK TRANSACTION.|  
 |189|Lock : Timeout (timeout > 0)|Se produit lors de l'expiration d'une demande de verrou sur une ressource, telle qu'une page.|  
-|190|Progress Report: Opération d’Index en ligne|Indique la progression d'une opération de génération d'index en ligne pendant l'exécution du processus de création.|  
-|191|Classe d'événements TM: Enregistrer Tran starting|Intervient lors du démarrage d'une requête SAVE TRANSACTION.|  
-|192|Classe d'événements TM: Save Tran terminée|Intervient lors de l'achèvement d'une requête SAVE TRANSACTION.|  
+|190|Rapport de progression : Opération d’Index en ligne|Indique la progression d'une opération de génération d'index en ligne pendant l'exécution du processus de création.|  
+|191|TM : Enregistrer Tran starting|Intervient lors du démarrage d'une requête SAVE TRANSACTION.|  
+|192|TM : Save Tran terminée|Intervient lors de l'achèvement d'une requête SAVE TRANSACTION.|  
 |193|Background Job Error|Se produit lorsque le travail en arrière-plan s'est terminé anormalement.|  
 |194|OLEDB Provider Information|Intervient lorsqu'une requête distribuée s'exécute et collecte des informations correspondant à la connexion du fournisseur.|  
 |195|Mount Tape|Se produit lorsqu'une demande de montage de bande est reçue.|  
@@ -241,14 +240,14 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Le tableau suivant répertorie les colonnes qui peuvent être ajoutées pour un événement.  
   
-|Numéro de colonne|Nom de colonne|Description|  
+|Numéro de colonne|Nom de la colonne|Description|  
 |-------------------|-----------------|-----------------|  
 |1|**TextData**|Valeur de texte dépendant de la classe d'événements capturée dans la trace.|  
 |2|**BinaryData**|Valeur binaire dépendante de la classe d'événements capturés dans la trace.|  
 |3|**DatabaseID**|ID de la base de données spécifiée par l’utilisation *base de données* instruction ou la base de données par défaut si aucune utilisation *base de données* instruction est émise pour une connexion donnée.<br /><br /> La valeur pour une base de données peut être déterminée à l'aide de la fonction DB_ID.|  
 |4|**TransactionID**|ID affecté par le système à la transaction.|  
-|5|**LineNumber**|Indique le numéro de la ligne qui contient l'erreur. Pour les événements qui impliquent des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , comme **SP:StmtStarting**, la colonne **LineNumber** contient le numéro de ligne de l’instruction dans la procédure stockée ou le lot.|  
-|6|**NTUserName**|Nom d'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
+|5\.|**LineNumber**|Indique le numéro de la ligne qui contient l'erreur. Pour les événements qui impliquent des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] , comme **SP:StmtStarting**, la colonne **LineNumber** contient le numéro de ligne de l’instruction dans la procédure stockée ou le lot.|  
+|6\.|**NTUserName**|Nom d'utilisateur [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|  
 |7|**NTDomainName**|Domaine Windows auquel appartient l'utilisateur.|  
 |8|**HostName**|Nom de l'ordinateur client à l'origine de la requête.|  
 |9|**ClientProcessID**|ID affecté par l'ordinateur client au processus dans lequel s'exécute l'application cliente.|  
@@ -258,10 +257,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 |13|**Duration**|Quantité de temps écoulé (en microsecondes) prise par l’événement. Cette colonne de données n'est pas remplie par l'événement Hash Warning.|  
 |14|**StartTime**|Heure à laquelle a débuté l'événement, si disponible.|  
 |15|**EndTime**|Heure de fin de l'événement. Cette colonne n'est pas remplie pour les classes d'événements de démarrage, comme **SQL:BatchStarting** ou **SP:Starting**. Il est également pas remplie par le **Hash Warning** événement.|  
-|16|**Reads**|Nombre de lectures logiques sur disque effectuées par le serveur pour l'événement. Cette colonne n’est pas remplie par le **verrou : publié** événement.|  
+|16|**Lectures**|Nombre de lectures logiques sur disque effectuées par le serveur pour l'événement. Cette colonne n’est pas remplie par le **verrou : publié** événement.|  
 |17|**Writes**|Nombre d'écritures physiques effectuées par le serveur pour l'événement.|  
 |18|**Unité centrale**|Temps processeur (en millisecondes) utilisé par l'événement.|  
-|19|**Autorisations**|Représente l'image bitmap des autorisations ; utilisé par l'audit de sécurité.|  
+|19|**autorisations**|Représente l'image bitmap des autorisations ; utilisé par l'audit de sécurité.|  
 |20|**Severity**|Niveau de gravité d'une exception.|  
 |21|**EventSubClass**|Type de sous-classe d'événements. Cette colonne de données n'est pas remplie pour toutes les classes d'événements.|  
 |22|**ObjectID**|ID affecté à l'objet par le système.|  
@@ -271,9 +270,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 |26|**ServerName**|Nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], soit *nom_serveur* ou *servername\instancename*, tracée.|  
 |27|**EventClass**|Type de classe d'événement actuellement enregistrée.|  
 |28|**ObjectType**|Type d'objet : table, fonction ou procédure stockée, par exemple.|  
-|29|**NestLevel**|Niveau d'imbrication où s'exécute la procédure stockée. See [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
+|29|**NestLevel**|Niveau d'imbrication où s'exécute la procédure stockée. Consultez [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
 |30|**État**|État du serveur, en cas d'erreur.|  
-|31|**Erreur**|Numéro d’erreur.|  
+|31|**Error**|Numéro d’erreur.|  
 |32|**Mode**|Mode de verrouillage du verrou acquis. Cette colonne n’est pas remplie par le **verrou : publié** événement.|  
 |33|**Handle**|Handle de l'objet référencé dans l'événement.|  
 |34|**ObjectName**|Nom de l'objet en cours d'accès.|  
@@ -315,7 +314,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  Si *sur* a la valeur **0**, et *column_id* est NULL, l’événement est désactivé (OFF) et toutes les colonnes sont effacées. Si *column_id* n’est pas null, la colonne est désactivée (OFF).  
   
- Le tableau suivant illustre l’interaction entre **@on** et **@columnid**.  
+ Le tableau suivant illustre l’interaction entre **@on** et **@columnid** .  
   
 |@on|@columnid|Résultat|  
 |---------|---------------|------------|  

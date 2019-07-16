@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a268e72262f9f8252ea89774876f3d04008fe4c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27f675cca5115a8336f2be4b7fa96c091aee1b62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063562"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>Définition d’options par programmation pour le pilote dBASE
 
@@ -29,7 +28,7 @@ ms.locfileid: "63284948"
 |------------|-----------------|------------|  
 |Nombre de lignes approximatif|Détermine si les statistiques de taille de table sont arrondies. Cette option s’applique à toutes les sources de données qui utilisent le pilote ODBC.|Pour définir cette option de manière dynamique, utilisez le **statistiques** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Séquence de classement|La séquence dans laquelle les champs sont triés.<br /><br /> La séquence peut être : ASCII (la valeur par défaut) ou International.|Pour définir cette option de manière dynamique, utilisez le **COLLATINGSEQUENCE** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
-|Nom de la source de données|Un nom qui identifie la source de données, telles que la paie ou Personnel.|Pour définir cette option de manière dynamique, utilisez le **DSN** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
+|Data Source Name|Un nom qui identifie la source de données, telles que la paie ou Personnel.|Pour définir cette option de manière dynamique, utilisez le **DSN** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Base de données|Une source de données Microsoft Access peut être configurée sans sélectionné ou créé une base de données. Si aucune base de données n’est fourni lors de l’installation, les utilisateurs seront invités à sélectionner un fichier de base de données lorsqu’ils se connectent à la source de données.|Pour définir cette option de manière dynamique, utilisez le **DBQ** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Description|Une description facultative des données dans la source de données ; par exemple, « date d’embauche, historique de salaire et examen actuel de tous les employés. »|Pour définir cette option de manière dynamique, utilisez le **DESCRIPTION** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Exclusive|Si le **exclusif** est activée, la base de données s’ouvre en mode exclusif et est accessible par un seul utilisateur à la fois. Les performances sont améliorées lorsqu’elle s’exécute en mode exclusif.|Pour définir cette option de manière dynamique, utilisez le **exclusif** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  

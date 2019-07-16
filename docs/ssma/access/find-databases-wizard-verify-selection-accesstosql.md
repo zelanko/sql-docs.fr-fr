@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f2b3abf36923d11776ac08f4e4386981eb2aad48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2edf02c31b8b52d6743113e6c6c5878bf5180a83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024738"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>Assistant de bases de données de la recherche (vérifier la sélection) (AccessToSQL)
 La page vérifier la sélection de l’Assistant trouver les bases de données répertorie les fichiers à ajouter à SSMA. Si la liste des fichiers est incorrecte, cliquez sur **retour** pour modifier la liste. Sinon, cliquez sur **Terminer** pour ajouter les fichiers.  
@@ -28,7 +27,7 @@ Pour ouvrir l’Assistant de trouver les bases de données, sur le **fichier** m
 **Nom de fichier**  
 Affiche le nom du fichier de base de données Access à ajouter à SSMA.  
   
-**Chemins d'accès au fichier**  
+**Chemin de fichier**  
 Affiche le chemin d’accès du fichier de base de données Access.  
   
 **Propriétaire**  

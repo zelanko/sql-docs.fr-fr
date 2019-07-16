@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: c83c36e2-734e-4960-bc7e-92235910bc6f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c20fdea1dd7a182ae3925880e1dded6537e297de
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a2ca81717dcf7d5794683a33f2f3f5d080d3f1f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044933"
 ---
 # <a name="creating-a-driver-application"></a>Création d’une application de pilote
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +70,7 @@ ms.locfileid: "51661318"
   
 -   Effectuer des opérations de copie en bloc  
   
--   Gérer les données de grande taille (**varchar (max)**, **nvarchar (max)**, et **varbinary (max)** colonnes) opérations  
+-   Gérer les données de grande taille (**varchar (max)** , **nvarchar (max)** , et **varbinary (max)** colonnes) opérations  
   
 -   Utiliser la logique de reconnexion pour faciliter le basculement lorsque la mise en miroir de bases de données est configurée  
   

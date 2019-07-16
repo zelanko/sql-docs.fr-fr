@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84710ffd69ea377c979adf94af1394d8436ef10b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 590bd488ae87e8e871837c3055a3225794850d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077016"
 ---
 # <a name="data-type-conversions"></a>Conversions de type de données
 Données qui peuvent être converties à partir d’un type vers un autre à un des quatre fois : quand données sont transférées à partir de la variable d’une application vers un autre C à C, lorsque les données dans une variable d’application sont envoyées à un paramètre d’instruction (C en SQL), lorsque les données dans une colonne de jeu de résultats sont retournées dans une variable d’application (SQL vers C), et lorsque les données sont transférées à partir de la source de données d’une colonne vers un autre (SQL to SQL).  

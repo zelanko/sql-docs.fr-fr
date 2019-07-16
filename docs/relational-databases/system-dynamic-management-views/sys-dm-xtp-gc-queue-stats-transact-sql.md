@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: cb8173ed92dd50c640435b14f4b9096d46ee4471
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090200"
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
 
@@ -40,9 +39,9 @@ ms.locfileid: "67388714"
  Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
 
-|Nom de colonne|type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
-|queue_id|**Int**|Identificateur unique de la file d'attente.|  
+|queue_id|**int**|Identificateur unique de la file d'attente.|  
 |total_enqueues|**bigint**|Nombre total d'éléments de travail garbage collection empilés dans cette file d'attente depuis que le serveur a démarré.|  
 |total_dequeues|**bigint**|Nombre total d'éléments de travail garbage collection dépilés de cette file d'attente depuis que le serveur a démarré.|  
 |current_queue_depth|**bigint**|Nombre actuel d'éléments de travail garbage collection présents dans la file d'attente. Cet élément peut impliquer un ou plusieurs éléments récupérés par le garbage collector.|  

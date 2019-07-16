@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: af24f2c4-5e86-4135-a4f3-a24faaeeefe7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: aae49bb6eb8ecf067911b2cb64017af0f3143aa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6d83e81253430f243fcaed55b66f6d0de6299ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63132801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083505"
 ---
 # <a name="assessment-report-sybasetosql"></a>Rapport d’évaluation (SybaseToSQL)
 La fenêtre de rapport d’évaluation affiche les résultats de la conversion d’objets de base de données à [!INCLUDE[tsql](../../includes/tsql-md.md)] syntaxe, et peut également aider à vous estimer le coût et complexité de vos projets de migration.  

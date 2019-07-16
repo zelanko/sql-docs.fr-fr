@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3e8545fe1d612991eb79a7e75e896089b525a996
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dbc927d0630dd6db3d45c5e074b49d01b3396b5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900094"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "63047110"
 > [!NOTE]  
 >  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_memory_brokers**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**Int**|ID du pool de ressources s'il est associé à un pool du gouverneur de ressources.|  
 |**memory_broker_type**|**nvarchar(60)**|Type de gestionnaire d'allocation mémoire. Il existe actuellement trois types de gestionnaires d’allocation mémoire dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], répertoriés ci-dessous avec leurs descriptions.<br /><br /> **MEMORYBROKER_FOR_CACHE** : Mémoire allouée pour une utilisation par les objets mis en cache (cache de Pool de mémoires tampons pas).<br /><br /> **MEMORYBROKER_FOR_STEAL** : Mémoire occultée du pool de mémoires tampons. Cette mémoire ne peut pas être réutilisée par d'autres composants tant qu'elle n'est pas libérée par le propriétaire actuel.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : Mémoire réservée pour une utilisation future par les demandes en cours d’exécution.|  
@@ -54,7 +53,7 @@ ms.locfileid: "63047110"
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
   
 ## <a name="see-also"></a>Voir aussi  
 

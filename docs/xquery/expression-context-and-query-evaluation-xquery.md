@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f8092182bff23580936e17923985739525309097
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038921"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexte des expressions et évaluation des requêtes (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ ms.locfileid: "54256874"
   
 -   Si l’interrogation typé **xml** colonne ou une variable, les composants de la collection de schémas XML associée à la colonne ou la variable sont importés dans le contexte statique. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
--   Pour chaque type atomique des schémas importés, une fonction de conversion est également mise à disposition dans le contexte statique. L'exemple suivant illustre ce concept. Dans cet exemple, une requête est spécifiée contre un typé **xml** variable. La collection de schémas XML associée à cette variable définit un type atomique, myType. Correspondant à ce type, une fonction de conversion, **myType()**, est disponible lors de l’analyse statique. L'expression de la requête (`ns:myType(0)`) renvoie une valeur de type myType.  
+-   Pour chaque type atomique des schémas importés, une fonction de conversion est également mise à disposition dans le contexte statique. L'exemple suivant illustre ce concept. Dans cet exemple, une requête est spécifiée contre un typé **xml** variable. La collection de schémas XML associée à cette variable définit un type atomique, myType. Correspondant à ce type, une fonction de conversion, **myType()** , est disponible lors de l’analyse statique. L'expression de la requête (`ns:myType(0)`) renvoie une valeur de type myType.  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -153,7 +152,7 @@ ms.locfileid: "54256874"
   
 -   Le mode de compatibilité XPath n'est pas pris en charge.  
   
--   En cas de construction XML, seul le mode de construction strip est pris en charge. Il s'agit du paramètre par défaut. Par conséquent, le type du nœud d’élément construit est de **xdt : non typé** type et les attributs sont de **xdt : untypedAtomic** type.  
+-   En cas de construction XML, seul le mode de construction strip est pris en charge. Il s’agit du paramètre par défaut. Par conséquent, le type du nœud d’élément construit est de **xdt : non typé** type et les attributs sont de **xdt : untypedAtomic** type.  
   
 -   Seul le mode de classement ordered est pris en charge.  
   

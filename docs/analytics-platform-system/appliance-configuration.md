@@ -2,19 +2,18 @@
 title: Listes de vérification de configuration - Analytique Platform System | Microsoft Docs
 description: Fournit des listes de contrôle pour les tâches requises pour configurer le système de plateforme d’Analytique pour votre propre environnement. Ces tâches de configuration sont nécessaires avant de pouvoir utiliser l’appliance.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ada3d2f782a33caf5334361a9682c53cf7cdec95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9977ac8ea73e37afef85a46d6794ea5136357b44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961594"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Listes de contrôle de configuration pour l’Analytique Platform System appliance
 Fournit des listes de contrôle pour les tâches requises pour configurer le système de plateforme d’Analytique pour votre propre environnement. Ces tâches de configuration sont nécessaires avant de pouvoir utiliser l’appliance.  
@@ -69,13 +68,13 @@ Après avoir effectué la **Configuration Manager** effectuer des tâches, la li
   
 |Tâche de configuration|Description|  
 |----------------------|---------------|  
-|Les logiciels antivirus tiers peuvent être installé et configuré sur l’appliance SQL Server PDW pour exposés extérieurement des nœuds.<br /><br />(Facultatif)|Pour plus d’informations, consultez [d’un logiciel Antivirus &#40;Analytique Platform System&#41;](antivirus-software.md).|  
-|Le mot de passe DSRM peut être modifié.<br /><br />(Facultatif)|Pour plus d’informations, consultez [définir un mot de passe administrateur pour vous connecter à des nœuds AD dans le Mode de restauration des Services d’annuaire &#40;DSRM&#41; &#40;Analytique Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md).|  
+|Les logiciels antivirus tiers peuvent être installé et configuré sur l’appliance SQL Server PDW pour exposés extérieurement des nœuds.<br /><br />(facultatif)|Pour plus d’informations, consultez [d’un logiciel Antivirus &#40;Analytique Platform System&#41;](antivirus-software.md).|  
+|Le mot de passe DSRM peut être modifié.<br /><br />(facultatif)|Pour plus d’informations, consultez [définir un mot de passe administrateur pour vous connecter à des nœuds AD dans le Mode de restauration des Services d’annuaire &#40;DSRM&#41; &#40;Analytique Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md).|  
 |Configurer l’appliance pour recevoir des mises à jour logicielles<br /><br />(Recommandé)|L’appliance doit être configuré pour recevoir des mises à jour le SQL Server PDW et le logiciel sous-jacent.<br /><br />Pour plus d’informations, consultez [configurer Windows Server Update Services &#40;WSUS&#41; &#40;Analytique Platform System&#41;](configure-windows-server-update-services-wsus.md). Pour plus d’informations sur WSUS, consultez [maintenance logicielle &#40;Analytique Platform System&#41;](software-servicing.md).|  
-|Configurer la connectivité à des données externes telles que Hadoop ou Azure blob storage.<br /><br />(Facultatif)|Pour plus d’informations, consultez [configurer la connectivité PolyBase pour données externes &#40;Analytique Platform System&#41;](configure-polybase-connectivity-to-external-data.md).|  
-|Configurer les logiciels Antivirus<br /><br />(Facultatif)|Solutions antivirus tiers peut être utilisé pour protéger les nœuds exposés en externe, mais n’est pas obligatoire. Suivez les instructions de.|  
-|Configurer les cartes réseau InfiniBand sur la sauvegarde et de chargement des serveurs<br /><br />(Facultatif)|Pour configurer la sauvegarde et chargement des serveurs pour vous connecter à SQL Server PDW en utilisant le réseau InfiniBand, vous devez configurer les cartes réseau pour autoriser la solution DNS pour résoudre la connexion InfiniBand sur le réseau InfiniBand actuellement actif.|  
-|Configurer pour envoyer des données de télémétrie à Microsoft<br /><br />(Facultatif)|Pour configurer le système de plateforme d’Analytique pour envoyer des données de télémétrie à Microsoft, vous devez exécuter un script PowerShell sur le nœud de contrôle. Pour obtenir des instructions spécifiques, consultez [envoyer des commentaires des données de télémétrie à Microsoft &#40;SQL Server PDW&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md).|  
+|Configurer la connectivité à des données externes telles que Hadoop ou Azure blob storage.<br /><br />(facultatif)|Pour plus d’informations, consultez [configurer la connectivité PolyBase pour données externes &#40;Analytique Platform System&#41;](configure-polybase-connectivity-to-external-data.md).|  
+|Configurer les logiciels Antivirus<br /><br />(facultatif)|Solutions antivirus tiers peut être utilisé pour protéger les nœuds exposés en externe, mais n’est pas obligatoire. Suivez les instructions de.|  
+|Configurer les cartes réseau InfiniBand sur la sauvegarde et de chargement des serveurs<br /><br />(facultatif)|Pour configurer la sauvegarde et chargement des serveurs pour vous connecter à SQL Server PDW en utilisant le réseau InfiniBand, vous devez configurer les cartes réseau pour autoriser la solution DNS pour résoudre la connexion InfiniBand sur le réseau InfiniBand actuellement actif.|  
+|Configurer pour envoyer des données de télémétrie à Microsoft<br /><br />(facultatif)|Pour configurer le système de plateforme d’Analytique pour envoyer des données de télémétrie à Microsoft, vous devez exécuter un script PowerShell sur le nœud de contrôle. Pour obtenir des instructions spécifiques, consultez [envoyer des commentaires des données de télémétrie à Microsoft &#40;SQL Server PDW&#41;](send-telemetry-feedback-to-microsoft-sql-server-pdw.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Un logiciel antivirus &#40;Analytique Platform System&#41;](antivirus-software.md)  

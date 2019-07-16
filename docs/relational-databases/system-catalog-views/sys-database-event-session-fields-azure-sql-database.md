@@ -10,14 +10,13 @@ ms.topic: language-reference
 ms.assetid: 9b5c94d6-612c-4e0f-976d-ac6ba55da3ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7874cb88d70aae5a843475f2adf4946730aed1b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5486fa6f9100e61dbd25ad029f1024115485111
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915122"
 ---
 # <a name="sysdatabaseeventsessionfields-azure-sql-database"></a>sys.database_event_session_fields (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -26,16 +25,16 @@ ms.locfileid: "47717956"
   
 ||  
 |-|  
-|**S’applique aux**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 et les versions ultérieures.|  
+|**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] V12 et les versions ultérieures.|  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**Int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
-|object_id|**Int**|ID de l'objet auquel est associé ce champ. N'accepte pas la valeur NULL.|  
-|NAME|**sysname**|Le nom du champ. N'accepte pas la valeur NULL.|  
+|event_session_id|**int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
+|object_id|**int**|ID de l'objet auquel est associé ce champ. N'accepte pas la valeur NULL.|  
+|name|**sysname**|Le nom du champ. N'accepte pas la valeur NULL.|  
 |valeur|**sql_variant**|La valeur du champ. N'accepte pas la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 424c928f64b784070520f4cebe450dd5465fea41
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd09c823e09270ebf7c9851b3c6760baf720db39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016951"
 ---
 # <a name="bottomcount-mdx"></a>BottomCount (MDX)
 
@@ -35,7 +34,7 @@ BottomCount(Set_Expression, Count [,Numeric_Expression])
  *Compter*  
  Expression numérique valide qui précise le nombre de tuples à retourner.  
   
- *Numeric_Expression*  
+ *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
 ## <a name="remarks"></a>Notes  

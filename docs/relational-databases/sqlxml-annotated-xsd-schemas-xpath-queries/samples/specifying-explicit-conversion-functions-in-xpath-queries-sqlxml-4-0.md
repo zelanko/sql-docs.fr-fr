@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 543f0d0234c6f4bc2f34904bda0cd6b0019aaaa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e01c63fd0961755eefc0afb0493005d3b5c1c6c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62737418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027071"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Spécification de fonctions de conversion explicite dans les requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "62737418"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-use-the-number-explicit-conversion-function"></a>A. Utiliser la fonction de conversion explicite number()  
+### <a name="a-use-the-number-explicit-conversion-function"></a>R. Utiliser la fonction de conversion explicite number()  
  Le **number()** fonction convertit un argument en un nombre.  
   
  En supposant que la valeur de **ContactID** n’est pas numérique, la requête suivante convertit **ContactID** à un nombre et la compare à la valeur 4. La requête renvoie tous les  **\<employé >** éléments enfants du nœud de contexte avec le **ContactID** attribut qui a une valeur numérique de 4 :  

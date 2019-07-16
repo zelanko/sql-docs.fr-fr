@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9625b59-06a0-4883-b155-b932ba7528d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d1c31ef622281b4f52f62ca3867c5afa7dcae8ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2895ec765df3910dbbaa1e76ba1579e4afe5cca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194412"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091653"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>Mise à jour de données avec SQLSetPos
 Les applications peuvent mettre à jour ou supprimer n’importe quelle ligne dans l’ensemble de lignes avec **SQLSetPos**. Appel **SQLSetPos** est une alternative pratique à la construction et l’exécution d’une instruction SQL. Il permet à un pilote ODBC prend en charge les mises à jour positionnées même lorsque la source de données ne prend pas en charge les instructions SQL positionnées. Il fait partie du paradigme de la réalisation d’accès de base de données complète au moyen d’appels de fonction.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4c1f772b041aa5f7be2c1fc0c7aeb7c69189b5d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967228"
 ---
 # <a name="append-method-adox-users"></a>Append, méthode (utilisateurs ADOX)
 Ajoute un nouveau [utilisateur](../../../ado/reference/adox-api/user-object-adox.md) de l’objet à la [utilisateurs](../../../ado/reference/adox-api/users-collection-adox.md) collection.  
@@ -35,11 +34,11 @@ Users.Append User[,Password]
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Utilisateur*  
+ *User*  
  Un **Variant** valeur qui contient le **utilisateur** objet à ajouter ou le nom de l’utilisateur à créer et à ajouter.  
   
  *Mot de passe*  
- Facultatif. Un **chaîne** valeur qui contient le mot de passe pour l’utilisateur. Le *mot de passe* paramètre correspond à la valeur spécifiée par le [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) méthode d’un **utilisateur** objet.  
+ facultatif. Un **chaîne** valeur qui contient le mot de passe pour l’utilisateur. Le *mot de passe* paramètre correspond à la valeur spécifiée par le [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) méthode d’un **utilisateur** objet.  
   
 ## <a name="remarks"></a>Notes  
  Le **utilisateurs** collection d’un [catalogue](../../../ado/reference/adox-api/catalog-object-adox.md) représente tous les utilisateurs du catalogue. Le **utilisateurs** collection pour un [groupe](../../../ado/reference/adox-api/group-object-adox.md) représente uniquement les utilisateurs qui ont une appartenance au groupe spécifique.  

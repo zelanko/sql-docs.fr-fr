@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 58cab4235a0b0199540179250fc5358ff6a525b6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3ebee467890e26aa58171690f5fdabaef3607ee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528849"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084924"
 ---
 # <a name="spupdatecategory-transact-sql"></a>sp_update_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_update_category
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @class = ] 'class'` La classe de la catégorie à mettre à jour. *classe*est **varchar(8)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @class = ] 'class'` La classe de la catégorie à mettre à jour. *classe*est **varchar(8)** , sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  

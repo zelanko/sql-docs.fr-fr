@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f0077c9b-8eb2-4b5f-8c4c-7436fdef37ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec1d8f0a79f9bcd08fc74bc9d5e7fd52da4a2709
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 748f2452d20b618ae0011e2e1ac4e24af098ac06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019050"
 ---
 # <a name="data-type-identifiers-and-descriptors"></a>Identificateurs et descripteurs des types de données
 Les types de données répertoriés dans le [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) et [les Types de données C](../../../odbc/reference/appendixes/c-data-types.md) sections plus haut dans cette annexe sont des types de données « concis » : Chaque identificateur fait référence à un seul type de données. Il existe une correspondance univoque entre l’identificateur et le type de données. Descripteurs, toutefois, ne faire pas dans tous les cas utilisent une valeur unique pour identifier les types de données. Dans certains cas, ils utilisent un type de données « commentaires » et un sous-code de type. Pour tous les types de données à l’exception des types de données date/heure et intervalle, l’identificateur de type détaillée est identique à l’identificateur de type concis et la valeur SQL_DESC_DATETIME_INTERVAL_CODE est égale à 0. Pour les types de données datetime et interval, toutefois, un type verbose (SQL_DATETIME ou SQL_INTERVAL) est stocké dans SQL_DESC_TYPE, un type concis est stocké dans SQL_DESC_CONCISE_TYPE, et un sous-code pour chaque type concis est stocké dans la valeur SQL_DESC_DATETIME_INTERVAL_CODE. Définition de l’une de ces champs affecte les autres. Pour plus d’informations sur ces champs, consultez la [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) description de fonction.  

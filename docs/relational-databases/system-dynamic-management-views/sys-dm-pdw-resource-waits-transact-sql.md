@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs
+title: Sys.dm_pdw_resource_waits (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: a43ce9a2-5261-41e3-97f0-555ba05ebed9
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 634cded452697c91dfd2ff60635faa7fe1163958
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 35868774efc7083b835bb6f44b6c71cbffc7ae2c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899212"
 ---
 # <a name="sysdmpdwresourcewaits-transact-sql"></a>Sys.dm_pdw_resource_waits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,14 +28,14 @@ ms.locfileid: "56027500"
 |-----------------|---------------|-----------------|-----------|  
 |wait_id|**bigint**|Position de la demande dans la liste d’attente.|ordinal à partir de 0. Cela n’est pas unique sur toutes les entrées de l’attente.|  
 |session_id|**nvarchar(32)**|ID de la session dans laquelle l’état d’attente s’est produite.|Consultez session_id dans [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
-|Type|**nvarchar(255)**|Type d’attente que représente cette entrée.|Valeurs possibles :<br /><br /> Connexion<br /><br /> Concurrence des requêtes locales<br /><br /> Concurrence des requêtes distribuées<br /><br /> Accès concurrentiel DMS<br /><br /> Accès concurrentiel de sauvegarde|  
-|object_type|**nvarchar(255)**|Type d’objet qui est affectée par l’attente.|Valeurs possibles :<br /><br /> **OBJECT**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **APPLICATION**|  
+|type|**nvarchar(255)**|Type d’attente que représente cette entrée.|Valeurs possibles :<br /><br /> Connexion<br /><br /> Concurrence des requêtes locales<br /><br /> Concurrence des requêtes distribuées<br /><br /> Accès concurrentiel DMS<br /><br /> Accès concurrentiel de sauvegarde|  
+|object_type|**nvarchar(255)**|Type d’objet qui est affectée par l’attente.|Valeurs possibles :<br /><br /> **OBJECT**<br /><br /> **DATABASE**<br /><br /> **SYSTEM**<br /><br /> **SCHEMA**<br /><br /> **APPLICATION**|  
 |object_name|**nvarchar(386)**|Nom ou GUID de l’objet spécifié qui a été affectée par l’attente.|Tables et les vues sont affichées avec des noms en trois parties.<br /><br /> Index et les statistiques sont affichées avec des noms en quatre parties.<br /><br /> Les noms, les principaux et les bases de données sont des noms de chaîne.|  
 |request_id|**nvarchar(32)**|ID de la demande sur lequel l’état d’attente s’est produite.|Identificateur QID de la demande.<br /><br /> Identificateur GUID pour les demandes de charge.|  
 |request_time|**datetime**|Heure à laquelle le verrou ou la ressource a été demandée.||  
 |acquire_time|**datetime**|Heure à laquelle a été acquis le verrou ou une ressource.||  
 |state|**nvarchar(50)**|État de l’état d’attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|priority|**Int**|Priorité de l’élément en attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|priority|**int**|Priorité de l’élément en attente.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |concurrency_slots_used|**Int**|Nombre d’emplacements de concurrence (32 max) réservé pour cette demande.|1 - pour SmallRC<br /><br /> 3 - pour MediumRC<br /><br /> 7 pour LargeRC<br /><br /> 22 - pour XLargeRC|  
 |resource_class|**nvarchar(20)**|La classe de ressources pour cette demande.|SmallRC<br /><br /> MediumRC<br /><br /> LargeRC<br /><br /> XLargeRC|  
   

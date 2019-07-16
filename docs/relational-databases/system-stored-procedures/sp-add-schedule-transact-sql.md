@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16468053ee1e0d09b5be37c034800c122c1d16c9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 438fe71bcc32c63f97aea95c7105399c2ff8a479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088505"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 |Valeur de *freq_type*|Effet sur *freq_interval*|  
 |---------------------------|--------------------------------|  
-|**1** (once)|*freq_interval* n’est pas utilisé.|  
+|**1** (une fois)|*freq_interval* n’est pas utilisé.|  
 |**4** (quotidienne)|Chaque *freq_interval* jours.|  
 |**8** (hebdomadaire)|*freq_interval* prend une ou plusieurs des opérations suivantes (combinées avec un opérateur logique OR) :<br /><br /> **1** = dimanche<br /><br /> **2** = lundi<br /><br /> **4** = mardi<br /><br /> **8** = mercredi<br /><br /> **16** = jeudi<br /><br /> **32** = vendredi<br /><br /> **64** = samedi|  
 |**16** (mensuellement)|Sur le *freq_interval* jour du mois.|  
@@ -130,7 +129,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
@@ -148,7 +147,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-schedule"></a>A. Création d'une planification  
+### <a name="a-creating-a-schedule"></a>R. Création d'une planification  
  L'exemple suivant crée une planification nommée `RunOnce`. Elle s'exécute une fois à `23:30` le jour où la planification est créée.  
   
 ```  
@@ -163,7 +162,7 @@ EXEC dbo.sp_add_schedule
 GO  
 ```  
   
-### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>b. Création d'une planification et attachement à plusieurs travaux  
+### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>B. Création d'une planification et attachement à plusieurs travaux  
  L'exemple suivant crée une planification nommée `NightlyJobs`. Les travaux qui utilisent cette planification s'exécutent tous les jours lorsque l'heure indiquée par le serveur est `01:00`. L'exemple joint la planification au travail `BackupDatabase` et au travail `RunReports`.  
   
 > [!NOTE]  

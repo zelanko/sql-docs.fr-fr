@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc4b4c7a5c1074a62bf0e84d265840109f65ea55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096450"
 ---
 # <a name="dbase-data-types"></a>Types de données dBASE
 Le tableau suivant montre comment les types de données dBASE sont mappés aux types de données ODBC SQL. Notez que pas tous les types de données SQL ODBC sont prises en charge.  
@@ -34,9 +33,9 @@ Le tableau suivant montre comment les types de données dBASE sont mappés aux t
 |DATE|SQL_DATE|  
 |FLOAT[1]|SQL_DOUBLE|  
 |LOGIQUE|SQL_BIT|  
-|MEMO|SQL_LONGVARCHAR|  
-|NUMERIC (BCD)|SQL_DOUBLE|  
-|OLEOBJECT[1]|SQL_LONGBINARY|  
+|MÉMO|SQL_LONGVARCHAR|  
+|NUMÉRIQUE (BCD)|SQL_DOUBLE|  
+|CLASSES OLEOBJECT [1]|SQL_LONGBINARY|  
   
  Valide [1] uniquement pour la version de dBASE 5. *x*  
   
@@ -56,6 +55,6 @@ Le tableau suivant montre comment les types de données dBASE sont mappés aux t
 |CHAR|Création d’une colonne de type CHAR égale à zéro ou de longueur non spécifiée retourne en fait une colonne de 254 octets.|  
 |Données chiffrées|Le pilote dBASE ne prend pas en charge les tables dBASE chiffré.|  
 |LOGIQUE|Le pilote dBASE ne peut pas créer un index sur une colonne logique.|  
-|MEMO|La longueur maximale d’une colonne Mémo est 65 500 octets.|  
+|MÉMO|La longueur maximale d’une colonne Mémo est 65 500 octets.|  
   
  Vous trouverez davantage de limites sur les types de données dans [Limitations des types de données](../../odbc/microsoft/data-type-limitations.md).

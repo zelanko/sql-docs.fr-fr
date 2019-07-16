@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 542b19ca-61c8-41ca-aa2e-0aba8906cc24
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f96a3966a3f7d6a7c3c115586929cf975d54e45c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a099d67d337544a33bfc922fe14e07af39bd619d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022622"
 ---
 # <a name="systracesubclassvalues-transact-sql"></a>sys.trace_subclass_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,14 +36,14 @@ ms.locfileid: "47659010"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt les affichages catalogue des événements étendus.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|ID de l'événement de trace. Ce paramètre figure également dans le **sys.trace_events** vue de catalogue.|  
 |**trace_column_id**|**smallint**|ID de la colonne de trace utilisé pour l'énumération. Ce paramètre figure également dans le **sys.trace_columns** vue de catalogue.|  
 |**subclass_name**|**nvarchar(128)**|Signification de la valeur de colonne.|  
 |**subclass_value**|**smallint**|Valeur de colonne.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

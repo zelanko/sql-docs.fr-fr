@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a63a88e24f62ba9d8a4a70107663ab2d585f4640
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061792"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +68,11 @@ EXECUTE sys.sp_rda_test_connection
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|LINK_STATE accompagnées|INT|Une des valeurs suivantes, qui correspondent aux valeurs de **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|Une des valeurs suivantes, qui correspondent à l’exemple précédent valeurs pour **LINK_STATE accompagnées**.<br /><br /> -SAIN<br />     Le serveur entre SQL Server et Azure à distance n’est intègre.<br />-   ERROR_AZURE_FIREWALL<br />     Le pare-feu Azure empêche le lien entre SQL Server et le serveur Azure distant.<br />-   ERROR_NO_CONNECTION<br />     SQL Server ne peut pas établir une connexion au serveur Azure distant.<br />-   ERROR_AUTH_FAILURE<br />     Un échec d’authentification empêche le lien entre SQL Server et le serveur Azure distant.<br />-   ERROR<br />     Une erreur qui n’est pas un problème d’authentification, d’un problème de connectivité ou d’un problème de pare-feu empêche le lien entre SQL Server et le serveur Azure distant.|  
-|error_number|INT|Le numéro de l’erreur. S’il n’existe aucune erreur, ce champ est NULL.|  
+|LINK_STATE accompagnées|int|Une des valeurs suivantes, qui correspondent aux valeurs de **link_state_desc**.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|link_state_desc|varchar(32)|Une des valeurs suivantes, qui correspondent à l’exemple précédent valeurs pour **LINK_STATE accompagnées**.<br /><br /> -SAIN<br />     Le serveur entre SQL Server et Azure à distance n’est intègre.<br />-   ERROR_AZURE_FIREWALL<br />     Le pare-feu Azure empêche le lien entre SQL Server et le serveur Azure distant.<br />-   ERROR_NO_CONNECTION<br />     SQL Server ne peut pas établir une connexion au serveur Azure distant.<br />-   ERROR_AUTH_FAILURE<br />     Un échec d’authentification empêche le lien entre SQL Server et le serveur Azure distant.<br />-ERREUR<br />     Une erreur qui n’est pas un problème d’authentification, d’un problème de connectivité ou d’un problème de pare-feu empêche le lien entre SQL Server et le serveur Azure distant.|  
+|error_number|int|Le numéro de l’erreur. S’il n’existe aucune erreur, ce champ est NULL.|  
 |error_message|nvarchar(1024)|Message d’erreur. S’il n’existe aucune erreur, ce champ est NULL.|  
   
 ## <a name="permissions"></a>Autorisations  

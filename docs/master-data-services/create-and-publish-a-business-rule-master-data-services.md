@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6961d636-4d69-468e-81f7-8d0be6a4a039
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1ad1a0935c084aab515d6e91181695af55860773
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9822b9f4b26897b1162a336b1adaa6f38c5ff117
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025062"
 ---
 # <a name="create-and-publish-a-business-rule-master-data-services"></a>Créer et publier une règle d'entreprise (Master Data Services)
 
@@ -105,7 +104,7 @@ ms.locfileid: "65489614"
   
 |Nom|Description|  
 |----------|-----------------|  
-|État|Lorsque vous cliquez sur **Enregistrer** , l’image ci-après s’affiche pour indiquer que la règle d’entreprise est en cours de mise à jour.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> En cas d’erreur lors de la création ou de la modification d’une règle d’entreprise, l’image suivante apparaît.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Si l’état présente la valeur OK, l’image ci-dessous s’affiche.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
+|Statut|Lorsque vous cliquez sur **Enregistrer** , l’image ci-après s’affiche pour indiquer que la règle d’entreprise est en cours de mise à jour.<br /><br /> ![mds_BR_refresh](../master-data-services/media/mds-br-refresh.png "mds_BR_refresh")<br /><br /> En cas d’erreur lors de la création ou de la modification d’une règle d’entreprise, l’image suivante apparaît.<br /><br /> ![mds_br_error](../master-data-services/media/mds-br-error.png "mds_br_error")<br /><br /> Si l’état présente la valeur OK, l’image ci-dessous s’affiche.<br /><br /> ![mds_BR_success](../master-data-services/media/mds-br-success.png "mds_BR_success")|  
 |Nom|Le nom de la règle d’entreprise.|  
 |Description|La description de la règle d’entreprise.|  
 |État de la règle d’entreprise|L’un des états de règle d’entreprise suivants : Règle non définie, Active, Exclue, Modifications en attente, Exclusion en attente et Suppression en attente.|  

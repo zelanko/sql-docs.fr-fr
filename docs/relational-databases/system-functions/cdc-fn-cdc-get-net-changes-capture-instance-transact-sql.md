@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8d60f772d7848d0e207f83b5c7a1a10da4b43b37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043044"
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Arguments  
  *from_lsn*  
- Numéro séquentiel dans le journal qui représente le point de terminaison inférieur de la plage de numéros séquentiels dans le journal à inclure dans le jeu de résultats. *from_lsn* est **Binary (10)**.  
+ Numéro séquentiel dans le journal qui représente le point de terminaison inférieur de la plage de numéros séquentiels dans le journal à inclure dans le jeu de résultats. *from_lsn* est **Binary (10)** .  
   
  Seules les lignes de la [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) modifier la table avec une valeur dans __ $start_lsn supérieure ou égale à *from_lsn* sont inclus dans le jeu de résultats.  
   
  *to_lsn*  
- Numéro séquentiel dans le journal qui représente le point de terminaison supérieur de la plage de numéros séquentiels dans le journal à inclure dans le jeu de résultats. *to_lsn* est **Binary (10)**.  
+ Numéro séquentiel dans le journal qui représente le point de terminaison supérieur de la plage de numéros séquentiels dans le journal à inclure dans le jeu de résultats. *to_lsn* est **Binary (10)** .  
   
  Seules les lignes de la [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) modifier la table avec une valeur dans __ $start_lsn inférieure ou égale à *from_lsn* ou égale à *to_lsn* sont inclus dans le jeu de résultats.  
   
@@ -79,14 +78,14 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |__$start_lsn|**binary(10)**|Numéro séquentiel dans le journal associé à la transaction de validation de la modification.<br /><br /> Toutes les modifications validées dans la même transaction partagent le même numéro séquentiel dans le journal de validation. Par exemple, si une opération de mise à jour sur la table source modifie deux colonnes sur deux lignes, la table de modifications contiendra quatre lignes, chacune avec la même start_lsnvalue de $ __.|  
-|__$operation|**Int**|Identifie l'opération du langage de manipulation de données permettant d'appliquer la ligne de données de modification à la source de données cible.<br /><br /> Si la valeur du paramètre row_filter_option est tout ou tout avec le masque, la valeur dans cette colonne peut être l'une des valeurs suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 4 = mise à jour<br /><br /> Si la valeur du paramètre row_filter_option est tout ou tout avec fusion, la valeur dans cette colonne peut être l'une des suivantes :<br /><br /> 1 = suppression|  
+|__$operation|**int**|Identifie l'opération du langage de manipulation de données permettant d'appliquer la ligne de données de modification à la source de données cible.<br /><br /> Si la valeur du paramètre row_filter_option est tout ou tout avec le masque, la valeur dans cette colonne peut être l'une des valeurs suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 4 = mise à jour<br /><br /> Si la valeur du paramètre row_filter_option est tout ou tout avec fusion, la valeur dans cette colonne peut être l'une des suivantes :<br /><br /> 1 = suppression|  
 |__$update_mask|**varbinary(128)**|Masque de bits avec un bit correspondant à chaque colonne capturée identifiée pour l'instance de capture. Tous les bits définis de cette valeur ont la valeur 1 lorsque __$operation = 1 ou 2. Lorsque \_ \_$operation = 3 ou 4, seuls les bits correspondant aux colonnes qui ont changé sont définis sur 1.|  
 |*\<<colonnes_de_table_source_capturées>*|variable|Les colonnes restantes retournées par la fonction sont les colonnes de la table source qui ont été identifiées comme colonnes capturées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée dans la liste des colonnes capturées, toutes les colonnes de la table source sont retournées.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner. Pour tous les autres utilisateurs, requiert l'autorisation SELECT sur toutes les colonnes capturées dans la table source et, si un rôle de régulation pour l'instance de capture a été défini, l'appartenance à ce rôle de base de données. Lorsque l'appelant n'a pas l'autorisation de consulter les données sources, la fonction retourne l'erreur 208 (nom d'objet non valide).  
   
 ## <a name="remarks"></a>Notes  
@@ -129,7 +128,7 @@ SELECT * FROM cdc.fn_cdc_get_net_changes_HR_Department(@from_lsn, @to_lsn, 'all'
 ## <a name="see-also"></a>Voir aussi  
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [sys.fn_cdc_map_time_to_lsn &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md)   
- [Sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_help_change_data_capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  
   

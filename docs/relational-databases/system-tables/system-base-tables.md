@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dafea3c43e8287b92665cbdc5c901ab2ba0116d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43f5e96a280614d3f69472c7d794489bf1a5ba58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029562"
 ---
 # <a name="system-base-tables"></a>Tables de base système
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +45,8 @@ ms.locfileid: "47833627"
 |Table de base|Description|  
 |----------------|-----------------|  
 |**Sys.sysschobjs**|Existe dans toutes les bases de données. Chaque ligne représente un objet de la base de données.|  
-|**Sys.sysbinobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité de Service Broker dans la base de données. Les entités de Service Broker incluent les éléments suivants :<br /><br /> type de message<br /><br /> contrat de service<br /><br /> Service<br /><br /> Les noms et les types utilisent un classement binaire fixe.|  
-|**Sys.sysclsobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité classifiée qui partage les mêmes propriétés communes qui incluent les éléments suivants :<br /><br /> Assembly<br /><br /> unité de sauvegarde<br /><br /> Catalogue de texte intégral<br /><br /> Fonction de partition<br /><br /> Schéma de partition<br /><br /> groupe de fichiers<br /><br /> clé d'obfuscation|  
+|**Sys.sysbinobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité de Service Broker dans la base de données. Les entités de Service Broker incluent les éléments suivants :<br /><br /> type de message<br /><br /> contrat de service<br /><br /> de diffusion en continu<br /><br /> Les noms et les types utilisent un classement binaire fixe.|  
+|**Sys.sysclsobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité classifiée qui partage les mêmes propriétés communes qui incluent les éléments suivants :<br /><br /> Assembly<br /><br /> unité de sauvegarde<br /><br /> Catalogue de texte intégral<br /><br /> Partition (fonction)<br /><br /> Schéma de partition<br /><br /> groupe de fichiers<br /><br /> clé d'obfuscation|  
 |**Sys.sysnsobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque entité de l'étendue de l'espace de noms. Cette table est utilisée pour le stockage des entités de collection XML.|  
 |**Sys.syscolpars**|Existe dans toutes les bases de données. Contient une ligne pour chaque colonne de table, chaque vue ou chaque fonction table. Contient également des lignes pour chaque paramètre d'une procédure ou d'une fonction.|  
 |**Sys.systypedsubobjs**|Existe dans toutes les bases de données. Contient une ligne pour chaque sous-entité typée. Seuls les paramètres de la fonction de partition appartiennent à cette catégorie.|  
@@ -61,7 +60,7 @@ ms.locfileid: "47833627"
 |**Sys.sysxlgns**|Il existe dans le **master** uniquement la base de données. Contient une ligne pour chaque principal de serveur.|  
 |**Sys.sysdbfiles**|Existe dans toutes les bases de données. Si la colonne **dbid** est égal à zéro, la ligne représente un fichier qui appartient à cette base de données. Dans le **master** de base de données, la colonne **dbid** peut être différente de zéro. Lorsque c'est le cas, la ligne représente un fichier maître.|  
 |**Sys.sysusermsg**|Il existe dans le **master** uniquement la base de données. Chaque ligne représente un message d'erreur défini par l'utilisateur.|  
-|**Sys.sysprivs**|Existe dans toutes les bases de données. Contient une ligne pour chaque autorisation de niveau base de données ou serveur.<br /><br /> Remarque : Les autorisations de niveau serveur sont stockées dans le **master** base de données.|  
+|**Sys.sysprivs**|Existe dans toutes les bases de données. Contient une ligne pour chaque autorisation de niveau base de données ou serveur.<br /><br /> Remarque : Les autorisations au niveau du serveur sont stockées dans le **master** base de données.|  
 |**Sys.sysowners**|Existe dans toutes les bases de données. Chaque ligne représente un principal de base de données.|  
 |**Sys.sysobjkeycrypts**|Existe dans toutes les bases de données. Contient une ligne pour chaque clé symétrique, chaque chiffrement ou chaque propriété de chiffrement associé à un objet.|  
 |**Sys.syscerts**|Existe dans toutes les bases de données. Contient une ligne pour chaque certificat dans une base de données.|  

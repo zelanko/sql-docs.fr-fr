@@ -19,35 +19,34 @@ helpviewer_keywords:
 ms.assetid: 56793e9c-aa90-452e-88c6-d9b799239888
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 87392911d8fa393777e1b2d7b9e5bec1c416e939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06ed4b4820ce7a6e6483df6efd1de2e8fbadf954
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904464"
 ---
 # <a name="sysresourcegovernorresourcepools-transact-sql"></a>sys.resource_governor_resource_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne la configuration de pool de ressources stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chaque ligne de la vue détermine la configuration d'un pool.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|pool_id|**Int**|ID unique du pool de ressources. N'accepte pas la valeur NULL.|  
-|NAME|**sysname**|Nom du pool de ressources. N'accepte pas la valeur NULL.|  
+|pool_id|**int**|ID unique du pool de ressources. N'accepte pas la valeur NULL.|  
+|name|**sysname**|Nom du pool de ressources. N'accepte pas la valeur NULL.|  
 |min_cpu_percent|**Int**|Bande passante processeur moyenne garantie pour toutes les demandes dans le pool de ressources en cas de contention du processeur. N'accepte pas la valeur NULL.|  
 |max_cpu_percent|**Int**|Bande passante processeur moyenne maximale pour toutes les demandes dans le pool de ressources en cas de contention du processeur. N'accepte pas la valeur NULL.|  
-|min_memory_percent|**Int**|Quantité de mémoire garantie pour toutes les demandes dans le pool de ressources. Cette valeur n'est pas partagée avec d'autres pools de ressources. N'accepte pas la valeur NULL.|  
+|min_memory_percent|**int**|Quantité de mémoire garantie pour toutes les demandes dans le pool de ressources. Cette valeur n'est pas partagée avec d'autres pools de ressources. N'accepte pas la valeur NULL.|  
 |max_memory_percent|**Int**|Pourcentage de la mémoire totale du serveur qui peut être utilisé par les demandes dans ce pool de ressources. N'accepte pas la valeur NULL. La valeur maximale effective dépend des valeurs minimales du pool. Par exemple, max_memory_percent peut avoir la valeur 100, alors que sa valeur maximale effective est inférieure.|  
-|cap_cpu_percent|**Int**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Limite maximale d'utilisation fixe sur la bande passante de l'UC que toutes les demandes dans le pool de ressources recevront. Limite la bande passante maximale de l'UC au niveau spécifié. La plage autorisée pour la valeur est comprise entre 1 et 100.|  
-|min_iops_per_volume|**Int**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Opérations d'E/S minimales par seconde (IOPS) par paramètre de volume de ce pool. 0 = aucune réservation. Ne peut pas avoir la valeur null.|  
-|max_iops_per_volume|**Int**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Opérations d'E/S maximales par seconde (IOPS) par paramètre de volume de ce pool. 0 = illimitées. Ne peut pas avoir la valeur null.|  
+|cap_cpu_percent|**int**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Limite maximale d'utilisation fixe sur la bande passante de l'UC que toutes les demandes dans le pool de ressources recevront. Limite la bande passante maximale de l'UC au niveau spécifié. La plage autorisée pour la valeur est comprise entre 1 et 100.|  
+|min_iops_per_volume|**int**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Opérations d'E/S minimales par seconde (IOPS) par paramètre de volume de ce pool. 0 = aucune réservation. Ne peut pas avoir la valeur null.|  
+|max_iops_per_volume|**int**|**S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Opérations d'E/S maximales par seconde (IOPS) par paramètre de volume de ce pool. 0 = illimitées. Ne peut pas avoir la valeur null.|  
   
 ## <a name="remarks"></a>Notes  
  L'affichage catalogue affiche les métadonnées stockées. Pour afficher la configuration en mémoire, utilisez la vue de gestion dynamique correspondante, [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW ANY DEFINITION pour consulter le contenu, requiert l'autorisation CONTROL SERVER pour modifier le contenu.  
   
 ## <a name="see-also"></a>Voir aussi  

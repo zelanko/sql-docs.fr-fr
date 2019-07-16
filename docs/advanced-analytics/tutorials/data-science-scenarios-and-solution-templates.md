@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: 83c659c3982225221c7ad262af925863c821c5ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962294"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scénarios de science des données et des modèles de solution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +79,7 @@ Chaque solution inclut des exemples de données, le code R ou Python code et pro
 
 [Demande d’énergie prévision de modèle avec SQL Server R Services](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-R-Services-1)
 
-**Quoi :**: Prévision de la demande est un problème important dans divers domaines, y compris l’énergie, de vente au détail et de services. Prévision de la demande exacte aide les entreprises conduite production meilleure planification, l’allocation des ressources et autres décisions métier importantes. Dans le secteur de l’énergie, la prévision de la demande est essentielle pour réduire le coût de stockage d’énergie et équilibrage offre et la demande.
+**Quoi :** : Prévision de la demande est un problème important dans divers domaines, y compris l’énergie, de vente au détail et de services. Prévision de la demande exacte aide les entreprises conduite production meilleure planification, l’allocation des ressources et autres décisions métier importantes. Dans le secteur de l’énergie, la prévision de la demande est essentielle pour réduire le coût de stockage d’énergie et équilibrage offre et la demande.
 
 **Comment :** Ce modèle utilise SQL Server R Services pour prédire la demande en électricité. Le modèle utilisé pour la prédiction est un modèle de régression de forêts aléatoires basé sur **rxDForest**, un algorithme inclus dans Microsoft R Server hautes performances d’apprentissage. La solution comprend un simulateur de demande, tout le code R et T-SQL nécessaire pour former un modèle, ainsi que les procédures stockées que vous pouvez utiliser pour générer des prédictions et créer des rapports. 
 
@@ -89,7 +88,7 @@ Chaque solution inclut des exemples de données, le code R ou Python code et pro
 
 Pour télécharger les fichiers fournis avec chaque modèle, vous pouvez utiliser des commandes GitHub ou ouvrir le lien et cliquer sur **Download Zip** pour enregistrer tous les fichiers sur votre ordinateur.  Une fois téléchargée, la solution contient généralement ces dossiers :
   
--   **Données**: Contient les exemples de données pour chaque application.
+-   **Données** : Contient les exemples de données pour chaque application.
   
 -   **R**: Contient tout le code de développement R que nécessaires pour la solution. La solution nécessite les bibliothèques fournies par Microsoft R Server, mais peut être ouverte et modifiée dans n’importe quel IDE R. Le code R a été optimisé pour que les calculs soient effectués « dans la base de données », en affectant une instance de SQL Server comme contexte de calcul.
   

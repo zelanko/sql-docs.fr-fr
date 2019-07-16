@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62635866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997477"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Propriétaire**|**sysname**|Nom du propriétaire de l’objet.|  
 |**Objet**|**sysname**|Nom de l'objet.|  
@@ -82,7 +81,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 EXEC sp_helprotect NULL, NULL, dbo;  
 ```  
   
- ou  
+ Ou  
   
 ```  
 EXEC sp_helprotect @grantorname = 'dbo';  
@@ -97,7 +96,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-the-permissions-for-a-table"></a>A. Répertorier les autorisations pour une table  
+### <a name="a-listing-the-permissions-for-a-table"></a>R. Répertorier les autorisations pour une table  
  Dans l'exemple ci-dessous, les autorisations relatives à la table `titles` sont répertoriées.  
   
 ```  

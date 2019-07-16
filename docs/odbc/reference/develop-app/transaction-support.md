@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be133079c1b6beffd484942eb9ae058c14dd5c1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0b5e33f94c5452a2062f7c18339f27c8da73fa9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086065"
 ---
 # <a name="transaction-support"></a>Prise en charge des transactions
 Le degré de prise en charge des transactions est définie par le pilote. ODBC est conçue pour être implémentée sur une base de données utilisateur unique ou de bureau qui n’a pas besoin de gérer plusieurs mises à jour ses données. En outre, certaines bases de données qui prennent en charge les transactions faire donc uniquement pour les instructions de langage de Manipulation de données (DML) de SQL ; Il existe les restrictions ou la sémantique de transaction spéciales concernant l’utilisation du langage DDL (Data Definition) lorsqu’une transaction est active. Autrement dit, il peut être prise en charge de transaction pour plusieurs mises à jour simultanées tables mais ne pas pour modifier le nombre et la définition des tables lors d’une transaction.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 118d0f47-2afd-4955-bb47-38b1e2c2f38f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bc752afc0cb5214e629a343c35464e612b57c36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d32e5212ba1ba28262d871498f2974485d38233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040017"
 ---
 # <a name="describing-parameters"></a>Description des paramètres
 **SQLBindParameter** a des arguments qui décrivent le paramètre : son type SQL, la précision et l’échelle. Le pilote utilise ces informations, ou *métadonnées,* pour convertir la valeur du paramètre du type requis par la source de données. À première vue, il peut sembler que le pilote est mieux connaître les métadonnées de paramètre que l’application ; Après tout, le pilote peut découvrir facilement les métadonnées pour un résultat de jeu de colonnes. En fait, cela n’est pas le cas. Tout d’abord, la plupart des sources de données ne fournissent pas un moyen pour le pilote découvrir les métadonnées de paramètre. Ensuite, la plupart des applications connaissez déjà les métadonnées.  

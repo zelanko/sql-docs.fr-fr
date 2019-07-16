@@ -10,14 +10,13 @@ dev_langs:
 ms.assetid: 0729eeff-ac7e-43f0-80fa-ff5346a75985
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 49d2fc908bc7f2ef7c2e43a2e4028189528f6110
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: da1ba0db4467526ef2b54650020a899f88788648
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008964"
 ---
 # <a name="sppdwaddnetworkcredentials-sql-data-warehouse"></a>sp_pdw_add_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
  *user_name* est défini comme nvarchar (513).  
   
- '*password*ꞌ  
+ «*mot de passe*ꞌ  
  Spécifie le mot de passe *user_name*.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -64,7 +63,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-add-credentials-for-performing-a-database-backup"></a>A. Ajouter des informations d’identification pour effectuer une sauvegarde de base de données  
+### <a name="a-add-credentials-for-performing-a-database-backup"></a>R. Ajouter des informations d’identification pour effectuer une sauvegarde de base de données  
  L’exemple suivant associe les informations d’identification du utilisateur nom et mot de passe pour le seattle\david d’utilisateur de domaine à un serveur cible qui a une adresse IP de 10.172.63.255. Seattle\david de l’utilisateur dispose des autorisations de lecture/écriture sur le serveur cible. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] est de stocker ces informations d’identification et de les utiliser pour lire et écrire vers et depuis le serveur cible, selon les besoins de sauvegarde et les opérations de restauration.  
   
 ```  

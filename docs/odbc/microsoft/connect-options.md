@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: abfdc133-cb33-435f-a467-fbe15444f687
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06695bf1770c9e362decac5702dcd924d47c23bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4358756deaa595ee5e10df0490522631201b9c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023376"
 ---
 # <a name="connect-options"></a>Options de connexion
 > [!IMPORTANT]  
@@ -28,7 +27,7 @@ ms.locfileid: "63301771"
   
  Ces options permettent la personnalisation de la connexion de base de données au sein d’une application.  
   
-|Option de connexion|Remarques|  
+|Option de connexion|Notes|  
 |--------------------|-----------|  
 |SQL_AUTOCOMMIT|Si vous choisissez SQL_AUTOCOMMIT_OFF, votre application doit explicitement valider ou restaurer les transactions avec [SQLTransact](../../odbc/microsoft/core-level-api-functions-odbc-driver-for-oracle.md).|  
 |SQL_ODBC_CURSORS|Cet attribut de connexion est implémenté dans le Gestionnaire de pilotes.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 256f1add5399d3e9c5795440d80670f66a096cb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053073"
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,35 +51,35 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
  Nom d'une variable de curseur déclarée devant recevoir la sortie du curseur. *variable_de_curseur_sortie* est **curseur**, sans valeur par défaut et doit ne pas être associé à des curseurs au moment de la procédure sp_describe_cursor est appelée. Le curseur retourné est un curseur en lecture seule, dynamique et permettant les défilements.  
   
  [ @cursor_source=] {Ne local ' | Ne global ' | Ne variable '}  
- Indique si le curseur qui fait l'objet du rapport est défini en utilisant le nom d'un curseur local, d'un curseur global ou d'une variable de curseur. Le paramètre est **nvarchar (30)**.  
+ Indique si le curseur qui fait l'objet du rapport est défini en utilisant le nom d'un curseur local, d'un curseur global ou d'une variable de curseur. Le paramètre est **nvarchar (30)** .  
   
  [ @cursor_identity=] N'*nom_de_curseur_local*']  
- Nom d'un curseur créé par une instruction DECLARE CURSOR contenant soit le mot clé LOCAL, soit celui défini par défaut pour LOCAL. *nom_de_curseur_local* est **nvarchar (128)**.  
+ Nom d'un curseur créé par une instruction DECLARE CURSOR contenant soit le mot clé LOCAL, soit celui défini par défaut pour LOCAL. *nom_de_curseur_local* est **nvarchar (128)** .  
   
  [ @cursor_identity=] N'*ne nom_de_curseur_global*']  
- Est le nom d’un curseur créé par une instruction DECLARE CURSOR contenant soit le mot clé GLOBAL soit celui défini par défaut pour GLOBAL. *ne nom_de_curseur_global* est **nvarchar (128)**.  
+ Est le nom d’un curseur créé par une instruction DECLARE CURSOR contenant soit le mot clé GLOBAL soit celui défini par défaut pour GLOBAL. *ne nom_de_curseur_global* est **nvarchar (128)** .  
   
  *ne nom_de_curseur_global* peut également être le nom d’un curseur de serveur API ouvert par une application ODBC qui a ensuite nommé en appelant SQLSetCursorName.  
   
  [ @cursor_identity=] N'*ne variable_de_curseur_entrée*']  
- Nom d'une variable de curseur associée à un curseur ouvert. *Ne variable_de_curseur_entrée* est **nvarchar (128)**.  
+ Nom d'une variable de curseur associée à un curseur ouvert. *Ne variable_de_curseur_entrée* est **nvarchar (128)** .  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="cursors-returned"></a>Curseurs retournés  
  sp_describe_cursor encapsule son jeu de résultats dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] **curseur** paramètre de sortie. Cela permet aux lots, procédures stockées et déclencheurs [!INCLUDE[tsql](../../includes/tsql-md.md)] de travailler sur une seule ligne de sortie à la fois. Cela signifie également que la procédure ne peut pas être appelée directement à partir de fonctions d’API de base de données. Le **curseur** paramètre de sortie doit être lié à une variable de programme, mais l’API de base de données ne prennent pas en charge la liaison **curseur** variables ou des paramètres.  
   
  La table suivante indique le format du curseur qui est retourné en utilisant sp_describe_cursor. C'est le même format que celui qui est retourné par sp_cursor_list.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|Nom utilisé pour désigner le curseur. Si la référence du curseur provient du nom spécifié dans une instruction DECLARE CURSOR, le nom de référence est le même que le nom du curseur. Si la référence du curseur provient d'une variable, le nom de référence est celui de la variable.|  
 |cursor_name|**sysname**|Nom du curseur dans une instruction DECLARE CURSOR. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si le curseur a été créé en définissant une variable curseur pour un curseur, cursor_name retourne le nom de la variable curseur. Dans les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne de résultat retourne un nom généré par le système.|  
 |cursor_scope|**tinyint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**Int**|Valeurs identiques à celles indiquées par la fonction système CURSOR_STATUS :<br /><br /> 1 = Le curseur référencé par le nom de curseur ou la variable est ouvert. Si le curseur est non sensitif, statique ou contrôlé par clés, il comporte au moins une ligne. Si le curseur est dynamique, l'ensemble de résultats comporte zéro ou plusieurs lignes.<br /><br /> 0 = Le curseur référencé par le nom de curseur ou la variable est ouvert mais ne comporte pas de lignes. Les curseurs dynamiques ne renvoient jamais cette valeur.<br /><br /> -1 = Le curseur référencé par le nom de curseur ou la variable est fermé.<br /><br /> -2 = S'applique uniquement aux variables de curseur. Aucun curseur n'est affecté à la variable. Il se peut qu'un paramètre OUTPUT ait affecté un curseur à la variable, mais la procédure stockée a fermé le curseur avant de sortir.<br /><br /> -3 = Aucun curseur ou variable de curseur portant le nom spécifié n'existe, ou aucun curseur n'a été alloué à la variable de curseur.|  
 |model|**tinyint**|1 = Non sensitif (ou statique)<br /><br /> 2 = jeu de clés<br /><br /> 3 = dynamique<br /><br /> 4 = Avance rapide|  
-|concurrence|**tinyint**|1 = lecture seule<br /><br /> 2 = Verrous de défilement<br /><br /> 3 = Optimiste|  
+|concurrency|**tinyint**|1 = lecture seule<br /><br /> 2 = Verrous de défilement<br /><br /> 3 = Optimiste|  
 |scrollable|**tinyint**|0 = Avant uniquement<br /><br /> 1 = À défilement|  
 |open_status|**tinyint**|0 = Fermé<br /><br /> 1 = Ouvert|  
 |cursor_rows|**Decimal(10,0)**|Nombre de lignes correspondantes dans le jeu de résultats. Pour plus d’informations, consultez [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md).|  
@@ -95,7 +94,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
   
  Une instruction DECLARE CURSOR peut demander un type de curseur que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas prendre en charge en utilisant l'instruction SELECT contenue dans DECLARE CURSOR. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertit de manière implicite le curseur en un type qu'il peut prendre en charge en utilisant l'instruction SELECT. Si l'option TYPE_WARNING est spécifiée dans l'instruction DECLARE CURSOR, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envoie à l'application un message d'information lui indiquant qu'une conversion a été effectuée. sp_describe_cursor peut ensuite être appelée pour déterminer le type de curseur a été implémentée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  

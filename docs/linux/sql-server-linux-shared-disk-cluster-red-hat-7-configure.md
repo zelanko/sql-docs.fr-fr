@@ -4,18 +4,17 @@ description: Implémenter la haute disponibilité en configurant le cluster de d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: b2eb3a0a135fc43e3dadb855682cea9f6465d5ca
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 5ca2cd85087cf26be925e8899dfc3a1957e284ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032278"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Configurer un cluster de disque partagé de Red Hat Enterprise Linux pour SQL Server
 

@@ -7,13 +7,12 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: bd0a79a3991c34ddbcf874aca80160299074919a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 65a7954aa18f9e8dbdfd814a6b0d189683e4606f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962310"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Notation native à l’aide de la fonction de prédire le T-SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,11 +69,11 @@ Types de modèles non pris en charge sont les suivants :
 + Modèles PMML
 + Modèles créés à l’aide d’autres bibliothèques open source ou tierces
 
-## <a name="example-predict-t-sql"></a>Exemple : PRÉDIRE (T-SQL)
+## <a name="example-predict-t-sql"></a>Exemple : PRÉDIRE (T-SQL)
 
 Dans cet exemple, vous créez un modèle et puis appelez la fonction de prédiction en temps réel à partir de T-SQL.
 
-### <a name="step-1-prepare-and-save-the-model"></a>Étape 1. Préparer et enregistrer le modèle
+### <a name="step-1-prepare-and-save-the-model"></a>Étape 1. Préparer et enregistrer le modèle
 
 Exécutez le code suivant pour créer la base de données exemple et les tables requises.
 
@@ -143,7 +142,7 @@ SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
 
-### <a name="step-2-run-predict-on-the-model"></a>Étape 2. Exécutez PREDICT sur le modèle
+### <a name="step-2-run-predict-on-the-model"></a>Étape 2. Exécutez PREDICT sur le modèle
 
 L’instruction PREDICT simple suivante obtient une classification du modèle d’arborescence de décision à l’aide du **notation native** (fonction). Il prévoit l’espèce iris en fonction des attributs fournis, la longueur des pétales et la largeur.
 

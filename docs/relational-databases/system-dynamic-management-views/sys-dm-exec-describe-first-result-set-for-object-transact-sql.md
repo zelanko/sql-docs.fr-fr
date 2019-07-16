@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffdedf95865e2653ea434c30eb5c07f19ba8286f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3d08f031394522b0d9c9ab5f09bb6a79c4d5a01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097833"
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,24 +52,24 @@ sys.dm_exec_describe_first_result_set_for_object
 ## <a name="table-returned"></a>Table retournée  
  Ces métadonnées communes sont retournées en tant que jeu de résultats avec une ligne pour chaque colonne dans les métadonnées de résultats. Chaque ligne décrit le type et la possibilité de valeur NULL de la colonne dans le format décrit dans la section suivante. S'il n'existe pas de première instruction pour chaque chemin d'accès de contrôle, un jeu de résultats avec des lignes nulles est retourné.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Spécifie si la colonne est une colonne supplémentaire ajoutée à titre d'informations de navigation qui ne s'affiche pas réellement dans le jeu de résultats.|  
 |**column_ordinal**|**Int**|Contient la position ordinale de la colonne dans le jeu de résultats. Position de la première colonne sera spécifiée comme 1.|  
-|**nom**|**sysname**|Contient le nom de la colonne si un nom peut être déterminé. Sinon, a la valeur NULL.|  
+|**name**|**sysname**|Contient le nom de la colonne si un nom peut être déterminé. Sinon, a la valeur NULL.|  
 |**is_nullable**|**bit**|Contient la valeur 1 si la colonne autorise des valeurs NULL, 0 si la colonne n'autorise pas de valeurs NULL et 1 s'il est impossible de déterminer que la colonne autorise des valeurs NULL.|  
-|**system_type_id**|**Int**|Contient le system_type_id du type de données de la colonne comme spécifié dans sys.types. Pour les types CLR, bien que la colonne system_type_name retourne NULL, cette colonne retournera la valeur 240.|  
+|**system_type_id**|**int**|Contient le system_type_id du type de données de la colonne comme spécifié dans sys.types. Pour les types CLR, bien que la colonne system_type_name retourne NULL, cette colonne retournera la valeur 240.|  
 |**system_type_name**|**nvarchar (256)**|Contient le nom du type de données. Inclut des arguments (tels que la longueur, la précision, l'échelle) spécifiés pour le type de données de la colonne. Si le type de données est un type d'alias défini par l'utilisateur, le type de système sous-jacent est spécifié ici. S'il s'agit d'un type clr défini par l'utilisateur, NULL est retourné dans cette colonne.|  
 |**max_length**|**smallint**|Longueur maximale (en octets) de la colonne.<br /><br /> -1 = la colonne est de type de données **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , ou **xml**.<br /><br /> Pour **texte** colonnes, le **max_length** valeur sera 16 ou la valeur définie par **sp_tableoption 'text in row'** .|  
 |**precision**|**tinyint**|Précision de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
 |**scale**|**tinyint**|Échelle de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
 |**collation_name**|**sysname**|Nom du classement de la colonne si elle est basée sur les caractères. Sinon, retourne NULL.|  
-|**user_type_id**|**Int**|Pour les types d'alias et CLR, contient l'information user_type_id du type de données de la colonne comme spécifié dans sys.types. Sinon, a la valeur NULL.|  
+|**user_type_id**|**int**|Pour les types d'alias et CLR, contient l'information user_type_id du type de données de la colonne comme spécifié dans sys.types. Sinon, a la valeur NULL.|  
 |**user_type_database**|**sysname**|Pour les types d'alias et CLR, contient le nom de la base de données dans laquelle le type est défini. Sinon, a la valeur NULL.|  
 |**user_type_schema**|**sysname**|Pour les types d'alias et CLR, contient le nom du schéma dans lequel le type est défini. Sinon, a la valeur NULL.|  
 |**user_type_name**|**sysname**|Pour les types d'alias et CLR, contient le nom du type. Sinon, a la valeur NULL.|  
 |**assembly_qualified_type_name**|**nvarchar(4000)**|Pour les types CLR, retourne le nom de l'assembly et de la classe définissant le type. Sinon, a la valeur NULL.|  
-|**xml_collection_id**|**Int**|Contient l'information xml_collection_id du type de données de la colonne comme spécifié dans sys.columns. Cette colonne retournera NULL si le type retourné n'est pas associé à une collection de schémas XML.|  
+|**xml_collection_id**|**int**|Contient l'information xml_collection_id du type de données de la colonne comme spécifié dans sys.columns. Cette colonne retournera NULL si le type retourné n'est pas associé à une collection de schémas XML.|  
 |**xml_collection_database**|**sysname**|Contient la base de données dans laquelle la collection de schémas XML associée à ce type est définie. Cette colonne retournera NULL si le type retourné n'est pas associé à une collection de schémas XML.|  
 |**xml_collection_schema**|**sysname**|Contient le schéma dans lequel la collection de schémas XML associée à ce type est définie. Cette colonne retournera NULL si le type retourné n'est pas associé à une collection de schémas XML.|  
 |**xml_collection_name**|**sysname**|Contient le nom de la collection de schémas XML associé à ce type. Cette colonne retournera NULL si le type retourné n'est pas associé à une collection de schémas XML.|  
@@ -90,11 +89,11 @@ sys.dm_exec_describe_first_result_set_for_object
 |**ordinal_in_order_by_list**|**smallint**|Position de cette colonne dans la liste ORDER BY. Retourne NULL si la colonne ne s'affiche pas dans la liste ORDER BY ou si la liste ORDER BY ne peut pas être déterminée de manière unique.|  
 |**order_by_list_length**|**smallint**|Longueur de la liste ORDER BY. Retourne NULL s'il n'existe aucune liste ORDER BY ou si la liste ORDER BY ne peut pas être déterminée de manière unique. Notez que cette valeur sera la même pour toutes les lignes retournées par sp_describe_first_result_set.|  
 |**order_by_is_descending**|**smallint NULL**|Si la valeur ordinal_in_order_by_list n’est pas NULL, le **order_by_is_descending** colonne indique la direction de la clause ORDER BY pour cette colonne. Sinon, elle indique NULL.|  
-|**error_number**|**Int**|Contient le numéro d'erreur retourné par la fonction. Contient NULL si aucune erreur ne s'est produite dans la colonne.|  
+|**error_number**|**int**|Contient le numéro d'erreur retourné par la fonction. Contient NULL si aucune erreur ne s'est produite dans la colonne.|  
 |**error_severity**|**Int**|Contient la gravité retournée par la fonction. Contient NULL si aucune erreur ne s'est produite dans la colonne.|  
 |**error_state**|**Int**|Contient le message d’état retourné par la fonction. Si aucune erreur ne s'est produite, la colonne contiendra NULL.|  
 |**error_message**|**nvarchar(4096)**|Contient le message retourné par la fonction. Si aucune erreur ne s'est produite, la colonne contiendra NULL.|  
-|**error_type**|**Int**|Contient un entier qui représente l'erreur retournée. Mappé à error_type_desc. Consultez la liste sous les notes.|  
+|**error_type**|**int**|Contient un entier qui représente l'erreur retournée. Mappé à error_type_desc. Consultez la liste sous les notes.|  
 |**error_type_desc**|**nvarchar(60)**|Contient une chaîne majuscule courte qui représente l'erreur retournée. Mappé à error_type. Consultez la liste sous les notes.|  
   
 ## <a name="remarks"></a>Notes  
@@ -108,8 +107,8 @@ sys.dm_exec_describe_first_result_set_for_object
 |2|SYNTAX|Une erreur de syntaxe s'est produite dans le lot.|  
 |3|CONFLICTING_RESULTS|Le résultat n'a pas pu être déterminé en raison d'un conflit entre deux premières instructions possibles.|  
 |4|DYNAMIC_SQL|Le résultat n'a pas pu être déterminé en raison du SQL dynamique qui pourrait éventuellement retourner le premier résultat.|  
-|5|CLR_PROCEDURE|Le résultat n'a pas pu être déterminé parce qu'une procédure stockée clr pourrait éventuellement retourner le premier résultat.|  
-|6|CLR_TRIGGER|Le résultat n'a pas pu être déterminé parce qu'un déclencheur CLR pourrait éventuellement retourner le premier résultat.|  
+|5\.|CLR_PROCEDURE|Le résultat n'a pas pu être déterminé parce qu'une procédure stockée clr pourrait éventuellement retourner le premier résultat.|  
+|6\.|CLR_TRIGGER|Le résultat n'a pas pu être déterminé parce qu'un déclencheur CLR pourrait éventuellement retourner le premier résultat.|  
 |7|EXTENDED_PROCEDURE|Le résultat n'a pas pu être déterminé parce qu'une procédure stockée étendue pourrait éventuellement retourner le premier résultat.|  
 |8|UNDECLARED_PARAMETER|Le résultat n’a pas pu être déterminé, car le type de données d’un ou plusieurs des colonnes de l’ensemble de résultats dépend potentiellement un paramètre non déclaré.|  
 |9|RECURSION|Le résultat n'a pas pu être déterminé car le lot contient une instruction récursive.|  
@@ -123,7 +122,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-metadata-with-and-without-browse-information"></a>A. Retour de métadonnées avec et sans informations de navigation  
+### <a name="a-returning-metadata-with-and-without-browse-information"></a>R. Retour de métadonnées avec et sans informations de navigation  
  L’exemple suivant crée une procédure stockée nommée TestProc2 qui retourne deux jeux de résultats. Puis l’exemple montre que **sys.dm_exec_describe_first_result_set** retourne des informations sur le premier jeu de résultats dans la procédure, avec et sans les informations de consultation.  
   
 ```  

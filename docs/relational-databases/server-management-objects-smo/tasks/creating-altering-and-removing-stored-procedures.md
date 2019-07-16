@@ -12,27 +12,26 @@ helpviewer_keywords:
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46a4bad9a7eb57f45b210cea68f146a4340b8f1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1eaec75e05dba6d6fd859c1537d7a528df16959c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939035"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Création, modification et suppression des procédures stockées
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), les procédures stockées sont représentées par le <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objet.  
+  Dans SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects), les procédures stockées sont représentées par l'objet <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  
   
- Création d’un <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objet dans SMO requiert la définition du <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> propriété le [!INCLUDE[tsql](../../../includes/tsql-md.md)] script qui définit la procédure stockée. Paramètres requièrent le \@ doivent être créés individuellement à l’aide et utilisez le préfixe <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> objets et en ajoutant à la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> collection de la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objet.  
+ La création d'un objet <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> dans SMO requiert la définition de la propriété <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> sur le script [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui définit la procédure stockée. Paramètres requièrent le \@ doivent être créés individuellement à l’aide et utilisez le préfixe <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> objets et en ajoutant à la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> collection de la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objet.  
   
 ## <a name="example"></a>Exemple  
  Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Création, modification et suppression d'une procédure stockée en Visual Basic  
- Cet exemple de code montre comment créer une procédure stockée pour le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de données. L'exemple retourne le nom d'un employé lorsque le numéro d'ID d'employé est fourni. La procédure stockée requiert un paramètre d'entrée pour spécifier le numéro d'ID d'employé et un paramètre de sortie pour retourner le nom de l'employé.  
+ Cet exemple de code montre comment créer une procédure stockée pour la base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . L'exemple retourne le nom d'un employé lorsque le numéro d'ID d'employé est fourni. La procédure stockée requiert un paramètre d'entrée pour spécifier le numéro d'ID d'employé et un paramètre de sortie pour retourner le nom de l'employé.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -70,7 +69,7 @@ sp.Drop()
 ``` 
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-c"></a>Création, modification et suppression d'une procédure stockée en Visual C#  
- Cet exemple de code montre comment créer une procédure stockée pour le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de données. L'exemple retourne le nom d'un employé lorsque le numéro d'ID d'employé est fourni (`BusinessEntityID`). La procédure stockée requiert un paramètre d'entrée pour spécifier le numéro d'ID d'employé et un paramètre de sortie pour retourner le nom de l'employé.  
+ Cet exemple de code montre comment créer une procédure stockée pour la base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . L'exemple retourne le nom d'un employé lorsque le numéro d'ID d'employé est fourni (`BusinessEntityID`). La procédure stockée requiert un paramètre d'entrée pour spécifier le numéro d'ID d'employé et un paramètre de sortie pour retourner le nom de l'employé.  
   
 ```csharp  
 {  
@@ -110,7 +109,7 @@ sp.Drop()
 ```  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-powershell"></a>Création, modification et suppression d'une procédure stockée dans PowerShell  
- Cet exemple de code montre comment créer une procédure stockée pour le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de données. L'exemple retourne le nom d'un employé lorsque le numéro d'ID d'employé est fourni (`BusinessEntityID`). La procédure stockée requiert un paramètre d'entrée pour spécifier le numéro d'ID d'employé et un paramètre de sortie pour retourner le nom de l'employé.  
+ Cet exemple de code montre comment créer une procédure stockée pour la base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . L'exemple retourne le nom d'un employé lorsque le numéro d'ID d'employé est fourni (`BusinessEntityID`). La procédure stockée requiert un paramètre d'entrée pour spécifier le numéro d'ID d'employé et un paramètre de sortie pour retourner le nom de l'employé.  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

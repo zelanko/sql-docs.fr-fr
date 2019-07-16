@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 101cb855ea4d73b5f537e8738ab3177b7f618fbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965432"
 ---
 # <a name="procedures-collection-adox"></a>Procedures, collection (ADOX)
 Contient tous les [procédure](../../../ado/reference/adox-api/procedure-object-adox.md) objets d’un catalogue.  
   
 ## <a name="remarks"></a>Notes  
- Le [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) méthode pour un **procédures** collection est unique pour ADOX. Vous pouvez :  
+ Le [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) méthode pour un **procédures** collection est unique pour ADOX. Vous pouvez :  
   
 -   Ajouter une nouvelle procédure à la collection avec le **Append** (méthode).  
   
- Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
+ Les propriétés et les méthodes restantes sont des collections ADO standard. Vous pouvez :  
   
 -   Accéder à une procédure dans la collection avec le [élément](../../../ado/reference/ado-api/item-property-ado.md) propriété.  
   

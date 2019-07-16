@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 8d68a61a-683f-4b20-92f9-c0a8d9ba0ad1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5aa95edeb1a947aea517de30efcbbbc3c6c799c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a4be6cffcc7e4f13b88d8037b53d438d604b9650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089946"
 ---
 # <a name="msmergecontents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSmerge_contents** table contient une ligne pour chaque ligne modifiée dans la base de données active depuis sa publication. Cette table est utilisée par le processus de fusion afin de déterminer les lignes qui ont été modifiées. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**Int**|Surnom de la table publiée.|  
-|**ROWGUID**|**uniqueidentifier**|Identificateur de ligne pour la ligne concernée.|  
+|**rowguid**|**uniqueidentifier**|Identificateur de ligne pour la ligne concernée.|  
 |**génération**|**bigint**|La génération de la ligne identifiée par le **tablenick** et **rowguid**.|  
 |**partchangegen**|**bigint**|Génération associée à la dernière modification de données pouvant avoir changé si la ligne appartient à une publication filtrée|  
 |**lignage**|**varbinary(501)**|Surnom de l'abonné et numéro de version utilisés pour mettre à jour l'historique des modifications apportées à cette ligne|  

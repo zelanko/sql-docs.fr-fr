@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ffba36ac-d22e-40b9-911a-973fa9e10bd3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df2fa8df9af317bd76b2d7f10e50f7cc937e4660
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97b100b1ade97e1e88cf1421f09a7723412c8b76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915496"
 ---
 # <a name="upgrading-a-35-driver-to-a-38-driver"></a>Mise à niveau d’un pilote 3.5 vers un pilote 3.8
 Cette rubrique fournit des instructions et des considérations relatives à la mise à niveau d’un pilote ODBC 3.5 à un pilote ODBC 3.8.  

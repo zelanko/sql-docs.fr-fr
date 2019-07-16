@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b6a70f9-6840-4140-a059-bb7bd7ccc67c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 83fad699c78a1d405d7d67bda544b6c5781fbed5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14cd4a9c4fb3c49bfa3bd5778e4872bd7b002017
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62939519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028903"
 ---
 # <a name="managing-passwords-sybasetosql"></a>Gestion des mots de passe (SybaseToSQL)
 Cette section concerne la sécurisation des mots de passe de base de données et la procédure pour importer ou exporter les sur les serveurs :  
@@ -59,7 +58,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
                 
                 Re-enter password for server_id 'XXX_1': xxxxxxx
             
-            Exemple 2 :
+            Exemple 2 :
             
                 C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Sybase\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 
@@ -75,7 +74,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
   
         Exécuter le `SSMAforSybaseConsole.exe` avec la`-securepassword` et `-remove` passer à la ligne de commande en passant l’ID de serveur pour supprimer les mots de passe chiffrés à partir du fichier de stockage protégé présent sur l’ordinateur local.  
   
-        Exemple :  
+        Exemple :  
         
             C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -remove all
             C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -remove "source_1,target_1"  
@@ -84,7 +83,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
   
         Exécuter le `SSMAforSybaseConsole.exe` avec la `-securepassword` et `-list` passer à la ligne de commande pour répertorier tous les ID de serveur dont les mots de passe ont été chiffrés.  
   
-        Exemple :  
+        Exemple :  
         
             C:\SSMA\SSMAforSybaseConsole.EXE -securepassword -list  
   
@@ -95,7 +94,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
 ## <a name="exporting-or-importing-encrypted-passwords"></a>Exporter ou importer des mots de passe chiffrés  
 L’application de Console SSMA vous permet d’exporter des mots de passe de base de données chiffrées présentes dans un fichier sur l’ordinateur local à un fichier sécurisé et inversement. Il permet de rendre la machine de mots de passe chiffrés indépendants. La fonctionnalité d’exportation lit l’id de serveur et le mot de passe à partir de l’ordinateur local, stockage protégé et enregistre les informations dans un fichier chiffré. L’utilisateur est invité à entrer le mot de passe pour le fichier sécurisé. Assurez-vous que le mot de passe entré est la longueur de 8 caractères ou plus. Ce fichier sécurisé est portable sur des ordinateurs différents. Fonctionnalité d’importation lit les informations d’id et mot de passe de serveur à partir du fichier sécurisé. L’utilisateur est invité à entrer le mot de passe pour le fichier sécurisé et ajoute les informations sur le stockage local protégé.  
   
-Exemple :  
+Exemple :  
 
     Export password
     
@@ -113,7 +112,7 @@ Exemple :
     
     Please confirm password: xxxxxxxx  
   
-Exemple :  
+Exemple :  
 
     Import an encrypted password
     

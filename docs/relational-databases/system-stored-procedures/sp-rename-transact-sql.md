@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330b330375ee49d13242dd400ed76fae2bfc6e71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 070c2a362a69fb6863cc263da3975efc66c7c9f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006935"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objname =] '*object_name*'  
  Nom actuel, complet ou non, de l'objet utilisateur ou du type de données. Si l’objet à renommer est une colonne dans une table, *object_name* doit être sous la forme *table.column* ou *configuration : schéma.table.colonne*. Si l’objet à renommer est un index, *object_name* doit être sous la forme *table.index* ou *schema.table.index*. Si l’objet à renommer est une contrainte, *object_name* doit être sous la forme *schema.constraint*.  
   
- Les guillemets ne sont nécessaires que si un nom complet d'objet est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *object_name* est **nvarchar(776)**, sans valeur par défaut.  
+ Les guillemets ne sont nécessaires que si un nom complet d'objet est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *object_name* est **nvarchar(776)** , sans valeur par défaut.  
   
  [ @newname =] '*nouveau_nom*'  
  Nouveau nom de l'objet spécifié. *new_name* doit être un nom en une partie et doit respecter les règles des identificateurs. *NewName* est **sysname**, sans valeur par défaut.  
@@ -60,9 +59,9 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 >  Les noms de déclencheurs ne peuvent pas commencer par # ou par ##.  
   
  [ @objtype =] '*object_type*'  
- Type d'objet renommé. *object_type* est **varchar(13)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+ Type d'objet renommé. *object_type* est **varchar(13)** , avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |COLUMN|Colonne à renommer.|  
 |DATABASE|Base de données définie par l'utilisateur. Ce type d'objet est nécessaire pour renommer une base de données.|  
@@ -85,12 +84,12 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
   
  Le fait de renommer un objet tel qu'une table ou une colonne ne renomme pas automatiquement les références à cet objet. Vous devez modifier manuellement tout objet qui référence l'objet renommé. Par exemple, si vous renommez une colonne de table et si cette colonne est référencée dans un déclencheur, vous devez modifier le déclencheur pour refléter le nouveau nom de colonne. Utilisez [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) pour obtenir la liste des dépendances de l’objet avant de le renommer.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour renommer des objets, des colonnes et des index, il vous faut l'autorisation ALTER sur l'objet concerné. Pour renommer des types définis par l'utilisateur, il vous faut une autorisation CONTROL sur le type concerné. Pour renommer une base de données, vous devez être membre des rôles serveur fixes dbcreator ou sysadmin.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-renaming-a-table"></a>A. Modification du nom d'une table  
+### <a name="a-renaming-a-table"></a>R. Modification du nom d'une table  
  L'exemple suivant renomme la table `SalesTerritory` en `SalesTerr` dans le schéma `Sales` .  
   
 ```  

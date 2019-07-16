@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: be30abc9-c00d-446f-b1b4-1269772f37e6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a3903fa2047e5c629563b78b2ff2da73d2c34951
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 38c6bb0ae74ffe54e9637610139374e458e3649d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095704"
 ---
 # <a name="msagentparameters-transact-sql"></a>MSagent_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSagent_parameters** table contient les paramètres associés à un profil d’agent. Les noms de paramètres sont identiques à ceux qui sont pris en charge par l'agent. Cette table est stockée dans le **msdb** base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**profile_id**|**Int**|L’ID de profil à partir de la **MSagent_profiles** table.|  
+|**profile_id**|**int**|L’ID de profil à partir de la **MSagent_profiles** table.|  
 |**parameter_name**|**sysname**|Nom du paramètre.|  
 |**value**|**nvarchar(255)**|Valeur du paramètre.|  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 661752a55b808b010f8a111bcc18e47048a3999b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cb5022df9628607c94754cbbadceecaea02c4db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63065106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087778"
 ---
 # <a name="visual-foxpro-odbc-driver-native-error-messages"></a>Messages des erreurs natives du pilote ODBC Visual FoxPro
 Les tableaux suivants répertorient les messages d’erreur natifs pour le pilote ODBC Visual FoxPro.  
@@ -32,7 +31,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs pour le pilot
 |1|Fonctionnalité n’est pas disponible.|  
 |2|Échec de l’opération d’entrée/sortie.|  
 |3|Handle libre n’est pas trouvé.|  
-|5|Utilisation d’un handle non alloué.|  
+|5\.|Utilisation d’un handle non alloué.|  
 |99|Annulation de la procédure.|  
   
 ## <a name="100"></a>100  
@@ -297,7 +296,7 @@ Les tableaux suivants répertorient les messages d’erreur natifs pour le pilot
 |902|Échec de l’évaluateur d’expression.|  
 |903|Chaîne est trop longue pour tenir.|  
 |904|** ou ^ erreur de domaine.|  
-|905|LOG(): Zéro ou négatif utilisé comme argument.|  
+|905|LOG() : Zéro ou négatif utilisé comme argument.|  
 |906|L’argument de SQRT() ne peut pas être négatif.|  
 |912|Opération non valide pour un champ général.|  
 |914|Numéro de page de codes n’est pas valide.|  

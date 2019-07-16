@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 155791eb-8832-4596-8487-7fc70dfba5b9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 042fb188e5a704ed9843bcf98b501a5c315d825f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e4218f6a105f81997c37202421feb689cd3a074
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055003"
 ---
 # <a name="sphelpfulltexttablescursor-transact-sql"></a>sp_help_fulltext_tables_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -50,19 +49,19 @@ sp_help_fulltext_tables_cursor [ @cursor_return = ] @cursor_variable OUTPUT
   
 `[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Est le nom du catalogue de texte intégral. *fulltext_catalog_name* est **sysname**, avec NULL comme valeur par défaut. Si *fulltext_catalog_name* est omis ou a la valeur NULL, toutes les tables indexées en texte intégral associés à la base de données sont retournées. Si *fulltext_catalog_name* est spécifié, mais *table_name* est omis ou a la valeur NULL, les informations d’index de recherche en texte intégral sont récupérées pour chaque table indexée en texte intégral associé à ce catalogue. Si les deux *fulltext_catalog_name* et *table_name* sont spécifiés, une ligne est retournée si *table_name* associé *fulltext_catalog_name*; Sinon, une erreur est générée.  
   
-`[ @table_name = ] 'table_name'` Est le nom de table d’une ou deux parties pour laquelle les métadonnées de recherche en texte intégral sont demandées. *table_name* est **nvarchar (517)**, avec NULL comme valeur par défaut. Si seuls *table_name* est spécifié, la ligne concernant *table_name* est retourné.  
+`[ @table_name = ] 'table_name'` Est le nom de table d’une ou deux parties pour laquelle les métadonnées de recherche en texte intégral sont demandées. *table_name* est **nvarchar (517)** , avec NULL comme valeur par défaut. Si seuls *table_name* est spécifié, la ligne concernant *table_name* est retourné.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_OWNER**|**sysname**|Propriétaire de la table. Nom de l'utilisateur de la base de données qui a créé la table.|  
 |**TABLE_NAME**|**sysname**|Nom de la table.|  
 |**FULLTEXT_KEY_INDEX_NAME**|**sysname**|Index imposant la contrainte UNIQUE dans la colonne désignée comme colonne clé unique.|  
-|**FULLTEXT_KEY_COLID**|**Int**|ID de colonne de l'index unique identifié par FULLTEXT_KEY_NAME.|  
+|**FULLTEXT_KEY_COLID**|**int**|ID de colonne de l'index unique identifié par FULLTEXT_KEY_NAME.|  
 |**FULLTEXT_INDEX_ACTIVE**|**Int**|Indique si les colonnes de cette table marquées pour l'indexation de texte intégral peuvent faire l'objet de requêtes :<br /><br /> 0 = Inactif<br /><br /> 1 = Actif|  
 |**FULLTEXT_CATALOG_NAME**|**sysname**|Catalogue de texte intégral contenant les données d'index sur le texte intégral.|  
   

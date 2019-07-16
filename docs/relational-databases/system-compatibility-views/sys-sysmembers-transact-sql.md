@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ceb18341-f985-4849-ac83-21d67ab7b980
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5672c6b027e001e2aaf2a344c2710d2a28e62e9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 776c253b85f26e4808da7b3b1990be862546cbfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076558"
 ---
 # <a name="syssysmembers-transact-sql"></a>sys.sysmembers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63018646"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**memberuid**|**smallint**|ID de l'utilisateur pour le membre de rôle. Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  
 |**groupuid**|**smallint**|ID de l'utilisateur pour le rôle Déborde ou retourne la valeur NULL si le nombre d'utilisateurs et de rôles dépasse 32 767.|  

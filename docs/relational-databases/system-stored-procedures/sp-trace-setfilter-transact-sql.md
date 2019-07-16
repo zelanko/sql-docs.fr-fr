@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c296c668bf553569becb9b4cf2e30001021d47c1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095939"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,8 +84,8 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |1|Erreur inconnue.|  
 |2|La trace est en cours d'exécution. La modification de la Trace à cet instant précis entraîne une erreur.|  
 |4|La colonne spécifiée n’est pas valide.|  
-|5|La colonne spécifiée n'est pas autorisée pour le filtrage. Cette valeur est retournée uniquement à partir de **sp_trace_setfilter**.|  
-|6|L'opérateur de comparaison spécifié n'est pas valide.|  
+|5\.|La colonne spécifiée n'est pas autorisée pour le filtrage. Cette valeur est retournée uniquement à partir de **sp_trace_setfilter**.|  
+|6\.|L'opérateur de comparaison spécifié n'est pas valide.|  
 |7|L'opérateur logique spécifié n'est pas valide.|  
 |9|Le descripteur de trace spécifié n'est pas valide.|  
 |13|Mémoire insuffisante. Renvoyé lorsqu'il n'y a pas assez de mémoire pour exécuter l'action spécifiée.|  

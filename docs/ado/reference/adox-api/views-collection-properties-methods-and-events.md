@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 04e119a4-39e1-45fe-8e39-c9b9afbfeb27
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7ba5c845320311298a2b1162451c601372fd257d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b76eb52f9f90e97c47d96e8bb072c2bee33061e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964755"
 ---
 # <a name="views-collection-properties-methods-and-events"></a>Propriétés, méthodes et événements de la collection Views
 ## <a name="properties"></a>Properties  
@@ -34,7 +33,7 @@ ms.locfileid: "66696998"
  [Refresh, méthode](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
 ## <a name="events"></a>Events  
- Aucun.  
+ Aucune.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Views, collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

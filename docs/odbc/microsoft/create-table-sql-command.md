@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 195d226caed68da7131390eaf1985d4e05b2edf3
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 2f979ccb5a44ada8e86424e0f6134f39d28a021d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096600"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE, commande SQL
 Crée une table comportant les champs spécifiés.  
@@ -47,10 +46,10 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- CREATE TABLE &#124; DBF *TableName1*  
+ CRÉER la TABLE &#124; DBF *TableName1*  
  Spécifie le nom de la table à créer. Les options de TABLE et DBF sont identiques.  
   
- NAME *LongTableName*  
+ NOM *LongTableName*  
  Spécifie un nom long de la table. Un nom de table long peut être spécifié uniquement quand une base de données est ouvert, car les noms de table longs sont stockés dans les bases de données.  
   
  Les noms longs peuvent contenir jusqu'à 128 caractères et peuvent être utilisés à la place des noms de fichiers courts dans la base de données.  
@@ -115,7 +114,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Comme une table peut avoir qu’un seul index primaire, vous ne peut pas inclure cette clause si vous avez déjà créé un index primaire pour un champ. Visual FoxPro génère une erreur si vous incluez plusieurs clauses de clé primaire dans CREATE TABLE.  
   
- UNIQUE *eExpression3*TAG *TagName3*  
+ UNIQUE *eExpression3*balise *TagName3*  
  Crée un index de candidat. *eExpression3* spécifie un champ ou une combinaison de champs dans la table. Toutefois, si vous avez créé un index principal avec une des options de la clé primaire, vous ne pouvez pas inclure le champ qui a été spécifié pour l’index primaire. BALISE *TagName3* spécifie un nom de balise pour la balise d’index de candidat qui est créé. Noms de balise d’index peuvent contenir jusqu'à 10 caractères.  
   
  Une table peut avoir plusieurs index candidats.  

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60c55373a1647f6a2f12526e308d6ca45aeebb7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041699"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +45,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n* ne peut pas être 0. La fonction retourne une erreur si vous ne faites pas au moins une prédiction.  
   
- *n-start, n-end*  
+ *début de n, n-fin*  
  Spécifie une plage d'étapes de série chronologique.  
   
  *n-début* doit être un entier et ne peut pas être 0.  
@@ -116,7 +115,7 @@ OR [Model Region] = 'M200 Pacific'
   
  Dans cet exemple, le mot clé FLATTENED a été utilisé pour simplifier la lecture des résultats.  Si vous n'utilisez pas le mot clé FLATTENED et qu'à la place vous retournez un ensemble de lignes hiérarchique, cette requête retourne deux colonnes. La première contient la valeur de [ModelRegion] et la deuxième une table imbriquée à deux colonnes : $TIME, qui affiche les tranches de temps prédites, et Quantity, qui contient les valeurs prédites.  
   
-### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>Exemple 2 : Ajout de nouvelles données et l’utilisation de REPLACE_MODEL_CASES  
+### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>Exemple 2 : Ajout de nouvelles données et l’utilisation de REPLACE_MODEL_CASES  
  Supposez que vous constatez que les données étaient incorrectes pour une région particulière et que vous souhaitez utiliser les modèles dans le modèle, tout en ajustant les prédictions pour qu'elles correspondent aux nouvelles données. Ou il se peut que vous constatiez qu'une autre région a des tendances plus fiables et que vous souhaitiez appliquer le modèle le plus fiable aux données d'une région différente.  
   
  Dans de tels scénarios, vous pouvez utiliser le paramètre REPLACE_MODEL_CASES et spécifier un nouveau jeu de données à utiliser comme données d'historique. De cette façon, les projections seront basées sur les modèles dans le modèle spécifié, mais continueront de manière fluide à partir de la fin des nouveaux points de données. Pour obtenir une description complète de ce scénario, consultez [avancé des prédictions de série chronologique &#40;didacticiel d’exploration de données intermédiaire&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  

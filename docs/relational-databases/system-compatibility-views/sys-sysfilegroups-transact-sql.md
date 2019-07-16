@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c644e52b20347ac661806d9e33cad9530e9512f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5388533ed665548eaaac3c25976271750d1348c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053486"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>sys.sysfilegroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "47649433"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**GroupID**|**smallint**|Numéro unique d'identification de groupe pour chaque base de données.|  
+|**groupid**|**smallint**|Numéro unique d'identification de groupe pour chaque base de données.|  
 |**allocpolicy**|**smallint**|Réservé|  
-|**status**|**Int**|0x8 = Lecture seule<br /><br /> 0x10 = Par défaut|  
+|**status**|**int**|0x8 = Lecture seule<br /><br /> 0x10 = Par défaut|  
 |**groupname**|**sysname**|Nom du groupe de fichiers.|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8679bea49b63ffd5dc7164942b42ac9eed7e9ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086364"
 ---
 # <a name="multiple-results"></a>Résultats multiples
 Un *résultat* est un élément retourné par la source de données après une instruction est exécutée. ODBC comporte deux types de résultats : jeux de résultats et des nombres de lignes. *Nombres de lignes* sont le nombre de lignes affectées par une mise à jour, supprimer, ou instruction insert. Lots, décrit dans [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), peut générer plusieurs résultats.  

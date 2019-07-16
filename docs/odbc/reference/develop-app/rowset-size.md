@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 60366ae8-175c-456a-ae5e-bdd860786911
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 54da54a63fb1234478a3161cd46e7143258d2d65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fda38811fa876c9a0fad55e7f2ee7566ad3026d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943763"
 ---
 # <a name="rowset-size"></a>Taille des ensembles de lignes
 Quelle taille d’ensemble de lignes à utiliser dépend de l’application. Applications basées sur l’écran suivent généralement une des deux stratégies. La première consiste à définir la taille de l’ensemble de lignes sur le nombre de lignes affichées sur l’écran ; Si l’utilisateur redimensionne l’écran, l’application modifie la taille de l’ensemble de lignes en conséquence. La seconde consiste à définir la taille de l’ensemble de lignes à un plus grand nombre, telle que 100, ce qui réduit le nombre d’appels à la source de données. L’application fait défiler localement dans l’ensemble de lignes lorsque cela est possible et extrait les nouvelles lignes uniquement lorsqu’il fait défiler en dehors de l’ensemble de lignes.  

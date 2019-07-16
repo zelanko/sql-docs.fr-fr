@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17a88095611a5f551708f3950359063317368757
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67eac22a630305f32f141ea18861e5638445f19b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094350"
 ---
 # <a name="sequence-of-status-records"></a>Séquence d’enregistrements d’état
 Si deux ou plusieurs enregistrements d’état sont retournés, le Gestionnaire de pilotes et le pilote classent selon les règles suivantes. L’enregistrement avec le rang le plus élevé est le premier enregistrement. La source d’un enregistrement (Gestionnaire de pilotes, pilotes, passerelle et ainsi de suite) constitue toutefois pas lorsque les enregistrements de classement.  

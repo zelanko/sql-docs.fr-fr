@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c12df75b549ddb9455a902bbf3cd44ba02fef6f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0b318557535552d910981bdb43c31973f0c845b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091130"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +114,7 @@ HRESULT BCPColFmt(
  Position ordinale de la colonne dans la table de base de données. Le premier numéro de colonne est 1. La position ordinale d'une colonne est signalée par **IColumnsInfo::GetColumnInfo** ou des méthodes semblables. Si cette valeur est 0, la copie en bloc ignore le champ dans le fichier de données.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
+ S_OK  
  S_OK  
   
  E_FAIL  

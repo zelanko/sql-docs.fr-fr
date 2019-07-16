@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: ea6db43d999c2c0102cde0c0b30867f255bce569
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 2d05c48f1492509fe05272560dd3cf332b424cb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961675"
 ---
 # <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning Services (R, Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +43,7 @@ SQL Server 2017 prend en charge R et Python. Le tableau suivant décrit les co
 | Composant | Description |
 |-----------|-------------|
 | Service SQL Server Launchpad | Un service qui gère les communications entre les runtimes R et Python externes et l’instance du moteur de base de données. |
-| Packages R | [**RevoScaleR** ](r/ref-r-revoscaler.md) est la bibliothèque principale pour évolutive fonctions R. dans cette bibliothèque sont parmi les plus couramment utilisées. Transformations de données et de manipulation, de synthèse statistique, de visualisation et de nombreuses formes de modélisation et les analyses sont trouvent dans ces bibliothèques. En outre, les fonctions dans ces bibliothèques distribuer automatiquement les charges de travail entre les cœurs disponibles pour le traitement parallèle, avec la possibilité de travailler sur des segments de données coordonnées et gérées par le moteur de calcul.  <br/>[**MicrosoftML (R)** ](r/ref-r-microsoftml.md) ajoute des algorithmes d’apprentissage automatique pour créer des modèles personnalisés pour l’analyse de texte, l’analyse de l’image et l’analyse des sentiments. <br/>[**sqlRUtils** ](r/ref-r-sqlrutils.md) fournit des fonctions d’assistance pour placer des scripts R dans une procédure stockée T-SQL, l’inscription d’une procédure stockée avec une base de données et l’exécution de la procédure stockée à partir d’un environnement de développement R.<br/>[**olapR** ](r/ref-r-olapr.md) est de construction ou de l’exécution d’une requête MDX dans un script R.|
+| Packages R | [**RevoScaleR** ](r/ref-r-revoscaler.md) est la bibliothèque principale pour évolutive fonctions R. dans cette bibliothèque sont parmi les plus couramment utilisées. La transformation et la manipulation des données, le résumé statistique, la visualisation et de nombreuses formes de modélisation et d’analyse sont rendues possibles avec ces bibliothèques. De plus, les fonctions de ces bibliothèques répartissent automatiquement les charges de travail entre les cœurs disponibles pour un traitement parallèle, avec la possibilité de travailler sur des blocs de données qui sont coordonnés et gérés par le moteur de calcul.  <br/>[**MicrosoftML (R)** ](r/ref-r-microsoftml.md) ajoute des algorithmes d’apprentissage automatique pour créer des modèles personnalisés pour l’analyse de texte, l’analyse de l’image et l’analyse des sentiments. <br/>[**sqlRUtils** ](r/ref-r-sqlrutils.md) fournit des fonctions d’assistance pour placer des scripts R dans une procédure stockée T-SQL, l’inscription d’une procédure stockée avec une base de données et l’exécution de la procédure stockée à partir d’un environnement de développement R.<br/>[**olapR** ](r/ref-r-olapr.md) est de construction ou de l’exécution d’une requête MDX dans un script R.|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) est open source distribution Microsoft de R. Le package et un interpréteur sont inclus. Utilisez toujours la version de MRO installé par le programme d’installation. |
 | Outils R | Invites de commandes et fenêtres de console R sont des outils standard dans une distribution de R.  |
 | Exemples de R et scripts |  Les packages RevoScaleR et R Open source incluent les jeux de données intégrées afin que vous pouvez créer et exécuter le script à l’aide de données préinstallées. |
@@ -68,11 +67,11 @@ Enfin, si vous utilisez un [serveur autonome](r/r-server-standalone.md) et l’�
 
 ## <a name="how-to-get-started"></a>La prise en main
 
-### <a name="step-1-install-the-software"></a>Étape 1 : Installer le logiciel
+### <a name="step-1-install-the-software"></a>Étape 1 : Installer le logiciel
 
 + [SQL Server Machine Learning Services (en base de données)](install/sql-machine-learning-services-windows-install.md)
  
-### <a name="step-2-configure-a-development-tool"></a>Étape 2 : Configurer un outil de développement
+### <a name="step-2-configure-a-development-tool"></a>Étape 2 : Configurer un outil de développement
 
 Les scientifiques des données utilisent généralement R ou Python sur leur propre station de travail d’ordinateur portable ou de développement, pour Explorer les données et de créer et de régler des modèles prédictifs jusqu'à ce qu’un bon modèle prédictif est établie. Avec l’analytique en base de données dans SQL Server, il est inutile de modifier ce processus. Une fois l’installation terminée, vous pouvez exécuter le code R ou Python sur SQL Server localement et à distance.
 
@@ -84,7 +83,7 @@ Les scientifiques des données utilisent généralement R ou Python sur leur pro
 
 + **Incorporer des scripts R ou Python dans les procédures stockées SQL Server**. Lorsque votre code est entièrement optimisé l’encapsuler dans une procédure stockée pour éviter le déplacement des données inutiles et optimiser les tâches de traitement des données.
 
-### <a name="step-3-write-your-first-script"></a>Étape 3 : Écrire votre premier script
+### <a name="step-3-write-your-first-script"></a>Étape 3 : Écrire votre premier script
 
 Appeler des fonctions R ou Python à partir de dans le script T-SQL :
 
@@ -95,7 +94,7 @@ Appeler des fonctions R ou Python à partir de dans le script T-SQL :
 
 Choisir le meilleur langage pour la tâche. R est idéal pour les calculs statistiques qui sont difficiles à implémenter à l’aide de SQL. Pour les opérations de jeu basé sur les données, exploiter la puissance de SQL Server pour optimiser les performances. Utiliser le moteur de base de données en mémoire pour effectuer des calculs très rapides sur les colonnes.
 
-### <a name="step-4-optimize-your-solution"></a>Étape 4 : Optimiser votre solution
+### <a name="step-4-optimize-your-solution"></a>Étape 4 : Optimiser votre solution
 
 Lorsque le modèle est prêt à l’échelle sur les données d’entreprise, les spécialistes des données est souvent fonctionnement avec le développeur de base de données ou SQL pour optimiser les processus tels que :
 
@@ -111,7 +110,7 @@ En règle générale, les scientifiques des données à l’aide de R ont eu des
 
 Pour plus d’informations sur les performances, consultez ce [étude de cas de performances](r/performance-case-study-r-services.md) et [R et les données d’optimisation](r/r-and-data-optimization-r-services.md).
 
-### <a name="step-5-deploy-and-consume"></a>Étape 5 : Déployer et utiliser
+### <a name="step-5-deploy-and-consume"></a>Étape 5 : Déployer et utiliser
 
 Une fois le script ou le modèle est prêt pour la production, un développeur de base de données peut incorporer le code ou le modèle dans une procédure stockée d’afin que le code R ou Python enregistré peut être appelé à partir d’une application. Stockage et l’exécution du code R à partir de SQL Server présente de nombreux avantages : vous pouvez utiliser l’interface pratique de SQL Server, et tous les calculs ont lieu dans la base de données, évitant ainsi le déplacement de données inutiles.
 
@@ -135,10 +134,10 @@ SQL Server 2017 Machine Learning Services est la nouvelle génération de SQL Se
 
 | Nom de produit | Version du moteur | Date de publication |
 |--------------|---------|--------------|
-| SQL Server 2017 Machine Learning Services (en base de données) | R Server 9.2.1 <br/> Python Server 9.2 | Octobre 2017 |
-| SQL Server 2017 Machine Learning Server (autonome) | R Server 9.2.1 <br/> Python Server 9.2 | Octobre 2017 |
-| SQL Server 2016 R Services (en base de données) | R Server 9.1  | Juillet 2017  |
-| SQL Server 2016 R Server (autonome)  |  R Server 9.1 | Juillet 2017 |
+| SQL Server 2017 Machine Learning Services (en base de données) | R Server 9.2.1 <br/> Python Server 9.2 | Octobre 2017 |
+| SQL Server 2017 Machine Learning Server (autonome) | R Server 9.2.1 <br/> Python Server 9.2 | Octobre 2017 |
+| SQL Server 2016 R Services (en base de données) | R Server 9.1  | Juillet 2017  |
+| SQL Server 2016 R Server (autonome)  |  R Server 9.1 | Juillet 2017 |
 
 Pour les versions de package par version, voir la version de la carte dans [les composants de mise à niveau de R et Python](install/upgrade-r-and-python.md#version-map).
 

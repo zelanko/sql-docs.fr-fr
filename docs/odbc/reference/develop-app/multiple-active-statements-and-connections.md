@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a6571356-b23e-4f10-a17b-bce09460b71e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b2a1edbf9947aff01ef6d4688959352986cf672d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76b74ff748a62a401955e4ea4a995f507314124e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942826"
 ---
 # <a name="multiple-active-statements-and-connections"></a>Instructions et connexions multiples actives simultanément
 Certains pilotes et le SGBD limite le nombre d’instructions et connexions qui peuvent être actives en même temps. Ces numéros peuvent être aussi petit qu’un. Pour plus d’informations, consultez les options SQL_MAX_CONCURRENT_ACTIVITIES et SQL_MAX_DRIVER_CONNECTIONS dans le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) description, de fonction et [instruction gère](../../../odbc/reference/develop-app/statement-handles.md) et [ Handles de connexion](../../../odbc/reference/develop-app/connection-handles.md).

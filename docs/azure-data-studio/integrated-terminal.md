@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: d29234810e30efd204f498e2f7c63ba6571cbfe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959537"
 ---
 # <a name="integrated-terminal"></a>Terminal intégré
 
@@ -98,11 +97,11 @@ Voici les raccourcis clavier pour naviguer rapidement dans le terminal intégré
 |---|---|  
 |**Ctrl+\`**|Afficher le terminal intégré|  
 |**CTRL + MAJ +\`**|Créer nouveau terminal|  
-|**Ctrl+Up**|Défilement vers le haut|  
+|**Ctrl + flèche haut**|Défilement vers le haut|  
 |**Ctrl+Down**|Défiler vers le bas|  
 |**Ctrl+PageUp**|Page de défilement précédente|  
 |**Ctrl+PageDown**|Défiler d’une page vers le bas|  
-|**Ctrl+Home**|Faites défiler vers le haut|  
+|**CTRL + origine**|Faites défiler vers le haut|  
 |**Ctrl+End**|Faites défiler vers le bas|  
 |**Ctrl+K**|Désactivez le terminal|  
 

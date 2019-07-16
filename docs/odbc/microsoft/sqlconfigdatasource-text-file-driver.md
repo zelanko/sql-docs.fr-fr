@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1635538f69b313a73a24ab1531f8793c7d98741e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46bb00fb01ed3fee8098420794af089f2d8b981e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054086"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (pilote de fichier texte)
 > [!NOTE]  
@@ -32,7 +31,7 @@ ms.locfileid: "62665255"
 |CHARACTERSET|Pour le pilote de texte, OEM ou ANSI.|  
 |COLNAMEHEADER|Pour le pilote de texte, indique si le premier enregistrement de données spécifie les noms de colonnes. La valeur TRUE ou FALSE.|  
 |DEFAULTDIR|La spécification de chemin d’accès au répertoire.|  
-|DESCRIPTION|Une description des données dans la source de données.<br /><br /> La même option est définie en tant que **Description** dans la boîte de dialogue d’installation.|  
+|Description|Une description des données dans la source de données.<br /><br /> La même option est définie en tant que **Description** dans la boîte de dialogue d’installation.|  
 |DRIVER|La spécification de chemin d’accès à la DLL du pilote.|  
 |DRIVERID|Un ID d’entier pour le pilote. 27 (texte)|  
 |EXTENSIONS|Répertorie les extensions de nom de fichier des fichiers texte sur la source de données.<br /><br /> La même option est définie en tant que **liste des Extensions** dans la boîte de dialogue d’installation.|  

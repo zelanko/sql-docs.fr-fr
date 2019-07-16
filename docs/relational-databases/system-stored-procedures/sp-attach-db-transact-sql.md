@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc0ab6b4dc44d14b375b13da971c0849eb42b0b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf96da996996a98a965d2563c729321318ac400c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046199"
 ---
 # <a name="spattachdb-transact-sql"></a>sp_attach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_attach_db [ @dbname= ] 'dbname'
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Le **sp_attach_db** procédure stockée doit uniquement être exécutée sur les bases de données qui ont été préalablement détachées du serveur de base de données à l’aide d’explicite **sp_detach_db** opération ou sur des bases de données copiées. Si vous devez spécifier plus de 16 fichiers, utilisez CREATE DATABASE *database_name* FOR ATTACH ou CREATE DATABASE *database_name* FOR_ATTACH_REBUILD_LOG. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  

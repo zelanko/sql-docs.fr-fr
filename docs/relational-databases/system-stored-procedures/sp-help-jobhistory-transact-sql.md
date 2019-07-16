@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054929"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,17 +80,17 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**0**|Échec|  
 |**1**|Opération réussie|  
 |**2**|Reprise (étape uniquement)|  
-|**3**|Opération annulée|  
+|**3**|Canceled|  
 |**4**|Messages en cours d’exécution|  
-|**5**|Unknown|  
+|**5**|Inconnu|  
   
 `[ @minimum_retries = ] minimum_retries` Le nombre minimal de fois qu’un travail de tentatives d’exécution. *minimum_de_reprises* est **int**, avec NULL comme valeur par défaut.  
   
 `[ @oldest_first = ] oldest_first` S’il faut présenter en premier la sortie des travaux plus ancien est. *le_plus_ancien_en_premier* est **int**, avec une valeur par défaut **0**, laquelle présente tout d’abord les travaux les plus récents. **1** présente tout d’abord les travaux les plus anciens.  
   
-`[ @server = ] 'server'` Le nom du serveur sur lequel le travail a été effectué. *serveur* est **nvarchar (30)**, avec NULL comme valeur par défaut.  
+`[ @server = ] 'server'` Le nom du serveur sur lequel le travail a été effectué. *serveur* est **nvarchar (30)** , avec NULL comme valeur par défaut.  
   
-`[ @mode = ] 'mode'` Si SQL Server doit imprimer toutes les colonnes du jeu de résultats (**complète**) ou un résumé des colonnes. *mode* est **varchar(7)**, avec une valeur par défaut **Résumé**.  
+`[ @mode = ] 'mode'` Si SQL Server doit imprimer toutes les colonnes du jeu de résultats (**complète**) ou un résumé des colonnes. *mode* est **varchar(7)** , avec une valeur par défaut **Résumé**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -99,24 +98,24 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 ## <a name="result-sets"></a>Jeux de résultats  
  La liste des colonnes dépend de la valeur de *mode*. L’ensemble de colonnes le plus complet est indiqué ci-dessous et est retourné quand *mode* est FULL.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**Int**|Numéro d'identification de l'entrée d'historique.|  
 |**job_id**|**uniqueidentifier**|Numéro d’identification du travail.|  
 |**job_name**|**sysname**|Nom du travail.|  
-|**step_id**|**Int**|Numéro d’identification de l’étape (sera **0** pour un historique des travaux).|  
+|**step_id**|**int**|Numéro d’identification de l’étape (sera **0** pour un historique des travaux).|  
 |**step_name**|**sysname**|Nom de l'étape (NULL pour un historique des travaux).|  
-|**sql_message_id**|**Int**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], représente le numéro d'erreur [!INCLUDE[tsql](../../includes/tsql-md.md)] le plus récent affiché pendant l'exécution de la commande.|  
-|**sql_severity**|**Int**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], représente le degré de gravité [!INCLUDE[tsql](../../includes/tsql-md.md)] le plus élevé obtenu pendant l'exécution de la commande.|  
+|**sql_message_id**|**int**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], représente le numéro d'erreur [!INCLUDE[tsql](../../includes/tsql-md.md)] le plus récent affiché pendant l'exécution de la commande.|  
+|**sql_severity**|**int**|Pour une étape [!INCLUDE[tsql](../../includes/tsql-md.md)], représente le degré de gravité [!INCLUDE[tsql](../../includes/tsql-md.md)] le plus élevé obtenu pendant l'exécution de la commande.|  
 |**message**|**nvarchar(1024)**|Message d'historique d'étape ou de travail.|  
-|**run_status**|**Int**|Résultat du travail ou de l'étape.|  
-|**run_date**|**Int**|Date de début d'exécution du travail ou de l'étape.|  
-|**run_time**|**Int**|Heure de début d'exécution du travail ou de l'étape.|  
+|**run_status**|**int**|Résultat du travail ou de l'étape.|  
+|**run_date**|**int**|Date de début d'exécution du travail ou de l'étape.|  
+|**run_time**|**int**|Heure de début d'exécution du travail ou de l'étape.|  
 |**run_duration**|**Int**|Durée, au format HHMMSS, de l'exécution du travail ou de l'étape.|  
 |**operator_emailed**|**nvarchar(20)**|Opérateur qui a reçu un courrier électronique concernant ce travail (NULL pour un historique d'étape).|  
 |**operator_netsent**|**nvarchar(20)**|Opérateur qui a reçu un message réseau concernant ce travail (NULL pour un historique d'étape).|  
 |**operator_paged**|**nvarchar(20)**|Opérateur qui a reçu un message par radiomessagerie concernant ce travail (NULL pour un historique d'étape).|  
-|**retries_attempted**|**Int**|Nombre de reprises de l'étape (0 pour un historique d'étape).|  
+|**retries_attempted**|**int**|Nombre de reprises de l'étape (0 pour un historique d'étape).|  
 |**server**|**nvarchar(30)**|Serveur sur lequel est exécutée l'étape ou le travail. Est toujours (**local**).|  
   
 ## <a name="remarks"></a>Notes  
@@ -137,7 +136,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-all-job-information-for-a-job"></a>A. Affichage de toutes les informations d'un travail  
+### <a name="a-listing-all-job-information-for-a-job"></a>R. Affichage de toutes les informations d'un travail  
  L'exemple ci-dessous répertorie toutes les informations du travail `NightlyBackups`.  
   
 ```  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 604718c747819517bd323b73f276eb1fcc2a220f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d9ce81a0d7aad6b41945b1564076004db80cd5e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900279"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -35,17 +34,17 @@ ms.locfileid: "56024993"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |session_activity_id|**uniqueidentifier**|ID de l'opération. Non null.|  
-|resource_type|**Int**|Indique le type de ressource sur lequel l'opération est effectuée. Non null. Dans la version actuelle, cette vue trace les opérations effectuées sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uniquement, et la valeur entière correspondante est 0.|  
+|resource_type|**int**|Indique le type de ressource sur lequel l'opération est effectuée. Non null. Dans la version actuelle, cette vue trace les opérations effectuées sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uniquement, et la valeur entière correspondante est 0.|  
 |resource_type_desc|**nvarchar(2048)**|Description du type de ressource sur lequel l'opération est effectuée. Dans la version actuelle, cette vue trace les opérations effectuées sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)] uniquement.|  
 |major_resource_id|**sql_variant**|Nom de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] sur laquelle l'opération est effectuée. Non Null.|  
-|minor_resource_id|**sql_variant**|À usage interne uniquement Non null.|  
+|minor_resource_id|**sql_variant**|À usage interne uniquement. Non null.|  
 |opération|**nvarchar(60)**|Opération effectuée sur une [!INCLUDE[ssSDS](../../includes/sssds-md.md)], telle que CREATE ou ALTER.|  
 |state|**tinyint**|L’état de l’opération.<br /><br /> 0 = En attente<br />1 = Opération en cours<br />2 = Opération terminée<br />3 = Échec<br />4 = Opération annulée|  
 |state_desc|**nvarchar(120)**|PENDING = Opération en attente de la disponibilité d'une ressource ou d'un quota.<br /><br /> IN_PROGRESS = L'opération a démarré et est en cours.<br /><br /> COMPLETED = L'opération s'est terminée avec succès.<br /><br /> FAILED = L'opération a échoué. Consultez le **error_desc** colonne pour plus d’informations.<br /><br /> CANCELLED = Opération arrêtée à la demande de l'utilisateur.|  
 |percent_complete|**Int**|Pourcentage de l'opération terminée. Les valeurs ne sont pas continus et les valeurs valides sont répertoriées ci-dessous. Non NULL.<br/><br/>0 = l’opération n’a ne pas démarrée<br/>50 = opération en cours<br/>100 = opération terminée|  
 |error_code|**Int**|Code indiquant l'erreur qui s'est produite pendant une opération ayant échoué. 0 indique que l'opération pour cette étape s'est terminée avec succès.|  
 |error_desc|**nvarchar(2048)**|Description de l'erreur qui s'est produite pendant une opération ayant échoué.|  
-|error_severity|**Int**|Niveau de gravité de l'erreur qui s'est produite pendant une opération ayant échoué. Pour plus d’informations sur la gravité des erreurs, consultez [gravité des erreurs du moteur de base de données](https://go.microsoft.com/fwlink/?LinkId=251052).|  
+|error_severity|**int**|Niveau de gravité de l'erreur qui s'est produite pendant une opération ayant échoué. Pour plus d’informations sur la gravité des erreurs, consultez [gravité des erreurs du moteur de base de données](https://go.microsoft.com/fwlink/?LinkId=251052).|  
 |error_state|**Int**|Réservé pour un usage ultérieur. La compatibilité future n'est pas garantie.|  
 |start_time|**datetime**|Horodateur du début de l'opération.|  
 |last_modify_time|**datetime**|Horodateur de la dernière modification de l'enregistrement d'une opération longue. Si les opérations se terminent avec succès, ce champ contient l'horodateur du moment où l'opération s'est terminée.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f3690d4c954ae3cde5159100280597af14a796d3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b12ebcfb662db9740efdf918f0857b94144e0ceb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054298"
 ---
 # <a name="spdropextendedproc-transact-sql"></a>sp_dropextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +42,13 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @functname = ] 'procedure'` Est le nom de la procédure stockée étendue à supprimer. *procédure* est **nvarchar (517)**, sans valeur par défaut.  
+`[ @functname = ] 'procedure'` Est le nom de la procédure stockée étendue à supprimer. *procédure* est **nvarchar (517)** , sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  L’exécution de **sp_dropextendedproc** supprime le nom de la procédure stockée étendue définie par l’utilisateur à partir de la [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) vue de catalogue et supprime l’entrée à partir de la [sys.extended_procedures ](../../relational-databases/system-catalog-views/sys-extended-procedures-transact-sql.md) vue de catalogue. Cette procédure stockée peut être exécutée uniquement dans les **master** base de données.  

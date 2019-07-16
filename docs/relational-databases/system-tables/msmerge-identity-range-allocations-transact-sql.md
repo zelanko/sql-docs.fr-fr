@@ -17,27 +17,26 @@ helpviewer_keywords:
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 09544c1e8735c3a6ad4fd6abfca430e84fabd775
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de0325925bb1ad1626987361435056ff21a26be6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62910176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072650"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSmerge_identity_range_allocations** table est utilisée pour suivre l’historique de l’identité affectations de plage, à des éditeurs et les abonnés, pour les articles publiés. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|L’ID du serveur de publication.|  
 |**publisher_db**|**nvarchar(128)**|Le nom de la base de données de publication.|  
 |**publication**|**nvarchar(128)**|Nom de la publication.|  
 |**article**|**nvarchar(128)**|Le nom de l’article.|  
 |**subscriber** (Abonné)|**nvarchar(128)**|Nom de l'Abonné.|  
-|**subscriber_db**|**nvarchar(128)**|Le nom de la base de données d’abonnement.|  
+|**bd_abonné**|**nvarchar(128)**|Le nom de la base de données d’abonnement.|  
 |**is_pub_range**|**bit**|Indique si la plage d'identité est affectée à un serveur de publication.|  
 |**ranges_allocated**|**tinyint**|Nombre de plages d'identité affectées.|  
 |**range_begin**|**numeric(38)**|Valeur de départ de la plage.|  

@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (Access Driver) | Microsoft Docs
+title: SQLConfigDataSource (pilote Access) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1b152fb7-fa12-46b9-b168-006bb1355e77
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd626d476bf1c4ac8b4f83f397584c367299904f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b515ed4c30d68e62a49e1044c4ddf6f5cc5ab1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985236"
 ---
 # <a name="sqlconfigdatasource-access-driver"></a>SQLConfigDataSource (pilote Access)
 > [!NOTE]  
@@ -36,7 +35,7 @@ ms.locfileid: "62665404"
 |CREATE_V2DB|Crée un fichier de base de données qui est compatible avec Microsoft Access 2.0. A le format suivant : CREATE_V2DB =\<nom de chemin d’accès >\<ordre de tri facultatif >, où le nom de chemin d’accès est le chemin d’accès complet à une base de données Microsoft Access. Une erreur est renvoyée si le nom de chemin d’accès spécifie une base de données existante. L’ordre de tri sera à tel que défini dans la boîte de dialogue Nouvelle base de données affichée lorsque le bouton Créer est enfoncé dans la boîte de dialogue d’installation de Microsoft Access. Si aucun ordre de tri n’est spécifié, le général est utilisé.<br /><br /> Lorsque vous utilisez le mot clé CREATE_V2DB dans la même instruction avec un mot clé DSN, ce pilote ignore le mot clé DSN. Par conséquent, la création d’une base de données et en spécifiant un DSN sont un processus en deux étapes.<br /><br /> Lorsque vous utilisez le mot clé CREATE_V2DB, si le chemin d’accès de la base de données Microsoft Access doit être créé contient un ou plusieurs espaces, puis le nom de chemin complet doit être placé entre guillemets doubles, comme indiqué dans les exemples suivants :<br /><br /> « C:\PROGRAM FILES\COMMON Files\Microsoft MyAccess.mdb »<br /><br /> « C:\PROGRAM FILES\Access2.mdb »<br /><br /> CREATE_V2DB=C:\TEMP\test.mdb (sans guillemets nécessités)|  
 |DBQ|Le nom du fichier de base de données.<br /><br /> La même option est définie en tant que **base de données** dans la boîte de dialogue d’installation.|  
 |DEFAULTDIR|La spécification de chemin d’accès au fichier de base de données.|  
-|DESCRIPTION|Une description des données dans la source de données.<br /><br /> La même option est définie en tant que **Description** dans la boîte de dialogue d’installation.|  
+|Description|Une description des données dans la source de données.<br /><br /> La même option est définie en tant que **Description** dans la boîte de dialogue d’installation.|  
 |DRIVER|La spécification de chemin d’accès à la DLL du pilote.|  
 |DRIVERID|Un ID d’entier pour le pilote.  25 (Microsoft Access)|  
 |FIL|Fichier de type MS Access pour Microsoft Access|  

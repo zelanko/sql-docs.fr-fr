@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4937f6b4-86bd-4070-88df-3d216306c33a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e29fac8b9cdb955ddaff6643eacae352e9c39bf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fb469dfcaaec33a03681bfb64f411851df0400e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63214313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020914"
 ---
 # <a name="testing-migrated-database-objects-sybasetosql"></a>Test des objets de base de données migrés (SybaseToSQL)
 Microsoft SQL Server Migration Assistant pour Sybase testeur (SSMA testeur) teste automatiquement la conversion des objets de base de données et la migration des données effectuées par SSMA. Une fois que toutes les étapes de migration de SSMA sont terminées, utilisez SSMA testeur pour vérifier que les objets convertis fonctionnent de manière identique et que toutes les données a été correctement transféré.  

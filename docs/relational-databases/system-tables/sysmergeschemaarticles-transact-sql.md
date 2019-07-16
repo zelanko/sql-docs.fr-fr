@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 581a6be7472818f983bc82ef3a717be0c0edaa48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9446d03db98d7fa5181fb0217814cdd86c55de1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029809"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Permet de suivre les articles de schéma exclusivement associés à la réplication de fusion. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de l'article de schéma exclusivement associé à la publication de fusion.|  
+|**name**|**sysname**|Nom de l'article de schéma exclusivement associé à la publication de fusion.|  
 |**type**|**tinyint**|Type de l'article de schéma exclusivement, pouvant être :<br /><br /> **0 x 20** = article de schéma exclusivement de procédure stockée.<br /><br /> **0 x 40** = article de schéma exclusivement de vue ou un article de schéma uniquement la vue indexée.|  
 |**objid**|**Int**|Identificateur de l'objet de base de l'article. L'identificateur d'objet peut être celui d'une procédure, vue, vue indexée ou fonction définie par l'utilisateur.|  
 |**artid**|**uniqueidentifier**|Identificateur de l'article.|  

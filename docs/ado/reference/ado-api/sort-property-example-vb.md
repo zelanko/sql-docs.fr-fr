@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 537ca70a2741cb1226602af5406529eaa281fcd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7dec17461f44c9e461a010e8a0bf5cf3fe3bbbd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931021"
 ---
 # <a name="sort-property-example-vb"></a>Sort, exemple de propriétés (VB)
 Cet exemple utilise le [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) l’objet [tri](../../../ado/reference/ado-api/sort-property.md) propriété pour réorganiser les lignes d’un **Recordset** dérivé le ***auteurs*** table de le ***Pubs*** base de données. Une routine utilitaire secondaire imprime chaque ligne.  

@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 098ff2a0a3e4827a9d80c3955cc6f2689c3fa53e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bfdd322107da1a08edb3933aee9d5b79b6c2b47a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904437"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Cet affichage catalogue contient une ligne par itinéraire. Service Broker utilise des itinéraires pour localiser l'adresse réseau d'un service.   
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de l'itinéraire, unique dans la base de données. Cette colonne n'accepte pas la valeur NULL.|  
-|**route_id**|**Int**|Identificateur de l'itinéraire. Cette colonne n'accepte pas la valeur NULL.|  
+|**name**|**sysname**|Nom de l'itinéraire, unique dans la base de données. Cette colonne n'accepte pas la valeur NULL.|  
+|**route_id**|**int**|Identificateur de l'itinéraire. Cette colonne n'accepte pas la valeur NULL.|  
 |**principal_id**|**Int**|Identificateur du principal de base de données propriétaire de cet itinéraire. Accepte la valeur NULL.|  
 |**remote_service_name**|**nvarchar (256)**|Nom du service distant. Accepte la valeur NULL.|  
 |**broker_instance**|**nvarchar(128)**|Identificateur du Service Broker qui héberge le service distant. Accepte la valeur NULL.|  

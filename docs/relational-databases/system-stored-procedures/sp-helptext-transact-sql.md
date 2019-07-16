@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b518c7b79ca6a054b5d6435ea7cb2fe10e419b7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 160d52c8c145828f6a63c104aecb17e04867cee8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048288"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'name'` Est le nom qualifié ou non d’un objet étendu aux schémas définis par l’utilisateur. Les guillemets ne sont nécessaires que si un objet qualifié est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. Cet objet doit exister dans la base de données active. *nom* est **nvarchar(776)**, sans valeur par défaut.  
+`[ @objname = ] 'name'` Est le nom qualifié ou non d’un objet étendu aux schémas définis par l’utilisateur. Les guillemets ne sont nécessaires que si un objet qualifié est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. Cet objet doit exister dans la base de données active. *nom* est **nvarchar(776)** , sans valeur par défaut.  
   
 `[ @columnname = ] 'computed_column_name'` Est le nom de la colonne calculée pour laquelle afficher les informations de définition. La table qui contient la colonne doit être spécifiée en tant que *nom*. *column_name* est **sysname**, sans valeur par défaut.  
   
@@ -50,7 +49,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Text**|**nvarchar(255)**|Définition de l'objet|  
   
@@ -58,11 +57,11 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
  sp_helptext affiche la définition utilisée pour créer un objet dans plusieurs lignes. Chaque ligne contient 255 caractères de la définition [!INCLUDE[tsql](../../includes/tsql-md.md)]. La définition réside dans le **définition** colonne dans le [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vue de catalogue.  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite l'appartenance au rôle **public** . Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP, ou VIEW DEFINITION.  
+ Nécessite l'appartenance au rôle **public** . Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-displaying-the-definition-of-a-trigger"></a>A. Affichage de la définition d'un déclencheur  
+### <a name="a-displaying-the-definition-of-a-trigger"></a>R. Affichage de la définition d'un déclencheur  
  L’exemple suivant affiche la définition du déclencheur `dEmployee` dans le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]base de données.  
   
 ```  

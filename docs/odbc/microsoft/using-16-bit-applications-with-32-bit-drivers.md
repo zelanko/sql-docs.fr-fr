@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4be5d2cacaeca7cf53caa330a126284370ec80f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088193"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Utilisation d’applications 16 bits avec des pilotes 32 bits
 > [!IMPORTANT]  
@@ -62,5 +61,5 @@ ms.locfileid: "63209963"
 |Nom de fichier|Description|  
 |---------------|-----------------|  
 |Odbc.dll|Gestionnaire de pilotes 16 bits|  
-|Odbcinst.dll|DLL d’installation 16 bits|  
+|ODBCINST.dll|DLL d’installation 16 bits|  
 |Odbcadm.exe|programme de l’administrateur ODBC 16 bits|

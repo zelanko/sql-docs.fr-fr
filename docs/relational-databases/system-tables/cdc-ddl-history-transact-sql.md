@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b68bace89b49ba11fe7744229a5f7b9500ec6cdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1855120dde6e6f4e9037a6f14832cd24f310d77b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079224"
 ---
 # <a name="cdcddlhistory-transact-sql"></a>cdc.ddl_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +31,9 @@ ms.locfileid: "62471392"
   
  Nous vous recommandons de ne pas interroger les tables système directement. À la place, exécutez le [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) procédure stockée.  
    
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**source_object_id**|**Int**|Identificateur de la table source à laquelle la modification DDL a été appliquée.|  
+|**source_object_id**|**int**|Identificateur de la table source à laquelle la modification DDL a été appliquée.|  
 |**object_id**|**Int**|ID de la table de modifications associée à une instance de capture pour la table source.|  
 |**required_column_update**|**bit**|Indique que le type de données d'une colonne capturée a été modifié dans la table source. Ce changement a modifié la colonne dans la table de modifications.|  
 |**ddl_command**|**nvarchar(max)**|Instruction DDL appliquée à la table source.|  

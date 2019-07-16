@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2dd164f25848d4c6b4f913ca2ddc746d7801fb78
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2b5f416d1f2989cd9392ecac0279e792477cca8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909184"
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,16 +51,16 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
   
 ||||  
 |-|-|-|  
-|Nom de colonne|Type de données|Description|  
-|**account_id**|**Int**|Identificateur du compte.|  
-|**nom**|**sysname**|Nom du compte|  
+|Nom de la colonne|Type de données|Description|  
+|**account_id**|**int**|Identificateur du compte.|  
+|**name**|**sysname**|Nom du compte|  
 |**description**|**nvarchar (256)**|Description du compte.|  
 |**email_address**|**nvarchar(128)**|Adresse électronique à partir de laquelle les messages sont envoyés.|  
 |**display_name**|**nvarchar(128)**|Nom d'affichage du compte|  
 |**replyto_address**|**nvarchar(128)**|L’adresse où les réponses aux messages de ce compte sont envoyées.|  
 |**servertype**|**sysname**|Type de serveur de messagerie pour le compte.|  
 |**servername**|**sysname**|Nom du serveur de messagerie pour le compte.|  
-|**port**|**Int**|Numéro de port utilisé par le serveur de messagerie.|  
+|**port**|**int**|Numéro de port utilisé par le serveur de messagerie.|  
 |**username**|**nvarchar(128)**|Nom d'utilisateur à utiliser pour se connecter au serveur de messagerie, si ce serveur utilise l'authentification. Lorsque **nom d’utilisateur** est NULL, la messagerie de base de données n’utilise pas l’authentification pour ce compte.|  
 |**use_default_credentials**|**bit**|Spécifie si le courrier électronique doit être envoyé au serveur SMTP en utilisant les informations d'identification du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** est de type bit, sans valeur par défaut. Lorsque ce paramètre est 1, la messagerie de base de données utilise les informations d’identification de le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. Lorsque ce paramètre est 0, la messagerie de base de données utilise le **@username** et **@password** pour l’authentification sur le serveur SMTP. Si **@username** et **@password** ont la valeur NULL, alors que la messagerie de base de données utilise l’authentification anonyme. Consultez administrateur SMTP avant de spécifier ce paramètre.|  
 |**enable_ssl**|**bit**|Spécifie si la messagerie de base de données chiffre les communications à l'aide de la technologie SSL (Secure Sockets Layer). Utilisez cette option si SSL est obligatoire sur votre serveur SMTP. **enable_ssl** est de type bit, sans valeur par défaut. 1 indique que la messagerie de base de données chiffre les communications au moyen de SSL tandis que la valeur 0 indique qu'elle envoie le courrier sans le chiffrement SSL.|  

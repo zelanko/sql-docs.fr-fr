@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0f626eb9f5c1b654428175dc456910b183fe0c3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63046850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985743"
 ---
 # <a name="aggregate-functions---sum"></a>Fonctions d’agrégation : sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
-### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. Utilisation de la fonction XQuery sum() pour rechercher le nombre total d'heures de travail pour tous les ateliers inclus dans le processus de fabrication  
+### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>R. Utilisation de la fonction XQuery sum() pour rechercher le nombre total d'heures de travail pour tous les ateliers inclus dans le processus de fabrication  
  La requête ci-dessous permet de trouver le nombre total d'heures de travail pour tous les ateliers inclus dans le processus de fabrication de tous les modèles de produits pour lesquels des instructions de fabrication sont stockées.  
   
 ```  

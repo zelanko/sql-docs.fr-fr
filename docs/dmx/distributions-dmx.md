@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: e4ffd21a2b507e03af6534296715528d83aac0f6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f4789a0e312decb2a46a9a1ba656fc5e4d3e9d47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992031"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070751"
 ---
 # <a name="distributions-dmx"></a>Distributions (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,8 +36,8 @@ ms.locfileid: "37992031"
  Pour plus d’informations sur les types de distribution, consultez [Distributions de colonnes &#40;d’exploration de données&#41;](../analysis-services/data-mining/column-distributions-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de contenu &#40;exploration de données&#41;](../analysis-services/data-mining/content-types-data-mining.md)   
- [Data Mining Extensions &#40;DMX&#41; référence](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Types de contenu &#40;Exploration de données&#41;](../analysis-services/data-mining/content-types-data-mining.md)   
+ [Référence DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; éléments de syntaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   

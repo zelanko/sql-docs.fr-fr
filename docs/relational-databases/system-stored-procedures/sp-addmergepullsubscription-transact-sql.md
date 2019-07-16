@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59e639c1dd319d7db074d692d3776105abe89f0f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ef860a30ba5994e25a9d532445af0ec2c39f9e1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042730"
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @subscription_priority = ] subscription_priority` Est la priorité d’abonnement. *priorité_d*est **réel**, avec NULL comme valeur par défaut. Pour les abonnements locaux et anonymes, la priorité est **0.0**. La priorité est utilisée par le résolveur par défaut pour déterminer un gagnant lorsque des conflits sont détectés. Pour les abonnés globaux, la priorité de l'abonnement doit être inférieure à 100, qui correspond à la priorité du serveur de publication.  
   
-`[ @sync_type = ] 'sync_type'` Est le type de synchronisation d’abonnement. *sync_type*est **nvarchar (15)**, avec une valeur par défaut **automatique**. Peut être **automatique** ou **aucun**. Si **automatique**, le schéma et les données initiales des tables publiées sont transférées vers l’abonné tout d’abord. Si **aucun**, il est supposé l’abonné possède déjà le schéma et les données initiales des tables publiées. Les données et les tables système sont toujours transférées.  
+`[ @sync_type = ] 'sync_type'` Est le type de synchronisation d’abonnement. *sync_type*est **nvarchar (15)** , avec une valeur par défaut **automatique**. Peut être **automatique** ou **aucun**. Si **automatique**, le schéma et les données initiales des tables publiées sont transférées vers l’abonné tout d’abord. Si **aucun**, il est supposé l’abonné possède déjà le schéma et les données initiales des tables publiées. Les données et les tables système sont toujours transférées.  
   
 > [!NOTE]  
 >  Nous ne recommandons pas la valeur **aucun**.  
   
-`[ @description = ] 'description'` Est une brève description de cet abonnement par extraction. *Description*est **nvarchar (255)**, avec NULL comme valeur par défaut. Cette valeur est affichée par le moniteur de réplication dans le **nom convivial** colonne, qui peut être utilisé pour trier les abonnements pour une publication analysée.  
+`[ @description = ] 'description'` Est une brève description de cet abonnement par extraction. *Description*est **nvarchar (255)** , avec NULL comme valeur par défaut. Cette valeur est affichée par le moniteur de réplication dans le **nom convivial** colonne, qui peut être utilisé pour trier les abonnements pour une publication analysée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

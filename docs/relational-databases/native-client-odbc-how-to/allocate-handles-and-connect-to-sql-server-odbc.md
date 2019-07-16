@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2144513a5f5de453c93215edcc2bb416d53781bc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0dc7cad1d720489db4044bbd34c6516035305365
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090819"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Allouer des handles et se connecter à SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "51677378"
   
 8.  Appelez SQLConnect pour utiliser une source de données existante pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     ou  
+     Ou  
   
      Appelez [SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md) à utiliser une chaîne de connexion pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

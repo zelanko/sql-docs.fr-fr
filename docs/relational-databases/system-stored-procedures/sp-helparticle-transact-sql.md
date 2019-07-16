@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cffdecba62283e3fc404c3630866467bc3a2b1c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084993"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +56,9 @@ sp_helparticle [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**article id**|**Int**|ID de l’article.|  
+|**id d’article**|**int**|ID de l’article.|  
 |**nom de l’article**|**sysname**|Nom de l'article.|  
 |**objet de base**|**nvarchar(257)**|Nom de la table sous-jacente représentée par l'article ou la procédure stockée.|  
 |**objet de destination**|**sysname**|Nom de la table de destination (abonnement)|  
@@ -83,11 +82,11 @@ sp_helparticle [ @publication = ] 'publication'
 |**unqualified_sync_object**|**sysname**|Nom de la vue qui définit l'article publié, sans le nom du propriétaire.|  
 |**filter_owner**|**sysname**|Propriétaire du filtre.|  
 |**unqua_filter**|**sysname**|Nom du filtre, sans le nom du propriétaire.|  
-|**auto_identity_range**|**Int**|Indicateur signalant si la gestion automatique de plages d'identité était activée sur la publication au moment de sa création. **1** signifie que la plage d’identité automatique est activée ; **0** signifie qu’elle est désactivée.|  
-|**publisher_identity_range**|**Int**|Plage de taille de la plage d’identité sur le serveur de publication si l’article a *identityrangemanagementoption* définie sur **automatique** ou **auto_identity_range** défini sur  **true**.|  
+|**auto_identity_range**|**int**|Indicateur signalant si la gestion automatique de plages d'identité était activée sur la publication au moment de sa création. **1** signifie que la plage d’identité automatique est activée ; **0** signifie qu’elle est désactivée.|  
+|**publisher_identity_range**|**int**|Plage de taille de la plage d’identité sur le serveur de publication si l’article a *identityrangemanagementoption* définie sur **automatique** ou **auto_identity_range** défini sur  **true**.|  
 |**identity_range**|**bigint**|Plage de taille de la plage d’identité sur l’abonné si l’article a *identityrangemanagementoption* définie sur **automatique** ou **auto_identity_range** défini sur  **true**.|  
 |**threshold**|**bigint**|Valeur de pourcentage indiquant le moment où l'Agent de distribution affecte une nouvelle plage d'identité.|  
-|**identityrangemanagementoption**|**Int**|Indique la gestion des plages d'identité appliquée à l'article.|  
+|**identityrangemanagementoption**|**int**|Indique la gestion des plages d'identité appliquée à l'article.|  
 |**fire_triggers_on_snapshot**|**bit**|Indique si les déclencheurs de l'utilisateur répliqués sont exécutés lorsque l'instantané initial est appliqué.<br /><br /> **1** = utilisateur déclencheurs sont exécutés.<br /><br /> **0** = utilisateur déclencheurs ne sont pas exécutées.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

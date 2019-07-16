@@ -1,5 +1,5 @@
 ---
-title: expanded-QName (XQuery) | Microsoft Docs
+title: Expanded-QName (XQuery) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e95081c03a5a3f91b601e9db1ddbb24b9c5f295a
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004584"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Fonctions relatives aux QName : expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
-### <a name="a-replacing-a-qname-type-node-value"></a>A. Remplacement d'une valeur de nœud de type QName  
+### <a name="a-replacing-a-qname-type-node-value"></a>R. Remplacement d'une valeur de nœud de type QName  
  Cet exemple montre comment vous pouvez modifier la valeur d'un nœud d'élément de type QName. Cet exemple illustre les opérations suivantes :  
   
 -   Crée une collection de schémas XML qui définit un élément de type QName.  
@@ -114,7 +113,7 @@ SELECT * from T
 go  
 ```  
   
- Voici l'ensemble de résultats. l'élément <`ElemQN`> de type QName possède désormais une nouvelle valeur :  
+ Voici l'ensemble de résultats. Notez que l’élément <`ElemQN`> de QName type a maintenant une nouvelle valeur :  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -132,7 +131,7 @@ drop xml schema collection SC
 go  
 ```  
   
-### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>b. Gestion des limites liées à l'utilisation de la fonction expanded-QName()  
+### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>B. Gestion des limites liées à l'utilisation de la fonction expanded-QName()  
  Le **expanded-QName** fonction ne peut pas être utilisée dans la construction XML. L'exemple suivant illustre ce comportement. Pour contourner cette limite, l'exemple insère d'abord un nœud, puis le modifie.  
   
 ```  
@@ -158,7 +157,7 @@ SELECT *
 FROM T  
 ```  
   
- La tentative suivante d'ajout d'un autre élément <`root`> se solde par un échec car la fonction n'est pas prise en charge dans la construction XML.  
+ La tentative suivante ajoute un autre <`root`> élément mais échoue, car la fonction se solde par n’est pas pris en charge dans la construction XML.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -166,7 +165,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- Une solution à ce problème consiste à insérer une instance avec une valeur pour l'élément <`root`> puis à la modifier. Dans cet exemple, une valeur initiale nil est utilisée lorsque l'élément <`root`> est inséré. La collection de schémas XML utilisée dans cet exemple autorise une valeur nil pour l'élément <`root`>.  
+ Une solution consiste à insérer une instance avec une valeur pour le <`root`> élément, puis le modifier. Dans cet exemple, une valeur initiale nil est utilisée lorsque le <`root`> élément est inséré. La collection de schémas XML dans cet exemple autorise une valeur nil pour le <`root`> élément.  
   
 ```  
 update T SET xmlCol.modify('  

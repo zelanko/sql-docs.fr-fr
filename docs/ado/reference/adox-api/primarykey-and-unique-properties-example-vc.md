@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d51814a2-ff7d-48ed-b719-99776da2091a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2c7f9c03794ce375e902773f6d0231bf76e2031b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b81ad98725bb48fe03e472cdf5cfdbbf047aaef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965539"
 ---
 # <a name="primarykey-and-unique-properties-example-vc"></a>PrimaryKey et Unique, exemples de propriétés (VC++)
 Cet exemple montre la [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) et [Unique](../../../ado/reference/adox-api/unique-property-adox.md) propriétés d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Le code crée une nouvelle table avec deux colonnes. Le **PrimaryKey** et **Unique** propriétés sont utilisées pour définir une colonne clé primaire pour laquelle les valeurs en double ne sont pas autorisées.  

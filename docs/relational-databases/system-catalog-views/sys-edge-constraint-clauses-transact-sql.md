@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 23895b8321e5f772972821c24b652dd8b85318aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26b347703a632a4147f8dcba369efaa272b4cef9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62858842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079352"
 ---
 # <a name="sysedgeconstraintclauses-transact-sql"></a>sys.edge_constraint_clauses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Contient une ligne par la clause d’une contrainte d’arête.
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|object_id de la contrainte d’arête.|  
+|**object_id**|**int**|object_id de la contrainte d’arête.|  
 |**from_object_id**|**Int**|object_id de la table de nœud FROM.|  
-|**to_object_id**|**Int**|object_id de la table de nœud de destination.|  
-|**clause_number**|**Int**|Index d’entier généré en interne de la clause.|  
+|**to_object_id**|**int**|object_id de la table de nœud de destination.|  
+|**clause_number**|**int**|Index d’entier généré en interne de la clause.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

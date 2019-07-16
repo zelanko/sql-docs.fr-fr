@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 72a292724a08917b18baedd6a3adbb8dfd00f739
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e78b5a8640918291fc68e5b4882448b94a1b9d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079526"
 ---
 # <a name="sysdatabaserecoverystatus-transact-sql"></a>sys.database_recovery_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +39,9 @@ ms.locfileid: "47707347"
   
 -   Avoir l’autorisation CREATE DATABASE dans le **master** base de données.    
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|ID de la base de données, unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**database_id**|**int**|ID de la base de données, unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**database_guid**|**uniqueidentifier**|Utilisé pour associer ensemble tous les fichiers de base de données d'une base de données. Tous les fichiers possèdent ce GUID dans leur page d'en-tête afin que la base de données démarre comme prévu. Une seule base de données doit posséder ce GUID, mais des doublons peuvent être créés en copiant et en joignant des bases de données. RESTORE génère toujours un nouveau GUID lorsque vous restaurez une base de données qui n'existe pas encore.<br /><br /> NULL= Base de données hors connexion, ou la base de données ne démarrera pas.|  
 |**family_guid**|**uniqueidentifier**|Identificateur de la « famille de sauvegarde » de la base de données pour détecter les états de restauration correspondants.<br /><br /> NULL = base de données est hors connexion ou de la base de données ne démarrera pas.|  
 |**last_log_backup_lsn**|**numeric(25,0)**|Numéro de la séquence de journal à partir de la prochaine sauvegarde du journal.<br /><br /> Si NULL, un sauvegarde du journal des transactions jusqu'à n’est pas possible, car il n’existe aucune sauvegarde de base de données actuelle ou la base de données est de récupération SIMPLE.|  
@@ -50,7 +49,7 @@ ms.locfileid: "47707347"
 |**first_recovery_fork_guid**|**uniqueidentifier**|Identificateur de la fourchette de récupération de début.<br /><br /> NULL= Base de données hors connexion, ou la base de données ne démarrera pas.|  
 |**fork_point_lsn**|**numeric(25,0)**|Si **first_recovery_fork_guid** n’est pas égal ( ! =) pour **recovery_fork_guid**, **fork_point_lsn** est le numéro de séquence de journal du point du branchement actuel. Dans le cas contraire, la valeur est NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

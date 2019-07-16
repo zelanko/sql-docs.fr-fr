@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: 73dae456-7044-4b00-b0bd-990ef810b356
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d6957119fb21343c4b66c05948c72b8a8cc55d34
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6b113044f46a09b54ed8c9d6f0fafdab2ec5b06c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061389"
 ---
 # <a name="syseventnotificationeventtypes-transact-sql"></a>sys.event_notification_event_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque événement ou groupe d'événements qui déclenche une notification d'événement.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**type**|**Int**|Type d'événement ou groupe d'événements qui active une notification d'événement.|  
+|**type**|**int**|Type d'événement ou groupe d'événements qui active une notification d'événement.|  
 |**type_name**|**nvarchar(128)**|Nom d'un événement ou groupe d'événements. Cela peut être spécifié dans la clause FOR d’une [CREATE EVENT NOTIFICATION](../../t-sql/statements/create-event-notification-transact-sql.md) instruction.|  
-|**parent_type**|**Int**|Type de groupe d'événements qui est le parent de l'événement ou du groupe d'événements.|  
+|**parent_type**|**int**|Type de groupe d'événements qui est le parent de l'événement ou du groupe d'événements.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

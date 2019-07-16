@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71df952769ae509ba25b256ecdc9ddef3a54ebe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926645"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Fournisseur Microsoft OLE DB pour Microsoft Jet présentation
 Le fournisseur OLE DB pour Microsoft Jet permet à ADO accéder aux bases de données Microsoft Jet.
@@ -62,7 +61,7 @@ Microsoft.Jet.OLEDB.4.0
 |---------------|-----------------|
 |Jet OLEDB:Compact espace récupéré quantité (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|Indique une estimation de la quantité d’espace, en octets, qui peuvent être récupérées par le compactage de la base de données. Cette valeur est valide uniquement après avoir établi une connexion de base de données.|
 |Contrôle de OLEDB:Connection Jet (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Indique si les utilisateurs peuvent se connecter à la base de données.|
-|Jet OLEDB:Create System Database (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|Indique si une base de données système doit être créé lors de la création d’une source de données.|
+|Jet OLEDB : créer la base de données système (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|Indique si une base de données système doit être créé lors de la création d’une source de données.|
 |Jet OLEDB : Database le Mode de verrouillage (DBPROP_JETOLEDB_DATABASELOCKMODE)|Indique le mode de verrouillage pour cette base de données. Le premier utilisateur pour ouvrir la base de données détermine le mode utilisé lorsque la base de données est ouverte.|
 |Jet OLEDB : Database Password (DBPROP_JETOLEDB_DATABASEPASSWORD)|Indique le mot de passe de base de données.|
 |Jet OLEDB : ne copiez pas les paramètres régionaux sur Compact (DBPROP_JETOLEDB_COMPACT_DONTCOPYLOCALE)|Indique si Jet doit copier les informations de paramètres régionaux lorsque vous compactez une base de données.|
@@ -132,8 +131,8 @@ Microsoft.Jet.OLEDB.4.0
 |Terme de catalogue|DBPROP_CATALOGTERM|
 |Définition de colonne|DBPROP_COLUMNDEFINITION|
 |Catalogue actuel|DBPROP_CURRENTCATALOG|
-|Source de données|DBPROP_INIT_DATASOURCE|
-|Nom de la source de données|DBPROP_DATASOURCENAME|
+|source de données|DBPROP_INIT_DATASOURCE|
+|Data Source Name|DBPROP_DATASOURCENAME|
 |Objet de Source de données modèle de thread|DBPROP_DSOTHREADMODEL|
 |Nom SGBD|DBPROP_DBMSNAME|
 |Version SGBD|DBPROP_DBMSVER|
@@ -179,7 +178,7 @@ Microsoft.Jet.OLEDB.4.0
 |Terme de table|DBPROP_TABLETERM|
 |Transaction DDL|DBPROP_SUPPORTEDTXNDDL|
 |ID d'utilisateur|DBPROP_AUTH_USERID|
-|Nom d'utilisateur|DBPROP_USERNAME|
+|User Name|DBPROP_USERNAME|
 |Handle de fenêtre|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propriétés dynamiques du Recordset

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b370d18c6c5c1a90be370aeef2f910713a51695b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0b5813635c14f569703f186ebe2a55dd933b8427
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030406"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>Conversions du type de données datetime de SQL en C
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,8 +47,8 @@ ms.locfileid: "52418580"
 |2|Les espaces de début et de fin sont ignorés.|  
 |3|La chaîne est analysée en date, time, timezone ou timezoneoffset et autorise jusqu'à neuf chiffres pour les fractions de seconde. Si un timezoneoffset est analysé, l'heure est convertie en fuseau horaire du client. Si une erreur se produit pendant cette conversion, un enregistrement de diagnostic est généré avec SQLSTATE 22018 et le message « Dépassement du champ Datetime ».|  
 |4|Si la valeur n'est pas une valeur date, timestamp ou timestampoffset valide, un enregistrement de diagnostic est généré avec SQLSTATE 22018 et le message « Valeur de caractère non valide pour la spécification de la casse ».|  
-|5|Si l'heure n'est pas nulle, un enregistrement de diagnostic est généré avec SQLSTATE 01S07 et le message « Troncation fractionnelle ».|  
-|6|Si la valeur n'est pas une valeur time, timestamp ou timestampoffset valide, un enregistrement de diagnostic est généré avec SQLSTATE 22018 et le message « Valeur de caractère non valide pour la spécification de la casse ».|  
+|5\.|Si l'heure n'est pas nulle, un enregistrement de diagnostic est généré avec SQLSTATE 01S07 et le message « Troncation fractionnelle ».|  
+|6\.|Si la valeur n'est pas une valeur time, timestamp ou timestampoffset valide, un enregistrement de diagnostic est généré avec SQLSTATE 22018 et le message « Valeur de caractère non valide pour la spécification de la casse ».|  
 |7|Le composant date est ignoré.|  
 |8|Si les fractions de seconde ne sont pas nulles, un enregistrement de diagnostic est généré avec SQLSTATE 01S07 et le message « Troncation fractionnelle ».|  
 |9|Si la valeur n'est pas une valeur date, time, timestamp ou timestampoffset valide, un enregistrement de diagnostic est généré avec SQLSTATE 22018 et le message « Valeur de caractère non valide pour la spécification de la casse ».|  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 437b25af01544a1df6197a0d63e21ae2f7bee605
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07ca74ffb2b793038f230d2b3a5b265101a7eb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102343"
 ---
 # <a name="sysnumberedprocedureparameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,24 +37,24 @@ ms.locfileid: "47824237"
 > [!NOTE]  
 >  Les paramètres XML et CLR ne sont pas pris en charge pour les procédures numérotées.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**Int**|ID de l’objet auquel appartient ce paramètre.|  
 |**procedure_number**|**smallint**|Numéro de cette procédure dans l'objet (supérieur ou égal à 2).|  
-|**nom**|**sysname**|Nom du paramètre. Est unique au sein de **procedure_number**.|  
+|**name**|**sysname**|Nom du paramètre. Est unique au sein de **procedure_number**.|  
 |**parameter_id**|**Int**|ID du paramètre. Est unique au sein de la **procedure_number**.|  
 |**system_type_id**|**tinyint**|ID du type de système du paramètre|  
 |**user_type_id**|**Int**|ID du type, tel que défini par l'utilisateur, du paramètre.|  
 |**max_length**|**smallint**|Longueur maximale du paramètre, en octets.<br /><br /> -1 = le type de données de colonne est varchar(max), nvarchar(max) ou varbinary(max).|  
-|**Précision**|**tinyint**|Précision du paramètre s'il est de type numérique ; sinon, 0.|  
-|**Mise à l’échelle**|**tinyint**|Échelle du paramètre s'il est de type numérique ; sinon, 0.|  
+|**precision**|**tinyint**|Précision du paramètre s'il est de type numérique ; sinon, 0.|  
+|**scale**|**tinyint**|Échelle du paramètre s'il est de type numérique ; sinon, 0.|  
 |**is_output**|**bit**|1 = le paramètre est un paramètre de sortie ou de retour ; sinon, 0|  
 |**is_cursor_ref**|**bit**|1 = le paramètre est un paramètre de référence de curseur.|  
   
 > [!NOTE]  
 >  Les paramètres XML et CLR ne sont pas pris en charge pour les procédures numérotées.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -14,24 +14,23 @@ helpviewer_keywords:
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad210f91d00f9e692c8ee20fef01a808a01501c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fae642b46b4c652583622ec4832b3217d0b1681c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068562"
 ---
 # <a name="data-source-specification-subkeys"></a>Sous-clés de spécification de source de données
 Chaque source de données répertoriée dans la sous-clé de Sources de données ODBC a une sous-clé de son propre. Cette sous-clé a le même nom que la valeur correspondante sous la sous-clé de Sources de données ODBC. Les valeurs sous cette sous-clé doivent répertorier la DLL du pilote et peuvent indiquer une description de la source de données. Si le pilote prend en charge les traducteurs, les valeurs peuvent répertorier le nom d’un convertisseur de valeur par défaut, la DLL de traduction par défaut et l’option de traduction par défaut. Les valeurs peuvent également énumérer les autres informations requises par le pilote pour se connecter à la source de données. Par exemple, le pilote peut nécessiter un nom de serveur, le nom de la base de données ou le nom de schéma.  
   
  Les formats des valeurs sont comme indiqué dans le tableau suivant. Seule la valeur du pilote est requise.  
   
-|Nom|Type de données|Données|  
+|Name|Type de données|Données|  
 |----------|---------------|----------|  
 |Description|REG_SZ|*description*|  
-|Pilote|REG_SZ|*driver-DLL-path*|  
-|TranslationDLL|REG_SZ|*translator-DLL-path*|  
+|Pilote|REG_SZ|*chemin de DLL de pilote*|  
+|TranslationDLL|REG_SZ|*chemin de DLL de traduction*|  
 |TranslationName|REG_SZ|*translator-name*|  
 |TranslationOption|REG_SZ|*translation-option*|  
 |*opt-value-name*|*opt-value-type*|*opt-value-data*|  

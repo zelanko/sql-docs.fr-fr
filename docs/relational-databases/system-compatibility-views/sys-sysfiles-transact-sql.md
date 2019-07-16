@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b47f38d-1cff-404d-89d3-9342c451c802
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c2c139a914b511ab7ee80a0fdd180bab5654205a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a3554e254be0623e36719fe76b2d811908a939d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053467"
 ---
 # <a name="syssysfiles-transact-sql"></a>sys.sysfiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,16 +35,16 @@ ms.locfileid: "63047141"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**fileid**|**smallint**|Numéro unique d'identification de fichier pour chaque base de données.|  
 |**groupid**|**smallint**|Numéro d'identification du groupe de fichiers.|  
-|**size**|**Int**|Taille du fichier, en pages de 8 Ko.|  
+|**size**|**int**|Taille du fichier, en pages de 8 Ko.|  
 |**maxsize**|**Int**|Taille maximale du fichier, en pages de 8 Ko.<br /><br /> 0 = Croissance nulle.<br /><br /> -1 = Le fichier peut croître tant que le disque n'est pas saturé.<br /><br /> 268435456 = Le fichier journal peut croître pour atteindre une taille maximale de 2 To.<br /><br /> Remarque : Bases de données qui sont mis à niveau avec une taille de fichier journal illimitée signalera -1 pour la taille maximale du fichier journal.|  
-|**growth**|**Int**|Taille de croissance de la base de données. Peut être le nombre de pages ou le pourcentage de taille de fichier, en fonction de la valeur de **état**.<br /><br /> 0 = Croissance nulle.|  
+|**growth**|**int**|Taille de croissance de la base de données. Peut être le nombre de pages ou le pourcentage de taille de fichier, en fonction de la valeur de **état**.<br /><br /> 0 = Croissance nulle.|  
 |**status**|**Int**|Bits d’état pour le **croissance** valeur en mégaoctets (Mo) ou kilo-octets (Ko).<br /><br /> 0x2 = Fichier disque.<br /><br /> 0x40 = Fichier journal.<br /><br /> 0x100000 = Croissance. Cette valeur est un pourcentage et non le nombre de pages.|  
 |**perf**|**Int**|Réservé.|  
-|**nom**|**sysname**|Nom logique du fichier.|  
+|**name**|**sysname**|Nom logique du fichier.|  
 |**filename**|**nvarchar(260)**|Nom de l'unité physique. Inclut le chemin d'accès complet du fichier.|  
   
 ## <a name="see-also"></a>Voir aussi  

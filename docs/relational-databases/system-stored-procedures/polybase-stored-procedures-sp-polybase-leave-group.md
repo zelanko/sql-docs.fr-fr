@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef87a8f1-5407-47b5-b8bf-bd7d08c0f0fe
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 43f155de0eb81918d5129d404e7cd2f236957152
-ms.sourcegitcommit: 182b8f68bfb345e9e69547b6d507840ec8ddfd8b
+ms.openlocfilehash: 0071746f2d65dd0c9c699beeacf404bf3dd7bb65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43037902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941925"
 ---
 # <a name="sppolybaseleavegroup-transact-sql"></a>sp_polybase_leave_group (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_polybase_leave_group;
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation CONTROL SERVER.  
   
 ## <a name="remarks"></a>Notes  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71d43ef9-4a31-493e-b9e0-f864e9ef3ce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf41671abc6393a18fad06e1debd297fed1f04c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a74ed9d4dfe0afb8bf59abb11220a0677d000bfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947585"
 ---
 # <a name="guid-escape-sequences"></a>Séquences d’échappement de GUID
 ODBC utilise les séquences d’échappement pour les littéraux de GUID. La syntaxe de cette séquence d’échappement est comme suit :  
@@ -35,7 +34,7 @@ ODBC utilise les séquences d’échappement pour les littéraux de GUID. La syn
  *Échappement ODBC-guid* :: =  
      *Guid de l’initiateur-ÉCHAP ODBC* '*valeur de guid*' *ODBC ÉCHAP-marque de fin*  
   
- *ODBC-esc-initiator* ::= {  
+ *ODBC-ÉCHAP-initiateur* :: = {}  
   
  *ODBC ÉCHAP-marque de fin* :: =}  
   
@@ -43,16 +42,16 @@ ODBC utilise les séquences d’échappement pour les littéraux de GUID. La syn
   
  *guid-separator* ::= -  
   
- *clock-low-value* ::= *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
+ *horloge faible valeur* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
   
- *clock-middle-value* ::= *hex_digit hex_digit hex_digit hex_digit*  
+ *valeur du milieu d’horloge* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *clock-high-value* ::= *hex_digit hex_digit hex_digit hex_digit*  
+ *horloge de grande valeur* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *clock-seq-value* ::= *hex_digit hex_digit hex_digit hex_digit*  
+ *valeur Clock-seq* :: = *hex_digit hex_digit hex_digit hex_digit*  
   
- *clock-node-value* ::= *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
+ *valeur de nœud horloge* :: = *hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit hex_digit*  
   
- *hex_digit* ::= 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; A &#124; B &#124; C &#124; D &#124; E &#124; F  
+ *hex_digit* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; A &#124; B &#124; C &#124; D &#124; E &#124; F  
   
  La séquence d’échappement de littéral de GUID est pris en charge si le type de données GUID est pris en charge par la source de données. Une application doit appeler **SQLGetTypeInfo** pour déterminer si ce type de données est prise en charge.

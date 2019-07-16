@@ -19,38 +19,37 @@ helpviewer_keywords:
 ms.assetid: eecbb68e-9b4c-4243-94e2-8096a9cc7892
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4365ad34102965e163d18d26b3f9a139e6025bb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 63231301109f83243b431244028fddffb8cc6fe7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001324"
 ---
 # <a name="sysallparameters-transact-sql"></a>sys.all_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Affiche l'union de tous les paramètres qui appartiennent aux objets système ou définis par l'utilisateur.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**Int**|ID de l’objet auquel appartient ce paramètre.|  
-|**nom**|**sysname**|Nom du paramètre. Unique dans l'objet. Si l'objet est une fonction scalaire, le nom du paramètre est une chaîne de caractères vide dans la ligne qui représente la valeur renvoyée.|  
-|**parameter_id**|**Int**|Identificateur du paramètre. Unique dans l'objet. Si l’objet est une fonction scalaire, **parameter_id** = 0 représente la valeur de retour.|  
+|**name**|**sysname**|Nom du paramètre. Unique dans l'objet. Si l'objet est une fonction scalaire, le nom du paramètre est une chaîne de caractères vide dans la ligne qui représente la valeur renvoyée.|  
+|**parameter_id**|**int**|Identificateur du paramètre. Unique dans l'objet. Si l’objet est une fonction scalaire, **parameter_id** = 0 représente la valeur de retour.|  
 |**system_type_id**|**tinyint**|Identificateur du type système du paramètre.|  
-|**user_type_id**|**Int**|Identificateur du type du paramètre tel qu'il est défini par l'utilisateur.<br /><br /> Pour retourner le nom du type, joindre à la [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) vue sur cette colonne de catalogue.|  
-|**max_length**|**smallint**|Longueur maximale du paramètre en octets.<br /><br /> -1 = la colonne est de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.|  
-|**Précision**|**tinyint**|Précision du paramètre s'il est numérique ; sinon, 0.|  
-|**Mise à l’échelle**|**tinyint**|Échelle du paramètre s'il est numérique ; sinon, 0.|  
+|**user_type_id**|**int**|Identificateur du type du paramètre tel qu'il est défini par l'utilisateur.<br /><br /> Pour retourner le nom du type, joindre à la [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) vue sur cette colonne de catalogue.|  
+|**max_length**|**smallint**|Longueur maximale du paramètre en octets.<br /><br /> -1 = la colonne est de type de données **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , ou **xml**.|  
+|**precision**|**tinyint**|Précision du paramètre s'il est numérique ; sinon, 0.|  
+|**scale**|**tinyint**|Échelle du paramètre s'il est numérique ; sinon, 0.|  
 |**is_output**|**bit**|1 = le paramètre est renvoyé ; sinon, 0.|  
 |**is_cursor_ref**|**bit**|1 = le paramètre est un paramètre de référence de curseur.|  
 |**has_default_value**|**bit**|1 = le paramètre a une valeur par défaut.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve seulement les valeurs par défaut des objets CLR dans cet affichage catalogue ; par conséquent, cette colonne a toujours une valeur nulle (0) pour les objets [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour afficher la valeur par défaut d’un paramètre dans un [!INCLUDE[tsql](../../includes/tsql-md.md)] de l’objet, interrogez la **définition** colonne de la [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vue de catalogue, ou utiliser le [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md)fonction système.|  
 |**is_xml_document**|**bit**|1 = Le contenu est un document XML complet.<br /><br /> 0 = le contenu est un fragment de document ou le type de données de la colonne n’est pas **xml**.|  
 |**default_value**|**sql_variant**|Si **has_default_value** est 1, la valeur de cette colonne est la valeur de la valeur par défaut pour le paramètre ; sinon, NULL.|  
-|**xml_collection_id**|**Int**|Identificateur de la collection du schéma XML utilisé pour valider le paramètre.<br /><br /> Différent de zéro si le type de données du paramètre **xml** et le code XML est tapé.<br /><br /> 0 = il n'existe pas de collection de schéma XML ou le paramètre n'est pas de type XML.|  
+|**xml_collection_id**|**int**|Identificateur de la collection du schéma XML utilisé pour valider le paramètre.<br /><br /> Différent de zéro si le type de données du paramètre **xml** et le code XML est tapé.<br /><br /> 0 = il n'existe pas de collection de schéma XML ou le paramètre n'est pas de type XML.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

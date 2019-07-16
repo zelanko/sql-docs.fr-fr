@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5c63b6e2f128871740f816cf0772f44646e31f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946172"
 ---
 # <a name="xml-construction-xquery"></a>Construction XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Bien que la construction d'éléments à partir d'expressions constantes, comme dans cet exemple, soit utile, la véritable puissance de cette fonctionnalité du langage XQuery réside dans la possibilité de construire un document XML qui extrait dynamiquement des données d'une base de données. Vous pouvez utiliser des accolades pour spécifier les expressions de requête. Dans le document XML obtenu, l'expression est remplacée par sa valeur. Par exemple, la requête suivante construit un élément <`NewRoot`> avec un élément enfant (<`e`>). La valeur de l’élément <`e`> est calculée en spécifiant une expression de chemin d’accès à l’intérieur des accolades (« {...} »).  
+ Bien que la construction d'éléments à partir d'expressions constantes, comme dans cet exemple, soit utile, la véritable puissance de cette fonctionnalité du langage XQuery réside dans la possibilité de construire un document XML qui extrait dynamiquement des données d'une base de données. Vous pouvez utiliser des accolades pour spécifier les expressions de requête. Dans le document XML obtenu, l'expression est remplacée par sa valeur. Par exemple, la requête suivante construit un <`NewRoot`> élément avec un élément enfant (<`e`>). La valeur de l’élément <`e`> est calculée en spécifiant une expression de chemin d’accès à l’intérieur des accolades (« {...} »).  
   
 ```sql
 DECLARE @x xml;  
@@ -137,7 +136,7 @@ SELECT @y;
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
- La requête suivante est un autre exemple de construction d'éléments à l'aide du constructeur d'élément direct. En outre, la valeur de l'élément <`FirstLocation`> est obtenue en exécutant l'expression comprise entre les accolades. L'expression de requête renvoie les étapes de fabrication suivies sur le premier site de production à partir de la colonne Instructions de la table Production.ProductModel.  
+ La requête suivante est un autre exemple de construction d'éléments à l'aide du constructeur d'élément direct. En outre, la valeur de la <`FirstLocation`> élément est obtenu en exécutant l’expression entre accolades. L'expression de requête renvoie les étapes de fabrication suivies sur le premier site de production à partir de la colonne Instructions de la table Production.ProductModel.  
   
 ```sql
 SELECT Instructions.query('  
@@ -235,11 +234,11 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- L'élément construit <`ProductModel`> possède un attribut ProductModelID et les nœuds enfants suivants :  
+ L’élément construit <`ProductModel`> a un attribut ProductModelID et les nœuds enfants :  
   
 -   Un nœud de texte (`This is product model catalog description.`).  
   
--   Un nœud d'élément (<`Summary`>). Ce nœud possède un nœud de texte enfant (`Some description`).  
+-   Un nœud d’élément, <`Summary`>. Ce nœud possède un nœud de texte enfant (`Some description`).  
   
  Lorsque vous construisez un attribut, vous pouvez spécifier sa valeur avec une expression entre accolades. Dans ce cas, le résultat de l'expression est renvoyé en tant que valeur de l'attribut.  
   
@@ -337,7 +336,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
     ```  
   
--   Les séquences hétérogènes ne sont pas prises en charge. Toute tentative d'affectation d'une séquence hétérogène comme valeur d'attribut renvoie une erreur, comme le montre l'exemple suivant. Dans cet exemple, une séquence hétérogène, composée d'une chaîne « Item » et d'un élément <`x`>, est spécifiée comme valeur d'attribut :  
+-   Les séquences hétérogènes ne sont pas prises en charge. Toute tentative d'affectation d'une séquence hétérogène comme valeur d'attribut renvoie une erreur, comme le montre l'exemple suivant. Dans cet exemple, une séquence hétérogène, une chaîne « Item » et un élément <`x`>, est spécifié comme valeur d’attribut :  
   
     ```sql
     DECLARE @x xml  
@@ -382,7 +381,7 @@ where ProductModelID=7;
 -   Dans le prologue XQuery.  
   
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>Utilisation d'un attribut de déclaration d'espace de noms pour ajouter des espaces de noms  
- L'exemple suivant utilise un attribut de déclaration d'espace de noms dans la construction de l'élément <`a`> pour déclarer un espace de noms par défaut. La construction de l'élément enfant <`b`> annule la déclaration de l'espace de noms par défaut déclaré dans l'élément parent.  
+ L’exemple suivant utilise un attribut de déclaration d’espace de noms dans la construction de l’élément <`a`> pour déclarer un espace de noms par défaut. La construction de l’élément enfant <`b`> annule la déclaration de l’espace de noms par défaut déclaré dans l’élément parent.  
   
 ```sql
 declare @x xml  
@@ -401,7 +400,7 @@ select @x.query( '
 </a>  
 ```  
   
- Vous pouvez affecter un préfixe à l'espace de noms. Le préfixe est spécifié dans la construction de l'élément <`a`>.  
+ Vous pouvez affecter un préfixe à l'espace de noms. Le préfixe est spécifié dans la construction de l’élément <`a`>.  
   
 ```sql
 declare @x xml  
@@ -420,7 +419,7 @@ select @x.query( '
 </x:a>  
 ```  
   
- Vous pouvez annuler la déclaration d'un espace de noms par défaut dans la construction XML, mais pas celle d'un préfixe d'espace de noms. La requête suivante renvoie une erreur car vous ne pouvez pas annuler la déclaration d'un préfixe tel que spécifié dans la construction de l'élément <`b`>.  
+ Vous pouvez annuler la déclaration d'un espace de noms par défaut dans la construction XML, mais pas celle d'un préfixe d'espace de noms. La requête suivante retourne une erreur, car vous ne pouvez pas annuler-déclarer un préfixe tel que spécifié dans la construction de l’élément <`b`>.  
   
 ```sql
 declare @x xml  
@@ -431,7 +430,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- L'espace de noms nouvellement construit peut être utilisé dans la requête. Par exemple, la requête suivante déclare un espace de noms lors de la construction de l'élément <`FirstLocation`> et spécifie le préfixe dans les expressions pour les valeurs d'attribut LocationID et SetupHrs.  
+ L'espace de noms nouvellement construit peut être utilisé dans la requête. Par exemple, la requête suivante déclare un espace de noms dans la construction de l’élément <`FirstLocation`> et spécifie le préfixe dans les expressions pour les valeurs d’attribut LocationID et SetupHrs.  
   
 ```sql
 SELECT Instructions.query('  
@@ -445,7 +444,7 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- La création d'un nouveau préfixe d'espace de noms de cette façon écrase toute déclaration d'espace de noms déjà existante pour ce préfixe. Par exemple, la déclaration d'espace de noms `AWMI="https://someURI"` dans le prologue de la requête est remplacée par la déclaration d'espace de noms dans l'élément <`FirstLocation`>.  
+ La création d'un nouveau préfixe d'espace de noms de cette façon écrase toute déclaration d'espace de noms déjà existante pour ce préfixe. Par exemple, la déclaration d’espace de noms, `AWMI="https://someURI"`, dans la requête prologue est remplacée par la déclaration d’espace de noms dans le <`FirstLocation`> élément.  
   
 ```sql
 SELECT Instructions.query('  
@@ -471,7 +470,7 @@ select @x.query( '
             <a><b xmlns=""/></a>' )  
 ```  
   
- Dans la construction de l'élément <`b`>, l'attribut de déclaration d'espace de noms est spécifié avec une chaîne vide en guise de valeur. Cette opération annule la déclaration de l'espace de noms par défaut déclaré dans le parent.  
+ Notez que dans la construction de l’élément <`b`>, l’attribut de déclaration d’espace de noms est spécifié avec une chaîne vide en tant que sa valeur. Cette opération annule la déclaration de l'espace de noms par défaut déclaré dans le parent.  
   
 
 Voici le résultat obtenu :  
@@ -549,7 +548,7 @@ test
   
  **Remarque** pour obtenir un exemple d’utilisation d’un constructeur de nœud de texte explicite, consultez l’exemple spécifique dans [insérer &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
- Dans la requête suivante, le document XML construit comprend un élément, deux attributs, un commentaire et une instruction de traitement. Une virgule est utilisée avant <`FirstLocation`> car une séquence est en cours de construction.  
+ Dans la requête suivante, le document XML construit comprend un élément, deux attributs, un commentaire et une instruction de traitement. Notez qu’une virgule est utilisée avant le <`FirstLocation`>, car une séquence est en cours de construction.  
   
 ```sql
 SELECT Instructions.query('  
@@ -590,7 +589,7 @@ where ProductModelID=7;
   
 -   attribut  
   
--   texte  
+-   text  
   
  Dans le cas des nœuds d'élément et d'attribut, ces mots clés sont suivis du nom du nœud ainsi que de l'expression, entre accolades, qui génère le contenu du nœud. Dans l'exemple suivant, vous construisez ce document XML :  
   

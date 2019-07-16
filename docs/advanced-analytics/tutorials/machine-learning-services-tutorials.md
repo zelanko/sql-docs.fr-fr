@@ -7,13 +7,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 6d68d7f36ea6539142bab0ea0e4b50ef6dca8444
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c8e8ad13ddc34148f1718b7843e00545cd758c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962093"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>Didacticiels de SQL Server Machine Learning dans R et Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +52,7 @@ Commencez ici pour découvrir comment exécuter R ou Python à partir de T-SQL e
 + [R : Créer un modèle prédictif](rtsql-create-a-predictive-model-r.md)
 + [R : Prédire et tracer à partir du modèle](rtsql-predict-and-plot-from-model.md)
 
-## <a name="tutorials"></a>Didacticiels
+## <a name="tutorials"></a>Tutoriels
 
 Créez sur votre première expérience avec R et Python et T-SQL en prenant les examiner plus en détail les packages de Microsoft et les opérations plus spécialisées telles que le passage à partir de local à des contextes de calcul à distance.
 
@@ -69,7 +68,7 @@ Ces exemples et les démonstrations fournies par l’équipe de développement S
 | Lien | Description | 
 |------|-------------|
 | [Exécuter le client clustering à l’aide de R et SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | Utiliser l’apprentissage non supervisé pour segmenter les clients basés sur les données de ventes. Cet exemple utilise l’algorithme rxKmeans évolutive à partir de Microsoft R pour générer le modèle de clustering. |
-| [Exécuter le client clustering à l’aide de Python et SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Découvrez comment utiliser l’algorithme de Kmeans pour effectuer la mise en cluster non supervisé des clients. Cet exemple utilise le langage Python-database.| SQL Server 2017 |
+| [Exécuter le client clustering à l’aide de Python et SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Découvrez comment utiliser l’algorithme de Kmeans pour effectuer la mise en cluster non supervisé des clients. Cet exemple utilise le langage Python-database.| SQL Server 2017 |
 | [Créer un modèle prédictif à l’aide de R et SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Découvrez comment une entreprise de location de skis peut utiliser machine learning pour prédire les locations à venir, qui permet du plan d’activités et du personnel pour répondre à la demande future. Cet exemple utilise les algorithmes Microsoft pour générer des modèles d’arbres de décision et de régression logistique. | 
 | [Créer un modèle prédictif à l’aide de Python et SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Générez l’application d’analyse de location ski à l’aide de Python, pour faciliter la planification de la demande future. Cet exemple utilise la nouvelle bibliothèque Python, **revoscalepy**, pour créer un modèle de régression linéaire. | 
 

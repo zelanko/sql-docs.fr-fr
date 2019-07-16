@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_waiting_tasks (Transact-SQL) | Microsoft Docs
+title: Sys.dm_os_waiting_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6ce0fa8270a05d8c3385cbc7b5c25edeaa84bc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899634"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62998002"
 > [!NOTE]  
 >  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_waiting_tasks**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary(8)**|Adresse de la tâche en attente.|  
 |**session_id**|**smallint**|ID de la session associée à la tâche.|  
@@ -46,7 +45,7 @@ ms.locfileid: "62998002"
 |**resource_address**|**varbinary(8)**|Adresse de la ressource que la tâche attend.|  
 |**blocking_task_address**|**varbinary(8)**|Tâche qui mobilise actuellement cette ressource.|  
 |**blocking_session_id**|**smallint**|ID de la session qui bloque la demande. Si cette colonne est NULL, la demande n'est pas bloquée, ou les informations de session de la session bloquant la demande ne sont pas disponibles (ou ne peuvent pas être identifiées).<br /><br /> -2 = La ressource qui bloque la demande appartient à une transaction distribuée orpheline.<br /><br /> -3 = La ressource qui bloque la demande appartient à une transaction de récupération différée.<br /><br /> -4 = L'ID de session du propriétaire du verrou qui bloque la demande n'a pas pu être déterminé en raison de transitions d'état de verrou interne.|  
-|**blocking_exec_context_id**|**Int**|ID du contexte d'exécution de la tâche bloquante.|  
+|**blocking_exec_context_id**|**int**|ID du contexte d'exécution de la tâche bloquante.|  
 |**resource_description**|**nvarchar(3072)**|Description de la ressource actuellement mobilisée. Pour plus d'informations, consultez la liste ci-dessous.|  
 |**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
@@ -85,17 +84,17 @@ ms.locfileid: "62998002"
   
     -   Pour la base de données : Databaselock subresource =\<databaselock-subresource > dbid =\<db-id >  
   
-    -   For FILE: filelock fileid=\<file-id> subresource=\<filelock-subresource> dbid=\<db-id>  
+    -   Pour un fichier : Filelock fileid =\<fichier-id > subresource =\<filelock-subresource > dbid =\<db-id >  
   
     -   Pour l’objet : Objectlock lockPartition =\<lock-partition-id > objid =\<obj-id > subresource =\<objectlock-subresource > dbid =\<db-id >  
   
-    -   For PAGE: pagelock fileid=\<file-id> pageid=\<page-id> dbid=\<db-id> subresource=\<pagelock-subresource>  
+    -   Pour PAGE : Pagelock fileid =\<fichier-id > pageid =\<page-id > dbid =\<db-id > subresource =\<pagelock-subresource >  
   
     -   Pour Key : Keylock hobtid =\<hobt-id > dbid =\<db-id >  
   
     -   Pour EXTENT : Extentlock fileid =\<fichier-id > pageid =\<page-id > dbid =\<db-id >  
   
-    -   For RID: ridlock fileid=\<file-id> pageid=\<page-id> dbid=\<db-id>  
+    -   Pour RID : Ridlock fileid =\<fichier-id > pageid =\<page-id > dbid =\<db-id >  
   
     -   Pour l’APPLICATION : Applicationlock hash =\<hash > databasePrincipalId =\<rôle-id > dbid =\<db-id >  
   
@@ -131,14 +130,14 @@ ms.locfileid: "62998002"
   
 -   \<db-id>:\<file-id>:\<page-in-file>  
   
--   \<GUID>  
+-   \<GUID >  
   
 -   \<latch-class> (\<latch-address>)  
   
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
  
 ## <a name="example"></a>Exemple
 Cet exemple identifie les sessions bloquées.  Exécuter le [!INCLUDE[tsql](../../includes/tsql-md.md)] interroger dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].

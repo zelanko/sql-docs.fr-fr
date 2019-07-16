@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2786295b344cfc2df6ae613e42a39f71aee4d3d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b113fbd8111072790d1f0904b3e751c6629725b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945957"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Opérateurs XQuery sur le type de données xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "56038890"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-general-operators"></a>A. Utilisation d'opérateurs généraux  
+### <a name="a-using-general-operators"></a>R. Utilisation d'opérateurs généraux  
  La requête illustre l'utilisation d'opérateurs généraux qui s'appliquent à des séquences et qui comparent également des séquences. La requête récupère une séquence de numéros de téléphone pour chaque client à partir de la **AdditionalContactInfo** colonne de la **Contact** table. Cette séquence est ensuite comparée à la séquence de deux numéros de téléphone ("111-111-1111", "222-2222").  
   
  La requête utilise le **=** opérateur de comparaison. Chaque nœud dans la séquence situé à droite de la **=** opérateur est comparé à chaque nœud de la séquence situé à gauche. Si les nœuds correspondent, la comparaison de nœud est **TRUE**. Elle est ensuite convertie en int et comparée à 1, puis la requête retourne l'ID de client.  
@@ -56,9 +55,9 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- Il existe un autre moyen d'observer le fonctionnement de la requête précédente : Chaque valeur de numéro téléphone téléphone récupérée à partir de la **AdditionalContactInfo** colonne est comparée à l’ensemble de deux numéros de téléphone. Si la valeur se trouve dans le jeu, le client correspondant est retourné dans le résultat.  
+ Il existe un autre moyen d’observer le fonctionne de la requête précédente : Chaque valeur de numéro téléphone téléphone récupérée à partir de la **AdditionalContactInfo** colonne est comparée à l’ensemble de deux numéros de téléphone. Si la valeur se trouve dans le jeu, le client correspondant est retourné dans le résultat.  
   
-### <a name="b-using-a-numeric-operator"></a>b. Utilisation d'un opérateur numérique  
+### <a name="b-using-a-numeric-operator"></a>B. Utilisation d'un opérateur numérique  
  L'opérateur + de cette requête est un opérateur de valeur, car il s'applique à un seul élément. Par exemple, la valeur 1 est ajoutée à une taille de lot retournée par la requête :  
   
 ```sql
@@ -79,7 +78,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-using-a-value-operator"></a>C. Utilisation d'un opérateur de valeur  
- La requête suivante récupère les éléments <`Picture`> pour un modèle de produit pour lequel la taille d'image est « small » :  
+ La requête suivante extrait le <`Picture`> éléments pour un modèle de produit où la taille d’image est « small » :  
   
 ```sql
 SELECT CatalogDescription.query('  

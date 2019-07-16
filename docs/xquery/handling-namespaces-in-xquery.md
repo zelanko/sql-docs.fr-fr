@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 542b63da-4d3d-4ad5-acea-f577730688f1
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9ad01fb0aa73dc34739c5584a510dbe1bc854da
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 07158d4131c60cf46f49a860721333c78213c982
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004533"
 ---
 # <a name="handling-namespaces-in-xquery"></a>Gestion des espaces de noms dans XQuery
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "54254824"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-declaring-a-namespace"></a>A. Déclaration d'un espace de noms  
+### <a name="a-declaring-a-namespace"></a>R. Déclaration d'un espace de noms  
  La requête suivante récupère les étapes de fabrication d'un modèle de produit spécifique.  
   
 ```  
@@ -52,7 +51,7 @@ WHERE ProductModelID=7
   
  Notez que le **espace de noms** mot clé est utilisé pour définir un nouveau préfixe d’espace de noms, « AWMI : ». Ce préfixe doit ensuite être utilisé dans la requête pour tous les éléments couverts par l'étendue de cet espace de noms.  
   
-### <a name="b-declaring-a-default-namespace"></a>b. Déclaration d'un espace de noms par défaut  
+### <a name="b-declaring-a-default-namespace"></a>B. Déclaration d'un espace de noms par défaut  
  Dans la requête précédente, un nouveau préfixe d'espace de noms a été défini. Il a fallu ensuite utiliser ce préfixe dans la requête pour sélectionner les structures XML appropriées. Une alternative consiste à déclarer un espace de noms par défaut, comme le montre la requête modifiée suivante :  
   
 ```  

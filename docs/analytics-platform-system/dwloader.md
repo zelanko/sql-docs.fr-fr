@@ -2,19 +2,18 @@
 title: dwloader du chargeur de ligne de commande - Parallel Data Warehouse | Microsoft Docs
 description: dwloader est un outil de ligne de commande de Parallel Data Warehouse (PDW) qui charge des lignes de la table en bloc dans une table existante.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd3f005346c5faae9e02513a144d04d80857b770
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961027"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>dwloader du chargeur de ligne de commande pour Parallel Data Warehouse
 **dwloader** est un outil de ligne de commande Parallel Data Warehouse (PDW) qui charge des lignes de la table en bloc dans une table existante. Lors du chargement de lignes, vous pouvez ajouter toutes les lignes à la fin de la table (*mode append* ou *en mode fastappend*), ajoute de nouvelles lignes et mettre à jour des lignes existantes (*mode upsert*), ou supprimer toutes les lignes avant le chargement existantes et puis insérer toutes les lignes dans une table vide (*recharger mode*).  
@@ -138,7 +137,7 @@ Utiliser un fichier de paramètres, *parameter_file_name*, à la place des param
   
 Le fichier de paramètres contient un paramètre, sans le **-** préfixe, par ligne.  
   
-Exemples :  
+Exemples :  
   
 `rt=percentage`  
   
@@ -193,7 +192,7 @@ Pour charger plusieurs fichiers avec une seule commande :
   
 -   Tous les fichiers seront concaténés et chargées comme s’ils sont un seul fichier, et les lignes rejetées ira à un fichier unique de rejet.  
   
-Exemples :  
+Exemples :  
   
 -   i - \\\loadserver\loads\daily\\*.gz  
   
@@ -201,7 +200,7 @@ Exemples :
   
 -   i - \\\loadserver\loads\daily\monday.*  
   
--   -i \\\loadserver\loads\daily\monday.txt  
+-   i - \\\loadserver\loads\daily\monday.txt  
   
 -   i - \\\loadserver\loads\daily\\*  
   
@@ -216,7 +215,7 @@ Les options pour un *source_data_file_name* qui est délimitée par des caractè
   
 Pour des fichiers ASCII, les valeurs NULL sont représentées en plaçant les délimiteurs de manière consécutive. Par exemple, dans un fichier délimitée une barre verticale (« | »), une valeur NULL est indiquée par « || ». Dans un fichier délimité par des virgules, une valeur NULL est indiquée par «,, ». En outre, le **-E** (--emptyStringAsNull) option doit être spécifiée. Pour plus d’informations sur -E, voir ci-dessous.  
   
-**-e** *character_encoding*  
+**e -** *character_encoding*  
 Spécifie un type d’encodage de caractères pour les données à charger à partir du fichier de données. Les options sont ASCII (par défaut), UTF-8, UTF16 ou UTF16BE, où UTF16 est primauté des octets et UTF16BE big endian. Ces options respectent la casse.  
   
 **-t** *field_delimiter*  
@@ -224,19 +223,19 @@ Le délimiteur pour chaque champ (colonne) dans la ligne. Le délimiteur de cham
   
 |Nom|Caractère d’échappement|Caractère hexadécimal|  
 |--------|--------------------|-----------------|  
-|Onglet|\t|0x09|  
+|Onglet|\t|0 x 09|  
 |Retour chariot (CR)|\r|0x0d|  
-|Saut de ligne (LF)|\n|0x0a|  
+|Saut de ligne (LF)|\n|0x0A|  
 |CRLF|\r\n|0x0d0x0a|  
 |Virgule|','|0x2c|  
-|guillemet double|\\"|0x22|  
-|un guillemet simple|\\'|0x27|  
+|Guillemet double|\\"|0 x 22|  
+|Guillemet simple|\\'|0 x 27|  
   
 Pour spécifier le caractère barre verticale sur la ligne de commande, mettez-le entre guillemets doubles, « | ». Cela permet d’éviter toute interprétation erronée par l’Analyseur de ligne de commande. Autres caractères sont placées entre guillemets simples.  
   
-Exemples :  
+Exemples :  
   
--t "|"  
+t-« | »  
   
 -t ' '  
   
@@ -253,19 +252,19 @@ Pour spécifier un retour chariot (CR), un saut de ligne (LF) ou un caractère d
   
 Exemples de retour chariot + saut de ligne :  
   
--r \r\n  
+r - \r\n  
   
--r 0x0d0x0a  
+r - 0x0d0x0a  
   
 Exemples de CR :  
   
--r \r  
+r - \r  
   
--r 0x0d  
+r - 0x0d  
   
 Exemples de saut de ligne :  
   
--r \n  
+r - \n  
   
 -r 0x0a  
   
@@ -274,7 +273,7 @@ Un saut de ligne est requis pour Unix. Une demande de modification est requis po
 **-s** *string_delimiter*  
 Le délimiteur pour les données de chaîne type de champ d’un fichier d’entrée de texte délimité. Le délimiteur de chaîne est une ou plusieurs des valeurs ASCII.  Il peut être spécifié comme un caractère (par exemple, -s *) ou comme une valeur hexadécimale (par exemple, -s 0 x 22 pour les guillemets doubles).  
   
-Exemples :  
+Exemples :  
   
 -s *  
   
@@ -310,7 +309,7 @@ Dans l’exemple précédent, la première ligne chargée aura SalesCode = '230'
   
 Pour plus d’informations sur la gestion de début et de fin de conversion de type des espaces ou des données en mode de largeur fixe, consultez [pour dwloader, les règles de conversion de type de données](dwloader-data-type-conversion-rules.md).  
   
-**-e** *character_encoding*  
+**e -** *character_encoding*  
 Spécifie un type d’encodage de caractères pour les données à charger à partir du fichier de données. Les options sont ASCII (par défaut), UTF-8, UTF16 ou UTF16BE, où UTF16 est primauté des octets et UTF16BE big endian. Ces options respectent la casse.  
   
 Colonnes de largeur fixe ne sont pas pris en charge -e est UTF8.  
@@ -322,25 +321,25 @@ Pour spécifier un retour chariot (CR), un saut de ligne (LF) ou un caractère d
   
 Exemples de retour chariot + saut de ligne :  
   
--r \r\n  
+r - \r\n  
   
--r 0x0d0x0a  
+r - 0x0d0x0a  
   
 Exemples de CR :  
   
--r \r  
+r - \r  
   
--r 0x0d  
+r - 0x0d  
   
 Exemples de saut de ligne :  
   
--r \n  
+r - \n  
   
 -r 0x0a  
   
 Un saut de ligne est requis pour Unix. Une demande de modification est requis pour Windows.  
   
-**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
+**D -** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
 Spécifie l’ordre des mois (m), jour (d) et l’année (y) pour tous les champs de date/heure dans le fichier d’entrée. L’ordre par défaut est ymd. Pour spécifier plusieurs formats de commande pour le même fichier source, utilisez l’option -dt.  
   
 YMD | dmy  
@@ -363,7 +362,7 @@ Exemples de mdy des données d’entrée pour le 1er janvier 1975 :
 -   01011975  
   
 maj  
-Entrée des exemples de fichiers pour mars 04,2010 : 03-2010-04, 3/2010/4  
+Entrée des exemples de fichiers pour mars 04,2010 : 03-2010-04, 2010/3/4  
   
 jam  
 Exemples de fichier d’entrée pour le 04 mars 2010 : 04-2010-03, 4/2010/3  
@@ -380,7 +379,7 @@ Chaque format de date/heure est spécifiée dans un fichier nommé *datetime_for
   
 Chaque ligne contient le nom d’une colonne dans la table de destination et son format de date/heure.  
   
-Exemples :  
+Exemples :  
   
 `LastReceiptDate=ymd`  
   
@@ -448,7 +447,7 @@ Utilisé avec le `-rt percentage` option pour spécifier les vérifications de p
 **-c**  
 Supprime les caractères d’espace blanc de gauche et droite de char, nchar, varchar et nvarchar champs. Convertit chaque champ qui contient uniquement des caractères d’espace blanc sur la chaîne vide.  
   
-Exemples :  
+Exemples :  
   
 « ' est tronquée à « »  
   
@@ -554,20 +553,20 @@ Le mode append charge les données en deux phases. Première phase charge les do
   
 |Type de table|Transactions multiples<br />Mode (-m)|Table est vide|Prise en charge l’accès concurrentiel|Journalisation|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Segment de mémoire (heap)|Oui|Oui|Oui|Minimal|  
-|Segment de mémoire (heap)|Oui|Non|Oui|Minimal|  
-|Segment de mémoire (heap)|Non|Oui|Non|Minimal|  
-|Segment de mémoire (heap)|Non|Non|Non|Minimal|  
-|Cl|Oui|Oui|Non|Minimal|  
+|Segment de mémoire (heap)|Oui|Oui|Oui|Minimales|  
+|Segment de mémoire (heap)|Oui|Non|Oui|Minimales|  
+|Segment de mémoire (heap)|Non|Oui|Non|Minimales|  
+|Segment de mémoire (heap)|Non|Non|Non|Minimales|  
+|Cl|Oui|Oui|Non|Minimales|  
 |Cl|Oui|Non|Oui|Complète|  
-|Cl|Non|Oui|Non|Minimal|  
+|Cl|Non|Oui|Non|Minimales|  
 |Cl|Non|Non|Oui|Complète|  
   
 Le tableau ci-dessus présente **dwloader** en utilisant le mode append, le chargement dans un segment de mémoire ou une table d’index cluster (CI), avec ou sans l’indicateur multi-transactionnelle et le chargement dans une table vide ou une table non vide. Le verrouillage et le comportement de chaque combinaison de charge de ce type d’enregistrement s’affiche dans la table. Par exemple, le chargement (2ème) phase avec le mode append dans un index cluster sans mode multi-transactionnelle et dans vide table aura PDW créer un verrou exclusif sur la table et journalisation est minime. Cela signifie qu’un client ne sera pas en mesure de charger (2e) phase et requête simultanément dans une table vide. Toutefois, lors du chargement avec la même configuration dans une table non vide, PDW n’émettra pas un verrou exclusif sur la table et l’accès concurrentiel est possible. Malheureusement, une journalisation complète se produit, le processus peut ralentir.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-simple-dwloader-example"></a>A. Exemple de simple dwloader  
+### <a name="a-simple-dwloader-example"></a>R. Exemple de simple dwloader  
 L’exemple suivant montre l’émission de la **chargeur** avec uniquement les options requises sélectionnées. Autres options sont effectuées à partir du fichier de configuration globale, *loadparamfile.txt*.  
   
 Exemple à l’aide de l’authentification SQL Server.  

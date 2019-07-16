@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 27e789c4eb34ed275d6f18f62325287febb73422
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62740189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949600"
 ---
 # <a name="level-object-ado-md"></a>Level, objet (ADO MD)
 Contient un jeu de membres, chacun d'entre eux ayant le même rang dans une hiérarchie.  
@@ -43,7 +42,7 @@ Contient un jeu de membres, chacun d'entre eux ayant le même rang dans une hié
   
  Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste de propriétés réelle peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
   
-|Créer une vue d’abonnement|Description|  
+|Name|Description|  
 |----------|-----------------|  
 |CatalogName|Le nom du catalogue auquel appartient ce cube.|  
 |CubeName|Nom du cube.|  

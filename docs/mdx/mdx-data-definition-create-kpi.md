@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2a905c223418392ee9d3bd45dffbfe2ab821a298
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098399"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>Définition de données MDX - CREATE KPI
 
@@ -30,13 +29,13 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *KPI_Name*  
+ *Nom_icp*  
  Chaîne valide qui fournit le nom d'un indicateur de performance clé.  
   
  *KPI_Value*  
  Expression MDX (Multidimensional Expressions) valide qui retourne une valeur numérique.  
   
- *Property_Name*  
+ *Property_name*  
  Chaîne valide qui fournit le nom d'une propriété d'indicateur de performance clé.  
   
  *Property_Value*  
@@ -72,7 +71,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |Nombre d'états du graphique d'indicateur de performance clé|Valeur de ces états|  
 |--------------------------------------|---------------------------|  
 |3|Mauvais = -1 à -0,5<br /><br /> OK =-0.4999 à 0,4999<br /><br /> Bon = 0,50 à 1|  
-|5|Mauvais = -1 à -0,75<br /><br /> Risque = -0,7499 à -0,25<br /><br /> OK = -0,2499 à 0,2499<br /><br /> En hausse = 0,25 à 0,7499<br /><br /> Bon = 0,75 à 1|  
+|5\.|Mauvais = -1 à -0,75<br /><br /> Risque = -0,7499 à -0,25<br /><br /> OK = -0,2499 à 0,2499<br /><br /> En hausse = 0,25 à 0,7499<br /><br /> Bon = 0,75 à 1|  
   
 > [!NOTE]  
 >  Pour certains graphiques, comme la jauge inversée ou la flèche d'état inversée, la plage est inversée. Autrement dit, -1 signifie bon et 1 signifie mauvais.  
@@ -81,18 +80,18 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
   
 |Utilisation du graphique|Nom du graphique d'indicateur de performance clé|Nombre d'états|  
 |--------------------|-------------------------|----------------------|  
-|État|Formes|3|  
-|État|Feu de circulation|3|  
-|État|Panneaux de signalisation|3|  
-|État|Jauge|3|  
-|État|Jauge inversée|5|  
-|État|Thermomètre|3|  
-|État|Cylindre|3|  
-|État|Faces|3|  
-|État|Flèche de variance|3|  
+|Statut|Formes|3|  
+|Statut|Feu de circulation|3|  
+|Statut|Panneaux de signalisation|3|  
+|Statut|Jauge|3|  
+|Statut|Jauge inversée|5\.|  
+|Statut|Thermomètre|3|  
+|Statut|Cylindre|3|  
+|Statut|Faces|3|  
+|Statut|Flèche de variance|3|  
 |Tendance|Flèche standard|3|  
 |Tendance|Flèche d'état|3|  
-|Tendance|Flèche d'état inversée|5|  
+|Tendance|Flèche d'état inversée|5\.|  
 |Tendance|Faces|3|  
   
 ## <a name="see-also"></a>Voir aussi  

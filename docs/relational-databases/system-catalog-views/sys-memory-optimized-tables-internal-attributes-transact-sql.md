@@ -19,34 +19,33 @@ helpviewer_keywords:
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a85fedcd5eaddf5383f6f84360765bc60ad2556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102385"
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Contient une ligne pour chaque table optimisée en mémoire interne utilisé pour stocker les tables utilisateur optimisées en mémoire. Chaque table utilisateur correspond à une ou plusieurs tables internes. Une seule table est utilisée pour le stockage de données principal. Les tables internes supplémentaires servent à la prise en charge des fonctionnalités telles que les index columnstore temporels et le stockage (LOB) hors ligne des tables optimisées en mémoire.
  
-| Nom de colonne  | Type de données  | Description |
+| Nom de la colonne  | Type de données  | Description |
 | :------ |:----------| :-----|
 |object_id  |**Int**|       Identifiant de la table utilisateur. Les tables optimisées en mémoire internes destinées à la prise en charge d’une table utilisateur (par exemple, le stockage hors ligne ou les lignes supprimées dans le cas de combinaisons Hk/Columnstore) ont le même object_id que leurs parents. |
 |xtp_object_id  |**bigint**|    ID de l’objet In-Memory OLTP correspondant à la table optimisée en mémoire interne utilisée pour prendre en charge la table utilisateur. Il est unique dans la base de données, et peut évoluer au fil de la durée de vie de l’objet. 
-|Type|  **Int** |   Type de la table interne.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
+|type|  **int** |   Type de la table interne.<br/><br/> 0 => DELETED_ROWS_TABLE <br/> 1 => USER_TABLE <br/> 2 => DICTIONARIES_TABLE<br/>3 => SEGMENTS_TABLE<br/>4 => ROW_GROUPS_INFO_TABLE<br/>5 => INTERNAL OFF-ROW DATA TABLE<br/>252 => INTERNAL_TEMPORAL_HISTORY_TABLE | 
 |type_desc| **nvarchar(60)**|   Description du type<br/><br/>DELETED_ROWS_TABLE -> Lignes supprimées de suivi de table interne pour un index columnstore<br/>USER_TABLE -> Table contenant les données de ligne utilisateur<br/>DICTIONARIES_TABLE -> Dictionnaires pour un index columnstore<br/>SEGMENTS_TABLE -> Segments compressés pour un index columnstore<br/>ROW_GROUPS_INFO_TABLE -> Métadonnées à propos des groupes de lignes compressés d’un index columnstore<br/>INTERNAL OFF-ROW DATA TABLE -> Table interne utilisée pour le stockage d’une colonne hors ligne. Dans ce cas, minor_id reflète column_id.<br/>INTERNAL_TEMPORAL_HISTORY_TABLE -> Fin à chaud de la table d’historique basée sur le disque. Tout d’abord, les lignes insérées dans l’historique sont insérées dans cette table optimisée en mémoire interne. Il existe une tâche en arrière-plan qui déplace de manière asynchrone les lignes de cette table interne vers la table d’historique sur disque. |
-|minor_id|  **Int**|    0 indique une table utilisateur ou interne<br/><br/>Non-0 indique l’ID d’une colonne stockée hors ligne. Se joint à column_id dans sys.columns.<br/><br/>Chaque colonne stockée hors ligne a une ligne correspondante dans cette vue système.|
+|minor_id|  **int**|    0 indique une table utilisateur ou interne<br/><br/>Non-0 indique l’ID d’une colonne stockée hors ligne. Se joint à column_id dans sys.columns.<br/><br/>Chaque colonne stockée hors ligne a une ligne correspondante dans cette vue système.|
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-all-columns-that-are-stored-off-row"></a>A. Renvoi de toutes les colonnes qui sont stockées hors ligne
+### <a name="a-returning-all-columns-that-are-stored-off-row"></a>R. Renvoi de toutes les colonnes qui sont stockées hors ligne
 
 Le script T-SQL suivant illustre une table avec plusieurs grandes colonnes non-LOB et une seule colonne LOB :
 

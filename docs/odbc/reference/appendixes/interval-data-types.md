@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: fba93f65-c1db-44f4-91ba-532f87241cf7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 930a848ea01d128cb248c7929408ce7510937ad9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a42c8767228c75d3b7b0da308d739516875cf966
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947555"
 ---
 # <a name="interval-data-types"></a>Types de données d’intervalle
 Un intervalle est défini comme la différence entre deux dates et heures. Intervalles sont exprimées dans un des deux manières différentes. Un est un *année-mois* intervalle qui exprime les intervalles en termes d’années et un nombre entier d’un mois. L’autre est un *jours-heures* intervalle qui exprime les intervalles en termes de jours, les minutes et secondes. Ces deux types d’intervalles sont distincts et ne peut pas être combinés, étant donné que les mois peuvent avoir différents nombres de jours.  

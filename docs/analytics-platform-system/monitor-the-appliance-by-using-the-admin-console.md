@@ -2,19 +2,18 @@
 title: Moniteur avec la Console d’administration - Analytique Platform System | Microsoft Docs
 description: Pour le système de plateforme d’Analytique, la Console d’administration est une application web qui met en évidence les informations d’intégrité, état et les performances de l’appliance. Les utilisateurs se connecter à la Console d’administration via un navigateur internet.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7fb3bf769d3145118359af0e33e3cf01a0b6d325
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960487"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Surveiller l’appliance avec la Console d’administration - Analytique Platform System
 La Console d’administration est une application web de SQL Server PDW qui met en évidence les informations d’intégrité, état et les performances de l’appliance. Les utilisateurs se connecter à la Console d’administration d’Internet Explorer.  
@@ -26,7 +25,7 @@ La Console d’administration est une application web de SQL Server PDW qui met 
 Dossier de base  
 Fournit un résumé rapide de l’état de l’appliance.  
   
-Contrôle d’intégrité  
+Intégrité  
 Affiche la topologie d’appliances avec indicateurs montrant l’intégrité de chaque composant surveillé dans chaque nœud. Vous permet d’afficher l’état actuel des nœuds individuels et les propriétés des composants du nœud.  
   
 Affiche les alertes matérielles et logicielles.  
@@ -50,7 +49,7 @@ Affiche de charger les plans, l’état actuel de la charge PDW et les erreurs a
 Sauvegardes/restaurations  
 Affiche le journal de PDW sauvegarde et de restauration.  
   
-Contrôle d’intégrité  
+Intégrité  
 Affiche la topologie PDW avec indicateurs montrant l’intégrité de chaque composant surveillé dans chaque nœud. Vous permet d’afficher l’état actuel des nœuds individuels et les propriétés des composants du nœud.  
   
 Affiche les alertes matérielles et logicielles.  
