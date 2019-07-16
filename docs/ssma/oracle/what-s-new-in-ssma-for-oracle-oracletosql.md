@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bd80395b4df7957f48cc480ba858af387e870b86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20fc72ce649d8ab66c43fe1c8f3a87775d83f9fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086785"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Quelles sont les nouveautés de SSMA pour Oracle (OracleToSQL)
 Cet article répertorie les SQL Server Migration Assistant (SSMA) pour les modifications d’Oracle dans chaque version.
@@ -42,7 +41,7 @@ En outre, cette version inclut un ensemble ciblé de correctifs conçues pour am
 > [!IMPORTANT]
 > Avec SSMA v7.4 et versions ultérieures, .net 4.5.2 est un préalable de l’installation.
 
-## <a name="ssma-v81"></a>SSMA v8.1
+## <a name="ssma-v81"></a>V8.1 SSMA
 
 La version v8.1 de SSMA pour Oracle a été améliorée avec des correctifs ciblés visant qui est conçues pour améliorer la qualité et conversion des mesures.
 
@@ -177,7 +176,7 @@ La version v7.1 de SSMA pour Oracle contient les modifications suivantes :
 * SSMA prend désormais en charge les mises à jour automatiques pour télécharger la dernière version de SSMA dès qu’il est disponible.
 * Fichiers binaires installables SSMA sont maintenant fournies via fichiers de package Windows installer (.msi).
 
-## <a name="may-2016"></a>Mai 2016
+## <a name="may-2016"></a>Mai 2016
 
 La version de mai 2016 de SSMA pour Oracle contient les modifications suivantes :  
 

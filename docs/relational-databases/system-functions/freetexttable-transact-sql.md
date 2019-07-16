@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 42372b9ed94ad941c4a2436a28d0b9eaeb9f3b67
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 4ab1797fabd8fb7d77eab85c97604b77e72f25c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042760"
 ---
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ FREETEXTTABLE (table , { column_name | (column_list) | * }
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-simple-example"></a>A. Exemple simple  
+### <a name="a-simple-example"></a>R. Exemple simple  
  L’exemple suivant crée et remplit un tableau simple de deux colonnes, la liste des 3 comtés et les couleurs dans leurs indicateurs. L’informatique crée et remplit un catalogue de texte intégral et un index sur la table. Le **FREETEXTTABLE** syntaxe est illustrée.  
   
 ```  

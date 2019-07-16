@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1f80198787dd85d8f0c65e9881925641f9f081e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64040f4a0caf8253e6d6e8a3b00ff21e0cebe6d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075349"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Installation des composants SSMA sur SQL Server (MySQLToSql)
 Outre l’installation de SSMA, vous devez également installer les composants sur l’ordinateur qui est en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ces composants incluent le pack d’extension SSMA qui prend en charge la migration des données et les fournisseurs de MySQL pour activer la connectivité du serveur à serveur.  

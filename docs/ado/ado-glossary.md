@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6f139965c4235b84c66c460767d5c6d1695b68ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67d791820e9dd22b035f98eb76e27723ebfb8fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927173"
 ---
 # <a name="ado-glossary-terms"></a>Termes du glossaire ADO
 Cette rubrique définit les termes pertinents se rapportant à ADO.
@@ -38,7 +37,7 @@ Cette rubrique définit les termes pertinents se rapportant à ADO.
 
  opération asynchrone une opération qui retourne le contrôle au programme appelant sans attendre que l’opération se termine. Avant que l’opération soit terminée, l’exécution de code se poursuit. Voir aussi *opération synchrone*.
 
-## <a name="b"></a>B
+## <a name="b"></a>b
  mappage de l’entrée A la liaison entre un champ dans une table et une variable. Dans les extensions ADO de Visual C++, **Recordset** champs sont mappés à des variables C/C++.
 
  valeur numérique de masque de bits A conçu pour une comparaison de valeurs de bit par bit avec d’autres valeurs numériques, généralement pour les options d’indicateur dans le paramètre ou les valeurs de retour. Cette comparaison est généralement effectuée par des opérateurs logiques au niveau du bit, tels que **et** et **ou** en Visual Basic, **&** et **&#124;** en C++.

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 257e91babf98fcbd7a2a54e8b9d14134a7446d6b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7a2a4e8a7cf58f8c4519d15ae46e2b278fcd1383
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008963"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Par défaut, il est impossible de supprimer une planification si elle est attachée à un travail. Pour supprimer une planification qui est attachée à un travail, spécifiez la valeur **1** pour *force_delete*. La suppression d'une planification n'arrête pas les travaux en cours d'exécution.  
@@ -77,7 +76,7 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-deleting-a-schedule"></a>A. Suppression d'une planification  
+### <a name="a-deleting-a-schedule"></a>R. Suppression d'une planification  
  L'exemple suivant supprime la planification `NightlyJobs`. Si la planification est attachée à un travail, l'exemple ne la supprime pas.  
   
 ```  

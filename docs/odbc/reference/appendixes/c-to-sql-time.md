@@ -1,5 +1,5 @@
 ---
-title: 'C en SQL : Time | Microsoft Docs'
+title: 'C en SQL : Moment | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ea11803847505698ea42d13727b6177f3a24bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4a3734ff8d9f0cb120e1d33433ee3a301bb59ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019304"
 ---
 # <a name="c-to-sql-time"></a>C en SQL : Time
 L’identificateur pour le type de données ODBC C temps est :  
@@ -29,12 +28,12 @@ L’identificateur pour le type de données ODBC C temps est :
   
  Le tableau suivant présente les types de données à laquelle les données de C de temps peuvent être converties à ODBC SQL. Pour obtenir une explication des colonnes et des termes dans la table, consultez [conversion des données à partir de C en Types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|Identificateur de type SQL|Test|SQLSTATE|  
+|Identificateur de type SQL|Tester|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longueur d’octet de colonne > = 8<br /><br /> Colonne de longueur d’octet < 8<br /><br /> Valeur de données n’est pas une heure valide|n/a<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longueur de colonne caractère > = 8<br /><br /> Colonne de longueur < 8 caractères<br /><br /> Valeur de données n’est pas une heure valide|n/a<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_TIME|Valeur de données est une heure valide<br /><br /> Valeur de données n’est pas une heure valide|n/a<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Valeur de données est une heure valide [a]<br /><br /> Valeur de données n’est pas une heure valide|n/a<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longueur d’octet de colonne > = 8<br /><br /> Colonne de longueur d’octet < 8<br /><br /> Valeur de données n’est pas une heure valide|N/A<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longueur de colonne caractère > = 8<br /><br /> Colonne de longueur < 8 caractères<br /><br /> Valeur de données n’est pas une heure valide|N/A<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_TIME|Valeur de données est une heure valide<br /><br /> Valeur de données n’est pas une heure valide|N/A<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Valeur de données est une heure valide [a]<br /><br /> Valeur de données n’est pas une heure valide|N/A<br /><br /> 22007|  
   
  [a] la date de partie de l’horodatage est définie sur la date actuelle et la fraction de seconde partie de l’horodatage est défini à zéro.  
   

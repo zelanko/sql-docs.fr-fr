@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7a41da6-e067-430a-8da2-3f6745b8a4f3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89c6e254dfc163e75f16ccffaf97d3c2c8b222be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 58ef9c5e68e7d209262ebf43891ba5c1bcc4174f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990287"
 ---
 # <a name="ihpublishercolumnconstraints-transact-sql"></a>IHpublishercolumnconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +31,11 @@ ms.locfileid: "52779581"
   
 ## <a name="definition"></a>Définition  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publishercolumn_id**|**Int**|Identifie la colonne de [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) avec une contrainte associée.|  
-|**publisherconstraint_id**|**Int**|Identifie une contrainte de [IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md) associé à la colonne.|  
-|**indid**|**Int**|Indique la position de la colonne dans la table publiée.|  
+|**publisherconstraint_id**|**int**|Identifie une contrainte de [IHpublisherconstraints](../../relational-databases/system-tables/ihpublisherconstraints-transact-sql.md) associé à la colonne.|  
+|**indid**|**int**|Indique la position de la colonne dans la table publiée.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Réplication de base de données hétérogène](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

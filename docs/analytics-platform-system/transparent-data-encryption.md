@@ -2,22 +2,21 @@
 title: Chiffrement transparent des données - Parallel Data Warehouse | Microsoft Docs
 description: Chiffrement transparent des données (TDE) pour Parallel Data Warehouse (PDW) effectue le chiffrement d’e/s en temps réel et le déchiffrement des données et fichiers journaux des transactions et les fichiers de journaux PDW spéciales. »
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 582c237819dab5f0a1e30e2bd4e27fe3cc9ae57f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959983"
 ---
-# <a name="transparent-data-encryption"></a>chiffrement transparent des données
-Vous pouvez prendre plusieurs précautions pour mieux sécuriser la base de données comme par exemple concevoir un système sécurisé, chiffrer les ressources confidentielles et créer un pare-feu autour des serveurs de base de données. Toutefois, pour un scénario dans lequel le support physique (par exemple, les lecteurs ou les bandes de sauvegarde) est volé, une personne malveillante peut juste restaurer ou attacher la base de données et parcourir les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
+# <a name="transparent-data-encryption"></a>Chiffrement transparent des données
+Vous pouvez prendre plusieurs précautions pour mieux sécuriser la base de données comme par exemple concevoir un système sécurisé, chiffrer les ressources confidentielles et créer un pare-feu autour des serveurs de base de données. Toutefois, pour un scénario dans lequel le support physique (par exemple, les lecteurs ou les bandes de sauvegarde) est volé, une personne malveillante peut juste restaurer ou attacher la base de données et parcourir les données. Une solution consiste à chiffrer les données sensibles dans la base de données et à protéger les clés qui sont utilisées pour chiffrer les données avec un certificat. Cela empêche toute personne qui ne dispose pas des clés d'utiliser les données, mais ce type de protection doit être planifié à l'avance.  
   
 *Chiffrement transparent des données* (TDE) effectue le chiffrement d’e/s en temps réel et le déchiffrement des données et les fichiers journaux des transactions et le PDW spécial des fichiers journaux. Le chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. La clé DEK est une clé symétrique sécurisée à l’aide d’un certificat stocké dans la base de données master de l’ordinateur SQL Server PDW. Le chiffrement transparent des données protège les données « au repos », autrement dit les fichiers de données et les fichiers journaux. Il permet de se conformer à de nombreuses lois, règles et instructions établies dans différents secteurs professionnels. Cette fonctionnalité permet aux développeurs de logiciels de chiffrer les données à l’aide d’algorithmes de chiffrement AES et 3DES sans modifier les applications existantes.  
   

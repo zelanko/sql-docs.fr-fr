@@ -20,31 +20,30 @@ helpviewer_keywords:
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b873a4d43d76fe27c7a807324c2fb60ce3d42fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053390"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contient une ligne pour chaque langue présente dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|ID unique de la langue.|  
 |dateformat|**nchar(3)**|Ordre des éléments de la date, par exemple JMA.|  
-|datefirst|**tinyint**|Premier jour de la semaine : 1 pour lundi, 2 pour mardi, etc., jusqu'à 7 pour dimanche.|  
-|Mise à niveau|**Int**|Réservé pour le système.|  
-|NAME|**sysname**|Nom officiel de la langue, par exemple « Français ».|  
+|datefirst|**tinyint**|Premier jour de la semaine : 1 pour lundi, 2 pour mardi, et ainsi de suite jusqu'à 7 pour dimanche.|  
+|upgrade|**Int**|Réservé pour le système.|  
+|name|**sysname**|Nom officiel de la langue, par exemple « Français ».|  
 |alias|**sysname**|Nom de la langue de remplacement, par exemple « French ».|  
 |mois|**nvarchar(372)**|Liste des noms complets des mois, séparés par des virgules, dans l'ordre, de janvier à décembre. Chaque nom peut comporter jusqu'à 20 caractères.|  
 |mois courts|**nvarchar(132)**|Liste des noms abrégés des mois, séparés par des virgules, dans l'ordre, de janvier à décembre. Chaque nom peut comporter jusqu'à 9 caractères.|  
-|jours|**nvarchar(217)**|Liste des noms des jours, séparés par des virgules, dans l'ordre, de lundi à dimanche. Chaque nom peut comporter jusqu'à 30 caractères.|  
+|days|**nvarchar(217)**|Liste des noms des jours, séparés par des virgules, dans l'ordre, de lundi à dimanche. Chaque nom peut comporter jusqu'à 30 caractères.|  
 |lcid|**Int**|Identificateur des paramètres régionaux [!INCLUDE[msCoName](../../includes/msconame-md.md)] de la langue.|  
 |msglangid|**smallint**|ID du groupe de messages du [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
   
@@ -71,7 +70,7 @@ ms.locfileid: "47719717"
 |Croate|1050|1050|  
 |Slovaque|1051|1051|  
 |Slovene|1060|1060|  
-|Greek|1032|1032|  
+|Grec|1032|1032|  
 |Bulgare|1026|1026|  
 |Russe|1049|1049|  
 |Turc|1055|1055|  

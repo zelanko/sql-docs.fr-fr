@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af0ed8307652ccf45e7fbfffb6c00355c8a8b004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5863935ddf595409d48be79dc646c0994ddeb0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019321"
 ---
 # <a name="c-to-sql-guid"></a>C en SQL : GUID
 L’identificateur pour le type de données GUID ODBC C est :  
@@ -29,15 +28,15 @@ L’identificateur pour le type de données GUID ODBC C est :
   
  Le tableau suivant présente les types de données à laquelle les données de GUID C peuvent être converties à ODBC SQL. Pour obtenir une explication des colonnes et des termes dans la table, consultez [conversion des données à partir de C en Types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|Identificateur de type SQL|Test|SQLSTATE|  
+|Identificateur de type SQL|Tester|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR|Longueur d’octet de colonne > = 36|n/a|  
+|SQL_CHAR|Longueur d’octet de colonne > = 36|N/A|  
 |SQL_VARCHAR|Colonne de longueur d’octet < 36|22001|  
 |SQL_LONGVARCHAR|Valeur de données n’est pas un GUID valide|22018|  
-|SQL_WCHAR|Longueur de colonne caractère > = 36|n/a|  
+|SQL_WCHAR|Longueur de colonne caractère > = 36|N/A|  
 |SQL_WVARCHAR|Colonne de longueur < 36 caractères|22001|  
 |SQL_WLONGVARCHAR|Valeur de données n’est pas un GUID valide|22018|  
-|SQL_GUID|Aucun [a]|n/a|  
+|SQL_GUID|Aucun [a]|N/A|  
   
  [a] toutes les valeurs hexadécimales sont valides en tant que GUID.  
   

@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: b25e17e1-7718-432e-a442-c4946741d474
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7c41d886550bef428590d4d2d39bb09434a9312
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7bc81e41299041b50e53074cd4a133c6bd9c0cf9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016507"
 ---
 # <a name="mssyncstates-transact-sql"></a>MSsync_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSsync_states** quelle publication se trouve toujours en mode de capture instantanée de la table. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|L’ID du serveur de publication.|  
 |**publisher_db**|**sysname**|Le nom de la base de données de publication.|  
-|**publication_id**|**Int**|ID de la publication.|  
+|**publication_id**|**int**|ID de la publication.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage des Tables système avec les vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39ebda5de5820cdfd7333ad1d0997593922e0a4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039891"
 ---
 # <a name="diagnostic-messages"></a>Messages de diagnostic
 Un message de diagnostic est retourné avec chaque SQLSTATE. La même valeur SQLSTATE est souvent retournée avec un nombre de messages différents. Par exemple, SQLSTATE 42000 (syntaxe ou violation d’accès) est retournée pour la plupart des erreurs dans la syntaxe SQL. Toutefois, chaque erreur de syntaxe est susceptible d’être décrite par un autre message.  
@@ -33,7 +32,7 @@ Un message de diagnostic est retourné avec chaque SQLSTATE. La même valeur SQL
   
  Si la source d’une erreur ou un avertissement est un composant lui-même, le message de diagnostic doive expliquer ceci. Par conséquent, le texte des messages a deux formats. Pour les erreurs et avertissements qui n’apparaissent pas dans une source de données, le message de diagnostic doit utiliser ce format :  
   
- **[** *vendor-identifier* **][** *ODBC-component-identifier* **]** *component-supplied-text*  
+ **[** *identificateur du fournisseur* **] [** *identificateur de composant ODBC* **]** *texte composant fourni*  
   
  Pour les erreurs et avertissements qui se produisent dans une source de données, le message de diagnostic doit utiliser ce format :  
   

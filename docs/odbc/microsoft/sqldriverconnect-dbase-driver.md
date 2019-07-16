@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e4eeaa7ba710814bfeb8c5b4f5aa0dbd2d30ef7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 238931112d55214c239dab732f951a197d359615
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63060952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053923"
 ---
 # <a name="sqldriverconnect-dbase-driver"></a>SQLDriverConnect (pilote dBASE)
 > [!NOTE]  
@@ -38,4 +37,4 @@ ms.locfileid: "63060952"
   
 |Pilote|Mots clés requis|Exemples|  
 |------------|-----------------------|--------------|  
-|dBASE|Pilote, DriverID|Driver={Microsoft dBASE Driver (*.dbf)}; DBQ=c:\temp; DriverID=277|
+|dBASE|Pilote, DriverID|Driver = {Microsoft dBASE Driver (*.dbf)} ; DBQ = c:\temp ; DriverID = 277|

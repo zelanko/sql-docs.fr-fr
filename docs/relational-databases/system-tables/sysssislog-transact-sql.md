@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bde0c339b369aaccce107ded51f3b124be3b37f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d837049f36e4f7925f8e62a18987f51235f19c14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029611"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "65489775"
 >  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] écrit des entrées de journalisation dans cette table **uniquement** lorsque les packages utilisent le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] module fournisseur d’informations.  
   
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |id|**Int**|Identificateur unique de l'entrée d'enregistrement.|  
 |événement|**sysname**|Nom de l'événement qui a généré l'entrée d'enregistrement.|  
@@ -45,7 +44,7 @@ ms.locfileid: "65489775"
 |executionid|**uniqueidentifier**|GUID de l'instance d'exécution de l'exécutable qui a généré l'entrée du journal.|  
 |starttime|**datetime**|L’heure que le package a commencé à exécuter.|  
 |endtime|**datetime**|Heure de fin du package.<br /><br /> Cette fonctionnalité n'est pas implémentée. La valeur dans la colonne endtime est toujours identique à la valeur dans la colonne starttime.|  
-|datacode|**Int**|Valeur entière facultative qui indique généralement le résultat de l'exécution du conteneur ou de la tâche.|  
+|datacode|**int**|Valeur entière facultative qui indique généralement le résultat de l'exécution du conteneur ou de la tâche.|  
 |databytes|**image**|Tableau d'octets facultatif qui contient des informations supplémentaires.|  
 |message|**nvarchar**|Description de l'événement et des informations associées à l'événement.|  
   

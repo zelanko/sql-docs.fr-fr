@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdf0984f172657ad45ee6da0a09de5e0e457b003
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032738"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,13 +52,13 @@ sp_statistics [ @table_name = ] 'table_name'
   
  Si, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les index de la table sont retournés. Si *propriétaire* n’est pas spécifié et l’utilisateur actuel ne possède pas d’une table avec la valeur *nom*, cette procédure recherche une table avec la valeur *nom* détenus par le propriétaire de la base de données. Si cette table existe, ses index sont retournés.  
   
-`[ @table_qualifier = ] 'qualifier'` Est le nom du qualificateur de table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce paramètre représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+`[ @table_qualifier = ] 'qualifier'` Est le nom du qualificateur de table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_ **.** _propriétaire_ **.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce paramètre représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
 `[ @index_name = ] 'index_name'` Est le nom d’index. *index_name* est **sysname**, avec % comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
-`[ @is_unique = ] 'is_unique'` Est si seuls les index uniques (si **Y**) doivent être retournées. *is_unique* est **char (1)**, avec une valeur par défaut **N**.  
+`[ @is_unique = ] 'is_unique'` Est si seuls les index uniques (si **Y**) doivent être retournées. *is_unique* est **char (1)** , avec une valeur par défaut **N**.  
   
-`[ @accuracy = ] 'accuracy'` Est le niveau de la cardinalité et la précision de page pour les statistiques. *précision* est **char (1)**, avec une valeur par défaut **Q**. Spécifiez **E** pour vous assurer que les statistiques sont mises à jour afin que la cardinalité et des pages sont exactes.  
+`[ @accuracy = ] 'accuracy'` Est le niveau de la cardinalité et la précision de page pour les statistiques. *précision* est **char (1)** , avec une valeur par défaut **Q**. Spécifiez **E** pour vous assurer que les statistiques sont mises à jour afin que la cardinalité et des pages sont exactes.  
   
  La valeur **E** (sql_ensure) indique le pilote pour extraire des statistiques de manière inconditionnelle.  
   
@@ -67,7 +66,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Nom du qualificateur de table. Cette colonne peut être NULL.|  
 |**TABLE_OWNER**|**sysname**|Nom du propriétaire de la table. Cette colonne renvoie toujours une valeur.|  
@@ -79,12 +78,12 @@ sp_statistics [ @table_name = ] 'table_name'
 |**SEQ_IN_INDEX**|**smallint**|Position de la colonne dans l'index|  
 |**COLUMN_NAME**|**sysname**|Nom de colonne pour chaque colonne de la **TABLE_NAME** retourné. Cette colonne renvoie toujours une valeur.|  
 |**COLLATION**|**char(1)**|Ordre utilisé dans les classements. Valeurs possibles :<br /><br /> A = Croissant<br /><br /> D = Décroissant<br /><br /> NULL = Non applicable|  
-|**CARDINALITÉ**|**Int**|Nombre de lignes dans la table ou de valeurs uniques dans l’index.|  
-|**PAGES**|**Int**|Nombre de pages pour stocker l'index ou la table.|  
+|**CARDINALITÉ**|**int**|Nombre de lignes dans la table ou de valeurs uniques dans l’index.|  
+|**PAGES**|**int**|Nombre de pages pour stocker l'index ou la table.|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Les index dans le jeu de résultats s’affichent dans l’ordre croissant en fonction des colonnes **NON_UNIQUE**, **TYPE**, **INDEX_NAME**, et **SEQ_IN_INDEX**.  

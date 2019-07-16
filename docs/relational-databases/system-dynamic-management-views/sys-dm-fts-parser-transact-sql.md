@@ -19,13 +19,12 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 16df7ce483209be058d44448e9071406f897b41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900919"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (Transact-SQL)
 
@@ -66,7 +65,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |mot clé|**varbinary(128)**|Représentation hexadécimale d'un mot clé donné retournée par un analyseur lexical. Cette représentation permet de stocker le mot clé dans l'index de recherche en texte intégral. Cette valeur n’est pas lisible, mais il est utile de concernant un mot-clé donné à la sortie retournée par d’autres vues de gestion dynamique qui retournent le contenu d’un index de recherche en texte intégral, tel que [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md) et [ Sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md).<br /><br /> **Remarque :** OxFF représente le caractère spécial qui indique la fin d’un fichier ou un jeu de données.|  
 |group_id|**Int**|Contient une valeur entière qui est utile pour différencier le groupe logique à partir duquel un terme donné a été généré. Par exemple, « `Server AND DB OR FORMSOF(THESAURUS, DB)"` » produit les valeurs group_id suivantes en anglais :<br /><br /> 1 : Serveur<br />2 : BdD<br />3 : BdD|  
@@ -74,7 +73,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |occurrence|**Int**|Indique l'ordre de chaque terme dans le résultat de l'analyse. Par exemple, pour l'expression « `SQL Server query processor` », l'occurrence contiendrait les valeurs d'occurrence suivantes pour les termes de l'expression, en anglais :<br /><br /> 1 pour `SQL`<br />2 pour `Server`<br />3 pour `query`<br />4 pour `processor`|  
 |special_term|**nvarchar(4000)**|Contient des informations sur les caractéristiques du terme émis par l'analyseur lexical, informations qui peuvent être l'une des suivantes :<br /><br /> Concordance exacte<br /><br /> Mot parasite<br /><br /> Fin de phrase<br /><br /> Fin de paragraphe<br /><br /> Fin de chapitre|  
 |display_term|**nvarchar(4000)**|Contient la forme explicite du mot clé. Comme avec les fonctions conçues pour accéder au contenu de l'index de recherche en texte intégral, ce terme affiché peut ne pas être identique au terme d'origine en raison des limitations inhérentes à la dénormalisation. Toutefois, il doit être suffisamment précis pour vous permettre de l'identifier à partir de l'entrée d'origine.|  
-|expansion_type|**Int**|Contient des informations sur la nature de l'expansion d'un terme donné, informations qui peuvent être l'une des suivantes :<br /><br /> 0 =Cas de mot unique<br /><br /> 2=Expansion fléchie<br /><br /> 4=Expansion/remplacement du dictionnaire des synonymes<br /><br /> Par exemple, considérez un cas dans lequel le dictionnaire des synonymes définit run comme expansion de `jog` :<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Le terme `FORMSOF (FREETEXT, run)` génère la sortie suivante :<br /><br /> `run` with expansion_type=0<br /><br /> `runs` with expansion_type=2<br /><br /> `running` with expansion_type=2<br /><br /> `ran` with expansion_type=2<br /><br /> `jog` with expansion_type=4|  
+|expansion_type|**int**|Contient des informations sur la nature de l'expansion d'un terme donné, informations qui peuvent être l'une des suivantes :<br /><br /> 0 =Cas de mot unique<br /><br /> 2=Expansion fléchie<br /><br /> 4=Expansion/remplacement du dictionnaire des synonymes<br /><br /> Par exemple, considérez un cas dans lequel le dictionnaire des synonymes définit run comme expansion de `jog` :<br /><br /> `<expansion>`<br /><br /> `<sub>run</sub>`<br /><br /> `<sub>jog</sub>`<br /><br /> `</expansion>`<br /><br /> Le terme `FORMSOF (FREETEXT, run)` génère la sortie suivante :<br /><br /> `run` with expansion_type=0<br /><br /> `runs` with expansion_type=2<br /><br /> `running` with expansion_type=2<br /><br /> `ran` with expansion_type=2<br /><br /> `jog` with expansion_type=4|  
 |source_term|**nvarchar(4000)**|Terme ou expression à partir duquel un terme donné à été généré ou analysé. Par exemple, une requête sur '"`word breakers" AND stemmers'` produit les valeurs source_term suivantes en anglais :<br /><br /> `word breakers` pour le display_term`word`<br />`word breakers` pour le display_term`breakers`<br />`stemmers` pour le display_term`stemmers`|  
   
 ## <a name="remarks"></a>Notes  
@@ -129,7 +128,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-displaying-the-output-of-a-given-word-breaker-for-a-keyword-or-phrase"></a>A. Affichage de la sortie d'un analyseur lexical donné pour un mot clé ou une expression  
+### <a name="a-displaying-the-output-of-a-given-word-breaker-for-a-keyword-or-phrase"></a>R. Affichage de la sortie d'un analyseur lexical donné pour un mot clé ou une expression  
  L'exemple suivant retourne la sortie produite par l'analyseur lexical anglais, dont le LCID est 1033, utilisé sans liste de mots vides sur la chaîne de requête suivante :  
   
  `The Microsoft business analysis`  

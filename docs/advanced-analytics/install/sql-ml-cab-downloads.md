@@ -7,13 +7,12 @@ ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 3c5c27186969db01cc90fa43a6cf4ec2774ab051
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12659f7ea5df9ab364be44d98a8037c54b3ba2cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962868"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>CAB télécharge les mises à jour cumulatives d’analytique en base de données de SQL Server instances
 
@@ -34,7 +33,7 @@ Vous pouvez également appliquer des mises à jour cumulatives pour un serveur a
 
 Fichiers CAB sont répertoriées dans l’ordre chronologique inverse. Lorsque vous téléchargez les fichiers CAB et les transférez vers l’ordinateur cible, les placer dans un dossier tel que **télécharge** ou le dossier %Temp% de l’utilisateur le programme d’installation.
 
-|Version  |Composant | Télécharger le lien  | Problèmes résolus | 
+|Libérer  |Composant | Télécharger le lien  | Problèmes résolus | 
 |---------|----------|----------------|------------------|
 |**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| Les fichiers binaires dans le package sont maintenant signés. |
@@ -66,7 +65,7 @@ Fichiers CAB sont répertoriées dans l’ordre chronologique inverse. Lorsque v
 | | R Server      |[SRS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869052&clcid=1033)| Erreurs de long chemin d’accès relatif dans rxInstallPackages.<br/>Connexions dans un bouclage pour RxExec.
 | | Python de Microsoft Open    | Aucune modification à partir de versions précédentes. |
 | | Serveur de Python    |[SPS_9.2.0.500_1033.cab](https://go.microsoft.com/fwlink/?LinkId=869053&clcid=1033)| <br/>Connexions dans un bouclage pour rx_exec.
-|**[SQL Server 2017 CU4](https://support.microsoft.com/help/4056498)** |  |   |  |
+|**[Cu4 et versions ultérieures SQL Server 2017](https://support.microsoft.com/help/4056498)** |  |   |  |
 | | Microsoft R Open     | [SRO_3.3.3.300_1033.cab](https://go.microsoft.com/fwlink/?LinkId=863894)| Aucune modification à partir de versions précédentes. |
 | | R Server      |[SRS_9.2.0.400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866212&clcid=1033)|
 | | Python de Microsoft Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502)| Aucune modification à partir de versions précédentes. |
@@ -94,7 +93,7 @@ Fichiers CAB sont répertoriées dans l’ordre chronologique inverse. Lorsque v
 
 Pour SQL Server 2016 R Services, les versions de ligne de base sont la version RTM ou une version service pack.
 
-|Version  |Télécharger le lien  |
+|Libérer  |Télécharger le lien  |
 |---------|---------------|
 |**SQL Server 2016 SP2 CU6**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|

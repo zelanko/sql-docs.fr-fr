@@ -18,28 +18,27 @@ helpviewer_keywords:
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900165"
 ---
 # <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 Retourne une ligne qui affiche des informations de version de système d’exploitation.  
   
-|Nom de colonne |Type de données |Description |  
+|Nom de la colonne |Type de données |Description |  
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar (256)** |Le type de système d’exploitation : Windows ou Linux |
 |**host_distribution** |**nvarchar (256)** |Description du système d’exploitation. |
 |**host_release**|**nvarchar (256)**|Version du système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows (numéro de version). Pour obtenir la liste de valeurs et les descriptions, consultez [Version de système d’exploitation (Windows)](/windows/desktop/SysInfo/operating-system-version). <br> Pour Linux, retourne une chaîne vide. |  
 |**host_service_pack_level**|**nvarchar (256)**|Niveau du Service Pack du système d'exploitation Windows. <br> Pour Linux, retourne une chaîne vide. |  
 |**host_sku**|**Int**|ID de référence (SKU) Windows. Pour obtenir la liste des ID de référence (SKU) et des descriptions, consultez [GetProductInfo, fonction](https://msdn.microsoft.com/library/ms724358.aspx). Autorise la valeur NULL. <br> Pour Linux, retourne la valeur NULL. |  
-|**os_language_version**|**Int**|Identificateur des paramètres régionaux (LCID) du système d'exploitation. Pour obtenir la liste des valeurs LCID et des descriptions, consultez [ID de paramètres régionaux assignés par Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Ne peut pas avoir la valeur null.|  
+|**os_language_version**|**int**|Identificateur des paramètres régionaux (LCID) du système d'exploitation. Pour obtenir la liste des valeurs LCID et des descriptions, consultez [ID de paramètres régionaux assignés par Microsoft](https://go.microsoft.com/fwlink/?LinkId=208080). Ne peut pas avoir la valeur null.|  
 
 ## <a name="remarks"></a>Notes  
 Cette vue est similaire à [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), ajout de colonnes pour différencier Windows et Linux.

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 12ae39b965678a47053d3d312c750f7bd87bd7d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916828"
 ---
 # <a name="status-property-example-field-vb"></a>Status, exemple de propriété (objet Field) (VB)
 L’exemple suivant ouvre un document à partir d’un dossier en lecture/écriture à l’aide du [fournisseur de publication Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). Le [état](../../../ado/reference/ado-api/status-property-ado-field.md) propriété d’un [champ](../../../ado/reference/ado-api/field-object.md) objet de la [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) sera tout d’abord être définie sur **adFieldPendingInsert**, puis de mettre à jour **adFieldOk**.  

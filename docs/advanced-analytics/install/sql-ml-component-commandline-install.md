@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: d852cc745578d852b2c8235ebcaf3614020a1bb8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6ffd4b13d5ab92187ac998fd983e8fa8416e4401
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962893"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installer les composants R et Python à partir de la ligne de commande d’apprentissage SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,8 +50,8 @@ En cas d’installation à partir de l’invite de commandes, [!INCLUDE[ssNoVers
 | / FONCTIONNALITÉS = AdvancedAnalytics | Installe la version de la base de données : SQL Server 2017 Machine Learning Services (en base de données) ou SQL Server 2016 R Services (en base de données).  |
 | / FONCTIONNALITÉS = SQL_INST_MR | S’applique à SQL Server 2017 uniquement. Coupler avec AdvancedAnalytics. Installe la fonctionnalité (en base de données) R, y compris Microsoft R Open et les packages R propriétaires. La fonctionnalité de SQL Server 2016 R Services est R uniquement, donc il n’existe aucun paramètre pour cette version.|
 | / FONCTIONNALITÉS = SQL_INST_MPY | S’applique à SQL Server 2017 uniquement. Coupler avec AdvancedAnalytics. Installe la fonctionnalité (en base de données) Python, y compris Anaconda et les packages Python propriétaires. |
-| /FEATURES = SQL_SHARED_MR | Installe la fonctionnalité R pour la version autonome : SQL Server 2017 Machine Learning Server (autonome) ou SQL Server 2016 R Server (autonome). Un serveur autonome est une « fonctionnalité partagée » ne pas liée à une instance du moteur de base de données.|
-| /FEATURES = SQL_SHARED_MPY | S’applique à SQL Server 2017 uniquement. Installe la fonctionnalité de Python pour la version autonome : SQL Server 2017 Machine Learning Server (autonome). Un serveur autonome est une « fonctionnalité partagée » ne pas liée à une instance du moteur de base de données.|
+| / FONCTIONNALITÉS = SQL_SHARED_MR | Installe la fonctionnalité R pour la version autonome : SQL Server 2017 Machine Learning Server (autonome) ou SQL Server 2016 R Server (autonome). Un serveur autonome est une « fonctionnalité partagée » ne pas liée à une instance du moteur de base de données.|
+| / FONCTIONNALITÉS = SQL_SHARED_MPY | S’applique à SQL Server 2017 uniquement. Installe la fonctionnalité de Python pour la version autonome : SQL Server 2017 Machine Learning Server (autonome). Un serveur autonome est une « fonctionnalité partagée » ne pas liée à une instance du moteur de base de données.|
 | /IACCEPTROPENLICENSETERMS  | Indique que vous avez accepté les termes du contrat de licence pour l’utilisation des composants R open source. |
 | /IACCEPTPYTHONLICENSETERMS | Indique que vous avez accepté les termes du contrat de licence pour l’utilisation des composants Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indique que vous avez accepté les termes du contrat de licence pour l’utilisation de SQL Server.|
@@ -179,12 +178,12 @@ Pour vérifier l’état d’installation de l’instance et résoudre les probl
 
 Aux développeurs R peuvent démarrer avec des exemples simples et apprendre les bases du fonctionne de R avec SQL Server. Pour votre prochaine étape, consultez les liens suivants :
 
-+ [Didacticiel : Exécuter R dans T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Didacticiel : Analytique en base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutoriel : Exécuter R dans T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutoriel : Analytique en base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Les développeurs Python peuvent apprendre à utiliser Python avec SQL Server en suivant ces didacticiels :
 
-+ [Didacticiel : Exécutez le code Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Didacticiel : Analytique en base de données pour les développeurs Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Tutoriel : Exécutez le code Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Tutoriel : Analytique en base de données pour les développeurs Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 Pour afficher des exemples d’apprentissage qui sont basées sur des scénarios réels, consultez [d’apprentissage didacticiels](../tutorials/machine-learning-services-tutorials.md).

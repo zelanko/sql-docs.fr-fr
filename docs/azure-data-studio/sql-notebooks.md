@@ -10,13 +10,12 @@ ms.reviewer: achatter; alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 9af2e04a3973eddfcd714c7968c35e544302aba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959263"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Comment utiliser des blocs-notes dans Azure Data Studio
 
@@ -28,7 +27,7 @@ Cet article décrit comment lancer l’expérience de bloc-notes dans Azure Data
 Vous pouvez vous connecter au type de connexion Microsoft SQL Server dans Azure Data Studio.
 Dans Azure Data Studio, vous pouvez également appuyer sur F1, puis cliquez sur **nouvelle connexion** et connectez-vous à votre serveur SQL Server.
 
-![image1](media/sql-notebooks/connection-info.png)
+![Image1](media/sql-notebooks/connection-info.png)
 
 ## <a name="launch-notebooks"></a>Lancer des ordinateurs portables
 
@@ -36,7 +35,7 @@ Il existe plusieurs façons de lancer un nouveau bloc-notes.
 
 1. Accédez à la **Menu fichier** dans Azure Data Studio, puis cliquez sur **nouveau bloc-notes**.
 
-    ![image3](media/sql-notebooks/file-new-notebook.png)
+    ![Image3](media/sql-notebooks/file-new-notebook.png)
 
 3. Cliquez avec le bouton droit sur le **SQL Server** connexion et lancement puis **nouveau bloc-notes**. 
     ![image3](media/sql-notebooks/server-new-notebook.png)
@@ -63,15 +62,15 @@ Noyau de SQL pour vous connecter à une instance de SQL Server
 
 Résultats de requête
 
-![image19](media/sql-notebooks/sql-cell-results.png)
+![Image19](media/sql-notebooks/sql-cell-results.png)
 
 Noyau de SQL pour vous connecter à l’instance de serveur PostgreSQL 
 
-![image18](media/sql-notebooks/pgsql-code-cell.png)
+![Image18](media/sql-notebooks/pgsql-code-cell.png)
 
 Résultats de requête
 
-![image20](media/sql-notebooks/pgsql-cell-results.png)
+![Image20](media/sql-notebooks/pgsql-cell-results.png)
 
 ### <a name="configure-python-for-notebooks"></a>Configuration de Python pour les blocs-notes
 
@@ -81,14 +80,14 @@ Lorsque vous sélectionnez un des autres noyaux en dehors de SQL dans la liste d
 
 Une fois l’installation terminée, vous trouverez une notification dans l’historique des tâches ainsi que l’emplacement du serveur principal Jupyter en cours d’exécution dans le Terminal de sortie.
 
-![image22](media/sql-notebooks/jupyter-backend.png)
+![Image22](media/sql-notebooks/jupyter-backend.png)
 
 |Noyau|Description
 |:-----|:-----
 | Noyau SQL | Écrire du Code SQL ciblé sur votre base de données relationnelle.
 |PySpark3 et le noyau PySpark| Écrire du code Python à l’aide de calcul Spark à partir du cluster.
 |Noyau Spark|Écrire du code Scala et R à l’aide de calcul Spark à partir du cluster.
-|Python Kernel|Écrire du code Python pour un développement local.
+|Noyau Python|Écrire du code Python pour un développement local.
 
 `Attach to` fournit le contexte pour le noyau à attacher. Si vous utilisez le noyau de SQL, vous pouvez `Attach to` un de vos instances de SQL Server.
 
@@ -110,7 +109,7 @@ La cellule est modifiée en mode édition et tapez maintenant markdown et vous v
 
 Cliquez en dehors de la cellule de texte pour afficher le texte markdown.
 
-![image10](media/sql-notebooks/notebook-markdown-preview.png)
+![Image10](media/sql-notebooks/notebook-markdown-preview.png)
 
 ### <a name="trusted-and-non-trusted"></a>Approuvés et Non approuvés
 
@@ -130,29 +129,29 @@ Cliquez sur **Exécuter**.
 
 L’Application Spark est démarrée et renvoie le résultat suivant :
 
-![image12](media/sql-notebooks/pyspark.png)
+![Image12](media/sql-notebooks/pyspark.png)
 
 ### <a name="spark-kernel--scala-language"></a>Noyau Spark | Langage de Scala
 
 Choisissez le `Spark|Scala Kernel` et dans le type de cellule dans le code suivant.
 
-![image13](media/sql-notebooks/spark-scala.png)
+![Image13](media/sql-notebooks/spark-scala.png)
 
 Vous pouvez également afficher les Options « cellule » lorsque vous cliquez sur l’icône des options ci-dessous :
 
-![image14](media/sql-notebooks/scala-cell-options.png)
+![Image14](media/sql-notebooks/scala-cell-options.png)
 
 ### <a name="spark-kernel--r-language"></a>Noyau Spark | Langage R
 
 Choisissez le Spark | R dans la liste déroulante pour les noyaux. Dans la cellule, tapez ou collez le code. Cliquez sur **exécuter** pour afficher la sortie suivante.
 
-![image15](media/sql-notebooks/spark-r.png)
+![Image15](media/sql-notebooks/spark-r.png)
 
 ### <a name="local-python-kernel"></a>Noyau Python local
 
 Choisissez le noyau Python local et dans le type de cellule :
 
-![image16](media/sql-notebooks/local-python.png)
+![Image16](media/sql-notebooks/local-python.png)
 
 ## <a name="manage-packages"></a>Gérer les Packages
 Une des choses que nous avons optimisé pour le développement Python local était d’incluent la possibilité d’installer des packages qui les clients devraient pour leurs scénarios. Par défaut, nous incluons les packages courants tels que `pandas`, `numpy` etc., mais si vous attendez un package qui n’est pas inclus ensuite écrire le code suivant dans la cellule du bloc-notes : 
@@ -165,7 +164,7 @@ Lorsque vous exécutez cette commande, `Module not found` est retournée. Si vot
 
 Si elle retourne un `Module not Found` erreur, puis cliquez sur **gérer les Packages** pour lancer l’expérience de l’Assistant. 
 
-![image17](media/sql-notebooks/manage-packages.png)
+![Image17](media/sql-notebooks/manage-packages.png)
 
 Dans cet Assistant, vous serez en mesure de voir les **installé** packages. Vous pouvez parcourir la liste et la version associée de chacun de ces packages. Si vous avez besoin pour **désinstaller** aucune de ces packages, puis vous pouvez cliquer sur un des packages, puis cliquez sur le **désinstaller des packages sélectionnés** option.
 

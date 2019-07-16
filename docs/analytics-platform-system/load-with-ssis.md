@@ -2,19 +2,18 @@
 title: Charger des données avec Integration Services - Parallel Data Warehouse | Microsoft Docs
 description: Fournit des informations de référence et de déploiement pour le chargement des données dans Parallel Data Warehouse (PDW) à l’aide des packages SQL Server Integration Services (SSIS).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90d9f7422a3073df79a93949b3b7ed2e94208412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960670"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Charger des données avec Integration Services à Parallel Data Warehouse
 Fournit des informations de référence et de déploiement pour le chargement de données dans SQL Server Parallel Data Warehouse à l’aide des packages SQL Server Integration Services (SSIS).  
@@ -61,7 +60,7 @@ Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`
 ### <a name="run-from-a-windows-command-prompt"></a>Invite de commandes de s’exécuter à partir de Windows 
 Pour exécuter le package à partir d’une invite de commandes Windows, à l’aide de la **dtexec** utilitaire : `dtexec /FILE <packagePath>`  
   
-Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Par exemple : `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>Types de données  
 Lorsque vous utilisez les Services d’intégration pour charger des données à partir d’une source de données dans une base de données SQL Server PDW, les données sont tout d’abord mappées à partir de la source de données aux types de données Integration Services. Cela permet à des données provenant de plusieurs sources de données d'être mappées à un ensemble commun de types de données.  
@@ -71,7 +70,7 @@ Puis les données sont mappées à partir des Services d’intégration pour les
 |Type de données PDW|Integration Services types de données (s) correspondant au type de données PDW|  
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|  
 |BIT|DT_BOOL|  
-|bigint|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
+|BIGINT|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
 |CHAR|DT_STR|  
 |DATE|DT_DBDATE|  
 |DATETIME|DT_DATE, DT_DBDATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2|  
@@ -84,7 +83,7 @@ Puis les données sont mappées à partir des Services d’intégration pour les
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -250,7 +249,7 @@ Exécuter le package sur votre ordinateur Integration Services.
 [Créer une tâche de script qui utilise l’adaptateur de destination SSIS PDW](create-ssis-script-task-using-pdw-destination-adapter.md)  
 [SQL Server Integration Services](../integration-services/sql-server-integration-services.md)  
 [Conception et implémentation de Packages (Integration Services)](https://msdn.microsoft.com/library/ms141091\(v=sql11\).aspx)  
-[Tutoriel : Création d’un Package de base à l’aide d’un Assistant](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
+[Tutoriel : Création d’un Package de base à l’aide d’un Assistant](https://technet.microsoft.com/library/ms365330\(v=sql11\).aspx)  
 [Mise en route (Integration Services)](https://go.microsoft.com/fwlink/?LinkId=202412)  
 [Exemple de génération dynamique de Package](https://go.microsoft.com/fwlink/?LinkId=202413)  
 [Conception de vos Packages SSIS pour le parallélisme (vidéo liée à SQL Server)](https://msdn.microsoft.com/library/dd795221.aspx)  

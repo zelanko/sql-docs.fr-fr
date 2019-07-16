@@ -7,13 +7,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 6cb30c306c5cd2b426976aba4a873475639e4ba5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73272310b25cfd42250142864e3e6f0999a4f853
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962884"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Installer SQL Server Machine Learning Services sur Windows
 
@@ -104,7 +103,7 @@ Pour des installations locales, vous devez exécuter le programme d'installation
 
 7. Une fois l’installation terminée, si vous êtes invité à redémarrer l’ordinateur, faites-le maintenant. Il est important de lire le message affiché par l'Assistant Installation à la fin de l'installation. Pour plus d'informations, consultez [View and Read SQL Server Setup Log Files](https://docs.microsoft.com/sql/database-engine/install-windows/view-and-read-sql-server-setup-log-files).
 
-## <a name="set-environment-variables"></a>Jeu de variables d’environnement
+## <a name="set-environment-variables"></a>Définition des variables d'environnement
 
 Pour R fonctionnalité d’intégration uniquement, vous devez définir le **MKL_CBWR** variable d’environnement [résultat homogène](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr) des calculs d’Intel Math Kernel Library (MKL).
 
@@ -299,12 +298,12 @@ Le processus d’installation et de gestion des packages R est différent dans S
 
 Aux développeurs R peuvent démarrer avec des exemples simples et apprendre les bases du fonctionne de R avec SQL Server. Pour votre prochaine étape, consultez les liens suivants :
 
-+ [Tutoriel : Exécuter R dans T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [Tutoriel : Analytique en base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Tutoriel : Exécuter R dans T-SQL](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [Tutoriel : Analytique en base de données pour les développeurs R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Les développeurs Python peuvent apprendre à utiliser Python avec SQL Server en suivant ces didacticiels :
 
-+ [Tutoriel : Exécutez le code Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Tutoriel : Analytique en base de données pour les développeurs Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [Tutoriel : Exécutez le code Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Tutoriel : Analytique en base de données pour les développeurs Python](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
 Pour afficher des exemples d’apprentissage qui sont basées sur des scénarios réels, consultez [d’apprentissage didacticiels](../tutorials/machine-learning-services-tutorials.md).

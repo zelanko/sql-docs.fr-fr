@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d8f64172685c42a5dde8de9027c8c7e621ddd9f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff187d5d2b67c5fc3d40a80a136ff9f0c65b2ed2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070042"
 ---
 # <a name="transfer-octet-length"></a>Longueur en octets du transfert
 La longueur d’octet de transfert d’une colonne est le nombre maximal d’octets retournés à l’application lorsque les données sont transférées vers son type de données C par défaut. Pour les données de caractères, la longueur d’octet de transfert n’inclut pas d’espace pour le caractère de fin de la valeur null. La longueur d’octet de transfert d’une colonne peut être différente du nombre d’octets requis pour stocker les données sur la source de données.  

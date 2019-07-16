@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 099fd0ff318a77f1f1916395fbd13087ab8ba18b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 45cec32e818eab1ec5586196eadef998b8f988ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036390"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Mappage des fonctions de remplacement pour la compatibilité descendante des applications
 Une application ODBC *3.x* application fonctionne via ODBC *3.x* Gestionnaire de pilotes fonctionnera par rapport à une application ODBC *2.x* pilote tant qu’aucune nouvelle fonctionnalité n’est utilisées. Les deux dupliquée des fonctionnalités et des changements de comportement, toutefois, affectent-elles la façon qui ODBC *3.x* application fonctionne sur une application ODBC *2.x* pilote. Lorsque vous travaillez avec une application ODBC *2.x* pilote, le Gestionnaire de pilotes ODBC suivante le mappe *3.x* fonctions qui ont remplacé un ou plusieurs ODBC *2.x* fonctions, dans le ODBC correspondant *2.x* fonctions.  
@@ -454,9 +453,9 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |ColumnName|"" (chaîne vide)|  
 |*NameLengthPtr|0|  
 |*DataTypePtr|SQL_BINARY|  
-|*ColumnSizePtr|4|  
+|\* ColumnSizePtr|4|  
 |*DecimalDigitsPtr|0|  
-|*NullablePtr|SQL_NO_NULLS|  
+|\* NullablePtr|SQL_NO_NULLS|  
   
 ### <a name="sqlgetdata"></a>SQLGetData  
  Lorsqu’une application ODBC *3.x* application fonctionne avec une application ODBC *2.x* pilote effectue l’appel suivant à **SQLGetData** pour récupérer un signet :  

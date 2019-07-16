@@ -1,21 +1,20 @@
 ---
-title: mssqlctl hdfs reference
+title: référence de hdfs mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Article de référence pour les commandes hdfs mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f211faf827bdf925a8fde938fff8f96998bc359
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6a2044594065e6f98ed919ace2171279e6f72c25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957915"
 ---
 # <a name="mssqlctl-hdfs"></a>mssqlctl hdfs
 
@@ -26,9 +25,9 @@ L’article suivant fournit la référence pour le **hdfs** commandes dans le **
 ## <a name="commands"></a>Commandes
 |     |     |
 | --- | --- |
-[mssqlctl hdfs shell](#mssqlctl-hdfs-shell) | L’interpréteur de commandes HDFS est un interpréteur de commandes interactif simple pour le système de fichiers HDFS.
+[interpréteur de commandes hdfs mssqlctl](#mssqlctl-hdfs-shell) | L’interpréteur de commandes HDFS est un interpréteur de commandes interactif simple pour le système de fichiers HDFS.
 [mssqlctl hdfs ls](#mssqlctl-hdfs-ls) | Répertorie l’état du fichier donné ou du répertoire.
-[mssqlctl hdfs exists](#mssqlctl-hdfs-exists) | Déterminer si un fichier ou répertoire existe.  Retourne True si existe et False sinon.
+[mssqlctl hdfs existe](#mssqlctl-hdfs-exists) | Déterminer si un fichier ou répertoire existe.  Retourne True si existe et False sinon.
 [mssqlctl hdfs mkdir](#mssqlctl-hdfs-mkdir) | Créez un répertoire au chemin spécifié.
 [mssqlctl hdfs mv](#mssqlctl-hdfs-mv) | Déplacer le fichier spécifié ou le chemin d’accès à l’emplacement spécifié.
 [mssqlctl hdfs create](#mssqlctl-hdfs-create) | Créer le fichier texte à l’emplacement spécifié.  Contenu de texte simple peut être ajouté via le paramètre de données.
@@ -37,7 +36,7 @@ L’article suivant fournit la référence pour le **hdfs** commandes dans le **
 [mssqlctl hdfs rmr](#mssqlctl-hdfs-rmr) | Un fichier ou répertoire suppriment de façon récursive.
 [mssqlctl hdfs chmod](#mssqlctl-hdfs-chmod) | Modifier l’autorisation sur le fichier ou répertoire spécifié.
 [mssqlctl hdfs chown](#mssqlctl-hdfs-chown) | Modifier le propriétaire ou le groupe du fichier spécifié.
-## <a name="mssqlctl-hdfs-shell"></a>mssqlctl hdfs shell
+## <a name="mssqlctl-hdfs-shell"></a>interpréteur de commandes hdfs mssqlctl
 L’interpréteur de commandes HDFS est un interpréteur de commandes interactif simple pour le système de fichiers HDFS.
 ```bash
 mssqlctl hdfs shell 
@@ -83,7 +82,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-hdfs-exists"></a>mssqlctl hdfs exists
+## <a name="mssqlctl-hdfs-exists"></a>mssqlctl hdfs existe
 Déterminer si un fichier ou répertoire existe.  Retourne True si existe et False sinon.
 ```bash
 mssqlctl hdfs exists --path -p 
@@ -160,7 +159,7 @@ Format de sortie.  Valeurs autorisées : json, jsonc, table, tsv.  Par défaut�
 Chaîne de requête JMESPath. Consultez [ http://jmespath.org/ ](http://jmespath.org/]) pour plus d’informations et des exemples.
 #### `--verbose`
 Augmente le détail de la journalisation. Utilisez --debug pour les journaux d’activité de débogage complets.
-## <a name="mssqlctl-hdfs-create"></a>mssqlctl hdfs create
+## <a name="mssqlctl-hdfs-create"></a>créer des mssqlctl hdfs
 Créer le fichier texte à l’emplacement spécifié.  Contenu de texte simple peut être ajouté via le paramètre de données.
 ```bash
 mssqlctl hdfs create --path -p 

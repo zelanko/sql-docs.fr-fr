@@ -18,27 +18,26 @@ helpviewer_keywords:
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b6f6538aa13b2236c7dca52189b37addad85ae53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9934771b6a887f6ae0984e79ce11729145e3d410
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051537"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Cette vue système dont l'étendue est la base de données est conçue pour fournir un système d'avertissement anticipé pour déterminer les objets qui seront affectés par une mise à niveau de version majeure dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Utilisez cette vue avant ou après la mise à niveau pour obtenir une énumération complète des objets affectés. Vous devez interroger cette vue dans chaque base de données pour obtenir le nombre total sur le serveur.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |class|**int** pas NULL|Classe de l'objet qui sera affecté :<br /><br /> **1** = constraint<br /><br /> **7** = index et segments|  
 |class_desc|**nvarchar (60)** pas NULL|Description de la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** pas NULL|ID d'objet de la contrainte, ou ID d'objet de la table contenant l'index ou le segment de mémoire.|  
 |minor_id|**int** NULL|**NULL** pour les contraintes<br /><br /> Index_id pour les index et les segments|  
-|dependency|**nvarchar (60)** pas NULL|Description de la dépendance qui provoque l'impact sur une contrainte ou un index. La valeur est également utilisée pour les avertissements générés pendant la mise à niveau.<br /><br /> Exemples :<br /><br /> **espace** (pour intrinsèque)<br /><br /> **géométrie** (pour système UDT)<br /><br /> **Geography::Parse** (pour système de méthode UDT)|  
+|dependency|**nvarchar (60)** pas NULL|Description de la dépendance qui provoque l'impact sur une contrainte ou un index. La valeur est également utilisée pour les avertissements générés pendant la mise à niveau.<br /><br /> Exemples :<br /><br /> **espace** (pour intrinsèque)<br /><br /> **géométrie** (pour système UDT)<br /><br /> **Geography::Parse** (pour système de méthode UDT)|  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW DATABASE STATE.  

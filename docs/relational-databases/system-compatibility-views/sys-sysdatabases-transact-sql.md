@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66ea403b5abc5b8c84ad9a1465cb30d2007ac500
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b0dab1ca5f21ced6a54192a4b0173ead68fd6f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089167"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -37,19 +36,19 @@ ms.locfileid: "47852287"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de la base de données|  
+|**name**|**sysname**|Nom de la base de données|  
 |**dbid**|**smallint**|ID de la base de données|  
 |**sid**|**varbinary(85)**|ID système du créateur de la base de données.|  
-|**Mode**|**smallint**|Champ utilisé de manière interne pour verrouiller une base de données pendant sa création.|  
-|**status**|**Int**|Bits d’état, certains d'entre eux peuvent être définis à l’aide de [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) comme indiqué :<br /><br /> 1 = **autoclose** (ALTER DATABASE)<br /><br /> 4 = **select dans / bulkcopy** (ALTER DATABASE via SET RECOVERY)<br /><br /> 8 = **trunc. log sur chkpt** (ALTER DATABASE via SET RECOVERY)<br /><br /> 16 = **détection de page endommagée** (ALTER DATABASE)<br /><br /> 32 = **le chargement**<br /><br /> 64 = **avant la restauration**<br /><br /> 128 = **la récupération**<br /><br /> 256 = **ne pas récupéré**<br /><br /> 512 = **hors connexion** (ALTER DATABASE)<br /><br /> 1024 = **en lecture seule** (ALTER DATABASE)<br /><br /> 2048 = **utilisation des dbo uniquement** (ALTER DATABASE via SET RESTRICTED_USER)<br /><br /> 4096 = **mono-utilisateur** (ALTER DATABASE)<br /><br /> 32768 = **mode urgence**<br /><br /> 65536 = **SOMME DE CONTRÔLE** (ALTER DATABASE)<br /><br /> 4194304 = **autoshrink** (ALTER DATABASE)<br /><br /> 1073741824 = **est arrêté correctement**<br /><br /> Plusieurs bits peuvent être activés à la fois.|  
-|**status2**|**Int**|16384 = **par défaut ANSI null** (ALTER DATABASE)<br /><br /> 65536 = **concaténation de null donne null** (ALTER DATABASE)<br /><br /> 131072 = **déclencheurs récursifs** (ALTER DATABASE)<br /><br /> 1048576 = **par défaut jusqu’au curseur local** (ALTER DATABASE)<br /><br /> 8388608 = **identificateur entre guillemets** (ALTER DATABASE)<br /><br /> 33554432 = **fermer le curseur sur validation** (ALTER DATABASE)<br /><br /> 67108864 = **ANSI nulls** (ALTER DATABASE)<br /><br /> 268435456 = **ANSI warnings** (ALTER DATABASE)<br /><br /> 536870912 = **complète activée en mode texte** (définie à l’aide **sp_fulltext_database**)|  
+|**mode**|**smallint**|Champ utilisé de manière interne pour verrouiller une base de données pendant sa création.|  
+|**status**|**int**|Bits d’état, certains d'entre eux peuvent être définis à l’aide de [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) comme indiqué :<br /><br /> 1 = **autoclose** (ALTER DATABASE)<br /><br /> 4 = **select dans / bulkcopy** (ALTER DATABASE via SET RECOVERY)<br /><br /> 8 = **trunc. log sur chkpt** (ALTER DATABASE via SET RECOVERY)<br /><br /> 16 = **détection de page endommagée** (ALTER DATABASE)<br /><br /> 32 = **le chargement**<br /><br /> 64 = **avant la restauration**<br /><br /> 128 = **la récupération**<br /><br /> 256 = **ne pas récupéré**<br /><br /> 512 = **hors connexion** (ALTER DATABASE)<br /><br /> 1024 = **en lecture seule** (ALTER DATABASE)<br /><br /> 2048 = **utilisation des dbo uniquement** (ALTER DATABASE via SET RESTRICTED_USER)<br /><br /> 4096 = **mono-utilisateur** (ALTER DATABASE)<br /><br /> 32768 = **mode urgence**<br /><br /> 65536 = **SOMME DE CONTRÔLE** (ALTER DATABASE)<br /><br /> 4194304 = **autoshrink** (ALTER DATABASE)<br /><br /> 1073741824 = **est arrêté correctement**<br /><br /> Plusieurs bits peuvent être activés à la fois.|  
+|**status2**|**int**|16384 = **par défaut ANSI null** (ALTER DATABASE)<br /><br /> 65536 = **concaténation de null donne null** (ALTER DATABASE)<br /><br /> 131072 = **déclencheurs récursifs** (ALTER DATABASE)<br /><br /> 1048576 = **par défaut jusqu’au curseur local** (ALTER DATABASE)<br /><br /> 8388608 = **identificateur entre guillemets** (ALTER DATABASE)<br /><br /> 33554432 = **fermer le curseur sur validation** (ALTER DATABASE)<br /><br /> 67108864 = **ANSI nulls** (ALTER DATABASE)<br /><br /> 268435456 = **ANSI warnings** (ALTER DATABASE)<br /><br /> 536870912 = **complète activée en mode texte** (définie à l’aide **sp_fulltext_database**)|  
 |**crdate**|**datetime**|Date de création|  
-|**réservé**|**datetime**|Réservé pour un usage ultérieur.|  
-|**Catégorie**|**Int**|Contient un bitmap des informations utilisées pour la réplication :<br /><br /> 1 = Publié pour la réplication transactionnelle et d'instantané.<br /><br /> 2 = Abonné à une publication transactionnelle ou d'instantané.<br /><br /> 4 = Publié pour une réplication de fusion.<br /><br /> 8 = Abonné à une publication de fusion.<br /><br /> 16 = Base de données de distribution.|  
+|**reserved**|**datetime**|Réservé pour un usage ultérieur.|  
+|**category**|**int**|Contient un bitmap des informations utilisées pour la réplication :<br /><br /> 1 = Publié pour la réplication transactionnelle et d'instantané.<br /><br /> 2 = Abonné à une publication transactionnelle ou d'instantané.<br /><br /> 4 = Publié pour une réplication de fusion.<br /><br /> 8 = Abonné à une publication de fusion.<br /><br /> 16 = Base de données de distribution.|  
 |**cmptlevel**|**tinyint**|Niveau de compatibilité pour la base de données. Pour plus d’informations, consultez [Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
-|**filename**|**nvarchar(260)**|Nom et chemin d'accès du système d'exploitation pour le fichier primaire de la base de données.<br /><br /> **nom de fichier** est visible par **dbcreator**, **sysadmin**, le propriétaire de la base de données avec les autorisations CREATE ANY DATABASE ou les bénéficiaires de l’une des autorisations suivantes : ALTER ANY DATABASE CRÉER UNE BASE DE DONNÉES, AFFICHER UNE DÉFINITION. Pour retourner le chemin d’accès et nom de fichier, interrogez la [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) affichage de compatibilité, ou le [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) vue.|  
+|**filename**|**nvarchar(260)**|Nom et chemin d'accès du système d'exploitation pour le fichier primaire de la base de données.<br /><br /> **nom de fichier** est visible par **dbcreator**, **sysadmin**, le propriétaire de la base de données avec les autorisations CREATE ANY DATABASE ou les bénéficiaires de l’une des autorisations suivantes : ALTER ANY DATABASE, CREATE ANY DATABASE, AFFICHER UNE DÉFINITION. Pour retourner le chemin d’accès et nom de fichier, interrogez la [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) affichage de compatibilité, ou le [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) vue.|  
 |**version**|**smallint**|Numéro de version interne du code [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec lequel la base de données a été créée. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>Voir aussi  

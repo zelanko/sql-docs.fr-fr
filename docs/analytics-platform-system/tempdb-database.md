@@ -2,19 +2,18 @@
 title: Base de données tempdb - Parallel Data Warehouse | Microsoft Docs
 description: Base de données tempdb dans Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7e11f4eff980358f4b4906f8a100cfc509d19dd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1790ae3bc63a379c1bcf143655f10829db60a339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960019"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>base de données tempdb dans Parallel Data Warehouse
 **tempdb** est une base de données système SQL Server PDW stocke les tables temporaires locales pour les bases de données utilisateur. Tables temporaires sont souvent utilisés pour améliorer les performances de requête. Par exemple, vous pouvez utiliser une table temporaire d’organiser un script et réutiliser des données calculées.  

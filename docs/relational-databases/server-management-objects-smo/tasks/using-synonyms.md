@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a25a6a288d8d345f36e73814bdf8fdf71a28af5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 183c5c002165565c1042df5d4523d9e25a027cee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030024"
 ---
 # <a name="using-synonyms"></a>Utilisation de synonymes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Un synonyme est un alias donné à un objet dans l'étendue du schéma. Dans SMO, les synonymes sont représentés par le <xref:Microsoft.SqlServer.Management.Smo.Synonym> objet. L'objet <xref:Microsoft.SqlServer.Management.Smo.Synonym> est un enfant de l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>. Cela signifie que les synonymes ne sont valides que dans le contexte de la base de données dans laquelle ils ont été définis. Toutefois, le synonyme peut faire référence aux objets sur une autre base de données, ou sur une instance distante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Un synonyme est un alias donné à un objet dans l'étendue du schéma. Dans SMO, les synonymes sont représentés par l'objet <xref:Microsoft.SqlServer.Management.Smo.Synonym>. L'objet <xref:Microsoft.SqlServer.Management.Smo.Synonym> est un enfant de l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>. Cela signifie que les synonymes ne sont valides que dans le contexte de la base de données dans laquelle ils ont été définis. Toutefois, le synonyme peut faire référence aux objets d'une autre base de données ou d'une instance distante de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  L'objet auquel est attribué un alias est l'objet de base. La propriété de nom de l'objet <xref:Microsoft.SqlServer.Management.Smo.Synonym> est l'alias attribué à l'objet de base.  
   

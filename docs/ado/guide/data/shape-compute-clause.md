@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e1e268da5eb4c53b6270e474987c69b88383cd9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924146"
 ---
 # <a name="shape-compute-clause"></a>Clause COMPUTE de la commande SHAPE
 Une clause COMPUTE de forme génère un parent **Recordset**, dont les colonnes sont constituées d’une référence à l’enfant **Recordset**; facultatif dont le contenu est chapitre, nouveau, ou des colonnes calculées, des colonnes ou le résultat de l’exécution des fonctions d’agrégation sur l’enfant **Recordset** précédemment finies ou **Recordset**; et toutes les colonnes à partir de l’enfant **Recordset** répertoriées dans facultatif par clause.  
@@ -47,7 +46,7 @@ SHAPE child-command [AS] child-alias
   
 -   Le mot-clé TABLE, suivi du nom d’une table dans le fournisseur de données.  
   
- *child-alias*  
+ *alias-enfant*  
  Alias utilisé pour faire référence à la **Recordset** retourné par la *commande enfant.* Le *enfant-alias* est requis dans la liste des colonnes dans la clause COMPUTE et définit la relation entre parent et enfant **Recordset** objets.  
   
  *appended-column-list*  
@@ -77,15 +76,15 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  Par exemple, supposons que vous avez une table nommée des données démographiques, qui se compose de champs d’état, ville et remplissage. (Les chiffres dans la table sont fournis uniquement à un exemple).  
   
-|État|Ville|Remplissage|  
+|État|City|Remplissage|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|\- ou -|Medford|200,000|  
-|\- ou -|Portland|400,000|  
+|Ou|Medford|200,000|  
+|Ou|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
 |WA|Tacoma|500,000|  
-|\- ou -|Corvallis|300,000|  
+|Ou|Corvallis|300,000|  
   
  Maintenant, exécutez cette commande de la forme :  
   
@@ -105,33 +104,33 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ### <a name="parent"></a>Parent  
   
-|SUM (rs.Population)|rs|État|  
+|Somme (rs. Remplissage)|rs|État|  
 |---------------------------|--------|-----------|  
 |1,300,000|Référence à Enfant1|CA|  
 |1,200,000|Référence à Enfant2|WA|  
-|1,100,000|Référence à enfant 3|\- ou -|  
+|1,100,000|Référence à enfant 3|Ou|  
   
 ## <a name="child1"></a>Enfant1  
   
-|État|Ville|Remplissage|  
+|État|City|Remplissage|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
   
 ## <a name="child2"></a>Enfant2  
   
-|État|Ville|Remplissage|  
+|État|City|Remplissage|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|État|Ville|Remplissage|  
+|État|City|Remplissage|  
 |-----------|----------|----------------|  
-|\- ou -|Medford|200,000|  
-|\- ou -|Portland|400,000|  
-|\- ou -|Corvallis|300,000|  
+|Ou|Medford|200,000|  
+|Ou|Portland|400,000|  
+|Ou|Corvallis|300,000|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Accès aux lignes dans un Recordset hiérarchique](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

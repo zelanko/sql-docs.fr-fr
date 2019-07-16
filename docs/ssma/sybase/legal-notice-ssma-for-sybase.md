@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6857a18ca740c399feb5e8fd65dae4ec9a7d7dd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c65cc8fa51061ba9f8886bf81e0fa80d53781f91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028949"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>Mentions légales (SSMA pour Sybase)
 Cette documentation, ainsi que les exemples d’applications qu’elle contient, est fournie à titre d’information uniquement et sans aucune garantie, expresse ou implicite. Les informations contenues dans cette documentation, notamment les URL et autres références à des sites web Internet, pourront faire l’objet de modifications sans préavis. L’utilisateur reconnaît assumer tous les risques liés à l’utilisation ou aux résultats de l’utilisation de cette documentation.  
   
 Un exemple présenté dans cette documentation sert principalement à illustrer un concept ou l’utilisation raisonnable d’une instruction ou d’une clause particulière. La plupart des exemples ne reprennent pas la totalité du code normalement utilisé dans un système en production puisque certaines parties de la validation des données et de la gestion des erreurs sont retirées pour mettre l’accent sur un concept ou une instruction particulière. Aucun support technique n’est disponible pour ces exemples, ni pour le code source fourni.  
   
-Sauf mention contraire, les exemples de sociétés, d'organisations, de produits, de noms de domaine, d'adresses de messagerie, de personnes, de lieux et d'événements sont fictifs et toute ressemblance avec des sociétés, des organisations, des produits, des noms de domaine, des adresses de messagerie, des personnes, des lieux ou des événements réels serait tout à fait fortuite. L’utilisateur est tenu d’observer la réglementation relative aux droits d’auteur applicable dans son pays. Aucune partie de cette documentation ne peut être reproduite, stockée ou introduite dans un système de restitution, ou transmise à quelque fin ou par quelque moyen que ce soit (électronique, mécanique, photocopie, enregistrement ou autre) sans la permission expresse et écrite de Microsoft Corporation.  
+Sauf mention contraire, les exemples de sociétés, d'organisations, de produits, de noms de domaine, d'adresses de messagerie, de personnes, de lieux et d'événements sont fictifs et toute ressemblance avec des sociétés, des organisations, des produits, des noms de domaine, des adresses de messagerie, des personnes, des lieux ou des événements réels serait tout à fait fortuite. L'utilisateur est tenu d'observer la réglementation relative aux droits d'auteur applicable dans son pays. Aucune partie de cette documentation ne peut être reproduite, stockée ou introduite dans un système de restitution, ou transmise à quelque fin ou par quelque moyen que ce soit (électronique, mécanique, photocopie, enregistrement ou autre) sans la permission expresse et écrite de Microsoft Corporation.  
   
 Les produits mentionnés dans cette documentation peuvent faire l’objet de brevets, de dépôts de brevets en cours, de marques, de droits d’auteur ou d’autres droits de propriété intellectuelle et industrielle de Microsoft. Sauf stipulation expresse contraire d’un contrat de licence écrit de Microsoft, la fourniture de cette documentation n’a pas pour effet de vous concéder une licence sur ces brevets, marques, ni de vous céder des droits d’auteur ou autres droits de propriété intellectuelle quels qu’ils soient.  
   

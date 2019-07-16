@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8fa365d2-9de0-40c6-bcd2-a85613061baf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e197f6054e417a01f8d7e352cffb40328de69e9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92d16bfa1026169d4b2af7ef79bd0bda33b46992
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057218"
 ---
 # <a name="pseudo-type-identifiers"></a>Identificateurs des pseudo-types
 Pour faciliter la programmation application, ODBC définit un nombre d’identificateurs des pseudo-types. Ces identificateurs ne correspondent pas réellement aux types de données réelles, mais au lieu de cela, selon la situation, résoudre les types de données existant.  

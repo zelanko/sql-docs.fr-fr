@@ -24,14 +24,13 @@ ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 083b38e51433adec98f153bd4340d8b5d7ff7723
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54b338e76e0bb26c2df23871ed24fabfa8aa6c6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067073"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>Masquage d'éléments et d'attributs à l'aide de sql:hide
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65980803"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. Spécification de sql:hide sur un attribut  
+### <a name="a-specifying-sqlhide-on-an-attribute"></a>R. Spécification de sql:hide sur un attribut  
  Le schéma XSD dans cet exemple se compose d’un  **\<Person.Contact >** élément avec **ContactID**, **FirstName**, et **LastName** attributs.  
   
  Le **\<Person.Contact >** élément est de type complexe et, par conséquent, est mappé à la table du même nom (mappage par défaut). Tous les attributs de  **\<Person.Contact >** élément sont de type simple et mapper aux colonnes portant le même nom dans la Person.Contacttable dans la base de données AdventureWorks. Dans le schéma, le **SQL : Hide** annotation est spécifiée sur le **ContactID** attribut. Lorsqu’une requête XPath est spécifiée contre ce schéma, le **ContactID** n’est pas retourné dans le document XML.  

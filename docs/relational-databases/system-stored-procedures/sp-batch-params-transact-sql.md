@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b66e8b2d1b0d397a24c4ff5c702c00aff14988d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001811"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +42,17 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 `[ @tsqlbatch = ] 'tsqlbatch'` Est une chaîne Unicode contenant un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou un lot pour le paramètre informations sont que vous souhaitez. *tsqlbatch* est **nvarchar (max)** ou implicitement convertible en **nvarchar (max)** .  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**PARAMETER_NAME**|**sysname**|Nom du paramètre que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a trouvé dans le traitement.|  
 |**COLUMN_TYPE**|**smallint**|Ce champ retourne l'une des valeurs suivantes :<br /><br /> 0 = SQL_PARAM_TYPE_UNKNOWN<br /><br /> 1 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 2 = SQL_PARAM_TYPE_OUTPUT<br /><br /> 3 = SQL_RESULT_COL<br /><br /> 4 = SQL_PARAM_OUTPUT<br /><br /> 5 = SQL_RETURN_VALUE<br /><br /> Cette colonne a toujours pour valeur 0.|  
 |**DATA_TYPE**|**smallint**|Type de données du paramètre (code d'entier d'un type de données ODBC). Si ce type de données ne peut pas être mappé à un type ISO, la valeur est NULL. Le nom de type de données natif est retourné dans le **TYPE_NAME** colonne. Cette valeur est toujours NULL.|  
 |**TYPE_NAME**|**sysname**|Représentation sous forme de chaîne du type de données tel qu'il est présenté par le SGBD sous-jacent. Cette valeur est NULL.|  
-|**PRECISION**|**Int**|Nombre de chiffres significatifs. La valeur de retour pour la **précision** colonne est en base 10.|  
+|**PRECISION**|**int**|Nombre de chiffres significatifs. La valeur de retour pour la **précision** colonne est en base 10.|  
 |**LENGTH**|**Int**|Taille de transfert des données. Cette valeur est NULL.|  
 |**MISE À L’ÉCHELLE**|**smallint**|Nombre de chiffres situés à droite du séparateur décimal. Cette valeur est NULL.|  
 |**RADIX**|**smallint**|Base des types numériques. Cette valeur est NULL.|  
@@ -61,7 +60,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**SQL_DATA_TYPE**|**smallint**|Valeur du type de données système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] telle qu'elle apparaît dans le champ TYPE du descripteur. Cette colonne est la même que la colonne **DATA_TYPE**, excepté pour les types de données **datetime** et **interval** ISO. Cette colonne renvoie toujours une valeur. Cette valeur est NULL.|  
 |**SQL_DATETIME_SUB**|**smallint**|Le **datetime** ou ISO **intervalle** sous-code si la valeur de **SQL_DATA_TYPE** est SQL_DATETIME ou SQL_INTERVAL. Pour les données de types autres que **datetime** et ISO **intervalle**, cette colonne est NULL. Cette valeur est NULL.|  
 |**CHAR_OCTET_LENGTH**|**Int**|Longueur maximale en octets d’un **caractère** ou **binaire** paramètre de type de données. Pour tous les autres types de données, cette colonne retourne une valeur NULL. Cette valeur est toujours NULL.|  
-|**ORDINAL_POSITION**|**Int**|Numéro d'ordre du paramètre dans le traitement. Si le nom du paramètre est répété plusieurs fois, cette colonne indique la position de la première occurrence. Le premier paramètre occupe la position 1. Cette colonne renvoie toujours une valeur.|  
+|**ORDINAL_POSITION**|**int**|Numéro d'ordre du paramètre dans le traitement. Si le nom du paramètre est répété plusieurs fois, cette colonne indique la position de la première occurrence. Le premier paramètre occupe la position 1. Cette colonne renvoie toujours une valeur.|  
   
 ## <a name="permissions"></a>Autorisations  
  Autorisation d’exécuter **sp_batch_params** est accordée aux **public**.  

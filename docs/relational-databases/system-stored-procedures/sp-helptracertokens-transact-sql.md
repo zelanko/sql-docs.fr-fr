@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2e365c4a71c7bfdb5deece18e19c9950dd2ddf45
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 83d5789fed1ee9ff8d92d549feeb1ae47a8ed38c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048234"
 ---
 # <a name="sphelptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +50,9 @@ sp_helptracertokens [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Jeu de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**tracer_id**|**Int**|Identifie un enregistrement de jeton de suivi.|  
+|**tracer_id**|**int**|Identifie un enregistrement de jeton de suivi.|  
 |**publisher_commit**|**datetime**|Date et heure auxquelles l'enregistrement de jeton a été validé sur le serveur de publication dans la base de données de publication.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

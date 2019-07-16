@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926635"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Fournisseur Microsoft OLE DB pour ODBC présentation
 Pour un programmeur ADO ou RDS, l’idéal serait dans toutes les données source expose une interface OLE DB, afin que ADO peut appeler directement dans la source de données. Bien que les fournisseurs de base de données plus en plus implémentez des interfaces OLE DB, certaines sources de données ne sont pas encore exposées de cette façon. Toutefois, la plupart des systèmes SGBD utilisés aujourd'hui sont accessibles via ODBC.
@@ -184,7 +183,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
 |[EditMode](../../../ado/reference/ado-api/editmode-property.md)|Lecture seule|Lecture seule|Lecture seule|Lecture seule|
-|[Filter](../../../ado/reference/ado-api/filter-property.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
+|[Filtrer](../../../ado/reference/ado-api/filter-property.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
 |[MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
 |[MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md)|lecture/écriture|lecture/écriture|lecture/écriture|lecture/écriture|
@@ -217,7 +216,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Oui|Oui|Oui|Oui|
 |[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|Oui|Oui|Oui|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Oui|Oui|Oui|Oui|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Non|Non|Oui|Oui|
+|[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|Non|Non|Oui|Oui|
 |[Prise en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|Oui|Oui|Oui|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Oui|Oui|Oui|Oui|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Oui|Oui|Oui|Oui|
@@ -243,8 +242,8 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Définition de colonne|DBPROP_COLUMNDEFINITION|
 |Connect Timeout|DBPROP_INIT_TIMEOUT|
 |Catalogue actuel|DBPROP_CURRENTCATALOG|
-|Source de données|DBPROP_INIT_DATASOURCE|
-|Nom de la source de données|DBPROP_DATASOURCENAME|
+|source de données|DBPROP_INIT_DATASOURCE|
+|Data Source Name|DBPROP_DATASOURCENAME|
 |Objet de Source de données modèle de thread|DBPROP_DSOTHREADMODEL|
 |Nom SGBD|DBPROP_DBMSNAME|
 |Version SGBD|DBPROP_DBMSVER|
@@ -295,7 +294,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Terme de table|DBPROP_TABLETERM|
 |Transaction DDL|DBPROP_SUPPORTEDTXNDDL|
 |ID d'utilisateur|DBPROP_AUTH_USERID|
-|Nom d'utilisateur|DBPROP_USERNAME|
+|User Name|DBPROP_USERNAME|
 |Handle de fenêtre|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propriétés dynamiques du Recordset

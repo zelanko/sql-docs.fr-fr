@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 390ef0c2-107c-4443-9495-80f35f22d168
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c7c3d1f4ccc6b6a7fc9f398c528dcab79ffbd426
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e00eece4d8a3064806b401975aa299e76518f3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061202"
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>Sélection d’objet avancée (MySQLToSQL)
 Le **Section avancé de l’objet** boîte de dialogue vous permet de filtrer les objets de base de données à l’aide de chaînes et des sous-chaînes dans le nom d’objet, puis sélectionnez ou désélectionnez ces objets. SSMA effectue des opérations de conversion et la migration sur les objets sélectionnés.  
@@ -42,7 +41,7 @@ Affiche les éléments dans une table filtrés.
 **Affiche les éléments chargés uniquement**  
 Active ou désactive l’affichage des catégories ou des éléments. Lorsque cette case est activée, SSMA montre tous les éléments qui correspondent aux critères de filtre et ceux qui ont été précédemment chargée. Lorsque cette case n’est pas activée, SSMA montre les dossiers de catégorie.  
   
-**Filter**  
+**Filtrer**  
 Entrez la chaîne que vous souhaitez utiliser pour filtrer les éléments. Par exemple, pour rechercher des éléments disponibles qui contiennent la chaîne « ID » dans le nom d’élément, entrez la chaîne « ID » dans le **filtre** boîte.  
   
 Si les éléments correspondent au critère de filtre, les catégories ou les éléments apparaîtront à mesure que vous tapez la chaîne. Pour afficher les éléments correspondants, nous recommandons que vous cliquez sur le **affiche uniquement les éléments chargés** bouton.  

@@ -6,13 +6,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fe383652a63b0972097fc739cf33bd3fcbe2e7e6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3c9d8d6cc8c0a5cfdc697c5daaa3b56631d74116
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963029"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Résoudre les problèmes de collecte de données pour l’apprentissage
 
@@ -72,21 +71,21 @@ WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
 
 En dernier recours, vous pouvez ouvrir des fichiers sur le serveur pour déterminer la version installée. Pour ce faire, recherchez le fichier rlauncher.config pour obtenir l’emplacement du runtime R et le répertoire de travail actuel. Nous recommandons de faire et d’ouvrir une copie du fichier afin que vous ne modifiez pas accidentellement des propriétés.
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name\MSSQL\Binn\rlauncher.config`
 
-* SQL Server 2017
+* SQL Server 2017
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Binn\rlauncher.config`
 
 Pour obtenir la version de R et les versions de RevoScaleR, ouvrez une invite de commandes R, ou ouvrez l’interface RGui qui est associé à l’instance.
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instancename>\R_SERVICES\bin\x64\RGui.exe`
 
-* SQL Server 2017
+* SQL Server 2017
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
@@ -160,11 +159,11 @@ Lorsque vous travaillez avec le service pour la première fois, il peut être di
 
 Obtenir la plus récente ERRORLOG de SQL Server. L’ensemble complet des journaux d’erreurs se compose des fichiers depuis le répertoire de journal par défaut suivant :
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.SQL2016\MSSQL\Log\ExtensibilityLog`
 
-* SQL Server 2017
+* SQL Server 2017
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.SQL2016\MSSQL\Log\ExtensibilityLog`
 
@@ -203,11 +202,11 @@ SQL Server génère des journaux distincts pour les runtimes de langage de scrip
 
 Vous pouvez obtenir ces journaux à partir d’emplacements par défaut suivants :
 
-* SQL Server 2016
+* SQL Server 2016
   
   `C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
-* SQL Server 2017
+* SQL Server 2017
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\MSSQL\Log\ExtensibilityLog`
 
@@ -220,7 +219,7 @@ Par exemple, les messages de journal suivantes sont associées à l’infrastruc
   
   Cela peut indiquer que les comptes de travail qui exécutent des scripts externes ne peuvent pas accéder à l’instance.
 
-* *InitializePhysicalUsersPool Failed*
+* *InitializePhysicalUsersPool a échoué*
   
   Ce message peut signifier que vos paramètres de sécurité empêchent le programme d’installation à partir de la création du pool de comptes de travail qui sont nécessaires pour exécuter des scripts externes.
 

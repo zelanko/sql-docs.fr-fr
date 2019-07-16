@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 884ed081e9d1ec445815802545da2160057e9f3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cf5835e513b1d03ac1065ae039c989c6f80a659f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018539"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Présentation des codes de mise à jour (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "56026880"
 >  Cette documentation suppose une connaissance suffisante des modèles et de la prise en charge des schémas de mappage dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Introduction aux schémas XSD annotés &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Pour les applications héritées qui utilisent XDR, consultez [de schémas XDR annotés &#40;déconseillé dans SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Espace de noms requis dans le code de mise à jour  
- Les mots clés dans une mise à jour, tel que  **\<synchronisation >**,  **\<avant >**, et  **\<après >**, existent dans le **urn : schemas-microsoft-com-mise à jour** espace de noms. Le préfixe d'espace de noms employé est arbitraire. Dans cette documentation, le **updg** préfixe désigne le **updategram** espace de noms.  
+ Les mots clés dans une mise à jour, tel que  **\<synchronisation >** ,  **\<avant >** , et  **\<après >** , existent dans le **urn : schemas-microsoft-com-mise à jour** espace de noms. Le préfixe d'espace de noms employé est arbitraire. Dans cette documentation, le **updg** préfixe désigne le **updategram** espace de noms.  
   
 ## <a name="reviewing-syntax"></a>Vérification de la syntaxe  
- Une mise à jour est un modèle avec  **\<synchronisation >**,  **\<avant >**, et  **\<après >** blocs qui forment la syntaxe de la mise à jour. Le code ci-dessous illustre cette syntaxe dans sa forme la plus simple :  
+ Une mise à jour est un modèle avec  **\<synchronisation >** ,  **\<avant >** , et  **\<après >** blocs qui forment la syntaxe de la mise à jour. Le code ci-dessous illustre cette syntaxe dans sa forme la plus simple :  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

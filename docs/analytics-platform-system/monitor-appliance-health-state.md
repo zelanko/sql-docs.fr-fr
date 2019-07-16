@@ -2,19 +2,18 @@
 title: Surveiller l’intégrité de l’appliance - Analytique Platform System
 description: Comment surveiller l’état d’un appareil Analytique Platform System à l’aide de la Console d’administration, ou en interrogeant directement les vues de gestion dynamique de Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c69e46ad6a37a17a12c37f83625b5c7f6eaf8078
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960613"
 ---
 # <a name="monitor-appliance-health-state"></a>État de l’intégrité de l’analyse
 Cet article explique comment surveiller l’état d’un appareil Analytique Platform System à l’aide de la Console d’administration, ou en interrogeant directement les vues de gestion dynamique de Parallel Data Warehouse. 
@@ -69,13 +68,13 @@ ORDER BY
   
 Valeurs possibles retournées pour la propriété d’état sont :  
   
--   Ok  
+-   D'accord  
   
--   NonCritical  
+-   Non critique  
   
 -   Critique  
   
--   Unknown  
+-   Inconnu  
   
 -   Non pris en charge  
   

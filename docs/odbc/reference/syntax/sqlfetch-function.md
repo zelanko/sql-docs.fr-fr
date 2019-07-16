@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15074b31b1c147ef78a898dbb8624f3b40358d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f9b3171d496f54942e7ac1005acea1b3566ff76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003066"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch, fonction
 **Conformité**  
@@ -127,14 +126,14 @@ SQLRETURN SQLFetch(
   
 |Ensemble de lignes actif|Code de retour|Nouvel ensemble de lignes|nombre de lignes extraites|  
 |--------------------|-----------------|----------------|------------------------|  
-|Avant de démarrer|SQL_SUCCESS|1 à 5|5|  
-|1 à 5|SQL_SUCCESS|6 à 10|5|  
-|52 à 56|SQL_SUCCESS|57 à 61|5|  
-|91 à 95|SQL_SUCCESS|96-100|5|  
+|Avant de démarrer|SQL_SUCCESS|1 à 5|5\.|  
+|1 à 5|SQL_SUCCESS|6 à 10|5\.|  
+|52 à 56|SQL_SUCCESS|57 à 61|5\.|  
+|91 à 95|SQL_SUCCESS|96-100|5\.|  
 |93 à 97|SQL_SUCCESS|98 à 100. Les lignes 4 et 5 du tableau d’état de ligne sont définis sur SQL_ROW_NOROW.|3|  
-|96-100|SQL_NO_DATA|Aucun.|0|  
-|99 à 100|SQL_NO_DATA|Aucun.|0|  
-|Après la fin|SQL_NO_DATA|Aucun.|0|  
+|96-100|SQL_NO_DATA|Aucune.|0|  
+|99 à 100|SQL_NO_DATA|Aucune.|0|  
+|Après la fin|SQL_NO_DATA|Aucune.|0|  
   
 ## <a name="returning-data-in-bound-columns"></a>Renvoi de données dans les colonnes dépendantes  
  En tant que **SQLFetch** retourne chaque ligne, elle place les données pour chaque colonne dépendante dans la mémoire tampon liée à cette colonne. Si aucune colonne n’est liés, **SQLFetch** ne retourne aucune donnée, mais déplace le curseur de bloc vers l’avant. Les données peuvent toujours être récupérées à l’aide de **SQLGetData**. Si le curseur se trouve un curseur multiligne (autrement dit, le paramètre SQL_ATTR_ROW_ARRAY_SIZE est supérieur à 1), **SQLGetData** peut être appelée uniquement si SQL_GD_BLOCK est retourné lorsque **SQLGetInfo** est appelée avec un  *InfoType* de SQL_GETDATA_EXTENSIONS. (Pour plus d’informations, consultez [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md).)  
@@ -230,19 +229,19 @@ SQLRETURN SQLFetch(
 #### <a name="other-descriptor-fields"></a>Autres champs de descripteur  
  Les champs de descripteur suivants sont utilisés par **SQLFetch**.  
   
-|Champ de descripteur|Desc.|Champ dans|Défini par le biais|  
+|Champ de descripteur|DESC.|Champ dans|Défini par le biais|  
 |----------------------|-----------|--------------|-----------------|  
 |SQL_DESC_ARRAY_SIZE|ARD|En-tête|Attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE|  
 |SQL_DESC_ARRAY_STATUS_PTR|IRD|En-tête|Attribut d’instruction SQL_ATTR_ROW_STATUS_PTR|  
 |SQL_DESC_BIND_OFFSET_PTR|ARD|En-tête|Attribut d’instruction SQL_ATTR_ROW_BIND_OFFSET_PTR|  
 |SQL_DESC_BIND_TYPE|ARD|En-tête|Attribut d’instruction SQL_ATTR_ROW_BIND_TYPE|  
 |SQL_DESC_COUNT|ARD|En-tête|*ColumnNumber* argument de **SQLBindCol**|  
-|SQL_DESC_DATA_PTR|ARD|enregistrements|*TargetValuePtr* argument de **SQLBindCol**|  
-|SQL_DESC_INDICATOR_PTR|ARD|enregistrements|*StrLen_or_IndPtr* argument dans **SQLBindCol**|  
-|SQL_DESC_OCTET_LENGTH|ARD|enregistrements|*BufferLength* argument dans **SQLBindCol**|  
-|SQL_DESC_OCTET_LENGTH_PTR|ARD|enregistrements|*StrLen_or_IndPtr* argument dans **SQLBindCol**|  
+|SQL_DESC_DATA_PTR|ARD|records|*TargetValuePtr* argument de **SQLBindCol**|  
+|SQL_DESC_INDICATOR_PTR|ARD|records|*StrLen_or_IndPtr* argument dans **SQLBindCol**|  
+|SQL_DESC_OCTET_LENGTH|ARD|records|*BufferLength* argument dans **SQLBindCol**|  
+|SQL_DESC_OCTET_LENGTH_PTR|ARD|records|*StrLen_or_IndPtr* argument dans **SQLBindCol**|  
 |SQL_DESC_ROWS_PROCESSED_PTR|IRD|En-tête|Attribut d’instruction SQL_ATTR_ROWS_FETCHED_PTR|  
-|SQL_DESC_TYPE|ARD|enregistrements|*TargetType* argument dans **SQLBindCol**|  
+|SQL_DESC_TYPE|ARD|records|*TargetType* argument dans **SQLBindCol**|  
   
  Tous les champs de descripteur peuvent également être définies via **SQLSetDescField**.  
   

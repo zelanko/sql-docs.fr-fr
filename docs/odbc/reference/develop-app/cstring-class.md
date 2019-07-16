@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 18630642-76fa-43c4-a154-3f0969ec9b50
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f5752602de4848b35298fb4c4a6a1efdf6519dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90c92476337bb1059b7272830e33094edc58dbd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002072"
 ---
 # <a name="cstring-class"></a>CString, classe
 Étant donné que les objets de la **CString** classe dans Microsoft® Visual C++® sont signées et les arguments de chaîne dans les fonctions ODBC sont non signés, les applications qui passent **CString** objets aux fonctions ODBC sans conversion les recevra les avertissements du compilateur.

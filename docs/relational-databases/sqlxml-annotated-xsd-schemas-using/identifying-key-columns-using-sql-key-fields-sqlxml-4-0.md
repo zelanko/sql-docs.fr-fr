@@ -21,14 +21,13 @@ ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd87ee0f409a4775d2189b4947ca19eaf6b22386
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c88c55a6a846a0907664730b3c185707a30c2600
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067059"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>Identification de colonnes clés à l'aide de sql:key-fields (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "67583816"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. Production de l’imbrication appropriée lorsque \<SQL : Relationship > ne fournit pas suffisamment d’informations  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>R. Production de l’imbrication appropriée lorsque \<SQL : Relationship > ne fournit pas suffisamment d’informations  
  Cet exemple montre où **SQL : Key-champs** doit être spécifié.  
   
  Prenons le schéma suivant : Le schéma spécifie une hiérarchie entre les  **\<ordre >** et  **\<client >** éléments dans lesquels la  **\<ordre >** élément est le parent et le  **\<client >** élément est un enfant.  

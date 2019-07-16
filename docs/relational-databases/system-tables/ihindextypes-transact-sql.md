@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 5eb67d59-a19d-4dba-9d2b-657f87818f6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b522f4a1e7de1bc82aca53d48362878f64a8718
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4c7c1bca0f400085ad55ac69b692e5a5fc1ec4c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990372"
 ---
 # <a name="ihindextypes-transact-sql"></a>IHindextypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **IHindextypes** (table système) contient une ligne pour chaque type d’index non-SQL Server pris en charge pour les éditeurs non SQL Server. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**type**|**nvarchar(255)**|Le nom d’un type d’index pris en charge non SQL Server.|  
   

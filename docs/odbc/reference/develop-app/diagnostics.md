@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72e79d377371277720e2fcc15a31ce715693d832
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd6640c0dc06d9e957176717ef26aa3e444ffa9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022522"
 ---
 # <a name="diagnostics"></a>Diagnostics
 Fonctions dans ODBC retournent des informations de diagnostic de deux manières. Le code de retour indique la réussite ou l’échec de la fonction, global, tandis que les enregistrements de diagnostic fournissent des informations détaillées sur la fonction. Au moins un enregistrement de diagnostic - l’enregistrement d’en-tête - est retourné même si la fonction réussit.  

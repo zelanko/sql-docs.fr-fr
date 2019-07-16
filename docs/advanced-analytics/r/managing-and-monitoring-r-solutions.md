@@ -7,13 +7,12 @@ ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a53056f1f169224b222a07a062f6ddd88cb24b81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02b74aa3fcb8a6526a59821c615ec421220e8608
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962607"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Gérer et intégrer des charges de travail machine learning sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +35,7 @@ Intégration de R et Python devient disponible via une série d’étapes. Le pr
 
 Tous les autres utilisateurs doivent être l’autorisation EXECUTE ANY EXTERNAL SCRIPT. Supplémentaires [les autorisations de base de données standard](../security/user-permission.md) déterminer si les utilisateurs peuvent créer des objets, exécuter des scripts, utiliser des modèles sérialisés et formés et ainsi de suite. 
 
-## <a name="resource-allocation"></a>Allocation de ressources
+## <a name="resource-allocation"></a>Allocation des ressources
 
 Les procédures stockées et des requêtes T-SQL qui appellent le traitement externe utilisent les ressources disponibles pour le pool de ressources par défaut. Dans le cadre de la configuration par défaut, les processus externes tels que les sessions R et Python sont autorisés jusqu'à 20 % de la mémoire totale sur le système hôte. 
 

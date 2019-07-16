@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0332efca72c216ac6ecbb2f5f397fbf57e8b7cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63080670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059960"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Référence de l’Interface utilisateur (DB2ToSQL)
 Cette section inclut des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour DB2.  
@@ -45,7 +44,7 @@ Le tableau suivant répertorie les boîtes de dialogue SSMA :
 |[Paramètres du projet&#40;chargement d’objets système&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-loading-system-objects-db2tosql.md)|Utilisez la page de chargement des objets de système de la **paramètres du projet** boîte de dialogue pour spécifier quel système DB2 objets SSMA convertit et les charge dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Paramètres du projet &#40;mappage de Type&#41; &#40;DB2ToSQL&#41;](../../ssma/db2/project-settings-type-mapping-db2tosql.md)|Utilisez la page mappage de Type de la **paramètres du projet** boîte de dialogue pour spécifier les mappages de type par défaut pour toutes les bases de données et les objets de base de données dans l’Assistant SSMA pour DB2 projet.|  
 |[Actualiser à partir de la base de données &#40;DB2ToSQL&#41;](../../ssma/db2/refresh-from-database-db2tosql.md)|Utilisez le **Actualiser à partir de la base de données** boîte de dialogue pour sélectionner les objets à actualiser à partir de la base de données DB2.|  
-|[Save Metadata &#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|Le **enregistrer les métadonnées** boîte de dialogue apparaît lorsque vous enregistrez un projet auquel il manque des métadonnées.|  
+|[Enregistrer les métadonnées &#40;DB2ToSQL&#41;](../../ssma/db2/save-metadata-db2tosql.md)|Le **enregistrer les métadonnées** boîte de dialogue apparaît lorsque vous enregistrez un projet auquel il manque des métadonnées.|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Bien démarrer avec SSMA pour DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)  

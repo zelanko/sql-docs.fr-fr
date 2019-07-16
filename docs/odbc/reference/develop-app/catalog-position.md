@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22a9a9d50891a6101076af6378fb33543274b21b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d7c320521a9948c7968f4f7f5d42fd715f6c03d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63237951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062681"
 ---
 # <a name="catalog-position"></a>Position du catalogue
 La position d’un nom de catalogue dans un identificateur et la façon dont il est séparé du reste de l’identificateur varie à partir de la source de données à la source de données. Par exemple, dans une source de données Xbase, le nom du catalogue est un répertoire et, dans Microsoft® Windows®, est séparé du nom de table (qui est un nom de fichier) par une barre oblique inverse (\\). L’illustration suivante montre cette condition.  

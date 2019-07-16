@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c6b05955-f8fd-4706-a1a7-a8dbd74870c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26bf17596dbd3279498df2edcee7636db95ae139
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cde0158e72d1e24c112c8e7955f0d6b317bd729
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987851"
 ---
 # <a name="select-statement-limitations"></a>SELECT, instruction - limitations
 Une colonne de la fonction d’agrégation ne peut pas être combinée avec une colonne non agrégée dans une instruction SELECT.  

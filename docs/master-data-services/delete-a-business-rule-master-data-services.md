@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8dee36c433cc1fec26bd66bf3498e505fd3edc9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec560acba23c5423c295f569745da1f8d6bc86e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094397"
 ---
 # <a name="delete-a-business-rule-master-data-services"></a>Supprimer une règle d'entreprise (Master Data Services)
 
@@ -51,7 +50,7 @@ ms.locfileid: "65487749"
   
 6.  Dans la grille, cliquez sur la ligne pour la règle d'entreprise à supprimer.  
   
-7.  Cliquez sur **Supprimer**.  
+7.  Cliquez sur **Delete**.  
   
 8.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**. La valeur de la colonne **État de la règle d’entreprise** est **Suppression en attente**.  
   

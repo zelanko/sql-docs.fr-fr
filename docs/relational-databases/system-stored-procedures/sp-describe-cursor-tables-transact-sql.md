@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2a4627491075dd7b7db9d75188137271edd17804
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053090"
 ---
 # <a name="spdescribecursortables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,26 +52,26 @@ sp_describe_cursor_tables
  Nom d'une variable de curseur déclarée devant recevoir la sortie du curseur. *variable_de_curseur_sortie* est **curseur**, sans valeur par défaut et doit ne pas être associé à des curseurs au moment de la procédure sp_describe_cursor_tables est appelée. Le curseur retourné est un curseur en lecture seule, dynamique et permettant les défilements.  
   
  [ @cursor_source=] {Ne local ' | Ne global ' | Ne variable '}  
- Indique si le curseur qui fait l'objet du rapport est défini en utilisant le nom d'un curseur local, d'un curseur global ou d'une variable de curseur. Le paramètre est **nvarchar (30)**.  
+ Indique si le curseur qui fait l'objet du rapport est défini en utilisant le nom d'un curseur local, d'un curseur global ou d'une variable de curseur. Le paramètre est **nvarchar (30)** .  
   
  [ @cursor_identity=] N'*nom_de_curseur_local*'  
- Est le nom d’un curseur créé par une instruction DECLARE CURSOR contenant soit le mot clé LOCAL, ou celui défini par défaut pour LOCAL. *nom_de_curseur_local* est **nvarchar (128)**.  
+ Est le nom d’un curseur créé par une instruction DECLARE CURSOR contenant soit le mot clé LOCAL, ou celui défini par défaut pour LOCAL. *nom_de_curseur_local* est **nvarchar (128)** .  
   
  [ @cursor_identity=] N'*ne nom_de_curseur_global*'  
- Nom d'un curseur créé par une instruction DECLARE CURSOR contenant soit le mot clé GLOBAL, soit celui défini par défaut pour GLOBAL. *ne nom_de_curseur_global* peut également être le nom d’un curseur de serveur API ouvert par une application ODBC qui a ensuite nommé le curseur en appelant SQLSetCursorName. *ne nom_de_curseur_global* est **nvarchar (128)**.  
+ Nom d'un curseur créé par une instruction DECLARE CURSOR contenant soit le mot clé GLOBAL, soit celui défini par défaut pour GLOBAL. *ne nom_de_curseur_global* peut également être le nom d’un curseur de serveur API ouvert par une application ODBC qui a ensuite nommé le curseur en appelant SQLSetCursorName. *ne nom_de_curseur_global* est **nvarchar (128)** .  
   
  [ @cursor_identity=] N'*ne variable_de_curseur_entrée*'  
- Nom d'une variable de curseur associée à un curseur ouvert. *Ne variable_de_curseur_entrée* est **nvarchar (128)**.  
+ Nom d'une variable de curseur associée à un curseur ouvert. *Ne variable_de_curseur_entrée* est **nvarchar (128)** .  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="cursors-returned"></a>Curseurs retournés  
  sp_describe_cursor_tables encapsule son rapport sous la forme un [!INCLUDE[tsql](../../includes/tsql-md.md)] **curseur** paramètre de sortie. Cela permet aux lots, procédures stockées et déclencheurs [!INCLUDE[tsql](../../includes/tsql-md.md)] de travailler sur une seule ligne de sortie à la fois. Par ailleurs, la procédure ne peut pas être appelée directement depuis les fonctions d'API. Le **curseur** paramètre de sortie doit être lié à une variable de programme, mais les API ne prennent pas en charge la liaison **curseur** variables ou des paramètres.  
   
  La table suivante montre le format du curseur qui est retourné en utilisant sp_describe_cursor_tables.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |table_owner|**sysname**|ID d'utilisateur du propriétaire de table.|  
 |Table_name|**sysname**|Nom de l'objet ou de la table de base. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les curseurs côté serveur retournent toujours l'objet spécifié par l'utilisateur, et non les tables de base.|  
@@ -80,13 +79,13 @@ sp_describe_cursor_tables
 |lock_type|**smallint**|Type de verrou de défilement demandé soit explicitement, soit implicitement pour chaque table de base sous-jacente de ce curseur. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> 0 = Aucun<br /><br /> 1 = Partagé<br /><br /> 3 = Mettre à jour|  
 |server_name|**sysname, nullable**|Nom du serveur lié sur lequel réside la table. Prend la valeur NULL quand OPENQUERY ou OPENROWSET sont utilisés.|  
 |objectid|**Int**|ID d’objet de la table. Prend la valeur 0 quand OPENQUERY ou OPENROWSET sont utilisés.|  
-|dbid|**Int**|ID de la base de données dans laquelle réside la table. Prend la valeur 0 quand OPENQUERY ou OPENROWSET sont utilisés.|  
+|dbid|**int**|ID de la base de données dans laquelle réside la table. Prend la valeur 0 quand OPENQUERY ou OPENROWSET sont utilisés.|  
 |dbname|**sysname**, **nullable**|Nom de la base de données dans laquelle réside la table. Prend la valeur NULL quand OPENQUERY ou OPENROWSET sont utilisés.|  
   
 ## <a name="remarks"></a>Notes  
  La procédure sp_describe_cursor_tables décrit les tables de base qui sont référencées par un curseur de serveur. Utilisez sp_describe_cursor_columns pour obtenir la description des attributs du jeu de résultats retourné par le curseur. Utilisez la procédure sp_describe_cursor pour obtenir la description des caractéristiques globales du curseur, par exemple sa capacité à permettre le défilement et les mises à jour. Utilisez la procédure stockée sp_cursor_list pour obtenir un rapport sur les curseurs côté serveur [!INCLUDE[tsql](../../includes/tsql-md.md)] qui sont visibles à la connexion.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  

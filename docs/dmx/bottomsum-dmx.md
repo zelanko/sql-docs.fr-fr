@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 9879f2b4ce405ac59568876cd22e381c0dfad2bd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51ebd164ae5c184177367f59b5643712b14718a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071136"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -99,7 +98,7 @@ NATURAL PREDICTION JOIN
  **Remarque** cet exemple est fourni uniquement pour illustrer l’utilisation de BottomSum. L'exécution de cette requête peut prendre beaucoup de temps, en fonction de la taille de votre jeu de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)  
   

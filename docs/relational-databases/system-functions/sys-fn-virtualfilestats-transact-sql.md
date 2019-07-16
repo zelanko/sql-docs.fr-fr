@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73e30668dc103c478d0308d1fd8ee09689822129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059190"
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,12 +69,12 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 ## <a name="remarks"></a>Notes  
  **fn_virtualfilestats** est un système de fonction table qui fournit des informations statistiques, telles que le nombre total d’e/s effectuée sur un fichier. Cette fonction vous permet d'enregistrer et de suivre la durée d'attente de l'utilisateur avant de pouvoir lire ou écrire dans un fichier. Cette fonction permet également d'identifier les fichiers dont l'activité est intense au niveau des entrées/sorties (E/S).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-displaying-statistical-information-for-a-database"></a>A. Affichage des informations statistiques d'une base de données  
+### <a name="a-displaying-statistical-information-for-a-database"></a>R. Affichage des informations statistiques d'une base de données  
  L'exemple suivant affiche les informations statistiques de l'ID de fichier 1 de la base de données dont l'ID est `1`.  
   
 ```sql  

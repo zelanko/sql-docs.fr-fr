@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0913458d683d7641145b262552e147033dbfc054
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36e108fcc61b2390d5fd72ac4ad322778ccfb4b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057076"
 ---
 # <a name="scalar-function-escape-sequence"></a>Séquence d’échappement de fonction scalaire
 ODBC utilise les séquences d’échappement pour les fonctions scalaires. La syntaxe de cette séquence d’échappement est comme suit :  
@@ -40,7 +39,7 @@ ODBC utilise les séquences d’échappement pour les fonctions scalaires. La sy
   
  (Les définitions pour les éléments non terminaux *nom de la fonction* et *nom de la fonction* (*liste d’arguments*) sont dérivés de la liste des fonctions scalaires dans [ Annexe e : Fonctions scalaires](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
   
- *ODBC-esc-initiator* ::= {  
+ *ODBC-ÉCHAP-initiateur* :: = {}  
   
  *ODBC ÉCHAP-marque de fin* :: =}  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4ff80124-6e2e-4d96-a692-57c17b53c55e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3fee8a773359f49c9cbcd8347db8f5f2a374a170
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 5edd424f06b53ef1a530a47b390640a7a1d8b604
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072551"
 ---
 # <a name="setstrvalue-method-clientnetworkprotocolproperty-class"></a>Méthode SetStrValue (classe ClientNetworkProtocolProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ object.SetStrValue(StrValue)
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*strValue*|Valeur de chaîne qui spécifie la nouvelle valeur de la propriété actuelle.|  
+|*StrValue*|Valeur de chaîne qui spécifie la nouvelle valeur de la propriété actuelle.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur uint32 égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

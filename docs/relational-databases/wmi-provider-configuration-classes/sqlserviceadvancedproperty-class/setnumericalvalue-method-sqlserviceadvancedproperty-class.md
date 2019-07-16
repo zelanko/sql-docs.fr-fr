@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 950ed1e8-0538-4db4-807c-a2c36f43cf6b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7db43df883cb8b4158bccc40ec559ea820e4abb7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2479e1591764590289470d7ef4a326f6a9e9a758
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091843"
 ---
 # <a name="setnumericalvalue-method-sqlserviceadvancedproperty-class"></a>Méthode SetNumericalValue (classe SqlServiceAdvancedProperty)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ object.SetNumericalValue(NumValue)
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*%Numvalue%*|Valeur **uint32** qui spécifie la valeur de la propriété avancée.|  
+|*NumValue*|Valeur **uint32** qui spécifie la valeur de la propriété avancée.|  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Valeur **uint32** , égale à 0 si le service a été correctement modifié, égale à 1 si la demande n'est pas prise en charge ou égale à tout autre nombre pour indiquer une erreur.  

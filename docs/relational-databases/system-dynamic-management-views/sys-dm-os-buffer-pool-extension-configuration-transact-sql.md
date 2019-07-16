@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs
+title: Sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/09/2017
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6d647fc2a1a4d5f88a85ec5917125527004570c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38e4e1ad85a5e968d4b0bb33a3a72a829942585b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62503798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900222"
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
@@ -34,11 +33,11 @@ ms.locfileid: "62503798"
   
 
   
-| Nom de colonne | Type de données | Description |
+| Nom de la colonne | Type de données | Description |
 | :---------- | :-------- | :---------- |
 |path|**nvarchar**(256)|Chemin d'accès et nom de fichier du cache d'extension du pool de mémoires tampons. Autorise la valeur Null.|  
-|file_id|**Int**|ID du fichier d'extension du pool de mémoires tampons. N'accepte pas la valeur NULL.|  
-|state|**Int**|État de la fonctionnalité d'extension du pool de mémoires tampons. N'accepte pas la valeur NULL.<br /><br /> 0 : Extension du pool de mémoires tampons désactivée<br /><br /> 1 : Désactivation de l'extension du pool de mémoires tampons<br /><br /> 2 : réservé pour un usage ultérieur<br /><br /> 3 : Activation de l'extension du pool de mémoires tampons<br /><br /> 4 : Réservé pour un usage ultérieur<br /><br /> 5 : Extension du pool de mémoires tampons activée|  
+|file_id|**int**|ID du fichier d'extension du pool de mémoires tampons. N'accepte pas la valeur NULL.|  
+|state|**int**|État de la fonctionnalité d'extension du pool de mémoires tampons. N'accepte pas la valeur NULL.<br /><br /> 0 : Extension du pool de mémoires tampons désactivée<br /><br /> 1 : Désactivation de l'extension du pool de mémoires tampons<br /><br /> 2 : réservé pour un usage ultérieur<br /><br /> 3 : Activation de l'extension du pool de mémoires tampons<br /><br /> 4 : Réservé pour un usage ultérieur<br /><br /> 5 : Extension du pool de mémoires tampons activée|  
 |state_description|**nvarchar**(60)|Décrit l'état de la fonctionnalité d'extension du pool de mémoires tampons. Autorise la valeur NULL.<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = EXTENSION DU POOL DE MÉMOIRES TAMPONS ACTIVÉE|
 |current_size_in_kb|**bigint**|Taille actuelle du fichier d'extension du pool de mémoires tampons. N'accepte pas la valeur NULL.|
 | &nbsp; | &nbsp; | &nbsp; |
@@ -48,7 +47,7 @@ ms.locfileid: "62503798"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-configuration-buffer-pool-extension-information"></a>A. Retourner les informations de configuration de l'extension du pool de mémoires tampons  
+### <a name="a-returning-configuration-buffer-pool-extension-information"></a>R. Retourner les informations de configuration de l'extension du pool de mémoires tampons  
  L'exemple suivant retourne toutes les colonnes de la vue de gestion dynamique sys.dm_os_buffer_pool_extension_configruation.  
   
 ```sql  

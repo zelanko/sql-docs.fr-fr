@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8090ea1080fa7528d3a8297e14760190e8aadfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 949d22b0acdd4cc6d1e9d865f4f65e847d87aa46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055048"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -66,21 +65,21 @@ sp_help_fulltext_system_components
 ## <a name="result-sets"></a>Jeux de résultats  
  Le jeu de résultats suivant est retourné pour les composants système.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Type de composant. Il peut s'agir :<br /><br /> Filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
-|**componentname**|**sysname**|Nom du composant.|  
+|**NomComposant**|**sysname**|Nom du composant.|  
 |**clsid**|**uniqueidentifier**|Identificateur de classe du composant.|  
 |**fullpath**|**nvarchar (256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre **serveradmin** rôle serveur fixe.|  
 |**version**|**nvarchar(30)**|Numéro de version du composant.|  
-|**manufacturer**|**sysname**|Nom du fabricant du composant.|  
+|**Fabricant**|**sysname**|Nom du fabricant du composant.|  
   
  Le jeu de résultats suivant est retourné uniquement si un ou plusieurs catalogues de texte intégral existent et utilisent *component_type*.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**Int**|ID de la base de données.|  
-|**ftcatid**|**Int**|Identificateur du catalogue de texte intégral.|  
+|**ftcatid**|**int**|Identificateur du catalogue de texte intégral.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **public** rôle ; Toutefois, les utilisateurs peuvent voir uniquement les informations sur les catalogues de texte intégral pour lequel ils ont l’autorisation VIEW DEFINITION. Seuls les membres du rôle de serveur fixe **serveradmin** peuvent voir les valeurs de la colonne **fullpath** .  
@@ -90,7 +89,7 @@ sp_help_fulltext_system_components
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-all-full-text-system-components"></a>A. Liste de tous les composants système de texte intégral  
+### <a name="a-listing-all-full-text-system-components"></a>R. Liste de tous les composants système de texte intégral  
  L'exemple suivant répertorie tous les composants systèmes de texte intégral enregistrés sur l'instance de serveur.  
   
 ```  

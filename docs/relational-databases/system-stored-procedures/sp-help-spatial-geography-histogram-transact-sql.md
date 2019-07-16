@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a6fa55cd5359c64f2a124ff85429745c995fae96
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3c2b94b4c76054fb1e9ce6e078f3490ad263a52c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085192"
 ---
 # <a name="sphelpspatialgeographyhistogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +53,9 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Une valeur de table est retournée. La grille suivante décrit le contenu de colonne de la table.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**cellid**|**Int**|Représente l'ID unique de chaque cellule, avec un nombre initial de 1.|  
+|**cellid**|**int**|Représente l'ID unique de chaque cellule, avec un nombre initial de 1.|  
 |**cell**|**geography**|Polygone rectangulaire qui représente chaque cellule. La forme de cellule est identique à la forme de cellule utilisée pour l'indexation spatiale.|  
 |**row_count**|**bigint**|Indique le nombre d'objets spatiaux qui touchent ou contiennent la cellule.|  
   

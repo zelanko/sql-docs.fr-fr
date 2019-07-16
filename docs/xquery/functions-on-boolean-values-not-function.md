@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a39312142a2d81761320c1e5f75cefe2a85b9d7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038915"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Fonctions sur des valeurs booléennes : fonction not 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +43,8 @@ fn:not($arg as item()*) as xs:boolean
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. À l’aide de la fonction XQuery not() pour rechercher les modèles de produit dont les descriptions du catalogue n’incluent pas les \<spécifications > élément.  
- La requête suivante construit le document XML qui contient les ID des modèles de produit dont la description de catalogue ne comprend pas l'élément <`Specifications`>.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>R. À l’aide de la fonction XQuery not() pour rechercher les modèles de produit dont les descriptions du catalogue n’incluent pas les \<spécifications > élément.  
+ La requête suivante construit du code XML qui contient l’ID de modèle de produit pour les modèles de produit dont les descriptions du catalogue ne comprennent pas la <`Specifications`> élément.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -94,7 +93,7 @@ WHERE ProductModelID=7
   
 -   Dans la requête, le **pas (@MachineHours)** prédicat retourne la valeur True s’il existe aucune **MachineHours** attribut.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID Result   

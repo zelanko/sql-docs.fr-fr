@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: c2886986-9e07-44ea-a350-feeac05ee4f4
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 794baaa127019eb13a77cb98bf90be71d33917b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa4da39290590591af30e259db910fdc9e5600ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051558"
 ---
 # <a name="sysdmdbmissingindexgroupstats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,9 +35,9 @@ ms.locfileid: "62507417"
   
  Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d’exposer ces informations, chaque ligne qui contient les données qui n’appartient pas au locataire connecté est filtrée.  
     
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**group_handle**|**Int**|Identifie un groupe d'index manquant. Cet identificateur est unique sur le serveur.<br /><br /> Les autres colonnes fournissent des informations sur toutes les requêtes pour lesquelles l'index du groupe est considéré comme manquant.<br /><br /> Un groupe d'index ne contient qu'un seul index.|  
+|**group_handle**|**int**|Identifie un groupe d'index manquant. Cet identificateur est unique sur le serveur.<br /><br /> Les autres colonnes fournissent des informations sur toutes les requêtes pour lesquelles l'index du groupe est considéré comme manquant.<br /><br /> Un groupe d'index ne contient qu'un seul index.|  
 |**unique_compiles**|**bigint**|Nombre de compilations et de recompilations qui pourraient tirer parti de ce groupe d'index manquants. Les compilations et les recompilations de nombreuses requêtes peuvent contribuer à la valeur de cette colonne.|  
 |**user_seeks**|**bigint**|Nombre de recherches résultant de requêtes utilisateur pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé.|  
 |**user_scans**|**bigint**|Nombre d'analyses résultant de requêtes utilisateur pour lesquelles l'index recommandé du groupe pourrait avoir été utilisé.|  
@@ -65,7 +64,7 @@ ms.locfileid: "62507417"
 ## <a name="examples"></a>Exemples  
  Les exemples suivants illustrent comment utiliser le **sys.dm_db_missing_index_group_stats** vue de gestion dynamique.  
   
-### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. Trouvez les 10 index manquants qui devraient générer l'amélioration la plus importante pour les requêtes utilisateur  
+### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>R. Trouvez les 10 index manquants qui devraient générer l'amélioration la plus importante pour les requêtes utilisateur  
  La requête suivante détermine les 10 index manquants qui génèreraient l'amélioration cumulée la plus importante, par ordre décroissant, pour les requêtes utilisateur.  
   
 ```  

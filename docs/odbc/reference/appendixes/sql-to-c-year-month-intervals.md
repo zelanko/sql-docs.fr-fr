@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01af57739f23db586991f8a54d14b90b47f15933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c7412226dd0674022da022b0a0a63e5bf2063cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065046"
 ---
 # <a name="sql-to-c-year-month-intervals"></a>SQL à C : Intervalles d’années-mois
 
@@ -33,13 +32,13 @@ Les identificateurs pour les types de données SQL ODBC intervalle année-mois s
 
 Le tableau suivant présente le ODBC C types de données à partir de quel mois-année intervalle de données SQL peut-être être convertie. Pour obtenir une explication des colonnes et des termes dans la table, consultez [conversion des données à partir de SQL pour les Types de données C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
 
-|Identificateur de type C|Test|TargetValuePtr|StrLen_or_IndPtr|SQLSTATE|  
+|Identificateur de type C|Tester|TargetValuePtr|StrLen_or_IndPtr|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_INTERVAL_MONTH[a]<br /><br /> SQL_C_INTERVAL_YEAR[a]<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH[a]|Portion de champs ne pas tronquée à droite<br /><br /> Portion de champs tronquée à droite<br /><br /> La précision de la cible de début n’est pas assez grande pour contenir les données à partir de la source|Données<br /><br /> Données tronquées<br /><br /> Indéfini|Longueur des données en octets<br /><br /> Longueur des données en octets<br /><br /> Indéfini|n/a<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT[b]<br /><br /> SQL_C_UTINYINT[b]<br /><br /> SQL_C_USHORT[b]<br /><br /> SQL_C_SHORT[b]<br /><br /> SQL_C_SLONG[b]<br /><br /> SQL_C_ULONG[b]<br /><br /> SQL_C_NUMERIC[b]<br /><br /> SQL_C_BIGINT[b]|Précision de l’intervalle a été un champ unique et les données ont été converties sans troncation<br /><br /> Précision de l’intervalle a été un seul champ et tronqué en entier<br /><br /> Précision de l’intervalle n’était pas un champ unique|Données<br /><br /> Données tronquées<br /><br /> Indéfini|Taille du type de données C<br /><br /> Longueur des données en octets<br /><br /> Taille du type de données C|n/a<br /><br /> 22003<br /><br /> 22015|  
-|SQL_C_BINARY|Longueur d’octet de données < = *BufferLength*<br /><br /> Longueur d’octet de données > *BufferLength*|Données<br /><br /> Indéfini|Longueur des données en octets<br /><br /> Indéfini|n/a<br /><br /> 22003|  
-|SQL_C_CHAR|Longueur d’octet de caractère < *BufferLength*<br /><br /> Nombre de chiffres de l’ensemble (par opposition aux fractions de seconde) < *BufferLength*<br /><br /> Nombre de chiffres de l’ensemble (par opposition aux fractions de seconde) > = *BufferLength*|Données<br /><br /> Données tronquées<br /><br /> Indéfini|Taille du type de données C<br /><br /> Taille du type de données C<br /><br /> Indéfini|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|Longueur des caractères < *BufferLength*<br /><br /> Nombre de chiffres de l’ensemble (par opposition aux fractions de seconde) < *BufferLength*<br /><br /> Nombre de chiffres de l’ensemble (par opposition aux fractions de seconde) > = *BufferLength*|Données<br /><br /> Données tronquées<br /><br /> Indéfini|Taille du type de données C<br /><br /> Taille du type de données C<br /><br /> Indéfini|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH[a]<br /><br /> SQL_C_INTERVAL_YEAR[a]<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH[a]|Portion de champs ne pas tronquée à droite<br /><br /> Portion de champs tronquée à droite<br /><br /> La précision de la cible de début n’est pas assez grande pour contenir les données à partir de la source|Données<br /><br /> Données tronquées<br /><br /> Indéfini|Longueur des données en octets<br /><br /> Longueur des données en octets<br /><br /> Indéfini|N/A<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT[b]<br /><br /> SQL_C_UTINYINT[b]<br /><br /> SQL_C_USHORT[b]<br /><br /> SQL_C_SHORT[b]<br /><br /> SQL_C_SLONG[b]<br /><br /> SQL_C_ULONG[b]<br /><br /> SQL_C_NUMERIC[b]<br /><br /> SQL_C_BIGINT[b]|Précision de l’intervalle a été un champ unique et les données ont été converties sans troncation<br /><br /> Précision de l’intervalle a été un seul champ et tronqué en entier<br /><br /> Précision de l’intervalle n’était pas un champ unique|Données<br /><br /> Données tronquées<br /><br /> Indéfini|Taille du type de données C<br /><br /> Longueur des données en octets<br /><br /> Taille du type de données C|N/A<br /><br /> 22003<br /><br /> 22015|  
+|SQL_C_BINARY|Longueur d’octet de données < = *BufferLength*<br /><br /> Longueur d’octet de données > *BufferLength*|Données<br /><br /> Indéfini|Longueur des données en octets<br /><br /> Indéfini|N/A<br /><br /> 22003|  
+|SQL_C_CHAR|Longueur d’octet de caractère < *BufferLength*<br /><br /> Nombre de chiffres de l’ensemble (par opposition aux fractions de seconde) < *BufferLength*<br /><br /> Nombre de chiffres de l’ensemble (par opposition aux fractions de seconde) > = *BufferLength*|Données<br /><br /> Données tronquées<br /><br /> Indéfini|Taille du type de données C<br /><br /> Taille du type de données C<br /><br /> Indéfini|N/A<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|Longueur des caractères < *BufferLength*<br /><br /> Nombre de chiffres de l’ensemble (par opposition aux fractions de seconde) < *BufferLength*<br /><br /> Nombre de chiffres de l’ensemble (par opposition aux fractions de seconde) > = *BufferLength*|Données<br /><br /> Données tronquées<br /><br /> Indéfini|Taille du type de données C<br /><br /> Taille du type de données C<br /><br /> Indéfini|N/A<br /><br /> 01004<br /><br /> 22003|  
   
  [a] intervalle année-mois d’un type SQL peut être converti en n’importe quel type d’intervalle C année-mois.  
   

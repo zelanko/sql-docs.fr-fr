@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0b1a69ebbc96197a5bf8fc1cb617e7fde65c731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917953"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO - syntaxe WFC)
 Un **ObjectProxy** objet représente un serveur et est retourné par la **createObject** méthode de la [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objet. La classe ObjectProxy possède une méthode, **appeler**, ce qui peut appeler une méthode sur le serveur et retourner un objet à cet appel.  
@@ -46,8 +45,8 @@ public Object ObjectProxy.( String method, Object[] args)
  *ObjectProxy*  
  Un **ObjectProxy** objet qui représente le serveur.  
   
- *method*  
+ *(Méthode)*  
  Chaîne contenant le nom de la méthode à appeler sur le serveur.  
   
  *args*  
- Facultatif. Un tableau d’objets qui sont des arguments à la méthode sur le serveur. Types de données Java sont automatiquement converties en types de données pouvant être utilisée sur le serveur.
+ facultatif. Un tableau d’objets qui sont des arguments à la méthode sur le serveur. Types de données Java sont automatiquement converties en types de données pouvant être utilisée sur le serveur.

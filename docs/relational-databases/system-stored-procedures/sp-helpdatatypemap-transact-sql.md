@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf42231158f646e34c63bd148ba66c9780b14785
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ee304c9847019b21f1e08f57a3e0fdf0b439d241
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101397"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**MSSQLSERVER**|Base de données source au format [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|Base de données Oracle source.|  
   
-`[ @source_version = ] 'source_version'` Est la version de produit du SGBD source. *source_version*est **varchar (10)**, et le cas contraire, le type de données mappages pour toutes les versions du SGBD source est retournés. Permet de filtrer le jeu de résultats en fonction de la version source du SGBD.  
+`[ @source_version = ] 'source_version'` Est la version de produit du SGBD source. *source_version*est **varchar (10)** , et le cas contraire, le type de données mappages pour toutes les versions du SGBD source est retournés. Permet de filtrer le jeu de résultats en fonction de la version source du SGBD.  
   
 `[ @source_type = ] 'source_type'` Le type de données est répertorié dans le SGBD source. *source_type* est **sysname**, et si non spécifié, les mappages pour tous les types de données dans le SGBD source sont retournés. Permet de filtrer le jeu de résultats en fonction du type de données indiqué dans le SGBD source.  
   
@@ -64,7 +63,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**DB2**|Base de données IBM DB2 de destination.|  
 |**SYBASE**|Base de données Sybase de destination.|  
   
-`[ @destination_version = ] 'destination_version'` Est la version de produit du SGBD de destination. *destination_version*est **varchar (10)**, et le cas contraire, les mappages de toutes les versions du SGBD de destination sont retournés. Permet de filtrer le jeu de résultats en fonction de la version de destination du SGBD.  
+`[ @destination_version = ] 'destination_version'` Est la version de produit du SGBD de destination. *destination_version*est **varchar (10)** , et le cas contraire, les mappages de toutes les versions du SGBD de destination sont retournés. Permet de filtrer le jeu de résultats en fonction de la version de destination du SGBD.  
   
 `[ @destination_type = ] 'destination_type'` Le type de données est répertorié dans le SGBD de destination. *destination_type*est **sysname**, et si non spécifié, les mappages pour tous les types de données du SGBD de destination sont retournés. Permet de filtrer le jeu de résultats en fonction du type de données indiqué dans le SGBD de destination.  
   
@@ -72,7 +71,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |**mapping_id**|Identifie un mappage de type de données.|  
 |**source_dbms**|Nom et numéro de version du SGBD source.|  

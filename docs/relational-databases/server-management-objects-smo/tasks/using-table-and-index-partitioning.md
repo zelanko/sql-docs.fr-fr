@@ -15,24 +15,23 @@ helpviewer_keywords:
 ms.assetid: 0e682d7e-86c3-4d73-950d-aa692d46cb62
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 045a676405904a3dd679c972fada8aeb1df01ee6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3b7e2e8dfb255f8b0c9044694b500d23d75dd9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048940"
 ---
 # <a name="using-table-and-index-partitioning"></a>Utilisation du partitionnement des tables et des index
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Données peuvent être stockées en utilisant les algorithmes de stockage fournis par [Tables et index partitionnés](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Le partitionnement permet de rendre des tables et des index volumineux plus gérables et plus évolutifs.  
+  Les données peuvent être stockées en utilisant les algorithmes de stockage fournis par les [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Le partitionnement permet de rendre des tables et des index volumineux plus gérables et plus évolutifs.  
   
 ## <a name="index-and-table-partitioning"></a>Partitionnement des tables et des index  
  Cette fonctionnalité permet de répartir les données des tables et index sur plusieurs groupes de fichiers dans des partitions. Une fonction de partition définit comment les lignes d'une table ou d'un index sont mappées à un ensemble de partitions selon les valeurs de certaines colonnes, appelées « colonnes de partitionnement ». Un schéma de partition mappe chaque partition spécifiée par la fonction de partition avec un groupe de fichiers. Vous pouvez ainsi développer des stratégies d'archivage qui permettent de répartir les tables sur plusieurs groupes de fichiers, et par conséquent sur plusieurs périphériques physiques.  
   
- Le <xref:Microsoft.SqlServer.Management.Smo.Database> objet constituée une collection de <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> objets qui représentent les fonctions de partition implémentées et une collection de <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> les objets qui décrivent comment les données sont mappées aux groupes de fichiers.  
+ L'objet <xref:Microsoft.SqlServer.Management.Smo.Database> contient une collection d'objets <xref:Microsoft.SqlServer.Management.Smo.PartitionFunction> qui représentent les fonctions de partition implémentées et une collection d'objets <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> qui décrivent comment les données sont mappées avec les groupes de fichiers.  
   
  Chaque objet <xref:Microsoft.SqlServer.Management.Smo.Table> et <xref:Microsoft.SqlServer.Management.Smo.Index> spécifie quel schéma de partition il utilise dans la propriété <xref:Microsoft.SqlServer.Management.Smo.PartitionScheme> et spécifie les colonnes dans la <xref:Microsoft.SqlServer.Management.Smo.PartitionSchemeParameterCollection>.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "47847407"
  Dans les exemples de code suivants, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-visual-c"></a>Installation d'un schéma de partition pour une table en Visual C#  
- L’exemple de code montre comment créer une fonction de partition et un schéma de partition pour le `TransactionHistory` table dans le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de données exemple. Les partitions sont organisées par date dans le but de déplacer les enregistrements anciens vers la table `TransactionHistoryArchive` .  
+ L'exemple de code montre comment créer une fonction de partition et un schéma de partition pour la table `TransactionHistory` de l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Les partitions sont organisées par date dans le but de déplacer les enregistrements anciens vers la table `TransactionHistoryArchive` .  
   
 ```csharp  
 {   
@@ -88,7 +87,7 @@ ps.Create();
 ```  
   
 ## <a name="setting-up-a-partition-scheme-for-a-table-in-powershell"></a>Installation d'un schéma de partition pour une table dans PowerShell  
- L’exemple de code montre comment créer une fonction de partition et un schéma de partition pour le `TransactionHistory` table dans le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de données exemple. Les partitions sont organisées par date dans le but de déplacer les enregistrements anciens vers la table `TransactionHistoryArchive` .  
+ L'exemple de code montre comment créer une fonction de partition et un schéma de partition pour la table `TransactionHistory` de l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . Les partitions sont organisées par date dans le but de déplacer les enregistrements anciens vers la table `TransactionHistoryArchive` .  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  
@@ -134,6 +133,6 @@ $ps.Create()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+ [Tables et index partitionnés](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

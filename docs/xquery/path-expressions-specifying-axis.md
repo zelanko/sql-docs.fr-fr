@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f6c624427a8dc8c5a6c1828b9a48ff7f335cea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946482"
 ---
 # <a name="path-expressions---specifying-axis"></a>Expressions de chemin : spécification de l’axe
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "51670327"
 ## <a name="examples"></a>Exemples  
  Les exemples de requête dans cette rubrique sont définis sur **xml** colonnes de type le **AdventureWorks** base de données.  
   
-### <a name="a-specifying-a-child-axis"></a>A. Spécification de l'axe enfant  
+### <a name="a-specifying-a-child-axis"></a>R. Spécification de l'axe enfant  
  Pour un modèle de produit spécifique, la requête suivante extrait le \<fonctionnalités > enfants de nœud d’élément de la \<ProductDescription > nœud d’élément à partir de la description du catalogue de produits stockée dans le `Production.ProductModel` table.  
   
 ```  
@@ -109,11 +108,11 @@ select @y
   
  Dans cette expression, si vous spécifiez un axe descendant pour l'expression de chemin d'accès,  
   
- `/child::a/child::b/descendant::*`, vous demandez tous les descendants du nœud d'élément <`b`>.  
+ `/child::a/child::b/descendant::*`, vous demandez tous les descendants de le <`b`> nœud d’élément.  
   
  L'astérisque (*) dans le test de nœud représente le nom du nœud comme un test de nœud. Par conséquent, le type de nœud principal de l'axe descendant, le nœud d'élément, détermine les types de nœuds retournés. En d'autres termes, l'expression retourne tous les nœuds d'élément. Les nœuds de texte sont retournés. Pour plus d’informations sur le type de nœud principal et sa relation avec le test de nœud, consultez [spécifiant des Test de nœud dans une étape d’Expression de chemin d’accès](../xquery/path-expressions-specifying-node-test.md) rubrique.  
   
- Les nœuds d'élément <`c`> et <`d`> sont retournés, comme le montre le résultat suivant :  
+ Les nœuds d’élément <`c`> et <`d`> sont retournés, comme indiqué dans le résultat suivant :  
   
 ```  
 <c>text2  
@@ -122,9 +121,9 @@ select @y
 <d>text3</d>  
 ```  
   
- Si vous spécifiez un axe descendant-or-self au lieu d'un axe descendant, `/child::a/child::b/descendant-or-self::*` retourne le nœud du contexte, l'élément <`b`> et son descendant.  
+ Si vous spécifiez un axe descendant-or-self au lieu de l’axe descendant, `/child::a/child::b/descendant-or-self::*` renvoie le nœud de contexte, élément <`b`> et de ses descendants.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <b>text1  
@@ -152,9 +151,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>C. Spécification de l'axe parent  
- La requête ci-après retourne l'enfant <`Summary`> de l'élément <`ProductDescription`> du document XML du catalogue de produits stocké dans la table `Production.ProductModel`.  
+ La requête suivante retourne le <`Summary`> élément enfant de la <`ProductDescription`> élément dans le document XML de catalogue produit stockées dans le `Production.ProductModel` table.  
   
- Elle utilise l'axe parent pour renvoyer le parent de l'élément <`Feature`> et extrait l'enfant <`Summary`> de l'élément <`ProductDescription`>.  
+ Cet exemple utilise l’axe parent pour retourner au parent de la <`Feature`> élément et récupérer le <`Summary`> élément enfant de la <`ProductDescription`> élément.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -194,7 +193,7 @@ WHERE  ProductModelID=19
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- Pour ajouter l'ID `ProductModelID` pour chaque élément `<Feature`>, l'axe `parent` est spécifié :  
+ Pour ajouter le `ProductModelID` pour chaque `<Feature`> élément, le `parent` axe est spécifié :  
   
 ```  
 SELECT CatalogDescription.query('  

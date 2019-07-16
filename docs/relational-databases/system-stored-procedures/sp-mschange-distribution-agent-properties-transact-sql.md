@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 93462a0f9529b20b3a74d37a3b844eb643e9f7b3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fbbe2e782da5892640ab66a93911b959317d0538
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022294"
 ---
 # <a name="spmschangedistributionagentproperties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` Est la propriété de publication à modifier. *propriété* est **sysname**, sans valeur par défaut.  
   
-`[ @value = ] 'value'` Est la nouvelle valeur de propriété. *valeur* est **nvarchar (524)**, avec NULL comme valeur par défaut.  
+`[ @value = ] 'value'` Est la nouvelle valeur de propriété. *valeur* est **nvarchar (524)** , avec NULL comme valeur par défaut.  
   
  Le tableau ci-dessous décrit les propriétés modifiables du travail de l'Agent de distribution et les limites liées aux valeurs de ces propriétés.  
   
@@ -76,7 +75,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné|  
 ||**1**|Serveur de la source de données ODBC.|  
 ||**3**|Fournisseur OLE DB|  
-|**subscriptionstreams**||Indique le nombre de connexions autorisées par Agent de distribution pour appliquer en parallèle des traitements de modifications à un Abonné. *Non pris en charge pour les non -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *les abonnés, les serveurs de publication Oracle ou les abonnements d’égal à égal.*|  
+|**flux d’abonnements**||Indique le nombre de connexions autorisées par Agent de distribution pour appliquer en parallèle des traitements de modifications à un Abonné. *Non pris en charge pour les non -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *les abonnés, les serveurs de publication Oracle ou les abonnements d’égal à égal.*|  
   
 > [!NOTE]  
 >  Après avoir modifié le nom de connexion ou le mot de passe d'un Agent, vous devez arrêter et redémarrer celui-ci avant que la modification prenne effet.  

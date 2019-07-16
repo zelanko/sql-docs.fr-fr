@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 4f027b31-4e03-43a6-849d-1ba9d8d34ae8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2b42eacb645f27ba44b467c842df98e8ca6944a
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 4d8f796569eb8c4b524c0bc45b37ca8dc676ab45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090245"
 ---
 # <a name="sysdmxesessionevents-transact-sql"></a>sys.dm_xe_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne des informations sur les événements de la session. Les événements sont des points d'exécution discrets. Des prédicats peuvent être appliqués aux événements pour les empêcher de se déclencher si ces événements ne contiennent pas les informations requises.  
+  Renvoie des informations sur les sessions d’événements. Les événements sont des points d'exécution discrets. Des prédicats peuvent être appliqués aux événements pour les empêcher de se déclencher si ces événements ne contiennent pas les informations requises.  
    
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|Adresse mémoire de la session d'événements. N'accepte pas la valeur NULL.|  
 |event_name|**nvarchar (256)**|Nom de l'événement auquel est liée une action. N'accepte pas la valeur NULL.|  

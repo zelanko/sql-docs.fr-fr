@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f7ab2eaf-e627-464d-91fe-0e170b3f37bc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 768fb39cdf26b01d55ffaf175ec07e181d265b52
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c9579de52a155bd3d5eaa26862f1a7da93d7b19f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026820"
 ---
 # <a name="sysdmdbxtpmemoryconsumers-transact-sql"></a>sys.dm_db_xtp_memory_consumers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -35,23 +34,23 @@ ms.locfileid: "52522748"
   
  Pour plus d’informations, consultez [OLTP en mémoire &#40;optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |memory_consumer_id|**bigint**|ID (interne) du consommateur de mémoire.|  
 |memory_consumer_type|**Int**|Type de consommateur de mémoire :<br /><br /> 0 = Agrégation. (Regroupe l'utilisation de la mémoire de deux consommateurs ou plus. Ne doit pas être affiché.)<br /><br /> 2=VARHEAP (Suit la consommation de mémoire pour un segment de longueur variable.)<br /><br /> 3=HASH (Suit la consommation de mémoire pour un index.)<br /><br /> 5=DB PAGE POOL (Suit la consommation de mémoire d'un pool de pages de base de données pour les opérations runtime.) Par exemple, les variables de table et certaines analyses sérialisables. Il existe un seul consommateur de mémoire de ce type par base de données.)|  
 |memory_consumer_type_desc|**nvarchar(64)**|Type de consommateur de mémoire : VARHEAP, HASH ou PGPOOL.<br /><br /> 0 - (il ne doit pas être affiché.)<br /><br /> 2 - VARHEAP<br /><br /> 3 - HASH<br /><br /> 5 - PGPOOL|  
-|memory_consumer_desc|**nvarchar(64)**|Description de l'instance de consommateur de mémoire :<br /><br /> VARHEAP : <br />Segment de mémoire de la base de données. Utilisé pour allouer des données utilisateur à une base de données (lignes).<br />Segment de mémoire de la base de données système. Utilisé pour allouer les données de la base de données qui seront incluses dans les vidages de mémoire et qui n'incluent pas les données utilisateur.<br />Segment de mémoire de l'index de plage. Segment de mémoire privé utilisé par l'index de plage pour allouer les pages BW.<br /><br /> HACHAGE : Aucune description car object_id indique la table et index_id, l'index de hachage lui-même.<br /><br /> PGPOOL : Pour la base de données, il n'y a qu'une seule base de données 64 Ko de pool de pages.|  
+|memory_consumer_desc|**nvarchar(64)**|Description de l'instance de consommateur de mémoire :<br /><br /> VARHEAP : <br />Segment de mémoire de la base de données. Utilisé pour allouer des données utilisateur à une base de données (lignes).<br />Segment de mémoire de la base de données système. Utilisé pour allouer les données de la base de données qui seront incluses dans les vidages de mémoire et qui n'incluent pas les données utilisateur.<br />Segment de mémoire de l'index de plage. Segment de mémoire privé utilisé par l'index de plage pour allouer les pages BW.<br /><br /> HACHAGE : Aucune description car object_id n’indique la table et index_id, l’index de hachage lui-même.<br /><br /> PGPOOL : Pour la base de données, il est le pool de pages qu’un seul pool de pages 64 Ko de la base de données.|  
 |object_id|**bigint**|ID de l'objet auquel la mémoire allouée est attribuée. Valeur négative pour les objets système.|  
 |xtp_object_id|**bigint**|L’ID d’objet pour la table optimisée en mémoire.|  
 |index_id|**Int**|ID d'index du consommateur (le cas échéant). NULL pour les tables de base.|  
 |allocated_bytes|**bigint**|Nombre d'octets réservés pour ce consommateur.|  
 |used_bytes|**bigint**|Octets utilisés par ce consommateur. S'applique uniquement à varheap.|  
-|allocation_count|**Int**|Nombre d'allocations.|  
+|allocation_count|**int**|Nombre d'allocations.|  
 |partition_count|**Int**|À usage interne uniquement|  
-|sizeclass_count|**Int**|À usage interne uniquement|  
+|sizeclass_count|**int**|À usage interne uniquement|  
 |min_sizeclass|**Int**|À usage interne uniquement|  
-|max_sizeclass|**Int**|À usage interne uniquement|  
-|memory_consumer_address|**varbinary**|Adresse interne du consommateur. À usage interne uniquement|  
+|max_sizeclass|**int**|À usage interne uniquement|  
+|memory_consumer_address|**varbinary**|Adresse interne du consommateur. À usage interne uniquement.|  
 |xtp_object_id|**bigint**|ID d’objet OLTP en mémoire qui correspond à la table optimisée en mémoire.|  
   
 ## <a name="remarks"></a>Notes  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e4aaf05b0d53e7d0fea5e509f02562ea9213bbef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63215933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944627"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Guide de référence de l’interface utilisateur (MySQLToSQL)
 Cette section inclut des rubriques d’aide pour SQL Server Migration Assistant (SSMA) pour MySQL.  
@@ -41,13 +40,13 @@ Le tableau suivant répertorie les boîtes de dialogue SSMA :
 |[Paramètres globaux &#40;fenêtre sortie&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/global-settings-output-window-mysqltosql.md)|Utilisez le **paramètres globaux** boîte de dialogue pour définir les préférences de SSMA pour interface utilisateur de MySQL.|  
 |[Nouveau projet &#40;SSMA&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/new-project-ssma-mysqltosql.md)|Utilisez le **nouveau projet** boîte de dialogue pour créer un nouveau SSMA pour MySQL projet.|  
 |[Paramètres du projet &#40;Conversion&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)|Utilisez la page de Conversion de la **paramètres du projet** boîte de dialogue pour spécifier comment SSMA pour MySQL convertit les fonctions et variables globales.|  
-|[Project Settings &#40;GUI&#41;  &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-gui-mysqltosql.md)|Utilisez la page de l’interface graphique utilisateur de la **paramètres du projet** boîte de dialogue pour spécifier la quantité de données s’affiche sur le **données** onglet.|  
+|[Paramètres du projet &#40;GUI&#41;&#40;MySQLToSQL  &#41;](../../ssma/mysql/project-settings-gui-mysqltosql.md)|Utilisez la page de l’interface graphique utilisateur de la **paramètres du projet** boîte de dialogue pour spécifier la quantité de données s’affiche sur le **données** onglet.|  
 |[Paramètres du projet &#40;synchronisation&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-synchronization-mysqltosql.md)|Utilisez la page de la Migration de la **paramètres du projet** boîte de dialogue pour personnaliser la façon dont SSMA pour MySQL migre les données de MySQL vers SQL Server.|  
 |[Paramètres du projet &#40;Migration&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-migration-mysqltosql.md)|Utilisez la page de synchronisation de la **paramètres du projet** boîte de dialogue Personnaliser la SSMA pour MySQL crée ou modifie migration des objets de base de données dans SQL Server.|  
 |[Paramètres du projet &#40;Azure SQL DB&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md)|Utilisez la page de SQL Azure de la **paramètres du projet** boîte de dialogue pour personnaliser les paramètres de connectivité pour la migration des données de MySQL vers SQL Azure.|  
 |[Paramètres du projet &#40;mappage de Type&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md)|Utilisez la page mappage de Type de la **paramètres du projet** boîte de dialogue pour spécifier les mappages de type par défaut pour toutes les bases de données et les objets de base de données dans l’Assistant SSMA pour MySQL projet.|  
 |[Actualiser à partir de la base de données &#40;MySQLToSQL&#41;](../../ssma/mysql/refresh-from-database-mysqltosql.md)|Utilisez le **Actualiser à partir de la base de données** boîte de dialogue pour sélectionner les objets à actualiser à partir de la base de données MySQL.|  
-|[Save Metadata  &#40;MySQLToSQL&#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|Le **enregistrer les métadonnées** boîte de dialogue apparaît lorsque vous enregistrez un projet auquel il manque des métadonnées.|  
+|[Enregistrer les métadonnées &#40;MySQLToSQL&#41;](../../ssma/mysql/save-metadata-mysqltosql.md)|Le **enregistrer les métadonnées** boîte de dialogue apparaît lorsque vous enregistrez un projet auquel il manque des métadonnées.|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Bien démarrer avec SSMA pour MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-mysqltosql.md)  

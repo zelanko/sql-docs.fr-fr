@@ -3,18 +3,17 @@ title: Gérer SQL Server sur Linux
 description: Cet article fournit des liens vers les outils et les tâches courantes de gestion pour SQL Server s’exécutant sur Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.openlocfilehash: 33489d1704d90d32b8b9362b1fa87f123ac17236
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: e38e51eb1db6c335175b2fc55636532df88ac27d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000055"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Choisir l’outil approprié pour gérer SQL Server sur Linux
 
@@ -38,7 +37,7 @@ Le nouveau Studio de données Azure est un outil multiplateforme pour la gestion
 
 SQL Server Management Studio (SSMS) est une application Windows qui fournit une interface utilisateur graphique pour la gestion de SQL Server. Bien qu’il s’exécute actuellement uniquement sur Windows, vous pouvez l’utiliser pour se connecter à distance à vos instances Linux SQL Server. Pour plus d’informations sur l’utilisation de SSMS pour gérer SQL Server, consultez [utiliser SSMS pour gérer SQL Server sur Linux](sql-server-linux-manage-ssms.md).
 
-## <a name="mssql-cli-preview"></a>mssql-cli (preview)
+## <a name="mssql-cli-preview"></a>MSSQL-cli (version préliminaire)
 
 Microsoft a publié un nouvel outil de script inter-plateformes pour SQL Server, [mssql-cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/). Cet outil est actuellement en version préliminaire.
 

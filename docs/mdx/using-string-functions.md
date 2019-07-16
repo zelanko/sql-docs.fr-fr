@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6e151d06d086569b16fcdf1dc3570f9b220dfcd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74eec478baad335cb5be6a78ec1faea2d15030ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62928155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037995"
 ---
 # <a name="using-string-functions"></a>Utilisation des fonctions de chaîne
 
@@ -102,7 +101,7 @@ ms.locfileid: "62928155"
 >  Le **StrToMember** et **StrToSet** fonctions doivent être utilisées avec précaution. Elles peuvent entraîner des performances médiocres de requête si elles sont utilisées dans des définitions de calcul.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Generate &#40;MDX&#41;](../mdx/generate-mdx.md)   
+ [Générer &#40;MDX&#41;](../mdx/generate-mdx.md)   
  [Name &#40;MDX&#41;](../mdx/name-mdx.md)   
  [UniqueName &#40;MDX&#41;](../mdx/uniquename-mdx.md)   
  [Fonctions &#40;syntaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   

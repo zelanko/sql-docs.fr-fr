@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0ec801da96735f15b6320c3f0372855c1ff3c2c8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48621e242fae86b0b9fca689149ed1364cb7ff1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079846"
 ---
 # <a name="topcount-dmx"></a>TopCount (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -109,10 +108,10 @@ NATURAL PREDICTION JOIN
 SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $SUPPORT)  
 ```  
   
- Les résultats contiennent les 3 prédictions supérieures triées par la valeur de support. Vous pouvez remplacer $SUPPORT par $PROBABILITY ou $ADJUSTED_PROBABILITY pour retourner des prédictions classées par probabilité ou par probabilité ajustée. Pour plus d’informations, consultez **prédire (DMX)**.  
+ Les résultats contiennent les 3 prédictions supérieures triées par la valeur de support. Vous pouvez remplacer $SUPPORT par $PROBABILITY ou $ADJUSTED_PROBABILITY pour retourner des prédictions classées par probabilité ou par probabilité ajustée. Pour plus d’informations, consultez **prédire (DMX)** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   
  [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)   

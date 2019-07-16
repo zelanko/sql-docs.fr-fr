@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085279"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,33 +55,33 @@ sp_help_proxy
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Système d'exploitation (CmdExec)|  
-|Snapshot|Agent d'instantané de réplication|  
+|Instantané|Agent d'instantané de réplication|  
 |LogReader|Agent de lecture du journal des réplications|  
 |Distribution|Agent de Distribution de réplication|  
 |Fusion|Replication Merge Agent|  
 |QueueReader|Agent de lecture de la file d'attente de réplication|  
 |ANALYSISQUERY|Commandes Analysis Services|  
 |ANALYSISCOMMAND|Requête Analysis Services|  
-|Dts|Exécution de package SSIS|  
+|Dts|Exécution des packages SSIS|  
 |PowerShell|script PowerShell|  
   
-`[ @name = ] 'name'` Le nom d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion pour énumérer les serveurs proxy. Le nom est **nvarchar (256)**, avec NULL comme valeur par défaut. Lorsque *nom* est spécifié, *subsystem_name* doit également être spécifié.  
+`[ @name = ] 'name'` Le nom d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion pour énumérer les serveurs proxy. Le nom est **nvarchar (256)** , avec NULL comme valeur par défaut. Lorsque *nom* est spécifié, *subsystem_name* doit également être spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**proxy_id**|**Int**|Numéro d'identification du proxy.|  
-|**nom**|**sysname**|Nom du proxy.|  
+|**proxy_id**|**int**|Numéro d'identification du proxy.|  
+|**name**|**sysname**|Nom du proxy.|  
 |**credential_identity**|**sysname**|Nom du domaine Microsoft Windows et nom d'utilisateur pour les informations d'identification associées au serveur proxy.|  
 |**enabled**|**tinyint**|Indique si ce serveur proxy est activé. { **0** = non activé, **1** = activé}|  
 |**description**|**nvarchar(1024)**|Description de ce serveur proxy.|  
 |**user_sid**|**varbinary(85)**|Numéro d'identification de sécurité (SID) Windows de l'utilisateur Windows pour ce serveur proxy.|  
-|**credential_id**|**Int**|Identifiant des informations d'identification associées à ce serveur proxy.|  
-|**credential_identity_exists**|**Int**|Indique si l'identifiant des informations d'identification existe. { 0 = inexistant, 1 = existant }|  
+|**credential_id**|**int**|Identifiant des informations d'identification associées à ce serveur proxy.|  
+|**credential_identity_exists**|**int**|Indique si l'identifiant des informations d'identification existe. { 0 = inexistant, 1 = existant }|  
   
 ## <a name="remarks"></a>Notes  
  Lorsque aucun paramètre n’est fourni, **sp_help_proxy** répertorie des informations pour tous les proxys de l’instance.  
@@ -99,7 +98,7 @@ sp_help_proxy
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-information-for-all-proxies"></a>A. Affichage des informations pour tous les serveurs proxy  
+### <a name="a-listing-information-for-all-proxies"></a>R. Affichage des informations pour tous les serveurs proxy  
  L'exemple ci-dessous répertorie les informations pour tous les serveurs proxy de l'instance.  
   
 ```  

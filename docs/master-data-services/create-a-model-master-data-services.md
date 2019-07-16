@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9bb3b3b3-bde8-44aa-ad62-eaae21188141
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5c55db7072020f715882912b46cac0e9219cbbf9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96eb620a89fc9f7507f194539d9c1e3e09fc169c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906653"
 ---
 # <a name="create-a-model-master-data-services"></a>Créer un modèle (Master Data Services)
 
@@ -58,7 +57,7 @@ ms.locfileid: "65477058"
   
 -   **État** : état du modèle. Quand vous cliquez sur le bouton **Enregistrer le modèle**, l’image ![Mise à jour](../master-data-services/media/mds-model-status-updating.png "Mise à jour") s’affiche, ce qui signifie que le modèle est en cours de mise à jour. En cas d’erreur pendant la création ou la modification d’un modèle, l’image ![Erreur](../master-data-services/media/mds-model-status-error.png "Erreur") apparaît. Dans le cas contraire, le statut est OK et l’image ![OK](../master-data-services/media/mds-model-status-ok.png "OK") apparaît.  
   
--   **Nom**: Nom du modèle.  
+-   **Nom** : Nom du modèle.  
   
 -   **Description** : description du modèle.  
   

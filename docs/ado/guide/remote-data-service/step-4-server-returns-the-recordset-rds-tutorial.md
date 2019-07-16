@@ -1,5 +1,5 @@
 ---
-title: 'Étape 4 : Serveur retourne l’objet Recordset (didacticiel RDS) | Microsoft Docs'
+title: 'Étape 4 : Serveur retourne l’objet Recordset (didacticiel RDS) | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,15 +12,14 @@ helpviewer_keywords:
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1359fa3a69c013a7d268cd20e71324e16e629b48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bd243b21b7003c524c3483f5b8d7bb92be1e18d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922063"
 ---
-# <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>Étape 4 : Le serveur retourne un recordset (tutoriel RDS)
+# <a name="step-4-server-returns-the-recordset-rds-tutorial"></a>Étape 4 : Le serveur retourne un recordset (tutoriel RDS)
 > [!IMPORTANT]
 >  Depuis Windows 8 et Windows Server 2012, composants de serveur Services Bureau à distance ne sont plus inclus dans le système d’exploitation Windows (voir Windows 8 et [Guide de compatibilité de Windows Server 2012](https://www.microsoft.com/download/details.aspx?id=27416) pour plus de détails). Composants du client RDS seront supprimées dans une future version de Windows. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité. Les applications qui utilisent des services Bureau à distance doivent migrer vers [Service de données WCF](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
@@ -39,5 +38,5 @@ Sub RDSTutorial4()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Étape 5 : DataControl est devient utilisable (didacticiel RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
+ [Étape 5 : DataControl est devient utilisable (didacticiel RDS)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
  [Didacticiel RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

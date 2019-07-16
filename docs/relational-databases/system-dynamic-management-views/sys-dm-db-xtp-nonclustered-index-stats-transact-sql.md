@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
+title: Sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: d55ba31c-296c-419b-9c4b-c126e0a3d156
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa87aa3514af538f55965b00efe8f5965f5c753f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 726fd7d44ed64dfee609ad29181a2077364d72e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63003502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026788"
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ ms.locfileid: "63003502"
   
  Pour plus d’informations sur les index non cluster optimisé en mémoire, consultez [vue d’ensemble de SQL Server In-Memory OLTP Internals](https://t.co/T6zToWc6y6), page 17.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|object_id|**Int**|ID de l'objet.|  
+|object_id|**int**|ID de l'objet.|  
 |xtp_object_id|**bigint**|ID de la table optimisée en mémoire.|  
 |index_id|**Int**|Identificateur de l'index.|  
 |delta_pages|**bigint**|Nombre total de pages delta pour cet index dans l'arborescence.|  

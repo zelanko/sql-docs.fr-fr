@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: be4c586e3a3bdf4387601d1221bd7afeab852677
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9cbd14a7ce8dd1cfb1571874a83a615065200014
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053521"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +35,12 @@ ms.locfileid: "47595297"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom logique du fichier de sauvegarde ou du fichier de base de données.|  
+|**name**|**sysname**|Nom logique du fichier de sauvegarde ou du fichier de base de données.|  
 |**size**|**Int**|Taille du fichier en pages de 2 kilo-octets (Ko).|  
 |**Faible**|**Int**|Conservé pour compatibilité descendante uniquement.|  
-|**Haute**|**Int**|Conservé pour compatibilité descendante uniquement.|  
+|**Haute**|**int**|Conservé pour compatibilité descendante uniquement.|  
 |**status**|**smallint**|Bitmap indiquant le type de périphérique :<br /><br /> 1 = Disque par défaut<br /><br /> 2 = Disque physique<br /><br /> 4 = Disque logique<br /><br /> 8 = Omettre en-tête<br /><br /> 16 = Fichier de sauvegarde<br /><br /> 32 = Écritures en série<br /><br /> 4096 = Lecture seule|  
 |**cntrltype**|**smallint**|Type de contrôleur :<br /><br /> 0 = Fichier de base de données non CD-ROM<br /><br /> 2 = Fichier de sauvegarde sur disque<br /><br /> 3 - 4 = Fichier de sauvegarde sur disquette<br /><br /> 5 = Fichier de sauvegarde sur bande<br /><br /> 6 = Fichier de canal nommé|  
 |**phyname**|**nvarchar(260)**|Nom du fichier physique.|  

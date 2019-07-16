@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 505e75dfab9ea4e2ba44d8ef12f0ba5c7eecbde2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097666"
 ---
 # <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-removing-the-login-mapping-for-an-existing-user"></a>A. Suppression du mappage de connexion d'un utilisateur existant  
+### <a name="a-removing-the-login-mapping-for-an-existing-user"></a>R. Suppression du mappage de connexion d'un utilisateur existant  
  L'exemple suivant supprime le mappage pour la connexion `Mary` du serveur local vers le serveur lié `Accounts`. Par conséquent, la connexion `Mary` utilise le mappage de connexion par défaut.  
   
 ```  

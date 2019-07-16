@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 440bc409-1188-4175-afc4-c68e31e44fed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4241ac9a457aa51f32ec12e9b1d8b83aa534995e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060217"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque message Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourné par le système de messagerie de base de données (Dans ce contexte fait référence à un message comme un message d’erreur, pas un message électronique). Configurer le **niveau de journalisation** paramètre à l’aide de la **configurer les paramètres du système** boîte de dialogue de l’Assistant Configuration de la messagerie de base de données, ou le [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)une procédure stockée, à déterminer quels messages sont retournés.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Log_id**|**Int**|Identificateur d'éléments du journal.|  
 |**event_type**|**varchar(11)**|Type d'avis inséré dans le journal. Les valeurs possibles sont les suivantes : erreurs, avertissements, messages d'information, messages de succès et messages internes supplémentaires.|  
@@ -38,7 +37,7 @@ ms.locfileid: "62759947"
 |**description**|**nvarchar(max)**|Texte du message en cours d'enregistrement.|  
 |**process_id**|**Int**|L'ID de processus du programme externe de messagerie de base de données. Cette valeur change en principe à chaque démarrage du programme externe de messagerie de base de données.|  
 |**mailitem_id**|**Int**|Identificateur de l'élément de messagerie dans la file d'attente des messages. La valeur est NULL si le message n'est pas associé à un élément de courrier électronique spécifique.|  
-|**account_id**|**Int**|Le **account_id** du compte associé à l’événement. La valeur est NULL si le message n'est pas associé à un compte spécifique.|  
+|**account_id**|**int**|Le **account_id** du compte associé à l’événement. La valeur est NULL si le message n'est pas associé à un compte spécifique.|  
 |**last_mod_date**|**datetime**|Date et heure de la dernière modification de la ligne.|  
 |**last_mod_user**|**sysname**|Dernier utilisateur qui a modifié la ligne. Pour les messages électroniques, il s'agit de l'utilisateur qui a envoyé le message. Pour les messages générés par le programme externe de messagerie de base de données, il s'agit du contexte utilisateur du programme.|  
   

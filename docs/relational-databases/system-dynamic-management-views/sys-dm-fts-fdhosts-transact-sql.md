@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d42a6334-4362-4361-83da-f8324fe55ec7
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b986e726bb3e30847abd034337e3121970c6d7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f76ab50987ea8a2e1f2ce6c93e71d2623f532d80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951011"
 ---
 # <a name="sysdmftsfdhosts-transact-sql"></a>sys.dm_fts_fdhosts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,19 +34,19 @@ ms.locfileid: "65944384"
   Retourne des informations sur l'activité actuelle de l'hôte ou des hôtes de démon de filtre sur l'instance de serveur.  
   
  
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**fdhost_id**|**Int**|ID de l'hôte de démon de filtre.|  
+|**fdhost_id**|**int**|ID de l'hôte de démon de filtre.|  
 |**fdhost_name**|**nvarchar(120)**|Nom de l'hôte de démon de filtre.|  
 |**fdhost_process_id**|**Int**|ID de processus Windows de l'hôte de démon de filtre.|  
 |**fdhost_type**|**nvarchar(120)**|Type de document traité par l'hôte de démon de filtre, l'un des types suivants :<br /><br /> Thread unique<br /><br /> Multithread<br /><br /> Document énorme|  
 |**max_thread**|**Int**|Nombre maximal de threads dans l'hôte de démon de filtre.|  
-|**batch_count**|**Int**|Nombre des lots traités dans l'hôte de démon de filtre.|  
+|**batch_count**|**int**|Nombre des lots traités dans l'hôte de démon de filtre.|  
   
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
 
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne le nom de l'hôte de démon de filtre et le nombre maximal de threads dans cet hôte. Il contrôle également le nombre de lots traités actuellement dans le démon de filtre. Ces informations peuvent être utilisées pour diagnostiquer les performances.  

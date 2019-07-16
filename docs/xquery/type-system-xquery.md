@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946203"
 ---
 # <a name="type-system-xquery"></a>Système de types (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ SELECT @x.query( '/a[1] instance of element()')
 > [!NOTE]  
 >  Lorsque vous interrogez une instance XML typée et que l'expression de requête inclut l'axe parent, le type statique d'information des nœuds résultants n'est plus disponible. Toutefois, le type dynamique est encore associé aux nœuds.  
   
-## <a name="typed-value-vs-string-value"></a>Valeur typée par rapport à valeur de chaîne  
+## <a name="typed-value-vs-string-value"></a>Valeur typée par rapport. Valeur de chaîne  
  Chaque nœud possède une valeur typée et une valeur de chaîne. Pour les données XML typées, le type de la valeur typée est fourni par la collection de schémas XML associée à la colonne ou à la variable sur laquelle porte la requête. Pour les données XML non typées, le type de la valeur typée est **xdt : untypedAtomic**.  
   
  Vous pouvez utiliser la **data()** ou **string()** fonction pour récupérer la valeur d’un nœud :  
@@ -106,7 +105,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   Le [chaîne fonction &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) retourne la valeur de chaîne du nœud.  
   
- Dans la collection de schémas XML ci-dessous, l'élément <`root`> du type entier est défini :  
+ Dans la collection de schémas XML suivante, le <`root`> élément du type entier est défini :  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  

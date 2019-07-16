@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc8072a6d7291a546f0f12256aa4b336da037a83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87ad7b8b36c80d86e0c3ac0335dd6f348a30c7bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63281089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002244"
 ---
 # <a name="constructing-interoperable-sql-statements"></a>Construction d’instructions SQL interopérables
 Comme indiqué dans les sections précédentes, les applications interopérables doivent utiliser la grammaire SQL ODBC. Au-delà, grâce à cette grammaire, toutefois, un nombre de problèmes supplémentaires est confronté à des applications interopérables. Par exemple, ce que fait une application ? si elle souhaite utiliser une fonctionnalité, telles que les jointures externes, qui n’est pas pris en charge par toutes les sources de données  

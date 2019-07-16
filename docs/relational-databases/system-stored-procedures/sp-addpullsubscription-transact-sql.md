@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dbdd156c20378eda748cef17ec58f6ecf7129cb9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ea87c5e83b5be3945469ddb0e32c9f8158a5e116
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022438"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +50,13 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 `[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
-`[ @independent_agent = ] 'independent_agent'` Spécifie s’il existe un Agent de Distribution autonome pour cette publication. *independent_agent* est **nvarchar (5)**, avec TRUE comme valeur par défaut. Si **true**, il existe un Agent de Distribution autonome pour cette publication. Si **false**, il existe un Agent de Distribution pour chaque paire de base de données de serveur de publication/abonné de base de données. *independent_agent* est une propriété de la publication et doit avoir la même valeur ici que sur le serveur de publication.  
+`[ @independent_agent = ] 'independent_agent'` Spécifie s’il existe un Agent de Distribution autonome pour cette publication. *independent_agent* est **nvarchar (5)** , avec TRUE comme valeur par défaut. Si **true**, il existe un Agent de Distribution autonome pour cette publication. Si **false**, il existe un Agent de Distribution pour chaque paire de base de données de serveur de publication/abonné de base de données. *independent_agent* est une propriété de la publication et doit avoir la même valeur ici que sur le serveur de publication.  
   
-`[ @subscription_type = ] 'subscription_type'` Est le type d’abonnement. *subscription_type* est **nvarchar(9)**, avec une valeur par défaut **anonyme**. Vous devez spécifier une valeur de **extraction** pour *subscription_type*, sauf si vous souhaitez créer un abonnement sans l’enregistrer sur le serveur de publication. Dans ce cas, vous devez spécifier une valeur de **anonyme**. Cela s'avère nécessaire lorsque vous ne pouvez pas établir de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le serveur de publication pendant la configuration de l'abonnement.  
+`[ @subscription_type = ] 'subscription_type'` Est le type d’abonnement. *subscription_type* est **nvarchar(9)** , avec une valeur par défaut **anonyme**. Vous devez spécifier une valeur de **extraction** pour *subscription_type*, sauf si vous souhaitez créer un abonnement sans l’enregistrer sur le serveur de publication. Dans ce cas, vous devez spécifier une valeur de **anonyme**. Cela s'avère nécessaire lorsque vous ne pouvez pas établir de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le serveur de publication pendant la configuration de l'abonnement.  
   
-`[ @description = ] 'description'` Est la description de la publication. *Description* est **nvarchar (100)**, avec NULL comme valeur par défaut.  
+`[ @description = ] 'description'` Est la description de la publication. *Description* est **nvarchar (100)** , avec NULL comme valeur par défaut.  
   
-`[ @update_mode = ] 'update_mode'` Est le type de mise à jour. *update_mode* est **nvarchar (30)**, et peut prendre l’une des valeurs suivantes.  
+`[ @update_mode = ] 'update_mode'` Est le type de mise à jour. *update_mode* est **nvarchar (30)** , et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  

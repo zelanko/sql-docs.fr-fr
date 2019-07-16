@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 128c25db-0b71-449d-bfb2-38b8abcf24a0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 537f40f96b70478833105d84960830469703565b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fec1b43f3e129a752e79024f3800d6f4fb3fb60a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984927"
 ---
 # <a name="dbosysjobstepslogs-transact-sql"></a>dbo.sysjobstepslogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient le journal des étapes de travail pour toutes les étapes de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent configurées pour écrire la sortie des étapes dans une table. Cette table est stockée dans le **msdb** base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**log_id**|**Int**|ID du journal d'étapes de travail.|  
 |**log**|**nvarchar(max)**|Contenu du journal d'étapes de travail.|  

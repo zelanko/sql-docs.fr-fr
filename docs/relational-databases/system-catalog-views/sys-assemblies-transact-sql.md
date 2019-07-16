@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: e321753f-293f-42ab-b225-d118713df40b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 335b536d3356f5bfefa6cf5efd71b34327c79708
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19577afb746e3b005dffd803d86351d8a4b0eca4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62706086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001206"
 ---
 # <a name="sysassemblies-transact-sql"></a>sys.assemblies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   Retourne une ligne pour chaque assembly.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de l’assembly. Unique dans la base de données.|  
-|**principal_id**|**Int**|Identificateur du principal qui est propriétaire de cet assembly.|  
-|**assembly_id**|**Int**|Numéro d'identification de l'assembly Unique dans une base de données.|  
+|**name**|**sysname**|Nom de l’assembly. Unique dans la base de données.|  
+|**principal_id**|**int**|Identificateur du principal qui est propriétaire de cet assembly.|  
+|**assembly_id**|**int**|Numéro d'identification de l'assembly Unique dans une base de données.|  
 |**clr_name**|**nvarchar(4000)**|Chaîne canonique qui encode le nom simple, le numéro de version, les paramètres régionaux, la clé publique, et l'architecture de l'assembly. Cette valeur identifie de façon univoque l'assembly du côté CLR (Common Language Runtime).|  
 |**permission_set**|**tinyint**|Jeu d'autorisations/niveau de sécurité de l'assembly.<br /><br /> 1 = accès sécurisé<br /><br /> 2 = accès externe<br /><br /> 3 = accès non sécurisé|  
 |**permission_set_desc**|**nvarchar(60)**|Description du jeu d'autorisations/niveau de sécurité de l'assembly.<br /><br /> SAFE_ACCESS<br /><br /> EXTERNAL_ACCESS<br /><br /> UNSAFE_ACCESS|  

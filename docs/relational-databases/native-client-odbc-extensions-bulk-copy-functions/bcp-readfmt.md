@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a94a4c25e739b49b0e212e030f088c50ff818202
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081bad36acaa8469e7a2ada7620cf9f4828a7b97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099465"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ RETCODE bcp_readfmt (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *pas*  
+ *hdbc*  
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *szFormatFile*  
@@ -54,7 +53,7 @@ RETCODE bcp_readfmt (
 ## <a name="remarks"></a>Notes  
  Après avoir **bcp_readfmt** lit les valeurs de format, il effectue les appels appropriés aux [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) et [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md). Vous n'avez nul besoin d'analyser un fichier de format et d'exécuter ces appels.  
   
- Pour conserver un fichier de format, appelez [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md). Les appels de **bcp_readfmt** peuvent faire référence à des formats enregistrés. Pour plus d’informations, consultez [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
+ Pour rendre un fichier de format persistant, appelez [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md). Les appels de **bcp_readfmt** peuvent faire référence à des formats enregistrés. Pour plus d'informations, consultez [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md).  
   
  Autre solution, l'utilitaire de copie en bloc (**bcp**) peut enregistrer les formats de données définis par l'utilisateur dans les fichiers qui peuvent être référencés par **bcp_readfmt**. Pour plus d’informations sur la **bcp** utilitaire et la structure de **bcp** fichiers de format de données, consultez [importation et exportation de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   

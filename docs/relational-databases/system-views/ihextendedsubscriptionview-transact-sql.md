@@ -17,28 +17,27 @@ helpviewer_keywords:
 ms.assetid: 124756a4-463a-4a81-bf5b-de7e8ffc7a62
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30ba4a0947f98ab34ed8c11ef0e8f3a25c3e453b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8f080f5defd5143d3822e86eeeb3c7242b51d08d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029584"
 ---
 # <a name="ihextendedsubscriptionview-transact-sql"></a>IHextendedSubscriptionView (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **IHextendedSubscriptionView** vue expose des informations sur l’abonnement à une publication non-SQL Server. Cette vue est stockée dans le **distribution** base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**article_id**|**Int**|Identificateur unique d'un article|  
+|**article_id**|**int**|Identificateur unique d'un article|  
 |**dest_db**|**sysname**|Nom de la base de données de destination|  
 |**srvid**|**smallint**|Identificateur unique pour un Abonné|  
 |**login_name**|**sysname**|Nom de connexion utilisé pour se connecter à un Abonné.|  
 |**distribution_jobid**|**binaire**|Identifie le travail de l'Agent de distribution.|  
-|**publisher_database_id**|**Int**|Identifie la base de données de publication.|  
-|**subscription_type**|**Int**|Le type d’abonnement :<br /><br /> **0** = push - l’agent de distribution s’exécute sur l’abonné.<br /><br /> **1** = par extraction - l’agent de distribution s’exécute sur le serveur de distribution.|  
+|**publisher_database_id**|**int**|Identifie la base de données de publication.|  
+|**subscription_type**|**int**|Le type d’abonnement :<br /><br /> **0** = push - l’agent de distribution s’exécute sur l’abonné.<br /><br /> **1** = par extraction - l’agent de distribution s’exécute sur le serveur de distribution.|  
 |**sync_type**|**tinyint**|Type de synchronisation initiale :<br /><br /> **1** = automatique<br /><br /> **2** = none|  
 |**status**|**tinyint**|L’état de l’abonnement :<br /><br /> **0** = inactif<br /><br /> **1** = abonné<br /><br /> **2** = actif|  
 |**snapshot_seqno_flag**|**bit**|Indique si un numéro de séquence d'instantané est utilisé.|  

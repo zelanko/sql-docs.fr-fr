@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 2a158ecd0223f7483494e4b28068c4634874e11d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959013"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>Tutoriel : Utiliser l’éditeur Transact-SQL pour créer des objets de base de données- [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -68,11 +67,11 @@ Ce didacticiel requiert SQL Server ou la base de données SQL Azure *TutorialDB*
 
 2. Type **sql** dans l’éditeur, flèche vers le bas pour **sqlCreateStoredProcedure**, puis appuyez sur la *onglet* clé (ou *entrée*) pour charger la créer stockée extrait de code de procédure.
 
-   ![snippet-list](./media/tutorial-sql-editor/snippet-list.png)
+   ![liste d’extraits](./media/tutorial-sql-editor/snippet-list.png)
 
 3. L’extrait de code de procédure stockée create comporte deux champs défini pour une modification rapide, *StoredProcedureName* et *SchemaName*. Sélectionnez *StoredProcedureName*, avec le bouton droit, puis sélectionnez **toutes les Occurrences de modification**. Tapez maintenant *getCustomer* et tous les *StoredProcedureName* modifier les entrées à *getCustomer*.
 
-   ![snippet](./media/tutorial-sql-editor/snippet.png)
+   ![Extrait de code](./media/tutorial-sql-editor/snippet.png)
 
 5. Remplacez toutes les occurrences de *SchemaName* à *dbo*. 
 6. L’extrait de code contient les paramètres de l’espace réservé et le texte qui a besoin de la mise à jour. Le *EXECUTE* instruction contient également le texte d’espace réservé, car il ne connaît pas le nombre de paramètres a la procédure. Pour ce didacticiel mise à jour de l’extrait de code par conséquent, il ressemble le code suivant :

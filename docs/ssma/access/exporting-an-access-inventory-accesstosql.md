@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006556"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportation d’un inventaire Access (AccessToSQL)
 Si vous avez plusieurs bases de données Access et que vous ne savez pas lesquels pour migrer vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez exporter un inventaire de toutes les bases de données Access dans un projet. Vous pouvez ensuite consulter et interroger les métadonnées d’inventaire pour déterminer les bases de données et les objets au sein de ces bases de données à migrer. Cet inventaire vous permet de rapidement trouver les réponses aux questions, telles que les éléments suivants :  
@@ -58,7 +57,7 @@ Les instructions suivantes décrivent comment créer un projet, ajouter des base
   
 2.  Dans le menu **Fichier**, sélectionnez **Nouveau projet**.  
   
-    La boîte de dialogue **Nouveau projet** s'affiche.  
+    La boîte de dialogue **Nouveau projet** s’affiche.  
   
 3.  Dans la zone **Nom** , tapez le nom de votre projet.  
   
@@ -91,7 +90,7 @@ Pour plus d’informations sur la création de projets, consultez [Creating and 
   
     Vous pouvez utiliser la **sélectionner tout** et **Effacer tout** boutons en haut de la liste pour sélectionner ou effacer toutes les bases de données. Vous pouvez également maintenez la touche CTRL enfoncée pour sélectionner plusieurs lignes, ou maintenez la touche MAJ ENFONCÉE pour sélectionner une plage de lignes.  
   
-7.  Cliquer sur **Suivant**.  
+7.  Cliquez sur **Suivant**.  
   
 8.  Dans la page vérifier, cliquez sur **Terminer**.  
   

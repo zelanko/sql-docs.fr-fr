@@ -24,26 +24,25 @@ helpviewer_keywords:
 ms.assetid: 0686bc5a-c206-41ef-b40a-79a8259d51d2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 48e497c41cc542e54ec4fffa1f97dac5635e0039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9449c9a52a49f86e72542d965c1ae1b6a5d1809c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942637"
 ---
 # <a name="sysavailabilityreadonlyroutinglists-transact-sql"></a>sys.availability_read_only_routing_lists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour la liste de routage en lecture seule de chaque réplica de disponibilité d’un groupe de disponibilité Always On dans le cluster de basculement WSFC.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|Identificateur unique du réplica de disponibilité propriétaire de la liste de routage.|  
-|**routing_priority**|**Int**|Ordre de priorité du routage (1 est le premier, 2 est le second et ainsi de suite).|  
+|**routing_priority**|**int**|Ordre de priorité du routage (1 est le premier, 2 est le second et ainsi de suite).|  
 |**read_only_replica_id**|**uniqueidentifier**|Identificateur unique du réplica de disponibilité sur lequel une charge de travail en lecture seule est routée.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

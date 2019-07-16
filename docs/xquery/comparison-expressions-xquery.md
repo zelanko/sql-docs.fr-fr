@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac4e617b7abb220dd2a8767a334ddbdf1c685d2c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039033"
 ---
 # <a name="comparison-expressions-xquery"></a>Expressions de comparaison (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +46,8 @@ ms.locfileid: "51661833"
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|=|Égal à|  
-|!=|Non égal|  
+|=|Égal|  
+|!=|Différence|  
 |\<|Inférieur à|  
 |>|Supérieur à|  
 |\<=|Inférieur ou égal à|  
@@ -122,7 +121,7 @@ WHERE ContactID=1
   
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 \<act:number   
@@ -142,8 +141,8 @@ WHERE ContactID=1
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|eq|Égal à|  
-|ne|Non égal|  
+|eq|Égal|  
+|ne|Différence|  
 |lt|Inférieur à|  
 |gt|Supérieur à|  
 |le|Inférieur ou égal à|  
@@ -174,7 +173,7 @@ WHERE ProductModelID=19
   
 -   Étant donné que les opérateurs de valeur fonctionnent uniquement sur les valeurs atomiques, le **data()** fonction est implicitement utilisée pour récupérer la valeur du nœud. Autrement dit, `data($P/PD:Size) eq "small"` donne le même résultat.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 \<PD:Picture   
@@ -208,7 +207,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7           
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductModelID       Result          
@@ -221,9 +220,9 @@ ProductModelID       Result
   
  Ces comparaisons sont faites en fonction de l'ordre du document :  
   
--   `<<` : Ne **opérande 1** précéder **opérande 2** dans l’ordre du document.  
+-   `<<` : Est **opérande 1** précéder **opérande 2** dans l’ordre du document.  
   
--   `>>` : Ne **opérande 1** suivez **opérande 2** dans l’ordre du document.  
+-   `>>` : Est **opérande 1** suivez **opérande 2** dans l’ordre du document.  
   
  La requête suivante retourne la valeur True si la description du catalogue produit le \<garantie > élément apparaissant avant la \<Maintenance > élément dans l’ordre du document pour un produit particulier.  
   

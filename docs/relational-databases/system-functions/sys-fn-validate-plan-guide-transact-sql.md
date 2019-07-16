@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 844a6de4bd0ee770cd8406d3024a6a7f3bec3e4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059191"
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,21 +48,21 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|msgnum|**Int**|ID du message d'erreur.|  
+|msgnum|**int**|ID du message d'erreur.|  
 |severity|**tinyint**|Niveau de gravité du message, entre 1 et 25.|  
 |state|**smallint**|Numéro d'état de l'erreur indiquant le point dans le code au niveau duquel l'erreur s'est produite.|  
 |message|**nvarchar(2048)**|Texte du message de l'erreur.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les repères de plan de portée OBJECT requièrent une autorisation VIEW DEFINITION ou ALTER sur l'objet et les autorisations référencés pour compiler la requête ou le lot fourni dans le repère de plan. Par exemple, si un lot contient des instructions SELECT, des autorisations SELECT sont requises sur les objets référencés.  
   
  Les repères de plan de portée SQL ou TEMPLATE requièrent une autorisation ALTER sur la base de données et les autorisations pour compiler la requête ou le lot fourni dans le repère de plan. Par exemple, si un lot contient des instructions SELECT, des autorisations SELECT sont requises sur les objets référencés.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-validating-all-plan-guides-in-a-database"></a>A. Validation de tous les repères de plan dans une base de données  
+### <a name="a-validating-all-plan-guides-in-a-database"></a>R. Validation de tous les repères de plan dans une base de données  
  L'exemple suivant vérifie la validité de tous les repères de plan dans la base de données actuelle. Si un jeu de résultats vide est retourné, tous les repères de plan sont valides.  
   
 ```sql  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b94583225c842d52518087c0cbaf9f8acea2972a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acbf543abeb8e35adb506e1fb381d2fa2018f113
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603097"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053453"
 ---
 # <a name="syssysforeignkeys-transact-sql"></a>sys.sysforeignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "47603097"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**constid**|**Int**|ID de la contrainte FOREIGN KEY.|  
+|**constid**|**int**|ID de la contrainte FOREIGN KEY.|  
 |**fkeyid**|**Int**|ID d'objet de la table avec la contrainte FOREIGN KEY.|  
-|**rkeyid**|**Int**|ID d'objet de la table référencé dans la contrainte FOREIGN KEY.|  
+|**rkeyid**|**int**|ID d'objet de la table référencé dans la contrainte FOREIGN KEY.|  
 |**fkey**|**smallint**|ID de la colonne de référence.|  
 |**rkey**|**smallint**|ID de la colonne référencée.|  
 |**keyno**|**smallint**|Position de la colonne dans la liste des colonnes de référence.|  

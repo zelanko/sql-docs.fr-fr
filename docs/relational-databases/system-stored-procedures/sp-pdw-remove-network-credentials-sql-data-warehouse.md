@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7a86459f8ea20b2596068093a2e24cb87aa788cb
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: d3c19439a481b843edec8210f83a4a82e5dd27a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056438"
 ---
 # <a name="sppdwremovenetworkcredentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -61,7 +60,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-remove-credentials-for-performing-a-database-backup"></a>A. Supprimer les informations d’identification pour effectuer une sauvegarde de base de données  
+### <a name="a-remove-credentials-for-performing-a-database-backup"></a>R. Supprimer les informations d’identification pour effectuer une sauvegarde de base de données  
  L’exemple suivant supprime les références de nom et mot de passe utilisateur pour accéder au serveur cible qui a une adresse IP de 10.192.147.63.  
   
 ```  
