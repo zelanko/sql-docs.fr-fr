@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0cc45718f864f14ade20348b5dae76286ea14f3a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417120"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208259"
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,13 +68,13 @@ ms.locfileid: "52417120"
   
     2.  Cliquez sur **Autres options**.  
   
-    3.  Sous Bibliothèques, cliquez sur **Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+    3.  Sous Bibliothèques, cliquez sur **Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
     1.  **SharePoint 2013**: Cliquez sur l’icône des paramètres ![paramètres SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "paramètres SharePoint"). Cliquez sur **Contenu du site**.  
   
     2.  Cliquez sur **Ajouter une application**.  
   
-    3.  Cliquez sur **Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+    3.  Cliquez sur **Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 2.  Tapez le nom de la bibliothèque. Veillez à inclure des informations descriptives qui permettent aux utilisateurs d’identifier cette bibliothèque en tant qu’aperçu complet pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et les rapports Reporting Services.  
   
@@ -132,11 +132,11 @@ ms.locfileid: "52417120"
   
  Le tableau suivant décrit les différentes mises en page pour la présentation des croquis miniatures de chaque page affichée en aperçu :  
   
-|Affichage|Description|  
+|Vue|Description|  
 |----------|-----------------|  
 |Vue Galerie (valeur par défaut)|Galerie constitue la vue par défaut pour une Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'aperçu s'affiche à gauche. Des miniatures plus petites de chaque feuille de calcul s'affichent en regard de celui-ci, en ordre séquentiel de gauche à droite.|  
 |Tous les documents|Il s'agit de la mise en page standard pour les bibliothèques de documents. Vous pouvez choisir cette vue pour gérer des documents individuels ou afficher le contenu de bibliothèques sous forme de liste.<br /><br /> Utilisez cette vue pour modifier des propriétés ou pour supprimer ou déplacer des documents.<br /><br /> Si vous avez activé le contrôle de version, vous devez utiliser cette vue pour archiver des documents dans la bibliothèque ou les en extraire.|  
-|Vue Théâtre et vue Carrousel|Ces vues spécialisées sont idéales pour exposer un petit nombre de documents connexes. La rotation complète des miniatures inclut toutes les pages de tous les documents de la bibliothèque. Si vous avez un grand nombre de documents, ces vues peuvent être impraticables pour les utilisateurs qui souhaitent trouver ou ouvrir un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] spécifique.<br /><br /> Vue Théâtre : la zone d'aperçu est centrée. Des miniatures plus petites de chaque feuille de calcul s'affichent plus bas dans la page, des deux côtés.<br /><br /> Vue Carrousel : la zone d'aperçu est centrée. Les miniatures qui précèdent et suivent immédiatement la miniature actuelle sont adjacentes à la zone d'aperçu.|  
+|Vue Théâtre et vue Carrousel|Ces vues spécialisées sont idéales pour exposer un petit nombre de documents connexes. La rotation complète des miniatures inclut toutes les pages de tous les documents de la bibliothèque. Si vous avez un grand nombre de documents, ces vues peuvent être impraticables pour les utilisateurs qui souhaitent trouver ou ouvrir un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] spécifique.<br /><br /> Vue théâtre : La zone d’aperçu est centrée. Des miniatures plus petites de chaque feuille de calcul s'affichent plus bas dans la page, des deux côtés.<br /><br /> Vue carrousel : La zone d’aperçu est centrée. Les miniatures qui précèdent et suivent immédiatement la miniature actuelle sont adjacentes à la zone d'aperçu.|  
   
 ### <a name="switch-to-a-different-view"></a>Passer à une vue différente  
   

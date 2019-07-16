@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134389"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206577"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Appel d'une procédure stockée (OLE DB)
   Une procédure stockée peut avoir entre zéro et plusieurs paramètres. Elle peut également retourner une valeur. Lorsque vous utilisez le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, les paramètres à une procédure stockée peuvent être passés par :  
@@ -91,7 +91,7 @@ ms.locfileid: "54134389"
   
  La syntaxe générale pour l'appel d'une procédure à l'aide de la séquence d'échappement ODBC CALL est :  
   
- {[**? =**]**appeler**_nom_procédure_[**(**[*paramètre*] [**,**[*paramètre*]]... **)**]}  
+ {[ **? =** ]**appeler**_nom_procédure_[ **(** [*paramètre*] [ **,** [*paramètre*]]... **)** ]}  
   
  Exemple :  
   

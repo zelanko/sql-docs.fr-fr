@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 706ed441-2881-4934-8d5e-fb357ee067ce
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 243207c6175f5604e7cc887bd7c67085e2d86291
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 377a1e342970e9593b37924c3739ee7a706d5264
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053036"
 ---
 # <a name="spdescribeparameterencryption-transact-sql"></a>sp_describe_parameter_encryption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,12 +60,12 @@ sp_describe_parameter_encryption
   
  Chaque ligne du premier jeu de résultats décrit une paire de clés ; une clé de chiffrement de colonne chiffrée et la clé principale de colonne correspondante.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_ordinal**|**Int**|ID de la ligne dans le jeu de résultats.|  
-|**database_id**|**Int**|Id de base de données.|  
-|**column_encryption_key_id**|**Int**|L’id de clé de chiffrement colonne. Remarque : ce code indique une ligne dans le [sys.column_encryption_keys &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) vue de catalogue.|  
-|**column_encryption_key_version**|**Int**|Réservé pour un usage ultérieur. Actuellement, contient toujours 1.|  
+|**database_id**|**int**|Id de base de données.|  
+|**column_encryption_key_id**|**int**|L’id de clé de chiffrement colonne. Remarque : ce code indique une ligne dans le [sys.column_encryption_keys &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) vue de catalogue.|  
+|**column_encryption_key_version**|**int**|Réservé pour un usage ultérieur. Actuellement, contient toujours 1.|  
 |**column_encryption_key_metadata_version**|**binary(8)**|Un horodatage représentant l’heure de création de la clé de chiffrement de colonne.|  
 |**column_encryption_key_encrypted_value**|**varbinary(4000)**|La valeur chiffrée de la clé de chiffrement de colonne.|  
 |**column_master_key_store_provider_name**|**sysname**|Le nom du fournisseur pour le magasin de clés qui contient la clé principale de colonne qui a été utilisée pour générer la valeur chiffrée de la clé de chiffrement de colonne.|  
@@ -75,13 +74,13 @@ sp_describe_parameter_encryption
   
  Chaque ligne du deuxième jeu de résultats contient des métadonnées de chiffrement pour un seul paramètre.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**parameter_ordinal**|**Int**|ID de la ligne dans le jeu de résultats.|  
+|**parameter_ordinal**|**int**|ID de la ligne dans le jeu de résultats.|  
 |**parameter_name**|**sysname**|Nom d’un des paramètres spécifiés dans le  *\@params* argument.|  
 |**column_encryption_algorithm**|**tinyint**|Qui indique l’algorithme de chiffrement configuré pour la colonne, le paramètre correspond à du code. Les valeurs actuellement prises en charge sont : 2 pour **AEAD_AES_256_CBC_HMAC_SHA_256**.|  
-|**column_encryption_type**|**tinyint**|Code indiquant le type de chiffrement configuré pour la colonne, le paramètre correspond à. Les valeurs prises en charge sont :<br /><br /> 0 - texte brut (la colonne n’est pas chiffrée)<br /><br /> 1 - aléatoire de chiffrement<br /><br /> 2 - le chiffrement déterministe.|  
-|**column_encryption_key_ordinal**|**Int**|Le code de la ligne dans le premier résultat défini. La ligne référencée décrit la clé de chiffrement de colonne configurée pour la colonne, le paramètre correspond à.|  
+|**column_encryption_type**|**tinyint**|Code indiquant le type de chiffrement configuré pour la colonne, le paramètre correspond à. Les valeurs prises en charge sont les suivantes :<br /><br /> 0 - texte brut (la colonne n’est pas chiffrée)<br /><br /> 1 - aléatoire de chiffrement<br /><br /> 2 - le chiffrement déterministe.|  
+|**column_encryption_key_ordinal**|**int**|Le code de la ligne dans le premier résultat défini. La ligne référencée décrit la clé de chiffrement de colonne configurée pour la colonne, le paramètre correspond à.|  
 |**column_encryption_normalization_rule_version**|**tinyint**|Numéro de version de l’algorithme de normalisation de type.|  
   
 ## <a name="remarks"></a>Notes  
@@ -144,7 +143,7 @@ EXEC sp_describe_parameter_encryption N'INSERT INTO t1 VALUES(@c1)',  N'@c1 INT'
   
 |column_encryption_key_ordinal|database_id|column_encryption_key_id|column_encryption_key_version|column_encryption_key_metadata_version|column_encryption_key_encrypted_value|  
 |--------------------------------------|------------------|---------------------------------|--------------------------------------|------------------------------------------------|-----------------------------------------------|  
-|1|5|1|1|0x99EDA60083A50000|0x016E000001630075007200720065006E00740075007300650072002F006D0079002F006100360036006200620030006600360064006400370030006200640066006600300032006200360032006400300066003800370065003300340030003200380038006500360066003900330030003500CA0D0CEC74ECADD1804CF99137B4BD06BBAB15D7EA 74E0C249A779C7768A5B659E0125D24FF827F5EA8CA517A8E197ECA1353BA814C2B0B2E6C8AB36E3AE6A1E972D69C3C573A963ADAB6686CF5D24F95FE43140C4F9AF48FBA7DF2D053F3B4A1F5693A1F905440F8015BDB43AF8A04BE4E045B89876A0097E5FBC4E6A3B9C3C0D278C540E46C53938B8C957B689C4DC095821C465C73117CBA95B758232 F9E5B2FCC7950B8CA00AFE374DE42847E3FBC2FDD277035A2DEF529F4B735C20D980073B4965B4542A34723276A1646998FC6E1C40A3FDB6ABCA98EE2B447F114D2AC7FF8C7D51657550EC5C2BABFFE8429B851272086DCED94332CF18FA854C1D545A28B1EF4BE64F8E035175C1650F6FC5C4702ACF99850A4542B3747EAEC0CC726E091B36CE2439 2D801ECAA684DE344FECE05812D12CD72254A014D42D0EABDA41C89FC4F545E88B4B8781E5FAF40D7199D4842D2BFE904D209728ED4F527CBC169E2904F6E711FF81A8F4C25382A2E778DD2A58552ED031AFFDA9D9D891D98AD82155F93C58202FC24A77F415D4F8EF22419D62E188AC609330CCBD97CEE1AEF8A18B01958833604707FDF03B2B3864 87CC679D7E352D0B69F9FB002E51BCD814D077E82A09C14E9892C1F8E0C559CFD5FA841CEF647DAB03C8191DC46B772E94D579D8C80FE93C3827C9F0AE04D5325BC73111E07EEEDBE67F1E2A73580085|  
+|1|5\.|1|1|0x99EDA60083A50000|0x016E000001630075007200720065006E00740075007300650072002F006D0079002F006100360036006200620030006600360064006400370030006200640066006600300032006200360032006400300066003800370065003300340030003200380038006500360066003900330030003500CA0D0CEC74ECADD1804CF99137B4BD06BBAB15D7EA 74E0C249A779C7768A5B659E0125D24FF827F5EA8CA517A8E197ECA1353BA814C2B0B2E6C8AB36E3AE6A1E972D69C3C573A963ADAB6686CF5D24F95FE43140C4F9AF48FBA7DF2D053F3B4A1F5693A1F905440F8015BDB43AF8A04BE4E045B89876A0097E5FBC4E6A3B9C3C0D278C540E46C53938B8C957B689C4DC095821C465C73117CBA95B758232 F9E5B2FCC7950B8CA00AFE374DE42847E3FBC2FDD277035A2DEF529F4B735C20D980073B4965B4542A34723276A1646998FC6E1C40A3FDB6ABCA98EE2B447F114D2AC7FF8C7D51657550EC5C2BABFFE8429B851272086DCED94332CF18FA854C1D545A28B1EF4BE64F8E035175C1650F6FC5C4702ACF99850A4542B3747EAEC0CC726E091B36CE2439 2D801ECAA684DE344FECE05812D12CD72254A014D42D0EABDA41C89FC4F545E88B4B8781E5FAF40D7199D4842D2BFE904D209728ED4F527CBC169E2904F6E711FF81A8F4C25382A2E778DD2A58552ED031AFFDA9D9D891D98AD82155F93C58202FC24A77F415D4F8EF22419D62E188AC609330CCBD97CEE1AEF8A18B01958833604707FDF03B2B3864 87CC679D7E352D0B69F9FB002E51BCD814D077E82A09C14E9892C1F8E0C559CFD5FA841CEF647DAB03C8191DC46B772E94D579D8C80FE93C3827C9F0AE04D5325BC73111E07EEEDBE67F1E2A73580085|  
   
  (Résultats continuent).  
   

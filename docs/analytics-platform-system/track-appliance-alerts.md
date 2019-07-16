@@ -2,19 +2,18 @@
 title: Effectuer le suivi des alertes de l’appliance - Analytique Platform System | Microsoft Docs
 description: Effectuer le suivi des alertes de l’appliance d’Analytique Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62f116b8e45512d5a6fc5ce50c0fbc76344103be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960024"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Effectuer le suivi des alertes de l’appliance d’Analytique Platform System
 Cette rubrique explique comment utiliser la Console d’administration et les vues système pour effectuer le suivi des alertes dans une appliance SQL Server PDW.  
