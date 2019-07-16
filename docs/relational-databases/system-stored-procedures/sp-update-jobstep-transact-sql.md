@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1ab6c1408b9f9c2de2e4070ab35e34ea8a458df
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084877"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +69,9 @@ sp_update_jobstep
   
 `[ @step_name = ] 'step_name'` Est un nouveau nom pour l’étape. *nom_de_l*est **sysname**, avec NULL comme valeur par défaut.  
   
-`[ @subsystem = ] 'subsystem'` Le sous-système utilisé par Microsoft SQL Server Agent pour exécuter *commande*. *sous-système* est **nvarchar (40)**, avec NULL comme valeur par défaut.  
+`[ @subsystem = ] 'subsystem'` Le sous-système utilisé par Microsoft SQL Server Agent pour exécuter *commande*. *sous-système* est **nvarchar (40)** , avec NULL comme valeur par défaut.  
   
-`[ @command = ] 'command'` L’exécution des commandes à exécuter via *sous-système*. *commande* est **nvarchar (max)**, avec NULL comme valeur par défaut.  
+`[ @command = ] 'command'` L’exécution des commandes à exécuter via *sous-système*. *commande* est **nvarchar (max)** , avec NULL comme valeur par défaut.  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -100,7 +99,7 @@ sp_update_jobstep
   
 `[ @on_fail_step_id = ] fail_step_id` Le numéro d’identification de l’étape du travail à exécuter si l’étape échoue et *action_échec* est **4**. *id_étape_échec* est **int**, avec NULL comme valeur par défaut.  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *serveur* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *serveur* est **nvarchar (128)** , avec NULL comme valeur par défaut.  
   
 `[ @database_name = ] 'database'` Le nom de la base de données dans lequel exécuter un [!INCLUDE[tsql](../../includes/tsql-md.md)] étape. *base de données*est **sysname**. Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
   
@@ -112,7 +111,7 @@ sp_update_jobstep
   
 `[ @os_run_priority = ] run_priority` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @output_file_name = ] 'file_name'` Le nom du fichier dans lequel la sortie de cette étape est enregistrée. *file_name* est **nvarchar (200)**, avec NULL comme valeur par défaut. Ce paramètre est valide uniquement avec les commandes fonctionnant dans les sous-systèmes [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CmdExec.  
+`[ @output_file_name = ] 'file_name'` Le nom du fichier dans lequel la sortie de cette étape est enregistrée. *file_name* est **nvarchar (200)** , avec NULL comme valeur par défaut. Ce paramètre est valide uniquement avec les commandes fonctionnant dans les sous-systèmes [!INCLUDE[tsql](../../includes/tsql-md.md)] ou CmdExec.  
   
  Pour définir nom_fichier_sortie NULL, vous devez définir *nom_fichier_sortie* sur une chaîne vide (' ') ou à une chaîne de caractères vides, mais vous ne pouvez pas utiliser le **CHAR(32)** (fonction). Vous pouvez par exemple définir cet argument avec une chaîne vide comme suit :  
   

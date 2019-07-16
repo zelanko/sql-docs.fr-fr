@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 02c46d74a1e68af322aa50c7b0ac1c3d4f96ee49
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f180e2b3478ce136fa16d82084d46b79e6152957
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070425"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,15 +45,15 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @filtered_table = ] 'filtered_table'` Est le nom d’une table filtrée. *filtered_table* est **nvarchar (400)**, sans valeur par défaut.  
+`[ @filtered_table = ] 'filtered_table'` Est le nom d’une table filtrée. *filtered_table* est **nvarchar (400)** , sans valeur par défaut.  
   
-`[ @join_table = ] 'join_table'` Est le nom d’une table jointe à *filtered_table*. *join_table* est **nvarchar (400)**, sans valeur par défaut.  
+`[ @join_table = ] 'join_table'` Est le nom d’une table jointe à *filtered_table*. *join_table* est **nvarchar (400)** , sans valeur par défaut.  
   
-`[ @join_filterclause = ] 'join_filterclause'` La clause de filtre de jointure testée. *join_filterclause* est **nvarchar (1000)**, sans valeur par défaut.  
+`[ @join_filterclause = ] 'join_filterclause'` La clause de filtre de jointure testée. *join_filterclause* est **nvarchar (1000)** , sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|Est si la publication est éligible pour les partitions précalculées. où **1** signifie qu’il est partitions peuvent être utilisées, et **0** signifie qu’ils ne peuvent pas être utilisés.|  
 |**has_dynamic_filters**|**bit**|Si la clause de filtre fournie comprend au moins une fonction de filtrage paramétré ; où **1** signifie qu’une fonction de filtrage paramétré est utilisée, et **0** signifie qu’une telle fonction n’est pas utilisée.|  

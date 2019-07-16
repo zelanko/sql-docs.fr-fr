@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 717dbb55691529e22f333a639f2d835d60431b98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113546"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "63014611"
   
  Le tableau ci-dessous dresse la liste des colonnes renvoyées par le jeu de résultats :  
   
-|Nom de colonne|Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |DATA_TYPE|Retourne SQL_VARCHAR, SQL_VARBINARY ou SQL_WVARCHAR pour les **varchar (max)** des types de données.|  
 |TYPE_NAME|Retourne « varchar », « varbinary » ou « nvarchar » pour le **varchar (max)** , **varbinary (max)** , et **nvarchar (max)** des types de données.|  
@@ -63,7 +62,7 @@ ms.locfileid: "63014611"
 ## <a name="sqlcolumns-and-table-valued-parameters"></a>SQLColumns et paramètres table  
  Le jeu de résultats retourné par SQLColumns dépend de la valeur de SQL_SOPT_SS_NAME_SCOPE. Pour plus d’informations, consultez [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md). Les colonnes suivantes ont été ajoutées pour les paramètres table :  
   
-|Nom de colonne|Type de données|Sommaire|  
+|Nom de la colonne|Type de données|Sommaire|  
 |-----------------|---------------|--------------|  
 |SS_IS_COMPUTED|Smallint|Pour une colonne d'un TABLE_TYPE, SQL_TRUE si la colonne est une colonne calculée ; sinon, SQL_FALSE.|  
 |SS_IS_IDENTITY|Smallint|SQL_TRUE si la colonne est une colonne d'identité ; sinon, SQL_FALSE.|  
@@ -81,10 +80,10 @@ ms.locfileid: "63014611"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>Prise en charge SQLColumns pour les colonnes éparses  
  Deux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des colonnes spécifiques ont été ajoutés au jeu de résultats pour SQLColumns :  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**Smallint**|Si la colonne est une colonne éparse, SQL_TRUE ; sinon, SQL_FALSE.|  
-|SS_IS_COLUMN_SET|**Smallint**|Si la colonne est la **column_set** colonne, sql_true ; sinon, SQL_FALSE.|  
+|SS_IS_SPARSE|**smallint**|Si la colonne est une colonne éparse, SQL_TRUE ; sinon, SQL_FALSE.|  
+|SS_IS_COLUMN_SET|**smallint**|Si la colonne est la **column_set** colonne, sql_true ; sinon, SQL_FALSE.|  
   
  Conformément à la spécification ODBC, SS_IS_SPARSE et SS_IS_COLUMN_SET apparaissent avant toutes les colonnes spécifiques au pilote qui ont été ajoutés à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]et après toutes les colonnes mandatées par ODBC lui-même.  
   

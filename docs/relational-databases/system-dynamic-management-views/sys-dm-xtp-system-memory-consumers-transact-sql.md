@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebc5947611129086952394f157c6173a3b4efcf0
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090093"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,17 +40,17 @@ select * from sys.dm_xtp_system_memory_consumers
 |Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|ID interne du consommateur de mémoire.|  
-|memory_consumer_type|**int**|Entier qui représente le type de consommateur de mémoire avec l’une des valeurs suivantes :<br /><br /> 0 - ne doit pas être affiché. Regroupe l'utilisation de la mémoire de deux consommateurs ou plus.<br /><br /> 1 - LOOKASIDE : Suit la consommation de mémoire pour un système lookaside.<br /><br /> 2 - VARHEAP : Effectue le suivi de la consommation de mémoire pour un segment de longueur variable.<br /><br /> 4 - pool de pages d’e/s : Effectue le suivi de la consommation de mémoire pour un pool de pages système utilisé pour les opérations d’e/s.|  
+|memory_consumer_type|**Int**|Entier qui représente le type de consommateur de mémoire avec l’une des valeurs suivantes :<br /><br /> 0 - ne doit pas être affiché. Regroupe l'utilisation de la mémoire de deux consommateurs ou plus.<br /><br /> 1 - LOOKASIDE : Suit la consommation de mémoire pour un système lookaside.<br /><br /> 2 - VARHEAP : Effectue le suivi de la consommation de mémoire pour un segment de longueur variable.<br /><br /> 4 - pool de pages d’e/s : Effectue le suivi de la consommation de mémoire pour un pool de pages système utilisé pour les opérations d’e/s.|  
 |memory_consumer_type_desc|**nvarchar(16)**|Description du type de consommateur de mémoire :<br /><br /> 0 - ne doit pas être affiché.<br /><br /> 1 - LOOKASIDE<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
 |memory_consumer_desc|**nvarchar(64)**|Description de l'instance de consommateur de mémoire :<br /><br /> VARHEAP : <br />Segment du système. Usage universel. Actuellement utilisé uniquement pour allouer des éléments de travail de garbage collection.<br />-ou-<br />Segment lookaside. Utilisé par les looksides lorsque le nombre d'éléments contenus dans la liste de disponibilité atteint un atteint une extrémité de fin prédéfinie (en règle générale environ 5 000 éléments).<br /><br /> PGPOOL : Pour système d’e/s pools il existe trois tailles différentes : Pool de pages système 4K, pool de pages système 64 K et système 256 Ko de la page pool.|  
 |lookaside_id|**bigint**|ID du fournisseur de mémoire lookaside, ThreadLocal.|  
 |pagepool_id|**bigint**|ID du fournisseur de mémoire de pool de pages, ThreadLocal.|  
 |allocated_bytes|**bigint**|Nombre d'octets réservés pour ce consommateur.|  
 |used_bytes|**bigint**|Octets utilisés par ce consommateur. S'applique uniquement aux consommateurs de mémoire varheap.|  
-|allocation_count|**Int**|Nombre d'allocations.|  
-|partition_count|**int**|À usage interne uniquement|  
+|allocation_count|**int**|Nombre d'allocations.|  
+|partition_count|**Int**|À usage interne uniquement|  
 |sizeclass_count|**Int**|À usage interne uniquement|  
-|min_sizeclass|**Int**|À usage interne uniquement|  
+|min_sizeclass|**int**|À usage interne uniquement|  
 |max_sizeclass|**int**|À usage interne uniquement|  
 |memory_consumer_address|**varbinary**|Adresse interne du consommateur.|  
   

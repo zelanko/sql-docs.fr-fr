@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: ac97121f-2bd0-4f71-8e45-42c8584edbc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b098dafc5764db96bdf3dc9e604f3e69a687ab94
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c08fd2235750a8a7be99b5290813331141ddf0de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055373"
 ---
 # <a name="sysfntranslatepermissions-transact-sql"></a>sys.fn_translate_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ sys.fn_translate_permissions ( level , perms )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Niveau*  
- Type d'élément sécurisable auquel l'autorisation est appliquée. *niveau* est **nvarchar (60)**.  
+ *level*  
+ Type d'élément sécurisable auquel l'autorisation est appliquée. *niveau* est **nvarchar (60)** .  
   
  *Perms*  
- Masque de bits retourné dans la colonne d'autorisations. *Perms* est **varbinary (16)**.  
+ Masque de bits retourné dans la colonne d'autorisations. *Perms* est **varbinary (16)** .  
   
 ## <a name="returns"></a>Valeur renvoyée  
  **table**  
@@ -56,7 +55,7 @@ sys.fn_translate_permissions ( level , perms )
 ## <a name="remarks"></a>Notes  
  La valeur retournée dans le **autorisations** colonne d’une Trace SQL est une représentation entière du masque de bits utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour calculer les autorisations effectives. Chacun des 25 types d'éléments sécurisables possède son propre jeu d'autorisations avec des valeurs numériques correspondantes. **Sys.fn_translate_permissions** convertit ce masque de bits dans une table de noms d’autorisations.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="example"></a>Exemple  

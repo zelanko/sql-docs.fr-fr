@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff6dbe9abcd1378370a17a053b69ea59c01fee75
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044495"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +59,10 @@ sysmail_help_profileaccount_sp
   
 ||||  
 |-|-|-|  
-|Nom de colonne|Type de données|Description|  
-|**profile_id**|**Int**|Identificateur du profil du profil.|  
-|**profile_name**|**sysname**|Nom du profil|  
-|**account_id**|**Int**|ID du compte.|  
+|Nom de la colonne|Type de données|Description|  
+|**profile_id**|**int**|Identificateur du profil du profil.|  
+|**nom_profil**|**sysname**|Nom du profil|  
+|**account_id**|**int**|ID du compte.|  
 |**account_name**|**sysname**|Nom du compte|  
 |**sequence_number**|**Int**|Numéro de séquence du compte dans le profil.|  
   

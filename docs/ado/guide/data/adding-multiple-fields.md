@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 90904154f324a86088fac0d637301193464feb2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07a1a3723b4169872c1b8aa872457e67a60d1f71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926278"
 ---
 # <a name="adding-multiple-fields-and-values"></a>Ajout de plusieurs champs et valeurs
 Parfois, il peut être plus efficace de passer un tableau de champs et leurs valeurs correspondantes pour le **AddNew** (méthode), plutôt que de paramètre **valeur** plusieurs fois pour chaque nouveau champ. Si *FieldList* est un tableau, *valeurs* doit également être un tableau avec le même nombre de membres ; sinon, une erreur se produit. L’ordre des noms de champ doit correspondre à l’ordre des valeurs de champ dans chaque tableau. Le code suivant passe un tableau de champs et un tableau de valeurs à la **AddNew** (méthode).

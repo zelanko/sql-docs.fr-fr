@@ -17,25 +17,24 @@ helpviewer_keywords:
 ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3339cf1731c712cdfee7145390d5cc955c748a98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2a80729738986d69f2eb78b16d119072d6e9e11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094751"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **systranschemas** table est utilisée pour effectuer le suivi des modifications de schéma dans les articles publiés dans les publications transactionnelles et d’instantané. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**tabid**|**Int**|Identifie l'article de table sur lequel la modification de schéma s'est produite.|  
+|**tabid**|**int**|Identifie l'article de table sur lequel la modification de schéma s'est produite.|  
 |**startlsn**|**binaire**|Valeur LSN du début de la modification de schéma.|  
 |**endlsn**|**binaire**|Valeur LSN de la fin de la modification de schéma.|  
-|**typeid**|**Int**|Type de modification de schéma.|  
+|**typeid**|**int**|Type de modification de schéma.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

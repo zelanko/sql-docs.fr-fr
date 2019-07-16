@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529121"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211566"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Ajouter la logique métier aux données XML
   Votre logique métier peut être ajoutée aux données XML de plusieurs manières :  
@@ -30,7 +30,7 @@ ms.locfileid: "58529121"
   
 -   Vous pouvez écrire des procédures stockées et des fonctions Transact-SQL pour lancer le traitement sur la colonne XML en fonction de vos besoins.  
   
-## <a name="example-applying-xsl-transformation"></a>Exemple : Appliquer la Transformation XSL  
+## <a name="example-applying-xsl-transformation"></a>Exemple : Application d’une transformation XSL  
  Considérez une fonction CLR **TransformXml()** qui accepte un `xml` type instance et une transformation XSL stockée dans un fichier de données, applique la transformation aux données XML et puis retourne les données XML transformées dans le résultat. Le code suivant est un squelette de fonction écrit en C# :  
   
 ```  
@@ -51,7 +51,7 @@ public static SqlXml TransformXml (SqlXml XmlData, string xslPath) {
 }   
 ```  
   
- Après l’enregistrement de l’assembly et la création d’une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l’utilisateur, **SqlXslTransform()** correspondant à **TransformXml()**, la fonction peut être appelée à partir de Transact-SQL, comme le montre la requête suivante :  
+ Après l’enregistrement de l’assembly et la création d’une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l’utilisateur, **SqlXslTransform()** correspondant à **TransformXml()** , la fonction peut être appelée à partir de Transact-SQL, comme le montre la requête suivante :  
   
 ```  
 SELECT SqlXslTransform (xCol, 'C:\MyFile\xsltransform.xsl')  

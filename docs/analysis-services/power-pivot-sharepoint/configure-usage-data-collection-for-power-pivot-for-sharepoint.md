@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420280"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164148"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurer la collecte des données d’utilisation (PowerPivot pour SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "52420280"
   
 4.  Cliquez sur **Exécuter maintenant**. Si le bouton **Exécuter maintenant** est désactivé, cliquez sur **Activer** , puis cliquez sur **Exécuter maintenant**.  
   
-5.  Dans la liste Définitions de travaux, cliquez sur **Travail du minuteur pour le traitement du tableau de bord de gestion des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+5.  Dans la liste Définitions de travaux, cliquez sur **Travail du minuteur pour le traitement du tableau de bord de gestion des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 6.  Cliquez sur **Exécuter maintenant**.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "52420280"
  Pour plus d’informations sur la collecte et le stockage des données d’utilisation, consultez [Collecte des données d’utilisation Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Définir des catégories de temps de réponse aux requêtes lents, moyens et rapides à des fins de création de rapports  
- Les performances de traitement des requêtes sont mesurées par rapport à des catégories prédéfinies qui définissent un cycle de requête-réponse en fonction de sa durée d'exécution. Les catégories prédéfinies sont notamment les suivantes : Triviale, Rapide, Attendue, Longue et Hors limite. Chaque demande envoyée à un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] relève de l’une des catégories en fonction de sa durée d’exécution.  
+ Les performances de traitement des requêtes sont mesurées par rapport à des catégories prédéfinies qui définissent un cycle de requête-réponse en fonction de sa durée d'exécution. Catégories prédéfinies sont les suivantes : Triviale, rapide, attendue, longue et hors limite. Chaque demande envoyée à un serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] relève de l’une des catégories en fonction de sa durée d’exécution.  
   
  Les informations de réponse à une requête sont utilisées dans les rapports d'activité. Dans les rapports, chaque catégorie est utilisée différemment pour déterminer plus efficacement l’évolution des performances du système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Par exemple, les demandes triviales sont totalement exclues, car leur exclusion supprime le bruit dans les données et affiche des tendances plus significatives avec les catégories restantes. Par opposition, les statistiques sur les demandes longues ou hors limite sont les plus importantes dans le rapport afin que les administrateurs ou les propriétaires de classeurs puissent entreprendre l'action corrective sur le champ.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "52420280"
   
 1.  Dans l'Administration centrale de SharePoint, dans **Gestion des applications**, cliquez sur **Gérer les applications de service**.  
   
-2.  Recherchez l’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Vous pouvez reconnaître une application de service à son type. Le type d’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est **Application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+2.  Recherchez l’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Vous pouvez reconnaître une application de service à son type. Le type d’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est **Application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 3.  Cliquez sur le nom de l’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le Tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] apparaît.  
   
@@ -179,9 +179,9 @@ ms.locfileid: "52420280"
   
  Le tableau suivant affiche les valeurs par défaut pour la configuration de la collecte des données d'utilisation.  
   
-|Paramètre|Valeur par défaut|Type|Plage valide|  
+|Paramètre|Valeur par défaut|type|Plage valide|  
 |-------------|-------------------|----------|-----------------|  
-|**Événements d’utilisation Analysis Services** (connexion, chargement, déchargement, requêtes)|\<activé >|Booléen|Ces valeurs sont activées ou désactivées.|  
+|**Événements d’utilisation Analysis Services** (connexion, chargement, déchargement, requêtes)|\<enabled>|Boolean|Ces valeurs sont activées ou désactivées.|  
 |**Query Reporting interval**|300 (en secondes)|Entier|Comprise entre 1 et n'importe quel entier positif. La valeur par défaut est 5 minutes.|  
 |**Usage data history**|365 (en jours)|Entier|La valeur 0 spécifie une durée illimitée, mais vous pouvez également définir une limite supérieure pour l'expiration des données d'historique qui sont alors automatiquement supprimées. Les valeurs valides pour une période de rétention limitée sont comprises entre 1 et 5 000 (en jours).|  
 |Limite supérieure de réponse triviale|500 (en millisecondes)|Entier|Définit une limite maximale qui définit un échange requête-réponse triviale. Toute demande dont la durée d'exécution est comprise entre 0 et 500 millisecondes est une demande triviale ; elle est ignorée à des fins de création de rapports.|  

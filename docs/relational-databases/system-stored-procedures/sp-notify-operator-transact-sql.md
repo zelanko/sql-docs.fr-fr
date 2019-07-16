@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f12ce5837e47ce9cb647d1f7364ce23ad921e26c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107982"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +47,21 @@ sp_notify_operator
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @profile_name = ] 'profilename'` Le nom du profil de messagerie de base de données à utiliser pour envoyer le message. *ProfileName* est **nvarchar (128)**. Si *profilename* n’est pas spécifié, le profil de messagerie de base de données par défaut est utilisé.  
+`[ @profile_name = ] 'profilename'` Le nom du profil de messagerie de base de données à utiliser pour envoyer le message. *ProfileName* est **nvarchar (128)** . Si *profilename* n’est pas spécifié, le profil de messagerie de base de données par défaut est utilisé.  
   
 `[ @id = ] id` L’identificateur de l’opérateur à laquelle envoyer le message. *ID* est **int**, avec NULL comme valeur par défaut. Un des *id* ou *nom* doit être spécifié.  
   
-`[ @name = ] 'name'` Le nom de l’opérateur auquel envoyer le message. *nom* est **nvarchar (128)**, avec NULL comme valeur par défaut. Un des *id* ou *nom* doit être spécifié.  
+`[ @name = ] 'name'` Le nom de l’opérateur auquel envoyer le message. *nom* est **nvarchar (128)** , avec NULL comme valeur par défaut. Un des *id* ou *nom* doit être spécifié.  
   
-> **REMARQUE :** Une adresse de messagerie doit être définie pour l'opérateur pour qu'il puisse recevoir des messages.  
+> **REMARQUE :** Une adresse de messagerie doit être définie pour l’opérateur qu’il puisse recevoir des messages.  
   
 `[ @subject = ] 'subject'` Le sujet du message électronique. *objet* est **nvarchar (256)** sans valeur par défaut.  
   
 `[ @body = ] 'message'` Le corps du message électronique. *message* est **nvarchar (max)** sans valeur par défaut.  
   
-`[ @file_attachments = ] 'attachment'` Le nom d’un fichier à joindre au message électronique. *pièce jointe* est **nvarchar (512)**, sans valeur par défaut.  
+`[ @file_attachments = ] 'attachment'` Le nom d’un fichier à joindre au message électronique. *pièce jointe* est **nvarchar (512)** , sans valeur par défaut.  
   
-`[ @mail_database = ] 'mail_host_database'` Spécifie le nom de la base de données hôte de messagerie. *mail_host_database* is **nvarchar(128)**. Si aucun *mail_host_database* est spécifié, le **msdb** base de données est utilisé par défaut.  
+`[ @mail_database = ] 'mail_host_database'` Spécifie le nom de la base de données hôte de messagerie. *mail_host_database* est **nvarchar (128)** . Si aucun *mail_host_database* est spécifié, le **msdb** base de données est utilisé par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

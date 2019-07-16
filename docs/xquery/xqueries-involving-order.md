@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49f7c204dd5c8fd74c1e2fe1c1c57adb38e60d69
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946110"
 ---
 # <a name="xqueries-involving-order"></a>Requêtes XQuery impliquant un ordre
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52524075"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>A. Récupération des étapes de fabrication sur le deuxième poste de travail pour un produit  
+### <a name="a-retrieve-manufacturing-steps-at-the-second-work-center-location-for-a-product"></a>R. Récupération des étapes de fabrication sur le deuxième poste de travail pour un produit  
  Pour un modèle de produit spécifique, la requête suivante récupère les étapes de fabrication sur le deuxième poste de travail dans l'ordre des postes de travail que comprend le processus de fabrication.  
   
 ```sql
@@ -64,7 +63,7 @@ WHERE ProductModelID=7
   
 -   **@\*** Récupère tous les attributs du deuxième poste de travail.  
   
--   L'itération FLWOR (FOR ... RETURN) récupère tous les éléments enfants <`step`> du deuxième poste de travail.  
+-   L’itération FLWOR (pour... RETURN) récupère tous les <`step`> emplacement du centre les éléments enfants du deuxième travail.  
   
 -   Le [fonction SQL :Column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) contient la valeur relationnelle dans le code XML qui est en cours de construction.  
   
@@ -84,7 +83,7 @@ WHERE ProductModelID=7
   
  La requête précédente récupère uniquement les nœuds de texte. Si vous souhaitez que la totalité <`step`> élément retourné à la place, supprimez le **string()** fonction à partir de la requête :  
   
-### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>b. Recherche des matières et outils utilisés sur le deuxième poste de travail au cours de la fabrication d'un produit  
+### <a name="b-find-all-the-material-and-tools-used-at-the-second-work-center-location-in-the-manufacturing-of-a-product"></a>B. Recherche des matières et outils utilisés sur le deuxième poste de travail au cours de la fabrication d'un produit  
  Pour un modèle de produit spécifique, la requête suivante récupère les outils et les matières utilisés sur le deuxième poste de travail dans l'ordre des postes de travail que comprend le processus de fabrication.  
   
 ```sql
@@ -138,7 +137,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. Récupération des descriptions des deux premiers composants d'un produit à partir du catalogue du produit  
- Pour un modèle de produit spécifique, la requête récupère les descriptions des deux premiers composants à partir de l'élément <`Features`> dans le catalogue du modèle de produit.  
+ Pour un modèle de produit spécifique, la requête récupère les descriptions de deux fonctionnalité première à partir de la <`Features`> élément dans le catalogue de modèle de produit.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -158,9 +157,9 @@ where ProductModelID=19
   
  Notez les points suivants dans la requête précédente :  
   
- Le corps de la requête construit du code XML qui englobe l'élément <`ProductModel`> ayant ProductModelID et ProductModelName comme attributs.  
+ Le corps de la requête construit du code XML qui inclut le <`ProductModel`> élément qui possède les attributs ProductModelID et ProductModelName.  
   
--   La requête utilise une boucle FOR ... RETURN pour récupérer les descriptions des composants du modèle de produit. Le **position()** fonction est utilisée pour récupérer les deux premières caractéristiques.  
+-   La requête utilise une boucle FOR... RETURN pour récupérer les descriptions de fonctionnalité de modèle de produit. Le **position()** fonction est utilisée pour récupérer les deux premières caractéristiques.  
   
  Voici le résultat obtenu :  
   

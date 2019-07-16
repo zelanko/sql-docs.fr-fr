@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c297578fabca3c20781c6227307f25dbece1bbfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62797813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055232"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |Value|Description|  
 |-----------|-----------------|  
 |**LOCAL**|Catégorie de travaux locale.|  
-|**MULTI -SERVER**|Catégorie de travaux multiserveur.|  
+|**MULTI-SERVEUR**|Catégorie de travaux multiserveur.|  
 |**NONE**|Catégorie d’une classe autre que **travail**.|  
   
 `[ @name = ] 'name'` Le nom de la catégorie pour laquelle les informations sont demandées. *nom* est **sysname**, avec NULL comme valeur par défaut.  
@@ -69,19 +68,19 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="result-sets"></a>Jeux de résultats  
  Lorsque **@suffix** est **0**, **sp_help_category** retourne le jeu de résultats suivant :  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**Int**|ID de la catégorie|  
-|**category_type**|**tinyint**|Type de catégorie :<br /><br /> **1** = Local<br /><br /> **2** = Multiserver<br /><br /> **3** = none|  
-|**nom**|**sysname**|Nom de la catégorie|  
+|**category_type**|**tinyint**|Type de catégorie :<br /><br /> **1** = local<br /><br /> **2** = multiserveur<br /><br /> **3** = none|  
+|**name**|**sysname**|Nom de la catégorie|  
   
  Lorsque **@suffix** est **1**, **sp_help_category** retourne le jeu de résultats suivant :  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**Int**|ID de la catégorie|  
 |**category_type**|**sysname**|Type de catégorie : Un des **LOCAL**, **multiserveur**, ou **NONE**|  
-|**nom**|**sysname**|Nom de la catégorie|  
+|**name**|**sysname**|Nom de la catégorie|  
   
 ## <a name="remarks"></a>Notes  
  **sp_help_category** doit être exécuté à partir de la **msdb** base de données.  
@@ -101,7 +100,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-local-job-information"></a>A. Renvoi d'informations sur les travaux en local  
+### <a name="a-returning-local-job-information"></a>R. Renvoi d'informations sur les travaux en local  
  L'exemple suivant renvoie des informations sur les travaux qui sont administrés localement.  
   
 ```  

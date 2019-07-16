@@ -1,5 +1,5 @@
 ---
-title: sys.http_endpoints (Transact-SQL) | Microsoft Docs
+title: Sys.http_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: 16f59695-ecd9-457e-8874-055af63f8ea7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1bd36b58fc3a98e0c123e37a3b98c18077ac19ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41ca717399a3cd86f2137de6ae474d89e3eb819e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122730"
 ---
 # <a name="syshttpendpoints-transact-sql"></a>sys.http_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque point de terminaison créé sur le serveur qui utilise le protocole HTTP.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**< colonnes héritées >**||Hérite des colonnes de [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**site**|**nvarchar(128)**|Nom de l'ordinateur hôte du site, tel qu'il est spécifié dans l'option SITE =.|  
 |**url_path**|**nvarchar(4000)**|Portion du chemin d'accès uniquement de ce point de terminaison HTTP, comme le spécifie l'option PATH=.|  
 |**is_clear_port_enabled**|**bit**|1 = Activation du port en clair à l'aide de l'option PORT = CLEAR.|  
-|**clear_port**|**Int**|Numéro de port spécifié dans l'option CLEAR PORT =.<br /><br /> NULL = Non spécifié.|  
+|**clear_port**|**int**|Numéro de port spécifié dans l'option CLEAR PORT =.<br /><br /> NULL = Non spécifié.|  
 |**is_ssl_port_enabled**|**bit**|1 = Activation du port SSL à l'aide de l'option PORT = SSL.|  
-|**ssl_port**|**Int**|Numéro de port spécifié dans l'option SSL PORT =.<br /><br /> NULL = Non spécifié.|  
+|**ssl_port**|**int**|Numéro de port spécifié dans l'option SSL PORT =.<br /><br /> NULL = Non spécifié.|  
 |**is_anonymous_enabled**|**bit**|1 = Activation de l'accès anonyme à l'aide de l'option AUTHENTICATION = ANONYMOUS.|  
 |**is_basic_auth_enabled**|**bit**|1 = Activation de l'authentification de base à l'aide de l'option AUTHENTICATION = BASIC.|  
 |**is_digest_auth_enabled**|**bit**|1 = Activation de l'authentification de type Digest à l'aide de l'option AUTHENTICATION = DIGEST.|  

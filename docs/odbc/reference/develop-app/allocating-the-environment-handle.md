@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a8eefe5bc6678462099afda8381d6b16bd076dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823ea02a2acb6a28f56c58bb40fe684a2589bd24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077181"
 ---
 # <a name="allocating-the-environment-handle"></a>Allocation d’un handle d’environnement
 La première tâche pour toutes les applications ODBC consiste à charger le Gestionnaire de pilotes ; Cette opération dépend du système d’exploitation. Par exemple, sur un ordinateur exécutant Microsoft® Windows NT® Server/Windows 2000 Server, Windows NT Workstation/Windows 2000 Professionnel ou Microsoft Windows® 95/98, l’application soit liée à la bibliothèque du Gestionnaire de pilotes ou les appels  **LoadLibrary** de charger la DLL du Gestionnaire de pilotes.  

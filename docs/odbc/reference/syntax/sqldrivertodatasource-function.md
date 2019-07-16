@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0de28eb5-8aa9-43e4-a87f-7dbcafe800dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 844e11e72bb46b69229a9a4747ac7e64f013f14e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d36996f49cb58fbb8812ae5fee8928fdc8bddf1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104638"
 ---
 # <a name="sqldrivertodatasource-function"></a>SQLDriverToDataSource, fonction
 **SQLDriverToDataSource** prend en charge des traductions pour les pilotes ODBC. Cette fonction n’est pas appelée par les applications prenant en charge ODBC ; applications demandent une traduction via **SQLSetConnectAttr**. Le pilote associé le *ConnectionHandle* spécifié dans **SQLSetConnectAttr** appelle la DLL spécifiée pour effectuer des traductions de tous les flux de données à partir du pilote vers la source de données. Une DLL de traduction par défaut peut être spécifié dans le fichier d’initialisation ODBC.  

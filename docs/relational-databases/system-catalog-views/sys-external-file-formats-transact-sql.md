@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b16deb7ed2bd43cc45966d27b79729897e76405c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048391"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>Sys.external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "52532359"
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**Int**|ID d’objet pour le format de fichier externe.||  
-|NAME|**sysname**|Nom du format de fichier. dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], il est unique pour la base de données. Dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], il est unique pour le serveur.||  
+|name|**sysname**|Nom du format de fichier. dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], il est unique pour la base de données. Dans [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], il est unique pour le serveur.||  
 |format_type|**tinyint**|Le type de format de fichier.|DELIMITEDTEXT, RCFILE, ORC, PARQUET|  
 |indicateur_fin_de_champ|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, c’est la marque de fin de champ.||  
 |string_delimiter|**nvarchar(10)**|Pour format_type = DELIMITEDTEXT, il s’agit du délimiteur de chaîne.||  

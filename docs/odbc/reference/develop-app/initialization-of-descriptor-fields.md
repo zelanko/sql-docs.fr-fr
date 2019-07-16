@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d988099cad357254f04a79a8a6cccbbe4eb2768c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c78162bcf0421fee609abe5fcacf9613e0f8020b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138941"
 ---
 # <a name="initialization-of-descriptor-fields"></a>Initialisation de champs de descripteur
 Lorsqu’un descripteur de ligne d’application est alloué, ses champs recevant des valeurs initiales comme indiqué dans [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). La valeur initiale du champ SQL_DESC_TYPE est SQL_DEFAULT. Ainsi, pour un traitement standard des données de base pour la présentation à l’application. L’application peut spécifier un traitement différent des données en définissant les champs de l’enregistrement de descripteur.  

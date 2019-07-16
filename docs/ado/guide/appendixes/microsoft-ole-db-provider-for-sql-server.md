@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f083f62a67a2255b59fe9ca7cffc03e5aaf5f0a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926615"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Fournisseur Microsoft OLE DB pour la présentation de SQL Server
 Le fournisseur Microsoft OLE DB pour SQL Server, SQLOLEDB, permet à ADO pour accéder à Microsoft SQL Server.
@@ -152,8 +151,8 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Définition de colonne|DBPROP_COLUMNDEFINITION|
 |Connect Timeout|DBPROP_INIT_TIMEOUT|
 |Catalogue actuel|DBPROP_CURRENTCATALOG|
-|Source de données|DBPROP_INIT_DATASOURCE|
-|Nom de la source de données|DBPROP_DATASOURCENAME|
+|source de données|DBPROP_INIT_DATASOURCE|
+|Data Source Name|DBPROP_DATASOURCENAME|
 |Objet de Source de données modèle de thread|DBPROP_DSOTHREADMODEL|
 |Nom SGBD|DBPROP_DBMSNAME|
 |Version SGBD|DBPROP_DBMSVER|
@@ -201,7 +200,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |Terme de table|DBPROP_TABLETERM|
 |Transaction DDL|DBPROP_SUPPORTEDTXNDDL|
 |ID d'utilisateur|DBPROP_AUTH_USERID|
-|Nom d'utilisateur|DBPROP_USERNAME|
+|User Name|DBPROP_USERNAME|
 |Handle de fenêtre|DBPROP_INIT_HWND|
 
 ## <a name="recordset-dynamic-properties"></a>Propriétés dynamiques du Recordset

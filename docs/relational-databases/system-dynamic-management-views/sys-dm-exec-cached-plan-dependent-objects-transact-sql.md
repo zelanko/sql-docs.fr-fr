@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9b6cf5f7-b267-44fb-aac8-f49c9aa10cc1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f74b6b9fe659f6d2af0f30bd6a2b629939fc5628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca4499645846dacc762d8d3bf130ccc44a7f3155
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097900"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>Arguments  
 *plan_handle*  
-Est un jeton qui identifie de façon unique un plan d’exécution de requête pour un lot qui a été exécutée et son plan se trouve dans le cache du plan. *plan_handle* est **varbinary (64)**.   
+Est un jeton qui identifie de façon unique un plan d’exécution de requête pour un lot qui a été exécutée et son plan se trouve dans le cache du plan. *plan_handle* est **varbinary (64)** .   
 
 Le *plan_handle* peut être obtenu à partir d’objets de gestion dynamique suivants :  
   
@@ -57,7 +56,7 @@ Le *plan_handle* peut être obtenu à partir d’objets de gestion dynamique sui
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**usecounts**|**Int**|Nombre d'utilisations du curseur ou contexte d'utilisation.<br /><br /> Colonne n'acceptant pas la valeur NULL.|  
 |**memory_object_address**|**varbinary(8)**|Adresse mémoire du curseur ou contexte d'utilisation.<br /><br /> Colonne n'acceptant pas la valeur NULL.|  

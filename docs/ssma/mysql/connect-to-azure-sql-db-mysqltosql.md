@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 81623d27-25af-444f-9779-1edb8c6fb470
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 713a0ba96a2e82f10d4150b337d51f9f1774548f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12da1aa42f468b92e1833410e635183aabf3a384
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103243"
 ---
 # <a name="connect-to-azure-sql-db-mysqltosql"></a>Se connecter à Azure SQL DB (MySQLToSQL)
 Utilisez la connexion à la boîte de dialogue de SQL Azure pour se connecter à la base de données SQL Azure que vous souhaitez migrer.  

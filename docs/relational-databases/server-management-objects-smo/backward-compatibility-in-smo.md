@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 2f986436-aaf2-4eaf-9809-df849d97d4fb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 810c0d5d1856b21b20129544890e8b9c57cc0d15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7a002b4f5d4b678171fc5dd396152d155779f78b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126767"
 ---
 # <a name="backward-compatibility-in-smo"></a>Compatibilité descendante dans SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47713317"
  Ces fichiers sont requis pour les classes de connexion, les classes utilitaires SMO et les classes de base.  
   
 > [!NOTE]  
->  SmoEnum.dll ayant été supprimé, les références à ce fichier doivent être supprimées du projet SMO [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+>  SmoEnum.dll ayant été supprimé, les références à ce fichier doivent être supprimées du projet SMO [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
   
  Les espaces de noms ayant également changé, vous pouvez utiliser les éléments suivants :  
   
@@ -56,7 +55,7 @@ Imports Microsoft.SqlServer.Management.Smo
 Imports Microsoft.SqlServer.Management.Common  
 ```  
   
- Si votre code utilise une fonction Urn, telle que **Server.GetSqlSmoObject(Urn)**, vous devez établir un lien avec l'espace de noms Microsoft.SqlServer.Management.Sdk.Sfc.  
+ Si votre code utilise une fonction Urn, telle que **Server.GetSqlSmoObject(Urn)** , vous devez établir un lien avec l'espace de noms Microsoft.SqlServer.Management.Sdk.Sfc.  
   
  Si votre code utilise directement l'objet de transfert, vous devrez établir un lien avec l'espace de noms Microsoft.SqlServer.Management.SmoExtended.  
   

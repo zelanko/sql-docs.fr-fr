@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 92cff6191f9b606a5394edaac36706328ab52bc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 413fad6c982622eddb2a1341c63804da089dd8a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141024"
 ---
 # <a name="managing-passwords-db2tosql"></a>La gestion des mots de passe (DB2ToSQL)
 Cette section concerne la sécurisation des mots de passe de base de données et la procédure pour importer ou exporter les sur les serveurs :  
@@ -54,7 +53,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
                 
                 Re-enter password for server_id 'XXX_1': xxxxxxx
             
-            Exemple 2 :
+            Exemple 2 :
             
                 C:\SSMA\SSMAforDB2Console.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 
@@ -70,7 +69,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
   
         Exécuter le `SSMAforDB2Console.exe` avec la`-securepassword` et `-remove` passer à la ligne de commande en passant l’ID de serveur pour supprimer les mots de passe chiffrés à partir du fichier de stockage protégé présent sur l’ordinateur local.  
   
-        Exemple :  
+        Exemple :  
         
             C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove all
             C:\SSMA\SSMAforDB2Console.EXE -securepassword -remove "source_1,target_1"  
@@ -79,7 +78,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
   
         Exécuter le `SSMAforDB2Console.exe` avec la `-securepassword` et `-list` passer à la ligne de commande pour répertorier tous les ID de serveur dont les mots de passe ont été chiffrés.  
   
-        Exemple :  
+        Exemple :  
         
             C:\SSMA\SSMAforDB2Console.EXE -securepassword -list  
 
@@ -91,7 +90,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
 ## <a name="exporting-or-importing-encrypted-passwords"></a>Exporter ou importer des mots de passe chiffrés  
 L’application de Console SSMA vous permet d’exporter des mots de passe de base de données chiffrées présentes dans un fichier sur l’ordinateur local à un fichier sécurisé et inversement. Il permet de rendre la machine de mots de passe chiffrés indépendants. La fonctionnalité d’exportation lit l’id de serveur et le mot de passe à partir de l’ordinateur local, stockage protégé et enregistre les informations dans un fichier chiffré. L’utilisateur est invité à entrer le mot de passe pour le fichier sécurisé. Assurez-vous que le mot de passe entré est la longueur de 8 caractères ou plus. Ce fichier sécurisé est portable sur des ordinateurs différents. Fonctionnalité d’importation lit les informations d’id et mot de passe de serveur à partir du fichier sécurisé. L’utilisateur est invité à entrer le mot de passe pour le fichier sécurisé et ajoute les informations sur le stockage local protégé.  
   
-Exemple :  
+Exemple :  
 
     Export password
     
@@ -109,7 +108,7 @@ Exemple :
     
     Please confirm password: xxxxxxxx  
   
-Exemple :  
+Exemple :  
 
     Import an encrypted password
     

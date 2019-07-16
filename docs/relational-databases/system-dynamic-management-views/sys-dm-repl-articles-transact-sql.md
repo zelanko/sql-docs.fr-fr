@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65bc88be1b9a6cdb9a69d41a526916ab3aa7ab2a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 07dc611371cbff373fb60036c8c16da6656a8de1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088592"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne des informations sur les objets de base de données publiés sous forme d'articles dans une topologie de réplication.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**artcache_db_address**|**varbinary(8)**|Adresse en mémoire de la structure de base de données du cache pour la base de données de publication.|  
 |**artcache_table_address**|**varbinary(8)**|Adresse en mémoire de la structure de table du cache pour l'article de table publié.|  
@@ -47,13 +46,13 @@ ms.locfileid: "56031830"
 |**wszArtinscmd**|**nvarchar(510)**|Commande ou procédure stockée utilisée pour les insertions.|  
 |**cmdTypeIns**|**Int**|Syntaxe d'appel pour la procédure stockée d'insertion, pouvant être une de ces valeurs.<br /><br /> **1** = APPEL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **7** = INCONNU|  
 |**wszArtdelcmd**|**nvarchar(510)**|Commande ou procédure stockée utilisée pour les suppressions.|  
-|**cmdTypeDel**|**Int**|Syntaxe d'appel pour la procédure stockée de suppression, pouvant être une de ces valeurs.<br /><br /> **0** = XCALL<br /><br /> **1** = APPEL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **7** = INCONNU|  
+|**cmdTypeDel**|**int**|Syntaxe d'appel pour la procédure stockée de suppression, pouvant être une de ces valeurs.<br /><br /> **0** = XCALL<br /><br /> **1** = APPEL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **7** = INCONNU|  
 |**wszArtupdcmd**|**nvarchar(510)**|Commande ou procédure stockée utilisée pour les mises à jour.|  
-|**cmdTypeUpd**|**Int**|Syntaxe d'appel pour la procédure stockée de mise à jour, pouvant être une de ces valeurs.<br /><br /> **0** = XCALL<br /><br /> **1** = APPEL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = INCONNU|  
+|**cmdTypeUpd**|**int**|Syntaxe d'appel pour la procédure stockée de mise à jour, pouvant être une de ces valeurs.<br /><br /> **0** = XCALL<br /><br /> **1** = APPEL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = INCONNU|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Commande ou procédure stockée utilisée pour les mises à jour partielles.|  
 |**cmdTypePartialUpd**|**Int**|Syntaxe d'appel pour la procédure stockée de mise à jour partielle, pouvant être une de ces valeurs.<br /><br /> **2** = SQL|  
-|**numcol**|**Int**|Nombre de colonnes dans la partition pour un article filtré verticalement.|  
-|**artcmdtype**|**tinyint**|Type de commande actuellement répliqué, pouvant être une de ces valeurs.<br /><br /> **1** = INSERT<br /><br /> **2** = DELETE<br /><br /> **3** = UPDATE<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = none<br /><br /> **6** = pour usage interne uniquement<br /><br /> **7** = pour usage interne uniquement<br /><br /> **8** = mise à jour partielle|  
+|**numcol**|**int**|Nombre de colonnes dans la partition pour un article filtré verticalement.|  
+|**artcmdtype**|**tinyint**|Type de commande actuellement répliqué, pouvant être une de ces valeurs.<br /><br /> **1** = INSERTION<br /><br /> **2** = DELETE<br /><br /> **3** = UPDATE<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = none<br /><br /> **6** = pour usage interne uniquement<br /><br /> **7** = pour usage interne uniquement<br /><br /> **8** = mise à jour partielle|  
 |**artgeninscmd**|**nvarchar(510)**|Modèle de commande INSERT reposant sur les colonnes incluses dans l'article.|  
 |**artgendelcmd**|**nvarchar(510)**|Modèle de commande DELETE, qui peut inclure la clé primaire ou les colonnes incluses dans l'article, selon la syntaxe d'appel utilisée.|  
 |**artgenupdcmd**|**nvarchar(510)**|Modèle de commande UPDATE, qui peut inclure la clé primaire, les colonnes mises à jour ou une liste complète de colonnes, selon la syntaxe d'appel utilisée.|  

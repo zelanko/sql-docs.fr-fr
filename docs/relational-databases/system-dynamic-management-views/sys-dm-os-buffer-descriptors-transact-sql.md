@@ -1,5 +1,5 @@
 ---
-title: sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
+title: Sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 012aab95-8888-4f35-9ea3-b5dff6e3f60f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 29449905da888d0f7c85b66d3731eed381dc582c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.openlocfilehash: 52d2a0284666c7b26c40fad62e8fdf9455379b49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900249"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,26 +36,26 @@ ms.locfileid: "62506056"
   
 > **REMARQUE :** À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_buffer_descriptors**.  
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|database_id|**Int**|Identificateur de la base de données associée à la page dans le pool de mémoires tampons. Autorise la valeur NULL.|  
-|file_id|**Int**|Identificateur du fichier qui contient l'image persistante de la page. Autorise la valeur NULL.|  
-|page_id|**Int**|Identificateur de la page dans le fichier. Autorise la valeur NULL.|  
+|database_id|**int**|Identificateur de la base de données associée à la page dans le pool de mémoires tampons. Autorise la valeur NULL.|  
+|file_id|**int**|Identificateur du fichier qui contient l'image persistante de la page. Autorise la valeur NULL.|  
+|page_id|**int**|Identificateur de la page dans le fichier. Autorise la valeur NULL.|  
 |page_level|**Int**|Niveau d'index de la page. Autorise la valeur NULL.|  
 |allocation_unit_id|**bigint**|Identificateur de l'unité d'allocation de la page. Cette valeur peut être utilisée pour la jointure de sys.allocation_units. Autorise la valeur NULL.|  
 |page_type|**nvarchar(60)**|Type de la page, par exemple : Page de données ou page d’Index. Autorise la valeur NULL.|  
-|row_count|**Int**|Nombre de lignes dans la page. Autorise la valeur NULL.|  
-|free_space_in_bytes|**Int**|Quantité d'espace disponible dans la page, en octets. Autorise la valeur NULL.|  
+|row_count|**int**|Nombre de lignes dans la page. Autorise la valeur NULL.|  
+|free_space_in_bytes|**int**|Quantité d'espace disponible dans la page, en octets. Autorise la valeur NULL.|  
 |is_modified|**bit**|1 = la page a été modifiée après avoir été lue sur le disque. Autorise la valeur NULL.|  
-|numa_node|**Int**|Nœud NUMA (Nonuniform Memory Access) pour la mémoire tampon. Autorise la valeur NULL.|  
+|numa_node|**int**|Nœud NUMA (Nonuniform Memory Access) pour la mémoire tampon. Autorise la valeur NULL.|  
 |read_microsec|**bigint**|Temps réel (en microsecondes) requis pour lire la page dans la mémoire tampon. Ce nombre est réinitialisé lorsque la mémoire tampon est réutilisée. Autorise la valeur NULL.|  
 |is_in_bpool_extension|**bit**|1 = Page se trouve dans l’extension du pool de mémoires tampons. Autorise la valeur NULL.|  
-|pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
    
 ## <a name="remarks"></a>Notes  
  Sys.dm_os_buffer_descriptors retourne les pages qui sont utilisés par la base de données de ressources. Sys.dm_os_buffer_descriptors ne retourne pas d’informations sur les pages libres ou occultées, ni sur les pages qui contenaient des erreurs lors de leur lecture.  
@@ -70,7 +69,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-cached-page-count-for-each-database"></a>A. Retour du nombre de pages mises en cache pour chaque base de données  
+### <a name="a-returning-cached-page-count-for-each-database"></a>R. Retour du nombre de pages mises en cache pour chaque base de données  
  L'exemple suivant retourne le nombre de pages chargées pour chaque base de données.  
   
 ```  

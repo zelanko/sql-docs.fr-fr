@@ -1,5 +1,5 @@
 ---
-title: Afficher ou modifier les paramètres d’algorithme | Documents Microsoft
+title: Afficher ou modifier les paramètres d’algorithme | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58b512d726d45a8ceabb76a4ce2b1e6c8c62815b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018216"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209562"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>Afficher ou modifier les paramètres d'algorithme
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34018216"
   
 -   spécifier une valeur de départ ou la taille du jeu de données d'exclusion interne utilisé pour la création de modèle.  
   
- Les paramètres fournis pour chaque algorithme varient considérablement. Pour obtenir la liste des paramètres que vous pouvez définir pour chaque algorithme, consultez les rubriques de références techniques dans cette section : [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Les paramètres fournis pour chaque algorithme varient considérablement ; Pour obtenir la liste des paramètres que vous pouvez définir pour chaque algorithme, consultez les rubriques de référence technique de cette section : [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
 ### <a name="change-an-algorithm-parameter"></a>Changer un paramètre d'algorithme  
   
@@ -62,6 +62,6 @@ ms.locfileid: "34018216"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches liées aux modèles d’exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tâches et procédures des modèles d’exploration de données](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

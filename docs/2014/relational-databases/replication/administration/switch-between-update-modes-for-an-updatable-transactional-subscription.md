@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ee768eb4e50e4501af204c885916cd14409df2c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785191"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210759"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>Basculer entre les modes de mise à jour d'un abonnement transactionnel pouvant être mis à jour
   Cette rubrique explique comment basculer entre les modes de mise à jour d'un abonnement transactionnel pouvant être mis à jour dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Spécifiez le mode des abonnements pouvant être mis à jour à l'aide de l'Assistant Nouvel abonnement. Pour plus d’informations sur la définition de ce mode lors de l’utilisation de cet Assistant, consultez [Afficher et modifier les propriétés d’un abonnement par extraction](../view-and-modify-pull-subscription-properties.md).  
@@ -49,17 +49,17 @@ ms.locfileid: "52785191"
   
 3.  Cliquez avec le bouton droit sur l'abonnement dont vous voulez définir le mode de mise à jour puis cliquez sur **Définir la méthode de mise à jour**.  
   
-4.  Dans le **définir la méthode de mise à jour - \<abonné > : \<Base_de_données_abonnement >** boîte de dialogue, sélectionnez **mise à jour immédiate** ou **la mise à jour en file d’attente**.  
+4.  Dans la boîte de dialogue **Définir la méthode de mise à jour - \<Abonné> : \<SubscriptionDatabase>** , sélectionnez **Mise à jour immédiate** ou **Mise à jour en attente**.  
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-set-the-updating-mode-for-a-pull-subscription"></a>Pour définir le mode de mise à jour d'un abonnement extrait  
   
-1.  Dans le **Subscription Properties - \<serveur de publication > : \<Base_de_données_publication >** boîte de dialogue, sélectionnez la valeur **répliquer les modifications immédiatement** ou **modifications en file d’attente** pour le **méthode de mise à jour de l’abonné** option.  
+1.  Dans la boîte de dialogue **Propriétés de l'abonnement - \<Serveur de publication> : \<PublicationDatabase>** , sélectionnez une valeur de **Répliquer les modifications immédiatement** ou **Modifications en attente** pour l’option **Méthode de mise en jour d’abonné**.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
- Pour plus d’informations sur l’accès à la **Subscription Properties - \<serveur de publication > : \<Base_de_données_publication >** boîte de dialogue, consultez [afficher et modifier les propriétés d’abonnement par extraction](../view-and-modify-pull-subscription-properties.md).  
+ Pour plus d'informations sur la manière d'accéder à la boîte de dialogue **Propriétés de l'abonnement - \<Serveur de publication> : \<PublicationDatabase>** , consultez [Afficher et modifier les propriétés Abonnement par extraction](../view-and-modify-pull-subscription-properties.md).  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52785191"
   
 1.  Vérifiez que l'abonnement prend en charge le basculement en exécutant [sp_helppullsubscription](/sql/relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql) pour un abonnement par extraction ou [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql) pour un abonnement par émission de données. Si la valeur de **mode de mise à jour** dans le jeu de résultats est **3** ou **4**, le basculement est pris en charge.  
   
-2.  Sur l'Abonné de la base de données d'abonnement, exécutez [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql). Spécifiez **@publisher**, **@publisher_db**, **@publication**, et l'une des valeurs suivantes pour **@failover_mode**:  
+2.  Sur l'Abonné de la base de données d'abonnement, exécutez [sp_setreplfailovermode](/sql/relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql). Spécifiez **@publisher** , **@publisher_db** , **@publication** , et l'une des valeurs suivantes pour **@failover_mode** :  
   
     -   **mis en file d'attente** - basculement sur la mise à jour en attente lorsque la connectivité a été perdue temporairement.  
   

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1df2ac9979e99a301d416d25d143039bef3ee4ed
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d78e3aa24f6e73d624eec1f33fbebb62108bcc65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096293"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de données Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,12 +41,12 @@ ms.locfileid: "67833039"
 |xtp_storage_percent|**decimal (5,2)**|Utilisation du stockage pour l’OLTP en mémoire en pourcentage de la limite du niveau de service (à la fin de la période de rapport). Cela inclut la mémoire utilisée pour le stockage des objets OLTP en mémoire suivants : tables optimisées en mémoire, les index et les variables de table. Il inclut également la mémoire utilisée pour le traitement des opérations ALTER TABLE.<br /><br /> Retourne 0 si l’OLTP en mémoire n’est pas utilisé dans la base de données.|  
 |max_worker_percent|**decimal (5,2)**|Nombre maximal d’ouvriers simultanés (demandes) en pourcentage de la limite de niveau de service de la base de données.|  
 |max_session_percent|**decimal (5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite de niveau de service de la base de données.|  
-|dtu_limit|**int**|Base de données max DTU paramètre actuel de cette base de données pendant cet intervalle. Pour les bases de données à l’aide du modèle VCORE, cette colonne est NULL.|
+|dtu_limit|**Int**|Base de données max DTU paramètre actuel de cette base de données pendant cet intervalle. Pour les bases de données à l’aide du modèle VCORE, cette colonne est NULL.|
 |cpu_limit|**decimal (5,2)**|Nombre de vCores pour cette base de données pendant cet intervalle. Pour les bases de données à l’aide du modèle dtu, cette colonne est NULL.|
 |avg_instance_cpu_percent|**decimal (5,2)**|Base de données l’utilisation du processeur en pourcentage moyen.|
 |avg_instance_memory_percent|**decimal (5,2)**|Utilisation moyenne de base de données de mémoire en pourcentage.|
 |avg_login_rate_percent|**decimal (5,2)**|Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.|
-|replica_role|**Int**|Représente le rôle du réplica en cours avec 0 comme principal, 1 en tant que base de données secondaire et 2 en tant que redirecteur (principal de géo-secondaire). Vous voyez « 1 », cas de connexion avec intention en lecture seule à toutes les bases de données secondaires. Si vous vous connectez à une base de données géo-secondaire sans spécifier l’intention en lecture seule, vous devez voir « 2 » (connexion au redirecteur).|
+|replica_role|**int**|Représente le rôle du réplica en cours avec 0 comme principal, 1 en tant que base de données secondaire et 2 en tant que redirecteur (principal de géo-secondaire). Vous voyez « 1 », cas de connexion avec intention en lecture seule à toutes les bases de données secondaires. Si vous vous connectez à une base de données géo-secondaire sans spécifier l’intention en lecture seule, vous devez voir « 2 » (connexion au redirecteur).|
 |||
   
 > [!TIP]  

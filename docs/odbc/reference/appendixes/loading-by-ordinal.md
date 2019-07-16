@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 337d90ab-68eb-4940-a2f3-f7d5693ee766
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ccecc541143e971d82a225e24e1c8caf6a03c32c
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: fdc7728fe06df708efd973423f5c8c05333ce189
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041603"
 ---
 # <a name="loading-by-ordinal"></a>Chargement par ordinal
 Dans ODBC *2.x*, le chargement par ordinal pourrait être effectué pour améliorer les performances du processus de connexion. Une application ODBC *2.x* pilote exporte une fonction factice de l’ordinal 199 ; lorsque le Gestionnaire de pilote détecte que celui-ci, il résout les adresses des fonctions ODBC par ordinal, et non par nom. Cette fonctionnalité est toujours pris en charge pour ODBC *2.x* pilotes mais n’est ne pas pris en charge pour ODBC *3.x* pilotes.

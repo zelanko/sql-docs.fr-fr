@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1a03ecd9f41fe7d236f8c61f7059014a6ac07fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088210"
 ---
 # <a name="operators-mdx-syntax"></a>Opérateurs (syntaxe MDX)
 
@@ -76,7 +75,7 @@ ms.locfileid: "63277603"
   
 -   XOR  
   
--   \- ou -  
+-   Ou  
   
  Pour plus d’informations sur les opérateurs dans une expression MDX, consultez [référence des opérateurs MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md).  
   
@@ -92,8 +91,8 @@ ms.locfileid: "63277603"
   
 |Type d'origine|Type exigé|Conversion|  
 |-------------------|-----------------|----------------|  
-|Level|Définissez|\<level>.members|  
-|Hierarchy|Membre|\<hierarchy>.defaultmember|  
+|Niveau|Définissez|\<level>.members|  
+|Hierarchy|Membre|\<hiérarchie > .defaultmember|  
 |Membre|Tuple|(\<Membre >)|  
 |Tuple|Membre|\<tuple>.item(0)|  
 |Tuple|Scalaire|\<tuple>.value|  

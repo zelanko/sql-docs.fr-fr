@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa2bae15b2da81dcf69ca1e486c74e7b4ccd5ba8
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 9eb9ced4e010001f42e106ce8b1903e029f2f1c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109557"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque valeur d’option de configuration de l’échelle du serveur dans le système.  
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**configuration_id**|**Int**|ID unique pour la valeur de configuration.|  
-|**nom**|**nvarchar(35)**|Nom de l'option de configuration.|  
+|**configuration_id**|**int**|ID unique pour la valeur de configuration.|  
+|**name**|**nvarchar(35)**|Nom de l'option de configuration.|  
 |**value**|**sql_variant**|Valeur configurée pour cette option.|  
 |**minimum**|**sql_variant**|Valeur minimale pour l'option de configuration.|  
 |**maximum**|**sql_variant**|Valeur maximale pour l'option de configuration.|  

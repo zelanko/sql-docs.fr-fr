@@ -1,5 +1,5 @@
 ---
-title: Partager des flux de données à l’aide d’une bibliothèque de flux de données (PowerPivot pour SharePoint) | Documents Microsoft
+title: Partager des flux de données à l’aide d’une bibliothèque de flux de données (PowerPivot pour SharePoint) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f262fe19ba39f217135908173189bf93a7e68817
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030690"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163706"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>Partager des flux de données à l’aide d’une bibliothèque de flux de données (Power Pivot pour SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "34030690"
   
  [Modifier un document de service de données](#modifydsdoc)  
   
- [Étape suivante : utiliser un document de service de données](#usedsdoc)  
+ [Étape suivante : Utiliser un Document de Service de données](#usedsdoc)  
   
 > [!NOTE]  
 >  Bien que les flux de données soient utilisés pour ajouter des données web à une source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que vous créez dans [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], toute application cliente qui peut lire un flux Atom peut traiter un document de service de données.  
   
-##  <a name="prereq"></a> Configuration requise  
+##  <a name="prereq"></a> Conditions préalables  
  Vous devez disposer d’un déploiement de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint qui ajoute le traitement de requêtes [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à une batterie de serveurs SharePoint. La prise en charge des flux de données est déployée via le package de solution [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
  Vous devez posséder une bibliothèque SharePoint qui prend en charge le type de contenu du document de service de données. Il est à cet effet recommandé d'utiliser une bibliothèque de source de données par défaut, mais il est aussi possible d'ajouter manuellement le type de contenu à n'importe quelle bibliothèque. Pour plus d’informations, consultez [Créer ou personnaliser une bibliothèque de flux de données &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
@@ -107,7 +107,7 @@ ms.locfileid: "34030690"
 > [!IMPORTANT]  
 >  Bien que le document de service de données ne soit lu qu'une seule fois, les services de données qui fournissent les données réelles peuvent faire l'objet d'accès à intervalles réguliers pour obtenir des flux plus récents. Pour plus d’informations sur l’actualisation des données, consultez [Actualisation des données Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md).  
   
-##  <a name="usedsdoc"></a> Étape suivante : utiliser un document de service de données  
+##  <a name="usedsdoc"></a> Étape suivante : Utiliser un Document de Service de données  
  Pour utiliser un document de service de données que vous avez créé dans une bibliothèque SharePoint, utilisez l’option d’importation **À partir de flux de données** dans une source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour obtenir des instructions, consultez [Utiliser des flux de données &#40;Power Pivot pour SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ## <a name="see-also"></a>Voir aussi  

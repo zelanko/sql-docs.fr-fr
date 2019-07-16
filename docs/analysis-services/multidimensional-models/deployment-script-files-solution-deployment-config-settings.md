@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4535ce33d0615cd98bf910da9b765a0e972131d7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525661"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208937"
 ---
 # <a name="deployment-script-files---solution-deployment-config-settings"></a>Fichiers de script de déploiement - Paramètres de configuration du déploiement de solutions
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "52525661"
   
 -   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode interactif et, dans la page **Paramètres de configuration** , spécifiez les paramètres de configuration pour les objets déployés.  
   
-     -ou-  
+     ou  
   
 -   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'invite de commandes en mode fichier de réponses. Pour plus d'informations sur le mode fichier de réponses, consultez [Running the Analysis Services Deployment Wizard](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).  
   
-     -ou-  
+     ou  
   
 -   Modifier le \< *nom_projet*> fichier .configsettings à l’aide de n’importe quel éditeur de texte.  
   

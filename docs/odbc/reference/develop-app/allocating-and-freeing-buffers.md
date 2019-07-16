@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 886bc9ed-39d4-43d2-82ff-aebc35b14d39
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 388147de8935d36180ba9845c8353bbf3dd6edc0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b783c2fc6766f0e2d2685724169894160c15ffc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077189"
 ---
 # <a name="allocating-and-freeing-buffers"></a>Allocation et libération de mémoires tampons
 Toutes les mémoires tampons sont allouées et libérées par l’application. Si une mémoire tampon n’est pas différée, il doit exister uniquement pendant la durée de l’appel à une fonction. Par exemple, **SQLGetInfo** retourne la valeur associée à une option spécifique dans la mémoire tampon vers laquelle pointée le *InfoValuePtr* argument. Cette mémoire tampon peut être libéré immédiatement après l’appel à **SQLGetInfo**, comme illustré dans l’exemple de code suivant :  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e948b1e2fa5bb0877597e3fc3429f306afe991f2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 273633532b9b9247ea7aa12fe90bfcc3c6f6bb81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083273"
 ---
 # <a name="compatibility-matrix"></a>Matrice de compatibilité
 Le tableau suivant décrit la compatibilité des types d’applications et des pilotes définis précédemment dans cette section.  
@@ -33,9 +32,9 @@ Le tableau suivant décrit la compatibilité des types d’applications et des p
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |application 16 bits, n’importe quelle version|Compatible|Compatible|Compatible|Compatible|  
 |Pure *2.x* application|Compatible|Compatible|Compatible|Non compatible avec [3]|  
-|Pure *2.x* recompiler l’application|Compatible|Compatible[1]|Compatible[1]|Non compatible avec [3]|  
-|Pure *2.x* application Unicode|Compatible|Compatible[1]|Compatible[1]|Non compatible avec [3]|  
-|Application pure Open Group et conforme à ISO|Non compatible|Compatible[2]|Compatible[2]|Compatible[2]|  
+|Pure *2.x* recompiler l’application|Compatible|Compatible avec [1]|Compatible avec [1]|Non compatible avec [3]|  
+|Pure *2.x* application Unicode|Compatible|Compatible avec [1]|Compatible avec [1]|Non compatible avec [3]|  
+|Application pure Open Group et conforme à ISO|Non compatible|Compatible avec [2]|Compatible avec [2]|Compatible avec [2]|  
 |Application 3.0 pure|Non compatible|Compatible|Compatible|Non compatible avec [4]|  
 |Application 3.5 pure|Non compatible|Compatible|Compatible|Non compatible avec [4]|  
 |Pure application 3,8 (ou version ultérieure)|Non compatible avec [5]|Non compatible avec [5]|Compatible|Non compatible avec [4]|  

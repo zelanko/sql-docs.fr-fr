@@ -3,18 +3,17 @@ title: Comment configurer MSDTC sur Linux
 description: Cet article fournit une procédure pas à pas pour la configuration de MSDTC sur Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f4fe81c5e306b059414fe0f2245aca9c9787ee1b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: c44458e1a68c842b6433d7a137865ae8451c136c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077608"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Comment configurer Microsoft Distributed Transaction Coordinator (MSDTC) sur Linux
 
@@ -28,7 +27,7 @@ Les transactions distribuées sont activées sur SQL Server sur Linux en introdu
 
 SQL Server 2019 introduit deux paramètres de configuration pour l’utilitaire mssql-conf.
 
-| mssql-conf setting | Description |
+| paramètre de MSSQL-conf | Description |
 |---|---|
 | **network.rpcport** | Le port TCP utilisé par le processus de mappeur de point de terminaison RPC lie à. |
 | **distributedtransaction.servertcpport** | Le port qui écoute le serveur MSDTC. Si ce n’est pas définie, le service MS DTC utilise un port éphémère aléatoire sur les redémarrages du service, et exceptions de pare-feu doit être reconfigurées pour vous assurer que service MSDTC peut poursuivre la communication. |

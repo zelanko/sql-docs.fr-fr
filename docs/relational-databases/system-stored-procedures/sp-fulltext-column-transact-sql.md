@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4b972abd2674d88274545d1ce4394be88f43c65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124339"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,14 +47,14 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @tabname = ] 'qualified_table_name'` Est un nom de table d’une ou deux parties. La table doit déjà exister dans la base de données actuelle. La table doit avoir un index de recherche en texte intégral. *nom_table_qualifée* est **nvarchar (517)**, sans valeur par défaut.  
+`[ @tabname = ] 'qualified_table_name'` Est un nom de table d’une ou deux parties. La table doit déjà exister dans la base de données actuelle. La table doit avoir un index de recherche en texte intégral. *nom_table_qualifée* est **nvarchar (517)** , sans valeur par défaut.  
   
 `[ @colname = ] 'column_name'` Est le nom d’une colonne dans *nom_table_qualifée*. La colonne doit être de type caractère, **varbinary (max)** ou **image** colonne et ne peut pas être une colonne calculée. *column_name* est **sysname**, sans valeur par défaut.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut créer des index de recherche en texte intégral de données texte stockées dans des colonnes qui sont de **varbinary (max)** ou **image** type de données. Les images et les dessins ne sont pas indexés.  
   
-`[ @action = ] 'action'` Est l’action à effectuer. *action* est **varchar (20)**, aucune valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @action = ] 'action'` Est l’action à effectuer. *action* est **varchar (20)** , aucune valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -73,7 +72,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Si l'index de texte intégral est actif, tout remplissage en cours est arrêté. De plus, si le suivi des modifications est activé pour une table détenant un index de texte intégral actif, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantit la validité de l'index. Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] arrête tout remplissage en cours sur la table, supprime l'index existant et démarre un nouveau remplissage.  

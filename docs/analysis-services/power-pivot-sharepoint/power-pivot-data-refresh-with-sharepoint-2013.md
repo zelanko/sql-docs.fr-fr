@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 583059b93268f3652cf2e8f324574ec739d449dd
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658227"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208192"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>Actualisation des données Power Pivot avec SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "58658227"
   
 -   [Informations supplémentaires](#bkmk_moreinformation)  
   
-## <a name="background"></a>Arrière-plan  
+## <a name="background"></a>Présentation  
  Excel Services dans SharePoint Server 2013 gère l’actualisation des données pour les classeurs Excel 2013 et génère le traitement du modèle de données sur un serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui s’exécute en mode SharePoint. Pour les classeurs Excel 2010, Excel Services gère également le chargement et l'enregistrement des classeurs et des modèles de données. Toutefois, Excel Services repose sur le service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour envoyer des commandes de traitement au modèle de données. Le tableau suivant récapitule les composants qui envoient des commandes de traitement pour l'actualisation des données en fonction de la version du classeur. L'environnement donné est une batterie de serveurs SharePoint 2013 configurée pour utiliser un [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis Server qui s'exécute en mode SharePoint.  
   
 ||||  
@@ -69,9 +69,9 @@ ms.locfileid: "58658227"
   
 -   L'actualisation interactive des données actualise uniquement les données dans la session de l'utilisateur actuel. Les données ne sont pas automatiquement enregistrées dans l'élément de classeur dans la base de données de contenu SharePoint.  
   
--   **Informations d’identification :** L'actualisation interactive des données peut utiliser l'identité de l'utilisateur actuellement connecté en tant qu'informations d'identification, ou informations d'identification stockées, pour la connexion à la source de données. Les informations d'identification utilisées dépendent des paramètres d'authentification d'Excel Services définis pour la connexion du classeur à la source de données externe.  
+-   **Informations d’identification :** Actualisation interactive des données pouvez utiliser l’identité de l’utilisateur actuellement connecté en tant qu’informations d’identification ou des informations d’identification stockées pour se connecter à la source de données. Les informations d'identification utilisées dépendent des paramètres d'authentification d'Excel Services définis pour la connexion du classeur à la source de données externe.  
   
--   **Classeurs pris en charge :**  classeurs créés dans Excel 2013.  
+-   **Classeurs pris en charge :**  Classeurs créés dans Excel 2013.  
   
  **Pour actualiser les données :**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "58658227"
   
 3.  Excel Services charge la base de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , la traite et lui demande d’actualiser le cache du classeur Excel.  
   
-4.  **Remarque :** le classeur mis à jour n'est pas automatiquement enregistré dans la bibliothèque de documents.  
+4.  **Remarque :** Le classeur mis à jour n’est pas enregistré automatiquement à la bibliothèque de documents.  
   
  ![actualisation interactive des données](../../analysis-services/power-pivot-sharepoint/media/as-interactive-datarefresh-sharepoint2013.gif "actualisation interactive des données")  
   
@@ -92,21 +92,21 @@ ms.locfileid: "58658227"
   
  Expérience utilisateur typique : Lorsqu’un client sélectionne « Actualiser toutes les connexions » dans un classeur Excel 2013 qui contient un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] modèle, ils affiche une message d’erreur semblable au suivant :  
   
--   **Échec de l’actualisation des données externes :** une erreur s’est produite lors de l’utilisation du modèle de données dans le classeur. Réessayez. Nous n’avons pas pu actualiser une ou plusieurs connexions de données dans ce classeur.  
+-   **Échec de l’actualisation des données externes :** Une erreur s’est produite lors de l’utilisation du modèle de données dans le classeur. Réessayez. Nous n’avons pas pu actualiser une ou plusieurs connexions de données dans ce classeur.  
   
  Selon le fournisseur de données que vous utilisez, vous pouvez voir des messages semblables aux suivants dans le journal ULS.  
   
  **Avec SQL Native Client :**  
   
--   Nous n’avons pas pu créer de connexion externe ou exécuter la requête. Message du fournisseur : L'objet hors ligne « DataSource », qui fait référence aux ID « 20102481-39c8-4d21-bf63-68f583ad22bb », a été spécifié mais n'a pas été utilisé.  Erreur OLE DB ou ODBC : une erreur liée au réseau ou spécifique à l'instance s'est produite lors de l'établissement d'une connexion à SQL Server. Le serveur est introuvable ou n'est pas accessible. Vérifiez si le nom de l'instance est correct et si SQL Server est configuré pour autoriser les connexions distantes. Pour plus d'informations, consultez la documentation en ligne de SQL Server ; 08001 ; Fournisseur SSL : Le package de sécurité demandé n'existe pas ; 08001 ; Le client ne peut pas établir de connexion ; 08001 ; Chiffrement non pris en charge sur le client ; 08001.   ConnectionName : ThisWorkbookDataModel, Workbook: book1.xlsx.  
+-   Nous n’avons pas pu créer de connexion externe ou exécuter la requête. Message du fournisseur : Objet hors ligne « DataSource », qui fait référence à l’ID ' 20102481-39 c d de 8-4. 21-bf63-68f583ad22bb », a été spécifié mais n’a pas été utilisé.  Erreur OLE DB ou ODBC : Une erreur liée au réseau ou spécifique à l’instance s’est produite lors de l’établissement d’une connexion à SQL Server. Le serveur est introuvable ou n'est pas accessible. Vérifiez si le nom de l'instance est correct et si SQL Server est configuré pour autoriser les connexions distantes. Pour plus d’informations, consultez la documentation en ligne de SQL Server. ; 08001 ; Fournisseur SSL : Le package de sécurité demandé n’existe pas ; 08001 ; Client ne peut pas établir de connexion ; 08001 ; Chiffrement non pris en charge sur le client. ; 08001.  , ConnectionName : ThisWorkbookDataModel, classeur : book1.xlsx.  
   
  **Avec le Fournisseur Microsoft OLE DB pour SQL Server :**  
   
--   Nous n’avons pas pu créer de connexion externe ou exécuter la requête. Message du fournisseur : l'objet hors ligne « DataSource », qui fait référence aux ID « 6e711bfa-b62f-4879-a177-c5dd61d9c242 », a été spécifié mais n'a pas été utilisé. Erreur OLE DB ou ODBC. ConnectionName : ThisWorkbookDataModel, classeur : OLEDB Provider.xlsx.  
+-   Nous n’avons pas pu créer de connexion externe ou exécuter la requête. Message du fournisseur : Objet hors ligne « DataSource », qui fait référence aux ID '6e711bfa-b62f-4879-a177-c5dd61d9c242', a été spécifié mais n’a pas été utilisé. Erreur OLE DB ou ODBC. , ConnectionName : ThisWorkbookDataModel, classeur : OLEDB Provider.xlsx.  
   
  **Avec le Fournisseur de données .NET Framework pour SQL Server :**  
   
--   Nous n’avons pas pu créer de connexion externe ou exécuter la requête. Message du fournisseur : L'objet hors ligne « DataSource », qui fait référence aux ID « f5fb916c-3eac-4d07-a542-531524c0d44a », a été spécifié mais n'a pas été utilisé.  Erreurs dans le moteur relationnel de haut niveau. L'exception suivante s'est produite lors de l'utilisation de l'interface IDbConnection managée : Impossible de charger le fichier ou l'assembly « System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089 » ou une de ses dépendances. Soit un niveau d'emprunt d'identité requis n'a pas été fourni, soit le niveau d'emprunt d'identité fourni n'est pas valide. (Exception de HRESULT : 0x80070542).  ConnectionName : ThisWorkbookDataModel, classeur : NETProvider.xlsx.  
+-   Nous n’avons pas pu créer de connexion externe ou exécuter la requête. Message du fournisseur : Hors ligne « DataSource », qui fait référence aux ID 'f5fb916c-3eac - 4D 07-a542-531524c0d44a' d’objet a été spécifié mais n’a pas été utilisé.  Erreurs dans le moteur relationnel de haut niveau. L’exception suivante s’est produite lors de l’interface IDbConnection managée : Impossible de charger le fichier ou l’assembly « System.Transactions, Version = 4.0.0.0, Culture = neutral, PublicKeyToken = b77a5c561934e089' ou une de ses dépendances. Soit un niveau d'emprunt d'identité requis n'a pas été fourni, soit le niveau d'emprunt d'identité fourni n'est pas valide. (Exception de HRESULT : 0x80070542).  , ConnectionName : ThisWorkbookDataModel, classeur : NETProvider.xlsx.  
   
  **Résumé des étapes de configuration** Pour configurer le privilège **Agir en tant que partie du système d’exploitation** sur le serveur local :  
   
@@ -139,7 +139,7 @@ ms.locfileid: "58658227"
   
     -   Enregistrer le classeur dans la base de données de contenu.  
   
--   **Informations d’identification :** Utilise des informations d'identification stockées. N'utilise pas l'identité de l'utilisateur actuel.  
+-   **Informations d’identification :** Utilise les informations d’identification stockées. N'utilise pas l'identité de l'utilisateur actuel.  
   
 -   **Classeurs pris en charge :** Classeurs créés à l’aide de la [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] complément pour Excel 2010 ou à l’aide d’Excel 2013. Les classeurs créés dans Excel 2010 avec le complément [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ne sont pas pris en charge. Mettre à niveau le classeur au moins au format [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour plus d’informations, consultez [Mettre à niveau les classeurs et l’actualisation planifiée des données &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
@@ -147,9 +147,9 @@ ms.locfileid: "58658227"
   
 -   Consultez l'illustration qui suit les étapes.  
   
-1.  Dans une bibliothèque de documents SharePoint, cliquez sur le **menu Ouvrir** (**...**) pour un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
+1.  Dans une bibliothèque de documents SharePoint, cliquez sur le **menu Ouvrir** ( **...** ) pour un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].  
   
-2.  Cliquez sur le second **menu Ouvrir**, puis sur **Gérer l’actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+2.  Cliquez sur le second **menu Ouvrir**, puis sur **Gérer l’actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 3.  Dans la page **Gérer l'actualisation des données** , cliquez sur **Activer** puis configurez la planification de l'actualisation.  
   
@@ -193,17 +193,17 @@ ms.locfileid: "58658227"
 ## <a name="data-refresh-log-data"></a>Données du journal d'actualisation des données  
  **Données d’utilisation :** Vous pouvez afficher les données d’utilisation actualisation des données dans le [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] tableau de bord de gestion. Pour afficher les données d'utilisation :  
   
-1.  Dans l’Administration centrale SharePoint, dans le groupe **Paramètres généraux de l’application**, cliquez sur **Tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+1.  Dans l’Administration centrale SharePoint, dans le groupe **Paramètres généraux de l’application**, cliquez sur **Tableau de bord de gestion [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 2.  En bas du tableau de bord, consultez le **d’actualisation des données - activité récente** et **d’actualisation des données - défaillances récentes**.  
   
 3.  Pour plus d'informations sur les données d'utilisation et la façon de les activer, consultez [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).  
   
- **Données du journal de diagnostic :** Vous pouvez afficher les données du journal de diagnostics SharePoint associées à l'actualisation des données. D’abord, vérifiez la configuration de la journalisation des diagnostics pour le **Service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** dans la page **Surveillance** de l’Administration centrale de SharePoint. Vous devrez peut-être augmenter le niveau de journalisation pour le « événement le moins critique » au journal. Par exemple, définissez temporairement la valeur sur **Commentaires** et réexécutez les opérations d'actualisation des données.  
+ **Données du journal de diagnostic :** Vous pouvez afficher les données de journal de diagnostics SharePoint associées à l’actualisation des données. D’abord, vérifiez la configuration de la journalisation des diagnostics pour le **Service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** dans la page **Surveillance** de l’Administration centrale de SharePoint. Vous devrez peut-être augmenter le niveau de journalisation pour le « événement le moins critique » au journal. Par exemple, définissez temporairement la valeur sur **Commentaires** et réexécutez les opérations d'actualisation des données.  
   
  Les entrées de journal contiennent :  
   
--   La **zone** du **Service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+-   La **zone** du **Service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 -   La catégorie de l' **Actualisation des données**.  
   
@@ -212,11 +212,11 @@ ms.locfileid: "58658227"
 ##  <a name="datarefresh_additional_authentication"></a> Considérations supplémentaires relatives à l'authentification  
  Les paramètres de la boîte de dialogue **Paramètres d'authentification Excel Services** dans Excel 2013 déterminent l'identité Windows qu'Excel Services et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilisent pour l'actualisation des données.  
   
--   **Utiliser le compte de l’utilisateur authentifié**: Excel Services effectue l'actualisation des données sous l'identité de l'utilisateur actuellement connecté.  
+-   **Utiliser le compte de l’utilisateur authentifié**: Excel Services effectue l’actualisation des données sous l’identité de l’utilisateur actuellement connecté.  
   
--   **Utiliser un compte stocké**: suppose l'existence d'un ID d'application du service Banque d'informations sécurisé de SharePoint. Excel Services utilise cet ID pour extraire le nom d'utilisateur et le mot de passe afin d'authentifier l'actualisation des données.  
+-   **Utiliser un compte stocké**: Suppose un ID d’application SharePoint Secure Store Service, Excel Services utilise pour récupérer le nom d’utilisateur et le mot de passe pour authentifier l’authentification de l’actualisation des données.  
   
--   **Aucun**: Les Services Excel **compte de Service autonome** est utilisé. Le compte de service est associé à un proxy de service Banque d'informations sécurisé. Configurez les paramètres dans la page **Paramètres d'application Excel Services** , dans la section **Données externes** .  
+-   **Aucun** : Les Services Excel **compte de Service autonome** est utilisé. Le compte de service est associé à un proxy de service Banque d'informations sécurisé. Configurez les paramètres dans la page **Paramètres d'application Excel Services** , dans la section **Données externes** .  
   
  Pour ouvrir la boîte de dialogue des paramètres d'authentification :  
   

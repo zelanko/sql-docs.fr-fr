@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Écriture d’instructions Transact-SQL | Microsoft Docs'
+title: 'Tutoriel : Écriture d’instructions Transact-SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 67e09713fdec72313bde6ba81e1cc169467fda0c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807581"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211195"
 ---
-# <a name="tutorial-writing-transact-sql-statements"></a>Didacticiel : Écriture d'instructions Transact-SQL
+# <a name="tutorial-writing-transact-sql-statements"></a>Tutoriel : Écriture d’instructions Transact-SQL
   Bienvenue dans le didacticiel d'écriture d'instructions [!INCLUDE[tsql](../includes/tsql-md.md)] . Ce didacticiel s'adresse aux utilisateurs qui débutent dans l'écriture d'instructions SQL. Il permet aux nouveaux utilisateurs de débuter en passant en revue certaines instructions de base destinées à créer des tables et à insérer des données. Ce didacticiel utilise [!INCLUDE[tsql](../includes/tsql-md.md)], l'implémentation [!INCLUDE[msCoName](../includes/msconame-md.md)] de la norme SQL. Ce didacticiel constitue une brève introduction au langage [!INCLUDE[tsql](../includes/tsql-md.md)] mais ne remplace pas un cours de formation sur [!INCLUDE[tsql](../includes/tsql-md.md)] . Les instructions de ce didacticiel sont volontairement simples et n'ont pas pour objectif de traduire la complexité propre à une base de données de production type.  
   
 > [!NOTE]  
@@ -35,13 +35,13 @@ ms.locfileid: "52807581"
   
  Ce didacticiel est divisé en trois leçons :  
   
- [Leçon 1 : Création d’objets de base de données](lesson-1-creating-database-objects.md)  
+ [Leçon 1 : Création des objets de base de données](lesson-1-creating-database-objects.md)  
  Dans cette leçon, vous allez créer une base de données, créer une table dans la base de données, insérer des données dans la table, mettre à jour et lire les données.  
   
- [Leçon 2 : Configuration des autorisations sur des objets de base de données](lesson-2-configuring-permissions-on-database-objects.md)  
+ [Leçon 2 : Configuration des autorisations sur des objets de base de données](lesson-2-configuring-permissions-on-database-objects.md)  
  Dans cette leçon, vous allez créer une connexion et un utilisateur. Vous allez également créer une vue et une procédure stockée, puis octroyer à l'utilisateur l'autorisation sur la procédure stockée.  
   
- [Leçon 3 : Suppression des objets de base de données](lesson-3-1-deleting-database-objects.md)  
+ [Leçon 3 : Suppression des objets de base de données](lesson-3-1-deleting-database-objects.md)  
  Dans cette leçon, vous allez supprimer l'accès aux données, supprimer des données d'une table, supprimer la table, puis supprimer la base de données.  
   
 ## <a name="requirements"></a>Configuration requise  

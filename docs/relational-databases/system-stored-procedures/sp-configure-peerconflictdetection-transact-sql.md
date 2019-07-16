@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a0a3ac1096ff14577ba72157118dcef4e1b03e70
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215943"
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  Nom de la publication pour laquelle configurer la détection de conflit. *publication* est **sysname**, sans valeur par défaut.  
   
  [ @action=] '*action*'  
- Spécifie s'il faut activer ou désactiver la détection de conflit pour une publication. *action* est **nvarchar (5)**, et peut prendre l’une des valeurs suivantes.  
+ Spécifie s'il faut activer ou désactiver la détection de conflit pour une publication. *action* est **nvarchar (5)** , et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -86,7 +85,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Voir aussi  
  [Détection de conflit dans la réplication d’égal à égal](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Réplication transactionnelle d’égal à égal](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Procédures stockées de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

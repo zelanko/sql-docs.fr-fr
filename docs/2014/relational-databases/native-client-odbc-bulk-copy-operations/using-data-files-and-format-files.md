@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c49ccb59a8e6ab1b027de02afee37252e8cc482
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071929"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206830"
 ---
 # <a name="using-data-files-and-format-files"></a>Utilisation de fichiers de données et de format
   Le programme de copie en bloc le plus simple permet d'effectuer les opérations suivantes :  
@@ -43,7 +43,7 @@ ms.locfileid: "48071929"
   
  L'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] peut être n'importe quelle instruction qui génère un jeu de résultats. Le fichier de données contenant le premier jeu de résultats de l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] est créé. La copie en bloc ignore tous les jeux de résultats après le premier si l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] génère plusieurs jeux de résultats.  
   
- Pour créer un fichier de données dans la colonne données sont stockées dans un format différent de celui de la table, appelez [bcp_columns](../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) pour spécifier le nombre de colonnes sera modifié, puis appelez [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) pour chaque colonne dont le format vous souhaitez modifier. Cela est effectué après l’appel **bcp_init** mais avant d’appeler **bcp_exec**. **bcp_colfmt** Spécifie le format dans lequel les données de la colonne sont stockées dans le fichier de données. Il peut être utilisé lors de la copie en bloc vers ou à partir d'éléments. Vous pouvez également utiliser **bcp_colfmt** pour définir les indicateurs de fin de ligne et de colonne. Par exemple, si vos données ne contient aucun caractère de l’onglet, vous pouvez créer un fichier délimité par tabulation à l’aide de **bcp_colfmt** pour définir le caractère de tabulation comme indicateur de fin pour chaque colonne.  
+ Pour créer un fichier de données dans la colonne données sont stockées dans un format différent de celui de la table, appelez [bcp_columns](../native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) pour spécifier le nombre de colonnes sera modifié, puis appelez [bcp_colfmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md) pour chaque colonne dont le format vous souhaitez modifier. Cela est effectué après l’appel **bcp_init** mais avant d’appeler **bcp_exec**. **bcp_colfmt** Spécifie le format dans lequel les données de la colonne sont stockées dans le fichier de données. Il peut être utilisé lors de la copie en bloc dans ou out. Vous pouvez également utiliser **bcp_colfmt** pour définir les indicateurs de fin de ligne et de colonne. Par exemple, si vos données ne contient aucun caractère de l’onglet, vous pouvez créer un fichier délimité par tabulation à l’aide de **bcp_colfmt** pour définir le caractère de tabulation comme indicateur de fin pour chaque colonne.  
   
  Lorsque en bloc copie et à l’aide de **bcp_colfmt**, vous pouvez facilement créer un fichier de format décrivant le fichier de données que vous avez créé en appelant [bcp_writefmt](../native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md) après le dernier appel à **bcp_colfmt**.  
   

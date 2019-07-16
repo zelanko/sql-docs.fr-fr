@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 41ade0ca-5f11-469d-bd4d-c8302ccd93b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd5cae24b30840ea08ec2ae025b021fcf70f2dc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108575"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  Paramètre obligatoire qui désigne quelle opération le curseur effectuera. *optype* requiert l’une des opérations suivantes **int** valeurs d’entrée.  
   
-|Value|Nom|Description|  
+|Value|Name|Description|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Utilisée pour mettre à jour une ou plusieurs lignes dans le tampon d'extraction.  Les lignes spécifiées dans *rownum* sont accessibles de nouveau et mis à jour.|  
 |0x0002|Suppression|Utilisée pour supprimer une ou plusieurs lignes dans le tampon d'extraction. Les lignes spécifiées dans *rownum* sont de nouveau accès et de suppression.|  

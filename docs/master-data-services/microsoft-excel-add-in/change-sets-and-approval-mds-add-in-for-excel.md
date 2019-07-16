@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5257e054-be61-4a55-b699-708366a759af
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 323f352ba3208ed0de7ec910df7e2b23105f2534
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6239949729ba443d1b6d60b99bd4e888d72b20eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092474"
 ---
 # <a name="change-sets-and-approval-mds-add-in-for-excel"></a>Ensembles de modifications et approbation (complément MDS pour Excel)
 

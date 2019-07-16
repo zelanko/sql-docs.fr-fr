@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63139015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006632"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertir des objets de base de données Access (AccessToSQL)
 Une fois que vous avez ajouté des bases de données Access et connecté à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, SSMA affiche les métadonnées pour l’accès et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de base de données SQL Azure. Vous pouvez maintenant sélectionner les objets de base de données Access et puis de convertir les schémas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou les schémas de SQL Azure.  
@@ -63,7 +62,7 @@ Le tableau suivant présente les objets d’accès sont convertis et résultant 
 |requête|vue<br /><br />Requêtes SELECT plus sont converties en vues. Autres requêtes, telles que les requêtes de mise à jour, ne sont pas migrés.<br /><br />Les requêtes SELECT qui prennent des paramètres ne sont pas converties, ni les requêtes de tableau croisé.|  
 |rapport|non converti|  
 |Formulaire|non converti|  
-|macro|non converti|  
+|(Macro)|non converti|  
 |module|non converti|  
 |Valeur par défaut|Valeur par défaut|  
 |Autoriser zéro propriété de colonne de longueur|contrainte de validation|  

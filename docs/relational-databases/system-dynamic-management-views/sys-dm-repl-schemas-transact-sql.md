@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 430f7d53baa507a86f4b9060a41ce513adeef904
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 152a8b7f4c933874d8190b95404cbbeb91bb098f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088583"
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "56031180"
   Retourne des informations sur les colonnes de table publiées par la réplication.  
   
  
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**artcache_schema_address**|**varbinary(8)**|Adresse en mémoire de la structure de schéma du cache pour l'article de table publié.|  
 |**tabid**|**bigint**|ID de la table répliquée.|  
@@ -45,10 +44,10 @@ ms.locfileid: "56031180"
 |**rowsetid_insert**|**bigint**|ID de la ligne insérée.|  
 |**num_pk_cols**|**Int**|Nombre de colonnes clés primaires.|  
 |**pcitee**|**binary(8000)**|Pointeur sur la structure d'expression de requête utilisée pour évaluer la colonne calculée.|  
-|**re_numtextcols**|**Int**|Nombre de colonnes d'objets BLOB (Binary Large Object) dans la table répliquée.|  
+|**re_numtextcols**|**int**|Nombre de colonnes d'objets BLOB (Binary Large Object) dans la table répliquée.|  
 |**re_schema_lsn_begin**|**binary(8000)**|Numéro séquentiel dans le journal de départ pour l'enregistrement de la version du schéma.|  
 |**re_schema_lsn_end**|**binary(8000)**|Dernier numéro séquentiel dans le journal de la version de schéma.|  
-|**re_numcols**|**Int**|Nombre de colonnes publiées.|  
+|**re_numcols**|**int**|Nombre de colonnes publiées.|  
 |**re_colid**|**Int**|Identificateur de colonne au niveau du serveur de publication.|  
 |**re_awcName**|**nvarchar(510)**|Nom de la colonne publiée.|  
 |**re_ccName**|**smallint**|Nombre de caractères dans le nom de colonne.|  
@@ -67,8 +66,8 @@ ms.locfileid: "56031180"
 |**se_rowsetid**|**bigint**|ID de l'ensemble de lignes.|  
 |**se_schema_lsn_begin**|**binary(8000)**|Numéro de séquence d'enregistrement de départ pour l'enregistrement de la version du schéma.|  
 |**se_schema_lsn_end**|**binary(8000)**|Dernier numéro séquentiel dans le journal de la version de schéma.|  
-|**se_numcols**|**Int**|Nombre de colonnes.|  
-|**se_colid**|**Int**|ID de la colonne au niveau de l'abonné.|  
+|**se_numcols**|**int**|Nombre de colonnes.|  
+|**se_colid**|**int**|ID de la colonne au niveau de l'abonné.|  
 |**se_maxlen**|**smallint**|Longueur maximale de la colonne.|  
 |**se_prec**|**tinyint**|Précision de la colonne.|  
 |**se_scale**|**tinyint**|Échelle de la colonne.|  
@@ -79,7 +78,7 @@ ms.locfileid: "56031180"
 |**se_fNullable**|**tinyint**|Spécifie si la colonne prend en charge les valeurs NULL.|  
 |**se_fAnsiTrim**|**tinyint**|Indique si la troncature ANSI est utilisée sur la colonne.|  
 |**se_computed**|**smallint**|Indique si la colonne est une colonne calculée.|  
-|**se_nullBitInLeafRows**|**Int**|Indique si la valeur de la colonne est NULL.|  
+|**se_nullBitInLeafRows**|**int**|Indique si la valeur de la colonne est NULL.|  
   
 ## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation VIEW DATABASE STATE sur la base de données de publication pour appeler **dm_repl_schemas**.  

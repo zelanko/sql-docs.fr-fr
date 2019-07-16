@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf6b5127bac7aedf9e67918d38020c73a4afe186
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079600"
 ---
 # <a name="using-arrays-of-parameters"></a>Utilisation de tableaux de paramètres
 Pour utiliser des tableaux de paramètres, l’application appelle **SQLSetStmtAttr** avec un *attribut* argument de SQL_ATTR_PARAMSET_SIZE pour spécifier le nombre de jeux de paramètres. Il appelle **SQLSetStmtAttr** avec un *attribut* argument de SQL_ATTR_PARAMS_PROCESSED_PTR pour spécifier l’adresse d’une variable dans laquelle le pilote peut retourner le nombre de jeux de paramètres traités, erreur y compris des jeux. Il appelle **SQLSetStmtAttr** avec un *attribut* argument de SQL_ATTR_PARAM_STATUS_PTR pour pointer vers un tableau dans lequel retourner les informations d’état pour chaque ligne de valeurs de paramètre. Le pilote stocke ces adresses dans la structure que de l’instruction il tient à jour.  
@@ -29,7 +28,7 @@ Pour utiliser des tableaux de paramètres, l’application appelle **SQLSetStmtA
   
  Avant d’exécuter l’instruction, l’application définit la valeur de chaque élément de chaque tableau lié. Lorsque l’instruction est exécutée, le pilote utilise les informations stockée pour récupérer les valeurs de paramètre et les envoyer à la source de données ; Si possible, le pilote doit envoyer ces valeurs sous forme de tableaux. Bien que l’utilisation de tableaux de paramètres est mieux implémentée par l’exécution de l’instruction SQL avec tous les paramètres dans le tableau avec un seul appel à la source de données, cette fonctionnalité n’est pas largement disponible dans le SGBD dès aujourd'hui. Toutefois, les pilotes peuvent la simuler en exécutant une instruction SQL plusieurs fois, chacun avec un ensemble unique de paramètres.  
   
- Avant d’une application utilise des tableaux de paramètres, il doit être sûr qu’ils sont pris en charge par les pilotes utilisés par l’application. Pour ce faire, deux possibilités s'offrent à vous :  
+ Avant d’une application utilise des tableaux de paramètres, il doit être sûr qu’ils sont pris en charge par les pilotes utilisés par l’application. Il existe deux façons d'effectuer cette opération :  
   
 -   Utiliser uniquement les pilotes prennent en charge les tableaux de paramètres. L’application peut coder en dur les noms de ces pilotes, ou l’utilisateur peut être invité à utiliser uniquement ces pilotes. Applications personnalisées et des applications verticales utilisent généralement un ensemble limité de pilotes.  
   

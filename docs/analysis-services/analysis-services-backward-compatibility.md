@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ab4f304d865992a3269b4ee83c9e25f61069e8c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984691"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210268"
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Compatibilité descendante de Analysis Services (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
 Cet article décrit les modifications apportées dans la disponibilité des fonctionnalités et de comportement entre la version actuelle et la version précédente.
 
-## <a name="deprecated-features"></a>Fonctionnalités déconseillées
+## <a name="deprecated-features"></a>Fonctionnalités dépréciées
 Un *fonctionnalité déconseillée* seront abandonnés à partir du produit dans une version ultérieure, mais est toujours pris en charge et inclus dans la version actuelle pour assurer la compatibilité descendante. Il est recommandé de que vous interrompre l’utilisation des fonctionnalités déconseillées dans les projets nouveaux ou existants pour assurer la compatibilité avec les versions ultérieures.
   
 Les fonctionnalités suivantes sont déconseillées dans cette version :
@@ -39,7 +39,7 @@ Les fonctionnalités suivantes sont déconseillées dans cette version :
 |Tabulaire|Les niveaux de compatibilité 1100 et 1103 des modèles tabulaires ne seront pas pris en charge dans une future version. La solution consiste à définir des modèles au niveau de compatibilité 1200 ou supérieur, la conversion de définitions de modèle en métadonnées tabulaires. Consultez [Niveau de compatibilité pour les modèles tabulaires dans Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
 |Outils|SQL Server Profiler pour la capture de traces<br /><br /> La solution consiste à utiliser le Générateur de profils d’événements étendus, intégré dans SQL Server Management Studio.  <br /> Consultez [Surveiller Analysis Services avec des événements étendus SQL Server](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Outils|Server Profiler pour Trace Replay <br />Remplacement. Il n’existe aucune solution de remplacement.|  
-|Objets de gestion de trace et API de trace|Objets Microsoft.AnalysisServices.Trace (contenant les API des objets Analysis Services de trace et de relecture). La solution de remplacement est multiple :<br /><br /> -Configuration de trace : Microsoft.SqlServer.Management.XEvent<br />-Lecture de trace : Microsoft.SqlServer.XEvent.Linq<br />-   Relecture de trace : Aucune|  
+|Objets de gestion de trace et API de trace|Objets Microsoft.AnalysisServices.Trace (contenant les API des objets Analysis Services de trace et de relecture). La solution de remplacement est multiple :<br /><br /> -Configuration de trace : Microsoft.SqlServer.Management.XEvent<br />-Lecture de trace : Microsoft.SqlServer.XEvent.Linq<br />-Relecture de trace : Aucun|  
   
 > [!NOTE]  
 >  Les fonctionnalités précédemment annoncées comme déconseillées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] restent en place. Le code prenant en charge ces fonctionnalités n’ayant pas encore été supprimé du produit, bon nombre de celles-ci sont toujours présentes dans cette version. Bien que les fonctionnalités précédemment déconseillées peuvent être accessibles, ils sont considérés comme déconseillée et peut être physiquement retirées du produit à tout moment.  
@@ -52,11 +52,11 @@ Les fonctionnalités suivantes ont été dépréciées dans une version antérie
 |||  
 |-|-|  
 |**Fonctionnalité**|**Remplacement ou contournement**|  
-|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2005.|  
-|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2005.|  
-|Indicateur d’optimiseur de requête NON_EMPTY_BEHAVIOR|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2008.|  
-|Assemblys COM|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2008.|  
-|Propriété intrinsèque de cellule CELL_EVALUATION_LIST|Aucun. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2005.|  
+|[CalculationPassValue &#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|Aucune. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2005.|  
+|[CalculationCurrentPass &#40;MDX&#41;](../mdx/calculationcurrentpass-mdx.md)|Aucune. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2005.|  
+|Indicateur d’optimiseur de requête NON_EMPTY_BEHAVIOR|Aucune. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2008.|  
+|Assemblys COM|Aucune. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2008.|  
+|Propriété intrinsèque de cellule CELL_EVALUATION_LIST|Aucune. L’utilisation de cette fonctionnalité a été déconseillée dans SQL Server 2005.|  
   
 > [!NOTE]  
 >  Les fonctionnalités précédemment annoncées comme déconseillées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] restent en place. Le code prenant en charge ces fonctionnalités n’ayant pas encore été supprimé du produit, bon nombre de celles-ci sont toujours présentes dans cette version. Bien que les fonctionnalités précédemment déconseillées peuvent être accessibles, ils sont considérés comme déconseillée et peut être physiquement retirées du produit à tout moment.  

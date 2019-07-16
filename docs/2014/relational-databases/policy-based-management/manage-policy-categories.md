@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d22ee5c7d66039a8c04daabe411a6ba0554e2849
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817970"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210796"
 ---
 # <a name="manage-policy-categories"></a>Gérer les catégories de stratégie
   Cette rubrique explique comment appliquer une seule ou toutes les stratégies disponibles dans une catégorie à l'ensemble de l'instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "52817970"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Cette procédure stockée est exécutée dans le contexte du propriétaire actuel de la procédure stockée.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

@@ -1,5 +1,5 @@
 ---
-title: Traiter un modèle d’exploration de données | Documents Microsoft
+title: Traiter un modèle d’exploration de données | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2bfc8d22ff87f467fa89d178d46b422918aa4dd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017916"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209730"
 ---
 # <a name="process-a-mining-model"></a>Traiter un modèle d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "34017916"
   
 4.  Une fois le modèle traité, cliquez sur **Fermer** dans la boîte de dialogue **État d'avancement du traitement** .  
   
-5.  Cliquez sur **fermer** dans les **traiter le modèle d’exploration de données - \<modèle >** boîte de dialogue.  
+5.  Cliquez sur **fermer** dans le **traiter le modèle d’exploration de données - \<modèle >** boîte de dialogue.  
   
  Seuls la structure d'exploration de données et le modèle d'exploration de données sélectionné ont été traités.  
   
@@ -58,11 +58,11 @@ ms.locfileid: "34017916"
   
 5.  Une fois les modèles traités, cliquez sur **Fermer** dans la boîte de dialogue **État d'avancement du traitement** .  
   
-6.  Cliquez sur **fermer** dans les **traitement \<modèle >** boîte de dialogue.  
+6.  Cliquez sur **fermer** dans le **traitement \<modèle >** boîte de dialogue.  
   
  La structure d'exploration de données et tous les modèles d'exploration de données associés ont été traités.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches liées aux modèles d’exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tâches et procédures des modèles d’exploration de données](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

@@ -12,21 +12,20 @@ dev_langs:
 ms.assetid: a8a58ca7-0a7d-4786-bfd9-e8894bd345dd
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9d88d2084533904dcbb47aad0d629b1aa8171e8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: MT
+ms.openlocfilehash: 06fcdf262730862c8143c1e768184aa761cca577
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121040"
 ---
 # <a name="sysdmcolumnstoreobjectpool-transact-sql"></a>Sys.dm_column_store_object_pool (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
  Renvoie le nombre des différents types d’utilisation de pool de mémoire objet pour les objets d’index columnstore.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |`database_id`|`int`|ID de la base de données. Il est unique au sein d’une instance d’une base de données SQL Server ou un serveur de base de données SQL Azure. |  
 |`object_id`|`int`|ID de l'objet. L’objet est un de l’object_types. | 
@@ -43,7 +42,7 @@ ms.locfileid: "52544241"
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
  
 ## <a name="see-also"></a>Voir aussi  
   

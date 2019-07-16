@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 74c8748ae02df8747be5670f09ec11c7dfa8e882
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e604f66e48c8c8bb93ff5fd4abb174449f0fcdd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088442"
 ---
 # <a name="mtd-mdx"></a>Mtd (MDX)
 
@@ -51,7 +50,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sum &#40;MDX&#41;](../mdx/sum-mdx.md)   
+ [Somme &#40;MDX&#41;](../mdx/sum-mdx.md)   
  [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

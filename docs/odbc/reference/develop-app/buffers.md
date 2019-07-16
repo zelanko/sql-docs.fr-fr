@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 306632f544f144aa4b21e150543c2d4ca5a37d0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad13379552e3a5a576b0aa5cc8720ca6ca1688a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63008015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118741"
 ---
 # <a name="buffers"></a>Mémoires tampons
 Une mémoire tampon est tout bloc de mémoire de l’application utilisée pour passer des données entre l’application et le pilote. Par exemple, mémoires tampons d’application peuvent être associées, ou *lié,* avec les colonnes du jeu de résultats **SQLBindCol**. Comme chaque ligne est extraite, les données sont retournées pour chaque colonne dans ces mémoires tampons. *Entrée de mémoires tampons* sont utilisés pour passer des données à partir de l’application au pilote ; *mémoires tampons de sortie* sont utilisées pour retourner des données à partir du pilote à l’application.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-manager: jroth
-ms.openlocfilehash: c31c10dc5c0917286e6621fedc91f08c8d385555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123820"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem (Transact-SQL)
 
@@ -72,11 +71,11 @@ sp_grant_proxy_to_subsystem
 |**Snapshot**|Agent d'instantané de réplication|  
 |**LogReader**|Agent de lecture du journal des réplications|  
 |**Distribution**|Agent de Distribution de réplication|  
-|**Fusion**|Replication Merge Agent|  
+|**Fusionner**|Replication Merge Agent|  
 |**QueueReader**|Agent de lecture de la file d'attente de réplication|  
 |**ANALYSISQUERY**|Requête Analysis Services|  
 |**ANALYSISCOMMAND**|Commandes Analysis Services|  
-|**Dts**|Exécution de package SSIS|  
+|**Dts**|Exécution des packages SSIS|  
 |**PowerShell**|script PowerShell|  
 | &nbsp; | &nbsp; |
   
@@ -88,7 +87,7 @@ sp_grant_proxy_to_subsystem
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-granting-access-to-a-subsystem-by-id"></a>A. Octroi du droit d'accès à un sous-système par numéro d'identification  
+### <a name="a-granting-access-to-a-subsystem-by-id"></a>R. Octroi du droit d'accès à un sous-système par numéro d'identification  
  L'exemple suivant accorde au proxy `Catalog application proxy` le droit d'accès au sous-système ActiveX Scripting.  
   
 ```sql

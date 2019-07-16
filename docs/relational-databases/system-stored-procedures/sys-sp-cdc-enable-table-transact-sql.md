@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 40b94782cf542800922b69291654ff7d46dcfde0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b846ff31d4acbc9d87f66a76a19f688384c88982
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106457"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ sys.sp_cdc_enable_table
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Pour pouvoir activer une table pour la capture de données modifiées, la base de données doit être activée. Pour déterminer si la base de données est activée pour la capture de données modifiées, interrogez la **is_cdc_enabled** colonne dans le [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) vue de catalogue. Pour activer la base de données, utilisez le [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) procédure stockée.  
@@ -125,7 +124,7 @@ sys.sp_cdc_enable_table
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-enabling-change-data-capture-by-specifying-only-required-parameters"></a>A. Activation de la capture des données modifiées en spécifiant uniquement les paramètres requis  
+### <a name="a-enabling-change-data-capture-by-specifying-only-required-parameters"></a>R. Activation de la capture des données modifiées en spécifiant uniquement les paramètres requis  
  L'exemple suivant active la capture des données modifiées pour la table `HumanResources.Employee`. Seuls les paramètres requis sont spécifiés.  
   
 ```  

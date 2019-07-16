@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a580492c-1b41-4393-9604-faa0bd28854b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7fe70b1e484039593c9bb02a28788259f9afaf18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aadec3adbf7b3928f182c99e5545165b5cfd372
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039868"
 ---
 # <a name="diagnostic-tools"></a>Outils de diagnostic
 Deux installations peuvent aider à diagnostiquer les problèmes dans les applications ODBC. Les deux sont disponibles à partir de l’administrateur ODBC et implémentée par le Gestionnaire de pilotes. *Suivi* fournit un moyen d’enregistrement dans un fichier journal de la séquence d’appels de fonction. Visual Studio Analyzer permet l’analyse des informations sur l’interaction des composants dans un environnement distribué.  

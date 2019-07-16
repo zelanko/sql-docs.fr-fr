@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e58551ae3c6edda3cd865817223fd8052d03ec5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130054"
 ---
 # <a name="decimal-digits"></a>Nombres décimaux
 Le *chiffres décimaux* de données decimal et numeric types est défini comme le nombre maximal de chiffres à droite de la virgule décimale, ou à l’échelle des données. Pour les colonnes de nombres à virgule flottante approximatifs ou de paramètres, l’échelle est non définie, car le nombre de chiffres à droite de la virgule décimale n’est pas fixe. Pour les données datetime ou interval qui contient un composant « secondes », les chiffres décimaux est défini comme le nombre de chiffres à droite de la virgule décimale dans le composant « secondes » des données.  
@@ -32,13 +31,13 @@ Le *chiffres décimaux* de données decimal et numeric types est défini comme l
   
 |Type SQL|Chiffres décimaux|  
 |--------------|--------------------|  
-|Tous les types caractères et binaires [a]|n/a|  
+|Tous les types caractères et binaires [a]|N/A|  
 |SQL_DECIMAL<br />SQL_NUMERIC|Le nombre défini de chiffres à droite de la virgule décimale. Par exemple, l’échelle d’une colonne définie en tant que NUMERIC(10,3) est 3. Cela peut être un nombre négatif pour prendre en charge le stockage de très grands nombres sans utiliser de notation exponentielle ; par exemple, « 12000 » peuvent être stockées en tant que « 12 » avec une échelle de -3.|  
 |Tous les types numériques exacts autres que SQL_DECIMAL et SQL_NUMERIC [a]|0|  
-|Tous les types de données approximatifs [a]|n/a|  
-|SQL_TYPE_DATE et tous les types d’intervalle avec aucun composant « secondes » [a]|n/a|  
+|Tous les types de données approximatifs [a]|N/A|  
+|SQL_TYPE_DATE et tous les types d’intervalle avec aucun composant « secondes » [a]|N/A|  
 |Tous les types de date/heure sauf SQL_TYPE_DATE et tous les types d’intervalle avec un composant « secondes »|Le nombre de chiffres à droite de la virgule décimale dans la partie secondes de la valeur (en fractions de seconde). Ce nombre ne peut pas être négatif.|  
-|SQL_GUID|n/a|  
+|SQL_GUID|N/A|  
   
  [a] le *DecimalDigits* argument de **SQLBindParameter** est ignorée pour ce type de données.  
   
@@ -46,10 +45,10 @@ Le *chiffres décimaux* de données decimal et numeric types est défini comme l
   
 |Type SQL|Champ de descripteur correspondant à<br /><br /> Chiffres décimaux|  
 |--------------|----------------------------------------------------------|  
-|Tous les types caractères et binaires|n/a|  
+|Tous les types caractères et binaires|N/A|  
 |Tous les types numériques exacts|SCALE|  
-|SQL_BIT|n/a|  
-|Tous les types numériques approximatifs|n/a|  
+|SQL_BIT|N/A|  
+|Tous les types numériques approximatifs|N/A|  
 |Tous les types de date/heure|PRECISION|  
 |Tous les types d’intervalle avec un composant « secondes »|PRECISION|  
-|Tous les types d’intervalle avec aucun composant « secondes »|n/a|
+|Tous les types d’intervalle avec aucun composant « secondes »|N/A|

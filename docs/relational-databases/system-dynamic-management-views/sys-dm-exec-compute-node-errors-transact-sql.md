@@ -21,16 +21,15 @@ helpviewer_keywords:
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a11a5e7090f89f4a31ffd15f8ebbce78ea395a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d47c6ae6d43b48b83be934a0bbfcce822e16fc42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097886"
 ---
-# <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
+# <a name="sysdmexeccomputenodeerrors-transact-sql"></a>Sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   Nœuds de calcul retourne survenues sur PolyBase.  
@@ -39,11 +38,11 @@ ms.locfileid: "63013391"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar(36)**|Id numérique unique associé à l’erreur.|Unique dans toutes les erreurs de requête dans le système|  
 |source|**nvarchar(255)**|Description de thread ou processus source||  
-|type|**nvarchar(255)**|Type d'erreur||  
+|type|**nvarchar(255)**|Le type d’erreur.||  
 |create_time|**datetime**|L’heure de l’occurrence de l’erreur||  
-|compute_node_id|**Int**|Identificateur du nœud de calcul spécifique|Consultez compute_node_id de [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|compute_node_id|**int**|Identificateur du nœud de calcul spécifique|Consultez compute_node_id de [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|**nvarchar(36)**|Identificateur de la requête PolyBase, le cas échéant.||  
-|spid|**Int**|Identificateur de la session de SQL Server||  
+|spid|**int**|Identificateur de la session de SQL Server||  
 |thread_id|**Int**|Identificateur numérique du thread sur lequel l’erreur s’est produite.||  
 |détails|nvarchar(4000)|Description complète des détails de l’erreur.||  
   

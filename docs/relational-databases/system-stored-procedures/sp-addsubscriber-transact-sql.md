@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd59aae098a91a47e1137bd55cd97cf1066b02bf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cb21731dd02fee4ec3779affed56f85e5dbc0e9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079227"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. La propriété est maintenant spécifiée sur une base par abonnement lors de l’exécution [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Lorsqu'une valeur est spécifiée, elle sert alors de valeur par défaut au moment de la création des abonnements pour cet Abonné et un message d'avertissement s'affiche.  
   
-`[ @password = ] 'password'` Mot de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. *mot de passe* est **nvarchar (524)**, avec NULL comme valeur par défaut.  
+`[ @password = ] 'password'` Mot de passe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. *mot de passe* est **nvarchar (524)** , avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  N'utilisez pas de mot de passe vide. Utilisez un mot de passe fort.  
@@ -116,7 +115,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. La propriété est maintenant spécifiée sur une base par abonnement lors de l’exécution [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Lorsqu'une valeur est spécifiée, elle sert alors de valeur par défaut au moment de la création des abonnements pour cet Abonné et un message d'avertissement s'affiche.  
   
- [**@frequency_interval=** ] *frequency_interval*  
+ [ **@frequency_interval=** ] *frequency_interval*  
  Valeur appliquée à la fréquence définie *frequency_type*. *frequency_interval* est **int**, avec 1 comme valeur par défaut.  
   
 > [!NOTE]  
@@ -177,7 +176,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est maintenu que dans un but de compatibilité ascendante avec les scripts déjà établis. La propriété est maintenant spécifiée sur une base par abonnement lors de l’exécution [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Lorsqu'une valeur est spécifiée, elle sert alors de valeur par défaut au moment de la création des abonnements pour cet Abonné et un message d'avertissement s'affiche.  
   
-`[ @description = ] 'description'` Est une description de l’abonné. *Description* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @description = ] 'description'` Est une description de l’abonné. *Description* est **nvarchar (255)** , avec NULL comme valeur par défaut.  
   
 `[ @security_mode = ] security_mode` Est le mode de sécurité implémenté. *security_mode* est **int**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. **1** Spécifie l’authentification Windows.  
   

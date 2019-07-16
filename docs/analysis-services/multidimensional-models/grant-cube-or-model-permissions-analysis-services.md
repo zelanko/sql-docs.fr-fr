@@ -1,5 +1,5 @@
 ---
-title: Accorder des autorisations de cube ou du modèle (Analysis Services) | Documents Microsoft
+title: Accorder des autorisations de cube ou de modèle (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f028885e91dd67869e15bab4d7b64cc97b64f9bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024366"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208883"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Octroyer des autorisations de cube ou de modèle (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34024366"
 > [!NOTE]  
 >  Seuls les administrateurs de serveur, ou les administrateurs de base de données ayant des autorisations Contrôle total, peuvent déployer un cube à partir de fichiers sources vers un serveur ou créer des rôles et assigner des membres. Pour obtenir des informations sur ces niveaux d’autorisation, consultez [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) et [Octroyer des autorisations de base de données&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
-#### <a name="step-1-create-the-role"></a>Étape 1 : Créer le rôle  
+#### <a name="step-1-create-the-role"></a>Étape 1 : Créer le rôle  
   
 1.  Dans SSMS, connectez-vous à Analysis Services. Si vous avez besoin d’aide sur cette étape, consultez [Connexion à partir d’applications clientes &#40;Analysis Services&#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34024366"
   
 5.  Continuez à l'étape suivante après avoir entré un nom et une description facultative.  
   
-#### <a name="step-2-assign-membership"></a>Étape 2 : Assigner l’appartenance  
+#### <a name="step-2-assign-membership"></a>Étape 2 : Affecter une appartenance  
   
 1.  Dans le volet **Appartenance** , cliquez sur **Ajouter** pour entrer les comptes d’utilisateurs ou de groupes Windows qui accéderont au cube à l’aide de ce rôle. Analysis Services prend uniquement en charge les identités de sécurité Windows. Notez que vous ne créez pas de connexions de base de données lors de cette étape. Dans Analysis Services, les utilisateurs se connectent par l'intermédiaire de comptes Windows.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34024366"
   
      Notez que nous ignorons le volet Source de données. La plupart des consommateurs ordinaires de données Analysis Services n'ont pas besoin d'autorisations sur l'objet source de données. Pour obtenir des informations sur ces niveaux d’autorisation, consultez [Octroyer des autorisations sur un objet de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md) .  
   
-#### <a name="step-3-set-cube-permissions"></a>Étape 3 : Définir les autorisations du cube  
+#### <a name="step-3-set-cube-permissions"></a>Étape 3 : Définir des autorisations de Cube  
   
 1.  Dans le volet **Cubes** , sélectionnez un cube, puis cliquez sur l’accès **Lecture** ou **Lecture/Écriture** .  
   
@@ -65,7 +65,7 @@ ms.locfileid: "34024366"
   
      Pour finir, ce volet vous permet d’accorder des droits **Traiter la base de données** sur le cube pour permettre à tous les membres de ce rôle de traiter des données pour ce cube. Le traitement étant généralement une opération restreinte, nous vous recommandons de laisser cette tâche aux administrateurs ou de définir des rôles spécifiquement pour cette tâche. Pour plus d’informations sur les bonnes pratiques concernant les autorisations de traitement, consultez [Octroyer des autorisations de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md).  
   
-#### <a name="step-4-test"></a>Étape 4 : Tester  
+#### <a name="step-4-test"></a>Étape 4 : Tester  
   
 1.  Utilisez Excel pour tester les autorisations d'accès au cube. Vous pouvez également utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en suivant la même technique que celle décrite ci-dessous (exécution de l’application comme utilisateur non-administrateur).  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34024366"
   
      Si vous recevez des erreurs lors de la connexion, vérifiez la configuration des ports pour Analysis Services et vérifiez que le serveur accepte les connexions à distance. Pour la configuration des ports, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
-#### <a name="step-5-script-role-definition-and-assignments"></a>Étape 5 : Écrire un script de définition et d’assignation des rôles  
+#### <a name="step-5-script-role-definition-and-assignments"></a>Étape 5 : Assignations et la définition de rôle de script  
   
 1.  En guise d'étape finale, vous devez générer un script qui capture la définition de rôle que vous venez de créer.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34024366"
   
 ## <a name="see-also"></a>Voir aussi  
  [Méthodologies d'authentification prises en charge par Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Accorder des autorisations sur les structures d’exploration de données et modèles &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Accorder des autorisations sur un objet de source de données & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Octroyer des autorisations sur des modèles et des structures d’exploration de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Octroyer des autorisations sur un objet de source de données &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

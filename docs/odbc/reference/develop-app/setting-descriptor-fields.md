@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d735dc64-370f-48ab-a59f-6cef9bc4e1e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14724a5cc863074344cfbb02615f0ccff228f04c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34c4a6e3d98b6711c77fb50d7156207de148881a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094253"
 ---
 # <a name="setting-descriptor-fields"></a>Définition des champs de descripteur
 Pour modifier les champs d’un descripteur, une application peut appeler **SQLSetDescField**. Certains champs sont en lecture seule et ne peut pas être définies. (Consultez le [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) description de fonction.)  

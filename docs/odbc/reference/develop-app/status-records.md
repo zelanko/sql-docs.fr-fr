@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4a987f69-158f-4cc4-a31b-2b7dd8dcbb87
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 986cd3c48104bfe822934eb415b854b8e976f242
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6ed360c39b87efe851bcbbb5c60762288ea1719
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114280"
 ---
 # <a name="status-records"></a>Enregistrements d’état
 Les champs dans les enregistrements d’état contiennent des informations sur les erreurs spécifiques ou des avertissements retournés par la Gestionnaire de pilotes, pilotes ou source de données, y compris le SQLSTATE, une numéro d’erreur natif, un message de diagnostic, un numéro de colonne et un numéro de ligne. Enregistrements d’état peuvent être créés uniquement si la fonction retourne SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA ou SQL_STILL_EXECUTING. Pour obtenir une liste complète des champs dans les enregistrements d’état, consultez le [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) description de fonction.  

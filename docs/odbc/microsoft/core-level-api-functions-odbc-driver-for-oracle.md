@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2e77ffd4fe892bc2f3d9a944c79d6b702d5e671
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc95ec17dc221cb77bd94fc3378af483aeee92dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081970"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Fonctions de l’API du niveau principal (pilote ODBC pour Oracle)
 > [!IMPORTANT]  
@@ -29,7 +28,7 @@ ms.locfileid: "66354583"
   
  Fonctions à ce niveau comprennent le niveau minimal de conformité de l’interface pour les pilotes ODBC.  
   
-|Fonction d’API|Remarques|  
+|Fonction d’API|Notes|  
 |------------------|-----------|  
 |**SQLAllocConnect**|Alloue la mémoire pour un handle de connexion, *pas*, au sein de l’environnement identifié par *henv*. Le Gestionnaire de pilotes traite cet appel et appelle le pilote **SQLAllocConnect** fonction chaque fois que **SQLConnect**, **SQLBrowseConnect**, ou  **SQLDriverConnect** est appelée.|  
 |**SQLAllocEnv**|Affiche une boîte de dialogue spécifier la configuration requise pour le logiciel Client Oracle, puis retourne SQL_NULL_HANDLE. Si le logiciel Client Oracle n’est pas installé, cette fonction alloue de la mémoire pour un handle d’environnement, *henv*et initialise l’interface de niveau d’appel ODBC pour une utilisation par une application.|  

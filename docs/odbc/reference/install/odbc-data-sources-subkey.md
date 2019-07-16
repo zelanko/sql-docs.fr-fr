@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a8ccb80-c573-4418-84e5-f04a2b0e2ac1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9867946ce84163a504582c8a9575100c3c9aacd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a1d0c506c4a4b33d7138378032947821d4e9f3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63069818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093991"
 ---
 # <a name="odbc-data-sources-subkey"></a>Sous-clé des sources de données ODBC
 Les valeurs sous la sous-clé de Sources de données ODBC répertorient les sources de données. Le format de ces valeurs est comme indiqué dans le tableau suivant.  

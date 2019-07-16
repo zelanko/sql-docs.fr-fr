@@ -19,14 +19,13 @@ ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b79a27759459e84b4b1d879914aca1665c1c0043
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 148eb98bb160557d4188941d293d96c0e5ac5ee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067023"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Demande de références URL à des données BLOB à l'aide de sql:encode (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "65980775"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. Spécification de sql:encode pour obtenir une référence URL à des données BLOB  
+### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>R. Spécification de sql:encode pour obtenir une référence URL à des données BLOB  
  Dans cet exemple, le schéma de mappage spécifie **sql : encode** sur le **LargePhoto** attribut à récupérer la référence URI à une photo de produit spécifique (au lieu de récupérer les données binaires en Base 64 - format codé).  
   
 ```  

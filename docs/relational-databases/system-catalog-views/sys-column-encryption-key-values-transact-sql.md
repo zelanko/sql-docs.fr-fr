@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e2c80afe1636243baefa944fb1d38f1f077bddb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c4a9f214ca9a947e8f488dd347f69b487b963e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140118"
 ---
 # <a name="syscolumnencryptionkeyvalues-transact-sql"></a>Sys.column_encryption_key_values (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations sur les valeurs chiffrées de la colonne clés de chiffrement (clés cek) créés avec le [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) ou [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)instruction. Chaque ligne représente une valeur d’une clé CEK, chiffrée avec une clé principale de colonne (CMK).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**column_encryption_key_id**|**Int**|ID de la clé CEK dans la base de données.|  
-|**column_master_key_id**|**Int**|ID de la clé principale de colonne qui a été utilisée pour chiffrer la valeur de clé CEK.|  
+|**column_encryption_key_id**|**int**|ID de la clé CEK dans la base de données.|  
+|**column_master_key_id**|**int**|ID de la clé principale de colonne qui a été utilisée pour chiffrer la valeur de clé CEK.|  
 |**encrypted_value**|**varbinary(8000)**|Valeur de clé CEK chiffré avec la clé principale de colonne spécifié dans column_master_key_id.|  
 |**encryption_algorithm_name**|**sysname**|Nom de l’algorithme utilisé pour chiffrer la valeur de clé CEK.<br /><br /> Nom de l’algorithme de chiffrement utilisé pour chiffrer la valeur. L’algorithme pour les fournisseurs de système doit être **RSA_OAEP**.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite le **VIEW ANY COLUMN ENCRYPTION KEY** autorisation.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

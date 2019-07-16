@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80a84d208ecd75b86df312d8d520a332669a8ce8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae6c07026bbbc12fc526eca1b5079bcc9cf36782
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030264"
 ---
 # <a name="managing-users-roles-and-logins"></a>Gestion des utilisateurs, rôles et connexions
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  Dans SMO, les connexions sont représentées par l'objet <xref:Microsoft.SqlServer.Management.Smo.Login>. Lorsque la connexion existe dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], elle peut être ajoutée à un rôle serveur. Le rôle de serveur est représenté par le <xref:Microsoft.SqlServer.Management.Smo.ServerRole> objet. Le rôle de base de données est représenté par l'objet <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> et le rôle d'application est représenté par l'objet <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
+  Dans SMO, les connexions sont représentées par l'objet <xref:Microsoft.SqlServer.Management.Smo.Login>. Lorsque la connexion existe dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], elle peut être ajoutée à un rôle serveur. Le rôle de serveur est représenté par l'objet <xref:Microsoft.SqlServer.Management.Smo.ServerRole>. Le rôle de base de données est représenté par l'objet <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> et le rôle d'application est représenté par l'objet <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole>.  
   
- Les privilèges associés au niveau du serveur sont répertoriés en tant que propriétés de la <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> objet. Les privilèges au niveau serveur peuvent être accordés, refusés ou révoqués pour les comptes d'ouverture de session individuels.  
+ Les privilèges associés au niveau serveur sont répertoriés sous la forme de propriétés de l'objet <xref:Microsoft.SqlServer.Management.Smo.ServerPermission>. Les privilèges au niveau serveur peuvent être accordés, refusés ou révoqués pour les comptes d'ouverture de session individuels.  
   
- Chaque <xref:Microsoft.SqlServer.Management.Smo.Database> objet possède un <xref:Microsoft.SqlServer.Management.Smo.UserCollection> objet qui spécifie tous les utilisateurs dans la base de données. Chaque utilisateur est associé à une ouverture de session. Une ouverture de session peut être associée à plusieurs utilisateurs d'une base de données. Le <xref:Microsoft.SqlServer.Management.Smo.Login> l’objet <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> méthode peut être utilisée pour répertorier tous les utilisateurs dans chaque base de données qui est associé à l’ouverture de session. Ou bien, la propriété <xref:Microsoft.SqlServer.Management.Smo.User> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Login> spécifie l'ouverture de session qui est associée à l'utilisateur.  
+ Chaque objet <xref:Microsoft.SqlServer.Management.Smo.Database> a un objet <xref:Microsoft.SqlServer.Management.Smo.UserCollection> qui spécifie tous les utilisateurs de la base de données. Chaque utilisateur est associé à une ouverture de session. Une ouverture de session peut être associée à plusieurs utilisateurs d'une base de données. La méthode <xref:Microsoft.SqlServer.Management.Smo.Login> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> peut être utilisée pour répertorier tous les utilisateurs dans chaque base de données associée à l'ouverture de session. Ou bien, la propriété <xref:Microsoft.SqlServer.Management.Smo.User> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Login> spécifie l'ouverture de session qui est associée à l'utilisateur.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bases de données ont également des rôles qui spécifient un ensemble de privilèges de niveau de base de données qui permettent à un utilisateur d’effectuer des tâches spécifiques. Contrairement aux rôles de serveur, les rôles de base de données ne sont pas fixes. Ils peuvent être créés, modifiés et supprimés. Les privilèges et utilisateurs peuvent être attribués à un rôle de base de données pour une administration en masse.  
+ Les bases de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ont également des rôles qui spécifient un jeu de privilèges de niveau base de données qui permettent à un utilisateur d'effectuer des tâches spécifiques. Contrairement aux rôles de serveur, les rôles de base de données ne sont pas fixes. Ils peuvent être créés, modifiés et supprimés. Les privilèges et utilisateurs peuvent être attribués à un rôle de base de données pour une administration en masse.  
   
 ## <a name="example"></a>Exemple  
  Dans les exemples de code suivants, vous devez sélectionner l'environnement, le modèle et le langage de programmation à utiliser pour créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Énumération des connexions et des utilisateurs associés en Visual C#  
- Chaque utilisateur d'une base de données est associé à une ouverture de session. L'ouverture de session peut être associée à plusieurs utilisateurs dans plusieurs bases de données. L'exemple de code montre comment appeler la méthode <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Login> pour répertorier tous les utilisateurs de la base de données qui sont associés à l'ouverture de session. L’exemple crée une ouverture de session et un utilisateur dans le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de données pour vous assurer que les informations de mappage à énumérer.  
+ Chaque utilisateur d'une base de données est associé à une ouverture de session. L'ouverture de session peut être associée à plusieurs utilisateurs dans plusieurs bases de données. L'exemple de code montre comment appeler la méthode <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Login> pour répertorier tous les utilisateurs de la base de données qui sont associés à l'ouverture de session. L'exemple crée une ouverture de session et un utilisateur dans la base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] pour garantir la présence d'informations de mappage à énumérer.  
   
 ```csharp  
 {   
@@ -64,7 +63,7 @@ foreach ( Database db in srv.Databases) {
 ```  
   
 ## <a name="enumerating-logins-and-associated-users-in-powershell"></a>Énumération des connexions et des utilisateurs associés dans PowerShell  
- Chaque utilisateur d'une base de données est associé à une ouverture de session. L'ouverture de session peut être associée à plusieurs utilisateurs dans plusieurs bases de données. L'exemple de code montre comment appeler la méthode <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Login> pour répertorier tous les utilisateurs de la base de données qui sont associés à l'ouverture de session. L’exemple crée une ouverture de session et un utilisateur dans le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de données pour vous assurer que les informations de mappage à énumérer.  
+ Chaque utilisateur d'une base de données est associé à une ouverture de session. L'ouverture de session peut être associée à plusieurs utilisateurs dans plusieurs bases de données. L'exemple de code montre comment appeler la méthode <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> de l'objet <xref:Microsoft.SqlServer.Management.Smo.Login> pour répertorier tous les utilisateurs de la base de données qui sont associés à l'ouverture de session. L'exemple crée une ouverture de session et un utilisateur dans la base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] pour garantir la présence d'informations de mappage à énumérer.  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

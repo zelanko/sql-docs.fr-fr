@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13c566ef9163cd7bc71ac6934f3db9782c87f06f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096053"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,15 +48,15 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @table_name = ] 'name'` La table est utilisée pour retourner des informations de catalogue. *nom* est **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
+`[ @table_name = ] 'name'` La table est utilisée pour retourner des informations de catalogue. *nom* est **nvarchar (384)** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
-`[ @table_owner = ] 'owner'` Est le propriétaire de la table de la table utilisée pour retourner des informations de catalogue. *propriétaire* est **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si le propriétaire n'est pas précisé, les règles par défaut définissant la visibilité des tables du SGBD sous-jacent sont utilisées.  
+`[ @table_owner = ] 'owner'` Est le propriétaire de la table de la table utilisée pour retourner des informations de catalogue. *propriétaire* est **nvarchar (384)** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si le propriétaire n'est pas précisé, les règles par défaut définissant la visibilité des tables du SGBD sous-jacent sont utilisées.  
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si le propriétaire n'est pas spécifié et que l'utilisateur actuel ne possède pas de table ayant le nom spécifié, la procédure recherche une table portant le nom spécifié, possédée par le propriétaire de la base de données. Si la recherche de la table aboutit, ce sont les colonnes de cette dernière qui sont retournées.  
   
-`[ @table_qualifier = ] 'qualifier'` Est le nom du qualificateur de table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+`[ @table_qualifier = ] 'qualifier'` Est le nom du qualificateur de table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_ **.** _propriétaire_ **.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
-``[ , [ @table_type = ] "'type', 'type'" ]`` Est une liste de valeurs séparées par des virgules, qui donne des informations sur les tables de tous les types de tables qui sont spécifiées. Ceux-ci incluent **TABLE**, **SYSTEMTABLE**, et **vue**. *type* est **varchar (100)**, avec NULL comme valeur par défaut.  
+``[ , [ @table_type = ] "'type', 'type'" ]`` Est une liste de valeurs séparées par des virgules, qui donne des informations sur les tables de tous les types de tables qui sont spécifiées. Ceux-ci incluent **TABLE**, **SYSTEMTABLE**, et **vue**. *type* est **varchar (100)** , avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Chaque type de table doit être encadré de guillemets simples, l'ensemble du paramètre devant être encadré de guillemets doubles. Les types de table sont en lettres majuscules. Si SET QUOTED_IDENTIFIER est défini à ON, chaque guillemet simple doit devenir double et l'ensemble du paramètre doit être encadré de guillemets simples.  
@@ -65,11 +64,11 @@ sp_tables [ [ @table_name = ] 'name' ]
 `[ @fUsePattern = ] 'fUsePattern'` Détermine si le trait de soulignement (_), pourcentage (%) et entre crochets ([ou]) caractères sont interprétés comme des caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|Nom du qualificateur de table. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Ce champ peut contenir la valeur NULL.|  
 |**TABLE_OWNER**|**sysname**|Nom du propriétaire de la table. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de l'utilisateur de la base de données qui a créé la table. Ce champ retourne toujours une valeur.|  
@@ -89,7 +88,7 @@ sp_tables [ [ @table_name = ] 'name' ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>A. Retour d'une liste d'objets pouvant être sollicités dans l'environnement actuel  
+### <a name="a-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>R. Retour d'une liste d'objets pouvant être sollicités dans l'environnement actuel  
  L’exemple suivant retourne une liste d’objets qui peuvent être des requêtes dans l’environnement actuel.  
   
 ```  

@@ -33,14 +33,13 @@ helpviewer_keywords:
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad4e43d04c16443323358f0b84e6f26a9f9ab6bf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d7526bd23d5b49160748eff653d0e2d9c1e07ce4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086837"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertion de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ ms.locfileid: "56019010"
   
 -   La plupart des exemples sont basés sur l'exemple de base de données [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]. Toutes les mises à jour sont appliquées aux tables de cette base de données.  
   
-### <a name="a-inserting-a-record-by-using-an-updategram"></a>A. Insertion d'un enregistrement à l'aide d'un code de mise à jour  
+### <a name="a-inserting-a-record-by-using-an-updategram"></a>R. Insertion d'un enregistrement à l'aide d'un code de mise à jour  
  Ce code de mise à jour centré sur les attributs insère un enregistrement dans la table HumanResources.Employee dans la base de données [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)].  
   
  Dans cet exemple, le code de mise à jour ne spécifie pas de schéma de mappage. Par conséquent, le code de mise à jour utilise le mappage par défaut, dans lequel le nom d'élément est mappé à un nom de table et les attributs ou éléments enfants sont mappés aux colonnes dans cette table.  
@@ -159,7 +158,7 @@ ms.locfileid: "56019010"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>b. Insertion de plusieurs enregistrements à l'aide d'un code de mise à jour  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>B. Insertion de plusieurs enregistrements à l'aide d'un code de mise à jour  
  Ce code de mise à jour ajoute deux nouveaux enregistrements de décalage à la table HumanResources.Shift. Mise à jour ne spécifie pas le paramètre facultatif  **\<avant >** bloc.  
   
 ```  
@@ -238,7 +237,7 @@ ms.locfileid: "56019010"
   
  La colonne UnitPrice dans la table Order Details est du **money** type. Pour appliquer la conversion de type approprié (à partir d’un **chaîne** type à un **money** type), le caractère de signe dollar ($) doit être ajouté en tant que partie de la valeur. Si la mise à jour ne spécifie pas un schéma de mappage, le premier caractère de la **chaîne** valeur est évaluée. Si le premier caractère est le signe $, la conversion appropriée est appliquée.  
   
- Si la mise à jour est spécifiée par rapport à un schéma de mappage où la colonne est marquée de façon appropriée, soit comme **dt:type="fixed.14.4 »** ou **SQL : DataType = « argent »**, le signe dollar ($) n’est pas requis et le conversion est contrôlée par le mappage. Il s'agit de la méthode recommandée pour garantir que la conversion de type appropriée a lieu.  
+ Si la mise à jour est spécifiée par rapport à un schéma de mappage où la colonne est marquée de façon appropriée, soit comme **dt:type="fixed.14.4 »** ou **SQL : DataType = « argent »** , le signe dollar ($) n’est pas requis et le conversion est contrôlée par le mappage. Il s'agit de la méthode recommandée pour garantir que la conversion de type appropriée a lieu.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Pour tester un exemple de requête XPath sur le schéma  
   

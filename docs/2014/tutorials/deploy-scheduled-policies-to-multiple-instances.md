@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016720"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185799"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Déployer des stratégies planifiées sur plusieurs instances
   En utilisant des serveurs inscrits, vous pouvez déployer des stratégies planifiées sur des serveurs gérés à partir d'un emplacement central. Vous pouvez déployer des stratégies planifiées à partir d'un groupe de serveurs locaux ou à partir d'un serveur de gestion centralisée.  
@@ -71,7 +71,7 @@ ms.locfileid: "56016720"
     > [!NOTE]  
     >  Si vous cliquez sur **groupes de serveurs locaux** ou le serveur de gestion centralisée lui-même, les stratégies seront déployées pour tous les serveurs gérés. Si vous cliquez avec le bouton droit sur un groupe de serveurs spécifique, les stratégies seront déployées uniquement sur les serveurs de ce groupe. Si vous cliquez avec le bouton droit sur un serveur inscrit spécifique, les stratégies seront déployées uniquement sur ce serveur.  
   
-3.  Regard **fichiers à importer**, cliquez sur le bouton de sélection (**...** ).  
+3.  Regard **fichiers à importer**, cliquez sur le bouton de sélection ( **...** ).  
   
 4.  Dans le **sélectionner la stratégie** boîte de dialogue, accédez à l’emplacement du dossier où vous avez enregistré les stratégies planifiées. Pour cet exemple, accédez à l’emplacement **C:\Scheduled_BP_Policies**.  
   

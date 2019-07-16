@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120230"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +44,8 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @Action= ] '*action*'  
- Décrit l'action à effectuer par la procédure. *action* is **varchar(10)** . *action* peut avoir l’une des valeurs suivantes.  
+ [ @Action=] '*action*'  
+ Décrit l'action à effectuer par la procédure. *action* est **varchar (10)** . *action* peut avoir l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -54,13 +53,13 @@ sp_change_users_login [ @Action = ] 'action'
 |**Rapport**|Dresse la liste des utilisateurs qui ne sont pas liés à un compte de connexion dans la base de données active et indique les identificateurs de sécurité (SID) correspondants. *utilisateur*, *connexion*, et *mot de passe* doit être NULL ou non spécifié.<br /><br /> Pour remplacer l’option de rapport avec une requête en utilisant les tables système, comparer les entrées de **sys.server_prinicpals** avec les entrées dans **sys.database_principals**.|  
 |**Update_One**|Lie le spécifié *utilisateur* dans la base de données actuelle à un existant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *connexion*. *utilisateur* et *connexion* doit être spécifié. *mot de passe* doit être NULL ou non spécifié.|  
   
- [ @UserNamePattern= ] '*user*'  
+ [ @UserNamePattern=] '*utilisateur*'  
  Nom d'un utilisateur dans la base de données active. *utilisateur* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ @LoginName= ] '*login*'  
+ [ @LoginName=] '*connexion*'  
  Est le nom d'un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
   
- [ @Password= ] '*password*'  
+ [ @Password=] '*mot de passe*'  
  Mot de passe affecté à un nouveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion qui est créée en spécifiant **Auto_Fix**. Si une connexion correspondante existe déjà, l’utilisateur est mappé sur et *mot de passe* est ignoré. Si une connexion correspondante n’existe pas, sp_change_users_login crée une nouvelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion et lui affecte *mot de passe* comme mot de passe pour la nouvelle connexion. *mot de passe* est **sysname**, et ne doit pas être NULL.  
   
 > **IMPORTANT** Utilisez toujours un [mot de passe fort !](../../relational-databases/security/strong-passwords.md)
@@ -70,7 +69,7 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |UserName|**sysname**|Nom de l'utilisateur de la base de données.|  
 |UserSID|**varbinary(85)**|Identificateur de sécurité de l'utilisateur.|  
@@ -89,7 +88,7 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-showing-a-report-of-the-current-user-to-login-mappings"></a>A. Affichage d'un rapport des mappages utilisateur-connexion en cours  
+### <a name="a-showing-a-report-of-the-current-user-to-login-mappings"></a>R. Affichage d'un rapport des mappages utilisateur-connexion en cours  
  Cet exemple produit un rapport des utilisateurs définis dans la base de données active et de leurs identificateurs de sécurité (SID).  
   
 ```  

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa7b7004f1cfca9a1fbec27742af7df515c05c59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073352"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introduction à l'utilisation des requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ ms.locfileid: "63013352"
 ## <a name="supported-functionality"></a>Fonctionnalités prises en charge  
  Le tableau suivant indique les fonctionnalités du langage XPath implémentées dans SQLXML 4.0.  
   
-|Fonctionnalité|Élément|Lien aux exemples de requêtes|  
+|Fonctionnalité|Item|Lien aux exemples de requêtes|  
 |-------------|----------|----------------------------|  
 |Axes|**attribut**, **enfant**, **parent**, et **self** axes|[Spécification d’Axes dans les requêtes XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-axes-in-xpath-queries-sqlxml-4-0.md)|  
 |Prédicats à valeurs booléennes, y compris les prédicats consécutifs et imbriqués||[Spécification d’opérateurs arithmétiques dans des requêtes XPath &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/samples/specifying-arithmetic-operators-in-xpath-queries-sqlxml-4-0.md)|  
@@ -106,7 +105,7 @@ ms.locfileid: "63013352"
 ## <a name="unsupported-functionality"></a>Fonctionnalités non prises en charge  
  Le tableau suivant indique les fonctionnalités du langage XPath non implémentées dans SQLXML 4.0.  
   
-|Fonctionnalité|Élément|  
+|Fonctionnalité|Item|  
 |-------------|----------|  
 |Axes|**ancestor**, **ancestor-or-self**, **descendant**, **descendant-or-self (//)** , **following**, **following-sibling**, **namespace**, **preceding**, **preceding-sibling**|  
 |Prédicats à valeurs numériques||  

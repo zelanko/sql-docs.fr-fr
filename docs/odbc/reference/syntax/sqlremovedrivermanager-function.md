@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3413cf3c0e316e25ad52cc35ba348cab1694ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cd31a45ed891a8dc95f4f23981d4b626a6095b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024540"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager, fonction
 **Conformité**  
@@ -81,12 +80,12 @@ BOOL SQLRemoveDriverManager(
   
 |||  
 |-|-|  
-|ODBC32DLL|ODBCCP32.DLL|  
-|ODBCCR32.DLL|ODBC16GT.DLL|  
-|ODBCCU32.DLL|ODBC32GT.DLL|  
-|ODBCINT. DLL|DS16GT.DLL|  
-|ODBCTRAC. DLL|DS32GT.DLL|  
-|MSVCRT40.DLL|ODBCAD32.EXE|  
+|ODBC32DLL|ODBCCP32. DLL|  
+|ODBCCR32. DLL|ODBC16GT.DLL|  
+|ODBCCU32. DLL|ODBC32GT.DLL|  
+|ODBCINT. DLL|DS16GT. DLL|  
+|ODBCTRAC. DLL|DS32GT. DLL|  
+|MSVCRT40. DLL|ODBCAD32.EXE|  
 |ODBCCP32.CPL||  
   
  **SQLRemoveDriverManager** est également appelé dans le cadre d’un processus de mise à niveau. Si une application détecte qu’il doit effectuer une mise à niveau et il a précédemment installé le pilote, le pilote doit être supprimé et réinstallé.  

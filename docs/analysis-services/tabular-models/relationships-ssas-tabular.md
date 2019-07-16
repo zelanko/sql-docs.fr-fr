@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072526"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207511"
 ---
-# <a name="relationships"></a>Relations 
+# <a name="relationships"></a>Relationships 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
   Dans les modèles tabulaires, une relation est une connexion entre deux tables de données. La relation établit la façon dont les données des deux tables doivent être mises en corrélation. Par exemple, il est possible de créer une relation entre une table Clients et une table Commandes afin d'indiquer le nom du client associé à chaque commande.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "53072526"
 ##  <a name="what"></a> Avantages  
  Une relation est une connexion entre deux tables de données, basée sur une ou plusieurs colonnes dans chaque table. Pour comprendre pourquoi les relations sont utiles, imaginez que vous effectuez le suivi des données des commandes client dans votre entreprise. Vous pouvez effectuer le suivi de toutes les données dans une table individuelle possédant une structure similaire à :  
   
-|CustomerID|Créer une vue d’abonnement|EMail|DiscountRate|OrderID|OrderDate|Produit|Quantité|  
+|CustomerID|Nom|EMail|DiscountRate|OrderID|OrderDate|Produit|Quantité|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -41,7 +41,7 @@ ms.locfileid: "53072526"
   
 ### <a name="customers"></a>Customers  
   
-|[CustomerID]|Créer une vue d’abonnement|EMail|  
+|[CustomerID]|Nom|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -83,7 +83,7 @@ ms.locfileid: "53072526"
   
  Le tableau ci-dessous indique les relations entre les trois tables :  
   
-|Relation|Type|colonne de recherche|colonne|  
+|Relation|type|colonne de recherche|colonne|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|un-à-un|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|un-à-plusieurs|Customers.CustomerID|Orders.CustomerID|  
@@ -164,7 +164,7 @@ ms.locfileid: "53072526"
 ##  <a name="bkmk_dupl_errors"></a> Duplicate values and other errors  
  Si vous choisissez une colonne qui ne peut pas être utilisée dans la relation, un X rouge s'affiche en regard de la colonne. Vous pouvez placer le curseur sur l'icône d'erreur pour afficher un message qui fournit des informations supplémentaires sur le problème. Voici quelques-uns des problèmes qui peuvent rendre impossible la création d'une relation entre les colonnes sélectionnées :  
   
-|Problème ou message|Résolution|  
+|Problème ou message|Résolution :|  
 |------------------------|----------------|  
 |La relation ne peut pas être créée car les deux colonnes sélectionnées contiennent des valeurs dupliquées.|Au moins, une colonne de la paire que vous sélectionnez doit contenir uniquement des valeurs uniques pour créer une relation valide.<br /><br /> Vous pouvez modifier les colonnes pour supprimer les doublons ou inverser l'ordre des colonnes afin que la colonne qui contient les valeurs uniques soit utilisée comme **colonne de recherche associée**.|  
 |La colonne contient une valeur Null ou vide.|Les colonnes de données ne peuvent pas être jointes entre elles sur une valeur Null. Pour chaque ligne, une valeur doit figurer dans chacune des deux colonnes utilisées dans une relation.|  

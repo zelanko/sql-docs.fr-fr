@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5dd36e82b71ff862a543bfa38cda4b4a660738a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 649c00f1db486dab4a996138be4e26b0e270fbae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106291"
 ---
 # <a name="arguments-in-catalog-functions"></a>Arguments dans les fonctions de catalogue
 Toutes les fonctions de catalogue acceptent des arguments avec laquelle une application peut restreindre l’étendue des données retournées. Par exemple, les première et deuxième appels à **SQLTables** dans le code suivant retourne un jeu de résultats contenant des informations sur toutes les tables, tandis que le troisième appel retourne des informations sur la table Orders :  

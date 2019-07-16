@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098551"
 ---
 # <a name="mdx-data-definition---create-action"></a>Définition de données MDX - CREATE ACTION
 
@@ -103,19 +102,19 @@ FOR
 ### <a name="scope"></a>`Scope`  
  Chaque action est définie pour un cube spécifique et possède un nom unique dans ce cube. Une action peut avoir l'une des étendues répertoriées dans le tableau ci-après.  
   
- Étendue de cube   
+ Étendue de cube  
  Pour les actions indépendantes de dimensions, membres ou cellules spécifiques ; par exemple : « Lancer l’émulation de terminal pour AS / 400 système de production ».  
   
- Étendue de dimension   
+ Étendue de dimension  
  Cette action s'applique à une dimension spécifique. Elle ne dépend pas d'une sélection spécifique de niveaux ou de membres.  
   
- Étendue de niveau   
+ Étendue de niveau  
  Cette action s'applique à un niveau de dimension spécifique. Elle ne dépend pas de la sélection spécifique d'un membre dans cette dimension.  
   
  Étendue de membre  
  Cette action s'applique aux membres d'un niveau spécifique.  
   
- Étendue de cellule   
+ Étendue de cellule  
  Cette action s'applique uniquement à des cellules spécifiques.  
   
  Étendue de jeu  

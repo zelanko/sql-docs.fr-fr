@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: 8c519072-ae4c-4d32-9d4e-775e3d3d6389
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16112ca3b66e0218efd54d3bf385e04cb654e3e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e280afb03eeac46a58943d276137e2019340a0a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057000"
 ---
-# <a name="sql-to-c-binary"></a>SQL à C : Binaire
+# <a name="sql-to-c-binary"></a>SQL à C : Binary
 Les identificateurs pour les types de données ODBC SQL binaires sont :  
   
  SQL_BINARY  
@@ -34,11 +33,11 @@ Les identificateurs pour les types de données ODBC SQL binaires sont :
   
  Le tableau suivant présente les types de données à laquelle les données binaires de SQL peuvent être converties à la C ODBC. Pour obtenir une explication des colonnes et des termes dans la table, consultez [conversion des données à partir de SQL pour les Types de données C](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md).  
   
-|Identificateur de type C|Test|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
+|Identificateur de type C|Tester|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|(Longueur d’octet de données) \* 2 < *BufferLength*<br /><br /> (Longueur d’octet de données) \* 2 > = *BufferLength*|Données<br /><br /> Données tronquées|Longueur des données en octets<br /><br /> Longueur des données en octets|n/a<br /><br /> 01004|  
-|SQL_C_WCHAR|(Caractère de longueur de données) \* 2 < *BufferLength*<br /><br /> (Caractère de longueur de données) \* 2 > = *BufferLength*|Données<br /><br /> Données tronquées|Longueur des données en caractères<br /><br /> Longueur des données en caractères|n/a<br /><br /> 01004|  
-|SQL_C_BINARY|Longueur d’octet de données < = *BufferLength*<br /><br /> Longueur d’octet de données > *BufferLength*|Données<br /><br /> Données tronquées|Longueur des données en octets<br /><br /> Longueur des données en octets|n/a<br /><br /> 01004|  
+|SQL_C_CHAR|(Longueur d’octet de données) \* 2 < *BufferLength*<br /><br /> (Longueur d’octet de données) \* 2 > = *BufferLength*|Données<br /><br /> Données tronquées|Longueur des données en octets<br /><br /> Longueur des données en octets|N/A<br /><br /> 01004|  
+|SQL_C_WCHAR|(Caractère de longueur de données) \* 2 < *BufferLength*<br /><br /> (Caractère de longueur de données) \* 2 > = *BufferLength*|Données<br /><br /> Données tronquées|Longueur des données en caractères<br /><br /> Longueur des données en caractères|N/A<br /><br /> 01004|  
+|SQL_C_BINARY|Longueur d’octet de données < = *BufferLength*<br /><br /> Longueur d’octet de données > *BufferLength*|Données<br /><br /> Données tronquées|Longueur des données en octets<br /><br /> Longueur des données en octets|N/A<br /><br /> 01004|  
   
  Lorsque les données SQL binaire sont converti en données caractères C, chaque octet (8 bits) de la source de données est représenté comme deux caractères ASCII. Ces caractères sont la représentation sous forme de caractère ASCII du nombre figurant dans sa forme hexadécimale. Par exemple, un 00000001 binaire est converti en « 01 » et un 11111111 binaire est converti en « FF ».  
   

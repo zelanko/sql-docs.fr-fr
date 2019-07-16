@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: f2b2e2ad-ba24-48a1-913c-8ee4e0895dc4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fce3ca4a2055d7f4eb10cfdcac7f09c7fd004282
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfd88dec92d2707b72c829aa53f2798d3d64fee3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089196"
 ---
 # <a name="syssysconstraints-transact-sql"></a>sys.sysconstraints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,15 +35,15 @@ ms.locfileid: "47806877"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**constid**|**Int**|Numéro de contrainte.|  
-|**id**|**Int**|Identificateur de la table qui détient la contrainte.|  
+|**constid**|**int**|Numéro de contrainte.|  
+|**id**|**int**|Identificateur de la table qui détient la contrainte.|  
 |**colid**|**smallint**|ID de la colonne sur laquelle la contrainte est définie.<br /><br /> 0 = Contrainte de niveau table|  
 |**spare1**|**tinyint**|Réservé|  
-|**status**|**Int**|Pseudo-masque de bits indiquant l'état. Il peut prendre les valeurs suivantes :<br /><br /> 1 = Contrainte PRIMARY KEY<br /><br /> 2 = Contrainte UNIQUE KEY<br /><br /> 3 = Contrainte FOREIGN KEY<br /><br /> 4 = Contrainte CHECK<br /><br /> 5 = Contrainte DEFAULT<br /><br /> 16 = Contrainte de niveau colonne<br /><br /> 32 = Contrainte de niveau table|  
-|**actions**|**Int**|Réservé|  
-|**Erreur**|**Int**|Réservé|  
+|**status**|**int**|Pseudo-masque de bits indiquant l'état. Il peut prendre les valeurs suivantes :<br /><br /> 1 = Contrainte PRIMARY KEY<br /><br /> 2 = Contrainte UNIQUE KEY<br /><br /> 3 = Contrainte FOREIGN KEY<br /><br /> 4 = Contrainte CHECK<br /><br /> 5 = Contrainte DEFAULT<br /><br /> 16 = Contrainte de niveau colonne<br /><br /> 32 = Contrainte de niveau table|  
+|**actions**|**int**|Réservé|  
+|**Erreur**|**int**|Réservé|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage des Tables système avec les vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

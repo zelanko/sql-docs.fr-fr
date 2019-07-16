@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1d7c74ee9963d93d289f589115712614a745dad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049581"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197776"
 ---
 # <a name="event-notifications"></a>Notifications d'événements
   Les notifications d'événements envoient des informations sur les événements à un service [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Les notifications d'événements sont exécutées en réponse à une variété d'instructions DDL (Data Definition Language) [!INCLUDE[tsql](../../includes/tsql-md.md)] et d'événements Trace SQL, par l'envoi d'informations relatives à ces événements à un service [!INCLUDE[ssSB](../../includes/sssb-md.md)] .  
@@ -51,7 +51,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 ## <a name="event-notifications-concepts"></a>Concepts de notifications d'événements  
  Lorsqu'une notification d'événement est créée, une ou plusieurs conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)] entre une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le service cible spécifié sont ouvertes. Les conversations restent en général ouvertes tant que la notification d'événement existe en tant qu'objet sur l'instance de serveur. Dans certains cas d'erreur, les conversations peuvent être interrompues avant la suppression de la notification d'événement. Ces conversations ne sont jamais partagées entre les notifications d'événements. Toutes les notifications d'événements possèdent leurs propres conversations exclusives. L'interruption d'une conversation interdit explicitement au service cible de recevoir davantage de messages ; en outre, la conversation ne rouvrira pas au déclenchement suivant de la notification d'événement.  
   
- Informations sur les événements sont remises à la [!INCLUDE[ssSB](../../includes/sssb-md.md)] service en tant que variable de type `xml` qui fournit des informations sur quand un événement se produit, l’objet de base de données concerné, le [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction par lot impliquée et autres informations. Pour plus d’informations sur le schéma XML produit par les notifications d’événements, consultez [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
+ Les informations sur l'événement sont livrées au service [!INCLUDE[ssSB](../../includes/sssb-md.md)] sous forme de variable de type `xml` qui fournit des informations sur l'heure à laquelle un événement se produit, l'objet de base de données concerné, l'instruction par lot [!INCLUDE[tsql](../../includes/tsql-md.md)] impliquée ainsi que d'autres informations. Pour plus d’informations sur le schéma XML produit par les notifications d’événements, consultez [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql).  
   
 ### <a name="event-notifications-vs-triggers"></a>Notifications d'événements et Déclencheurs  
  Le tableau suivant répertorie les similitudes et les différences entre les déclencheurs et les notifications d'événements.  

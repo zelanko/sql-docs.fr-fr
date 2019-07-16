@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 736867be33531a73c0ada66a3be0f1245f1c483a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e50e8128bb80b290e7610d9cc846dd3e148e398
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118630"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync, fonction
 **Conformité**  
  Version introduite : ODBC 3.8  
   
- Conformité aux normes : None  
+ Conformité aux normes : Aucun  
   
  **Résumé**  
  **SQLCompleteAsync** peut être utilisé pour déterminer quand une fonction asynchrone se termine à l’aide d’un traitement en fonction de notification ou d’interrogation. Pour plus d’informations sur les opérations asynchrones, consultez [exécution asynchrone](../../../odbc/reference/develop-app/asynchronous-execution.md).  
@@ -60,14 +59,14 @@ SQLRETURN SQLCompleteAsync(
  [Sortie] Pointeur vers une mémoire tampon qui contient le code de retour de l’API asynchrone. Si *AsyncRetCodePtr* est NULL, **SQLCompleteAsync** retourne SQL_ERROR.  
   
 ## <a name="returns"></a>Valeur renvoyée  
- SQL_SUCCESS, SQL_ERROR, SQL_NO_DATA, or SQL_INVALID_HANDLE.  
+ SQL_SUCCESS, SQL_ERROR, SQL_NO_DATA ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
  Si **SQLCompleteAsync** retourne SQL_SUCCESS, une application doit obtenir le code de retour de la fonction asynchrone à partir de la mémoire tampon vers laquelle pointe *AsyncRetCodePtr*. La valeur SQLSTATE associée, le cas échéant, peut être obtenue en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un descripteur d’instruction ou un *HandleType* de SQL_ HANDLE_DBC et un handle de connexion. Ces enregistrements de diagnostic sont associés à la fonction asynchrone, n’appliquez pas **SQLCompleteAsync** (fonction).  
   
  **SQLCompleteAsync** retourne un code autre que SQL_SUCCESS pour indiquer que **SQLCompleteAsync** n’est pas appelé correctement. **SQLCompleteAsync** ne publie pas dans ce cas de n’importe quel enregistrement de diagnostic. Codes de retour possibles sont :  
   
--   SQL_INVALID_HANDLE: Le handle a indiqué par *HandleType* et *gérer* n’est pas un handle valide.  
+-   SQL_INVALID_HANDLE : Le handle a indiqué par *HandleType* et *gérer* n’est pas un handle valide.  
   
 -   SQL_ERROR : *AsyncRetCodePtr* est NULL ou le traitement asynchrone n’est pas activé sur le handle.  
   

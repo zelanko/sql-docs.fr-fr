@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c470e54-0600-4b2b-b1f3-9885cb28a01a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74d4ceb4532ee09004f035958860833aef488aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 185e68ed8d083e3ccfbab99369f6a778766a4c09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138911"
 ---
 # <a name="interface-conformance-levels"></a>Niveaux de conformité de l’interface
 L’objectif de l’audit consiste à informer l’application quelles fonctionnalités sont disponibles à ce dernier à partir du pilote. Un schéma audit basé sur les fonctions ne pas suffisamment à atteindre cet objectif. Dans ODBC 3. *x*, pilotes sont classées selon les fonctionnalités qu’ils possèdent. Prise en charge la fonctionnalité peut inclure la prise en charge de la fonction ; Il peut également inclure la prise en charge d’un champ de descripteur, un attribut d’instruction, une valeur « Y » pour un type d’informations retourné par **SQLGetInfo**, et ainsi de suite.  

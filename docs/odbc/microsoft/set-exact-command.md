@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9533d3e0-e7c1-49de-a3a3-0cc4373a91cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16651df836ac3fb87c5e28b4b8fa25088e9dd86a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 686ecc89f44bac4b219b760e55160f451a15c503
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997727"
 ---
 # <a name="set-exact-command"></a>SET EXACT, commande
 Spécifie les règles de comparaison de deux chaînes de longueurs différentes.  
@@ -58,7 +57,7 @@ SET EXACT ON | OFF
 |« abc » = « ab »|Correspondance|Aucune correspondance|Aucune correspondance|  
 |« abc » = « ab_ »|Aucune correspondance|Aucune correspondance|Aucune correspondance|  
 |« ab » = « ab_ »|Aucune correspondance|Correspondance|Aucune correspondance|  
-|"ab_" = "ab"|Correspondance|Correspondance|Aucune correspondance|  
+|« ab_ » = « ab »|Correspondance|Correspondance|Aucune correspondance|  
 |« » = « ab »|Aucune correspondance|Aucune correspondance|Aucune correspondance|  
 |« ab » = « »|Correspondance|Aucune correspondance|Aucune correspondance|  
 |"__" = ""|Correspondance|Correspondance|Aucune correspondance|  

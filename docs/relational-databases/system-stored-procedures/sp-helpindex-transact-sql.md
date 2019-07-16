@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d4191a53db7c4921f026e4b6e6f8406b2ce5c24
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 17e43f9739b0306a42c4c454cf93fdf92b255177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122529"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,14 +40,14 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @objname = ] 'name'` Est le nom qualifié ou non d’une table définie par l’utilisateur ou une vue. Les guillemets ne sont nécessaires que si un nom qualifié de table ou de vue est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *nom* est **nvarchar(776)**, sans valeur par défaut.  
+`[ @objname = ] 'name'` Est le nom qualifié ou non d’une table définie par l’utilisateur ou une vue. Les guillemets ne sont nécessaires que si un nom qualifié de table ou de vue est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *nom* est **nvarchar(776)** , sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|Nom de l’index.|  
 |**index_description**|**varchar(210)**|Description d'index incluant le groupe de fichiers sur lequel il est situé.|  

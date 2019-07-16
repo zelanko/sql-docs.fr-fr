@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: afe9eacb2f5e42dc945505d54e420877a8f4cbca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af9086ba9de7d9c61bcedecd4331e7e0e77d6489
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121119"
 ---
 # <a name="syspolicypolicycategories-transact-sql"></a>syspolicy_policy_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,16 +30,16 @@ ms.locfileid: "47646497"
   Affiche une ligne pour chaque catégorie de la stratégie de la Gestion basée sur des stratégies dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Catégories de stratégie vous aider à organiser des stratégies lorsque celles-ci sont nombreuses. Le tableau suivant décrit les colonnes dans la vue syspolicy_policy_groups.  
  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|policy_category_id|**Int**|Identificateur de la catégorie de stratégie.|  
-|NAME|**sysname**|Nom de la catégorie de stratégie.|  
+|policy_category_id|**int**|Identificateur de la catégorie de stratégie.|  
+|name|**sysname**|Nom de la catégorie de stratégie.|  
 |mandate_database_subscriptions|**bit**|Indique si la catégorie de stratégie s'applique à toutes les bases de données dans une instance sans un abonnement explicite (1) ou si la catégorie de stratégie doit être appliquée à une base de données en utilisant un abonnement explicite (0).|  
   
 ## <a name="remarks"></a>Notes  
  Affiche une liste des groupes de stratégie de la Gestion basée sur des stratégies.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
 ## <a name="see-also"></a>Voir aussi  

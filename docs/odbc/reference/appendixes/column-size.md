@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5639828c90141079ab66f6cceb466328ddb3f56d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019234"
 ---
 # <a name="column-size"></a>Taille de colonne
 La taille de colonne (ou paramètre) des types de données numérique désigne le nombre maximal de chiffres utilisé par le type de données de la colonne ou du paramètre ou la précision des données. Pour les types de caractères, il s’agit la longueur en caractères des données ; pour les types de données binaires, taille de colonne est définie en tant que la longueur en octets des données. Pour l’heure, timestamp et tous les types de données d’intervalle, il s’agit du nombre de caractères dans la représentation sous forme de caractère de ces données. La taille de la colonne définie pour chaque type de données SQL concis est indiquée dans le tableau suivant.  
@@ -32,10 +31,10 @@ La taille de colonne (ou paramètre) des types de données numérique désigne l
 |SQL_DECIMAL SQL_NUMERIC|Le nombre défini de chiffres. Par exemple, la précision d’une colonne définie en tant que NUMERIC(10,3) est 10.|  
 |SQL_BIT[c]|1|  
 |SQL_TINYINT[c]|3|  
-|SQL_SMALLINT[c]|5|  
+|SQL_SMALLINT[c]|5\.|  
 |SQL_INTEGER[c]|10|  
 |SQL_BIGINT[c]|19 (signée) ou 20 (si non signé)|  
-|SQL_REAL[c]|7|  
+|SQL_REAL [c]|7|  
 |SQL_FLOAT[c]|15|  
 |SQL_DOUBLE[c]|15|  
 |Tous les types binaires [a] [b].|Longueur définie ou maximale en octets de la colonne ou du paramètre. Par exemple, la longueur d’une colonne définie comme BINARY (10) est 10.|  
@@ -46,7 +45,7 @@ La taille de colonne (ou paramètre) des types de données numérique désigne l
 |SQL_INTERVAL_DAY_TO_SECOND|Où *p* est l’intervalle de la précision de début et *s* est la précision en secondes, 9 +*p* (si *s*= 0) ou 10 +*p* + *s* (si *s*> 0). [ d]|  
 |SQL_INTERVAL_HOUR_TO_SECOND|Où *p* est l’intervalle de la précision de début et *s* est la précision en secondes, 6 +*p* (si *s*= 0) ou 7 +*p* + *s* (si *s*> 0). [ d]|  
 |SQL_INTERVAL_MINUTE_TO_SECOND|Où *p* est l’intervalle de la précision de début et *s* est la précision en secondes, 3 +*p* (si *s*= 0) ou 4 +*p* + *s* (si *s*> 0). [ d]|  
-|SQL_INTERVAL_YEAR  SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*, où *p* est la précision interval. [ d]|  
+|SQL_INTERVAL_YEAR SQL_INTERVAL_MONTH SQL_INTERVAL_DAY SQL_INTERVAL_HOUR SQL_INTERVAL_MINUTE|*p*, où *p* est la précision interval. [ d]|  
 |SQL_INTERVAL_YEAR_TO_MONTH SQL_INTERVAL_DAY_TO_HOUR|3 +*p*, où *p* est la précision interval. [ d]|  
 |SQL_INTERVAL_DAY_TO_MINUTE|6 +*p*, où *p* est la précision interval. [ d]|  
 |SQL_INTERVAL_HOUR_TO_MINUTE|3 +*p*, où *p* est la précision interval. [ d]|  

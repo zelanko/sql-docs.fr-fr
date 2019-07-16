@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbf4195294ce8bc279a2ed995ce09a5f384a82c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0e34ad32ed5fb2ae54c5a32b715ee6eb417023b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118080"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
   
 `[ @alternate_distributor = ] 'alternate_distributor'` Est le nom du serveur de distribution pour l’autre partenaire de synchronisation. *alternate_distributor* est **sysname**, sans valeur par défaut.  
   
-`[ @friendly_name = ] 'friendly_name'` Est un nom d’affichage par lequel l’association du serveur de publication ou de serveur de distribution qui constitue un autre partenaire de synchronisation peut être identifiée. *nom_convivial* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @friendly_name = ] 'friendly_name'` Est un nom d’affichage par lequel l’association du serveur de publication ou de serveur de distribution qui constitue un autre partenaire de synchronisation peut être identifiée. *nom_convivial* est **nvarchar (255)** , avec NULL comme valeur par défaut.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

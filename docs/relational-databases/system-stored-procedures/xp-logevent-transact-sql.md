@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c8604413718e8b318b67cf63562531e869a79ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116642"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  Chaîne de caractères d'une longueur maximale de 2048 caractères.  
   
  **«** *gravité* **»**  
- Une des trois chaînes de caractères INFORMATIONAL, WARNING ou ERROR. *gravité* est facultatif, avec INFORMATIONAL comme valeur par défaut.  
+ Est une des trois chaînes de caractères : INFORMATION, avertissement ou erreur. *gravité* est facultatif, avec INFORMATIONAL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -60,7 +59,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
 ## <a name="remarks"></a>Notes  
  Lorsque vous envoyez des messages à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] procédures, déclencheurs, lots et ainsi de suite, utilisent l’instruction RAISERROR au lieu de xp_logevent. xp_logevent ne pas appeler un gestionnaire de messages d’un client ou@ERROR. Pour écrire des messages dans l'Observateur d'événements Windows et dans le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exécutez l'instruction RAISERROR.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Il faut appartenir au rôle de base de données fixe db_owner de la base de données master ou au rôle serveur fixe sysadmin.  
   
 ## <a name="examples"></a>Exemples  

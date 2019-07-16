@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff853976cf0d900cb24391ff6bf13838782ea876
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b847576e503fbbbb511d2dda8f60675c298681c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039381"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString, fonction
 **Conformité**  
- Version introduite : ODBC 2.0  
+ Version introduite : ODBC VERSION 2.0  
   
  **Résumé**  
  **SQLWritePrivateProfileString** écrit un nom de la valeur et les données dans la sous-clé Odbc.ini des informations système.  

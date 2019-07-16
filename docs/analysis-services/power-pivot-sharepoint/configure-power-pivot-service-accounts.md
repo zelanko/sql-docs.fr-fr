@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 55eb472ef14e980f77a47a2c6989031cebec91e9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509551"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208306"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configuration des comptes de service Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "52509551"
   
  [Spécifications relatives aux comptes et autorisations](#requirements)  
   
- [Résolution des problèmes : Accorder des autorisations administratives manuellement](#updatemanually)  
+ [Dépannage : Accorder des autorisations administratives manuellement](#updatemanually)  
   
- [Résolution des problèmes : HTTP de résoudre des 503 erreurs dues à des mots de passe expirés pour l’Administration centrale ou le SharePoint Foundation Web Service d’Application](#expired)  
+ [Dépannage : HTTP de résoudre des 503 erreurs dues à des mots de passe expirés pour l’Administration centrale ou le SharePoint Foundation Web Service d’Application](#expired)  
   
 ##  <a name="bkmk_passwordssas"></a> Mettre à jour un mot de passe arrivé à expiration pour une instance de SQL Server Analysis Services (Power Pivot)  
   
-1.  Pointez sur Démarrer, cliquez sur **Outils d'administration**, puis cliquez sur **Services**. Double-cliquez sur **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**. Cliquez sur **Ouvrir une session**, puis tapez le nouveau mot de passe pour le compte.  
+1.  Pointez sur Démarrer, cliquez sur **Outils d'administration**, puis cliquez sur **Services**. Double-cliquez sur **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** . Cliquez sur **Ouvrir une session**, puis tapez le nouveau mot de passe pour le compte.  
   
 2.  Dans Administration centrale, dans la section Sécurité, cliquez sur **Configurer les comptes gérés**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52509551"
   
 3.  Dans **Sélectionnez un compte pour ce service**, choisissez un compte géré existant ou créez-en un. Le compte doit être un compte d'utilisateur de domaine.  
   
-4.  Sélectionnez **Pool d’applications de service - Système des services web SharePoint** pour modifier l’identité du pool d’applications de l’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] par défaut. Selon la manière dont votre installation a été configurée, le service peut s'exécuter sous un pool d'applications de service existant créé pour les services SharePoint. Par défaut, l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] inscrit le service en tant qu’application de service **par défaut[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (Application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**.  
+4.  Sélectionnez **Pool d’applications de service - Système des services web SharePoint** pour modifier l’identité du pool d’applications de l’application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] par défaut. Selon la manière dont votre installation a été configurée, le service peut s'exécuter sous un pool d'applications de service existant créé pour les services SharePoint. Par défaut, l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] inscrit le service en tant qu’application de service **par défaut[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (Application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** .  
   
      Si le service a été configuré manuellement par un administrateur SharePoint, il est très probablement doté de son propre pool d'applications de service.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52509551"
   
 #### <a name="analysis-services-service-account"></a>Compte de service Analysis Services  
   
-|Condition requise|Description|  
+|Prérequis|Description|  
 |-----------------|-----------------|  
 |Spécification relative à la configuration|Ce compte doit être spécifié pendant l’installation de SQL Server dans la page **Analysis Services - Configuration** de l’Assistant Installation (ou dans le paramètre d’installation **ASSVCACCOUNT** dans le cas d’une installation en ligne de commande).<br /><br /> Vous pouvez modifier le nom d'utilisateur ou le mot de passe à l'aide de l'Administration centrale, de PowerShell ou de l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'utilisation d'autres outils pour modifier les comptes et les mots de passe n'est pas prise en charge.|  
 |Spécification relative au compte d'utilisateur de domaine|Ce compte doit être un compte d'utilisateur de domaine Windows. Les comptes d'ordinateur intégrés (tels que Service réseau ou Service local) sont interdits. Le programme d'installation de SQL Server répond à la nécessité d'un compte d'utilisateur de domaine en bloquant l'installation chaque fois qu'un compte d'ordinateur est spécifié.|  
@@ -108,14 +108,14 @@ ms.locfileid: "52509551"
   
 #### <a name="power-pivot-service-application-pool"></a>Pool d'applications de service Power Pivot  
   
-|Condition requise|Description|  
+|Prérequis|Description|  
 |-----------------|-----------------|  
 |Spécification relative à la configuration|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est une ressource partagée de la batterie de serveurs qui devient disponible lorsque vous créez une application de service. Le pool d'applications de service doit être spécifié lors de la création de l'application de service. Il peut être spécifié de deux façons, soit à l'aide de l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , soit par le biais de commandes PowerShell.<br /><br /> Vous pouvez avoir configuré l'identité du pool d'applications de sorte qu'il s'exécute sous un compte unique. Mais si vous n’avez pas, envisagez de le modifier maintenant pour s’exécuter sous un compte différent.|  
 |Spécification relative au compte d'utilisateur de domaine|L'identité du pool d'applications doit être un compte d'utilisateur de domaine Windows. Les comptes d'ordinateur intégrés (tels que Service réseau ou Service local) sont interdits.|  
 |Spécifications relatives aux autorisations|Ce compte n'a pas besoin d'autorisations d'administrateur système local sur l'ordinateur. Ce compte doit cependant avoir des autorisations d'administrateur système Analysis Services sur le [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] local installé sur le même ordinateur. Ces autorisations sont accordées automatiquement par le programme d'installation de SQL Server, ou lorsque vous définissez ou modifiez l'identité du pool d'applications dans l'Administration centrale.<br /><br /> Les autorisations d'administration sont nécessaires pour l'envoi de requêtes au [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Elles sont également requises pour la surveillance de l'intégrité, la fermeture de sessions inactives et l'écoute des événements de trace.<br /><br /> Le compte doit disposer d'autorisations de connexion, de lecture et d'écriture sur la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Ces autorisations sont accordées automatiquement lors de la création de l'application et sont mises à jour automatiquement lorsque vous modifiez des comptes ou des mots de passe dans l'Administration centrale.<br /><br /> L'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] vérifie qu'un utilisateur SharePoint est autorisé à afficher des données avant de récupérer le fichier, mais n'emprunte pas l'identité de l'utilisateur. Il n'existe aucune spécification relative à l'emprunt d'identité.|  
-|Spécifications relatives à la montée en puissance parallèle|Aucun.|  
+|Spécifications relatives à la montée en puissance parallèle|Aucune.|  
   
-##  <a name="updatemanually"></a> Résolution des problèmes : Accorder les autorisations administratives manuellement  
+##  <a name="updatemanually"></a> Résolution des problèmes : Accorder des autorisations administratives manuellement  
  Les autorisations administratives ne peuvent être mises à jour si la personne qui met à jour les informations d'identification n'est pas administrateur local sur l'ordinateur. Vous pouvez alors accorder des autorisations administratives manuellement. Pour ce faire, le plus simple est d'exécuter le travail du minuteur de Configuration [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans l'Administration centrale. Avec cette approche, vous pouvez réinitialiser des autorisations pour tous les serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la batterie. Notez que cette approche fonctionne uniquement si le travail du minuteur SharePoint s'exécute à la fois comme administrateur de batterie et comme administrateur local sur l'ordinateur.  
   
 1.  Dans Supervision, cliquez sur **Examiner les définitions de travail**.  
@@ -150,7 +150,7 @@ ms.locfileid: "52509551"
   
 11. Tapez le nom du compte utilisé pour le pool d'applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , puis cliquez sur **OK**.  
   
-##  <a name="expired"></a> Résolution des problèmes : résoudre les erreurs HTTP 503 dues à des mots de passe expirés pour l'Administration centrale ou le service de l'application web de Microsoft SharePoint Foundation  
+##  <a name="expired"></a> Résolution des problèmes : HTTP de résoudre des 503 erreurs dues à des mots de passe expirés pour l’Administration centrale ou le SharePoint Foundation Web Service d’Application  
  Si le service de l'Administration centrale ou le service Application Web de SharePoint Foundation cesse de fonctionner en raison de la réinitialisation du compte ou de l'expiration du mot de passe, des messages d'erreur HTTP 503 « Service non disponible » s'affichent lors de la tentative d'ouverture de l'Administration centrale de SharePoint ou d'un site SharePoint. Suivez ces étapes pour remettre votre serveur en ligne. Une fois l'Administration centrale disponible, vous pouvez passer à la mise à jour des informations de compte périmées.  
   
 1.  Dans les outils d'administration, cliquez sur **Gestionnaire des services IIS**.  

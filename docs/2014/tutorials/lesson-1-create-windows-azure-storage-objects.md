@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038340"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210958"
 ---
-# <a name="lesson-1-create-windows-azure-storage-objects"></a>Leçon 1 : Créer des objets de stockage Azure Windows
+# <a name="lesson-1-create-windows-azure-storage-objects"></a>Leçon 1 : Créer des objets de Stockage Microsoft Azure
   Avant de créer des sauvegardes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans le Cloud de stockage, vous devez tout d'abord créer un compte de stockage, puis un conteneur d'objets blob. La leçon 1 présente les étapes de connexion au portail de gestion Windows Azure, puis de création d'un compte de stockage et d'un conteneur d'objets blob.  
   
 ## <a name="create-a-storage-account"></a>Créer un compte de stockage  
@@ -57,6 +57,6 @@ ms.locfileid: "56038340"
     >  Vous pouvez également créer un conteneur par programme à l'aide des API REST. Pour plus d’informations, consultez [créer un conteneur](https://go.microsoft.com/fwlink/?LinkId=271946).  
   
 ### <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Créer des informations d’identification SQL Server](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
+ [Leçon 2 : Créer des informations d’identification SQL Server](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
   
   

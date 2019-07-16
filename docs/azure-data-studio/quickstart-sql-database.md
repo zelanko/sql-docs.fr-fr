@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: efff2a0ac451afb869451735545be6cc50ad15f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959435"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Démarrage rapide : Utilisez [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour vous connecter et interroger la base de données SQL Azure
 
@@ -51,13 +50,13 @@ Utilisez [!INCLUDE[name-sos](../includes/name-sos-short.md)] pour établir une c
    | **Authentification** | Connexion SQL| Ce didacticiel utilise l’authentification SQL. |
    | **Nom d'utilisateur** | Le nom du compte utilisateur de serveur admin | Le nom d’utilisateur du compte utilisé pour créer le serveur. |
    | **Mot de passe (connexion SQL)** | Le mot de passe du compte administrateur serveur | Le mot de passe du compte utilisé pour créer le serveur. |
-   | **Enregistrer le mot de passe ?** | Oui ou Non | Sélectionnez **Oui** si vous ne souhaitez pas entrer le mot de passe chaque fois. |
+   | **Enregistrer le mot de passe** | Oui ou Non | Sélectionnez **Oui** si vous ne souhaitez pas entrer le mot de passe chaque fois. |
    | **Nom de la base de données** | *Laisser vide* | Vous vous connectez uniquement au serveur ici. |
    | **Groupe de serveurs** | Sélectionnez <Default> | Vous pouvez définir ce champ à un groupe de serveurs spécifiques que vous avez créé. | 
 
    ![Nouvelle icône de connexion](media/quickstart-sql-database/new-connection-screen.png)  
 
-3. Sélectionnez **Se connecter**.
+3. Sélectionnez **Connecter**.
 
 4. Si votre serveur n’a pas une règle de pare-feu autorisant Azure Data Studio pour vous connecter, le **créer une nouvelle règle de pare-feu** s’ouvre. Remplissez le formulaire pour créer une nouvelle règle de pare-feu. Pour plus d’informations, consultez [règles de pare-feu](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
@@ -150,7 +149,7 @@ Affichent les résultats de la requête :
    ![Sélectionnez les résultats](media/quickstart-sql-database/select-results2.png)
 
 
-## <a name="clean-up-resources"></a>Nettoyer les ressources
+## <a name="clean-up-resources"></a>Supprimer des ressources
 
 Les articles de démarrage rapide suivants reposent sur les ressources créées ici. Si vous prévoyez de travailler via ces articles, être ne pas voulez-vous vraiment supprimer ces ressources. Sinon, dans le portail Azure, vous devez supprimer les ressources que vous n’avez plus besoin. Pour plus d’informations, consultez [nettoyer les ressources](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 

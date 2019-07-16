@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 441ba49d-f778-4fa1-98c4-ced375a01a34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ce5530e160fe6473ff84fca0978b5fc467fe688
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a78730509cc1f9eeec83b8d9ff9cb0917e0ed99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060430"
 ---
 # <a name="sysxmlschematypes-transact-sql"></a>sys.xml_schema_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque composant de schéma XML qui est un Type, **symbol_space** de **T**.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**\<héritée de colonnes >**||Hérite des colonnes de [sys.xml_schema_components](../../relational-databases/system-catalog-views/sys-xml-schema-components-transact-sql.md).|  
 |**is_abstract**|**bit**|1 = Type est un type abstrait. Toutes les instances d’un élément de ce type doivent utiliser **xsi : type** pour indiquer un type dérivé qui n’est pas abstrait.<br /><br /> 0 = Type n'est pas un type abstrait. (par défaut)|  

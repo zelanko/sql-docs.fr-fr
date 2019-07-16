@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5859d7e4c026375d5e9ade69628b9cf9e4a76ed0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8bfa9ff0683f67a1d38aeb17bccd0cfc1443d6d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117955"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -214,15 +213,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @active_end_date = ] active_end_date` Date à laquelle l’Agent de fusion cesse d’être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, avec NULL comme valeur par défaut.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Est une invite de commandes facultative qui est fournie à l’Agent de fusion. *optional_command_line* est **nvarchar (255)**, avec une valeur par défaut « ». Permet de fournir des paramètres supplémentaires à l'Agent de fusion, comme dans l'exemple suivant où le délai d'expiration par défaut de la requête est augmenté jusqu'à `600` secondes :  
+`[ @optional_command_line = ] 'optional_command_line'` Est une invite de commandes facultative qui est fournie à l’Agent de fusion. *optional_command_line* est **nvarchar (255)** , avec une valeur par défaut « ». Permet de fournir des paramètres supplémentaires à l'Agent de fusion, comme dans l'exemple suivant où le délai d'expiration par défaut de la requête est augmenté jusqu'à `600` secondes :  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
-`[ @merge_jobid = ] merge_jobid` Est le paramètre de sortie pour l’ID de travail. *id_travail_de_fusion* est **Binary (16)**, avec NULL comme valeur par défaut.  
+`[ @merge_jobid = ] merge_jobid` Est le paramètre de sortie pour l’ID de travail. *id_travail_de_fusion* est **Binary (16)** , avec NULL comme valeur par défaut.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Spécifie si l’abonnement peut être synchronisé par le biais du Gestionnaire de synchronisation Windows. *l’argument enabled_for_syncmgr* est **nvarchar (5)**, avec FALSE comme valeur par défaut. Si **false**, l’abonnement n’est pas inscrit avec le Gestionnaire de synchronisation. Si **true**, l’abonnement est enregistré avec le Gestionnaire de synchronisation et peuvent être synchronisée sans démarrer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Spécifie si l’abonnement peut être synchronisé par le biais du Gestionnaire de synchronisation Windows. *l’argument enabled_for_syncmgr* est **nvarchar (5)** , avec FALSE comme valeur par défaut. Si **false**, l’abonnement n’est pas inscrit avec le Gestionnaire de synchronisation. Si **true**, l’abonnement est enregistré avec le Gestionnaire de synchronisation et peuvent être synchronisée sans démarrer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 `[ @ftp_address = ] 'ftp_address'` Pour la compatibilité descendante uniquement.  
   
@@ -232,15 +231,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @ftp_password = ] 'ftp_password'` Pour la compatibilité descendante uniquement.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Spécifie l’emplacement à partir duquel récupérer les fichiers de capture instantanée. *alternate_snapshot_folder* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si la valeur est NULL, les fichiers d'instantané sont extraits à partir de l'emplacement par défaut spécifié par le serveur de publication.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Spécifie l’emplacement à partir duquel récupérer les fichiers de capture instantanée. *alternate_snapshot_folder* est **nvarchar (255)** , avec NULL comme valeur par défaut. Si la valeur est NULL, les fichiers d'instantané sont extraits à partir de l'emplacement par défaut spécifié par le serveur de publication.  
   
-`[ @working_directory = ] 'working_directory'` Est le nom du répertoire de travail utilisé pour stocker temporairement les fichiers de données et le schéma de la publication lorsque FTP est utilisé pour transférer des fichiers d’instantanés. *working_directory* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @working_directory = ] 'working_directory'` Est le nom du répertoire de travail utilisé pour stocker temporairement les fichiers de données et le schéma de la publication lorsque FTP est utilisé pour transférer des fichiers d’instantanés. *working_directory* est **nvarchar (255)** , avec NULL comme valeur par défaut.  
   
-`[ @use_ftp = ] 'use_ftp'` Spécifie l’utilisation de FTP au lieu du protocole usuel pour extraire les instantanés. *use_ftp* est **nvarchar (5)**, avec FALSE comme valeur par défaut.  
+`[ @use_ftp = ] 'use_ftp'` Spécifie l’utilisation de FTP au lieu du protocole usuel pour extraire les instantanés. *use_ftp* est **nvarchar (5)** , avec FALSE comme valeur par défaut.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` Utiliser le résolveur interactif pour résoudre les conflits pour tous les articles autorisant la résolution interactive. *use_interactive_resolver* est **nvarchar (5)**, avec FALSE comme valeur par défaut.  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` Utiliser le résolveur interactif pour résoudre les conflits pour tous les articles autorisant la résolution interactive. *use_interactive_resolver* est **nvarchar (5)** , avec FALSE comme valeur par défaut.  
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
@@ -252,15 +251,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @job_name = ] 'job_name' ]` Est le nom d’un travail d’agent existant. *job_name* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre n'est indiqué que lorsque l'abonnement est synchronisé grâce à un travail existant plutôt qu'un nouveau travail (étant le comportement par défaut). Si vous n’êtes pas membre de la **sysadmin** rôle serveur fixe, vous devez spécifier *job_login* et *job_password* lorsque vous spécifiez *nom_travail*.  
   
-`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Le chemin d’accès au dossier où les fichiers d’instantanés seront lues à partir de si un instantané de données filtrées doit être utilisé. *dynamic_snapshot_location* est **nvarchar (260)**, avec NULL comme valeur par défaut. Pour plus d'informations, voir [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Le chemin d’accès au dossier où les fichiers d’instantanés seront lues à partir de si un instantané de données filtrées doit être utilisé. *dynamic_snapshot_location* est **nvarchar (260)** , avec NULL comme valeur par défaut. Pour plus d'informations, voir [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 `[ @use_web_sync = ] use_web_sync` Indique que la synchronisation Web est activée. *use_web_sync* est **bits**, avec 0 comme valeur par défaut. **1** Spécifie que l’abonnement par extraction peut être synchronisé via internet à l’aide de HTTP.  
   
-`[ @internet_url = ] 'internet_url'` Est l’emplacement de l’écouteur de réplication (REPLISAPI. DLL) pour la synchronisation Web. *internet_url* est **nvarchar (260)**, avec NULL comme valeur par défaut. *internet_url* est une URL qualifiée complète, au format `http://server.domain.com/directory/replisapi.dll`. Si le serveur est configuré de manière à être à l'écoute sur un port autre que le port 80, le numéro de port doit également être fourni sous la forme `http://server.domain.com:portnumber/directory/replisapi.dll`, où `portnumber` représente le port.  
+`[ @internet_url = ] 'internet_url'` Est l’emplacement de l’écouteur de réplication (REPLISAPI. DLL) pour la synchronisation Web. *internet_url* est **nvarchar (260)** , avec NULL comme valeur par défaut. *internet_url* est une URL qualifiée complète, au format `http://server.domain.com/directory/replisapi.dll`. Si le serveur est configuré de manière à être à l'écoute sur un port autre que le port 80, le numéro de port doit également être fourni sous la forme `http://server.domain.com:portnumber/directory/replisapi.dll`, où `portnumber` représente le port.  
   
 `[ @internet_login = ] 'internet_login'` La connexion de l’Agent de fusion utilise pour se connecter au serveur Web qui héberge la synchronisation Web est à l’aide de l’authentification de base HTTP. *internet_login* est **sysname**, avec NULL comme valeur par défaut.  
   
-`[ @internet_password = ] 'internet_password'` Le mot de passe utilisé par l’Agent de fusion lors de la connexion au serveur Web qui héberge la synchronisation Web est à l’aide de l’authentification de base HTTP. *internet_password* est **nvarchar (524)**, avec NULL comme valeur par défaut.  
+`[ @internet_password = ] 'internet_password'` Le mot de passe utilisé par l’Agent de fusion lors de la connexion au serveur Web qui héberge la synchronisation Web est à l’aide de l’authentification de base HTTP. *internet_password* est **nvarchar (524)** , avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
@@ -279,7 +278,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @hostname = ] 'hostname'` Remplace la valeur de HOST_NAME() lorsque cette fonction est utilisée dans la clause WHERE d’un filtre paramétré. *nom d’hôte* est **sysname**, avec NULL comme valeur par défaut.  
   
-`[ @job_login = ] 'job_login'` Est la connexion pour le compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)**, sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions d'Agent à l'Abonné et pour les connexions au serveur de distribution et au serveur de publication lors de l'utilisation de l'authentification intégrée de Windows.  
+`[ @job_login = ] 'job_login'` Est la connexion pour le compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)** , sans valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions d'Agent à l'Abonné et pour les connexions au serveur de distribution et au serveur de publication lors de l'utilisation de l'authentification intégrée de Windows.  
   
 `[ @job_password = ] 'job_password'` Est le mot de passe pour le compte Windows sous lequel l’agent s’exécute. *job_password* est **sysname**, sans valeur par défaut.  
   

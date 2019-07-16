@@ -3,18 +3,17 @@ title: Configurer les paramètres de SQL Server sur Linux
 description: Cet article décrit comment utiliser l’outil mssql-conf pour configurer les paramètres de SQL Server sur Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: ac1f88377b15bf8bd4a92a5dd705716db55deaaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077601"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurer SQL Server sur Linux avec l’outil mssql-conf
 
@@ -27,7 +26,7 @@ ms.locfileid: "67834008"
 
 |||
 |---|---|
-| [Agent](#agent) | Activer l’Agent SQL Server |
+| [Agent](#agent) | Activer l’Agent SQL Server. |
 | [Classement](#collation) | Définir un nouveau classement pour SQL Server sur Linux. |
 | [Commentaires des clients](#customerfeedback) | Choisissez ou non SQL Server envoie des commentaires à Microsoft. |
 | [Profil de messagerie de base de données](#dbmail) | Définir le profil de messagerie de base de données par défaut pour SQL Server sur Linux. |
@@ -488,7 +487,7 @@ Le **memory.memorylimitmb** définir les contrôles la quantité mémoire physiq
 
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="msdtc"></a> Configure MSDTC
+## <a id="msdtc"></a> Configurer MSDTC
 
 Le **network.rpcport** et **distributedtransaction.servertcpport** paramètres sont utilisés pour configurer Microsoft Distributed Transaction Coordinator (MSDTC). Pour modifier ces paramètres, exécutez les commandes suivantes :
 
@@ -508,7 +507,7 @@ Outre la définition de ces valeurs, vous devez également configurer le routage
 
 Il existe plusieurs autres paramètres pour mssql-conf que vous pouvez utiliser pour surveiller et résoudre les problèmes de MSDTC. Le tableau suivant décrit brièvement ces paramètres. Pour plus d’informations sur leur utilisation, consultez les détails dans l’article de prise en charge Windows, [comment activer le suivi de diagnostic pour MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
-| mssql-conf setting | Description |
+| paramètre de MSSQL-conf | Description |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Configurer les sécuriser les appels RPC uniquement pour les transactions distribuées |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | Configurer la sécurité seuls les appels RPC pour distribuée |transactions
