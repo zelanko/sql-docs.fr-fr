@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cbf78cf6c3ed1b04dd0a282c016db83837bf0a0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064273"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Données Unicode et pages de codes du serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62742125"
  Si votre application de l'API de procédure stockée étendue prend en charge Unicode, vous devez convertir les noms de colonne de métadonnées Unicode, les messages d'erreur, etc. en données multioctets avant de passer ces données à l'API de procédure stockée étendue.  
   
 ## <a name="example"></a>Exemple  
- La procédure stockée étendue suivante est un exemple des conversions Unicode abordées précédemment. Sachez que :  
+ La procédure stockée étendue suivante est un exemple des conversions Unicode abordées précédemment. Notez les points suivants :  
   
 -   Données de la colonne sont passées en tant que données Unicode à **srv_describe** , car la colonne est décrite comme étant SRVNVARCHAR.  
   

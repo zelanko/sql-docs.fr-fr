@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1d1df1d780cf9e1e631f6b146e45cc0a34da9438
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cce5ab3b735d3c641da4a6234e860d0528f107c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936705"
 ---
 # <a name="supports-method"></a>Supports, méthode
 Détermine si une certaine [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet prend en charge un type particulier de fonctionnalité.  

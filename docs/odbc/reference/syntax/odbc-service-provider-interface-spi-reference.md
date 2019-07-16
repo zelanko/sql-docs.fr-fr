@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cdeffb4a-f344-4abe-97f3-be2ede1c8e59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e3d83f0aa27641c9dde164f51319a0e78d456ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88053620fa413c50a8faff4cc47cbbe1457249f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073831"
 ---
 # <a name="odbc-service-provider-interface-spi-reference"></a>Informations de référence sur l’interface SPI ODBC
 En règle générale, ODBC défini une interface de programmation d’applications (API). Les fonctions dans l’API peuvent être appelées par les applications, et elles doivent être implémentées à l’intérieur du Gestionnaire de pilotes et le pilote.  

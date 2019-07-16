@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f40e89eef1a4480110a4b0b066d3e080732ac202
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: e47539a350a2918ef24c47e3c1eca270d4aeb72e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985954"
 ---
 # <a name="aggregate-functions---max"></a>Fonctions d’agrégation : max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +48,13 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
-### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. Utilisation de la fonction XQuery max() pour localiser les postes de travail du processus de fabrication enregistrant le plus d'heures de main-d'œuvre  
+### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>R. Utilisation de la fonction XQuery max() pour localiser les postes de travail du processus de fabrication enregistrant le plus d'heures de main-d'œuvre  
  La requête fournie dans [fonction min (XQuery)](../xquery/aggregate-functions-min.md) peut être réécrit pour utiliser le **max()** (fonction).  
   
 ## <a name="implementation-limitations"></a>Limites de mise en œuvre  
  Les limitations suivantes s'appliquent :  
   
--   Le **max (**) fonction mappe tous les entiers à xs : decimal.  
+-   Le **max (** ) fonction mappe tous les entiers à xs : decimal.  
   
 -   Le **max()** fonction sur les valeurs de type xs : Duration n’est pas pris en charge.  
   

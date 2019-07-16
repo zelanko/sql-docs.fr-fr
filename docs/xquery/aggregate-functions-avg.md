@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0cc60267-3c56-4a88-8ad7-bb07f0255d56
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 56760100d49e76179b868c892dd3cd61cf2c8142
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: b659aa13a8704a060be12bb015bd0de0fd126562
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985993"
 ---
 # <a name="aggregate-functions---avg"></a>Fonctions d’agrégation : avg
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ fn:avg($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type dans la base de données AdventureWorks.  
   
-### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>A. Utilisation de la fonction XQuery avg() pour rechercher les ateliers dans le processus de fabrication, dans lesquels le nombre d'heures de travail est supérieur à la moyenne de tous les ateliers.  
+### <a name="a-using-the-avg-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-in-which-labor-hours-are-greater-than-the-average-for-all-work-center-locations"></a>R. Utilisation de la fonction XQuery avg() pour rechercher les ateliers dans le processus de fabrication, dans lesquels le nombre d'heures de travail est supérieur à la moyenne de tous les ateliers.  
  Vous pouvez réécrire la requête fournie dans [fonction min (XQuery)](../xquery/aggregate-functions-min.md) à utiliser le **avg()** (fonction).  
   
 ## <a name="implementation-limitations"></a>Limites de mise en œuvre  

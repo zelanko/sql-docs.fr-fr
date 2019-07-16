@@ -1,5 +1,5 @@
 ---
-title: XSD Annotations (SQLXML 4.0) | Microsoft Docs
+title: Annotations XSD (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -13,14 +13,13 @@ ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80a08ac5fae625a834674b1109b74d8e57e8fb45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 583f9803ea7a11384ff0b27a73cfd95be5a24101
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066868"
 ---
 # <a name="xsd-annotations-sqlxml-40"></a>Annotations XSD (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "65980657"
 |**sql:max-depth**|Vous permet de spécifier la profondeur dans les relations récursives spécifiées dans le schéma.|[Spécification de la profondeur dans les relations récursives à l’aide de sql:max-depth](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-depth-in-recursive-relationships-by-using-sql-max-depth.md)|Non pris en charge|  
 |**sql:overflow-field**|Identifie la colonne de la base de données qui contient les données de dépassement.|[Récupération des données à l’aide de SQL : Overflow-champ &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/retrieving-unconsumed-data-using-the-sql-overflow-field-sqlxml-4-0.md)|Identique|  
 |**sql:prefix**|Crée des attributs ID, IDREF et IDREFS XML valides. Ajoute les valeurs des attributs ID, IDREF et IDREFS avec une chaîne.|[Création d’ID valide, IDREF et IDREFS à des attributs de Type à l’aide de SQL : Prefix &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-valid-id-idref-and-idrefs-type-attributes-using-sql-prefix-sqlxml-4-0.md)|Identique|  
-|**sql:relationship**|Spécifie des relations entre des éléments XML. Le **parent**, **enfant**, **-clé parente**, et **-clé enfant** attributs sont utilisés pour établir la relation.|[Spécification de relations à l’aide de SQL : Relationship &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)|Les noms des attributs sont différents :<br /><br /> **key-relation**<br /><br /> **foreign-relation**<br /><br /> **key**<br /><br /> **foreign-key**|  
+|**sql:relationship**|Spécifie des relations entre des éléments XML. Le **parent**, **enfant**, **-clé parente**, et **-clé enfant** attributs sont utilisés pour établir la relation.|[Spécification de relations à l’aide de SQL : Relationship &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-relationships-using-sql-relationship-sqlxml-4-0.md)|Les noms des attributs sont différents :<br /><br /> **relation de clé**<br /><br /> **foreign-relation**<br /><br /> **key**<br /><br /> **foreign-key**|  
 |**sql:use-cdata**|Permet de spécifier les sections CDATA à utiliser pour certains éléments dans le document XML.|[Création de Sections CDATA à l’aide de SQL : use-cdata &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-using/creating-cdata-sections-using-sql-use-cdata-sqlxml-4-0.md)|Identique|  
   
 > [!NOTE]  

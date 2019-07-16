@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe731839-c5c4-4884-bb6a-644eca28bb30
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8fbf20597cc037f0ac8835cd476cb380b020d339
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4a59bc73be89222fef49aa9e779232cd3548e8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945016"
 ---
 # <a name="database-requirements-master-data-services"></a>Configuration requise pour la base de données (Master Data Services)
 
@@ -58,7 +57,7 @@ ms.locfileid: "65477052"
   
  Pour obtenir la liste des fonctionnalités prises en charge par les différentes éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md). 
   
-### <a name="operating-system"></a>Système d'exploitation  
+### <a name="operating-system"></a>Système d’exploitation  
  Pour plus d’informations sur les systèmes d’exploitation Windows pris en charge et la configuration requise pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)], consultez [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
 ### <a name="accounts-and-permissions"></a>Comptes et autorisations  

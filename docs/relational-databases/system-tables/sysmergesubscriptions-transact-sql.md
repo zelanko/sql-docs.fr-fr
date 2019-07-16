@@ -17,31 +17,30 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: baea56d983ac1c2fff9016d1a385c8b4d918fb7a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029770"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque Abonné connu et constitue une table locale sur le serveur de publication. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |subscriber_server|**sysname**|L’ID du serveur. Permet de mapper le champ srvid avec la valeur propre au serveur lors de la migration d'une copie de la base de données d'abonnement vers un autre serveur.|  
 |db_name|**sysname**|Le nom de la base de données à l’abonnement.|  
 |pubid|**uniqueidentifier**|ID de la publication à partir de laquelle l'abonnement actuel a été créé.|  
-|datasource_type|**Int**|Le type de source de données :<br /><br /> **0** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **2** = jet OLE DB.|  
+|datasource_type|**int**|Le type de source de données :<br /><br /> **0** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **2** = jet OLE DB.|  
 |subid|**uniqueidentifier**|Numéro d'identification unique de l'abonnement.|  
 |replnickname|**binaire**|Surnom compressé du réplica.|  
 |replicastate|**uniqueidentifier**|Identificateur unique utilisé pour déterminer si la synchronisation précédente a réussi en comparant la valeur sur l'Éditeur à celle sur l'Abonné.|  
 |status|**tinyint**|L’état de l’abonnement :<br /><br /> **0** = inactif.<br /><br /> **1** = actif.<br /><br /> **2** = supprimé.|  
-|subscriber_type|**Int**|Le type d’abonné :<br /><br /> **1** = global.<br /><br /> **2** = local.<br /><br /> **3** = anonyme.|  
-|subscription_type|**Int**|Le type d’abonnement :<br /><br /> **0** = push.<br /><br /> **1** = par extraction.<br /><br /> **2** = anonyme.|  
+|subscriber_type|**int**|Le type d’abonné :<br /><br /> **1** = global.<br /><br /> **2** = local.<br /><br /> **3** = anonyme.|  
+|subscription_type|**int**|Le type d’abonnement :<br /><br /> **0** = push.<br /><br /> **1** = par extraction.<br /><br /> **2** = anonyme.|  
 |sync_type|**tinyint**|Type de synchronisation :<br /><br /> **1** = automatique.<br /><br /> **2** = pas de synchronisation.|  
 |description|**nvarchar(255)**|Brève description de l'abonnement.|  
 |priority|**real**|Indique la priorité de l'abonnement et permet l'implémentation d'utilitaires de résolution de conflits basée sur les priorités. Est égal à **0,00** pour tous les abonnements locaux ou anonymes.|  
@@ -57,12 +56,12 @@ ms.locfileid: "52802792"
 |last_sync_status|**Int**|État de l'abonnement :<br /><br /> **0** = tous les travaux sont en attente de démarrage.<br /><br /> **1** = une ou plusieurs travaux commencent.<br /><br /> **2** = tous les travaux ont été correctement exécutées.<br /><br /> **3** = au moins un travail exécute.<br /><br /> **4** = tous les travaux sont planifiés et inactifs.<br /><br /> **5** = au moins un travail est relancée après un échec.<br /><br /> **6** = au moins un travail n’a pas pu s’exécuter avec succès.|  
 |last_sync_summary|**sysname**|Description des résultats de la dernière synchronisation.|  
 |metadatacleanuptime|**datetime**|La dernière **datetime** métadonnées arrivées à expiration a peut-être été retirée de tables de système de réplication de fusion.|  
-|partition_id|**Int**|Identifie la partition précalculée à laquelle appartient l'abonnement.|  
+|partition_id|**int**|Identifie la partition précalculée à laquelle appartient l'abonnement.|  
 |cleanedup_unsent_changes|**bit**|Indique que les métadonnées relatives aux modifications non envoyées ont été nettoyées sur l'Abonné.|  
-|replica_version|**Int**|Identifie la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l'abonné auquel appartient l'abonnement. Les valeurs possibles sont :<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-|supportability_mode|**Int**|À usage interne uniquement|  
+|replica_version|**int**|Identifie la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de l'abonné auquel appartient l'abonnement. Les valeurs possibles sont :<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|supportability_mode|**int**|À usage interne uniquement|  
 |application_name|**nvarchar(128)**|À usage interne uniquement|  
-|subscriber_number|**Int**|À usage interne uniquement|  
+|subscriber_number|**int**|À usage interne uniquement|  
 |last_makegeneration_datetime|**datetime**|La dernière **datetime** que le processus de makegeneration s’est exécuté pour le serveur de publication. Pour plus d’informations, consultez le paramètre - MakeGenerationInterval dans [Agent de fusion de réplication](../../relational-databases/replication/agents/replication-merge-agent.md).|  
   
 ## <a name="see-also"></a>Voir aussi  

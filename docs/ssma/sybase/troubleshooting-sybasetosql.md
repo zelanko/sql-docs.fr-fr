@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting (SybaseToSQL) | Microsoft Docs
+title: Résolution des problèmes (SybaseToSQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d2f8fa753623e9b7d978556c16c5c4bbeba6efe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ecbd6235e0ebec1850bb959aec2aa25832e857f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63069645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020882"
 ---
 # <a name="troubleshooting-sybasetosql"></a>Résolution des problèmes (SybaseToSQL)
 Il n’est pas rare de rencontrer à mi-chemin de problèmes de migration exécutant les commandes ou scripts de la console.  
@@ -28,7 +27,7 @@ Les erreurs réparables peuvent porter sur :
   
 2.  Procédure  
   
-3.  Affichage  
+3.  Vue  
   
 4.  Déclencheur  
   

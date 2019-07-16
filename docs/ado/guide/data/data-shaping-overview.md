@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4cb5fd29-4e56-46ac-ae48-a6771c321c0c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6d693ccbeb06860cd4633a933e80b9ccbe6526a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3bce50892520dbc889a62960065ce3d8e423a81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925621"
 ---
 # <a name="data-shaping-overview"></a>Vue d’ensemble de la mise en forme des données
 *Mise en forme des données* revient à développer des relations hiérarchiques entre deux ou plusieurs entités logiques dans une requête. La hiérarchie peut être observée dans les relations parent-enfant entre un enregistrement d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)et un ou plusieurs enregistrements (également appelé un chapitre) d’un autre **Recordset**. Dans une relation parent-enfant, le parent **Recordset** contient l’enfant **Recordset**. Un exemple d’une telle relation hiérarchique est customers et orders. Pour chaque client dans une base de données, il peut y avoir zéro ou plusieurs commandes. La relation hiérarchique peut être récursives, ce qui signifie que les enregistrements de petit-enfant peuvent être imbriquées dans un enregistrement enfant. En principe, un enregistrement hiérarchique peut être imbriqué à n’importe quelle profondeur. Dans la pratique, ADO limite la récursivité à un maximum de 512 **Recordset**s.  

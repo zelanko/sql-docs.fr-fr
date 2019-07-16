@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb41d658637258c6d60b5adb4e0d7abb9ae81d91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3a4df236273b5afcaba78052ac236669bb133f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019368"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>C en SQL : Intervalles de jours-heures
 Les identificateurs pour les types de données ODBC C intervalle de jours-heures sont :  
@@ -48,12 +47,12 @@ Les identificateurs pour les types de données ODBC C intervalle de jours-heures
   
  Le tableau suivant présente les types de données à laquelle l’intervalle de données C peut être converti à ODBC SQL. Pour obtenir une explication des colonnes et des termes dans la table, consultez [conversion des données à partir de C en Types de données SQL](../../../odbc/reference/appendixes/converting-data-from-c-to-sql-data-types.md).  
   
-|Identificateur de type SQL|Test|SQLSTATE|  
+|Identificateur de type SQL|Tester|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR[a]<br /><br /> SQL_VARCHAR[a]<br /><br /> SQL_LONGVARCHAR[a]|Longueur d’octet de colonne > = longueur d’octet de caractère<br /><br /> Longueur d’octet de colonne < caractères de longueur d’octet [a]<br /><br /> Valeur de données n’est pas un littéral d’intervalle valide|n/a<br /><br /> 22001<br /><br /> 22015|  
-|SQL_WCHAR[a]<br /><br /> SQL_WVARCHAR[a]<br /><br /> SQL_WLONGVARCHAR[a]|Longueur de colonne caractère > = longueur de caractères de données<br /><br /> Longueur de colonne caractère < caractères de longueur des données [a]<br /><br /> Valeur de données n’est pas un littéral d’intervalle valide|n/a<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b] SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b] SQL_NUMERIC[b]<br /><br /> SQL_DECIMAL[b]|Conversion d’un intervalle de champ unique n’a pas abouti à la troncation des chiffres entières<br /><br /> La conversion a provoqué une troncation de chiffres entières|n/a<br /><br /> 22003|  
-|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Valeur de données a été convertie sans troncation de tous les champs<br /><br /> Un ou plusieurs champs de valeur de données ont été tronquées lors de la conversion|n/a<br /><br /> 22015|  
+|SQL_CHAR[a]<br /><br /> SQL_VARCHAR[a]<br /><br /> SQL_LONGVARCHAR[a]|Longueur d’octet de colonne > = longueur d’octet de caractère<br /><br /> Longueur d’octet de colonne < caractères de longueur d’octet [a]<br /><br /> Valeur de données n’est pas un littéral d’intervalle valide|N/A<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR[a]<br /><br /> SQL_WVARCHAR[a]<br /><br /> SQL_WLONGVARCHAR[a]|Longueur de colonne caractère > = longueur de caractères de données<br /><br /> Longueur de colonne caractère < caractères de longueur des données [a]<br /><br /> Valeur de données n’est pas un littéral d’intervalle valide|N/A<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT [b]<br /><br /> SQL_SMALLINT[b] SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b] SQL_NUMERIC[b]<br /><br /> SQL_DECIMAL[b]|Conversion d’un intervalle de champ unique n’a pas abouti à la troncation des chiffres entières<br /><br /> La conversion a provoqué une troncation de chiffres entières|N/A<br /><br /> 22003|  
+|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Valeur de données a été convertie sans troncation de tous les champs<br /><br /> Un ou plusieurs champs de valeur de données ont été tronquées lors de la conversion|N/A<br /><br /> 22015|  
   
  [a] C tous les types d’intervalle peuvent être converti en un type de données caractère.  
   

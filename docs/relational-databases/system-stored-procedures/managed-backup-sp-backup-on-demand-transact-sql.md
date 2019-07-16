@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8945ba72471855b2c3de5b169b12bea4cc2b656e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 980fb3006819e5727033376beae1f8156d26e0fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942053"
 ---
 # <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ EXEC managed_backup.sp_backup_on_demand
  Nom de la base de données sur laquelle la sauvegarde doit être effectuée. Le @database_name est **SYSNAME**.  
   
  @type  
- Type de sauvegarde à effectuer :  base de données ou journal. Le @type paramètre est **nvarchar (32)**.  
+ Le type de sauvegarde à effectuer :  Base de données ou journal. Le @type paramètre est **nvarchar (32)** .  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (réussite) ou 1 (échec)  

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd0d134e723a8ca45729933cbbf5b0d75bbde7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ff5b859b9bddce216e4f6bed343611ec155ffbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078355"
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Géo-réplication Active - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -41,10 +40,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @target_server = ] 'server_name'  
+ [ @target_server =] 'nom_serveur'  
  Nom du serveur SQL Database qui héberge la base de données secondaire active. server_name est de type sysname, sans valeur par défaut.  
   
- [ @target_database = ] 'database_name'  
+ [ @target_database =] 'database_name'  
  Nom de la base de données secondaire active. database_name est de type sysname, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

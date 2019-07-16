@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 921927f5-1b1e-452a-a79e-c691829fd826
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 1d265a40d21a09bf7682075bf13d5b4c5079d914
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c732645c526b2179265a6669055d005e944ee114
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992104"
 ---
 # <a name="dqs-security"></a>Sécurité DQS
 
@@ -35,7 +34,7 @@ ms.locfileid: "66802800"
   
 -   L' **opérateur de base de connaissances DQS** (rôle dqs_kb_operator) peut modifier et exécuter un projet. Il ne peut effectuer aucun type de gestion des connaissances ; il ne peut pas créer ni modifier une base de connaissances. Il peut voir les données d'analyse des activités, mais ne peut pas terminer une activité ni remplir des fonctions d'administration.  
   
-## <a name="user-management"></a>Gestion des utilisateurs  
+## <a name="user-management"></a>User Management  
  L'administrateur de base de données (DBA) crée des utilisateurs DQS et les associe à des rôles DQS dans SQL Server Management Studio. Il gère leurs autorisations en ajoutant des connexions SQL en tant qu'utilisateurs de la base de données DQS_MAIN, puis en associant chaque utilisateur à un des rôles DQS. Chaque rôle reçoit des autorisations sur un ensemble de procédures stockées dans la base de données DQS_MAIN. Les trois rôles DQS ne sont pas disponibles pour les bases de données DQS_PROJECTS et DQS_STAGING_DATA.  
   
 ## <a name="related-tasks"></a>Tâches associées  

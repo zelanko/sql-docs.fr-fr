@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: ee5c90de-3c61-4f63-8b57-1543d1704a0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66968fe0ec81f437c3da76428fe981041c7892d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f98bbc393db9b1e1d10fe0f68285f30231c0ef8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003106"
 ---
 # <a name="sqlerror-function"></a>SQLError, fonction
 **Conformité**  
- Version introduite : Conformité aux normes 1.0 ODBC : Déprécié  
+ Version introduite : Conformité aux normes 1.0 ODBC : Déconseillé  
   
  **Résumé**  
  **SQLError** retourne des informations d’erreur ou d’état.  

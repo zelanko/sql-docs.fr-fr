@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bea7712fd4efa1934117937a5168843d727d0dc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 515f3dad1f07535a5d0c8e590adadce0923180db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022747"
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,15 +36,15 @@ ms.locfileid: "62693911"
 > [!NOTE]  
 >  Si une base de données ne participe pas à la mise en miroir, toutes les colonnes avec le préfixe « mirroring_ » possèdent la valeur NULL.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|ID de la base de données. Unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**database_id**|**int**|ID de la base de données. Unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**mirroring_guid**|**uniqueidentifier**|ID du partenariat de mise en miroir.<br /><br /> NULL = la base de données n’est pas accessible ou n’est pas mise en miroir.<br /><br /> Remarque : Si la base de données ne participe pas à la mise en miroir, toutes les colonnes que le préfixe « Mirroring » ont la valeur NULL.|  
 |**mirroring_state**|**tinyint**|État de la base de données miroir et de la session de mise en miroir de base de données.<br /><br /> 0 = suspendu<br /><br /> 1 = Déconnecté de l'autre partenaire<br /><br /> 2 = Synchronisation<br /><br /> 3 = Basculement en attente<br /><br /> 4 = Synchronisé<br /><br /> 5 = les serveurs partenaires ne sont pas synchronisés. Le basculement n'est maintenant pas possible.<br /><br /> 6 = les serveurs partenaires sont synchronisés. Le basculement est éventuellement possible. Pour plus d’informations sur la configuration requise pour le basculement, consultez [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).<br /><br /> NULL = La base de données n'est pas accessible ou n'a pas été mise en miroir.|  
 |**mirroring_state_desc**|**nvarchar(60)**|La description de l'état de la base de données miroir et de la session de mise en miroir de base de données peut être :<br /><br /> DISCONNECTED<br /><br /> SYNCHRONIZED<br /><br /> SYNCHRONIZING<br /><br /> PENDING_FAILOVER<br /><br /> SUSPENDED<br /><br /> UNSYNCHRONIZED<br /><br /> SYNCHRONIZED<br /><br /> NULL<br /><br /> Pour plus d’informations, consultez [États de la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md).|  
 |**mirroring_role**|**tinyint**|Rôle actuel de la base de données locale dans la session de mise en miroir de base de données.<br /><br /> 1 = Principal<br /><br /> 2 = Miroir<br /><br /> NULL = La base de données n'est pas accessible ou n'a pas été mise en miroir.|  
 |**mirroring_role_desc**|**nvarchar(60)**|Description du rôle de base de données locale dans la mise en miroir, pouvant posséder l'une des valeurs suivantes :<br /><br /> PRINCIPAL<br /><br /> MIRROR|  
-|**mirroring_role_sequence**|**Int**|Nombre de fois où des partenaires de mise en miroir ont fait basculer les rôles principaux et en miroir en raison d'un basculement ou d'un service forcé.<br /><br /> NULL = La base de données n'est pas accessible ou n'a pas été mise en miroir.|  
+|**mirroring_role_sequence**|**int**|Nombre de fois où des partenaires de mise en miroir ont fait basculer les rôles principaux et en miroir en raison d'un basculement ou d'un service forcé.<br /><br /> NULL = La base de données n'est pas accessible ou n'a pas été mise en miroir.|  
 |**mirroring_safety_level**|**tinyint**|Paramètre de sécurité pour les mises à jour sur la base de données miroir :<br /><br /> 0 = État inconnu<br /><br /> 1 = Off [asynchrone]<br /><br /> 2 = Complet [synchrone]<br /><br /> NULL = La base de données n'est pas accessible ou n'a pas été mise en miroir.|  
 |**mirroring_safety_level_desc**|**nvarchar(60)**|Paramètre de sécurité de transaction pour les mises à jour sur la base de données miroir, pouvant posséder l'une des valeurs suivantes :<br /><br /> UNKNOWN<br /><br /> OFF<br /><br /> FULL<br /><br /> NULL|  
 |**mirroring_safety_sequence**|**Int**|Mettre à jour le numéro de séquence pour les modifications au niveau de la sécurité de transaction.<br /><br /> NULL = La base de données n'est pas accessible ou n'a pas été mise en miroir.|  
@@ -56,8 +55,8 @@ ms.locfileid: "62693911"
 |**mirroring_witness_state_desc**|**nvarchar(60)**|La description de l'état peut être :<br /><br /> UNKNOWN<br /><br /> CONNECTED<br /><br /> DISCONNECTED<br /><br /> NULL|  
 |**mirroring_failover_lsn**|**numeric(25,0)**|Numéro séquentiel dans le journal (LSN) du dernier enregistrement du journal des transactions dont le renforcement sur disque est garanti sur les deux partenaires. Après un basculement, le **mirroring_failover_lsn** est utilisé par les partenaires comme point de réconciliation à partir duquel le nouveau serveur miroir commence la synchronisation de la nouvelle base de données miroir avec la nouvelle base de données principale.|  
 |**mirroring_connection_timeout**|**Int**|Délai d'attente de connexion de mise en miroir en secondes. Nombre de secondes à patienter avant la réponse d'un serveur partenaire ou témoin avant de les considérer comme indisponibles. La valeur de délai d'attente par défaut est de 10 secondes.<br /><br /> NULL = La base de données n'est pas accessible ou n'a pas été mise en miroir.|  
-|**mirroring_redo_queue**|**Int**|Quantité maximale de journaux à restaurer par progression sur le miroir. Si mirroring_redo_queue_type est définie sur UNLIMITED, qui est le paramètre par défaut, cette colonne est NULL. Si la base de données n'est pas en ligne, cette colonne possède aussi la valeur NULL.<br /><br /> Sinon, cette colonne contient la quantité maximale de journaux en mégaoctets. Lorsque la valeur maximale est atteinte, le journal est temporairement bloqué sur le principal pendant que le serveur en miroir mirror se met à niveau. Cette fonction limite le temps de basculement.<br /><br /> Pour en savoir plus, voir [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  
-|**mirroring_redo_queue_type**|**nvarchar(60)**|UNLIMITED indique que la mise en miroir ne limite la file d'attente de restauration par progression. Il s'agit du paramètre par défaut.<br /><br /> Mo indique la taille maximale de la file d'attente de restauration par progression en mégaoctets. Sachez que si la taille de la file d'attente a été spécifiée en kilo-octets ou mégaoctets, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] convertit cette valeur en mégaoctets.<br /><br /> Si la base de données n'est pas en ligne, cette colonne possède la valeur NULL.|  
+|**mirroring_redo_queue**|**int**|Quantité maximale de journaux à restaurer par progression sur le miroir. Si mirroring_redo_queue_type est définie sur UNLIMITED, qui est le paramètre par défaut, cette colonne est NULL. Si la base de données n'est pas en ligne, cette colonne possède aussi la valeur NULL.<br /><br /> Sinon, cette colonne contient la quantité maximale de journaux en mégaoctets. Lorsque la valeur maximale est atteinte, le journal est temporairement bloqué sur le principal pendant que le serveur en miroir mirror se met à niveau. Cette fonction limite le temps de basculement.<br /><br /> Pour en savoir plus, voir [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  
+|**mirroring_redo_queue_type**|**nvarchar(60)**|UNLIMITED indique que la mise en miroir ne limite la file d'attente de restauration par progression. Il s’agit du paramètre par défaut.<br /><br /> Mo indique la taille maximale de la file d'attente de restauration par progression en mégaoctets. Sachez que si la taille de la file d'attente a été spécifiée en kilo-octets ou mégaoctets, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] convertit cette valeur en mégaoctets.<br /><br /> Si la base de données n'est pas en ligne, cette colonne possède la valeur NULL.|  
 |**mirroring_end_of_log_lsn**|**numeric(25,0)**|end-of-log local qui a été vidé sur le disque. Cela est comparable au LSN renforcé à partir du serveur miroir (voir la **mirroring_failover_lsn** colonne).|  
 |**mirroring_replication_lsn**|**numeric(25,0)**|Numéro séquentiel dans le journal maximum que la réplication peut envoyer.|  
   

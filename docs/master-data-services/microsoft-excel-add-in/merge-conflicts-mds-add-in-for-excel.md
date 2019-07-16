@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf95978f-a2c5-4325-8606-dbd4e88741b8
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a3d4af19da0c5d1a6724a0e7beb87fa4b5c8661b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22c25126106c6b93d779b6c494af0bff7b5b08af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074564"
 ---
 # <a name="merge-conflicts-mds-add-in-for-excel"></a>Fusionner les conflits (complément MDS pour Excel)
 
@@ -52,6 +51,6 @@ ms.locfileid: "65477148"
 4.  Après avoir cliqué sur **Appliquer**, vous pouvez apporter des modifications supplémentaires et réeffectuer la publication. Vous pouvez également cliquer sur **Annuler** si vous souhaitez annuler la mise à jour et recharger la dernière version à partir du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue d’ensemble : L’importation de données à partir d’Excel &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
+ [Présentation : L’importation de données à partir d’Excel &#40;complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/overview-importing-data-from-excel-mds-add-in-for-excel.md)  
   
   

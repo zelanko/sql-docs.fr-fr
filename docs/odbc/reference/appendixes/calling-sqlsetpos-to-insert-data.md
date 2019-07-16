@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 86647601dfc0223dd6fa4f0ffcc0e5db695868b5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: e07bf71f0d622ad9095974cd7020001625edf1f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037707"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>Appel de SQLSetPos pour insérer des données
 Lorsqu’une application ODBC *2.x* application fonctionne avec une application ODBC *3.x* pilote appelle **SQLSetPos** avec un *opération* argument de SQL_ADD, le Gestionnaire de pilotes ne mappe pas cet appel à **SQLBulkOperations**. Si une application ODBC *3.x* pilote doit fonctionner avec une application qui appelle **SQLSetPos** avec SQL_ADD, le pilote doit prendre en charge cette opération.  

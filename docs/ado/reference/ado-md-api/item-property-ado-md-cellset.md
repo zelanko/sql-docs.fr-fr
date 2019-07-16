@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0e93d79b-b12e-4e98-889e-c2dfcca20fd0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 68191a6d6e8541eb89a7c4be3c6820b2627fc90a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c7fbce544cac188db7ed3b3d40478aa63809405
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949626"
 ---
 # <a name="item-property-ado-md-cellset"></a>Item, propriété (objet Cellset d’ADO MD)
 Récupère une cellule à partir d’un [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) à l’aide de ses coordonnées.  

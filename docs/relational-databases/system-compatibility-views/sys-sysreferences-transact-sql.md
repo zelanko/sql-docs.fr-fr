@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 81276f13-202e-4e74-962d-46eb98c98d2e
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10409e8655925e9ead7c5954332567aded0dc184
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3edce02f20a16ebd9814f995f00023f8f3b153de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986493"
 ---
 # <a name="syssysreferences-transact-sql"></a>sys.sysreferences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -37,11 +36,11 @@ ms.locfileid: "47643459"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**constid**|**Int**|ID de la contrainte FOREIGN KEY.|  
-|**fkeyid**|**Int**|ID de la table qui contient la référence.|  
-|**rkeyid**|**Int**|ID de la table référencée.|  
+|**fkeyid**|**int**|ID de la table qui contient la référence.|  
+|**rkeyid**|**int**|ID de la table référencée.|  
 |**rkeyindid**|**smallint**|ID de l'index unique de la table référencée comprenant les colonnes clé référencées.|  
 |**keycnt**|**smallint**|Nombre de colonnes dans la clé.|  
 |**forkeys**|**varbinary(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

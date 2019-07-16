@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7774bec919a494ceac674b764eef2e38ca99414c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 1737ae8427df8d6d9bd6dbb9dea359da09f0c657
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59291519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035874"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Créer une base de données de graphique et exécuter certains critères spéciaux des requêtes à l’aide de T-SQL
 
@@ -34,7 +33,7 @@ Cet exemple fournit un [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script pou
 Cet exemple crée un schéma de graphique, comme montré dans la Figure 1, pour un réseau social hypothétique qui a des nœuds de personnes, Restaurant et City. Ces nœuds sont connectés entre eux à l’aide de vos amis, j’aime, les bords LivesIn et trouvera dans.
 
 ![personne-villes-restaurants-tables](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "exemple de base de données de graphique Sql")  
-Figure 1 : Exemple de schéma avec un restaurant, ville, nœuds de la personne et LivesIn, trouvera dans, les bords de mentions j’aime.
+Figure 1 : Exemple de schéma avec un restaurant, ville, nœuds de la personne et LivesIn, trouvera dans, les bords de mentions j’aime.
 
 ## <a name="sample-script"></a>Exemple de script
 
@@ -166,7 +165,7 @@ go
 ## <a name="script-explanation"></a>Explication du script  
 Ce script utilise la nouvelle syntaxe T-SQL pour créer des tables de nœuds et d’arêtes. Montre comment insérer des données dans les tables de nœuds et edge à l’aide de `INSERT` instruction et montre également comment utiliser `MATCH` clause pour la navigation et de critères spéciaux.
 
-|Command    |Remarques
+|Command    |Notes
 |---  |---  |
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Créer la table de nœuds ou d’arêtes de graphe  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Insérer dans une table de nœuds ou d’arêtes  |

@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 8cd2c2a2-25c8-4aff-951c-b593bbfc90ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62d22d1bf5fc3d01bf62afd2da6b3ebbc2bb0289
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b429e499cccaad553236b4ebee78374c69c7c4dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093011"
 ---
 # <a name="sqlsetconnectoption-function"></a>SQLSetConnectOption, fonction
 **Conformité**  
- Version introduite : Conformité aux normes 1.0 ODBC : Déprécié  
+ Version introduite : Conformité aux normes 1.0 ODBC : Déconseillé  
   
  **Résumé**  
  Dans ODBC 3 *.x*, la fonction ODBC 2.0 **SQLSetConnectOption** a été remplacé par **SQLSetConnectAttr**. Pour plus d’informations, consultez [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md).  

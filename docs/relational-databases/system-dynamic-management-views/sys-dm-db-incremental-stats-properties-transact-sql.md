@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs
+title: Sys.dm_db_incremental_stats_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2017
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 562c6de437c37052b65b9d31571fa4c9b2c3a749
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17ef15033281f040e00444dfbfc2e739bfa7a338
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004931"
 ---
 # <a name="sysdmdbincrementalstatsproperties-transact-sql"></a>sys.dm_db_incremental_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -48,9 +47,9 @@ sys.dm_db_incremental_stats_properties (object_id, stats_id)
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|object_id|**Int**|ID de l’objet (table) pour lequel retourner les propriétés de l’objet de statistiques.|  
+|object_id|**int**|ID de l’objet (table) pour lequel retourner les propriétés de l’objet de statistiques.|  
 |stats_id|**Int**|ID de l'objet de statistiques. Est unique dans la table. Pour plus d’informations, consultez [sys.stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-stats-transact-sql.md).|
 |partition_number|**Int**|Numéro de la partition contenant la partie de la table.|  
 |last_updated|**datetime2**|Date et heure de la dernière mise à jour de l'objet de statistiques. Pour plus d’informations, consultez la section [Notes](#Remarks) dans cette page.|  

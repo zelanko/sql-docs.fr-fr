@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c7ab77981c329c334b22d6fd9735188882b385c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7736c0001c8e22b6cc7c72b2e721e31519d035b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068066"
 ---
 # <a name="sysquerycontextsettings-transact-sql"></a>sys.query_context_settings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Contient des informations sur la sémantique qui affecte les paramètres de contexte associés à une requête. Il existe un nombre de paramètres de contexte disponibles dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui influencent la sémantique de requête (en définissant le résultat correct de la requête). Le même texte de requête compilé avec différents paramètres peut produire des résultats différents (selon les données sous-jacentes).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**context_settings_id**|**bigint**|Clé primaire. Cette valeur est exposée dans Showplan XML pour les requêtes.|  
 |**set_options**|**varbinary(8)**|Masque de bits refléter l’état de plusieurs options SET. Pour plus d’informations, consultez [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).|  
@@ -44,7 +43,7 @@ ms.locfileid: "63013545"
 |**required_cursor_options**|**Int**|Options de curseur spécifiées par l'utilisateur (type de curseur par exemple).|  
 |**acceptable_cursor_options**|**Int**|Options de curseur dans lesquelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut convertir implicitement afin de prendre en charge l'exécution de l'instruction.|  
 |**merge_action_type**|**smallint**|Le type de plan d’exécution de déclencheur utilisé comme résultat d’une **fusion** instruction.<br /><br /> 0 indique un plan de non-déclencheur, un plan de déclencheur qui ne s’exécute pas en tant que le résultat d’une **fusion** instruction ou un plan de déclencheur qui s’exécute en tant que le résultat d’un **fusion** instruction qui spécifie uniquement une **Supprimer** action.<br /><br /> 1 indique un **insérer** plan de déclencheur qui s’exécute en tant que le résultat d’une **fusion** instruction.<br /><br /> 2 indique un **mise à jour** plan de déclencheur qui s’exécute en tant que le résultat d’une **fusion** instruction.<br /><br /> 3 indique un **supprimer** plan de déclencheur qui s’exécute en tant que le résultat d’une **fusion** instruction contenant un correspondant **insérer** ou **mise à jour** action.<br /><br /> <br /><br /> Pour les déclencheurs imbriqués exécutés par des actions en cascade, cette valeur est l’action de la **fusion** instruction qui a provoqué la cascade.|  
-|**default_schema_id**|**Int**|ID du schéma par défaut, qui est utilisé pour résoudre les noms qui ne sont pas entièrement qualifiés.|  
+|**default_schema_id**|**int**|ID du schéma par défaut, qui est utilisé pour résoudre les noms qui ne sont pas entièrement qualifiés.|  
 |**is_replication_specific**|**bit**|Utilisé pour la réplication.|  
 |**is_contained**|**varbinary(1)**|1 indique une relation contenant-contenu de la base de données.|  
   

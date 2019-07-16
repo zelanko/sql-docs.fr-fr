@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76e1154e3cdf3cc52d311d0afa6372b4be9019c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1bdaf63313a339d2b25ca6648ad25c1b4466b3f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005737"
 ---
 # <a name="sqlprocedures-function"></a>Fonction SQLProcedures
 **Conformité**  
@@ -126,16 +125,16 @@ SQLRETURN SQLProcedures(
   
  Le tableau suivant répertorie les colonnes du jeu de résultats. Les colonnes supplémentaires au-delà de la colonne 8 (PROCEDURE_TYPE) peuvent être définies par le pilote. Une application doit accéder à des colonnes spécifiques aux pilotes à rebours à partir de la fin du jeu de résultats au lieu d’en spécifiant une position ordinale explicite. Pour plus d’informations, consultez [les données retournées par les fonctions de catalogue](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Nom de colonne|Numéro de colonne|Type de données|Commentaires|  
+|Nom de la colonne|Numéro de colonne|Type de données|Commentaires|  
 |-----------------|-------------------|---------------|--------------|  
 |PROCEDURE_CAT (ODBC 2.0)|1|Varchar|Identificateur du catalogue de procédure ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines procédures, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour ces procédures qui n’ont pas de catalogues.|  
 |PROCEDURE_SCHEM (ODBC 2.0)|2|Varchar|Identificateur de schéma de procédure ; NULL si non applicable à la source de données. Si un pilote prend en charge les schémas pour certaines procédures, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour ces procédures qui n’ont pas de schémas.|  
-|PROCEDURE_NAME (ODBC 2.0)|3|Varchar non NULL|Identificateur de la procédure.|  
+|NOM_PROCÉDURE (ODBC 2.0)|3|Varchar non NULL|Identificateur de la procédure.|  
 |NUM_INPUT_PARAMS (ODBC 2.0)|4|N/A|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
-|NUM_OUTPUT_PARAMS (ODBC 2.0)|5|N/A|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
-|NUM_RESULT_SETS (ODBC 2.0)|6|N/A|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
+|NUM_OUTPUT_PARAMS (ODBC 2.0)|5\.|N/A|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
+|NUM_RESULT_SETS (ODBC 2.0)|6\.|N/A|Réservé pour un usage ultérieur. Les applications ne doivent pas dépendre les données retournées dans ces colonnes de résultats.|  
 |REMARQUES (ODBC 2.0)|7|Varchar|Une description de la procédure.|  
-|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Définit le type de procédure :<br /><br /> SQL_PT_UNKNOWN: Il est impossible de déterminer si la procédure retourne une valeur.<br /><br /> SQL_PT_PROCEDURE: L’objet retourné est une procédure ; Autrement dit, il n’a pas une valeur de retour.<br /><br /> SQL_PT_FUNCTION: L’objet retourné est une fonction ; Autrement dit, il a une valeur de retour.|  
+|PROCEDURE_TYPE (ODBC 2.0)|8|Smallint|Définit le type de procédure :<br /><br /> SQL_PT_UNKNOWN : Il est impossible de déterminer si la procédure retourne une valeur.<br /><br /> SQL_PT_PROCEDURE : L’objet retourné est une procédure ; Autrement dit, il n’a pas une valeur de retour.<br /><br /> SQL_PT_FUNCTION : L’objet retourné est une fonction ; Autrement dit, il a une valeur de retour.|  
   
  Le *SchemaName* et *ProcName* arguments acceptent des modèles de recherche. Pour plus d’informations sur les modèles de recherche valides, consultez [Arguments de valeur de modèle](../../../odbc/reference/develop-app/pattern-value-arguments.md).  
   

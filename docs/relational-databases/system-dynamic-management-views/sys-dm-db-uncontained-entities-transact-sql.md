@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_uncontained_entities (Transact-SQL) | Microsoft Docs
+title: Sys.dm_db_uncontained_entities (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb3351abb75827c3eac7f48687823ffeed76986c
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 625c6134c91a9b452b8df2b7e235b78126c1354e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026922"
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +34,13 @@ ms.locfileid: "54405609"
   
 ||||  
 |-|-|-|  
-|**Nom de colonne**|**Type**|**Description**|  
-|*class*|**Int**|1 = objet ou colonne (inclut des modules, XPs, vues, synonymes et tables).<br /><br /> 4 = Principal de la base de données<br /><br /> 5 = Assembly<br /><br /> 6 = Type<br /><br /> 7 = Index (index de texte intégral)<br /><br /> 12 = déclencheur DDL de base de données<br /><br /> 19 = Itinéraire<br /><br /> 30 = Spécification d'audit|  
+|**Nom de la colonne**|**Type**|**Description**|  
+|*class*|**int**|1 = objet ou colonne (inclut des modules, XPs, vues, synonymes et tables).<br /><br /> 4 = Principal de la base de données<br /><br /> 5 = Assembly<br /><br /> 6 = Type<br /><br /> 7 = Index (index de texte intégral)<br /><br /> 12 = déclencheur DDL de base de données<br /><br /> 19 = Itinéraire<br /><br /> 30 = Spécification d'audit|  
 |*class_desc*|**nvarchar(120)**|Description de la classe de l'entité. Parmi les options suivantes pour correspondre à la classe :<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **DATABASE_PRINCIPAL**<br /><br /> **ASSEMBLY**<br /><br /> **TYPE**<br /><br /> **INDEX**<br /><br /> **DATABASE_DDL_TRIGGER**<br /><br /> **ROUTE**<br /><br /> **AUDIT_SPECIFICATION**|  
-|*major_id*|**Int**|ID de l'entité.<br /><br /> Si *classe* = 1, puis object_id<br /><br /> Si *classe* = 4, puis sys.database_principals.principal_id.<br /><br /> Si *classe* = 5, puis sys.assemblies.assembly_id.<br /><br /> Si *classe* = 6, puis sys.types.user_type_id.<br /><br /> Si *classe* = 7, puis sys.indexes.index_id.<br /><br /> Si *classe* = 12, puis sys.triggers.object_id.<br /><br /> Si *classe* = 19, sys.routes.Route_ID.<br /><br /> Si *classe* = 30, puis sys. database_audit_specifications.database_specification_id.|  
+|*major_id*|**int**|ID de l'entité.<br /><br /> Si *classe* = 1, puis object_id<br /><br /> Si *classe* = 4, puis sys.database_principals.principal_id.<br /><br /> Si *classe* = 5, puis sys.assemblies.assembly_id.<br /><br /> Si *classe* = 6, puis sys.types.user_type_id.<br /><br /> Si *classe* = 7, puis sys.indexes.index_id.<br /><br /> Si *classe* = 12, puis sys.triggers.object_id.<br /><br /> Si *classe* = 19, sys.routes.Route_ID.<br /><br /> Si *classe* = 30, puis sys. database_audit_specifications.database_specification_id.|  
 |*statement_line_number*|**Int**|Si la classe est un module, retourne le numéro de ligne sur lequel l'utilisation sans relation contenant-contenu se trouve.  Sinon, la valeur est Null.|  
-|*statement_ offset_begin*|**Int**|Si la classe est un module, indique, en octets, en commençant par 0, la position de départ où l'utilisation sans relation contenant-contenu démarre. Sinon, la valeur de retour est Null.|  
-|*statement_ offset_end*|**Int**|Si la classe est un module, indique, en octets, en commençant par 0, la position de fin de l'utilisation sans relation contenant-contenu. La valeur -1 indique la fin du module. Sinon, la valeur de retour est Null.|  
+|*statement_ offset_begin*|**int**|Si la classe est un module, indique, en octets, en commençant par 0, la position de départ où l'utilisation sans relation contenant-contenu démarre. Sinon, la valeur de retour est Null.|  
+|*statement_ offset_end*|**int**|Si la classe est un module, indique, en octets, en commençant par 0, la position de fin de l'utilisation sans relation contenant-contenu. La valeur -1 indique la fin du module. Sinon, la valeur de retour est Null.|  
 |*statement_type*|**nvarchar(512)**|Type d'instruction.|  
 |*nom de feature_*|**nvarchar (256)**|Retourne le nom externe de l'objet.|  
 |*feature_type_name*|**nvarchar (256)**|Renvoie le type de fonctionnalité.|  

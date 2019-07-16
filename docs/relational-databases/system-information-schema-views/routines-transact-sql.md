@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: c75561b2-c9a1-48a1-9afa-a5896b6454cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3b1e6f0f767f202ab21048f70915b56d51eb14a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078523"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "51673558"
 > [!NOTE]  
 >  La colonne ROUTINE_DEFINITION contient les instructions sources qui ont servi à créer la fonction ou la procédure stockée. Ces instructions sources sont susceptibles de contenir des retours-chariot imbriqués. Si vous renvoyez cette colonne à une application qui affiche les résultats au format texte, les retours-chariot imbriqués dans les résultats ROUTINE_DEFINITION peuvent modifier la mise en forme de l'ensemble de résultats global. Si vous sélectionnez la colonne ROUTINE_DEFINITION, vous devez ajuster les retours-chariot imbriqués, en transférant par exemple l'ensemble de résultats dans une grille ou en réintégrant ROUTINE_DEFINITION dans sa propre zone de texte.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |SPECIFIC_CATALOG|**nvarchar(** 128 **)**|Nom spécifique du catalogue Ce nom est le même que ROUTINE_CATALOG.|  
 |SPECIFIC_SCHEMA|**nvarchar(** 128 **)**|Nom spécifique du schéma.<br /><br /> **\*\* Important \* \***  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
@@ -53,8 +52,8 @@ ms.locfileid: "51673558"
 |UDT_SCHEMA|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
 |UDT_NAME|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
 |DATA_TYPE|**nvarchar(** 128 **)**|Type de données de la valeur renvoyée de la fonction. Retourne **table** si une fonction table.|  
-|CHARACTER_MAXIMUM_LENGTH|**Int**|Longueur maximale en caractères, lorsque la valeur renvoyée est de type caractère.<br /><br /> -1 pour **xml** et les données de type de valeur élevée.|  
-|CHARACTER_OCTET_LENGTH|**Int**|Longueur maximale en octets, lorsque la valeur renvoyée est de type caractère.<br /><br /> -1 pour **xml** et les données de type de valeur élevée.|  
+|CHARACTER_MAXIMUM_LENGTH|**int**|Longueur maximale en caractères, lorsque la valeur renvoyée est de type caractère.<br /><br /> -1 pour **xml** et les données de type de valeur élevée.|  
+|CHARACTER_OCTET_LENGTH|**int**|Longueur maximale en octets, lorsque la valeur renvoyée est de type caractère.<br /><br /> -1 pour **xml** et les données de type de valeur élevée.|  
 |COLLATION_CATALOG|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  
 |COLLATION_SCHEMA|**nvarchar(** 128 **)**|Retourne toujours la valeur Null.|  
 |COLLATION_NAME|**nvarchar(** 128 **)**|Nom de classement de la valeur renvoyée. Renvoie la valeur NULL pour les types non-caractère.|  
@@ -76,7 +75,7 @@ ms.locfileid: "51673558"
 |MAXIMUM_CARDINALITY|**bigint**|NULL. Réservé pour un usage ultérieur.|  
 |DTD_IDENTIFIER|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|Renvoie la valeur SQL pour une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] et la valeur EXTERNAL pour une fonction externe.<br /><br /> Les fonctions sont toujours en SQL.|  
-|ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Retourne les 4 000 premiers caractères du texte de définition de la fonction ou de la procédure stockée, si ces dernières ne sont pas chiffrées. Dans le cas contraire, la valeur NULL est retournée.<br /><br /> Pour vous assurer d’obtenir la définition complète, interrogez la [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) fonction ou la colonne de définition dans le [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vue de catalogue.|  
+|ROUTINE_DEFINITION|**nvarchar(** 4000 **)**|Retourne les 4 000 premiers caractères du texte de définition de la fonction ou de la procédure stockée, si ces dernières ne sont pas chiffrées. Dans le cas contraire, la valeur NULL est retournée.<br /><br /> Pour vous assurer d’obtenir la définition complète, interrogez la [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) fonction ou la colonne de définition dans le [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) vue de catalogue.|  
 |EXTERNAL_NAME|**nvarchar(** 128 **)**|NULL. Réservé pour un usage ultérieur.|  
 |EXTERNAL_LANGUAGE|**nvarchar (** 30 **)**|NULL. Réservé pour un usage ultérieur.|  
 |PARAMETER_STYLE|**nvarchar (** 30 **)**|NULL. Réservé pour un usage ultérieur.|  

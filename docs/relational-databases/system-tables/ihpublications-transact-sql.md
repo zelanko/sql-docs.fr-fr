@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: b519a101-fa53-44be-bd55-6ea79245b5d1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 227762e4fbc71d58641aa5f67ec975df9df08360
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5a94299b1411cdb53a47c773330773ce7209fbf2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990331"
 ---
 # <a name="ihpublications-transact-sql"></a>IHpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **IHpublications** (table système) contient une ligne pour chaque publication non SQL Server à l’aide du serveur de distribution en cours. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**pubid**|**Int**|Colonne d'identité fournissant un ID unique pour la publication.|  
-|**nom**|**sysname**|Nom unique associé à la publication.|  
+|**pubid**|**int**|Colonne d'identité fournissant un ID unique pour la publication.|  
+|**name**|**sysname**|Nom unique associé à la publication.|  
 |**repl_freq**|**tinyint**|Fréquence de réplication :<br /><br /> **0** = en fonction des transactions.<br /><br /> **1** = actualisation planifiée des tables.|  
 |**status**|**tinyint**|État de la publication pouvant prendre la valeur :<br /><br /> **0** = inactif.<br /><br /> **1** = actif.|  
 |**sync_method**|**tinyint**|Méthode de synchronisation :<br /><br /> **1** = copie en bloc de caractères.<br /><br /> **4** = Concurrent_c : copie en bloc de caractères est utilisée mais les tables ne sont pas verrouillées lors de l’instantané.|  
@@ -49,16 +48,16 @@ ms.locfileid: "52802781"
 |**post_snapshot_script**|**nvarchar(510)**|Spécifie un pointeur vers un **.sql** emplacement du fichier. L'Agent de distribution exécute le script de post-instantané après que tous les autres scripts d'objets et les données répliqués ont été appliqués lors d'une synchronisation initiale.|  
 |**compress_snapshot**|**bit**|Spécifie que l’instantané qui est écrite dans le *alt_snapshot_folder* emplacement consiste à être compressées dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] format CAB. **0** Spécifie que l’instantané ne sera pas compressé.|  
 |**ftp_address**|**sysname**|L’adresse réseau du service FTP du serveur de distribution. Spécifie l'emplacement d'où l'Agent de distribution peut extraire les fichiers d'instantané de la publication.|  
-|**ftp_port**|**Int**|Le numéro de port du service FTP du serveur de distribution. Indique l'emplacement à partir duquel l'Agent de distribution peut extraire les fichiers d'instantané de la publication.|  
+|**ftp_port**|**int**|Le numéro de port du service FTP du serveur de distribution. Indique l'emplacement à partir duquel l'Agent de distribution peut extraire les fichiers d'instantané de la publication.|  
 |**ftp_subdirectory**|**nvarchar(510)**|Spécifie l'emplacement d'où l'Agent de distribution peut extraire les fichiers d'instantané si la publication prend en charge la propagation d'instantanés via FTP.|  
 |**ftp_login**|**nvarchar (256)**|Nom d'utilisateur, utilisé pour la connexion au service FTP.|  
 |**ftp_password**|**nvarchar(1048)**|Le mot de passe d’utilisateur utilisé pour se connecter au service FTP.|  
 |**allow_dts**|**bit**|Indique que la publication autorise les transformations de données. **1** Spécifie que les transformations DTS sont autorisées. *Non pris en charge pour les éditeurs non SQL.*|  
 |**allow_anonymous**|**bit**|Indique si les abonnements anonymes sont autorisés pour la publication, où **1** signifie qu’ils sont autorisés.|  
 |**centralized_conflicts**|**bit**|Spécifie si les enregistrements en conflit sont stockés sur le serveur de publication :<br /><br /> **0** = les enregistrements en conflit sont stockés sur le serveur de publication et sur l’abonné qui a provoqué le conflit.<br /><br /> **1** = les enregistrements en conflit sont stockés sur le serveur de publication.<br /><br /> *Non pris en charge pour les éditeurs non SQL.*|  
-|**conflict_retention**|**Int**|Spécifie la durée de rétention des conflits en jours. *Non pris en charge pour les éditeurs non SQL.*|  
-|**conflict_policy**|**Int**|Spécifie la stratégie de résolution de conflits à suivre lorsque l'option d'abonné avec mise à jour en attente est utilisée. Peut prendre l'une des valeurs suivantes :<br /><br /> **1** = serveur de publication gagne le conflit.<br /><br /> **2** = l’abonné gagne le conflit.<br /><br /> **3** = abonnement est réinitialisé.<br /><br /> *Non pris en charge pour les éditeurs non SQL.*|  
-|**queue_type**|**Int**|Spécifie le type de file d'attente utilisé. Peut prendre l'une des valeurs suivantes :<br /><br /> **1** = msmq utilisant [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing pour stocker les transactions.<br /><br /> **2** = sql, qui utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions.<br /><br /> Cette colonne n’est pas utilisée par non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication.<br /><br /> Remarque : [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing est déconseillé et n'est plus pris en charge.<br /><br /> *Cette colonne n’est pas pris en charge pour les éditeurs non SQL.*|  
+|**conflict_retention**|**int**|Spécifie la durée de rétention des conflits en jours. *Non pris en charge pour les éditeurs non SQL.*|  
+|**conflict_policy**|**int**|Spécifie la stratégie de résolution de conflits à suivre lorsque l'option d'abonné avec mise à jour en attente est utilisée. Peut prendre l'une des valeurs suivantes :<br /><br /> **1** = serveur de publication gagne le conflit.<br /><br /> **2** = l’abonné gagne le conflit.<br /><br /> **3** = abonnement est réinitialisé.<br /><br /> *Non pris en charge pour les éditeurs non SQL.*|  
+|**queue_type**|**int**|Spécifie le type de file d'attente utilisé. Peut prendre l'une des valeurs suivantes :<br /><br /> **1** = msmq utilisant [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing pour stocker les transactions.<br /><br /> **2** = sql, qui utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions.<br /><br /> Cette colonne n’est pas utilisée par non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication.<br /><br /> Remarque : À l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing a été déconseillée et n’est plus pris en charge.<br /><br /> *Cette colonne n’est pas pris en charge pour les éditeurs non SQL.*|  
 |**ad_guidname**|**sysname**|Spécifie si la publication est publiée dans l'annuaire [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un identificateur global unique (GUID) valide indique que la publication est publiée dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory et le GUID est l’objet de publication Active Directory **objectGUID**. Si la valeur est NULL, la publication n'est pas publiée dans l'annuaire [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. *Non pris en charge pour les éditeurs non SQL.*|  
 |**backward_comp_level**|**Int**|Le niveau de compatibilité des bases de données peut avoir une des valeurs suivantes :<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].<br /><br /> *Non pris en charge pour les éditeurs non SQL.*|  
 |**description**|**nvarchar(255)**|Entrée décrivant la publication.|  
@@ -66,11 +65,11 @@ ms.locfileid: "52802781"
 |**immediate_sync**|**bit**|Indique si les fichiers de synchronisation sont créés ou recréés chaque fois que l’Agent d’instantané s’exécute, où **1** signifie qu’ils sont créés chaque fois que l’agent s’exécute.|  
 |**allow_push**|**bit**|Indique si les abonnements envoyés sont autorisés pour la publication, où **1** signifie qu’ils sont autorisés.|  
 |**allow_pull**|**bit**|Indique si les abonnements par extraction sont autorisées sur la publication, où **1** signifie qu’ils sont autorisés.|  
-|**retention**|**Int**|La quantité de modifications, en heures, à enregistrer pour la publication concernée.|  
+|**retention**|**int**|La quantité de modifications, en heures, à enregistrer pour la publication concernée.|  
 |**allow_subscription_copy**|**bit**|Spécifie si la possibilité de copier les bases de données d'abonnement qui s'abonnent à cette publication a été activée. **1** signifie que la copie est autorisée.|  
 |**allow_initialize_from_backup**|**bit**|Indique si les Abonnés peuvent initialiser un abonnement à cette publication à partir d'une sauvegarde plutôt qu'à partir de son instantané initial. **1** signifie que les abonnements peuvent être initialisés à partir d’une sauvegarde, et **0** signifie qu’ils ne peuvent pas. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md). *Non pris en charge pour les éditeurs non SQL.*|  
 |**min_autonosync_lsn**|**binary(1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**replicate_ddl**|**Int**|Précise si la réplication de schéma est prise en charge pour la publication. **1** indique que les instructions DDL exécutées sur le serveur de publication sont répliquées, et **0** indique que les instructions DDL ne sont pas répliquées. Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md). *Non pris en charge pour les éditeurs non SQL.*|  
+|**replicate_ddl**|**int**|Précise si la réplication de schéma est prise en charge pour la publication. **1** indique que les instructions DDL exécutées sur le serveur de publication sont répliquées, et **0** indique que les instructions DDL ne sont pas répliquées. Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md). *Non pris en charge pour les éditeurs non SQL.*|  
 |**options**|**Int**|Image précisant les options de publication supplémentaires, où les valeurs des options au niveau du bit peuvent être :<br /><br /> **0 x 1** - activées pour la réplication d’égal à égal.<br /><br /> **0 x 2** -publier des modifications locales uniquement.<br /><br /> **0 x 4** - activées pour les abonnés non SQL Server.|  
   
 ## <a name="see-also"></a>Voir aussi  

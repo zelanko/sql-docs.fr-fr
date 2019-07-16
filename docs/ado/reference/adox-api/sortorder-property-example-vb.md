@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9502254-d89b-4bcb-94f1-6418f89e7f30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f3506070a55b852292067ec89ee24ee11417d6da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fe5c9bc18e0bc84dc8629ebc42227dad01ea3ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965190"
 ---
 # <a name="sortorder-property-example-vb"></a>SortOrder, exemple de propriété (VB)
 Cet exemple montre la [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) propriété d’un [colonne](../../../ado/reference/adox-api/column-object-adox.md) qui a été ajouté à la [colonnes](../../../ado/reference/adox-api/columns-collection-adox.md) collection d’un [Index](../../../ado/reference/adox-api/index-object-adox.md). Le code ajoute un index croissant à la colonne de pays dans le **employés** table, puis affiche les enregistrements. Puis le code ajoute un index décroissant à la colonne de pays dans le **employés** de table et affiche les enregistrements à nouveau. La différence entre croissant et décroissant d’index s’affiche.  

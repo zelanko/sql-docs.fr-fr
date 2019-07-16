@@ -2,19 +2,18 @@
 title: Obtenir et configurer un serveur de chargement - Parallel Data Warehouse | Microsoft Docs
 description: Cet article décrit comment obtenir et configurer un serveur de chargement comme un système de Windows non-appliance pour l’envoi des chargements de données à Parallel Data Warehouse (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: da404aa881f3ff7af26a681751aae12a45f2628f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d753237841695786de3d368bebf9a606875ea634
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961611"
 ---
 # <a name="acquire-and-configure-a-loading-server-for-parallel-data-warehouse"></a>Obtenir et configurer un serveur de chargement pour Parallel Data Warehouse
 Cet article décrit comment obtenir et configurer un serveur de chargement comme un système de Windows non-appliance pour l’envoi des chargements de données à Parallel Data Warehouse (PDW).  
@@ -37,7 +36,7 @@ Le système de chargement peut être conçu comme un ou plusieurs serveurs de ch
   
 La configuration système requise pour un serveur de chargement dépend presque entièrement votre propre charge de travail. Utilisez le [le chargement des feuille de planification de capacité de serveur](loading-server-capacity-planning-worksheet.md) pour aider à déterminer vos besoins en capacité.  
   
-## <a name="Step2"></a>Étape 2 : Acquérir le Sserveur  
+## <a name="Step2"></a>Étape 2 : Acquérir le Sserveur  
 Maintenant que vous comprenez mieux vos besoins en capacité, vous pouvez planifier les serveurs et les composants réseau dont vous aurez besoin d’acheter ou mettre en service. Incorporer la liste suivante des exigences de votre plan d’achat, puis acheter votre serveur ou configurer un serveur existant.  
   
 ### <a name="R"></a>Configuration logicielle requise  
@@ -60,7 +59,7 @@ Pour préparer une connexion de Windows Server 2012 ou Windows Server 2012 R2 In
   
 3.  Acheter 2 câbles FDR InfiniBand pour une carte de port double ou 1 câble FDR InfiniBand pour une carte de port unique. Les câbles FDR InfiniBand se connectera le chargement du serveur au réseau InfiniBand appliance. La longueur du câble dépend de la distance entre le serveur de chargement et les commutateurs InfiniBand du matériel, en fonction de votre environnement.  
   
-## <a name="Step3"></a>Étape 3 : Connectez le serveur aux réseaux InfiniBand  
+## <a name="Step3"></a> Étape 3 : Connectez le serveur aux réseaux InfiniBand  
 Suivez ces étapes pour connecter le serveur de chargement pour le réseau InfiniBand. Si le serveur n’utilise pas le réseau InfiniBand, ignorez cette étape.  
   
 1.  Le serveur de rack suffisamment à l’appliance afin que vous pouvez vous connecter au réseau InfiniBand appliance.  
@@ -75,7 +74,7 @@ Suivez ces étapes pour connecter le serveur de chargement pour le réseau Infin
   
 5.  Configurez les paramètres DNS et InfiniBand pour les cartes réseau. Pour obtenir des instructions de configuration, consultez [cartes réseau InfiniBand configurer](configure-infiniband-network-adapters.md).  
   
-## <a name="Step4"></a>Étape 4 : Installer les outils de chargement  
+## <a name="Step4"></a>Étape 4 : Installer les outils de chargement  
 Les outils clients sont disponibles en téléchargement à partir du Microsoft Download Center. 
 
 Pour installer dwloader, exécutez l’installation de dwloader dans les outils clients.
@@ -85,7 +84,7 @@ Si vous envisagez d’utiliser les Services d’intégration pour le chargement,
 <!-- To install the des[Install Integration Services Destination Adapters](install-integration-services-destination-adapters.md). 
 --> 
   
-## <a name="Step5"></a>Étape 5 : Démarrer le chargement  
+## <a name="Step5"></a>Étape 5 : Démarrer le chargement  
 Vous êtes maintenant prêt à commencer le chargement des données. Pour plus d'informations, consultez :  
   
 1.  [Outil de chargement de ligne de commande de dwloader](dwloader.md)  

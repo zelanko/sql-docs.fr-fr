@@ -1,5 +1,5 @@
 ---
-title: sys.registered_search_property_lists (Transact-SQL) | Microsoft Docs
+title: Sys.registered_search_property_lists (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,26 +21,25 @@ ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 89636150a5925d3f1d2c77d0462666d369492010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87af4645a052001ddfc2d0540b6b40e75e3dbb20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067852"
 ---
 # <a name="sysregisteredsearchpropertylists-transact-sql"></a>sys.registered_search_property_lists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque liste de propriétés de recherche sur la base de données actuelle.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**property_list_id**|**Int**|ID de la liste de propriétés.|  
-|**nom**|**sysname**|Nom de la liste de propriétés.|  
+|**property_list_id**|**int**|ID de la liste de propriétés.|  
+|**name**|**sysname**|Nom de la liste de propriétés.|  
 |**create_date**|**datetime**|Date de création de la liste de propriétés.|  
 |**modify_date**|**datetime**|Date de dernière modification de la liste de propriétés au moyen d'une instruction ALTER.|  
-|**principal_id**|**Int**|Propriétaire de la liste de propriétés.|  
+|**principal_id**|**int**|Propriétaire de la liste de propriétés.|  
   
 ## <a name="remarks"></a>Notes  
  Pour plus d’informations, consultez [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  

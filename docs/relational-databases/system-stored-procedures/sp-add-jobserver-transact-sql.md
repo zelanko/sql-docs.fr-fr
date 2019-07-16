@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6514f5378c04652ec62cbad0b4899f28a2ade672
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fecd704d5f6b6f0384ecb17787bd8423852356ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078204"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,13 +47,13 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
-`[ @server_name = ] 'server'` Le nom du serveur vers lequel envoyer le travail. *serveur* est **nvarchar (30)**, avec une valeur par défaut de l’argument '. *serveur* peut être **(LOCAL)** pour un serveur local, ou le nom d’un serveur cible existant.  
+`[ @server_name = ] 'server'` Le nom du serveur vers lequel envoyer le travail. *serveur* est **nvarchar (30)** , avec une valeur par défaut de l’argument '. *serveur* peut être **(LOCAL)** pour un serveur local, ou le nom d’un serveur cible existant.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **@automatic_post** Il existe dans **sp_add_jobserver**, mais n’est ne pas répertorié dans les Arguments. **@automatic_post** est réservé à un usage interne.  
@@ -76,7 +75,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-assigning-a-job-to-the-local-server"></a>A. Affectation d'un travail au serveur local  
+### <a name="a-assigning-a-job-to-the-local-server"></a>R. Affectation d'un travail au serveur local  
  L'exemple suivant affecte le travail `NightlyBackups` pour une exécution sur le serveur local.  
   
 > [!NOTE]  
@@ -91,7 +90,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>b. Affectation d'un travail pour une exécution sur un serveur différent  
+### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>B. Affectation d'un travail pour une exécution sur un serveur différent  
  L'exemple suivant affecte le travail multiserveurs `Weekly Sales Backups` au serveur `SEATTLE2`.  
   
 > [!NOTE]  

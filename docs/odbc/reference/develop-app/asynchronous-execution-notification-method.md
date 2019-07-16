@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66b806b698164b306eee4dc7d4c48fbe7835adae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077064"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Exécution asynchrone (méthode de notification)
 ODBC permet l’exécution asynchrone de connexion et les opérations de l’instruction. Un thread d’application peut appeler une fonction ODBC en mode asynchrone et la fonction peut retourner avant que l’opération est terminée, ce qui permet le thread d’application effectuer d’autres tâches. Dans le Kit de développement Windows 7 pour les opérations de connexion, ou l’instruction asynchrone, une application déterminé que l’opération asynchrone a été terminée à l’aide de la méthode d’interrogation. Pour plus d’informations, consultez [exécution asynchrone (méthode d’interrogation)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md). À compter dans le Kit de développement logiciel Windows 8, vous pouvez déterminer qu’une opération asynchrone est terminée à l’aide de la méthode de notification.  
@@ -44,7 +43,7 @@ ODBC permet l’exécution asynchrone de connexion et les opérations de l’ins
 |------------------------------|----------------------------|--------------------|--------------|  
 |Nouvelle application de n’importe quelle version d’ODBC|ODBC 3.81|ODBC 3,80 pilote|Application peut utiliser cette fonctionnalité si le pilote prend en charge cette fonctionnalité, sinon le Gestionnaire de pilotes provoque une erreur.|  
 |Nouvelle application de n’importe quelle version d’ODBC|ODBC 3.81|Pilote Pre-ODBC 3,80|Le Gestionnaire de pilotes provoque une erreur si le pilote ne prend pas en charge cette fonctionnalité.|  
-|Nouvelle application de n’importe quelle version d’ODBC|Pre-ODBC 3.81|Tout|Lorsque l’application utilise cette fonctionnalité, un gestionnaire de pilotes ancien considère les nouveaux attributs en tant qu’attributs spécifiques au pilote, et le pilote doit d’erreur. Un nouveau gestionnaire de pilote ne passera pas ces attributs pour le pilote.|  
+|Nouvelle application de n’importe quelle version d’ODBC|Pre-ODBC 3.81|Quelconque|Lorsque l’application utilise cette fonctionnalité, un gestionnaire de pilotes ancien considère les nouveaux attributs en tant qu’attributs spécifiques au pilote, et le pilote doit d’erreur. Un nouveau gestionnaire de pilote ne passera pas ces attributs pour le pilote.|  
   
  Une application doit vérifier la version du Gestionnaire de pilotes avant d’utiliser cette fonctionnalité. Sinon, si un pilote mal écrit ne génère pas d’erreur et la version du Gestionnaire de pilotes est antérieur 3.81 d’ODBC, le comportement est indéfini.  
   
@@ -327,11 +326,11 @@ if (SQL_ASYNC_NOTIFICATION_CAPABLE == InfoValue)
   
  Les attributs de connexion SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE et SQL_ATTR_ASYNC_DBC_EVENT déterminent que ODBC s’exécute en mode asynchrone et que ODBC Active le mode de notification pour un handle de connexion. Les attributs d’instruction SQL_ATTR_ASYNC_ENABLE et SQL_ATTR_ASYNC_STMT_EVENT déterminent que ODBC s’exécute en mode asynchrone et que ODBC Active le mode de notification pour un descripteur d’instruction.  
   
-|SQL_ATTR_ASYNC_ENABLE ou SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT or SQL_ATTR_ASYNC_DBC_EVENT|Mode|  
+|SQL_ATTR_ASYNC_ENABLE ou SQL_ATTR_ASYNC_DBC_FUNCTION_ENABLE|SQL_ATTR_ASYNC_STMT_EVENT ou SQL_ATTR_ASYNC_DBC_EVENT|Mode|  
 |-------------------------------------------------------------------------|-------------------------------------------------------------------|----------|  
-|Activer|non-null|Notification asynchrone|  
+|Activer|non null|Notification asynchrone|  
 |Activer|Null|D’interrogation asynchrone|  
-|Disable|n'importe laquelle|Synchrone|  
+|Désactiver|n'importe laquelle|Synchrone|  
   
  Une application peut désactiver temporairement en mode d’opération asynchrone. ODBC ignore les valeurs de SQL_ATTR_ASYNC_DBC_EVENT si l’opération asynchrone au niveau de connexion est désactivée. ODBC ignore les valeurs de SQL_ATTR_ASYNC_STMT_EVENT si l’opération asynchrone au niveau instruction est désactivée.  
   

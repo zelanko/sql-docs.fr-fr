@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c1e261f8-6cb0-4759-b5f1-5ec233602655
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04d86251149708aa521166018d643fe8735d3ec6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c274d20590601ea2b089f53a9edf10b6a5ac0163
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022690"
 ---
 # <a name="sysdatabasepermissions-transact-sql"></a>sys.database_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,15 +35,15 @@ ms.locfileid: "47837528"
 > [!IMPORTANT]  
 >  Les autorisations au niveau colonne remplacent les autorisations au niveau objet sur la même entité.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**class**|**tinyint**|Identifie la classe sur laquelle l'autorisation existe.<br /><br /> 0 = Base de données<br />1 = objet ou colonne<br />3 = Schéma<br />4 = Principal de la base de données<br />5 = assembly - **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />6 = Type<br />10 = Collection de schémas XML - <br />                      **S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />15 = Type de message - **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />16 = contrat de Service - **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />17 = Service - **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />18 = liaisons de Service distant - **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />19 = route - **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />23 = catalogue de texte intégral - **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />24 = clé symétrique - **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />25 = certificate - **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br />26 = clé asymétrique - **s’applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**class_desc**|**nvarchar(60)**|Description de la classe sur laquelle l'autorisation existe.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> FULLTEXT_CATALOG<br /><br /> SYMMETRIC_KEYS<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC_KEY|  
 |**major_id**|**Int**|ID de l'objet sur lequel l'autorisation existe, interprété en fonction de la classe. En règle générale, le **major_id** est simplement le type d’ID qui s’applique à ce que représente la classe. <br /><br /> 0 = la base de données <br /><br /> > 0 = ID d’objet pour les objets utilisateur <br /><br /> \<0 = l’ID d’objet pour les objets système |  
 |**minor_id**|**Int**|ID secondaire de l'objet sur lequel l'autorisation existe, interprété en fonction de la classe. Souvent, le **minor_id** est égal à zéro, car aucun subcategory n’est disponible pour la classe d’objet. Sinon, il est l’ID de colonne d’une table.|  
-|**grantee_principal_id**|**Int**|ID du principal de la base de données à laquelle les autorisations sont accordées.|  
+|**grantee_principal_id**|**int**|ID du principal de la base de données à laquelle les autorisations sont accordées.|  
 |**grantor_principal_id**|**Int**|ID du principal de la base de données du fournisseur de ces autorisations.|  
-|**type**|**char (4)**|Type d'autorisation de la base de données. Pour obtenir la liste des types d'autorisations, consultez le tableau ci-dessous.|  
+|**type**|**char(4)**|Type d'autorisation de la base de données. Pour obtenir la liste des types d'autorisations, consultez le tableau ci-dessous.|  
 |**permission_name**|**nvarchar(128)**|Nom de l’autorisation.|  
 |**state**|**char(1)**|État de l'autorisation :<br /><br /> D = Refusée<br /><br /> R = Révoquée<br /><br /> G = Accordée<br /><br /> W = Accordée avec option Grant|  
 |**state_desc**|**nvarchar(60)**|Description de l'état de l'autorisation :<br /><br /> DENY<br /><br /> REVOKE<br /><br /> GRANT<br /><br /> GRANT_WITH_GRANT_OPTION|  
@@ -129,14 +128,14 @@ Les types d’autorisations suivants sont possibles.
 |VWCT|VIEW CHANGE TRACKING|TABLE, SCHEMA|  
 |VWDS|VIEW DATABASE STATE|DATABASE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Tout utilisateur peut consulter ses propres autorisations. Pour afficher les autorisations d'autres utilisateurs, vous devez disposer de l'autorisation VIEW DEFINITION, ALTER ANY USER, ou de n'importe quelle autorisation sur un utilisateur. Pour afficher les rôles définis par l'utilisateur, vous devez disposer de l'autorisation ALTER ANY ROLE, ou appartenir au rôle (notamment public).  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-all-the-permissions-of-database-principals"></a>A : Énumération de toutes les autorisations des principaux de base de données  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>R : Énumération de toutes les autorisations des principaux de base de données  
  La requête suivante énumère les autorisations accordées ou refusées explicitement aux principaux de base de données.  
   
 > [!IMPORTANT]  
@@ -150,7 +149,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B. Énumération des autorisations sur les objets de schéma dans une base de données  
+### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B : Affichage des autorisations sur les objets de schéma dans une base de données  
  La requête suivante joint sys.database_principals et sys.database_permissions à sys.objects et sys.schemas pour répertorier les autorisations accordées ou refusées sur des objets de schéma spécifiques.  
   
 ```  

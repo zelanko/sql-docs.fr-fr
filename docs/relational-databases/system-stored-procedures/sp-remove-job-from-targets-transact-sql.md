@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6ec60d6b11f9d17a6f5446e2840688fd1e4cb75
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1ba55c2744d1fad0b6453e0f1d1cd2ea96934bfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006970"
 ---
 # <a name="spremovejobfromtargets-transact-sql"></a>sp_remove_job_from_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_remove_job_from_targets [ @job_id = ] job_id
   
 `[ @job_name = ] 'job_name'` Le nom du travail à partir duquel supprimer les groupes de serveurs cibles ou les serveurs cibles spécifiés. Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
-`[ @target_server_groups = ] 'target_server_groups'` Une liste séparée par des virgules de groupes de serveurs cibles à supprimer du travail spécifié. *groupes_serveurs_cibles* est **nvarchar (1024)**, avec NULL comme valeur par défaut.  
+`[ @target_server_groups = ] 'target_server_groups'` Une liste séparée par des virgules de groupes de serveurs cibles à supprimer du travail spécifié. *groupes_serveurs_cibles* est **nvarchar (1024)** , avec NULL comme valeur par défaut.  
   
-`[ @target_servers = ] 'target_servers'` Une liste séparée par des virgules de serveurs cibles à supprimer du travail spécifié. *serveurs_cibles* est **nvarchar (1024)**, avec NULL comme valeur par défaut.  
+`[ @target_servers = ] 'target_servers'` Une liste séparée par des virgules de serveurs cibles à supprimer du travail spécifié. *serveurs_cibles* est **nvarchar (1024)** , avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

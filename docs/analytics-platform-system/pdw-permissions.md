@@ -2,19 +2,18 @@
 title: Autorisations dans Parallel Data Warehouse | Microsoft Docs
 description: Cet article décrit la configuration requise et les options de gestion des autorisations de base de données pour Parallel Data Warehouse.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2284c6b39693363de262e4ea307b0de45a0b6f06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960396"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>La gestion des autorisations dans Parallel Data Warehouse
 Cet article décrit la configuration requise et les options de gestion des autorisations de base de données pour SQL Server PDW.  

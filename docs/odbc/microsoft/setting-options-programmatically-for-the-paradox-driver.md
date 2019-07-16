@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fd92344552371e2e052a958485340b70522cc121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 658d03469e2733b0c25513a4d4a89c6ab88b9852
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063512"
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>Définition d’options par programmation pour le pilote Paradox
 
@@ -36,4 +35,4 @@ ms.locfileid: "63313572"
 |Lecture seule|Désigne la base de données en lecture seule.|Pour définir cette option de manière dynamique, utilisez le **READONLY** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Sélectionnez le répertoire|Affiche une boîte de dialogue où vous pouvez sélectionner un répertoire contenant les fichiers que vous souhaitez accéder.<br /><br /> Lorsque la définition d’un répertoire de source de données spécifiez le répertoire où le plus couramment utilisés fichiers se trouvent. Le pilote ODBC utilise ce répertoire comme répertoire par défaut. Copiez les autres fichiers dans ce répertoire si elles sont utilisées fréquemment. Ou bien, vous pouvez qualifier les noms de fichiers dans une instruction SELECT avec le nom du répertoire :<br /><br /> SÉLECTIONNEZ \* À PARTIR DE C:\MYDIR\EMP<br /><br /> Ou, vous pouvez spécifier un répertoire par défaut à l’aide de la **SQLSetConnectOption** fonction avec l’option SQL_CURRENT_QUALIFIER.|Pour définir cette option de manière dynamique, utilisez le **DEFAULTDIR** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |Sélectionnez le répertoire réseau|Le chemin d’accès complet du répertoire contenant une base de données de verrou Paradox, car il contient le fichier Pdoxusrs.net (dans Paradox 4. *x*) ou le fichier Paradox.net (dans Paradox 5. *x*). Si le répertoire ne contient pas un de ces fichiers, le pilote Paradox en crée un. Pour plus d’informations sur ces fichiers, consultez la documentation de Paradox.<br /><br /> Avant de pouvoir sélectionner un répertoire réseau, vous devez entrer votre nom d’utilisateur Paradox dans le **nom d’utilisateur** zone de texte. Cliquez sur **sélectionner un répertoire réseau** pour sélectionner un répertoire réseau.|Pour définir cette option de manière dynamique, utilisez le **PARADOXNETPATH** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
-|Nom d'utilisateur|Le nom d’utilisateur Paradox. Il s’agit du nom affiché à d’autres utilisateurs des fichiers Paradox lorsqu’un verrou est rencontré.|Pour définir cette option de manière dynamique, utilisez le **PARADOXUSERNAME** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|
+|User Name|Le nom d’utilisateur Paradox. Il s’agit du nom affiché à d’autres utilisateurs des fichiers Paradox lorsqu’un verrou est rencontré.|Pour définir cette option de manière dynamique, utilisez le **PARADOXUSERNAME** mot clé dans un appel à [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|

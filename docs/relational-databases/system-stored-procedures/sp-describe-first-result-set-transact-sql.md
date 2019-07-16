@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053051"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -43,9 +42,9 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ \@tsql = ] 'Transact-SQL_batch'` Un ou plusieurs [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. *Transact-SQL_batch* peut être **nvarchar (***n***)** ou **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL_batch'` Un ou plusieurs [!INCLUDE[tsql](../../includes/tsql-md.md)] instructions. *Transact-SQL_batch* peut être **nvarchar (***n***)** ou **nvarchar (max)** .  
   
-`[ \@params = ] N'parameters'` \@params fournit une chaîne de déclaration pour les paramètres pour le [!INCLUDE[tsql](../../includes/tsql-md.md)] bath, qui est similaire à sp_executesql. Les paramètres peuvent être **nvarchar (n)** ou **nvarchar (max)**.  
+`[ \@params = ] N'parameters'` \@params fournit une chaîne de déclaration pour les paramètres pour le [!INCLUDE[tsql](../../includes/tsql-md.md)] bath, qui est similaire à sp_executesql. Les paramètres peuvent être **nvarchar (n)** ou **nvarchar (max)** .  
   
  Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans le [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans l’instruction doit être défini dans \@params. Si le [!INCLUDE[tsql](../../includes/tsql-md.md)] lot dans l’instruction ou l’instruction ne contient-elle pas de paramètres, \@params n’est pas obligatoire. NULL est la valeur par défaut pour ce paramètre.  
   
@@ -63,15 +62,15 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="result-sets"></a>Jeux de résultats  
  Ces métadonnées communes sont retournées en tant que jeu de résultats avec une ligne pour chaque colonne dans les métadonnées de résultats. Chaque ligne décrit le type et la possibilité de valeur NULL de la colonne dans le format décrit dans la section suivante. S'il n'existe pas de première instruction pour chaque chemin d'accès de contrôle, un jeu de résultats avec des lignes nulles est retourné.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit pas NULL**|Indique que la colonne est une colonne supplémentaire ajoutée à titre d'informations de navigation et qu'elle ne s'affiche pas réellement dans le jeu de résultats.|  
 |**column_ordinal**|**int non NULL**|Contient la position ordinale de la colonne dans le jeu de résultats. Position de la première colonne sera spécifiée comme 1.|  
-|**nom**|**sysname NULL**|Contient le nom de la colonne si un nom peut être déterminé. Sinon, il contiendra NULL.|  
+|**name**|**sysname NULL**|Contient le nom de la colonne si un nom peut être déterminé. Sinon, il contiendra NULL.|  
 |**is_nullable**|**bit pas NULL**|Contient la valeur 1 si la colonne autorise des valeurs NULL, 0 si la colonne n'autorise pas de valeurs NULL, et 1 s'il n'est pas possible de déterminer si la colonne autorise des valeurs NULL.|  
 |**system_type_id**|**int non NULL**|Contient le system_type_id du type de données de la colonne comme spécifié dans sys.types. Pour les types CLR, bien que la colonne system_type_name retourne NULL, cette colonne retournera la valeur 240.|  
-|**system_type_name**|**nvarchar(256) NULL**|Contient le nom et les arguments (tels que la longueur, la précision, l'échelle) spécifiés pour le type de données de la colonne. Si le type de données est un type d'alias défini par l'utilisateur, le type de système sous-jacent est spécifié ici. S'il s'agit d'un type clr défini par l'utilisateur, NULL est retourné dans cette colonne.|  
-|**max_length**|**smallint non NULL**|Longueur maximale (en octets) de la colonne.<br /><br /> -1 = la colonne est de type de données **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**.<br /><br /> Pour **texte** colonnes, le **max_length** valeur sera 16 ou la valeur définie par **sp_tableoption 'text in row'**.|  
+|**system_type_name**|**nvarchar (256) NULL**|Contient le nom et les arguments (tels que la longueur, la précision, l'échelle) spécifiés pour le type de données de la colonne. Si le type de données est un type d'alias défini par l'utilisateur, le type de système sous-jacent est spécifié ici. S'il s'agit d'un type clr défini par l'utilisateur, NULL est retourné dans cette colonne.|  
+|**max_length**|**smallint non NULL**|Longueur maximale (en octets) de la colonne.<br /><br /> -1 = la colonne est de type de données **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , ou **xml**.<br /><br /> Pour **texte** colonnes, le **max_length** valeur sera 16 ou la valeur définie par **sp_tableoption 'text in row'** .|  
 |**precision**|**tinyint non NULL**|Précision de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
 |**scale**|**tinyint non NULL**|Échelle de la colonne si elle est numérique. Dans le cas contraire, retourne la valeur 0.|  
 |**collation_name**|**sysname NULL**|Nom du classement de la colonne si elle est basée sur les caractères. Sinon, retourne NULL.|  
@@ -144,7 +143,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
     -   **nvarchar(a)** à **nvarchar(a')** où un ' > un.  
   
-    -   **nvarchar(a)** to **nvarchar(max)**  
+    -   **nvarchar(a)** à **nvarchar (max)**  
   
     -   **varbinary(a)** à **varbinary(a')** où un ' > un.  
   
@@ -159,7 +158,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ### <a name="typical-examples"></a>Exemples types  
   
-#### <a name="a-simple-example"></a>A. Exemple simple  
+#### <a name="a-simple-example"></a>R. Exemple simple  
  L'exemple suivant décrit le jeu de résultats retourné par une requête unique.  
   
 ```  
@@ -191,7 +190,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -204,7 +203,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -217,7 +216,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
@@ -298,7 +297,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- Résultat : Erreur, types discordants (**varchar (10)** et **nvarchar (10)**).  
+ Résultat : Erreur, types discordants (**varchar (10)** et **nvarchar (10)** ).  
   
 #### <a name="result-set-can-return-an-error"></a>Le jeu de résultats peut retourner une erreur  
  Le premier jeu de résultats est soit une erreur, soit un jeu de résultats.  

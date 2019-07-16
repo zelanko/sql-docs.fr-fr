@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d670c1dbfc94e80394cf34733b8a91aeb6cb056
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63005865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032704"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,18 +63,18 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
  **1** = la recherche de correspondance est sur.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Nom du qualificateur de procédure. Cette colonne peut être NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nom du propriétaire de la procédure. Cette colonne renvoie toujours une valeur.|  
 |**PROCEDURE_NAME**|**nvarchar(134)**|Nom de la procédure. Cette colonne renvoie toujours une valeur.|  
-|**NUM_INPUT_PARAMS**|**Int**|Réservé pour un usage ultérieur.|  
-|**NUM_OUTPUT_PARAMS**|**Int**|Réservé pour un usage ultérieur.|  
-|**NUM_RESULT_SETS**|**Int**|Réservé pour un usage ultérieur.|  
+|**NUM_INPUT_PARAMS**|**int**|Réservé pour un usage ultérieur.|  
+|**NUM_OUTPUT_PARAMS**|**int**|Réservé pour un usage ultérieur.|  
+|**NUM_RESULT_SETS**|**int**|Réservé pour un usage ultérieur.|  
 |**REMARQUES**|**varchar(254)**|Description de la procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
 |**PROCEDURE_TYPE**|**smallint**|Type de procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours 2.0. Cette valeur peut être une des opérations suivantes :<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
@@ -91,7 +90,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-all-stored-procedures-in-the-current-database"></a>A. Renvoi de toutes les procédures stockées présentes dans la base de données active  
+### <a name="a-returning-all-stored-procedures-in-the-current-database"></a>R. Renvoi de toutes les procédures stockées présentes dans la base de données active  
  L'exemple suivant retourne toutes les procédures stockées contenues dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

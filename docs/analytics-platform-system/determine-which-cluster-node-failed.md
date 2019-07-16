@@ -2,19 +2,18 @@
 title: Déterminer le nœud de cluster a échoué - Analytique Platform System | Microsoft Docs
 description: Cet article décrit comment déterminer le nom du nœud Analytique Platform System (APS) qui ont échoué après un basculement de cluster s’est produite et une alerte de basculement de cluster a été déclenchée. Dans le cadre de la résolution des problèmes d’un cluster de basculement, vous devez déterminer le nom du nœud ayant échoué avant de contacter Microsoft pour vous aider à résoudre le problème.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4fd739e55725a3138a22539ef837088f86c8d8b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c17fde577b71382cd3ee63b8c6f50818184eab0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961053"
 ---
 # <a name="determine-which-cluster-node-failed-for-analytics-platform-system"></a>Déterminer quel cluster nœud a échoué pour l’Analytique Platform System
 Cette rubrique décrit comment déterminer le nom du nœud Analytique Platform System (APS) qui ont échoué après un basculement de cluster s’est produite et une alerte de basculement de cluster a été déclenchée. Dans le cadre de la résolution des problèmes d’un cluster de basculement, vous devez déterminer le nom du nœud ayant échoué avant de contacter Microsoft pour vous aider à résoudre le problème.  

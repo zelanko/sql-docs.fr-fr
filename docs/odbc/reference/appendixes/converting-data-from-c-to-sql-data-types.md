@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ee0afe78-b58f-4d34-ad9b-616bb23653bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 168fa55d89488277cd17f4bdca3105f7d879c8f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aca333a6f3006b1f12cf44d1670e38556027e476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019119"
 ---
 # <a name="converting-data-from-c-to-sql-data-types"></a>Conversion de données de C en types de données SQL
 Lorsqu’une application appelle **SQLExecute** ou **SQLExecDirect**, le pilote récupère les données pour tous les paramètres liés avec **SQLBindParameter** à partir d’emplacements de stockage dans l’application. Lorsqu’une application appelle **SQLSetPos**, le pilote récupère les données pour une mise à jour ou ajouter une opération à partir de colonnes liées avec **SQLBindCol**. Pour les paramètres de data-at-execution, l’application envoie les données de paramètre avec **SQLPutData**. Si nécessaire, le pilote convertit les données à partir du type de données spécifié par le *ValueType* argument dans **SQLBindParameter** au type de données spécifié par le *ParameterType*argument dans **SQLBindParameter**, puis envoie les données à la source de données.  
@@ -58,9 +57,9 @@ Lorsqu’une application appelle **SQLExecute** ou **SQLExecDirect**, le pilote 
   
  Cette section contient les rubriques suivantes.  
   
--   [C en SQL : Character](../../../odbc/reference/appendixes/c-to-sql-character.md)  
+-   [C en SQL : Caractère](../../../odbc/reference/appendixes/c-to-sql-character.md)  
   
--   [C en SQL : Numeric](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
+-   [C en SQL : Numérique](../../../odbc/reference/appendixes/c-to-sql-numeric.md)  
   
 -   [C en SQL : Bit](../../../odbc/reference/appendixes/c-to-sql-bit.md)  
   

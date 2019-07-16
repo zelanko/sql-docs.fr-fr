@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9d1322d872d5e05de4c7f142804fe2f1390b9859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd0c2273739a3651c7fdd4c424ce0cb47d39dd5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925843"
 ---
 # <a name="command-streams"></a>Flux de commandes
 ADO a toujours pris en charge d’entrée de commande au format de chaîne spécifié par le **CommandText** propriété. Comme alternative, avec ADO 2.7 ou version ultérieure, vous pouvez également utiliser un flux d’informations pour l’entrée de commande en affectant le flux à la **CommandStream** propriété. Vous pouvez affecter une ADO **Stream** objet, ou n’importe quel objet qui prend en charge le modèle COM **IStream** interface.  

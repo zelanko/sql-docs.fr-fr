@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046054"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,11 +45,11 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @defname = ] 'default'` Est le nom de la valeur par défaut qui est créé par défaut de créer. *par défaut* est **nvarchar(776)**, sans valeur par défaut.  
+`[ @defname = ] 'default'` Est le nom de la valeur par défaut qui est créé par défaut de créer. *par défaut* est **nvarchar(776)** , sans valeur par défaut.  
   
-`[ @objname = ] 'object_name'` Est le nom de table et de colonne ou le type de données alias auquel la valeur par défaut doit être lié. *object_name* est **nvarchar(776)** sans valeur par défaut. *object_name* ne peut pas être défini avec la **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, ou CLR types définis par l’utilisateur.  
+`[ @objname = ] 'object_name'` Est le nom de table et de colonne ou le type de données alias auquel la valeur par défaut doit être lié. *object_name* est **nvarchar(776)** sans valeur par défaut. *object_name* ne peut pas être défini avec la **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml**, ou CLR types définis par l’utilisateur.  
   
- Si *object_name* est un nom d’une seule partie, il est résolu comme un type de données alias. S'il s'agit d'un nom à deux ou trois composantes, il est d'abord résolu en tant que table et colonne. Si la résolution échoue, il est résolu en tant que type de données d'alias. Par défaut, les colonnes existantes du type de données alias héritent *par défaut*, sauf si une valeur par défaut a été liée directement à la colonne. Une valeur par défaut ne peut pas être lié à un **texte**, **ntext**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **timestamp**, CLR colonne de type défini par l’utilisateur, une colonne avec la propriété IDENTITY, une colonne calculée ou une colonne qui a déjà une contrainte par défaut.  
+ Si *object_name* est un nom d’une seule partie, il est résolu comme un type de données alias. S'il s'agit d'un nom à deux ou trois composantes, il est d'abord résolu en tant que table et colonne. Si la résolution échoue, il est résolu en tant que type de données d'alias. Par défaut, les colonnes existantes du type de données alias héritent *par défaut*, sauf si une valeur par défaut a été liée directement à la colonne. Une valeur par défaut ne peut pas être lié à un **texte**, **ntext**, **image**, **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml**, **timestamp**, CLR colonne de type défini par l’utilisateur, une colonne avec la propriété IDENTITY, une colonne calculée ou une colonne qui a déjà une contrainte par défaut.  
   
 > [!NOTE]  
 >  *object_name* peut contenir des crochets **[]** en tant qu’identificateurs délimités. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
@@ -72,7 +71,7 @@ sp_bindefault [ @defname = ] 'default' ,
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-binding-a-default-to-a-column"></a>A. Liaison d'une valeur par défaut à une colonne  
+### <a name="a-binding-a-default-to-a-column"></a>R. Liaison d'une valeur par défaut à une colonne  
  Une valeur par défaut nommée `today` a été définie dans la base de données actuelle par une instruction CREATE DEFAULT, l'exemple suivant lie cette valeur par défaut à la colonne `HireDate` de la table `Employee`. Si aucune valeur n'est fournie pour la colonne `Employee` lors de l'ajout d'une ligne dans la table `HireDate`, la colonne prend la valeur de `today` par défaut.  
   
 ```  

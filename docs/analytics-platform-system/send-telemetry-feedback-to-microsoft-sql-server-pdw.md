@@ -2,19 +2,18 @@
 title: Commentaires de télémétrie - Analytique Platform System | Microsoft Docs
 description: Envoyer des commentaires de télémétrie à Microsoft pour système de plateforme d’Analytique.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 347879cd468d67b3feee0c92dcd154334df4c237
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960096"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Envoyer des commentaires de télémétrie à Microsoft pour système de plateforme d’Analytique
 Analytique Platform System possède une fonctionnalité de télémétrie facultatif qui envoie des données de la Console d’administration à Microsoft. 
@@ -42,7 +41,7 @@ Pour fournir la protection des données personnelles maximale, points d’accès
     > [!NOTE]  
     > Pour importer vous devez utiliser les deux points dans la commande.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -92,7 +91,7 @@ Désactivation de la télémétrie s’arrête toutes les opérations qui commun
     > [!NOTE]  
     > Pour importer vous devez utiliser les deux points dans la commande.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> . .\Configure-RemoteMonitoring.ps1  
@@ -100,7 +99,7 @@ Désactivation de la télémétrie s’arrête toutes les opérations qui commun
   
 4.  Appeler le `Disable-RemoteMonitoring` commande sans paramètres. Cette commande arrête l’envoi des commentaires. (Cela n’affecte pas monitoring local.) Toutefois, la commande ne sera pas désactiver le redirecteur DNS et/ou de désactiver la connexion internet. Cela doit être effectuée manuellement après avoir désactivé avec succès des commentaires.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```  
     PS C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100> Disable-RemoteMonitoring  

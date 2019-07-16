@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4a2aff8-bde7-4bd5-8580-bc50f27311c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a77aeafff6b27b2de0b947700cef1c7251cd7548
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d225bac273558b928e3e8fd2f41bd121a723f6ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952368"
 ---
 # <a name="history-of-the-desktop-database-drivers"></a>Historique des pilotes pour les bases de données de poste de travail
 Le tableau suivant présente l’historique des versions de pilotes de base de données de bureau.  

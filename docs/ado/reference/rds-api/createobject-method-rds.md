@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 918836e949593672417240c1b91026e1e02c4788
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964544"
 ---
 # <a name="createobject-method-rds"></a>CreateObject, méthode (RDS)
 Crée le proxy pour l’objet métier cible et retourne un pointeur vers elle. Les packages et marshale données proxy pour le stub côté serveur pour les communications avec l’objet métier envoyer des demandes et les données sur Internet. Pour les objets de composant in-process, aucun proxy ne sont utilisés, un pointeur vers l’objet est fourni.  
@@ -32,16 +31,16 @@ Crée le proxy pour l’objet métier cible et retourne un pointeur vers elle. L
   
 |Protocol|Syntaxe|  
 |--------------|------------|  
-|HTTP|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
-|HTTPS|Set object = DataSpace.CreateObject("ProgId", "https\://awebsrvr")|  
-|DCOM|Set object = DataSpace.CreateObject("ProgId", "computername")|  
+|HTTP|Objet de jeu = DataSpace.CreateObject (« ProgId », « https\://awebsrvr »)|  
+|HTTPS|Objet de jeu = DataSpace.CreateObject (« ProgId », « https\://awebsrvr »)|  
+|DCOM|Objet de jeu = DataSpace.CreateObject (« ProgId », « computername »)|  
 |In-process|Set object = DataSpace.CreateObject("ProgId", "")|  
   
 ## <a name="parameters"></a>Paramètres  
  *Objet*  
  Une variable objet qui correspond à un objet qui est du type spécifié dans *ProgID*.  
   
- *DataSpace*  
+ *Espace de données*  
  Une variable objet qui représente un [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objet utilisé pour créer une instance du nouvel objet.  
   
  *ProgID*  

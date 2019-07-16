@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: da99a24ab6729e78220aeed3d18819e7b075603f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 066297daff3393304b83b77238277f873e1c97fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050450"
 ---
 # <a name="view-analysis-reports-in-database-experimentation-assistant"></a>Afficher les rapports d’analyse dans l’Assistant expérimentation de base de données
 
@@ -28,7 +27,7 @@ Après avoir [créer votre rapport d’analyse](database-experimentation-assista
 
 Dans la DEA, sélectionnez l’icône de menu. Dans le menu développé, sélectionnez **rapports d’analyse** près de l’icône de liste de vérification pour ouvrir la fenêtre de rapports d’analyse.
 
-Sous **rapports d’analyse**, entrez le nom d’un ordinateur exécutant SQL Server qui a une base de données d’analyse. Sélectionnez **Se connecter**. 
+Sous **rapports d’analyse**, entrez le nom d’un ordinateur exécutant SQL Server qui a une base de données d’analyse. Sélectionnez **Connecter**. 
 
 ![Se connecter à un rapport existant](./media/database-experimentation-assistant-view-report/dea-view-report-connect.png)
 
@@ -57,7 +56,7 @@ Sélectionnez les différents segments du graphique à secteurs gauche pour affi
 ![Secteurs de rapport](./media/database-experimentation-assistant-view-report/dea-view-report-pie-slices.png)
 
 - **Détérioré requêtes**: Requêtes qui été plus performant dans A à b.  
-- **Erreurs**: Requêtes pour afficher les erreurs dans l’instance B, mais pas dans l’instance A.  
+- **Erreurs** : Requêtes pour afficher les erreurs dans l’instance B, mais pas dans l’instance A.  
 - **Amélioration des requêtes**: Requêtes exécutées dans l’instance B à mieux dans l’instance A.  
 - **Requêtes indéterminés**: Requêtes qui comportait une modification de performances indéterminé.  
 - **Même**: Requêtes dans laquelle performances restent identiques entre les instances A et B.

@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 47edd434445d57c5ca25373b5dc15fa328f94019
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 407a4c87101b2d422afbb982c7a07d92e84d26f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962519"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>R Server (autonome) et Machine Learning Server (autonome) dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +30,7 @@ SQL Server 2016 est R uniquement. SQL Server 2017 prend en charge R et Python.
 
 | Composant | Description |
 |-----------|-------------|
-| Packages R | [**RevoScaleR** ](ref-r-revoscaler.md) est la bibliothèque principale pour R évolutive avec des fonctions de manipulation de données, de transformation, de visualisation et d’analyse.  <br/>[**MicrosoftML** ](ref-r-microsoftml.md) ajoute des algorithmes d’apprentissage automatique pour créer des modèles personnalisés pour l’analyse de texte, l’analyse de l’image et l’analyse des sentiments. <br/>[**sqlRUtils** ](ref-r-sqlrutils.md) fournit des fonctions d’assistance pour placer des scripts R dans une procédure stockée T-SQL, l’inscription d’une procédure stockée avec une base de données et l’exécution de la procédure stockée à partir d’un environnement de développement R.<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md) offres web déploiement de service (dans SQL Server 2017 uniquement). <br/>[**olapR** ](ref-r-olapr.md) permet de spécifier des requêtes MDX dans R.|
+| Packages R | [**RevoScaleR** ](ref-r-revoscaler.md) est la bibliothèque principale pour R évolutive avec des fonctions de manipulation de données, de transformation, de visualisation et d’analyse.  <br/>[**MicrosoftML** ](ref-r-microsoftml.md) ajoute des algorithmes d’apprentissage automatique pour créer des modèles personnalisés pour l’analyse de texte, l’analyse de l’image et l’analyse des sentiments. <br/>[**sqlRUtils** ](ref-r-sqlrutils.md) fournit des fonctions d’assistance pour placer des scripts R dans une procédure stockée T-SQL, l’inscription d’une procédure stockée avec une base de données et l’exécution de la procédure stockée à partir d’un environnement de développement R.<br/>[**mrsdeploy** ](operationalization-with-mrsdeploy.md) offres web déploiement de service (dans SQL Server 2017 uniquement). <br/>[**olapR** ](ref-r-olapr.md) permet de spécifier des requêtes MDX dans R.|
 | Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open) est open source distribution Microsoft de R. Le package et un interpréteur sont inclus. Utilisez toujours la version de MRO fournie dans le programme d’installation. |
 | Outils R | Invites de commandes et fenêtres de console R sont des outils standard dans une distribution de R. Les trouver à \Program files\Microsoft SQL Server\140\R_SERVER\bin\x64. |
 | Exemples de R et scripts |  Les packages RevoScaleR et R Open source incluent les jeux de données intégrées afin que vous pouvez créer et exécuter le script à l’aide de données préinstallées. Examinez les \Program files\Microsoft SQL Server\140\R_SERVER\library\datasets et \library\RevoScaleR. |
@@ -53,21 +52,21 @@ En outre à SQL Server, un serveur autonome est également utile comme un puissa
 
 Démarrer avec le programme d’installation, attacher les fichiers binaires à votre outil de développement favori et écrire votre premier script.
 
-### <a name="step-1-install-the-software"></a>Étape 1 : Installer le logiciel
+### <a name="step-1-install-the-software"></a>Étape 1 : Installer le logiciel
 
 Installer l’une de ces versions :
 
 + [SQL Server 2017 Machine Learning Server (autonome)](../install/sql-machine-learning-standalone-windows-install.md)
 + [SQL Server 2016 R Server (autonome) - R uniquement](../install/sql-r-standalone-windows-install.md)
 
-### <a name="step-2-configure-a-development-tool"></a>Étape 2 : Configurer un outil de développement
+### <a name="step-2-configure-a-development-tool"></a>Étape 2 : Configurer un outil de développement
 
 Sur un serveur autonome, il est courant de travailler localement à l’aide d’un environnement de développement installé sur le même ordinateur.
 
 + [Configurer les outils R](set-up-a-data-science-client.md)
 + [Configurer les outils Python](../python/setup-python-client-tools-sql.md)
 
-### <a name="step-3-write-your-first-script"></a>Étape 3 : Écrire votre premier script
+### <a name="step-3-write-your-first-script"></a>Étape 3 : Écrire votre premier script
 
 Écrire un script R ou Python à l’aide de fonctions à partir de RevoScaleR et revoscalepy algorithmes d’apprentissage.
   
@@ -77,11 +76,11 @@ Sur un serveur autonome, il est courant de travailler localement à l’aide d�
 
 Choisir le meilleur langage pour la tâche. R est idéal pour les calculs statistiques qui sont difficiles à implémenter à l’aide de SQL. Pour les opérations de jeu basé sur les données, tirez parti des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour optimiser les performances. Utiliser le moteur de base de données en mémoire pour effectuer des calculs très rapides sur les colonnes.
 
-### <a name="step-4-operationalize-your-solution"></a>Étape 4 : Faire fonctionner votre solution
+### <a name="step-4-operationalize-your-solution"></a>Étape 4 : Faire fonctionner votre solution
 
 Serveurs autonomes peuvent utiliser le [Opérationnalisation](https://docs.microsoft.com//machine-learning-server/what-is-operationalization) fonctionnalités de la non SQL-personnalisée [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server). Vous pouvez configurer un serveur autonome pour l’Opérationnalisation, ce qui vous offre ces avantages : déployer et héberger votre code, comme les services web, exécutez les diagnostics, tester la capacité du service web.
 
-### <a name="step-5-maintain-your-server"></a>Étape 5 : Gérer votre serveur
+### <a name="step-5-maintain-your-server"></a>Étape 5 : Gérer votre serveur
 
 SQL Server libère des mises à jour cumulatives de manière régulière. Appliquer les mises à jour cumulatives ajoute des améliorations fonctionnelles et sécurité à une installation existante. 
 

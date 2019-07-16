@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 30ea7fba212cc99b8d6d7e58397d29731048c6f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056295"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,9 +60,9 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|Indique l'horodateur de la création de ligne. Chaque ligne dans un ensemble de lignes unique a le même horodateur.|  
 |**component_type**|**sysname**|Indique si la ligne contient des informations pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au niveau du composant, ou pour un groupe de disponibilité Always On de l’instance :<br /><br /> instance<br /><br /> Always On : groupe de disponibilité|  
-|**component_name**|**sysname**|Indique le nom du composant ou le nom du groupe de disponibilité :<br /><br /> système<br /><br /> ressource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> événements<br /><br /> *\<nom du groupe de disponibilité >*|  
+|**component_name**|**sysname**|Indique le nom du composant ou le nom du groupe de disponibilité :<br /><br /> système<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> événements<br /><br /> *\<nom du groupe de disponibilité >*|  
 |**state**|**Int**|Indique l'état d'intégrité du composant :<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  
-|**state_desc**|**sysname**|Décrit la colonne d'état. Les descriptions qui correspondent aux valeurs dans la colonne d'état sont :<br /><br /> 0 : Unknown<br /><br /> 1 : nettoyer<br /><br /> 2 : avertissement<br /><br /> 3 : erreur|  
+|**state_desc**|**sysname**|Décrit la colonne d'état. Les descriptions qui correspondent aux valeurs dans la colonne d'état sont :<br /><br /> 0 : Inconnu<br /><br /> 1 : nettoyer<br /><br /> 2 : avertissement<br /><br /> 3 : erreur|  
 |**data**|**varchar (max)**|Spécifie des données spécifiques au composant.|  
   
  Voici les descriptions des cinq composants :  
@@ -78,7 +77,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **événements**: Collecte des données et des surfaces via la procédure stockée sur les erreurs et les événements d’intérêt enregistrés par le serveur, notamment des détails sur les exceptions de mémoire tampon en anneau, les événements de mémoire tampon en anneau sur l’allocation de mémoire, en dehors de la mémoire, le Moniteur du planificateur, pool de mémoires tampons, les verrouillages spinlock, sécurité et connectivité. Les événements afficheront toujours 0 comme état.  
   
--   **\<nom du groupe de disponibilité >**: Collecte les données de groupe de disponibilité spécifié (si component_type = « toujours sur : AvailabilityGroup »).  
+-   **\<nom du groupe de disponibilité >** : Collecte les données de groupe de disponibilité spécifié (si component_type = « toujours sur : AvailabilityGroup »).  
   
 ## <a name="remarks"></a>Notes  
 Du point de vue d'un échec, les composant system, resource et query_processing seront exploités pour la détection de pannes, tandis que les composants io_subsystem et events le seront uniquement à des fins de diagnostics.  
@@ -88,7 +87,7 @@ Le tableau suivant mappe les composants à leurs états d'intégrité associés.
 |Composants|Bon état (1)|Avertissement (2)|Erreur (3)|Inconnu (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
 |système|x|x|x||  
-|ressource|x|x|x||  
+|resource|x|x|x||  
 |query_processing|x|x|x||  
 |io_subsystem|x|x|||  
 |événements||||x|  

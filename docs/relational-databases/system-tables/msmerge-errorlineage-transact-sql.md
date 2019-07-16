@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 3bcbd328-c958-4cd4-a573-3c35539fa919
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d07a3fadfd2439c35b9d5255ff94d58c79bbbae5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1c3191191a9830a38a177ba3a3c353e5c34dedba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044762"
 ---
 # <a name="msmergeerrorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSmerge_errorlineage** table contient des lignes qui ont été supprimés sur l’abonné, mais dont la suppression n’est pas propagée vers le serveur de publication. Cette table est stockée dans les bases de données de publication et d’abonnement.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**tablenick**|**Int**|Valeur d'entier affectée à la table publiée pour la réplication de fusion. Correspond au champ de surnom dans le **sysmergearticles** table.|  
-|**ROWGUID**|**uniqueidentifier**|Identificateur de ligne.|  
+|**tablenick**|**int**|Valeur d'entier affectée à la table publiée pour la réplication de fusion. Correspond au champ de surnom dans le **sysmergearticles** table.|  
+|**rowguid**|**uniqueidentifier**|Identificateur de ligne.|  
 |**lignage**|**varbinary(501)**|Stocke une liste historique à partir de laquelle les Abonnés et les serveurs de publication ont apporté des mises à jour sur une ligne. Utilisé pour détecter et résoudre des situations conflictuelles.|  
   
 ## <a name="see-also"></a>Voir aussi  

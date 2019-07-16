@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: be818ed92a3c5a7f9522a6142f5acc815077bd10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032641"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +120,7 @@ sp_syscollector_create_collection_set
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. Création d'un jeu d'éléments de collecte à l'aide de valeurs par défaut  
+### <a name="a-creating-a-collection-set-by-using-default-values"></a>R. Création d'un jeu d'éléments de collecte à l'aide de valeurs par défaut  
  L'exemple suivant crée un jeu d'éléments de collecte en spécifiant uniquement les paramètres requis. `@collection_mode` n'est pas nécessaire, mais le mode de collecte par défaut (mis en cache) nécessite de spécifier un ID de planification ou un nom de planification.  
   
 ```  

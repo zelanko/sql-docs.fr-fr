@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 78e4f59ab1e994e34a7f0b1a0c519f34e20a2bd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f760220b02396591e684a83305111e487908d19b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006301"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty (MDX)
 
@@ -33,7 +32,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Numeric_Expression1*  
+ *Expression_numérique1*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
  *Numeric_Expression2*  

@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 99c96c860d2862b059077326be4f4fe313491cd3
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 07a0ce0688e56f0d7b2edac5cdbc87116c75d5ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961911"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Leçon 1 : Explorer et visualiser les données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -278,7 +277,7 @@ Pour afficher le tracé, ouvrez le dossier de destination et examinez les fichie
 
 ## <a name="next-lesson"></a>Leçon suivante
 
-[Leçon 2 : Créer des caractéristiques de données à l’aide de T-SQL](sqldev-create-data-features-using-t-sql.md)
+[Leçon 2 : Créer des caractéristiques de données à l’aide de T-SQL](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Leçon précédente
 

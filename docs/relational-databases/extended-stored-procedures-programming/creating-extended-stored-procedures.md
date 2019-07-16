@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec645ca897bb3760cb5ac866fbc28de5e2f6fcab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c22077de3bf41bc09864ac2c7f24dbdd4ecc3e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032042"
 ---
 # <a name="creating-extended-stored-procedures"></a>Création de procédures stockées étendues
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport) est une extension du compilateur spécifique à Microsoft. Si votre compilateur ne prend pas en charge cette directive, vous devez exporter cette fonction dans votre fichier DEF sous la section EXPORTS.  
   
- Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré avec la trace flag - T260 ou si un utilisateur disposant des privilèges d’administrateur système exécute DBCC TRACEON (260), et si la stockée étendue DLL de procédure ne prend pas en charge __GetXpVersion(), un message d’avertissement (erreur 8131 : la procédure stockée étendue La DLL '%' n’exporte pas \__GetXpVersion().) est écrit dans le journal des erreurs. (Notez que \__GetXpVersion() commence par deux traits de soulignement.)  
+ Lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré avec la trace flag - T260 ou si un utilisateur disposant des privilèges d’administrateur système exécute DBCC TRACEON (260), et si la stockée étendue DLL de procédure ne prend pas en charge __GetXpVersion(), un message d’avertissement (erreur 8131 : Procédure stockée étendue DLL '%' n’exporte pas \__GetXpVersion().) est écrit dans le journal des erreurs. (Notez que \__GetXpVersion() commence par deux traits de soulignement.)  
   
  Si la DLL de procédure stockée étendue exporte __GetXpVersion(), mais que la version retournée par la fonction est antérieure à celle requise par le serveur, un message d'avertissement indiquant la version retournée par la fonction et la version attendue par le serveur est écrit dans le journal des erreurs. Si vous obtenez ce message, vous retournez une valeur incorrecte de \__GetXpVersion(), ou si vous compilez avec une version antérieure de srv.h.  
   

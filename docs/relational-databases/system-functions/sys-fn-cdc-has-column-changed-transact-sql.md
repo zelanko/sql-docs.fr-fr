@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3d3df1bd07e73c3c363a0fd275e910c3c32cbe71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c409581771055e2c6d85d2cdd01937e2f033ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046381"
 ---
 # <a name="sysfncdchascolumnchanged-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
  Colonne capturée de l'instance de capture spécifiée sur laquelle des rapports doivent être effectués. *column_name* est **sysname**.  
   
  *update_mask*  
- Masque qui identifie les colonnes mises à jour dans toute ligne de modification associée. *update_mask* est **varbinary (128)**.  
+ Masque qui identifie les colonnes mises à jour dans toute ligne de modification associée. *update_mask* est **varbinary (128)** .  
   
 ## <a name="return-type"></a>Type de retour  
  **bit**  
@@ -60,7 +59,7 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
   
  Lorsque ces informations seront affichera dans le cadre d’une requête de données modifiées, nous vous recommandons d’utiliser les fonctions [sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) et [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) au lieu de cette fonction. Utilisez la fonction fn_cdc_get_column_ordinal avant d'interroger la modification de données de sorte que l'ordinal de colonne souhaité ne soit calculé qu'une seule fois. Utilisez fn_cdc_is_bit_set dans la requête afin d'extraire les informations du masque de mise à jour pour chaque ligne retournée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner. Pour tous les autres utilisateurs, requiert l'autorisation SELECT sur toutes les colonnes capturées dans la table source et, si un rôle de régulation pour l'instance de capture a été défini, l'appartenance à ce rôle de base de données.  
   
 ## <a name="see-also"></a>Voir aussi  

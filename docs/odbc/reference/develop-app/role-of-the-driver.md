@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cac64c24-a27d-4884-96c0-ea7988351711
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b940eac1548582285e7d41e0014cfe911dfb1137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c344c1d8b3a4702728807af9dae7ed9ca7c5cd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020381"
 ---
 # <a name="role-of-the-driver"></a>Rôle du pilote
 Le pilote vérifie toutes les erreurs et avertissements ne pas vérifiées par le Gestionnaire de pilotes et trie les enregistrements d’état qu’il génère. (Une application ODBC 2. *x* pilote ne trie pas les enregistrements d’état.) Cela inclut les erreurs et avertissements de troncation de données, conversion de données, la syntaxe et des transitions d’état. Le pilote peut également contrôler les erreurs et avertissements partiellement activés par le Gestionnaire de pilotes. Par exemple, bien que le Gestionnaire de pilotes vérifie si la valeur de *opération* dans **SQLSetPos** est autorisé, le pilote doit vérifier si elle est prise en charge.  

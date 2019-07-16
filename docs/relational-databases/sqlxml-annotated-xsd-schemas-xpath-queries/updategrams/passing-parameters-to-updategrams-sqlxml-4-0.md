@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 45c6f1d61df8f3f83b1cb8f579535882a9c1ad98
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c557c96701ce9587125acccbb12f408d465a07b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018487"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Passage de paramètres aux codes de mise à jour (updategrams) (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "67584666"
   
 -   Les exemples utilisent le mappage par défaut (en d'autres termes, aucun schéma de mappage n'est spécifié dans le code de mise à jour (updategram)). Pour plus d’exemples de codes qui utilisent des schémas de mappage, consultez [spécification d’un schéma de mappage annoté dans une mise à jour &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-4-0.md).  
   
-### <a name="a-passing-parameters-to-an-updategram"></a>A. Passage de paramètres à un code de mise à jour  
+### <a name="a-passing-parameters-to-an-updategram"></a>R. Passage de paramètres à un code de mise à jour  
  Dans cet exemple, le code de mise à jour modifie le nom d'un employé dans la table HumanResources.Shift. Mise à jour est passé de deux paramètres : ShiftID, qui est utilisé pour identifier un travail d’équipe et de manière unique nom.  
   
 ```  

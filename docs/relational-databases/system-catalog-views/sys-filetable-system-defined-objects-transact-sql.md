@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 62022e6b-46f6-495f-b14b-53f41e040361
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d18b3c20a78c4f819827a389a3811946bfef33ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd05f24ab90844065b708230ee016ce9ce78bfbd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005150"
 ---
 # <a name="sysfiletablesystemdefinedobjects-transact-sql"></a>sys.filetable_system_defined_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +37,8 @@ ms.locfileid: "47660757"
   
 |colonne|Data type|Description|  
 |------------|---------------|-----------------|  
-|**object_id**|**Int**|ID d'objet de l'objet défini par le système associé à un FileTable.<br /><br /> Fait référence à l’objet dans **sys.objects**.|  
-|**parent_object_id**|**Int**|ID d'objet du FileTable parent.<br /><br /> Fait référence à l’objet dans **sys.objects**.|  
+|**object_id**|**int**|ID d'objet de l'objet défini par le système associé à un FileTable.<br /><br /> Fait référence à l’objet dans **sys.objects**.|  
+|**parent_object_id**|**int**|ID d'objet du FileTable parent.<br /><br /> Fait référence à l’objet dans **sys.objects**.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer, modifier et supprimer des FileTables](../../relational-databases/blob/create-alter-and-drop-filetables.md)   

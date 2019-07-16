@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e397bf4480dd7a9955fb8c7acbce0d11fd910893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63215946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944689"
 ---
 # <a name="setting-project-options-mysqltosql"></a>Définition des options du projet (MySQLToSQL)
 Pour chaque projet SSMA, vous pouvez définir les options au niveau du projet. Ces options spécifient la façon dont les objets sont convertis, la migration des données, et la correspondance entre les types de sources de données et les types de données cible.  Avant de convertir les objets dans SQL Server ou SQL Azure ou migrer des données dans SQL Server ou SQL Azure, vérifiez que les options de configuration sont appropriées pour le projet.  

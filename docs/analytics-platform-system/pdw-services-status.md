@@ -2,19 +2,18 @@
 title: État - des services PDW Analytique Platform System | Microsoft Docs
 description: État des services de système de plateforme d’Analytique Parallel Data Warehouse (PDW).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6892bfcca05e0f85039dddee65a54b485a7ed433
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3db994b4869c1b017a079b404af3d95db1316dad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960367"
 ---
 # <a name="parallel-data-warehouse-services-status-for-analytics-platform-system"></a>État des services de Parallel Data Warehouse pour l’Analytique Platform System
 Parallel Data Warehouse **l’état des Services** page dans le Microsoft Analytique Platform System Configuration Manager affiche l’état actuel de tous les services SQL Server PDW et offre la possibilité d’arrêter et démarrer les services PDW. Il s’agit de la seule méthode prise en charge pour le démarrage et arrêt des services PDW. Notez que des composants ou services ne peut pas être redémarrées de manière indépendante.  

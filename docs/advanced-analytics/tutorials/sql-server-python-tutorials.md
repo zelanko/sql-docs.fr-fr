@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f31da296bf55b7da55a4e5a8398d411bc5a5b0ea
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: d5a434b6e089cd77a2bd685506e5552c4e1e7f6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961946"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>Didacticiels de SQL Server 2017 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,8 +32,8 @@ Cet article décrit les didacticiels Python pour la base de données analytique 
 |------|-------------|
 | [Démarrage rapide : Script Python « Hello world » dans SQL Server](quickstart-python-run-using-t-sql.md) | Découvrez les principes fondamentaux de l’appel de Python dans T-SQL. |
 | [Démarrage rapide : Créer, former et utiliser un modèle Python avec des procédures stockées dans SQL Server](quickstart-python-train-score-in-tsql.md) | Explique les mécanismes d’incorporation de code Python dans une procédure stockée, en fournissant des entrées et l’exécution de procédure stockée. |
-| [Didacticiel : Créer un modèle à l’aide de revoscalepy](use-python-revoscalepy-to-create-model.md) | Montre comment exécuter du code à partir d’un terminal de Python à distance, à l’aide du contexte de calcul de SQL Server. Vous devez connaître un peu avec les environnements et outils de Python. Exemple de code est fourni qui crée un modèle à l’aide **rxLinMod**, à partir du nouveau **revoscalepy** bibliothèque. |
-| [Didacticiel : Découvrez l’analytique de Python dans base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md) | Cette procédure pas à pas de bout en bout montre le processus de génération d’une solution complète de Python à l’aide de procédures stockées T-SQL. Tout le code Python est inclus.|
+| [Tutoriel : Créer un modèle à l’aide de revoscalepy](use-python-revoscalepy-to-create-model.md) | Montre comment exécuter du code à partir d’un terminal de Python à distance, à l’aide du contexte de calcul de SQL Server. Vous devez connaître un peu avec les environnements et outils de Python. Exemple de code est fourni qui crée un modèle à l’aide **rxLinMod**, à partir du nouveau **revoscalepy** bibliothèque. |
+| [Tutoriel : Découvrez l’analytique de Python dans base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md) | Cette procédure pas à pas de bout en bout montre le processus de génération d’une solution complète de Python à l’aide de procédures stockées T-SQL. Tout le code Python est inclus.|
 
 <a name ="bkmk_samples"></a>
 

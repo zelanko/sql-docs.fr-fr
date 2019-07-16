@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21756cadbfb924e95edd261942f018fb6aef6a4c
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: dbee7422bdf58d753c31c7aa57a81bc4b29d2568
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096236"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>Sys.DM\_db\_paramétrage\_recommandations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -37,11 +36,11 @@ ms.locfileid: "54226516"
   
  Dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], les vues de gestion dynamique ne peuvent pas exposer des informations qui ont un impact sur la relation contenant-contenu de la base de données, ou exposer des informations concernant d'autres bases de données auxquelles l'utilisateur a accès. Pour éviter d’exposer ces informations, chaque ligne qui contient les données qui n’appartient pas au locataire connecté est filtrée.
 
-| **Nom de colonne** | **Data type** | **Description** |
+| **Nom de la colonne** | **Type de données** | **Description** |
 | --- | --- | --- |
-| **nom** | **nvarchar(4000)** | Nom unique de recommandation. |
+| **name** | **nvarchar(4000)** | Nom unique de recommandation. |
 | **type** | **nvarchar(4000)** | Le nom de l’option de réglage automatique qui a produit la recommandation, par exemple, `FORCE_LAST_GOOD_PLAN` |
-| **raison** | **nvarchar(4000)** | Pourquoi cette recommandation a été fournie de raison. |
+| **reason** | **nvarchar(4000)** | Pourquoi cette recommandation a été fournie de raison. |
 | **valide\_dans la mesure où** | **datetime2** | La première fois que cette recommandation a été générée. |
 | **last\_refresh** | **datetime2** | La dernière fois cette recommandation a été générée. |
 | **state** | **nvarchar(4000)** | Document JSON qui décrit l’état de la recommandation. Les champs suivants sont disponibles :<br />-   `currentValue` -l’état actuel de la recommandation.<br />-   `reason` -(constante) qui décrit la raison pour laquelle il est recommandé dans l’état actuel.|
@@ -63,7 +62,7 @@ ms.locfileid: "54226516"
 
  `currentValue` champ dans le `state` colonne peut avoir les valeurs suivantes :
  
- | État | Description |
+ | Statut | Description |
  |--------|-------------|
  | `Active` | Recommandation est active et non encore appliqué. Utilisateur peut prendre le script de recommandation et exécutez-le manuellement. |
  | `Verifying` | La recommandation est appliquée par [!INCLUDE[ssde_md](../../includes/ssde_md.md)] et processus de vérification interne compare les performances du plan forcé avec le plan de régression. |

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53c091fd0b7a6cfdf390997fb5163fbc9d98e18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023339"
 ---
 # <a name="pattern-value-arguments"></a>Arguments de valeur de modèle
 Certains arguments dans le catalogue des fonctions, telles que la *TableName* argument dans **SQLTables**, acceptez les modèles de recherche. Ces arguments acceptent des modèles de recherche si l’attribut d’instruction SQL_ATTR_METADATA_ID a la valeur SQL_FALSE ; ils sont des arguments d’identificateur qui n’acceptent pas d’un modèle de recherche si cet attribut a la valeur SQL_TRUE.  
@@ -37,7 +36,7 @@ Certains arguments dans le catalogue des fonctions, telles que la *TableName* ar
   
 |Modèle de recherche|Description|  
 |--------------------|-----------------|  
-|%A%|Tous les identificateurs contenant la lettre A|  
+|%A %|Tous les identificateurs contenant la lettre A|  
 |ABC_|Tous les identificateurs de quatre caractères en commençant par ABC|  
 |ABC\\_|L’identificateur ABC_, en supposant que le caractère d’échappement est une barre oblique inverse (\\)|  
 |\\\\%|Tous les identificateurs commençant par une barre oblique inverse (\\), en supposant que le caractère d’échappement est une barre oblique inverse|  

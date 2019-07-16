@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b29ee604f1b584fcbdcd0ef91e32c84d89cc5f96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045990"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,20 +65,20 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**varbinary(16)**|Numéro de séquence de la commande.|  
 |**originator_srvname**|**sysname**|Serveur d'origine de la transaction.|  
 |**originator_db**|**sysname**|Base de données d'origine de la transaction.|  
-|**article_id**|**Int**|ID de l’article.|  
+|**article_id**|**int**|ID de l’article.|  
 |**type**|**Int**|Type de commande.|  
 |**partial_command**|**bit**|Indique s'il s'agit d'une commande partielle.|  
-|**hashkey**|**Int**|À usage interne uniquement|  
-|**originator_publication_id**|**Int**|ID de la publication d'origine de la transaction.|  
-|**originator_db_version**|**Int**|Version de la base de données d'origine de la transaction.|  
+|**hashkey**|**int**|À usage interne uniquement|  
+|**originator_publication_id**|**int**|ID de la publication d'origine de la transaction.|  
+|**originator_db_version**|**int**|Version de la base de données d'origine de la transaction.|  
 |**originator_lsn**|**varbinary(16)**|Identifie le numéro séquentiel dans le journal (LSN) de la commande dans la publication d'origine. Utilisé dans la réplication transactionnelle peer-to-peer.|  
 |**commande**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] commande.|  
-|**command_id**|**Int**|ID de la commande dans [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
+|**command_id**|**int**|ID de la commande dans [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   
  Les commandes longues peuvent être réparties entre plusieurs lignes dans l'ensemble de résultats.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dfb57a6512245c9adb36a511ce48721dd901995c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0575c7ef7e380b1157640f9927e41192838c1ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091600"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>Mise à jour de lignes dans l’ensemble de lignes avec SQLSetPos
 L’opération de mise à jour de **SQLSetPos** rend la source de données à mettre à jour une ou plusieurs lignes sélectionnées d’une table, à l’aide de données dans les mémoires tampons d’application pour chaque colonne dépendante (sauf si la valeur dans la mémoire tampon de longueur / d’indicateur est SQL_COLUMN_IGNORE). Les colonnes qui ne sont pas liés ne seront pas mis à jour.  

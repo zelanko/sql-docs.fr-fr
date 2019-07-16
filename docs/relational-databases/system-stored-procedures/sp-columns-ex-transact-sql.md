@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47a8665027ce251a391049aa71ba12b246c1c625
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070345"
 ---
 # <a name="spcolumnsex-transact-sql"></a>sp_columns_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,20 +57,20 @@ sp_columns_ex [ @table_server = ] 'table_server'
 `[ @ODBCVer = ] 'ODBCVer'` Est la version d’ODBC utilisée. *ODBCVer* est **int**, avec une valeur par défaut 2. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Consultez la spécification ODBC SQLColumns pour connaître les différences de comportement entre les versions 2 et 3.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nom du qualificateur de la table ou de la vue. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
+|**TABLE_CAT**|**sysname**|Nom du qualificateur de la table ou de la vue. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_ **.** _propriétaire_ **.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table. Ce champ peut contenir la valeur NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nom du propriétaire de la table ou de la vue. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de l'utilisateur de base de données qui a créé la table. Ce champ retourne toujours une valeur.|  
 |**TABLE_NAME**|**sysname**|Nom de table ou de vue. Ce champ retourne toujours une valeur.|  
 |**COLUMN_NAME**|**sysname**|Nom de colonne, pour chaque colonne de la **TABLE_NAME** retourné. Ce champ retourne toujours une valeur.|  
 |**DATA_TYPE**|**smallint**|Valeur entière correspondant à des indicateurs de type ODBC. S'il s'agit d'un type de données qui ne peut pas être mappé avec un type ODBC, cette valeur est NULL. Le nom de type de données natif est retourné dans le **TYPE_NAME** colonne.|  
 |**TYPE_NAME**|**varchar(** 13 **)**|Chaîne représentant un type de données. Le SGBD sous-jacent dispose de ce nom de type de données.|  
-|**COLUMN_SIZE**|**Int**|Nombre de chiffres significatifs. La valeur de retour pour la **précision** colonne est en base 10.|  
-|**BUFFER_LENGTH**|**Int**|Taille de transfert des données.1|  
+|**COLUMN_SIZE**|**int**|Nombre de chiffres significatifs. La valeur de retour pour la **précision** colonne est en base 10.|  
+|**BUFFER_LENGTH**|**int**|Taille de transfert des données.1|  
 |**DECIMAL_DIGITS**|**smallint**|Nombre de chiffres situés à droite du séparateur décimal.|  
 |**NUM_PREC_RADIX**|**smallint**|Est la base de types de données numériques.|  
 |**NULLABLE**|**smallint**|Spécifie la possibilité de contenir une valeur NULL.<br /><br /> 1 = les valeurs NULL sont autorisées.<br /><br /> 0 = pas de valeur NULL.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7dee3c11-aea0-4d10-9126-d54db19448f2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 78a89ddcb27111396ec279af0b418e8490780e6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1be899b95a4e132c3b5aa42a73df9bd1b0ee057c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62934602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038963"
 ---
 # <a name="error-handling-xquery"></a>Gestion des erreurs (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "62934602"
   
  Si l'erreur dynamique devait se produire dans un prédicat, il est courant que son non-déclenchement épargne la sémantique car () est mappé à False. Toutefois, dans certains cas, le renvoi de () au lieu d'une erreur dynamique peut générer des résultats inattendus. Les exemples suivants illustrent ce point.  
   
-### <a name="example-using-the-avg-function-with-a-string"></a>Exemple : À l’aide de la fonction avg() avec une chaîne  
+### <a name="example-using-the-avg-function-with-a-string"></a>Exemple : À l’aide de la fonction avg() avec une chaîne  
  Dans l’exemple suivant, le [fonction avg](../xquery/aggregate-functions-avg.md) est appelé pour calculer la moyenne des trois valeurs. L'une de ces valeurs est une chaîne. L'instance XML étant, dans ce cas, non typée, toutes les données qu'elle contient sont de type atomique non typé. Le **avg()** fonction convertit tout d’abord ces valeurs à **xs : double** avant de calculer la moyenne. Toutefois, la valeur, `"Hello"`, ne peut pas être casté en **xs : double** et génère une erreur dynamique. Dans ce cas, au lieu de renvoyer une erreur dynamique, la conversion de `"Hello"` à **xs : double** génère une séquence vide. Le **avg()** fonction ignore cette valeur, calcule la moyenne des deux autres valeurs et renvoie 150.  
   
 ```  
@@ -58,10 +57,10 @@ SET @x=N'<root xmlns:myNS="test">
 SELECT @x.query('avg(//*)')  
 ```  
   
-### <a name="example-using-the-not-function"></a>Exemple : À l’aide de not (fonction)  
+### <a name="example-using-the-not-function"></a>Exemple : À l’aide de not (fonction)  
  Lorsque vous utilisez le [ne fonctionne pas](../xquery/functions-on-boolean-values-not-function.md) dans un prédicat, par exemple, `/SomeNode[not(Expression)]`, et l’expression provoque une erreur dynamique, une séquence vide est retournée au lieu d’une erreur. Application **not()** à la séquence vide renvoie True, au lieu d’une erreur.  
   
-### <a name="example-casting-a-string"></a>Exemple : Conversion d’une chaîne  
+### <a name="example-casting-a-string"></a>Exemple : Conversion d’une chaîne  
  Dans l'exemple suivant, la chaîne littérale « NaN » est convertie au format xs:string, puis au format xs:double. Le résultat est un ensemble de lignes vide. Le fait que la chaîne « NaN » ne puisse pas être correctement convertie au format xs:double n'est détecté qu'à l'exécution car elle est d'abord convertie au format xs:string.  
   
 ```  

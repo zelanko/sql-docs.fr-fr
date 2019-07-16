@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: 8e4403e9-595c-4b6b-9d0c-f6ae1b2bc99d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: fa3c8cfcb4eb90c34bbab94a0d61998a6bc3c916
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87090611cd294e1af72484c4b0c03fcec1fe4f04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033955"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Créer un flux de travail personnalisé (Master Data Services)
 
@@ -64,7 +63,7 @@ ms.locfileid: "65485565"
   
 3.  Ajoutez « using Microsoft.MasterDataServices.Core.Workflow; » à votre fichier de code C#.  
   
-4.  Héritez de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> dans votre déclaration de classe. La déclaration de classe doit être semblable à : « public class WorkflowTester : IWorkflowTypeExtender'.  
+4.  Héritez de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> dans votre déclaration de classe. La déclaration de classe doit être semblable à : « public class WorkflowTester : IWorkflowTypeExtender ».  
   
 5.  Implémentez l'interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. La méthode <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> est appelée par le service d'intégration de flux de travail MDS de SQL Server pour démarrer votre flux de travail.  
   

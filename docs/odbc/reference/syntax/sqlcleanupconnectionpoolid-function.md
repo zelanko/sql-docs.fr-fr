@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4d00fcff0b2fa1948f6b2f6f66b863501e12d97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee8f9b9879a3533e8196bbc89f8ae0b0a132293a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036088"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID, fonction
 **Conformité**  
@@ -52,7 +51,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
  Une application ne peut pas recevoir le message d’erreur retourné par le pilote.  
   
 ## <a name="remarks"></a>Notes  
- **SQLCleanupConnectionPoolID** peut être appelée à tout moment, mais le Gestionnaire de pilotes garantit qu’aucun autre thread n’appelle simultanément **SQLGetPoolID** et aucun autre thread n’appelle simultanément ** SQLRateConnection** et **SQLPoolConnect** avec un jeton d’informations de connexion affecté à cet ID de pool. Par conséquent, le pilote doit Assurez-vous que cette fonction est thread-safe.  
+ **SQLCleanupConnectionPoolID** peut être appelée à tout moment, mais le Gestionnaire de pilotes garantit qu’aucun autre thread n’appelle simultanément **SQLGetPoolID** et aucun autre thread n’appelle simultanément  **SQLRateConnection** et **SQLPoolConnect** avec un jeton d’informations de connexion affecté à cet ID de pool. Par conséquent, le pilote doit Assurez-vous que cette fonction est thread-safe.  
   
  Un pilote peut nettoyer les ressources associées à l’ID de pool.  
   

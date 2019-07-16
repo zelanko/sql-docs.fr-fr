@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31ac070f-8c59-4fd5-bd5a-466bb27dbca0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d70d3ca60a046a355549260406edba261f805e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43004601845d3032d404c308b7b1fa4850f694ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022195"
 ---
 # <a name="using-concise-functions"></a>Utilisation de fonctions concises
 Certaines fonctions ODBC accéder implicite pour les descripteurs. Créateurs d’applications peuvent les trouver plus pratique que l’appel **SQLSetDescField** ou **SQLGetDescField**. Ces fonctions sont appelées *concis* fonctionne car ils effectuent un nombre de fonctions, y compris de définir ou obtenir les champs de descripteur. Certaines fonctions concises permettent une application de définir ou extraire plusieurs champs de descripteur associés dans un seul appel de fonction.  

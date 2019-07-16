@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 48554e48d09822b23320d36080084d4947882736
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 4ff8d99bd31e2638aa63393fb5ba052f442bf75f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936893"
 ---
 # <a name="sysdmexecsqltext-transact-sql"></a>sys.dm_exec_sql_text (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## <a name="arguments"></a>Arguments  
 *sql_handle*  
-Est un jeton qui identifie de façon unique un lot qui a exécuté ou est en cours d’exécution. *sql_handle* est **varbinary (64)**. 
+Est un jeton qui identifie de façon unique un lot qui a exécuté ou est en cours d’exécution. *sql_handle* est **varbinary (64)** . 
 
 Le *sql_handle* peut être obtenu à partir d’objets de gestion dynamique suivants :  
   
@@ -59,7 +58,7 @@ Le *sql_handle* peut être obtenu à partir d’objets de gestion dynamique suiv
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-Est un jeton qui identifie de façon unique un plan d’exécution de requête pour un lot qui a été exécutée et son plan réside dans le cache du plan, ou est en cours d’exécution. *plan_handle* est **varbinary (64)**.   
+Est un jeton qui identifie de façon unique un plan d’exécution de requête pour un lot qui a été exécutée et son plan réside dans le cache du plan, ou est en cours d’exécution. *plan_handle* est **varbinary (64)** .   
 
 Le *plan_handle* peut être obtenu à partir d’objets de gestion dynamique suivants :    
   
@@ -75,7 +74,7 @@ Le *plan_handle* peut être obtenu à partir d’objets de gestion dynamique sui
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**dbid**|**smallint**|ID de base de données.<br /><br /> Pour les instructions SQL ad hoc et préparées, l'ID de la base de données où les instructions ont été compilées.|  
 |**objectid**|**Int**|ID d’objet.<br /><br /> Est NULL pour les instructions SQL ad hoc et préparées.|  
@@ -98,7 +97,7 @@ Descripteur de plan est une valeur de hachage dérivée du plan compilé du lot 
   
 ## <a name="examples"></a>Exemples 
 
-### <a name="a-conceptual-example"></a>A. Exemple conceptuel
+### <a name="a-conceptual-example"></a>R. Exemple conceptuel
 Voici un exemple simple pour illustrer le passage un **sql_handle** directement ou avec **CROSS APPLY**.
   1.  Créer l’activité.  
 Exécutez le T-SQL suivant dans une nouvelle fenêtre de requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].   
@@ -133,7 +132,7 @@ Acquérir le **sql_handle** de **sys.dm_exec_requests**. Ensuite, transmettez le
          ```      
     
   
-### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>b. Obtenir des informations sur les cinq requêtes principales par temps processeur moyen  
+### <a name="b-obtain-information-about-the-top-five-queries-by-average-cpu-time"></a>B. Obtenir des informations sur les cinq requêtes principales par temps processeur moyen  
  L'exemple suivant retourne le texte de l'instruction SQL et le temps processeur moyen pour les cinq premières requêtes.  
   
 ```sql  

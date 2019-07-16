@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1dc0b43a-d023-4e7d-b027-8b1459fd058c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7f4d2c2278304b66bc2692e147a8bf48c81b0bc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b028625f1c236c96c39e75f08057f82fa852bd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945183"
 ---
 # <a name="how-permissions-are-determined-master-data-services"></a>Mode de détermination des autorisations (Master Data Services)
 
@@ -39,7 +38,7 @@ ms.locfileid: "65484398"
   
  ![mds_conc_security_no_overlap](../master-data-services/media/mds-conc-security-no-overlap.gif "mds_conc_security_no_overlap")  
   
-### <a name="step-1-effective-attribute-permissions-are-determined"></a>Étape 1 : Les autorisations d’attribut effectives sont déterminées.  
+### <a name="step-1-effective-attribute-permissions-are-determined"></a>Étape 1 : Les autorisations d’attribut effectives sont déterminées.  
  La liste suivante décrit comment sont déterminées les autorisations d'attribut effectives :  
   
 -   Les autorisations attribuées aux objets de modèle déterminent les attributs auxquels un utilisateur peut accéder.  
@@ -54,7 +53,7 @@ ms.locfileid: "65484398"
   
  ![mds_conc_inheritance_model](../master-data-services/media/mds-conc-inheritance-model.gif "mds_conc_inheritance_model")  
   
-### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Étape 2 : Si les autorisations des membres de la hiérarchie sont attribuées, les autorisations de membre effectives sont déterminées.  
+### <a name="step-2-if-hierarchy-member-permissions-are-assigned-effective-member-permissions-are-determined"></a>Étape 2 : Si les autorisations des membres de la hiérarchie sont attribuées, les autorisations de membre effectives sont déterminées.  
  La liste suivante explique comment les autorisations des membres de la hiérarchie effectives sont déterminées :  
   
 -   Les autorisations attribuées aux nœuds de la hiérarchie déterminent les membres auxquels un utilisateur peut accéder.  
@@ -69,7 +68,7 @@ ms.locfileid: "65484398"
   
  ![mds_conc_inheritance_hierarchy](../master-data-services/media/mds-conc-inheritance-hierarchy.gif "mds_conc_inheritance_hierarchy")  
   
-### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Étape 3 : L’intersection des autorisations d’attribut et de membre est déterminée.  
+### <a name="step-3-the-intersection-of-attribute-and-member-permissions-is-determined"></a>Étape 3 : L’intersection des autorisations d’attribut et de membre est déterminée.  
  Si les autorisations d'attribut effectives sont différentes des autorisations de membre effectives, les autorisations doivent être déterminées pour chaque valeur d'attribut individuelle. Pour plus d’informations, consultez [Chevauchement des autorisations de modèle et de membre &#40;Master Data Services&#41;](../master-data-services/overlapping-model-and-member-permissions-master-data-services.md).  
   
 ## <a name="permissions-assigned-to-multiple-groups"></a>Autorisations attribuées à plusieurs groupes  

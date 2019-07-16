@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 039e5a8970b2161bfe54b1836f3bd12b48477e1a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ad8446f52f5bf85794e8444d8d1b53f53bc54dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961810"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Créer un modèle R et l’enregistrer dans SQL Server (procédure pas à pas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -204,7 +203,7 @@ Vous pouvez vérifier le contexte de calcul est local en exécutant `rxGetComput
 
 Une fois que vous avez créé un modèle et vous être assuré qu’elle s’exécute correctement, vous souhaiterez probablement déployer sur un site où les utilisateurs ou les personnes de votre organisation peuvent rendre utilisent le modèle, ou peut-être reformer et revoir le modèle sur une base régulière. Ce processus est parfois appelé *Opérationnalisation* un modèle. Dans SQL Server, Opérationnalisation est obtenue en incorporant le code R dans une procédure stockée. Étant donné que le code se trouve dans la procédure, elle peut être appelée à partir de n’importe quelle application pouvant se connecter à SQL Server.
 
-Avant de pouvoir appeler le modèle à partir d’une application externe, vous devez enregistrer le modèle dans la base de données utilisée pour la production. Modèles formés sont stockés sous forme binaire, dans une seule colonne de type **varbinary (max)**.
+Avant de pouvoir appeler le modèle à partir d’une application externe, vous devez enregistrer le modèle dans la base de données utilisée pour la production. Modèles formés sont stockés sous forme binaire, dans une seule colonne de type **varbinary (max)** .
 
 Un flux de travail de déploiement classique se compose des étapes suivantes :
 

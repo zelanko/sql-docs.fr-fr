@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: 136a76ee-2b35-4418-ab46-fda2d51f7d99
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 60fb1fd10b448e7dc71d06aecaa36385f882f62f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 736083db5043dd8bcb9dce9f828a9191c582c872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048422"
 ---
 # <a name="syseventnotifications-transact-sql"></a>sys.event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque objet qui est une notification d’événement, avec **sys.objects.type** = fr.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de la notification d'événement|  
+|**name**|**sysname**|Nom de la notification d'événement|  
 |**object_id**|**Int**|Numéro d'identification de l'objet. Unique dans une base de données.|  
 |**parent_class**|**tinyint**|Classe du parent.<br /><br /> 0 = Base de données<br /><br /> 1 = objet ou colonne|  
 |**parent_class_desc**|**nvarchar(60)**|DATABASE<br /><br /> OBJECT_OR_COLUMN|  
@@ -43,11 +42,11 @@ ms.locfileid: "47755177"
 |**create_date**|**datetime**|Date de création.|  
 |**modify_date**|**datetime**|Est toujours égale à **create_date**.|  
 |**service_name**|**nvarchar (256)**|Nom du service cible auquel la notification est envoyée.|  
-|**BROKER_INSTANCE**|**nvarchar(128)**|Instance du broker auquel la notification est envoyée.|  
-|**principal_id**|**Int**|ID du principal de base de données propriétaire de cette notification d'événement|  
+|**broker_instance**|**nvarchar(128)**|Instance du broker auquel la notification est envoyée.|  
+|**principal_id**|**int**|ID du principal de base de données propriétaire de cette notification d'événement|  
 |**creator_sid**|**varbinary(85)**|SID de la connexion qui a créé la notification d'événement.<br /><br /> A la valeur NULL si l'option FAN_IN n'est pas spécifiée.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

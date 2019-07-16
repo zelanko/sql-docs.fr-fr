@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 0256881ffbf3a1729c89cd3a82522fd3e684ebf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57d174bbd24dea36470c4b8ca3e29f77dc4111f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935267"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery"></a>Importer les domaines d'un fichier Excel dans la découverte des connaissances
 
@@ -56,7 +55,7 @@ ms.locfileid: "66776496"
   
 8.  Sélectionnez une colonne, puis mappez un domaine existant à la colonne, ou créez un nouveau domaine en cliquant sur l'icône **Créer un domaine** , en créant un domaine dans la boîte de dialogue **Créer un domaine** , puis en mappant le domaine à la colonne. Le type de données du domaine doit correspondre au type de données de la colonne. Répétez ces étapes pour toutes les colonnes de la feuille de calcul.  
   
-9. Cliquer sur **Suivant**.  
+9. Cliquez sur **Suivant**.  
   
 10. Dans la page **Découverte** , cliquez sur **Démarrer** pour analyser les données de la feuille de calcul Excel.  
   

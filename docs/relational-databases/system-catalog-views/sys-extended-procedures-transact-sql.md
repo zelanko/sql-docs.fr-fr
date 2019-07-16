@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8eb0d10f8be8c2e5d9f939dd7a631d22154d6608
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 350c8eeec6a88bf2fad3a3461675696ae75ab8e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054327"
 ---
 # <a name="sysextendedprocedures-transact-sql"></a>sys.extended_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +32,12 @@ ms.locfileid: "47613679"
   Contient une ligne pour chaque objet qui est une procédure stockée étendue, avec **sys.objects.type** = X. Étant donné que les procédures stockées étendues sont installées dans le **master** , elles sont uniquement visibles à partir de ce contexte de base de données. En sélectionnant à partir de la **sys.extended_procedures** vue dans un autre contexte de base de données retourne un jeu de résultats vide.  
 
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**\<Colonnes héritent de sys.objects >**||Pour obtenir la liste des colonnes qui hérite de cette vue, consultez [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
 |**nom_dll**|**nvarchar(260)**|Nom (chemin d'accès compris) de la DLL pour cette procédure stockée étendue.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

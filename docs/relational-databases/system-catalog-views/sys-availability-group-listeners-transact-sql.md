@@ -21,23 +21,22 @@ helpviewer_keywords:
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 839e471e8861f081762f6129dff731e66bed77a7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041058"
 ---
 # <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Pour chaque toujours sur le groupe de disponibilité, retourne aucune ligne, indiquant qu’aucun nom de réseau est associé au groupe de disponibilité, ou retourne une ligne pour chaque configuration de l’écouteur de groupe de disponibilité dans le serveur de basculement Windows (WSFC) cluster. Cette vue affiche la configuration en temps réel obtenue à partir du cluster.  
+  Pour chaque groupe de disponibilité Always On, retourne aucune ligne, ce qui indique qu'aucun nom réseau n'est associé au groupe de disponibilité, ou retourne une ligne pour chaque configuration d'écouteur de groupe de disponibilité dans le cluster de clustering de basculement Windows Server (WSFC). Cette vue affiche la configuration en temps réel obtenue à partir du cluster.  
   
 > [!NOTE]  
 >  Cet affichage catalogue ne décrit pas les détails d'une configuration IP, qui a été définie dans le cluster WSFC.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|ID de groupe de disponibilité (**group_id**) à partir de [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md).|  
 |**listener_id**|**nvarchar(36)**|GUID à partir de l'ID de ressource de cluster.|  

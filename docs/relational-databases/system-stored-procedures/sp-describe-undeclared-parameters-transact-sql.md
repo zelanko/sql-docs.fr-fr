@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8bfd021414ab9e8078ec0df9c23c33828e36d0f9
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 27d30c4160571274339b5befba8f0b9a8cedb859
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053013"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -58,10 +57,10 @@ sp_describe_undeclared_parameters
 ## <a name="result-sets"></a>Jeux de résultats  
  **sp_describe_undeclared_parameters** retourne le jeu de résultats suivant.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int non NULL**|Contient la position ordinale du paramètre dans le jeu de résultats. La position du premier paramètre sera spécifiée comme 1.|  
-|**nom**|**sysname pas NULL**|Contient le nom du paramètre.|  
+|**name**|**sysname pas NULL**|Contient le nom du paramètre.|  
 |**suggested_system_type_id**|**int non NULL**|Contient le **system_type_id** du type de données du paramètre comme spécifié dans sys.types.<br /><br /> Pour les types CLR, bien que le **system_type_name** colonne retournera la valeur NULL, cette colonne retournera la valeur 240.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|Contient le nom du type de données. Inclut des arguments (tels que la longueur, la précision, l'échelle) spécifiés pour le type de données du paramètre. Si le type de données est un type d'alias défini par l'utilisateur, le type de système sous-jacent est spécifié ici. S'il s'agit d'un type de données CLR défini par l'utilisateur, NULL est retourné dans cette colonne. Si le type du paramètre ne peut pas être déduit, NULL est retourné.|  
 |**suggested_max_length**|**smallint non NULL**|Consultez sys.columns. pour **max_length** description de la colonne.|  

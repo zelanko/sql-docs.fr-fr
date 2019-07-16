@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fe66ff5b8902a737ff9a2ac0815069a4f01ea129
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 506b9a32b465c9006fe4030bd6fcbb8ba4d0f136
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938339"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>Évaluation des schémas DB2 pour la Conversion (DB2ToSQL)
 Avant de charger des objets et de migrer des données vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez déterminer comment complexe sera la migration et combien de temps l’opération prendra. SSMA peut créer un rapport d’évaluation qui affiche le pourcentage d’objets qui seront converties correctement. SSMA vous permet également d’afficher les problèmes spécifiques qui provoquent des échecs de conversion.  

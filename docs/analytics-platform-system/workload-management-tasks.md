@@ -2,19 +2,18 @@
 title: Tâches de gestion des charges de travail - Analytique Platform System | Microsoft Docs
 description: Tâches de gestion de la charge de travail d’Analytique Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8e538b96c482a6a16fffcfdac197e62885426b52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea6b3785914781e73a8570c1282741f7c4b56298
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959756"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>Tâches de gestion des charges de travail d’Analytique Platform System
 Tâches de gestion de la charge de travail d’Analytique Platform System.
@@ -47,7 +46,7 @@ Les allocations de ressources sont répertoriées dans [gestion de la charge de 
 ## <a name="change-the-system-resources-allocated-to-a-request"></a>Les ressources système allouées à une demande de modification
 Décrit comment déterminer quelle ressource classe une demande de SQL Server PDW est en cours d’exécution sous, puis comment modifier les ressources système pour cette requête. Modifier les ressources pour une demande nécessite de modifier l’appartenance de classe de ressource de la connexion d’envoi de la demande, à l’aide de la [ALTER SERVER ROLE](../t-sql/statements/alter-server-role-transact-sql.md) instruction.  
   
-### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>Étape 1 : Déterminer la classe de ressource pour la connexion à la demande en cours d’exécution.  
+### <a name="step-1-determine-the-resource-class-for-the-login-running-the-request"></a>Étape 1 : Déterminer la classe de ressource pour la connexion à la demande en cours d’exécution.  
 Cette requête affiche les connexions qui sont membres de l’appartenance aux rôles de ressource classe serveur. Il existe trois classes de ressources, **mediumrc**, **largerc**, et **xlargerc**.  
   
 > [!IMPORTANT]  
@@ -72,7 +71,7 @@ S’il n’y a aucune ouverture de session qui sont membres d’un rôle de serv
   
 Pour obtenir la liste des allocations de ressources pour chaque classe de ressources, consultez [gestion de la charge de travail](workload-management.md).  
   
-### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>Étape 2 : Exécuter la requête sous un compte de connexion avec l’appartenance de classe de ressources différents  
+### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>Étape 2 : Exécuter la requête sous un compte de connexion avec l’appartenance de classe de ressources différents  
 Il existe deux façons d’exécuter une requête avec des ressources système supérieure ou inférieure :  
   
 -   Exécuter la demande sous une autre connexion est membre d’une classe de ressource supérieure ou inférieure.  

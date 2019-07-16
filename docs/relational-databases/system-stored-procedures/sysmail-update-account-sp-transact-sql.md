@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 09af9a0190b8ba3b01c72cfa29e0647ad6d6b74d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9ba9e1f0757f23072b5e4f18f73fb5f7c69a005a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037360"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +56,13 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @account_name = ] 'account_name'` Le nom du compte à mettre à jour. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Au moins une des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
   
-`[ @email_address = ] 'email_address'` La nouvelle adresse de messagerie pour envoyer le message à partir de. Cette adresse doit être une adresse de messagerie Internet. Le nom de serveur figurant dans l'adresse identifie le serveur qu'utilise la messagerie de base de données pour envoyer le courrier à partir de ce compte. *email_address* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
+`[ @email_address = ] 'email_address'` La nouvelle adresse de messagerie pour envoyer le message à partir de. Cette adresse doit être une adresse de messagerie Internet. Le nom de serveur figurant dans l'adresse identifie le serveur qu'utilise la messagerie de base de données pour envoyer le courrier à partir de ce compte. *email_address* est **nvarchar (128)** , avec NULL comme valeur par défaut.  
   
-`[ @display_name = ] 'display_name'` Le nouveau nom d’affichage à utiliser sur les messages électroniques à partir de ce compte. *display_name* est **nvarchar (128)**, sans valeur par défaut.  
+`[ @display_name = ] 'display_name'` Le nouveau nom d’affichage à utiliser sur les messages électroniques à partir de ce compte. *display_name* est **nvarchar (128)** , sans valeur par défaut.  
   
-`[ @replyto_address = ] 'replyto_address'` La nouvelle adresse à utiliser dans l’en-tête de réponse de messages électroniques à partir de ce compte. *replyto_address* est **nvarchar (128)**, sans valeur par défaut.  
+`[ @replyto_address = ] 'replyto_address'` La nouvelle adresse à utiliser dans l’en-tête de réponse de messages électroniques à partir de ce compte. *replyto_address* est **nvarchar (128)** , sans valeur par défaut.  
   
-`[ @description = ] 'description'` Nouvelle description pour le compte. *Description* est **nvarchar (256)**, avec NULL comme valeur par défaut.  
+`[ @description = ] 'description'` Nouvelle description pour le compte. *Description* est **nvarchar (256)** , avec NULL comme valeur par défaut.  
   
 `[ @mailserver_name = ] 'server_name'` Le nouveau nom du serveur de messagerie SMTP à utiliser pour ce compte. L’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de résoudre le *nom_serveur* à une adresse IP. *nom_serveur* est **sysname**, sans valeur par défaut.  
   
@@ -94,7 +93,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-changing-the-information-for-an-account"></a>A. Modification des informations d'un compte  
+### <a name="a-changing-the-information-for-an-account"></a>R. Modification des informations d'un compte  
  L’exemple suivant met à jour le compte `AdventureWorks Administrator` dans le **msdb** base de données. Les informations du compte prennent les valeurs fournies.  
   
 ```  

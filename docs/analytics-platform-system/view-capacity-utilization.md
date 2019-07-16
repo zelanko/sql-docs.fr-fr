@@ -2,19 +2,18 @@
 title: Afficher l’utilisation de la capacité d’Analytique Platform System | Microsoft Docs
 description: Afficher l’utilisation de la capacité d’Analytique Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5fe722e6ce3d75f6e271e19d66551ccf951d045f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ac9347c9f5ec31c5f4f41228b1ef14119257751
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959788"
 ---
 # <a name="view-capacity-utilization-in-analytics-platform-system"></a>Utilisation de la capacité de vue d’Analytique Platform System
 Cette rubrique explique comment afficher l’utilisation de la capacité dans l’appliance SQL Server PDW.  

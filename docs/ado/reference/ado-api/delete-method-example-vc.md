@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b552191bdb7ed4aa2910bedc9209a58229c4e636
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af20890a9c75ee815145b78f1c10de377b861436
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933105"
 ---
 # <a name="delete-method-example-vc"></a>Delete, exemple de méthode (VC++)
 Cet exemple utilise le [supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md) méthode pour supprimer un enregistrement spécifié à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

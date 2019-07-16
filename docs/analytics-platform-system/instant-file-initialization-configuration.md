@@ -2,19 +2,18 @@
 title: Configurer l’initialisation instantanée des fichiers - Analytique Platform System | Microsoft Docs
 description: Configurer l’initialisation instantanée des fichiers système de plateforme d’Analytique. Initialisation instantanée des fichiers est une fonctionnalité de SQL Server qui autorise les opérations de fichier de données exécuter plus rapidement.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 959d219565de6577e31d9548f5daea0fe0d2419e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27f716b5fc3668b78fd7e5728dc4a2cd640c7940
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960733"
 ---
 # <a name="instant-file-initialization-configuration"></a>Configuration de l’initialisation instantanée des fichiers
 Initialisation instantanée des fichiers est une fonctionnalité de SQL Server qui autorise les opérations de fichier de données exécuter plus rapidement. Cochez la case pour activer l’initialisation instantanée des fichiers améliore les performances de SQL Server PDW. Toutefois, si cela pose un risque de sécurité pour vous business, puis laissez la case désactivée.  

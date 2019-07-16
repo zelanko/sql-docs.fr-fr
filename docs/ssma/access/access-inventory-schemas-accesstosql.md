@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068954"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Schémas d’inventaire Access (AccessToSQL)
 Les sections suivantes décrivent les tables qui sont créés par SSMA lorsque vous exportez des schémas d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -60,17 +59,17 @@ Métadonnées de la base de données sont exportées vers le **SSMA_Access_Inven
 |**FileOwner**|**nvarchar(4000)**|Le compte Windows qui est spécifié comme propriétaire de la base de données Access.|  
 |**DateCreated**|**datetime**|Date et heure de que création de la base de données Access.|  
 |**DateModified**|**datetime**|Date et heure de que dernière modification de la base de données Access.|  
-|**TablesCount**|**Int**|Le nombre de tables dans la base de données Access.|  
-|**QueriesCount**|**Int**|Le nombre de requêtes dans la base de données Access.|  
-|**FormsCount**|**Int**|Le nombre de formulaires dans la base de données Access.|  
+|**TablesCount**|**int**|Le nombre de tables dans la base de données Access.|  
+|**QueriesCount**|**int**|Le nombre de requêtes dans la base de données Access.|  
+|**FormsCount**|**int**|Le nombre de formulaires dans la base de données Access.|  
 |**ModulesCount**|**Int**|Le nombre de modules dans la base de données Access.|  
 |**ReportsCount**|**Int**|Le nombre de rapports dans la base de données Access.|  
-|**MacrosCount**|**Int**|Le nombre de macros dans la base de données Access.|  
+|**MacrosCount**|**int**|Le nombre de macros dans la base de données Access.|  
 |**AccessVersion**|**nvarchar(4000)**|La version de l’accès de la base de données.|  
 |**Classement**|**nvarchar(4000)**|Le classement de la base de données Access. Les classements déterminent comment une base de données trie et compare les chaînes.|  
 |**JetVersion**|**nvarchar(4000)**|La version de moteur de base de données Jet. Bases de données Access utilisent le moteur de base de données Jet sous-jacent.|  
 |**IsUpdatable**|**bit**|Indique si la base de données peut être mis à jour. Si la valeur est 1, la base de données est modifiable. Si la valeur est 0, la base de données est en lecture seule.|  
-|**QueryTimeout**|**Int**|Valeur du délai d’attente de la requête ODBC configurée pour la base de données, en secondes. La valeur par défaut est 60 secondes.|  
+|**QueryTimeout**|**int**|Valeur du délai d’attente de la requête ODBC configurée pour la base de données, en secondes. La valeur par défaut est 60 secondes.|  
   
 ## <a name="tables"></a>Tables  
 Métadonnées de table sont exportées vers le **SSMA_Access_InventoryTables** table. Cette table contient les colonnes suivantes :  
@@ -122,7 +121,7 @@ Les métadonnées de clé étrangère sont exportée vers le **SSMA_Access_Inven
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient cette clé FOREIGN KEY.|  
 |**TableId**|**uniqueidentifier**|Identifie la table qui contient cette clé FOREIGN KEY.|  
-|**ForeignKeyId**|**Int**|Incrémentation integer qui identifie la clé étrangère. Cette colonne est la clé primaire pour la table.|  
+|**ForeignKeyId**|**int**|Incrémentation integer qui identifie la clé étrangère. Cette colonne est la clé primaire pour la table.|  
 |**ForeignKeyName**|**nvarchar(4000)**|Nom de l’index.|  
 |**ReferencedTableId**|**uniqueidentifier**|Identifie la table qui contient les colonnes de la source.|  
 |**SourceColumns**|**nvarchar(4000)**|Répertorie l’ou les colonnes clés étrangères.|  
@@ -150,7 +149,7 @@ Métadonnées d’un formulaire sont exportée vers le **SSMA_Access_InventoryFo
 |Nom de la colonne|Type de données|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient cette forme.|  
-|**FormId**|**Int**|Incrémentation integer qui identifie le formulaire. Cette colonne est la clé primaire pour la table.|  
+|**FormId**|**int**|Incrémentation integer qui identifie le formulaire. Cette colonne est la clé primaire pour la table.|  
 |**FormName**|**nvarchar(4000)**|Nom du formulaire.|  
   
 ## <a name="macros"></a>Macros  
@@ -159,8 +158,8 @@ Métadonnées de la macro sont exportée vers le **SSMA_Access_InventoryMacros**
 |Nom de la colonne|Type de données|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient la macro.|  
-|**MacroId**|**Int**|Incrémentation integer qui identifie la macro. Cette colonne est la clé primaire pour la table.|  
-|**MacroName**|**nvarchar(4000)**|Le nom de la macro.|  
+|**MacroId**|**int**|Incrémentation integer qui identifie la macro. Cette colonne est la clé primaire pour la table.|  
+|**Nom_macro**|**nvarchar(4000)**|Le nom de la macro.|  
   
 ## <a name="reports"></a>Rapports  
 Métadonnées du rapport sont exportée vers le **SSMA_Access_InventoryReports** table. Cette table contient les colonnes suivantes :  
@@ -168,7 +167,7 @@ Métadonnées du rapport sont exportée vers le **SSMA_Access_InventoryReports**
 |Nom de la colonne|Type de données|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient le rapport.|  
-|**ReportId**|**Int**|Incrémentation integer qui identifie le rapport. Cette colonne est la clé primaire pour la table.|  
+|**ID du rapport**|**int**|Incrémentation integer qui identifie le rapport. Cette colonne est la clé primaire pour la table.|  
 |**ReportName**|**nvarchar(4000)**|Nom du rapport.|  
   
 ## <a name="modules"></a>Modules  
@@ -177,7 +176,7 @@ Métadonnées du module sont exportées vers le **SSMA_Access_InventoryModules**
 |Nom de la colonne|Type de données|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient le module.|  
-|**ModuleId**|**Int**|Incrémentation integer qui identifie le module. Cette colonne est la clé primaire pour la table.|  
+|**ModuleId**|**int**|Incrémentation integer qui identifie le module. Cette colonne est la clé primaire pour la table.|  
 |**ModuleName**|**nvarchar(4000)**|Le nom du module.|  
   
 ## <a name="see-also"></a>Voir aussi  

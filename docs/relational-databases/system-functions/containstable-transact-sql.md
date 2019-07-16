@@ -32,14 +32,13 @@ helpviewer_keywords:
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 534d1457f984c496b416edae421ab0f52c619eeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64540608739f0257425eec042e4b701606170c23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042920"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -170,7 +169,7 @@ FROM table AS FT_TBL INNER JOIN
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-simple-example"></a>A. Exemple simple  
+### <a name="a-simple-example"></a>R. Exemple simple  
  L’exemple suivant crée et remplit un tableau simple de deux colonnes, la liste des 3 comtés et les couleurs dans leurs indicateurs. L’informatique crée et remplit un catalogue de texte intégral et un index sur la table. Le **CONTAINSTABLE** syntaxe est illustrée. Cet exemple montre comment la valeur de classement augmente plus élevée lorsque la valeur de recherche est satisfaite plusieurs fois. Dans la dernière requête, Tanzanie qui contient le vert et noir a un rang plus élevé qu’Italie qui contiennent uniquement une des couleurs interrogées.  
   
 ```  

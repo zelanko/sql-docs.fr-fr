@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb7d6de3e00430e39d51dd365282e997a1e284d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 338d0161a18c31510f6be0b637f888fafbd99255
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62737833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088779"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>Classes managées SQLXML - Objet SqlXmlParameter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   L’objet SqlXmlParameter prend en charge ces propriétés :  
   
- Créer une vue d’abonnement  
+ Name  
  Nom du paramètre. Des paramètres peuvent être passés aux commandes. Appel de la méthode CreateParameter de l’objet SqlXmlCommand crée l’objet de paramètre.  
   
  Value  

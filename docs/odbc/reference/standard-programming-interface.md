@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a2fa727e-51f2-4123-ae25-0ee28e611231
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e0e10a6b8c15b6522e6b34ab008295fc411fcd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a241ea92af6c1273039cc45daab232a1fbe763a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081837"
 ---
 # <a name="standard-programming-interface"></a>Interface de programmation standard
 L’interface de programmation est peut-être la plus évidente finale de normalisation. En fait, quand il était en cours de développement ODBC, ANSI et ISO déjà fourni normes pour embedded SQL et SQL modules. Bien qu’il existait aucune norme pour une base de données CLI, le groupe d’accès - un consortium d’entreprises de fournisseurs de base de données - SQL a été vous envisagez de créer un. parties d’ODBC ultérieurement est devenu la base de leur travail.  

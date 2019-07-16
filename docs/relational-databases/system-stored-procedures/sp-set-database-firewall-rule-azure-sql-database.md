@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 93acd6ad9e904e1e3db5dfe7e244b459e7853d70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e5363e741c827a0fb16528a8b617e26a5b95f8a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025688"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Crée ou met à jour les règles de pare-feu au niveau de la base de données pour votre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Règles de pare-feu de base de données peuvent être configurées pour le **master** base de données et pour les bases de données utilisateur sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Les règles de pare-feu de base de données sont particulièrement utiles quand il est à l’aide de contenu aux utilisateurs de base de données. Pour plus d’informations, consultez [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Crée ou met à jour les règles de pare-feu au niveau de la base de données pour votre [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Règles de pare-feu de base de données peuvent être configurées pour le **master** base de données et pour les bases de données utilisateur sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Les règles de pare-feu de base de données sont particulièrement utiles quand il est à l’aide de contenu aux utilisateurs de base de données. Pour plus d’informations, voir [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,7 +49,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  **[@start_ip_address** =] '*start_ip_address*'  
  Adresse IP la plus basse dans la plage de paramètres de pare-feu au niveau base de données. Les adresses IP supérieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus basse possible est `0.0.0.0`. *start_ip_address* est **varchar (50)** sans valeur par défaut.  
   
- [**@end_ip_address** =] '*end_ip_address*'  
+ [ **@end_ip_address** =] '*end_ip_address*'  
  Adresse IP la plus élevée dans la plage de paramètres de pare-feu au niveau base de données. Les adresses IP inférieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus élevée possible est `255.255.255.255`. *end_ip_address* est **varchar (50)** sans valeur par défaut.  
   
  Le tableau suivant montre les arguments pris en charge et les options dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

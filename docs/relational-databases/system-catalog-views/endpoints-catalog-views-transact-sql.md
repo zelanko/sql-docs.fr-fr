@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4ddf1dec130e78b95132eb617a20614574486a89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98838772b53b5b650aa2d268049afde29443277e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63005795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033036"
 ---
 # <a name="endpoints-catalog-views-transact-sql"></a>Affichages catalogue des points de terminaison (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63005795"
 |[sys.http_endpoints](../../relational-databases/system-catalog-views/sys-http-endpoints-transact-sql.md)||  
   
 ## <a name="see-also"></a>Voir aussi  
- [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [Vues système &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Affichages catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

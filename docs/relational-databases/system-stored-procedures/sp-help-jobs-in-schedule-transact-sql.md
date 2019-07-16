@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0f892bf81811538eeb06b18feb725778464910b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054898"
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,40 +51,40 @@ sp_help_jobs_in_schedule
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne le jeu de résultats suivant :  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|ID unique de la tâche.|  
 |**originating_server**|**nvarchar(30)**|Nom du serveur d'origine du travail|  
-|**nom**|**sysname**|Nom du travail.|  
+|**name**|**sysname**|Nom du travail.|  
 |**enabled**|**tinyint**|Indique si le travail est activé pour être exécuté.|  
 |**description**|**nvarchar(512)**|Description pour le travail.|  
 |**start_step_id**|**Int**|Identificateur de l'étape du travail à partir de laquelle l'exécution doit débuter.|  
 |**category**|**sysname**|Catégorie de travail.|  
 |**Propriétaire**|**sysname**|Propriétaire du travail.|  
-|**notify_level_eventlog**|**Int**|Masque binaire indiquant les circonstances entraînant la consignation d'une notification d'événement dans le journal des applications Microsoft Windows. Peut prendre l'une des valeurs suivantes :<br /><br /> **0** = jamais<br /><br /> **1** = en cas de succès du travail<br /><br /> **2** = lors de l’échec du travail<br /><br /> **3** = chaque fois que le travail est terminé (quel que soit le résultat du travail)|  
-|**notify_level_email**|**Int**|Masque de bits indiquant les conditions d'envoi d'un message électronique en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
+|**notify_level_eventlog**|**int**|Masque binaire indiquant les circonstances entraînant la consignation d'une notification d'événement dans le journal des applications Microsoft Windows. Peut prendre l'une des valeurs suivantes :<br /><br /> **0** = jamais<br /><br /> **1** = en cas de succès du travail<br /><br /> **2** = lors de l’échec du travail<br /><br /> **3** = chaque fois que le travail est terminé (quel que soit le résultat du travail)|  
+|**notify_level_email**|**int**|Masque de bits indiquant les conditions d'envoi d'un message électronique en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
 |**notify_level_netsend**|**Int**|Masque de bits précisant les conditions d'envoi d'un message réseau en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
-|**notify_level_page**|**Int**|Masque de bits indiquant les conditions d'envoi d'une page en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
+|**notify_level_page**|**int**|Masque de bits indiquant les conditions d'envoi d'une page en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
 |**notify_email_operator**|**sysname**|Nom d'adresse électronique de l'opérateur à avertir.|  
 |**notify_netsend_operator**|**sysname**|Nom de l'utilisateur ou de l'ordinateur utilisé pour envoyer les messages sur le réseau.|  
 |**notify_page_operator**|**sysname**|Nom de l'utilisateur ou de l'ordinateur utilisé pour envoyer une page.|  
 |**delete_level**|**Int**|Masque de bits indiquant les conditions de suppression du travail en fin de travail. Les valeurs possibles sont les mêmes que pour **notify_level_eventlog**.|  
 |**date_created**|**datetime**|Date de que création du travail.|  
 |**date_modified**|**datetime**|Date de dernière modification du travail.|  
-|**version_number**|**Int**|Version du travail (mise à jour automatique à chaque modification).|  
-|**last_run_date**|**Int**|Date du début de la dernière exécution du travail.|  
+|**version_number**|**int**|Version du travail (mise à jour automatique à chaque modification).|  
+|**last_run_date**|**int**|Date du début de la dernière exécution du travail.|  
 |**last_run_time**|**Int**|Heure du début de la dernière exécution du travail.|  
 |**last_run_outcome**|**Int**|Résultat du travail lors de sa dernière exécution :<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
 |**next_run_date**|**Int**|Date prévue pour la prochaine exécution du travail.|  
 |**next_run_time**|**Int**|Heure prévue pour la prochaine exécution du travail.|  
-|**next_run_schedule_id**|**Int**|Numéro d'identification de la prochaine exécution planifiée.|  
-|**current_execution_status**|**Int**|État en cours d’exécution.|  
+|**next_run_schedule_id**|**int**|Numéro d'identification de la prochaine exécution planifiée.|  
+|**current_execution_status**|**int**|État en cours d’exécution.|  
 |**current_execution_step**|**sysname**|Étape d'exécution du travail en cours.|  
-|**current_retry_attempt**|**Int**|Si le travail est en cours d'exécution et que l'étape est effectuée plusieurs fois, ce paramètre correspond à la tentative en cours.|  
+|**current_retry_attempt**|**int**|Si le travail est en cours d'exécution et que l'étape est effectuée plusieurs fois, ce paramètre correspond à la tentative en cours.|  
 |**has_step**|**Int**|Nombre d'étapes du travail.|  
-|**has_schedule**|**Int**|Nombre de planifications d'un travail.|  
-|**has_target**|**Int**|Nombre de serveurs cibles d'un travail.|  
-|**type**|**Int**|Type du travail :<br /><br /> **1** = travail local.<br /><br /> **2** = travail multiserveur.<br /><br /> **0** = travail ne comprend aucun serveur cible.|  
+|**has_schedule**|**int**|Nombre de planifications d'un travail.|  
+|**has_target**|**int**|Nombre de serveurs cibles d'un travail.|  
+|**type**|**int**|Type du travail :<br /><br /> **1** = travail local.<br /><br /> **2** = travail multiserveur.<br /><br /> **0** = travail ne comprend aucun serveur cible.|  
   
 ## <a name="remarks"></a>Notes  
  Cette procédure affiche des informations sur les travaux attachés à la planification spécifiée.  

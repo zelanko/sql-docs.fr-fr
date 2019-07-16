@@ -2,19 +2,18 @@
 title: Configurer InfiniBand - Analytique Platform System | Microsoft Docs
 description: Décrit comment configurer les cartes réseau InfiniBand sur un serveur non-appliance client pour se connecter au nœud de contrôle sur Parallel Data Warehouse (PDW). Utilisez ces instructions pour la connectivité de base et pour la haute disponibilité, afin que les processus de chargement, sauvegarde et autres se connectent automatiquement au réseau InfiniBand actif.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4739a79989321c215819bab90da1d1831764f820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961250"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurer des cartes réseau InfiniBand pour Analytique Platform System
 Décrit comment configurer les cartes réseau InfiniBand sur un serveur non-appliance client pour se connecter au nœud de contrôle sur Parallel Data Warehouse (PDW). Utilisez ces instructions pour la connectivité de base et pour la haute disponibilité, afin que les processus de chargement, sauvegarde et autres se connectent automatiquement au réseau InfiniBand actif.  
@@ -96,9 +95,9 @@ Pour répondre aux besoins de votre entreprise, vous pouvez également joindre l
   
     Pour rechercher une adresse IP inutilisée, ouvrez une fenêtre de commande et effectuez un test ping d’adresses IP dans la plage d’adresses de votre application. Dans cet exemple, l’adresse IP du réseau de TeamIB2 est 172.16.18.30. Rechercher une adresse IP qui commence par 172.16.18 n’est pas utilisé. Par exemple, à partir de la ligne de commande entrez « ping 172.16.18.254 ». Si la requête ping échoue, l’adresse IP est disponible.  
   
-## <a name="Sec2"></a>Étape 2 : Configurer les paramètres de carte réseau InfiniBand sur votre serveur Client  
+## <a name="Sec2"></a>Étape 2 : Configurer les paramètres de carte réseau InfiniBand sur votre serveur Client  
 
-### <a name="notes"></a>Remarques  
+### <a name="notes"></a>Notes  
   
 -   Ces étapes vous montrent comment inscrire votre serveur avec les serveurs DNS de APS.  
   

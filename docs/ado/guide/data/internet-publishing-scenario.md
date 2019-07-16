@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2f551969-0fd9-41ee-b81d-100975a4bdc2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b5902adad5f9f419b553e4b73c976ae64a4e129f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00f470bef5026a6f91c43478b3d745446130d081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924965"
 ---
 # <a name="internet-publishing-scenario"></a>Scénario de publication Internet
 Cet exemple de code montre comment utiliser ADO avec le fournisseur Microsoft OLE DB pour la publication Internet. Dans ce scénario, vous allez créer une application Visual Basic qui utilise **Recordset**, **enregistrement**, et **Stream** objets pour afficher le contenu des ressources publiées avec le fournisseur de publications Internet.  
   
  Les étapes suivantes sont nécessaires pour créer ce scénario :  
   
--   [Étape 1 : Configurer le projet Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)  
+-   [Étape 1 : Configurer le projet Visual Basic](../../../ado/guide/data/step-1-set-up-the-visual-basic-project.md)  
   
 -   [Étape 2 : Initialiser la zone de liste principale](../../../ado/guide/data/step-2-initialize-the-main-list-box.md)  
   

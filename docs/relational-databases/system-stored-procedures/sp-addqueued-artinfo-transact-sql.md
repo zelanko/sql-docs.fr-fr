@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e44891f5a16625cb6c3176fac8188fa568822add
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a0f94fbf686e9b9bd9fd1b6780b298c661ce42f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031009"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 `[ @dest_table = ] _'dest_table'` Est le nom de la table de destination. *dest_table* est **sysname**, sans valeur par défaut.  
   
- [**@owner =** ] **'**_owner_**'**  
+ [ **@owner =** ] **'** _propriétaire_ **'**  
  Est le propriétaire de l’abonnement. *propriétaire* est **sysname**, sans valeur par défaut.  
   
 `[ @cft_table = ] 'cft_table'` Nom de la table de conflits de mise à jour en file d’attente pour cet article. *cft_table*est **sysname**, sans valeur par défaut.  

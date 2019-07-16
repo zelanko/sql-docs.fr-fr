@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8cdff2d0646dcce13257bb10f7f447169fd8c8b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c16bc1e0c8d8d6b5a62e2823aa011b58520b1d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018363"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>Questions fréquentes sur l'interrogation des catalogues système de SQL Server
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -617,7 +616,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="_FAQ20"></a> Comment déterminer si une colonne est utilisée dans une expression de colonne calculée ?  
- Avant d'exécuter la requête suivante, remplacez `<database_name>`, `<schema_name.table_name>`, et `<column_name`> par des noms valides.  
+ Avant d’exécuter la requête suivante, remplacez `<database_name>`, `<schema_name.table_name>`, et `<column_name`> avec des noms valides.  
   
 ```  
 USE <database_name>;  
@@ -871,7 +870,7 @@ GO
   
 ```  
   
- ou  
+ Ou  
   
 ```  
 USE <database_name>;  

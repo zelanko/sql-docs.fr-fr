@@ -4,18 +4,17 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1900a7156eaf98abb9a4c20bad5f7d1eafe365db
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 1d6a68ea3bc9954cbab62cee7579db6905a4632f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967514"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Sur Linux, les groupes de disponibilité Always On
 
@@ -49,7 +48,7 @@ Un type de cluster aucun signifie qu’il n’est pas nécessaire pour, ni le gr
 
 Type de cluster est stocké dans le [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] vue de gestion dynamique (DMV) `sys.availability_groups`, dans les colonnes `cluster_type` et `cluster_type_desc`.
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>required\_synchronized\_secondaries\_to\_commit
+## <a name="requiredsynchronizedsecondariestocommit"></a>requis\_synchronisés\_secondaires\_à\_validation
 
 Débutez [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] est un paramètre qui est utilisé par les groupes de disponibilité appelés `required_synchronized_secondaries_to_commit`. Le groupe de disponibilité vous indique le nombre de réplicas secondaires qui doivent être par échelons avec le réplica principal. Cela permet le basculement automatique (uniquement en cas d’intégré à Pacemaker avec un type de cluster externe) et contrôle le comportement des éléments tels que la disponibilité du site principal si le nombre approprié de réplicas secondaires est en ligne ou hors connexion. Pour en savoir plus sur cette procédure, consultez [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md). Le `required_synchronized_secondaries_to_commit` valeur est définie par défaut et gérée par Pacemaker / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Vous pouvez substituer manuellement cette valeur.
 

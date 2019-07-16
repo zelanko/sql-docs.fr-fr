@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 41555cb746cdfc7785a67a1b679459c415b2cad7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 29ea5e7e78d274eaf289afbd6ca73f97cd479679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026663"
 ---
 # <a name="mspeertopologyrequest-transact-sql"></a>MSpeer_topologyrequest (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Permet de suivre les requêtes de statut de topologie pour une publication dans le cadre d'une réplication d'égal à égal. Cette table est stockée dans la base de données de publication.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|id|**Int**|Identifie une demande de statut de topologie. La colonne request_id dans [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) utilise cette valeur.|  
+|id|**int**|Identifie une demande de statut de topologie. La colonne request_id dans [MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md) utilise cette valeur.|  
 |publication|**sysname**|Nom de la publication d'où provient la demande de statut de topologie.|  
 |sent_date|**datetime**|Date et heure d'émission de la demande de statut de topologie.|  
   

@@ -5,17 +5,16 @@ description: Déployer un script Python ou R en tant qu’application sur un clu
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1e5ab6364437432c803a364abd50ef5b1af4f8f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958911"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Comment utiliser VS Code pour déployer des applications sur les clusters de données volumineuses de SQL Server
 

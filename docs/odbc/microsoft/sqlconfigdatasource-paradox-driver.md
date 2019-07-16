@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (Paradox Driver) | Microsoft Docs
+title: SQLConfigDataSource (pilote Paradox) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad9c944af33da86e0d4f85769288f4ab7b6c369f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33cc778d921b90a460dab6bda352fd7627d2cf7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054071"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (pilote Paradox)
 > [!NOTE]  
@@ -32,9 +31,9 @@ ms.locfileid: "62665341"
 |COLLATINGSEQUENCE|La séquence dans laquelle les champs sont triés.<br /><br /> Lorsque le pilote Paradox est utilisé, la séquence peut être ASCII (par défaut), International, suédois-finnois ou Norvégien-Danois.<br /><br /> La même option est définie en tant que **séquence de classement** dans la boîte de dialogue d’installation.|  
 |DBQ|Le nom du fichier de base de données.<br /><br /> La même option est définie en tant que **base de données** dans la boîte de dialogue d’installation.|  
 |DEFAULTDIR|La spécification de chemin d’accès au répertoire.|  
-|DESCRIPTION|Une description des données dans la source de données.<br /><br /> La même option est définie en tant que **Description** dans la boîte de dialogue d’installation.|  
+|Description|Une description des données dans la source de données.<br /><br /> La même option est définie en tant que **Description** dans la boîte de dialogue d’installation.|  
 |DRIVER|La spécification de chemin d’accès à la DLL du pilote.|  
-|DRIVERID|Un ID d’entier pour le pilote.<br /><br /> 26 (Paradox 3.x)<br /><br /> 282 (Paradox 4.x)<br /><br /> 538 (Paradox 5.x)|  
+|DRIVERID|Un ID d’entier pour le pilote.<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (paradox 4.x)<br /><br /> 538 (paradox 5.x)|  
 |EXCLUSIF|Détermine si la base de données doit être ouvert en mode exclusif (accédé par un seul utilisateur à la fois) ou mode (accédé par plusieurs utilisateurs à la fois) partagé. Peut être true (mode exclusif) ou false (mode partagé).<br /><br /> La même option est définie en tant que **exclusif** dans la boîte de dialogue d’installation.|  
 |FIL|Fichier de type Paradox 3.x, Paradox 4.x ou Paradox 5.x|  
 |TYPE DE FICHIER|Type de fichier pour le pilote de texte (texte).|  

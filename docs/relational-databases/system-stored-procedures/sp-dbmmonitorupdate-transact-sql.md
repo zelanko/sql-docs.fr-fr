@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f8ee54383074e624d082d2ab782d6b038fd03d06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 190b4f0598afa6d434b5dada8c8464cb8209dac7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061262"
 ---
 # <a name="spdbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sp_dbmmonitorupdate [ database_name ]
  Nom de la base de données dont vous souhaitez mettre à jour l'état de mise en miroir. Si *database_name* n’est pas spécifié, la procédure met à jour la table d’état pour chaque base de données mise en miroir sur l’instance de serveur.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **sp_dbmmonitorupdate** peuvent être exécutées uniquement dans le contexte de la **msdb** base de données.  
@@ -62,7 +61,7 @@ sp_dbmmonitorupdate [ database_name ]
   
  Lors de la mise à jour l’état de mise en miroir d’une base de données, **sp_dbmmonitorupdate** inspecte la valeur la plus récente de toute mesure de performance de mise en miroir pour lequel un seuil d’avertissement a été spécifié. Si la valeur dépasse le seuil, la procédure ajoute un événement d'informations au journal des événements. Tous les taux sont des moyennes établies depuis la dernière mise à jour. Pour plus d’informations, consultez [Utiliser des seuils d’avertissement et d’alertes sur des métriques de performances de mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

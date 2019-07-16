@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e9493f0f4b4ff782e14fadf3c366c95e7d91efd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33eb5a1c4176041d64ba60a3a684b75bc4816350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091928"
 ---
 # <a name="systriggers-transact-sql"></a>sys.triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,10 +34,10 @@ ms.locfileid: "47843397"
   
  Le **parent_class** et **nom** colonnes qui identifient de façon unique le déclencheur dans la base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom du déclencheur. Les noms de déclencheurs DML ont une portée de schéma. Les noms de déclencheurs DDL ont une portée définie par rapport à l'entité parente.|  
-|**object_id**|**Int**|Numéro d'identification de l'objet. Unique dans une base de données.|  
+|**name**|**sysname**|Nom du déclencheur. Les noms de déclencheurs DML ont une portée de schéma. Les noms de déclencheurs DDL ont une portée définie par rapport à l'entité parente.|  
+|**object_id**|**int**|Numéro d'identification de l'objet. Unique dans une base de données.|  
 |**parent_class**|**tinyint**|Classe du parent du déclencheur.<br /><br /> 0 = Base de données, pour les déclencheurs DDL.<br /><br /> 1 = Objet ou colonne pour les déclencheurs DML.|  
 |**parent_class_desc**|**nvarchar(60)**|Description de la classe parente du déclencheur.<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN|  
 |**parent_id**|**Int**|ID du parent du déclencheur, comme suit :<br /><br /> 0 = Déclencheurs apparentés à une base de données.<br /><br /> Pour les déclencheurs DML, il s’agit du **object_id** de la table ou vue sur laquelle le déclencheur DML est défini.|  
@@ -51,7 +50,7 @@ ms.locfileid: "47843397"
 |**is_not_for_replication**|**bit**|Déclencheur créé sous la forme NOT FOR REPLICATION.|  
 |**is_instead_of_trigger**|**bit**|1 = Déclencheurs INSTEAD OF<br /><br /> 0 = Déclencheurs AFTER|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

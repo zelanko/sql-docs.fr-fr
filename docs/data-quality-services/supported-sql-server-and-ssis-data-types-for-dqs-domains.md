@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4931143a-b84d-478b-9b45-174128d36ed3
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 4e0fed979571c27aa42e01a9e876abae81aaff9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a75eacaf4283b957a24ade9319ea0dc46c436bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991764"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Types de données SQL Server et SSIS pris en charge pour les domaines DQS
 
@@ -33,9 +32,9 @@ ms.locfileid: "66783827"
 |Type de données de domaine DQS|Type de données SQL Server pris en charge|  
 |--------------------------|------------------------------------|  
 |Date|Date|  
-|Decimal|Décimal<br /><br /> FLOAT<br /><br /> money<br /><br /> numeric<br /><br /> REAL<br /><br /> SMALLMONEY|  
-|Entier|BIGINT<br /><br /> INT<br /><br /> smallint<br /><br /> TINYINT|  
-|String|char<br /><br /> NCHAR<br /><br /> NVARCHAR<br /><br /> varchar|  
+|Decimal|Décimal<br /><br /> float<br /><br /> money<br /><br /> numeric<br /><br /> real<br /><br /> smallmoney|  
+|Entier|bigint<br /><br /> int<br /><br /> smallint<br /><br /> tinyint|  
+|String|char<br /><br /> nchar<br /><br /> nvarchar<br /><br /> varchar|  
   
  Les autres types de données SQL Server ne sont pas pris en charge dans DQS. Pour plus d’informations sur les types de données SQL Server, consultez [Types de données &#40;Transact-SQL&#41;](../t-sql/data-types/data-types-transact-sql.md).  
   

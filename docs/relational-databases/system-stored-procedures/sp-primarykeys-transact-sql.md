@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 91b3956f37830d66d6680452b452f2d928551beb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ccae0385ef8c9305f4972ff6dcbd7a7960200370
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056313"
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +51,17 @@ sp_primarykeys [ @table_server = ] 'table_server'
 `[ @table_catalog = ] 'table_catalog'` Est le nom du catalogue dans lequel spécifié *table_name* réside. Dans l'environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cet argument correspond au nom de la base de données. *table_catalog* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|Catalogue de la table|  
 |**TABLE_SCHEM**|**sysname**|Schéma de la table|  
 |**TABLE_NAME**|**sysname**|Nom de la table.|  
 |**COLUMN_NAME**|**sysname**|Nom de la colonne.|  
-|**KEY_SEQ**|**Int**|Numéro de séquence de la colonne dans une clé primaire multicolonne.|  
+|**KEY_SEQ**|**int**|Numéro de séquence de la colonne dans une clé primaire multicolonne.|  
 |**PK_NAME**|**sysname**|Identificateur de clé primaire. Retourne NULL s'il n'est pas applicable à la source de données.|  
   
 ## <a name="remarks"></a>Notes  

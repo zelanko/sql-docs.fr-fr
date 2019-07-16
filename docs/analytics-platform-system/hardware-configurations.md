@@ -2,19 +2,18 @@
 title: Les configurations matérielles - Analytique Platform System | Microsoft Docs
 description: Le matériel Analytique Platform System (APS) est conçu avec des unités évolutives afin que vous achetez la bonne quantité de traitement et de stockage en fonction des besoins de votre entreprise. L’appliance met à l’échelle le stockage pour Parallel Data Warehouse à partir de quelques téraoctets à 6 sur plusieurs pétaoctets de données.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2a252e5f2aebd8d51b9b0eb1f353ded504155c2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3e1759dcde0dd792ce5179de08e9add1ef355e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960895"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Configurations matérielles - Analytique Platform System
 Le matériel Analytique Platform System (APS) est conçu avec des unités évolutives afin que vous achetez la bonne quantité de traitement et de stockage en fonction des besoins de votre entreprise. L’appliance met à l’échelle le stockage pour SQL Server Parallel Data Wareouse (PDW) à partir de quelques téraoctets à 6 sur plusieurs pétaoctets de données.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2a2787be1bf44e1f214d396444a73b938acf7ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942835"
 ---
 # <a name="update-delete-and-insert-statements"></a>Instructions UPDATE, DELETE et INSERT
 Applications basées sur SQL apporter des modifications aux tables en exécutant la **mise à jour**, **supprimer**, et **insérer** instructions. Ces instructions font partie d’au niveau de conformité de grammaire SQL minimale et doivent être pris en charge par tous les pilotes et les sources de données.  
@@ -31,11 +30,11 @@ Applications basées sur SQL apporter des modifications aux tables en exécutant
   
  **Mise à jour** _nom de la table_  
   
- **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
+ **Définissez** _identificateur de colonne_ **=** {*expression* &#124; **NULL**}  
   
  [ **,** _identificateur de colonne_ **=** {*expression* &#124; **NULL**}]...  
   
- [**WHERE** _search-condition_]  
+ [**Où** _condition de recherche_]  
   
  **DELETE FROM** _nom de la table_[**où** _condition de recherche_]  
   

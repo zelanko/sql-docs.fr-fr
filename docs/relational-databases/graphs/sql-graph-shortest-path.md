@@ -17,14 +17,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: b4e07c8aa0c7911b02f7df5386c03b1860df38c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035877"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,7 +48,7 @@ Chemin d’accès doit être utilisée avec n’importe quel nom de table de nœ
 ## <a name="arbitrary-length-pattern"></a>Modèle de longueur arbitraire
 Ce modèle inclut les nœuds et les bords qui doivent être parcourus à plusieurs reprises jusqu'à ce que le nœud souhaité soit atteint ou jusqu'à ce que le nombre maximal d’itérations tel que spécifié dans le modèle est remplie. Chaque fois que la requête est exécutée, le résultat de l’exécution de ce modèle sera une collection ordonnée des nœuds et des bords parcourus le long du tracé à partir du nœud de démarrage pour le nœud de fin. Il s’agit d’un modèle de syntaxe d’expression régulière style et les quantificateurs deux modèle suivantes sont prises en charge :
 
-* **‘+’** : Répétez le modèle une ou plusieurs fois. Arrêtez dès qu’un chemin d’accès le plus court est trouvé.
+* **'+'** : Répétez le modèle une ou plusieurs fois. Arrêtez dès qu’un chemin d’accès le plus court est trouvé.
 * **{1,n}**  : Répétez le modèle une à « n » fois. Terminer dès qu’une plus courte est trouvée.
 
 ## <a name="lastnode"></a>LAST_NODE
@@ -118,7 +117,7 @@ Dans certains cas, les mauvais plans peuvent être générés pour les requêtes
 ## <a name="examples"></a>Exemples 
 Pour les requêtes de l’exemple illustrés ici, nous allons ot utilisent le nœud et des tableaux de bord créés dans [exemple de graphe SQL](./sql-graph-sample.md)
 
-### <a name="a--find-shortest-path-between-2-people"></a>A.  Rechercher le chemin le plus court entre les 2 personnes
+### <a name="a--find-shortest-path-between-2-people"></a>R.  Rechercher le chemin le plus court entre les 2 personnes
  Dans l’exemple suivant, nous trouver chemin le plus court entre Jacob et Alice. Nous aurons besoin le nœud Person et edge FriendOf créé à partir de l’exemple de script graphique. 
 
  ```

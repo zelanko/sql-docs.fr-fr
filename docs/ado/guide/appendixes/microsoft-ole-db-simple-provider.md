@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bc17df7bad00205803b33cb4af17cb3c6ddaac56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926605"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Vue d’ensemble de la Simple fournisseur Microsoft OLE DB
 Le Microsoft OLE DB Simple fournisseur (OSP) permet à ADO d’accéder aux données pour laquelle un fournisseur a été écrite à l’aide de la [Kit de ressources OLE DB Simple fournisseur (OSP)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Les fournisseurs de simples sont destinées à accéder aux sources de données qui nécessitent la prise en charge OLE DB uniquement fondamentaux, tels que des tableaux en mémoire ou des documents XML.

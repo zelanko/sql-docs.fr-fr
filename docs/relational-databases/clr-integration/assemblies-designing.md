@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9c07f706-6508-41aa-a4d7-56ce354f9061
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6d1fc46d8ccffa84ad820153a060b6b02c2deb71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 205347e9d70ae378e10245c45d2580767eafbd8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028024"
 ---
 # <a name="assemblies---designing"></a>Assemblys - Conception
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47808027"
 -   Si une portion de code managé requiert une autorisation plus élevée, il est préférable de la placer dans un assembly distinct du code qui ne requiert pas une telle autorisation.  
   
 ## <a name="managing-assembly-security"></a>Gestion de la sécurité des assemblys  
- Vous pouvez contrôler la quantité d’un assembly peut accéder aux ressources protégées par la sécurité d’accès du Code .NET lorsqu’il s’exécute du code managé. Pour ce faire, vous spécifiez l'un des trois jeux d'autorisations lorsque vous créez ou modifiez un assembly : SAFE, EXTERNAL_ACCESS ou UNSAFE.  
+ Vous pouvez contrôler la quantité d’un assembly peut accéder aux ressources protégées par la sécurité d’accès du Code .NET lorsqu’il s’exécute du code managé. Pour cela, en spécifiant une des trois jeux d’autorisations lorsque vous créez ou modifiez un assembly : SAFE, EXTERNAL_ACCESS ou UNSAFE.  
   
 ### <a name="safe"></a>SAFE  
  SAFE est le jeu d'autorisations par défaut et il s'agit du plus restrictif. Le code exécuté par un assembly avec des autorisations SAFE ne peut pas accéder aux ressources système externes telles que les fichiers, le réseau, les variables d'environnement ou le Registre. Le code SAFE peut accéder aux données des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locales ou réaliser des calculs et une logique métier qui ne nécessitent pas l'accès aux ressources situées hors de ces bases de données.  

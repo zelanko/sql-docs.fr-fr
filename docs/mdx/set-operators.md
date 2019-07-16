@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: df58b5c7f6da05700f00b4ec5fd46b81926dd3bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ad0b92a970c3618584365d9ad6e99420daef05d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037011"
 ---
 # <a name="set-operators"></a>Opérateurs de jeu
 

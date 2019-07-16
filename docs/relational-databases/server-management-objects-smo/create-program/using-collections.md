@@ -14,27 +14,26 @@ helpviewer_keywords:
 ms.assetid: 209eb175-2514-4de1-bc32-b2e6a469d945
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 579a7bacb9264a7adff2477ba94b122b58e046c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 21b431b121e9ded13352309404014d5a851bbfa0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098177"
 ---
 # <a name="using-collections"></a>Utilisation de collections
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Une collection est une liste d'objets construits à partir de la même classe d'objets et qui partagent le même objet parent. L'objet de collection contient toujours le nom du type d'objet avec le suffixe Collection. Par exemple, pour accéder aux colonnes dans une table spécifiée, utilisez le type d'objet <xref:Microsoft.SqlServer.Management.Smo.ColumnCollection>. Il contient tous les objets <xref:Microsoft.SqlServer.Management.Smo.Column> qui appartiennent au même objet <xref:Microsoft.SqlServer.Management.Smo.Table>.  
   
- Le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **pour... Chaque** instruction ou le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach** instruction peut être utilisée pour itérer sur chaque membre de la collection.  
+ L'instruction [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] **For...Each** ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] **foreach** peut être utilisée pour parcourir chaque membre de la collection.  
   
 ## <a name="examples"></a>Exemples  
 Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-basic"></a>Référence d'un objet à l'aide d'une collection en Visual Basic  
- Cet exemple de code montre comment définir une propriété de colonne à l’aide de la <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, et <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> propriétés. Ces propriétés représentent des collections, qui peuvent être utilisées pour identifier un objet particulier lorsqu'elles sont utilisées avec un paramètre qui spécifie le nom de l'objet. Le nom et le schéma sont requis pour le <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> propriété d’objet de collection.  
+ Cet exemple de code indique comment définir une propriété de colonne à l'aide des propriétés <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> et <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>. Ces propriétés représentent des collections, qui peuvent être utilisées pour identifier un objet particulier lorsqu'elles sont utilisées avec un paramètre qui spécifie le nom de l'objet. Le nom et le schéma sont requis pour la propriété d'objet de collection <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -47,7 +46,7 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("Modified
 ```
   
 ## <a name="referencing-an-object-by-using-a-collection-in-visual-c"></a>Référence d'un objet à l'aide d'une collection en Visual C#  
- Cet exemple de code montre comment définir une propriété de colonne à l’aide de la <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>, et <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A> propriétés. Ces propriétés représentent des collections, qui peuvent être utilisées pour identifier un objet particulier lorsqu'elles sont utilisées avec un paramètre qui spécifie le nom de l'objet. Le nom et le schéma sont requis pour le <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> propriété d’objet de collection.  
+ Cet exemple de code indique comment définir une propriété de colonne à l'aide des propriétés <xref:Microsoft.SqlServer.Management.Smo.TableViewTableTypeBase.Columns%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A> et <xref:Microsoft.SqlServer.Management.Smo.Server.Databases%2A>. Ces propriétés représentent des collections, qui peuvent être utilisées pour identifier un objet particulier lorsqu'elles sont utilisées avec un paramètre qui spécifie le nom de l'objet. Le nom et le schéma sont requis pour la propriété d'objet de collection <xref:Microsoft.SqlServer.Management.Smo.Database.Tables%2A>.  
   
 ```csharp  
 {   
@@ -62,7 +61,7 @@ srv.Databases("AdventureWorks2012").Tables("Person", "Person").Columns("LastName
 ```  
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-basic"></a>Parcours des membres d'une collection en Visual Basic  
- Cet exemple de code effectue une itération dans le <xref:Microsoft.AnalysisServices.Server.Databases%2A> affiche toutes les connexions à l’instance de base de données et la propriété de collection [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Cet exemple de code parcourt la propriété de collection <xref:Microsoft.AnalysisServices.Server.Databases%2A> et affiche toutes les connexions de base de données à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -83,7 +82,7 @@ Console.WriteLine("Total connections =" & total)
 ```
   
 ## <a name="iterating-through-the-members-of-a-collection-in-visual-c"></a>Parcours des membres d'une collection en Visual C#  
- Cet exemple de code effectue une itération dans le <xref:Microsoft.AnalysisServices.Server.Databases%2A> affiche toutes les connexions à l’instance de base de données et la propriété de collection [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+ Cet exemple de code parcourt la propriété de collection <xref:Microsoft.AnalysisServices.Server.Databases%2A> et affiche toutes les connexions de base de données à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   
