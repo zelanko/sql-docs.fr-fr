@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ede7e1a97ca121073760eaa0c5dcd309b5e3e412
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03875d828940a2baa5d9f30f7beb58adb77abf07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018109"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47608075"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**srvid**|**smallint**|ID (pour utilisation locale uniquement) du serveur distant.|  
 |**srvstatus**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -44,21 +43,21 @@ ms.locfileid: "47608075"
 |**srvproduct**|**sysname**|Nom de produit du serveur distant|  
 |**ProviderName**|**nvarchar(128)**|Nom du fournisseur OLE DB pour l'accès au serveur.|  
 |**datasource**|**nvarchar(4000)**|Valeur de source de données OLE DB.|  
-|**Emplacement**|**nvarchar(4000)**|Valeur d'emplacement OLE DB.|  
+|**location**|**nvarchar(4000)**|Valeur d'emplacement OLE DB.|  
 |**ProviderString**|**nvarchar(4000)**|Valeur de chaîne de fournisseur OLE DB.|  
 |**schemadate**|**datetime**|Date de la dernière mise à jour de la ligne.|  
-|**TopologyX**|**Int**|Non utilisé.|  
-|**TopologyY**|**Int**|Non utilisé.|  
+|**TopologyX**|**int**|Non utilisé.|  
+|**TopologyY**|**int**|Non utilisé.|  
 |**catalog**|**sysname**|Catalogue utilisé lors de la connexion à un fournisseur OLE DB.|  
 |**srvcollation**|**sysname**|Classement du serveur.|  
 |**connecttimeout**|**Int**|Paramètre de délai d'expiration de la connexion serveur.|  
-|**querytimeout**|**Int**|Paramètre de délai d'expiration des requêtes envoyées au serveur.|  
+|**querytimeout**|**int**|Paramètre de délai d'expiration des requêtes envoyées au serveur.|  
 |**srvnetname**|**char(30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = serveur distant<br /><br /> 0 = serveur lié|  
 |**rpc**|**bit**|1 = **sp_serveroption@rpc** définie sur **true** ou **sur**.<br /><br /> 0 = **sp_serveroption@rpc** définie sur **false** ou **hors**.|  
 |**pub**|**bit**|1 = **sp_serveroption@pub** définie sur **true** ou **sur**.<br /><br /> 0 = **sp_serveroption@pub** définie sur **false** ou **hors**.|  
 |**sub**|**bit**|1 = **sp_serveroption@sub** définie sur **true** ou **sur**.<br /><br /> 0 = **sp_serveroption@sub** définie sur **false** ou **hors**.|  
-|**serveur de distribution**|**bit**|1 = **sp_serveroption@dist** définie sur **true** ou **sur**.<br /><br /> 0 = **sp_serveroption@dist** définie sur **false** ou **hors**.|  
+|**dist**|**bit**|1 = **sp_serveroption@dist** définie sur **true** ou **sur**.<br /><br /> 0 = **sp_serveroption@dist** définie sur **false** ou **hors**.|  
 |**dpub**|**bit**|1 = **sp_serveroption@dpub** définie sur **true** ou **sur**.<br /><br /> 0 = **sp_serveroption@dpub** définie sur **false** ou **hors**.|  
 |**rpcout**|**bit**|1 =  **sp_serveroption@rpc out** définie sur **true** ou **sur**.<br /><br /> 0 =  **sp_serveroption@rpc out** définie sur **false** ou **hors**.|  
 |**dataaccess**|**bit**|1 =  **sp_serveroption@data accès** définie sur **true** ou **sur**.<br /><br /> 0 =  **sp_serveroption@data accès** définie sur **false** ou **hors**.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd95329c91c69af38b1ffc7951191498fcc40479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987949"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Fichier Schema.ini (pilote du fichier texte)
 Lorsque le pilote de texte est utilisé, le format du fichier texte est déterminé à l’aide d’un fichier d’informations de schéma. Le fichier d’informations de schéma est toujours nommé Schema.ini et toujours conservé dans le même répertoire que la source de données de texte. Le fichier d’informations de schéma fournit la méthode IISAM avec des informations sur le format général du fichier, le nom de colonne et les informations de type de données et plusieurs autres caractéristiques de données. Un fichier Schema.ini est toujours requis pour accéder aux données de longueur fixe. Vous devez utiliser un fichier Schema.ini lorsque votre table de texte contient la date/heure, devise, ou données Decimal ou à tout moment que vous souhaitez contrôler davantage la gestion des données dans la table.  
@@ -54,10 +53,10 @@ Lorsque le pilote de texte est utilisé, le format du fichier texte est détermi
   
 |Spécificateur de format|Format de table|Instruction Schema.ini Format|  
 |----------------------|------------------|---------------------------------|  
-|**Délimité par des tabulations**|Les champs dans le fichier sont délimités par des tabulations.|Format=TabDelimited|  
+|**Délimité par des tabulations**|Les champs dans le fichier sont délimités par des tabulations.|Format = TabDelimited|  
 |**Délimité CSV**|Les champs dans le fichier sont délimités par des virgules (CSV).|Format = CSVDelimited|  
-|**Délimité personnalisée**|Champs dans le fichier sont délimités par n’importe quel caractère que vous choisissez d’entrer dans la boîte de dialogue. Tout sauf les guillemets doubles (") sont autorisées, y compris vide.|Format = délimité (*caractère personnalisé*)<br /><br /> -ou-<br /><br /> Sans délimiteur spécifié :<br /><br /> Format=Delimited( )|  
-|**Longueur fixe**|Les champs dans le fichier sont de longueur fixe.|Format=FixedLength|  
+|**Délimité personnalisée**|Champs dans le fichier sont délimités par n’importe quel caractère que vous choisissez d’entrer dans la boîte de dialogue. Tout sauf les guillemets doubles (") sont autorisées, y compris vide.|Format = délimité (*caractère personnalisé*)<br /><br /> ou<br /><br /> Sans délimiteur spécifié :<br /><br /> Format=Delimited( )|  
+|**Longueur fixe**|Les champs dans le fichier sont de longueur fixe.|Format = FixedLength|  
   
 ## <a name="specifying-the-fields"></a>Spécification des champs  
  Vous pouvez spécifier des noms de champs dans un fichier texte délimité par des caractères de deux manières :  
@@ -100,7 +99,7 @@ n=ColumnNametype [#]
 |Paramètre|Description|  
 |---------------|-----------------|  
 |*ColumnName*|Le nom de texte de la colonne. Si le nom de colonne contienne des espaces incorporés, vous devez le placer entre guillemets doubles.|  
-|*type*|Types de données sont les suivantes :<br /><br /> **Types de données Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Unique<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> Mémo<br /><br /> **Types de données ODBC** Char (sous forme de texte)<br /><br /> Float (comme Double)<br /><br /> Integer (comme court)<br /><br /> LongChar (comme Mémo)<br /><br /> Date *format de date*|  
+|*type*|Types de données sont les suivantes :<br /><br /> **Types de données Microsoft Jet**<br /><br /> Bit<br /><br /> Byte<br /><br /> Courte<br /><br /> long<br /><br /> Currency<br /><br /> Single<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> Mémo<br /><br /> **Types de données ODBC** Char (sous forme de texte)<br /><br /> Float (comme Double)<br /><br /> Integer (comme court)<br /><br /> LongChar (comme Mémo)<br /><br /> Date *format de date*|  
 |**Width**|La valeur de chaîne littérale `Width`. Indique que le nombre suivant désigne la largeur de la colonne (facultatif pour les fichiers délimités par des caractères ; obligatoire pour les fichiers de longueur fixe).|  
 |*#*|La valeur entière qui désigne la largeur de la colonne (obligatoire si **largeur** est spécifié).|  
   
@@ -123,7 +122,7 @@ CharacterSet=ANSI
 |**CurrencySymbol**|Indique le symbole monétaire qui peut être utilisé pour les valeurs monétaires dans le fichier texte. Le signe dollar ($) et exemples Dm.|  
 |**CurrencyPosFormat**|Peut être définie à une des valeurs suivantes :<br /><br /> -Préfixe de symbole de devise sans séparation ($1)<br />-Suffixe de symbole de devise sans séparation (1$)<br />-Préfixe de symbole de devise avec la séparation d’un caractère ($ 1)<br />-Suffixe de symbole de devise avec la séparation d’un caractère (1 $)|  
 |**CurrencyDigits**|Spécifie le nombre de chiffres utilisés pour la partie fractionnaire d’un montant monétaire.|  
-|**CurrencyNegFormat**|Peut avoir l'une des valeurs suivantes :<br /><br /> -   ($1)<br />-   -$1<br />-   $-1<br />-   $1-<br />-   (1$)<br />-   -1$<br />-   1-$<br />-   1$-<br />-   -1 $<br />-   -$ 1<br />-   1 $-<br />-   $ 1-<br />-   $ -1<br />-   1- $<br />-   ($ 1)<br />-   (1 $)<br /><br /> Cet exemple montre le signe dollar, mais vous devez le remplacer avec le bon **CurrencySymbol** valeur dans le programme.|  
+|**CurrencyNegFormat**|Peut avoir l'une des valeurs suivantes :<br /><br /> -   ($1)<br />--$1<br />-$-1<br />-$1 -<br />-   (1$)<br />--1$<br />-1$<br />-$ 1-<br />--1 $<br />--$ 1<br />-   1 $-<br />-$ 1 -<br />-$ -1<br />-1 $<br />-   ($ 1)<br />-   (1 $)<br /><br /> Cet exemple montre le signe dollar, mais vous devez le remplacer avec le bon **CurrencySymbol** valeur dans le programme.|  
 |**CurrencyThousandSymbol**|Indique le symbole de caractère unique qui peut être utilisé pour séparer les valeurs de devise dans le fichier texte par des milliers.|  
 |**CurrencyDecimalSymbol**|Peut être définie sur n’importe quel caractère unique qui est utilisé pour séparer la totalité de la partie fractionnaire d’un montant monétaire.|  
   
