@@ -7,13 +7,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a3348058b03ff1441256cc8298ddc1b5b2216b0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac4c00830c9f678c467a75c1531b97fd3723c0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962713"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Convertir le code R pour l’exécution dans les instances SQL Server (en base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +29,7 @@ Toutefois, votre code peut nécessiter des modifications substantielles si une d
 + Votre solution d’origine comprend plusieurs étapes qui peuvent être plus efficaces dans un environnement de production si exécutée indépendamment, telles que la préparation des données ou de l’ingénierie et le modèle de formation, notation ou signaler.
 + Vous souhaitez améliorer optimiser les performances en ajustant les bibliothèques, à l’aide de l’exécution en parallèle ou déchargement d’un traitement à SQL Server. 
 
-## <a name="step-1-plan-requirements-and-resources"></a>Étape 1. Planifier la configuration requise et ressources
+## <a name="step-1-plan-requirements-and-resources"></a>Étape 1. Planifier la configuration requise et ressources
 
 **Packages**
 
@@ -64,7 +63,7 @@ Toutefois, votre code peut nécessiter des modifications substantielles si une d
 
     Pour plus d’informations, consultez [les Types de données et les bibliothèques R](../r/r-libraries-and-data-types.md).
 
-## <a name="step-2-convert-or-repackage-code"></a>Étape 2. Convertir ou recréez le package code
+## <a name="step-2-convert-or-repackage-code"></a>Étape 2. Convertir ou recréez le package code
 
 Combien vous modifiez votre code varie selon que vous avez l’intention de soumettre le code R à partir d’un client distant à exécuter dans le contexte de calcul SQL Server ou prévoyez de déployer le code dans le cadre d’une procédure stockée, ce qui peut fournir de meilleures performances et sécurité des données. Encapsulant votre code dans une procédure stockée impose certaines exigences supplémentaires. 
 
@@ -122,7 +121,7 @@ Combien vous modifiez votre code varie selon que vous avez l’intention de soum
 
     Pour plus d’informations, consultez [conseils d’optimisation de SQL Server et des astuces pour les Services d’Analytique](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
 
-### <a name="step-3-prepare-for-deployment"></a>Étape 3. Préparer le déploiement
+### <a name="step-3-prepare-for-deployment"></a>Étape 3. Préparer le déploiement
 
 + Prévenez l’administrateur afin que vous puissiez installer et tester les packages avant le déploiement de votre code. 
 
