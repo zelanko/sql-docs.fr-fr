@@ -1,5 +1,5 @@
 ---
-title: Leaves (MDX) | Microsoft Docs
+title: / / Niveaux feuilles (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b18f283dce1ed5d0d3099dbdc26e27e8aff39ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d29c77250c23900d74d1969a6c37bc719c89cdd7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270448"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905736"
 ---
 # <a name="leaves-mdx"></a>Leaves (MDX)
 

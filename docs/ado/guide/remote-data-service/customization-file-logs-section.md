@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d5d64dc151fbd54da17a65e2178b7f38eb6b2834
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14c5436478444e525c7a9753cf3e4e5cddb92f5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922786"
 ---
 # <a name="customization-file-logs-section"></a>Fichier de personnalisation, section Logs
 Le **journaux** section contient une entrée de fichier journal, qui spécifie le nom d’un fichier qui enregistre les erreurs pendant l’opération de la **DataFactory**.  
@@ -41,7 +40,7 @@ FileName
   
 |Élément|Description|  
 |----------|-----------------|  
-|**err**|Une chaîne littérale qui indique qu’il est une entrée de fichier journal.|  
+|**Err**|Une chaîne littérale qui indique qu’il est une entrée de fichier journal.|  
 |*FileName*|Un nom de chemin d’accès et de fichier complet. Le nom de fichier standard est **c:\msdfmap.log**.|  
   
  Le fichier journal contient le nom d’utilisateur, un HRESULT, une date et une heure de chaque erreur.  

@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 99cdd6fdf5db075cc8fd46b738f468fd5d9a028d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894928"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>Installation d’AdventureWorks et la configuration
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +66,7 @@ Suivez les étapes ci-dessous pour restaurer une sauvegarde de votre base de don
 
 1. Ouvrez SQL Server Management Studio et connectez-vous à l’instance de SQL Server cible.
 2. Avec le bouton droit sur le **bases de données** nœud, puis sélectionnez **Restore Database**.
-3. Sélectionnez **appareil** et cliquez sur le bouton de sélection (**...** )
+3. Sélectionnez **appareil** et cliquez sur le bouton de sélection ( **...** )
 4. Dans la boîte de dialogue **sélectionner les unités de sauvegarde**, cliquez sur **ajouter**, accédez à la sauvegarde de base de données dans le système de fichiers du serveur et sélectionnez la sauvegarde. Cliquez sur **OK**.
 5. Si nécessaire, modifiez l’emplacement cible pour les données et fichiers journaux, dans le **fichiers** volet. Notez qu’il est recommandé de placer des données et fichiers journaux sur des lecteurs différents.
 6. Cliquez sur **OK**. Ceci lancera la restauration de base de données. Une fois terminé, vous aurez la base de données AdventureWorks installée sur votre instance de SQL Server.
@@ -82,7 +81,7 @@ Suivez les étapes ci-dessous pour attacher le fichier de données pour votre ba
 2. Avec le bouton droit sur le **bases de données** nœud, puis sélectionnez **attacher**.
 3. Sélectionnez **ajouter** et accédez à la. Vous souhaitez joindre un fichier MDF. 
 1. Sélectionnez le fichier et cliquez sur **OK**. 
-    1. La base de données que vous avez sélectionné doit être affiché dans la fenêtre inférieure. Si le fichier est répertorié comme « not found », sélectionnez les points de suspension (**...** ) en regard du nom de fichier et mise à jour le chemin d’accès pour le chemin correct. 
+    1. La base de données que vous avez sélectionné doit être affiché dans la fenêtre inférieure. Si le fichier est répertorié comme « not found », sélectionnez les points de suspension ( **...** ) en regard du nom de fichier et mise à jour le chemin d’accès pour le chemin correct. 
     1. Si vous avez uniquement le fichier de données (.mdf) et pas le fichier journal (.ldf), puis mettez en surbrillance le .ldf dans la fenêtre du bas et sélectionnez **supprimer**. Cela créera un nouveau fichier journal. 
 1. Sélectionnez **OK** pour joindre le fichier. Une fois que le fichier est attaché, vous aurez la base de données AdventureWorks installée sur votre instance de SQL Server.  
 

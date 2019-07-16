@@ -7,13 +7,12 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 618c4b127c42aae6a5b8d7570f1962f8c8e38e9a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f4c0eb20b0e0cd64065c7db0687b1dc36b2dbe7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962755"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (module Python dans SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -138,6 +137,6 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 ## <a name="see-also"></a>Voir aussi
 
 + [Didacticiels Python](../tutorials/sql-server-python-tutorials.md)
-+ [Tutoriel : Incorporer le code Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Tutoriel : Incorporer le code Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
 + [Référence Python (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)
 

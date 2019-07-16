@@ -4,17 +4,16 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 203fad6aa3c39d57446738b9c74631fe114c609e
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d7d7d7eeacca4e18fe5b5fdc97331e24a6ca212d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952617"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Principes fondamentaux de disponibilité de SQL Server pour les déploiements de Linux
 
@@ -86,7 +85,7 @@ Comme pour Windows, les distributions Linux présentent un pare-feu intégré. S
 
 | Numéro de port | type     | Description                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
-| 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
+| 111         | TCP/UDP  | NFS- `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (si utilisé) - le mappeur de Point de terminaison                                                                                          |
 | 137         | UDP      | Samba (si utilisé) - Service de nom NetBIOS                                                                                      |
 | 138         | UDP      | Samba (si utilisé) - datagramme NetBIOS                                                                                          |

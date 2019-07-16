@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 925eefdbe8f5ff9196689026edb685c8f76d7d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920806"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction, interface
 Le **ADORecordConstruction**interface est utilisée pour construire une ADO **enregistrement** objet à partir d’un OLE DB **ligne** objet dans une application C/C++.  
@@ -36,10 +35,10 @@ Le **ADORecordConstruction**interface est utilisée pour construire une ADO **en
 |[Ligne](../../../ado/reference/ado-api/row-property-ado.md)|En lecture/écriture.<br />Obtient/définit une OLE DB **ligne** objet à partir de/sur cette ADO **enregistrement** objet.|  
   
 ## <a name="methods"></a>Méthodes  
- Aucun.  
+ Aucune.  
   
 ## <a name="events"></a>Events  
- Aucun.  
+ Aucune.  
   
 ## <a name="remarks"></a>Notes  
  Étant donné un OLE DB **ligne** objet (`pRow`), la construction de ADO **enregistrement** objet (`adoR`), s’élève à trois opérations ci-après :  
