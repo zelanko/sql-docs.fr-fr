@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 17879dc4c932ff127b858657a9af0aca340029b5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586179"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860518"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Un dictionnaire des synonymes pour la recherche en texte intégral est un fichie
 
 -   Paramètre de signes diacritiques  
   
-     Pour un dictionnaire des synonymes donné, tous les modèles de recherche respectent ou non les signes diacritiques, par exemple le tilde ( **~** ), l’accent aigu (**´**) ou le tréma (**¨**), (autrement dit ils *respectent les accents* ou *ne respectent pas les accents*). Par exemple, supposons que vous spécifiez le modèle « café » à remplacer par d’autres modèles dans une requête de texte intégral. Si le dictionnaire des synonymes ne respecte pas les accents, la recherche en texte intégral remplace les modèles « café » et « cafe ». Si le dictionnaire des synonymes respecte les accents, la recherche en texte intégral remplace seulement le modèle « café ». Par défaut, un dictionnaire des synonymes ne tient pas compte des accents.  
+     Pour un dictionnaire des synonymes donné, tous les modèles de recherche respectent ou non les signes diacritiques, par exemple le tilde ( **~** ), l’accent aigu ( **&acute;** ) ou le tréma ( **&uml;** ), (autrement dit ils *respectent les accents* ou *ne respectent pas les accents*). Par exemple, supposez que vous spécifiez le remplacement du modèle « caf&eacute; » par d'autres modèles dans une requête de texte intégral. Si le dictionnaire des synonymes ne tient pas compte des accents, la recherche en texte intégral remplace les modèles « caf&eacute; » et « cafe ». Si le dictionnaire des synonymes respecte les accents, la recherche en texte intégral remplace seulement le modèle « caf&eacute; ». Par défaut, un dictionnaire des synonymes ne tient pas compte des accents.  
   
 ##  <a name="initial_thesaurus_files"></a> Fichiers par défaut du dictionnaire des synonymes
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un fichier de dictionnaire des synonymes XML par langue prise en charge. Ces fichiers sont essentiellement vides. Ils contiennent uniquement la structure XML de niveau supérieur commune à tous les dictionnaires des synonymes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et un exemple commenté de dictionnaire des synonymes.  

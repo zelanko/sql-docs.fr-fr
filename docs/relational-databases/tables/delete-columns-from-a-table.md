@@ -17,89 +17,79 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41a78443dba90f8b75fec9e3db05c9106755b865
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 06847b9eeb2c01ae7b3e5d512a01f87adafdeb42
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580471"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731950"
 ---
 # <a name="delete-columns-from-a-table"></a>Supprimer des colonnes d'une table
+
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
-  Cette rubrique explique comment supprimer des colonnes de table dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-  
-> [!CAUTION]  
->  Quand vous supprimez une colonne dans une table, la colonne et toutes les données qu’elle contient sont supprimées.
-  
- **Dans cette rubrique**  
-  
--   **Avant de commencer :**  
-  
-     [Limitations et restrictions](#Restrictions)  
-  
-     [Sécurité](#Security)  
-  
--   **Pour supprimer une colonne d'une table à l'aide de :**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Avant de commencer  
-  
-###  <a name="Restrictions"></a> Limitations et restrictions  
- Vous ne pouvez pas supprimer une colonne qui a une contrainte CHECK. Vous devez d'abord supprimer la contrainte.  
-  
- Vous ne pouvez pas supprimer une colonne qui a des contraintes PRIMARY KEY ou FOREIGN KEY ou d'autres dépendances, sauf en utilisant le Concepteur de tables. Si vous utilisez l'Explorateur d'objets ou [!INCLUDE[tsql](../../includes/tsql-md.md)], vous devez d'abord supprimer toutes les dépendances à la colonne.  
-  
-###  <a name="Security"></a> Sécurité  
-  
-####  <a name="Permissions"></a> Autorisations  
- Requiert une autorisation ALTER sur la table.  
-  
-##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
-  
-#### <a name="to-delete-columns-by-using-object-explorer"></a>Pour supprimer des colonnes à l'aide de l'Explorateur d'objets  
-  
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  Dans l’**Explorateur d’objets**, recherchez la table dans laquelle vous souhaitez supprimer des colonnes, puis développez-la pour exposer les noms des colonnes. 
+Cette rubrique explique comment supprimer des colonnes de table dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-3.  Cliquez avec le bouton droit sur la colonne à supprimer, puis choisissez **Supprimer**.  
-  
-3.  Dans la boîte de dialogue **Supprimer un objet** , cliquez sur **OK**.  
+> [!CAUTION]
+> Quand vous supprimez une colonne dans une table, la colonne et toutes les données qu’elle contient sont supprimées.
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+ **Dans cette rubrique**
 
- Si la colonne contient des contraintes ou d'autres dépendances, un message d'erreur s'affichera dans la boîte de dialogue **Supprimer un objet** . Résolvez l'erreur en supprimant les contraintes référencées.  
-  
-#### <a name="to-delete-columns-by-using-table-designer"></a>Pour supprimer des colonnes à l'aide du Concepteur de tables  
-  
-1.  Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur la table dans laquelle vous souhaitez supprimer des colonnes et choisissez **Conception**.  
-  
-2.  Cliquez avec le bouton droit sur la colonne à supprimer et, dans le menu contextuel, cliquez sur **Supprimer une colonne** .  
-  
-3.  Si les colonnes à supprimer participent à une relation (FOREIGN KEY ou PRIMARY KEY), un message vous demande confirmation avant la suppression des colonnes sélectionnées et de leurs relations. Cliquez sur **Oui**.  
-  
-##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
-  
-#### <a name="to-delete-columns"></a>Pour supprimer des colonnes  
-  
-1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
-  
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**.  
-  
-    ```  
-    USE AdventureWorks2012;  
-    GO  
-    ALTER TABLE dbo.doc_exb DROP COLUMN column_b ;  
-    ```  
-  
- Si la colonne contient des contraintes ou d'autres dépendances, un message d'erreur est retourné. Résolvez l'erreur en supprimant les contraintes référencées.  
-  
- Pour obtenir des exemples supplémentaires, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
-  
-##  <a name="FollowUp"></a>  
+- **Avant de commencer :**
+
+   [Limitations et restrictions](#Restrictions)
+
+   [Sécurité](#Security)
+
+- **Pour supprimer une colonne d'une table à l'aide de :**
+
+   [SQL Server Management Studio](#SSMSProcedure)
+
+   [Transact-SQL](#TsqlProcedure)
+
+## <a name="BeforeYouBegin"></a> Avant de commencer
+
+### <a name="Restrictions"></a> Limitations et restrictions
+
+Vous ne pouvez pas supprimer une colonne qui a une contrainte CHECK. Vous devez d'abord supprimer la contrainte.
+
+Vous ne pouvez pas supprimer une colonne qui a des contraintes PRIMARY KEY ou FOREIGN KEY ou d'autres dépendances, sauf en utilisant le Concepteur de tables. Si vous utilisez l'Explorateur d'objets ou [!INCLUDE[tsql](../../includes/tsql-md.md)], vous devez d'abord supprimer toutes les dépendances à la colonne.
+
+### <a name="Security"></a> Sécurité
+
+#### <a name="Permissions"></a> Autorisations
+
+Requiert une autorisation ALTER sur la table.
+
+## <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio
+
+### <a name="to-delete-columns-by-using-object-explorer"></a>Pour supprimer des colonnes à l'aide de l'Explorateur d'objets
+
+1. Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+2. Dans l’**Explorateur d’objets**, recherchez la table dans laquelle vous souhaitez supprimer des colonnes, puis développez-la pour exposer les noms des colonnes.
+3. Cliquez avec le bouton droit sur la colonne à supprimer, puis choisissez **Supprimer**.
+4. Dans la boîte de dialogue **Supprimer un objet** , cliquez sur **OK**.
+
+Si la colonne contient des contraintes ou d'autres dépendances, un message d'erreur s'affichera dans la boîte de dialogue **Supprimer un objet** . Résolvez l'erreur en supprimant les contraintes référencées.
+
+### <a name="to-delete-columns-by-using-table-designer"></a>Pour supprimer des colonnes à l'aide du Concepteur de tables
+
+1. Dans l’ **Explorateur d’objets**, cliquez avec le bouton droit sur la table dans laquelle vous souhaitez supprimer des colonnes et choisissez **Conception**.
+2. Cliquez avec le bouton droit sur la colonne à supprimer et, dans le menu contextuel, cliquez sur **Supprimer une colonne** .
+3. Si les colonnes à supprimer participent à une relation (FOREIGN KEY ou PRIMARY KEY), un message vous demande confirmation avant la suppression des colonnes sélectionnées et de leurs relations. Cliquez sur **Oui**.
+
+## <a name="TsqlProcedure"></a> Utilisation de Transact-SQL
+
+### <a name="to-delete-columns"></a>Pour supprimer des colonnes
+
+L'exemple suivant vous indique comment supprimer une colonne.
+
+```sql
+ALTER TABLE dbo.doc_exb DROP COLUMN column_b;
+```
+
+Si la colonne contient des contraintes ou d'autres dépendances, un message d'erreur est retourné. Résolvez l'erreur en supprimant les contraintes référencées.
+
+Pour obtenir des exemples supplémentaires, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).
+
+## <a name="FollowUp"></a>

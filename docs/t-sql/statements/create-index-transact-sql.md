@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6ca14f18b89093db5ad3c6b86a381eebcd2fad5
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 195f7d0f298d191845a65864e752ab9a4dea5d06
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500231"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652794"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -734,7 +734,7 @@ Les instructions suivantes s’appliquent aux opérations d’index pouvant êtr
 - La création d’index en ligne est spécifiée comme pouvant être reprise avec l’option `RESUMABLE = ON`.
 - L’option RESUMABLE n’est pas persistante dans les métadonnées d’un index donné et s’applique uniquement à la durée d’une instruction DDL actuelle. C’est pourquoi la clause `RESUMABLE = ON` doit être spécifiée explicitement pour permettre la reprise.
 - L’option MAX_DURATION n’est prise en charge que pour l’option `RESUMABLE = ON`.
-- MAX_DURATION pour l’option RESUMABLE spécifie l’intervalle de temps d’un index en cours de génération. Une fois ce délai écoulé, la génération d’index est mise en pause ou termine son exécution. L’utilisateur choisit quand reprendre la génération d’un index en pause. La **durée** en minutes de MAX_DURATION doit être supérieure à 0 minute et inférieur ou égale à une semaine (7 * 24 * 60 = 10080 minutes). Si la mise en pause d’une opération d’index est longue, les performances DML d’une table spécifique et la capacité de disque de la base de données risquent d’être impactées parce que les deux index, l’original et celui nouvellement créé, ont besoin d’espace disque et doivent être mis à jour au cours des opérations DML. Si l’option MAX_DURATION est omise, l’opération d’index se poursuit jusqu'à ce qu’elle se termine ou qu’une défaillance se produise.
+- MAX_DURATION pour l’option RESUMABLE spécifie l’intervalle de temps d’un index en cours de génération. Une fois ce délai écoulé, la génération d’index est mise en pause ou termine son exécution. L’utilisateur choisit quand reprendre la génération d’un index en pause. La **durée** en minutes de MAX_DURATION doit être supérieure à 0 minute et inférieur ou égale à une semaine (7 \* 24 \* 60 = 10080 minutes). Si la mise en pause d’une opération d’index est longue, les performances DML d’une table spécifique et la capacité de disque de la base de données risquent d’être impactées parce que les deux index, l’original et celui nouvellement créé, ont besoin d’espace disque et doivent être mis à jour au cours des opérations DML. Si l’option MAX_DURATION est omise, l’opération d’index se poursuit jusqu'à ce qu’elle se termine ou qu’une défaillance se produise.
 - Pour interrompre immédiatement l’opération d’index, vous pouvez arrêter (Ctrl-C) la commande en cours ou bien exécuter la commande [ALTER INDEX](alter-index-transact-sql.md) PAUSE ou la command `KILL <session_id>`. Une commande en pause peut être reprise avec la commande [ALTER INDEX](alter-index-transact-sql.md).
 - Si l’instruction CREATE INDEX d’origine est réexécutée sur un index pouvant être repris, l’opération de création d’index en pause est automatiquement reprise.
 - L’option `SORT_IN_TEMPDB = ON` n’est pas prise en charge sur l’index pouvant être repris.

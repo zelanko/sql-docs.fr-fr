@@ -1,6 +1,6 @@
 ---
-title: Conseils et astuces supplémentaires pour utiliser SQL Server Management Studio
-description: Tutoriel indiquant des conseils et astuces supplémentaires pour utiliser SSMS.
+title: Conseils et astuces pour utiliser SQL Server Management Studio (SSMS)
+description: Apprenez à commenter et à supprimer les commentaires sur votre code, à mettre en retrait votre texte, à filtrer des objets dans l’Explorateur d’objets, à accéder à votre journal des erreurs SQL Server et à rechercher le nom de votre instance SQL Server à l’aide de SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -8,7 +8,7 @@ ms.prod_service: sql-tools
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
 - Help [SQL Server], SQL Server Management Studio
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 4c6585e8e2c467c6e0a4a288107fd59cae64f84b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c31c8243ef74b69a5fe050e5487911138db76741
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499419"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860647"
 ---
-# <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutoriel : Conseils et astuces supplémentaires pour utiliser SSMS
+# <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Conseils et astuces pour utiliser SQL Server Management Studio (SSMS)
 
-Ce tutoriel vous propose des astuces supplémentaires pour utiliser SQL Server Management Studio (SSMS). Cet article vous montre comment : 
+Cet article vous propose des conseils et astuces pour utiliser SQL Server Management Studio (SSMS). Cet article vous montre comment : 
 
 > [!div class="checklist"]
 > * Ajouter/supprimer des marques de commentaire dans le texte Transact-SQL (T-SQL)
@@ -40,7 +40,7 @@ Ce tutoriel vous propose des astuces supplémentaires pour utiliser SQL Server M
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
-Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l’accès à un serveur SQL et d’une base de données AdventureWorks. 
+Pour tester les étapes fournies dans cet article, vous avez besoin de SQL Server Management Studio, de l’accès à SQL Server et d’une base de données AdventureWorks. 
 
 * Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 * Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
@@ -267,7 +267,7 @@ Une fois que vous êtes connecté à SQL Server, le nom du serveur est disponibl
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>Si vous êtes connecté à un alias ou un écouteur de groupe de disponibilité
 
-Quand vous êtes connecté à un alias ou un écouteur de groupe de disponibilité, ces informations sont indiquées dans l’Explorateur d’objets et la fenêtre Propriétés. Dans ce cas, le nom SQL Server n’est peut-être pas visible et doit être interrogé : 
+Quand vous êtes connecté à un alias ou un écouteur de groupe de disponibilité, ces informations sont indiquées dans l’Explorateur d’objets et la fenêtre Propriétés. Dans ce cas, le nom SQL Server n’est peut-être pas visible et doit être interrogé :
 
 1. Connectez-vous à votre serveur SQL.
 
@@ -282,3 +282,12 @@ Quand vous êtes connecté à un alias ou un écouteur de groupe de disponibilit
 4. Consultez les résultats de la requête pour identifier le nom de l’instance SQL Server à laquelle vous êtes connecté : 
 
     ![Interroger le nom du serveur SQL](media/ssms-tricks/queryservername.png)
+
+## <a name="next-steps"></a>Étapes suivantes
+
+La meilleure façon de se familiariser avec SSMS est d’effectuer des exercices pratiques. Ces articles *Tutoriel* et *Procédure* vous aident à vous familiariser avec les différentes fonctionnalités disponibles dans SSMS.  Ces articles vous apprennent à gérer les composants de SSMS et à trouver les fonctionnalités utilisées régulièrement.
+
+* [Se connecter à une instance et l’interroger](connect-query-sql-server.md)
+* [Création de scripts](scripting-ssms.md)
+* [Utilisation de modèles dans SSMS](../template/templates-ssms.md)
+* [Configuration de SSMS](ssms-configuration.md)

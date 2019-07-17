@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2370c428d063958079e749c792a60de3b7379ee3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 217ed3b61b3e4da943103f992340210ef8295bb0
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210528"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832933"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ Les vues système suivantes contiennent des informations sur la compression de d
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - Les colonnes **type** et **type_desc** incluent CLUSTERED COLUMNSTORE et NONCLUSTERED COLUMNSTORE.  
 -   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) - Les colonnes **data_compression** et **data_compression_desc** incluent COLUMNSTORE et COLUMNSTORE_ARCHIVE.  
   
-La procédure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) ne s’applique pas aux index columnstore.  
+La procédure [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) peut aussi s’appliquer aux index columnstore.  
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>Impact de la compression sur les tables et les index partitionnés  
  Lorsque vous utilisez la compression des données avec des tables et des index partitionnés, assurez-vous de prendre en compte les considérations suivantes :  
@@ -199,7 +199,7 @@ Le tableau suivant illustre les paramètres de réplication qui contrôlent la c
 -   La compression de données est incompatible avec les colonnes éparses. Par conséquent, les tables contenant des colonnes éparses ne peuvent pas être compressées et les colonnes éparses ne peuvent pas être ajoutées aux tables compressées.  
 -   L'activation de la compression peut provoquer la modification des plans de requêtes, car les données sont stockées avec un nombre différent de pages et de lignes par page.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Implémentation de la compression de ligne](../../relational-databases/data-compression/row-compression-implementation.md)   
  [Implémentation de la compression de page](../../relational-databases/data-compression/page-compression-implementation.md)   
  [Implémentation de la compression Unicode](../../relational-databases/data-compression/unicode-compression-implementation.md)   

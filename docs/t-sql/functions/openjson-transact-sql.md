@@ -19,12 +19,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 88c74779b60ae25ea381a2814b06a11b4fdd2e22
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 471b4fac245dcdb1aec537ccd3e8345d99039871
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343858"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624383"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -239,7 +239,10 @@ Les colonnes que la fonction OPENJSON retourne dépendent de l’option WITH.
   
      Seules les propriétés de premier niveau sont retournées. L’instruction échoue si le texte JSON n’est pas formaté correctement.  
 
-2. Lorsque vous appelez OPENJSON et que vous spécifiez un schéma explicite dans la clause WITH, la fonction retourne une table avec le schéma que vous avez défini dans la clause WITH.  
+2. Lorsque vous appelez OPENJSON et que vous spécifiez un schéma explicite dans la clause WITH, la fonction retourne une table avec le schéma que vous avez défini dans la clause WITH.
+
+> [!NOTE]  
+> Les colonnes **Clé**, **Valeur** et **Type** ne sont retournées que lorsque vous utilisez OPENJSON avec le schéma par défaut et ne sont pas disponibles avec un schéma explicite.
 
 ## <a name="remarks"></a>Notes  
 
