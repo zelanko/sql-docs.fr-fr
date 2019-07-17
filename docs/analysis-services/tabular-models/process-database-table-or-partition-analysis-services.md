@@ -1,5 +1,5 @@
 ---
-title: Processus de base de données, la Table ou Partition (Analysis Services) | Documents Microsoft
+title: Processus de base de données, la Table ou Partition (Analysis Services) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3fbaa230d4db635b5c3f6c232fa50ae0cf88aec1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044013"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207520"
 ---
 # <a name="process-database-table-or-partition-analysis-services"></a>Processus de base de données, table ou partition (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  Les tâches de cette rubrique décrivent comment traiter manuellement les partitions, table ou une base de données de modèle tabulaire à l’aide de la **processus \<objet >** boîte de dialogue de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+  Les tâches de cette rubrique décrivent comment traiter une base de données de modèle tabulaire, table ou des partitions manuellement à l’aide de la **processus \<objet >** boîte de dialogue dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
- Pour plus d’informations sur le traitement du modèle tabulaire, consultez [traiter les données](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
+ Pour plus d’informations sur le traitement des modèles tabulaires, consultez [traiter les données](../../analysis-services/tabular-models/process-data-ssas-tabular.md).  
   
 ##  <a name="bkmk_process_tasks"></a> Tâches  
   
@@ -67,7 +67,7 @@ ms.locfileid: "34044013"
     |----------|-----------------|  
     |**Traiter par défaut**|Détecte l'état de traitement d'un objet de partition et effectue le traitement nécessaire pour faire passer les objets de partition non traités ou traités partiellement dans un état de traitement complet. Les données des partitions et des tables vides sont chargées ; les hiérarchies, les colonnes calculées et les relations sont créées ou reconstruites (recalculées).|  
     |**Traiter entièrement**|Traite un objet de partition et tous les objets qu'il contient. Lorsque la commande Traiter entièrement est exécutée pour un objet qui a déjà été traité, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supprime toutes les données de l'objet, puis traite l'objet. Ce type de traitement est obligatoire lorsqu'une modification structurelle a été apportée à un objet.|  
-    |**Traiter les données**|Chargez les données dans une partition ou une table sans reconstruire les hiérarchies ou les relations ni recalculer les colonnes calculées et les mesures.|  
+    |**Traiter des données**|Chargez les données dans une partition ou une table sans reconstruire les hiérarchies ou les relations ni recalculer les colonnes calculées et les mesures.|  
     |**Traiter l'effacement**|Supprime toutes les données d'une partition.|  
     |**Traiter l'ajout**|Mise à jour incrémentielle de la partition avec de nouvelles données.|  
   

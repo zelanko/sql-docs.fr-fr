@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 86cecd45-0b09-42e9-8152-32a12a1c2b7a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ca1e260e49efcc91a8a4aca471e06b8a7ed23448
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9898dbde804b0c4615a5dc4ad6b8fefa79000ccb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005575"
 ---
 # <a name="srvparamstatus-extended-stored-procedure-api"></a>srv_paramstatus (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +55,9 @@ n
  Indique le numéro du paramètre. Le premier paramètre est le numéro 1.  
   
 ## <a name="returns"></a>Valeur renvoyée  
- Un **int** qui contient les indicateurs d’état du paramètre. Actuellement, il existe un seul indicateur: Si le bit 0 est défini sur 1, le paramètre est un paramètre de retour. En l’absence du *n*ième paramètre ou d’une procédure stockée distante, la valeur -1 est retournée.  
+ Un **int** qui contient les indicateurs d’état du paramètre. Actuellement il n’y a qu’un seul indicateur : Si le bit 0 est défini sur 1, le paramètre est un paramètre de retour. En l’absence du *n*ième paramètre ou d’une procédure stockée distante, la valeur -1 est retournée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette routine retourne les indicateurs d'état pour un paramètre d'appel d'une procédure stockée distante.  
   
  Les paramètres contiennent les données passées entre les clients et l'application avec des procédures stockées distantes. Le client peut spécifier certains paramètres en tant que paramètres de retour. Ces paramètres de retour peuvent contenir des valeurs que l'application transmet au client.  
@@ -70,7 +69,7 @@ n
 > [!IMPORTANT]  
 >  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [srv_rpcparams &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   
   

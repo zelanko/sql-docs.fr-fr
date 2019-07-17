@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 29b5225f95c6b2cb04f42c0e67c504ac2cb20e53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cc48fa530730beec07aaca4bfb933c9ff8fb2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986358"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>Fonctionnalités Access incompatibles (AccessToSQL)
 Pas toutes les fonctionnalités de base de données Access sont compatibles avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par exemple, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et accès avoir différents jeux de mots clés réservés. Considérations de ceux-ci peuvent empêcher une migration réussie vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilisez le tableau suivant pour en savoir plus sur les problèmes de migration possible et ce que vous pouvez faire à leur sujet.  

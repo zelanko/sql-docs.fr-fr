@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: b90147a3-fd8e-408e-961d-5c7000e068ad
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 1a3a6baec134c715d5f15c0e3e45a19e17d5b5cf
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 3be4ff07923759af53b929852d4dbaa4088a77f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904420"
 ---
 # <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "67716288"
 |time|**datetime**|Heure (UTC) par incréments d'heures.|  
 |database_name|**nvarchar**|Nom de la base de données utilisateur.|  
 |sku|**nvarchar**|Nom de la SKU. Les valeurs possibles sont les suivantes :<br /><br /> Web<br /><br /> Business<br /><br /> De base<br /><br /> standard<br /><br /> Premium|  
-|usage_in_seconds|**Int**|Somme du temps processeur utilisé dans l'heure.<br /><br /> Remarque : Cette colonne est déconseillée pour V11 et V12 ne concerne pas. **Valeur est toujours définie sur 0.**|  
+|usage_in_seconds|**int**|Somme du temps processeur utilisé dans l'heure.<br /><br /> Remarque : Cette colonne est déconseillée pour V11 et V12 ne concerne pas. **Valeur est toujours définie sur 0.**|  
 |storage_in_megabytes|**decimal**|Taille de stockage maximale pour l'heure, y compris les données de la base de données, index, procédures stockées et métadonnées.|  
   
 ## <a name="permissions"></a>Autorisations  

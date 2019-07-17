@@ -19,35 +19,34 @@ helpviewer_keywords:
 ms.assetid: 82d1c102-efcc-4b60-9a5e-3eee299bcb2b
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 223277050e7c758d2fcd5d46e62cf171fc2a1cca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c97061b08475549b2e8ebccdc75a56f74eb6614
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947302"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265929"
 ---
 # <a name="sysdmftsindexpopulation-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations sur les remplissages d'index de recherche en texte intégral et d'expression de clé sémantique actuellement en cours dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**Int**|ID de la base de données qui contient l'index de texte intégral en cours de remplissage.|  
-|**catalog_id**|**Int**|ID du catalogue de texte intégral qui contient cet index de texte intégral.|  
-|**table_id**|**Int**|ID de la table pour laquelle l'index de recherche en texte intégral est rempli.|  
+|**catalog_id**|**int**|ID du catalogue de texte intégral qui contient cet index de texte intégral.|  
+|**table_id**|**int**|ID de la table pour laquelle l'index de recherche en texte intégral est rempli.|  
 |**memory_address**|**varbinary(8)**|Adresse mémoire de la structure des données internes utilisées pour représenter un remplissage actif.|  
-|**population_type**|**Int**|Type de remplissage. Il peut s'agir :<br /><br /> 1 = Remplissage complet<br /><br /> 2 = Remplissage incrémentiel avec cachet temporel<br /><br /> 3 = Mise à jour manuelle des modifications suivies<br /><br /> 4 = Mise à jour en arrière-plan des modifications suivies|  
+|**population_type**|**int**|Type de remplissage. Il peut s'agir :<br /><br /> 1 = Remplissage complet<br /><br /> 2 = Remplissage incrémentiel avec cachet temporel<br /><br /> 3 = Mise à jour manuelle des modifications suivies<br /><br /> 4 = Mise à jour en arrière-plan des modifications suivies|  
 |**population_type_description**|**nvarchar(120)**|Description du type de remplissage.|  
 |**is_clustered_index_scan**|**bit**|Indique si le remplissage implique une analyse sur l'index cluster.|  
 |**range_count**|**Int**|Nombre de sous-plages dans lesquelles ce remplissage a été mis en parallèle.|  
-|**completed_range_count**|**Int**|Nombre de plages pour lesquelles le traitement est terminé.|  
-|**outstanding_batch_count**|**Int**|Nombre actuel de lots en attente pour ce remplissage. Pour plus d’informations, consultez [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
-|**status**|**Int**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> État de ce remplissage. Remarque : certains états sont transitoires. Il peut s'agir :<br /><br /> 3 = Démarrage<br /><br /> 5 = Traitement normal<br /><br /> 7 = A arrêté le traitement<br /><br /> Par exemple, cet état se produit lorsqu'une fusion automatique est en cours.<br /><br /> 11 = Remplissage abandonné<br /><br /> 12 = Traiter une extraction de ressemblance sémantique|  
+|**completed_range_count**|**int**|Nombre de plages pour lesquelles le traitement est terminé.|  
+|**outstanding_batch_count**|**int**|Nombre actuel de lots en attente pour ce remplissage. Pour plus d’informations, consultez [sys.dm_fts_outstanding_batches &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
+|**status**|**int**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> État de ce remplissage. Remarque : certains états sont transitoires. Il peut s'agir :<br /><br /> 3 = Démarrage<br /><br /> 5 = Traitement normal<br /><br /> 7 = A arrêté le traitement<br /><br /> Par exemple, cet état se produit lorsqu'une fusion automatique est en cours.<br /><br /> 11 = Remplissage abandonné<br /><br /> 12 = Traiter une extraction de ressemblance sémantique|  
 |**status_description**|**nvarchar(120)**|Description de l'état du remplissage.|  
-|**completion_type**|**Int**|État de la manière dont ce remplissage s'est terminé.|  
+|**completion_type**|**int**|État de la manière dont ce remplissage s'est terminé.|  
 |**completion_type_description**|**nvarchar(120)**|Description du type d'achèvement.|  
 |**worker_count**|**Int**|Cette valeur est toujours 0.|  
 |**queued_population_type**|**Int**|Type du remplissage, d'après les modifications suivies, que suivra l'éventuel remplissage en cours.|  
@@ -61,7 +60,7 @@ ms.locfileid: "65947302"
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
   
 ## <a name="physical-joins"></a>Jointures physiques  
  ![Jointures significatives de cette vue de gestion dynamique](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-index-population-1.gif "jointures significatives de cette vue de gestion dynamique")  

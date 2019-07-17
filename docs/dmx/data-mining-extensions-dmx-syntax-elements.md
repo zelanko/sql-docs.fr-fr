@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a745449428a0a348dc60a5b47304612bb889556c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070853"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Éléments de syntaxe DMX (Data Mining Extensions)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "37989921"
  [Expressions &#40;DMX&#41;](../dmx/expressions-dmx.md)  
  Unités de syntaxe que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut résoudre en valeurs unique ou scalaire, en objets, ou en valeurs de table.  
   
- [Opérateurs &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
  Utilisés avec une ou plusieurs expressions DMX simples pour créer des expressions DMX plus complexes.  
   
  [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)  
@@ -56,7 +55,7 @@ ms.locfileid: "37989921"
  Définissez les indicateurs supplémentaires utilisés par l'algorithme pour traiter un modèle d'exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Référence DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   

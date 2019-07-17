@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f860306c721bba75a9d5fc9af63ddbe0c6fc9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002648"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,11 +50,11 @@ sys.dm_db_missing_index_columns(index_handle)
   
 ## <a name="table-returned"></a>Table retournée  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**column_id**|**Int**|ID de la colonne.|  
+|**column_id**|**int**|ID de la colonne.|  
 |**column_name**|**sysname**|Nom de la colonne de la table.|  
-|**column_usage**|**varchar(20)**|Indique la manière dont la colonne est utilisée par la requête. Les valeurs possibles et leurs descriptions sont :<br /><br /> L’égalité : La colonne contribue à un prédicat qui exprime l’égalité, le formulaire : <br />                        *table.column* = *constant_value*<br /><br /> INÉGALITÉ : La colonne contribue à un prédicat qui exprime l’inégalité, par exemple, un prédicat de la forme : *table.column* > *constant_value*. Tout opérateur de comparaison autre que "=" exprime l'inégalité.<br /><br /> INCLUDE : Colonne n’est pas utilisé pour évaluer un prédicat, mais il est utilisé pour une autre raison, par exemple, pour couvrir une requête.|  
+|**column_usage**|**varchar(20)**|Indique la manière dont la colonne est utilisée par la requête. Les valeurs possibles et leurs descriptions sont :<br /><br /> ÉGALITÉ : La colonne contribue à un prédicat qui exprime l’égalité, le formulaire : <br />                        *table.column* = *constant_value*<br /><br /> INÉGALITÉ : La colonne contribue à un prédicat qui exprime l’inégalité, par exemple, un prédicat de la forme : *table.column* > *constant_value*. Tout opérateur de comparaison autre que "=" exprime l'inégalité.<br /><br /> SONT LES SUIVANTES : Colonne n’est pas utilisé pour évaluer un prédicat, mais il est utilisé pour une autre raison, par exemple, pour couvrir une requête.|  
   
 ## <a name="remarks"></a>Notes  
  Informations retournées par **sys.dm_db_missing_index_columns** est mis à jour lorsqu’une requête est optimisée par l’optimiseur de requête et n’est pas persistant. Les informations sur les index manquants sont simplement conservées jusqu'au redémarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les administrateurs de base de données doivent effectuer régulièrement des copies de sauvegarde des informations sur les index manquants s'ils souhaitent les conserver après le recyclage du serveur.  
@@ -63,7 +62,7 @@ sys.dm_db_missing_index_columns(index_handle)
 ## <a name="transaction-consistency"></a>Cohérence transactionnelle  
  Si une transaction crée ou supprime une table, les lignes qui contiennent les informations d'index manquants concernant les objets supprimés sont retirées de cet objet de gestion dynamique, ce qui permet de préserver la cohérence des transactions.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les utilisateurs doivent bénéficier de l'autorisation VIEW SERVER STATE ou de toute autorisation qui implique l'autorisation VIEW SERVER STATE pour interroger cette fonction de gestion dynamique.  
   
 ## <a name="examples"></a>Exemples  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1a63d92d-ca3a-46ae-911f-6788292c801e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: de287802693adb18e39509fdc0e7577d05984949
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00a24ffca764c029b87470b7aa07d15f33b4c673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996439"
 ---
 # <a name="registry-entries-visual-foxpro-odbc-driver"></a>Entrées du Registre (pilote ODBC Visual FoxPro)
 Lorsque vous installez le pilote ODBC Visual FoxPro, le programme d’installation met à jour le Registre de votre système, dans la clé de Registre HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCInst.ini, pour ajouter une nouvelle clé appelée pilote Microsoft Visual FoxPro. Sous cette clé, les valeurs décrites dans le tableau suivant sont ajoutés.  

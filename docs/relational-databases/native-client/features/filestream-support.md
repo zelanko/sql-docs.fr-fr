@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1ad3400d-7fcd-40c9-87ae-f5afc61e0374
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 030f2e002c4dba8148a1e4bbcbb9eff9033308f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47ea988c3c9ec2b784109e46ce30d1a0ed56dc61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987516"
 ---
 # <a name="filestream-support"></a>Prise en charge de FILESTREAM
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +26,11 @@ ms.locfileid: "47689000"
 
   FILESTREAM permet de stocker et d'accéder à de grandes valeurs binaires, soit par le biais de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], soit par accès direct au système de fichiers Windows. Une grande valeur binaire est une valeur supérieure à 2 gigaoctets (Go). Pour plus d’informations sur la prise en charge améliorée de FILESTREAM, consultez [FILESTREAM &#40;SQL Server&#41;](../../../relational-databases/blob/filestream-sql-server.md).  
   
- Quand une connexion de base de données est ouverte, la valeur -1 (« illimité ») est affectée par défaut à **@@TEXTSIZE**.  
+ Quand une connexion de base de données est ouverte, la valeur -1 (« illimité ») est affectée par défaut à **@@TEXTSIZE** .  
   
  Il est également possible d'accéder et de mettre à jour des colonnes FILESTREAM à l'aide d'API de système de fichiers Windows.  
   
- Pour plus d'informations, consultez les rubriques suivantes :  
+ Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Prise en charge FILESTREAM &#40;OLE DB&#41;](../../../relational-databases/native-client/ole-db/filestream-support-ole-db.md)  
   

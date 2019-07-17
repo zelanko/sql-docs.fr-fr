@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9dfe88f11cc26d4a9711b7f21caf4c4475ec954b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351321"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206737"
 ---
 # <a name="binding-parameters"></a>Liaison de paramètres
   Chaque marqueur de paramètre dans une instruction SQL doit être associé, ou lié, à une variable dans l'application avant que l'instruction puisse être exécutée. Cela est effectué en appelant le [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) (fonction). **SQLBindParameter** décrit la variable de programme (adresse, type de données C et ainsi de suite) au pilote. Cette fonction identifie également le marqueur de paramètre en indiquant sa valeur ordinale puis décrit les caractéristiques de l'objet SQL qu'il représente (type de données SQL, précision, etc.).  

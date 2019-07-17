@@ -20,12 +20,12 @@ ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 91a811fd2c868194ad0fc45d75cae7649a324672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67950996"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265967"
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,14 +45,14 @@ ms.locfileid: "67950996"
 |**is_paused**|**bit**|Indique si le remplissage du catalogue de texte intégral actif a été suspendu.|  
 |**status**|**int**|État actuel du catalogue de texte intégral. Il peut s'agir :<br /><br /> 0 = En cours d'initialisation<br /><br /> 1 = Prêt<br /><br /> 2 = En pause<br /><br /> 3 = Erreur temporaire<br /><br /> 4 = Doit être remonté<br /><br /> 5 = Arrêt<br /><br /> 6 = Suspendu pour sauvegarde<br /><br /> 7 = Sauvegarde en cours via le catalogue<br /><br /> 8 = Catalogue endommagé|  
 |**status_description**|**nvarchar(120)**|Description de l'état actuel du catalogue de texte intégral actif.|  
-|**previous_status**|**Int**|État précédent du catalogue de texte intégral. Il peut s'agir :<br /><br /> 0 = En cours d'initialisation<br /><br /> 1 = Prêt<br /><br /> 2 = En pause<br /><br /> 3 = Erreur temporaire<br /><br /> 4 = Doit être remonté<br /><br /> 5 = Arrêt<br /><br /> 6 = Suspendu pour sauvegarde<br /><br /> 7 = Sauvegarde en cours via le catalogue<br /><br /> 8 = Catalogue endommagé|  
+|**previous_status**|**int**|État précédent du catalogue de texte intégral. Il peut s'agir :<br /><br /> 0 = En cours d'initialisation<br /><br /> 1 = Prêt<br /><br /> 2 = En pause<br /><br /> 3 = Erreur temporaire<br /><br /> 4 = Doit être remonté<br /><br /> 5 = Arrêt<br /><br /> 6 = Suspendu pour sauvegarde<br /><br /> 7 = Sauvegarde en cours via le catalogue<br /><br /> 8 = Catalogue endommagé|  
 |**previous_status_description**|**nvarchar(120)**|Description de l'état précédent du catalogue de texte intégral actif.|  
-|**worker_count**|**Int**|Nombre de threads opérant actuellement sur ce catalogue de texte intégral.|  
-|**active_fts_index_count**|**Int**|Nombre d'index de recherche en texte intégral en cours d'alimentation.|  
-|**auto_population_count**|**int**|Nombre de tables en cours d'alimentation automatique pour ce catalogue de texte intégral.|  
+|**worker_count**|**int**|Nombre de threads opérant actuellement sur ce catalogue de texte intégral.|  
+|**active_fts_index_count**|**int**|Nombre d'index de recherche en texte intégral en cours d'alimentation.|  
+|**auto_population_count**|**Int**|Nombre de tables en cours d'alimentation automatique pour ce catalogue de texte intégral.|  
 |**manual_population_count**|**Int**|Nombre de tables en cours d'alimentation manuelle pour ce catalogue de texte intégral.|  
-|**full_incremental_population_count**|**int**|Nombre de tables en cours de remplissage complet ou incrémentiel pour ce catalogue de texte intégral.|  
-|**row_count_in_thousands**|**int**|Nombre estimé de lignes (en milliers) dans tous les index de texte intégral de ce catalogue de texte intégral.|  
+|**full_incremental_population_count**|**Int**|Nombre de tables en cours de remplissage complet ou incrémentiel pour ce catalogue de texte intégral.|  
+|**row_count_in_thousands**|**Int**|Nombre estimé de lignes (en milliers) dans tous les index de texte intégral de ce catalogue de texte intégral.|  
 |**is_importing**|**bit**|Indique si le catalogue de texte intégral est en cours d'importation :<br /><br /> 1 = le catalogue est en cours d'importation.<br /><br /> 2 = le catalogue n'est pas en cours d'importation.|  
   
 ## <a name="remarks"></a>Notes  
@@ -61,7 +61,7 @@ ms.locfileid: "67950996"
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
    
 ## <a name="physical-joins"></a>Jointures physiques  
  ![Jointures significatives de cette vue de gestion dynamique](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "jointures significatives de cette vue de gestion dynamique")  

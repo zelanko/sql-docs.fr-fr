@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f75d127b6b8bd723a4d39a5e0610884010e4106
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018503"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Spécification d'un schéma de mappage annoté dans un code de mise à jour (updategram) (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "63025530"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples de travail utilisant les exemples suivants, vous devez respecter les exigences spécifiées dans [configuration requise pour exécuter les exemples de SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>A. Création d'un code de mise à jour avec un schéma de mappage simple  
+### <a name="a-creating-an-updategram-with-a-simple-mapping-schema"></a>R. Création d'un code de mise à jour avec un schéma de mappage simple  
  Le schéma XSD suivant (SampleSchema.xml) est un schéma de mappage qui mappe le  **\<client >** élément à la table Sales.Customer :  
   
 ```  

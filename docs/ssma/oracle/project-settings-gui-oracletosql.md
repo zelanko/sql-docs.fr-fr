@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 90c6c1a75c975d8c4c79c87516ac628cfab15690
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: b1b77b5ac7562ffcf39e065fb99df9da5b1f6ca6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62991463"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266572"
 ---
 # <a name="project-settings-gui-oracletosql"></a>Paramètres du projet (GUI) (OracleToSQL)
 Les paramètres de projet de l’interface graphique utilisateur vous permettent de configurer la manière dont les données apparaissent sur le **données** onglet et s’il faut afficher le rapport d’évaluation après la conversion ou non.  

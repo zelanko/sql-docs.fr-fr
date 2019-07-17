@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21bf98ac97c9a695b7b9576412d43c832011322d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62933693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004660"
 ---
 # <a name="functions-on-sequences---id"></a>Fonctions sur les séquences : id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ fn:id($arg as xs:IDREF*) as element()*
 ## <a name="examples"></a>Exemples  
  Cette rubrique fournit des exemples de XQuery relatifs à des instances XML stockés dans différentes **xml** colonnes de type le [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] base de données.  
   
-### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. Récupération des éléments en fonction de la valeur de l'attribut IDREF  
+### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>R. Récupération des éléments en fonction de la valeur de l'attribut IDREF  
  L’exemple suivant utilise la fonction fn : ID pour récupérer le <`employee`> éléments, en fonction de l’attribut IDREF manager. Dans cet exemple, l'attribut manager est de type IDREF et l'attribut eid est de type ID.  
   
  Pour une valeur d’attribut de gestionnaire spécifique, le **id()** fonction recherche le <`employee`> élément dont valeur d’attribut de type ID correspond à la valeur IDREF en entrée. En d’autres termes, pour un employé spécifique, le **id()** fonction retourne le responsable de l’employé.  
