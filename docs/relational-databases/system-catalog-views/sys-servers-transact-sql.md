@@ -19,32 +19,31 @@ helpviewer_keywords:
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 59849d1e4a462433ac7f0b1b4e3e620bcdb82256
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b17296d558c078d3f580e63bf662bb975615ad94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132950"
 ---
 # <a name="sysservers-transact-sql"></a>sys.servers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque serveur lié ou distant inscrit et une ligne pour le serveur local a **server_id** = 0.  
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**Int**|ID local du serveur lié.|  
-|**nom**|**sysname**|Lorsque **server_id** = 0, la valeur retournée est le nom du serveur.<br /><br /> Lorsque **server_id** > 0, la valeur retournée est le nom local du serveur lié.|  
+|**server_id**|**int**|ID local du serveur lié.|  
+|**name**|**sysname**|Lorsque **server_id** = 0, la valeur retournée est le nom du serveur.<br /><br /> Lorsque **server_id** > 0, la valeur retournée est le nom local du serveur lié.|  
 |**product**|**sysname**|Nom de produit du serveur lié. La valeur de « SQL Server » indique une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**provider**|**sysname**|Nom du fournisseur OLE DB permettant de se connecter au serveur lié.|  
 |**data_source**|**nvarchar(4000)**|Propriété de connexion à la source de données OLE DB.|  
 |**location**|**nvarchar(4000)**|Propriété de connexion de l'emplacement OLE DB. NULL si aucun.|  
 |**provider_string**|**nvarchar(4000)**|Propriété de connexion à la chaîne du fournisseur OLE DB.<br /><br /> A pour valeur NULL sauf si l'appelant dispose de l'autorisation ALTER ANY LINKED SERVER.|  
 |**catalog**|**sysname**|Propriété d'une connexion au catalogue OLEDB. NULL si aucun.|  
-|**connect_timeout**|**Int**|Délai d'expiration de la connexion en secondes, 0 si aucun.|  
-|**query_timeout**|**Int**|Délai d'expiration de la requête en secondes, 0 si aucun.|  
+|**connect_timeout**|**int**|Délai d'expiration de la connexion en secondes, 0 si aucun.|  
+|**query_timeout**|**int**|Délai d'expiration de la requête en secondes, 0 si aucun.|  
 |**is_linked**|**bit**|0 = est un ancien serveur ajouté à l’aide de **sp_addserver**, avec un comportement de transaction distribuée et RPC différents.<br /><br /> 1 = Serveur lié standard.|  
 |**is_remote_login_enabled**|**bit**|L'option RPC est active et permet les connexions entrantes à distance pour ce serveur.|  
 |**is_rpc_out_enabled**|**bit**|RPC sortant (depuis ce serveur) activé.|  

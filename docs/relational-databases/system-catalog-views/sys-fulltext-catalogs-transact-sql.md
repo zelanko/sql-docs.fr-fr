@@ -19,13 +19,12 @@ ms.assetid: cf1489ff-4819-41fa-a62a-4ed797a16207
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 0183694382851f023c9f6863848a3e525cc0b7aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 114109e0ee7bf7ba8855ad65f4ab7438c9815187
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133856"
 ---
 # <a name="sysfulltextcatalogs-transact-sql"></a>sys.fulltext_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,15 +34,15 @@ ms.locfileid: "64945620"
 > [!NOTE]  
 >  Les colonnes suivantes seront supprimées dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **data_space_id**, **file_id**, et **chemin d’accès**. Évitez d'utiliser ces colonnes dans de nouveaux travaux de développement et modifiez dès que possible les applications qui les utilisent actuellement.  
  
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|fulltext_catalog_id|**Int**|Identificateur du catalogue de texte intégral. Il est unique parmi les catalogues de texte intégral de la base de données.|  
+|fulltext_catalog_id|**int**|Identificateur du catalogue de texte intégral. Il est unique parmi les catalogues de texte intégral de la base de données.|  
 |name|**sysname**|Nom du catalogue. Unique dans la base de données.|  
 |path|**nvarchar(260)**|Nom du répertoire du catalogue dans le système de fichiers.|  
 |is_default|**bit**|Catalogue de texte intégral par défaut.<br /><br /> True = est la valeur par défaut.<br /><br /> False = n'est pas la valeur par défaut.|  
 |is_accent_sensitivity_on|**bit**|Paramètre indiquant le respect des accents pour le catalogue.<br /><br /> True = respecte les accents.<br /><br /> False = ne respecte pas les accents.|  
 |data_space_id|**Int**|Groupe de fichiers dans lequel le catalogue a été créé.|  
-|file_id|**Int**|ID du fichier de texte intégral associé au catalogue.|  
+|file_id|**int**|ID du fichier de texte intégral associé au catalogue.|  
 |principal_id|**Int**|ID du principal de base de données propriétaire du catalogue de texte intégral.|  
 |is_importing|**bit**|Indique si le catalogue de texte intégral est en cours d'importation :<br /><br /> 1 = le catalogue est en cours d'importation.<br /><br /> 2 = le catalogue n'est pas en cours d'importation.|  
   

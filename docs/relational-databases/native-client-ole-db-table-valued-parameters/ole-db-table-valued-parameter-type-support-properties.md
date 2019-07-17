@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 372a4859c80fc58dff37080e9383ffeebc1721a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d578fe4b389f9d20d656d43d17c28cd610e3437
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133383"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>Prise en charge du type de paramètre table OLE DB (Propriétés)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "62465594"
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
 |DBPROP_BLOCKINGSTORAGEOBJECTS|VARIANT_TRUE|  
-|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/W : Lecture seule<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Les signets ne sont pas autorisés sur les objets d’ensemble de lignes de paramètre table.|  
+|DBPROP_BOOKMARKS<br /><br /> DBPROP_LITERALBOOKMARKS|R/W : Lecture seule<br /><br /> Par défaut : VARIANT_FALSE<br /><br /> Description : Les signets ne sont pas autorisés sur les objets d’ensemble de lignes de paramètre table.|  
 |DBPROP_BOOKMARKSKIPPED|VARIANT_FALSE|  
 |DBPROP_BOOKMARKTYPE|DBPROPVAL_BMK_NUMERIC|  
 |DBPROP_CANHOLDROWS|VARIANT_FALSE|  
@@ -83,7 +82,7 @@ ms.locfileid: "62465594"
   
 |ID de propriété|Valeur de propriété|  
 |-----------------|--------------------|  
-|SSPROP_COL_COMPUTED|R/W : En lecture/écriture<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Type : VT_BOOL<br /><br /> Description : Lorsque la valeur VARIANT_TRUE, indique que la colonne est une colonne calculée. La valeur VARIANT_FALSE indique qu'il ne s'agit pas d'une colonne calculée.|  
+|SSPROP_COL_COMPUTED|R/W : En lecture/écriture<br /><br /> Par défaut : VARIANT_FALSE<br /><br /> Tapez : VT_BOOL<br /><br /> Description : Lorsque la valeur VARIANT_TRUE, indique que la colonne est une colonne calculée. La valeur VARIANT_FALSE indique qu'il ne s'agit pas d'une colonne calculée.|  
   
 ### <a name="dbpropsetsqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
  Ces propriétés sont lues par le consommateur durant la découverte des informations de type de paramètre table dans les appels à ISSCommandWithParameters::GetParameterProperties et définies par le consommateur lors de la définition des propriétés spécifiques sur le paramètre table via ISSCommandWithParameters::SetParameterProperties.  
@@ -92,11 +91,11 @@ ms.locfileid: "62465594"
   
 |ID de propriété|Valeur de propriété|  
 |-----------------|--------------------|  
-|SSPROP_PARAM_TYPE_TYPENAME|R/W : En lecture/écriture<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type : VT_BSTR<br /><br /> Description : Consommateurs utilisent cette propriété à obtenir ou définir le nom du type de paramètre table.<br /><br /> Vous pouvez également utiliser cette propriété avec des types CLR définis par l'utilisateur.<br /><br /> Vous pouvez, si vous le souhaitez, la spécifier afin de préciser un nom de type de table pour un paramètre table (en cas d'utilisation d'une commande de syntaxe d'appel ODBC). Cette propriété est obligatoire pour les requêtes paramétrables SQL ad hoc.|  
-|SSPROP_PARAM_TYPE_SCHEMANAME|R/W : En lecture/écriture<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type : VT_BSTR<br /><br /> Description : Consommateurs utilisent cette propriété à obtenir ou définir le nom de schéma du type de paramètre table.<br /><br /> Vous pouvez également utiliser cette propriété avec des types CLR définis par l'utilisateur.|  
-|SSPROP_PARAM_TYPE_CATALOGNAME|R/W : En lecture seule<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type : VT_BSTR<br /><br /> Description : Consommateurs utilisent cette propriété pour obtenir le nom de catalogue du type de paramètre table.<br /><br /> Vous pouvez également utiliser cette propriété avec des types CLR définis par l'utilisateur. La définition de cette propriété est une erreur ; les types de tables définis par l'utilisateur doivent figurer dans la même base de données que les paramètres table qui les utilisent.|  
-|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W : En lecture/écriture<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type : VT_UI2 &#124; VT_ARRAY<br /><br /> Description : Consommateurs utilisent cette propriété pour spécifier quel jeu de colonnes dans l’ensemble de lignes doivent être traités en tant que valeurs par défaut. Aucune valeur ne sera envoyée pour ces colonnes. Au moment d'extraire des données de l'objet d'ensemble de lignes du consommateur, le fournisseur n'exige aucune liaison pour ces colonnes.<br /><br /> Chaque élément du tableau doit désigner l'ordinal d'une colonne dans l'objet d'ensemble de lignes. Les ordinaux non valides génèrent des erreurs lors de l'exécution des commandes.|  
-|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W : En lecture/écriture<br /><br /> Valeur par défaut : VT_EMPTY<br /><br /> Type : VT_UI2 &#124; VT_ARRAY<br /><br /> Description : Cette propriété est utilisée par le consommateur pour fournir une indication sur le serveur pour indiquer l’ordre de tri trier les données de colonne. Le fournisseur n'effectue aucune validation et part du principe que le consommateur agit conformément à la spécification fournie. Le serveur utilise cette propriété pour procéder à des optimisations.<br /><br /> Les informations d'ordre des colonnes pour chaque colonne sont représentées par une paire d'éléments dans le tableau. Le premier élément dans la paire correspond au numéro de la colonne. Le deuxième élément dans la paire sera 1 pour l'ordre croissant ou 2 pour l'ordre décroissant.|  
+|SSPROP_PARAM_TYPE_TYPENAME|R/W : En lecture/écriture<br /><br /> Par défaut : VT_EMPTY<br /><br /> Tapez : VT_BSTR<br /><br /> Description : Consommateurs utilisent cette propriété à obtenir ou définir le nom du type de paramètre table.<br /><br /> Vous pouvez également utiliser cette propriété avec des types CLR définis par l'utilisateur.<br /><br /> Vous pouvez, si vous le souhaitez, la spécifier afin de préciser un nom de type de table pour un paramètre table (en cas d'utilisation d'une commande de syntaxe d'appel ODBC). Cette propriété est obligatoire pour les requêtes paramétrables SQL ad hoc.|  
+|SSPROP_PARAM_TYPE_SCHEMANAME|R/W : En lecture/écriture<br /><br /> Par défaut : VT_EMPTY<br /><br /> Tapez : VT_BSTR<br /><br /> Description : Consommateurs utilisent cette propriété à obtenir ou définir le nom de schéma du type de paramètre table.<br /><br /> Vous pouvez également utiliser cette propriété avec des types CLR définis par l'utilisateur.|  
+|SSPROP_PARAM_TYPE_CATALOGNAME|R/W : En lecture seule<br /><br /> Par défaut : VT_EMPTY<br /><br /> Tapez : VT_BSTR<br /><br /> Description : Consommateurs utilisent cette propriété pour obtenir le nom de catalogue du type de paramètre table.<br /><br /> Vous pouvez également utiliser cette propriété avec des types CLR définis par l'utilisateur. La définition de cette propriété est une erreur ; les types de tables définis par l'utilisateur doivent figurer dans la même base de données que les paramètres table qui les utilisent.|  
+|SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W : En lecture/écriture<br /><br /> Par défaut : VT_EMPTY<br /><br /> Tapez : VT_UI2 &#124; VT_ARRAY<br /><br /> Description : Consommateurs utilisent cette propriété pour spécifier quel jeu de colonnes dans l’ensemble de lignes doivent être traités en tant que valeurs par défaut. Aucune valeur ne sera envoyée pour ces colonnes. Au moment d'extraire des données de l'objet d'ensemble de lignes du consommateur, le fournisseur n'exige aucune liaison pour ces colonnes.<br /><br /> Chaque élément du tableau doit désigner l'ordinal d'une colonne dans l'objet d'ensemble de lignes. Les ordinaux non valides génèrent des erreurs lors de l'exécution des commandes.|  
+|SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W : En lecture/écriture<br /><br /> Par défaut : VT_EMPTY<br /><br /> Tapez : VT_UI2 &#124; VT_ARRAY<br /><br /> Description : Cette propriété est utilisée par le consommateur pour fournir une indication sur le serveur pour indiquer l’ordre de tri trier les données de colonne. Le fournisseur n'effectue aucune validation et part du principe que le consommateur agit conformément à la spécification fournie. Le serveur utilise cette propriété pour procéder à des optimisations.<br /><br /> Les informations d'ordre des colonnes pour chaque colonne sont représentées par une paire d'éléments dans le tableau. Le premier élément dans la paire correspond au numéro de la colonne. Le deuxième élément dans la paire sera 1 pour l'ordre croissant ou 2 pour l'ordre décroissant.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge des types de paramètre table OLE DB](../../relational-databases/native-client-ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support.md)   

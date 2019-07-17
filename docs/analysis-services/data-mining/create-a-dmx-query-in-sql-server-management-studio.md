@@ -1,5 +1,5 @@
 ---
-title: Créer une requête DMX dans SQL Server Management Studio | Documents Microsoft
+title: Créer une requête DMX dans SQL Server Management Studio | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9842dd19b9f613c7b10c86e3596ddda96a99f59b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014566"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183990"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Créer une requête DMX dans SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]fournit un ensemble de fonctionnalités pour vous aider à créer des requêtes de prédiction, les requêtes de contenu et les requêtes de définition de données sur les modèles d’exploration de données et les structures d’exploration de données.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un ensemble de fonctionnalités pour vous aider à créer des requêtes de prédiction, des requêtes de contenu et des requêtes de définition des données sur des modèles et des structures d’exploration de données.  
   
 -   Le générateur de requêtes de prédiction graphique est disponible dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]pour simplifier le processus d’écriture des requêtes de prédiction et de mappage de jeux de données à un modèle.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34014566"
  Vous pouvez également créer des modèles personnalisés, pour les requêtes ou les commandes que vous exécutez fréquemment.  
   
 ## <a name="xmla-query-templates"></a>Modèles de requête XMLA  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]fournit également des modèles pour les requêtes XMLA.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit également des modèles pour les requêtes XMLA.  
   
  Les types de requêtes se chevauchent selon qu'ils sont effectués à l'aide de XMLA ou DMX. Par exemple, vous pouvez créer des requêtes de contenu de modèle à l'aide de DMX ou des ensembles de lignes de schéma d'exploration de données, mais les ensembles de lignes de schéma contiennent parfois des informations qui ne sont pas exposés dans les requêtes de contenu DMX.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "34014566"
  [Créer une requête de contenu sur un modèle d’exploration de données](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils de requête d'exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Les Extensions d’exploration de données & #40 ; DMX & #41 ; Référence](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Outils de requête d’exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [Informations de référence sur le langage DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

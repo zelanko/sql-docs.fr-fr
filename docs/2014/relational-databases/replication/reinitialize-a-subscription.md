@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771391"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199227"
 ---
 # <a name="reinitialize-a-subscription"></a>Réinitialiser un abonnement
   Cette rubrique explique comment réinitialiser un abonnement par extraction de données (pull) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Des abonnements individuels peuvent être marqués pour réinitialisation afin qu'un nouvel instantané soit appliqué lors de la synchronisation suivante.  
@@ -107,19 +107,19 @@ ms.locfileid: "52771391"
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>Pour réinitialiser un abonnement par extraction à une publication transactionnelle  
   
-1.  Sur l’Abonné, dans la base de données d’abonnement, exécutez [sp_reinitpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql). Specify **@publisher**, de **@publisher_db**et **@publication**. L'abonnement est alors marqué pour réinitialisation lors de la prochaine exécution de l'Agent de distribution.  
+1.  Sur l’Abonné, dans la base de données d’abonnement, exécutez [sp_reinitpullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitpullsubscription-transact-sql). Specify **@publisher** , de **@publisher_db** et **@publication** . L'abonnement est alors marqué pour réinitialisation lors de la prochaine exécution de l'Agent de distribution.  
   
 2.  (Facultatif) Démarrez l'Agent de distribution sur l'Abonné pour synchroniser l'abonnement. Pour plus d'informations, voir [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-transactional-publication"></a>Pour réinitialiser un abonnement par émission de données à une publication transactionnelle  
   
-1.  Sur le serveur de publication, exécutez [sp_reinitsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql). Specify **@publication**, de **@subscriber**et **@destination_db**. L'abonnement est alors marqué pour réinitialisation lors de la prochaine exécution de l'Agent de distribution.  
+1.  Sur le serveur de publication, exécutez [sp_reinitsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitsubscription-transact-sql). Specify **@publication** , de **@subscriber** et **@destination_db** . L'abonnement est alors marqué pour réinitialisation lors de la prochaine exécution de l'Agent de distribution.  
   
 2.  (Facultatif) Démarrez l'Agent de distribution sur le serveur de distribution pour synchroniser l'abonnement. Pour plus d’informations, consultez [Synchroniser un abonnement par émission (push)](synchronize-a-push-subscription.md).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-merge-publication"></a>Pour réinitialiser un abonnement par extraction à une publication de fusion  
   
-1.  Sur l’Abonné, dans la base de données d’abonnement, exécutez [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql). Specify **@publisher**, de **@publisher_db**et **@publication**. Pour télécharger les modifications de l’abonné avant la réinitialisation, affectez la valeur `true` pour **@upload_first**. L'abonnement est alors marqué pour réinitialisation lors de la prochaine exécution de l'Agent de fusion.  
+1.  Sur l’Abonné, dans la base de données d’abonnement, exécutez [sp_reinitmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergepullsubscription-transact-sql). Specify **@publisher** , de **@publisher_db** et **@publication** . Pour télécharger les modifications de l’abonné avant la réinitialisation, affectez la valeur `true` pour **@upload_first** . L'abonnement est alors marqué pour réinitialisation lors de la prochaine exécution de l'Agent de fusion.  
   
     > [!IMPORTANT]  
     >  Si vous ajoutez, supprimez ou modifiez un filtre paramétré, les modifications en attente chez l'abonné ne peuvent pas être chargées sur le serveur de publication pendant la réinitialisation. Si vous voulez télécharger les modifications en attente, synchronisez tous les abonnements avant de modifier le filtre.  
@@ -128,7 +128,7 @@ ms.locfileid: "52771391"
   
 #### <a name="to-reinitialize-a-push-subscription-to-a-merge-publication"></a>Pour réinitialiser un abonnement par émission de données à une publication de fusion  
   
-1.  Sur le serveur de publication, exécutez [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql). Specify **@publication**, de **@subscriber**et **@subscriber_db**. Pour télécharger les modifications de l’abonné avant la réinitialisation, affectez la valeur `true` pour **@upload_first**. L'abonnement est alors marqué pour réinitialisation lors de la prochaine exécution de l'Agent de distribution.  
+1.  Sur le serveur de publication, exécutez [sp_reinitmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-reinitmergesubscription-transact-sql). Specify **@publication** , de **@subscriber** et **@subscriber_db** . Pour télécharger les modifications de l’abonné avant la réinitialisation, affectez la valeur `true` pour **@upload_first** . L'abonnement est alors marqué pour réinitialisation lors de la prochaine exécution de l'Agent de distribution.  
   
     > [!IMPORTANT]  
     >  Si vous ajoutez, supprimez ou modifiez un filtre paramétré, les modifications en attente chez l'abonné ne peuvent pas être chargées sur le serveur de publication pendant la réinitialisation. Si vous voulez télécharger les modifications en attente, synchronisez tous les abonnements avant de modifier le filtre.  
@@ -137,7 +137,7 @@ ms.locfileid: "52771391"
   
 #### <a name="to-set-the-reinitialization-policy-when-creating-a-new-merge-publication"></a>Pour définir la stratégie de réinitialisation lors de la création d'une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), en spécifiant l'une des valeurs suivantes pour **@automatic_reinitialization_policy**:  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), en spécifiant l'une des valeurs suivantes pour **@automatic_reinitialization_policy** :  
   
     -   **1** - les modifications sont téléchargées depuis l'Abonné avant réinitialisation automatique d'un abonnement suite à la modification de la publication.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "52771391"
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>Pour modifier la stratégie de réinitialisation pour une publication de fusion existante  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), en spécifiant **automatic_reinitialization_policy** à **@property** et l'une des valeurs suivantes pour **@value**:  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), en spécifiant **automatic_reinitialization_policy** à **@property** et l'une des valeurs suivantes pour **@value** :  
   
     -   **1** - les modifications sont téléchargées depuis l'Abonné avant réinitialisation automatique d'un abonnement suite à la modification de la publication.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "52771391"
     > [!NOTE]  
     >  Si cette méthode retourne `false`, les propriétés de l'abonnement définies à l'étape 2 sont incorrectes ou l'abonnement par extraction n'existe pas.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A> . Cette méthode marque l'abonnement pour réinitialisation.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransPullSubscription.Reinitialize%2A>. Cette méthode marque l'abonnement pour réinitialisation.  
   
 5.  Synchronisez l'abonnement par extraction. Pour plus d’informations, consultez [Synchroniser un abonnement par extraction (pull)](synchronize-a-pull-subscription.md).  
   
@@ -190,7 +190,7 @@ ms.locfileid: "52771391"
     > [!NOTE]  
     >  Si cette méthode retourne `false`, les propriétés de l'abonnement définies à l'étape 2 sont incorrectes ou l'abonnement par émission de données n'existe pas.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A> . Cette méthode marque l'abonnement pour réinitialisation.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.TransSubscription.Reinitialize%2A>. Cette méthode marque l'abonnement pour réinitialisation.  
   
 5.  Synchronisez l'abonnement par émission de données. Pour plus d'informations, voir [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
@@ -205,7 +205,7 @@ ms.locfileid: "52771391"
     > [!NOTE]  
     >  Si cette méthode retourne `false`, les propriétés de l'abonnement définies à l'étape 2 sont incorrectes ou l'abonnement par extraction n'existe pas.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A> . Passez la valeur `true` pour télécharger les modifications sur l'Abonné avant la réinitialisation ou la valeur `false` pour réinitialiser et perdre toute modification en attente sur l'Abonné. Cette méthode marque l'abonnement pour réinitialisation.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergePullSubscription.Reinitialize%2A>. Passez la valeur `true` pour télécharger les modifications sur l'Abonné avant la réinitialisation ou la valeur `false` pour réinitialiser et perdre toute modification en attente sur l'Abonné. Cette méthode marque l'abonnement pour réinitialisation.  
   
     > [!NOTE]  
     >  Les modifications ne peuvent pas être téléchargées si l'abonnement a expiré. Pour plus d'informations, voir [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  
@@ -223,7 +223,7 @@ ms.locfileid: "52771391"
     > [!NOTE]  
     >  Si cette méthode retourne `false`, les propriétés de l'abonnement définies à l'étape 2 sont incorrectes ou l'abonnement par émission de données n'existe pas.  
   
-4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A> . Passez la valeur `true` pour télécharger les modifications sur l'Abonné avant la réinitialisation ou la valeur `false` pour réinitialiser et perdre toute modification en attente sur l'Abonné. Cette méthode marque l'abonnement pour réinitialisation.  
+4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.MergeSubscription.Reinitialize%2A>. Passez la valeur `true` pour télécharger les modifications sur l'Abonné avant la réinitialisation ou la valeur `false` pour réinitialiser et perdre toute modification en attente sur l'Abonné. Cette méthode marque l'abonnement pour réinitialisation.  
   
     > [!NOTE]  
     >  Les modifications ne peuvent pas être téléchargées si l'abonnement a expiré. Pour plus d'informations, voir [Set the Expiration Period for Subscriptions](publish/set-the-expiration-period-for-subscriptions.md).  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7e1c3534e510e2a18929331918db7b6cf3efa60
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138411"
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,18 +34,18 @@ ms.locfileid: "51657458"
   
  Pour plus d’informations, consultez [domaines d’Application](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**appdomain_address**|**varbinary(8)**|Adresse de la **AppDomain**. Base de données tous les objets appartenant à un utilisateur sont toujours chargés dans le même **AppDomain**. Vous pouvez utiliser cette colonne pour rechercher tous les assemblys actuellement chargés dans ce **AppDomain** dans **sys.dm_clr_loaded_assemblies**.|  
-|**appdomain_id**|**Int**|ID de la **AppDomain**. Chaque **AppDomain** a un ID unique.|  
+|**appdomain_id**|**int**|ID de la **AppDomain**. Chaque **AppDomain** a un ID unique.|  
 |**appdomain_name**|**varchar(386)**|Nom de la **AppDomain** tel qu’assigné par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**creation_time**|**datetime**|Heure à laquelle le **AppDomain** a été créé. Étant donné que **AppDomains** sont mis en cache et réutilisés pour de meilleures performances, **creation_time** n’est pas nécessairement le temps lorsque le code a été exécuté.|  
 |**db_id**|**Int**|ID de la base de données dans lequel cet **AppDomain** a été créé. Code stocké dans deux bases de données ne peuvent pas partager une **AppDomain**.|  
 |**user_id**|**Int**|ID de l’utilisateur dont les objets peuvent s’exécuter dans **AppDomain**.|  
 |**state**|**nvarchar(128)**|Un descripteur pour l’état actuel de la **AppDomain**. Un domaine d'application AppDomain peut être dans différents états de sa création à sa suppression. Pour plus d'informations, consultez la section « Remarques » de cette rubrique.|  
 |**strong_refcount**|**Int**|Nombre de références fortes au **AppDomain**. Cela reflète le nombre de lots qui utilisent ce en cours d’exécution **AppDomain**. Notez que l’exécution de cette vue créera un **refcount fort**; même si aucun code en cours d’exécution, **strong_refcount** a la valeur 1.|  
-|**weak_refcount**|**Int**|Nombre de références faibles au **AppDomain**. Cela indique le nombre d’objets à l’intérieur de la **AppDomain** sont mis en cache. Lorsque vous exécutez un objet de base de données managés, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met en cache dans le **AppDomain** pour une réutilisation ultérieure. Cela améliore les performances.|  
-|**cost**|**Int**|Coût de la **AppDomain**. Plus le coût est élevé, plus la probabilité cela **AppDomain** est soit déchargé si la sollicitation de la mémoire. Coût dépend généralement de la quantité de mémoire est nécessaire pour recréer cette **AppDomain**.|  
+|**weak_refcount**|**int**|Nombre de références faibles au **AppDomain**. Cela indique le nombre d’objets à l’intérieur de la **AppDomain** sont mis en cache. Lorsque vous exécutez un objet de base de données managés, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] met en cache dans le **AppDomain** pour une réutilisation ultérieure. Cela améliore les performances.|  
+|**cost**|**int**|Coût de la **AppDomain**. Plus le coût est élevé, plus la probabilité cela **AppDomain** est soit déchargé si la sollicitation de la mémoire. Coût dépend généralement de la quantité de mémoire est nécessaire pour recréer cette **AppDomain**.|  
 |**value**|**Int**|Valeur de la **AppDomain**. La valeur est faible, plus la probabilité cela **AppDomain** est soit déchargé si la sollicitation de la mémoire. Valeur dépend généralement le nombre de connexions ou de lots sont à l’aide de ce **AppDomain**.|  
 |**total_processor_time_ms**|**bigint**|Temps processeur total, en millisecondes, utilisé par tous les threads lors de l'exécution dans le domaine d'application actuel depuis le démarrage du processus. Cela équivaut à **System.AppDomain.MonitoringTotalProcessorTime**.|  
 |**total_allocated_memory_kb**|**bigint**|Taille totale, en kilo-octets, de toutes les allocations mémoire faites par le domaine d'application depuis sa création, sans soustraction de la mémoire recueillie. Cela équivaut à **System.AppDomain.MonitoringTotalAllocatedMemorySize**.|  
@@ -81,7 +80,7 @@ ms.locfileid: "51657458"
 |E_APPDOMAIN_DESTROY|Le **AppDomain** processus de destruction par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |E_APPDOMAIN_ZOMBIE|Le **AppDomain** a été détruite par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais pas toutes les références à la **AppDomain** ont été nettoyés.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW SERVER STATE sur la base de données.  
   
 ## <a name="examples"></a>Exemples  

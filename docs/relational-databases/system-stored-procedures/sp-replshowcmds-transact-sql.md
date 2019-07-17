@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e73b67cce73005b7a992c09a436dbda1db5c4e52
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7769c4e648cf3ed3898409cbdc3f0787dcb6d837
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113123"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +42,13 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ## <a name="result-sets"></a>Jeux de résultats  
  **sp_replshowcmds** est une procédure de diagnostic qui retourne des informations sur la base de données de publication à partir de laquelle elle est exécutée.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**binary(10)**|Numéro de séquence de la commande.|  
-|**originator_id**|**Int**|ID de l’émetteur de commande, toujours **0**.|  
-|**publisher_database_id**|**Int**|ID de la base de données serveur de publication, toujours **0**.|  
+|**originator_id**|**int**|ID de l’émetteur de commande, toujours **0**.|  
+|**publisher_database_id**|**int**|ID de la base de données serveur de publication, toujours **0**.|  
 |**article_id**|**Int**|ID de l’article.|  
-|**type**|**Int**|Type de commande.|  
+|**type**|**int**|Type de commande.|  
 |**commande**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] commande.|  
   
 ## <a name="remarks"></a>Notes  
