@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013580"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185748"
 ---
-# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Leçon 1 : Évaluez les recommandations de manière à la demande
+# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Leçon 1 : évaluer les bonnes pratiques en fonction des demandes
   En utilisant la méthode à la demande (ou « ad hoc ») d'évaluation des stratégies, vous pouvez évaluer rapidement des stratégies des meilleures pratiques pour déterminer si une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] répond aux indications et recommandations des meilleures pratiques.  
   
  Dans cette leçon, vous allez effectuer une évaluation de la demande des stratégies des meilleures pratiques pour la [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sur une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -32,6 +32,6 @@ ms.locfileid: "56013580"
  [Effectuer une évaluation à la demande à l’aide de l’Explorateur d’objets](../ssms/object/object-explorer.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Leçon 2 : Évaluer les stratégies des meilleures pratiques de manière planifiée](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Leçon 2 : Évaluer les stratégies des meilleures pratiques de manière planifiée](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
   

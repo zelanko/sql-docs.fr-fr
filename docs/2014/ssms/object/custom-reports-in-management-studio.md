@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e02e5f55032f7a5d4e11e1ee4c908e84a83e00f8
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188289"
 ---
 # <a name="custom-reports-in-management-studio"></a>Rapports personnalisés dans Management Studio
   Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], un grand nombre de nœuds de l’Explorateur d’objets proposent un ensemble de rapports standard créés par [!INCLUDE[msCoName](../../includes/msconame-md.md)]. Ces rapports fournissent généralement les informations serveur demandées. À partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, les administrateurs peuvent exécuter des rapports personnalisés qui ont été créés dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] à partir de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "58618286"
   
 -   Cliquez avec le bouton droit sur un nœud dans l’Explorateur d’objets, pointez successivement sur **Rapports**et sur **Rapports personnalisés**, puis sélectionnez un rapport personnalisé dans la liste des fichiers récemment utilisés.  
   
-## <a name="limitations"></a>Limitations  
+## <a name="limitations"></a>Limites  
  Lorsque vous travaillez avec des rapports personnalisés, tenez compte des contraintes suivantes :  
   
 -   Pour éviter toute exécution imprévisible d'un code malveillant, vous ne pouvez pas configurer [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] en vue d'exécuter automatiquement un rapport, même si la configuration du système de fichiers autorise l'association de fichiers .rdl avec [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Les rapports ne peuvent être ni exécutés par programme [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , ni exécutés à partir de la ligne de commande via [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  

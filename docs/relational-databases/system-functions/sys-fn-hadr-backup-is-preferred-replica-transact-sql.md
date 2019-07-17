@@ -21,15 +21,14 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a6bba59d680a9f7ba1595808eed27762670aab97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e343e7e9657b69ebd06a147cb99fa19e3c36aab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120252"
 ---
-# <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)
+# <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>Sys.fn_hadr_backup_is_preferred_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Utilisé pour déterminer si le réplica actuel est le réplica de sauvegarde par défaut.  
@@ -64,7 +63,7 @@ END
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-sysfnhadrbackupispreferredreplica"></a>A. Utilisation de sys.fn_hadr_backup_is_preferred_replica  
+### <a name="a-using-sysfnhadrbackupispreferredreplica"></a>R. Utilisation de sys.fn_hadr_backup_is_preferred_replica  
  L'exemple suivant retourne 1 si la base de données active est le réplica de sauvegarde par défaut.  
   
 ```  

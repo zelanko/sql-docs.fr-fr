@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 49a7a1af0f4b487baddfffa3e4f14d2a148b7a1d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 7d12906f8dec0bfb12fc861c067e6e615e758a3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134990"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>Curseurs de bloc, curseurs avec défilement et compatibilité descendante pour les applications ODBC 3.x
 L’existence des deux **SQLFetchScroll** et **SQLExtendedFetch** représente la première clear Fractionner dans ODBC entre l’Interface API (Application Programming), qui est l’ensemble de fonctions le les appels de l’application et l’Interface de fournisseur de Service (SPI), qui est l’ensemble de fonctions le pilote implémente. Cette distinction est nécessaire pour équilibrer le fait dans ODBC *3.x*, qui utilise **SQLFetchScroll**, pour s’aligner avec les normes et être compatible avec ODBC *2.x*, qui utilise **SQLExtendedFetch**.  

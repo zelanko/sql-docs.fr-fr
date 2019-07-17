@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef528fb128c81de1d2be07196dfe2a20ceaebba4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135079"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196398"
 ---
 # <a name="modify-views"></a>Modifier des vues
   Après avoir défini une vue, vous pouvez modifier sa définition dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sans la supprimer ni être obligé de la recréer à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "54135079"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour exécuter l'instruction ALTER VIEW, il est nécessaire de disposer au minimum de l'autorisation ALTER sur OBJECT.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -66,7 +66,7 @@ ms.locfileid: "54135079"
   
     1.  Activez ou désactivez les cases à cocher des éléments à ajouter ou supprimer.  
   
-    2.  Cliquez avec le bouton droit dans le volet Diagramme, sélectionnez **Ajouter une table...**, puis les colonnes supplémentaires à ajouter à la vue dans la boîte de dialogue **Ajouter une table**.  
+    2.  Cliquez avec le bouton droit dans le volet Diagramme, sélectionnez **Ajouter une table...** , puis les colonnes supplémentaires à ajouter à la vue dans la boîte de dialogue **Ajouter une table**.  
   
     3.  Cliquez avec le bouton droit sur la barre de titre de la table que vous souhaitez supprimer et sélectionnez **Supprimer**.  
   

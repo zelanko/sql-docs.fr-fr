@@ -1,5 +1,5 @@
 ---
-title: Le chemin d’accès de connexion de données n’est pas valide | Documents Microsoft
+title: Le chemin d’accès de connexion de données n’est pas valide | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d3ecd392bbcbbf310d5960ec42d7799a36c2ebac
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028440"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208083"
 ---
 # <a name="the-data-connection-path-is-invalid"></a>Le chemin d’accès de connexion de données n’est pas valide
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34028440"
 |S'applique à|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint|  
 |Version du produit|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Cause|Excel Services est configuré pour autoriser uniquement les connexions de données à partir de fichiers .odc se trouvant dans une bibliothèque de connexions de données approuvées.|  
-|Texte du message|Le chemin d'accès à la connexion de données dans le classeur pointe vers un fichier sur le lecteur local, ou est un URI non valide. Échec de l’actualisation des connexions suivantes : données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
+|Texte du message|Le chemin d'accès à la connexion de données dans le classeur pointe vers un fichier sur le lecteur local, ou est un URI non valide. Les connexions suivantes n'ont pas pu s'actualiser : [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Données|  
   
 ## <a name="explanation"></a>Explication  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] contiennent des connexions de données incorporées. Pour prendre en charge l'interaction de classeurs via des segments et des filtres, Excel Services doit être configuré pour autoriser l'accès aux données externes via des informations de connexion incorporées. L’accès aux données externes est requis pour la récupération de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] chargées sur des serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la batterie de serveurs.  

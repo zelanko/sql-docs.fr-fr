@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-manager: jroth
-ms.openlocfilehash: fd5b172b7029376d6f9641552315fc64e734cc8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124682"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -54,12 +53,12 @@ sp_enum_login_for_proxy
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**proxy_id**|**Int**|Numéro d'identification du proxy.|  
+|**proxy_id**|**int**|Numéro d'identification du proxy.|  
 |**proxy_name**|**sysname**|Nom du proxy.|  
-|**nom**|**sysname**|Nom du principal de sécurité pour l'association.|  
-|**flags**|**Int**|Type du principal de sécurité.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion<br /><br /> **1** = rôle de système fixe<br /><br /> **2** = rôle de base de données dans **msdb**|  
+|**name**|**sysname**|Nom du principal de sécurité pour l'association.|  
+|**flags**|**int**|Type du principal de sécurité.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion<br /><br /> **1** = rôle de système fixe<br /><br /> **2** = rôle de base de données dans **msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Notes  
@@ -76,7 +75,7 @@ sp_enum_login_for_proxy
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-all-associations"></a>A. Création de la liste de toutes les associations  
+### <a name="a-listing-all-associations"></a>R. Création de la liste de toutes les associations  
  L'exemple suivant répertorie toutes les autorisations établies entre des connexions et des proxys dans l'instance en cours.  
   
 ```sql

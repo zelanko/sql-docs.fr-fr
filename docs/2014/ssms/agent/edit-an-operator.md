@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9ee3228eea9970563540be9bc6a4c3b9a3677112
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127589"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189326"
 ---
 # <a name="edit-an-operator"></a>Modifier un opérateur
   Cette rubrique explique comment modifier la disponibilité d'un opérateur pour recevoir des notifications et leurs adresses d'envoi par courrier électronique, récepteur de radiomessagerie et réseau dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "54127589"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent modifier des opérateurs.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c357efe4636c1b502cdb57305b9072907d4b2e98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532067"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165220"
 ---
 # <a name="assl-xml-conventions"></a>Conventions ASSL XML
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "52532067"
   
  En règle générale, l'héritage n'est pas utilisé lorsque plusieurs types partagent un même nom de propriété. Par exemple, le **nom** et **ID** propriétés s’affichent dans de nombreux éléments, mais ces propriétés n’ont pas été promues à un type abstrait.  
   
-## <a name="whitespace"></a>Espaces  
+## <a name="whitespace"></a>Whitespace  
  Les espaces contenus dans la valeur d'un élément sont conservés. Toutefois, les espaces de début et de fin sont toujours supprimés. Par exemple, les éléments suivants comportent le même texte, mais le nombre d'espaces contenus dans le texte varie d'un élément à un autre, si bien que leurs valeurs sont considérées comme étant différentes :  
   
  `<Description>My text<Description>`  
@@ -126,7 +126,7 @@ ms.locfileid: "52532067"
  **DateTime**  
  Un **DateTime** structure à partir de .NET Framework. Un **DateTime** valeur ne peut pas être NULL. La date la plus basse pris en charge par le **DataTime** type de données est le 1er janvier 1601, qui est disponible pour les programmeurs en tant que **DateTime.MinValue**. La date la plus basse pris en charge indique qu’un **DateTime** valeur est manquante.  
   
- **Booléen**  
+ **Boolean**  
  Énumération constituée de seulement deux valeurs, telles que {true, false} ou {0, 1}.  
   
 ## <a name="default-values"></a>Valeurs par défaut  
@@ -134,10 +134,10 @@ ms.locfileid: "52532067"
   
 |Type de données XML|Valeur par défaut|  
 |-------------------|-------------------|  
-|**Booléen**|False|  
+|**Boolean**|False|  
 |**String**|"" (chaîne vide)|  
 |**Entier** ou **Long**|0 (zéro)|  
-|**Horodatage**|12:00:00 AM, 1/1/0001 (correspondant à un .NET Framework **System.DateTime** avec 0 battement)|  
+|**Timestamp**|12:00:00 AM, 1/1/0001 (correspondant à un .NET Framework **System.DateTime** avec 0 battement)|  
   
  Un élément qui est présent mais vide est considéré comme ayant une valeur de chaîne null, et non la valeur par défaut.  
   

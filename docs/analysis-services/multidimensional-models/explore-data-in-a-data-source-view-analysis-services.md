@@ -1,5 +1,5 @@
 ---
-title: Explorer les données dans une vue de Source de données (Analysis Services) | Documents Microsoft
+title: Explorer les données dans une vue de Source de données (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a7cb3d9895c7524bf0517270b50ac7830774dd9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026836"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177801"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Explorer des données dans une vue de source de données (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,15 +34,15 @@ ms.locfileid: "34026836"
   
 3.  Cliquez avec le bouton droit sur la table, la vue ou la requête nommée contenant les données que vous voulez consulter, puis sélectionnez **Explorer les données**.  
   
-     Les données de la source sous-jacente de la table, vue, ou une requête nommée dans la vue de source de données sont des requêtes et les résultats s’affichent dans le **Explorer \<nom d’objet > Table** onglet.  
+     Les données source sous-jacente de la table, vue, ou requête nommée dans la vue de source de données sont des requêtes et les résultats s’affichent dans le **Explorer \<nom_objet > Table** onglet.  
   
-4.  Sur le **Explorer \<nom d’objet > Table** barre d’outils, cliquez sur le **options d’échantillonnage** icône.  
+4.  Sur le **Explorer \<nom_objet > Table** barre d’outils, cliquez sur le **options d’échantillonnage** icône.  
   
      La boîte de dialogue **Options d'exploration de données** s'ouvre. Dans cette boîte de dialogue, vous pouvez spécifier la méthode d’échantillonnage (et augmenter ou diminuer le nombre d’enregistrements par rapport à la taille d’échantillonnage par défaut de 5000 lignes) ou le nombre d’échantillons.  
   
 5.  Selon le cas, cliquez sur **OK** ou sur **Annuler** .  
   
-6.  Pour rééchantillonner les données, cliquez sur **Rééchantillonner des données** sur la **Explorer \<nom d’objet > Table** barre d’outils.  
+6.  Pour rééchantillonner les données, cliquez sur **Rééchantillonner des données** sur le **Explorer \<nom_objet > Table** barre d’outils.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  

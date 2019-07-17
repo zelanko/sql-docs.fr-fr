@@ -1,5 +1,5 @@
 ---
-title: Créer une connexion de modèle sémantique BI à un classeur PowerPivot | Documents Microsoft
+title: Créer une connexion de modèle sémantique BI à un classeur PowerPivot | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 992e8a3f84af3de9cb9c8ae461b5c6c0505c1b66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026506"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164118"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Créer une connexion du modèle sémantique BI à un classeur PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "34026506"
   
      Votre page doit ressembler à l'illustration suivante.  
   
-     ![Page de connexion BISM affichant l’URL classeur](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "page de connexion BISM montrant l’URL de classeur")  
+     ![Page de connexion BISM affichant l’URL classeur](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-ppvtds.gif "page de connexion BISM affichant l’URL classeur")  
   
      Éventuellement, si vous disposez d'autorisations SharePoint sur le classeur, une étape supplémentaire de validation est effectuée pour s'assurer que l'emplacement est valide. Si vous n'êtes pas autorisé à accéder aux données, vous avez la possibilité d'enregistrer la connexion de modèle sémantique BI sans la réponse de validation.  
   

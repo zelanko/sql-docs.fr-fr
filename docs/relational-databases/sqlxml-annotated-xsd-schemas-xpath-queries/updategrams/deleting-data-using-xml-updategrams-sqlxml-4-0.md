@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4fb116d7-7652-474a-a567-cb475a20765c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7d878a3dde7ae227e3f2d1394440e0b1e2b7bb1f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f99df8f47b50649f46e4acc0aeecb040bf214806
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220402"
 ---
 # <a name="deleting-data-using-xml-updategrams-sqlxml-40"></a>Suppression de données à l'aide de codes de mise à jour (updategrams) XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "56043070"
   
  Pour créer des exemples de travail utilisant les exemples suivants, vous devez respecter les exigences spécifiées dans [configuration requise pour exécuter les exemples de SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-deleting-a-record-by-using-an-updategram"></a>A. Suppression d'un enregistrement à l'aide d'un code de mise à jour  
+### <a name="a-deleting-a-record-by-using-an-updategram"></a>R. Suppression d'un enregistrement à l'aide d'un code de mise à jour  
  Les codes de mise à jour suivants suppriment deux enregistrements de la table HumanResources.Shift.  
   
  Dans ces exemples, le code de mise à jour ne spécifie pas de schéma de mappage. Par conséquent, le code de mise à jour utilise le mappage par défaut, dans lequel le nom d'élément est mappé à un nom de table et les attributs ou sous-éléments sont mappés aux colonnes.  

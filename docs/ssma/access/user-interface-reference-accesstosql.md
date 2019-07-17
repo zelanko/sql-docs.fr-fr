@@ -13,17 +13,17 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299427"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266964"
 ---
 # <a name="user-interface-reference-accesstosql"></a>Référence de l’Interface utilisateur (AccessToSQL)
 Cette section inclut des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour l’accès.  
   
-## <a name="in-this-section"></a>Contenu de cette section  
+## <a name="in-this-section"></a>Dans cette section  
   
 |Rubrique|Description|  
 |---------|---------------|  

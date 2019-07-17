@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9ee8e8eeb7552d9a4c875a64be85b9b7734b1dc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207739"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206661"
 ---
 # <a name="use-large-clr-udts-ole-db"></a>Utiliser des table UDT CLR volumineuses (OLE DB)
   Cet exemple indique comment extraire des lignes avec les types volumineux définis par l'utilisateur depuis un jeu de résultats. Pour plus d’informations, consultez [Large CLR User-Defined Types &#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md). Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure.  
@@ -27,7 +27,7 @@ ms.locfileid: "48207739"
   
  Exécutez la deuxième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour ajouter l'assembly à la base de données master.  
   
- Compilez avec ole32.lib oleaut32.lib et exécutez la troisième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
+ Compilez avec ole32.lib oleaut32.lib et exécutez la troisième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
  Exécutez la quatrième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) pour supprimer l'assembly dans la base de données master.  
   

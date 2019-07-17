@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4415f3e0a6ebf773a3a781a5547a50a578d9d4f9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a4cd3b8f186f1ade85f4ed4533b0549bcd449a69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134948"
 ---
 # <a name="clr-integration-architecture----performance"></a>Architecture de l’intégration du CLR - Performances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +48,14 @@ ms.locfileid: "51671988"
   
  Table en continu est des fonctions managées qui retournent un **IEnumerable** interface. **IEnumerable** a des méthodes pour parcourir le jeu de résultats retourné par la fonction table en continu. Lorsque la fonction table en continu est appelé, retourné **IEnumerable** est directement connecté au plan de requête. Le plan de requête appelle **IEnumerable** méthodes lorsqu’il a besoin extraire les lignes. Ce modèle d'itération permet que les résultats soient consommés immédiatement après que la première ligne a été créée, au lieu d'attendre que la totalité de la table soit remplie. Il réduit aussi considérablement la mémoire consommée en appelant la fonction.  
   
-### <a name="arrays-vs-cursors"></a>Différences entre les tableaux et les Curseurs  
+### <a name="arrays-vs-cursors"></a>Visual Studio de tableaux. Curseurs  
  Lorsque les curseurs [!INCLUDE[tsql](../../includes/tsql-md.md)] doivent parcourir des données qui sont plus aisément exprimées en tableau, le code managé peut être utilisé avec des gains de performance significatifs.  
   
 ### <a name="string-data"></a>Données de type chaîne  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données de type caractère tel que **varchar**, peut être du type SqlString ou SqlChars dans les fonctions managées. Les variables SqlString créent une instance de la valeur entière en mémoire. Les variables SqlChars fournissent une interface multidiffusion qui peut être utilisée pour obtenir de meilleures performances et une meilleure évolutivité en ne créant pas d'instance de la totalité de la valeur en mémoire. Ce point est particulièrement important pour les données LOB. En outre, les données XML du serveur est accessible via une interface de diffusion en continu renvoyée par **SqlXml.CreateReader()**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données de type caractère tel que **varchar**, peut être du type SqlString ou SqlChars dans les fonctions managées. Les variables SqlString créent une instance de la valeur entière en mémoire. Les variables SqlChars fournissent une interface multidiffusion qui peut être utilisée pour obtenir de meilleures performances et une meilleure évolutivité en ne créant pas d'instance de la totalité de la valeur en mémoire. Ce point est particulièrement important pour les données LOB. En outre, les données XML du serveur est accessible via une interface de diffusion en continu renvoyée par **SqlXml.CreateReader()** .  
   
-### <a name="clr-vs-extended-stored-procedures"></a>Différences entre le CLR et les Procédures stockées étendues  
- Les API Microsoft.SqlServer.Server (API) qui permettent aux procédures managées de renvoyer des jeux de résultats au client s'exécutent mieux que les API ODS (Open Data Services) utilisées par les procédures stockées étendues. En outre, les System.Data.SqlServer APIs prise en charge des types de données tels que **xml**, **varchar (max)**, **nvarchar (max)**, et **varbinary (max)**, introduite dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], tandis que les API ODS n’ont pas été étendues pour prendre en charge de nouveaux types de données.  
+### <a name="clr-vs-extended-stored-procedures"></a>Visual Studio CLR. Procédures stockées étendues  
+ Les API Microsoft.SqlServer.Server (API) qui permettent aux procédures managées de renvoyer des jeux de résultats au client s'exécutent mieux que les API ODS (Open Data Services) utilisées par les procédures stockées étendues. En outre, les System.Data.SqlServer APIs prise en charge des types de données tels que **xml**, **varchar (max)** , **nvarchar (max)** , et **varbinary (max)** , introduite dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], tandis que les API ODS n’ont pas été étendues pour prendre en charge de nouveaux types de données.  
   
  Avec le code managé, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère l'utilisation de ressources telles que la mémoire, les threads et la synchronisation. La raison en est que les API managées qui exposent ces ressources sont implémentées sur le gestionnaire de ressources [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Inversement, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a ni vue ou contrôle sur l'utilisation des ressources de la procédure stockée étendue. Par exemple, si une procédure stockée étendue consomme une quantité trop importante d'UC ou de ressources mémoire, il n'existe aucun moyen de le détecter ou de le contrôler avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avec le code managé, toutefois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut détecter qu'un thread donné n'a rien produit pendant une longue période de temps, puis forcer la tâche à être abandonnée afin qu'un autre travail puisse être planifié. Par conséquent, l'utilisation du code managé offre une meilleure évolutivité et une meilleure utilisation des ressources système.  
   

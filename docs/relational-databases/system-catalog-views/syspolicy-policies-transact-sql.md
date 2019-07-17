@@ -17,27 +17,26 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: aec3b91a52667e0ef0801bd2532689e39ebf9ccb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9619f06273b60076f41ad217465d3aa134855135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121163"
 ---
 # <a name="syspolicypolicies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Affiche une ligne pour chaque stratégie de gestion basée sur des stratégies dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. syspolicy_policies appartient au schéma dbo dans la base de données msdb. Le tableau suivant décrit les colonnes dans la vue syspolicy_policies.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |policy_id|**Int**|Identificateur de la stratégie.|  
-|NAME|**sysname**|Nom de la stratégie.|  
+|name|**sysname**|Nom de la stratégie.|  
 |condition_id|**Int**|ID de la condition appliquée ou testée par cette stratégie.|  
-|root_condition_id|**Int**|À usage interne uniquement|  
+|root_condition_id|**Int**|À usage interne uniquement.|  
 |date_created|**datetime**|Date et heure de création de la stratégie.|  
-|execution_mode|**Int**|Mode d'évaluation de la stratégie. Les valeurs possibles sont les suivantes :<br /><br /> 0 = À la demande<br /><br /> Ce mode évalue la stratégie lorsqu'elle est spécifiée directement par l'utilisateur.<br /><br /> 1 = Sur modification - Empêcher<br /><br /> Ce mode automatisé utilise des déclencheurs DDL pour empêcher les violations de stratégie.<br /><br /> 2 = Sur modification - Journal uniquement<br /><br /> Ce mode automatisé utilise la notification d'événements pour évaluer une stratégie lorsqu'une modification pertinente se produit et il enregistre les violations de stratégie dans un journal.<br /><br /> 4 = Selon la planification<br /><br /> Ce mode automatisé utilise un travail de l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour évaluer périodiquement une stratégie. Il enregistre les violations de stratégie dans un journal.<br /><br /> Remarque : La valeur 3 n’est pas une valeur possible.|  
+|execution_mode|**Int**|Mode d'évaluation de la stratégie. Les valeurs possibles sont les suivantes :<br /><br /> 0 = À la demande<br /><br /> Ce mode évalue la stratégie lorsqu'elle est spécifiée directement par l'utilisateur.<br /><br /> 1 = Sur modification - Empêcher<br /><br /> Ce mode automatisé utilise des déclencheurs DDL pour empêcher les violations de stratégie.<br /><br /> 2 = Sur modification - Journal uniquement<br /><br /> Ce mode automatisé utilise la notification d'événements pour évaluer une stratégie lorsqu'une modification pertinente se produit et il enregistre les violations de stratégie dans un journal.<br /><br /> 4 = Selon la planification<br /><br /> Ce mode automatisé utilise un travail de l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour évaluer périodiquement une stratégie. Il enregistre les violations de stratégie dans un journal.<br /><br /> Remarque : La valeur 3 n’est pas une valeur possible.|  
 |policy_category|**Int**|ID de la catégorie de la stratégie de la Gestion basée sur des stratégies auquel appartient cette stratégie. Est NULL s'il s'agit du groupe de stratégie par défaut.|  
 |schedule_uid|**uniqueidentifier**|Lorsque execution_mode a la valeur Selon la planification, contient l'ID de la planification ; sinon, NULL.|  
 |description|**nvarchar(max)**|Description de la stratégie. La colonne de description est facultative et peut être NULL.|  
@@ -53,7 +52,7 @@ ms.locfileid: "47845147"
 ## <a name="remarks"></a>Notes  
  Lorsque vous dépannez la gestion basée sur des stratégies, interrogez la [syspolicy_conditions](../../relational-databases/system-catalog-views/syspolicy-conditions-transact-sql.md) vue pour déterminer si la stratégie est activée. Cette vue affiche également qui a créé ou modifié en dernier la stratégie.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
 ## <a name="see-also"></a>Voir aussi  

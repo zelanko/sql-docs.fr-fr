@@ -20,12 +20,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8ae2babba09f30b03ea512a85bdc6f06c4bf7f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: HT
+ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68204711"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262661"
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>Sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Comme l'enregistrement avec contrôle de version est stocké sous forme binaire,
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|ID de base de données de la base de données.|  
+|**database_id**|**Int**|ID de base de données de la base de données.|  
 |**reserved_page_count**|**bigint**|Nombre total de pages réservées dans tempdb pour version stocke les enregistrements de la base de données.|  
 |**reserved_space_kb**|**bigint**|Espace total utilisé (en Ko) dans tempdb pour version stocke les enregistrements de la base de données.|  
   

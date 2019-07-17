@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3461d6f80bb1ac693cca78954e5165fb7f012436
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122450"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,18 +47,18 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="result-sets"></a>Jeux de résultats  
  Le premier rapport contient des informations sur chaque connexion spécifiée (voir le tableau ci-dessous).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nom de connexion.|  
 |**SID**|**varbinary(85)**|ID de sécurité de la connexion (SID).|  
 |**DefDBName**|**sysname**|Par défaut de base de données qui **LoginName** utilise pour se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**DefLangName**|**sysname**|Langue par défaut utilisée par **LoginName**.|  
 |**Auser**|**char(5)**|Oui = **LoginName** a un nom d’utilisateur associé dans une base de données.<br /><br /> Non = **LoginName** n’a pas de nom d’utilisateur associé.|  
-|**ARemote**|**char(7)**|Oui = **LoginName** a une connexion distante associée.<br /><br /> Non = **LoginName** n’a pas de connexion associée.|  
+|**À distance**|**char(7)**|Oui = **LoginName** a une connexion distante associée.<br /><br /> Non = **LoginName** n’a pas de connexion associée.|  
   
  Le deuxième rapport contient des informations à propos des utilisateurs mappés à chaque connexion et des appartenances aux rôles de la connexion, comme illustré dans le tableau suivant.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|Nom de connexion.|  
 |**DBName**|**sysname**|Par défaut de base de données qui **LoginName** utilise pour se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

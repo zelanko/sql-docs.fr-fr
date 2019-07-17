@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 831571621256a34611672ae6444379c375370f1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dbaf429acb94334540f0e147eae2808e1655309
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119346"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +31,15 @@ ms.locfileid: "47679271"
   Contient une ligne pour chaque support de sauvegarde. Cette table est stockée dans le **msdb** base de données.  
  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**media_set_id**|**Int**|Numéro d'identification unique du support de sauvegarde. Identité, clé primaire.|  
+|**media_set_id**|**int**|Numéro d'identification unique du support de sauvegarde. Identité, clé primaire.|  
 |**media_uuid**|**uniqueidentifier**|Identificateur UUID du support de sauvegarde. Tous les [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] jeux de supports ont un UUID.<br /><br /> Pour les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], toutefois, si un support de sauvegarde contient uniquement une famille de supports, la **media_uuid** colonne peut être NULL (**media_family_count** est 1).|  
 |**media_family_count**|**tinyint**|Nombre de familles de supports dans le support de sauvegarde. Sa valeur peut être NULL.|  
-|**nom**|**nvarchar(128)**|Nom du support de sauvegarde. Sa valeur peut être NULL.<br /><br /> Pour plus d’informations, consultez MEDIANAME et MEDIADESCRIPTION dans [sauvegarde &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**name**|**nvarchar(128)**|Nom du support de sauvegarde. Sa valeur peut être NULL.<br /><br /> Pour plus d’informations, consultez MEDIANAME et MEDIADESCRIPTION dans [sauvegarde &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**description**|**nvarchar(255)**|Description textuelle du support de sauvegarde. Sa valeur peut être NULL.<br /><br /> Pour plus d’informations, consultez MEDIANAME et MEDIADESCRIPTION dans [sauvegarde &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**software_name**|**nvarchar(128)**|Nom du logiciel de sauvegarde qui a écrit l’étiquette du support. Sa valeur peut être NULL.|  
-|**software_vendor_id**|**Int**|Numéro d'identification du fournisseur du logiciel qui a écrit l'étiquette du support de sauvegarde. Sa valeur peut être NULL.<br /><br /> La valeur de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est hexadécimale 0 x 1200.|  
+|**software_vendor_id**|**int**|Numéro d'identification du fournisseur du logiciel qui a écrit l'étiquette du support de sauvegarde. Sa valeur peut être NULL.<br /><br /> La valeur de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est hexadécimale 0 x 1200.|  
 |**MTF_major_version**|**tinyint**|Numéro de la version principale de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Tape Format utilisée pour créer ce support de sauvegarde. Sa valeur peut être NULL.|  
 |**mirror_count**|**tinyint**|Nombre de miroirs dans le support de sauvegarde.|  
 |**is_password_protected**|**bit**|Mot de passe protégé du support de sauvegarde :<br /><br /> 0 = Non protégé<br /><br /> 1 = Protégé|  

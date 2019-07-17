@@ -42,11 +42,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cdc2ee8c14e62106775438f932957c69c7c0daa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777131"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199388"
 ---
 # <a name="publish-data-and-database-objects"></a>Publier des données et des objets de base de données
   Lors de la création d'une publication, vous choisissez les tables et les autres objets de base de données à publier. Vous pouvez publier les objets de base de données suivants à l'aide de la réplication.  
@@ -89,7 +89,7 @@ ms.locfileid: "52777131"
   
  Pour plus d'informations sur la manière de travailler avec des publications, consultez les rubriques suivantes :  
   
--   [Create a Publication](create-a-publication.md)  
+-   [Créer une publication](create-a-publication.md)  
   
 -   [Définir un article](define-an-article.md)  
   
@@ -168,7 +168,7 @@ ms.locfileid: "52777131"
 -   Si vous publiez un objet de base de données qui dépend d'un ou de plusieurs autres objets de base de données, vous devez publier tous les objets référencés. Par exemple, si vous publiez une vue qui dépend d'une table, vous devez publier la table également.  
   
     > [!NOTE]  
-    >  Si vous ajoutez un article à une publication de fusion et qu'un article existant dépend du nouvel article, vous devez spécifier un ordre de traitement pour les deux articles à l'aide du paramètre **@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) et [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Examinez le scénario suivant : vous publiez une table, mais vous ne publiez pas de fonction référencée par la table. Si vous ne publiez pas la fonction, la table ne peut pas être créée au niveau de l'abonné. Lorsque vous ajoutez la fonction à la publication : spécifiez la valeur **1** pour le paramètre **@processing_order** de **sp_addmergearticle**, spécifiez la valeur **2** pour le paramètre **@processing_order** de **sp_changemergearticle**, et spécifiez le nom de la table pour le paramètre **@article**. Cet ordre de traitement permet de créer la fonction au niveau de l'Abonné avant la table qui en dépend. Vous pouvez utiliser différents nombres pour chaque article tant que le nombre de la fonction est inférieur au nombre de la table.  
+    >  Si vous ajoutez un article à une publication de fusion et qu'un article existant dépend du nouvel article, vous devez spécifier un ordre de traitement pour les deux articles à l'aide du paramètre **@processing_order** de [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) et [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Examinez le scénario suivant : vous publiez une table, mais vous ne publiez pas de fonction référencée par la table. Si vous ne publiez pas la fonction, la table ne peut pas être créée au niveau de l'abonné. Lorsque vous ajoutez la fonction à la publication : spécifiez la valeur **1** pour le paramètre **@processing_order** de **sp_addmergearticle**, spécifiez la valeur **2** pour le paramètre **@processing_order** de **sp_changemergearticle**, et spécifiez le nom de la table pour le paramètre **@article** . Cet ordre de traitement permet de créer la fonction au niveau de l'Abonné avant la table qui en dépend. Vous pouvez utiliser différents nombres pour chaque article tant que le nombre de la fonction est inférieur au nombre de la table.  
   
 -   Les noms de publication ne peuvent pas contenir les caractères suivants : % * [ ] | : " ? \ / \< >.  
   

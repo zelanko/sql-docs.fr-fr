@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: af57bf0c-a265-410f-9bab-63b78569b4a6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 712d5286036aa8fbf375d16abfbe3a3c2257ab91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfde20205de71a302c7ba8151fc6171cecc05a08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140679"
 ---
 # <a name="syslinkedlogins-transact-sql"></a>sys.linked_logins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne par mappage de connexion de serveur lié dans le but d'utiliser ce mappage dans les requêtes RPC et les requêtes distribuées en provenance du serveur local et à destination du serveur lié correspondant.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**server_id**|**Int**|ID du serveur dans **sys.servers**.|  
-|**local_principal_id**|**Int**|Serveur principal auquel s'applique le mappage.<br /><br /> 0 = générique ou public.|  
+|**server_id**|**int**|ID du serveur dans **sys.servers**.|  
+|**local_principal_id**|**int**|Serveur principal auquel s'applique le mappage.<br /><br /> 0 = générique ou public.|  
 |**uses_self_credential**|**bit**|Si la valeur de la colonne est égale à 1, le mappage indique que la session doit utiliser ses propres informations d'identification ; la valeur 0 indique que la session utilise les nom et mot de passe fournis.|  
 |**remote_name**|**sysname**|Nom utilisateur distant servant à la connexion. Le mot de passe est également stocké mais n'est pas exposé dans les interfaces des vues de catalogue.|  
 |**modify_date**|**datetime**|Date de la dernière modification de la connexion liée.|  

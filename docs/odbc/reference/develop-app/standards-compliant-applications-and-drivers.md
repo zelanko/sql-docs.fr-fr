@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1283cd0b41eff971a1014b213bda5e44f1912039
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 4980cfe64a5a8e8404c6b5b0bdc8b1aba484f0c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107333"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>Applications et pilotes conformes aux normes
 Une application conforme aux normes ou le pilote est celui qui est conforme à la spécification d’IAO groupe Open « gestion des données : Interface de niveau d’appel SQL (CLI) » et la norme ISO/IEC 9075-Interface de niveau d’appel 3:1995 (E) (SQL/CLI).  

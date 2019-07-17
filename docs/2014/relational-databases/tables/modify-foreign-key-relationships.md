@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129619"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196841"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifier des relations de clé étrangère
   Vous pouvez modifier le côté clé étrangère d'une relation dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. La modification de la clé étrangère d’une table modifie les colonnes liées aux colonnes figurant dans la table de clé primaire.  
@@ -53,7 +53,7 @@ ms.locfileid: "54129619"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -82,7 +82,7 @@ ms.locfileid: "54129619"
      Vérifie en fonction de la contrainte, toutes les données qui existaient dans la table avant la création ou la réactivation de la contrainte.  
   
      **Catégorie Spécification de tables et colonnes**  
-     Se développe pour afficher les colonnes des tables jouant le rôle de clé étrangère et de clé primaire (ou unique) dans la relation. Pour modifier ou définir ces valeurs, cliquez sur le bouton de sélection (**...**) à droite du champ de propriété.  
+     Se développe pour afficher les colonnes des tables jouant le rôle de clé étrangère et de clé primaire (ou unique) dans la relation. Pour modifier ou définir ces valeurs, cliquez sur le bouton de sélection ( **...** ) à droite du champ de propriété.  
   
      **Table de base de clé étrangère**  
      Affiche la table qui contient la colonne jouant le rôle de clé étrangère dans la relation sélectionnée.  

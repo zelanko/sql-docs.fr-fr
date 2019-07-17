@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61afd5c9932f58c49e54b4aff8b053d0a25a6e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130023"
 ---
 # <a name="display-size"></a>Taille d’affichage
 La taille d’affichage d’une colonne est le nombre maximal de caractères que nécessaire pour afficher les données sous forme de caractère. Le tableau suivant définit la taille d’affichage pour chaque type de données ODBC SQL.  
@@ -39,8 +38,8 @@ La taille d’affichage d’une colonne est le nombre maximal de caractères que
 |SQL_FLOAT SQL_DOUBLE|24 (un signe, 15 chiffres, une virgule décimale, la lettre *E*, une connexion, ainsi que 3 chiffres).|  
 |Tous les types binaires [a]|Défini ou maximum (pour les types de variables) longueur de la colonne 2 de fois. (Chaque octet binaire est représentée par un nombre hexadécimal à 2 chiffres).|  
 |SQL_TYPE_DATE|10 (une date au format *aaaa-mm-jj*).|  
-|SQL_TYPE_TIME|8 (une heure au format *hh : mm :*)<br /><br /> - ou -<br /><br /> 9 + *s* (une heure au format *hh : mm :*[.fff...], où *s* est la précision en fractions de seconde).|  
-|SQL_TYPE_TIMESTAMP|19 (pour un horodatage dans le *aaaa-mm-jj hh : mm :* format)<br /><br /> - ou -<br /><br /> 20 + *s* (pour un horodatage dans le *aaaa-mm-jj hh : mm :* format [.fff...], où *s* est la précision en fractions de seconde).|  
+|SQL_TYPE_TIME|8 (une heure au format *hh : mm :* )<br /><br /> ou<br /><br /> 9 + *s* (une heure au format *hh : mm :* [.fff...], où *s* est la précision en fractions de seconde).|  
+|SQL_TYPE_TIMESTAMP|19 (pour un horodatage dans le *aaaa-mm-jj hh : mm :* format)<br /><br /> ou<br /><br /> 20 + *s* (pour un horodatage dans le *aaaa-mm-jj hh : mm :* format [.fff...], où *s* est la précision en fractions de seconde).|  
 |Tous les types de données d’intervalle|Consultez [longueur du Type de données de l’intervalle](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
 |SQL_GUID|36 (le nombre de caractères dans le *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* format|  
   

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0761f469-9b6c-4fa6-bbd7-f0cb936e4f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45d144b583c934ef6599a611255d68d51f9413ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8aeb097f2cabac01b0d4108dbcf07ed46f15f971
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110263"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Extraire des colonnes avec IRow::GetColumns (ou IRow::Open) et ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "53205278"
   
 2.  Exécutez la commande (dans cet exemple, **ICommandExecute::Execute()** est appelée avec IID_IRow).  
   
-3.  Extraire les données de colonne à l’aide **::Open()** ou **IRow ::GetColumns()**.  
+3.  Extraire les données de colonne à l’aide **::Open()** ou **IRow ::GetColumns()** .  
   
     -   **::Open()** peut être utilisé pour ouvrir un **ISequentialStream** sur la ligne. Spécifiez DBGUID_STREAM pour indiquer que la colonne contient un flux de données binaires (vous pouvez ensuite utiliser **IStream** ou **ISequentialStream** pour lire les données de la colonne).  
   
@@ -51,11 +50,11 @@ ms.locfileid: "53205278"
   
  Cet exemple requiert l'exemple de base de données AdventureWorks, que vous pouvez télécharger à partir de la page d'accueil des [exemples et projets de communautés Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384) .  
   
- Le premier ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) liste de code crée une table utilisée par l’exemple.  
+ La première liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crée une table utilisée par l'exemple.  
   
  Compilez avec ole32.lib oleaut32.lib et exécutez la deuxième liste de code (C++). Cette application vous permet de vous connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut de votre ordinateur. Sur certains systèmes d'exploitation Windows, vous devrez remplacer (localhost) ou (local) par le nom de votre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour vous connecter à une instance nommée, changez la chaîne de connexion de L"(local)" en L"(local)\\\nom", où nom correspond à l’instance nommée. Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express est installé dans une instance nommée. Assurez-vous que votre variable d'environnement INCLUDE inclut le répertoire qui contient sqlncli.h.  
   
- Le troisième ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) du code supprime la table utilisée par l’exemple.  
+ La troisième liste de code ([!INCLUDE[tsql](../../includes/tsql-md.md)]) supprime la table utilisée par l'exemple.  
   
 ```  
 USE AdventureWorks  

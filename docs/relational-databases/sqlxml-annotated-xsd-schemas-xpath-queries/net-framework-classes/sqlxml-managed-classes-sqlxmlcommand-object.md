@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ac8e2b23988f09b21f21ed5cfded790871a25a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9f6ad55aff8291e3c0f14e8f44085da71d2b594c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119519"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Classes managées SQLXML - Objet SqlXmlCommand
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ public SqlXmlCommand(string cnString)
  ExecuteToStream void publique (Stream outputStream)  
  Écrit les résultats de la requête dans un flux de données existant. Cette méthode est utile lorsque vous avez un flux auquel vous voulez ajouter (par exemple, pour obtenir les résultats de requête écrites dans le System.Web.HttpResponse.OutputStream) les résultats. Pour obtenir un exemple fonctionnel, consultez [l’exécution des requêtes SQL &#40;Classes managées SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
- XmlReader ExecuteXmlReader()  
+ ExecuteXmlReader() de XmlReader  
  Retourne un objet XmlReader. Vous pouvez utiliser cette méthode à manipuler directement les données dans l’objet XmlReader ou incorporer dans l’architecture chainable de System.Xml. Pour plus d'informations, consultez la documentation sur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Pour obtenir un exemple fonctionnel, consultez [l’exécution de requêtes SQL à l’aide de la méthode ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
  Objet de TheSqlXmlCommand prend également en charge ces méthodes supplémentaires :  
@@ -104,7 +103,7 @@ public SqlXmlCommand(string cnString)
  Texte de la commande. Cette propriété est utilisée pour spécifier le texte de la commande que vous souhaitez exécuter. Pour obtenir un exemple fonctionnel, consultez [l’exécution des requêtes SQL &#40;Classes managées SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
  CommandStream  
- Flux de commande. Cette propriété est utile si vous souhaitez exécuter une commande à partir d'un fichier (par exemple, un modèle XML). Lorsque vous utilisez CommandStream, uniquement **« Modèle »**, **« UpdateGram »** et **« DiffGram » CommandType** valeurs sont prises en charge. Pour obtenir un exemple fonctionnel, consultez [l’exécution des fichiers de modèle à l’aide de la propriété CommandStream](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md).  
+ Flux de commande. Cette propriété est utile si vous souhaitez exécuter une commande à partir d'un fichier (par exemple, un modèle XML). Lorsque vous utilisez CommandStream, uniquement **« Modèle »** , **« UpdateGram »** et **« DiffGram » CommandType** valeurs sont prises en charge. Pour obtenir un exemple fonctionnel, consultez [l’exécution des fichiers de modèle à l’aide de la propriété CommandStream](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md).  
   
  CommandType  
  Identifie le type de commande. Cette propriété est utilisée pour spécifier le type de commande que vous souhaitez exécuter. Les valeurs du tableau ci-dessous déterminent le type de la commande. Pour obtenir un exemple fonctionnel, consultez [l’accès à des fonctionnalités de SQLXML dans l’environnement .NET](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md).  

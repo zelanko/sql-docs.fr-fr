@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce3ad077a62d79518d45c53596fb4334a4498434
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3613c3da1138a6ec17394a5b6615d78d0a941e56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133151"
 ---
 # <a name="sysserverevents-transact-sql"></a>sys.server_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,9 +32,9 @@ ms.locfileid: "63013337"
   Contient une ligne par événement pour lequel est activé un déclencheur DDL de niveau serveur ou une notification d'événement de niveau serveur. Les colonnes **object_id** et **type** identifient l’événement de serveur.  
 
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|ID de la notification d'événements de niveau serveur ou du déclencheur DDL de niveau serveur à activer.|  
+|**object_id**|**int**|ID de la notification d'événements de niveau serveur ou du déclencheur DDL de niveau serveur à activer.|  
 |**type**|**Int**|Type de l'événement à l'origine de l'activation de la notification d'événement ou du déclencheur DDL.|  
 |**type_desc**|**nvarchar(60)**|Description de l'événement à l'origine de l'activation du déclencheur DDL ou de la notification d'événement.|  
 |**event_group_type**|**Int**|Groupe d'événements sur lequel le déclencheur ou la notification d'événements est créé(e), ou null si le déclencheur n'est pas créé sur un groupe d'événements.|  

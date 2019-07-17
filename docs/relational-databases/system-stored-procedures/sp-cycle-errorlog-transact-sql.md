@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 565cc98059c056dbb4fc73f3e0734229754aad93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c15a36678bf0bd1ff5fc933eb79bff96b6780b60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108339"
 ---
 # <a name="spcycleerrorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_cycle_errorlog
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré, le journal des erreurs en cours est renommé en **errorlog.1**; **errorlog.1** devient **errorlog.2**, **errorlog.2** devient **errorlog.3**, et ainsi de suite. **sp_cycle_errorlog** vous permet de parcourir les fichiers journaux des erreurs sans arrêter et démarrer le serveur.  

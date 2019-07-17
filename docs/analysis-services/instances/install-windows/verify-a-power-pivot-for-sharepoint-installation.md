@@ -1,5 +1,5 @@
 ---
-title: Vérifier une Power Pivot for SharePoint Installation | Documents Microsoft
+title: Vérifier une Power Pivot for SharePoint Installation | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f047593657806b872aafdda802c9c85ac4526b56
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017506"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209470"
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Vérifier une installation Power Pivot pour SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -68,12 +68,12 @@ ms.locfileid: "34017506"
   
     1.  Sélectionnez **Contenu du site**.  
   
-    2.  Dans la liste d’applications, vous devriez voir **Bibliothèque de flux de données** et **Galerie [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Ces modèles de bibliothèque sont fournis par la fonctionnalité [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] et sont visibles dans la liste des bibliothèques si la fonctionnalité est intégrée correctement.  
+    2.  Dans la liste d’applications, vous devriez voir **Bibliothèque de flux de données** et **Galerie [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** . Ces modèles de bibliothèque sont fournis par la fonctionnalité [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] et sont visibles dans la liste des bibliothèques si la fonctionnalité est intégrée correctement.  
   
 ## <a name="verify-data-access-on-the-server"></a>Vérifiez l'accès aux données sur le serveur  
  Pour vérifier l’accès aux données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] sur le serveur, procédez comme suit :  
   
-1.  [Téléchargez](http://go.microsoft.com/fwlink/?LinkID=219108) l'exemple de données Picnic qui accompagne un didacticiel Reporting Services. Vous allez utiliser l’exemple de classeur des fichiers téléchargés pour vérifier l’accès aux données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Extrayez les fichiers.  
+1.  [Téléchargez](http://go.microsoft.com/fwlink/?LinkID=219108) l'exemple de données Picnic qui accompagne un didacticiel Reporting Services. Vous allez utiliser l’exemple de classeur des fichiers téléchargés pour vérifier l’accès aux données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Procédez à l’extraction des fichiers.  
   
 2.  Téléchargez le classeur Excel (.xlsx) dans Documents partagés. Le classeur contient des données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] incorporées.  
   
@@ -89,9 +89,9 @@ ms.locfileid: "34017506"
   
 7.  Dans Type de serveur, sélectionnez **Analysis Services**.  
   
-8.  Dans nom du serveur, entrez  **\<nom-serveur > \powerpivot**, où  **\<nom-serveur >** est le nom de l’ordinateur qui a le [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour l’installation de SharePoint.  
+8.  Nom du serveur, entrez  **\<nom-serveur > \powerpivot**, où  **\<nom-serveur >** est le nom de l’ordinateur qui a le [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint installation.  
   
-9. Cliquez sur **Se connecter**. Le programme vérifie que le serveur Analysis Services est disponible.  
+9. Cliquer sur **Se connecter**. Le programme vérifie que le serveur Analysis Services est disponible.  
   
 10. Dans l’Explorateur d’objets, vous pouvez cliquer sur **Bases de données** pour afficher la liste des fichiers de données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] qui sont chargés.  
   

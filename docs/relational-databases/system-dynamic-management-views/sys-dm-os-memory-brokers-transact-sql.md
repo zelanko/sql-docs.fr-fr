@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: dbc927d0630dd6db3d45c5e074b49d01b3396b5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8e131e2550ffa5078df5e284898ffe936128b7e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900094"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265867"
 ---
 # <a name="sysdmosmemorybrokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67900094"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**pool_id**|**Int**|ID du pool de ressources s'il est associé à un pool du gouverneur de ressources.|  
+|**pool_id**|**int**|ID du pool de ressources s'il est associé à un pool du gouverneur de ressources.|  
 |**memory_broker_type**|**nvarchar(60)**|Type de gestionnaire d'allocation mémoire. Il existe actuellement trois types de gestionnaires d’allocation mémoire dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], répertoriés ci-dessous avec leurs descriptions.<br /><br /> **MEMORYBROKER_FOR_CACHE** : Mémoire allouée pour une utilisation par les objets mis en cache (cache de Pool de mémoires tampons pas).<br /><br /> **MEMORYBROKER_FOR_STEAL** : Mémoire occultée du pool de mémoires tampons. Cette mémoire ne peut pas être réutilisée par d'autres composants tant qu'elle n'est pas libérée par le propriétaire actuel.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : Mémoire réservée pour une utilisation future par les demandes en cours d’exécution.|  
 |**allocations_kb**|**bigint**|Quantité de mémoire, en kilo-octets (Ko), allouée à ce type de gestionnaire d'allocation mémoire.|  
 |**allocations_kb_per_sec**|**bigint**|Taux d'allocations de mémoire, en kilo-octets (Ko) par seconde. Cette valeur peut être négative pour les désallocations de mémoire.|  
@@ -48,12 +48,12 @@ ms.locfileid: "67900094"
 |**future_allocations_kb**|**bigint**|Nombre projeté d'allocations, en kilo-octet (Ko), qui seront effectuées dans les prochaines secondes.|  
 |**overall_limit_kb**|**bigint**|Quantité maximale de mémoire, en kilo-octets (Ko), que le service broker peut allouer.|  
 |**last_notification**|**nvarchar(60)**|Recommandation relative à l'utilisation de la mémoire basée sur les paramètres actuels et le modèle d'utilisation. Les valeurs valides sont les suivantes :<br /><br /> grow<br /><br /> shrink<br /><br /> stable|  
-|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
   
 ## <a name="see-also"></a>Voir aussi  
 

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: 8793e1ddd29d5327a02a2a4077daf4c643a8c316
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 7e45f85a26d2beaaba552707681e574bae4795cc
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625763"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266508"
 ---
 # <a name="save-metadata--oracletosql"></a>Enregistrer les métadonnées (OracleToSQL)
 Le **enregistrer les métadonnées** boîte de dialogue vous invite à charger les métadonnées dans votre projet SSMA avant de l’enregistrer. Vous pouvez ainsi vous disposez d’un fichier de projet complet que vous pouvez utiliser hors connexion et l’envoyer à d’autres personnes, tels que du personnel de support technique.  
@@ -34,7 +34,7 @@ SSMA charge les métadonnées dans le projet en fonction des besoins. Métadonn�
 **Tout sélectionner**  
 Sélectionne les bases de données tout répertoriées.  
   
-**Désactiver**  
+**Effacer**  
 Efface la case à cocher pour toutes les bases de données avec les métadonnées manquantes. Impossible d’effacer la case à cocher si une entrée de métadonnées a été chargée.  
   
 **Enregistrer**  

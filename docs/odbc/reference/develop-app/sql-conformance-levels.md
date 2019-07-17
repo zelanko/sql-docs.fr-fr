@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2e8ce5aeeb94a4f7a33b22054adc8067e0654ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7862b2e3a86c6d98a51c73ecb470d59bcfe29dc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107521"
 ---
 # <a name="sql-conformance-levels"></a>Niveaux de conformité SQL
 Niveau de la grammaire SQL-92 pris en charge par un pilote est indiqué par la valeur retournée par un appel à **SQLGetInfo** avec le type d’information SQL_SQL_CONFORMANCE. Cela indique si le pilote est conforme aux niveaux d’entrée, FIPS transitoires, intermédiaire ou intégral définis dans SQL-92.  

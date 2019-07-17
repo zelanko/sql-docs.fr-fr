@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ce5d59e050aafa69a0b2584c66328c568f5ddee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118058"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @join_articlename = ] 'join_articlename'` Nom de l’article parent auquel l’article enfant, spécifié par *article*, doit être joint à l’aide de la clause de jointure spécifiée par *join_filterclause*, afin de déterminer les lignes dans l’article enfant qui répondent aux le critère de filtre du filtre de fusion. *join_articlename* est **sysname**, sans valeur par défaut. L’article doit figurer dans la publication donnée par *publication*.  
   
-`[ @join_filterclause = ] join_filterclause` Clause de jointure qui doit être utilisée pour joindre l’article enfant spécifié par *article*et l’article parent spécifié par *join_article*, afin de déterminer les lignes qualifiant le filtre de fusion. *join_filterclause* est **nvarchar (1000)**.  
+`[ @join_filterclause = ] join_filterclause` Clause de jointure qui doit être utilisée pour joindre l’article enfant spécifié par *article*et l’article parent spécifié par *join_article*, afin de déterminer les lignes qualifiant le filtre de fusion. *join_filterclause* est **nvarchar (1000)** .  
   
 `[ @join_unique_key = ] join_unique_key` Spécifie si la jointure entre l’article enfant *article*et l’article parent *join_article*est un-à-plusieurs, un à un, plusieurs-à-un ou plusieurs-à-plusieurs. *join_unique_key* est **int**, avec 0 comme valeur par défaut. **0** indique une jointure plusieurs-à-un ou plusieurs-à-plusieurs. **1** indique une jointure un-à-un ou un-à-plusieurs. Cette valeur est **1** quand les colonnes de jointure forment une clé unique dans *join_article*, ou si *join_filterclause* est entre une clé étrangère dans *article* et une clé primaire dans *join_article*.  
   

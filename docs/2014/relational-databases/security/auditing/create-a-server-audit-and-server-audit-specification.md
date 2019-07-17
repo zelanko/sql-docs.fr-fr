@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135759"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198414"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Créer un audit du serveur et une spécification d'audit du serveur
   Cette rubrique explique comment créer un audit de serveur et une spécification d'audit de serveur dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'*audit* d'une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d'une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implique le suivi et l'enregistrement des événements qui se produisent sur le système. L’objet *Audit SQL Server* recueille une seule instance des actions et des groupes d’actions au niveau du serveur ou de la base de données à surveiller. L'audit s'effectue au niveau de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Vous pouvez exécuter plusieurs audits par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'objet *Spécification de l'audit du serveur* appartient à un audit. Vous pouvez créer une spécification d'audit de serveur par audit, car tous deux sont créés au niveau de la portée de l'instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](sql-server-audit-database-engine.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "54135759"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
   
 -   Pour créer, modifier ou supprimer un audit du serveur, les principaux requièrent l'autorisation ALTER ANY SERVER AUDIT ou CONTROL SERVER.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54135759"
   
 1.  Dans l'Explorateur d'objets, développez le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Audits** et sélectionnez **Nouvel audit...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Audits** et sélectionnez **Nouvel audit...** .  
   
      Les options suivantes sont disponibles sur la page **Général** de la boîte de dialogue **Créer un audit** .  
   
@@ -88,14 +88,14 @@ ms.locfileid: "54135759"
     > [!IMPORTANT]  
     >  Lorsque l'audit est en état d'échec, la connexion administrateur dédiée peut continuer à exécuter des événements audités.  
   
-     Liste**Destination de l’audit**   
+     Liste**Destination de l’audit**  
      Spécifie la cible pour l'audit des données. Les options disponibles sont un fichier binaire, le journal des applications Windows ou le journal de sécurité Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne peut pas écrire dans le journal de sécurité Windows sans configurer d'autres paramètres dans Windows. Pour plus d’informations, consultez [Écrire des événements d’audit SQL Server dans le journal de sécurité](write-sql-server-audit-events-to-the-security-log.md).  
   
      **Chemins d'accès au fichier**  
      Spécifie l’emplacement du dossier dans lequel les données d’audit sont écrites quand la **destination de l’audit** est un fichier.  
   
      **Points de suspension (...)**  
-     Ouvre le **localiser le dossier -**_nom_serveur_ boîte de dialogue pour spécifier un chemin d’accès de fichier ou de créer un dossier dans lequel écrire le fichier d’audit.  
+     Ouvre le **localiser le dossier -** _nom_serveur_ boîte de dialogue pour spécifier un chemin d’accès de fichier ou de créer un dossier dans lequel écrire le fichier d’audit.  
   
      **Limites maximales du fichier d'audit :**  
      **Fichiers de substitution maximale**  
@@ -104,16 +104,16 @@ ms.locfileid: "54135759"
      **Nombre maximal de fichiers**  
      Spécifie que, lorsque le nombre maximal de fichiers d'audit est atteint, toute action qui entraîne la génération d'événements d'audit supplémentaires échoue et provoque une erreur.  
   
-     Case à cocher**Illimité**   
+     Case à cocher**Illimité**  
      Lorsque la case **Illimité** sous **Nombre maximal de fichiers de substitution** est cochée, aucune limite n’est imposée sur le nombre de fichiers d’audit qui seront créés. La case à cocher **Illimité** est sélectionnée par défaut et s'applique aux sélections **Nombre maximal de fichiers de substitution** et **Nombre maximal de fichiers** .  
   
-     Zone**Nombre de fichiers**   
+     Zone**Nombre de fichiers**  
      Spécifie le nombre de fichiers d'audit à créer, jusqu'à 2 147 483 647. Cette option est disponible uniquement si **Illimité** est désactivé.  
   
      **Taille de fichier maximale**  
      Spécifie la taille maximale d'un fichier d'audit, en mégaoctets (MB), en gigaoctets (GB) ou en téraoctets (TB). Vous pouvez spécifier une valeur comprise entre 1 024 Mo et 2 147 483 647 To. L'activation de la case à cocher **Illimité** ne fixe pas de limite quant à la taille du fichier. La spécification d'une valeur inférieure à 1 024 Mo échoue et génère une erreur. La case à cocher **Illimité** est sélectionnée par défaut.  
   
-     Case à cocher**Réserver l’espace disque**   
+     Case à cocher**Réserver l’espace disque**  
      Spécifie qu'une quantité d'espace disque égale à la taille de fichier maximale spécifiée doit être pré-allouée. Ce paramètre ne peut être utilisé que si la case à cocher **Illimité** sous **Taille de fichier maximale** n'est pas sélectionnée. Cette case à cocher n'est pas activée par défaut.  
   
 3.  Éventuellement, sur la page **Filtre** , entrez un prédicat, ou la clause `WHERE` , pour l'audit de serveur afin de définir des options supplémentaires qui ne sont pas disponibles sur la page **Général** . Mettez le prédicat entre parenthèses ; par exemple : `(object_name = 'EmployeesTable')`.  
@@ -124,7 +124,7 @@ ms.locfileid: "54135759"
   
 1.  Dans l'Explorateur d'objets, cliquez sur le signe plus pour développer le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit du serveur**, puis sélectionnez **Nouvelle spécification de l’audit du serveur...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit du serveur**, puis sélectionnez **Nouvelle spécification de l’audit du serveur...** .  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Créer la spécification de l'audit du serveur** .  
   

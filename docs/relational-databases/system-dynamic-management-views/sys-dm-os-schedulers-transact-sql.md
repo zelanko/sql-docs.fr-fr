@@ -20,12 +20,12 @@ ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f167aa6f4572fc1a44db83cfb9f7ea7b7a092b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4beae403312770c5f8b93bce5b8be11518708508
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899841"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265680"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,16 +39,16 @@ ms.locfileid: "67899841"
 |-----------------|---------------|-----------------|  
 |scheduler_address|**varbinary(8)**|Adresse mémoire du planificateur. N'accepte pas la valeur NULL.|  
 |parent_node_id|**int**|Identificateur du nœud auquel le planificateur appartient. On parle également de nœud parent. Il s'agit d'un nœud NUMA (Nonuniform Memory Access). N'accepte pas la valeur NULL.|  
-|scheduler_id|**int**|ID du planificateur. Tous les planificateurs utilisés pour exécuter des requêtes régulières ont des numéros d'identificateur inférieurs à 1 048 576. Les planificateurs qui sont identifiés par un numéro supérieur ou égal à 1 048 576 sont utilisés en interne par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple le planificateur de connexions administrateur dédiées. N'accepte pas la valeur NULL.|  
+|scheduler_id|**Int**|ID du planificateur. Tous les planificateurs utilisés pour exécuter des requêtes régulières ont des numéros d'identificateur inférieurs à 1 048 576. Les planificateurs qui sont identifiés par un numéro supérieur ou égal à 1 048 576 sont utilisés en interne par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple le planificateur de connexions administrateur dédiées. N'accepte pas la valeur NULL.|  
 |cpu_id|**smallint**|ID de l'UC assigné au planificateur.<br /><br /> N'accepte pas la valeur NULL.<br /><br /> **Remarque :** 255 n’indique pas aucune affinité comme elle le faisait [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Consultez [sys.dm_os_threads &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md) pour plus d’informations supplémentaires d’affinités.|  
 |status|**nvarchar(60)**|Indique l'état du planificateur. Peut avoir l'une des valeurs suivantes :<br /><br /> -MASQUÉ EN LIGNE<br />-MASQUÉ EN MODE HORS CONNEXION<br />-VISIBLE EN LIGNE<br />-VISIBLE EN MODE HORS CONNEXION<br />-EN LIGNE VISIBLE (DAC)<br />-   HOT_ADDED<br /><br /> N'accepte pas la valeur NULL.<br /><br /> Planificateurs masqués sont utilisés pour traiter les demandes qui sont internes à la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les planificateurs VISIBLE servent à traiter les requêtes des utilisateurs.<br /><br /> Les planificateurs OFFLINE se mappent avec des processeurs qui sont déconnectés dans le masque d'affinité et qui ne sont, par conséquent, pas utilisés pour traiter des requêtes. Les planificateurs ONLINE se mappent avec des processeurs qui sont connectés dans le masque d'affinité et qui sont disponibles pour traiter des threads.<br /><br /> DAC indique que le planificateur s'exécute sous une connexion administrateur dédiée (DAC, Dedicated Administrator Connection).<br /><br /> HOT ADDED indique que les planificateurs ont été ajoutés en réponse à un événement d'ajout d'un processeur à chaud.|  
 |is_online|**bit**|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour utiliser uniquement certains des processeurs disponibles sur le serveur, cette configuration peut indiquer que certains planificateurs sont associés à des processeurs non inclus dans le masque d'affinité. Dans ce cas, cette colonne retourne la valeur 0. Cette valeur signifie que le planificateur n'est pas utilisé pour traiter des requêtes ou des lots.<br /><br /> N'accepte pas la valeur NULL.|  
 |is_idle|**bit**|1 = Le planificateur est inactif. Aucun processus de travail n'est actuellement en cours d'exécution. N'accepte pas la valeur NULL.|  
-|preemptive_switches_count|**Int**|Nombre de fois où les processus de travail opérant sur ce planificateur sont passés en mode préemptif.<br /><br /> Pour exécuter du code externe à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, des procédures stockées étendues et des requêtes distribuées), un thread doit s'exécuter en dehors du contrôle du planificateur non préemptif. Pour ce faire, un processus de travail passe en mode préemptif.|  
-|context_switches_count|**int**|Nombre de changements de contexte ayant eu lieu sur ce planificateur. N'accepte pas la valeur NULL.<br /><br /> Pour permettre à d'autres processus de travail de s'exécuter, le processus de travail en cours doit abandonner le contrôle du planificateur ou changer de contexte.<br /><br /> **Remarque :** Si un processus de travail abandonne le planificateur et les place dans la file d’attente exécutable et puis trouve aucun autre processus, le processus de travail se sélectionne lui-même. Dans ce cas, context_switches_count n'est pas mis à jour, mais yield_count l'est.|  
+|preemptive_switches_count|**int**|Nombre de fois où les processus de travail opérant sur ce planificateur sont passés en mode préemptif.<br /><br /> Pour exécuter du code externe à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (par exemple, des procédures stockées étendues et des requêtes distribuées), un thread doit s'exécuter en dehors du contrôle du planificateur non préemptif. Pour ce faire, un processus de travail passe en mode préemptif.|  
+|context_switches_count|**Int**|Nombre de changements de contexte ayant eu lieu sur ce planificateur. N'accepte pas la valeur NULL.<br /><br /> Pour permettre à d'autres processus de travail de s'exécuter, le processus de travail en cours doit abandonner le contrôle du planificateur ou changer de contexte.<br /><br /> **Remarque :** Si un processus de travail abandonne le planificateur et les place dans la file d’attente exécutable et puis trouve aucun autre processus, le processus de travail se sélectionne lui-même. Dans ce cas, context_switches_count n'est pas mis à jour, mais yield_count l'est.|  
 |idle_switches_count|**int**|Nombre de fois où le planificateur a attendu un événement quand il était inactif. Cette colonne est similaire à context_switches_count. N'accepte pas la valeur NULL.|  
 |current_tasks_count|**int**|Nombre de tâches actuellement associées au planificateur. Il s'agit des tâches suivantes :<br /><br /> -Les tâches qui sont en attente d’un processus de travail pour les exécuter.<br />-Les tâches qui sont actuellement en attente ou en cours d’exécution (en état SUSPENDED ou RUNNABLE).<br /><br /> Lorsqu'une tâche est terminée, ce nombre est décrémenté. N'accepte pas la valeur NULL.|  
-|runnable_tasks_count|**Int**|Nombre de processus de travail, auxquels des tâches sont affectées, qui attendent d'être planifiés sur la file d'attente exécutable. N'accepte pas la valeur NULL.|  
+|runnable_tasks_count|**int**|Nombre de processus de travail, auxquels des tâches sont affectées, qui attendent d'être planifiés sur la file d'attente exécutable. N'accepte pas la valeur NULL.|  
 |current_workers_count|**int**|Nombre de processus de travail qui sont associés à ce planificateur. Il s'agit des processus de travail qui ne sont affectés à aucune tâche. N'accepte pas la valeur NULL.|  
 |active_workers_count|**int**|Nombre de processus de travail actifs. Un processus de travail actif n'est jamais préemptif, doit être associé à une tâche et est soit en cours d'exécution, soit exécutable, soit suspendu. N'accepte pas la valeur NULL.|  
 |work_queue_count|**bigint**|Nombre de tâches dans la file d'attente de travail. Ces tâches attendent d'être sélectionnées par un processus de travail. N'accepte pas la valeur NULL.|  
@@ -65,12 +65,12 @@ ms.locfileid: "67899841"
 |total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Indique la limitation basée sur [Service Level Objective](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective), sera toujours 0 pour les versions non-Azure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Autorise la valeur NULL.|
 |total_scheduler_delay_ms|**bigint**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] et ultérieur <br><br> Délai entre un travailleur du basculement et un autre changement dans. Peut être dû travailleurs preemptive, ce qui peut retarder la planification du processus de travail non préemptif suivant, ou en raison du système d’exploitation planifier des threads à partir d’autres processus. N'accepte pas la valeur NULL.|
 |ideal_workers_limit|**int**|**S’applique à** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et ultérieur <br><br> Nombre de travaux doit idéalement être sur le planificateur. Si les travaux en cours dépassent la limite en raison de la charge de la tâche déséquilibré, une fois qu’ils deviennent inactifs, ils seront supprimés. N'accepte pas la valeur NULL.|
-|pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
 
 ## <a name="examples"></a>Exemples  
   

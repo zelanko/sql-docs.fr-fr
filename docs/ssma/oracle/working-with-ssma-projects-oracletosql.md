@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 3ec3a2f9bcdf43657649263d77eff3b31c9a57a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: b96aba990231225516a7ba8ccf1523b91cb56c86
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283559"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266360"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Utilisation de projets SSMA (OracleToSQL)
 Pour migrer des bases de données Oracle à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous créez tout d’abord un projet SSMA. Le projet est un fichier qui contient les informations suivantes :  
@@ -62,9 +62,9 @@ Pour migrer des données à partir de bases de données Oracle à [!INCLUDE[ssNo
   
 **Pour créer un projet**  
   
-1.  Sur le **fichier** menu, cliquez sur **nouveau projet**.  
+1.  Dans le menu **Fichier**, cliquez sur **Nouveau projet**.  
   
-    La boîte de dialogue **Nouveau projet** s'affiche.  
+    La boîte de dialogue **Nouveau projet** s’affiche.  
   
 2.  Dans la zone **Nom** , tapez le nom de votre projet.  
   

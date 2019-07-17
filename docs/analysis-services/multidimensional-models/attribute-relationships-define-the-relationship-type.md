@@ -1,5 +1,5 @@
 ---
-title: Définir le Type de relation d’une relation d’attribut | Documents Microsoft
+title: Définir le Type de relation d’une relation d’attribut | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c6ae9dd941ecf13d05b62b1b5f8bcdd3d3784188
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022126"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179232"
 ---
-# <a name="attribute-relationships---define-the-relationship-type"></a>Relations d’attributs : permet de définir le Type de relation
+# <a name="attribute-relationships---define-the-relationship-type"></a>Relations d’attributs - Définir le type d’une relation
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Vous définissez le type de relation d’une relation d’attribut par le biais de l’onglet **Relations d’attributs** du Concepteur de dimensions, accessible depuis [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1a6a9e45b1640a82cd15074373f162a97d9a0a6
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 49d7ac030eb8e391f083311fc0248b0f0752e72a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121018"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +52,20 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @name = ] 'name'` Le nom d’un opérateur (destinataire de notification). Ce nom doit être unique et ne peut pas contenir le pourcentage (**%**) caractères. *nom* est **sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'` Le nom d’un opérateur (destinataire de notification). Ce nom doit être unique et ne peut pas contenir le pourcentage ( **%** ) caractères. *nom* est **sysname**, sans valeur par défaut.  
   
 `[ @enabled = ] enabled` Indique l’état actuel de l’opérateur. *activé* est **tinyint**, avec une valeur par défaut **1** (activé). Si **0**, l’opérateur n’est pas activé et ne reçoit pas de notifications.  
   
-`[ @email_address = ] 'email_address'` L’adresse de messagerie de l’opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *email_address* est **nvarchar (100)**, avec NULL comme valeur par défaut.  
+`[ @email_address = ] 'email_address'` L’adresse de messagerie de l’opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *email_address* est **nvarchar (100)** , avec NULL comme valeur par défaut.  
   
  Vous pouvez spécifier une adresse électronique physique ou un alias pour *email_address*. Exemple :  
   
- «**jdoe**'ou'**jdoe@xyz.com**»  
+ «**jdoe**'ou' **jdoe@xyz.com** »  
   
 > [!NOTE]  
 >  Vous devez utiliser l'adresse de messagerie pour Messagerie de base de données.  
   
-`[ @pager_address = ] 'pager_address'` L’adresse de radiomessagerie de l’opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *adresse_radiomessagerie* est **narchar(100)**, avec NULL comme valeur par défaut.  
+`[ @pager_address = ] 'pager_address'` L’adresse de radiomessagerie de l’opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *adresse_radiomessagerie* est **narchar(100)** , avec NULL comme valeur par défaut.  
   
 `[ @weekday_pager_start_time = ] weekday_pager_start_time` Heure après laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envoie la notification par radiomessagerie à l’opérateur spécifié de la semaine, du lundi au vendredi. *weekday_pager_start_time*est **int**, avec une valeur par défaut **090000**, ce qui indique 9 heures du matin. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
@@ -92,7 +91,7 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Vendredi|  
 |**64**|Samedi|  
   
-`[ @netsend_address = ] 'netsend_address'` L’adresse réseau de l’opérateur auquel le message réseau est envoyé. *adresse_envoiréseau*est **nvarchar (100)**, avec NULL comme valeur par défaut.  
+`[ @netsend_address = ] 'netsend_address'` L’adresse réseau de l’opérateur auquel le message réseau est envoyé. *adresse_envoiréseau*est **nvarchar (100)** , avec NULL comme valeur par défaut.  
   
 `[ @category_name = ] 'category'` Le nom de la catégorie pour cet opérateur. *catégorie* est **sysname**, avec NULL comme valeur par défaut.  
   
@@ -100,7 +99,7 @@ sp_add_operator [ @name = ] 'name'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **sp_add_operator** doit être exécuté à partir de la **msdb** base de données.  

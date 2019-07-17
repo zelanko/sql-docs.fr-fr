@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 1b16284240d4e93e8de3f56a704c97efcfebdc4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097730"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255601"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,23 +55,23 @@ Dans le tableau ci-dessus, **attribut** peut avoir les valeurs suivantes :
 |Attribute|Type de données|Description|  
 |---------------|---------------|-----------------|  
 |set_options|**Int**|Indique les valeurs d'option ayant servi à compiler le plan.|  
-|objectid|**int**|Une des clés principales servant à rechercher un objet dans le cache. Il s’agit d’ID d’objet stocké dans [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) pour les objets de base de données (procédures, vues, déclencheurs, etc.). Pour des plans de type « Adhoc » ou « Prepared », il s'agit d'un hachage interne du texte du lot.|  
+|objectid|**Int**|Une des clés principales servant à rechercher un objet dans le cache. Il s’agit d’ID d’objet stocké dans [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) pour les objets de base de données (procédures, vues, déclencheurs, etc.). Pour des plans de type « Adhoc » ou « Prepared », il s'agit d'un hachage interne du texte du lot.|  
 |dbid|**int**|ID de la base de données contenant l'entité à laquelle le plan fait référence.<br /><br /> Pour des plans ad hoc ou préparés, il s'agit de l'ID de la base de données à partir duquel est exécuté le lot.|  
-|dbid_execute|**int**|Pour les objets système stockés dans le **ressources** de base de données, l’ID de base de données à partir de laquelle le plan mis en cache est exécuté. Dans tous les autres cas, il est égal à 0.|  
+|dbid_execute|**Int**|Pour les objets système stockés dans le **ressources** de base de données, l’ID de base de données à partir de laquelle le plan mis en cache est exécuté. Dans tous les autres cas, il est égal à 0.|  
 |user_id|**int**|Une valeur de -2 indique que le lot soumis ne dépend pas de la résolution implicite des noms et peut être partagé entre différents utilisateurs. Cette méthode est recommandée. Toute autre valeur représente l'ID de l'utilisateur soumettant la requête dans la base de données.| 
 |language_id|**smallint**|ID de la langue de la connexion qui a créé l'objet dans le cache. Pour plus d’informations, consultez [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md).|  
 |date_format|**smallint**|Format de date de la connexion qui a créé l'objet dans le cache Pour plus d’informations, consultez [SET DATEFORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/set-dateformat-transact-sql.md).|  
 |date_first|**tinyint**|Valeur date first. Pour plus d’informations, consultez [SET DATEFIRST &#40;Transact-SQL&#41;](../../t-sql/statements/set-datefirst-transact-sql.md).|  
 |status|**Int**|Bits d'état interne qui font partie de la clé de recherche en cache.|  
 |required_cursor_options|**int**|Options de curseur spécifiées par l'utilisateur (type de curseur par exemple).|  
-|acceptable_cursor_options|**Int**|Options de curseur dans lesquelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut convertir implicitement afin de prendre en charge l'exécution de l'instruction. Par exemple, l'utilisateur peut spécifier un curseur dynamique, mais l'optimiseur de requête peut convertir ce type de curseur en curseur statique.|  
-|inuse_exec_context|**Int**|Nombre de lots en cours d'exécution qui font appel au plan de requête.|  
+|acceptable_cursor_options|**int**|Options de curseur dans lesquelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut convertir implicitement afin de prendre en charge l'exécution de l'instruction. Par exemple, l'utilisateur peut spécifier un curseur dynamique, mais l'optimiseur de requête peut convertir ce type de curseur en curseur statique.|  
+|inuse_exec_context|**int**|Nombre de lots en cours d'exécution qui font appel au plan de requête.|  
 |free_exec_context|**Int**|Nombre de contextes d'exécution en cache pour le plan de requête qui ne sont pas actuellement utilisés.|  
 |hits_exec_context|**int**|Nombre d'obtention et de réutilisation du contexte d'exécution à partir du cache du plan évitant ainsi de recompiler l'instruction SQL. La valeur est une agrégation de toutes les exécutions de lot jusqu'à présent.|  
-|misses_exec_context|**int**|Nombre de fois un contexte d'exécution était introuvable dans le cache de plan entraînant la création d'un nouveau contexte d'exécution pour l'exécution du lot.|  
+|misses_exec_context|**Int**|Nombre de fois un contexte d'exécution était introuvable dans le cache de plan entraînant la création d'un nouveau contexte d'exécution pour l'exécution du lot.|  
 |removed_exec_context|**int**|Nombre de contextes d'exécution ayant été supprimés en raison d'une mémoire insuffisante dans le plan en cache.|  
 |inuse_cursors|**Int**|Nombre de lots en cours d'exécution contenant un ou plusieurs curseurs qui font appel au plan en cache.|  
-|free_cursors|**int**|Nombre de curseurs libres ou inactifs du plan en cache.|  
+|free_cursors|**Int**|Nombre de curseurs libres ou inactifs du plan en cache.|  
 |hits_cursors|**Int**|Nombre d'obtention et de réutilisation d'un curseur inactif à partir du plan en cache. La valeur est une agrégation de toutes les exécutions de lot jusqu'à présent.|  
 |misses_cursors|**int**|Nombre de fois où un curseur inactif était introuvable dans le cache.|  
 |removed_cursors|**int**|Nombre de curseurs ayant été supprimés en raison d'une mémoire insuffisante dans le plan en cache.|  
@@ -81,7 +81,7 @@ Dans le tableau ci-dessus, **attribut** peut avoir les valeurs suivantes :
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
 
 ## <a name="remarks"></a>Notes  
   

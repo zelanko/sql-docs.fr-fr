@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 26410a933c7432189f664c2b04d2b41e3e31c9c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ab4c1f691820fb19dde7a3e3166abc2ff065b18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126637"
 ---
 # <a name="connecting-to-sql-server-db2etosql"></a>Connexion à SQL Server (DB2eToSQL)
 Pour migrer des bases de données DB2 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 ou Azure SQL DB vous devez vous connecter à un de ces instances de cibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque vous vous connectez, SSMA récupère les métadonnées sur toutes les bases de données dans l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et affiche les métadonnées de base de données dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées. SSMA stocke des informations sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous êtes connecté à, mais ne stocke pas les mots de passe.  

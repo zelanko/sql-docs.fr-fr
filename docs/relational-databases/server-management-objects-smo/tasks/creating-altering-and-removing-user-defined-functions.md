@@ -12,30 +12,29 @@ helpviewer_keywords:
 ms.assetid: 0ebebd3b-0775-41c2-989d-aa4cf81af12a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 592dc044f15ba1063370ca5bf42f51bf45e69265
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c33572469cfaa37673212d483cc05d15d3a1b828
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111538"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Création, modification et suppression de fonctions définies par l'utilisateur
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
   Le <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objet fournit une fonctionnalité qui permet aux utilisateurs de gérer par programmation des fonctions définies par l’utilisateur dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les fonctions définies par l'utilisateur prennent en charge les paramètres d'entrée et de sortie, ainsi que les références directes aux colonnes de table.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nécessite des assemblys à inscrire dans une base de données que ceux-ci peuvent être utilisés dans les procédures stockées, fonctions, les déclencheurs et les types de données définis par l’utilisateur défini par l’utilisateur. SMO prend en charge cette fonctionnalité avec l'objet <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] requiert l'enregistrement d'assemblys dans une base de données pour que ceux-ci puissent être utilisés dans des procédures stockées, des fonctions définies par l'utilisateur, des déclencheurs et des types de données définis par l'utilisateur. SMO prend en charge cette fonctionnalité avec l'objet <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>.  
   
- Le <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objet fait référence à l’assembly .NET avec le <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A>, et <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A> propriétés.  
+ L'objet <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> référence l'assembly .NET avec les propriétés <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A> et <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A>.  
   
- Lorsque le <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> objet fait référence à un assembly .NET, vous devez inscrire l’assembly en créant un <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> objet et en l’ajoutant à la <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection> objet auquel appartient le <xref:Microsoft.SqlServer.Management.Smo.Database> objet.  
+ Lorsque l'objet <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> référence un assembly .NET, vous devez enregistrer l'assembly en créant un objet <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly> et en l'ajoutant à l'objet <xref:Microsoft.SqlServer.Management.Smo.SqlAssemblyCollection>, qui fait partie de l'objet <xref:Microsoft.SqlServer.Management.Smo.Database>.  
   
 ## <a name="example"></a>Exemple  
  Pour utiliser un exemple de code qui est fourni, vous devrez choisir l'environnement de programmation, le modèle de programmation et le langage de programmation dans lequel créer votre application. Pour plus d’informations, consultez [créer un Visual C&#35; projet SMO dans Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Création d'une fonction scalaire définie par l'utilisateur en Visual Basic  
- Cet exemple de code montre comment créer et supprimer une fonction scalaire définie par l’utilisateur qui a une entrée <xref:System.DateTime> paramètre d’objet et un entier type de retour en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. La fonction définie par l’utilisateur est créée sur le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de données. L'exemple crée une fonction définie par l'utilisateur, ISOweek, qui accepte un argument de date et calcule le numéro de semaine ISO. Pour que ce calcul puisse être correctement réalisé, la valeur 1 doit être affectée à l'option de base de données DATEFIRST avant l'appel de la fonction.  
+ Cet exemple de code montre comment créer et supprimer une fonction scalaire définie par l'utilisateur qui a un paramètre d'objet <xref:System.DateTime> en entrée et un type de retour entier en [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]. La fonction définie par l'utilisateur est créée dans la base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . L'exemple crée une fonction définie par l'utilisateur, ISOweek, qui accepte un argument de date et calcule le numéro de semaine ISO. Pour que ce calcul puisse être correctement réalisé, la valeur 1 doit être affectée à l'option de base de données DATEFIRST avant l'appel de la fonction.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -66,7 +65,7 @@ udf.Drop()
 ``` 
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-c"></a>Création d'une fonction scalaire définie par l'utilisateur en Visual C#  
- Cet exemple de code montre comment créer et supprimer une fonction scalaire définie par l’utilisateur qui a une entrée <xref:System.DateTime> paramètre d’objet et un entier type de retour en [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La fonction définie par l’utilisateur est créée sur le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de données. L'exemple crée la fonction définie par l'utilisateur. `ISOweek` . Cette fonction prend un argument date et calcule le numéro de semaine ISO. Pour que ce calcul puisse être correctement réalisé, la valeur `DATEFIRST` doit être affectée à l'option de base de données `1` avant l'appel de la fonction.  
+ Cet exemple de code montre comment créer et supprimer une fonction scalaire définie par l'utilisateur qui a un paramètre d'objet <xref:System.DateTime> en entrée et un type de retour entier en [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La fonction définie par l'utilisateur est créée dans la base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . L'exemple crée la fonction définie par l'utilisateur. `ISOweek` . Cette fonction prend un argument date et calcule le numéro de semaine ISO. Pour que ce calcul puisse être correctement réalisé, la valeur `DATEFIRST` doit être affectée à l'option de base de données `1` avant l'appel de la fonction.  
   
 ```csharp  
 {  
@@ -102,7 +101,7 @@ udf.Drop()
 ```  
   
 ## <a name="creating-a-scalar-user-defined-function-in-powershell"></a>Création d'une fonction scalaire définie par l'utilisateur dans PowerShell  
- Cet exemple de code montre comment créer et supprimer une fonction scalaire définie par l’utilisateur qui a une entrée <xref:System.DateTime> paramètre d’objet et un entier type de retour en [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La fonction définie par l’utilisateur est créée sur le [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de données. L'exemple crée la fonction définie par l'utilisateur. `ISOweek` . Cette fonction prend un argument date et calcule le numéro de semaine ISO. Pour que ce calcul puisse être correctement réalisé, la valeur `DATEFIRST` doit être affectée à l'option de base de données `1` avant l'appel de la fonction.  
+ Cet exemple de code montre comment créer et supprimer une fonction scalaire définie par l'utilisateur qui a un paramètre d'objet <xref:System.DateTime> en entrée et un type de retour entier en [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]. La fonction définie par l'utilisateur est créée dans la base de données [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . L'exemple crée la fonction définie par l'utilisateur. `ISOweek` . Cette fonction prend un argument date et calcule le numéro de semaine ISO. Pour que ce calcul puisse être correctement réalisé, la valeur `DATEFIRST` doit être affectée à l'option de base de données `1` avant l'appel de la fonction.  
   
 ```powershell   
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

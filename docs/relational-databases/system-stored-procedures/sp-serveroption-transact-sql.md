@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b2594ca16f3cd7378dbd8632af448471b8f1654
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1fcd6f158908893ce5eb86c24a3bb3882867bc2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104381"
 ---
 # <a name="spserveroption-transact-sql"></a>sp_serveroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_serveroption [@server = ] 'server'
 ## <a name="arguments"></a>Arguments  
 `[ @server = ] 'server'` Est le nom du serveur pour lequel définir l’option. *server* est de type **sysname**et n'a pas de valeur par défaut.  
   
-`[ @optname = ] 'option_name'` Est l’option à définir pour le serveur spécifié. *option_name* est **varchar (** 35 **)**, sans valeur par défaut. *option_name* peut être une des valeurs suivantes.  
+`[ @optname = ] 'option_name'` Est l’option à définir pour le serveur spécifié. *option_name* est **varchar (** 35 **)** , sans valeur par défaut. *option_name* peut être une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -64,7 +63,7 @@ sp_serveroption [@server = ] 'server'
 |**utiliser le classement distant**|Détermine si le classement d'une colonne distante ou d'un serveur local doit être utilisé.<br /><br /> Si **true**, le classement des colonnes distantes est utilisé pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sources de données et le classement spécifié dans **nom de classement** est utilisé pour les non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des sources de données.<br /><br /> Si **false**, les requêtes distribuées utilisent toujours le classement par défaut du serveur local, tandis que **nom de classement** et le classement des colonnes distantes sont ignorés. La valeur par défaut est **false**. (Le **false** valeur est compatible avec la sémantique de classement utilisée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.)|  
 |**promotion des transactions à distance proc**|Cette option permet de protéger les actions d'une procédure de serveur à serveur par le biais d'une transaction MS DTC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator). Lorsque cette option a la valeur TRUE (ou) appelant une procédure stockée distante démarre une transaction distribuée et enregistre la transaction dans MS DTC. L'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelant la procédure stockée distante constitue l'élément créateur de la transaction et qui contrôle l'exécution jusqu'à son terme. Si une instruction COMMIT TRANSACTION ou ROLLBACK TRANSACTION est ensuite émise pour la connexion, le serveur de contrôle demande à MS DTC de gérer l'achèvement de la transaction distribuée sur tous les ordinateurs concernés.<br /><br /> Une fois qu'une transaction distribuée [!INCLUDE[tsql](../../includes/tsql-md.md)] a démarré, des appels de procédures stockées distantes peuvent être effectués envers d'autres instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ont été définies en tant que serveurs liés. Les serveurs liés sont tous inscrits dans la transaction distribuée [!INCLUDE[tsql](../../includes/tsql-md.md)] et MS DTC garantit que la transaction est exécutée jusqu'à son terme sur chaque serveur lié.<br /><br /> Si cette option a la valeur FALSE (ou OFF), une transaction locale ne sera pas promue en transaction distribuée lors de l'exécution d'un appel de procédure distante sur un serveur lié.<br /><br /> Si, avant d'exécuter un appel de procédure de serveur à serveur, la transaction est déjà une transaction distribuée, cette option n'a pas effet. L'appel de procédure sur le serveur lié s'exécutera sous la même transaction distribuée.<br /><br /> Si, avant d'exécuter un appel de procédure de serveur à serveur, aucune transaction n'est active dans la connexion, cette option n'a pas effet. La procédure s'exécute ensuite sur le serveur lié sans transactions actives.<br /><br /> La valeur par défaut de cette option est TRUE (ou ON).|  
   
-`[ @optvalue = ] 'option_value'` Spécifie ou non le *option_name* doit être activée (**TRUE** ou **sur**) ou désactivé (**FALSE** ou **hors**). *l’argument option_value* est **varchar (** 10 **)**, sans valeur par défaut.  
+`[ @optvalue = ] 'option_value'` Spécifie ou non le *option_name* doit être activée (**TRUE** ou **sur**) ou désactivé (**FALSE** ou **hors**). *l’argument option_value* est **varchar (** 10 **)** , sans valeur par défaut.  
   
  *l’argument option_value* peut être un entier non négatif pour le **délai de connexion** et **délai de requête** options. Pour le **nom de classement** option, *argument option_value* peut être un nom de classement ou une valeur NULL.  
   

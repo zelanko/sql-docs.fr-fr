@@ -1,5 +1,5 @@
 ---
-title: Propriétés de la hiérarchie utilisateur | Documents Microsoft
+title: Propriétés de la hiérarchie utilisateur | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8c29e85d684095c57dc3f02caebc9afdd156c0ea
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021386"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180643"
 ---
-# <a name="user-hierarchies---properties"></a>Hiérarchies des utilisateurs - propriétés
+# <a name="user-hierarchies---properties"></a>Hiérarchies utilisateur - Propriétés
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Le tableau suivant décrit les propriétés d'une hiérarchie définie par l'utilisateur.  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |AllMemberName|Contient la légende dans la langue par défaut du membre Tous de la hiérarchie.|  
-|AllowDuplicateNames|Détermine si les noms en double sont autorisés dans la hiérarchie. Les valeurs sont True et False. Valeur par défaut est True.|  
-| Description|Contient la description de la hiérarchie.|  
+|AllowDuplicateNames|Détermine si les noms en double sont autorisés dans la hiérarchie. Les valeurs sont True et False. La valeur par défaut est True.|  
+|Description|Contient la description de la hiérarchie.|  
 |DisplayFolder|Spécifie le dossier permettant aux utilisateurs d'afficher la hiérarchie.|  
 |ID|Contient l'identificateur unique (ID) de la hiérarchie.|  
 |MemberNamesUnique|Détermine si les noms de membre dans la hiérarchie doivent être uniques. Les valeurs sont True et False. La valeur par défaut est False.|  

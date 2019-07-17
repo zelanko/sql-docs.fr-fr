@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea192588186f69adbc04ab6a56123206e1fb7817
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146454"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208613"
 ---
 # <a name="data-types-in-analysis-services"></a>Types de données dans Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "50146454"
 |||  
 |-|-|  
 |BigInt|Entier signé de 64 bits. Le *BigInt* type valeur représente des entiers avec les valeurs comprises entre 9,223,372,036,854,775,808 négatif et positif 9,223,372,036,854,775,807.|  
-|Binaire|Un flux de données binaires de **octets** type. **Octets** est un type valeur qui représente des entiers non signés avec des valeurs comprises entre 0 et 255.|  
-|Booléen|Instances de ce type ont des valeurs **true** ou **false**.|  
-|Monétaire (Currency)|Un *devise* valeur comprise entre -922,337,203,685,477.5808 + 922,337,203,685,477.5807 avec une précision d’un dix millième d’unité monétaire (quatre positions décimales).|  
+|Binary|Un flux de données binaires de **octets** type. **Octets** est un type valeur qui représente des entiers non signés avec des valeurs comprises entre 0 et 255.|  
+|Boolean|Instances de ce type ont des valeurs **true** ou **false**.|  
+|Currency|Un *devise* valeur comprise entre -922,337,203,685,477.5808 + 922,337,203,685,477.5807 avec une précision d’un dix millième d’unité monétaire (quatre positions décimales).|  
 |Date|Date et données de temps, stockées comme un double. La partie entière correspond au nombre de jours depuis le 30 décembre 1899 tandis que la partie fractionnaire désigne une fraction d'un jour ou l'heure.|  
 |Double|Nombre à virgule flottante compris entre -1,79769313486232E +308 et 1,79769313486232E +308. Une valeur Double stocke les informations de nombre jusqu'à 15 chiffres décimaux de précision.|  
 |Entier|Entier signé 32 bits représentant des entiers signés avec des valeurs qui varient entre 2 147 483 648 (négatif) et 2 147 483 647 (positif).|  
-|Unique|Nombre à virgule flottante compris entre - 3,4028235E +38 et 3,4028235E +38. Une valeur Single stocke les informations de nombre jusqu'à 7 chiffres décimaux de précision.|  
+|Single|Nombre à virgule flottante compris entre - 3,4028235E +38 et 3,4028235E +38. Une valeur Single stocke les informations de nombre jusqu'à 7 chiffres décimaux de précision.|  
 |Smallint|Entier signé 16 bits. Le *Smallint* type de valeur représente des entiers signés avec des valeurs comprises entre 32768 négatif et positif 32767.|  
 |Tinyint|Entier signé 8 bits. Le type de valeur Tinyint représente des entiers dont la valeur varie entre 128 (négatif) et 127 (positif).|  
 |UnsignedBigInt|Entier non signé 64 bits. Le *UnsignedBigInt* type valeur représente des entiers non signés avec des valeurs comprises entre 0 et 18,446,744,073,709,551,615.|  
@@ -43,7 +43,7 @@ ms.locfileid: "50146454"
 ## <a name="amo-validations-on-data-types"></a>Validations AMO sur les types Data  
  Le tableau suivant contient les validations supplémentaires effectuées par AMO (Analysis Management Objects) pour certaines liaisons :  
   
-|Object|Binding|Types de données autorisés|  
+|Object|Liaison|Types de données autorisés|  
 |------------|-------------|------------------------|  
 |DimensionAttribute|KeyColumns|Tous à l'exception de Binary|  
 ||NameColumn|WChar uniquement|  
@@ -51,12 +51,12 @@ ms.locfileid: "50146454"
 ||CustomRollupColumn|WChar uniquement|  
 ||CustomRollupPropertiesColumn|WChar uniquement|  
 ||UnaryOperatorColumn|WChar uniquement|  
-||ValueColumn|All|  
+||ValueColumn|Tous|  
 |AttributeTranslation|CaptionColumn|WChar uniquement|  
 |ScalarMiningStructureColumn|KeyColumns|Tous à l'exception de Binary|  
 ||NameColumn|WChar uniquement|  
 |TableMiningStructureColumn|ForeignKeyColumns|Tous à l'exception de Binary|  
 |MeasureGroupAttribute|KeyColumns|Tous à l'exception de Binary|  
-|Mesure de comptage de valeurs|Source|BigInt, Currency, Double, Integer, Single, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt, UnsignedTinyInt|  
+|Mesure de comptage de valeurs|`Source`|BigInt, Currency, Double, Integer, Single, SmallInt, TinyInt, UnsignedBigInt, UnsignedInt, UnsignedSmallInt, UnsignedTinyInt|  
   
   

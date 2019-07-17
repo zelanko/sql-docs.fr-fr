@@ -1,5 +1,5 @@
 ---
-title: Traitement des objets d’exploration de données | Documents Microsoft
+title: Traitement des objets d’exploration de données | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,19 +10,19 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 017f1d751e81fa80b8a7e4c2655fd1de59459fed
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016836"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209726"
 ---
 # <a name="processing-data-mining-objects"></a>Traitement des objets d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Un objet d'exploration de données n'est rien de plus qu'un conteneur vide tant qu'il n'est pas traité. Le*traitement* d’un modèle d’exploration de données est également appelé *apprentissage*.  
   
- **Traitement des structures d’exploration de données :** une structure d’exploration de données reçoit les données d’une source de données externe, comme défini par les liaisons de colonne et les métadonnées d’utilisation, puis elle les lit. Ces données sont lues entièrement, puis analysées pour extraire différentes statistiques. Analysis Services contient une représentation compacte des données, appropriée pour l'analyse par les algorithmes d'exploration de données, dans un cache local. Vous pouvez conserver ce cache ou le supprimer lorsque les modèles ont été traités. Par défaut, le cache est stocké. Pour plus d’informations, consultez [Traiter une structure d’exploration de données](../../analysis-services/data-mining/process-a-mining-structure.md).  
+ **Traitement des structures d’exploration de données :** Une structure d’exploration de données obtient des données à partir de la source de données externe, tel que défini par les liaisons de colonne et les métadonnées d’utilisation et lit les données. Ces données sont lues entièrement, puis analysées pour extraire différentes statistiques. Analysis Services contient une représentation compacte des données, appropriée pour l'analyse par les algorithmes d'exploration de données, dans un cache local. Vous pouvez conserver ce cache ou le supprimer lorsque les modèles ont été traités. Par défaut, le cache est stocké. Pour plus d’informations, consultez [Traiter une structure d’exploration de données](../../analysis-services/data-mining/process-a-mining-structure.md).  
   
- **Traitement des modèles d’exploration de données :** un modèle d’exploration de données est vide (contenant uniquement des définitions) jusqu’à ce qu’il soit traité. Pour traiter un modèle d'exploration de données, la structure d'exploration de données doit avoir fait l'objet d'un traitement. Le modèle d'exploration de données reçoit les données du cache de la structure d'exploration de données, il applique tous les filtres qui ont pu être créés sur le modèle, puis transmet le jeu de données via l'algorithme pour détecter des motifs. Une fois le modèle traité, il stocke uniquement les résultats du traitement, et non les données. Pour plus d’informations, consultez [Traiter un modèle d’exploration de données](../../analysis-services/data-mining/process-a-mining-model.md).  
+ **Traitement des modèles d’exploration de données :** Un modèle d’exploration de données est vide, contenant uniquement des définitions jusqu'à ce qu’il soit traité. Pour traiter un modèle d'exploration de données, la structure d'exploration de données doit avoir fait l'objet d'un traitement. Le modèle d'exploration de données reçoit les données du cache de la structure d'exploration de données, il applique tous les filtres qui ont pu être créés sur le modèle, puis transmet le jeu de données via l'algorithme pour détecter des motifs. Une fois le modèle traité, il stocke uniquement les résultats du traitement, et non les données. Pour plus d’informations, consultez [Traiter un modèle d’exploration de données](../../analysis-services/data-mining/process-a-mining-model.md).  
   
  Le diagramme suivant illustre le flux de données lors du traitement d'une structure d'exploration de données et d'un modèle d'exploration de données.  
   
@@ -49,9 +49,9 @@ ms.locfileid: "34016836"
  Pour plus d’informations, consultez [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d’extraction & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
- [Les Structures d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Les modèles d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
- [Architecture logique & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
+ [Requêtes d’extraction &#40;exploration de données&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [Structures d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)   
+ [Architecture logique &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/logical-architecture-analysis-services-data-mining.md)  
   
   

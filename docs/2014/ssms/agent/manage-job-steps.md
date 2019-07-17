@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768451"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189143"
 ---
 # <a name="manage-job-steps"></a>Gérer les étapes de travail
   Une étape du travail est une action exécutée par le travail sur une base de données ou un serveur. Chaque travail doit posséder au moins une étape de travail. Les étapes de travail peuvent être :  
@@ -75,7 +75,7 @@ ms.locfileid: "52768451"
   
 -   le code de sortie du processus renvoyé en cas de succès de la commande ;  
   
--   Commande à exécuter. S'il s'agit d'exécuter une commande du système d'exploitation, vous spécifiez simplement la commande elle-même. Dans le cas d'un programme externe, il s'agit du nom du programme et des arguments à transmettre au programme, par exemple : **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe --e-q « sp_who »**  
+-   Commande à exécuter. S'il s'agit d'exécuter une commande du système d'exploitation, vous spécifiez simplement la commande elle-même. Dans le cas d’un programme externe, il s’agit du nom du programme et des arguments à transmettre au programme, par exemple : **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     >  Vous devez indiquer le chemin d'accès complet au fichier exécutable si ce dernier ne réside pas dans un répertoire spécifié dans le chemin système ou le chemin d'accès de l'utilisateur sous le nom duquel l'étape de travail est exécutée.  

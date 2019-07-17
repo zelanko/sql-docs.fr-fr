@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e00adccfa6e75434fe398e21faafccc22f99914e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361741"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206684"
 ---
 # <a name="execute-a-stored-procedure-using-rpc-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Exécuter une procédure stockée (avec la syntaxe RPC) et traiter des codes de retour et des paramètres de sortie (OLE DB)
   Les procédures stockées [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent avoir des codes de retour et des paramètres de sortie de type entier. Les codes de retour et paramètres de sortie sont envoyés dans le dernier paquet du serveur et ne sont par conséquent pas accessibles à l'application tant que l'ensemble de lignes n'a pas été complètement libéré. Si la commande retourne plusieurs résultats, les données de paramètre de sortie sont disponibles lorsque `IMultipleResults::GetResult` retourne DB_S_NORESULT ou lorsque l'interface `IMultipleResults` est complètement libérée (selon l'événement qui se produit en premier).  

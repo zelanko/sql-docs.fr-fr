@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 04abb6062986e17f4f84c9d4ac6f6bd1ef6d2204
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a96d536143c7e636045eb926e9240e047c78070b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899987"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265803"
 ---
 # <a name="sysdmosmemorycacheentries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,21 +42,21 @@ ms.locfileid: "67899987"
 |**entry_data_address**|**varbinary(8)**|Adresse des données utilisateur dans l'entrée en mémoire cache.<br /><br /> 0x00000000 = L'adresse des données d'entrée n'est pas disponible.<br /><br /> N'accepte pas la valeur NULL.|  
 |**in_use_count**|**int**|Nombre d'utilisateurs simultanés de cette entrée en mémoire cache. N'accepte pas la valeur NULL.|  
 |**is_dirty**|**bit**|Indique si cette entrée du cache est marquée en vue d'une suppression. 1 = marquée pour la suppression. N'accepte pas la valeur NULL.|  
-|**disk_ios_count**|**int**|Nombre d'E/S qui ont eu lieu pendant la création de cette entrée. N'accepte pas la valeur NULL.|  
-|**context_switches_count**|**Int**|Nombre de changements de contexte subis pendant la création de cette entrée. N'accepte pas la valeur NULL.|  
-|**original_cost**|**Int**|Coût initial de l'entrée. Cette valeur est une approximation du nombre d'entrées/sorties engagées, du coût des instructions processeur et de la quantité de mémoire utilisée par l'entrée Plus le coût est élevé, moins il y a de probabilités que l'élément soit supprimé de la mémoire cache. N'accepte pas la valeur NULL.|  
+|**disk_ios_count**|**Int**|Nombre d'E/S qui ont eu lieu pendant la création de cette entrée. N'accepte pas la valeur NULL.|  
+|**context_switches_count**|**int**|Nombre de changements de contexte subis pendant la création de cette entrée. N'accepte pas la valeur NULL.|  
+|**original_cost**|**int**|Coût initial de l'entrée. Cette valeur est une approximation du nombre d'entrées/sorties engagées, du coût des instructions processeur et de la quantité de mémoire utilisée par l'entrée Plus le coût est élevé, moins il y a de probabilités que l'élément soit supprimé de la mémoire cache. N'accepte pas la valeur NULL.|  
 |**current_cost**|**int**|Coût actuel de l'entrée en mémoire cache. Cette valeur est mise à jour lors de la purge des entrées. Le coût actuel est réinitialisé à sa valeur d'origine lors de la réutilisation de l'entrée. N'accepte pas la valeur NULL.|  
 |**memory_object_address**|**varbinary(8)**|Adresse de l'objet mémoire associé. Autorise la valeur NULL.|  
 |**pages_allocated_count**|**bigint**|**S'applique à**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu'à [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Nombre de pages de 8 Ko pour stocker cette entrée en mémoire cache. N'accepte pas la valeur NULL.|  
 |**pages_kb**|**bigint**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Quantité de mémoire, en kilo-octets (Ko), utilisée par cette entrée du cache.  N'accepte pas la valeur NULL.|  
 |**entry_data**|**nvarchar(2048)**|Représentation en série de l'entrée en cache. Ces informations sont dépendantes du magasin du cache. Autorise la valeur NULL.|  
-|**pool_id**|**int**|**S'applique à**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID de pool de ressources associé à l'entrée. Autorise la valeur NULL.<br /><br /> not katmai|  
-|**pdw_node_id**|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|**pool_id**|**Int**|**S'applique à**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> ID de pool de ressources associé à l'entrée. Autorise la valeur NULL.<br /><br /> not katmai|  
+|**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
 ## <a name="permissions"></a>Autorisations 
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
 
 ## <a name="see-also"></a>Voir aussi  
  

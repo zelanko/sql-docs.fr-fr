@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 100da3bfaeee1c4b1e4dae00c96bcc08a763f3b3
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 021a6e689dfc109f8a58ca080956aec7efc49291
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124472"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ \@data_source_name = ] *datasourcename*  
+ [ \@data_source_name =] *datasourcename*  
  Identifie la source de données externe dans laquelle l’instruction est exécutée. Consultez [créer une SOURCE de données externe &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). La source de données externe peut être de type « SGBDR » ou « SHARD_MAP_MANAGER ».  
   
  [ \@stmt= ] *statement*  
@@ -58,7 +57,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
  [ \@params =] N'\@*nom_paramètre ** data_type* [,... *n* ] '  
  Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans \@stmt. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans \@stmtmust être défini dans \@params. Si le [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de \@stmt ne contient-elle pas de paramètres, \@params n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
   
- [ \@param1= ] '*value1*'  
+ [ \@param1 =] '*value1*'  
  Valeur du premier paramètre qui est défini dans la chaîne de paramètres. Cette valeur peut être une constante ou une variable Unicode. Il doit y avoir une valeur de paramètre fournie pour chaque paramètre inclus dans \@stmt. Les valeurs ne sont pas requis lorsque la [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de \@stmt n’a aucun paramètre.  
   
  *n*  

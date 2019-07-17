@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763671"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206984"
 ---
 # <a name="modify-a-partition-function"></a>Modifier une fonction de partition
   Vous pouvez modifier le partitionnement d'une table ou d'un index dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] en ajoutant ou supprimant le nombre de partitions spécifié (par incréments de 1) dans la fonction de partition de la table ou de l'index à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Lorsque vous ajoutez une partition, vous fractionnez une partition existante en deux partitions dont vous redéfinissez les limites. Lorsque vous supprimez une partition, vous fusionnez les limites de deux partitions pour n'en définir qu'une. Cette action a pour effet de remplir à nouveau une partition et de laisser l'autre non affectée.  
@@ -60,7 +60,7 @@ ms.locfileid: "52763671"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  L'instruction ALTER PARTITION FUNCTION peut être exécutée avec les autorisations suivantes :  
   
 -   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  

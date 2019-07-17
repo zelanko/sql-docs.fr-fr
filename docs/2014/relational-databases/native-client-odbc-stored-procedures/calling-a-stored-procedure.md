@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45b3d55774c4a05192f3bec9ef8bd92f89a74aa8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127649"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207027"
 ---
 # <a name="calling-a-stored-procedure"></a>Appel d'une procédure stockée
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client prend en charge à la fois la séquence d’échappement ODBC CALL et le [!INCLUDE[tsql](../../includes/tsql-md.md)] [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql) instruction pour l’exécution des procédures stockées ; la séquence d’échappement ODBC CALL est la méthode préférée. L'utilisation de la syntaxe ODBC permet à une application de récupérer les codes de retour de procédures stockées et le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est également optimisé pour utiliser un protocole initialement développé pour envoyer des appels de procédure distante (RPC) entre des ordinateurs qui exécutent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce protocole RPC augmente les performances en supprimant une bonne partie du traitement des paramètres et de l'analyse des instructions sur le serveur.  
@@ -33,7 +33,7 @@ ms.locfileid: "54127649"
   
  La séquence d'échappement ODBC CALL permettant d'appeler une procédure est la suivante :  
   
- {[**? =**]**appeler**_nom_procédure_[([*paramètre*] [**,**[*paramètre*]] ...)]}  
+ {[ **? =** ]**appeler**_nom_procédure_[([*paramètre*] [ **,** [*paramètre*]] ...)]}  
   
  où *nom_procédure* Spécifie le nom d’une procédure et *paramètre* spécifie un paramètre de procédure. Les paramètres nommés sont pris en charge uniquement dans les instructions à l'aide de la séquence d'échappement ODBC CALL.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "54127649"
   
  Les paramètres d'entrée et d'entrée/sortie peuvent être omis dans les appels de procédure. Si une procédure est appelée avec des parenthèses mais sans paramètre, le pilote instruit la source de données d'utiliser la valeur par défaut comme premier paramètre. Exemple :  
   
- {**appeler** _nom_procédure_**()**}  
+ {**appeler** _nom_procédure_ **()** }  
   
  Si la procédure n'a pas de paramètre, elle peut échouer. Si une procédure est appelée sans parenthèses, le pilote n'envoie aucune valeur de paramètre. Exemple :  
   

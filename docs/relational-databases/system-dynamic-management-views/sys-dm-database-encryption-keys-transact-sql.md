@@ -20,12 +20,12 @@ ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04f40d4d788e391026bd981f8be7218062282c07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 2c66fbc1cdf98d45a7440d2def9cb3fd1be5635a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005063"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255752"
 ---
 # <a name="sysdmdatabaseencryptionkeys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,14 +35,14 @@ ms.locfileid: "68005063"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|ID de la base de données.|  
-|encryption_state|**Int**|Indique si la base de données est chiffrée ou non chiffrée.<br /><br /> 0 = aucune clé de chiffrement de base de données présente, pas de chiffrement<br /><br /> 1 = non chiffré<br /><br /> 2 = chiffrement en cours<br /><br /> 3 = chiffrée.<br /><br /> 4 = modification de clé en cours<br /><br /> 5 = déchiffrement en cours<br /><br /> 6 = modification de la protection en cours (Le certificat ou la clé asymétrique qui chiffre la clé de chiffrement de base de données est en cours de modification.)|  
+|encryption_state|**int**|Indique si la base de données est chiffrée ou non chiffrée.<br /><br /> 0 = aucune clé de chiffrement de base de données présente, pas de chiffrement<br /><br /> 1 = non chiffré<br /><br /> 2 = chiffrement en cours<br /><br /> 3 = chiffrée.<br /><br /> 4 = modification de clé en cours<br /><br /> 5 = déchiffrement en cours<br /><br /> 6 = modification de la protection en cours (Le certificat ou la clé asymétrique qui chiffre la clé de chiffrement de base de données est en cours de modification.)|  
 |create_date|**datetime**|Affiche la date (au format UTC) la clé de chiffrement a été créée.|  
 |regenerate_date|**datetime**|Affiche la date (au format UTC) la clé de chiffrement a été régénérée.|  
 |modify_date|**datetime**|Affiche la date (au format UTC) la clé de chiffrement a été modifiée.|  
 |set_date|**datetime**|Affiche la date (au format UTC), la clé de chiffrement a été appliquée à la base de données.|  
 |opened_date|**datetime**|Indique le moment de la dernière ouverture (au format UTC) la clé de la base de données.|  
 |key_algorithm|**nvarchar(32)**|Affiche l'algorithme utilisé pour la clé.|  
-|key_length|**int**|Affiche la longueur de la clé.|  
+|key_length|**Int**|Affiche la longueur de la clé.|  
 |encryptor_thumbprint|**varbinary(20)**|Affiche l'empreinte numérique du chiffreur.|  
 |encryptor_type|**nvarchar(32)**|**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Décrit le chiffreur.|  
 |percent_complete|**real**|Pourcentage accompli de la modification de l'état de chiffrement de la base de données. La valeur 0 indique aucune modification d'état.|
@@ -54,7 +54,7 @@ ms.locfileid: "68005063"
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
 
 ## <a name="see-also"></a>Voir aussi  
 

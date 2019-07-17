@@ -1,5 +1,5 @@
 ---
-title: 'Comment : insérer des lignes dans la colonne de géographie (ODBC) | Microsoft Docs'
+title: 'Procédure : Insérer des lignes dans la colonne de géographie (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753496"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206810"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procédure : insérer des lignes dans la colonne de géographie (ODBC)
-  Cet exemple insère deux lignes dans une table avec une colonne de type geography à partir d'une entrée WKB (Well-Known Binary) à l'aide de 2 liaisons différentes (SQLCCHAR et SQLCBINARY). Il sélectionne ensuite une ligne de cette table et utilise ::STAsText() pour l'afficher. La représentation WKB est 0x01010000000700ECFAD03A4C4001008000B5DF07C0 et l'application se charge de l'impression sur la console : POINT(56.4595 -2.9842).  
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procédure : Insérer des lignes dans la colonne de géographie (ODBC)
+  Cet exemple insère deux lignes dans une table avec une colonne de type geography à partir d'une entrée WKB (Well-Known Binary) à l'aide de 2 liaisons différentes (SQLCCHAR et SQLCBINARY). Il sélectionne ensuite une ligne de cette table et utilise :: STAsText() pour l’afficher. Le WKB est 0x01010000000700ECFAD03A4C4001008000B5DF07C0 et l’application imprime sur la console : POINT (56.4595-2.9842).  
   
  Cet exemple ne requiert pas de source de données ODBC, mais s'exécute par défaut sur l'instance locale de SQL Server.  
   

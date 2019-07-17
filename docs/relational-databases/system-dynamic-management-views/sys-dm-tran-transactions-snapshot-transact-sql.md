@@ -20,12 +20,12 @@ ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a40ad81505419239d7a09d01a0c27fceff2a24f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b91ac554186c37b2e074dd3faded49a01259222e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090471"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262687"
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,13 +70,13 @@ dm_tran_transactions_snapshot
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Numéro de séquence (XSN) d'une transaction d'instantané.|  
-|**snapshot_id**|**Int**|Identificateur d'instantané pour chaque instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] lancée en mode de lecture validée à l'aide du contrôle de version de ligne. Cette valeur permet de générer une vue cohérente, d'un point de vue transactionnel, de la base de données prenant en charge chaque requête qui est exécutée en mode de lecture validée à l'aide du contrôle de version de ligne.|  
+|**snapshot_id**|**int**|Identificateur d'instantané pour chaque instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] lancée en mode de lecture validée à l'aide du contrôle de version de ligne. Cette valeur permet de générer une vue cohérente, d'un point de vue transactionnel, de la base de données prenant en charge chaque requête qui est exécutée en mode de lecture validée à l'aide du contrôle de version de ligne.|  
 |**snapshot_sequence_num**|**bigint**|Numéro de séquence d'une transaction qui était active lorsque la transaction d'instantané a commencé.|  
   
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
   
 ## <a name="remarks"></a>Notes  
  Lorsqu'une transaction d'instantané démarre, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] enregistre toutes les transactions qui sont actives à ce moment précis. **Sys.dm_tran_transactions_snapshot** fournit ces informations pour toutes les transactions d’instantané actuellement actives.  

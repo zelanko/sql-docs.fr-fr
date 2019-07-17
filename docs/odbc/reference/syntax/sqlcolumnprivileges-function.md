@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10d05310f7d9580b652f24bffa0896e32b23a40a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e3c54e0e2eb4ad633d35159e1ff010c9388f5d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118706"
 ---
 # <a name="sqlcolumnprivileges-function"></a>Fonction SQLColumnPrivileges
 **Conformité**  
@@ -135,14 +134,14 @@ SQLRETURN SQLColumnPrivileges(
   
  Le tableau suivant répertorie les colonnes du jeu de résultats. Les colonnes supplémentaires au-delà de la colonne 8 (IS_GRANTABLE) peuvent être définies par le pilote. Une application doit accéder à des colonnes spécifiques aux pilotes à rebours à partir de la fin du jeu de résultats au lieu d’en spécifiant une position ordinale explicite. Pour plus d’informations, consultez [les données retournées par les fonctions de catalogue](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
-|Nom de colonne|Numéro de colonne|Type de données|Commentaires|  
+|Nom de la colonne|Numéro de colonne|Type de données|Commentaires|  
 |-----------------|-------------------|---------------|--------------|  
-|TABLE_CAT  (ODBC 1.0)|1|Varchar|Identificateur du catalogue ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de catalogues.|  
+|TABLE_CAT (ODBC 1.0)|1|Varchar|Identificateur du catalogue ; NULL si non applicable à la source de données. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de catalogues.|  
 |TABLE_SCHEM (ODBC 1.0)|2|Varchar|Identificateur de schéma ; NULL si non applicable à la source de données. Si un pilote prend en charge les schémas pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, elle retourne une chaîne vide (" ») pour les tables qui n’ont pas de schémas.|  
 |TABLE_NAME (ODBC 1.0)|3|Varchar non NULL|Identificateur de la table.|  
 |COLUMN_NAME (ODBC 1.0)|4|Varchar non NULL|Nom de colonne. Le pilote retourne une chaîne vide pour une colonne qui n’a pas de nom.|  
-|FOURNISSEUR D’AUTORISATIONS (ODBC 1.0)|5|Varchar|Nom de l’utilisateur qui dispose du privilège ; NULL si non applicable à la source de données.<br /><br /> Pour toutes les lignes dans lequel la valeur dans la colonne GRANTEE est le propriétaire de l’objet, la colonne GRANTOR sera « _système ».|  
-|BÉNÉFICIAIRE (ODBC 1.0)|6|Varchar non NULL|Nom de l’utilisateur auquel l’autorisation a été accordée.|  
+|FOURNISSEUR D’AUTORISATIONS (ODBC 1.0)|5\.|Varchar|Nom de l’utilisateur qui dispose du privilège ; NULL si non applicable à la source de données.<br /><br /> Pour toutes les lignes dans lequel la valeur dans la colonne GRANTEE est le propriétaire de l’objet, la colonne GRANTOR sera « _système ».|  
+|BÉNÉFICIAIRE (ODBC 1.0)|6\.|Varchar non NULL|Nom de l’utilisateur auquel l’autorisation a été accordée.|  
 |PRIVILÈGE (ODBC 1.0)|7|Varchar non NULL|Identifie le privilège de la colonne. Peut être une des opérations suivantes (ou d’autres prises en charge par les données source défini par l’implémentation) :<br /><br /> SÉLECTIONNEZ : Le grantee est autorisé à récupérer des données pour la colonne.<br /><br /> INSERTION : Le grantee est autorisé à fournir des données pour la colonne dans les nouvelles lignes sont insérées dans la table associée.<br /><br /> MISE À JOUR : Le grantee est autorisé à mettre à jour des données dans la colonne.<br /><br /> RÉFÉRENCES : Le grantee est autorisé pour faire référence à la colonne dans une contrainte (par exemple, une valeur unique, référentielle, ou une contrainte de validation de table).|  
 |IS_GRANTABLE (ODBC 1.0)|8|Varchar|Indique si le grantee est autorisé à accorder le privilège à d’autres utilisateurs ; « Oui », « Non » ou « NULL » si inconnu ou non applicable à la source de données.<br /><br /> Un privilège est possible d’accorder ou non transférables, mais pas les deux. Le jeu de résultats retourné par **SQLColumnPrivileges** ne contient jamais les deux lignes pour lequel toutes les colonnes à l’exception de la colonne IS_GRANTABLE contiennent la même valeur.|  
   

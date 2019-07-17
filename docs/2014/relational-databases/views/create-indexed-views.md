@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131809"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196430"
 ---
 # <a name="create-indexed-views"></a>Créer des vues indexées
   Cette rubrique explique comment créer une vue indexée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le premier index créé sur une vue doit être un index cluster unique. Après avoir créé l'index cluster unique, vous pouvez créer davantage d'index non cluster. La création d'un index cluster unique sur une vue améliore les performances des requêtes, car la vue est stockée dans la base de données au même titre qu'une table avec un index cluster. L'optimiseur de requête peut utiliser des vues indexées pour accélérer l'exécution des requêtes. Il n'est pas nécessaire de référencer la vue dans la requête pour que l'optimiseur envisage d'utiliser cette vue.  
@@ -43,7 +43,7 @@ ms.locfileid: "54131809"
 5.  Créez l'index cluster unique sur la vue.  
   
 ###  <a name="Restrictions"></a> Options SET requises pour les vues indexées  
- L'évaluation de la même expression peut produire des résultats différents dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] si des options SET différentes sont actives lors de l'exécution de la requête. Par exemple, si l’option SET CONCAT_NULL_YIELDS_NULL est activée (ON), l’expression **«** abc **»** + NULL retourne la valeur Null. Cependant, si l’option CONCAT_NULL_YIEDS_NULL est désactivée (OFF), la même expression retourne **«** abc **»**.  
+ L'évaluation de la même expression peut produire des résultats différents dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] si des options SET différentes sont actives lors de l'exécution de la requête. Par exemple, si l’option SET CONCAT_NULL_YIELDS_NULL est activée (ON), l’expression **«** abc **»** + NULL retourne la valeur Null. Cependant, si l’option CONCAT_NULL_YIEDS_NULL est désactivée (OFF), la même expression retourne **«** abc **»** .  
   
  Pour pouvoir gérer correctement les vues et retourner des résultats cohérents, les vues indexées nécessitent des valeurs fixes pour plusieurs options SET. Les options SET dans le tableau suivant doivent être définies avec les valeurs indiquées dans le **RequiredValue** colonne chaque fois que les conditions suivantes sont remplies :  
   
@@ -86,11 +86,11 @@ ms.locfileid: "54131809"
   
 -   Lorsque vous créez l'index, l'option IGNORE_DUP_KEY doit avoir la valeur OFF (valeur par défaut).  
   
--   Les tables doivent être référencées par des noms en deux parties, _schéma_**.**_nom_table_ , dans la définition de la vue.  
+-   Les tables doivent être référencées par des noms en deux parties, _schéma_ **.** _nom_table_ , dans la définition de la vue.  
   
 -   Les fonctions définies par l'utilisateur référencées dans la vue doivent avoir été créées avec l'option WITH SCHEMABINDING.  
   
--   Toutes les fonctions définies par l’utilisateur référencées dans la vue doivent être référencées par des noms en deux parties, _schéma_**.**_fonction_.  
+-   Toutes les fonctions définies par l’utilisateur référencées dans la vue doivent être référencées par des noms en deux parties, _schéma_ **.** _fonction_.  
   
 -   La propriété d'accès aux données d'une fonction définie par l'utilisateur doit avoir la valeur NO SQL, et la propriété d'accès externe doit avoir la valeur NO.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "54131809"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation CREATE VIEW dans la base de données et l'autorisation ALTER sur le schéma dans lequel la vue est créée.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  

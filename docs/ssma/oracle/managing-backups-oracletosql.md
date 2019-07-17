@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 7fb88b22ae3c1a1ebdee9dc0167169e2cdbc4b3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: a11948b901e0f687b1daf537faa7b836c4618206
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62816508"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262969"
 ---
 # <a name="managing-backups-oracletosql"></a>Gestion des sauvegardes (OracleToSQL)
 Gestion des sauvegardes Oracle vous permet de sauvegarde et restauration de données de table avant ou après l’exécution d’un test. Vous pouvez également gérer le contenu de la sauvegarde avec la boîte de dialogue gérer du contenu de sauvegarde.  
   
 ## <a name="oracle-backup-management"></a>Gestion des sauvegardes Oracle  
   
-### <a name="backup"></a>Backup  
+### <a name="backup"></a>Sauvegarde  
 Pour ouvrir la boîte de dialogue sauvegarde, dans le testeur menu, pointez sur gestion des sauvegardes Oracle, puis cliquez sur sauvegarde... Dans la boîte de dialogue de sauvegarde, vous trouverez l’arborescence de métadonnées d’Oracle affichant toutes les tables du schéma Oracle chargé. Sélectionnez une ou plusieurs tables pour effectuer une sauvegarde.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  
@@ -36,7 +36,7 @@ Les boutons suivants sont disponibles dans la boîte de dialogue :
   
 -   Cliquez sur le **Annuler** bouton pour fermer la boîte de dialogue.  
   
-### <a name="restore"></a>Restaurer  
+### <a name="restore"></a>Restore  
 Pour ouvrir la boîte de dialogue de restauration, dans le menu de testeur, pointez sur la gestion de la sauvegarde Oracle, puis cliquez sur restauration... Vous y trouverez une arborescence contenant les tables disponibles dans la sauvegarde. Sélectionnez une ou plusieurs tables pour restaurer ses données.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  
@@ -61,7 +61,7 @@ Les boutons suivants sont disponibles dans la boîte de dialogue :
 ## <a name="sql-server-backup-management"></a>Gestion des sauvegardes SQL Server  
 Gestion des sauvegardes SQL Server vous permet de sauvegarde et restauration de données de table avant ou après l’exécution d’un test. Vous pouvez également gérer le contenu de la sauvegarde avec la boîte de dialogue gérer du contenu de sauvegarde.  
   
-### <a name="backup"></a>Backup  
+### <a name="backup"></a>Sauvegarde  
 Pour ouvrir la boîte de dialogue sauvegarde, dans le testeur menu, pointez sur gestion des sauvegardes SQL Server, puis cliquez sur sauvegarde... Dans la boîte de dialogue de sauvegarde, vous trouverez l’arborescence de métadonnées du serveur SQL affichant toutes les tables des bases de données SQL Server chargés. Sélectionnez une ou plusieurs tables pour effectuer une sauvegarde.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  
@@ -72,7 +72,7 @@ Les boutons suivants sont disponibles dans la boîte de dialogue :
   
 -   Cliquez sur le **Annuler** bouton pour fermer la boîte de dialogue.  
   
-### <a name="restore"></a>Restaurer  
+### <a name="restore"></a>Restore  
 Pour ouvrir la boîte de dialogue de restauration, dans le menu de testeur pointez sur gestion de sauvegarde SQL Server, la restauration, cliquez sur... Vous y trouverez une arborescence contenant les tables disponibles dans la sauvegarde. Sélectionnez un ou plusieurs table pour restaurer ses données.  
   
 Les boutons suivants sont disponibles dans la boîte de dialogue :  

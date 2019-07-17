@@ -10,12 +10,12 @@ ms.assetid: 40c1eb02-26b2-44ba-969d-6c430c61c281
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 57dde428be8a70b1476de390dbbd22549434c2ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9189087be52fbb23e8768dd64f0a63bb9d0fe480
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453507"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266989"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant pour Access (AccessToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour l’accès est un outil de migration des bases de données à partir de [!INCLUDE[msCoName](../../includes/msconame_md.md)] accéder aux versions 97 à 2010 à [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 / [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 sur Windows et Linux (version préliminaire) / [!INCLUDE[msCoName](../../includes/msconame_md.md)] base de données SQL Azure. SSMA pour Access convertit les objets de base de données Access à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de base de données SQL Azure, ceux des objets dans les charges [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, et, avant de migrer à partir de l’accès aux données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure.  

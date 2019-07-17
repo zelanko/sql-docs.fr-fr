@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-manager: craigg
-ms.openlocfilehash: d521a16fa7c18e67e1929cb0e38aecf862d6c18a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93a55b28325bd9b04af569120ad34baeb689e8f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124660"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem (Transact-SQL)
 
@@ -57,11 +56,11 @@ sp_enum_proxy_for_subsystem
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**subsystem_id**|**Int**|Numéro d'identification du sous-système|  
+|**subsystem_id**|**int**|Numéro d'identification du sous-système|  
 |**subsystem_name**|**sysname**|Nom du sous-système.|  
-|**proxy_id**|**Int**|Numéro d'identification du proxy.|  
+|**proxy_id**|**int**|Numéro d'identification du proxy.|  
 |**proxy_name**|**sysname**|Nom du proxy.|  
 | &nbsp; | &nbsp; | &nbsp; |
   
@@ -79,7 +78,7 @@ sp_enum_proxy_for_subsystem
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-all-associations"></a>A. Création de la liste de toutes les associations  
+### <a name="a-listing-all-associations"></a>R. Création de la liste de toutes les associations  
  L'exemple suivant répertorie toutes les autorisations établies entre des proxys et des sous-systèmes dans l'instance en cours.  
   
 ```sql

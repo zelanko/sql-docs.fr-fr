@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6f5129771e5d487075ad2223317047fbbb3c09fe
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211163"
 ---
 # <a name="sql-full-text-filter-daemon-launcher-service-tab"></a>Lanceur de démon de filtre de texte intégral SQL (onglet Service)
   À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], le lanceur de démon de filtre de texte intégral SQL (service de lancement FDHOST) est utilisé par la recherche en texte intégral [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce service doit être en cours d'exécution pendant que vous utilisez la recherche en texte intégral. Pour plus d’informations sur les processus hôtes de démon de filtre, consultez « Architecture de la recherche en texte intégral » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -47,11 +47,11 @@ ms.locfileid: "52803376"
  **Mode de démarrage**  
  Les options disponibles pour ce service sont les suivantes :  
   
--   Manuel : Ce service n'est pas automatiquement lancé au démarrage de l'ordinateur. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
+-   Manuelle : Ce service ne démarre pas automatiquement lorsque l’ordinateur démarre. Vous devez démarrer le service à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'un autre outil.  
   
--   Automatique : ce service essaie de se lancer au démarrage de cet ordinateur.  
+-   Automatique : Ce service essaie de se lancer au démarrage de cet ordinateur.  
   
--   Désactivé : ce service ne peut pas être démarré.  
+-   Désactivé : Ce service ne peut pas être démarré.  
   
  **État**  
  Indique si ce service est en cours d'exécution, arrêté ou désactivé. « **…** » indique qu’un changement d’état est en attente.  

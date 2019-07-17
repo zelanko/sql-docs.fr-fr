@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5af1233e81c996e98287a637e01ad1d249671303
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee1a0cc83b55fc265ae2bb490fd9d5e11fd73f22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129623"
 ---
 # <a name="msdatatypemappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSdatatype_mappings** vue mappe les types de données SQL Server pour les types de données utilisés par les systèmes de gestion de base de données non SQL Server (SGBD). Cette table est stockée dans le **msdb** base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**dbms_name**|**nvarchar(128)**|Est le nom du SGBD. Voici les valeurs possibles et leurs descriptions.<br /><br /> **MSSQLSERVER**: La destination est une base de données SQL Server.<br />**ORACLE**: Base de données Oracle de destination.<br />**DB2**: Base de données IBM DB2 de destination.<br />**SYBASE**: Base de données Sybase de destination.|  
 |**sql_type**|**nvarchar(128)**|Est le type de données SQL Server.|  

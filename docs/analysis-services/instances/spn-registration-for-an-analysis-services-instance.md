@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7b4516470b1b55c697cbfee065dbf53c3187a6a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526494"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209418"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Inscription du nom SPN pour une instance Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "52526494"
 |Compte de service|Il s'agit du compte de démarrage du service Windows **MSSQLServerOLAPService** . Ce peut être un compte d'utilisateur de domaine Windows, un compte virtuel, un compte de service administré ou un compte intégré comme un SID par service, un NetworkService, ou un LocalSystem. Un compte d’utilisateur de domaine Windows peut être mise en forme en tant que domaine\utilisateur ou user@domain.|  
   
 ##  <a name="bkmk_virtual"></a> Inscription du nom SPN pour un compte virtuel  
- Les comptes virtuels correspondent au type de compte par défaut des services SQL Server. Le compte virtuel est **NT Service\MSOLAPService** pour une instance par défaut et **NT Service\MSOLAP$**\<instance-name > pour une instance nommée.  
+ Les comptes virtuels correspondent au type de compte par défaut des services SQL Server. Le compte virtuel est **NT Service\MSOLAPService** pour une instance par défaut et **NT Service\MSOLAP$** \<instance-name > pour une instance nommée.  
   
  Comme son nom l'indique, ce type de compte n'existe pas dans Active Directory. Un compte virtuel n'existe que sur l'ordinateur local. Lors de la connexion à des périphériques, des applications ou des services externes, la connexion est établie à l'aide du compte d'ordinateur local. Pour cette raison, une inscription du nom SPN pour Analysis Services s'exécutant sous un compte virtuel correspond en fait à une inscription SPN pour le compte d'ordinateur.  
   
@@ -93,7 +93,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Exemple de syntaxe pour une instance nommée exécutée en tant que NT Service\MSOLAP$\<instance-name >**  
   
- Cet exemple illustre la syntaxe **setspn** pour une instance nommée s'exécutant sous le compte virtuel par défaut. Dans cet exemple, le nom d’hôte de l’ordinateur est **AW-SRV02** et le nom de l’instance **AW-FINANCE**. Là encore, il est le compte d’ordinateur qui est spécifié pour le SPN, plutôt que le compte virtuel **NT Service\MSOLAP$**\<instance-name >.  
+ Cet exemple illustre la syntaxe **setspn** pour une instance nommée s'exécutant sous le compte virtuel par défaut. Dans cet exemple, le nom d’hôte de l’ordinateur est **AW-SRV02** et le nom de l’instance **AW-FINANCE**. Là encore, il est le compte d’ordinateur qui est spécifié pour le SPN, plutôt que le compte virtuel **NT Service\MSOLAP$** \<instance-name >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  

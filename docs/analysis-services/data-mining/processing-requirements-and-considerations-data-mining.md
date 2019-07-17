@@ -1,5 +1,5 @@
 ---
-title: Le traitement de la configuration requise et considérations (exploration de données) | Documents Microsoft
+title: Traitement des exigences et considérations (exploration de données) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4228f5ae90f7fdd2510787b6fca6ad10f7302e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016146"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182471"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Exigences et considérations concernant le traitement (exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,13 +58,13 @@ ms.locfileid: "34016146"
   
  Les modèles d'exploration de données sont également traités dans les scénarios suivants :  
   
- **Déploiement d’un projet**: en fonction des paramètres et de l’état actuel du projet, les modèles d’exploration de données du projet sont généralement traités intégralement quand le projet est déployé.  
+ **Déploiement d’un projet**: Selon les paramètres du projet et l’état actuel du projet, les modèles d’exploration de données dans le projet sont généralement traités intégralement lorsque le projet est déployé.  
   
  Lorsque vous commencez le déploiement, le traitement démarre automatiquement, à moins qu'il n'existe une version préalablement traitée sur le serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et qu'aucune modification sur la structure n'ait eu lieu. Vous pouvez déployer un projet en sélectionnant **Déployer la solution** dans la liste déroulante ou en appuyant sur la touche F5. Plusieurs possibilités s'offrent à vous :  
   
  Pour plus d’informations sur la définition des propriétés de déploiement d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui contrôlent la manière dont les modèles d’exploration de données sont déployés, consultez [Déploiement de solutions d’exploration de données](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md).  
   
- **Déplacement d’un modèle d’exploration de données**: quand vous déplacez un modèle d’exploration de données à l’aide de la commande EXPORT, seule la définition du modèle est exportée, laquelle comprend le nom de la structure d’exploration de données qui doit fournir des données au modèle.  
+ **Déplacement d’un modèle d’exploration de données**: Lorsque vous déplacez un modèle d’exploration de données à l’aide de la commande d’exportation, uniquement la définition du modèle est exportée, qui inclut le nom de la structure d’exploration de données qui est censé fournir des données au modèle.  
   
  Exigences de retraitement pour les scénarios suivants utilisant les commandes EXPORT et IMPORT :  
   
@@ -83,8 +83,8 @@ ms.locfileid: "34016146"
  Pour plus d’informations, consultez [Exporter et importer des objets d’exploration de données](../../analysis-services/data-mining/export-and-import-data-mining-objects.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Structures d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Les Structures d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Structures d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Structures d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

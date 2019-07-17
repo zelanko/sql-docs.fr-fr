@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145704"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209200"
 ---
 # <a name="actions-in-multidimensional-models"></a>Actions dans les modèles multidimensionnels
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "50145704"
   
 -   Membres de hiérarchie  
   
--   Level  
+-   Niveau  
   
 -   Membres de niveau  
   
@@ -52,7 +52,7 @@ ms.locfileid: "50145704"
  **Contenu d'action**  
  Sélectionnez le type d'action. Le tableau suivant récapitule les types disponibles.  
   
-|Type|Description|  
+|type|Description|  
 |----------|-----------------|  
 |Jeu de données|Récupère un dataset.|  
 |Propriétaire|Effectue une opération en utilisant une interface différente de celles répertoriées dans ce tableau.|  
@@ -67,7 +67,7 @@ ms.locfileid: "50145704"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|**Invocation**|Détermine le mode d'exécution de l'action. Le mode interactif, qui est celui par défaut, spécifie que l'action est exécutée lorsqu'un utilisateur accède à un objet. Les paramètres possibles sont :<br /><br /> Traitement<br /><br /> Interactif<br /><br /> À l’ouverture|  
+|**Invocation**|Détermine le mode d'exécution de l'action. Le mode interactif, qui est celui par défaut, spécifie que l'action est exécutée lorsqu'un utilisateur accède à un objet. Les paramètres possibles sont :<br /><br /> Batch<br /><br /> Interactif<br /><br /> À l’ouverture|  
 |**Application**|Décrit l'application de l'action.|  
 |**Description**|Décrit l'action.|  
 |**Légende**|Fournit une légende qui s'affiche pour l'action. Si la légende est au format MDX, spécifiez **True** pour **La légende est MDX**.|  

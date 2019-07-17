@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b9276d0a8684023d8e6dba1a890b5f1698a017a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700327"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181984"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Effacer les caches Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "51700327"
   
  L'effacement du cache requiert la fourniture d'un identificateur d'objet à l'instruction **ClearCache** dans une requête XMLA. La première étape de cette rubrique explique comment obtenir un identificateur d'objet.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Étape 1 : obtenir l'identificateur d'objet  
+#### <a name="step-1-get-the-object-identifier"></a>Étape 1 : Obtenir l’identificateur d’objet  
   
 1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur un objet, sélectionnez **Propriétés**et copiez la valeur de la propriété ID dans le volet **Propriétés** . Cette approche fonctionne pour la base de données, le cube, la dimension ou la table.  
   
 2.  Pour obtenir l’ID d’un groupe de mesures, cliquez avec le bouton droit sur le groupe de mesures et sélectionnez **Générer un script du groupe de mesures en tant que**. Choisissez **Create** ou **Alter**, et envoyez la requête dans une fenêtre. L'ID du groupe de mesures sera visible dans la définition de l'objet. Copiez l'ID de la définition d'objet.  
   
-#### <a name="step-2-run-the-query"></a>Étape 2 : exécuter la requête  
+#### <a name="step-2-run-the-query"></a>Étape 2 : Exécutez la requête  
   
 1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], cliquez avec le bouton droit sur une base de données, pointez sur **Nouvelle requête**, puis sélectionnez **XMLA**.  
   

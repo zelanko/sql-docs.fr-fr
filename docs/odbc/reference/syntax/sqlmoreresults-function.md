@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bf169ed5-4d55-412c-b184-12065a726e89
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cd3569425a862efd662c894c6839eb6df0f767e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ca7ed4f6bbcd31b8f67b95dc14a2c6c301b5a59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138828"
 ---
 # <a name="sqlmoreresults-function"></a>Fonction SQLMoreResults
 **Conformité**  
@@ -47,7 +46,7 @@ SQLRETURN SQLMoreResults(
  [Entrée] Descripteur d’instruction.  
   
 ## <a name="returns"></a>Valeur renvoyée  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE, OR SQL_PARAM_DATA_AVAILABLE.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE OU SQL_PARAM_DATA_AVAILABLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
  Lorsque **SQLMoreResults** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL _HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLMoreResults** et explique chacune dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  

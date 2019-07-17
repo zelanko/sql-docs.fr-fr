@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c3a0eee5477b249bcde144aa6933851b2f61d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 540a6a27a38ad7e7f749428c93773856bcc2cb89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130900"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copie en bloc à partir de variables de programme
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,8 +70,8 @@ ms.locfileid: "63014041"
 |SQL_TINYINT (signé)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_TINYINT (non signé)|SQL_C_UTINYINT|SQLINT1|**tinyint**|  
 |SQL_SMALL_INT (signé)|SQL_C_SSHORT|SQLINT2|**smallint**|  
-|SQL_SMALL_INT (non signé)|SQL_C_SLONG|SQLINT4|**Int**<br /><br /> **entier**|  
-|SQL_INTEGER (signé)|SQL_C_SLONG|SQLINT4|**Int**<br /><br /> **entier**|  
+|SQL_SMALL_INT (non signé)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **entier**|  
+|SQL_INTEGER (signé)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **entier**|  
 |SQL_INTEGER (non signé)|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **dec**|  
 |SQL_BIGINT (signé et non signé)|SQL_C_CHAR|SQLCHARACTER|**bigint**|  
 |SQL_REAL|SQL_C_FLOAT|SQLFLT4|**real**|  

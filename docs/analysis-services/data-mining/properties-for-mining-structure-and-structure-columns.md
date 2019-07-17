@@ -1,5 +1,5 @@
 ---
-title: Propriétés de Structure d’exploration de données et les colonnes de Structure | Documents Microsoft
+title: Propriétés de Structure d’exploration de données et les colonnes de Structure | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 72f89879ac7b50f35af283e13b25fb8c8b439b2d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017136"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182447"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propriétés des colonnes de structure et des structure d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "34017136"
   
 ### <a name="properties-of-the-mining-structure"></a>Propriétés de la structure d'exploration de données  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
-|**CacheMode**|Spécifie si les cas utilisés dans le cadre de l'apprentissage doivent être mis en cache ou supprimés à la fin de la formation. **Note :**  Cette propriété doit avoir la valeur **KeepTrainingCases** pour activer l’extraction et les données d’exclusion.|  
+|**CacheMode**|Spécifie si les cas utilisés dans le cadre de l'apprentissage doivent être mis en cache ou supprimés à la fin de la formation. **Remarque :**  Cette propriété doit être définie sur **KeepTrainingCases** pour activer l’extraction et les données d’exclusion.|  
 |**Classement**|Spécifie le classement par défaut de la colonne. Si aucun n'est spécifié, le classement du serveur est utilisé.|  
 |**Description**|Décrit la structure d'exploration de données. Il est recommandé que la description indique la fonction et la composition des données dans la structure.|  
 |**ErrorConfiguration (par défaut)**|Spécifie les options relatives à la gestion spéciale des erreurs, le cas échéant.|  
-|**HoldoutMaxCases**|Spécifie le nombre maximal de cas de structure qui peuvent être réservés en tant que jeu de données de test.  Si des valeurs sont spécifiées pour **HoldoutMaxCases** et **HoldoutPercent**, les conditions sont combinées. **Note :**  Pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit être défini sur **KeepTrainingCases**.|  
-|**HoldoutPercent**|Spécifie le pourcentage de cas de structure à réserver comme jeu de données de test. Si des valeurs sont spécifiées pour **HoldoutMaxCases** et **HoldoutPercent**, les conditions sont combinées. **Note :**  Pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit être défini sur **KeepTrainingCases**.|  
-|**HoldoutSeed**|Spécifie une valeur de départ pour initialiser le partitionnement du jeu de test d'exclusion, afin de garantir que le jeu de données de test pourra être recréé. **Note :**  Pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit être défini sur **KeepTrainingCases**.|  
+|**HoldoutMaxCases**|Spécifie le nombre maximal de cas de structure qui peuvent être réservés en tant que jeu de données de test.  Si des valeurs sont spécifiées pour **HoldoutMaxCases** et **HoldoutPercent**, les conditions sont combinées. **Remarque :**  Pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit être définie sur **KeepTrainingCases**.|  
+|**HoldoutPercent**|Spécifie le pourcentage de cas de structure à réserver comme jeu de données de test. Si des valeurs sont spécifiées pour **HoldoutMaxCases** et **HoldoutPercent**, les conditions sont combinées. **Remarque :**  Pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit être définie sur **KeepTrainingCases**.|  
+|**HoldoutSeed**|Spécifie une valeur de départ pour initialiser le partitionnement du jeu de test d'exclusion, afin de garantir que le jeu de données de test pourra être recréé. **Remarque :**  Pour définir cette propriété, <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> doit être définie sur **KeepTrainingCases**.|  
 |**ID**|Affiche l'identificateur unique de la structure d'exploration de données.<br /><br /> Le nom que vous avez attribué à la structure d'exploration de données lorsque vous l'avez créée est utilisé comme ID. Si vous changez ultérieurement le nom en tapant une nouvelle valeur pour la propriété **Nom** , le nouveau nom est utilisé seulement comme alias ; l’ID ne change pas.|  
 |**Langage**|Spécifie la langue des légendes dans la structure d'exploration de données.|  
 |**Nom**|Spécifie le nom ou l'alias de la structure d'exploration de données.<br /><br /> Si vous modifiez la valeur de la propriété Name, le nouveau nom est utilisé comme légende ou alias uniquement ; l'identificateur de la structure d'exploration de données ne change pas.|  
@@ -48,7 +48,7 @@ ms.locfileid: "34017136"
   
 ### <a name="properties-of-the-mining-structure-columns"></a>Oropriétés des colonnes de la structure d'exploration de données  
   
-|Propriété| Description|  
+|Propriété|Description|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|Identifie la colonne qu'une colonne classifiée décrit.|  
 |**Contenu**|Type de contenu de la colonne.|  
@@ -62,14 +62,14 @@ ms.locfileid: "34017136"
 |**ModelingFlags**|Spécifie des paramètres supplémentaires rendus disponibles par l'algorithme.|  
 |**Nom**|Nom de la colonne.|  
 |**NameColumn**|Identifie la colonne qui fournit le nom de l'élément parent.|  
-|**Source**|Affiche la source de la colonne.<br /><br /> Pour les sources de données relationnelles, la valeur est toujours **(aucun)**.<br /><br /> Pour les structures basées sur un cube OLAP, la valeur est l'instruction MDX qui définit la coupe utilisée comme source pour la table imbriquée.|  
-|**SourceMeasureGroup**|Affiche la source du groupe de mesures.<br /><br /> Pour les sources de données relationnelles, la valeur est toujours **(aucun)**.<br /><br /> Pour les structures basées sur un cube OLAP, la valeur est l'instruction MDX qui définit la coupe utilisée comme source pour la table imbriquée.|  
+|**Source**|Affiche la source de la colonne.<br /><br /> Pour les sources de données relationnelles, la valeur est toujours **(aucun)** .<br /><br /> Pour les structures basées sur un cube OLAP, la valeur est l'instruction MDX qui définit la coupe utilisée comme source pour la table imbriquée.|  
+|**SourceMeasureGroup**|Affiche la source du groupe de mesures.<br /><br /> Pour les sources de données relationnelles, la valeur est toujours **(aucun)** .<br /><br /> Pour les structures basées sur un cube OLAP, la valeur est l'instruction MDX qui définit la coupe utilisée comme source pour la table imbriquée.|  
 |**Type**|Type de données pour le contenu de la colonne.|  
   
  Pour plus d’informations sur la définition ou la modification des propriétés, consultez [Tâches de la structure d’exploration de données et procédures](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer une structure d'exploration de données relationnelle](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
- [Colonnes de structure d'exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)  
+ [Colonnes de structure d’exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)  
   
   

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: c1d4ed20-ad3b-4e33-a26b-38d7517237b7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b5d65c5df2d1ebc1e2b0435e02bd9668f3feb18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3ad8fa44e5222406f16be09a6157f96fac6b345
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128684"
 ---
 # <a name="data-source-objects-ole-db"></a>Objets source de données (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47627167"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilise la terme source de données pour l’ensemble des interfaces OLE DB utilisé pour établir un lien vers un magasin de données, tel que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Création d’une instance de l’objet de source de données du fournisseur est la première tâche d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consommateur de Native Client.  
   
- Chaque fournisseur OLE DB déclare un identificateur de classe (CLSID) pour lui-même. Le CLSID de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif est le GUID CLSID_SQLNCLI10 de C/C++ (le symbole SQLNCLI_CLSID est converti correct progid dans le fichier sqlncli.h que vous référencez). Avec le CLSID, le consommateur utilise la fonction OLE **CoCreateInstance** pour fabriquer une instance de l’objet source de données.  
+ Chaque fournisseur OLE DB déclare un identificateur de classe (CLSID) pour lui-même. Le CLSID de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif est le C /C++ GUID CLSID_SQLNCLI10 (le symbole SQLNCLI_CLSID est converti correct progid dans le fichier sqlncli.h que vous référencez). Avec le CLSID, le consommateur utilise la fonction OLE **CoCreateInstance** pour fabriquer une instance de l’objet source de données.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client est un serveur in-process. Instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets de fournisseur OLE DB Native Client sont créés à l’aide de la macro CLSCTX_INPROC_SERVER de manière à indiquer le contexte exécutable.  
   

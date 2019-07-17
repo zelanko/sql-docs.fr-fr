@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7f593dafc1a734cd5f3a0c9fde4f47987f0b92af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685607"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207408"
 ---
 # <a name="create-relationships"></a>Créer des relations
 
@@ -58,7 +58,7 @@ Avant de poursuivre la création de votre modèle, vous devez vérifier ces rela
   
 3.  Vérifier que les relations suivantes ont été créées lorsque chacune des tables ont été importées à partir de la base de données AdventureWorksDW :  
   
-    |Actif|Table de charge de travail|Table de recherche associée|  
+    |Actif|Table|Table de recherche associée|  
     |----------|---------|------------------------|  
     |Oui|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
     |Oui|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
@@ -72,7 +72,7 @@ Avant de poursuivre la création de votre modèle, vous devez vérifier ces rela
 
 Dans la vue de diagramme, notez une flèche, un astérisque et un nombre sur les lignes qui indiquent la relation entre les tables.
 
-![as-lesson4-line](../tutorial-tabular-1400/media/as-lesson4-line.png)
+![en tant que ligne de lesson4](../tutorial-tabular-1400/media/as-lesson4-line.png)
 
 La flèche indique la direction du filtre. L’astérisque indique que cette table est la *nombreux* côté dans la cardinalité de la relation et celui qui contient cette table est la *un* côté de la relation. Si vous avez besoin modifier une relation ; par exemple, modifier la direction du filtrage de la relation ou sa cardinalité, double-cliquez sur la ligne de relation pour ouvrir la boîte de dialogue Modifier la relation.
 
@@ -88,7 +88,7 @@ Dans certains cas, vous devrez peut-être créer des relations supplémentaires 
 
     Une ligne pleine apparaît et indique que vous avez créé une relation active entre la **OrderDate** colonne dans le **Internet Sales** table et le **Date** colonne dans la  **Date** table. 
   
-      ![as-lesson4-new](../tutorial-tabular-1400/media/as-lesson4-new.png) 
+      ![en tant que-lesson4-nouveau](../tutorial-tabular-1400/media/as-lesson4-new.png) 
   
     > [!NOTE]  
     > Lorsque vous créez des relations, la direction de la cardinalité et de filtre entre la table primaire et de la table de recherche associée est automatiquement sélectionnée.  
@@ -99,9 +99,9 @@ Dans certains cas, vous devrez peut-être créer des relations supplémentaires 
   
 3.  Enfin, créez une dernière relation. Dans le **FactInternetSales** table, cliquez et maintenez le **ShipDate** colonne, puis faites glisser le curseur vers le **Date** colonne dans le **DimDate** table, puis relâchez.  
     
-     ![as-lesson4-newinactive](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
+     ![en tant que newinactive de lesson4](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
   
-## <a name="whats-next"></a>Quelle est l’étape suivante ?
+## <a name="whats-next"></a>Étapes suivantes
 
 [Leçon 5 : Créer des colonnes calculées](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).
   

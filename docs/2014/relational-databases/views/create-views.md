@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 27748ee6f4c70ebbcb4d1d28738130ddea07232b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134399"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211668"
 ---
 # <a name="create-views"></a>Créer des vues
   Vous pouvez créer des vues dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Une vue peut être utilisée aux fins suivantes :  
@@ -51,7 +51,7 @@ ms.locfileid: "54134399"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation CREATE VIEW dans la base de données et l'autorisation ALTER sur le schéma dans lequel la vue est créée.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -60,9 +60,9 @@ ms.locfileid: "54134399"
   
 1.  Dans l' **Explorateur d'objets**, développez la base de données dans laquelle vous souhaitez créer votre nouvelle vue.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Vues**, puis cliquez sur **Nouvelle vue...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Vues**, puis cliquez sur **Nouvelle vue...** .  
   
-3.  Dans le **ajouter une Table** boîte de dialogue, sélectionnez l’ou les éléments que vous souhaitez inclure dans votre nouvelle vue à partir d’un des onglets suivants : Tables, vues, fonctions et synonymes.  
+3.  Dans la boîte de dialogue **Ajouter une table**, sélectionnez le ou les éléments que vous souhaitez inclure dans votre nouvel affichage dans l'un des onglets suivants : Tables, affichages, fonctions et synonymes.  
   
 4.  Cliquez sur **Ajouter**, puis sur **Fermer**.  
   

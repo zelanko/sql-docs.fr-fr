@@ -19,33 +19,32 @@ helpviewer_keywords:
 ms.assetid: ad3548bc-4780-4821-b962-b421d52daed9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 349abe5ccc5fb36ee6c3568e97163e6eb665f633
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe249cd389e71fa5565e2877fba46b47cf0a4f38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47594670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108784"
 ---
 # <a name="syssystemsqlmodules-transact-sql"></a>sys.system_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie une ligne par objet système qui contient un module défini par le langage SQL. Les objets système de type FN, IF, P, PC, TF, V sont associés à un module SQL. Pour identifier l’objet conteneur, vous pouvez joindre cette vue à [sys.system_objects](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|Numéro d'identification de l'objet conteneur, unique dans une base de données.|  
-|**Définition**|**nvarchar(max)**|Texte SQL qui définit ce module.|  
+|**object_id**|**int**|Numéro d'identification de l'objet conteneur, unique dans une base de données.|  
+|**definition**|**nvarchar(max)**|Texte SQL qui définit ce module.|  
 |**uses_ansi_nulls**|**bit**|1 = Le module a été créé lorsque l'option de base de données SET ANSI_NULLS était activée (ON).<br /><br /> Retourne toujours 1.|  
 |**uses_quoted_identifier**|**bit**|1 = Le module a été créé avec l'instruction SET QUOTED_IDENTIFIER ON.<br /><br /> Retourne toujours 1.|  
 |**is_schema_bound**|**bit**|0 = Le module n'a pas été créé avec l'option SCHEMABINDING.<br /><br /> Retourne toujours 0.|  
 |**uses_database_collation**|**bit**|0 = Le module ne dépend pas du classement par défaut de la base de données.<br /><br /> Retourne toujours 0.|  
 |**is_recompiled**|**bit**|0 = La procédure n'a pas été créée en utilisant l'option WITH RECOMPILE.<br /><br /> Retourne toujours 0.|  
 |**null_on_null_input**|**bit**|0 = Le module n'a pas été créé pour produire un résultat NULL pour toute entrée NULL.<br /><br /> Retourne toujours 0.|  
-|**execute_as_principal_id**|**Int**|Retourne toujours la valeur NULL|  
+|**execute_as_principal_id**|**int**|Retourne toujours la valeur NULL|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

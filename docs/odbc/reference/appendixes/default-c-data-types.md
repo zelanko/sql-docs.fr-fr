@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 229140ae-af8f-4ec8-9ccf-1e92360e0bac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c4147b1bfa5ffb1e379c3aa8be2c9ea2a9d2775
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9e0a9b8e85967ce46344e824c03e74fe3552e7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130014"
 ---
 # <a name="default-c-data-types"></a>Types de données C par défaut
 Si une application spécifie SQL_C_DEFAULT dans **SQLBindCol**, **SQLGetData**, ou **SQLBindParameter**, le pilote part du principe que les type de données C de la sortie ou la mémoire tampon d’entrée correspond au type de données SQL de la colonne ou du paramètre auquel est liée la mémoire tampon.  

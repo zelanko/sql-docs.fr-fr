@@ -20,12 +20,12 @@ ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9f44724282761f071cd28d8cbe200855cb14f69
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 491ec37d96cf6bdb2b074efb42a54406beb1fd20
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004853"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264405"
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,8 +43,8 @@ ms.locfileid: "68004853"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**smallint**|ID de la base de données sur laquelle la table ou la vue est définie.|  
-|**object_id**|**Int**|ID de la table ou de la vue sur laquelle l'index est défini.|  
-|**index_id**|**Int**|Identificateur de l'index.|  
+|**object_id**|**int**|ID de la table ou de la vue sur laquelle l'index est défini.|  
+|**index_id**|**int**|Identificateur de l'index.|  
 |**user_seeks**|**bigint**|Nombre de recherches par requête utilisateur.|  
 |**user_scans**|**bigint**|Nombre d’analyses par requête utilisateur qui n’utilise pas « prédicat de recherche ».|  
 |**user_lookups**|**bigint**|Nombre de recherches de signets par les requêtes utilisateur.|  
@@ -61,7 +61,7 @@ ms.locfileid: "68004853"
 |**last_system_scan**|**datetime**|Heure de la dernière analyse système.|  
 |**last_system_lookup**|**datetime**|Heure de la dernière recherche système.|  
 |**last_system_update**|**datetime**|Heure de la dernière mise à jour système.|  
-|pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
 ## <a name="remarks"></a>Notes  
  Chaque recherche, analyse ou mise à jour individuelle sur l'index spécifié par l'exécution d'une requête, est comptée comme utilisation de cet index et augmente d'une unité le compteur correspondant dans cette vue. Les informations sont renvoyées pour les opérations générées par des requêtes soumises par l'utilisateur et pour les opérations générées par des requêtes internes, telles que des analyses pour le recueil de statistiques.  
@@ -76,7 +76,7 @@ ms.locfileid: "68004853"
   
 ## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.  
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.  
   
 ## <a name="see-also"></a>Voir aussi  
 

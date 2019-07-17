@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e80d5790f78c83a8a1ff3059e12e0946e206c060
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52795831"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211450"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Créer un travail principal SQL Server Agent
   Cette rubrique explique comment créer un travail principal [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -32,7 +32,7 @@ ms.locfileid: "52795831"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Les travaux distribués dont les étapes sont associées à un proxy sont exécutés dans le contexte du compte proxy du serveur cible. Assurez-vous que les conditions suivantes sont remplies ou que les étapes de travail associées à un proxy ne seront pas téléchargées du serveur maître vers la cible :  
   
 -   La sous-clé de Registre **\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<*nom_instance*> \SQL Server Agent\AllowDownloadedJobsToMatchProxyName**(REG_DWORD) a pour valeur 1 (true). Par défaut, la valeur de cette sous-clé est 0 (False).  
@@ -53,7 +53,7 @@ ms.locfileid: "52795831"
   
 2.  Cliquez sur le signe plus (+) pour développer **Agent SQL Server**.  
   
-3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Nouveau travail...**.  
+3.  Cliquez avec le bouton droit sur le dossier **Travaux** et sélectionnez **Nouveau travail...** .  
   
 4.  Dans la boîte de dialogue **Nouveau travail** , sur la page **Général** , modifiez les propriétés générales du travail. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail et la nouvelle tâche &#40;Général Page&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   

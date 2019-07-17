@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9778d44f3a11bcea066aea3ef43d36489b5daded
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 87cb8f207d85220b88ef00d65fd4704b21becf63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106505"
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sys.sp_cdc_enable_db
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Capture de données modifiées ne peut pas être activée sur [bases de données système](../../relational-databases/databases/system-databases.md) ou bases de données de distribution.  

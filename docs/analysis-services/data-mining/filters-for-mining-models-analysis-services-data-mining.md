@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410666"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210008"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtres pour les modèles d'exploration de données (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52410666"
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Création des filtres de modèle à l'aide du Concepteur d'exploration de données  
  Vous filtrez un modèle dans le Concepteur d’exploration de données en modifiant la propriété **Filter** du modèle d’exploration de données. Vous pouvez taper directement une expression de filtre dans le volet **Propriétés** ou ouvrir une boîte de dialogue de filtre pour créer des conditions.  
   
- Il existe deux boîtes de dialogue de filtre. La première permet de créer des conditions appliquées à la table de cas. Si la source de données contient plusieurs tables, sélectionnez d'abord une table, puis sélectionnez une colonne et spécifiez les opérateurs et les conditions qui s'appliquent à cette colonne. Vous pouvez lier plusieurs conditions à l’aide des opérateurs **AND**/**OR** . Les opérateurs disponibles pour définir les valeurs varient selon que la colonne contient des valeurs discrètes ou continues. Par exemple, vous pouvez utiliser les opérateurs **supérieur à** et **inférieur à** avec les valeurs continues. Toutefois, pour les valeurs discrètes, vous pouvez uniquement utiliser les opérateurs **= (égal à)**, **!= (différent de)** et **IS NULL** .  
+ Il existe deux boîtes de dialogue de filtre. La première permet de créer des conditions appliquées à la table de cas. Si la source de données contient plusieurs tables, sélectionnez d'abord une table, puis sélectionnez une colonne et spécifiez les opérateurs et les conditions qui s'appliquent à cette colonne. Vous pouvez lier plusieurs conditions à l’aide des opérateurs **AND**/**OR** . Les opérateurs disponibles pour définir les valeurs varient selon que la colonne contient des valeurs discrètes ou continues. Par exemple, vous pouvez utiliser les opérateurs **supérieur à** et **inférieur à** avec les valeurs continues. Toutefois, pour les valeurs discrètes, vous pouvez uniquement utiliser les opérateurs **= (égal à)** , **!= (différent de)** et **IS NULL** .  
   
 > [!NOTE]  
 >  Le mot clé **LIKE** n’est pas pris en charge. Si vous voulez inclure plusieurs attributs discrets, vous devez créer des conditions séparées et les lier à l’aide de l’opérateur **OR** .  

@@ -1,5 +1,5 @@
 ---
-title: Outils d’exploration de données | Documents Microsoft
+title: Outils d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 70d08ebe145e64f21299f5e46d33bbc7ae41536f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015146"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210087"
 ---
 # <a name="data-mining-tools"></a>Outils d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "34015146"
 ## <a name="data-mining-wizard"></a>Assistant Exploration de données  
  Utilisez l'Assistant Exploration de données pour commencer la création de solutions d'exploration de données. Cet Assistant est facile et rapide à utiliser, et vous guide tout au long du processus de création d'une structure d'exploration de données et d'un modèle d'exploration de données initial qui lui est associé ; il inclut les tâches de sélection d'un type d'algorithme et d'une source de données, ainsi que la définition des données de cas utilisées pour l'analyse.  
   
- **Pour plus d’informations** : [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md).  
+ **Pour plus d’informations :** [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## <a name="data-mining-designer"></a>Concepteur d'exploration de données  
+## <a name="data-mining-designer"></a>Concepteur d’exploration de données  
  Après avoir créé une structure et un modèle d'exploration de données à l'aide de l'Assistant Exploration de données, vous pouvez utiliser le Concepteur d'exploration de données depuis [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour utiliser les structures et les modèles existants.  
   
  Le concepteur contient des outils permettant de réaliser ces tâches :  
@@ -64,7 +64,7 @@ ms.locfileid: "34015146"
 ## <a name="integration-services-data-mining-tasks-and-transformations"></a>Tâches et transformations d'exploration de données d'Integration Services  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit de nombreux composants qui prennent en charge l'exploration de données.  
   
- Certains outils dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont conçus pour vous aider à automatiser des tâches courantes d'exploration de données, y compris la prédiction, la création de modèles et le traitement. Par exemple :  
+ Certains outils dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sont conçus pour vous aider à automatiser des tâches courantes d'exploration de données, y compris la prédiction, la création de modèles et le traitement. Exemple :  
   
 -   Créez un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui met automatiquement à jour le modèle chaque fois que le dataset est actualisé avec de nouveaux clients  
   
@@ -72,7 +72,7 @@ ms.locfileid: "34015146"
   
 -   Générez automatiquement des modèles transmis aux paramètres.  
   
- Toutefois, vous pouvez également utiliser l'exploration de données dans un flux de travail de package, en tant qu'entrée à d'autres processus. Par exemple :  
+ Toutefois, vous pouvez également utiliser l'exploration de données dans un flux de travail de package, en tant qu'entrée à d'autres processus. Exemple :  
   
 -   Utilisez les valeurs de probabilité générées par le modèle pour pondérer les scores pour l'exploration de texte ou d'autres tâches de classification.  
   
@@ -80,12 +80,12 @@ ms.locfileid: "34015146"
   
 -   Utilisation de la régression logistique pour segmenter les clients entrants par risque.  
   
- **Pour plus d’informations** [Projets connexes pour des solutions d’exploration de données](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
+ **Pour plus d’informations :** [Projets connexes pour des solutions d’exploration de données](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Tâches liées aux modèles d’exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tâches du modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

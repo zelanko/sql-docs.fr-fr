@@ -20,12 +20,12 @@ ms.assetid: a5052701-edbf-4209-a7cb-afc9e65c41c1
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6dd627a8361b29157b4e45bcba04dc78c72f26bf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ca20c4a8719ee6a80bd6a3c349dd50c8b0df81d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899766"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258713"
 ---
 # <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,14 +47,14 @@ ms.locfileid: "67899766"
 |usermode_time|**bigint**|Temps utilisateur utilisé par ce thread.|  
 |stack_base_address|**varbinary(8)**|Adresse mémoire haute de la pile de ce thread.|  
 |stack_end_address|**varbinary(8)**|Adresse mémoire basse de la pile de ce thread.|  
-|stack_bytes_committed|**Int**|Nombre d'octets validés dans la pile.|  
-|stack_bytes_used|**Int**|Nombre d'octets actuellement utilisés activement sur le thread.|  
+|stack_bytes_committed|**int**|Nombre d'octets validés dans la pile.|  
+|stack_bytes_used|**int**|Nombre d'octets actuellement utilisés activement sur le thread.|  
 |affinité|**bigint**|Masque d'UC sur lequel s'exécute ce thread. Cela dépend de la valeur configurée par le **ALTER SERVER CONFIGURATION SET PROCESS AFFINITY** instruction. Peut être différent du planificateur en cas d'affinité logicielle.|  
-|Priorité|**int**|Priorité du thread.|  
-|Paramètres régionaux|**Int**|Indicateur de paramètres régionaux mis en cache (LCID) pour le thread.|  
+|Priorité|**Int**|Priorité du thread.|  
+|Paramètres régionaux|**int**|Indicateur de paramètres régionaux mis en cache (LCID) pour le thread.|  
 |Jeton|**varbinary(8)**|Descripteur du jeton d'emprunt d'identité mis en cache pour le thread.|  
 |is_impersonating|**int**|Indique si ce thread utilise l'emprunt d'identité Win32.<br /><br /> 1 = Le thread utilise des informations d'autorisation sécurisées différentes des informations par défaut du processus. Cela indique que le thread emprunte l'identité d'une entité différente de celle qui a créé le processus.|  
-|is_waiting_on_loader_lock|**Int**|État du système d'exploitation qui indique si le thread attend le verrou du chargeur.|  
+|is_waiting_on_loader_lock|**int**|État du système d'exploitation qui indique si le thread attend le verrou du chargeur.|  
 |fiber_data|**varbinary(8)**|Fibre Win32 actuelle en cours d'exécution sur le thread. S'applique uniquement lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour le regroupement léger.|  
 |thread_handle|**varbinary(8)**|À usage interne uniquement|  
 |event_handle|**varbinary(8)**|À usage interne uniquement|  
@@ -68,7 +68,7 @@ ms.locfileid: "67899766"
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
 
 ## <a name="notes-on-linux-version"></a>Remarques sur la version de Linux
 

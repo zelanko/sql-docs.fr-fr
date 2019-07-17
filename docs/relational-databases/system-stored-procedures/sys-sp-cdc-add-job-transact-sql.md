@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106544"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @job_type = ] 'job\_type'` Type de travail à ajouter. *type_du_travail* est **nvarchar (20)** et ne peut pas être NULL. Les entrées valides sont **'capture'** et **'cleanup'**.  
+`[ @job_type = ] 'job\_type'` Type de travail à ajouter. *type_du_travail* est **nvarchar (20)** et ne peut pas être NULL. Les entrées valides sont **'capture'** et **'cleanup'** .  
   
 `[ @start_job = ] start_job` Indicateur qui spécifie si le travail doit être démarré immédiatement après son ajout. *START_JOB* est **bits** avec 1 comme valeur par défaut.  
   
@@ -83,14 +82,14 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Un travail de nettoyage est créé en utilisant les valeurs par défaut lorsque la première table dans la base de données est activée pour la capture des données modifiées. Un travail de capture est créé en utilisant les valeurs par défaut lorsque la première table dans la base de données est activée pour la capture des données modifiées et qu'aucune publication transactionnelle n'existe pour la base de données. Lorsqu'une publication transactionnelle existe, le lecteur de journal transactionnel est utilisé pour conduire le mécanisme de capture et un travail de capture séparé n'est ni requis ni autorisé.  
   
  Dans la mesure où les travaux de capture et de nettoyage sont créés par défaut, cette procédure stockée est nécessaire uniquement lorsqu'un travail a été supprimé explicitement et doit être recréé.  
   
- Le nom de la tâche est **cdc.**  _\<base de données\_nom\>_**\_nettoyage** ou **cdc.**  _\<base de données\_nom\>_**\_capturer**, où *< nom_base_de_données >* est le nom de la base de données actuelle. Si un travail portant le même nom existe déjà, le nom est ajouté avec une période (**.**) suivi d’un identificateur unique, par exemple : **capture de données modifiées. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ Le nom de la tâche est **cdc.**  _\<base de données\_nom\>_ **\_nettoyage** ou **cdc.**  _\<base de données\_nom\>_ **\_capturer**, où *< nom_base_de_données >* est le nom de la base de données actuelle. Si un travail portant le même nom existe déjà, le nom est ajouté avec une période ( **.** ) suivi d’un identificateur unique, par exemple : **capture de données modifiées. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Pour afficher la configuration actuelle d’un travail de nettoyage ou de capture, utilisez [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Pour modifier la configuration d’un travail, utilisez [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   
@@ -99,7 +98,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-capture-job"></a>A. Création d'un travail de capture  
+### <a name="a-creating-a-capture-job"></a>R. Création d'un travail de capture  
  L'exemple suivant crée un travail de capture. Cet exemple suppose que le travail de nettoyage existant a été supprimé explicitement et doit être recréé. Le travail est créé en utilisant les valeurs par défaut.  
   
 ```  

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5473d741f5144338c99627e1057c51ce116093d6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130289"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206842"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copie en bloc à partir de variables de programme
   Vous pouvez effectuer une copie en bloc directement à partir de variables de programme. Après avoir alloué des variables pour stocker les données pour une ligne et l’appel [bcp_init](../native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) pour démarrer la copie en bloc, appelez [bcp_bind](../native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) pour chaque colonne pour spécifier l’emplacement et le format de la variable de programme à associer avec la colonne. Remplissez chaque variable avec des données, puis appelez [bcp_sendrow](../native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) pour envoyer une ligne de données sur le serveur. Répétez le processus de remplissage des variables et d’appel **bcp_sendrow** jusqu'à ce que toutes les lignes ont été envoyés au serveur, puis appelez [bcp_done](../native-client-odbc-extensions-bulk-copy-functions/bcp-done.md) pour spécifier que l’opération est terminée.  
@@ -66,8 +66,8 @@ ms.locfileid: "54130289"
 |SQL_TINYINT (signé)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_TINYINT (non signé)|SQL_C_UTINYINT|SQLINT1|**tinyint**|  
 |SQL_SMALL_INT (signé)|SQL_C_SSHORT|SQLINT2|**smallint**|  
-|SQL_SMALL_INT (non signé)|SQL_C_SLONG|SQLINT4|**Int**<br /><br /> **entier**|  
-|SQL_INTEGER (signé)|SQL_C_SLONG|SQLINT4|**Int**<br /><br /> **entier**|  
+|SQL_SMALL_INT (non signé)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **entier**|  
+|SQL_INTEGER (signé)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **entier**|  
 |SQL_INTEGER (non signé)|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **dec**|  
 |SQL_BIGINT (signé et non signé)|SQL_C_CHAR|SQLCHARACTER|**bigint**|  
 |SQL_REAL|SQL_C_FLOAT|SQLFLT4|**real**|  

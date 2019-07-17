@@ -19,12 +19,12 @@ ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759918"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259927"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Bien démarrer avec l’Assistant Migration SQL Server pour l’accès (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour l’accès vous permet de convertir rapidement accéder aux objets de base de données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de base de données SQL Azure, téléchargez les objets résultants dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure, et migrer des données à partir de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure. Si nécessaire, vous pouvez également lier des tables de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou sur des tables de base de données SQL Azure afin que vous pouvez continuer à utiliser vos applications frontales Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure.  
@@ -118,8 +118,8 @@ SSMA contient les menus suivants :
   
 |Menu|Description|  
 |--------|---------------|  
-|**Fichier**|Contient des commandes pour l’Assistant de Migration, travaillez avec des projets, ajout et suppression des fichiers de base de données Access et la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure.|  
-|**Modifier**|Contient des commandes pour la recherche et de travailler avec du texte dans les pages de détails, telles que la copie [!INCLUDE[tsql](../../includes/tsql-md.md)] depuis le volet de détails SQL. Pour ouvrir le **gérer les signets** boîte de dialogue, dans le menu Edition, cliquez sur Gérer les signets. Dans la boîte de dialogue, vous verrez une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
+|**File**|Contient des commandes pour l’Assistant de Migration, travaillez avec des projets, ajout et suppression des fichiers de base de données Access et la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure.|  
+|**Edition**|Contient des commandes pour la recherche et de travailler avec du texte dans les pages de détails, telles que la copie [!INCLUDE[tsql](../../includes/tsql-md.md)] depuis le volet de détails SQL. Pour ouvrir le **gérer les signets** boîte de dialogue, dans le menu Edition, cliquez sur Gérer les signets. Dans la boîte de dialogue, vous verrez une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
 |**Affichage**|Contient le **synchroniser les explorateurs de métadonnées** commande. Cette opération synchronise les objets entre l’Explorateur de métadonnées d’accès et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l’Explorateur de métadonnées de base de données SQL Azure. Contient également des commandes pour afficher et masquer le **sortie** et **liste d’erreurs** volets et une option **dispositions** pour gérer les mises en page.|  
 |**Outils**|Contient des commandes pour créer des rapports, exporter des données, migrer des objets et données, liez des tables et fournit des boîtes de dialogue Paramètres d’accès au déploiement global et projet.|  
 |**Aide**|Fournit l’accès à l’aide de SSMA et en le **sur** boîte de dialogue.|  

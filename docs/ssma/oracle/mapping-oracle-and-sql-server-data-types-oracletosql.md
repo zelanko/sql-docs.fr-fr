@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 06e538ebbdab9d6438182eaa0b61d44818286547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796022"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262959"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Mappage de types de données Oracle et SQL Server (OracleToSQL)
 Les types de base de données Oracle diffèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de base de données. Lorsque vous convertissez des objets de base de données Oracle à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objets, vous devez spécifier le mappage des types de données d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  

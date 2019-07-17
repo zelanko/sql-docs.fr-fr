@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b08de0ce5acde863d8f2683b9bc8d6f38c2fa4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108629"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ \@nom =] N'*plan_guide_name*'  
  Est le nom du repère de plan. Les noms des repères de plan sont limités à la base de données active. *plan_guide_name* doivent respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md) et ne peut pas commencer par le signe dièse (#). La longueur maximale de *plan_guide_name* est de 124 caractères.  
   
- [ \@stmt = ] N'*statement_text*'  
+ [ \@stmt =] N'*statement_text*'  
  Instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] permettant de créer un repère de plan. Lorsque le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requête optimiseur reconnaît une requête qui correspond à *statement_text*, *plan_guide_name* en vigueur. Pour la création d’un repère de plan réussisse, *statement_text* doit apparaître dans le contexte spécifié par le \@type, \@module_or_batch, et \@params paramètres.  
   
  *statement_text* doit être fournie dans un moyen permettant de faire correspondre à l’instruction correspondante fournie dans le lot ou le module identifié par l’optimiseur de requête \@module_or_batch et \@params. Pour plus d'informations, consultez la section « Remarques ». La taille de *statement_text* est limitée uniquement par la mémoire disponible du serveur.  
@@ -147,7 +146,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-plan-guide-of-type-object-for-a-query-in-a-stored-procedure"></a>A. Création d'un repère de plan de type OBJECT pour une requête dans une procédure stockée  
+### <a name="a-creating-a-plan-guide-of-type-object-for-a-query-in-a-stored-procedure"></a>R. Création d'un repère de plan de type OBJECT pour une requête dans une procédure stockée  
  L'exemple ci-après crée un repère de plan qui correspond à une requête exécutée dans le contexte d'une procédure stockée basée sur une application et applique l'indicateur `OPTIMIZE FOR` à la requête.  
   
  Voici la procédure stockée :  

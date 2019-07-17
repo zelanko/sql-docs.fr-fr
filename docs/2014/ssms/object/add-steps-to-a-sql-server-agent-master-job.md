@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 18c4af67230726d831c2c192a782135f9afe3743
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822683"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188311"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Ajouter des étapes à un travail maître SQL Server Agent
   Cette rubrique explique comment ajouter des étapes à un travail maître SQL Server Agent dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "52822683"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous pouvez modifier uniquement les travaux dont vous êtes propriétaire, à moins d'être membre du rôle de serveur fixe **sysadmin** . Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../agent/implement-sql-server-agent-security.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -56,7 +56,7 @@ ms.locfileid: "52822683"
   
 4.  Cliquez avec le bouton droit sur le travail auquel vous voulez ajouter des étapes, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du travail -**_nom_travail_, sous **Sélectionner une page**, sélectionnez **Étapes**. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail : nouveau travail &#40;Page étapes&#41;](../agent/job-properties-new-job-steps-page.md).  
+5.  Dans la boîte de dialogue **Propriétés du travail -** _nom_travail_, sous **Sélectionner une page**, sélectionnez **Étapes**. Pour plus d’informations sur les options disponibles sur cette page, consultez [propriétés du travail : nouveau travail &#40;Page étapes&#41;](../agent/job-properties-new-job-steps-page.md).  
 
 6.  Lorsque vous avez terminé, cliquez sur **OK**.  
   

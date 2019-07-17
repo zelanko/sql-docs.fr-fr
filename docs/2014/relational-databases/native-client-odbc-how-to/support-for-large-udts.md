@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5ccacd7bb6fabf6c7eed0cee02ddb34979f14a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160889"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205553"
 ---
 # <a name="support-for-large-udts"></a>Prise en charge de tables UDT volumineuses
   Cet exemple de solution contient deux projets. Un projet crée un assembly (DLL) à partir du code source C#. Cet assembly contient le type CLR. Une table sera ajoutée à la base de données. Une colonne dans la table sera d'un type défini dans l'assembly ; par défaut, cet exemple utilisera la base de données master. Le deuxième projet est une application C native qui lit des données de la table.  

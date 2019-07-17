@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb9bc8d8fe92a53eace426080221c224e229a80b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96927e2c0a773674cbc4b8dabee804870d6559e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119259"
 ---
 # <a name="cdccapturedcolumns-transact-sql"></a>cdc.captured_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,16 +31,16 @@ ms.locfileid: "47620037"
   
  Il est recommandé que vous **pas directement interroger les tables système**. À la place, exécutez le [sys.sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md) procédure stockée.  
    
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**Int**|Identificateur de la table source à laquelle appartient la colonne capturée.|  
 |**column_name**|**sysname**|Nom de la colonne capturée.|  
 |**column_id**|**Int**|ID de la colonne capturée dans la table source.|  
 |**COLUMN_TYPE**|**sysname**|Type de la colonne capturée.|  
-|**column_ordinal**|**Int**|Ordinal de colonne (de base 1) dans la table de modifications. Les colonnes de métadonnées dans la table de modifications sont exclues. L'ordinal 1 est assigné à la première colonne capturée.|  
+|**column_ordinal**|**int**|Ordinal de colonne (de base 1) dans la table de modifications. Les colonnes de métadonnées dans la table de modifications sont exclues. L'ordinal 1 est assigné à la première colonne capturée.|  
 |**is_computed**|**bit**|Indique que la colonne capturée est une colonne calculée dans la table source.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [CDC.change_tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
+ [cdc.change_tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-change-tables-transact-sql.md)  
   
   

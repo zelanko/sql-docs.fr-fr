@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a34d69fe4d8d8de6668e804bc574c18196f0aa8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc2a41cb5f7bbd8e5b0b76ed7b571ffdf80a939f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132875"
 ---
 # <a name="sysservicecontractusages-transact-sql"></a>sys.service_contract_usages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Cet affichage catalogue contient une ligne pour chaque paire (service, contrat).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**service_id**|**Int**|Identificateur du service utilisant le contrat. Cette colonne n'accepte pas la valeur NULL.|  
+|**service_id**|**int**|Identificateur du service utilisant le contrat. Cette colonne n'accepte pas la valeur NULL.|  
 |**service_contract_id**|**Int**|Identificateur du contrat utilisé par le service. Cette colonne n'accepte pas la valeur NULL.|  
   
 ## <a name="permissions"></a>Autorisations  

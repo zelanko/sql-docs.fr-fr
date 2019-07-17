@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e51c42237b57830cbe894114019657ab5b3742c3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 71027fb060a5085289aed4c8a637bc76a71bbd2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108677"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @filename = ] 'file_name'` Est la chaîne qui spécifie le chemin d’accès complet, y compris nom de fichier, à laquelle une copie du fichier de données (.mdf) est enregistrée. *nom de fichier* est **nvarchar (260)**, sans valeur par défaut.  
+`[ @filename = ] 'file_name'` Est la chaîne qui spécifie le chemin d’accès complet, y compris nom de fichier, à laquelle une copie du fichier de données (.mdf) est enregistrée. *nom de fichier* est **nvarchar (260)** , sans valeur par défaut.  
   
-`[ @temp_dir = ] 'temp_dir'` Est le nom du répertoire qui contient les fichiers temporaires. *temp_dir* est **nvarchar (260)**, avec NULL comme valeur par défaut. Si NULL, le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] répertoire de données par défaut sera utilisé. Le répertoire doit contenir suffisamment d'espace pour stocker un fichier d'une taille équivalente à celle de tous les fichiers de bases de données d'abonnés réunis.  
+`[ @temp_dir = ] 'temp_dir'` Est le nom du répertoire qui contient les fichiers temporaires. *temp_dir* est **nvarchar (260)** , avec NULL comme valeur par défaut. Si NULL, le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] répertoire de données par défaut sera utilisé. Le répertoire doit contenir suffisamment d'espace pour stocker un fichier d'une taille équivalente à celle de tous les fichiers de bases de données d'abonnés réunis.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` Indicateur booléen facultatif qui spécifie s’il faut remplacer un fichier existant du même nom que celui spécifié dans **@filename**. *overwrite_existing_file*est **bits**, avec une valeur par défaut **0**. Si **1**, il écrase le fichier spécifié par **@filename**, s’il existe. Si **0**, la procédure stockée échoue si le fichier existe et que le fichier n’est pas remplacé.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` Indicateur booléen facultatif qui spécifie s’il faut remplacer un fichier existant du même nom que celui spécifié dans **@filename** . *overwrite_existing_file*est **bits**, avec une valeur par défaut **0**. Si **1**, il écrase le fichier spécifié par **@filename** , s’il existe. Si **0**, la procédure stockée échoue si le fichier existe et que le fichier n’est pas remplacé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

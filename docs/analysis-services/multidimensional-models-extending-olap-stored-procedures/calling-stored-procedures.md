@@ -1,5 +1,5 @@
 ---
-title: Appel de procédures stockées | Documents Microsoft
+title: Appel de procédures stockées | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a0bdf517f2845e28a9d3520034d9de16ff65a25e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020986"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181168"
 ---
 # <a name="calling-stored-procedures"></a>Appel des procédures stockées
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,15 +60,15 @@ SELECT Country.Members on 0, MySproc(Measures.Sales) ON 1 FROM Sales
 ## <a name="calling-stored-procedures-with-the-call-statement"></a>Appel de procédures stockées avec l'instruction Call  
  Procédures stockées peuvent être appelées en dehors du contexte d’une requête MDX à l’aide de l’expression MDX **appeler** instruction.  
   
- Vous pouvez utiliser cette méthode pour instancier les effets secondaires d'une requête stockée ou pour que l'application obtienne les résultats d'une requête stockée. Une utilisation courante de la **appeler** instruction serait d’utiliser des objets AMO (Analysis Management) pour effectuer des fonctions d’administration qui n’ont pas de résultat de retour. Par exemple, la commande suivante appelle une procédure stockée :  
+ Vous pouvez utiliser cette méthode pour instancier les effets secondaires d'une requête stockée ou pour que l'application obtienne les résultats d'une requête stockée. Une utilisation courante de la **appeler** instruction consisterait à utiliser des objets AMO (Analysis Management) pour effectuer des fonctions d’administration qui n’ont pas un résultat de retour. Par exemple, la commande suivante appelle une procédure stockée :  
   
 ```  
 Call MyStoredProcedure(a,b,c)  
 ```  
   
- La seule prise en charge de type retourné à partir de la procédure stockée dans un **appeler** instruction est un ensemble de lignes. La sérialisation pour un ensemble de lignes est définie par XML for Analysis. Si une procédure stockée dans un **appeler** instruction retourne un autre type, il est ignoré et pas dans XML à l’application appelante. Pour plus d'informations sur les ensembles de lignes de XML for Analysis, consultez Ensembles de lignes de schéma XML for Analysis.  
+ La seule prise en charge de type retourné à partir de la procédure stockée dans un **appeler** instruction est un ensemble de lignes. La sérialisation pour un ensemble de lignes est définie par XML for Analysis. Si une procédure stockée dans un **appeler** instruction retourne tout autre type, il est ignoré et pas dans XML à l’application appelante. Pour plus d'informations sur les ensembles de lignes de XML for Analysis, consultez Ensembles de lignes de schéma XML for Analysis.  
   
- Si une procédure stockée retourne un ensemble de lignes .NET, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] convertit le résultat sur le serveur en ensemble de lignes XML for Analysis. Le code XML de l’ensemble de lignes Analysis est toujours retourné par une procédure stockée dans le **appeler** (fonction). Si un dataset contient des fonctionnalités qui ne peuvent pas être exprimées dans l'ensemble de lignes XML for Analysis, un échec se produit.  
+ Si une procédure stockée retourne un ensemble de lignes .NET, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] convertit le résultat sur le serveur en ensemble de lignes XML for Analysis. Le code XML pour l’ensemble de lignes Analysis est toujours retourné par une procédure stockée dans le **appeler** (fonction). Si un dataset contient des fonctionnalités qui ne peuvent pas être exprimées dans l'ensemble de lignes XML for Analysis, un échec se produit.  
   
  Les procédures qui retournent des valeurs void (par exemple, des sous-routines dans Visual Basic) peuvent également être employées avec le mot clé CALL. Si, par exemple, vous souhaitez utiliser la fonction MyVoidFunction() dans une instruction MDX, utilisez la syntaxe suivante :  
   

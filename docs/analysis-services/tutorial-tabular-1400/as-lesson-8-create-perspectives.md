@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 29a49478d75d7af5670f3e693cd87a5238c4ae11
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: c74e457d29f39201601a3a62d651cce97c52fa70
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57684936"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207313"
 ---
 # <a name="create-perspectives"></a>Créer des perspectives
 
@@ -45,11 +45,11 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
 4.  Sélectionnez toutes les tables *sauf* **DimCustomer**.  
   
-    ![as-lesson8-perspectives](../tutorial-tabular-1400/media/as-lesson8-perspectives.png)
+    ![en tant que-lesson8-perspectives](../tutorial-tabular-1400/media/as-lesson8-perspectives.png)
   
     Dans une leçon ultérieure, vous utilisez la fonctionnalité analyser dans Excel pour tester cette perspective. La liste de champs de tableau croisé dynamique Excel inclut chaque table à l’exception de la table DimCustomer.  
 
-## <a name="whats-next"></a>Quelle est l’étape suivante ?
+## <a name="whats-next"></a>Étapes suivantes
 
 [Leçon 9 : Créer des hiérarchies](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md).
   

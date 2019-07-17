@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8c35e86f-0597-4ef4-b2b8-f643e53ed4c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 213c86a7f7b81a997082aa5653e00a830197f9d8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 21f72a13f8f5f7ac93b0f31716632c9280df5fb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107017"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Métadonnées - Date et heure et ensembles de lignes de schéma
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,10 +31,10 @@ ms.locfileid: "52415576"
   
 |Type de colonne|DATA_TYPE|COLUMN_FLAGS, DBCOLUMFLAGS_SS_ISVARIABLESCALE|DATETIME_PRECISION|  
 |-----------------|----------------|------------------------------------------------------|-------------------------|  
-|date|DBTYPE_DBDATE|Désactiver|0|  
+|date|DBTYPE_DBDATE|Effacer|0|  
 |time|DBTYPE_DBTIME2|Définissez|0..7|  
-|smalldatetime|DBTYPE_DBTIMESTAMP|Désactiver|0|  
-|DATETIME|DBTYPE_DBTIMESTAMP|Désactiver|3|  
+|smalldatetime|DBTYPE_DBTIMESTAMP|Effacer|0|  
+|datetime|DBTYPE_DBTIMESTAMP|Effacer|3|  
 |datetime2|DBTYPE_DBTIMESTAMP|Définissez|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|Définissez|0..7|  
   
@@ -69,9 +68,9 @@ ms.locfileid: "52415576"
 ## <a name="providertypes-rowset"></a>Ensemble de lignes PROVIDER_TYPES  
  Les lignes suivantes sont retournées pour les types date/heure :  
   
-|Type -><br /><br /> colonne|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|Type -><br /><br /> colonne|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |--------------------------|----------|----------|-------------------|--------------|---------------|--------------------|  
-|TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |DATA_TYPE|DBTYPE_DBDATE|DBTYPE_DBTIME2|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMPOFFSET|  
 |COLUMN_SIZE|10|16|16|23|27|34|  
 |LITERAL_PREFIX|»|»|»|»|»|»|  
@@ -83,7 +82,7 @@ ms.locfileid: "52415576"
 |UNSIGNED_ATTRIBUTE|NULL|NULL|NULL|NULL|NULL|NULL|  
 |FIXED_PREC_SCALE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
 |AUTO_UNIQUE_VALUE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|VARIANT_FALSE|  
-|LOCAL_TYPE_NAME|date|time|smalldatetime|DATETIME|datetime2|datetimeoffset|  
+|LOCAL_TYPE_NAME|date|time|smalldatetime|datetime|datetime2|datetimeoffset|  
 |MINIMUM_SCALE|NULL|0|NULL|NULL|0|0|  
 |MAXIMUM_SCALE|NULL|7|NULL|NULL|7|7|  
 |GUID|NULL|NULL|NULL|NULL|NULL|NULL|  

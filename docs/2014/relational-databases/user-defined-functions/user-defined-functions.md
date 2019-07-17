@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084689"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211699"
 ---
 # <a name="user-defined-functions"></a>Fonctions définies par l'utilisateur
   À l'instar des fonctions dans les langages de programmation, les fonctions définies par l'utilisateur de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont des routines qui acceptent des paramètres, exécutent une action, par exemple un calcul complexe, et retournent le résultat de cette action sous forme de valeur. La valeur retournée peut être une valeur scalaire unique ou un jeu de résultats.  
@@ -61,10 +61,10 @@ ms.locfileid: "48084689"
   
 ##  <a name="FunctionTypes"></a> Types de fonctions  
  Fonction scalaire  
- Les fonctions scalaires définies par l'utilisateur retournent une valeur de donnée unique dont le type est défini dans la clause RETURNS. Une fonction scalaire incluse ne contient pas de corps ; la valeur scalaire est le résultat d'une instruction unique. Le corps d'une fonction scalaire à instructions multiples, défini dans un bloc BEGIN...END, contient une série d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui retournent la valeur unique. Le type de retour peut être n’importe quel type de données à l’exception `text`, `ntext`, `image`, `cursor`, et `timestamp`.  
+ Les fonctions scalaires définies par l'utilisateur retournent une valeur de donnée unique dont le type est défini dans la clause RETURNS. Une fonction scalaire incluse ne contient pas de corps ; la valeur scalaire est le résultat d'une instruction unique. Le corps d'une fonction scalaire à instructions multiples, défini dans un bloc BEGIN...END, contient une série d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qui retournent la valeur unique. Le type de retour peut être n'importe quel type de données à l'exception de `text`, `ntext`, `image`, `cursor` et `timestamp`.  
   
  Fonctions table  
- Fonctions table définies par l’utilisateur retournent un `table` type de données. Une fonction table incluse ne contient pas de corps ; la table est le jeu de résultats d'une instruction SELECT unique.  
+ Les fonctions table définies par l'utilisateur retournent un type de données `table`. Une fonction table incluse ne contient pas de corps ; la table est le jeu de résultats d'une instruction SELECT unique.  
   
  Fonctions système  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit de nombreuses fonctions système que vous pouvez utiliser pour effectuer diverses opérations. Elles ne peuvent pas être modifiées. Pour plus d’informations, consultez [Fonctions intégrées &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions), [Fonctions stockées système &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql) et [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views).  
