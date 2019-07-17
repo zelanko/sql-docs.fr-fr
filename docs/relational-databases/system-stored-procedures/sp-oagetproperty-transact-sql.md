@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6611998b8aa22242693ec5d44bf842671a777c98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65449716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107881"
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_OAGetProperty objecttoken , propertyname
  *propertyname*  
  Nom de la propriété de l'objet OLE à renvoyer.  
   
- *propertyvalue* **OUTPUT**  
+ *PropertyValue* **sortie**  
  Valeur de la propriété renvoyée. Si elle est spécifiée, il doit s'agir d'une variable locale du type de données approprié.  
   
  Si la propriété retourne un objet OLE, *propertyvalue* doit être une variable locale du type de données **int**. Un jeton d’objet est stocké dans la variable locale, et ce jeton d’objet peut être utilisé avec d’autres procédures stockées OLE Automation.  
@@ -83,9 +82,9 @@ sp_OAGetProperty objecttoken , propertyname
   
  Lorsque toutes les valeurs de données d'une colonne partagent le même type de données, ce type est utilisé pour toute la colonne. Lorsque les valeurs de données d'une colonne utilisent des types de données différents, le choix du type pour l'ensemble de la colonne se fait sur la base du tableau suivant.  
   
-||INT|FLOAT|money|datetime|varchar|NVARCHAR|  
+||int|float|money|datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
-|**Int**|**Int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
+|**Int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
@@ -100,7 +99,7 @@ sp_OAGetProperty objecttoken , propertyname
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-using-a-local-variable"></a>A. Utilisation d'une variable locale  
+### <a name="a-using-a-local-variable"></a>R. Utilisation d'une variable locale  
  L’exemple suivant obtient le `HostName` propriété (de l’élément précédemment créé **SQLServer** objet) et le stocke dans une variable locale.  
   
 ```  

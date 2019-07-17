@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15fa1de65ada904ecf4b93947e1e9e9f818fd0d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108675"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>A. Création d'un repère de plan à partir d'un plan de requête dans le cache du plan  
+### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>R. Création d'un repère de plan à partir d'un plan de requête dans le cache du plan  
  L'exemple suivant crée un repère de plan pour une instruction SELECT unique en spécifiant un plan de requête à partir du cache du plan. L'exemple commence par exécuter une instruction `SELECT` simple pour laquelle le repère de plan sera créé. Le plan de cette requête est examiné à l'aide des vues de gestion dynamique `sys.dm_exec_sql_text` et `sys.dm_exec_text_query_plan`. Le repère de plan est ensuite créé pour la requête en spécifiant le plan de requête dans le cache du plan associé à la requête. La dernière instruction dans l'exemple vérifie que le repère de plan existe.  
   
 ```sql  

@@ -20,27 +20,26 @@ helpviewer_keywords:
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e81714ece6c410682781f97978d5aa2be84c307d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81d66f177c230d406fac9dae9373cf85da1837e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133223"
 ---
 # <a name="sysservereventsessionfields-transact-sql"></a>sys.server_event_session_fields (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Retourne une ligne pour chaque colonne personnalisable définie explicitement sur les événements et les cibles.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**Int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
+|event_session_id|**int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
 |object_id|**Int**|ID de l'objet auquel est associé ce champ. N'accepte pas la valeur NULL.|  
-|NAME|**sysname**|Le nom du champ. N'accepte pas la valeur NULL.|  
+|name|**sysname**|Le nom du champ. N'accepte pas la valeur NULL.|  
 |valeur|**sql_variant**|La valeur du champ. N'accepte pas la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  

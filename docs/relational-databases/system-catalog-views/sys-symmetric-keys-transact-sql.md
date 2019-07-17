@@ -19,26 +19,25 @@ helpviewer_keywords:
 ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07b60dacedec35460fd0e23e1d28769dcc5674fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b4607c5873889c17e9934cc4f24465fe4e83007
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108933"
 ---
 # <a name="syssymmetrickeys-transact-sql"></a>sys.symmetric_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Renvoie une ligne pour chaque clé symétrique créée avec l'instruction CREATE SYMMETRIC KEY.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de la clé. Unique dans la base de données.|  
+|**name**|**sysname**|Nom de la clé. Unique dans la base de données.|  
 |**principal_id**|**Int**|ID du principal de la base de données propriétaire de la clé.|  
 |**symmetric_key_id**|**Int**|ID de la clé. Unique dans la base de données.|  
-|**key_length**|**Int**|Longueur de la clé en bits.|  
+|**key_length**|**int**|Longueur de la clé en bits.|  
 |**key_algorithm**|**char(2)**|Algorithme utilisé avec la clé :<br /><br /> R2 = RC2<br /><br /> R4 = RC4<br /><br /> D = DES<br /><br /> D3 = Triple DES<br /><br /> DT = TRIPLE_DES_3KEY<br /><br /> DX = DESX<br /><br /> A1 = AES 128<br /><br /> A2 = AES 192<br /><br /> A3 = AES 256<br /><br /> NA = EKM Key|  
 |**algorithm_desc**|**nvarchar(60)**|Description de l'algorithme utilisé avec la clé :<br /><br /> RC2<br /><br /> RC4<br /><br /> DES<br /><br /> Triple_DES<br /><br /> TRIPLE_DES_3KEY<br /><br /> DESX<br /><br /> AES_128<br /><br /> AES_192<br /><br /> AES_256<br /><br /> NULL (algorithmes de gestion de clés extensible uniquement)|  
 |**create_date**|**datetime**|Date de création de la clé.|  

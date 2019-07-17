@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5801a38e22a0c638e9daee1e448158941499b19f
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 808d6e9482d293e957a0dc483df128d08b74133c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108763"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Supprime le repère de plan spécifié par *plan_guide_name*. Après la suppression d'un repère de plan, les exécutions futures d'une requête auparavant filtrée par le repère de plan ne sont plus influencées par ce repère de plan.  
   
  DROP ALL  
- Supprime tous les repères de plan dans la base de données actuelle. **N'**_plan_guide_name_ ne peut pas être spécifié lorsque DROP ALL est défini.  
+ Supprime tous les repères de plan dans la base de données actuelle. **N'** _plan_guide_name_ ne peut pas être spécifié lorsque DROP ALL est défini.  
   
  DISABLE  
  Désactive le repère de plan spécifié par *plan_guide_name*. Après la désactivation d'un repère de plan, les exécutions futures d'une requête auparavant filtrée par le repère de plan ne sont plus influencées par ce repère de plan.  
   
  DISABLE ALL  
- Désactive tous les repères de plan dans la base de données actuelle. **N'**_plan_guide_name_ ne peut pas être spécifié lorsque DISABLE ALL est défini.  
+ Désactive tous les repères de plan dans la base de données actuelle. **N'** _plan_guide_name_ ne peut pas être spécifié lorsque DISABLE ALL est défini.  
   
  ENABLE  
  Active le repère de plan spécifié par *plan_guide_name*. Une fois activé, un repère de plan peut être associé à une requête admissible. Par défaut, les repères de plan sont activés au moment de leur création.  
   
  ENABLE ALL  
- Active tous les repères de plan dans la base de données actuelle. **N'**_plan_guide_name_**'** ne peut pas être spécifié lorsque ENABLE ALL est défini.  
+ Active tous les repères de plan dans la base de données actuelle. **N'** _plan_guide_name_ **'** ne peut pas être spécifié lorsque ENABLE ALL est défini.  
   
 ## <a name="remarks"></a>Notes  
  Si vous tentez de supprimer ou de modifier une fonction, une procédure stockée ou un déclencheur DML référencé par un repère de plan, qu'il soit activé ou désactivé, une erreur se produit.  
@@ -84,7 +83,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-enabling-disabling-and-dropping-a-plan-guide"></a>A. Suppression, activation ou désactivation d'un repère de plan  
+### <a name="a-enabling-disabling-and-dropping-a-plan-guide"></a>R. Suppression, activation ou désactivation d'un repère de plan  
  L'exemple qui suit crée un repère de plan, le désactive, l'active et le supprime.  
   
 ```  
@@ -125,7 +124,7 @@ GO
 EXEC sp_control_plan_guide N'DROP', N'Guide3';  
 ```  
   
-### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>b. Désactivation de tous les repères de plan dans la base de données actuelle  
+### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>B. Désactivation de tous les repères de plan dans la base de données actuelle  
  L'exemple qui suit désactive tous les repères de plan dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

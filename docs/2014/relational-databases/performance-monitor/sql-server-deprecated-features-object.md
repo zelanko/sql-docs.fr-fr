@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763941"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206963"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
   L'objet SQLServer:Deprecated Features de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un compteur permettant de contrôler les fonctionnalités désignées comme dépréciées. Dans tous les cas, le compteur fournit un nombre d'utilisations indiquant combien de fois la fonctionnalité déconseillée a été rencontrée depuis le dernier démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "52763941"
 |Instances du compteur de l'objet SQL Server Deprecated Features|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' et '##' comme nom des tables temporaires et procédures stockées|Un identifiant ne contenant pas d'autres caractères que # a été rencontré. Utilisez au moins un caractère supplémentaire. Se produit une fois par compilation.|  
-|Syntaxe d'appel de fonction '::'|La syntaxe d'appel de fonction :: a été rencontrée pour une fonction table. Remplacez par `SELECT column_list FROM`  *\< nom_fonction >*`()`. Par exemple, remplacez `SELECT * FROM ::fn_virtualfilestats(2,1)`par `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produit une fois par compilation.|  
+|Syntaxe d'appel de fonction '::'|La syntaxe d'appel de fonction :: a été rencontrée pour une fonction table. Remplacez par `SELECT column_list FROM`  *\< nom_fonction >* `()`. Par exemple, remplacez `SELECT * FROM ::fn_virtualfilestats(2,1)`par `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produit une fois par compilation.|  
 |\@ et noms commençant par \@\@ comme identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]|Un identificateur commençant par \@ ou \@\@ a été trouvé. N’utilisez pas \@, \@\@ ou des noms commençant par \@\@ comme identificateurs. Se produit une fois par compilation.|  
 |ADDING TAPE DEVICE|La fonctionnalité déconseillée sp_addumpdevice'`tape`' a été rencontrée. Utilisez sp_addumpdevice'`disk`' à la place. Se produit une fois par utilisation.|  
 |Autorisation ALL|Nombre total de fois où la syntaxe GRANT ALL, DENY ALL ou REVOKE ALL a été rencontrée. Modifiez la syntaxe pour refuser des autorisations spécifiques. Se produit une fois par requête.|  
@@ -112,7 +112,7 @@ ms.locfileid: "52763941"
 |numbered_stored_procedures||  
 |numbered_procedure_parameters|Des références à la fonctionnalité déconseillée sys.numbered_procedure_parameters ont été rencontrées. Ne pas utiliser. Se produit une fois par compilation.|  
 |numbered_procedures|Des références à la fonctionnalité déconseillée sys.numbered_procedures ont été rencontrées. Ne pas utiliser. Se produit une fois par compilation.|  
-|Ancien style RAISEERROR|L’instruction RAISERROR déconseillée (Format : Syntaxe RAISERROR entier chaîne) a été rencontrée. Réécrivez l'instruction en utilisant la syntaxe RAISERROR actuelle. Se produit une fois par compilation.|  
+|Ancien style RAISEERROR|La syntaxe RAISERROR dépréciée (Format : chaîne d’entier RAISERROR) a été rencontrée. Réécrivez l'instruction en utilisant la syntaxe RAISERROR actuelle. Se produit une fois par compilation.|  
 |OLEDB pour les connexions ad hoc|Le fournisseur SQLOLEDB n'est pas pris en charge. Utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client pour les connexions ad hoc.|  
 |PERMISSIONS|Des références à la fonction intrinsèque PERMISSIONS ont été rencontrées. Interrogez à la place sys.fn_my_permissions. Se produit une fois par requête.|  
 |ProcNums|La syntaxe déconseillée ProcNums a été rencontrée. Réécrivez les instructions de manière à supprimer ces références. Se produit une fois par compilation.|  
@@ -251,7 +251,7 @@ ms.locfileid: "52763941"
 |Option de table text in row|Des références à l'option de table 'text in row' ont été rencontrées. Utilisez à la place sp_tableoption 'large value types out of row'. Se produit une fois par requête.|  
 |TEXTPTR|Des références à la fonction TEXTPTR ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données `varchar(max)` et à supprimer les types de données `text`, `ntext` et `image` de la syntaxe. Se produit une fois par requête.|  
 |TEXTVALID|Des références à la fonction TEXTVALID ont été rencontrées. Réécrivez les applications de manière à utiliser le type de données `varchar(max)` et à supprimer les types de données `text`, `ntext` et `image` de la syntaxe. Se produit une fois par requête.|  
-|timestamp|Nombre total des fois où le type de données `timestamp` déconseillé a été rencontré dans une instruction DDL. Utilisez à la place le type de données `rowversion`.|  
+|TIMESTAMP|Nombre total des fois où le type de données `timestamp` déconseillé a été rencontré dans une instruction DDL. Utilisez à la place le type de données `rowversion`.|  
 |UPDATETEXT ou WRITETEXT|L'instruction UPDATETEXT ou WRITETEXT a été rencontrée. Réécrivez les applications de manière à utiliser le type de données `varchar(max)` et à supprimer les types de données `text`, `ntext` et `image` de la syntaxe. Se produit une fois par requête.|  
 |USER_ID|Des références à la fonction USER_ID ont été rencontrées. Utilisez à la place la fonction DATABASE_PRINCIPAL_ID. Se produit une fois par compilation.|  
 |Utilisation d'OLEDB pour les serveurs liés||  

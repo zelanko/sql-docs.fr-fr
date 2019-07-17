@@ -11,12 +11,12 @@ ms.assetid: 45823fc8-723a-49f2-9a11-94d241245cfd
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: f74158bcb8a83b65842d016f3dd8aeacf73f0427
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1c438eff7f3543b22fc2c0e4e2a7264cd1a91ee
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485075"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263985"
 ---
 # <a name="tracing-master-data-services"></a>Suivi (Master Data Services)
 
@@ -65,7 +65,7 @@ ms.locfileid: "65485075"
     |Time|Date de l’entrée de suivi.|  
     |CorrelationID|Un ID de corrélation est affecté à chaque demande. Tous les suivis déclenchés par la demande partagent le même ID de corrélation.<br /><br /> Lorsqu’une erreur se produit dans l’interface utilisateur, l’ID de corrélation apparaît dans le message d’erreur.|  
     |Opération|Nom de l’opération de demande. Si la demande est une demande de l’interface utilisateur Web, le nom de l’opération correspond à l’URL. Si la demande est une demande API, le nom de l’opération correspond au nom du service.|  
-    |Level|Niveau de cette entrée de suivi.|  
+    |Niveau|Niveau de cette entrée de suivi.|  
     |`Message`|Corps du message de suivi.|  
   
 ## <a name="external-resources"></a>Ressources externes  

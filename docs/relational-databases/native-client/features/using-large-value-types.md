@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4a58b05c-8848-44bb-8704-f9f409efa5af
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbf518fa74c15afbc990bf4a5c1349bdfd6c4f78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68458e8d24bd56c3293d0bf2547180394db8ee61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120451"
 ---
 # <a name="using-large-value-types"></a>Utilisation de types de valeur élevée
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "62997917"
   
  Les types de données **varchar(max)** , **varbinary(max)** et **nvarchar(max)** dans les colonnes avec une taille **max** illimitée sont représentés comme ISLONG via les ensembles de lignes de schéma OLE DB principaux et les interfaces qui retournent des types de données de colonne.  
   
- L’objet de commande **IAccessor** implémentation a été modifiée pour autoriser la liaison en tant que DBTYPE_IUNKNOWN. Si le consommateur spécifie DBTYPE_IUNKNOWN et affecte la valeur Null à *pObject*, le fournisseur retourne l’interface **ISequentialStream** au consommateur afin que celui-ci puisse extraire les données **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** des variables de sortie.  
+ L’implémentation **IAccessor** de l’objet de commande a été modifiée pour autoriser la liaison en tant que DBTYPE_IUNKNOWN. Si le consommateur spécifie DBTYPE_IUNKNOWN et affecte la valeur Null à *pObject*, le fournisseur retourne l’interface **ISequentialStream** au consommateur afin que celui-ci puisse extraire les données **varchar(max)** , **nvarchar(max)** ou **varbinary(max)** des variables de sortie.  
   
  Les valeurs de paramètres de sortie diffusées en continu sont retournées après les lignes de résultat (le cas échéant). Si l’application tente de passer au jeu de résultats suivant en appelant **IMultipleResults::GetResult** sans consommer toutes les valeurs de paramètres de sortie retournées, DB_E_OBJECTOPEN est retourné.  
   

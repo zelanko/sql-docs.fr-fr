@@ -20,12 +20,12 @@ ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c31bf39c4f133aa6f693614845cb54a5cf2bfc6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f287c548a7ebb71b1ebf3e1bce30e43b412c755
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899759"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265716"
 ---
 # <a name="sysdmosstacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67899759"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**stack_address**|**varbinary(8)**|Adresse unique d'allocation de cette pile. N'accepte pas la valeur NULL.|  
-|**frame_index**|**int**|Chaque ligne représente une fonction qui, appelez lorsque triés par ordre croissant par index de trame pour un particulier **(stack_address) donnée**, retourne la pile des appels. N'accepte pas la valeur NULL.|  
+|**frame_index**|**Int**|Chaque ligne représente une fonction qui, appelez lorsque triés par ordre croissant par index de trame pour un particulier **(stack_address) donnée**, retourne la pile des appels. N'accepte pas la valeur NULL.|  
 |**frame_address**|**varbinary(8)**|Adresse de l'appel de la fonction. N'accepte pas la valeur NULL.|  
   
 ## <a name="remarks"></a>Notes  
@@ -48,7 +48,7 @@ ms.locfileid: "67899759"
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
 
 
 ## <a name="see-also"></a>Voir aussi  

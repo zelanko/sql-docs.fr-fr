@@ -25,12 +25,12 @@ helpviewer_keywords:
 author: bluefooted
 ms.author: pamela
 manager: amitban
-ms.openlocfilehash: 2fc7136b60dba47813b9942316ee6fdfbc64f307
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 6d8203979a0afdca1ae78b9bd51723c906c40ea2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58899705"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267072"
 ---
 # <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -50,11 +50,11 @@ Est le format hexadécimal de 8 octets d’une ressource de page de base de donn
   
 ## <a name="tables-returned"></a>Tables retournées  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |db_id|**Int**|ID de la base de données|  
 |file_id|**Int**|ID de fichier|  
-|page_id|**Int**|ID de page|  
+|page_id|**int**|ID de page|  
   
 ## <a name="remarks"></a>Notes  
 `sys.fn_PageResCracker` permet de convertir la représentation hexadécimale sur 8 octets d’une page de base de données à un ensemble de lignes qui contient l’ID de base de données, fichier ID et l’ID de page de la page.   

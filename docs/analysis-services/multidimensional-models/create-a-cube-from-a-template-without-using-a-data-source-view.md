@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28f87d9cbe6dfa0bf41a0d0547e8da7bec5659bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521348"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209100"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Créer un cube a partir d'un modèle sans utiliser de vue de source de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "52521348"
 ## <a name="selecting-dimensions"></a>Sélection de dimensions  
  Utilisez la page **Sélectionner des dimensions** de l'Assistant pour ajouter les dimensions existantes au cube. Cette page s'affiche uniquement s'il existe déjà des dimensions partagées sans source de données dans le projet ou la base de données. Elle ne présente pas les dimensions qui ont une source de données.  
   
- Pour ajouter des dimensions existantes, sélectionnez-en une ou plusieurs dans la liste **Dimensions partagées** et cliquez sur le bouton représentant une flèche droite (**>**) pour les placer dans la liste **Dimensions du cube** . Cliquez sur le bouton à deux flèches (**>>**) pour déplacer toutes les dimensions de la liste.  
+ Pour ajouter des dimensions existantes, sélectionnez-en une ou plusieurs dans la liste **Dimensions partagées** et cliquez sur le bouton représentant une flèche droite ( **>** ) pour les placer dans la liste **Dimensions du cube** . Cliquez sur le bouton à deux flèches ( **>>** ) pour déplacer toutes les dimensions de la liste.  
   
 ## <a name="defining-new-measures"></a>Définition de nouvelles mesures  
  Utilisez la page **Définir de nouvelles mesures** de l’Assistant pour spécifier les mesures et les groupes de mesures du nouveau cube. Les groupes de mesures que vous spécifiez ici correspondront aux tables de faits dans le schéma généré. Les mesures que vous spécifiez ici correspondront aux colonnes non-clés numériques dans les tables.  

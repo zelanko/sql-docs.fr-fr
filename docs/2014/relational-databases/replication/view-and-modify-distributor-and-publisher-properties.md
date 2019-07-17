@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131139"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212026"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Afficher et modifier les propriétés d'un serveur de distribution ou d'un serveur de publication
   Cette rubrique décrit comment afficher et modifier les propriétés du serveur de distribution et du serveur de publication dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -58,11 +58,11 @@ ms.locfileid: "54131139"
   
 2.  Cliquez avec le bouton droit sur le dossier **Réplication** , puis cliquez sur **Propriétés du serveur de distribution**.  
   
-3.  Affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**.  
+3.  Affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** .  
   
-    -   Pour afficher et modifier les propriétés d’une base de données de distribution, cliquez sur le bouton des propriétés (**...**) pour la base de données dans la page **Général** de la boîte de dialogue.  
+    -   Pour afficher et modifier les propriétés d’une base de données de distribution, cliquez sur le bouton des propriétés ( **...** ) pour la base de données dans la page **Général** de la boîte de dialogue.  
   
-    -   Pour afficher et modifier les propriétés du serveur de publication associées au serveur de distribution, cliquez sur le bouton des propriétés (**...**) pour le serveur de publication sur la page **Serveurs de publication** de la boîte de dialogue.  
+    -   Pour afficher et modifier les propriétés du serveur de publication associées au serveur de distribution, cliquez sur le bouton des propriétés ( **...** ) pour le serveur de publication sur la page **Serveurs de publication** de la boîte de dialogue.  
   
     -   Pour accéder aux profils des agents de réplication, cliquez sur le bouton **Profils par défaut** sur la page **Général** de la boîte de dialogue. Pour plus d'informations, voir [Replication Agent Profiles](agents/replication-agent-profiles.md).  
   
@@ -128,7 +128,7 @@ ms.locfileid: "54131139"
   
 1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> . Passez l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>. Passez l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 1.  
   
 3.  (Facultatif) Vérifiez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationServer.IsDistributor%2A> pour vérifier que le serveur actuellement connecté est un serveur de distribution.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "54131139"
   
 1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase> . Spécifiez la propriété de nom et passez l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.DistributionDatabase>. Spécifiez la propriété de nom et passez l'objet <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créé à l'étape 1.  
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés du serveur. Si cette méthode retourne `false`, la base de données avec le nom spécifié n'existe pas sur le serveur.  
   
@@ -164,13 +164,13 @@ ms.locfileid: "54131139"
   
 1.  Créez une connexion au serveur de distribution en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
 3.  Définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en spécifiant la connexion créée à l'étape 1.  
   
 4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.Load%2A> pour obtenir les propriétés de l'objet.  
   
-5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> . Passez la nouvelle valeur de mot de passe pour le paramètre *password* .  
+5.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A>. Passez la nouvelle valeur de mot de passe pour le paramètre *password* .  
   
     > [!IMPORTANT]  
     >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez stocker des informations d'identification, utilisez les [Services de chiffrement](https://go.microsoft.com/fwlink/?LinkId=34733) fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows .NET Framework.  
@@ -179,7 +179,7 @@ ms.locfileid: "54131139"
   
     1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-    2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer> .  
+    2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.ReplicationServer>.  
   
     3.  Définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> en spécifiant la connexion créée à l'étape 6a.  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be6dc5a164220befb534368eace4f51f4dbd84e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c40fe8c823115c3131a1719185bce8f1506df81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138843"
 ---
 # <a name="keyset-driven-cursors"></a>Curseurs de jeu de clés
 Un curseur keyset se situe entre un statique et un curseur dynamique dans sa capacité à détecter les modifications. Comme un curseur statique, il ne détecte pas toujours les modifications apportées à l’appartenance et à l’ordre du jeu de résultats. Comme un curseur dynamique, il détecte les modifications apportées aux valeurs de lignes du jeu de résultats (selon le niveau d’isolation de la transaction, tel que défini par l’attribut de connexion SQL_ATTR_TXN_ISOLATION).  

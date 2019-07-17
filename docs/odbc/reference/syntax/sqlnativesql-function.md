@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f58d262f133fc242592e62e0bb5a4152877adf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 719b34eef3eb51af1e5eeabce3a88d453f005eff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138817"
 ---
 # <a name="sqlnativesql-function"></a>Fonction SQLNativeSql
 **Conformité**  
@@ -48,7 +47,7 @@ SQLRETURN SQLNativeSql(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *ConnectionHandle*  
+ *Handle de connexion*  
  [Entrée] Handle de connexion.  
   
  *InStatementText*  
@@ -122,7 +121,7 @@ SELECT int2 (empid) FROM employee
  Pour plus d’informations, consultez [l’exécution directe](../../../odbc/reference/develop-app/direct-execution-odbc.md) et [exécution préparée](../../../odbc/reference/develop-app/prepared-execution-odbc.md).  
   
 ## <a name="related-functions"></a>Fonctions connexes  
- Aucun.  
+ Aucune.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

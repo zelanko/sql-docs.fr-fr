@@ -20,12 +20,12 @@ ms.assetid: 7ab44517-0351-4f91-bdd9-7cf940f03c51
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03e98ee186626ad4561047672e7dfb97ed49ef05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090462"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262600"
 ---
 # <a name="sysdmtranversionstore-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ sys.dm_tran_version_store
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|Numéro de séquence de la transaction qui produit la version de l'enregistrement.|  
 |**version_sequence_num**|**bigint**|Numéro de séquence de l'enregistrement avec version. Cette valeur est unique dans la transaction produisant la version.|  
-|**database_id**|**Int**|ID de base de données de l'enregistrement avec contrôle de version.|  
+|**database_id**|**int**|ID de base de données de l'enregistrement avec contrôle de version.|  
 |**rowset_id**|**bigint**|ID d'ensemble de lignes de l'enregistrement.|  
 |**status**|**tinyint**|Indique si un enregistrement avec version a été réparti sur deux enregistrements. Si la valeur est 0, l'enregistrement est stocké sur une seule page. Si la valeur est 1, l'enregistrement est réparti sur deux enregistrements, lesquels sont stockés sur deux pages différentes.|  
 |**min_length_in_bytes**|**smallint**|Longueur minimale de l'enregistrement, en octets.|  
@@ -61,7 +61,7 @@ sys.dm_tran_version_store
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant illustre un scénario de test dans lequel quatre transactions simultanées, chacune étant identifiée par un numéro de séquence de transaction, sont exécutées dans une base de données où les options ALLOW_SNAPSHOT_ISOLATION et READ_COMMITTED_SNAPSHOT sont définies à ON. Les transactions suivantes sont exécutées :  

@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 9164bfe2-6fc4-4b52-946a-09ea3cf67041
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67b6a2c048f8e873d6daa447270e00c1eda86c3e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 638bea3db68712300ad2284e50676bf1df67c9ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139810"
 ---
 # <a name="mssnapshotdeliveryprogress-transact-sql"></a>MSsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSsnapshotdeliveryprogress** table est utilisée pour suivre les fichiers qui ont été remis avec succès à l’abonné lorsqu’un instantané est appliqué. Ces données permettent de reprendre la remise des fichiers si l'Agent de fusion ne parvient pas à fournir tous les fichiers pendant la session, de manière à ce que les mêmes fichiers ne soient pas de nouveau remis lors de la prochaine exécution de l'Agent. Cette table est stockée dans la base de données d'abonnement de l'Abonné.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**session_token**|**nvarchar(260)**|Identifie le chemin d'accès du dossier d'instantané à partir duquel le fichier a été remis. Pour les publications qui utilisent des filtres paramétrés, la chaîne **dynsnap** sera ajouté à la valeur.|  
-|**progress_token_hash**|**Int**|Une valeur de hachage générée selon la valeur de *progress_token* utilisé améliorer l’efficacité des recherches pour une donnée *progress_token* valeur.|  
+|**progress_token_hash**|**int**|Une valeur de hachage générée selon la valeur de *progress_token* utilisé améliorer l’efficacité des recherches pour une donnée *progress_token* valeur.|  
 |**progress_token**|**nvarchar(500)**|Identifie un fichier remis, sous la forme d'une combinaison du nom du fichier et de son chemin d'accès.|  
 |**progress_timestamp**|**datetime**|Le **datetime** valeur qui indique quand un fichier d’instantané a été remis avec succès.|  
   

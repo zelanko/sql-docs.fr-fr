@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146364"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180378"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Actions (Analysis Services - Données multidimensionnelles)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "50146364"
 |Type d’action|Description|  
 |-----------------|-----------------|  
 |CommandLine|Exécute une commande à partir de l'invite de commandes.|  
-|Dataset|Renvoie un groupe de données à une application cliente.|  
+|Jeu de données|Renvoie un groupe de données à une application cliente.|  
 |Extraction|Retourne une instruction d'extraction comme expression que le client exécute pour retourner un ensemble de lignes.|  
 |Html|Exécute un script HTML dans un navigateur Internet.|  
 |Propriétaire|Effectue une opération en utilisant une interface différente de celles répertoriées dans ce tableau.|  

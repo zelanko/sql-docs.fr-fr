@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: e960df1a-13fc-43ee-ba91-34c1b719ac2c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1cceaf4c200f6fe9f2bf6c735548bc0f439dab7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b78466b0c2c20bc3b59fb372870bbad87aef0e74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133887"
 ---
 # <a name="sysforeignkeys-transact-sql"></a>sys.foreign_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contient une ligne pour chaque objet qui est une contrainte FOREIGN KEY, avec **sys.object.type** = F.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**\<Colonnes héritent de sys.objects >**||Pour obtenir la liste des colonnes qui hérite de cette vue, consultez [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|**referenced_object_id**|**Int**|ID de l'objet référencé.|  
+|**referenced_object_id**|**int**|ID de l'objet référencé.|  
 |**key_index_id**|**Int**|ID de l'index de clé dans l'objet référencé.|  
 |**is_disabled**|**bit**|La contrainte FOREIGN KEY est désactivée.|  
 |**is_not_for_replication**|**bit**|La contrainte FOREIGN KEY a été créée à l'aide de l'option NOT FOR REPLICATION.|  

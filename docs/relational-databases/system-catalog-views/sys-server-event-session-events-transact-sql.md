@@ -20,30 +20,29 @@ helpviewer_keywords:
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 766d614db7d07c8db5305c32a5e84d71dac53dca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9ac3c2bd13b5f89ea8d87336e579e196e3754c5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133231"
 ---
 # <a name="sysservereventsessionevents-transact-sql"></a>sys.server_event_session_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Retourne une ligne pour chaque événement d'une session d'événements.  
+  Renvoie une ligne pour chaque événement d’une session d’événements.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|event_session_id|**Int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
-|event_id|**Int**|ID de l'événement. Cet ID est unique au sein d'une session d'événements. N'accepte pas la valeur NULL.|  
-|NAME|**sysname**|Nom de l’événement. N'accepte pas la valeur NULL.|  
+|event_session_id|**int**|ID de la session d'événements. N'accepte pas la valeur NULL.|  
+|event_id|**int**|ID de l'événement. Cet ID est unique au sein d'une session d'événements. N'accepte pas la valeur NULL.|  
+|name|**sysname**|Nom de l’événement. N'accepte pas la valeur NULL.|  
 |package|**sysname**|Nom du package d'événement qui contient l'événement. N'accepte pas la valeur NULL.|  
 |module|**sysname**|Nom du module qui contient l'événement. N'accepte pas la valeur NULL.|  
 |prédicat|**nvarchar(3000)**|L’expression de prédicat est appliquée à l’événement. Autorise la valeur NULL.|  
 |predicate_xml|**nvarchar(3000)**|Expression de prédicat XML qui est appliquée à l'événement. Autorise la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f0d49d6aeb8231dbffb56b42fe1151ae90d0e41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505221"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181310"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Mettre à niveau les classeurs et l'actualisation planifiée des données (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "52505221"
 |Environnement de création|\<|Prise en charge et comportement|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2010**|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2010**|**2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint 2013**|  
-|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel 2010**|Toutes les fonctionnalités|**Expérience :** les utilisateurs peuvent interagir avec le classeur dans le navigateur et l'utiliser comme source de données pour d'autres solutions.<br /><br /> **Mise à niveau :** Classeurs seront automatiquement mise à niveau dans la bibliothèque de documents si la mise à niveau automatique est activée pour la [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Service système dans la batterie de serveurs SharePoint,<br /><br /> **Planifier l’actualisation des données :** NON pris en charge. Le classeur doit être mis à niveau.|**Expérience :** les utilisateurs peuvent interagir avec le classeur et l'utiliser comme source de données pour d'autres solutions.<br /><br /> **Mise à niveau :** la mise à niveau automatique n'est pas disponible. Les utilisateurs doivent mettre à niveau leurs classeurs 2008 R2 vers la version 2012 ou version Office 2013 manuellement.<br /><br /> **Planifier l’actualisation des données :** NON pris en charge. Le classeur doit être mis à niveau.|  
-|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel**|Non pris en charge|Toutes les fonctionnalités|**Expérience :** les utilisateurs peuvent interagir avec le classeur dans le navigateur et l'utiliser comme source de données pour d'autres solutions. La planification de l'actualisation des données est disponible.<br /><br /> **Mise à niveau :** la mise à niveau automatique n'est pas prise en charge. Les utilisateurs peuvent mettre à niveau leurs classeurs vers la version Office 2013.<br /><br /> **Planification de l'actualisation des données :** prise en charge.|  
+|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel 2010**|Toutes les fonctionnalités|**Expérience :** Les utilisateurs peuvent interagir avec le classeur dans le navigateur et utiliser comme source de données pour d’autres solutions.<br /><br /> **Mise à niveau :** Classeurs seront automatiquement mise à niveau dans la bibliothèque de documents si la mise à niveau automatique est activée pour la [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Service système dans la batterie de serveurs SharePoint,<br /><br /> **Planifier l’actualisation des données :** NON pris en charge. Le classeur doit être mis à niveau.|**Expérience :** Les utilisateurs peuvent interagir avec le classeur et utilisez-le comme une source de données pour d’autres solutions.<br /><br /> **Mise à niveau :** Mise à niveau automatique n’est pas disponible. Les utilisateurs doivent mettre à niveau leurs classeurs 2008 R2 vers la version 2012 ou version Office 2013 manuellement.<br /><br /> **Planifier l’actualisation des données :** NON pris en charge. Le classeur doit être mis à niveau.|  
+|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel**|Non pris en charge|Toutes les fonctionnalités|**Expérience :** Les utilisateurs peuvent interagir avec le classeur dans le navigateur et utiliser comme source de données pour d’autres solutions. La planification de l'actualisation des données est disponible.<br /><br /> **Mise à niveau :** Mise à niveau automatique n’est pas pris en charge. Les utilisateurs peuvent mettre à niveau leurs classeurs vers la version Office 2013.<br /><br /> **Planification de l'actualisation des données :** prise en charge.|  
 |**Excel 2013**|Non pris en charge|Non pris en charge|Toutes les fonctionnalités|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Mettre à niveau des classeurs SQL Server 2008 R2 vers des classeurs SQL Server 2012 Service Pack 1 (SP1)  
@@ -58,7 +58,7 @@ ms.locfileid: "52505221"
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel 2013.  
   
- **La mise à niveau un classeur :** L'actualisation planifiée des données ne fonctionne pas tant que vous n'avez pas mis à niveau le classeur vers un classeur 2012. Pour mettre à niveau le classeur et le modèle qu'il contient, procédez de l'une des façons suivantes :  
+ **La mise à niveau un classeur :** L’actualisation des données planifiée ne fonctionne pas jusqu'à ce que vous mettez à niveau le classeur vers un classeur 2012. Pour mettre à niveau le classeur et le modèle qu'il contient, procédez de l'une des façons suivantes :  
   
 -   Téléchargez le classeur et ouvrez-le dans Microsoft Excel 2010 avec le complément SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour Excel installé.  
   

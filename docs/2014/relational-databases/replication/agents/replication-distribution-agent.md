@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210743"
 ---
 # <a name="replication-distribution-agent"></a>Agent de distribution de réplication
   L'Agent de distribution de réplication est un fichier exécutable qui déplace l'instantané (pour la réplication d'instantané et la réplication transactionnelle) et les transactions contenues dans les tables de base de données de distribution (pour la réplication transactionnelle) vers les tables de destination au niveau des Abonnés.  
@@ -89,14 +89,14 @@ ms.locfileid: "56028060"
  **-?**  
  Imprime tous les paramètres disponibles.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- Nom du serveur de publication. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_**\\**_instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Nom du serveur de publication. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
   
  **-PublisherDB** _publisher_database_  
  Nom de la base de données du serveur de publication.  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- Nom de l'Abonné. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_**\\**_instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ Nom de l'Abonné. Spécifiez *server_name* pour l'instance par défaut de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur. Spécifiez _server_name_ **\\** _instance_name_ pour une instance nommée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur ce serveur.  
   
  **-SubscriberDB** _subscriber_database_  
  Nom de la base de données de l'Abonné.  
@@ -230,7 +230,7 @@ ms.locfileid: "56028060"
  **-QuotedIdentifier** _quoted_identifier_  
  Spécifie le caractère de l'identificateur entre guillemets à utiliser. Le premier caractère de la valeur indique la valeur utilisée par l'Agent de distribution. Si **QuotedIdentifier** est utilisé sans valeur, l’Agent de distribution utilise un espace. Si **QuotedIdentifier** n’est pas utilisé, l’Agent de distribution utilise n’importe quel identificateur entre guillemets pris en charge par l’Abonné.  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  Liste séparée par des virgules spécifiant les numéros d'erreur à ignorer par cet agent.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  

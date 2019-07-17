@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18013587c8c6eb23989f8f22150b8980d0e5afc1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513778"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182660"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de séries chronologiques (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52513778"
  Les sections suivantes expliquent comment les nœuds sont réorganisés dans chacun de ces types de modèle.  
   
 ### <a name="structure-of-an-artxp-model"></a>Structure d'un modèle ARTXP  
- L'algorithme ARTXP crée un modèle semblable à un modèle d'arbre de décision. Il regroupe les attributs prédictibles et les divisent chaque fois que des différences significatives sont trouvées. Par conséquent, chaque modèle ARTXP contient une branche distincte pour chaque attribut prédictible. Par exemple, le didacticiel sur l'exploration de données de base crée un modèle qui prédit la quantité des ventes pour plusieurs régions. Dans le cas présent, **[Amount]** est l’attribut prédictible et une branche distincte est créée pour chaque région. Si vous aviez deux attributs prédictibles, **[Amount]** et **[Quantity]**, une branche distincte serait créée pour chaque association d’un attribut et d’une région.  
+ L'algorithme ARTXP crée un modèle semblable à un modèle d'arbre de décision. Il regroupe les attributs prédictibles et les divisent chaque fois que des différences significatives sont trouvées. Par conséquent, chaque modèle ARTXP contient une branche distincte pour chaque attribut prédictible. Par exemple, le didacticiel sur l'exploration de données de base crée un modèle qui prédit la quantité des ventes pour plusieurs régions. Dans le cas présent, **[Amount]** est l’attribut prédictible et une branche distincte est créée pour chaque région. Si vous aviez deux attributs prédictibles, **[Amount]** et **[Quantity]** , une branche distincte serait créée pour chaque association d’un attribut et d’une région.  
   
  Le nœud supérieur de la branche ARTXP contient les mêmes informations que celles présentes dans un nœud racine de l'arbre de décision. Cela inclut le nombre d'enfants de ce nœud (CHILDREN_CARDINALITY), le nombre de cas qui remplissent les conditions de ce nœud (NODE_SUPPORT) et différentes statistiques descriptives (NODE_DISTRIBUTION).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52513778"
 >  Si vous voulez afficher les formules, vous pouvez rechercher la formule de régression complète au niveau du nœud terminal, mais pas dans un nœud intermédiaire ou racine.  
   
 ### <a name="structure-of-an-arima-model"></a>Structure d'un modèle ARIMA  
- L’algorithme ARIMA crée une seule information pour chaque combinaison d’une série de données (tel que **[Région]**) et un attribut prédictible (tel que **[Sales Amount]**)-l’équation qui décrit le modification de l’attribut prédictible dans le temps.  
+ L’algorithme ARIMA crée une seule information pour chaque combinaison d’une série de données (tel que **[Région]** ) et un attribut prédictible (tel que **[Sales Amount]** )-l’équation qui décrit le modification de l’attribut prédictible dans le temps.  
   
  L'équation de chaque série est dérivée de plusieurs composants, un pour chaque structure périodique trouvée dans les données. Par exemple, si vous avez des données de ventes qui sont collectées tous les mois, l'algorithme peut détecter des structures périodiques mensuelles, trimestrielles ou annuelles.  
   
@@ -303,7 +303,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> Fonctionnement de l'arbre ARIMA  
  Chaque structure d'un modèle ARIMA correspond à une *périodicité* ou *structure périodique*. Une structure périodique est un modèle de données qui se répète dans l'ensemble de la série de données. Une variation mineure dans le modèle est autorisée, dans les limites statistiques. La périodicité est mesurée en fonction des unités de temps par défaut qui ont été utilisées dans les données d'apprentissage. Par exemple, si les données d'apprentissage fournissent les données de ventes pour chaque jour, l'unité de temps par défaut est un jour, et toutes les structures périodiques sont définies sous la forme d'un nombre de jours spécifié.  
   
- Chaque période détectée par l'algorithme obtient son propre nœud de structure. Par exemple, si vous analysez les données de ventes quotidiennes, le modèle peut détecter des structures périodiques qui représentent les semaines. Dans le cas présent, l'algorithme créera deux structures périodiques dans le modèle fini : une pour la période quotidienne par défaut, notée {1}, et une pour les semaines, signalée par {7}.  
+ Chaque période détectée par l'algorithme obtient son propre nœud de structure. Par exemple, si vous analysez les données de ventes quotidiennes, le modèle peut détecter des structures périodiques qui représentent les semaines. Dans ce cas, l’algorithme créera deux structures périodiques dans le modèle fini : une pour la période par défaut quotidienne, notée en tant que {1}, et une pour les semaines, signalée par {7}.  
   
  Par exemple, la requête suivante retourne toutes les structures ARIMA d'un modèle d'exploration de données.  
   

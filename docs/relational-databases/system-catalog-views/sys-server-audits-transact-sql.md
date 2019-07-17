@@ -19,34 +19,33 @@ helpviewer_keywords:
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1cf8e911f8b8e871cf7389bf40d6a84bc455bffa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125001"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque audit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une instance de serveur. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**Int**|ID de l'audit.|  
-|**nom**|**sysname**|Nom de l’audit.|  
+|**audit_id**|**int**|ID de l'audit.|  
+|**name**|**sysname**|Nom de l’audit.|  
 |**AUDIT_GUID**|**uniqueidentifier**|GUID de l’audit qui est utilisé pour énumérer les audits avec membre Server&#124;opérations d’attachement de spécifications d’audit de base de données pendant le démarrage du serveur et base de données.|  
 |**create_date**|**datetime**|Date UTC de création de l'audit.|  
 |**modify_date**|**datetime**|Date UTC de dernière modification de l'audit.|  
-|**principal_id**|**Int**|ID du propriétaire de l’audit, tel qu’enregistré dans le serveur.|  
+|**principal_id**|**int**|ID du propriétaire de l’audit, tel qu’enregistré dans le serveur.|  
 |**type**|**char(2)**|Type d'audit :<br /><br /> SL - journal des événements de sécurité NT<br /><br /> AL - journal des événements Application NT<br /><br /> FL - fichier sur le système de fichiers|  
 |**type_desc**|**nvarchar(60)**|JOURNAL DE SÉCURITÉ<br /><br /> JOURNAL DES APPLICATIONS<br /><br /> FILE|  
 |**ON_FAILURE**|**tinyint**|En cas d'échec d'écriture d'une entrée d'audit :<br /><br /> 0 - continuer<br /><br /> 1 - arrêter l’instance de serveur<br /><br /> 2 - faire échouer l’opération|  
 |**on_failure_desc**|**nvarchar(60)**|En cas d'échec d'écriture d'une entrée d'audit :<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0 - désactivé<br /><br /> 1 – Activé|  
-|**QUEUE_DELAY**|**Int**|Durée maximale, en millisecondes, avant d'écrire sur disque. Si la valeur 0 est spécifiée, l'audit garantira une écriture avant qu'un événement puisse continuer.|  
-|**prédicat**|**nvarchar(3000)**|L’expression de prédicat est appliquée à l’événement.|  
+|**QUEUE_DELAY**|**int**|Durée maximale, en millisecondes, avant d'écrire sur disque. Si la valeur 0 est spécifiée, l'audit garantira une écriture avant qu'un événement puisse continuer.|  
+|**predicate**|**nvarchar(3000)**|L’expression de prédicat est appliquée à l’événement.|  
   
 ## <a name="permissions"></a>Autorisations  
  Les principaux avec le **ALTER ANY SERVER AUDIT** ou **VIEW ANY DEFINITION** autorisation ont accès à cette vue de catalogue. En outre, le principal ne doit pas être refusé **VIEW ANY DEFINITION** autorisation.  

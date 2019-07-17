@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5430aa0125e621a574d8fb9cc6b28f6b73794b46
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519263"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184444"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Appliquer un filtre à un modèle d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Sélectionnez le modèle et cliquez avec le bouton droit pour ouvrir le menu contextuel.  
   
-     -ou-  
+     ou  
   
      Sélectionnez le modèle. Puis, dans le menu **Modèle d'exploration de données** , sélectionnez **Définir le filtre de modèle**.  
   
@@ -101,7 +101,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Cliquez sur **Valeur** et tapez une valeur.  
   
-     Par exemple, pour **Colonne de la structure d’exploration de données** , sélectionnez **Model**. Pour **Opérateur**, sélectionnez **<>**, puis tapez la valeur **Water Bottle**. Cette condition crée l'expression de filtre suivante :  
+     Par exemple, pour **Colonne de la structure d’exploration de données** , sélectionnez **Model**. Pour **Opérateur**, sélectionnez **<>** , puis tapez la valeur **Water Bottle**. Cette condition crée l'expression de filtre suivante :  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   

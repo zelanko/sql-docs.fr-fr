@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: df2bab593e0e945e854e310a394abbc93f75efa4
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0722bbc713804af6b2b97b5651df5b564d17a136
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117803"
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**@message_id =** ] *message_number*  
+ [ **@message_id =** ] *message_number*  
  Numéro d’erreur du message à modifier à partir de **sys.messages**. *message_number* est **int** sans valeur par défaut.  
   
 `[ @parameter = ] 'write\_to\_log_'` Est utilisé avec **@parameter_value** pour indiquer que le message doit être écrit dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows. *écriture_dans_journal* est **sysname** sans valeur par défaut. *écriture_dans_journal* doit être définie sur WITH_LOG ou NULL. Si *écriture_dans_journal* est définie sur WITH_LOG ou NULL et la valeur de **@parameter_value** est **true**, le message est écrit dans le journal des applications Windows. Si *écriture_dans_journal* est définie sur WITH_LOG ou NULL et la valeur de **@parameter_value** est **false**, le message n’est pas automatiquement écrite dans le journal des applications Windows, mais peut être écrit selon la façon dont elle a été déclenchée. Si *écriture_dans_journal* est spécifié, la valeur de **@parameter_value** doit également être spécifié.  
@@ -50,13 +49,13 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 > [!NOTE]  
 >  Si un message est écrit dans le journal des applications Windows, il est également écrite dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] fichier journal des erreurs.  
   
-`[ @parameter_value = ]'value_'` Est utilisé avec **@parameter** pour indiquer que l’erreur doit être écrite dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows. *valeur* est **varchar (5)**, sans valeur par défaut. Si **true**, l’erreur est automatiquement écrite dans le journal des applications Windows. Si **false**, l’erreur n’est pas automatiquement écrite dans le journal des applications Windows, mais peut être écrit selon la façon dont elle a été déclenchée. Si *valeur* est spécifié, *écriture_dans_journal* pour **@parameter** doit également être spécifié.  
+`[ @parameter_value = ]'value_'` Est utilisé avec **@parameter** pour indiquer que l’erreur doit être écrite dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows. *valeur* est **varchar (5)** , sans valeur par défaut. Si **true**, l’erreur est automatiquement écrite dans le journal des applications Windows. Si **false**, l’erreur n’est pas automatiquement écrite dans le journal des applications Windows, mais peut être écrit selon la façon dont elle a été déclenchée. Si *valeur* est spécifié, *écriture_dans_journal* pour **@parameter** doit également être spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  L’effet de **sp_altermessage** avec le WITH_LOG option est similaire à celui du paramètre RAISERROR WITH LOG, à ceci près que **sp_altermessage** modifie le comportement de journalisation d’un message existant. Si un message a été modifié avec l'option WITH_LOG, il est toujours écrit dans le journal des applications Windows, quelle que soit la manière dont un utilisateur appelle l'erreur. Même si RAISERROR est exécuté sans l'option WITH_LOG, l'erreur est écrite dans le journal des applications Windows.  

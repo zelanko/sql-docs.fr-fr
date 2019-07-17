@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6207e110-f4bf-4139-b3ec-b799c9cb3ad7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b45ac37a4b2d8b37235bcf53164d6006c4ad51e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108420"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |Value|Description|  
 |-----------|-----------------|  
 |0|Opération réussie|  
-|0x0001|Failure|  
+|0x0001|Échec|  
 |1FF6|Impossible de retourner des métadonnées.<br /><br /> Remarque : La raison en est que l’instruction ne produit pas un jeu de résultats ; par exemple, il est une instruction INSERT ou DDL.|  
   
 ## <a name="examples"></a>Exemples  

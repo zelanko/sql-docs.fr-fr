@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76afbfcd2cd7668cfc65fc5078a1015ac33bc964
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529111"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178958"
 ---
 # <a name="data-sources-and-bindings-ssas-multidimensional"></a>Sources de données et liaisons (SSAS Multidimensionnel)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,13 +37,13 @@ ms.locfileid: "52529111"
 |---------------------------------|-----------------|  
 |BigInt|Entier signé de 64 bits. Ce type de données est mappé au type de données Int64 dans Microsoft [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I8 dans OLE DB.|  
 |Bool|Valeur booléenne. Ce type de données est mappé au type de données Boolean dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_BOOL dans OLE DB.|  
-|Monétaire (Currency)|Valeur monétaire comprise entre -263 (ou -922,337,203,685,477.5808) et 263-1 (ou +922,337,203,685,477.5807) avec une précision d'un dix-millième d'une unité monétaire. Ce type de données est mappé au type de données Decimal dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_CY dans OLE DB.|  
+|Currency|Valeur monétaire comprise entre -263 (ou -922,337,203,685,477.5808) et 263-1 (ou +922,337,203,685,477.5807) avec une précision d'un dix-millième d'une unité monétaire. Ce type de données est mappé au type de données Decimal dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_CY dans OLE DB.|  
 |Date|Données de date stockées sous la forme d'un nombre à virgule flottante double précision. La partie entière correspond au nombre de jours depuis le 30 décembre 1899 tandis que la partie fractionnaire désigne une fraction d'un jour. Ce type de données est mappé sur le type de données DateTime dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_DATE dans OLE DB.|  
 |Double|Nombre à virgule flottante double précision compris entre -1.79E +308 et 1.79E +308. Ce type de données est mappé au type de données Double dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_R8 dans OLE DB.|  
 |Entier|Entier signé de 32 bits. Ce type de données est mappé sur le type de données Int32 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_I4 dans OLE DB.|  
-|Unique|Nombre à virgule flottante simple précision compris entre -3.40E +38 et 3.40E +38. Ce type de données est mappé sur le type de données Single dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_R4 dans OLE DB.|  
+|Single|Nombre à virgule flottante simple précision compris entre -3.40E +38 et 3.40E +38. Ce type de données est mappé sur le type de données Single dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_R4 dans OLE DB.|  
 |SmallInt|Entier signé 16 bits. Ce type de données est mappé au type de données Int16 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I2 dans OLE DB.|  
-|TinyInt|Entier signé 8 bits. Ce type de données est mappé au type de données SByte dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I1 dans OLE DB.<br /><br /> Remarque : Si une source de données contient des champs de type tinyint et que la propriété AutoIncrément est définie sur True, ils seront convertis en entiers dans la vue de source de données.|  
+|TinyInt|Entier signé 8 bits. Ce type de données est mappé au type de données SByte dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_I1 dans OLE DB.<br /><br /> Remarque : Si une source de données contient des champs qui sont de type tinyint et que la propriété Autoincrément est définie sur True, ils seront convertis en entiers dans la vue de source de données.|  
 |UnsignedBigInt|Entier non signé 64 bits. Ce type de données est mappé sur le type de données UInt64 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_UI8 dans OLE DB.|  
 |UnsignedInt|Entier non signé 32 bits. Ce type de données est mappé sur le type de données UInt32 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et sur le type de données DBTYPE_UI4 dans OLE DB.|  
 |UnsignedSmallInt|Entier non signé 16 bits. Ce type de données est mappé au type de données UInt16 dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] et au type de données DBTYPE_UI2 dans OLE DB.|  
@@ -145,7 +145,7 @@ ms.locfileid: "52529111"
   
  Les liaisons hors ligne sont spécifiées en incluant l’objet de collection **Bindings** facultatif avec la commande de traitement. La collection **Bindings** facultative contient les éléments suivants.  
   
-|Propriété|Cardinalité|Type|Description|  
+|Propriété|Cardinalité|type|Description|  
 |--------------|-----------------|----------|-----------------|  
 |**Binding**|0-n|**Binding**|Fournit une collection de nouvelles liaisons.|  
 |**DataSource**|0-1|**DataSource**|Remplace l'élément **DataSource** du serveur qui aurait été utilisé.|  

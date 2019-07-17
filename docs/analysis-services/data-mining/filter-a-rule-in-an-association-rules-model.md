@@ -1,5 +1,5 @@
 ---
-title: Filtre de modèle de règles d’une règle dans une Association | Documents Microsoft
+title: Filtre de modèle de règles d’une règle dans une Association | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28d3601b18f792b957627e63630806453d971110
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014486"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209992"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrer une règle dans un modèle de règles d'association
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "34014486"
   
 ### <a name="filter-a-rule-in-an-association-model"></a>Filtrer une règle dans un modèle d'association  
   
-1.  Ouvrez le modèle d'exploration de données à l'aide de la **Visionneuse de l'algorithme MAR (Microsoft Association Rules)**. Pour ce faire, dans SQL Server Management Studio, cliquez avec le bouton droit sur le nom du modèle, puis sélectionnez **Parcourir**. Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], double-cliquez sur la structure d’exploration de données qui contient le modèle, puis cliquez sur l’onglet **Visionneuse de modèle d’exploration de données** du **Concepteur d’exploration de données**.  
+1.  Ouvrez le modèle d'exploration de données à l'aide de la **Visionneuse de l'algorithme MAR (Microsoft Association Rules)** . Pour ce faire, dans SQL Server Management Studio, cliquez avec le bouton droit sur le nom du modèle, puis sélectionnez **Parcourir**. Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], double-cliquez sur la structure d’exploration de données qui contient le modèle, puis cliquez sur l’onglet **Visionneuse de modèle d’exploration de données** du **Concepteur d’exploration de données**.  
   
-2.  Cliquez sur l'onglet **Règles** de la **Visionneuse de l'algorithme MAR (Microsoft Association Rules)**.  
+2.  Cliquez sur l'onglet **Règles** de la **Visionneuse de l'algorithme MAR (Microsoft Association Rules)** .  
   
 3.  Tapez une condition de règle dans la zone **Filtrer la règle** . Voici par exemple une condition de règle « Bike Stand », qui retourne également « Bike Stands ».  
   
@@ -39,24 +39,24 @@ ms.locfileid: "34014486"
   
 5.  Pour **Importance minimale**, augmentez la valeur d'importance afin de voir moins de règles ou réduisez cette valeur afin de voir davantage de règles.  
   
-6.  Pour **Afficher**, sélectionnez l'une des options suivantes : **Afficher le nom et la valeur de l'attribut**, **Afficher le nom de l'attribut uniquement**ou **Afficher la valeur de l'attribut uniquement**.  
+6.  Pour **afficher**, sélectionnez une des options suivantes : **Afficher le nom de l’attribut et valeur**, **afficher uniquement le nom attribut**, ou **afficher la valeur de l’attribut uniquement**.  
   
 7.  Pour **Lignes au maximum**, augmentez la valeur afin d'augmenter le nombre total de règles répondant aux conditions spécifiées ou réduisez la valeur afin de limiter le nombre de règles retournées. Les règles sont classées par ordre de probabilité ; par conséquent, vous risquez d'éliminer des règles supplémentaires qui répondent aux conditions spécifiées pour la probabilité ou l'importance.  
   
 8.  Activez ou désactivez la case à cocher **Afficher le nom long** pour basculer entre les modes d'affichage des noms de règles.  
   
-     Les règles sont alors filtrées afin d'afficher uniquement celles qui contiennent l'élément indiqué. La condition de filtre s'applique aux valeurs d'attributs avant ou après le délimiteur de règle, « -> ».  
+     Les règles sont alors filtrées afin d'afficher uniquement celles qui contiennent l'élément indiqué. La condition de filtre s'applique aux valeurs d'attributs avant ou après le délimiteur de règle, « -> ».  
   
     > [!NOTE]  
     >  La visionneuse met en cache la liste initiale des règles, en fonction d'une requête portant sur le modèle d'exploration de données ; en outre, elle n'actualise pas la liste des règles tant que vous ne modifiez pas les conditions de la requête en définissant les lignes maximales, la probabilité, l'importance ou l'affichage des noms longs. Par conséquent, si vous tapez une condition et si l'affichage n'est pas immédiatement actualisé, vous pouvez forcer la visionneuse à actualiser les données en activant, puis en désactivant la case à cocher **Afficher le nom long** .  
   
 ### <a name="create-a-query-on-the-itemsets-in-an-association-model"></a>Créer une requête sur les jeux d'éléments dans un modèle d'association  
   
--   [Exemples de requêtes de modèle association](../../analysis-services/data-mining/association-model-query-examples.md)  
+-   [Exemples de requêtes de modèle d’association](../../analysis-services/data-mining/association-model-query-examples.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Parcourir un modèle à l’aide de la visionneuse de règles Microsoft Association](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Leçon 3 : Création d’un scénario de panier & #40 ; didacticiel d’exploration de données intermédiaires & #41 ;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MAR (Microsoft Association Rules)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   

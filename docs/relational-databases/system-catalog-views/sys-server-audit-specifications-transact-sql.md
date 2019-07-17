@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 061636210c76bace7ae483e277c624bb291cdeb8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6a3c6522218702b52c075ef5ce8088057fc7662b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125008"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient des informations à propos des spécifications de l'audit du serveur dans un audit SQL Server sur une instance de serveur. Pour plus d’informations sur SQL Server Audit, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de la spécification du serveur.|  
+|**name**|**sysname**|Nom de la spécification du serveur.|  
 |**server_specification_id**|**Int**|ID de la **server_specification**.|  
 |**create_date**|**DateTime**|Date de création de la spécification d'audit du serveur.|  
 |**modified_date**|**DateTime**|Date de dernière modification de la spécification d'audit du serveur.|  

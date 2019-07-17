@@ -1,5 +1,5 @@
 ---
-title: Création de calculs de cellules au niveau de requête (MDX) | Documents Microsoft
+title: Création de calculs de cellules au niveau requête (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c9cb6f083751b14ad3cd8f2ffaac692ef4e6eb86
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022836"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208779"
 ---
-# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Calculs de cellules MDX - calculs de cellules d’étendue de requête
+# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Calculs de cellules MDX - calculs de cellules au niveau de requête
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Pour décrire les cellules calculées au sein du contexte d’une requête, vous pouvez utiliser le mot clé **WITH** dans la syntaxe MDX (Multidimensional Expressions). La syntaxe du mot clé **WITH** est la suivante :  
   
@@ -26,7 +26,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  La valeur `CellCalc_Identifier` est le nom des cellules calculées. La valeur `String_Expression` contient une liste d’expressions de jeu MDX unidimensionnelles et orthogonales. Chacune de ces expressions d'ensemble doit être convertie en l'une des catégories répertoriées dans le tableau suivant.  
   
-|Catégorie|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |Jeu vide|Expression de jeu MDX qui prend la valeur d'un ensemble vide. Dans ce cas, la portée de la cellule calculée est l'intégralité du cube.|  
 |Jeu à un seul membre|Expression de jeu MDX qui prend la valeur d'un seul membre.|  
@@ -51,6 +51,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Par ailleurs, la syntaxe MDX traite la formule de calcul chaque fois qu'une requête MDX impliquant les cellules comprises dans la définition de cellules calculées est adressée au cube. Ce traitement se produit quelle que soit la portée de création.  
   
 ## <a name="see-also"></a>Voir aussi  
- [CRÉER une instruction de calcul de cellule & #40 ; MDX & #41 ;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [Instruction CREATE CELL CALCULATION &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

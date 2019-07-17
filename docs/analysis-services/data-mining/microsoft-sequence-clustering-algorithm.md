@@ -1,5 +1,5 @@
 ---
-title: Algorithme Microsoft Sequence Clustering | Documents Microsoft
+title: Algorithme Microsoft Sequence Clustering | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d231e1c11e53650b7e76c0c7070bcbc0e0a7fa70
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016456"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182904"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algorithme MSC (Microsoft Sequence Clustering)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "34016456"
  Pour des informations plus détaillées sur les types de contenu et les types de données pris en charge pour les modèles Sequence Clustering, consultez la section relative aux spécifications dans [Références techniques relatives à l’algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md).  
   
 ## <a name="viewing-a-sequence-clustering-model"></a>Affichage d'un modèle Sequence Clustering  
- Le modèle d'exploration de données que crée cet algorithme contient les descriptions des séquences les plus courantes dans les données. Pour explorer le modèle, vous pouvez utiliser la **Visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)**. Lorsque vous affichez un modèle Sequence Clustering, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous montre des clusters qui contiennent plusieurs transitions. Vous pouvez également afficher des statistiques pertinentes. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
+ Le modèle d'exploration de données que crée cet algorithme contient les descriptions des séquences les plus courantes dans les données. Pour explorer le modèle, vous pouvez utiliser la **Visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)** . Lorsque vous affichez un modèle Sequence Clustering, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous montre des clusters qui contiennent plusieurs transitions. Vous pouvez également afficher des statistiques pertinentes. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md).  
   
  Si vous voulez en savoir plus, vous pouvez parcourir le modèle dans la [Visionneuse de l’arborescence de contenu générique Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Le contenu stocké pour le modèle inclut la distribution de toutes les valeurs dans chaque nœud, la probabilité de chaque cluster et des détails concernant les transitions. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles Sequence Clustering &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md).  
   
@@ -72,9 +72,9 @@ ms.locfileid: "34016456"
 -   Prend en charge l'utilisation de modèles d'exploration de données OLAP et la création de dimensions d'exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering algorithme techniques de référence](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Sequence Clustering Model Query Examples](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Parcourir un modèle à l’aide de la séquence de Microsoft Cluster Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Références techniques relatives à l’algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Exemples de requêtes de modèle MSC (Sequence Clustering)](../../analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
+ [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

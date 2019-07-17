@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7a9844032ad24de1c81144ca742bfb185aecc36
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072156"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207493"
 ---
 # <a name="tables-and-columns"></a>Tables et colonnes 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53072156"
  **Métadonnées de table**  
  Les relations, les mesures, les rôles, les perspectives et les données collées sont des métadonnées qui définissent des objets dans le contexte d'une table.  
   
- **Data**  
+ **Données**  
  Les données sont remplies dans les colonnes de table lorsque vous importez d'abord les tables à l'aide de l'Assistant Importation de table ou en créant de nouvelles données dans les colonnes calculées. Lorsque des données changent au niveau de la source, ou lorsqu'un modèle est supprimé de la mémoire, vous devez exécuter une opération de traitement pour remplir à nouveau les données dans les tables.  
   
 ##  <a name="bkmk_working"></a> Utilisation de tables et de colonnes  

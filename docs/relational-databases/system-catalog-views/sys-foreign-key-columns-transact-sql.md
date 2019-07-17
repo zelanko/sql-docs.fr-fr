@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f45b4be7f62b58bd69f427e37da2243ad4665264
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad5bd8f5391e5903a6f9fd10e0cfb340cf4952b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133983"
 ---
 # <a name="sysforeignkeycolumns-transact-sql"></a>sys.foreign_key_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contient une ligne pour chaque colonne, ou ensemble de colonnes, comportant une clé étrangère.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**constraint_object_id**|**Int**|ID de la contrainte FOREIGN KEY.|  
-|**constraint_column_id**|**Int**|ID de colonne, ou le jeu de colonnes, qui composent la clé étrangère (*1.. n* où n = nombre de colonnes).|  
-|**parent_object_id**|**Int**|ID du parent de la contrainte, qui est l'objet référençant.|  
+|**constraint_object_id**|**int**|ID de la contrainte FOREIGN KEY.|  
+|**constraint_column_id**|**int**|ID de colonne, ou le jeu de colonnes, qui composent la clé étrangère (*1.. n* où n = nombre de colonnes).|  
+|**parent_object_id**|**int**|ID du parent de la contrainte, qui est l'objet référençant.|  
 |**parent_column_id**|**Int**|ID de la colonne parente, qui est la colonne référençante.|  
-|**referenced_object_id**|**Int**|ID de l'objet référencé, qui contient la clé candidate.|  
-|**referenced_column_id**|**Int**|ID de la colonne référencée (colonne clé candidate).|  
+|**referenced_object_id**|**int**|ID de l'objet référencé, qui contient la clé candidate.|  
+|**referenced_column_id**|**int**|ID de la colonne référencée (colonne clé candidate).|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

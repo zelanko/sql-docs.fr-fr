@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196709"
 ---
 # <a name="table-properties"></a>Propriétés de la table
   Cette rubrique décrit les propriétés de table qui sont affichées dans la boîte de dialogue Propriétés d'une table dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d’informations sur la façon d’afficher ces propriétés, consultez [Afficher la définition de table](view-the-table-definition.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "53356282"
  **Sauvegarde de la base de données**  
  Nom de la base de données qui contient cette table.  
   
- **Server**  
+ **Serveur**  
  Nom de l'instance actuelle du serveur.  
   
  **Utilisateur**  
@@ -65,7 +65,7 @@ ms.locfileid: "53356282"
  Indique si l'objet a été créé avec l'option d'identificateur entre guillemets activée (ON). Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-quoted-identifier-transact-sql).  
   
  **Escalade de verrous**  
- Indique la granularité de l'escalade de verrous de la table. Pour plus d'informations sur le verrouillage dans le moteur de base de données, consultez [Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). Les valeurs possibles sont :  
+ Indique la granularité de l'escalade de verrous de la table. Pour plus d'informations sur le verrouillage dans le moteur de base de données, consultez [Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server](https://msdn.microsoft.com/library/jj856598.aspx). Les valeurs possibles sont les suivantes :  
   
  AUTO  
  Cette option permet au [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de sélectionner la granularité de l'escalade de verrous appropriée pour le schéma de la table.  
@@ -139,7 +139,7 @@ ms.locfileid: "53356282"
   
  Si la table ne contient pas de données FILESTREAM, ce champ est vierge.  
   
-### <a name="general"></a>Général  
+### <a name="general"></a>Généralités  
  **Le format de stockage VarDecimal est activé**  
  Lorsque `True`, cette valeur en lecture seule indique que `decimal` et `numeric` des types de données sont stockées en utilisant le format de stockage vardecimal. Pour modifier cette option, utilisez le `vardecimal storage format` option de [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Le format de stockage vardecimal est déconseillé. Utilisez plutôt la compression ROW.  
   

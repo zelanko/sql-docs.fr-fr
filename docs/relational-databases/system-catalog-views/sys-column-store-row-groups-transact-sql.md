@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fff57d41e522ae2e002809982bfeb084c28bbbba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c98acb87e180dce32a00e77ba6c1af9fbd48b6fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140011"
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Fournit des informations sur les index cluster columnstore pour chaque segment afin d'aider l'administrateur à prendre des décisions de gestion du système. **Sys.column_store_row_groups** a une colonne pour le nombre total de lignes stockées physiquement (y compris celles marquées comme supprimées) et une colonne pour le nombre de lignes marquées comme supprimées. Utilisez **sys.column_store_row_groups** pour déterminer la ligne les groupes ont un pourcentage élevé de lignes supprimées et doivent être reconstruits.  
    
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**Int**|ID de la table sur laquelle cet index est défini.|  
-|**index_id**|**Int**|ID de l'index de la table qui contient cet index columnstore.|  
-|**partition_number**|**Int**|ID de la partition de table qui contient le row_group_id de groupe de lignes. Utilisez partition_number pour joindre cette vue DMV à sys.partitions.|  
+|**index_id**|**int**|ID de l'index de la table qui contient cet index columnstore.|  
+|**partition_number**|**int**|ID de la partition de table qui contient le row_group_id de groupe de lignes. Utilisez partition_number pour joindre cette vue DMV à sys.partitions.|  
 |**row_group_id**|**Int**|Numéro de groupe de lignes associé à ce groupe de lignes. Cet ID est unique dans la partition.<br /><br /> -1 = fin d’une table en mémoire.|  
 |**delta_store_hobt_id**|**bigint**|Hobt_id des groupe de lignes ouvert dans le magasin delta.<br /><br /> NULL si le groupe de lignes n’est pas dans le magasin delta.<br /><br /> NULL pour la fin d’une table en mémoire.|  
 |**state**|**tinyint**|Numéro d'ID associé à state_description.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = OBJET TOMBSTONE|  

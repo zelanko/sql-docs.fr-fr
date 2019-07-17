@@ -20,12 +20,12 @@ ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6ce0fa8270a05d8c3385cbc7b5c25edeaa84bc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a45f2e392f0d3a6a82a93ba43746eb937fe6bb9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899634"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262734"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "67899634"
 |-----------------|---------------|-----------------|  
 |**waiting_task_address**|**varbinary(8)**|Adresse de la tâche en attente.|  
 |**session_id**|**smallint**|ID de la session associée à la tâche.|  
-|**exec_context_id**|**Int**|ID du contexte d'exécution associé à la tâche.|  
+|**exec_context_id**|**int**|ID du contexte d'exécution associé à la tâche.|  
 |**wait_duration_ms**|**bigint**|Temps d'attente total de ce type d'attente (en millisecondes). Ce temps **signal_wait_time**.|  
 |**wait_type**|**nvarchar(60)**|Nom du type d'attente.|  
 |**resource_address**|**varbinary(8)**|Adresse de la ressource que la tâche attend.|  
@@ -137,7 +137,7 @@ ms.locfileid: "67899634"
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
  
 ## <a name="example"></a>Exemple
 Cet exemple identifie les sessions bloquées.  Exécuter le [!INCLUDE[tsql](../../includes/tsql-md.md)] interroger dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].

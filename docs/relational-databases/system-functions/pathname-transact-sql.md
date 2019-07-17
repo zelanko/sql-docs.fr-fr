@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe641df85802baab70efa514179f5abbeaea8951
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f79f9f94d56c900d879fce06646b401f735e0bd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140578"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *@option*  
  Entier [expression](../../t-sql/language-elements/expressions-transact-sql.md) qui définit comment le composant serveur du chemin d’accès doit être mis en forme. *@option* peut prendre l’une des valeurs suivantes. La valeur par défaut est 0.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |0|Retourne le nom de serveur converti au format BIOS, par exemple : `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Retourne le nom de serveur non converti, par exemple : `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -61,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Lorsque la base de données appartient à un groupe de disponibilité Always On de groupe, puis la valeur de *use_replica_computer_name* a l’effet suivant sur la sortie de la **PathName** fonction :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Non spécifié.|La fonction retourne le nom de réseau virtuel (VNN) dans le chemin d'accès.|  
 |0|La fonction retourne le nom de réseau virtuel (VNN) dans le chemin d'accès.|  
@@ -80,7 +79,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-reading-the-path-for-a-filestream-blob"></a>A. Lecture du chemin d'accès d'un objet BLOB FILESTREAM  
+### <a name="a-reading-the-path-for-a-filestream-blob"></a>R. Lecture du chemin d'accès d'un objet BLOB FILESTREAM  
  L'exemple suivant attribue `PathName` à une variable `nvarchar(max)`.  
   
 ```sql  

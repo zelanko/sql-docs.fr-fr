@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122631"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +46,12 @@ fn_my_permissions ( securable , 'securable_class' )
  Indique le nom de l'élément sécurisable. Si l'élément sécurisable est le serveur ou une base de données, cette valeur doit être définie sur NULL. *securable* est une expression scalaire de type **sysname**. *élément sécurisable* peut être un nom en plusieurs parties.  
   
  «*securable_class*»  
- Nom de la classe de l'élément sécurisable pour lequel les autorisations sont affichées. *securable_class* est un **sysname**. *securable_class* doit être un des éléments suivants : rôle d’APPLICATION, ASSEMBLY, une clé asymétrique, certificat, contrat, base de données, point de terminaison, FULLTEXT CATALOG, LOGIN, MESSAGE TYPE, objet, REMOTE SERVICE BINDING, rôle, itinéraire, schéma, serveur, SERVICE , CLÉ SYMÉTRIQUE, TYPE, UTILISATEUR, COLLECTION DE SCHÉMAS XML.  
+ Nom de la classe de l'élément sécurisable pour lequel les autorisations sont affichées. *securable_class* est un **sysname**. *securable_class* doit être une des opérations suivantes : RÔLE D’APPLICATION, ASSEMBLY, CLÉ ASYMÉTRIQUE, CERTIFICAT, CONTRAT, BASE DE DONNÉES, POINT DE TERMINAISON, FULLTEXT CATALOG, LOGIN, TYPE DE MESSAGE, OBJET, LIAISONS DE SERVICE DISTANT, RÔLE, ITINÉRAIRE, SCHÉMA, SERVEUR, SERVICE, SYMMETRIC KEY, TYPE, UTILISATEUR, COLLECTION DE SCHÉMAS XML.  
   
 ## <a name="columns-returned"></a>Colonnes retournées  
  Le tableau suivant répertorie les colonnes qui **fn_my_permissions** retourne. Chaque ligne renvoyée décrit une autorisation détenue par le contexte de sécurité actuel sur l'élément sécurisable. Renvoie NULL si la requête échoue.  
   
-|Nom de colonne|Type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|Nom de l'élément sécurisable pour lequel les autorisations affichées sont effectivement accordées.|  
 |subentity_name|**sysname**|Nom de colonne si l'élément sécurisable contient des colonnes, sinon NULL.|  
@@ -85,7 +84,7 @@ GO
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-effective-permissions-on-the-server"></a>A. Affichage des autorisations effectives sur le serveur  
+### <a name="a-listing-effective-permissions-on-the-server"></a>R. Affichage des autorisations effectives sur le serveur  
  L'exemple suivant renvoie la liste des autorisations effectives détenues par l'appelant sur le serveur.  
   
 ```  

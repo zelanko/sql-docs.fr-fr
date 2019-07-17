@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544263"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208222"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Déployer des solutions Power Pivot sur SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,19 +26,19 @@ ms.locfileid: "52544263"
   
  Cette rubrique contient les sections suivantes :  
   
- [Condition préalable : Vérifier que l’Application Web utilise l’authentification en Mode classique](#bkmk_classic)  
+ [Condition préalable : Vérifier que l’Application Web utilise l’authentification en Mode classique](#bkmk_classic)  
   
- [Étape 1 : Déployer la Solution de batterie de serveurs](#bkmk_farm)  
+ [Étape 1 : Déployer la Solution de batterie de serveurs](#bkmk_farm)  
   
- [Étape 2 : Déployer la Solution d’Application Web Power Pivot à l’Administration centrale](#deployCA)  
+ [Étape 2 : Déployer la Solution d’Application Web Power Pivot à l’Administration centrale](#deployCA)  
   
- [Étape 3 : Déployer la Solution d’Application Web Power Pivot pour d’autres Applications Web](#deployUI)  
+ [Étape 3 : Déployer la Solution d’Application Web Power Pivot pour d’autres Applications Web](#deployUI)  
   
  [Redéployer ou vous retirer la solution](#retract)  
   
  [À propos des solutions Power Pivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Condition préalable : Vérifier que l'application Web utilise l'authentification en mode classique  
+##  <a name="bkmk_classic"></a> Prérequis : Vérifier que l’Application Web utilise l’authentification en Mode classique  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint n’est pris en charge que pour les applications web qui utilisent l’authentification Windows en mode classique. Pour vérifier si l’application utilise le mode classique, exécutez l’applet de commande PowerShell suivante à partir de la **SharePoint 2010 Management Shell**, en remplaçant **http://\<nom de site de niveau supérieur >** avec le nom de votre site SharePoint :  
   
 ```  
@@ -95,7 +95,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  Maintenant que la solution d'application Web est déployée sur l'Administration centrale, vous pouvez recourir à cette dernière pour effectuer toutes les étapes de configuration restantes.  
   
-##  <a name="deployUI"></a> Étape 3 : Déployer la Solution d’Application Web Power Pivot pour d’autres Applications Web  
+##  <a name="deployUI"></a> Étape 3 : Déployer la Solution d’Application Web Power Pivot pour d’autres Applications Web  
  Dans la tâche précédente, vous avez déployé Powerpivotwebapp.wsp sur l'Administration centrale. Dans cette section, vous allez déployer powerpivotwebapp.wsp sur chaque application Web existante qui prend en charge l’accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Si vous ajoutez des applications Web supplémentaires par la suite, assurez-vous que vous répétez cette étape pour chacune de ces applications.  
   
 1.  Dans l'Administration centrale, sous Paramètres système, cliquez sur **Gérer les solutions de la batterie**.  

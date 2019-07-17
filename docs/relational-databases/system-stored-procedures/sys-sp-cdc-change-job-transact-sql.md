@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5f5973382b7a09080fa990b0807deb01660ce0d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106529"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Si un paramètre est omis, la valeur associée dans le [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) table n’est pas mise à jour. Un paramètre qui a pour valeur explicite NULL est traité comme s'il était omis.  
@@ -98,7 +97,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-changing-a-capture-job"></a>A. Modification d'un travail de capture  
+### <a name="a-changing-a-capture-job"></a>R. Modification d'un travail de capture  
  L’exemple suivant met à jour le `@job_type`, `@maxscans`, et `@maxtrans` paramètres d’un travail de capture dans le `AdventureWorks2012` base de données. Les autres paramètres valides pour un travail de capture, `@continuous` et `@pollinginterval`, sont omis ; leurs valeurs ne sont pas modifiées.  
   
 ```  
@@ -112,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. Modification d'un travail de nettoyage  
- L'exemple suivant met à jour un travail de nettoyage dans la base de données `AdventureWorks2012`. Tous les paramètres valides pour ce type de travail, à l’exception **@threshold**, sont spécifiés. La valeur de **@threshold** n’est pas modifié.  
+ L'exemple suivant met à jour un travail de nettoyage dans la base de données `AdventureWorks2012`. Tous les paramètres valides pour ce type de travail, à l’exception **@threshold** , sont spécifiés. La valeur de **@threshold** n’est pas modifié.  
   
 ```  
 USE AdventureWorks2012;  

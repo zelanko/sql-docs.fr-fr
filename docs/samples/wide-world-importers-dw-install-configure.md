@@ -9,14 +9,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a1335b430346cf64d143ce3e07887d78f65a451
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed3c5f1a4f2168196a651aea64c9c88311a197b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104253"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW Installation et configuration
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -61,7 +60,7 @@ Pour importer un fichier bacpac dans une base de données SQL, vous pouvez utili
 3. Avec le bouton droit sur le **bases de données** nœud, puis sélectionnez **importer une Application de couche données**.
 4. Dans le **importer les paramètres** sélectionnez **importer à partir du disque local** et sélectionnez le fichier bacpac de la base de données à partir de votre système de fichiers.
 5. Sous **les paramètres de base de données** modifier le nom de la base de données à *WideWorldImportersDW* et sélectionnez l’objectif d’édition et le service cible à utiliser.
-6. Cliquez sur **suivant** et **Terminer** pour lancer le déploiement. Il prendra quelques minutes pour terminer. Lorsque vous spécifiez un objectif de service inférieur à S2 peut prendre plus de temps.
+6. Cliquez sur **suivant** et **Terminer** pour lancer le déploiement. L’exécution de cette opération nécessite quelques minutes. Lorsque vous spécifiez un objectif de service inférieur à S2 peut prendre plus de temps.
 
 ## <a name="configuration"></a>Configuration
 

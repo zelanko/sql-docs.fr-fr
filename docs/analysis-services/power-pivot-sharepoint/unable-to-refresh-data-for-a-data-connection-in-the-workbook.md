@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5db5706af88a657b213e85d97777abe3ef4f744
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203138"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207995"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>Impossible d'actualiser les données pour une connexion de données dans le classeur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "53203138"
 ## <a name="explanation-and-resolution"></a>Explication et résolution  
  Excel Services ne peut pas se connecter aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ou les charger. Les conditions qui provoquent cette erreur sont les suivantes :  
   
- **Scénario 1 : Service n’est pas démarré.**  
+ **Scénario 1 : Service n’est pas démarré.**  
   
  SQL Server Analysis Services ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) instance n’est pas démarrée. Un mot de passe périmé arrête l'exécution du service. Pour plus d'informations sur la modification du mot de passe, consultez [Configuration des comptes de service Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md) et [Démarrer ou arrêter un serveur PowerPivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/start-or-stop-a-power-pivot-for-sharepoint-server.md).  
   
@@ -40,7 +40,7 @@ ms.locfileid: "53203138"
   
  Le classeur que vous essayez d’ouvrir peut avoir été créé dans la version SQL Server 2008 R2 de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel. Très probablement, le fournisseur de données Analysis Services qui est spécifié dans la chaîne de connexion de données n'est pas présent sur l'ordinateur qui gère la demande.  
   
- Si tel est le cas, vous trouverez ce message dans le journal ULS : « Échec de l’actualisation ' [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t données » dans le classeur '\<URL du classeur >' », suivi de « Impossible d’obtenir une connexion ».  
+ Si c’est le cas, vous trouverez ce message dans le journal ULS : « Échec de l’actualisation ' [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]t données » dans le classeur '\<URL du classeur >' », suivi de « Impossible d’obtenir une connexion ».  
   
  Pour déterminer la version du classeur, ouvrez-le dans Excel et vérifiez quel fournisseur de données est spécifié dans la chaîne de connexion. Un classeur SQL Server 2008 R2 utilise MSOLAP.4 comme fournisseur de données.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "53203138"
   
  Les serveurs qui exécutent [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint obtiennent le fournisseur de données OLE DB mis à jour automatiquement. D’autres serveurs, tels que ceux qui exécutent une instance autonome d’Excel Services sans [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint sur le même ordinateur, doivent être corrigés pour utiliser les bibliothèques clientes plus récentes. Pour plus d’informations, voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
- **Scénario 3 : Contrôleur de domaine n’est pas disponible**  
+ **Scénario 3 : Contrôleur de domaine n’est pas disponible**  
   
  La cause de l'erreur peut être qu'un contrôleur de domaine n'est pas disponible pour valider l'identité de l'utilisateur. Un contrôleur de domaine est requis par le service d'émission de jetons Revendications vers Windows pour authentifier l'utilisateur SharePoint à chaque connexion. Le service d'émission de jetons Revendications vers Windows n'utilise pas des informations d'identification mises en cache. Il valide l'identité de l'utilisateur pour chaque connexion.  
   

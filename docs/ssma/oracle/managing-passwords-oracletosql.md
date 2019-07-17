@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: c6b99dfd27655894456a1b0957c8c42f31819e1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: d8520224662c02d1ffbe9fd2fd6ef76f8b1e698a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62795739"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262924"
 ---
 # <a name="managing-passwords-oracletosql"></a>Gestion des mots de passe (OracleToSQL)
 Cette section concerne la sécurisation des mots de passe de base de données et la procédure pour importer ou exporter les sur les serveurs :  
@@ -58,7 +58,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
                 
                 Re-enter password for server_id 'XXX_1': xxxxxxx
             
-            Exemple 2 :
+            Exemple 2 :
             
                 C:\SSMA\SSMAforOracleConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 
@@ -74,7 +74,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
   
         Exécuter le `SSMAforOracleConsole.exe` avec la`-securepassword` et `-remove` passer à la ligne de commande en passant l’ID de serveur pour supprimer les mots de passe chiffrés à partir du fichier de stockage protégé présent sur l’ordinateur local.  
         
-        Exemple :  
+        Exemple :  
         
             C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove all
             C:\SSMA\SSMAforOracleConsole.EXE -securepassword -remove "source_1,target_1"  
@@ -83,7 +83,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
   
         Exécuter le `SSMAforOracleConsole.exe` avec la `-securepassword` et `-list` passer à la ligne de commande pour répertorier tous les ID de serveur dont les mots de passe ont été chiffrés.  
   
-        Exemple :  
+        Exemple :  
         
             C:\SSMA\SSMAforOracleConsole.EXE -securepassword -list  
   
@@ -94,7 +94,7 @@ Spécifiez un mot de passe à l’aide d’une des trois méthodes suivantes :
 ## <a name="exporting-or-importing-encrypted-passwords"></a>Exporter ou importer des mots de passe chiffrés  
 L’application de Console SSMA vous permet d’exporter des mots de passe de base de données chiffrées présentes dans un fichier sur l’ordinateur local à un fichier sécurisé et inversement. Il permet de rendre la machine de mots de passe chiffrés indépendants. La fonctionnalité d’exportation lit l’id de serveur et le mot de passe à partir de l’ordinateur local, stockage protégé et enregistre les informations dans un fichier chiffré. L’utilisateur est invité à entrer le mot de passe pour le fichier sécurisé. Assurez-vous que le mot de passe entré est la longueur de 8 caractères ou plus. Ce fichier sécurisé est portable sur des ordinateurs différents. Fonctionnalité d’importation lit les informations d’id et mot de passe de serveur à partir du fichier sécurisé. L’utilisateur est invité à entrer le mot de passe pour le fichier sécurisé et ajoute les informations sur le stockage local protégé.  
   
-Exemple :  
+Exemple :  
 
     Export password
     
@@ -110,7 +110,7 @@ Exemple :
     
     Please confirm password: xxxxxxxx  
   
-Exemple :  
+Exemple :  
 
     Import an encrypted password
     

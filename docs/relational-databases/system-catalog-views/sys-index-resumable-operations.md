@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 780cffa17f6ee1af70d942545632c98c9d6dc1e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c934c2fe8357cb4d37484984998edfcb7219c649
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122664"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
 
@@ -33,19 +32,19 @@ ms.locfileid: "63004380"
 **Sys.index_resumable_operations** est une vue système qui surveille et vérifie l’état d’exécution actuel pour la reconstruction d’Index pouvant être reprise.  
 **S’applique à** : SQL Server 2017 et Azure SQL Database
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|ID de l’objet auquel cet index appartient (qui n’autorise pas la valeur null).|  
-|**index_id**|**Int**|ID de l’index (qui n’autorise pas la valeur null). **index_id** est unique seulement dans l’objet.|
-|**nom**|**sysname**|Nom de l’index. **nom** est unique seulement dans l’objet.|  
+|**object_id**|**int**|ID de l’objet auquel cet index appartient (qui n’autorise pas la valeur null).|  
+|**index_id**|**int**|ID de l’index (qui n’autorise pas la valeur null). **index_id** est unique seulement dans l’objet.|
+|**name**|**sysname**|Nom de l’index. **nom** est unique seulement dans l’objet.|  
 |**sql_text**|**nvarchar(max)**|Texte de l’instruction DDL T-SQL|
 |**last_max_dop**|**smallint**|Dernière MAX_DOP utilisé (par défaut = 0)|
-|**partition_number**|**Int**|Numéro de partition dans l’index ou le segment de mémoire propriétaire. Pour les tables non partitionnées et ou dans les cas toutes les partitions sont en cours de reconstruction de la valeur de cette colonne est NULL.|
+|**partition_number**|**int**|Numéro de partition dans l’index ou le segment de mémoire propriétaire. Pour les tables non partitionnées et ou dans les cas toutes les partitions sont en cours de reconstruction de la valeur de cette colonne est NULL.|
 |**state**|**tinyint**|État opérationnel pour les index pouvant être reprise :<br /><br />0 = en cours d’exécution<br /><br />1 = pause|
 |**state_desc**|**nvarchar(60)**|Description de l’état opérationnel pour les index pouvant être reprise (en cours d’exécution ou suspendu)|  
 |**start_time**|**datetime**|Heure de début d’une opération de index (qui n’autorise pas la valeur null)|
 |**last_pause_time**|**datatime**| Opération d’index dernier temps de pause (null). NULL si l’opération est en cours d’exécution et ne sont jamais mise en pause.|
-|**total_execution_time**|**Int**|Durée d’exécution totale à partir de l’heure de début en quelques minutes (qui n’autorise pas la valeur null)|
+|**total_execution_time**|**int**|Durée d’exécution totale à partir de l’heure de début en quelques minutes (qui n’autorise pas la valeur null)|
 |**percent_complete**|**real**|Index de fin progression de l’opération dans % (pas de valeur nulle).|
 |**page_count**|**bigint**|Nombre total de pages d’index allouées par l’opération de génération d’index pour le nouveau et les index de mappage (qui n’autorise pas la valeur null).
 

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8bd62cc5fef3ef13dede85c06b28b0501a83de2f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513906"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178453"
 ---
 # <a name="deployment-script-files---partition-and-role-deployment-options"></a>Fichiers de script de déploiement - Options de déploiement de partitions et de rôles
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "52513906"
   
 -   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode interactif et, sur la page **Spécifiez des options pour les partitions et les rôles** , spécifiez de nouvelles options de déploiement pour les partitions et les rôles.  
   
-     -ou-  
+     ou  
   
 -   Exécutez l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à l'invite de commandes en mode fichier de réponses. (Pour plus d’informations sur le mode fichier de réponses, consultez [Exécution de l’Assistant Déploiement d’Analysis Services](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md).)  
   
-     -ou-  
+     ou  
   
 -   Ouvrez le \< *nom_projet*> .deploymentoptions dans un éditeur de texte et manuellement modifier les options. Les options de PartitionDeployment sont DeployPartitions, RetainPartitions. Les options de RoleDeployment sont DeployRolesAndMembers, DeployRolesRetainMembers, RetainRoles.
   

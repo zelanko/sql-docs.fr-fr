@@ -20,12 +20,12 @@ ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e5ada5c47d49b801a9dba1a70f22754096f4b27
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 2d13e7b3e2cac16bed40752f4452ba558c982c41
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135170"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255436"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -38,12 +38,12 @@ Les compteurs retournés sont par opérateur par thread. Les résultats sont dyn
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|Identifie la session dans laquelle cette requête s'exécute. Référence dm_exec_sessions.session_id.|  
-|request_id|**Int**|Identifie la demande cible. Référence dm_exec_sessions.request_id.|  
+|request_id|**int**|Identifie la demande cible. Référence dm_exec_sessions.request_id.|  
 |sql_handle|**varbinary(64)**|Est un jeton qui identifie de façon unique le lot ou une procédure stockée qui fait partie de la requête. Référence dm_exec_query_stats.sql_handle.|  
 |plan_handle|**varbinary(64)**|Est un jeton qui identifie de façon unique un plan d’exécution de requête pour un lot qui a été exécutée et son plan réside dans le cache du plan, ou est en cours d’exécution. Références dm_exec_query_stats.plan_handle.|  
 |physical_operator_name|**nvarchar (256)**|Nom de l'opérateur physique.|  
-|node_id|**Int**|Identifie un nœud d'opérateur dans l'arborescence de requête.|  
-|thread_id|**int**|Fait la distinction entre les threads (pour une requête parallèle) qui appartiennent au même nœud d'opérateur de requête.|  
+|node_id|**int**|Identifie un nœud d'opérateur dans l'arborescence de requête.|  
+|thread_id|**Int**|Fait la distinction entre les threads (pour une requête parallèle) qui appartiennent au même nœud d'opérateur de requête.|  
 |task_address|**varbinary(8)**|Identifie la tâche SQLOS utilisée par ce thread. Référence dm_os_tasks.task_address.|  
 |row_count|**bigint**|Nombre de lignes retournées par l'opérateur jusqu'à présent.|  
 |rewind_count|**bigint**|Nombre de rembobinages jusqu'à présent.|  
@@ -59,7 +59,7 @@ Les compteurs retournés sont par opérateur par thread. Les résultats sont dyn
 |elapsed_time_ms|**bigint**|Temps total écoulé (en millisecondes) utilisé par les opérations du nœud cible jusqu'à présent.|  
 |cpu_time_ms|**bigint**|Nombre total d’utilisation de temps (en millisecondes) du processeur par les opérations du nœud cible jusqu'à présent.|  
 |database_id|**smallint**|ID de la base de données qui contient l'objet sur lequel les opérations de lecture et d'écriture sont effectuées.|  
-|object_id|**Int**|Identificateur de l'objet sur lequel les opérations de lecture et écriture sont effectuées. Fait référence à sys.objects.object_id.|  
+|object_id|**int**|Identificateur de l'objet sur lequel les opérations de lecture et écriture sont effectuées. Fait référence à sys.objects.object_id.|  
 |index_id|**int**|Index (le cas échéant) dans lequel l'ensemble de lignes est ouvert.|  
 |scan_count|**bigint**|Nombre d'analyses de tables ou d'index jusqu'à présent.|  
 |logical_read_count|**bigint**|Nombre de lectures logiques jusqu'à présent.|  
@@ -91,7 +91,7 @@ En commençant par [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, le *st
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
    
 ## <a name="examples"></a>Exemples  
  Étape 1 : Connexion à une session dans laquelle vous prévoyez d’exécuter la requête que vous analyserez avec `sys.dm_exec_query_profiles`. Pour configurer la requête pour le profil `SET STATISTICS PROFILE ON`. Exécutez votre requête dans la même session.  

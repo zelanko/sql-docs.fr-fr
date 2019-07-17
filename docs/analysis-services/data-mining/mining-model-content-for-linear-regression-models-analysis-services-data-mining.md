@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c016d54d9272409e3edc3d6fc379980b952dd917
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120179"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182752"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de régression linéaire (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "49120179"
  Nom du modèle.  
   
  ATTRIBUTE_NAME  
- **Nœud racine :** Vide  
+ **Nœud racine :** Vide  
   
- **Nœud de régression :** Nom de l’attribut prédictible.  
+ **Nœud de régression :** Le nom de l’attribut prédictible.  
   
  NODE_NAME  
  Toujours identique à NODE_UNIQUE_NAME.  
@@ -54,23 +54,23 @@ ms.locfileid: "49120179"
  NODE_TYPE  
  Un modèle de régression linéaire génère les types de nœuds suivants :  
   
-|ID du type de nœud|Type|Description|  
+|ID du type de nœud|type|Description|  
 |------------------|----------|-----------------|  
 |25|Racine de l'arbre de régression|Contient la formule qui décrit la relation entre la variable d’entrée et la variable de sortie.|  
   
  NODE_CAPTION  
  Étiquette ou légende associée au nœud. Cette propriété est principalement utilisée à des fins d'affichage.  
   
- **Nœud racine :** Vide  
+ **Nœud racine :** Vide  
   
- **Nœud de régression :** Tout.  
+ **Nœud de régression :** Toutes  
   
  CHILDREN_CARDINALITY  
  Estimation du nombre d'enfants du nœud.  
   
- **Nœud racine :** Indique le nombre de nœuds de régression. Un nœud de régression est créé pour chaque attribut prédictible du modèle.  
+ **Nœud racine :** Indique le nombre de nœuds de régression. Un nœud de régression est créé pour chaque attribut prédictible du modèle.  
   
- **Nœud de régression :** Toujours 0.  
+ **Nœud de régression :** Toujours 0.  
   
  PARENT_UNIQUE_NAME  
  Nom unique du parent du nœud. La valeur NULL est retournée pour tous les nœuds situés au niveau de la racine.  
@@ -78,9 +78,9 @@ ms.locfileid: "49120179"
  NODE_DESCRIPTION  
  Description du nœud.  
   
- **Nœud racine :** Vide  
+ **Nœud racine :** Vide  
   
- **Nœud de régression :** Tout.  
+ **Nœud de régression :** Toutes  
   
  NODE_RULE  
  Non utilisé pour les modèles de régression linéaire.  
@@ -91,23 +91,23 @@ ms.locfileid: "49120179"
  NODE_PROBABILITY  
  Probabilité associée à ce nœud.  
   
- **Nœud racine :** 0  
+ **Nœud racine :** 0  
   
- **Nœud de régression :** 1  
+ **Nœud de régression :** 1  
   
  MARGINAL_PROBABILITY  
  Probabilité d'accès au nœud à partir du nœud parent.  
   
- **Nœud racine :** 0  
+ **Nœud racine :** 0  
   
- **Nœud de régression :** 1  
+ **Nœud de régression :** 1  
   
  NODE_DISTRIBUTION  
  Table imbriquée fournissant des statistiques sur les valeurs du nœud.  
   
- **Nœud racine :** 0  
+ **Nœud racine :** 0  
   
- **Nœud de régression :** Table contenant les éléments utilisés pour générer la formule de régression. Un nœud de régression contient les types de valeur suivants :  
+ **Nœud de régression :** Une table qui contient les éléments utilisés pour générer la formule de régression. Un nœud de régression contient les types de valeur suivants :  
   
 |VALUETYPE|  
 |---------------|  
@@ -121,9 +121,9 @@ ms.locfileid: "49120179"
  NODE_SUPPORT  
  Nombre de cas qui prennent en charge ce nœud.  
   
- **Nœud racine :** 0  
+ **Nœud racine :** 0  
   
- **Nœud de régression :** Nombre de cas d’apprentissage.  
+ **Nœud de régression :** Nombre de cas d’apprentissage.  
   
  MSOLAP_MODEL_COLUMN  
  Nom de l'attribut prédictible.  

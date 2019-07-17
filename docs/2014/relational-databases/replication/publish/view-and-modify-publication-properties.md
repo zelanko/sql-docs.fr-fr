@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135829"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212051"
 ---
 # <a name="view-and-modify-publication-properties"></a>Afficher et modifier les propriétés d'une publication
   Cette rubrique décrit comment afficher et modifier les propriétés de la publication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -55,7 +55,7 @@ ms.locfileid: "54135829"
 -   Après qu'une publication a été créée, certaines modifications de propriétés nécessitent un nouvel instantané. Si une publication dispose d'abonnements, ces abonnements pourraient devoir alors être réinitialisés selon les modifications que vous avez apportées. Pour plus d’informations, consultez [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md) et [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Affichez et modifiez les propriétés de la publication dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, disponible dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et dans le moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../monitor/start-the-replication-monitor.md).  
+ Affichez et modifiez les propriétés de la publication dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , disponible dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] et dans le moniteur de réplication. Pour plus d’informations sur le démarrage du Moniteur de réplication, consultez [Démarrer le Moniteur de réplication](../monitor/start-the-replication-monitor.md).  
   
  La boîte de dialogue **Propriétés de la publication - \<Publication>** comprend les pages suivantes :  
   
@@ -109,7 +109,7 @@ ms.locfileid: "54135829"
 1.  Exécutez [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), en spécifiant la propriété de publication à modifier dans le paramètre **@property** et la nouvelle valeur de cette propriété dans le paramètre **@value** .  
   
     > [!NOTE]  
-    >  Si la modification nécessite la génération d'un nouvel instantané, vous devez également spécifier la valeur **1** pour **@force_invalidate_snapshot**et si la modification nécessite la réinitialisation des Abonnés, vous devez spécifier la valeur **1** pour **@force_reinit_subscription**. Pour plus d’informations sur les propriétés qui, une fois modifiées, nécessitent un nouvel instantané ou une réinitialisation, consultez [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md).  
+    >  Si la modification nécessite la génération d'un nouvel instantané, vous devez également spécifier la valeur **1** pour **@force_invalidate_snapshot** et si la modification nécessite la réinitialisation des Abonnés, vous devez spécifier la valeur **1** pour **@force_reinit_subscription** . Pour plus d’informations sur les propriétés qui, une fois modifiées, nécessitent un nouvel instantané ou une réinitialisation, consultez [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>Pour afficher les propriétés d'une publication de fusion  
   
@@ -120,7 +120,7 @@ ms.locfileid: "54135829"
 1.  Exécutez [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), en spécifiant la propriété de publication à modifier dans le paramètre **@property** et la nouvelle valeur de cette propriété dans le paramètre **@value** .  
   
     > [!NOTE]  
-    >  Si la modification nécessite la génération d’un nouvel instantané, vous devez également spécifier la valeur **1** pour **@force_invalidate_snapshot** et si la modification nécessite la réinitialisation des Abonnés, vous devez spécifier la valeur **1** pour **@force_reinit_subscription**. Pour plus d’informations sur les propriétés qui, une fois modifiées, nécessitent un nouvel instantané ou une réinitialisation, consultez [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md).  
+    >  Si la modification nécessite la génération d’un nouvel instantané, vous devez également spécifier la valeur **1** pour **@force_invalidate_snapshot** et si la modification nécessite la réinitialisation des Abonnés, vous devez spécifier la valeur **1** pour **@force_reinit_subscription** . Pour plus d’informations sur les propriétés qui, une fois modifiées, nécessitent un nouvel instantané ou une réinitialisation, consultez [Modifier les propriétés des publications et des articles](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>Pour afficher les propriétés d'un instantané  
   

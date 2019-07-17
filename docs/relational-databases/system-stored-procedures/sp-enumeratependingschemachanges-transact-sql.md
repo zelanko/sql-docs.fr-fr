@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a3f0fa918d0247f5fd6dbe11c4a91a2376c52dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da5579c52d1ffe1400e3b4c8c01210ca5856597b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124581"
 ---
 # <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +44,10 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>Jeu de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**article_name**|**sysname**|Nom de l’article auquel la modification de schéma s’applique, ou **à l’échelle de la Publication** pour les modifications de schéma qui s’appliquent à la publication entière.|  
-|**schemaversion**|**Int**|Numéro de la modification de schéma en attente.|  
+|**nom_article**|**sysname**|Nom de l’article auquel la modification de schéma s’applique, ou **à l’échelle de la Publication** pour les modifications de schéma qui s’appliquent à la publication entière.|  
+|**schemaversion**|**int**|Numéro de la modification de schéma en attente.|  
 |**schematype**|**sysname**|Valeur de texte représentant le type de modification de schéma.|  
 |**schematext**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] qui décrit la modification de schéma.|  
 |**schemastatus**|**nvarchar(10)**|Indique si une modification de schéma est en attente pour l'article. Peut avoir l'une des valeurs suivantes :<br /><br /> **Active** = modification de schéma est en attente<br /><br /> **inactif** = modification de schéma est inactive<br /><br /> **Ignorer** = modification de schéma n’est pas répliquée.|  

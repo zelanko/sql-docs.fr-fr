@@ -9,14 +9,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ead11248d0eebe198890884b427f864cfea756c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104287"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catalogue de base de données WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ Les données dans WideWorldImportersDW reflète donc les données de WideWorldIm
 
 Les différents types de tables sont organisées dans trois schémas.
 
-|schéma|Description|
+|Schéma|Description|
 |-----------------------------|---------------------|
 |Dimension|Tables de dimension.|
 |Fait|Tables de faits.|  
@@ -44,9 +43,9 @@ Les tables de dimension et de faits sont répertoriées ci-dessous. Les tables d
 
 WideWorldImportersDW a des tables de dimension suivantes. La description inclut la relation avec les tables source dans la base de données WideWorldImporters.
 
-|Table de charge de travail|Tables source|
+|Table|Tables source|
 |-----------------------------|---------------------|
-|Ville|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
+|City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |Date|Nouvelle table avec les informations sur les dates, y compris exercice (selon le 1er novembre de démarrage pour l’exercice).|
 |Employee|`Application.People` .|
@@ -59,7 +58,7 @@ WideWorldImportersDW a des tables de dimension suivantes. La description inclut 
 
 WideWorldImportersDW a les tables de faits suivants. La description inclut la relation avec les tables source dans la base de données WideWorldImporters, ainsi que les classes de chaque table de faits est généralement utilisée avec des requêtes analytique et le reporting.
 
-|Table de charge de travail|Tables source|Exemple Analytique|
+|Table|Tables source|Exemple Analytique|
 |-----------------------------|---------------------|---------------------|
 |JSON|`Sales.Orders` et `Sales.OrderLines`|Ventes aux personnes concernées, productivité sélecteur/packer et sur le temps de prélever des commandes. En outre, une faible stocks situations conduisant à commandes en différé.|
 |Vente|`Sales.Invoices` et `Sales.InvoiceLines`|Dates de ventes, les dates de livraison, rentabilité au fil du temps, la rentabilité par commercial.|
@@ -78,7 +77,7 @@ Toutes les extensions de l’exemple sont encouragées à utiliser le `Reports` 
 
 Ces procédures sont utilisées pour configurer l’exemple. Ils sont utilisés pour appliquer les fonctionnalités d’édition entreprise vers la version Édition standard de l’exemple, ajoutez PolyBase et reseed ETL.
 
-|Procédure|Fonction|
+|Procédure|Objectif|
 |-----------------------------|---------------------|
 |Configuration_ApplyPartitionedColumnstoreIndexing|S’applique à la fois le partitionnement et columnstore index pour les tables de faits.|
 |Configuration_ConfigureForEnterpriseEdition|S’applique le partitionnement, columnstore d’indexation et en mémoire.|
@@ -98,7 +97,7 @@ Procédures utilisées dans le processus ETL se répartissent dans ces catégori
 
 Procédures pour configurer les séquences dans la base de données.
 
-|Procédure|Fonction|
+|Procédure|Objectif|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Appelle la procédure `ReseedSequenceBeyondTableValue` pour toutes les séquences.|
 |ReseedSequenceBeyondTableValue|Utilisé pour repositionner la valeur de la séquence suivante au-delà de la valeur dans une table qui utilise la même séquence. (Comme un `DBCC CHECKIDENT` pour l’équivalent de colonnes d’identité pour les séquences, mais potentiellement plusieurs tables.)|

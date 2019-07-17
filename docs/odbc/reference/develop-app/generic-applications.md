@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dda2a3c4-76ef-40a6-b3a1-9e95bed61618
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 59110f66c512845ff5ce1f2f246c05c63fa755b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6b1544f5562468db03a649c263993039a722a3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139297"
 ---
 # <a name="generic-applications"></a>Applications génériques
 Applications génériques exécutent parfois une tâche codées en dur, par exemple une extraction de données à partir d’une base de données de feuille de calcul. Ils peuvent également effectuer diverses tâches définies par l’utilisateur, telle qu’une application de requête générique permettant à l’utilisateur entrer et exécuter une instruction SQL. Les applications génériques ont en commun est qu’ils doivent travailler avec un large éventail de SGBD différents et que le développeur ne sait pas au préalable ces SGBD sera.  

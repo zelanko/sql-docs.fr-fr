@@ -20,12 +20,12 @@ ms.assetid: 4d5d1e52-a574-4bdd-87ae-b932527235e8
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57e42c00c1844139d8c7af3610a777e42ea859b4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c37e8ca1ac255f4d6e5d29fa87f29a8136913c55
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899569"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262725"
 ---
 # <a name="sysdmosworkers-transact-sql"></a>sys.dm_os_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67899569"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |worker_address|**varbinary(8)**|Adresse mémoire du processus de travail.|  
-|status|**Int**|À usage interne uniquement|  
+|status|**int**|À usage interne uniquement|  
 |is_preemptive|**bit**|1 = le processus de travail s'exécute avec une planification préemptive. Tout processus de travail qui exécute du code externe est exécuté en mode de planification préemptive.|  
 |is_fiber|**bit**|1 = le processus de travail s'exécute en mode Regroupement léger. Pour plus d'informations, consultez [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).|  
 |is_sick|**bit**|1 = le processus de travail est bloqué car il essaie toujours d'obtenir un verrouillage total de l'UC. Si ce bit est défini, cela peut signaler un problème de contention sur un objet auquel les accès sont fréquents.|  
@@ -46,15 +46,15 @@ ms.locfileid: "67899569"
 |is_fatal_exception|**bit**|Indique si le processus de travail a reçu une exception fatale.|  
 |is_inside_catch|**bit**|1 = le processus de travail gère actuellement une exception.|  
 |is_in_polling_io_completion_routine|**bit**|1 = le processus de travail exécute actuellement une routine d'exécution d'E/S pour une E/S en attente. Pour plus d’informations, consultez [sys.dm_io_pending_io_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-io-pending-io-requests-transact-sql.md).|  
-|context_switch_count|**Int**|Nombre de changements de contexte du planificateur qui sont exécutés par ce processus de travail.|  
+|context_switch_count|**int**|Nombre de changements de contexte du planificateur qui sont exécutés par ce processus de travail.|  
 |pending_io_count|**int**|Nombre d'E/S physiques qui sont effectuées par ce processus de travail.|  
 |pending_io_byte_count|**bigint**|Nombre total d'octets correspondant à toutes les E/S physiques en attente pour ce processus de travail.|  
-|pending_io_byte_average|**Int**|Nombre moyen d'octets des E/S physiques pour ce processus de travail.|  
+|pending_io_byte_average|**int**|Nombre moyen d'octets des E/S physiques pour ce processus de travail.|  
 |wait_started_ms_ticks|**bigint**|Moment précis, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), où ce processus de travail est passé à l’état suspendu. En soustrayant cette valeur de ms_ticks dans [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) retourne le nombre de millisecondes pendant lesquelles le travail a été en attente.|  
 |wait_resumed_ms_ticks|**bigint**|Moment précis, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), où ce processus de travail est passé à l’état RUNNABLE. En soustrayant cette valeur de ms_ticks dans [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md) retourne le nombre de millisecondes que le processus de travail a passé dans la file d’attente exécutable.|  
 |task_bound_ms_ticks|**bigint**|Moment précis, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), quand une tâche est liée à ce processus de travail.|  
 |worker_created_ms_ticks|**bigint**|Moment précis, en [ms_ticks](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md), lorsqu’un processus de travail est créé.|  
-|exception_num|**Int**|Numéro d'erreur de la dernière exception rencontrée par ce processus de travail.|  
+|exception_num|**int**|Numéro d'erreur de la dernière exception rencontrée par ce processus de travail.|  
 |exception_severity|**int**|Gravité de la dernière exception rencontrée par ce processus de travail.|  
 |exception_address|**varbinary(8)**|Adresse du code qui a levé l'exception.|  
 |affinité|**bigint**|Affinité de thread du processus de travail. Correspond à l’affinité du thread dans [sys.dm_os_threads &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-threads-transact-sql.md).|  
@@ -65,7 +65,7 @@ ms.locfileid: "67899569"
 |return_code|**int**|Valeur retournée par la dernière attente. Peut avoir l'une des valeurs suivantes :<br /><br /> 0 =SUCCESS<br /><br /> 3 = DEADLOCK<br /><br /> 4 = PREMATURE_WAKEUP<br /><br /> 258 = TIMEOUT|  
 |quantum_used|**bigint**|À usage interne uniquement|  
 |max_quantum|**bigint**|À usage interne uniquement|  
-|boost_count|**int**|À usage interne uniquement|  
+|boost_count|**Int**|À usage interne uniquement|  
 |tasks_processed_count|**int**|Nombre de tâches traitées par ce processus de travail.|  
 |fiber_address|**varbinary(8)**|Adresse mémoire de la fibre à laquelle ce processus de travail est associé.<br /><br /> NULL = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas configuré pour le regroupement léger.|  
 |task_address|**varbinary(8)**|Adresse mémoire de la tâche active. Pour plus d’informations, consultez [sys.dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md).|  
@@ -84,7 +84,7 @@ ms.locfileid: "67899569"
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
 
 ## <a name="examples"></a>Exemples  
  Vous pouvez utiliser la requête suivante pour déterminer la durée d'exécution d'un processus de travail à l'état SUSPENDED ou RUNNABLE.  

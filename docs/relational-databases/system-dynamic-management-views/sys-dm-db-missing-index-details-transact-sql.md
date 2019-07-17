@@ -21,12 +21,12 @@ ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2038a5b2abf30142eb8dd8cdee2621f6e1a23f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8218ff5c92613b0f152c699a81314cb6a3530885
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096321"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263787"
 ---
 # <a name="sysdmdbmissingindexdetails-transact-sql"></a>sys.dm_db_missing_index_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "68096321"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**index_handle**|**int**|Identifie un index manquant. L'identificateur est unique sur le serveur. **index_handle** est la clé de cette table.|  
+|**index_handle**|**Int**|Identifie un index manquant. L'identificateur est unique sur le serveur. **index_handle** est la clé de cette table.|  
 |**database_id**|**smallint**|Identifie la base de données dans laquelle réside la table comportant les index manquants.|  
-|**object_id**|**Int**|Identifie la table dans laquelle est situé l'index manquant.|  
+|**object_id**|**int**|Identifie la table dans laquelle est situé l'index manquant.|  
 |**equality_columns**|**nvarchar(4000)**|Liste de colonnes, séparées par des virgules, qui contribuent aux prédicats d'égalité au format :<br /><br /> *table.column* =*constant_value*|  
 |**inequality_columns**|**nvarchar(4000)**|Liste de colonnes, séparées par des virgules, qui contribuent aux prédicats d'inégalité, par exemple, les prédicats au format :<br /><br /> *table.column* > *constant_value*<br /><br /> Tout opérateur de comparaison autre que "=" exprime l'inégalité.|  
 |**included_columns**|**nvarchar(4000)**|Liste de colonnes, séparées par des virgules, requises comme colonnes de couverture pour la requête. Pour plus d’informations sur la couverture ou les colonnes incluses, consultez [créer des index avec colonnes incluses](../../relational-databases/indexes/create-indexes-with-included-columns.md).<br /><br /> Pour les index optimisés en mémoire (hachage et optimisées en mémoire non cluster), ignorer **included_columns**. Toutes les commandes de la table sont incluses dans chaque index optimisé en mémoire.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68096321"
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
 
 ## <a name="see-also"></a>Voir aussi  
  [sys.dm_db_missing_index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-columns-transact-sql.md)   

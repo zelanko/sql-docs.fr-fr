@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b01628e339e4a3ce1f824f27edd75e2e5aea2526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123772"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>Arguments  
  **«** *command_string* **»**  
- Chaîne qui contient une commande à transmettre au système d'exploitation. *command_string* est **varchar (8000)** ou **nvarchar (4000)**, sans valeur par défaut. *command_string* ne peut pas contenir plus d’un jeu de guillemets doubles. Une seule paire de guillemets est nécessaire si des espaces sont présents dans les chemins d’accès de fichier ou noms de programmes référencés dans *command_string*. Si l'incorporation d'espaces est source de problèmes, recourez à des noms de fichiers FAT 8.3.  
+ Chaîne qui contient une commande à transmettre au système d'exploitation. *command_string* est **varchar (8000)** ou **nvarchar (4000)** , sans valeur par défaut. *command_string* ne peut pas contenir plus d’un jeu de guillemets doubles. Une seule paire de guillemets est nécessaire si des espaces sont présents dans les chemins d’accès de fichier ou noms de programmes référencés dans *command_string*. Si l'incorporation d'espaces est source de problèmes, recourez à des noms de fichiers FAT 8.3.  
   
  **no_output**  
  Paramètre facultatif indiquant qu'aucune sortie ne doit être retournée au client.  
@@ -74,7 +73,7 @@ The command(s) completed successfully.
 >  Si **xp_cmdshell** est exécutée dans un lot et retourne une erreur, le lot échoue. Cela représente un changement de comportement. Dans les versions antérieures de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le traitement continue de s’exécuter.  
   
 ## <a name="xpcmdshell-proxy-account"></a>Compte proxy xp_cmdshell  
- Lorsqu’elle est appelée par un utilisateur qui n’est pas un membre de la **sysadmin** rôle serveur fixe **xp_cmdshell** se connecte à Windows en utilisant le nom de compte et le mot de passe stocké dans les informations d’identification nommée **## xp_cmdshell_proxy_account ##**. Si ces informations d’identification de proxy n’existent pas, **xp_cmdshell** échouera.  
+ Lorsqu’elle est appelée par un utilisateur qui n’est pas un membre de la **sysadmin** rôle serveur fixe **xp_cmdshell** se connecte à Windows en utilisant le nom de compte et le mot de passe stocké dans les informations d’identification nommée **## xp_cmdshell_proxy_account ##** . Si ces informations d’identification de proxy n’existent pas, **xp_cmdshell** échouera.  
   
  Les informations d’identification du compte proxy peuvent être créée en exécutant **sp_xp_cmdshell_proxy_account**. Cette procédure stockée accepte comme arguments un nom d'utilisateur et un mot de passe Windows. Par exemple, la commande ci-dessous crée des informations d'identification de proxy pour l'utilisateur de domaine Windows `SHIPPING\KobeR` qui possède le mot de passe Windows `sdfh%dkc93vcMt0`.  
   
@@ -121,14 +120,14 @@ REVERT ;
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-a-list-of-executable-files"></a>A. Retour d'une liste de fichiers exécutables  
+### <a name="a-returning-a-list-of-executable-files"></a>R. Retour d'une liste de fichiers exécutables  
  L'exemple ci-dessous montre la procédure stockée étendue `xp_cmdshell` exécutant une commande de répertoire.  
   
 ```  
 EXEC master..xp_cmdshell 'dir *.exe''  
 ```  
   
-### <a name="b-returning-no-output"></a>b. Aucun renvoi d'information en sortie  
+### <a name="b-returning-no-output"></a>B. Aucun renvoi d'information en sortie  
  L'exemple ci-dessous utilise `xp_cmdshell` pour exécuter une chaîne de commande sans retourner les informations en sortie au client.  
   
 ```  

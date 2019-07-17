@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 323bf0c943d12a2d05e5fde80194d35d9ab733cf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753611"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206561"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server Agent, objet JobSteps
   L'objet de performance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JobSteps **de l'Agent** intègre des compteurs de performances chargés de fournir des informations sur les étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le tableau ci-dessous répertorie les compteurs inclus dans cet objet.  
   
  Le tableau suivant énumère les compteurs **SQLAgent:JobSteps** .  
   
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |**Étapes actives**|Ce compteur fait état du nombre d'étapes de travail en cours d'exécution.|  
 |**Étapes en attente**|Ce compteur fait état du nombre d'étapes de travail en mesure d'être exécutées par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , mais dont l'exécution n'a pas encore commencé.|  
@@ -43,7 +43,7 @@ ms.locfileid: "52753611"
 |**Distribution**|Informations relatives aux étapes de travail qui utilisent le sous-système **Distribution**|  
 |**Dts**|Informations relatives aux étapes de travail qui utilisent le sous-système [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|  
 |**LogReader**|Informations relatives aux étapes de travail qui utilisent le sous-système **LogReader**|  
-|**Fusion**|Informations relatives aux étapes de travail qui utilisent le sous-système **Merge**|  
+|**Fusionner**|Informations relatives aux étapes de travail qui utilisent le sous-système **Merge**|  
 |**PowerShell**|Informations relatives aux étapes de travail qui utilisent le sous-système **PowerShell**|  
 |**QueueReader**|Informations relatives aux étapes de travail qui utilisent le sous-système **QueueReader**|  
 |**Snapshot**|Informations relatives aux étapes de travail qui utilisent le sous-système **Snapshot**|  

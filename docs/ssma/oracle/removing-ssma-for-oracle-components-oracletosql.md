@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 8b527a56-4e52-487a-9ac9-2320388e6d7d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: da54f9fc21b74be790ac86c9690738b71fd3e1c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 0434f88c46d14672c84f5f7939488a827b229e27
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628544"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266562"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Suppression de composants SSMA pour Oracle (OracleToSQL)
 Lorsque vous avez terminé les bases de données migration d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous souhaiterez peut-être désinstaller des composants SSMA. Vous pouvez désinstaller les composants du client à tout moment. Toutefois, vous ne devez pas désinstaller le pack d’extension à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sauf si vos bases de données migrées ne plus utilisent les fonctions dans le **ssma_oracle** schéma de la **sysdb** base de données.  

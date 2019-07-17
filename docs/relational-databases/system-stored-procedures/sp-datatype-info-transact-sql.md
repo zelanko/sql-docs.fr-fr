@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39e8f688c23cffb1512be1cd1142d38c010668a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108305"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -46,15 +45,15 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 `[ @ODBCVer = ] odbc_version` Est la version d’ODBC utilisée. *le paramètre version_odbc* est **tinyint**, avec une valeur par défaut 2.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |TYPE_NAME|**sysname**|Type de données dépendant du SGBD (système de gestion de base de données)|  
 |DATA_TYPE|**smallint**|Code pour le type ODBC sur lequel toutes les colonnes de ce type sont mappées.|  
-|PRECISION|**Int**|Précision maximale du type de données de la source de données. La valeur NULL est retournée pour les types de données pour lesquels la précision n'est pas applicable. La valeur de retour pour la colonne PRECISION est en base 10.|  
+|PRECISION|**int**|Précision maximale du type de données de la source de données. La valeur NULL est retournée pour les types de données pour lesquels la précision n'est pas applicable. La valeur de retour pour la colonne PRECISION est en base 10.|  
 |LITERAL_PREFIX|**varchar(** 32 **)**|Caractères utilisés devant une constante. Par exemple, un guillemet unique ( **'** ) pour les types de caractères et 0 x pour le fichier binaire.|  
 |LITERAL_SUFFIX|**varchar(** 32 **)**|Caractères utilisés pour terminer une constante. Par exemple, un guillemet unique ( **'** ) pour les types de caractères et pas de guillemets pour fichier binaire.|  
 |CREATE_PARAMS|**varchar(** 32 **)**|Description des paramètres de création de ce type de données. Par exemple, **décimal** est « precision, scale », **float** est NULL, et **varchar** correspond à « max_length ».|  
@@ -69,7 +68,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 |MAXIMUM_SCALE|**smallint**|Échelle maximale du type de données de la source de données. Si l'échelle maximale n'est pas définie séparément dans la source de données, mais si au contraire elle est définie comme étant identique à la précision maximale, cette colonne contient la même valeur que la colonne PRECISION.|  
 |SQL_DATA_TYPE|**smallint**|Valeur du type de données SQL tel qu'il apparaît dans le champ TYPE du descripteur. Cette colonne est identique à la colonne DATA_TYPE, excepté pour le **datetime** et ANSI **intervalle** types de données. Ce champ retourne toujours une valeur.|  
 |SQL_DATETIME_SUB|**smallint**|**date/heure** ou ANSI **intervalle** sous-code si la valeur de SQL_DATA_TYPE est SQL_DATETIME ou SQL_INTERVAL. Pour les données de types autres que **datetime** et ANSI **intervalle**, ce champ est NULL.|  
-|NUM_PREC_RADIX|**Int**|Nombre de bits ou de chiffres pour calculer le nombre maximal qu’une colonne peut contenir. Si le type de données est un type de données numérique approximatif, cette colonne contient la valeur 2 pour indiquer plusieurs bits. Pour les types numériques exacts, cette colonne contient la valeur 10 pour indiquer plusieurs chiffres décimaux. Sinon, cette colonne est NULL. En combinant la précision et la base, l'application peut calculer le nombre maximal que la colonne peut contenir.|  
+|NUM_PREC_RADIX|**int**|Nombre de bits ou de chiffres pour calculer le nombre maximal qu’une colonne peut contenir. Si le type de données est un type de données numérique approximatif, cette colonne contient la valeur 2 pour indiquer plusieurs bits. Pour les types numériques exacts, cette colonne contient la valeur 10 pour indiquer plusieurs chiffres décimaux. Sinon, cette colonne est NULL. En combinant la précision et la base, l'application peut calculer le nombre maximal que la colonne peut contenir.|  
 |INTERVAL_PRECISION|**smallint**|Valeur de précision interval si *data_type* est **intervalle**; sinon, NULL.|  
 |USERTYPE|**smallint**|**usertype** valeur de la table systypes.|  
   

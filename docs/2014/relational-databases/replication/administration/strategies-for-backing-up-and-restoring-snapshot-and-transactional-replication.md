@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125229"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210774"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Stratégies de sauvegarde et de restauration de la réplication transactionnelle et d'instantané
   Lors de la conception d'une stratégie de sauvegarde et de restauration de la réplication transactionnelle et d'instantané, vous devez identifier :  
@@ -101,7 +101,7 @@ ms.locfileid: "54125229"
   
      Pour plus d’informations sur la suppression de la réplication, consultez [sp_removedbreplication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql).  
   
-#### <a name="publication-database-read-only-transactional-replication"></a>Base de données de publication : réplication transactionnelle en lecture seule  
+#### <a name="publication-database-read-only-transactional-replication"></a>Base de données de publication : Réplication transactionnelle en lecture seule  
   
 1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "54125229"
   
          Pour plus d'informations sur la manière de spécifier que l'Abonné possède déjà les données, consultez [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de données de publication : réplication transactionnelle avec des abonnements mis à jour  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de données de publication : Réplication transactionnelle avec abonnements mis à jour  
   
 1.  Restaurez la dernière sauvegarde de la base de données de publication. Passez à l’étape 2.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "54125229"
   
 9. Après la restauration, la plage d’identité assignée à chaque table de la base de données **A** est également utilisée dans la base de données **B**. Vérifiez que la base de données **B** restaurée a reçu toutes les modifications de la base de données **B** défaillante qui ont été propagées aux bases de données **A** et **C**, puis réattribuez une valeur de départ à la plage d’identité de chaque table.  
   
-    1.  Exécutez [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) sur la base de données **B** et récupérez le paramètre de sortie **@request_id**. Passez à l'étape b.  
+    1.  Exécutez [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) sur la base de données **B** et récupérez le paramètre de sortie **@request_id** . Passez à l'étape b.  
   
     2.  Par défaut, l'Agent de distribution est configuré pour s'exécuter en continu ; par conséquent, les jetons doivent être envoyés automatiquement à tous les nœuds. Si l'Agent de distribution ne s'exécute pas en mode continu, exécutez l'Agent. Pour plus d’informations, consultez [Concepts des exécutables de l’agent de réplication](../concepts/replication-agent-executables-concepts.md) ou [Démarrer et arrêter un Agent de réplication &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Passez à l'étape c.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54125229"
   
     1.  Arrêtez toute activité sur les tables publiées dans la topologie d'égal à égal. Passez à l'étape b.  
   
-    2.  Exécutez [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) sur la base de données **B** et récupérez le paramètre de sortie **@request_id**. Passez à l'étape c.  
+    2.  Exécutez [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) sur la base de données **B** et récupérez le paramètre de sortie **@request_id** . Passez à l'étape c.  
   
     3.  Par défaut, l'Agent de distribution est configuré pour s'exécuter en continu ; par conséquent, les jetons doivent être envoyés automatiquement à tous les nœuds. Si l'Agent de distribution ne s'exécute pas en mode continu, exécutez l'Agent. Passez à l'étape d.  
   
@@ -321,7 +321,7 @@ ms.locfileid: "54125229"
   
 2.  Restaurez la dernière sauvegarde de la base de données d'abonnement. Passez à l’étape 3.  
   
-3.  Si la base de données d'abonnement contient uniquement des abonnements par émission de données, allez à étape 4. Si la base de données d’abonnement contient des abonnements par extraction, posez-vous les questions suivantes : Les informations d’abonnement est en cours ? La base de données inclut-elle toutes les tables et options définies au moment de la défaillance ? Si tel est le cas, passez à l’étape 4. Si non, réinitialisez l'abonnement. La récupération est terminée.  
+3.  Si la base de données d'abonnement contient uniquement des abonnements par émission de données, allez à étape 4. Si la base de données d’abonnement contient des abonnements par extraction, posez-vous les questions suivantes : les informations d’abonnement sont-elles à jour ? La base de données inclut-elle toutes les tables et options définies au moment de la défaillance ? Si tel est le cas, passez à l’étape 4. Si non, réinitialisez l'abonnement. La récupération est terminée.  
   
 4.  Pour synchroniser l'Abonné, exécutez l'Agent de distribution. La récupération est terminée.  
   

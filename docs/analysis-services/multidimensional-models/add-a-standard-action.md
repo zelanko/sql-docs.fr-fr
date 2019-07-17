@@ -1,5 +1,5 @@
 ---
-title: Ajouter une Action Standard | Documents Microsoft
+title: Ajouter une Action Standard | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a6af04d1ed2b8db53425ad0aaf83d95d73dd6f8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180275"
 ---
 # <a name="add-a-standard-action"></a>Ajouter une action standard
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,9 +36,9 @@ ms.locfileid: "34020636"
         |Cellules|Toutes les cellules est la seule sélection disponible. Si vous choisissez **Cellules** comme type de cible, vous pouvez taper une expression dans **Condition** pour limiter les cellules auxquelles l'action est associée.|  
         |Cube|CURRENTCUBE est la seule sélection disponible. L'action est associée au cube actif.|  
         |Membres de dimension|Sélectionnez une seule dimension. L'action est associée à tous les membres de la dimension.|  
-        |Hiérarchie|Sélectionnez une hiérarchie unique. L'action sera associée à l'objet hiérarchie uniquement. Les hiérarchies d'attribut apparaissent dans la liste uniquement si leurs propriétés **AttributeHierarchyEnabled** et **AttributeHierarchyVisible** sont définies avec la valeur **True**.|  
+        |Hierarchy|Sélectionnez une hiérarchie unique. L'action sera associée à l'objet hiérarchie uniquement. Les hiérarchies d'attribut apparaissent dans la liste uniquement si leurs propriétés **AttributeHierarchyEnabled** et **AttributeHierarchyVisible** sont définies avec la valeur **True**.|  
         |Membres de hiérarchie|Sélectionnez une hiérarchie unique. L'action est associée à tous les membres de la hiérarchie sélectionnée. Les hiérarchies d'attribut apparaissent dans la liste uniquement si leurs propriétés **AttributeHierarchyEnabled** et **AttributeHierarchyVisible** sont définies avec la valeur **True**.|  
-        |Level|Sélectionnez un niveau unique. L'action sera associée à l'objet niveau uniquement.|  
+        |Niveau|Sélectionnez un niveau unique. L'action sera associée à l'objet niveau uniquement.|  
         |Membres de niveau|Sélectionnez un niveau unique. L'action est associée à tous les membres du niveau sélectionné.|  
   
     -   Dans **Objet cible**, cliquez sur la flèche à droite de la zone de texte, puis dans l'arborescence qui s'ouvre, cliquez sur l'objet auquel vous souhaitez attacher l'action, puis sur **OK**.  
@@ -47,9 +47,9 @@ ms.locfileid: "34020636"
   
     -   Dans la liste déroulante **Type** , sélectionnez le type d’action que vous souhaitez créer. Le tableau suivant répertorie les types d'actions disponibles.  
   
-        |Type|Description|  
+        |type|Description|  
         |----------|-----------------|  
-        |Dataset|Récupère un dataset.|  
+        |Jeu de données|Récupère un dataset.|  
         |Propriétaire|Effectue une opération en utilisant une interface différente de celles répertoriées dans ce tableau.|  
         |Ensemble de lignes|Récupère un ensemble de lignes.|  
         |Instruction|Exécute une commande OLE DB.|  
@@ -64,7 +64,7 @@ ms.locfileid: "34020636"
         |Option|Description|  
         |------------|-----------------|  
         |Interactif|L'action est générée par l'intervention de l'utilisateur.|  
-        |Traitement|L'action s'exécute en tant que traitement par lots.|  
+        |Batch|L'action s'exécute en tant que traitement par lots.|  
         |À l'ouverture|L'action s'exécute lorsqu'un utilisateur ouvre le cube.|  
   
     -   Dans **Application**, tapez le nom de l'application associée à l'action. Par exemple, si vous créez une action qui amène un utilisateur vers un site Web spécifique, l'application associée à cette action doit être Microsoft Internet Explorer ou un autre navigateur Web.  
@@ -72,7 +72,7 @@ ms.locfileid: "34020636"
         > [!NOTE]  
         >  Les actions propriétaires ne sont pas retournées au serveur, sauf si l’application cliente restreint explicitement l’ensemble de lignes du schéma afin de retourner uniquement les actions qui correspondent au nom spécifié dans **Application**.  
   
-    -   Dans **Action contenu**, si vous utilisez le type d’URL, placez l’adresse Internet entre guillemets, par exemple, «http://www.adventure-works.com».  
+    -   Dans **contenu d’Action**, si vous utilisez le type d’URL, placez l’adresse Internet entre guillemets, par exemple, « http://www.adventure-works.com ».  
   
     -   Dans **Description**, tapez la description de l'action.  
   

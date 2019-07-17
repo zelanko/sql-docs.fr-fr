@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 420b1ca4e6cdd72d86c715301957be1f14074fee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685396"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207135"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Leçon supplémentaire - Hiérarchies déséquilibrées
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685396"
 
 Dans cette leçon supplémentaire, vous résoudre un problème courant lorsque pivotement sur des hiérarchies qui contiennent des valeurs vides (membres) à différents niveaux. Par exemple, une organisation où un responsable hiérarchique a chefs de service et des non-cadres comme collaborateurs directs. Ou bien, hiérarchies géographiques composées des pays-région-ville, où certaines villes n’ont pas un état parent ou la Province, par exemple Washington D.C., cité du Vatican. Lorsqu’une hiérarchie possède des membres vides, elle descend souvent à des niveaux différents ou déséquilibrés.
 
-![as-lesson-detail-ragged-hierarchies-table](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-table.png)
+![as-Lesson-Detail-Ragged-Hierarchies-table](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-table.png)
 
 Les modèles tabulaires au niveau de compatibilité 1400 ont supplémentaires **masquer les membres** propriété pour les hiérarchies. Le **par défaut** paramètre suppose il n’y aucun membre vide à tout niveau. Le **masquer les membres vides** paramètre exclut les membres vides à partir de la hiérarchie lors de l’ajout à un rapport ou tableau croisé dynamique.  
   
@@ -113,7 +113,7 @@ Si vous avez créé le projet AW Internet Sales dans le cadre du didacticiel, vo
 
 2.  Dans **propriétés** > **masquer les membres**, sélectionnez **masquer les membres vides**. 
 
-    ![as-lesson-detail-ragged-hierarchies-hidemembers](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-hidemembers.png)
+    ![as-Lesson-Detail-Ragged-Hierarchies-hidemembers](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-hidemembers.png)
 
 3.  De retour dans Excel, actualisez le tableau croisé dynamique. 
 

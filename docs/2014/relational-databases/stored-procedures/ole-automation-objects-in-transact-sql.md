@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 06913c27af89657aef5a0a5397cd77a1ee025299
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075791"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211854"
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Objets OLE Automation dans Transact-SQL
   [!INCLUDE[tsql](../../includes/tsql-md.md)] contient plusieurs procédures stockées système qui permettent aux objets OLE Automation d’être référencés dans les lots [!INCLUDE[tsql](../../includes/tsql-md.md)] , les procédures stockées et les déclencheurs. Les procédures stockées système sont exécutées en tant que procédures stockées étendues, et les objets OLE Automation invoqués par les procédures stockées sont exécutés dans l'espace d'adressage d'une instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] de la même façon que les procédures stockées étendues.  

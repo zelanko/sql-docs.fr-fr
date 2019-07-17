@@ -1,5 +1,5 @@
 ---
-title: Mesures et groupes de mesures | Documents Microsoft
+title: Mesures et groupes de mesures | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 04eb5a41bec6e9abb62cfde516f2dad2ff820521
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165755"
 ---
 # <a name="measures-and-measure-groups"></a>Mesures et groupes de mesures
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,10 +24,10 @@ ms.locfileid: "34024246"
   
 |**Lien**|**Description**|  
 |--------------|---------------------|  
-|[Créer des mesures et groupes de mesures dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Choisissez entre les différentes approches permettant de créer des mesures et des groupes de mesures.|  
-|[Configurer les propriétés de mesure](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Si vous avez utilisé l'Assistant Cube pour entreprendre la création de votre cube, vous devrez peut-être modifier la méthode d'agrégation, appliquer un format de données, définir la visibilité de la mesure dans les applications clientes ou éventuellement ajouter une expression de mesure pour manipuler les données avant que les valeurs soient agrégées.|  
-|[Configurer les propriétés du groupe de mesures](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|Dans un modèle multidimensionnel, un groupe de mesures équivaut à une table de faits de l'entrepôt de données source. Les propriétés définies sur un groupe de mesures vous permettent de spécifier des comportements de mise en cache, le stockage et les directives de traitement qui fonctionnent collectivement au niveau du groupe de mesures. La configuration de partitions est en partie déterminée par les propriétés définies sur les objets groupes de mesures.|  
-|[Utilisez les fonctions d’agrégation](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Découvrez les méthodes d'agrégation qui peuvent être affectées à une mesure.|  
+|[Création de mesures et de groupes de mesures dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Choisissez entre les différentes approches permettant de créer des mesures et des groupes de mesures.|  
+|[Configurer des propriétés de mesure](../../analysis-services/multidimensional-models/configure-measure-properties.md)|Si vous avez utilisé l'Assistant Cube pour entreprendre la création de votre cube, vous devrez peut-être modifier la méthode d'agrégation, appliquer un format de données, définir la visibilité de la mesure dans les applications clientes ou éventuellement ajouter une expression de mesure pour manipuler les données avant que les valeurs soient agrégées.|  
+|[Configurer les propriétés d'un groupe de mesures](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|Dans un modèle multidimensionnel, un groupe de mesures équivaut à une table de faits de l'entrepôt de données source. Les propriétés définies sur un groupe de mesures vous permettent de spécifier des comportements de mise en cache, le stockage et les directives de traitement qui fonctionnent collectivement au niveau du groupe de mesures. La configuration de partitions est en partie déterminée par les propriétés définies sur les objets groupes de mesures.|  
+|[Utiliser des fonctions d'agrégation](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|Découvrez les méthodes d'agrégation qui peuvent être affectées à une mesure.|  
 |[Définir le comportement semi-additif](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|Le comportement semi-additif fait référence aux agrégations qui sont valides pour certaines dimensions, mais pas pour d'autres. Un solde de compte bancaire en est un exemple courant. Vous pouvez agréger des soldes par client et par région, mais pas sur une période donnée. Par exemple, il n'est pas souhaitable d'ajouter des soldes du même compte sur plusieurs jours consécutifs. Pour définir un comportement semi-additif, utilisez l'Assistant Ajouter Business Intelligence.|  
 |[Groupes de mesures liés](../../analysis-services/multidimensional-models/linked-measure-groups.md)|Réaffectez un groupe de mesures existant à d'autres cubes de la même base de données ou à des bases de données Analysis Services différentes.|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "34024246"
   
  Que se passe-t-il si la mesure n'est pas associée aux dimensions utilisées dans la requête ? En général, Analysis Services affiche la mesure par défaut, et la valeur est la même pour tous les membres. Dans cet exemple, les ventes sur Internet ( **Internet Sales**), qui mesurent la vente directe correspondant aux commandes passées par les clients à l’aide du catalogue en ligne, n’ont aucune relation avec l’organisation commerciale.  
   
- ![Valeurs de mesure de tableau croisé dynamique affichant répétées](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "tableau croisé dynamique affichant répétées des valeurs de mesure")  
+ ![Tableau croisé dynamique affichant répétées des valeurs de mesure](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "tableau croisé dynamique affichant répétées des valeurs de mesure")  
   
  Pour réduire les risques de rencontrer ces comportements dans une application cliente, vous pouvez créer plusieurs cubes ou perspectives dans la même base de données, et vous assurer que chaque cube ou perspective contient uniquement les objets associés. Les relations que vous devez vérifier sont celles entre le groupe de mesures (mappé à la table de faits) et les dimensions.  
   
@@ -57,6 +57,6 @@ ms.locfileid: "34024246"
   
 ## <a name="see-also"></a>Voir aussi  
  [Cubes dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [Créer des mesures et groupes de mesures dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
+ [Création de mesures et de groupes de mesures dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   
   

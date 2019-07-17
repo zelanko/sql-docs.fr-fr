@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812751"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211728"
 ---
 # <a name="ddl-event-groups"></a>groupes d'événements DDL
   Les tableaux suivants répertorient les groupes d'événements DDL qui peuvent être utilisés pour exécuter un déclencheur DDL ou une notification d'événement ainsi que les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] qu'ils couvrent. Notez la nature inclusive des groupes d'événements. Par exemple, un déclencheur DDL ou une notification d'événement qui spécifie FOR DDL_TABLE_EVENTS (10018) couvre les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE et DROP TABLE. Un déclencheur DDL ou une notification d'événement qui spécifie FOR DDL_TABLE_VIEW_EVENTS (10017) couvre toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sous les types DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS et DDL_STATISTICS_EVENTS.  
@@ -27,12 +27,12 @@ ms.locfileid: "52812751"
 > [!NOTE]  
 >  Certaines procédures stockées système qui exécutent des opérations de type DDL peuvent également exécuter des déclencheurs DDL ou déclencher des notifications d'événements. Testez vos déclencheurs et notifications d'événements DDL afin de déterminer leur réponse aux procédures stockées système qui sont exécutées. Par exemple, l’instruction CREATE TYPE et la procédure stockée **sp_addtype** activent toutes les deux un déclencheur ou une notification d’événements DDL créés sur un événement CREATE_TYPE.  
   
-## <a name="events"></a>Événements  
+## <a name="events"></a>Events  
  Les événements répertoriés sous DDL_DATABASE_LEVEL_EVENTS sont exécutés au niveau du serveur (instance) ou de la base de données. Les événements répertoriés sous DDL_SERVER_LEVEL_EVENTS sont exécutés uniquement au niveau du serveur.  
   
 ||||  
 |-|-|-|  
-|parent_type|Type|NAME|  
+|parent_type|type|name|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  

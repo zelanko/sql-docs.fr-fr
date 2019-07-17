@@ -1,5 +1,5 @@
 ---
-title: sp_delete_firewall_rule (Azure SQL Database) | Microsoft Docs
+title: sp_delete_firewall_rule (base de données Azure SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/27/2016
 ms.service: sql-database
@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: cf93eed1-ba97-4850-9fcc-b9c5a9317908
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 406f94ab0ab2d0ebaddf9635448e364bf90ceb8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01bc61c37fcde1e23c1b1c962dae7a985d053c03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130656"
 ---
 # <a name="spdeletefirewallrule-azure-sql-database"></a>sp_delete_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
-  Supprime des paramètres de pare-feu de niveau serveur de votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Cette procédure stockée est uniquement disponible dans la base de données master à la connexion du principal au niveau du serveur.  
+  Supprime des paramètres de pare-feu de niveau serveur de votre serveur [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Cette procédure stockée est uniquement disponible dans la base de données MASTER pour la connexion principale au niveau du serveur.  
 
   
 ## <a name="syntax"></a>Syntaxe  
@@ -42,7 +41,7 @@ sp_delete_firewall_rule [@name =] 'name'
 ## <a name="arguments"></a>Arguments  
  L'argument de la procédure stockée est le suivant :  
   
- [@name =] '*name*'  
+ [@name =] '*nom*'  
  Nom du paramètre de pare-feu de niveau serveur qui sera supprimé. *nom* est **nvarchar (128)** sans valeur par défaut.  
   
 ## <a name="remarks"></a>Notes  
@@ -60,7 +59,7 @@ EXEC sp_delete_firewall_rule N'Example setting 1';
   
 ## <a name="see-also"></a>Voir aussi  
  [Pare-feu de base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Procédure : Configurer les paramètres de pare-feu (base de données SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Guide pratique : Configurer les paramètres de pare-feu (base de données SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [Sys.firewall_rules &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-firewall-rules-azure-sql-database.md)  
   

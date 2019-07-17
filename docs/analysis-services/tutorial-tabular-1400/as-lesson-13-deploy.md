@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4e8e6bea11794545a2b0ab9c340e85344ec23d33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685306"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162209"
 ---
 # <a name="deploy"></a>Déployer
 
@@ -44,7 +44,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
 2.  Dans le **Pages de propriétés de AW Internet Sales** boîte de dialogue **serveur de déploiement**, dans le **Server** propriété, entrez le nom complet du serveur. Si vous vous connectez à Azure Analysis Services, nom du serveur doit inclure l’URL complète.
 
-    ![as-lesson13-deploy-property](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
+    ![en tant que-lesson13-déployer-propriété](../tutorial-tabular-1400/media/as-lesson13-deploy-property.png)
   
 3.  Dans le **base de données** propriété, tapez **Adventure Works Internet Sales**.  
   
@@ -72,11 +72,11 @@ Cette leçon décrit la méthode plus courante et la plus simple pour déployer 
 ## <a name="conclusion"></a>Conclusion  
 Félicitations ! Vous avez terminé de créer et déployer votre premier modèle tabulaire Analysis Services. Ce didacticiel vous a guidés dans les tâches courantes pour créer un modèle tabulaire. Maintenant que votre modèle Internet Sales Adventure Works est déployé, vous pouvez utiliser SQL Server Management Studio pour gérer le modèle, créer des scripts de processus et un plan de sauvegarde. Les utilisateurs peuvent également maintenant vous connecter au modèle à l’aide d’une application cliente de création de rapports tels que Microsoft Excel ou Power BI.  
 
-![as-lesson13-ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
+![en tant que-lesson13-ssms](../tutorial-tabular-1400/media/as-lesson13-ssms.png)
   
   
   
-## <a name="whats-next"></a>Quelle est l’étape suivante ?
+## <a name="whats-next"></a>Étapes suivantes
 [Se connecter avec Power BI Desktop](https://docs.microsoft.com/azure/analysis-services/analysis-services-connect-pbi)   
 [Leçon supplémentaire – sécurité dynamique](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)   
 [Leçon supplémentaire – lignes de détails](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)   

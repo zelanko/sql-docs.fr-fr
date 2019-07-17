@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626523"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266505"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Sélection et configuration des objets affectés (OracleToSQL)
 À cette page, vous pouvez sélectionner les tables et les clés étrangères, les modifications dans lequel doivent être comparées quand SSMA vérifie les résultats de l’exécution pour les objets choisi à l’étape précédente. En outre, vous pouvez personnaliser les paramètres de vérification.  
@@ -28,16 +28,16 @@ Dans l’arborescence des objets Oracle situé sur le côté gauche de la fenêt
   
 Si le testeur de SSMA ne peut pas vérifier la valeur d’un de ces objets, vous verrez le lien intitulé **certains des objets sélectionnés contiennent des erreurs** sous l’arborescence d’objets. Cliquez sur ce lien pour afficher les raisons pourquoi ces objets ne peuvent pas être comparées et pour effacer la sélection d’objets incorrectes.  
   
-## <a name="table"></a>Table de charge de travail  
+## <a name="table"></a>Table  
 L’onglet de la Table contient la vue de grille de la table sélectionnée. La grille contient les informations suivantes sur la table sélectionnée :  
   
 -   Nom de la colonne  
   
 -   Type de données  
   
--   Précision  
+-   Precision  
   
--   Échelle  
+-   Scale  
   
 -   Règle  
   

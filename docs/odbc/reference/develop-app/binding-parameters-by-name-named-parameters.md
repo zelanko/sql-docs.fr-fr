@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 68dfb8976312016ee7f2e42fc4fcdecb93fd28cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fdd8d00bd6af5479079e66c1ca42f249e033d29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107642"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Liaison de paramètres par nom (paramètres nommés)
 Certains SGBD permettre à une application spécifier les paramètres à une procédure stockée par nom plutôt que par position dans l’appel de procédure. Ces paramètres sont appelés *des paramètres nommés*. ODBC prend en charge l’utilisation des paramètres nommés. Dans ODBC, les paramètres nommés sont utilisés uniquement dans les appels aux procédures stockées et ne peut pas être utilisés dans d’autres instructions SQL.  

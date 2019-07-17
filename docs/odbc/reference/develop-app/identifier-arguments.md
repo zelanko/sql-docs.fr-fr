@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 156dfaf5c6a6a4ec06a0c96b5f726383cba32ba6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93cf744cf105762fb90a92049d6698e67a19d58c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138999"
 ---
 # <a name="identifier-arguments"></a>Arguments d’identificateur
 Si une chaîne dans un argument de l’identificateur est entre guillemets, le pilote supprime de début et les espaces à droite et traite littéralement la chaîne entre guillemets. Si la chaîne n’est pas mis entre guillemets, le pilote supprime les espaces à droite et des plis la chaîne en majuscules. La définition d’un argument d’identificateur pour un pointeur null retourne SQL_ERROR et SQLSTATE HY009 (utilisation non valide d’un pointeur null), sauf si l’argument est un nom de catalogue et de catalogues ne sont pas pris en charge.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3018d23247a8f4d127d09878cb20c5f48f76c4ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de92a64bb090a053d4cecb03cd9b812744f72fba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126404"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,24 +39,24 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**@publisher** =] **'***publisher***'**  
+ [ **@publisher** =] **'***publisher***'**  
  Est le nom de la non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
- [**@schema** =] **'***schéma***'**  
+ [ **@schema** =] **'***schéma***'**  
  Nom du schéma. *schéma* est **sysname**, avec NULL comme valeur par défaut.  
   
- [**@operation** =] **'***opération***'**  
- Action à effectuer sur ce schéma. *opération* est **nvarchar (4)**, et peut prendre l’une des valeurs suivantes.  
+ [ **@operation** =] **'***opération***'**  
+ Action à effectuer sur ce schéma. *opération* est **nvarchar (4)** , et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**add**|Ajoute le schéma spécifié à la liste des schémas qui ne peuvent pas être publiés.|  
-|**DROP**|Supprime le schéma spécifié de la liste des schémas qui ne peuvent pas être publiés.|  
+|**drop**|Supprime le schéma spécifié de la liste des schémas qui ne peuvent pas être publiés.|  
 |**Aide**|Retourne la liste de schémas qui ne peuvent pas être publiés.|  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**SchemaName**|**sysname**|Nom du schéma dont la publication n'est pas admise.|  
   

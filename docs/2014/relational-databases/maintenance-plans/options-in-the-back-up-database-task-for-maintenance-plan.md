@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774651"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205943"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>Tâche Sauvegarder la base de données (Plan de maintenance)
   Utilisez la boîte de dialogue **Tâche Sauvegarder la base de données** pour ajouter une tâche de sauvegarde au plan de maintenance. La sauvegarde de la base de données est importante pour pallier son endommagement possible à la suite d'une défaillance matérielle ou logicielle (ou d'erreurs des utilisateurs), en permettant sa restauration à partir d'une copie de sauvegarde. Cette tâche vous permet d'effectuer des sauvegardes des journaux des transactions, des sauvegardes de groupe de fichiers et de fichiers, des sauvegardes différentielles et complètes.  
@@ -37,7 +37,7 @@ ms.locfileid: "52774651"
  Crée une nouvelle connexion serveur à utiliser pour exécuter la tâche. La boîte de dialogue **Nouvelle connexion** est décrite ci-dessous.  
   
  **Bases de données**  
- Spécifie les bases de données faisant l'objet de cette tâche. Lorsque vous sélectionnez cette option, la liste déroulante comprend les options suivantes : **Toutes les bases de données**, **toutes les bases de données système**, **toutes les bases de données utilisateur**, **ces bases de données**.  
+ Spécifie les bases de données faisant l'objet de cette tâche. Lorsque sélectionné, la liste déroulante fournit les options suivantes : **Toutes les bases de données**, **toutes les bases de données système**, **toutes les bases de données utilisateur**, **ces bases de données**.  
   
  **Toutes les bases de données**  
  Génère un plan de maintenance qui exécute les tâches de maintenance sur toutes les bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

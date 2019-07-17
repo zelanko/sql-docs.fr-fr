@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 388995cd5cb8a711d72533685c14088a7e908475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135539"
 ---
 # <a name="using-block-cursors"></a>Utilisation de curseurs de bloc
 Prise en charge pour les curseurs de bloc est intégrée dans ODBC 3. *x*. **SQLFetch** peut être utilisé uniquement pour les extractions multilignes lorsqu’elle est appelée dans ODBC 3. *x*; si une application ODBC 2. *x* application appelle **SQLFetch**, il s’ouvre uniquement un curseur de ligne unique, avant uniquement. Lorsqu’une application ODBC 3. *x* application appelle **SQLFetch** dans un ODBC 2. *x* pilote, elle retourne une seule ligne, sauf si le pilote prend en charge **SQLExtendedFetch**. Pour plus d’informations, consultez [curseurs de bloc, curseurs avec défilement et compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) dans g : annexe Instructions de pilote pour la compatibilité descendante.  

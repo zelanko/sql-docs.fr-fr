@@ -1,5 +1,5 @@
 ---
-title: Impossible de charger fichier ou ensemble de Services de données Microsoft | Documents Microsoft
+title: Impossible de charger fichier ou assembly les Services de données de Microsoft | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9472fffb790d8d18ced8d2a528011927717aabc6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026596"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164159"
 ---
-# <a name="could-not-load-file-or-assembly-microsoft-data-services"></a>Impossible de charger fichier ou ensemble de Services de données Microsoft
+# <a name="could-not-load-file-or-assembly-microsoft-data-services"></a>Impossible de charger fichier ou assembly les Services de données de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Dans les environnements SharePoint 2010 qui disposent de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint, cette erreur se produira si vous tentez une exportation de flux de données et que la version requise de Microsoft ADO.NET Data Services n’est pas disponible sur le système.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "34026596"
   
 ## <a name="user-action"></a>Action de l'utilisateur  
   
-1.  Accédez à la documentation relative à la configuration requise matérielle et logicielle pour SharePoint 2010, [déterminer matérielle et logicielle requise (SharePoint 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734).  
+1.  Accédez à la documentation relative à la configuration requise matérielle et logicielle pour SharePoint 2010, [déterminer la configuration matérielle et logicielle requise (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkId=169734) (http://go.microsoft.com/fwlink/?LinkId=169734).  
   
 2.  Dans **Installer les logiciels requis**, recherchez le lien pour ADO.NET Data Services 3.5 correspondant au système d'exploitation que vous utilisez.  
   

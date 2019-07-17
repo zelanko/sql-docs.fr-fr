@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780721"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211048"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] est une interface puissante qui permet de créer et gérer des traces ainsi que d'analyser et relire les résultats de trace. Ces événements sont enregistrés dans un fichier de trace qui peut être analysé ou utilisé ultérieurement pour relire une série d'étapes spécifique lors d'une tentative de diagnostic d'un problème.  
@@ -67,7 +67,7 @@ ms.locfileid: "52780721"
 > [!NOTE]  
 >  Pour utiliser [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], il est préférable de bien comprendre Trace SQL. Pour en savoir plus, voir [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).  
   
- **Événement**  
+ **Event**  
  Un événement est une action générée dans une instance de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. En voici quelques exemples :  
   
 -   connexions d'accès, échecs et déconnexions ;  
@@ -119,7 +119,7 @@ ms.locfileid: "52780721"
   
  SQL Server vous permet de tracer une instance SQL Server de deux façons : à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], ou de procédures stockées système.  
   
- **Filter**  
+ **Filtrer**  
  Lorsque vous créez une trace ou un modèle, vous pouvez définir des critères pour filtrer les données récupérées par l'événement. Pour éviter que les traces ne deviennent trop volumineuses, vous pouvez les filtrer de manière à ce que seul un sous-ensemble des données d'événement soit recueilli. Par exemple, vous pouvez limiter les noms d'utilisateurs Microsoft Windows contenus dans la trace à des utilisateurs spécifiques pour réduire les données de sortie.  
   
  Si aucun filtre n'est défini, tous les événements des classes d'événements sélectionnées sont retournés dans le résultat de trace.  
@@ -188,6 +188,6 @@ ms.locfileid: "52780721"
  [Sessions, catégorie d’événement](../../relational-databases/event-classes/sessions-event-category.md)   
  [Procédures stockées, catégorie d’événement](../../relational-databases/event-classes/stored-procedures-event-category.md)   
  [TSQL, catégorie d’événement](../../relational-databases/event-classes/tsql-event-category.md)   
- [Analyse des performances et surveillance de l’activité du serveur](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
+ [Analyse des performances et surveillance de l'activité du serveur](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

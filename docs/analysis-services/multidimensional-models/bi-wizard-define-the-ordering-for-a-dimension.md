@@ -1,5 +1,5 @@
 ---
-title: Définir le classement d’une Dimension | Documents Microsoft
+title: Définir le classement d’une Dimension | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6f2e9dfce4abc66e9fa77a7d429c3cdd9a306c69
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209142"
 ---
-# <a name="bi-wizard---define-the-ordering-for-a-dimension"></a>Assistant BI - définir le classement d’une Dimension
+# <a name="bi-wizard---define-the-ordering-for-a-dimension"></a>Assistant BI - Définir l’ordre des attributs d’une dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Ajoutez la fonctionnalité de classement des attributs à un cube ou à une dimension pour spécifier comment les membres d'un attribut sont classés. Les membres peuvent être classés d'après le nom ou la clé de l'attribut, ou d'après le nom ou la clé d'un autre attribut (en fonction d'une relation d'attribut). Par défaut, les membres sont classés d'après le nom de l'attribut. Cette fonctionnalité modifie les paramètres de propriété **OrderBy** et **OrderByAttributeID** des attributs d'une dimension.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "34022246"
 ## <a name="specifying-ordering"></a>Spécification du classement  
  Dans la deuxième page **Spécifier l'ordre des attributs** de l'Assistant, vous spécifiez comment tous les attributs de la dimension vont être classés.  
   
- Dans la colonne **Attribut de classement** , vous pouvez modifier l'attribut utilisé pour effectuer le classement. Si l’attribut que vous souhaitez utiliser pour classer les membres n’est pas dans la liste, faites défiler la liste, puis  **\<nouvel attribut... >** pour ouvrir le **sélectionner une colonne** boîte de dialogue, dans laquelle vous pouvez sélectionner une colonne dans une table de dimension. En sélectionnant une colonne à l'aide de la boîte de dialogue **Sélectionner une colonne** , vous allez créer un attribut supplémentaire qui servira à classer les membres d'un attribut.  
+ Dans la colonne **Attribut de classement** , vous pouvez modifier l'attribut utilisé pour effectuer le classement. Si l’attribut que vous souhaitez utiliser pour classer les membres n’est pas dans la liste, faites défiler la liste, puis sélectionnez  **\<nouvel attribut... >** pour ouvrir le **sélectionner une colonne** boîte de dialogue, dans laquelle vous pouvez Sélectionnez une colonne dans une table de dimension. En sélectionnant une colonne à l'aide de la boîte de dialogue **Sélectionner une colonne** , vous allez créer un attribut supplémentaire qui servira à classer les membres d'un attribut.  
   
  Dans la colonne **Critères** , vous pouvez ensuite choisir si les membres de l'attribut doivent être classés par **Clé** ou par **Nom**.  
   

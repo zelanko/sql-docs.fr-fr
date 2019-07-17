@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9d42017e3dfd6016d8b4a42c6953905e804200f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ecdc3192e0b6de26d7b829883d26cc7bbaa7e04a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216391"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrictions du modèle de programmation de l'intégration du CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "54136019"
   
 -   L'assembly est l'un des assemblys pris en charge. Pour plus d’informations, consultez [prise en charge des bibliothèques .NET Framework](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   Vous utilisez **créer à partir d’ASSEMBLY**_\<emplacement >,_ et tous les assemblys référencés et leurs dépendances sont disponibles dans *\<emplacement >*.  
+-   Vous utilisez **créer à partir d’ASSEMBLY** _\<emplacement >,_ et tous les assemblys référencés et leurs dépendances sont disponibles dans *\<emplacement >* .  
   
--   Vous utilisez **créer à partir d’ASSEMBLY**_\<octets... >,_ et toutes les références sont spécifiées via espace séparées par des octets.  
+-   Vous utilisez **créer à partir d’ASSEMBLY** _\<octets... >,_ et toutes les références sont spécifiées via espace séparées par des octets.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Tous les **EXTERNAL_ACCESS** assemblys doivent respecter les critères suivants :  
@@ -110,7 +109,7 @@ ms.locfileid: "54136019"
   
 -   MayLeakOnAbort  
   
--   UI  
+-   Interface utilisateur  
   
  Pour plus d’informations sur les HPA et une liste de types et membres dans les assemblys pris en charge interdits, consultez [les attributs de Protection hôte et programmation de l’intégration de CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md).  
   

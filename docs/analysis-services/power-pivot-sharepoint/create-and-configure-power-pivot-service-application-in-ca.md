@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982601"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164050"
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Créer et configurer l’Application de Service PowerPivot dans l’autorité de certification
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,9 +55,9 @@ ms.locfileid: "38982601"
   
 2.  Dans le ruban **Applications de service** , cliquez sur **Nouveau**.  
   
-3.  Sélectionnez **Application de service SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**. Si cette option ne s'affiche pas dans la liste, cela signifie que [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint n'est pas installé ou configuré correctement.  
+3.  Sélectionnez **Application de service SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** . Si cette option ne s'affiche pas dans la liste, cela signifie que [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint n'est pas installé ou configuré correctement.  
   
-4.  Dans la page **Créer une nouvelle application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, entrez un nom pour l’application. La valeur par défaut est PowerPivotServiceApplication\<nombre >. Si vous créez plusieurs applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , il est utile d'entrer un nom descriptif pour permettre aux autres administrateurs de savoir comment l'application est utilisée.  
+4.  Dans la page **Créer une nouvelle application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , entrez un nom pour l’application. La valeur par défaut est PowerPivotServiceApplication\<nombre >. Si vous créez plusieurs applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , il est utile d'entrer un nom descriptif pour permettre aux autres administrateurs de savoir comment l'application est utilisée.  
   
 5.  Dans Pool d'applications, créez un nouveau pool d'applications pour l'application (recommandé). Sélectionnez ou créez un compte géré pour le pool d'applications. Veillez à spécifier un compte d'utilisateur de domaine. Un compte d'utilisateur de domaine permet l'utilisation de la fonctionnalité Compte géré de SharePoint, qui vous permet de mettre à jour des mots de passe et des informations sur le compte dans un seul emplacement. Des comptes de domaine sont requis si vous prévoyez une montée en puissance parallèle du déploiement incluant des instances de service supplémentaires qui s'exécuteront sous la même identité.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "38982601"
   
      Pour plus d’informations sur les associations de service, consultez [Connecter une application de service Power Pivot à une application web SharePoint dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md).  
   
-10. Cliquez sur **OK.** Le service s'affiche avec les autres services gérés dans la liste des applications de service de la batterie de serveurs.  
+10. Cliquez sur **OK**. Le service s'affiche avec les autres services gérés dans la liste des applications de service de la batterie de serveurs.  
   
 ##  <a name="ConfigApp"></a> Configurer l'application de service Power Pivot  
  Une nouvelle application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est créée à l'aide d'une configuration par défaut. Les paramètres par défaut sont recommandés dans la plupart des scénarios. Modifiez-les uniquement si vous constatez des temps de réponse longs ou des suppressions de connexions, ou si vous changez la configuration du service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour des applications Web SharePoint spécifiques.  
@@ -123,7 +123,7 @@ ms.locfileid: "38982601"
      Les modifications apportées au délai de chargement ou à la méthode d'allocation sont appliquées uniquement aux nouvelles requêtes entrantes. Les requêtes qui sont déjà en cours de traitement sont soumises aux valeurs qui étaient appliquées lors de la réception de la requête.  
   
 ##  <a name="AssignGSA"></a> Affecter une application de service Power Pivot à une application Web  
- Une fois que vous avez configuré une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vous pouvez l'affecter à une application Web. Pour ce faire, vous devez l'ajouter à la liste des connexions d'application de service de cette application Web. Pour ce faire, deux possibilités s'offrent à vous :  
+ Une fois que vous avez configuré une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , vous pouvez l'affecter à une application Web. Pour ce faire, vous devez l'ajouter à la liste des connexions d'application de service de cette application Web. Il existe deux façons d'effectuer cette opération :  
   
 -   Ajoutez-la au groupe de connexions **par défaut** . Le *groupe de connexions par défaut* est une collection de connexions d'application de service qui sont disponibles pour toute application Web y faisant référence. Vous devez ajouter une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] à cette liste.  
   
@@ -137,9 +137,9 @@ ms.locfileid: "38982601"
   
 3.  Cliquez sur **Connexions de service**.  
   
-4.  Dans **Modifier le groupe d’associations suivant**, sélectionnez **par défaut** ou **[personnalisé]**.  
+4.  Dans **Modifier le groupe d’associations suivant**, sélectionnez **par défaut** ou **[personnalisé]** .  
   
-5.  Pour **[personnalisé]**, cochez la case à côté de chaque connexion d’application de service que vous souhaitez utiliser. Si vous avez plusieurs applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (applications dont le type est défini sur **Proxy de l’application de service PowerPivot**), veillez à n’en sélectionner qu’une seule.  
+5.  Pour **[personnalisé]** , cochez la case à côté de chaque connexion d’application de service que vous souhaitez utiliser. Si vous avez plusieurs applications de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (applications dont le type est défini sur **Proxy de l’application de service PowerPivot**), veillez à n’en sélectionner qu’une seule.  
   
 6.  Cliquez sur **OK**.  
   

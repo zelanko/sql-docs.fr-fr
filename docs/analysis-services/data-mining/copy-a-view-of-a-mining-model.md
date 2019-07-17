@@ -1,5 +1,5 @@
 ---
-title: Copie d’une vue d’un modèle d’exploration de données | Documents Microsoft
+title: Copier une vue d’un modèle d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 685d4ce90312e9f34dcf9b8a6e0c94b419f37ee4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014236"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210163"
 ---
 # <a name="copy-a-view-of-a-mining-model"></a>Copier une vue d'un modèle d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -62,6 +62,6 @@ ms.locfileid: "34014236"
 5.  Cliquez de nouveau avec le bouton droit sur le volet **Détails du nœud** , puis sélectionnez **Copier**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Tâches et procédures de la visionneuse de modèle d’exploration de données](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

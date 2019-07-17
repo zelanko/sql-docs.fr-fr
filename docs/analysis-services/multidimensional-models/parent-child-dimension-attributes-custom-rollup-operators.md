@@ -1,5 +1,5 @@
 ---
-title: Opérateurs de cumul personnalisés dans les Dimensions Parent-enfant | Documents Microsoft
+title: Opérateurs de cumul personnalisés dans les Dimensions Parent-enfant | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 000d6355aee1fc38aa4fdcb97cf02df2a4ef09da
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165429"
 ---
-# <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>Attributs de Dimension parent-enfant - opérateurs de cumul personnalisé
+# <a name="parent-child-dimension-attributes---custom-rollup-operators"></a>Attributs de dimension parent-enfant - Opérateurs de cumul personnalisés
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Les opérateurs de cumul personnalisé proposent une façon simple de contrôler le mode de cumul des valeurs de membre dans les valeurs parentes à l'intérieur d'une hiérarchie parent-enfant. Dans une dimension dotée d'une relation parent-enfant, vous spécifiez une colonne contenant des opérateurs unaires qui spécifient le cumul de tous les membres non calculés de l'attribut parent. L'opérateur unaire est appliqué aux membres dès que les valeurs des membres parents sont évaluées.  
   
@@ -29,6 +29,6 @@ ms.locfileid: "34020956"
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir des formules de membre personnalisées](../../analysis-services/multidimensional-models/attribute-properties-define-custom-member-formulas.md)   
- [Opérateurs unaires dans les Dimensions Parent-enfant](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)  
+ [Opérateurs unaires dans les dimensions parent-enfant](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-unary-operators.md)  
   
   

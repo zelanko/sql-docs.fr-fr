@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9eecd202a17a0a08e8607ebec0caaa31b7b3ca9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bab3571ba880658d9f1a2629b899484008428083
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118787"
 ---
 # <a name="bookmarks-odbc"></a>Signets (ODBC)
 Un signet est une valeur utilisée pour identifier une ligne de données. La signification de la valeur du signet est connue uniquement du pilote ou de la source de données. Par exemple, il peut être aussi simple qu'un numéro de ligne ou aussi complexe qu'une adresse disque. Les signets dans ODBC sont légèrement différentes des signets dans la documentation réelle. Dans un livre réel, le lecteur place un signet à une page spécifique et recherche de signet revenir à la page. Dans ODBC, l'application demande un signet pour une ligne particulière, le stocke, puis le passe au curseur à retourner à la ligne. Par conséquent, les signets dans ODBC sont similaires à un lecteur écrivant un numéro de page, de rappeler, puis en consultant la page à nouveau.  

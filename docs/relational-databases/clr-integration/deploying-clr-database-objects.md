@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3a7446027be3ec8df4d3ff35a2b806ffdda6f8f8
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3bad8ec68ddeccd9ad8082b4f7b98422780581b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118547"
 ---
 # <a name="deploying-clr-database-objects"></a>Déploiement d'objets de base de données CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ ms.locfileid: "67585685"
   
 4.  Dans le **choisir les Options de Script** volet, cliquez sur **suivant**, ou modifier les options, puis sur **suivant**.  
   
-5.  Dans le **sélectionner les Types d’objet** volet, choisissez le type d’objet de base de données à déployer. Cliquer sur **Suivant**.  
+5.  Dans le **sélectionner les Types d’objet** volet, choisissez le type d’objet de base de données à déployer. Cliquez sur **Suivant**.  
   
 6.  Pour chaque type d’objet sélectionné dans le **sélectionner les Types d’objet** volet, un **choisir \<type >** volet s’affiche. Dans ce volet, vous pouvez choisir parmi toutes les instances de ce type d'objet de base de données inscrites dans la base de données spécifiée. Sélectionnez un ou plusieurs objets et cliquez sur **suivant**.  
   

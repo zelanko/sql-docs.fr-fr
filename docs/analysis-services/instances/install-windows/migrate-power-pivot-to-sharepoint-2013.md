@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8df7cc04ea0682212f5a046ca4c614e83ebe9c86
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206818"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68231874"
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>Migrer PowerPivot vers SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53206818"
 |1|2|3|4|  
 |-------|-------|-------|-------|  
 |Préparer la batterie de serveurs SharePoint 2013|Sauvegarder, copier et restaurer les bases de données|Monter les bases de données de contenu|Migrer les planifications [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]|  
-||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|- Administration centrale de SharePoint<br /><br /> - Windows PowerShell|- Pages d’application SharePoint<br /><br /> - Windows PowerShell|  
+||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|\- Administration centrale de SharePoint<br /><br /> \- Windows PowerShell|\- Pages d’application SharePoint<br /><br /> \- Windows PowerShell|  
   
 ##  <a name="bkmk_prepare_sharepoint2013"></a>Préparer la batterie de serveurs SharePoint 2013  
   
@@ -92,7 +92,7 @@ ms.locfileid: "53206818"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Résoudre les problèmes lors du montage des bases de données  
  Cette section résume les problèmes que vous pouvez rencontrer lors du montage de la base de données.  
   
-1.  **Erreurs d’authentification :** si des erreurs liées à l'authentification s'affichent, vérifiez quel mode d'authentification est utilisé par les applications web source. L'erreur peut être due à une incohérence entre l'authentification de l'application Web SharePoint 2013 et celle de l'application Web SharePoint 2010. Pour plus d'informations, consultez [1) Préparer la batterie de serveurs SharePoint 2013](#bkmk_prepare_sharepoint2013) .  
+1.  **Erreurs d’authentification :** Si vous constatez des erreurs liées à l’authentification, vérifiez quel mode d’authentification utilisé par les applications web source. L'erreur peut être due à une incohérence entre l'authentification de l'application Web SharePoint 2013 et celle de l'application Web SharePoint 2010. Pour plus d'informations, consultez [1) Préparer la batterie de serveurs SharePoint 2013](#bkmk_prepare_sharepoint2013) .  
   
 2.  **Absents :** Si vous constatez des erreurs liées aux manquantes [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] .dll, le **spPowerPivot.msi** n’a pas été installé ou le [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] outil de Configuration n’a pas été utilisé pour configurer [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
   
@@ -136,7 +136,7 @@ ms.locfileid: "53206818"
   
     1.  Une autre possibilité pour migrer les planifications consiste à activer l'actualisation planifiée pour chaque classeur. Naviguez jusqu'à la bibliothèque de documents qui contient les classeurs.  
   
-    2.  Ouvrez le menu contextuel et cliquez sur **Gérer l’actualisation des données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**.  
+    2.  Ouvrez le menu contextuel et cliquez sur **Gérer l’actualisation des données [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** .  
   
     3.  Dans la section **Actualisation planifiée** , cliquez sur **Activer**.  
   

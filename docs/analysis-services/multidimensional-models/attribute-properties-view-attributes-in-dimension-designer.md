@@ -1,5 +1,5 @@
 ---
-title: Afficher les attributs dans le Concepteur de dimensions | Documents Microsoft
+title: Afficher les attributs dans le Concepteur de dimensions | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c8e0535a1df60b4a4e1550e2b49a02e7a60e2c04
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022956"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179383"
 ---
-# <a name="attribute-properties---view-attributes-in-dimension-designer"></a>Propriétés d’attribut - afficher les attributs dans le Concepteur de dimensions
+# <a name="attribute-properties---view-attributes-in-dimension-designer"></a>Propriétés d’attribut - Afficher les attributs dans le Concepteur de dimensions
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Les attributs sont créés sur des objets de dimension. Vous pouvez afficher et configurer les attributs à l'aide du Concepteur de dimensions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le volet **Attributs** de l'onglet **Structure de dimension** du Concepteur de dimensions répertorie les attributs qui figurent dans une dimension. Utilisez ce volet pour ajouter, supprimer ou configurer les attributs. Vous pouvez également sélectionner les attributs à utiliser comme niveau d'une nouvelle hiérarchie ou à ajouter comme niveau d'une hiérarchie existante.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "34022956"
 |Icône|Utilisation de l'attribut|  
 |----------|---------------------|  
 |![Icône d’attribut](../../analysis-services/multidimensional-models/media/as-icon-attribute.gif "icône d’attribut")|Regular ou AccountType|  
-|![Icône d’attribut de clé](../../analysis-services/multidimensional-models/media/as-icon-key-attribute.gif "icône d’attribut de clé")|Key|  
+|![Icône d’attribut de clé](../../analysis-services/multidimensional-models/media/as-icon-key-attribute.gif "icône d’attribut de clé")|Touche|  
 |![Icône d’attribut parent](../../analysis-services/multidimensional-models/media/as-icon-parent-attribute.gif "icône d’attribut Parent")|Parent|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Référence des propriétés d'attribut de dimension](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

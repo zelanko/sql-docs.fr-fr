@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 115aa0db8e8d6f2fdc35718ccb60f1d0ed06b5c1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760135"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259904"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Liaison des applications Access vers SQL Server - Azure SQL DB (AccessToSQL)
 Si vous souhaitez utiliser vos applications Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez lier vos tables Access d’origine à migrées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou des tables de SQL Azure. La liaison modifie la base de données Access afin que vos pages d’accès aux requêtes, formulaires, rapports et données utilisent les données dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure au lieu des données dans votre base de données Access.  
@@ -101,22 +101,22 @@ Si le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou définitions 
 Les sections suivantes les problèmes de liste qui peuvent se produire dans les applications Access existantes après la migration des bases de données à partir de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, puis lier les tables, ainsi que les causes et les résolutions.  
   
 ### <a name="slow-performance-with-linked-tables"></a>Ralentissement des performances avec les tables liées  
-**Cause :** Certaines requêtes peuvent être lentes après la migration pour les raisons suivantes :  
+**Cause :** Certaines requêtes peuvent être lentes après la migration pour les raisons suivantes :  
   
 -   L’application dépend des fonctions qui n’existent pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure, ce qui provoque Jet extraire des tables localement pour exécuter une requête SELECT.  
   
 -   Requêtes qui mettre à jour ou supprimer le nombre de lignes sont renvoyées par Jet comme une requête paramétrable pour chaque ligne.  
   
-**Résolution :** Convertir les requêtes à exécution lente des requêtes pass-through, des procédures stockées ou des vues. Convertir les requêtes pass-through présente les problèmes suivants :  
+**Résolution :** Convertir les requêtes à exécution lente des requêtes pass-through, des procédures stockées ou des vues. Convertir les requêtes pass-through présente les problèmes suivants :  
   
 -   Requêtes directes ne peut pas être modifiés. Modifier le résultat de la requête ou l’ajout de nouveaux enregistrements doit être effectuées dans une autre façon, comme par parler explicitement **modifier** ou **ajouter** boutons sur votre formulaire est lié à la requête.  
   
 -   Certaines requêtes nécessitent l’entrée d’utilisateur, mais les requêtes pass-through ne prennent pas en charge l’entrée d’utilisateur. L’entrée d’utilisateur peut être obtenue en Visual Basic pour Applications (VBA) qui vous invite à entrer des paramètres, ou par un formulaire qui est utilisé comme un contrôle d’entrée. Dans les deux cas, le code VBA soumet la requête avec l’entrée utilisateur pour le serveur.  
   
 ### <a name="auto-increment-columns-are-not-updated-until-the-record-is-updated"></a>Colonnes à incrémentation automatique ne sont pas mis à jour jusqu'à ce que l’enregistrement est mis à jour  
-**Cause :** Après avoir appelé RecordSet.AddNew dans Jet, la colonne à incrémentation automatique est disponible avant l’enregistrement est mis à jour. Cela n’est pas vrai dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. La nouvelle valeur de la valeur nouvelle colonne d’identité est disponible uniquement après l’enregistrement de l’enregistrement.  
+**Cause :** Après avoir appelé RecordSet.AddNew dans Jet, la colonne à incrémentation automatique est disponible avant l’enregistrement est mis à jour. Cela n’est pas vrai dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. La nouvelle valeur de la valeur nouvelle colonne d’identité est disponible uniquement après l’enregistrement de l’enregistrement.  
   
-**Résolution :** Exécutez Visual Basic pour Applications (VBA) suivant avant d’accéder au champ d’identité :  
+**Résolution :** Exécutez Visual Basic pour Applications (VBA) suivant avant d’accéder au champ d’identité :  
   
 ```  
 Recordset.Update  
@@ -125,33 +125,33 @@ Recordset.LastModified
 ```  
   
 ### <a name="new-records-are-not-available"></a>Nouveaux enregistrements ne sont pas disponibles  
-**Cause :** Lorsque vous ajoutez un enregistrement à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une table SQL Azure à l’aide de VBA, si le champ de table index unique a une valeur par défaut et que vous n’affectez pas une valeur pour ce champ, le nouvel enregistrement n’apparaît pas jusqu'à ce que vous la rouvrirez dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Si vous essayez d’obtenir une valeur à partir de l’enregistrement, le message d’erreur suivant s’affiche :  
+**Cause :** Lorsque vous ajoutez un enregistrement à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une table SQL Azure à l’aide de VBA, si le champ de table index unique a une valeur par défaut et que vous n’affectez pas une valeur pour ce champ, le nouvel enregistrement n’apparaît pas jusqu'à ce que vous la rouvrirez dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Si vous essayez d’obtenir une valeur à partir de l’enregistrement, le message d’erreur suivant s’affiche :  
   
 `Run-time error '3167' Record is deleted.`  
   
-**Résolution :** Lorsque vous ouvrez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure table à l’aide du code VBA, incluez la `dbSeeChanges` option, comme dans l’exemple suivant :  
+**Résolution :** Lorsque vous ouvrez le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure table à l’aide du code VBA, incluez la `dbSeeChanges` option, comme dans l’exemple suivant :  
   
 `Set rs = db.OpenRecordset("TestTable", dbOpenDynaset, dbSeeChanges)`  
   
 ### <a name="after-migration-some-queries-will-not-allow-the-user-to-add-a-new-record"></a>Après la migration, certaines requêtes n’autorisera pas l’utilisateur d’ajouter un nouvel enregistrement  
-**Cause :** Si une requête n’inclut pas toutes les colonnes qui sont inclus dans un index unique, vous ne pouvez pas ajouter de nouvelles valeurs à l’aide de la requête.  
+**Cause :** Si une requête n’inclut pas toutes les colonnes qui sont inclus dans un index unique, vous ne pouvez pas ajouter de nouvelles valeurs à l’aide de la requête.  
   
-**Résolution :** Assurez-vous que toutes les colonnes incluses au moins un index unique font partie de la requête.  
+**Résolution :** Assurez-vous que toutes les colonnes incluses au moins un index unique font partie de la requête.  
   
 ### <a name="you-cannot-modify-a-linked-table-schema-with-access"></a>Vous ne pouvez pas modifier un schéma de table liée avec accès  
-**Cause :** Après la migration des données et la liaison des tables, l’utilisateur ne peut pas modifier le schéma d’une table dans Access.  
+**Cause :** Après la migration des données et la liaison des tables, l’utilisateur ne peut pas modifier le schéma d’une table dans Access.  
   
-**Résolution :** Modifier le schéma de table à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis mettez à jour le lien dans Access.  
+**Résolution :** Modifier le schéma de table à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis mettez à jour le lien dans Access.  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>Lien hypertexte a cessé de fonctionner après la migration de données  
-**Cause :** Après la migration de données, des liens hypertexte dans les colonnes perdre leur fonctionnalité et deviennent simples **nvarchar (max)** colonnes.  
+**Cause :** Après la migration de données, des liens hypertexte dans les colonnes perdre leur fonctionnalité et deviennent simples **nvarchar (max)** colonnes.  
   
-**Résolution :** Aucun.  
+**Résolution :** Aucune.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Certains types de données SQL Server ne sont pas pris en charge par Access  
-**Cause :** Si vous mettez à jour ultérieurement votre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou des tables SQL Azure pour contenir des types de données qui ne sont pas pris en charge par l’accès, vous ne pouvez pas ouvrir la table dans Access.  
+**Cause :** Si vous mettez à jour ultérieurement votre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou des tables SQL Azure pour contenir des types de données qui ne sont pas pris en charge par l’accès, vous ne pouvez pas ouvrir la table dans Access.  
   
-**Résolution :** Vous pouvez définir une requête d’accès qui retourne uniquement les lignes avec des types de données pris en charge.  
+**Résolution :** Vous pouvez définir une requête d’accès qui retourne uniquement les lignes avec des types de données pris en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
 [Migration bases de données Access vers SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

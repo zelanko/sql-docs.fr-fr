@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413086"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181798"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Vérificateur de cohérence de base de données (DBCC) pour Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -220,9 +220,9 @@ Execution complete
 |**Objet**|**Description de la vérification DBCC**|**Erreur en cas d’échec**|  
 |Base de données|Vérifie le nombre de tables dans la base de données.  Une valeur inférieure à zéro indique un endommagement.|La couche de stockage est endommagée. La collection de tables de la base de données ’%{parent/}’ est endommagée.|  
 |Base de données|Vérifie la structure interne utilisée pour tracer l’intégrité référentielle et lève une erreur si la taille est incorrecte.|Les fichiers de base de données n’ont pas réussi les vérifications de cohérence.|  
-|Table de charge de travail|Vérifie la valeur interne utilisée pour déterminer si la table est une table de dimensions ou de faits.  Une valeur qui se situe en dehors de la plage connue indique un endommagement.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des tables.|  
-|Table de charge de travail|Vérifie que le nombre de partitions dans le mappage des segments de la table correspond au nombre de partitions définies pour la table.|La couche de stockage est endommagée. La collection de partitions de la table ’%{parent/}’ est endommagée.|  
-|Table de charge de travail|Si une base de données tabulaire a été créée ou importée à partir de PowerPivot pour Excel 2010 et qu’elle comporte plus d’une partition, une erreur est déclenchée, indiquant une corruption (la prise en charge des partitions a été ajoutée aux versions ultérieures).|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du mappage de segments.|  
+|Table|Vérifie la valeur interne utilisée pour déterminer si la table est une table de dimensions ou de faits.  Une valeur qui se situe en dehors de la plage connue indique un endommagement.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des statistiques des tables.|  
+|Table|Vérifie que le nombre de partitions dans le mappage des segments de la table correspond au nombre de partitions définies pour la table.|La couche de stockage est endommagée. La collection de partitions de la table ’%{parent/}’ est endommagée.|  
+|Table|Si une base de données tabulaire a été créée ou importée à partir de PowerPivot pour Excel 2010 et qu’elle comporte plus d’une partition, une erreur est déclenchée, indiquant une corruption (la prise en charge des partitions a été ajoutée aux versions ultérieures).|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du mappage de segments.|  
 |Partition|Pour chaque partition, vérifie que le nombre de segments de données et le nombre d’enregistrements pour chaque segment de données dans le segment correspondent aux valeurs stockées dans l’index du segment.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du mappage de segments.|  
 |Partition|Génère une erreur si le nombre total d’enregistrements, de segments ou d’enregistrements par segment n’est pas valide (inférieur à zéro), ou que le nombre de segments ne correspond pas au nombre calculé de segments nécessaires selon le nombre total d’enregistrements.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification du mappage de segments.|  
 |Relation|Génère une erreur si la structure utilisée pour stocker les données relatives à la relation ne contient aucun enregistrement ou que le nom de la table utilisée dans la relation est vide.|Échec des vérifications de cohérence de la base de données (DBCC) lors de la vérification des relations.|  
@@ -259,7 +259,7 @@ Execution complete
 ## <a name="common-resolutions-for-error-conditions"></a>Solutions courantes pour les conditions d’erreur  
  Les erreurs suivantes s’affichent dans SQL Server Management Studio ou dans les fichiers msmdsrv.log. Ces erreurs se produisent quand une ou plusieurs vérifications échouent. Selon l’erreur, la résolution recommandée consiste soit à traiter à nouveau un objet, à supprimer et à redéployer une solution, soit à restaurer la base de données.  
   
-|Error|Problème|Résolution|  
+|Error|Problème|Résolution :|  
 |-----------|-----------|----------------|  
 |**Erreurs dans le gestionnaire de métadonnées**<br /><br /> La référence d’objet '\<objectID >' n’est pas valide. Elle ne correspond pas à la structure de la hiérarchie de classes de métadonnées.|Commande mal constituée|Vérifiez la syntaxe de la commande. Très probablement, vous avez inclus un objet de niveau inférieur sans spécifier un ou plusieurs de ses objets parents.|  
 |**Erreurs dans le gestionnaire de métadonnées**<br /><br /> Soit le \<objet > portant l’ID '\<objectID >' n’existe pas dans le \<parentobject > portant l’ID '\<Id_objet_parent >', ou l’utilisateur ne dispose pas des autorisations nécessaires pour accéder à l’objet.|Endommagement de l’index (multidimensionnel)|Retraitez l’objet et tous les objets dépendants.|  

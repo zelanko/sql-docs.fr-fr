@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: a324d07d-cfdf-43bd-98a0-acf332c5a4db
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 7760a893082f7b4a8899e00480fc43914b1c12ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 6947a51b731b22b28ffbaa509f7cd38be5e7ebc5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625913"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266531"
 ---
 # <a name="setting-project-options-oracletosql"></a>Définition des options du projet (OracleToSQL)
 Pour chaque projet SSMA, vous pouvez définir les options de niveau projet. Ces options spécifient la conversion de l’objet, le chargement d’objet, paramètres de migration des données et d’interface utilisateur. Avant de convertir des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vérifiez que les options de configuration sont appropriées pour le projet.  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c48c3aac77d845fba9df72819bc0503eca337ce9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752061"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68190044"
 ---
 # <a name="what39s-new-in-sql-server-installation"></a>Nouveautés dans l’installation de SQL Server
   Windows Vista n'est pas un système d'exploitation pris en charge pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Service Pack 1 reste la configuration minimale requise pour les systèmes d'exploitation [!INCLUDE[win7](../../includes/win7-md.md)] et [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)]. Pour plus d’informations sur la configuration requise du système d’exploitation, consultez [Hardware and Software Requirements for Installing SQL Server 2014](hardware-and-software-requirements-for-installing-sql-server.md).  

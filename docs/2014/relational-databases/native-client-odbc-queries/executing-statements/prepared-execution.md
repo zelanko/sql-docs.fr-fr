@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354225"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207054"
 ---
 # <a name="prepared-execution"></a>Exécution préparée
   L'API ODBC définit l'exécution préparée comme un moyen de réduire la charge d'analyse et de compilation associée à l'exécution répétée d'une instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'application génère une chaîne de caractères contenant une instruction SQL, puis l'exécute en deux étapes. Il appelle [SQLPrepare, fonction](https://go.microsoft.com/fwlink/?LinkId=59360) une fois pour que l’instruction soit analysée et compilée dans un plan d’exécution par le [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Il appelle ensuite **SQLExecute** pour chaque exécution du plan d’exécution préparée. Cela permet de réduire la charge d'analyse et de compilation pour chaque exécution. L'exécution préparée est couramment utilisée par les applications pour exécuter de manière répétée la même instruction SQL paramétrable.  
@@ -33,7 +33,7 @@ ms.locfileid: "53354225"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proposent également la prise en charge native de l'exécution préparée. Création d’un plan d’exécution **SQLPrepare** et exécutée par la suite lorsque **SQLExecute** est appelée. Étant donné que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n’est pas requis pour générer des procédures stockées temporaires sur **SQLPrepare**, il n’existe aucune surcharge supplémentaire sur les tables système dans **tempdb**.  
   
- Pour des raisons de performances, la préparation de l’instruction est différée jusqu'à ce que **SQLExecute** est appelée ou une opération de métapropriété (tel que [SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md) ou [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)dans ODBC) est effectuée. Il s'agit du comportement par défaut. Toute erreur dans l'instruction en cours de préparée reste inconnue tant que l'instruction n'a pas été exécutée ou qu'une opération de métapropriété n'a pas été effectuée. La définition de l'attribut SQL_SOPT_SS_DEFER_PREPARE de l'instruction spécifique au pilote ODBC  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  Native Client sur  SQL_DP_OFF peut désactiver ce comportement par défaut.  
+ Pour des raisons de performances, la préparation de l’instruction est différée jusqu'à ce que **SQLExecute** est appelée ou une opération de métapropriété (tel que [SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md) ou [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md)dans ODBC) est effectuée. Il s’agit du comportement par défaut. Toute erreur dans l'instruction en cours de préparée reste inconnue tant que l'instruction n'a pas été exécutée ou qu'une opération de métapropriété n'a pas été effectuée. La définition de l'attribut SQL_SOPT_SS_DEFER_PREPARE de l'instruction spécifique au pilote ODBC  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  Native Client sur  SQL_DP_OFF peut désactiver ce comportement par défaut.  
   
  Dans le cas de différé préparer, appelant **SQLDescribeCol** ou **SQLDescribeParam** avant d’appeler **SQLExecute** génère un aller-retour supplémentaire au serveur. Sur **SQLDescribeCol**, le pilote supprime la clause WHERE de la requête et l’envoie au serveur avec SET FMTONLY ON pour obtenir la description des colonnes dans le premier jeu de résultats retourné par la requête. Sur **SQLDescribeParam**, le pilote appelle le serveur pour obtenir une description des expressions ou des colonnes référencées par les marqueurs de paramètres dans la requête. Cette méthode présente également certaines restrictions, comme le fait qu'elle ne permette pas de résoudre les paramètres dans les sous-requêtes.  
   

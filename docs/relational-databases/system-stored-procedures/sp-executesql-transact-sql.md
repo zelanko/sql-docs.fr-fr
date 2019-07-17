@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef37233326597dc2a83f3089590e07f7b6efe51f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803164"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290354"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,17 +50,17 @@ sp_executesql [ @stmt = ] statement
   
 ## <a name="arguments"></a>Arguments  
  [ \@stmt= ] *statement*  
- Est une chaîne Unicode contenant un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot. \@stmt doit être une constante Unicode ou une variable Unicode. L'utilisation d'expressions Unicode plus complexes (comme la concaténation de deux chaînes avec l'opérateur +) n'est pas autorisée. L'utilisation de constantes de caractères n'est pas autorisée. Si une constante Unicode est spécifiée, elle doit porter le préfixe avec un **N**. Par exemple, la constante Unicode **ne sp_who'** est valide, mais la constante caractère **'sp_who'** n’est pas. La taille de la chaîne n'est limitée que par la quantité de mémoire disponible sur le serveur de base de données. Sur les serveurs 64 bits, la taille de la chaîne est limitée à 2 Go, la taille maximale de **nvarchar (max)**.  
+ Est une chaîne Unicode contenant un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot. \@stmt doit être une constante Unicode ou une variable Unicode. L'utilisation d'expressions Unicode plus complexes (comme la concaténation de deux chaînes avec l'opérateur +) n'est pas autorisée. L'utilisation de constantes de caractères n'est pas autorisée. Si une constante Unicode est spécifiée, elle doit porter le préfixe avec un **N**. Par exemple, la constante Unicode **ne sp_who'** est valide, mais la constante caractère **'sp_who'** n’est pas. La taille de la chaîne n'est limitée que par la quantité de mémoire disponible sur le serveur de base de données. Sur les serveurs 64 bits, la taille de la chaîne est limitée à 2 Go, la taille maximale de **nvarchar (max)** .  
   
 > [!NOTE]  
 >  \@stmt peut contenir des paramètres possédant la même forme qu’un nom de variable, par exemple : `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  Chaque paramètre inclus dans \@stmt doit posséder une entrée correspondante à la fois dans le \@liste des définitions de paramètre params et le paramètre de liste de valeurs.  
   
- [ \@params =] N'\@*nom_paramètre ** data_type* [,... *n* ] '  
+ [ \@params =] N'\@*nom_paramètre* *data_type* [,... *n* ] '  
  Est une chaîne qui contient les définitions de tous les paramètres qui ont été incorporés dans \@stmt. Cette chaîne doit être une constante Unicode ou une variable Unicode. Chaque définition de paramètre se compose d'un nom de paramètre et d'un type de données. *n* est un espace réservé qui indique les définitions de paramètres supplémentaires. Chaque paramètre spécifié dans \@stmt doit être défini dans \@params. Si le [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de \@stmt ne contient-elle pas de paramètres, \@params n’est pas obligatoire. La valeur par défaut de ce paramètre est NULL.  
   
- [ \@param1= ] '*value1*'  
+ [ \@param1 =] '*value1*'  
  Valeur du premier paramètre qui est défini dans la chaîne de paramètres. Cette valeur peut être une constante ou une variable Unicode. Il doit y avoir une valeur de paramètre fournie pour chaque paramètre inclus dans \@stmt. Les valeurs ne sont pas requis lorsque la [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le lot de \@stmt n’a aucun paramètre.  
   
  [ OUT | OUTPUT ]  
@@ -140,7 +139,7 @@ SELECT @max_title;
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-executing-a-simple-select-statement"></a>A. Exécution d'une instruction SELECT simple  
+### <a name="a-executing-a-simple-select-statement"></a>R. Exécution d'une instruction SELECT simple  
  Cet exemple illustre la création et l'exécution d'une instruction `SELECT` simple contenant un paramètre incorporé appelé `@level`.  
   
 ```  
@@ -151,7 +150,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
-### <a name="b-executing-a-dynamically-built-string"></a>b. Exécution d'une chaîne créée dynamiquement  
+### <a name="b-executing-a-dynamically-built-string"></a>B. Exécution d'une chaîne créée dynamiquement  
  L'exemple suivant illustre l'utilisation de `sp_executesql` pour exécuter une chaîne créée dynamiquement. La procédure stockée proposée sert à l'insertion de données dans un ensemble de tables utilisées pour partitionner les données commerciales d'une année. Il existe une table par mois de l'année, d'après le format suivant :  
   
 ```  
@@ -249,8 +248,6 @@ EXECUTE sp_executesql
           N'@level tinyint',  
           @level = 109;  
 ```  
-  
- Pour obtenir des exemples supplémentaires, consultez [sp_executesql (Transact-SQL)](https://msdn.microsoft.com/library/ms188001.aspx).  
   
 ## <a name="see-also"></a>Voir aussi  
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

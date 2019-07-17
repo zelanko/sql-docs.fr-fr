@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4a03be22-b7da-4e2a-97ff-94bed890a620
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6894622cc31e3348164570e2b5d775ed955baf0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 147c080df688ff02d133e725b1ac310439a68eb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126676"
 ---
 # <a name="systraces-transact-sql"></a>sys.traces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,20 +36,20 @@ ms.locfileid: "47784724"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt les affichages catalogue des événements étendus.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**Int**|ID de la trace.|  
 |**status**|**Int**|État de la trace :<br /><br /> 0 = arrêtée<br /><br /> 1 = en cours d’exécution|  
 |**path**|**nvarchar(260)**|Chemin du fichier de trace Cette valeur est NULL lorsque la trace représente une trace d'ensemble de lignes.|  
 |**max_size**|**bigint**|Limite de la taille de fichier de trace maximale en mégaoctets (Mo). Cette valeur est NULL lorsque la trace représente une trace d'ensemble de lignes.|  
 |**stop_time**|**datetime**|Heure d'arrêt de trace d'exécution.|  
-|**max_files**|**Int**|Nombre maximal de fichiers de substitution. Cette valeur est NULL lorsque le nombre maximal n'est pas défini.|  
+|**max_files**|**int**|Nombre maximal de fichiers de substitution. Cette valeur est NULL lorsque le nombre maximal n'est pas défini.|  
 |**is_rowset**|**bit**|1 = trace d'ensemble de lignes.|  
 |**is_rollover**|**bit**|1 = l'option de substitution est activée.|  
 |**is_shutdown**|**bit**|1 = l'option d'arrêt est activée.|  
 |**is_default**|**bit**|1 = trace par défaut.|  
 |**buffer_count**|**Int**|Nombre de tampons en mémoire utilisés par la trace.|  
-|**buffer_size**|**Int**|Taille de chaque tampon (Ko).|  
+|**buffer_size**|**int**|Taille de chaque tampon (Ko).|  
 |**file_position**|**bigint**|Dernière position d'un fichier de trace. Cette valeur est NULL lorsque la trace représente une trace d'ensemble de lignes.|  
 |**reader_spid**|**Int**|ID de session de lecteur de trace d'ensemble de lignes. Cette valeur est NULL lorsque la trace est un fichier de trace.|  
 |**start_time**|**datetime**|Heure de début de trace.|  
@@ -58,7 +57,7 @@ ms.locfileid: "47784724"
 |**event_count**|**bigint**|Nombre total d'événements qui se sont produits.|  
 |**dropped_event_count**|**Int**|Nombre total d'événements supprimés.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

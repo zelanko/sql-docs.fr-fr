@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 23d5180928f4f3335aa17dff61b50e6fdd19549f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157139"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196470"
 ---
 # <a name="create-user-defined-aggregates"></a>Créer des agrégats définis par l'utilisateur
   Vous pouvez créer un objet de base de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmé dans un assembly CLR. Les objets de base de données qui peuvent tirer parti du modèle de programmation riche fourni par le CLR sont notamment les déclencheurs, les procédures stockées, les fonctions, les fonctions d'agrégation et les types.  

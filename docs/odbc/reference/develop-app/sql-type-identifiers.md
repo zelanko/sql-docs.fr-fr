@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1763ee0cd8c5bc2017160de44b9c047781649eba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be36bd8efc059c1a4f9b5ddf2cdd7faf32cf7dd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107448"
 ---
 # <a name="sql-type-identifiers"></a>Identificateurs de types SQL
 Chaque source de données définit ses propres types de données SQL. ODBC définit des identificateurs de type et décrit les caractéristiques générales des types de données SQL qui peuvent être mappés à chaque identificateur de type. Il est spécifique au pilote comment chaque type de données dans la source de données sous-jacente est mappé à un identificateur de type SQL d’ODBC.  

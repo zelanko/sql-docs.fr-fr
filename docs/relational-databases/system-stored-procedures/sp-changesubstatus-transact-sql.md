@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0040f986e5ff3b6de025761b32d2f40e2e127d39
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe75ffcf1e8cdcc387acb48c882e247b21889c06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113812"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +64,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**. Si *publication* n’est pas spécifiée, toutes les publications sont affectées.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%** . Si *publication* n’est pas spécifiée, toutes les publications sont affectées.  
   
-`[ @article = ] 'article'` Est le nom de l’article. Doit être unique et propre à la publication. *article* est **sysname**, avec une valeur par défaut **%**. Si *article* n’est pas spécifiée, tous les articles sont affectées.  
+`[ @article = ] 'article'` Est le nom de l’article. Doit être unique et propre à la publication. *article* est **sysname**, avec une valeur par défaut **%** . Si *article* n’est pas spécifiée, tous les articles sont affectées.  
   
-`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné pour modifier l’état de. *abonné* est **sysname**, avec une valeur par défaut **%**. Si *abonné* n’est pas spécifié, état est modifié pour tous les abonnés à l’article spécifié.  
+`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné pour modifier l’état de. *abonné* est **sysname**, avec une valeur par défaut **%** . Si *abonné* n’est pas spécifié, état est modifié pour tous les abonnés à l’article spécifié.  
   
 `[ @status = ] 'status'` L’état de l’abonnement dans le **syssubscriptions** table. *état* est **sysname**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
@@ -81,7 +80,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @previous_status = ] 'previous_status'` Est l’état précédent de l’abonnement. *previous_status* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre vous permet de modifier les abonnements ayant actuellement cet état, permettant ainsi des fonctions de groupe sur un ensemble spécifique d’abonnements (par exemple, la définition active tous les abonnements retour au **abonné**).  
   
-`[ @destination_db = ] 'destination_db'` Est le nom de la base de données de destination. *destination_db* est **sysname**, avec une valeur par défaut **%**.  
+`[ @destination_db = ] 'destination_db'` Est le nom de la base de données de destination. *destination_db* est **sysname**, avec une valeur par défaut **%** .  
   
 `[ @frequency_type = ] frequency_type` Est la fréquence de planification de la tâche de distribution. *frequency_type* est **int**, avec NULL comme valeur par défaut.  
   
@@ -120,9 +119,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @active_end_date = ] active_end_date` Date à laquelle la tâche de distribution cesse d’être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, avec NULL comme valeur par défaut.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Est une invite de commandes facultative. *optional_command_line* est **nvarchar (4000)**, avec NULL comme valeur par défaut.  
+`[ @optional_command_line = ] 'optional_command_line'` Est une invite de commandes facultative. *optional_command_line* est **nvarchar (4000)** , avec NULL comme valeur par défaut.  
   
-`[ @distribution_jobid = ] distribution_jobid` Est l’ID de travail de l’Agent de Distribution sur le serveur de distribution pour l’abonnement lors du changement de l’état de l’abonnement d’inactif à actif. Dans les autres cas, il n'est pas défini. Si plus d'un Agent de distribution est impliqué dans un seul appel à cette procédure stockée, le résultat n'est pas défini. *id_tâche_distribution* est **Binary (16)**, avec NULL comme valeur par défaut.  
+`[ @distribution_jobid = ] distribution_jobid` Est l’ID de travail de l’Agent de Distribution sur le serveur de distribution pour l’abonnement lors du changement de l’état de l’abonnement d’inactif à actif. Dans les autres cas, il n'est pas défini. Si plus d'un Agent de distribution est impliqué dans un seul appel à cette procédure stockée, le résultat n'est pas défini. *id_tâche_distribution* est **Binary (16)** , avec NULL comme valeur par défaut.  
   
 `[ @from_auto_sync = ] from_auto_sync` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

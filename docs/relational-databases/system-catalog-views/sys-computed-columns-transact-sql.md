@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: c962c619-e18f-4315-9251-8d9862462299
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85e5f78e6096c2a860e376c72947f149b1cf8ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e55274d1e6dfa34a3cfb92317bb4f205cfdd964
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109573"
 ---
 # <a name="syscomputedcolumns-transact-sql"></a>sys.computed_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contient une ligne pour chaque colonne trouvée dans **sys.columns** qui est une colonne calculée.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**\<héritée de colonnes >**||Le **sys.computed_columns** vue retourne toutes les colonnes dans le **sys.columns** vue. Elle retourne également les colonnes supplémentaires décrites ci-après. Pour obtenir une description des colonnes qui les **sys.computed_columns** hérite **sys.columns**, consultez [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md). La valeur de la **is_computed** colonne est toujours définie sur 1 dans le **sys.computed_columns** vue.|  
 |**definition**|**nvarchar(max)**|Texte SQL qui définit cette colonne calculée.|  

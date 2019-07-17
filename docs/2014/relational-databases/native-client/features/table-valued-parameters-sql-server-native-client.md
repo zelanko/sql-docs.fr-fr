@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6eea28d6bccfa8d0f785f3b27e98141e94dd313c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207804"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206624"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Paramètres table (SQL Server Native Client)
   Les paramètres table ont été introduits dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] et offrent un moyen efficace de passer plusieurs lignes de données au serveur. Les paramètres table fournissent des fonctionnalités semblables aux tableaux de paramètres, mais offrent plus de souplesse et une intégration plus étroite avec [!INCLUDE[tsql](../../../includes/tsql-md.md)] ; ils améliorent souvent les performances. Les paramètres table peuvent également participer aux opérations basées sur des ensembles, contrairement aux tableaux de paramètres.  

@@ -1,5 +1,5 @@
 ---
-title: Définition de procédures stockées | Documents Microsoft
+title: Définition de procédures stockées | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54b14cd5ee54edab4508c06c55e5815bfeab934f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020096"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209378"
 ---
 # <a name="defining-stored-procedures"></a>Définition de procédures stockées
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34020096"
   
  Cette section contient les informations nécessaires pour comprendre, concevoir et mettre en œuvre des procédures stockées.  
   
-|Rubrique| Description|  
+|Rubrique|Description|  
 |-----------|-----------------|  
 |[Conception de procédures stockées](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/designing-stored-procedures.md)|Explique comment concevoir des assemblys pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
 |[Création de procédures stockées](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/creating-stored-procedures.md)|Explique comment créer des assemblys pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
@@ -32,6 +32,6 @@ ms.locfileid: "34020096"
 |[Débogage de procédures stockées](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md)|Explique comment déboguer les assemblys dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion des assemblys de modèle multidimensionnel](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
+ [Gestion des assemblys de modèles multidimensionnels](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

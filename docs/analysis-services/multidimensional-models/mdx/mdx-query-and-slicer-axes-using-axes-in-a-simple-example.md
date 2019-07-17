@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’Axes de requête et segment dans un exemple Simple (MDX) | Documents Microsoft
+title: À l’aide d’Axes de requête et segment dans un exemple Simple (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fce95d7e51c17f6e8a0fedbec01eccf7bd8ec8c4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022626"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165836"
 ---
-# <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>Requête MDX et les Axes de segment - utilisation des Axes dans un exemple Simple
+# <a name="mdx-query-and-slicer-axes---using-axes-in-a-simple-example"></a>Axes de requête et de segment MDX - Utilisation d’axes dans un exemple simple
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   L'exemple simple fourni dans cette rubrique illustre les principes de base de la spécification et de l'utilisation d'axes de requête et de découpage.  
   
@@ -45,7 +45,7 @@ WHERE ( [Measures].[Packages] )
 |2nd quarter|45|45|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécification du contenu d’un axe de requête & #40 ; MDX & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
- [Spécification du contenu d’un axe de secteur & #40 ; MDX & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
+ [Spécification du contenu d’un axe de requête &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-query-axis.md)   
+ [Spécification du contenu d’un axe de secteur &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-specify-the-contents-of-a-slicer-axis.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Tuples | Documents Microsoft
+title: Tuples | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 33bfe1d6e46a7687736afd837614eec350a941ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020386"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165766"
 ---
 # <a name="tuples"></a>Tuples
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -63,12 +63,12 @@ FROM [Adventure Works]
  Le tuple employé dans la requête de l'exemple ci-avant précise le retour de la cellule du cube à l'intersection de la mesure Reseller Sales Amount de la dimension de mesures et du membre CY 2004 de la hiérarchie d'attribut Calendar Year dans la dimension Date.  
   
 > [!NOTE]  
->  Vous pouvez désigner un membre d'attribut selon son nom ou sa clé de membre. Dans l'exemple précédent, vous pouviez remplacer la référence à [CY 2004] par &[2004].  
+>  Vous pouvez désigner un membre d'attribut selon son nom ou sa clé de membre. Dans l'exemple précédent, vous pouviez remplacer la référence à [CY 2004] par &[2004].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés dans MDX & #40 ; Analysis Services & #41 ;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Concepts clés de MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [Espace du cube](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
- [Fonctionnalité Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [Utilisation des membres, Tuples et jeux & #40 ; MDX & #41 ;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
+ [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
+ [Utilisation de membres, de tuples et de jeux &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   
   

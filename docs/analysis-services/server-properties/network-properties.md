@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b9bb77c5139b299a25fbd75bc30a58790ee0c30
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072356"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207949"
 ---
 # <a name="network-properties"></a>Propriétés réseau
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "53072356"
   
  **S’applique à :** Mode serveur multidimensionnel et tabulaire  
   
-## <a name="general"></a>Général  
+## <a name="general"></a>Généralités  
  **ListenOnlyOnLocalConnections**  
  Propriété booléenne qui spécifie si l'écoute doit avoir lieu uniquement sur les connexions locales, par exemple localhost.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "53072356"
  **ServerSendTimeout**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="requests"></a>Demandes  
+## <a name="requests"></a>Requests  
  **EnableBinaryXML**  
  Propriété booléenne qui spécifie si le serveur prend en charge les demandes au format XML binaire.  
   

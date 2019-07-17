@@ -1,5 +1,5 @@
 ---
-title: Référence technique de Microsoft Linear Regression algorithme | Documents Microsoft
+title: Référence technique de Microsoft Linear Regression algorithme | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84d0d6609538bb9abdbca61e75c6691c25a45950
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019376"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183058"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "34019376"
 ### <a name="setting-algorithm-parameters"></a>Définition des paramètres de l'algorithme  
  Le tableau suivant présente les paramètres fournis pour l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression).  
   
-|Paramètre| Description|  
+|Paramètre|Description|  
 |---------------|-----------------|  
 |*MAXIMUM_INPUT_ATTRIBUTES*|Spécifie le nombre d'attributs d'entrée que l'algorithme peut traiter avant d'appeler la sélection des fonctionnalités. Attribuez à ce paramètre la valeur 0 pour désactiver la sélection des fonctionnalités.<br /><br /> La valeur par défaut est 255.|  
-|*MAXIMUM_OUTPUT_ATTRIBUTES*|Spécifie le nombre d'attributs de sortie que l'algorithme peut traiter avant d'appeler la sélection des fonctionnalités. Attribuez à ce paramètre la valeur 0 pour désactiver la sélection des fonctionnalités.<br /><br /> La valeur par défaut est 255.|  
+|*MAXIMUM_OUTPUT_ATTRIBUTES*|Spécifie le nombre d'attributs de sortie que l'algorithme peut traiter avant d'appeler la sélection des fonctionnalités. Attribuez à ce paramètre la valeur 0 pour désactiver la sélection des fonctionnalités.<br /><br /> La valeur par défaut est 255.|  
 |*FORCE_REGRESSOR*|Force l'algorithme à utiliser les colonnes indiquées comme régresseurs, quelle que soit leur importance, telle que calculée par l'algorithme.|  
   
 ### <a name="modeling-flags"></a>Indicateurs de modélisation  
@@ -55,7 +55,7 @@ ms.locfileid: "34019376"
 |Indicateur de modélisation|Description|  
 |-------------------|-----------------|  
 |NOT NULL|Indique que la colonne ne peut pas contenir de valeur Null. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique aux colonnes de structure d'exploration de données.|  
-|REGRESSOR|Indique que la colonne contient des valeurs numériques continues qui doivent être traitées comme variables indépendantes potentielles pendant l'analyse. S'applique aux colonnes de modèle d'exploration de données.<br /><br /> Remarque : attribuer un indicateur de régresseur sur une colonne ne garantit pas que la colonne sera utilisée comme régresseur dans le modèle final.|  
+|REGRESSOR|Indique que la colonne contient des valeurs numériques continues qui doivent être traitées comme variables indépendantes potentielles pendant l'analyse. S'applique aux colonnes de modèle d'exploration de données.<br /><br /> Remarque : Marquage d’une colonne comme un régresseur ne garantit pas que la colonne sera être utilisée comme régresseur dans le modèle final.|  
   
 ### <a name="regressors-in-linear-regression-models"></a>Régresseurs dans les modèles de régression linéaire  
  Les modèles de régression linéaire sont basés sur l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Cependant, même si vous n’utilisez pas l’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression), tout modèle d’arbre de décision peut contenir un arbre ou des nœuds qui représentent une régression sur un attribut continu.  
@@ -66,13 +66,13 @@ ms.locfileid: "34019376"
   
  Vous pouvez utiliser le paramètre FORCED_REGRESSOR pour faire en sorte que l'algorithme utilise un régresseur particulier. Ce paramètre peut être utilisé avec les algorithmes MDT et MLR.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Un modèle de régression linéaire doit contenir une colonne clé, des colonnes d'entrée et au moins une colonne prédictible.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
  L’algorithme MLR ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression) prend en charge les colonnes d’entrée et les colonnes prédictibles répertoriées dans le tableau suivant. Pour plus d’informations sur la signification des types de contenu utilisés dans un modèle d’exploration de données, consultez [Types de contenu &#40;Exploration de données&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Colonne|Types de contenu|  
+|colonne|Types de contenu|  
 |------------|-------------------|  
 |Attribut d'entrée|Continu, Cyclique, Clé, Table et Ordonné|  
 |Attribut prédictible|Continu, Cyclique et Ordonné|  
@@ -81,8 +81,8 @@ ms.locfileid: "34019376"
 >  Les types de contenu**Cyclique** et **Trié** sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de régression linéaire Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
- [Exemples de requêtes de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de régression linéaire & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Algorithme MLR (Microsoft Linear Regression)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
+ [Exemples de requête de modèle de régression linéaire](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538601"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195630"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML, un mot clé [!INCLUDE[tsql](../../includes/tsql-md.md)] , fournit un ensemble de lignes sur des documents XML en mémoire qui est similaire à une table ou à une vue. OPENXML permet l'accès aux données XML comme s'il s'agissait d'un ensemble de lignes relationnelles. Pour cela, il fournit une vue sous forme d'un ensemble de lignes de la représentation interne d'un document XML. Les enregistrements de l'ensemble de lignes peuvent être stockés dans des tables de base de données.  
@@ -137,11 +137,11 @@ EXEC sp_xml_removedocument @docHandle;
   
  Le tableau ci-dessous décrit la structure de la table du bord.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ID unique du nœud du document.<br /><br /> L'ID de l'élément racine a pour valeur 0. Les valeurs négatives d'ID sont réservées.|  
 |**parentid**|**bigint**|Identifie le parent du nœud. Le parent identifié par cet ID n'est pas nécessairement l'élément parent. Toutefois, cela dépend du NodeType du nœud dont le parent est identifié par cet ID. Par exemple, si le nœud est un nœud texte, son parent peut être un nœud d'attribut.<br /><br /> Si le nœud se situe au niveau supérieur du document XML, son **ParentID** a pour valeur NULL.|  
-|**node type**|**Int**|Identifie le type de nœud et est un entier qui correspond à la numérotation des types de nœud XML de modèle d'objet XML (DOM).<br /><br /> Valeurs susceptibles d'apparaître dans cette colonne pour indiquer le type de nœud :<br /><br /> **1** = Nœud d’élément<br /><br /> **2** = Nœud d’attribut<br /><br /> **3** = Nœud texte<br /><br /> **4** = Nœud de section CDATA<br /><br /> **5** = Nœud de référence d’entité<br /><br /> **6** = Nœud d’entité<br /><br /> **7** = Nœud d’instructions de traitement<br /><br /> **8** = Nœud de commentaire<br /><br /> **9** = Nœud de document<br /><br /> **10** = Nœud de type de document<br /><br /> **11** = Nœud de fragment de document<br /><br /> **12** = Nœud de notation<br /><br /> Pour plus d'informations, consultez la rubrique « Propriété nodeType » dans le Kit de développement logiciel Microsoft XML (MSXML).|  
+|**node type**|**int**|Identifie le type de nœud et est un entier qui correspond à la numérotation des types de nœud XML de modèle d'objet XML (DOM).<br /><br /> Valeurs susceptibles d'apparaître dans cette colonne pour indiquer le type de nœud :<br /><br /> **1** = Nœud d’élément<br /><br /> **2** = Nœud d’attribut<br /><br /> **3** = Nœud texte<br /><br /> **4** = Nœud de section CDATA<br /><br /> **5** = Nœud de référence d’entité<br /><br /> **6** = Nœud d’entité<br /><br /> **7** = Nœud d’instructions de traitement<br /><br /> **8** = Nœud de commentaire<br /><br /> **9** = Nœud de document<br /><br /> **10** = Nœud de type de document<br /><br /> **11** = Nœud de fragment de document<br /><br /> **12** = Nœud de notation<br /><br /> Pour plus d'informations, consultez la rubrique « Propriété nodeType » dans le Kit de développement logiciel Microsoft XML (MSXML).|  
 |**localname**|**nvarchar(max)**|Fournit le nom local de l'élément ou de l'attribut. A pour valeur NULL si l'objet DOM est dépourvu de nom.|  
 |**prefix**|**nvarchar(max)**|Préfixe de l'espace de noms du nom de nœud.|  
 |**namespaceuri**|**nvarchar(max)**|URI de l'espace de noms du nœud. Si la valeur est NULL, aucun espace de noms n'est présent.|  
@@ -164,11 +164,11 @@ EXEC sp_xml_removedocument @docHandle;
   
  Vous pouvez spécifier le mappage de deux façons et vous pouvez également spécifier cela :  
   
--   en utilisant le paramètre *flags*   
+-   en utilisant le paramètre *flags*  
   
      Le mappage spécifié par le paramètre *flags* suppose une correspondance de nom dans laquelle les nœuds XML sont mappés avec les colonnes correspondantes du même nom dans l'ensemble de lignes.  
   
--   en utilisant le paramètre *ColPattern*   
+-   en utilisant le paramètre *ColPattern*  
   
      L'expression XPath*ColPattern*est spécifiée dans le paramètre *SchemaDeclaration* de la clause WITH. Le mappage spécifié dans *ColPattern* remplace celui défini par le paramètre *flags* .  
   

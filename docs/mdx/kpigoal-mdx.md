@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c6b85136e5fde72635f5691b5172232e7d601a24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f818731fdc2d7b7b6ee6b000fd4e85b150c9f92c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105245"
 ---
 # <a name="kpigoal-mdx"></a>KPIGoal (MDX)
 
@@ -29,7 +28,7 @@ KPIGoal(KPI_Name)
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *KPI_Name*  
+ *Nom_icp*  
  Expression de chaîne valide qui spécifie le nom d'un indicateur de performance clé.  
   
 ## <a name="remarks"></a>Notes  

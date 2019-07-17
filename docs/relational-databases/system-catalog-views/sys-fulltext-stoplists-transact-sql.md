@@ -22,24 +22,23 @@ ms.assetid: eb69fb8f-f6d9-446e-83c0-67afd05dfba0
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: affb9c997b340a61bd435125c80819a04cdec145
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88f4354a343e9748e1111d26c3ce8c248431b1be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133771"
 ---
 # <a name="sysfulltextstoplists-transact-sql"></a>sys.fulltext_stoplists (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contient une ligne par liste de mots vides de texte intégral dans la base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**Int**|ID de la liste de mots vides ; il est unique dans la base de données.|  
-|**nom**|**sysname**|Nom de la liste de mots vides.|  
+|**name**|**sysname**|Nom de la liste de mots vides.|  
 |**create_date**|**datetime**|Date de création de la liste de mots vides.|  
 |**modify_date**|**datetime**|Date de dernière modification de la liste de mots vides au moyen d'une instruction ALTER.|  
 |**Principal_id**|**Int**|ID du principal de la base de données propriétaire de la liste de mots vides.|  
