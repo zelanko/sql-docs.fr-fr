@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 96a5e6f6-d320-4623-b96e-0a856e3abebb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fcc0910bd985e36857fb2f14596779983123340f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 34f847d8a20ee52b680e69a28c07539e73c8b499
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131571"
 ---
 # <a name="srvrpcparams-extended-stored-procedure-api"></a>srv_rpcparams (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ srvproc
 ## <a name="returns"></a>Valeur renvoyée  
  Nombre de paramètres dans la procédure stockée distante. S'il n'y a pas de paramètres dans la procédure stockée distante ou s'il n'y a pas de procédure stockée distante actuellement, -1 est retourné et une erreur liée aux informations se produit.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette fonction retourne le nombre de paramètres dans la procédure stockée distante actuelle. Elle est généralement appelée à partir de la procédure stockée distante.  
   
  Quand un appel de procédure stockée distante est effectué avec des paramètres, ceux-ci peuvent être passés par nom ou par position (sans nom). Si l'appel de procédure stockée distante a été effectué avec certains paramètres passés par nom et certains passés par position, une erreur se produit. Quand cette erreur se produit, le gestionnaire de procédures stockées distantes est appelé, mais il ne reçoit pas les paramètres et **srv_rpcparams** retourne 0.  

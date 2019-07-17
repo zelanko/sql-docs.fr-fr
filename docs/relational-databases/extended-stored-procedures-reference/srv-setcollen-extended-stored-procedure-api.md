@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3c60f1c3-4562-463a-a259-12df172788bd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8dff06b97ddf1ad5b54581d373109bc3372a6dfc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 15bd83b902ad64213fcde3ef15a185d69fde8cd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119640"
 ---
 # <a name="srvsetcollen-extended-stored-procedure-api"></a>srv_setcollen (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ len
 ## <a name="returns"></a>Valeur renvoyée  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Chaque colonne de la ligne doit être au préalable définie avec **srv_describe**. La longueur des données de la colonne est définie par le dernier appel à **srv_describe** ou **srv_setcollen**. En cas de modification des données de longueur variable (données se terminant par le caractère Null) pour une ligne, vous devez utiliser **srv_setcollen** pour définir la nouvelle longueur avant d’appeler **srv_sendrow**. Pour une colonne qui autorise des valeurs Null, **srv_describe** doit être appelé avec un type de données qui autorise des valeurs Null attribué à *desttype* (comme SRVINTN) et des données Null sont spécifiées en appelant **srv_setcollen** avec la valeur 0 attribuée à *len*. Les données de longueur nulle ne peuvent pas être spécifiées à l'aide de l'API de procédure stockée étendue.  
   
  Notez que quand le type de données de la colonne est de longueur variable, *len* n’est pas vérifié. Cette fonction retourne FAIL si elle est appelée pour une colonne de longueur fixe.  
@@ -72,7 +71,7 @@ len
 > [!IMPORTANT]  
 >  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [srv_describe &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
   
   

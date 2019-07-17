@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cfb3c62f5b0e5f24c84f02e3eba7a9eebb7977fe
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 36020fb9df7b98338cd64a8e476b8da0b5196c0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119649"
 ---
 # <a name="srvsetcoldata-extended-stored-procedure-api"></a>srv_setcoldata (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ data
 ## <a name="returns"></a>Valeur renvoyée  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Chaque colonne de la ligne doit être au préalable définie avec **srv_describe**. Les adresses des données de colonne sont définies initialement avec **srv_describe**. En cas de modification de l'adresse des données de colonne, **srv_setcoldata** doit être appelé pour spécifier la nouvelle adresse des données et **srv_setcoldata** doit être appelé séparément pour chaque colonne modifiée.  
   
  Pour représenter des données Null, attribuez la valeur 0 à la longueur de la colonne avec **srv_setcollen**. L'adresse des données est alors ignorée.  
@@ -72,7 +71,7 @@ data
 > [!IMPORTANT]  
 >  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [srv_describe &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  
   
   

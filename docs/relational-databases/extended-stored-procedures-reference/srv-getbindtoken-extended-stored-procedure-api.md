@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c947d011-08ac-4fb8-b925-3da6e0999277
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 04d0993fc8e0a84d001dfd7e899dedf6ecc8dde2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2c4c413a3a84aa7db12ac4ecde7d41e3efd34525
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51655628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064097"
 ---
 # <a name="srvgetbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ bindtoken
 ## <a name="returns"></a>Valeur renvoyée  
  SUCCEED ou FAIL.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ### <a name="to-bind-an-extended-stored-procedure-session-to-the-client-session-that-called-it-so-they-share-the-same-transaction-lock-space"></a>Pour lier une session de procédure stockée étendue à la session cliente qui l'a appelée pour qu'elles partagent le même espace de verrouillage de transaction  
   
@@ -76,7 +75,7 @@ bindtoken
 > [!IMPORTANT]  
 >  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_bindsession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindsession-transact-sql.md)   
  [sp_getbindtoken &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getbindtoken-transact-sql.md)  
   

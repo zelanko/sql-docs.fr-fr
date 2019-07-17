@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e81a60e6-14ea-47bc-a11c-3d7635344447
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f6ec4e8f0edb68f7a316ae695359f617e1b6b1dc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3bb52186b88b678f9abe276fb5f18f1dd7505b96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119691"
 ---
 # <a name="srvrpcowner-extended-stored-procedure-api"></a>srv_rpcowner (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ len
 ## <a name="returns"></a>Valeur renvoyée  
  Un pointeur DBCHAR vers le composant propriétaire, terminé par le caractère NULL, de la procédure stockée distante actuelle. En l’absence de procédure stockée distante actuelle, NULL est retourné et *len* est défini sur -1.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette fonction retourne uniquement le composant propriétaire de la procédure stockée distante. Elle n'inclut pas les spécificateurs facultatifs pour le nom, le nom de la procédure stockée distante et le numéro de la procédure stockée distante.  
   
 > [!IMPORTANT]  

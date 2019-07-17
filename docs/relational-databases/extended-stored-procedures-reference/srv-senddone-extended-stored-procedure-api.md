@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1fc4f1d5-56d4-43f6-b5e4-0c0cc295cba3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d3ce8f810b2e4a51afa7ce0f6d020997e44e54a7
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: 329ba87fea8229d8ab5849fcdb728495e1bc1c5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67568773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131537"
 ---
 # <a name="srvsenddone-extended-stored-procedure-api"></a>srv_senddone (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,6 +83,6 @@ count
  N'appelez pas **srv_senddone** à partir du gestionnaire SRV_CONNECT.  
   
 > [!IMPORTANT]  
->  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
+>  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
   

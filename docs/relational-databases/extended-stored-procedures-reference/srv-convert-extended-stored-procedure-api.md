@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 216b4a31-786e-4361-8a33-e5f6e9790f90
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d69215395a579f569cbcc18b266e3a796f06148b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064143"
 ---
 # <a name="srvconvert-extended-stored-procedure-api"></a>srv_convert (API de procédure stockée étendue)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ destlen
 ## <a name="returns"></a>Valeur renvoyée  
  Longueur des données converties, en octets, si la conversion de type de données réussit. Quand **srv_convert** rencontre une demande de conversion qu’il ne prend pas en charge, il appelle le gestionnaire d’erreurs fourni par le développeur, le cas échéant, définit un numéro d’erreur global et retourne -1.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction **srv_willconvert** détermine si une conversion particulière est autorisée.  
   
  La conversion vers le type de données numérique approximatif SRVFLT4 ou SRVFLT8 peut provoquer une certaine perte de précision. La conversion à partir du type de données numérique approximatif SRVFLT4 ou SRVFLT8 vers SRVCHAR ou SRVTEXT peut également provoquer une certaine perte de précision.  
@@ -114,7 +113,7 @@ destlen
 > [!IMPORTANT]  
 >  Il est préférable d'examiner avec soin le code source des procédures stockées étendues et de tester les DLL compilées avant de les installer sur un serveur de production. Pour plus d'informations sur l'examen et les tests de sécurité, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [srv_setutype &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-setutype-extended-stored-procedure-api.md)   
  [srv_willconvert &#40;API de procédure stockée étendue&#41;](../../relational-databases/extended-stored-procedures-reference/srv-willconvert-extended-stored-procedure-api.md)  
   
