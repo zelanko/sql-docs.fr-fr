@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7c4c951d294ab57e19b4114380fd4692b9fc8151
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411366"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183764"
 ---
 # <a name="customize-mining-models-and-structure"></a>Personnaliser les modèles et les structures d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -99,8 +99,8 @@ ms.locfileid: "52411366"
 |HIDDEN_NODE_RATIO|[Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)|  
 |HISTORIC_MODEL_COUNT|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |HISTORICAL_MODEL_GAP|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
-|HOLDOUT_PERCENTAGE|[Références techniques relatives à l'algorithme MLR (Microsoft Logistic Regression)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Remarque : Ce paramètre est différent de la valeur du pourcentage d'exclusion qui s'applique à une structure d'exploration de données.|  
-|HOLDOUT_SEED|[Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Remarque : Ce paramètre est différent de la valeur de départ d'exclusion qui s'applique à une structure d'exploration de données.|  
+|HOLDOUT_PERCENTAGE|[Références techniques relatives à l'algorithme MLR (Microsoft Logistic Regression)](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Remarque : Ce paramètre est différent de la valeur de pourcentage d’exclusion qui s’applique à une structure d’exploration de données.|  
+|HOLDOUT_SEED|[Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> Remarque : Ce paramètre est différent de la valeur de départ d’exclusion qui s’applique à une structure d’exploration de données.|  
 |INSTABILITY_SENSITIVITY|[Informations techniques de référence sur l’algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)|  
 |MAXIMUM_INPUT_ATTRIBUTES|[Informations techniques de référence sur l’algorithme Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme Microsoft Linear Regression](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Références techniques relatives à l'algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)|  
 |MAXIMUM_ITEMSET_COUNT|[Informations techniques de référence sur l’algorithme Microsoft Association](../../analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md)|  

@@ -1,5 +1,5 @@
 ---
-title: Définir des Dimensions liées | Documents Microsoft
+title: Définir des Dimensions liées | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8441f37d902c823e9d8dce27a96b2d78f3f38b26
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023626"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209014"
 ---
 # <a name="define-linked-dimensions"></a>Définir des dimensions liées
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34023626"
 > [!NOTE]  
 >  Puisque l'actualisation n'est pas disponible, la plupart des développeurs Analysis Services copient les dimensions au lieu de les lier. Vous pouvez copier des dimensions entre les projets dans la même solution. Pour plus d’informations, consultez [Actualisation d’une dimension liée dans SSAS](http://sqlblog.com/blogs/marco_russo/archive/2006/09/12/refresh-of-a-linked-dimension-in-ssas.aspx).  
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Prérequis  
  La base de données source qui fournit la dimension et la base de données active qui les utilise doivent être de la même version et avoir le même niveau de compatibilité. Pour plus d’informations, consultez [Niveau de compatibilité d’une base de données multidimensionnelle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
  La base de données source doit être déployée et en ligne. Les serveurs qui publient ou consomment des objets liés doivent être configurés pour autoriser l'opération (voir ci-dessous).  

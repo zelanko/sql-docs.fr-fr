@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 46eec3cc-0ecc-4980-9020-fb74a9af5730
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f8b0a6fc7aa5765d9373af33ab4fac0a4a07aac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4d684fb6d9614defdca3897c53c4bae9fc231a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138084"
 ---
 # <a name="record-count"></a>Nombre d'enregistrements
 Le champ d’en-tête SQL_DESC_COUNT d’un descripteur est l’index de base un de l’enregistrement le plus élevé numérotés qui contient les données. Ce champ n’est pas un nombre de colonnes ou paramètres qui sont liés. Lorsqu’un descripteur est alloué, la valeur initiale de SQL_DESC_COUNT est 0.  

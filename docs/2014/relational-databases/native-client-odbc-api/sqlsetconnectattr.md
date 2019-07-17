@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1b48f9ee2e7ee3092e3f31fd6ef97e91c5cd9db
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207100"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ignore le paramètre de SQL_ATTR_CONNECTION_TIMEOUT.  
@@ -97,7 +97,7 @@ SQLSetConnectAttr(SQL_ATTR_CURRENT_CATALOG, ...) // restores to pre-connect attr
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NTS)  
 ```  
   
- La valeur par défaut est `ReadWrite`. Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prise en charge du Client natif de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] groupes de disponibilité, consultez [SQL Server Native Client prend en charge pour la haute disponibilité, récupération d’urgence](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
+ La valeur par défaut est `ReadWrite`. Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prise en charge du Client natif de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] groupes de disponibilité, consultez [SQL Server Native Client prend en charge pour la haute disponibilité, récupération d’urgence](../native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md).  
   
 ## <a name="sqlcoptssattachdbfilename"></a>SQL_COPT_SS_ATTACHDBFILENAME  
  SQL_COPT_SS_ATTACHDBFILENAME spécifie le nom du fichier primaire d'une base de données pouvant être attachée. Cette base de données est attachée et devient la base de données par défaut de la connexion. Pour utiliser SQL_COPT_SS_ATTACHDBFILENAME, vous devez spécifier le nom de la base de données en tant que la valeur de l’attribut de connexion SQL_ATTR_CURRENT_CATALOG ou dans la base de données = paramètre d’un [SQLDriverConnect](sqldriverconnect.md). Si la base de données a été attachée précédemment, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne l'attachera pas de nouveau.  

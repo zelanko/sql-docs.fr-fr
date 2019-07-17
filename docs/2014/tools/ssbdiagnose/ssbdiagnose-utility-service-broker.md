@@ -1,5 +1,5 @@
 ---
-title: Utilitaire (Service Broker) ssbdiagnose | Microsoft Docs
+title: Utilitaire ssbdiagnose (Service Broker) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823683"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211007"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>Utilitaire ssbdiagnose (Service Broker)
   L’utilitaire **ssbdiagnose** signale des problèmes rencontrés dans des conversations [!INCLUDE[ssSB](../../includes/sssb-md.md)] ou dans la configuration des services [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Des vérifications de configuration peuvent réalisées pour deux services ou pour un seul. Les problèmes sont signalés soit dans la fenêtre d’invite de commandes par un texte explicite, soit dans un fichier XML mis en forme qui peut être redirigé vers un fichier ou un autre programme.  
@@ -156,11 +156,11 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  Demande que la configuration du dialogue soit vérifiée pour le niveau de chiffrement spécifié :  
   
- **ON**: Paramètre par défaut. La sécurité de dialogue complète est configurée. Des certificats ont été déployés des deux côtés du dialogue, une liaison de service distant est présente et l'instruction GRANT SEND du service cible a spécifié l'utilisateur initiateur.  
+ **ON** : Paramètre par défaut. La sécurité de dialogue complète est configurée. Des certificats ont été déployés des deux côtés du dialogue, une liaison de service distant est présente et l'instruction GRANT SEND du service cible a spécifié l'utilisateur initiateur.  
   
- **DÉSACTIVER**: Aucune sécurité de la boîte de dialogue est configurée. Aucun certificat n’a été déployé, aucune liaison de service distant n’a été créée, et l’instruction GRANT SEND du service initiateur a spécifié le rôle **public** .  
+ **OFF** : Aucune sécurité de dialogue n'est configurée. Aucun certificat n’a été déployé, aucune liaison de service distant n’a été créée, et l’instruction GRANT SEND du service initiateur a spécifié le rôle **public** .  
   
- **ANONYME**: Sécurité du dialogue anonyme est configurée. Un certificat a été déployé, la liaison de service distant a spécifié la clause ANONYMOUS, et l’instruction GRANT SEND du service cible a spécifié le rôle **public** .  
+ **ANONYMOUS** : La sécurité de dialogue anonyme est configurée. Un certificat a été déployé, la liaison de service distant a spécifié la clause ANONYMOUS, et l’instruction GRANT SEND du service cible a spécifié le rôle **public** .  
   
  **RUNTIME**  
  Demande un rapport sur les problèmes à l'origine d'erreurs d'exécution pour une conversation [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Si ni **-NEW** ni **-ID** n’est spécifiée, **ssbdiagnose** surveille toutes les conversations dans toutes les bases de données spécifiées dans les options de connexion. Si l’option **-NEW** ou **-ID** est spécifiée, **ssbdiagnose** génère la liste des ID spécifiés dans les paramètres.  
@@ -200,7 +200,7 @@ WHERE database_id = DB_ID();
  ID de conversation sont signalés dans le `conversation_id` colonne de la **sys.conversation_endpoints** vue de catalogue.  
   
  **-TIMEOUT** *intervalle_délai_d’attente*  
- Spécifie la durée d’exécution du rapport **RUNTIME** en secondes. Si vous ne spécifiez pas **-TIMEOUT** , le rapport d’exécution s’exécute indéfiniment. **-TIMEOUT** est utilisé uniquement sur les rapports **RUNTIME** , et non sur les rapports **CONFIGURATION** . Utilisez Ctrl+C pour quitter **ssbdiagnose** si **-TIMEOUT** n’a pas été spécifié, ou pour terminer un rapport d’exécution avant**-** l’expiration du délai d’attente. *intervalle_délai_d’attente* doit être un nombre compris entre 1 et 2 147 483 647.  
+ Spécifie la durée d’exécution du rapport **RUNTIME** en secondes. Si vous ne spécifiez pas **-TIMEOUT** , le rapport d’exécution s’exécute indéfiniment. **-TIMEOUT** est utilisé uniquement sur les rapports **RUNTIME** , et non sur les rapports **CONFIGURATION** . Utilisez Ctrl+C pour quitter **ssbdiagnose** si **-TIMEOUT** n’a pas été spécifié, ou pour terminer un rapport d’exécution avant **-** l’expiration du délai d’attente. *intervalle_délai_d’attente* doit être un nombre compris entre 1 et 2 147 483 647.  
   
  **\<runtimeconnectionoptions>**  
  Spécifie les informations de connexion pour les bases de données contenant les services associés aux éléments de conversation qui sont surveillés. Si tous les services se trouvent dans la même base de données, vous ne devez spécifier qu’une seule clause **CONNECT TO** . Si les services se trouvent dans des bases de données séparées, vous devez fournir une clause **CONNECT TO** pour chaque base de données. Si **runtimeconnectionoptions** n’est pas spécifié, **ssbdiagnose** utilise les informations de connexion de **baseconnectionoptions**.  
@@ -314,7 +314,7 @@ WHERE database_id = DB_ID();
 ## <a name="examples"></a>Exemples  
  Cette section contient des exemples d’utilisation de **ssbdiagnose** à une invite de commandes.  
   
-### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>A. Vérification de la configuration de deux services dans la même base de données  
+### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>R. Vérification de la configuration de deux services dans la même base de données  
  L'exemple suivant montre comment demander un rapport de configuration dans le contexte suivant :  
   
 -   Le service initiateur et le service cible se trouvent dans la même base de données.  
@@ -329,7 +329,7 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>b. Vérification de la configuration de deux services sur des ordinateurs distincts qui utilisent une seule connexion  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>B. Vérification de la configuration de deux services sur des ordinateurs distincts qui utilisent une seule connexion  
  L'exemple suivant montre comment demander un rapport de configuration lorsque le service initiateur et le service cible se trouvent sur des ordinateurs distincts, mais sont accessibles en utilisant la même connexion via l'authentification Windows.  
   
 ```  

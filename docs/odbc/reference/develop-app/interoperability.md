@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43b7c849-9d59-4002-9977-9e2c8730b859
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d5e4fbee458bec88461d3e2945a466c848d3345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 434b27bffe3b32aa9fa0c5c6fd3a7100e8c7ea8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138864"
 ---
 # <a name="interoperability"></a>Interopérabilité
 *Interopérabilité* est la capacité d’une seule application pour fonctionner avec nombreux SGBD différents. La nécessité d’écrire des applications interopérables, génériques a été un des principaux facteurs menant au développement de ODBC. Toutefois, l’interopérabilité n’est pas un chemin d’accès simple suivi de « non interopérable » à « totalement interopérable ». Le chemin d’accès possède de nombreuses branches, et chacun nécessite des compromis entre les fonctionnalités, la vitesse, la complexité du code et temps de développement.  

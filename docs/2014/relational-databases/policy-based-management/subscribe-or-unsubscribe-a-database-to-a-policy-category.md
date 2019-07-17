@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d0139376adc28b07877389a023b19310b06417ea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753741"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212132"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>Abonner une base de données ou annuler son abonnement à une catégorie de stratégie
   Cette rubrique explique comment abonner une base de données à une catégorie de stratégie dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ou annuler cet abonnement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "52753741"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe db_owner.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

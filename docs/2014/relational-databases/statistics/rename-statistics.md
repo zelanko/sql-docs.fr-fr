@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a97bb9ab3fcf5aa3ec9e3177a8f4b319c98e1988
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100309"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197140"
 ---
 # <a name="rename-statistics"></a>Renommer des statistiques
   Vous pouvez renommer un objet de statistiques dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -44,7 +44,7 @@ ms.locfileid: "48100309"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 22fd8242de50f73eee634d1bc6bc3fcf5e887f0b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072616"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162803"
 ---
 # <a name="manage-roles-by-using-ssms"></a>Gérer les rôles à l'aide de SSMS 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53072616"
   
 4.  Dans **Définissez les autorisations de base de données pour ce rôle**, sélectionnez l'une des options d'autorisations suivantes :  
   
-    |Autorisation|Description|  
+    |Permission|Description|  
     |----------------|-----------------|  
     |**Contrôle total (Administrateur)**|Les membres peuvent apporter des modifications au schéma de modèle et peuvent afficher toutes les données.|  
     |**Traiter la base de données**|Les membres peuvent exécuter les opérations Traiter et Traiter tout. Impossible de modifier le schéma de modèle et d'afficher les données.|  

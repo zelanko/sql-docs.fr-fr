@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e02cbdeaaf754819b3a0efa15aa9515cc8515e62
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 85e75e1ce52866eb04b3c410f021db8de392239a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534031"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122326"
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication de fusion. *publication* est **sysname**, avec une valeur par défaut **%**, qui retourne tous les articles dans la base de données qui sont en conflit.  
+`[ @publication = ] 'publication'` Est le nom de la publication de fusion. *publication* est **sysname**, avec une valeur par défaut **%** , qui retourne tous les articles dans la base de données qui sont en conflit.  
   
 `[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *publisher* est **sysname**, avec NULL comme valeur par défaut.  
   
@@ -48,14 +47,14 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**article**|**sysname**|Nom de l'article.|  
 |**source_owner**|**sysname**|Propriétaire de l'objet source.|  
 |**source_object**|**nvarchar(386)**|Nom de l'objet source.|  
 |**conflict_table**|**nvarchar(258)**|Nom de la table stockant les conflits d'insertion ou de mise à jour.|  
 |**guidcolname**|**sysname**|Nom du RowGuidCol de l'objet source.|  
-|**centralized_conflicts**|**Int**|Spécifie si les enregistrements des conflits sont stockés sur le serveur de publication donné.|  
+|**centralized_conflicts**|**int**|Spécifie si les enregistrements des conflits sont stockés sur le serveur de publication donné.|  
   
  Si l’article a une seule des conflits de suppression et aucun **conflict_table** lignes, le nom de la **conflict_table** dans le résultat de jeu est NULL.  
   

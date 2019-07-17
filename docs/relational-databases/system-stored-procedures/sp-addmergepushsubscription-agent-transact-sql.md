@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 808a1925-be46-4999-8d69-b3a83010ec81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73f8b43a39f30720c6e9c8e4a4969ba350ebd8a0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e24659cc7880a5df34aa451c5051e77b8a4c59d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117954"
 ---
 # <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 > [!IMPORTANT]  
 >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  
   
-`[ @job_login = ] 'job_login'` Est la connexion pour le compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)**, avec NULL comme valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions d'Agent au serveur de distribution et pour les connexions à l'Abonné et au serveur de publication lors de l'utilisation de l'authentification intégrée de Windows.  
+`[ @job_login = ] 'job_login'` Est la connexion pour le compte Windows sous lequel l’agent s’exécute. *job_login* est **nvarchar (257)** , avec NULL comme valeur par défaut. Ce compte Windows est toujours utilisé pour les connexions d'Agent au serveur de distribution et pour les connexions à l'Abonné et au serveur de publication lors de l'utilisation de l'authentification intégrée de Windows.  
   
 `[ @job_password = ] 'job_password'` Est le mot de passe pour le compte Windows sous lequel l’agent s’exécute. *job_password* est **sysname**, sans valeur par défaut.  
   
@@ -162,7 +161,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 `[ @active_end_date = ] active_end_date` Date à laquelle l’Agent de fusion cesse d’être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, avec NULL comme valeur par défaut.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Spécifie si l’abonnement peut être synchronisé par le biais du Gestionnaire de synchronisation Windows. *l’argument enabled_for_syncmgr* est **nvarchar (5)**, avec FALSE comme valeur par défaut. Si **false**, l’abonnement n’est pas inscrit avec le Gestionnaire de synchronisation. Si **true**, l’abonnement est enregistré avec le Gestionnaire de synchronisation et peuvent être synchronisée sans démarrer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Spécifie si l’abonnement peut être synchronisé par le biais du Gestionnaire de synchronisation Windows. *l’argument enabled_for_syncmgr* est **nvarchar (5)** , avec FALSE comme valeur par défaut. Si **false**, l’abonnement n’est pas inscrit avec le Gestionnaire de synchronisation. Si **true**, l’abonnement est enregistré avec le Gestionnaire de synchronisation et peuvent être synchronisée sans démarrer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

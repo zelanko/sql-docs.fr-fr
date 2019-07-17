@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b486237208e5a374d5cae6da6fd82a22ee0ebe18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124827"
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_dropserver [ @server = ] 'server'
  Serveur à supprimer. *server* est de type **sysname**et n'a pas de valeur par défaut. *serveur* doit exister.  
   
  *droplogins*  
- Indique qui de connexion de serveur lié et distant pour liés *server* doit également être supprimé si **droplogins** est spécifié. **`@droplogins`** est **char (10)**, avec NULL comme valeur par défaut.  
+ Indique qui de connexion de serveur lié et distant pour liés *server* doit également être supprimé si **droplogins** est spécifié. **`@droplogins`** est **char (10)** , avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -55,7 +54,7 @@ sp_dropserver [ @server = ] 'server'
   
  **sp_dropserver** ne peut pas être exécutée à l’intérieur d’une transaction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite une autorisation ALTER ANY LINKED SERVER sur le serveur.  
   
 ## <a name="examples"></a>Exemples  

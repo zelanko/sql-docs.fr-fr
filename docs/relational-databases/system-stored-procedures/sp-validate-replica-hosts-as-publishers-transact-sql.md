@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a6786b8f26cd9040492bb03fff8ed18cd14be5ff
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f9cb198b8083a525c6416af17df774ecfe605bd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119379"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +50,10 @@ sp_validate_replica_hosts_as_publishers
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun.  
+ Aucune.  
   
 ## <a name="remarks"></a>Notes  
- Si aucune entrée n’existe pour le serveur de publication et de la base de données de publication, **sp_validate_redirected_publisher** retourne la valeur null pour le paramètre de sortie *@redirected_publisher*. Sinon, le serveur de publication redirigé associé est retourné, à la fois en cas de réussite et d'échec.  
+ Si aucune entrée n’existe pour le serveur de publication et de la base de données de publication, **sp_validate_redirected_publisher** retourne la valeur null pour le paramètre de sortie *@redirected_publisher* . Sinon, le serveur de publication redirigé associé est retourné, à la fois en cas de réussite et d'échec.  
   
  Si la validation réussit, **sp_validate_redirected_publisher** retourne une indication de réussite.  
   

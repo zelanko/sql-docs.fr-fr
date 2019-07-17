@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748528"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211744"
 ---
 # <a name="about-change-data-capture-sql-server"></a>À propos de la capture de données modifiées (SQL Server)
   La capture de données modifiées enregistre les activités d'insertion, de mise à jour et de suppression appliquées à une table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elle rend disponibles les détails des modifications dans un format relationnel simple à utiliser. Les informations sur les colonnes et les métadonnées nécessaires à l'application des modifications à un environnement cible sont capturées pour les lignes modifiées et stockées dans des tables de modification qui reflètent la structure de colonne des tables sources suivies. Des fonctions table sont fournies afin de procurer aux consommateurs un accès systématique aux données modifiées.  
@@ -43,7 +43,7 @@ ms.locfileid: "52748528"
   
  Chaque opération d'insertion ou de suppression appliquée à une table source apparaît comme une ligne unique dans la table de modifications. Les colonnes de données de la ligne qui résulte d'une opération d'insertion contiennent les valeurs de colonne après l'insertion. Les colonnes de données de la ligne qui résulte d'une opération de suppression contiennent les valeurs de colonne avant la suppression. Une opération de mise à jour requiert une entrée de ligne pour identifier les valeurs de colonne avant la mise à jour et une deuxième entrée de ligne pour identifier les valeurs de colonne après la mise à jour.  
   
- Chaque ligne d'une table de modifications contient également des métadonnées supplémentaires permettant d'interpréter l'activité de changement. La colonne __$start_lsn identifie le numéro séquentiel dans le journal de validation affecté à la modification. Ce numéro identifie les modifications qui ont été validées dans la même transaction et il ordonne ces transactions. La colonne \_\_$seqval peut être utilisée pour ordonner davantage de modifications qui ont lieu dans la même transaction. La colonne \_ \_$operation enregistre l’opération qui est associée à la modification : 1 = Suppression, 2 = insertion, 3 = mise à jour (image avant) et 4 = mise à jour (image après). La colonne \_\_$update_mask est un masque de bits variable avec un bit défini pour chaque colonne capturée. Pour les entrées d'insertion et de suppression, tous les bits du masque de mise à jour sont toujours définis. Toutefois, pour les lignes de mise à jour, seuls les bits correspondant aux colonnes modifiées sont définis.  
+ Chaque ligne d'une table de modifications contient également des métadonnées supplémentaires permettant d'interpréter l'activité de changement. La colonne __$start_lsn identifie le numéro séquentiel dans le journal de validation affecté à la modification. Ce numéro identifie les modifications qui ont été validées dans la même transaction et il ordonne ces transactions. La colonne \_\_$seqval peut être utilisée pour ordonner davantage de modifications qui ont lieu dans la même transaction. La colonne \_\_$operation enregistre l’opération qui est associée à la modification : 1 = supprimer, 2 = insérer, 3 = mettre à jour (avant l’image) et 4 = mettre à jour (après l’image). La colonne \_\_$update_mask est un masque de bits variable avec un bit défini pour chaque colonne capturée. Pour les entrées d'insertion et de suppression, tous les bits du masque de mise à jour sont toujours définis. Toutefois, pour les lignes de mise à jour, seuls les bits correspondant aux colonnes modifiées sont définis.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>Intervalle de validité de capture de données modifiées pour une base de données  
  L'intervalle de validité de capture de données modifiées pour une base de données est la durée pendant laquelle les données modifiées sont disponibles pour les instances de capture. L'intervalle de validité commence lorsque la première instance de capture est créée pour une table de base de données et il se poursuit jusqu'au moment présent.  

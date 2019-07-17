@@ -1,5 +1,5 @@
 ---
-title: Spécifier une colonne à utiliser comme régresseur dans un modèle | Documents Microsoft
+title: Spécifier une colonne à utiliser comme régresseur dans un modèle | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0cfbe8f17c14518b2acf41bdb9ecf64b1679ffb2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016546"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182341"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Spécifier une colonne à utiliser comme régresseur dans un modèle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34016546"
   
 3.  Dans le menu **Modèle d’exploration de données** , sélectionnez **Nouveau modèle d’exploration de données**.  
   
-4.  Pour l’algorithme, sélectionnez **MLR (Microsoft Linear Regression)**. Pour le nom, tapez **Call Center Regression**.  
+4.  Pour l’algorithme, sélectionnez **MLR (Microsoft Linear Regression)** . Pour le nom, tapez **Call Center Regression**.  
   
 5.  Sous l’onglet **Modèles d’exploration de données** , modifiez l’utilisation des colonnes de la façon suivante. La valeur **Ignorer**doit être affectée à toutes les colonnes ne figurant pas dans la liste suivante, si ce n’est pas déjà fait.  
   
@@ -60,9 +60,9 @@ ms.locfileid: "34016546"
      Dans la visionneuse, le modèle est représenté sous la forme d'un nœud unique contenant la formule de régression. Vous pouvez afficher la formule dans la **Légende d’exploration de données**, ou extraire les coefficients de la formule à l’aide de requêtes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de régression linéaire Microsoft](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
- [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
- [Référence technique de Microsoft Linear Regression algorithme](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenu du modèle d’exploration de données pour les modèles de régression linéaire & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Algorithme MLR (Microsoft Linear Regression)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
+ [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -16,11 +16,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545265"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211985"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Créer une spécification de l'audit du serveur et de la base de données
   Cette rubrique explique comment créer un audit de serveur et une spécification d'audit de base de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -52,7 +52,7 @@ ms.locfileid: "52545265"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
   
 -   Les utilisateurs disposant de l'autorisation ALTER ANY DATABASE AUDIT peuvent créer des spécifications d'audit de base de données et les lier à un audit quelconque.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52545265"
   
 1.  Dans l'Explorateur d'objets, développez le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Audits** et sélectionnez **Nouvel audit...**. Pour plus d’informations, consultez [Créer un audit du serveur et une spécification d'audit du serveur](create-a-server-audit-and-server-audit-specification.md).  
+2.  Cliquez avec le bouton droit sur le dossier **Audits** et sélectionnez **Nouvel audit...** . Pour plus d’informations, consultez [Créer un audit du serveur et une spécification d'audit du serveur](create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Lorsque vous avez fini de sélectionner les options, cliquez sur **OK**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "52545265"
   
 2.  Développez le dossier **Sécurité** .  
   
-3.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit de la base de données**, puis sélectionnez **Nouvelle spécification de l’audit de la base de données...**.  
+3.  Cliquez avec le bouton droit sur le dossier **Spécifications de l’audit de la base de données**, puis sélectionnez **Nouvelle spécification de l’audit de la base de données...** .  
   
      Les options suivantes sont disponibles dans la boîte de dialogue **Créer la spécification de l'audit de la base de données** .  
   

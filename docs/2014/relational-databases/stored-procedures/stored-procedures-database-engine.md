@@ -14,18 +14,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130615"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68197109"
 ---
 # <a name="stored-procedures-database-engine"></a>Procédures stockées (moteur de base de données)
-  Une procédure stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un groupe d’une ou de plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou une référence à une méthode CLR (Common Runtime Language) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Les procédures ressemblent à des constructions d'autres langages de programmation, car elles peuvent :  
+  Une procédure stockée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un groupe d’une ou de plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou une référence à une méthode CLR (Common Runtime Language) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Les procédures ressemblent à des constructions d'autres langages de programmation, car elles peuvent :  
   
 -   accepter des paramètres d'entrée et retourner plusieurs valeurs sous la forme de paramètres de sortie au programme appelant ;  
   
--   contenir des instructions de programmation qui effectuent des opérations dans la base de données. Cela inclut l'appel d'autres procédures ;  
+-   contenir des instructions de programmation qui effectuent des opérations dans la base de données. Cela inclut l'appel d'autres procédures ;  
   
 -   retourner une valeur d'état à un programme appelant pour indiquer une réussite ou un échec (et la raison de l'échec).  
   
@@ -64,8 +64,8 @@ ms.locfileid: "48130615"
  Temporaire  
  Les procédures temporaires sont une forme de procédures définies par l'utilisateur. Les procédures temporaires sont semblables à une procédure permanente, sauf qu'elles sont stockées dans **tempdb**. Il en existe deux types : locale et globale. Elles se différencient par leur nom, leur visibilité et leur disponibilité. Le premier caractère du nom des procédures temporaires locales est un signe dièse (#) unique. Ces procédures sont visibles uniquement à la connexion actuelle de l'utilisateur et sont supprimées dès que la connexion est fermée. En revanche, le nom des procédures temporaires globales commence par deux signes dièse (##) ; ces procédures sont visibles à tout utilisateur après avoir été créées et sont supprimées à la fin de la dernière session qui utilise la procédure.  
   
- Système  
- Les procédures système sont incluses dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles sont stockées physiquement dans la base de données **Resource** interne et masquée, mais elles apparaissent logiquement dans le schéma **sys** de chaque base de données définie par le système et définie par l’utilisateur. En outre, la base de données **msdb** contient également les procédures stockées système dans le schéma **dbo** , utilisées pour planifier les alertes et les travaux. Compte tenu du fait que les procédures système commencent par le préfixe **sp_**, nous vous recommandons de ne pas utiliser ce préfixe quand vous nommez des procédures définies par l’utilisateur. Pour obtenir la liste complète des procédures système, consultez [Procédures stockées système &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql).  
+ System  
+ Les procédures système sont incluses dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Elles sont stockées physiquement dans la base de données **Resource** interne et masquée, mais elles apparaissent logiquement dans le schéma **sys** de chaque base de données définie par le système et définie par l’utilisateur. En outre, la base de données **msdb** contient également les procédures stockées système dans le schéma **dbo** , utilisées pour planifier les alertes et les travaux. Compte tenu du fait que les procédures système commencent par le préfixe **sp_** , nous vous recommandons de ne pas utiliser ce préfixe quand vous nommez des procédures définies par l’utilisateur. Pour obtenir la liste complète des procédures système, consultez [Procédures stockées système &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les procédures système qui assurent l’interface entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les programmes externes pour diverses activités de maintenance. Ces procédures étendues utilisent le préfixe xp_. Pour obtenir la liste complète des procédures étendues, consultez [Procédures stockées étendues générales &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql).  
   

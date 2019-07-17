@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc38e4f11b32c368626b0f84a352d3f9c00fa0f7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805411"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211900"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Création, modification et suppression des procédures stockées
   Dans SMO ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects), les procédures stockées sont représentées par l'objet <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure>.  

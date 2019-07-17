@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9dfcb8f-1da6-49ca-a2c8-411574915434
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2952023dac4833ade3f67e3a59026a5865352c5e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b3f579fb9a263b69755baaa1be84f6d51e9beac1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113841"
 ---
 # <a name="sphelplogshippingmonitorprimary-transact-sql"></a>sp_help_log_shipping_monitor_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_help_log_shipping_monitor_primary
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |**primary_id**|ID de la base de données primaire pour la configuration de la copie des journaux de transaction.|  
 |**primary_server**|Le nom de l’instance principale de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration d’envoi de journaux.|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 981b98523a53e0c828de5e9cdf8a6c35c6843805
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852904"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207647"
 ---
 # <a name="impersonation"></a>Emprunt d'identité 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -58,7 +58,7 @@ Lorsque les données sont importées ou traitées, les informations d’identifi
  
 |Option|Description|  
 |------------|-----------------|  
-|**Emprunter l’identité de compte**|Spécifie le modèle utilise un compte d’utilisateur Windows pour importer ou traiter les données de la source de données. Le domaine et le nom du compte d’utilisateur utilise le format suivant :**\<nom de domaine >\\< nom du compte utilisateur\>**.|  
+|**Emprunter l’identité de compte**|Spécifie le modèle utilise un compte d’utilisateur Windows pour importer ou traiter les données de la source de données. Le domaine et le nom du compte d’utilisateur utilise le format suivant : **\<nom de domaine >\\< nom du compte utilisateur\>** .|  
 |**Emprunter l’identité d’utilisateur actuel**|Spécifie les données doivent être accessibles à partir de la source de données à l’aide de l’identité de l’utilisateur qui a envoyé la demande. Ce paramètre s’applique uniquement au mode DirectQuery.|  
 |**Emprunter l’identité**|Spécifie un nom d’utilisateur pour accéder à la source de données, mais n’a pas besoin de spécifier le mot de passe du compte. Ce paramètre s’applique uniquement lorsque la délégation Kerberos est activée et spécifie que l’authentification S4U doit être utilisée.|  
 |**Emprunter l’identité du compte de Service**|Spécifie le modèle utilise les informations d’identification de sécurité associées à l’instance de service Analysis Services qui gère le modèle.|  
@@ -72,7 +72,7 @@ Lorsque les données sont importées ou traitées, les informations d’identifi
  
 |Option|Description|  
 |------------|-----------------|  
-|**Mot de passe et le nom d’utilisateur Windows spécifique**|Cette option spécifie le modèle utilise un compte d’utilisateur Windows pour importer ou traiter les données de la source de données. Le domaine et le nom du compte d’utilisateur utilise le format suivant :**\<nom de domaine >\\< nom du compte utilisateur\>**. Lorsque vous créez un nouveau modèle à l’aide de l’Assistant Importation de Table, ce paramètre est l’option par défaut.|  
+|**Mot de passe et le nom d’utilisateur Windows spécifique**|Cette option spécifie le modèle utilise un compte d’utilisateur Windows pour importer ou traiter les données de la source de données. Le domaine et le nom du compte d’utilisateur utilise le format suivant : **\<nom de domaine >\\< nom du compte utilisateur\>** . Lorsque vous créez un nouveau modèle à l’aide de l’Assistant Importation de Table, ce paramètre est l’option par défaut.|  
 |**Compte de service**|Cette option spécifie que le modèle utilise les informations d'identification de sécurité associées à l'instance du service Analysis Services qui gère le modèle.|  
   
 ##  <a name="bkmk_impers_sec"></a> Sécurité  

@@ -21,22 +21,21 @@ helpviewer_keywords:
 ms.assetid: 8c16ecdf-68f4-4a2a-b594-086e3344e58a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 215ff84696cfc3d7590777ab1a2ad0f17c48d2a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44ab2e3106610f7b7130f997e9641e4aba685fd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127933"
 ---
 # <a name="messages-for-errors-catalog-views---sysmessages"></a>Affichages catalogue de messages (erreurs) - sys.messages
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque **message_id** ou **language_id** des messages d’erreur dans le système, pour les messages à la fois définie par le système et définies par l’utilisateur. Pour plus d’informations, consultez [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
    
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**message_id**|**Int**|ID du message. Unique sur le serveur. Les ID de message inférieurs à 50 000 sont des messages système.|  
+|**message_id**|**int**|ID du message. Unique sur le serveur. Les ID de message inférieurs à 50 000 sont des messages système.|  
 |**language_id**|**smallint**|ID de langue pour laquelle le texte dans **texte** est utilisé, tel que défini dans **syslanguages**. Il est unique pour une certaine **message_id**.|  
 |**severity**|**tinyint**|Niveau de gravité du message, entre 1 et 25. Il s’agit du même pour toutes les langues de message dans un **message_id**.|  
 |**is_event_logged**|**bit**|1 = le message est consigné dans le journal des événements lorsqu'une erreur est déclenchée. Il s’agit du même pour toutes les langues de message dans un **message_id**.|  

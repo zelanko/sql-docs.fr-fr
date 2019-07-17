@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8702c1d58e6c891505b0d7d9a85a4d5764fda67d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9685b9733c1d13b79ef2a19ee2f19bbe3130426
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106671"
 ---
 # <a name="systracecategories-transact-sql"></a>sys.trace_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +35,13 @@ ms.locfileid: "47685001"
   
 > **IMPORTANT !** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt les affichages catalogue des événements étendus.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**smallint**|Identificateur unique de la catégorie. Cette colonne figure également dans le **sys.trace_events** vue de catalogue.|  
-|**nom**|**nvarchar(128)**|Nom unique de la catégorie. Ce paramètre n'est pas localisé.|  
+|**name**|**nvarchar(128)**|Nom unique de la catégorie. Ce paramètre n'est pas localisé.|  
 |**type**|**tinyint**|Type de catégorie :<br /><br /> 0 = Normal<br /><br /> 1 = Connexion<br /><br /> 2 = Erreur|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

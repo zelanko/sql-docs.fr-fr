@@ -1,5 +1,5 @@
 ---
-title: Utilisation de la fonction RollupChildren (MDX) | Documents Microsoft
+title: Utilisation de la fonction RollupChildren (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 135ab6e43a0b751639bd1ce1d93bf2183039f713
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024098"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208771"
 ---
-# <a name="mdx-data-manipulation---rollupchildren-function"></a>Manipulation de données MDX - fonction RollupChildren
+# <a name="mdx-data-manipulation---rollupchildren-function"></a>Manipulation de données MDX - Fonction RollupChildren
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   La fonction MDX (Multidimensional Expressions) [RollupChildren](../../../mdx/rollupchildren-mdx.md) effectue le cumul des enfants d’un membre, en appliquant un opérateur unaire différent à chaque enfant, et retourne la valeur de ce cumul sous la forme d’un nombre. L'opérateur unaire peut être fourni par une propriété de membre associée au membre enfant, ou être une expression de type chaîne directement fournie à la fonction.  
   
@@ -68,6 +68,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  L'instruction MDX examine l'opérateur unaire du membre enfant. S’il est utilisé pour une soustraction (comme dans le cas des membres correspondant aux invendus réalisés sur le marché national et à l’étranger), l’opérateur unaire tilde (~) est remplacé par la fonction **IIf** . Sinon, la fonction **IIf** utilise l’opérateur unaire du membre enfant. Enfin, le total du cumul renvoyé est multiplié par 1,1 afin de fournir la valeur estimée des ventes brutes sur le marché national et à l'étranger.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Manipulation de données & #40 ; MDX & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Manipulation de données &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

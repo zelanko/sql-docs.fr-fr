@@ -1,5 +1,5 @@
 ---
-title: Activer l’écriture différée de Dimension | Documents Microsoft
+title: Activer l’écriture différée de Dimension | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 561dc878302afe7636a2660a9e194ac14a35c7f1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020316"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179115"
 ---
-# <a name="bi-wizard---enable-dimension-writeback"></a>Assistant BI - Enable écriture différée de Dimension
+# <a name="bi-wizard---enable-dimension-writeback"></a>Assistant BI - Activer la réécriture de la dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Ajoutez la fonctionnalité d'écriture en différé de la dimension à un cube ou à une dimension afin de permettre aux utilisateurs de modifier manuellement la structure et les membres de la dimension. Les mises à jour dans une dimension activée en écriture sont enregistrées directement dans la table de la dimension. Cette amélioration modifie la définition de la propriété **WriteEnabled** pour une dimension.  
   

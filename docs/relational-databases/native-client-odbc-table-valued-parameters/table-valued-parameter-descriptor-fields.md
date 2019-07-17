@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4e009eff-c156-4d63-abcf-082ddd304de2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13fb698d9a5be2e8fc949ad793cf19ac2aae97b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01345e16602516fd290b268cf4eb9abfb65c0faf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129103"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Champs de descripteur de paramètre table
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

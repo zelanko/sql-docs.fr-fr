@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 854edf82c32058c45df4ab4f71803933f59f2582
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140445"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +57,9 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ## <a name="arguments"></a>Arguments  
 `[ @database = ] 'database'` Est le nom du journal de transaction base de données primaire. *base de données* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
   
-`[ @backup_directory = ] 'backup_directory'` Est le chemin d’accès au dossier de sauvegarde sur le serveur principal. *backup_directory* est **nvarchar (500)**, sans valeur par défaut, et ne peut pas être NULL.  
+`[ @backup_directory = ] 'backup_directory'` Est le chemin d’accès au dossier de sauvegarde sur le serveur principal. *backup_directory* est **nvarchar (500)** , sans valeur par défaut, et ne peut pas être NULL.  
   
-`[ @backup_share = ] 'backup_share'` Est le chemin d’accès réseau au répertoire de sauvegarde sur le serveur principal. *backup_share* est **nvarchar (500)**, sans valeur par défaut, et ne peut pas être NULL.  
+`[ @backup_share = ] 'backup_share'` Est le chemin d’accès réseau au répertoire de sauvegarde sur le serveur principal. *backup_share* est **nvarchar (500)** , sans valeur par défaut, et ne peut pas être NULL.  
   
 `[ @backup_job_name = ] 'backup_job_name'` Est le nom de la tâche de l’Agent SQL Server sur le serveur principal qui copie la sauvegarde dans le dossier de sauvegarde. *backup_job_name* est **sysname** et ne peut pas être NULL.  
   
@@ -102,7 +101,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **sp_add_log_shipping_primary_database** doit être exécuté à partir de la **master** base de données sur le serveur principal. Cette procédure stockée remplit les fonctions suivantes :  

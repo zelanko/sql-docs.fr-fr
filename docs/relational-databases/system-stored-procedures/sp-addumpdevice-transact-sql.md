@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8c1ee1b5bdf2796aa64159867389639496a4906
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117907"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @devtype = ] 'device_type'` Est le type d’unité de sauvegarde. *device_type* est **varchar (20)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @devtype = ] 'device_type'` Est le type d’unité de sauvegarde. *device_type* est **varchar (20)** , sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -57,7 +56,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 `[ @logicalname = ] 'logical_name'` Est le nom logique de l’unité de sauvegarde utilisée dans les instructions BACKUP et RESTORE. *nom_logique* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
   
-`[ @physicalname = ] 'physical_name'` Est le nom physique de l’unité de sauvegarde. Les noms physiques doivent respecter les règles en vigueur pour les noms de fichiers du système d'exploitation ou les conventions d'affectation des noms pour les unités réseau, et doivent comprendre un chemin d'accès complet. *physical_name* est **nvarchar (260)**, sans valeur par défaut de valeur et ne peut pas être NULL.  
+`[ @physicalname = ] 'physical_name'` Est le nom physique de l’unité de sauvegarde. Les noms physiques doivent respecter les règles en vigueur pour les noms de fichiers du système d'exploitation ou les conventions d'affectation des noms pour les unités réseau, et doivent comprendre un chemin d'accès complet. *physical_name* est **nvarchar (260)** , sans valeur par défaut de valeur et ne peut pas être NULL.  
   
  Lorsque vous créez une unité de sauvegarde sur un site de réseau distant, assurez-vous que le nom sous lequel le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a été démarré est capable d'assurer les opérations d'écriture sur l'ordinateur distant.  
   
@@ -74,7 +73,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  **sp_addumpdevice** ajoute une unité de sauvegarde à la **sys.backup_devices** vue de catalogue. Vous pouvez ensuite faire référence à cette unité de manière logique dans les instructions BACKUP et RESTORE. **sp_addumpdevice** n’effectue pas l’accès à l’appareil physique. L'accès à l'unité spécifié survient uniquement lorsqu'une instruction BACKUP ou RESTORE est exécutée. La création d'une unité de sauvegarde logique peut simplifier les instructions BACKUP et RESTORE, car la définition du nom de l'unité est une solution via l'utilisation d'une clause « TAPE = » ou « DISK = » pour spécifier le chemin d'accès de l'unité.  
@@ -96,7 +95,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-adding-a-disk-dump-device"></a>A. Ajout d'une unité de sauvegarde sur disque  
+### <a name="a-adding-a-disk-dump-device"></a>R. Ajout d'une unité de sauvegarde sur disque  
  L'exemple suivant ajoute une unité de sauvegarde sur disque appelée `mydiskdump`, dont le nom physique est `c:\dump\dump1.bak`.  
   
 ```  
@@ -105,7 +104,7 @@ GO
 EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak';  
 ```  
   
-### <a name="b-adding-a-network-disk-backup-device"></a>b. Ajout d'une unité de sauvegarde sur disque du réseau  
+### <a name="b-adding-a-network-disk-backup-device"></a>B. Ajout d'une unité de sauvegarde sur disque du réseau  
  L'exemple suivant ajoute une unité de sauvegarde sur disque distant appelée `networkdevice`. Le nom sous lequel le [!INCLUDE[ssDE](../../includes/ssde-md.md)] a été démarré doit disposer des autorisations à ce fichier à distance (`\\<servername>\<sharename>\<path>\<filename>.bak`).  
   
 ```  

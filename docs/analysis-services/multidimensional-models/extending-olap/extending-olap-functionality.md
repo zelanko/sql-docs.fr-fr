@@ -1,5 +1,5 @@
 ---
-title: Étendre les fonctionnalités OLAP | Documents Microsoft
+title: Extension des fonctionnalités OLAP | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 06b73c0b9f8b4c2d93bb81762ebec442f94e7198
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021416"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177794"
 ---
 # <a name="extending-olap-functionality"></a>Étendre les fonctionnalités OLAP
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,9 +25,9 @@ ms.locfileid: "34021416"
  Les personnalisations sont des objets personnalisés que vous ajoutez à un cube pour fournir un comportement qui varie selon l'utilisateur. Les personnalisations ne sont pas des objets permanents dans le cube. Il s'agit d'objets que l'application cliente applique dynamiquement pendant la session de l'utilisateur. Voici quelques exemples : modifier la devise d'une valeur monétaire en fonction de la personne qui accède aux données en fournissant des indicateurs de performance clés individualisés, ou créer une liste ciblée de suggestions pour les clients standard qui achètent en ligne.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Extension d’OLAP par des personnalisations](../../../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md)  
+ [Extension d’OLAP via des personnalisations](../../../analysis-services/multidimensional-models/extending-olap/extending-olap-through-personalizations.md)  
   
- [Extensions de personnalisation de Analysis Services](../../../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)  
+ [Extensions de personnalisation d’Analysis Services](../../../analysis-services/multidimensional-models/extending-olap/analysis-services-personalization-extensions.md)  
   
  [Définition de procédures stockées](../../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

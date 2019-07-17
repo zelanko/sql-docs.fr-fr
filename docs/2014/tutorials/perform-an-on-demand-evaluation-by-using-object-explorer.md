@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028280"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210945"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Effectuer une évaluation à la demande à l'aide de l'Explorateur d'objets
   Dans cette tâche, vous allez utiliser l’Explorateur d’objets pour effectuer une évaluation à la demande des stratégies des meilleures pratiques pour la [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] sur une seule instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -38,17 +38,17 @@ ms.locfileid: "56028280"
     > [!NOTE]  
     >  Par défaut, l'instance locale est utilisée comme source des stratégies. Si vous avez précédemment importé des stratégies des meilleures pratiques, elles apparaîtront avec toutes les autres stratégies que vous avez créées. Vous pouvez sélectionner l’un des stratégies des meilleures pratiques importées, puis cliquez sur **Evaluate**. Si vous n'avez pas importé les stratégies des meilleures pratiques, continuez cette procédure.  
   
-3.  Dans le **évaluer les stratégies** boîte de dialogue, ensuite la **Source** , cliquez sur le bouton de sélection (**...** ) bouton.  
+3.  Dans le **évaluer les stratégies** boîte de dialogue, ensuite la **Source** , cliquez sur le bouton de sélection ( **...** ) bouton.  
   
-4.  Dans le **sélectionner une Source** boîte de dialogue, vous pouvez sélectionner **fichiers** ou **Server** comme source des fichiers de stratégie à évaluer. Si vous cliquez sur **Server**, vous pouvez effectuer une évaluation de la demande de n’importe quel stratégies des meilleures pratiques qui ont été précédemment importées dans la gestion basée sur un serveur local ou distant. Dans ce didacticiel, vous devrez cliquer sur **fichiers**, puis sélectionnez les fichiers de stratégie individuels que vous souhaitez évaluer. Pour cela, procédez comme suit :  
+4.  Dans le **sélectionner une Source** boîte de dialogue, vous pouvez sélectionner **fichiers** ou **Server** comme source des fichiers de stratégie à évaluer. Si vous cliquez sur **Server**, vous pouvez effectuer une évaluation de la demande de n’importe quel stratégies des meilleures pratiques qui ont été précédemment importées dans la gestion basée sur un serveur local ou distant. Dans ce didacticiel, vous devrez cliquer sur **fichiers**, puis sélectionnez les fichiers de stratégie individuels que vous souhaitez évaluer. Pour ce faire, procédez comme suit :  
   
     1.  Cliquez sur **fichiers**.  
   
-    2.  Regard **fichiers**, cliquez sur le bouton de sélection (**...** ) bouton.  
+    2.  Regard **fichiers**, cliquez sur le bouton de sélection ( **...** ) bouton.  
   
     3.  Dans le **sélectionner la stratégie** boîte de dialogue, accédez au dossier suivant, qui contient les stratégies des meilleures pratiques :  
   
-         **C:\Program Files (x86)\Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
+         **C:\Program fichiers (x86) \Microsoft SQL Server\110\Tools\Policies\DatabaseEngine\1033**  
   
         > [!NOTE]  
         >  Le chemin d'accès du fichier varie, selon l'emplacement d'installation des fichiers programme [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si vous exécutez un système d'exploitation 32 bits ou 64 bits, et selon l'identificateur de langue.  

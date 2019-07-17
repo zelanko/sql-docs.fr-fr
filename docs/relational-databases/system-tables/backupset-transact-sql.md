@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119333"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,21 +35,21 @@ ms.locfileid: "52402848"
  Cette table est stockée dans le **msdb** base de données.  
 
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**Int**|Numéro d'identification unique du jeu de sauvegardes Identité, clé primaire.|  
+|**backup_set_id**|**int**|Numéro d'identification unique du jeu de sauvegardes Identité, clé primaire.|  
 |**backup_set_uuid**|**uniqueidentifier**|Numéro d'identification unique du jeu de sauvegardes|  
-|**media_set_id**|**Int**|Numéro d'identification unique du support de sauvegarde contenant le jeu de sauvegardes. Références **backupmediaset (media_set_id)**.|  
+|**media_set_id**|**int**|Numéro d'identification unique du support de sauvegarde contenant le jeu de sauvegardes. Références **backupmediaset (media_set_id)** .|  
 |**first_family_number**|**tinyint**|Numéro de famille du support qui est le premier du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**first_media_number**|**smallint**|Numéro du support qui est le premier du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**last_family_number**|**tinyint**|Numéro de famille du support qui est le dernier du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**last_media_number**|**smallint**|Numéro du support qui est le dernier du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**catalog_family_number**|**tinyint**|Numéro de famille du support contenant le début du répertoire du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**catalog_media_number**|**smallint**|Numéro du support de sauvegardes contenant le début du répertoire du jeu de sauvegardes. Sa valeur peut être NULL.|  
-|**position**|**Int**|Position du jeu de sauvegardes utilisée lors de la restauration pour localiser les fichiers et le jeu de sauvegardes appropriés. Sa valeur peut être NULL. Pour plus d’informations, consultez le fichier dans [sauvegarde &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
+|**position**|**int**|Position du jeu de sauvegardes utilisée lors de la restauration pour localiser les fichiers et le jeu de sauvegardes appropriés. Sa valeur peut être NULL. Pour plus d’informations, consultez le fichier dans [sauvegarde &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Date et heure d'expiration du jeu de sauvegardes. Sa valeur peut être NULL.|  
-|**software_vendor_id**|**Int**|Numéro d'identification du fournisseur du logiciel qui a écrit l'en-tête de support de sauvegardes Sa valeur peut être NULL.|  
-|**nom**|**nvarchar(128)**|Nom du jeu de sauvegardes. Sa valeur peut être NULL.|  
+|**software_vendor_id**|**int**|Numéro d'identification du fournisseur du logiciel qui a écrit l'en-tête de support de sauvegardes Sa valeur peut être NULL.|  
+|**name**|**nvarchar(128)**|Nom du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**description**|**nvarchar(255)**|Description du jeu de sauvegardes. Sa valeur peut être NULL.|  
 |**user_name**|**nvarchar(128)**|Nom de l'utilisateur effectuant la sauvegarde Sa valeur peut être NULL.|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] numéro de version principale. Sa valeur peut être NULL.|  
@@ -76,7 +75,7 @@ ms.locfileid: "52402848"
 |**machine_name**|**nvarchar(128)**|Nom de l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]est exécuté. Sa valeur peut être NULL.|  
 |**flags**|**Int**|Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le **indicateurs** colonne a été déconseillée et est remplacée par les colonnes de bits suivantes :<br /><br /> **has_bulk_logged_data** <br /> **is_snapshot** <br /> **is_readonly** <br /> **is_single_user** <br /> **has_backup_checksums** <br /> **is_damaged** <br /> **begins_log_chain** <br /> **has_incomplete_metadata** <br /> **is_force_offline** <br /> **is_copy_only**<br /><br /> Sa valeur peut être NULL.<br /><br /> Dans des jeux de sauvegarde à partir de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], bits d'indicateur :<br />1 = La sauvegarde contient des données consignées de façon minimale. <br />2 = WITH SNAPSHOT a été utilisé. <br />4 = La base de données était accessible en lecture seule au moment de la sauvegarde.<br />8 = La base de données était en mode mono-utilisateur au moment de la sauvegarde.|  
 |**unicode_locale**|**Int**|Paramètres régionaux Unicode. Sa valeur peut être NULL.|  
-|**unicode_compare_style**|**Int**|Style de comparaison Unicode. Sa valeur peut être NULL.|  
+|**unicode_compare_style**|**int**|Style de comparaison Unicode. Sa valeur peut être NULL.|  
 |**collation_name**|**nvarchar(128)**|Nom du classement. Sa valeur peut être NULL.|  
 |**Is_password_protected**|**bit**|Jeu de sauvegardes<br /><br /> protégé par mot de passe :<br /><br /> 0 = Non protégé<br /><br /> 1 = Protégé|  
 |**recovery_model**|**nvarchar(60)**|Mode de récupération de la base de données :<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  

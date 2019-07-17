@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0154f155c82554ba30ce71c9e7091fdc7565f587
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fa2697548212e3d5c27604533e69bbc07f480864
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137597"
 ---
 # <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**Int**|ID de l'Agent d'instantané|  
-|**nom**|**nvarchar(100)**|Nom de l'Agent d'instantané|  
+|**id**|**int**|ID de l'Agent d'instantané|  
+|**name**|**nvarchar(100)**|Nom de l'Agent d'instantané|  
 |**publisher_security_mode**|**smallint**|Mode de sécurité utilisé par l'Agent lors de la connexion au serveur de publication. Il peut prendre l'une des valeurs suivantes :<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification<br /><br /> **1** = l’authentification Windows.|  
 |**publisher_login**|**sysname**|Nom de connexion utilisé lors de la connexion au serveur de publication.|  
 |**publisher_password**|**nvarchar(524)**|Pour des raisons de sécurité, la valeur **\* \* \* \* \* \* \* \* \* \*** est toujours retourné.|  
@@ -59,14 +58,14 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |**job_login**|**nvarchar(512)**|Est le compte Windows sous lequel l’agent d’instantané s’exécute, ce qui est retourné sous la forme *domaine*\\*nom d’utilisateur*.|  
 |**job_password**|**sysname**|Pour des raisons de sécurité, la valeur **\* \* \* \* \* \* \* \* \* \*** est toujours retourné.|  
 |**schedule_name**|**sysname**|Nom de la planification utilisée pour ce travail d'Agent.|  
-|**frequency_type**|**Int**|Fréquence à laquelle l'Agent s'exécute. La valeur peut être l'une des valeur suivantes.<br /><br /> **1** = une fois<br /><br /> **2** = à la demande<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = Monthly<br /><br /> **32** = fréquence mensuelle relative<br /><br /> **64** = démarrage automatique<br /><br /> **128** = périodique|  
+|**frequency_type**|**Int**|Fréquence à laquelle l'Agent s'exécute. La valeur peut être l'une des valeur suivantes.<br /><br /> **1** = une fois<br /><br /> **2** = à la demande<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = fréquence mensuelle relative<br /><br /> **64** = démarrage automatique<br /><br /> **128** = périodique|  
 |**frequency_interval**|**Int**|Jours d'exécution de l'Agent. La valeur peut être l'une des valeur suivantes.<br /><br /> **1** = dimanche<br /><br /> **2** = lundi<br /><br /> **3** = mardi<br /><br /> **4** = mercredi<br /><br /> **5** = jeudi<br /><br /> **6** = vendredi<br /><br /> **7** = samedi<br /><br /> **8** = jour<br /><br /> **9** = jours de la semaine<br /><br /> **10** = jours de week-end|  
 |**frequency_subday_type**|**Int**|Est le type qui définit la fréquence à laquelle l’agent s’exécute lorsque *frequency_type* est **4** (quotidienne), et peut prendre l’une des valeurs suivantes.<br /><br /> **1** = à l’heure spécifiée<br /><br /> **2** = secondes<br /><br /> **4** = minutes<br /><br /> **8** = heures|  
-|**frequency_subday_interval**|**Int**|Nombre d’intervalles de *frequency_subday_type* qui se produisent entre chaque exécution planifiée de l’agent.|  
-|**frequency_relative_interval**|**Int**|Est la semaine où l’agent s’exécute dans un mois donné lorsque *frequency_type* est **32** (mensuel relatif), et peut prendre l’une des valeurs suivantes.<br /><br /> **1** = premier<br /><br /> **2** = seconde<br /><br /> **4** = troisième<br /><br /> **8** = quatrième<br /><br /> **16** = dernier|  
-|**frequency_recurrence_factor**|**Int**|Nombre de semaines ou de mois entre les exécutions planifiées de l'Agent.|  
+|**frequency_subday_interval**|**int**|Nombre d’intervalles de *frequency_subday_type* qui se produisent entre chaque exécution planifiée de l’agent.|  
+|**frequency_relative_interval**|**int**|Est la semaine où l’agent s’exécute dans un mois donné lorsque *frequency_type* est **32** (mensuel relatif), et peut prendre l’une des valeurs suivantes.<br /><br /> **1** = premier<br /><br /> **2** = seconde<br /><br /> **4** = troisième<br /><br /> **8** = quatrième<br /><br /> **16** = dernier|  
+|**frequency_recurrence_factor**|**int**|Nombre de semaines ou de mois entre les exécutions planifiées de l'Agent.|  
 |**active_start_date**|**Int**|Date de la première exécution planifiée de l'Agent, au format AAAAMMJJ.|  
-|**active_end_date**|**Int**|Date de la dernière exécution planifiée de l'Agent, au format AAAAMMJJ.|  
+|**active_end_date**|**int**|Date de la dernière exécution planifiée de l'Agent, au format AAAAMMJJ.|  
 |**active_start_time**|**Int**|Heure de la première exécution planifiée de l'Agent, au format HHMMSS.|  
 |**active_end_time**|**Int**|Heure de la dernière exécution planifiée de l'Agent, au format HHMMSS.|  
   

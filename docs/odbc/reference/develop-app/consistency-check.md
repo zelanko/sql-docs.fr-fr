@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: deb80efa-ad1f-4ea5-b334-9817cd279e5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb73d8a4de482f24eae5794232019af9890e3624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 419e338a5e96821606dc26a53a4fccecbc72ae3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125540"
 ---
 # <a name="consistency-check"></a>Vérification de la cohérence
 Une vérification de cohérence est effectuée par le pilote automatiquement chaque fois qu’une application définit le champ SQL_DESC_DATA_PTR du APD, ARD ou IPD. Chaque fois que ce champ est défini, le pilote vérifie que la valeur du champ SQL_DESC_TYPE et les valeurs applicables pour le champ SQL_DESC_TYPE dans le même enregistrement sont valides et cohérentes.  

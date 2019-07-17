@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7c55ffcb48d6c079c942d9bdffec0a1dc1c1d8f9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411306"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182916"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Algorithme MNB (Microsoft Naive Bayes)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "52411306"
      Les valeurs de la colonne prédictible peuvent être traitées comme entrées. Cette approche peut être utile lorsque vous explorez un nouveau dataset, afin de rechercher des relations entre les colonnes.  
   
 ## <a name="viewing-the-model"></a>Affichage du modèle  
- Pour explorer le modèle, vous pouvez utiliser la **Visionneuse de l’algorithme MNB (Microsoft Naive Bayes)**. Elle illustre la manière dont les attributs d’entrée sont liés à l’attribut prédictible. Elle présente également un profil détaillé de chaque cluster, une liste des attributs qui permettent de distinguer les clusters les uns des autres, ainsi que les caractéristiques du jeu de données d'apprentissage complet. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md).  
+ Pour explorer le modèle, vous pouvez utiliser la **Visionneuse de l’algorithme MNB (Microsoft Naive Bayes)** . Elle illustre la manière dont les attributs d’entrée sont liés à l’attribut prédictible. Elle présente également un profil détaillé de chaque cluster, une liste des attributs qui permettent de distinguer les clusters les uns des autres, ainsi que les caractéristiques du jeu de données d'apprentissage complet. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md).  
   
  Si vous voulez en savoir plus, vous pouvez parcourir le modèle dans la [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c). Pour plus d’informations sur le type d’informations stockées dans le modèle, consultez [Contenu du modèle d’exploration de données pour les modèles Naive Bayes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md).  
   

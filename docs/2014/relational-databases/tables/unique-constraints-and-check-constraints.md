@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772281"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196674"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Contraintes uniques et contraintes de validation
   Les contraintes UNIQUE et CHECK sont deux types de contraintes qui peuvent être utilisées pour appliquer l'intégrité des données à des tables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce sont des objets de base de données importants.  
@@ -45,7 +45,7 @@ ms.locfileid: "52772281"
   
  Vous pouvez appliquer plusieurs contraintes CHECK à une seule colonne. Vous pouvez aussi appliquer une seule contrainte CHECK à plusieurs colonnes en la créant au niveau de la table. Ainsi, vous pouvez utiliser une contrainte CHECK sur plusieurs colonnes pour confirmer que les lignes comportant la valeur **USA** dans leur colonne **country_region** possèdent également une valeur à deux caractères dans leur colonne **state** . Cela permet de vérifier plusieurs conditions au même emplacement.  
   
- Les contraites CHECK sont similaires aux contraintes FOREIGN KEY dans la mesure où elles contrôlent les valeurs qui sont placées dans une colonne. Leur différence réside dans la manière dont elles déterminent les valeurs considérées comme valides : Contraintes FOREIGN KEY obtiennent la liste des valeurs valides d’une autre table, tandis que les contraintes CHECK déterminent ces valeurs à partir d’une expression logique.  
+ Les contraites CHECK sont similaires aux contraintes FOREIGN KEY dans la mesure où elles contrôlent les valeurs qui sont placées dans une colonne. La différence réside dans la manière dont elles déterminent les valeurs considérées comme valides : Contraintes FOREIGN KEY obtiennent la liste des valeurs valides d’une autre table, tandis que les contraintes CHECK déterminent ces valeurs à partir d’une expression logique.  
   
 > [!CAUTION]  
 >  Les contraintes qui incluent une conversion de type de données implicite ou explicite peuvent causer l'échec de certaines opérations. Par exemple, ces contraintes définies sur des tables qui sont les sources d'une commutation de partition peuvent causer l'échec d'une opération ALTER TABLE...SWITCH. Évitez les conversions de types de données dans les définitions des contraintes.  

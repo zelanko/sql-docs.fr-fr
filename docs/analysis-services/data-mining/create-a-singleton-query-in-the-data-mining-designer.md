@@ -1,5 +1,5 @@
 ---
-title: Créer une requête Singleton dans le Concepteur d’exploration de données | Documents Microsoft
+title: Créer une requête Singleton dans le Concepteur d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d30fee91882ecd2f76fde1e0c61d0e5bc3d302bc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014246"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183933"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>créer une requête singleton dans le Concepteur d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -77,6 +77,6 @@ AS [t]
      Un nouvel écran s'affiche avec le résultat de la requête. Pour examiner l’instruction DMX que vous venez de créer, cliquez sur **SQL**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes de prédiction & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Requêtes de prédiction &#40;Exploration de données&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

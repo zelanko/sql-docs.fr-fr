@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1acd79a5-b3e2-4161-9592-7acc2a41ba38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d04b79bb2d7cb70e2e36261547e462e1a7f2742
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81598b65daf5fa7370004c890ab775e5b29b518f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132097"
 ---
 # <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSarticles** table contient une ligne pour chaque article répliqué par un éditeur. Cette table est stockée dans la base de données de distribution.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|L’ID du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  

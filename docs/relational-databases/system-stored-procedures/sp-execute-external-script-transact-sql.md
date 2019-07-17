@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ce26cd3d4e42d6d94e32a3454318a0ee841c486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124485"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -182,7 +181,7 @@ Requiert **EXECUTE ANY EXTERNAL SCRIPT** autorisation de base de données.
 
 Cette section contient des exemples d’utilisation de la procédure stockée à exécuter des scripts R ou Python à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)].
 
-### <a name="a-return-an-r-data-set-to-sql-server"></a>A. Retourner un jeu de données R vers SQL Server  
+### <a name="a-return-an-r-data-set-to-sql-server"></a>R. Retourner un jeu de données R vers SQL Server  
 
 L’exemple suivant crée une procédure stockée qui utilise **sp_execute_external_script** pour retourner le jeu de données Iris fourni avec R à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -280,7 +279,7 @@ Pour calculer les scores, vous pouvez également utiliser la fonction [PREDICT](
  [Les bibliothèques R et les Types de données R](../../advanced-analytics/r/r-libraries-and-data-types.md)  
  [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)   
  [Problèmes connus pour SQL Server Machine Learning Services](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
- [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
+ [CRÉER une bibliothèque externe &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [external scripts enabled (option de configuration de serveur)](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   

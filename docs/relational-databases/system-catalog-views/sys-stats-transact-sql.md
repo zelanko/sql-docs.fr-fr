@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 42605c80-126f-460a-befb-a0b7482fae6a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5150dfbccb6998c69151ca4cf02d9fe88a222830
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a50bf492641da227f355f1e844a3e9d7156d93e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108960"
 ---
 # <a name="sysstats-transact-sql"></a>sys.stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,11 +34,11 @@ ms.locfileid: "62856012"
   
  L’affichage catalogue [sys.stats_columns](../../relational-databases/system-catalog-views/sys-stats-columns-transact-sql.md) fournit des informations statistiques pour chaque colonne dans la base de données. Pour plus d’informations sur les statistiques, consultez [Statistiques](../../relational-databases/statistics/statistics.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**Int**|ID de l'objet auquel ces statistiques appartiennent.|  
-|**nom**|**sysname**|Nom des statistiques. Unique dans l'objet.|  
-|**stats_id**|**Int**|ID des statistiques. Unique dans l'objet.<br /><br />Si les statistiques correspondent à un index, le *stats_id* valeur est identique à la *index_id* valeur dans le [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vue de catalogue.|  
+|**name**|**sysname**|Nom des statistiques. Unique dans l'objet.|  
+|**stats_id**|**int**|ID des statistiques. Unique dans l'objet.<br /><br />Si les statistiques correspondent à un index, le *stats_id* valeur est identique à la *index_id* valeur dans le [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) vue de catalogue.|  
 |**auto_created**|**bit**|Indique si les statistiques ont été créées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 0 = Les statistiques n'ont pas été créées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = Les statistiques ont été créées automatiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**user_created**|**bit**|Indique si les statistiques ont été créées par un utilisateur.<br /><br /> 0 = Les statistiques n'ont pas été créées par un utilisateur.<br /><br /> 1 = Les statistiques ont été créées par un utilisateur.|  
 |**no_recompute**|**bit**|Indique si les statistiques ont été créées avec le **NORECOMPUTE** option.<br /><br /> 0 = statistiques n’ont pas été créés avec le **NORECOMPUTE** option.<br /><br /> 1 = les statistiques ont été créées avec le **NORECOMPUTE** option.|  

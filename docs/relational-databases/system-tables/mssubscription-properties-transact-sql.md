@@ -17,28 +17,27 @@ helpviewer_keywords:
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bc3e113ab9ace64cac0d41cb34bdec1c44355e48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e49d5ed290d95453c376713cabb914a495dfca8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139723"
 ---
 # <a name="mssubscriptionproperties-transact-sql"></a>MSsubscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSsubscription_properties** table contient des lignes pour les informations de paramètre requises pour exécuter les agents de réplication sur l’abonné. Cette table est stockée dans la base de données d'abonnés sur l'Abonné pour un abonnement extrait ou dans la base de données de distribution sur le serveur de distribution pour un abonnement envoyé.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher** (serveur de publication)|**sysname**|Le nom du serveur de publication.|  
 |**publisher_db**|**sysname**|Nom de la base de données du serveur de publication.|  
 |**publication**|**sysname**|Nom de la publication.|  
-|**publication_type**|**Int**|Type de publication :<br /><br /> **0** = transactionnelle.<br /><br /> **2** = fusion.|  
+|**publication_type**|**int**|Type de publication :<br /><br /> **0** = transactionnelle.<br /><br /> **2** = fusion.|  
 |**publisher_login**|**sysname**|ID de connexion utilisé côté serveur de publication pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**publisher_password**|**nvarchar(524)**|Mot de passe (chiffré) utilisé côté serveur de publication pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**publisher_security_mode**|**Int**|Mode de sécurité implémenté sur le serveur de publication :<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’authentification SQL Server.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’authentification Windows.<br /><br /> **2** = les déclencheurs de synchronisation utilisent statique **sysservers** entrée pour effectuer un appel de procédure distante (RPC), et *publisher* doit être défini dans le **sysservers**table en tant que serveur distant ou serveur lié.|  
+|**publisher_security_mode**|**int**|Mode de sécurité implémenté sur le serveur de publication :<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’authentification SQL Server.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’authentification Windows.<br /><br /> **2** = les déclencheurs de synchronisation utilisent statique **sysservers** entrée pour effectuer un appel de procédure distante (RPC), et *publisher* doit être défini dans le **sysservers**table en tant que serveur distant ou serveur lié.|  
 |**distributor**|**sysname**|Le nom du serveur de distribution.|  
 |**distributor_login**|**sysname**|ID de connexion utilisé sur le serveur de distribution pour l’authentification SQL Server.|  
 |**distributor_password**|**nvarchar(524)**|Mot de passe (chiffré) utilisé côté serveur de distribution pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -52,7 +51,7 @@ ms.locfileid: "63032994"
 |**use_ftp**|**bit**|Spécifie l’utilisation de FTP au lieu du protocole usuel pour extraire les instantanés. Si **1**, FTP est utilisé.|  
 |**dts_package_name**|**sysname**|Spécifie le nom du package DTS (Data Transformation Services).|  
 |**dts_package_password**|**nvarchar(524)**|Spécifie le mot de passe du package.|  
-|**dts_package_location**|**Int**|Emplacement de stockage du package DTS.|  
+|**dts_package_location**|**int**|Emplacement de stockage du package DTS.|  
 |**enabled_for_syncmgr**|**bit**|Spécifie s'il est possible de synchroniser l'abonnement à l'aide du Gestionnaire de synchronisation [!INCLUDE[msCoName](../../includes/msconame-md.md)].<br /><br /> **0** = abonnement n’est pas inscrit avec le Gestionnaire de synchronisation.<br /><br /> **1** = abonnement est enregistré avec le Gestionnaire de synchronisation et peuvent être synchronisé sans démarrer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  
 |**offload_agent**|**bit**|Spécifie si l'Agent peut ou non être activé à distance. Si **0**, l’agent ne peut pas être activé à distance.|  
 |**offload_server**|**sysname**|Indique le nom de réseau du serveur utilisé pour l'activation à distance.|  
@@ -62,8 +61,8 @@ ms.locfileid: "63032994"
 |**internet_login**|**sysname**|La connexion de l’Agent de fusion utilise pour se connecter au serveur Web qui héberge la synchronisation Web à l’aide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
 |**internet_password**|**nvarchar(524)**|Le mot de passe pour la connexion de l’Agent de fusion utilise pour se connecter au serveur Web qui héberge la synchronisation Web à l’aide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
 |**internet_security_mode**|**Int**|Le mode d’authentification utilisé lors de la connexion au serveur Web qui héberge la synchronisation Web, où la valeur **1** signifie que l’authentification Windows et la valeur **0** signifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentification.|  
-|**internet_timeout**|**Int**|Durée (en secondes) avant l'expiration d'une demande de synchronisation Web.|  
-|**hostname**|**sysname**|Spécifie la valeur de **HOST_NAME** lorsque cette fonction est utilisée dans le **où** clause de filtre de jointure ou de la relation d’enregistrements logiques.|  
+|**internet_timeout**|**int**|Durée (en secondes) avant l'expiration d'une demande de synchronisation Web.|  
+|**Nom d’hôte**|**sysname**|Spécifie la valeur de **HOST_NAME** lorsque cette fonction est utilisée dans le **où** clause de filtre de jointure ou de la relation d’enregistrements logiques.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

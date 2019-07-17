@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780771"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211093"
 ---
 # <a name="profiler-utility"></a>Utilitaire profiler
   L’utilitaire **profiler** lance l’outil [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] . Les arguments facultatifs répertoriés ci-dessous dans cette rubrique permettent de contrôler le démarrage de l'application.  
@@ -94,7 +94,7 @@ ms.locfileid: "52780771"
  Spécifie le chemin d'accès et le nom d'un fichier dans lequel les résultats de trace doivent être écrits. Le chemin complet et le nom de fichier doivent être entre guillemets. Cette option n’est pas utilisable avec **/F**.  
   
  **/L** *locale_ID*  
- Non disponible.  
+ Non disponible  
   
  **/M "** *MM-DD-YY hh:mm:ss* **"**  
  Spécifie la date et l'heure auxquelles la trace doit s'arrêter. L'heure d'arrêt doit être indiquée entre guillemets. Spécifiez l'heure d'arrêt conformément aux paramètres du tableau ci-dessous :  

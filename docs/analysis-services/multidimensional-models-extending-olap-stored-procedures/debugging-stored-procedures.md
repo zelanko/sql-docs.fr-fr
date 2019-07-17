@@ -1,5 +1,5 @@
 ---
-title: Débogage des procédures stockées | Documents Microsoft
+title: Débogage des procédures stockées | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d37eebfad3f8a3e89dc65ad9602f4b5d61b5072e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024986"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181142"
 ---
 # <a name="debugging-stored-procedures"></a>Débogage des procédures stockées
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "34024986"
   
     2.  Dans le **attacher toProcess** boîte de dialogue, sélectionnez **afficher les processus de tous les utilisateurs**.  
   
-    3.  Dans le **processus disponibles** liste, dans le **processus** colonne, cliquez sur **Msmdsrv.exe**. S'il y a plus d'une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui s'exécute sur le serveur, vous devez identifier le processus par l'identificateur de l'instance que vous souhaitez utiliser.  
+    3.  Dans le **processus disponibles** répertorier, dans le **processus** colonne, cliquez sur **Msmdsrv.exe**. S'il y a plus d'une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui s'exécute sur le serveur, vous devez identifier le processus par l'identificateur de l'instance que vous souhaitez utiliser.  
   
-    4.  Dans le **attacher à** texte zone, assurez-vous que le type de programme approprié est sélectionné. Pour une DLL CLR, cliquez sur **sélectionnez**, puis cliquez sur **déboguer ces types de codes**, puis cliquez sur **Managed**, puis cliquez sur **OK**. Pour une DLL COM, cliquez sur **sélectionnez**, puis cliquez sur **déboguer ces types de codes**, puis cliquez sur **natif**, puis cliquez sur **OK**.  
+    4.  Dans le **attacher à** texte zone, assurez-vous que le type de programme approprié est sélectionné. Pour une DLL CLR, cliquez sur **sélectionnez**, puis cliquez sur **déboguer ces types de codes**, puis cliquez sur **managé**, puis cliquez sur **OK**. Pour une DLL COM, cliquez sur **sélectionnez**, puis cliquez sur **déboguer ces types de codes**, puis cliquez sur **natif**, puis cliquez sur **OK**.  
   
     5.  Cliquez sur **attacher**.  
   

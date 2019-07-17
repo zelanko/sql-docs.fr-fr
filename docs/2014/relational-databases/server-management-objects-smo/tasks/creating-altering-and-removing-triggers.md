@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b4f6cf3b1e988d12a39096d46275058d080a23c4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762331"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211896"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>Création, modification et suppression de déclencheurs
   Dans SMO, les déclencheurs sont représentés à l'aide de l'objet <xref:Microsoft.SqlServer.Management.Smo.Trigger>. Le [!INCLUDE[tsql](../../../includes/tsql-md.md)] code qui s’exécute lorsque le déclencheur est activé est défini par le <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> propriété de l’objet déclencheur. Le type de déclencheur est défini à l'aide d'autres propriétés de l'objet <xref:Microsoft.SqlServer.Management.Smo.Trigger>, par exemple la propriété <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>. Il s'agit d'une propriété booléenne qui spécifie si le déclencheur est activé par une `UPDATE` des enregistrements sur la table parente.  

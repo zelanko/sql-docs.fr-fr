@@ -20,28 +20,27 @@ helpviewer_keywords:
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93943109267db79b1c8475eb3e1875950f9970a
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135312"
 ---
-# <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (Transact-SQL)
+# <a name="syssecuritypolicies-transact-sql"></a>Sys.security_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Retourne une ligne pour chaque stratégie de sécurité dans la base de données.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|Nom de la stratégie de sécurité, unique dans la base de données.|  
-|object_id|**Int**|ID de la stratégie de sécurité.|  
+|name|**sysname**|Nom de la stratégie de sécurité, unique dans la base de données.|  
+|object_id|**int**|ID de la stratégie de sécurité.|  
 |principal_id|**Int**|ID du propriétaire de la stratégie de sécurité, tel qu'enregistré dans la base de données. NULL si le propriétaire est déterminé par le schéma.|  
 |schema_id|**Int**|ID du schéma où réside l'objet.|  
 |parent_object_id|**Int**|Identificateur de l'objet auquel appartient la stratégie. Doit être égal à 0.|  
-|Type|**vachar(2)**|Doit être **SP**.|  
+|type|**vachar(2)**|Doit être **SP**.|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|Date UTC de création de la stratégie de sécurité.|  
 |modify_date|**datetime**|Date UTC de dernière modification de la stratégie de sécurité.|  

@@ -11,34 +11,33 @@ dev_langs:
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8604cdc89c755dcd1564e842963f3afa311f1786
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e89405e04a06e8171c69b81066be743ee99d4534
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106708"
 ---
 # <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Fournit des informations sur les index cluster columnstore sur une base par segment pour aider l’administrateur de décisions de système de gestion dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **Sys.pdw_nodes_column_store_row_groups** a une colonne pour le nombre total de lignes stockées physiquement (y compris celles marquées comme supprimées) et une colonne pour le nombre de lignes marquées comme supprimées. Utilisez **sys.pdw_nodes_column_store_row_groups** pour déterminer la ligne les groupes ont un pourcentage élevé de lignes supprimées et doivent être reconstruits.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|ID de la table sous-jacente. Il s’agit de la table physique sur le nœud de calcul, pas l’object_id de la table logique sur le nœud de contrôle. Par exemple, object_id ne correspond pas avec l’object_id dans sys.tables.<br /><br /> Pour joindre avec sys.tables, utilisez sys.pdw_index_mappings.|  
-|**index_id**|**Int**|ID de l’index cluster columnstore sur *object_id* table.|  
-|**partition_number**|**Int**|ID de la partition de table qui contient le groupe de lignes *row_group_id*. Vous pouvez utiliser *partition_number* pour joindre cette vue DMV à sys.partitions.|  
-|**row_group_id**|**Int**|ID de ce groupe de lignes. Cet ID est unique dans la partition.|  
+|**object_id**|**int**|ID de la table sous-jacente. Il s’agit de la table physique sur le nœud de calcul, pas l’object_id de la table logique sur le nœud de contrôle. Par exemple, object_id ne correspond pas avec l’object_id dans sys.tables.<br /><br /> Pour joindre avec sys.tables, utilisez sys.pdw_index_mappings.|  
+|**index_id**|**int**|ID de l’index cluster columnstore sur *object_id* table.|  
+|**partition_number**|**int**|ID de la partition de table qui contient le groupe de lignes *row_group_id*. Vous pouvez utiliser *partition_number* pour joindre cette vue DMV à sys.partitions.|  
+|**row_group_id**|**int**|ID de ce groupe de lignes. Cet ID est unique dans la partition.|  
 |**dellta_store_hobt_id**|**bigint**|hobt_id des groupes de lignes delta, ou NULL si le type de groupe de lignes n'est pas delta. Un groupe de lignes delta est un groupe de lignes en lecture/écriture qui reçoit des enregistrements. Un groupe de lignes delta a la **OPEN** état. Un groupe de lignes delta est toujours au format rowstore et n'a pas été compressé au format columnstore.|  
 |**state**|**tinyint**|Numéro d'ID associé à state_description.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar(60)**|Description de l'état permanent du groupe de lignes :<br /><br /> Ouvrez - un groupe de lignes en lecture/écriture qui reçoit des enregistrements. Un groupe de lignes ouvert est toujours au format rowstore et n'a pas été compressé au format columnstore.<br /><br /> FERMÉ - un groupe de lignes qui a été rempli, mais pas encore compressé par le processus du moteur de tuple.<br /><br /> COMPRESSÉ - un groupe de lignes rempli et compressé.|  
 |**total_rows**|**bigint**|Nombre total de lignes stockées physiquement dans le groupe de lignes. Certaines peuvent avoir été supprimées, mais elles sont toujours stockées. Le nombre maximal de lignes d'un groupe de lignes est 1 048 576 (hexadécimal FFFFF).|  
 |**deleted_rows**|**bigint**|Nombre de lignes stockées physiquement dans le groupe de lignes qui sont marqués pour suppression.<br /><br /> Toujours 0 pour DELTA les groupes de lignes.|  
-|**size_in_bytes**|**Int**|Taille combinée, en octets, de toutes les pages dans ce groupe de lignes. Cette taille n’inclut pas la taille requise pour stocker les métadonnées ou les dictionnaires partagés.|  
+|**size_in_bytes**|**int**|Taille combinée, en octets, de toutes les pages dans ce groupe de lignes. Cette taille n’inclut pas la taille requise pour stocker les métadonnées ou les dictionnaires partagés.|  
 |**pdw_node_id**|**Int**|Id unique d’un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nœud.|  
-|**distribution_id**|**Int**|Id unique de la distribution.|
+|**distribution_id**|**int**|Id unique de la distribution.|
   
 ## <a name="remarks"></a>Notes  
  Retourne une ligne pour chaque groupe de lignes columnstore pour chaque table ayant un index columnstore cluster ou non cluster.  
@@ -106,7 +105,7 @@ ORDER BY 1, 2
 ```
   
 ## <a name="see-also"></a>Voir aussi  
- [SQL Data Warehouse et les vues de catalogue Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Affichages catalogue SQL Data Warehouse et Parallel Data Warehouse](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
  [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  

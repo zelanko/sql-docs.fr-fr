@@ -21,25 +21,24 @@ helpviewer_keywords:
 ms.assetid: 7cbb9171-3310-4aae-8458-755c882d6462
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf94358d5d4f06f787546ab98a8cbfcab2693bcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a1278426b6774c8f5c2d9bb13577e1499930c13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63051409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109467"
 ---
 # <a name="sysconversationpriorities-transact-sql"></a>sys.conversation_priorities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque priorité de conversation créée dans la base de données active, comme indiqué dans le tableau suivant : 
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |Priority_id|**Int**|Nombre qui identifie la priorité de conversation de façon unique. Cette colonne n'accepte pas la valeur NULL.|  
 |name|**sysname**|Nom de la priorité de conversation. Cette colonne n'accepte pas la valeur NULL.|  
 |service_contract_id|**Int**|Identificateur du contrat spécifié pour la priorité de conversation. Cette colonne peut être jointe sur la colonne service_contract_id dans sys.service_contracts. Accepte la valeur NULL.|  
-|local_service_id|**Int**|Identificateur du service spécifié en tant que service local pour la priorité de conversation. Cette colonne peut être jointe sur la colonne service_id dans sys.services. Accepte la valeur NULL.|  
+|local_service_id|**int**|Identificateur du service spécifié en tant que service local pour la priorité de conversation. Cette colonne peut être jointe sur la colonne service_id dans sys.services. Accepte la valeur NULL.|  
 |remote_service_name|**nvarchar (256)**|Nom du service spécifié en tant que service distant pour la priorité de conversation. Accepte la valeur NULL.|  
 |priority|**tinyint**|Niveau de priorité spécifié dans cette priorité de conversation. Cette colonne n'accepte pas la valeur NULL.|  
   

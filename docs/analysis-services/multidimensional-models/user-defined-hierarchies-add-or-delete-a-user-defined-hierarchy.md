@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89f92c07753462fc26cb6de7447395f02e571e7a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578711"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164908"
 ---
 # <a name="user-defined-hierarchies---add-or-delete-a-user-defined-hierarchy"></a>Hiérarchies définies par l’utilisateur -Ajouter ou supprimer
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "57578711"
   
 -   Sous l’onglet **Structure de dimension** , cliquez sur la hiérarchie définie par l’utilisateur que vous souhaitez supprimer dans le volet **Hiérarchies** . Dans la barre d’outils, cliquez sur **Supprimer**.  
   
-     - ou -  
+     - ou  
   
 -   Cliquez avec le bouton droit sur la hiérarchie définie par l’utilisateur que vous souhaitez supprimer dans le volet **Hiérarchies** , puis cliquez sur **Supprimer**.  
   
-     - ou -  
+     - ou  
   
 -   Faites glisser la hiérarchie définie par l'utilisateur hors de l'aire de conception.  
   

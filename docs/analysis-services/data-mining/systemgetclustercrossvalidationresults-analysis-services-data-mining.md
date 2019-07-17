@@ -1,5 +1,5 @@
 ---
-title: SystemGetClusterCrossValidationResults (Analysis Services - Exploration de données) | Documents Microsoft
+title: SystemGetClusterCrossValidationResults (Analysis Services - Exploration de données) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ce11f7cb54d40336633d09a5d6601f0366c6bf55
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018876"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209629"
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -83,16 +83,16 @@ SystemGetClusterCrossValidationResults(
   
  Le tableau suivant décrit les colonnes retournées.  
   
-|Nom de la colonne| Description|  
+|Nom de la colonne|Description|  
 |-----------------|-----------------|  
 |ModelName|Nom du modèle qui a été testé.|  
 |AttributeName|Nom de la colonne prédictible. Pour les modèles de cluster, toujours **null**.|  
 |AttributeState|Valeur cible spécifiée dans la colonne prédictible. Pour les modèles de cluster, toujours **null.**|  
 |PartitionIndex|Index de base 1 qui identifie la partition à laquelle s’appliquent les résultats.|  
 |PartitionSize|Entier qui indique combien de cas ont été inclus dans chaque partition.|  
-|Test|Type de test qui a été effectué.|  
+|Tester|Type de test qui a été effectué.|  
 |Measure|Nom de la mesure retournée par le test. Les mesures de chaque modèle dépendent du type de valeur prévisible. Pour obtenir une définition de chaque mesure, consultez [Validation croisée &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Pour obtenir la liste des mesures retournées pour chaque type prévisible, consultez [Mesures dans le rapport de validation croisée](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
-|Valeur|Valeur de la mesure de test spécifiée.|  
+|Value|Valeur de la mesure de test spécifiée.|  
   
 ## <a name="remarks"></a>Notes  
  Pour retourner des mesures de précision pour tout l’ensemble de données, utilisez [SystemGetClusterAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
@@ -119,7 +119,7 @@ CALL SystemGetClusterCrossValidationResults(
   
  Exemples de résultats :  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Test|Mesure|Valeur|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Tester|Measure|Value|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Cluster 1|||1|3025|Clustering|Probabilité de cas|0.930524511864121|  
 |Cluster 1|||2|3025|Clustering|Probabilité de cas|0.919184178430778|  
@@ -128,13 +128,13 @@ CALL SystemGetClusterCrossValidationResults(
 |Cluster 2|||2|1288|Clustering|Probabilité de cas|0.934865535691068|  
 |Cluster 2|||3|1288|Clustering|Probabilité de cas|0.924724595688798|  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  La validation croisée est uniquement disponible dans [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] à compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="see-also"></a>Voir aussi  
  [SystemGetCrossValidationResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

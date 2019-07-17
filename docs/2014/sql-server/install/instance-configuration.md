@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039880"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68190972"
 ---
 # <a name="instance-configuration"></a>Configuration de l'instance
   Utilisez la page **Configuration d’une instance** de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour spécifier s’il faut créer une instance par défaut ou une instance nommée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n’est pas déjà installée, une instance par défaut est créée, sauf si vous spécifiez une instance nommée.  

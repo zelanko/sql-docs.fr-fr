@@ -1,5 +1,5 @@
 ---
-title: sys.column_encryption_keys  (Transact-SQL) | Microsoft Docs
+title: Sys.column_encryption_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
 ms.prod: sql
@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: 43980dd8-b9b1-4869-a304-2c183ae8977d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 83dde1e60b9c9dd78a76c4bfa6afa86ac23f1bd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fd9177ad646a8086e00f9494e7e73488aace53d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140096"
 ---
-# <a name="syscolumnencryptionkeys--transact-sql"></a>sys.column_encryption_keys  (Transact-SQL)
+# <a name="syscolumnencryptionkeys--transact-sql"></a>Sys.column_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-xxx-md.md)]
 
   Retourne des informations sur les clés de chiffrement de colonne (clés cek) créé avec le [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) instruction. Chaque ligne représente une clé CEK.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Le nom de la clé CMK.|  
+|**name**|**sysname**|Le nom de la clé CMK.|  
 |**column_encryption_key_id**|**Int**|ID de la clé CEK.|  
 |**create_date**|**datetime**|Date de que création de la clé CEK.|  
 |**modify_date**|**datetime**|Date de que dernière modification de la clé CEK.|  

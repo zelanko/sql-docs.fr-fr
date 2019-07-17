@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5cf1fa6ce0e0a02a52e6a27f693c152d1f97152
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153838"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211536"
 ---
 # <a name="implementing-a-security-extension"></a>Implémentation d'une extension de sécurité
   L’authentification Windows de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] constitue le principal système permettant de sécuriser des rapports dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Dans certains cas, en revanche, vous pouvez avoir besoin d'étendre le système de sécurité [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pour personnaliser la sécurité dans votre entreprise. Pour cela, vous pouvez utiliser la plate-forme de développement fournie par l'API [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Cette section présente une vue d'ensemble des extensions de sécurité dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

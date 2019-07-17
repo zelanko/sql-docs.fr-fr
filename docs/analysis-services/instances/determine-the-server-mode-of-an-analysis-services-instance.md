@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b292e20880dcb77c4f448f7e141355edff67417f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578999"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209520"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Déterminer le mode serveur d'une instance Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Analysis Services peuvent être installés dans l'un des trois modes serveur : Multidimensionnel et exploration de données (par défaut), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint et tabulaire. Le mode serveur d'une instance Analysis Services est déterminé au moment de l'installation lorsque vous choisissez les options d'installation du serveur.  
+  Analysis Services peut être installé dans un des trois modes serveur : Multidimensionnel et exploration de données (par défaut), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint et tabulaire. Le mode serveur d'une instance Analysis Services est déterminé au moment de l'installation lorsque vous choisissez les options d'installation du serveur.  
   
  Le mode serveur détermine le type de solution que vous créez et déployez. Si vous n'avez pas installé le logiciel serveur et que vous souhaitez savoir dans quel mode le serveur a été installé, vous pouvez utiliser les informations de cette rubrique pour déterminer le mode. Pour plus d’informations sur la disponibilité des fonctionnalités dans un mode spécifique, consultez [comparaison sous forme de tableau et les Solutions multidimensionnelles](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d5d4da4f1d01d0afb66c998fc2c782afe0c2e6ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181925"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "53211578"
 ##  <a name="bkmk_default"></a> Configurer le pare-feu Windows pour une instance par défaut d'Analysis Services  
  L'instance par défaut de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] écoute le port TCP 2383. Si vous avez installé l'instance par défaut et souhaitez utiliser ce port, il vous suffit de débloquer l'accès entrant au port TCP 2383 dans le Pare-feu Windows pour permettre l'accès distant à l'instance par défaut de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si vous avez installé l'instance par défaut mais souhaitez configurer le service de façon à écouter un port fixe, consultez [Utiliser un port fixe pour une instance par défaut ou nommée d'Analysis Services](#bkmk_fixed) , plus loin dans cette rubrique.  
   
- Pour vérifier si le service s'exécute en tant qu'instance par défaut (MSSQLServerOLAPService), vérifiez le nom du service dans le Gestionnaire de configuration SQL Server. Une instance par défaut d’Analysis Services est toujours répertoriée sous le nom **SQL Server Analysis Services (MSSQLSERVER)**.  
+ Pour vérifier si le service s'exécute en tant qu'instance par défaut (MSSQLServerOLAPService), vérifiez le nom du service dans le Gestionnaire de configuration SQL Server. Une instance par défaut d’Analysis Services est toujours répertoriée sous le nom **SQL Server Analysis Services (MSSQLSERVER)** .  
   
 > [!NOTE]  
 >  Les différents systèmes d'exploitation Windows fournissent d'autres outils pour configurer le Pare-feu Windows. Dans leur majorité, ces outils vous donnent le choix entre ouvrir un port spécifique ou un exécutable de programme. À moins d'avoir une raison particulière de spécifier l'exécutable du programme, nous vous recommandons de spécifier le port.  
@@ -152,7 +152,7 @@ ms.locfileid: "53211578"
   
 8.  Pour vérifier que les connexions distantes sont activées, ouvrez SQL Server Management Studio ou Excel sur un autre ordinateur et connectez-vous à Analysis Services en spécifiant le nom de réseau du serveur et le nom de l’instance au format suivant : \<nom_serveur > \\< nom_instance\>. Par exemple, sur un serveur nommé **AW-SRV01** avec une instance nommée **Finance**, le nom du serveur sera **AW-SRV01\Finance**.  
   
- **Option 2 : Utiliser un port fixe pour une instance nommée**  
+ **Option 2 : Utiliser un port fixe pour une instance nommée**  
   
  L'alternative consiste à désigner un port fixe et à débloquer l'accès à ce port. L'avantage de cette approche est qu'elle offre de plus grandes possibilités en termes d'audit si vous autorisez l'accès au fichier exécutable de programme. L'utilisation d'un port fixe est de ce fait l'approche recommandée pour accéder à toute instance Analysis Services.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "53211578"
   
 2.  Après avoir déterminé quel port utiliser, spécifiez-le en modifiant le paramètre de configuration **Port** dans le fichier msmdsrv.ini ou dans la page Propriétés générales d'une instance d'Analysis Services dans SQL Server Management Studio.  
   
-3.  Redémarrage du service.  
+3.  Redémarrez le service.  
   
 4.  Configurez le Pare-feu Windows pour débloquer le port TCP spécifié. Si vous utilisez un port fixe pour une instance nommée, débloquez le port TCP spécifié pour cette instance et le port TCP 2382 pour le service SQL Server Browser.  
   

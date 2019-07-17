@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d380e799-2857-408a-bcbf-5e73a8e6aa5a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8590a33f870dc14ac34118ce5e655acc6e67f257
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7abf136187b4f45a03cebc92fd23ee544dddb117
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116687"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ xp_loginconfig ['config_name']
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **'** *config_name* **'**  
+ **«** *nom_de_config* **»**  
  Valeur de configuration à afficher. Si *nom_de_config* est ne pas spécifié, toutes les valeurs de configuration sont indiquées. *nom_de_config* est **sysname**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
@@ -62,9 +61,9 @@ xp_loginconfig ['config_name']
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Valeur de configuration|  
+|**name**|**sysname**|Valeur de configuration|  
 |**config value**|**sysname**|Paramètre de la valeur de configuration|  
   
 ## <a name="remarks"></a>Notes  
@@ -77,7 +76,7 @@ xp_loginconfig ['config_name']
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-how-to-report-all-configuration-values"></a>A. Comment signaler toutes les valeurs de configuration  
+### <a name="a-how-to-report-all-configuration-values"></a>R. Comment signaler toutes les valeurs de configuration  
  Le code exemple suivant montre tous les paramètres actuellement configurés.  
   
 ```  

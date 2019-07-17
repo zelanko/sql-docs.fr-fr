@@ -1,5 +1,5 @@
 ---
-title: 'Étape 5 : Valider la Transaction | Microsoft Docs'
+title: 'Étape 5 : Valider la Transaction | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 311685e2-f7b5-4ddc-8020-59380cd2f035
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 341f34afa1dbe65f4b83a46f461bb93f4fb4f4c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bde493edbc6d677b27ef72a24736b504959a7b59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114128"
 ---
-# <a name="step-5-commit-the-transaction"></a>Étape 5 : Valider la transaction
+# <a name="step-5-commit-the-transaction"></a>Étape 5 : Valider la transaction
 L’étape suivante consiste à valider la transaction, comme indiqué dans l’illustration suivante.  
   
  ![Montre comment valider une transaction](../../../odbc/reference/develop-app/media/pr16.gif "pr16")  

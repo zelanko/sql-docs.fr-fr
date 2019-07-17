@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2306f89ba724d6ba799f6bda6ec03f7f6377a97
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210858"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208323"
 ---
 # <a name="configure-or-repair-power-pivot-for-sharepoint-2013"></a>Configurer ou réparer PowerPivot pour SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "53210858"
   
      **Phrase secrète :** entrez une phrase secrète. Pour une nouvelle batterie de serveurs SharePoint, la phrase secrète est utilisée chaque fois que vous ajoutez un nouveau serveur ou une nouvelle application à la batterie de serveurs SharePoint. Si la batterie existe, entrez la phrase secrète qui vous permet d'ajouter une application de serveur à la batterie.  
   
-5.  **Port :** si vous le souhaitez, entrez un numéro de port pour vous connecter à l'application Web de l'Administration centrale ou utilisez le nombre généré de manière aléatoire fourni. L'outil de configuration vérifie que le nombre est disponible avant de le proposer comme option.  
+5.  **Port :** Si vous le souhaitez, tapez un numéro de port pour se connecter à l’application web Administration centrale ou utilisez le nombre généré de manière aléatoire fourni. L'outil de configuration vérifie que le nombre est disponible avant de le proposer comme option.  
   
 6.  Dans la page principale, tapez le nom d'un serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] exécuté en mode SharePoint.  
   
@@ -107,22 +107,22 @@ ms.locfileid: "53210858"
   
  Le tableau suivant décrit les valeurs utilisées pour configurer le serveur.  
   
-|Radiomessagerie|Valeur d'entrée|Source|Description|  
+|Page|Valeur d'entrée|`Source`|Description|  
 |----------|-----------------|------------|-----------------|  
 |**Configurer ou réparer [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint**|Compte par défaut|Utilisateur actuel|Le compte par défaut est un compte d'utilisateur de domaine Windows utilisé pour configurer des services partagés dans la batterie. Il est utilisé pour mettre en service les éléments suivants :|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] par défaut|  
-||||- Service Banque d’informations sécurisé|  
-||||- Excel Services|  
-||||- Identité du pool d’applications Web|  
-||||- Administrateur de collection de sites|  
-||||- Compte d’actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sans assistance|  
-||||Le compte de domaine de l’utilisateur actuel est utilisé par défaut.<br /><br /> Remarque : Il est recommandé de remplacer la valeur par défaut sauf si vous configurez un serveur à des fins d'évaluation et expérimentales.<br /><br /> Vous pouvez modifier les identités de service après une configuration ou une réparation, à l’aide de l’Administration centrale.<br /><br /> Éventuellement, dans l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , spécifiez des comptes dédiés pour ce qui suit :|  
-||||- Application web, via la page **Créer une application Web par défaut** (en supposant que l’outil crée une application web pour la batterie).|  
+||||\- Service Banque d’informations sécurisé|  
+||||\- Excel Services|  
+||||\- Identité du pool d’applications Web|  
+||||\- Administrateur de collection de sites|  
+||||\- Compte d’actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sans assistance|  
+||||Le compte de domaine de l’utilisateur actuel est utilisé par défaut.<br /><br /> Remarque : Il est recommandé de remplacer la valeur par défaut sauf si vous configurez un serveur à des fins d'évaluation et expérimentales.<br /><br /> Vous pouvez modifier les identités de service après une configuration ou une réparation, à l’aide de l’Administration centrale.<br /><br /> Éventuellement, dans l'outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , spécifiez des comptes dédiés pour ce qui suit :|  
+||||\- Application web, via la page **Créer une application Web par défaut** (en supposant que l’outil crée une application web pour la batterie).|  
 ||||-<br />                    [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , à l’aide de la page **Créer un compte sans assistance pour l’actualisation des données** de cet outil.|  
 ||Serveur de base de données|Instance nommée [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] locale, le cas échéant|Si une instance du moteur de base de données est installée en tant qu'instance nommée [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , l'outil renseigne le champ du serveur de base de données avec ce nom d'instance. Si vous n'avez pas installé le moteur de base de données, ce champ est vide.<br /><br /> Le**Serveur de base de données**  est un paramètre obligatoire. Il peut s'agir de n'importe quelle version ou édition de SQL Server prise en charge pour les batteries de serveurs SharePoint.|  
 ||Phrase secrète|Entrée utilisateur|Si vous créez une nouvelle batterie, la phrase secrète que vous entrez est utilisée comme phrase secrète pour la batterie. Si vous ajoutez [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint à une batterie de serveurs existante, tapez la phrase secrète de la batterie de serveurs existante.|  
 ||Port de l'Administration centrale de SharePoint|Par défaut, si nécessaire|Si la batterie de serveurs n'est pas configurée, l'outil fournit des options pour la création de la batterie de serveurs, notamment pour la création d'un point de terminaison HTTP dans l'Administration centrale. Il choisit un numéro de port généré de manière aléatoire qui n'est pas encore utilisé.|  
-||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel Services ([NomServeur]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Entrée utilisateur|Le serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est requis pour qu'Excel Services active les fonctionnalités principales de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom du serveur que vous tapez dans cette page est aussi ajouté à la liste figurant dans la page **Configurer les serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.|  
+||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel Services ([NomServeur]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Entrée utilisateur|Le serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] est requis pour qu'Excel Services active les fonctionnalités principales de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom du serveur que vous tapez dans cette page est aussi ajouté à la liste figurant dans la page **Configurer les serveurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .|  
 |**Configurer une nouvelle batterie de serveurs**|Serveur de base de données<br /><br /> Compte de batterie de serveurs<br /><br /> Phrase secrète<br /><br /> Port de l'Administration centrale de SharePoint|Par défaut, si nécessaire|Valeur par défaut de paramètres que vous avez entrés dans dans la page principale.|  
 |**Créer une application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**|Nom d'application de service|Par défaut|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Le nom par défaut est **Par défaut [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Service Application**. Vous pouvez le remplacer par une valeur différente dans l'outil.|  
 ||Serveur de base de données|Par défaut|Serveur de base de données qui héberge la base de données d'application de service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Le nom par défaut du serveur est le même que celui du serveur de base de données utilisé pour la batterie. Vous pouvez utiliser une autre valeur que le nom du serveur par défaut.|  
@@ -199,7 +199,7 @@ ms.locfileid: "53210858"
  Ajoutez des sites de confiance dans Excel Services pour varier les autorisations et les paramètres de configuration sur les sites qui fournissent des classeurs Excel et des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Pour plus d’informations, voir [Créer un emplacement approuvé pour les sites Power Pivot dans l’Administration centrale](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   
 ### <a name="build-a-includessgeminiincludesssgemini-mdmd-workbook"></a>Créer un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]  
- Après avoir installé les composants serveur dans une batterie, créez créer votre premier classeur Excel 2013 qui utilise des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] incorporées, puis publiez-le dans une bibliothèque SharePoint. Vous pouvez également télécharger ou publier un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d'exemple pour vérifier l'accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans SharePoint. Pour plus d'informations, consultez les documents suivants :  
+ Après avoir installé les composants serveur dans une batterie, créez créer votre premier classeur Excel 2013 qui utilise des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] incorporées, puis publiez-le dans une bibliothèque SharePoint. Vous pouvez également télécharger ou publier un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] d'exemple pour vérifier l'accès aux données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans SharePoint. Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Power Pivot aide](https://support.office.com/en-us/article/Power-Pivot-Help-241aac41-92e3-4e46-ae58-2f2cd7dbcf4f) (https://support.office.com/en-us/article/Power-Pivot-Help-241aac41-92e3-4e46-ae58-2f2cd7dbcf4f).  
   

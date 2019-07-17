@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cd3f00b89de1d2bad683e7ce7005605d3c61f18
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794841"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211761"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>Utiliser les paramètres table (Moteur de base de données)
   Les paramètres table sont déclarés en utilisant des types de table définis par l'utilisateur. Vous pouvez utiliser des paramètres table pour envoyer plusieurs lignes de données à une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] ou à une routine, telle qu'une procédure stockée ou une fonction, sans créer de table temporaire ou de nombreux paramètres.  

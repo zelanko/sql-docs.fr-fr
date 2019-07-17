@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 509dd17efeeb982c51938d7a18fad99a2e84ba5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59f6f5a37e65c802c8d51a1f56a40380f054e39b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114086"
 ---
 # <a name="testing-interoperable-applications"></a>Test des applications interopérables
 Test des applications interopérables est au mieux un long commerciaux et au pire impossible, car les nouveaux pilotes s’affichent en permanence sur le marché. Toutefois, un niveau raisonnable de test est possible. Applications avec l’interopérabilité limitée ou faible doivent uniquement être testées par rapport à ces pilotes que sont assurés de prendre en charge. Toutefois, ils doivent être entièrement testés par rapport à ces pilotes.  

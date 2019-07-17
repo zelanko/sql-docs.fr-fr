@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d36c20e0278a90bc5afcbd312afea2cb596e9c51
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: c1ca9d710ca0e87e69bcc237848c02b758c724cc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210256"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparaison des solutions tabulaires et multidimensionnelles
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +72,7 @@ ms.locfileid: "53072539"
 |Hiérarchies déséquilibrées|Oui|Oui<sup>1</sup>|  
 |Hiérarchies parent-enfant|Oui|Oui (via DAX)|
 |Partitions|Oui|Oui| 
-|perspectives|Oui|Oui|
+|Perspectives|Oui|Oui|
 |Sécurité de niveau ligne|Oui|Oui| 
 |Sécurité au niveau de l’objet|Oui|Oui<sup>1</sup>|
 |Mesures semi-additives|Oui|Oui| 

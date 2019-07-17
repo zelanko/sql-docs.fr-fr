@@ -20,14 +20,13 @@ ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef59338f86601316a71ae4f97004dc9beceb015f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0aa04b9a4b90b470ca3cc6df4a8f5cf62134027c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220503"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "64945635"
    
 |colonne|Data type|Description|  
 |------------|---------------|-----------------|  
-|**lcid**|**Int**|Identificateur des paramètres régionaux (LCID) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows de la langue.|  
-|**nom**|**sysname**|Représente la valeur de l’alias dans [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondant à la valeur de **lcid** ou la représentation sous forme de chaîne du LCID numérique.|  
+|**lcid**|**int**|Identificateur des paramètres régionaux (LCID) [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows de la langue.|  
+|**name**|**sysname**|Représente la valeur de l’alias dans [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) correspondant à la valeur de **lcid** ou la représentation sous forme de chaîne du LCID numérique.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valeurs retournées pour les langues par défaut  
  Le tableau suivant présente uniquement les valeurs des langues dont les analyseurs lexicaux sont inscrits par défaut.  
@@ -59,8 +58,8 @@ ms.locfileid: "64945635"
 |Anglais|1033|  
 |Français|1036|  
 |German|1031|  
-|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Greek|1032|  
-|Goudjrati|1095|  
+|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Grec|1032|  
+|Gujarati|1095|  
 |Hébreu|1037|  
 |Hindi|1081|  
 |Islandais|1039|  

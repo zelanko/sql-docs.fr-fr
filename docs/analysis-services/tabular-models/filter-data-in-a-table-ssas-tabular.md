@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9b1fcdda5bd49f8056a6035ec10da8fb52f1c5d1
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072123"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162808"
 ---
 # <a name="filter-data-in-a-table"></a>Filtrer des données dans une table 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "53072123"
   
 1.  Cliquez sur la flèche dans l'en-tête de la colonne dont vous souhaitez effacer un filtre.  
   
-2.  Cliquez sur **effacer le filtre de \<nom de colonne >**.  
+2.  Cliquez sur **effacer le filtre de \<nom de colonne >** .  
   
 ### <a name="to-clear-all-filters-for-a-table"></a>Pour effacer tous les filtres d'une table  
   

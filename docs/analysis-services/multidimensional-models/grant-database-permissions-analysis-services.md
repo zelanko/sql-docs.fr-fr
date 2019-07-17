@@ -1,5 +1,5 @@
 ---
-title: Accorder des autorisations de base de données (Analysis Services) | Documents Microsoft
+title: Accorder des autorisations de base de données (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f799b086833f0be7b08786aff08e65d202f29674
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177636"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Octroyer des autorisations de base de données (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Si vous débutez dans l'administration des bases de données Analysis Services avec une expérience des bases de données relationnelles, la première chose que vous devez comprendre est qu'en termes d'accès aux données, la base de données n'est pas l'objet sécurisable principal dans Analysis Services.  
   
- La principale structure de requête dans Analysis Services est un cube (ou modèle tabulaire), avec des autorisations utilisateur définies sur ces objets spécifiques. En comparaison avec le moteur de base de données relationnelle (dans lequel les connexions de base de données et les autorisations utilisateur, souvent **db_datareader** ont définies sur la base de données proprement dite), une base de données Analysis Services est principalement un conteneur pour les principaux objets de requête dans un modèle de données. Si votre objectif immédiat consiste à activer l’accès aux données pour un cube ou un modèle tabulaire, vous pouvez ignorer les autorisations de base de données pour l’instant et passer directement à la rubrique suivante : [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
+ La principale structure de requête dans Analysis Services est un cube (ou modèle tabulaire), avec des autorisations utilisateur définies sur ces objets spécifiques. En comparaison avec le moteur de base de données relationnelle (dans lequel les connexions de base de données et les autorisations utilisateur, souvent **db_datareader**ont définies sur la base de données proprement dite), une base de données Analysis Services est principalement un conteneur pour les principaux objets de requête dans un modèle de données. Si votre objectif immédiat consiste à activer l’accès aux données pour un cube ou modèle tabulaire, vous pouvez ignorer les autorisations de base de données pour l’instant et passer directement à cette rubrique : [Accorder des autorisations de cube ou modèle &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md).  
   
  Les autorisations de base de données dans Analysis Services activent des fonctions d'administration, soit d'un point de vue global (comme c'est le cas avec l'autorisation de base de données Contrôle total), soit de nature plus granulaire si vous déléguez des opérations de traitement. La définition des niveaux d’autorisation pour une base de données Analysis Services s’effectue dans le volet **Général** de la boîte de dialogue **Créer un rôle** , illustrée et décrite ci-dessous.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "34024636"
   
 ## <a name="see-also"></a>Voir aussi  
  [Accorder des droits d’administrateur de serveur à une instance Analysis Services](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Accorder des autorisations de processus & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [Octroyer des autorisations de traitement &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

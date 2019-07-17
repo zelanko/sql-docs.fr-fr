@@ -15,15 +15,14 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d31d36f315291d6826712771d0e3b6b1d8fbc496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139041"
 ---
-# <a name="handles"></a>Poignées
+# <a name="handles"></a>Handles
 Handles sont opaques, 32 bits des valeurs qui identifient un élément particulier ; dans ODBC, cet élément peut être un environnement, connexion, instruction ou descripteur. Lorsque l’application appelle **SQLAllocHandle**, le Gestionnaire de pilotes ou le pilote crée un nouvel élément du type spécifié et retourne son handle à l’application. Ultérieurement l’application utilise le handle pour identifier cet élément lors de l’appel de fonctions ODBC. Le Gestionnaire de pilotes et le pilote utilisent le handle pour localiser des informations sur l’élément.  
   
  Par exemple, le code suivant utilise deux pointeurs d’instruction (*hstmtOrder* et *hstmtLine*) pour identifier les instructions sur lesquelles créer des jeux de résultats des ventes commandes des commandes client et les numéros de ligne. Plus tard, il utilise ces descripteurs pour identifier le jeu de résultats pour extraire des données à partir de.  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7716b7e41e739a100c16e34560e737d2350e122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81a8e4ae45f8652b5928bb768e506dc1acc682d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66015099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135841"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Haute disponibilité et récupération d’urgence pour Master Data Services
 
@@ -25,7 +24,7 @@ ms.locfileid: "66015099"
 
 **Résumé :** Cet article décrit une solution pour MDS (Master Data Services) hébergé sur une configuration de groupe de disponibilité Always On. L’article décrit comment installer et configurer SQL 2016 Master Data Services sur un groupe de disponibilité SQL 2016 AlwaysOn. L’objectif principal de cette solution est d’améliorer la haute disponibilité et la récupération d’urgence des données du serveur principal MDS hébergées sur une base de données SQL Server.
 
-## <a name="introduction"></a>Introduction
+## <a name="introduction"></a>Présentation
 
 
 Cet article décrit une solution pour Master Data Services (MDS) hébergé sur une configuration de groupe de disponibilité AlwaysOn. L’article explique comment installer et configurer SQL 2016 MDS sur un groupe de disponibilité de SQL 2016 AlwaysOn. L’objectif principal de cette solution est d’améliorer la haute disponibilité et la récupération d’urgence des données du serveur principal MDS hébergées sur une base de données SQL Server.
@@ -233,7 +232,7 @@ Une instance de cluster de basculement améliore la haute disponibilité de nive
 
     Figure 10
 
-2.  Dans la boîte de dialogue **Propriétés de** **SQL Server (MSSQLSERVER)**, cliquez sur l’onglet **Haute disponibilité AlwaysOn**, puis cochez la case **Activer les groupes de disponibilité AlwaysOn**. Quand une valeur s’affiche dans la zone de texte **Nom du cluster de basculement Windows**, cliquez sur **OK** pour continuer. Voir figure 11.
+2.  Dans la boîte de dialogue **Propriétés de** **SQL Server (MSSQLSERVER)** , cliquez sur l’onglet **Haute disponibilité AlwaysOn**, puis cochez la case **Activer les groupes de disponibilité AlwaysOn**. Quand une valeur s’affiche dans la zone de texte **Nom du cluster de basculement Windows**, cliquez sur **OK** pour continuer. Voir figure 11.
 
     ![Option Activer les groupes de disponibilité AlwaysOn](media/Fig11_EnableAlwaysOn.png)
 
@@ -248,7 +247,7 @@ Une instance de cluster de basculement améliore la haute disponibilité de nive
 4.  Cliquez sur **Redémarrer** pour redémarrer le service **SQL Server** afin d’appliquer ce changement. Voir figure 10.
 
 >[!NOTE] 
->Vous pouvez changer le compte de service exécutant le service SQL Server en utilisant le **Gestionnaire de configuration SQL Server**. Cliquez sur l’onglet **Se connecter** dans la boîte de dialogue **Propriétés de** **SQL Server (MSSQLSERVER)**. Voir figure 11.
+>Vous pouvez changer le compte de service exécutant le service SQL Server en utilisant le **Gestionnaire de configuration SQL Server**. Cliquez sur l’onglet **Se connecter** dans la boîte de dialogue **Propriétés de** **SQL Server (MSSQLSERVER)** . Voir figure 11.
 
 ### <a name="create-an-availability-group"></a>Créer un groupe de disponibilité
 
@@ -316,9 +315,9 @@ Si cette case n’est pas cochée, la validation asynchrone est utilisée.
 
 8.  Dans la page **Spécifier les réplicas**, cliquez sur l’onglet **Écouteur**, puis effectuez la procédure suivante. Voir figure 18.
 
-    A.  Cliquez sur **Créer un écouteur de groupe de disponibilité** pour configurer un écouteur de groupe de disponibilité pour la connexion de base de données MDS.
+    a.  Cliquez sur **Créer un écouteur de groupe de disponibilité** pour configurer un écouteur de groupe de disponibilité pour la connexion de base de données MDS.
 
-    B.  Entrez un **Nom DNS de l’écouteur**, tel que MDSSQLServer.
+    b.  Entrez un **Nom DNS de l’écouteur**, tel que MDSSQLServer.
 
     c.  Entrez le port SQL par défaut, 1433, dans la zone de texte **Port**.
 

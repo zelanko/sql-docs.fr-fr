@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b0ddc008286dfffbf8ee15da0d8a111de69d6a1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108223"
 ---
 # <a name="spdbvardecimalstorageformat-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  Nom de la base de données dont le format de stockage doit être modifié. *database_name* est **sysname**, sans valeur par défaut. Si le nom de la base de données est omis, l'état du format de stockage vardecimal de toutes les bases de données dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est retourné.  
   
  [ @vardecimal_storage_format=] {'ON' |' DÉSACTIVER '}  
- Spécifie si le format de stockage vardecimal est activé. @vardecimal_storage_format peut prendre la valeur ON ou OFF (activé ou désactivé). Le paramètre est **varchar(3)**, sans valeur par défaut. Si un nom de base de données est indiqué mais que @vardecimal_storage_format est omis, le paramètre actuel de la base de données spécifiée est retourné. Cet argument n'a aucun effet sur [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures.  
+ Spécifie si le format de stockage vardecimal est activé. @vardecimal_storage_format peut prendre la valeur ON ou OFF (activé ou désactivé). Le paramètre est **varchar(3)** , sans valeur par défaut. Si un nom de base de données est indiqué mais que @vardecimal_storage_format est omis, le paramètre actuel de la base de données spécifiée est retourné. Cet argument n'a aucun effet sur [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou les versions ultérieures.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

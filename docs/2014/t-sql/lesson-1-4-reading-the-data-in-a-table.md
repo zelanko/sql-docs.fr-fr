@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182009"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68187298"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>Lecture des données dans une table (Didacticiel)
   Utilisez l'instruction SELECT pour lire les données dans une table. L'instruction SELECT est une des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] les plus importantes et dont la syntaxe comporte beaucoup de variations. Pour ce didacticiel, vous allez travailler avec cinq versions simples.  
@@ -81,10 +81,10 @@ ms.locfileid: "48182009"
 |||  
 |-|-|  
 |[Fonctions de chaîne &#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
-|[Fonctions mathématiques &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[Fonctions texte et Image &#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
+|[Fonctions mathématiques &#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[Fonctions texte et image &#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Résumé : Création des objets de base de données](lesson-1-5-summary-creating-database-objects.md)  
+ [Résumé : Création des objets de base de données](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)  

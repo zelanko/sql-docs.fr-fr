@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 01d2ee847c87fdab013b19edde3c20c9a03c8499
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763181"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199413"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Gérer les partitions d'une publication de fusion avec des filtres paramétrables
   Cette rubrique explique comment gérer des partitions pour une publication de fusion avec des filtres paramétrables dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Les filtres de lignes paramétrables peuvent être utilisés pour générer des partitions qui ne se chevauchent pas. Ces partitions peuvent être restreintes afin qu'un seul abonnement puisse recevoir une partition donnée. Dans ces cas, un grand nombre d'abonnés se traduit par un nombre élevé de partitions, ce qui requiert ensuite un nombre égal d'instantanés partitionnés. Pour plus d'informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md).  
@@ -47,11 +47,11 @@ ms.locfileid: "52763181"
 -   Lorsqu'une publication a paramétré des filtres qui génèrent des abonnements avec des partitions ne se chevauchant pas, et si un abonnement particulier est perdu et doit être recréé, vous devez effectuer les opérations suivantes : supprimez la partition à laquelle s'abonner, recréez l'abonnement, puis recréez la partition. Pour plus d'informations, voir [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md). La réplication génère des scripts de création pour les partitions d'Abonné existantes lors de la génération d'un script de création de publication. Pour plus d'informations, voir [Scripting Replication](../scripting-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Gérez des partitions dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](view-and-modify-publication-properties.md). Sur cette page, vous pouvez : créer et supprimer des partitions, autoriser des Abonnés à initier la génération et la remise d'instantanés, générer des instantanés pour une ou plusieurs partitions et nettoyer des instantanés.  
+ Gérez des partitions dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](view-and-modify-publication-properties.md). Sur cette page, vous pouvez : créer et supprimer des partitions, autoriser des Abonnés à initier la génération et la remise d'instantanés, générer des instantanés pour une ou plusieurs partitions et nettoyer des instantanés.  
   
 #### <a name="to-create-a-partition"></a>Pour créer une partition  
   
-1.  Dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **Ajouter**.  
+1.  Dans la page **Partitions de données** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , cliquez sur **Ajouter**.  
   
 2.  Dans la boîte de dialogue **Ajouter une partition de données** , entrez une valeur pour la valeur **HOST_NAME()** et/ou **SUSER_SNAME()** associée à la valeur que vous voulez créer.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52763181"
   
 1.  Sur la page **Partitions de données** , sélectionnez une partition dans la grille.  
   
-2.  Cliquez sur **Supprimer**.  
+2.  Cliquez sur **Delete**.  
   
 #### <a name="to-allow-subscribers-to-initiate-snapshot-generation-and-delivery"></a>Pour permettre aux Abonnés d'initier la génération et la remise d'instantanés  
   
@@ -100,13 +100,13 @@ ms.locfileid: "52763181"
   
 #### <a name="to-view-information-on-existing-partitions"></a>Pour consulter les informations sur les partitions existantes  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Spécifiez le nom de la publication pour **@publication**. (Facultatif) Spécifiez **@suser_sname** ou **@host_name** pour retourner uniquement les informations basées sur un critère de filtre unique.  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Spécifiez le nom de la publication pour **@publication** . (Facultatif) Spécifiez **@suser_sname** ou **@host_name** pour retourner uniquement les informations basées sur un critère de filtre unique.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>Pour définir une nouvelle partition et générer un nouvel instantané partitionné  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Spécifiez le nom de la publication pour **@publication**et la valeur paramétrable qui définit la partition pour l'un des éléments suivants :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Spécifiez le nom de la publication pour **@publication** et la valeur paramétrable qui définit la partition pour l'un des éléments suivants :  
   
-    -   **@suser_sname**- quand le filtre paramétrable est défini par la valeur retournée par [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
+    -   **@suser_sname** - quand le filtre paramétrable est défini par la valeur retournée par [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
   
     -   **@host_name** - quand le filtre paramétrable est défini par la valeur retournée par [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52763181"
   
 1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql). Spécifiez le nom de la publication pour **@publication** et la valeur paramétrable qui définit la partition pour l'un des éléments suivants :  
   
-    -   **@suser_sname**- quand le filtre paramétrable est défini par la valeur retournée par [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
+    -   **@suser_sname** - quand le filtre paramétrable est défini par la valeur retournée par [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
   
     -   **@host_name** - quand le filtre paramétrable est défini par la valeur retournée par [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
   
@@ -135,7 +135,7 @@ ms.locfileid: "52763181"
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la valeur <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée au cours de l'étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la valeur <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée au cours de l'étape 1.  
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "52763181"
   
 1.  Créez une connexion au serveur de publication en utilisant la classe <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
   
-2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication> . Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la valeur <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée au cours de l'étape 1.  
+2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergePublication>. Définissez les propriétés <xref:Microsoft.SqlServer.Replication.Publication.Name%2A> et <xref:Microsoft.SqlServer.Replication.Publication.DatabaseName%2A> de la publication et définissez la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> avec la valeur <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée au cours de l'étape 1.  
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> pour obtenir les propriétés de l'objet. Si cette méthode retourne `false`, soit les propriétés de la publication ont été définies de manière incorrecte à l'étape 2, soit la publication n'existe pas.  
   

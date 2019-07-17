@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84179762d2c4819fb5fc5f82ad6d0528ea689ecf
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38021424"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208438"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>Description du script de déploiement Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -32,6 +32,6 @@ ms.locfileid: "38021424"
   
 ## <a name="see-also"></a>Voir aussi  
  [Exécution de l'Assistant Déploiement d'Analysis Services](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)   
- [Présentation des fichiers d’entrée utilisés pour créer le script de déploiement](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)  
+ [Précisions sur les fichiers d'entrée utilisés pour créer le script de déploiement](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)  
   
   

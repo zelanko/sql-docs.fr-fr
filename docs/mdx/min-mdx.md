@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 85d48badaa1b50edec6a563decbead1a38f5fcb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83061ff3e9923e65f231675c1bc5b1913a5156fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114377"
 ---
 # <a name="min-mdx"></a>Min (MDX)
 
@@ -32,7 +31,7 @@ Min( Set_Expression [ , Numeric_Expression ] )
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Numeric_Expression*  
+ *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
 ## <a name="remarks"></a>Notes  

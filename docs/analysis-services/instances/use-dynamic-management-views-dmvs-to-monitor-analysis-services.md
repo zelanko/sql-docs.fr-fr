@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984100"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209411"
 ---
 # <a name="dynamic-management-views-dmvs"></a>Vues de gestion dynamique 
 
@@ -32,7 +32,7 @@ SELECT * FROM $System.<schemaRowset>
   
  Requêtes DMV retournent des informations sur l’état de serveur et l’objet au moment où la requête est exécutée. Pour surveiller les opérations en temps réel, utilisez plutôt le suivi. Pour plus d’informations en temps réel de surveillance à l’aide de traces, consultez [utilisez SQL Server Profiler pour surveiller Analysis Services](../../analysis-services/instances/use-sql-server-profiler-to-monitor-analysis-services.md).  
   
-## <a name="query-syntax"></a>syntaxe de requête
+## <a name="query-syntax"></a>Syntaxe de requête
 
 Le moteur d'interrogation des vues DMV est l'analyseur d'exploration de données. La syntaxe de requête DMV repose sur l’instruction SELECT &#40;DMX&#41; instruction. Bien que la syntaxe de requête DMV soit basée sur une instruction SQL SELECT, elle ne prend pas en charge la syntaxe complète d'une instruction SELECT. Notez que JOIN, GROUP BY, LIKE, CAST et CONVERT ne sont pas pris en charge.  
   

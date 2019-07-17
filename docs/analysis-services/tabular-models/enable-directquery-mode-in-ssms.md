@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072206"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207660"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Activer le mode DirectQuery dans SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,14 +44,14 @@ ms.locfileid: "53072206"
   
 -   En guise de dernière étape, vérifiez que le mode DirectQuery est opérationnel en exécutant la requête.  
   
-## <a name="step-1-check-the-compatibility-level"></a>Étape 1 : Vérifier le niveau de compatibilité  
+## <a name="step-1-check-the-compatibility-level"></a>Étape 1 : Vérifier le niveau de compatibilité  
  Les propriétés qui définissent l’accès aux données diffèrent sur le plan des niveaux de compatibilité. Une étape préliminaire consiste à vérifier le niveau de compatibilité de la base de données.  
   
 1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], connectez-vous à l’instance contenant le modèle tabulaire.  
   
 2.  Dans l’Explorateur d’objets, cliquez avec le bouton droit sur la base de données, puis choisissez **Propriétés** > **Niveau de compatibilité**.  
   
-     La valeur est soit **SQL Server 2016 (1200)**, soit un niveau antérieur tel que **SQL Server 2012 SP1 ou version ultérieure (1103)**. Dans l’étape suivante, suivez les instructions valides pour le niveau de compatibilité.  
+     La valeur est soit **SQL Server 2016 (1200)** , soit un niveau antérieur tel que **SQL Server 2012 SP1 ou version ultérieure (1103)** . Dans l’étape suivante, suivez les instructions valides pour le niveau de compatibilité.  
   
  Quand vous passez d’un modèle tabulaire au mode DirectQuery, le nouveau mode de stockage des données prend effet immédiatement.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "53072206"
     |-|-|  
     |**Valeurs valides**|**Description**|  
     |**DirectQuery**|Les requêtes sont exécutées sur un une base de données relationnelle principale, en utilisant la connexion à la source de données définie pour le modèle.<br /><br /> Les requêtes adressées au modèle sont converties en requêtes de base de données natives et redirigées vers la source de données.<br /><br /> Lorsque vous traitez un modèle en mode DirectQuery, seules les métadonnées sont compilées et déployées. Les données proprement dites sont externes au modèle. Elles résident dans les fichiers de base de données de la source de données opérationnelle.|  
-    |**Importer**|Les requêtes sont exécutées sur la base de données tabulaire dans MDX ou DAX.<br /><br /> Lorsque vous traitez un modèle en mode d’importation, les données sont récupérées à partir d’une source de données principale et stockées sur disque. Lors du chargement de la base de données, les données sont copiées entièrement en mémoire afin que les requêtes et analyses de table soient très rapides.<br /><br /> Il s’agit du mode par défaut pour les modèles tabulaires, qui est l’unique mode pour certaines sources de données (non relationnelles).|  
+    |**Importationation**|Les requêtes sont exécutées sur la base de données tabulaire dans MDX ou DAX.<br /><br /> Lorsque vous traitez un modèle en mode d’importation, les données sont récupérées à partir d’une source de données principale et stockées sur disque. Lors du chargement de la base de données, les données sont copiées entièrement en mémoire afin que les requêtes et analyses de table soient très rapides.<br /><br /> Il s’agit du mode par défaut pour les modèles tabulaires, qui est l’unique mode pour certaines sources de données (non relationnelles).|  
   
 ## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>Étape 2 b : Passer d’une base de données tabulaire 1100-1103 au mode DirectQuery  
   
@@ -93,7 +93,7 @@ ms.locfileid: "53072206"
   
 -   Une fois le modèle déployé, vous pouvez modifier la méthode de connexion par défaut. Par exemple, vous pouvez utiliser un mode hybride pour le test, et basculer le modèle en mode **DirectQuery uniquement** seulement après avoir testé complètement tous les rapports ou requêtes qui utilisent le modèle. Pour plus d’informations, consultez [Définir ou modifier la méthode de connexion par défaut pour DirectQuery](http://msdn.microsoft.com/library/f10d5678-d678-4251-8cce-4e30cfe15751).  
   
-## <a name="step-3-check-the-connection-properties-on-the-database"></a>Étape 3 : Vérifiez les propriétés de connexion sur la base de données  
+## <a name="step-3-check-the-connection-properties-on-the-database"></a>Étape 3 : Vérifiez les propriétés de connexion sur la base de données  
  Selon le paramétrage de la connexion à la source de données, le passage au mode DirectQuery peut modifier le contexte de sécurité de la connexion. Lorsque vous modifiez le mode d’accès aux données, examinez les propriétés de chaîne d’emprunt d’identité et de connexion pour vérifier que la connexion est valide pour les connexions en cours à la base de données principale.  
   
  Pour plus d’informations sur la délégation d’identité d’utilisateur pour les scénarios DirectQuery, voir la section **Configurer Analysis Services pour une délégation approuvée** dans [Configure Analysis Services for Kerberos constrained delegation](../../analysis-services/instances/configure-analysis-services-for-kerberos-constrained-delegation.md) .  
@@ -114,7 +114,7 @@ ms.locfileid: "53072206"
   
  L'emprunt d'identité ne peut pas être utilisé lorsque le modèle est utilisé dans la mémoire uniquement. La paramètre **ImpersonateCurrentUser**n'est pas valide, sauf si le modèle utilise le mode DirectQuery.  
   
-## <a name="step-4-validate-directquery-access"></a>Étape 4 : Valider l’accès de DirectQuery  
+## <a name="step-4-validate-directquery-access"></a>Étape 4 : Valider l’accès de DirectQuery  
   
 1.  Démarrez une trace à l’aide de SQL Server Profiler ou de xEvents dans Management Studio connecté à la base de données relationnelle SQL Server.  
   

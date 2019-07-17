@@ -1,5 +1,5 @@
 ---
-title: Créer une Dimension d’exploration de données | Documents Microsoft
+title: Créer une Dimension d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2455ccc283af429cb314aa2e5182f8b2ee58c18e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014206"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184100"
 ---
 # <a name="create-a-data-mining-dimension"></a>Créer une dimension d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "34014206"
      La dimension d’exploration de données est créée et ajoutée au dossier **Dimensions** dans l’Explorateur de solutions. Si vous avez sélectionné **Créer un cube**, un cube est créé et ajouté au dossier **Cubes** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la Structure d’exploration de données et procédures](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tâches et procédures relatives aux structures d’exploration de données](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

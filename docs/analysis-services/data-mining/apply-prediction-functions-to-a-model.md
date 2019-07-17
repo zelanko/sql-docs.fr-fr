@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 192f55c8194bfb9b85b3e0bfad51d8261e45ab0a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540658"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184420"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Appliquer des fonctions de prédiction à un modèle
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "52540658"
     > [!WARNING]  
     >  Le Générateur de requêtes de prédiction ne valide pas l’instruction DMX tant que vous n’avez pas cliqué sur **Résultats**. Vous constaterez souvent que l'expression qui est produite par le générateur de requêtes n'est pas une instruction DMX valide. Les causes les plus courantes sont la référence à une colonne qui n'est pas liée à la colonne prédictible ou la tentative de prédire une colonne d'une table imbriquée, ce qui requiert une instruction sub-SELECT. À ce stade, vous pouvez basculer vers la vue DMX et continuer à modifier l'instruction.  
   
-### <a name="example-create-a-query-on-a-clustering-model"></a>Exemple : Créer une requête sur un modèle de clustering  
+### <a name="example-create-a-query-on-a-clustering-model"></a>Exemple : Créer une requête sur un modèle de clustering  
   
 1.  Si aucun modèle de clustering n’est disponible pour générer cet exemple de requête, créez le modèle, [TM_Clustering], en utilisant le [Didacticiel sur l’exploration de données de base](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_getagentparameterlist (Transact-SQL) | Microsoft Docs
+title: sp_getagentparameterlist ne (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe50eb497c0bcaf4ba62bb4260567df5ee81c962
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2d80aedbe2503c4ab11fd894d44e8e37f2167daf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124008"
 ---
 # <a name="spgetagentparameterlist-transact-sql"></a>sp_getagentparameterlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_getagentparameterlist [ @agent_type = ] 'agent_type'
   
 |Value|Agent|  
 |-----------|-----------|  
-|**1**|Snapshot|  
+|**1**|Instantané|  
 |**2**|Lecture du journal|  
 |**3**|Distribution|  
 |**4**|Fusion|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02ce530385cdc911250a81d831dd2fdb81873f76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1333cd6cd5946b7a3a70152e12f4d3decfa7fed0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138430"
 ---
 # <a name="alter-table-statement-limitations"></a>ALTER TABLE, instruction - limitations
 Lorsque le pilote dBASE ou Paradox est utilisé, une fois qu’un index a été créé et ajouté à un nouvel enregistrement, la structure de la table ne peut pas être modifiée par l’instruction ALTER TABLE, sauf si l’index est supprimé et le contenu de la table est supprimé.  

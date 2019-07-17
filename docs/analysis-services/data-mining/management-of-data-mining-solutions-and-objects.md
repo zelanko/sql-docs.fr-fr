@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7dd7de5aac016239c2b778a7afeee9447144259
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145684"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183231"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestion des solutions et des objets d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,14 +76,14 @@ ms.locfileid: "50145684"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **Restrictions :** Aucun.  
+ **Restrictions :** Aucune.  
   
 ### <a name="data-mining-extensions-dmx"></a>DMX (Data Mining Extensions)  
  Data Mining Extensions (DMX) peut être utilisé avec d'autres interfaces de commandes telles que [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou ADOMD.NET pour créer, supprimer et interroger les structures et modèles d'exploration de données.  
   
 -   [Instructions de définition de données DMX &#40;Data Mining Extensions&#41;](../../dmx/dmx-statements-data-definition.md)  
   
- **Restrictions :** Certaines propriétés ne peuvent pas être modifiées avec DMX.  
+ **Restrictions :** Certaines propriétés ne peuvent pas être modifiées à l’aide de DMX.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) est le langage de définition de données utilisé pour l'ensemble d'Analysis Services. XMLA vous permet de contrôler la plupart des objets d'exploration de données et opérations de serveur. Toutes les opérations de gestion entre le client et le serveur peuvent être effectuées avec XMLA. Pour plus de commodité, vous pouvez utiliser le langage de script [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL) pour inclure le code XML dans un wrapper.  

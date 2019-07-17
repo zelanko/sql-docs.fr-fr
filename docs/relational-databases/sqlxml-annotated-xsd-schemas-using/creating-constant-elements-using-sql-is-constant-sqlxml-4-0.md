@@ -18,14 +18,13 @@ ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f61b7a2a7a1dd84896db36ad6bdf771d6f20b37b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 2155087406860a70c70d8a2be6a8ed64425adb57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585144"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126502"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>Création d'éléments constants à l'aide de sql:is-constant (SQLXML 4.0)
 
@@ -43,7 +42,7 @@ ms.locfileid: "67585144"
 ## <a name="examples"></a>Exemples  
  Pour créer des exemples fonctionnels à l'aide des exemples suivants, vous devez répondre à certaines conditions requises. Pour plus d’informations, consultez [configuration requise pour exécuter les exemples de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
-### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. Spécification de sql:is-constant pour ajouter un élément conteneur  
+### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>R. Spécification de sql:is-constant pour ajouter un élément conteneur  
  Ce schéma XSD, annotés  **\<CustomerOrders >** est défini comme un élément constant en spécifiant le **sql : constante est** attribut avec une valeur de 1. Par conséquent,  **\<CustomerOrders >** n’est pas mappé à aucune table de base de données ou de la colonne. Cet élément constant se compose de la  **\<ordre >** éléments enfants.  
   
  Bien que  **\<CustomerOrders >** ne mappe pas à aucune table de base de données ou d’une colonne, il apparaît toujours dans le XML résultant comme un élément conteneur qui contient le  **\<ordre >** éléments enfants.  

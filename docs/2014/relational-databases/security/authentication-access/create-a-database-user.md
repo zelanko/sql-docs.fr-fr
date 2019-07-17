@@ -24,11 +24,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542487"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211969"
 ---
 # <a name="create-a-database-user"></a>Créer un utilisateur de base de données
   Cette rubrique indique comment créer un utilisateur de base de données mappé à un compte de connexion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. L'utilisateur de base de données est l'identité du compte de connexion lorsqu'il est connecté à la base de données. Il peut utiliser le même nom que celui du compte de connexion, mais cela n'est pas obligatoire. Cette rubrique part du principe qu'il existe déjà un compte de connexion dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la création d’un compte de connexion, consultez [créer une connexion](create-a-login.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "52542487"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation `ALTER ANY USER` sur la base de données.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -70,7 +70,7 @@ ms.locfileid: "52542487"
   
 2.  Développez la base de données où créer le nouvel utilisateur de base de données.  
   
-3.  Cliquez avec le bouton droit sur le dossier **Sécurité**, pointez sur **Nouveau**, puis sélectionnez **Utilisateur...**.  
+3.  Cliquez avec le bouton droit sur le dossier **Sécurité**, pointez sur **Nouveau**, puis sélectionnez **Utilisateur...** .  
   
 4.  Dans la boîte de dialogue **Nouvel utilisateur de base de données**, dans la page **Général**, sélectionnez un des types d’utilisateurs suivants à partir de la liste **Type d’utilisateur** : **Utilisateur SQL avec connexion**, **utilisateur SQL sans connexion**, **utilisateur mappé à un certificat**, **utilisateur mappé à une clé asymétrique**, ou **utilisateur de Windows** .  
   
@@ -87,7 +87,7 @@ ms.locfileid: "52542487"
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Options supplémentaires  
- Le **nouvel utilisateur de base de données** boîte de dialogue offre également des options sur quatre pages supplémentaires : **Schémas détenus**, **appartenance**, **éléments sécurisables**, et **propriétés étendues**.  
+ La boîte de dialogue **Utilisateur de base de données - Nouveau** offre également des options sur quatre pages supplémentaires : **schémas détenus**, **appartenance**, **éléments sécurisables** et **propriétés étendues**.  
   
 -   La page **Schémas appartenant à un rôle** répertorie tous les schémas possibles qui peuvent être détenus par le nouvel utilisateur de base de données. Pour ajouter des schémas à un utilisateur de base de données ou lui en supprimer, sous **Schémas appartenant à cet utilisateur**, activez ou désactivez les cases à cocher en regard de ces schémas.  
   

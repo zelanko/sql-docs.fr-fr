@@ -21,11 +21,11 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f8ae2babba09f30b03ea512a85bdc6f06c4bf7f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: MT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688277"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68204711"
 ---
 # <a name="sysdmtranversionstorespaceusage-transact-sql"></a>Sys.dm_tran_version_store_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -36,13 +36,13 @@ Chaque enregistrement avec contrôle de version est stocké en tant que données
   
 Comme l'enregistrement avec contrôle de version est stocké sous forme binaire, cela ne pose pas de problème avec les différents classements des différentes bases de données. Utilisez **sys.dm_tran_version_store_space_usage** à surveiller et planifier la taille de tempdb en fonction de l’utilisation de l’espace de magasin de version des bases de données dans une instance de SQL Server.
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**Int**|ID de base de données de la base de données.|  
+|**database_id**|**int**|ID de base de données de la base de données.|  
 |**reserved_page_count**|**bigint**|Nombre total de pages réservées dans tempdb pour version stocke les enregistrements de la base de données.|  
 |**reserved_space_kb**|**bigint**|Espace total utilisé (en Ko) dans tempdb pour version stocke les enregistrements de la base de données.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 
 ## <a name="examples"></a>Exemples  

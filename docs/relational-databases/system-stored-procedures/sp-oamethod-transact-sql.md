@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7dbc0d6ccf753f8f11baee2f5c1c479895d0687
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107926"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_OAMethod objecttoken , methodname
  *objecttoken*  
  Jeton d’objet d’un objet OLE précédemment créé à l’aide de **sp_OACreate**.  
   
- *methodname*  
+ *MethodName*  
  Nom de la méthode de l'objet OLE à appeler.  
   
  _returnvalue_  **OUTPUT**  
@@ -93,9 +92,9 @@ sp_OAMethod objecttoken , methodname
   
  Lorsque toutes les valeurs de données d'une colonne partagent le même type de données, ce type est utilisé pour toute la colonne. Lorsque les valeurs de données d'une colonne utilisent des types de données différents, le choix du type pour l'ensemble de la colonne se fait sur la base du tableau suivant.  
   
-||INT|FLOAT|money|datetime|varchar|NVARCHAR|  
+||int|float|money|datetime|varchar|nvarchar|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
-|**Int**|**Int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
+|**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**datetime**|**varchar**|**varchar**|**varchar**|**datetime**|**varchar**|**nvarchar**|  
@@ -110,7 +109,7 @@ sp_OAMethod objecttoken , methodname
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-calling-a-method"></a>A. Appel d'une méthode  
+### <a name="a-calling-a-method"></a>R. Appel d'une méthode  
  L’exemple suivant appelle la `Connect` méthode de l’élément précédemment créé **SQLServer** objet.  
   
 ```  

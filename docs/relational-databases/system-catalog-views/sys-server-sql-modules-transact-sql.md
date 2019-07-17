@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 95583de206841bb3ed3ccff42809c028443c63ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 254be7cdd5e26422a27262b963d48908777d616b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62743951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133020"
 ---
 # <a name="sysserversqlmodules-transact-sql"></a>sys.server_sql_modules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +33,11 @@ ms.locfileid: "62743951"
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|Référence FOREIGN KEY au déclencheur de niveau serveur où ce module est défini.|  
+|**object_id**|**int**|Référence FOREIGN KEY au déclencheur de niveau serveur où ce module est défini.|  
 |**definition**|**nvarchar(max)**|Texte SQL qui définit ce module.<br /><br /> NULL = chiffré|  
 |**uses_ansi_nulls**|**bit**|Le module a été créé avec l'option ANSI NULLS définie sur ON.|  
 |**uses_quoted_identifier**|**bit**|Le module a été créé avec l'option QUOTED IDENTIFIER définie sur ON.|  
-|**execute_as_principal_id**|**Int**|ID de l'instruction d'exécution en tant que principal de serveur (EXECUTE AS).<br /><br /> NULL par défaut ou si EXECUTE AS CALLER<br /><br /> ID du principal spécifié si EXECUTE AS SELF EXECUTE AS principal-2 = EXECUTE AS OWNER.|  
+|**execute_as_principal_id**|**int**|ID de l'instruction d'exécution en tant que principal de serveur (EXECUTE AS).<br /><br /> NULL par défaut ou si EXECUTE AS CALLER<br /><br /> ID du principal spécifié si EXECUTE AS SELF EXECUTE AS principal-2 = EXECUTE AS OWNER.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -18,19 +18,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 1f3d69d8fdfffaa6573f4813392509d0ca71c684
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133070"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>Sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Retourne les données de stockage, d’e/s et l’utilisation du processeur pour Azure SQL Managed Instance. Les données sont collectées et agrégées dans des intervalles de cinq minutes. Il existe une ligne pour toutes les 15 secondes reporting. Les données retournées incluent l’utilisation du processeur, la taille de stockage, l’utilisation d’e/s et instance gérée référence (SKU). Les données historiques sont conservées pendant environ 14 jours.
+Retourne les données de stockage, d’e/s et l’utilisation du processeur pour Azure SQL Managed Instance. Les données sont collectées et agrégées par intervalles de cinq minutes. Il existe une ligne pour toutes les 15 secondes reporting. Les données retournées incluent l’utilisation du processeur, la taille de stockage, l’utilisation d’e/s et instance gérée référence (SKU). Les données historiques sont conservées pendant environ 14 jours.
 
 Le **sys.server_resource_stats** vue a des définitions différentes selon la version de l’instance gérée de SQL Azure qui est associé à la base de données. Tenez compte de ces différences et des modifications requises par votre application lors de la mise à niveau vers une nouvelle version de serveur.
  
@@ -45,13 +44,13 @@ Le **sys.server_resource_stats** vue a des définitions différentes selon la ve
 |resource_name|nvarchar(128)|Nom de la ressource.|
 |sku|nvarchar(128)|Managed Instance niveau de Service de l’Instance. Les valeurs possibles sont les suivantes : <br><ul><li>Usage général</li></ul><ul><li>Critique pour l’entreprise</li></ul>|
 |hardware_generation|nvarchar(128)|Identificateur de génération de matériel : comme Gen 4 ou Gen 5|
-|virtual_core_count|INT|Représente le nombre de cœurs virtuels par instance (8, 16 ou 24 en version préliminaire publique)|
+|virtual_core_count|int|Représente le nombre de cœurs virtuels par instance (8, 16 ou 24 en version préliminaire publique)|
 |avg_cpu_percent|decimal(5,2)|Utilisation de calcul moyenne en pourcentage de la limite du niveau de service Managed Instance utilisée par l’instance. Il est calculé comme la somme du temps processeur de tous les pools de ressources pour toutes les bases de données dans l’instance et divisé par le temps processeur disponible pour ce niveau dans l’intervalle spécifié.|
-|reserved_storage_mb|BIGINT|Réservé de stockage par instance (quantité de stockage de l’espace que le client acheté pour l’instance managée)|
-|storage_space_used_mb|decimal(18,2)|Stockage utilisé par les fichiers de toutes les bases instance gérée (y compris les bases de données utilisateur et système)|
-|io_request|BIGINT|Nombre total de d’opérations d’e/s physiques au sein de l’intervalle|
-|io_bytes_read|BIGINT|Nombre d’octets physiques lus dans l’intervalle|
-|io_bytes_written|BIGINT|Nombre d’octets physiques écrits dans l’intervalle|
+|reserved_storage_mb|bigint|Réservé de stockage par instance (quantité de stockage de l’espace que le client acheté pour l’instance managée)|
+|storage_space_used_mb|Decimal(18,2)|Stockage utilisé par les fichiers de toutes les bases instance gérée (y compris les bases de données utilisateur et système)|
+|io_request|bigint|Nombre total de d’opérations d’e/s physiques au sein de l’intervalle|
+|io_bytes_read|bigint|Nombre d’octets physiques lus dans l’intervalle|
+|io_bytes_written|bigint|Nombre d’octets physiques écrits dans l’intervalle|
 
  
 > [!TIP]  

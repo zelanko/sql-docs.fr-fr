@@ -1,5 +1,5 @@
 ---
-title: Hiérarchies utilisateur | Documents Microsoft
+title: Hiérarchies utilisateur | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,27 +10,27 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40b3ebfd8a92bb1c577c9fbd8ee4c9ed0068a700
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027146"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209229"
 ---
 # <a name="user-hierarchies"></a>Hiérarchies utilisateur
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Hiérarchies définies par l’utilisateur sont définis par l’utilisateur de hiérarchies d’attributs qui sont utilisés dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour organiser les membres d’une dimension en structures hiérarchiques et fournir des chemins de navigation dans un cube. Par exemple, le tableau suivant définit une table de dimension pour une dimension de temps. La table de dimension prend en charge trois attributs nommés Year, Quarter et Month.  
   
-|Année|Quarter|Mois|  
+|Year|Quarter|Mois|  
 |----------|-------------|-----------|  
 |1999|Trimestre 1|Jan|  
 |1999|Trimestre 1|Fév|  
 |1999|Trimestre 1|Mar|  
 |1999|2e trimestre|Avr|  
 |1999|2e trimestre|Mai|  
-|1999|2e trimestre|Juin|  
-|1999|Trimestre 3|Jui|  
-|1999|Trimestre 3|Aoû|  
-|1999|Trimestre 3|Sep|  
+|1999|2e trimestre|Jun|  
+|1999|3e trimestre|Jui|  
+|1999|3e trimestre|Aoû|  
+|1999|3e trimestre|Sep|  
 |1999|Trimestre 4|Oct|  
 |1999|Trimestre 4|Nov|  
 |1999|Trimestre 4|Déc|  
@@ -51,7 +51,7 @@ ms.locfileid: "34027146"
 ### <a name="unbalanced-hierarchies"></a>Hiérarchies déséquilibrées  
  Dans une hiérarchie non équilibrée, les branches aboutissent à des niveaux différents. Les hiérarchies parent-enfant sont des hiérarchies déséquilibrées. Par exemple, la dimension Organization dans l'exemple [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], contient un membre pour chaque employé. Le directeur général est le membre supérieur de la hiérarchie et les directeurs des différents services ainsi que la secrétaire de direction se trouvent immédiatement après lui. Des membres sont subordonnés aux directeurs des différents services, mais pas à la secrétaire de direction.  
   
- Il est parfois impossible pour les utilisateurs finaux de faire la différence entre les hiérarchies non équilibrées et les hiérarchies irrégulières. Toutefois, différentes techniques et propriétés dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous permettent de prendre en charge ces deux types de hiérarchies. Pour plus d’informations, consultez [hiérarchies irrégulières](../../analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md), et [attributs dans des hiérarchies Parent-enfant](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
+ Il est parfois impossible pour les utilisateurs finaux de faire la différence entre les hiérarchies non équilibrées et les hiérarchies irrégulières. Toutefois, différentes techniques et propriétés dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous permettent de prendre en charge ces deux types de hiérarchies. Pour plus d’informations, consultez [hiérarchies déséquilibrées](../../analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md), et [attributs dans les hiérarchies Parent-enfant](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
 ### <a name="ragged-hierarchies"></a>Hiérarchies déséquilibrées  
  Dans une hiérarchie déséquilibrée, le membre parent logique d'au moins un membre ne figure pas dans le niveau immédiatement supérieur à ce membre. Cela peut amener les branches de la hiérarchie à aboutir à des niveaux différents. Par exemple, dans une dimension Geography définie avec les niveaux Continent, CountryRegion et City, dans cet ordre, le membre Europe apparaît au niveau supérieur de la hiérarchie, le membre France apparaît au niveau intermédiaire et le membre Paris apparaît au niveau inférieur. France est plus précis que Europe et Paris l'est davantage que France. Les modifications suivantes sont apportées à cette hiérarchie régulière :  
@@ -67,7 +67,7 @@ ms.locfileid: "34027146"
 ### <a name="parent-child-hierarchies"></a>Hiérarchies parent-enfant  
  Les hiérarchies parent-enfant de dimensions sont définies à l'aide d'un attribut spécial, nommé « attribut parent », pour déterminer la façon dont les membres sont liés les uns aux autres. Un attribut parent décrit une *relation d’auto-référencement*, ou *jointure réflexive*, dans une table de dimension principale. Les hiérarchies parent-enfant sont construites à partir d'un seul attribut parent. Un seul niveau est affecté à une hiérarchie parent-enfant parce que les niveaux présents dans la hiérarchie sont constitués à partir des relations parent-enfant entre les membres associés à l'attribut parent. Le schéma de dimension d'une hiérarchie parent-enfant dépend de la présence d'une relation d'auto-référencement dans la table principale de la dimension. Par exemple, le diagramme suivant illustre la **DimOrganization** table de dimension principale le [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données exemple.  
   
- ![Jointure circulaires dans la table DimOrganization](../../analysis-services/multidimensional-models/media/dimorganization.gif "jointure circulaires dans la table DimOrganization")  
+ ![Jointure auto-référencée dans la table DimOrganization](../../analysis-services/multidimensional-models/media/dimorganization.gif "jointure auto-référencée dans la table DimOrganization")  
   
  Dans cette table de dimension, la colonne **ParentOrganizationKey** a une relation de clé étrangère avec la colonne clé primaire **OrganizationKey** . En d'autres termes, chaque enregistrement dans cette table peut être associé à un autre enregistrement de la table par une relation parent-enfant. Ce type de jointure réflexive est généralement utilisé pour représenter les données d'une entité d'une organisation, telles que la structure de gestion des employés dans un service.  
   
@@ -75,11 +75,11 @@ ms.locfileid: "34027146"
   
  La profondeur d'une hiérarchie parent-enfant peut varier d'une branche à l'autre de sa hiérarchie. En d'autres termes, une hiérarchie parent-enfant est considérée comme étant une hiérarchie déséquilibrée.  
   
- Contrairement aux hiérarchies définies par l'utilisateur, dans lesquelles le nombre de niveaux de la hiérarchie détermine le nombre de niveaux visibles pour les utilisateurs finaux, une hiérarchie parent-enfant est définie avec le niveau unique d'une hiérarchie d'attribut, et les valeurs de ce niveau unique produisent les multiples niveaux visibles pour les utilisateurs. Le nombre de niveaux affichés dépend du contenu des colonnes de table de dimension qui stockent les clés de membre et les clés parentes. Le nombre de niveaux peut changer à mesure que les données des tables de dimension changent. Pour plus d’informations, consultez [Dimensions Parent-enfant](../../analysis-services/multidimensional-models/parent-child-dimension.md), et [attributs dans des hiérarchies Parent-enfant](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
+ Contrairement aux hiérarchies définies par l'utilisateur, dans lesquelles le nombre de niveaux de la hiérarchie détermine le nombre de niveaux visibles pour les utilisateurs finaux, une hiérarchie parent-enfant est définie avec le niveau unique d'une hiérarchie d'attribut, et les valeurs de ce niveau unique produisent les multiples niveaux visibles pour les utilisateurs. Le nombre de niveaux affichés dépend du contenu des colonnes de table de dimension qui stockent les clés de membre et les clés parentes. Le nombre de niveaux peut changer à mesure que les données des tables de dimension changent. Pour plus d’informations, consultez [Dimensions Parent-enfant](../../analysis-services/multidimensional-models/parent-child-dimension.md), et [attributs dans les hiérarchies Parent-enfant](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer des hiérarchies définies par l’utilisateur](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
+ [Créer des hiérarchies définies par l'utilisateur](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Propriétés de la hiérarchie définie par l'utilisateur](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
- [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Référence des propriétés d’attribut de dimension](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

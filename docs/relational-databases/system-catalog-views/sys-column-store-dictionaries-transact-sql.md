@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fd497326f278dcc01b4fa81a0e64da6a93cbe8cd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f675e4d0d40bf9e1db4bf2de6b66b1acfc039873
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140019"
 ---
 # <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   Contient une ligne pour chaque dictionnaire utilisé dans des index columnstore optimisés en mémoire xVelocity. Les dictionnaires sont utilisés pour encoder certains, mais pas tous les types de données, par conséquent, certaines colonnes d'un index columnstore n'ont pas de dictionnaires. Un dictionnaire peut exister en tant que dictionnaire principal (pour tous les segments) et éventuellement pour d'autres dictionnaires secondaires utilisés pour un sous-ensemble des segments de la colonne.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**hobt_id**|**bigint**|ID du segment ou de l'index d'arbre B (B-tree) pour la table ayant cet index columnstore.|  
-|**column_id**|**Int**|ID de la colonne columnstore en commençant par 1. La première colonne a ID = 1, la deuxième colonne a ID = 2, etc.|  
+|**column_id**|**int**|ID de la colonne columnstore en commençant par 1. La première colonne a ID = 1, la deuxième colonne a ID = 2, etc.|  
 |**dictionary_id**|**Int**|Il peut y avoir deux types de dictionnaires : globales et locales, associés à un segment de colonne. Un dictionary_id 0 représente le dictionnaire global qui est partagé entre tous les segments de colonne (une pour chaque groupe de lignes) pour cette colonne.|  
-|**version**|**Int**|Version du format de dictionnaire.|  
+|**version**|**int**|Version du format de dictionnaire.|  
 |**type**|**Int**|Type de dictionnaire :<br /><br /> 1 - dictionnaire de hachage contenant **int** valeurs<br /><br /> 2 - non utilisé<br /><br /> 3 - dictionnaire de hachage contenant des valeurs de chaîne<br /><br /> 4 - dictionnaire de hachage contenant **float** valeurs<br /><br /> Pour plus d’informations sur les dictionnaires, consultez [Guide des index Columnstore](~/relational-databases/indexes/columnstore-indexes-overview.md).|  
 |**last_id**|**Int**|Le dernier ID de données dans le dictionnaire.|  
 |**entry_count**|**bigint**|Nombre d'entrées dans le dictionnaire.|  

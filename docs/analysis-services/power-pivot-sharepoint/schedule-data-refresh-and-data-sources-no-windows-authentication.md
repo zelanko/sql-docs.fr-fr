@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 316fe295473d106d0bea8150deed6a19c07bc3bc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408555"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208031"
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Actualisation planifiée des données et Sources de données - aucune authentification Windows
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,13 +24,13 @@ ms.locfileid: "52408555"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010 &#124; SharePoint 2013.|  
   
- **Vue d’ensemble :** Créez deux applications cibles Banque d'informations sécurisées. Configurez la première application cible (PowerPivotDataRefresh) en vue d'utiliser les informations d'identification Windows. Configurez la deuxième application cible avec les informations d'identification d'une source de données qui ne prend pas en charge l'authentification Windows, une base de données Oracle par exemple. La deuxième application cible utilise également la première application cible pour le compte d'actualisation des données sans assistance.  
+ **Vue d’ensemble :** Créez deux Store cible d’Applications sécurisées. Configurez la première application cible (PowerPivotDataRefresh) en vue d'utiliser les informations d'identification Windows. Configurez la deuxième application cible avec les informations d'identification d'une source de données qui ne prend pas en charge l'authentification Windows, une base de données Oracle par exemple. La deuxième application cible utilise également la première application cible pour le compte d'actualisation des données sans assistance.  
   
  ![as_powerpivot_refresh_no_windows_auth](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh :** ID d'application cible de la Banque d'informations sécurisées qui est défini avec l'authentification Windows.  
+-   **(1) PowerPivotDatarefresh :** Un Secure Store ID d’Application cible qui est défini avec l’authentification windows.  
   
--   **(2) OracleAuthentication :** ID d'application cible de la Banque d'informations sécurisées qui est défini avec les informations d'identification Oracle.  
+-   **(2) OracleAuthentication :** Un Secure Store ID d’Application cible qui est défini avec les informations d’identification Oracle.  
   
 -   **(3)**  Le [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] application de Service est configurée pour utiliser l’application cible « PowerPivotDataRefresh » pour le **compte d’actualisation des données sans assistance**.  
   
@@ -60,15 +60,15 @@ ms.locfileid: "52408555"
   
     -   **Adresse de messagerie du contact :** ?  
   
-    -   **Type d’Application cible :** Groupe.  
+    -   **Type d’Application cible :** groupe.  
   
-    -   **URL de Page d’Application cible :** Aucun.  
+    -   **URL de Page d’Application cible :** Aucune.  
   
-5.  Cliquer sur **Suivant**.  
+5.  Cliquez sur **Suivant**.  
   
 6.  Sur la page Informations d'identification, ne changez pas les deux noms de champ par défaut, ainsi que les types de champ pour **Nom d'utilisateur Windows** et **Mot de passe Windows**.  
   
-7.  Cliquer sur **Suivant**.  
+7.  Cliquez sur **Suivant**.  
   
 8.  Sur la page **Paramètres d'appartenance** , ajoutez au moins un **administrateur d'application cible** , puis ajoutez des membres qui ont besoin d'accéder à l'application cible.  
   
@@ -94,17 +94,17 @@ ms.locfileid: "52408555"
   
     -   **Adresse de messagerie du contact :** ?  
   
-    -   **Type d’Application cible :** Groupe.  
+    -   **Type d’Application cible :** groupe.  
   
-    -   **URL de Page d’Application cible :** Aucun.  
+    -   **URL de Page d’Application cible :** Aucune.  
   
-5.  Cliquer sur **Suivant**.  
+5.  Cliquez sur **Suivant**.  
   
 6.  Sur la page **Informations d’identification** , remplacez le nom du premier champ par **Oracle User ID** , puis remplacez **Type de champ** par **User Name**.  
   
      Remplacez le nom du second champ par **Oracle Password** , puis remplacez **Type de champ** par **Password**.  
   
-7.  Cliquer sur **Suivant**.  
+7.  Cliquez sur **Suivant**.  
   
 8.  Sur la page **Paramètres d'appartenance** , ajoutez au moins un **administrateur d'application cible** , puis ajoutez des membres qui ont besoin d'accéder à l'application cible.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "52408555"
 ## <a name="to-verify-data-refresh-with-the-new-authentication"></a>Pour vérifier l'actualisation des données avec la nouvelle authentification  
  Lorsque vous cliquez sur **OK**, la page **Historique d'actualisation** s'affiche. Après quelques minutes, vous devez voir apparaître un nouvel élément dans l'historique d'actualisation du fait que vous avez sélectionné **Aussi actualiser dès que possible**dans les étapes précédentes. La valeur par défaut du travail du minuteur **Travail du minuteur d’actualisation des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** est de 1 minute. Si aucun nouvel élément n'apparaît dans l'historique d'actualisation, patientez quelques minutes, puis actualisez votre navigateur. Si le problème persiste, vérifiez la valeur actuelle du travail du minuteur.  
   
-## <a name="more-information"></a>Informations supplémentaires  
+## <a name="more-information"></a>Informations complémentaires  
   
 -   [Configurer le service Banque d'informations sécurisé dans SharePoint 2013](http://technet.microsoft.com/library/ee806866.aspx).  
   

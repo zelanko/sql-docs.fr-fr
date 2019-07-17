@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 83fa1cf8d99f18cd82e00b4020a2d846b1bdfdc6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206298"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162887"
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>Activer le mode DirectQuery dans SSDT
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ Si votre modèle comporte déjà une connexion à une source de données et des 
 Si votre modèle est finalisé en tout ou partie avant l’activation du mode DirectQuery, il se peut que vous obteniez des erreurs concernant les fonctionnalités incompatibles. Dans Visual Studio, ouvrez la **Liste d’erreurs** et résolvez tous les problèmes qui empêcheraient le modèle de basculer en mode DirectQuery.  
 
 
-### <a name="whats-next"></a>Quelle est l’étape suivante ? 
+### <a name="whats-next"></a>Étapes suivantes 
 Vous pouvez maintenant importer des données à l’aide de l’Assistant Importation de table pour obtenir des métadonnées pour le modèle. Vous obtiendrez non pas des lignes de données, mais des tables, des colonnes et des relations qui serviront de base à votre modèle. 
 
 Vous pouvez créer un exemple de partition pour chaque table et ajouter des exemples de données de façon à vérifier le comportement du modèle au fur et à mesure de sa création. Les exemples de données ajoutés sont utilisés dans **Analyser pour Excel** ou dans d’autres outils clients pouvant se connecter à la base de données de l’espace de travail. Pour plus d’informations, consultez [Ajouter des exemples de données à un modèle DirectQuery en mode Création](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) .  

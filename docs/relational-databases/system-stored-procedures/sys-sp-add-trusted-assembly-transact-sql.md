@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c7cbcd065f2cb86522d057246226570ba3dad66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c9e7fad6c73cd5dd32673db6fc1ab841eb20994
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106556"
 ---
 # <a name="sysspaddtrustedassembly-transact-sql"></a>Sys.sp_add_trusted_assembly (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ La valeur de hachage SHA2_512 de l’assembly à ajouter à la liste des assembl
 [ @description =] '*description*'  
 Description définie par l’utilisateur facultative de l’assembly. Microsoft recommande d’utiliser le nom canonique qui encode le nom simple numéro de version, culture, clé publique et architecture de l’assembly à approuver. Cette valeur identifie l’assembly sur le côté du common language runtime (CLR) et est identique à la valeur clr_name dans sys.assemblies de manière unique. 
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Nécessite l’appartenance dans le `sysadmin` rôle serveur fixe ou `CONTROL SERVER` autorisation.
 

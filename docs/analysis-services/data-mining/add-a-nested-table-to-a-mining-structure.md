@@ -1,5 +1,5 @@
 ---
-title: Ajouter une Table imbriquée à une Structure d’exploration de données | Documents Microsoft
+title: Ajouter une Table imbriquée à une Structure d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0c65762dc69ee1a5f84a22984995fac5e909629c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014676"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184461"
 ---
 # <a name="add-a-nested-table-to-a-mining-structure"></a>ajouter une table imbriquée à une structure d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "34014676"
      Une nouvelle colonne de table contenant la colonne clé est ajoutée à la structure d'exploration. Pour plus d’informations sur l’ajout de colonnes, consultez [Ajouter des colonnes à une structure d’exploration de données](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la Structure d’exploration de données et procédures](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tâches et procédures relatives aux structures d’exploration de données](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811151"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181718"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Configurer Analysis Services et la délégation Kerberos contrainte (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52811151"
   
  ![classeur comme source de données](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "classeur comme source de données")  
   
-## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>Scénario 2 : Un liens de modèle tabulaire Analysis Services à un classeur Excel  
+## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>Scénario 2 : Un liens de modèle tabulaire Analysis Services à un classeur Excel  
  Un modèle tabulaire Analysis Services ![voir 1](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "voir 1") des liens vers un classeur Excel qui contient un modèle Power Pivot. Dans ce cas, quand [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] charge le modèle tabulaire, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] détecte le lien vers le classeur. Lors du traitement du modèle, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] envoie une requête d’interrogation à SharePoint pour charger le classeur. Dans ce scénario, les informations d’identification du client ne doivent **pas** être déléguées d’Analysis Services à SharePoint, mais une application cliente peut remplacer les informations de source de données dans une liaison hors ligne. Si la demande de liaison hors ligne spécifie d’emprunter l’identité de l’utilisateur actuel, les informations d’identification de celui-ci doivent être déléguées, ce qui nécessite une configuration de KCD entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et SharePoint.  
   
  ![office online server](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-oos.png "office online server")  
@@ -71,7 +71,7 @@ ms.locfileid: "52811151"
   
     3.  Cliquez sur **Propriétés**.  
   
-    4.  Cliquez sur **Protocole Internet version 6 (TCP/IPv6)**.  
+    4.  Cliquez sur **Protocole Internet version 6 (TCP/IPv6)** .  
   
     5.  Cliquez sur **Propriétés**.  
   

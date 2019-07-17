@@ -1,5 +1,5 @@
 ---
-title: sys.dm_clr_tasks (Transact-SQL) | Microsoft Docs
+title: Sys.dm_clr_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 462b9061-09fa-4858-9707-03d6cc19c769
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b1386f34ad1ae82229729e9db696c95176c43aa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.openlocfilehash: b3cd21954cc7f69b8f3acca3c75df3ef6ea0df56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121051"
 ---
 # <a name="sysdmclrtasks-transact-sql"></a>sys.dm_clr_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne une ligne pour toutes les tâches CLR (Common Language Runtime) en cours d'exécution. Un traitement [!INCLUDE[tsql](../../includes/tsql-md.md)] qui contient une référence à une routine CLR crée une tâche distincte pour exécuter l'ensemble du code managé de ce traitement. Les diverses instructions du traitement qui nécessitent l'exécution de code managé utilisent la même tâche CLR. Cette tâche CLR est chargée de tenir à jour les objets et les états liés à l'exécution du code managé, mais aussi les transitions entre l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le CLR.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|Adresse de la tâche CLR.|  
 |**sos_task_address**|**varbinary(8)**|Adresse de la tâche du traitement [!INCLUDE[tsql](../../includes/tsql-md.md)] sous-jacent.|  
@@ -41,13 +40,13 @@ ms.locfileid: "62742075"
 |**state**|**nvarchar(128)**|État actuel de la tâche.|  
 |**abort_state**|**nvarchar(128)**|État actuel de la procédure d'annulation (si la tâche a été annulée). L'abandon d'une tâche passe par plusieurs états.|  
 |**type**|**nvarchar(128)**|Type de tâche.|  
-|**affinity_count**|**Int**|Affinité de la tâche.|  
-|**forced_yield_count**|**Int**|Nombre de fois où la tâche a dû être abandonnée.|  
+|**affinity_count**|**int**|Affinité de la tâche.|  
+|**forced_yield_count**|**int**|Nombre de fois où la tâche a dû être abandonnée.|  
   
 ## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

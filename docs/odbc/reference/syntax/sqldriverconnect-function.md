@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 225b882a6c48900e9a15a23e4073910315848985
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9528280514be2eb2424b15a39ded3206aaca112f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104703"
 ---
 # <a name="sqldriverconnect-function"></a>Fonction SQLDriverConnect
 **Conformité**  
@@ -62,7 +61,7 @@ SQLRETURN SQLDriverConnect(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *ConnectionHandle*  
+ *Handle de connexion*  
  [Entrée] Handle de connexion.  
   
  *WindowHandle*  
@@ -88,7 +87,7 @@ SQLRETURN SQLDriverConnect(
  *DriverCompletion*  
  [Entrée] Indicateur qui indique si le Gestionnaire de pilotes ou le pilote doit demander les informations de connexion plus :  
   
- SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE,  SQL_DRIVER_COMPLETE_REQUIRED, or SQL_DRIVER_NOPROMPT.  
+ SQL_DRIVER_PROMPT, SQL_DRIVER_COMPLETE, SQL_DRIVER_COMPLETE_REQUIRED ou SQL_DRIVER_NOPROMPT.  
   
  (Pour plus d’informations, consultez « Commentaires ».)  
   
@@ -147,13 +146,13 @@ SQLRETURN SQLDriverConnect(
   
  *connection-string* ::= *empty-string*[;] &#124; *attribute*[;] &#124; *attribute*; *connection-string*  
   
- *empty-string* ::=*attribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value*[}]  
+ *une chaîne vide* :: =*attribut* :: = *mot clé de l’attribut*=*attribut-valeur* &#124; pilote = [{}] *valeur d’attribut*[}]  
   
  *mot clé de l’attribut* :: = DSN &#124; UID &#124; PWD &#124; *-défini-attribut-mot clé driver*  
   
  *attribute-value* ::= *character-string*  
   
- *driver-defined-attribute-keyword* ::= *identifier*  
+ *défini-attribut-mot clé Driver* :: = *identificateur*  
   
  où *chaîne de caractères* a zéro ou plusieurs caractères ; *identificateur* a un ou plusieurs caractères ; *mot clé de l’attribut* ne respecte pas la casse ; *attribut-valeur* peut respecter la casse ; et la valeur de la **DSN** mot clé n’est pas constitué uniquement d’espaces.  
   

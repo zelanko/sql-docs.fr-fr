@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9c2e25b51998d863809a57654b245b1cb63027b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6f842b96a9b179548688a4c655a566087ba1ebf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108625"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,13 +59,13 @@ sp_create_removable
   
 `[ @syslogical = ] 'syslogical'` Est le nom logique du fichier qui contient les tables du catalogue système. *syslogical* est **sysname**.  
   
-`[ @sysphysical = ] 'sysphysical'` Est le nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables du catalogue système. *sysphysical* est **nvarchar (260)**.  
+`[ @sysphysical = ] 'sysphysical'` Est le nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables du catalogue système. *sysphysical* est **nvarchar (260)** .  
   
 `[ @syssize = ] syssize` Est la taille, en mégaoctets, du fichier qui contient le système de tables du catalogue. *syssize* est **int**. La valeur minimale *syssize* est 1.  
   
 `[ @loglogical = ] 'loglogical'` Est le nom logique du fichier qui contient le journal des transactions. *loglogical* est **sysname**.  
   
-`[ @logphysical = ] 'logphysical'` Est le nom physique. Il comprend un chemin d'accès complet du fichier contenant le journal des transactions. *logphysical* est **nvarchar (260)**.  
+`[ @logphysical = ] 'logphysical'` Est le nom physique. Il comprend un chemin d'accès complet du fichier contenant le journal des transactions. *logphysical* est **nvarchar (260)** .  
   
 `[ @logsize = ] logsize` Est la taille, en mégaoctets, du fichier qui contient le journal des transactions. *LogSize* est **int**. La valeur minimale *logsize* est 1.  
   
@@ -74,7 +73,7 @@ sp_create_removable
   
  Il doit exister entre 1 et 16 fichiers de données. Habituellement, plusieurs fichiers de données sont créés lorsqu'il est prévu que la base de données soit volumineuse et qu'elle doive être distribuée sur plusieurs disques.  
   
-`[ @dataphysical1 = ] 'dataphysical'` Est le nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables de données. *dataphysique* est **nvarchar (260)**.  
+`[ @dataphysical1 = ] 'dataphysical'` Est le nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables de données. *dataphysique* est **nvarchar (260)** .  
   
 `[ @datasize1 = ] 'datasize'` Est la taille, en mégaoctets, d’un fichier qui contient les tables de données. *DataSize* est **int**. La valeur minimale *datasize* est 1.  
   
@@ -82,7 +81,7 @@ sp_create_removable
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Si vous souhaitez faire une copie de votre base de données sur un support amovible (par exemple un CD-ROM) pour la distribuer à d'autres utilisateurs, utilisez cette procédure stockée.  
@@ -97,7 +96,7 @@ sp_create_removable
   
 |Opération sur la base de données|Autorisations d'accès aux fichiers définies|  
 |---------------------------|------------------------------|  
-|Modifiée pour ajouter un nouveau fichier|Créé le|  
+|Modifiée pour ajouter un nouveau fichier|Date de création|  
 |Sauvegardée|Attachée|  
 |Restaurée|Détachée|  
   

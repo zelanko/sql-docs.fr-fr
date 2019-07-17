@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a0ae475ba4dc290f57eadf94d1e45e8a203a7ce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab9461d87a3df2efc98c38e4c72cee4c247fee7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138028"
 ---
 # <a name="sqlinstallererror-function"></a>SQLInstallerError, fonction
 **Conformité**  
@@ -66,7 +65,7 @@ RETCODE SQLInstallerError(
  [Sortie] Pointeur vers le nombre total d’octets (sans le caractère de fin de la valeur null) disponibles à renvoyer dans *lpszErrorMsg*. Si le nombre d’octets à retourner est supérieur ou égal à *cbErrorMsgMax*, le texte de message d’erreur dans *lpszErrorMsg* est tronqué à *cbErrorMsgMax* moins le octets de caractère de fin de la valeur null. Le *pcbErrorMsg* argument peut être un pointeur null.  
   
 ## <a name="returns"></a>Valeur renvoyée  
- SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, or SQL_ERROR.  
+ SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA ou SQL_ERROR.  
   
 ## <a name="diagnostics"></a>Diagnostics  
  **SQLInstallerError** ne valide pas les valeurs d’erreur pour lui-même. **SQLInstallerError** retourne SQL_NO_DATA lorsqu’il est impossible de récupérer les informations d’erreur (auquel cas *pfErrorCode* n’est pas défini). Si **SQLInstallerError** ne peut pas accéder aux valeurs d’erreur pour une raison quelconque qui doit normalement retourner SQL_ERROR, **SQLInstallerError** retourne SQL_ERROR, mais ne valide pas les valeurs d’erreur. Si vous ne connaissez pas la longueur de la chaîne d’avertissement (*lpszErrorMsg*), vous pouvez définir *lpszErrorMsg* à la valeur NULL et appeler **SQLInstallerError**. **SQLInstallerError** sera puis retourner la longueur de la chaîne d’avertissement dans *cbErrorMsgMax*. Si la mémoire tampon pour le message d’erreur est trop courte, **SQLInstallerError** retourne SQL_SUCCESS_WITH_INFO et retourne le bon *pfErrorCode* valeur **SQLInstallerError**.  

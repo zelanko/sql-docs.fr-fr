@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : Création d’une alerte de l’Agent SQL Server à l’aide du fournisseur WMI pour les événements serveur | Microsoft Docs'
+title: 'Aperçu : Création d’une alerte de l’Agent SQL Server à l’aide du fournisseur WMI pour les événements serveur | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195834"
 ---
-# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Exemple : Création d’une alerte de l’Agent SQL Server à l’aide du fournisseur WMI pour les événements serveur
+# <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>Aperçu : Création d’une alerte de SQL Server Agent en utilisant le fournisseur WMI pour les événements de serveur
   Une façon courante d'utiliser le fournisseur d'événements WMI consiste à créer des alertes de l'Agent SQL Server qui répondent à des événements spécifiques. L'exemple suivant présente une alerte simple qui enregistre les événements du graphique de blocage XML dans une table pour leur analyse ultérieure. L'Agent SQL Server soumet une demande WQL, reçoit des événements WMI et exécute un travail en réponse à l'événement. Remarquez que, bien que plusieurs objets Service Broker soient impliqués dans le traitement du message de notification, le fournisseur d'événements WMI gère les détails de la création et de la gestion de ces objets.  
   
 ## <a name="example"></a>Exemple  
@@ -102,7 +102,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Exécutez le script ci-dessous sous le second onglet de requête. Ce script produit un jeu de résultats, puis se bloque, en attendant d'acquérir un verrou sur `Production.Product`.  
+ Exécutez le script suivant dans le deuxième onglet de requête. Ce script génère un jeu de résultats, puis se bloque, attend pour acquérir un verrou sur `Production.Product`.  
   
 ```  
 USE AdventureWorks ;  
@@ -118,7 +118,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Exécutez le script ci-dessous sous le premier onglet de requête. Ce script se bloque, en attendant d'acquérir un verrou sur `Production.Location`. Après un court délai d'attente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisira soit ce script, soit le script dans l'exemple comme victime du blocage et mettra un terme à la transaction.  
+ Exécutez le script suivant dans le premier onglet de requête. Ce script se bloque, attend pour acquérir un verrou sur `Production.Location`. Après un court délai d'attente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisira soit ce script, soit le script dans l'exemple comme victime du blocage et mettra un terme à la transaction.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

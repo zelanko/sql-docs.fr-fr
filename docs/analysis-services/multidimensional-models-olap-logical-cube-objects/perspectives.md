@@ -1,5 +1,5 @@
 ---
-title: Perspectives | Documents Microsoft
+title: Perspectives | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d093d3991c41f35c16742c80e279754a1d650827
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027336"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180891"
 ---
 # <a name="perspectives"></a>Perspectives
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "34027336"
   
  Un cube doit être mis à jour et traité avant que la perspective ne puisse être utilisée.  
   
- Les cubes peuvent être des objets très complexes à Explorer dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Un cube unique peut représenter le contenu d'un entrepôt de données entier, avec plusieurs groupes de mesures dans un cube représentant plusieurs tables de faits et avec plusieurs dimensions reposant sur plusieurs tables de dimension. Ce type de cube peut être très complexe et très puissant, mais difficile à utiliser pour ceux qui n'ont besoin d'interagir qu'avec une petite partie du cube afin de répondre à leurs besoins en termes de décisionnel et de rapports.  
+ Cubes peuvent être des objets très complexes pour les utilisateurs à découvrir dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Un cube unique peut représenter le contenu d'un entrepôt de données entier, avec plusieurs groupes de mesures dans un cube représentant plusieurs tables de faits et avec plusieurs dimensions reposant sur plusieurs tables de dimension. Ce type de cube peut être très complexe et très puissant, mais difficile à utiliser pour ceux qui n'ont besoin d'interagir qu'avec une petite partie du cube afin de répondre à leurs besoins en termes de décisionnel et de rapports.  
   
- Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser une perspective pour réduire la complexité perçue d’un cube dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Une perspective définit un sous-ensemble visualisable d'un cube qui fournit des points de vue focalisés sur un domaine d'activité ou sur une application. La perspective contrôle la visibilité des objets contenus dans un cube. Les objets suivants peuvent être affichés ou masqués dans une perspective :  
+ Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser une perspective pour réduire la complexité apparente d’un cube dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Une perspective définit un sous-ensemble visualisable d'un cube qui fournit des points de vue focalisés sur un domaine d'activité ou sur une application. La perspective contrôle la visibilité des objets contenus dans un cube. Les objets suivants peuvent être affichés ou masqués dans une perspective :  
   
 -   Dimensions  
   
@@ -34,9 +34,9 @@ ms.locfileid: "34027336"
   
 -   Hierarchies  
   
--   les groupes de mesures ;  
+-   les groupes de mesures ;  
   
--   Mesures  
+-   mesures  
   
 -   les indicateurs de performance clés (KPI) ;  
   
@@ -44,7 +44,7 @@ ms.locfileid: "34027336"
   
 -   Actions  
   
- Par exemple, le **Adventure Works** de cube dans le [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] exemple [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données contient onze groupes de mesures et vingt dimensions de cube différentes, représentant les ventes, les ventes prévisionnelles et les données financières. Une application cliente peut faire directement référence à la totalité du cube, mais ce point de vue peut être trop important si un utilisateur tente d'extraire des informations de base sur les ventes prévisionnelles. Au lieu de cela, le même utilisateur peut utiliser le **cibles de ventes** perspective pour limiter l’affichage de la **Adventure Works** cube aux seuls objets pertinents pour les ventes prévisionnelles.  
+ Par exemple, le **Adventure Works** de cube dans le [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] exemple [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données contient onze groupes de mesures et vingt dimensions de cube différentes, représentant les ventes, les ventes prévisionnelles et les données financières. Une application cliente peut faire directement référence à la totalité du cube, mais ce point de vue peut être trop important si un utilisateur tente d'extraire des informations de base sur les ventes prévisionnelles. Au lieu de cela, le même utilisateur peut utiliser le **cibles de ventes** perspective pour restreindre l’affichage de la **Adventure Works** cube aux seuls objets pertinents pour les prévisions de vente.  
   
  Les objets d'un cube qui ne sont pas visibles pour l'utilisateur via une perspective peuvent cependant être directement référencés et récupérés à l'aide de XML for Analysis, des expressions MDX (Multidimensional Expressions) ou des instructions DMX (Data Mining Extensions). Les perspectives ne restreignent pas l'accès aux objets d'un cube et ne doivent pas être utilisées à cette fin. Elles doivent au contraire servir à optimiser l'expérience de l'utilisateur lorsqu'il accède à un cube.  
   
