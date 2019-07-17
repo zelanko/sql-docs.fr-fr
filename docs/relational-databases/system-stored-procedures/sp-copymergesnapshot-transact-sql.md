@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3abdc711d509f323dfd1600360b26c46b2e05ab
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b96ef181f0a584c51258a81a37b9f246af46f090
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108739"
 ---
 # <a name="spcopymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ## <a name="arguments"></a>Arguments  
 `[ @publication = ] 'publication'` Est le nom de la publication dont le contenu instantané doivent être copiés. *publication* est **sysname**, sans valeur par défaut.  
   
-`[ @destination_folder = ] 'destination_folder'` Est le nom du dossier dans lequel le contenu de l’instantané de publication doit être copiée. *destination_folder*est **nvarchar (255)**, sans valeur par défaut. Le *destination_folder* peut être un autre emplacement comme sur un autre serveur, sur un lecteur réseau ou sur un support amovible (CD-ROM ou disque).  
+`[ @destination_folder = ] 'destination_folder'` Est le nom du dossier dans lequel le contenu de l’instantané de publication doit être copiée. *destination_folder*est **nvarchar (255)** , sans valeur par défaut. Le *destination_folder* peut être un autre emplacement comme sur un autre serveur, sur un lecteur réseau ou sur un support amovible (CD-ROM ou disque).  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

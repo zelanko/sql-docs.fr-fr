@@ -20,12 +20,12 @@ ms.assetid: 95b707d3-3a93-407f-8e88-4515d4f2039d
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a33c01da4dc4847589436d8700c1cc265e18cd8f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: fe53a1d912ce03ab2eedb66b72b4de947466b313
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097892"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263938"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,22 +40,22 @@ ms.locfileid: "68097892"
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |bucketid|**int**|ID du compartiment de hachage dans lequel l'entrée est en cache. La valeur indique une plage comprise entre 0 et la taille de la table de hachage pour le type du cache.<br /><br /> Pour les caches Plans d'objets et Plans SQL, la taille de la table de hachage peut atteindre 10 007 sur des systèmes 32 bits et 40 009 sur des systèmes 64 bits. Pour le cache Arborescences liées, la taille de la table de hachage peut faire jusqu'à 1 009 sur des systèmes 32 bits et 4 001 sur des systèmes 64 bits. Pour le cache Procédures stockées étendues, la taille de la table de hachage peut faire jusqu'à 127 sur des systèmes 32 bits et 64 bits.|  
-|refcounts|**Int**|Nombre d'objets du cache faisant référence à cet objet. **RefCounts** doit être au moins 1 pour une entrée dans le cache.|  
+|refcounts|**int**|Nombre d'objets du cache faisant référence à cet objet. **RefCounts** doit être au moins 1 pour une entrée dans le cache.|  
 |usecounts|**int**|Nombre de fois que l'objet du cache a été trouvé. Non incrémenté lorsque les requêtes paramétrables recherchent un plan dans le cache. Peut être incrémenté plusieurs fois lors de l'utilisation du plan d'exécution de requêtes.|  
-|size_in_bytes|**int**|Nombre d'octets mobilisés par l'objet dans le cache.|  
+|size_in_bytes|**Int**|Nombre d'octets mobilisés par l'objet dans le cache.|  
 |memory_object_address|**varbinary(8)**|Adresse mémoire de l'entrée en cache. Cette valeur peut être utilisée avec [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) pour obtenir la répartition mémoire du plan mis en cache et avec [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)entrées pour obtenir le coût de mise en cache de l’entrée.|  
 |cacheobjtype|**nvarchar(34)**|Type d'objet dans le cache. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> Compiled Plan (plan compilé)<br /><br /> Compiled Plan Stub (stub du plan compilé)<br /><br /> Parse Tree (arborescence d'analyse)<br /><br /> Extended Proc (procédure étendue)<br /><br /> CLR Compiled Func (fonction compilée CLR)<br /><br /> CLR Compiled Proc (procédure compilée CLR)|  
 |objtype|**nvarchar(16)**|Type d'objet. Voici les valeurs possibles et leurs descriptions correspondantes.<br /><br /> Procédure : Procédure stockée<br />Préparé : Instruction préparée<br />Ad hoc : Requête ad hoc. Fait référence à [!INCLUDE[tsql](../../includes/tsql-md.md)] soumis en tant qu’événements de langage à l’aide de **osql** ou **sqlcmd** au lieu d’en tant qu’appels de procédure distante.<br />ReplProc : Procédure de réplication et de filtrage<br />Déclencheur : Déclencheur<br />Vue : Vue<br />Par défaut : Par défaut<br />UsrTab : Table utilisateur<br />SysTab : Table système<br />Vérification : Contrainte CHECK<br />Règle : Règle|  
 |plan_handle|**varbinary(64)**|Identificateur du plan en mémoire. Cet identificateur est temporaire et il reste constant uniquement tant que le plan est dans le cache. Cette valeur peut être utilisée avec les fonctions de gestion dynamique suivantes :<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
-|pool_id|**int**|ID du pool de ressources par rapport auquel cette utilisation de la mémoire de plan est prise en compte.|  
-|pdw_node_id|**int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|pool_id|**Int**|ID du pool de ressources par rapport auquel cette utilisation de la mémoire de plan est prise en compte.|  
+|pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
  <sup>1</sup>  
   
 ## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
-Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiert l’autorisation `VIEW DATABASE STATE` dans la base de données.   
+Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveaux Premium, nécessite le `VIEW DATABASE STATE` autorisation dans la base de données. Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard et les niveaux de base, nécessite le **administrateur du serveur** ou un **administrateur Azure Active Directory** compte.   
 
 ## <a name="examples"></a>Exemples  
   

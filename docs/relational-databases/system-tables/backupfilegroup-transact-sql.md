@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1456ff13c32b8b1f0eb8185693000507ffa401e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122923"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +33,11 @@ ms.locfileid: "62645180"
 > [!NOTE]  
 >  Le **backupfilegroup** tableau présente la configuration de groupe de fichiers de la base de données, pas du jeu de sauvegarde. Pour déterminer si un fichier est inclus dans le jeu de sauvegarde, utilisez le **is_present** colonne de la [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) table.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**Int**|Jeu de sauvegarde contenant ce groupe de fichiers.|  
-|**nom**|**sysname**|Nom du groupe de fichiers|  
-|**filegroup_id**|**Int**|ID du groupe de fichiers ; il est unique dans la base de données. Correspond à **data_space_id** dans **sys.filegroups**.|  
+|**backup_set_id**|**int**|Jeu de sauvegarde contenant ce groupe de fichiers.|  
+|**name**|**sysname**|Nom du groupe de fichiers|  
+|**filegroup_id**|**int**|ID du groupe de fichiers ; il est unique dans la base de données. Correspond à **data_space_id** dans **sys.filegroups**.|  
 |**filegroup_guid**|**uniqueidentifier**|Identificateur unique universel du groupe de fichiers. Sa valeur peut être NULL.|  
 |**type**|**char(2)**|Type de contenu, un des suivants :<br /><br /> FG = Groupe de fichiers « Lignes »<br /><br /> SL = Groupe de fichiers de journal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**type_desc**|**nvarchar(60)**|Description du type de fonction, un des suivants :<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  

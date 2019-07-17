@@ -20,23 +20,22 @@ ms.assetid: 7fc10fdc-370f-4927-bba0-b76108a7508e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d6f7aafe405b29db5457f470a99efac2e23e92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b240c74abde034f5008416994ca9cb497e6e64f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133803"
 ---
 # <a name="sysfulltextindexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Contient une ligne par index de recherche en texte intégral d'un objet tabulaire.  
 
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**Int**|ID de l'objet auquel cet index de texte intégral appartient.|  
+|**object_id**|**int**|ID de l'objet auquel cet index de texte intégral appartient.|  
 |**unique_index_id**|**Int**|ID de l'index de texte non intégral unique correspondant utilisé pour associer l'index de texte intégral aux lignes.|  
 |**fulltext_catalog_id**|**Int**|ID du catalogue de texte intégral dans lequel réside l'index de texte intégral.|  
 |**is_enabled**|**bit**|1 = l'index de texte intégral est actuellement activé.|  
@@ -49,8 +48,8 @@ ms.locfileid: "64945686"
 |**crawl_end_date**|**datetime**|Fin de l'analyse actuelle ou de la dernière analyse.<br /><br /> NULL = aucune.|  
 |**incremental_timestamp**|**binary(8)**|Valeur d'horodatage à utiliser pour l'analyse incrémentielle suivante.<br /><br /> NULL = aucune.|  
 |**stoplist_id**|**Int**|ID de la [liste de mots vides](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) qui est associé à cet index de recherche en texte intégral.|  
-|**data_space_id**|**Int**|Groupe de fichiers où réside cet index de recherche en texte intégral.|  
-|**property_list_id**|**Int**|ID de la liste de propriétés de recherche associée à cet index de recherche en texte intégral. NULL indique qu'aucune liste de propriétés de recherche n'est associée à l'index de recherche en texte intégral. Pour obtenir plus d’informations sur cette liste de propriétés de recherche, utilisez le [sys.registered_search_property_lists &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) vue de catalogue.|  
+|**data_space_id**|**int**|Groupe de fichiers où réside cet index de recherche en texte intégral.|  
+|**property_list_id**|**int**|ID de la liste de propriétés de recherche associée à cet index de recherche en texte intégral. NULL indique qu'aucune liste de propriétés de recherche n'est associée à l'index de recherche en texte intégral. Pour obtenir plus d’informations sur cette liste de propriétés de recherche, utilisez le [sys.registered_search_property_lists &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) vue de catalogue.|  
   
 ## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

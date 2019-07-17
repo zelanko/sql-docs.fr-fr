@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a3219168a070a9c264d4fb5457f9e5844734844a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775561"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68186113"
 ---
 # <a name="start-sql-server-profiler"></a>Démarrer SQL Server Profiler
   Il existe différentes méthodes pour démarrer le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] afin de prendre en charge la collecte des sorties de trace dans divers scénarios. Vous pouvez démarrer [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] à partir du menu **Démarrer** , du menu **Outils** dans l’Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] ou à partir de plusieurs autres emplacements dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -61,7 +61,7 @@ ms.locfileid: "52775561"
     > [!NOTE]  
     >  Lorsqu'un processus est sélectionné, le contexte de connexion correspond à la connexion de l'Explorateur d'objets à l'ouverture du moniteur d'activité. Le modèle de trace correspond à la valeur par défaut selon le type de serveur et le SPID est égal au SPID du processus sélectionné.  
   
-## <a name="net-framework-security"></a>Sécurité du .NET Framework  
+## <a name="net-framework-security"></a>Sécurité .NET Framework  
  Avec le mode d'authentification Windows, le compte d'utilisateur utilisé pour exécuter le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] doit avoir l'autorisation de se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Pour effectuer une opération de traçage à l'aide du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], les utilisateurs doivent également avoir l'autorisation ALTER TRACE.  

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625790"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266546"
 ---
 # <a name="running-test-cases-oracletosql"></a>Exécution de cas de test (OracleToSQL)
 Lorsque le testeur de SSMA exécute un cas de Test, il exécute les objets sélectionnés pour le test et crée un rapport sur les résultats de la vérification. Si les résultats sont identiques sur les deux plateformes, le test a réussi. La correspondance des objets entre Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est déterminée en fonction des paramètres de mappage de schéma pour le projet SSMA actuel.  
@@ -43,9 +43,9 @@ Supposons que la table vérifiée est nommée USER_TABLE. Pour une telle table, 
   
 ||||  
 |-|-|-|  
-|Nom|type|Description|  
+|Name|type|Description|  
 |USER_TABLE$ Trg|déclencheur|Déclencheur d’audit les modifications dans la table vérifiée.|  
-|USER_TABLE$AUD|table|Tableau dans lequel sont enregistrés les lignes supprimées et remplacées.|  
+|USER_TABLE$ AUD|table|Tableau dans lequel sont enregistrés les lignes supprimées et remplacées.|  
 |USER_TABLE$ AUDID|table|Tableau dans lequel les lignes nouvelles et modifiées sont enregistrés.|  
 |USER_TABLE|vue|Représentation sous forme simplifiée de modifications de la table.|  
 |$ USER_TABLE NOUVEAU|vue|Simplifiée de la représentation sous forme de lignes insérées et remplacés.|  
@@ -56,7 +56,7 @@ L’objet suivant est créé dans le schéma de table vérifié au niveau [!INCL
   
 ||||  
 |-|-|-|  
-|Créer une vue d’abonnement|type|Description|  
+|Nom|type|Description|  
 |USER_TABLE$ Trg|déclencheur|Déclencheur d’audit les modifications dans la table vérifiée.|  
   
 Et les objets suivants sont créés au [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dans la base de données ssmatesterdb.  
@@ -65,10 +65,10 @@ Et les objets suivants sont créés au [!INCLUDE[ssNoVersion](../../includes/ssn
 |-|-|-|  
 |Nom|type|Description|  
 |USER_TABLE$ Aud|table|Tableau dans lequel sont enregistrés les lignes supprimées et remplacées.|  
-|USER_TABLE$AudID|table|Tableau dans lequel les lignes nouvelles et modifiées sont enregistrés.|  
+|USER_TABLE$ AudID|table|Tableau dans lequel les lignes nouvelles et modifiées sont enregistrés.|  
 |USER_TABLE|vue|Représentation sous forme simplifiée de modifications de la table.|  
 |USER_TABLE$ nouveau|vue|Simplifiée de la représentation sous forme de lignes insérées et remplacés.|  
-|USER_TABLE$new_id|vue|Identification des lignes insérées et modifiées.|  
+|USER_TABLE$ new_id|vue|Identification des lignes insérées et modifiées.|  
 |USER_TABLE$ ancien|vue|Simplifiée de la représentation sous forme de lignes supprimés et remplacés.|  
   
 ### <a name="test-object-calls"></a>Appels d’objet de test  

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 43989355-cebf-4d8b-ba3d-fa8546e70230
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: a85eb72b3c239b8be0141c445e5d4507efb438cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 4fc68e8b8d3fc009b766f0fb0be97f1124797764
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192344"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259649"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>Paramètres globaux (boîtes de dialogue) (OracleToSQL)
 Utilisez la page de boîtes de dialogue de la **paramètres globaux** boîte de dialogue pour spécifier l’action de l’utilisateur par défaut et les paramètres d’avertissement pour SSMA.  

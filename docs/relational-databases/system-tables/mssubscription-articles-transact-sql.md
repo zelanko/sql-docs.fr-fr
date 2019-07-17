@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 36d6c5db3f675c570237a436557bbe6827af09e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8518c787f876152787ee30a20b9f25f936b9fa86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139775"
 ---
 # <a name="mssubscriptionarticles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Le **MSsubscription_articles** table contient des informations sur les articles d’un abonnement en file d’attente. La table est remplie seulement pour les types de réplications Mise à jour en attente et Mise à jour immédiate avec la mise à jour en file d'attente comme mode de basculement.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**agent_id**|**Int**|ID de l'Agent qui fournit des services à cet article.|  
+|**agent_id**|**int**|ID de l'Agent qui fournit des services à cet article.|  
 |**artid**|**Int**|L’ID d’article de la **sysarticles** table.|  
 |**article**|**sysname**|Le nom de l’article à partir de la **sysarticles** table.|  
 |**dest_table**|**sysname**|Le nom de la table de destination à partir de la **sysarticles** table.|  

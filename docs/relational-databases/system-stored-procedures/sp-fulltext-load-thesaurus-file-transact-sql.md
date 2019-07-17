@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c0857066ba5f8f57a5a6d088a4f37d69315225ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a71c4d61ec920b51146cc3d3111adefc09f23b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124230"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
@@ -45,7 +44,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  Entier de mappage de l’identificateur de paramètres régionaux (LCID) de la langue pour laquelle vous souhaitez lade la définition XML du dictionnaire des synonymes. Pour obtenir les LCID des langues qui sont disponibles sur une instance de serveur, utilisez le [sys.fulltext_languages &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) vue de catalogue.  
   
- **@loadOnlyIfNotLoaded** = *action*  
+ **@loadOnlyIfNotLoaded**  = *action*  
  Spécifie si le fichier de dictionnaire des synonymes doit être chargé dans les tables internes du dictionnaire des synonymes même s'il a déjà été chargé. *action* est une des :  
   
 |Value|Définition|  
@@ -54,10 +53,10 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 |1|Charge le fichier de dictionnaire des synonymes uniquement s'il n'est pas encore chargé.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Les fichiers d'un dictionnaire des synonymes sont chargés automatiquement par les requêtes de texte intégral qui l'utilisent. Pour éviter cet impact sur les performances de la première fois sur les requêtes de recherche en texte intégral, nous vous recommandons d’exécuter **sp_fulltext_load_thesaurus_file**.  
@@ -71,7 +70,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>A. Chargement d'un fichier de dictionnaire des synonymes même s'il a déjà été chargé  
+### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>R. Chargement d'un fichier de dictionnaire des synonymes même s'il a déjà été chargé  
  L'exemple suivant analyse et charge le fichier de dictionnaire des synonymes anglais.  
   
 ```sql

@@ -19,42 +19,41 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85ba57ba9e3559a790ae983025356510987c1eae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133131"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Contient des informations supplémentaires sur le type d’audit de fichier dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d’audit sur une instance de serveur. Pour plus d’informations, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|audit_id|**Int**|ID de l'audit.|  
-|NAME|**sysname**|Nom de l’audit.|  
+|audit_id|**int**|ID de l'audit.|  
+|name|**sysname**|Nom de l’audit.|  
 |audit_guid|**uniqueidentifier**|GUID de l'audit.|  
 |create_date|**datetime**|Date UTC de création de l'audit de fichier.|  
 |modify_date|**datatime**|Date UTC de la dernière modification de l'audit de fichier.|  
-|principal_id|**Int**|ID du propriétaire de l'audit, tel qu'enregistré sur le serveur.|  
-|Type|**char(2)**|Type d'audit :<br /><br /> 0 = Journal des événements de sécurité NT<br /><br /> 1 = Journal des événements d'applications NT<br /><br /> 2 = Fichier du système de fichiers|  
+|principal_id|**int**|ID du propriétaire de l'audit, tel qu'enregistré sur le serveur.|  
+|type|**char(2)**|Type d'audit :<br /><br /> 0 = Journal des événements de sécurité NT<br /><br /> 1 = Journal des événements d'applications NT<br /><br /> 2 = Fichier du système de fichiers|  
 |type_desc|**nvarchar(60)**|Description du type d'audit.|  
 |on_failure|**tinyint**|En cas d'échec :<br /><br /> 0 = Continuer<br /><br /> 1 = Arrêter l'instance de serveur<br /><br /> 2 = Faire échouer l'opération|  
 |on_failure_desc|**nvarchar(60)**|En cas d'échec d'écriture d'une entrée d'audit :<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  
 |is_state_enabled|**tinyint**|0 = Désactivé<br /><br /> 1 = Activé|  
-|queue_delay|**Int**|Temps d'attente maximal suggéré, en millisecondes, avant d'écrire sur le disque. Si la valeur est 0, l'audit garantit une écriture avant la poursuite de l'événement.|  
+|queue_delay|**int**|Temps d'attente maximal suggéré, en millisecondes, avant d'écrire sur le disque. Si la valeur est 0, l'audit garantit une écriture avant la poursuite de l'événement.|  
 |prédicat|**nvarchar(8000)**|Expression de prédicat qui est appliquée à l'événement.|  
 |max_file_size|**bigint**|Taille maximale de l'audit en mégaoctets :<br /><br /> 0 = Illimitée/non applicable au type d'audit sélectionné.|  
-|max_rollover_files|**Int**|Nombre maximal de fichiers à utiliser avec l'option de substitution.|  
+|max_rollover_files|**int**|Nombre maximal de fichiers à utiliser avec l'option de substitution.|  
 |max_files|**Int**|Nombre maximal de fichiers à utiliser sans l'option de substitution.|  
 |reserved_disk_space|**Int**|Quantité d'espace disque à réserver par fichier.|  
 |log_file_path|**nvarchar(260)**|Chemin d'accès à l'audit. Chemin d'accès au fichier pour l'audit de fichier, chemin d'accès du journal des applications pour l'audit de journal des applications.|  
 |log_file_name|**nvarchar(260)**|Nom de base du fichier journal fourni dans CREATE AUDIT DDL. Un nombre incrémentiel est ajouté au fichier base_log_name en tant que suffixe pour la création du nom de fichier journal.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les principaux avec le **ALTER ANY SERVER AUDIT** ou **VIEW ANY DEFINITION** autorisation ont accès à cette vue de catalogue. En outre, le principal ne doit pas être refusé **VIEW ANY DEFINITION** autorisation.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

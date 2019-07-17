@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caf8f68221c1ac14649bf10be0105e1e691c7482
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129958"
 ---
 # <a name="elements-used-in-sql-statements"></a>Éléments utilisés dans les instructions SQL
 Les éléments suivants sont utilisés dans les instructions SQL répertoriées précédemment.  
@@ -36,9 +35,9 @@ Les éléments suivants sont utilisés dans les instructions SQL répertoriées 
   
  *valeur booléenne-terme* :: = *facteur booléen* [AND *terme de valeur booléenne*]  
   
- *character-string-literal* ::= ''{*character*}...'' (*caractère* est n’importe quel caractère dans le jeu de caractères de la source de données/pilote. Pour inclure un caractère de guillemet littéral (") dans un littéral de chaîne de caractères, utilisez deux caractères de guillemet littéral ['' '].)  
+ *littéral de chaîne de caractères* :: = '' {*caractère*}... » (*caractère* est n’importe quel caractère dans le jeu de caractères de la source de données/pilote. Pour inclure un caractère de guillemet littéral (") dans un littéral de chaîne de caractères, utilisez deux caractères de guillemet littéral ['' '].)  
   
- *column-identifier* ::= *user-defined-name*  
+ *identificateur de colonne* :: = *nom défini par l’utilisateur*  
   
  *nom de la colonne* :: = [*nom de la table*.] *identificateur de colonne*  
   
@@ -58,17 +57,17 @@ Les éléments suivants sont utilisés dans les instructions SQL répertoriées 
   
  *insert-value* ::=  
   
- *dynamic-parameter*  
+ *paramètre dynamique*  
   
  &#124; *literal*  
   
  &#124; NULL  
   
- &AMP;#124;UTILISATEUR  
+ &#124;UTILISATEUR  
   
- *letter* ::= *lower-case-letter &#124; upper-case-letter*  
+ *lettre* :: = *minuscule scénarios lettres &#124; -supérieur-lettre*  
   
- *literal* ::= *character-string-literal*  
+ *littéral* :: = *littéral de chaîne de caractères*  
   
  *lettre de scénarios minuscule* :: = un &#124; b &#124; c &#124; d &#124; e &#124; f &#124; g &#124; h &#124; je &#124; j &#124; k &#124; l &#124; m &#124; n &#124; o &#124; p &#124; q &#124; r &#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y &#124; z  
   
@@ -86,7 +85,7 @@ Les éléments suivants sont utilisés dans les instructions SQL répertoriées 
   
  *liste de sélection* :: = \* &#124; *sélectionnez-sous-liste* [, *sélectionnez-sous-liste*]...  (*liste de sélection* ne peut pas contenir de paramètres.)  
   
- *select-sublist* ::= *expression*  
+ *Sélectionnez-sous-liste* :: = *expression*  
   
  *spécification de tri* :: = {*entier non signé &#124; nom-colonne*} [*ASC &#124; DESC*]  
   
@@ -98,9 +97,9 @@ Les éléments suivants sont utilisés dans les instructions SQL répertoriées 
   
  *liste de références de table* :: = *référence de table* [,*référence de table*]...  
   
- *term* ::= *factor* &#124; *term* {\*&#124; */* } *factor*  
+ *terme* :: = *facteur* &#124; *terme* {\*&#124; */* } *facteur*  
   
- *unsigned-integer* ::= {*digit*}  
+ *entier non signé* :: = {*chiffre*}  
   
  *lettre de cas supérieur* :: = *A &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G &#124; H &#124; je &#124; J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; P &#124;Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
   

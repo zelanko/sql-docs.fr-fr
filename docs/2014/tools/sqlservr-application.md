@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591863"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211015"
 ---
 # <a name="sqlservr-application"></a>Application sqlservr
   l’application **sqlservr** démarre, arrête, suspend et poursuit une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à partir d’une invite de commandes.  
@@ -61,7 +61,7 @@ ms.locfileid: "53591863"
  Démarre une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec une configuration minimale. Cette option est utile lorsqu'une valeur de configuration définie (espace mémoire insuffisant, par exemple) a empêché le serveur de démarrer.  
   
  **-e** _chemin_du_journal_des_erreurs_  
- Indique le chemin d'accès complet au fichier journal des erreurs. Si cette option n’est pas spécifiée, l’emplacement par défaut est *\<lecteur>*:\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog pour l’instance par défaut et *\<lecteur>* \Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog pour une instance nommée. Il n’existe aucun espace entre **-e** et *chemin_du_journal_des_erreurs*.  
+ Indique le chemin d'accès complet au fichier journal des erreurs. Si cette option n’est pas spécifiée, l’emplacement par défaut est *\<lecteur>* :\Program Files\Microsoft SQL Server\MSSQL\Log\Errorlog pour l’instance par défaut et *\<lecteur>* \Program Files\Microsoft SQL Server\MSSQL$*instance_name*\Log\Errorlog pour une instance nommée. Il n’existe aucun espace entre **-e** et *chemin_du_journal_des_erreurs*.  
   
  **-l** _chemin_du_journal_master_  
  Indique le chemin complet du fichier journal des transactions de la base de données **master** . Il n’existe aucun espace entre **-l** et *chemin_du_journal_master*.  
@@ -73,10 +73,10 @@ ms.locfileid: "53591863"
  Permet de démarrer une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Si le paramètre **-s** n’est pas spécifié, l’instance par défaut tente de démarrer. Vous devez accéder au répertoire BINN de l’instance, dans l’invite de commandes, avant de démarrer **sqlservr.exe**. Par exemple, si Instance1 doit utiliser \mssql$Instance1 pour ses fichiers binaires, l’utilisateur doit être dans le répertoire \mssql$Instance1\binn pour démarrer **sqlservr.exe -s instance1**. Si vous démarrez une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec l’option **-n** , il est également recommandé d’utiliser l’option **-e** , sinon les événements [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne sont pas consignés.  
   
  **-T** _trace#_  
- Indique qu’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit être démarrée avec un indicateur de trace spécifique (*trace#*) en vigueur. Les indicateurs de trace permettent de démarrer le serveur avec un comportement non standard. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
+ Indique qu’une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit être démarrée avec un indicateur de trace spécifique (*trace#* ) en vigueur. Les indicateurs de trace permettent de démarrer le serveur avec un comportement non standard. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
->  Lorsque vous spécifiez un indicateur de trace, utilisez **-T** pour transmettre le numéro d’indicateur de trace. **accepte un t minuscule (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), mais **-t** définit d’autres indicateurs de trace internes requis par les ingénieurs du support technique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  Lorsque vous spécifiez un indicateur de trace, utilisez **-T** pour transmettre le numéro d’indicateur de trace. **accepte un t minuscule (** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), mais **-t** définit d’autres indicateurs de trace internes requis par les ingénieurs du support technique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-v**  
  Affiche le numéro de version du serveur.  
@@ -91,9 +91,9 @@ ms.locfileid: "53591863"
   
  Utilisez la valeur par défaut du paramètre **-g** , sauf si l’un des avertissements suivants figure dans le journal des erreurs de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
--   « Échec de l'allocation d'octets pour la réserve virtuelle : FAIL_VIRTUAL_RESERVE \<taille > »  
+-   « Échec virtuel alloue octets : FAIL_VIRTUAL_RESERVE \<taille> »  
   
--   « Échec de l'allocation d'octets pour la réserve virtuelle : FAIL_VIRTUAL_COMMIT \<taille > »  
+-   « Échec virtuel alloue octets : FAIL_VIRTUAL_COMMIT \<taille> »  
   
  Ces messages peuvent indiquer que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tente de libérer des parties du pool de la mémoire de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] afin de trouver de l'espace pour des éléments tels que les fichiers .dll de procédure stockée étendue ou des objets Automation. Dans ce cas, envisagez d’augmenter la quantité de mémoire réservée par le commutateur **-g**``.  
   

@@ -20,16 +20,16 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351794"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195773"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Utilisation du fournisseur WMI pour la gestion de la configuration
   Tenez compte des éléments suivants avant de programmer le fournisseur WMI pour la gestion de la configuration :  
   
-## <a name="binding"></a>Binding  
+## <a name="binding"></a>Liaison  
  Le fournisseur WMI pour la gestion de la configuration est un modèle objet COM qui prend en charge les liaisons anticipées et tardives. Avec la liaison tardive, vous pouvez utiliser des langages de script, tels que VBScript, pour manipuler par programme les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les paramètres réseau et les alias.  
   
  Pour plus d’informations sur la programmation des implémentations du fournisseur WMI à l’aide de langages de script, consultez le [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [site Web](https://go.microsoft.com/fwlink/?linkid=15426).  

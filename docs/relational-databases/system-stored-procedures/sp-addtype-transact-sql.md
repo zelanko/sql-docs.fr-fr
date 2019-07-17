@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ead23c8feb428772fcde5bcdb59f19e1a23b6cd9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4e52fb6700d0af133a687c8b93e28cd12f72221c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117935"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_addtype [ @typename = ] type,
 |-|-|-|  
 |**bigint**|**binary(n)**|**bit**|  
 |**char(n)**|**datetime**|**decimal**|  
-|**float**|**image**|**Int**|  
+|**float**|**image**|**int**|  
 |**money**|**nchar(n)**|**ntext**|  
 |**numeric**|**nvarchar(n)**|**real**|  
 |**smalldatetime**|**smallint**|**smallmoney**|  
@@ -71,7 +70,7 @@ sp_addtype [ @typename = ] type,
  *s*  
  Entier non négatif qui indique le nombre maximal de décimales qui peuvent figurer à droite d'une virgule décimale ; il doit être inférieur ou égal à la précision. Pour plus d’informations, consultez [decimal et numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
-`[ @nulltype = ] 'null_type'` Indique la manière dont le type de données alias gère les valeurs null. *type_null* est **varchar (** 8 **)**, avec NULL comme valeur par défaut et doit être placé entre guillemets simples ('NULL', 'NOT NULL' ou 'NONULL'). Si *type_null* n’est pas défini explicitement par **sp_addtype**, il est défini sur la possibilité de valeur par défaut actuelle. Utilisez la fonction système GETANSINULL pour déterminer la possibilité de valeurs NULL actuellement définie. Il est possible d'ajuster cette valeur au moyen de l'instruction SET ou ALTER DATABASE. La possibilité de valeurs NULL doit être définie explicitement. Si **@phystype** est **bits**, et **@nulltype** n’est pas spécifié, la valeur par défaut n’est pas NULL.  
+`[ @nulltype = ] 'null_type'` Indique la manière dont le type de données alias gère les valeurs null. *type_null* est **varchar (** 8 **)** , avec NULL comme valeur par défaut et doit être placé entre guillemets simples ('NULL', 'NOT NULL' ou 'NONULL'). Si *type_null* n’est pas défini explicitement par **sp_addtype**, il est défini sur la possibilité de valeur par défaut actuelle. Utilisez la fonction système GETANSINULL pour déterminer la possibilité de valeurs NULL actuellement définie. Il est possible d'ajuster cette valeur au moyen de l'instruction SET ou ALTER DATABASE. La possibilité de valeurs NULL doit être définie explicitement. Si **@phystype** est **bits**, et **@nulltype** n’est pas spécifié, la valeur par défaut n’est pas NULL.  
   
 > [!NOTE]  
 >  Le *type_null* paramètre définit uniquement la possibilité de valeur NULL par défaut pour ce type de données. Si la possibilité d'utiliser des valeurs NULL est explicitement définie quand le type de données alias est utilisé lors de la création de la table, elle est prioritaire sur la possibilité de valeurs NULL actuellement définie. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) et [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -80,7 +79,7 @@ sp_addtype [ @typename = ] type,
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Un nom de type de données alias doit être unique dans la base de données. Cependant, plusieurs types de données alias portant des noms différents peuvent avoir la même définition.  
@@ -92,14 +91,14 @@ sp_addtype [ @typename = ] type,
 > [!IMPORTANT]  
 >  À des fins de compatibilité descendante, le **public** rôle de base de données est accordé automatiquement l’autorisation REFERENCES sur les types de données alias qui sont créés à l’aide de **sp_addtype**. Notez quand les types de données alias sont créés à l’aide de l’instruction CREATE TYPE au lieu de **sp_addtype**, aucun octroi automatique se produit.  
   
- Types de données alias ne peut pas être définies à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **table**, **xml**, **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** des types de données.  
+ Types de données alias ne peut pas être définies à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **table**, **xml**, **varchar (max)** , **nvarchar (max)** ou **varbinary (max)** des types de données.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **db_owner** ou **db_ddladmin** rôle de base de données fixe.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>A. Création d'un type de données alias qui n'accepte pas les valeurs NULL  
+### <a name="a-creating-an-alias-data-type-that-does-not-allow-for-null-values"></a>R. Création d'un type de données alias qui n'accepte pas les valeurs NULL  
  L’exemple suivant crée un type de données d’alias nommé `ssn` (numéro de sécurité sociale) basé sur le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-fourni **varchar** type de données. Le type de données `ssn` est utilisé pour les colonnes comportant des numéros de sécurité sociale à 11 chiffres (999-99-9999). Cette colonne ne peut pas avoir la valeur NULL.  
   
  Notez que `varchar(11)` est spécifié entre guillemets car il contient des signes de ponctuation (parenthèses).  
@@ -111,7 +110,7 @@ EXEC sp_addtype ssn, 'varchar(11)', 'NOT NULL';
 GO  
 ```  
   
-### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>b. Création d'un type de données alias qui autorise les valeurs NULL  
+### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>B. Création d'un type de données alias qui autorise les valeurs NULL  
  L'exemple suivant crée un type de données alias (basé sur `datetime`) appelé `birthday`, qui autorise les valeurs NULL.  
   
 ```  

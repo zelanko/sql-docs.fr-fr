@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a30016240c6cfd34cd2e21d6987ea04a0bc27537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124399"
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,11 +67,11 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  Est le nom du qualificateur de table (contenant une clé étrangère). *FKTABLE_QUALIFIER* est **sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le qualificateur représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |PKTABLE_QUALIFIER|**sysname**|Nom du qualificateur de la table (où figure la clé primaire). Ce champ peut contenir la valeur NULL.|  
 |PKTABLE_OWNER|**sysname**|Nom du propriétaire de la table (où figure la clé primaire). Ce champ retourne toujours une valeur.|  
@@ -83,8 +82,8 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 |FKTABLE_NAME|**sysname**|Nom de la table (contenant une clé étrangère). Ce champ retourne toujours une valeur.|  
 |FKCOLUMN_NAME|**sysname**|Nom de la colonne clé étrangère, pour chaque colonne de la table TABLE_NAME retournée. Ce champ retourne toujours une valeur.|  
 |KEY_SEQ|**smallint**|Numéro de séquence de la colonne dans une clé primaire multicolonne. Ce champ retourne toujours une valeur.|  
-|UPDATE_RULE|**smallint**|Action appliquée à la clé étrangère lorsque l'opération SQL est une mise à jour.  Valeurs possibles :<br /> 0=Modifications de type CASCADE apportées à la clé étrangère.<br /> 1=Modifications de type NO ACTION en présence de clé étrangère.<br />   2 = null du jeu <br /> 3 = définir par défaut |  
-|DELETE_RULE|**smallint**|Action appliquée à la clé étrangère lorsque l'opération SQL est une suppression. Valeurs possibles :<br /> 0=Modifications de type CASCADE apportées à la clé étrangère.<br /> 1=Modifications de type NO ACTION en présence de clé étrangère.<br />   2 = null du jeu <br /> 3 = définir par défaut |  
+|UPDATE_RULE|**smallint**|Action appliquée à la clé étrangère lorsque l'opération SQL est une mise à jour.  Valeurs possibles :<br /> 0=Modifications de type CASCADE apportées à la clé étrangère.<br /> 1=Modifications de type NO ACTION en présence de clé étrangère.<br />   2 = null du jeu <br /> 3 = définir par défaut |  
+|DELETE_RULE|**smallint**|Action appliquée à la clé étrangère lorsque l'opération SQL est une suppression. Valeurs possibles :<br /> 0=Modifications de type CASCADE apportées à la clé étrangère.<br /> 1=Modifications de type NO ACTION en présence de clé étrangère.<br />   2 = null du jeu <br /> 3 = définir par défaut |  
 |FK_NAME|**sysname**|Identificateur de clé étrangère. NULL si non applicable à la source de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le nom de la contrainte FOREIGN KEY.|  
 |PK_NAME|**sysname**|Identificateur de clé primaire. NULL si non applicable à la source de données. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne le nom de la contrainte PRIMARY KEY.|  
   
@@ -101,7 +100,7 @@ Si le nom de la table de clé primaire est spécifié et que le nom de la table 
   
 La procédure stockée sp_fkeys est équivalente à SQLForeignKeys dans ODBC.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert `SELECT` autorisation sur le schéma.  
   
 ## <a name="examples"></a>Exemples  

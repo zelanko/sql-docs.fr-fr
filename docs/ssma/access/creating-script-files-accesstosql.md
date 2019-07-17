@@ -10,19 +10,19 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5258a95b713da0ec1fe526e94ce11c6e5e0b595c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138771"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259835"
 ---
 # <a name="creating-script-files-accesstosql"></a>Création de fichiers de script (AccessToSQL)
 La première étape avant le lancement de l’application de console SSMA consiste à créer le fichier de script et, si nécessaire de créer le fichier de la valeur de la variable et le fichier de connexion de serveur.  
   
 Le fichier de script peut être divisé en trois sections, reportages.., :  
   
-1.  **config:** Permet à l’utilisateur définir les paramètres de configuration pour l’application de console.  
+1.  **configuration :** Permet à l’utilisateur définir les paramètres de configuration pour l’application de console.  
   
 2.  **serveurs :** Permet à l’utilisateur définir des définitions de serveur de la source/cible. Cela peut également être dans un fichier de connexion de serveur distinct.  
   
@@ -45,7 +45,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   supprimer-messages : Supprime les messages sur la console. Cela est « false » par défaut.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -86,9 +86,9 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     - source-utilisation-last-used = « true » (valeur par défaut) ou serveur de source = « source_servername »  
   
-    - target-use-last-used="true" (default) or target-server="target_servername"  
+    - cible-utilisation-last-used = « true » (valeur par défaut) ou serveur de la cible = « target_servername »  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -123,7 +123,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Le mode par défaut est **erreur**.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -148,13 +148,13 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     Les modes de reconnexion sont :  
   
-    -   reconnect-to-last-used-server: Si la connexion n’est pas active, il tente de se reconnecter au dernier serveur utilisé au maximum 5 fois.  
+    -   se reconnecter-last-utilisé-serveur : Si la connexion n’est pas active, il tente de se reconnecter au dernier serveur utilisé au maximum 5 fois.  
   
     -   générer une-erreur : Si la connexion n’est pas active, une erreur est générée.  
   
     Le mode par défaut est **générer une erreur**.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -202,7 +202,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   utilisateur poser : Invite l’utilisateur pour l’entrée (« Oui » / « non »)  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -223,7 +223,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
 6.  **Fournisseur de configuration requise a échoué :** Cela permet à l’utilisateur gérer les éléments nécessaires au traitement d’une commande. Par défaut, le mode strict est 'false'. Si elle est définie sur « true », une exception est généré pour l’échec de la configuration requise.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -251,7 +251,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     -   chaque - 20 %  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -297,7 +297,7 @@ Les options configurables par l’utilisateur sont les suivantes :
     > [!NOTE]  
     > Messages obligatoires sont enregistrés à n’importe quel niveau.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -324,7 +324,7 @@ Les options configurables par l’utilisateur sont les suivantes :
   
     2.  Si remplacer l’option est **true**, l’ordre de recherche sera fichier Script -&gt;fichier de connexion de serveur -&gt;inviter l’utilisateur.  
   
-    **Exemple :**  
+    **Exemple :**  
   
     ```xml  
     <output-providers>  
@@ -348,7 +348,7 @@ Par exemple, une migration de données standard d’une table spécifique dans u
   
 Lorsque toutes les commandes dans le fichier de script sont exécutées avec succès, l’application de console SSMA se termine et retourne le contrôle à l’utilisateur. Le contenu d’un fichier de script est plus ou moins statique avec des informations sur les variables contenues dans un [les fichiers de valeurs de Variable](creating-variable-value-files-accesstosql.md) ou, dans une section distincte du fichier de script pour les valeurs des variables.  
   
-**Exemple :**  
+**Exemple :**  
   
 ```xml  
 <!--Sample of script file commands -->  

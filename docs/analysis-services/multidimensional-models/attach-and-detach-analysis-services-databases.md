@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2419b057f6bc3fbe85c937911dd76bc8b9729b95
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144854"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180265"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Attacher et détacher des bases de données Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50144854"
   
 |Détachement d'une base de données en lecture/écriture|Détachement d'une base de données en lecture seule|  
 |--------------------------------------|-------------------------------------|  
-|1) Le serveur émet une demande de verrou CommitExclusive sur la base de données.<br /><br /> 2) Le serveur attend que toutes les transactions en cours soient validées ou annulées.<br /><br /> 3) Le serveur génère toutes les métadonnées dont il a besoin pour détacher la base de données.<br /><br /> 4) La base de données est marquée comme supprimée.<br /><br /> 5) Le serveur valide la transaction.|1) La base de données est marquée comme supprimée.<br /><br /> 2) Le serveur valide la transaction.<br /><br /> Remarque : le mot de passe qui sert à détacher la base de données ne peut pas être modifié pour une base de données en lecture seule. Une erreur est déclenchée si un paramètre de mot de passe est fourni pour une base de données attachée contenant déjà un mot de passe.|  
+|1) Le serveur émet une demande de verrou CommitExclusive sur la base de données.<br /><br /> 2) Le serveur attend que toutes les transactions en cours soient validées ou annulées.<br /><br /> 3) Le serveur génère toutes les métadonnées dont il a besoin pour détacher la base de données.<br /><br /> 4) La base de données est marquée comme supprimée.<br /><br /> 5) Le serveur valide la transaction.|1) La base de données est marquée comme supprimée.<br /><br /> 2) Le serveur valide la transaction.<br /><br /> Remarque : Impossible de modifier le mot de passe sert à détacher une base de données en lecture seule. Une erreur est déclenchée si un paramètre de mot de passe est fourni pour une base de données attachée contenant déjà un mot de passe.|  
   
  Les commandes **Attach** et **Detach** doivent être exécutées comme de simples opérations. Elles ne peuvent pas être combinées à d'autres opérations de la même transaction. De même, les commandes **Attach** et **Detach** sont des commandes transactionnelles atomiques. Cela signifie que soit l'opération réussit, soit elle échoue. Aucune base de données ne demeurera dans un état inachevé.  
   

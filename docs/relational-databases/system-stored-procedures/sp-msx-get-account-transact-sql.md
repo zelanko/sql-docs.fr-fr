@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 297dbbf13da14916d12fc1ef457279a1268bc991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dab15a076200e464e82d0b01ef6a156447a537f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108046"
 ---
 # <a name="spmsxgetaccount-transact-sql"></a>sp_msx_get_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_msx_get_account
 ## <a name="result-sets"></a>Jeux de résultats  
  Retourne le jeu de résultats suivant :  
   
-|Nom de la colonne|Type|Description|  
+|Nom de la colonne|type|Description|  
 |-----------------|----------|-----------------|  
 |msx_connection|**Int**|Numéro de connexion du serveur maître.|  
 |msx_credential_id|**Int**|Identificateur des informations d'identification utilisées pour cette connexion au serveur maître.|  
@@ -55,7 +54,7 @@ sp_msx_get_account
 ## <a name="remarks"></a>Notes  
  Retourne un jeu de résultats vide si aucune information d'identification n'est spécifiée pour ce serveur cible. Pour définir les informations d'identification, utilisez sp_msx_set_account.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe sysadmin.  
   
 ## <a name="examples"></a>Exemples  

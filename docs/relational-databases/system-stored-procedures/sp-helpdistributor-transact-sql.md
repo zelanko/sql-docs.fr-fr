@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c86f2b8ba6b9cc7223fa9fa16794ee69aa9cf46e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 42c350876037c83505860c65b26f4302d75b6eed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122555"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @distributor = ] 'distributor' OUTPUT` Est le nom du serveur de distribution. Serveur de distribution est **sysname**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @distributor = ] 'distributor' OUTPUT` Est le nom du serveur de distribution. Serveur de distribution est **sysname**, avec une valeur par défaut **%** , qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT` Est le nom de la base de données de distribution. *base_de_données_de_distribution* est **sysname**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @distribdb = ] 'distribdb' OUTPUT` Est le nom de la base de données de distribution. *base_de_données_de_distribution* est **sysname**, avec une valeur par défaut **%** , qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @directory = ] 'directory' OUTPUT` Est le répertoire de travail. *répertoire* est **nvarchar (255)**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @directory = ] 'directory' OUTPUT` Est le répertoire de travail. *répertoire* est **nvarchar (255)** , avec une valeur par défaut **%** , qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @account = ] 'account' OUTPUT` Est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] compte d’utilisateur Windows. *compte*est **nvarchar (255)**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @account = ] 'account' OUTPUT` Est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] compte d’utilisateur Windows. *compte*est **nvarchar (255)** , avec une valeur par défaut **%** , qui est la seule valeur qui retourne un jeu de résultats.  
   
 `[ @min_distretention = ] _min_distretentionOUTPUT` Est la période de rétention de distribution minimale, en heures. *rétention_de_distribution_minimale* est **int**, avec une valeur par défaut **-1**.  
   
@@ -64,29 +63,29 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 `[ @history_retention = ] _history_retentionOUTPUT` Est la période de rétention de l’historique, en heures. *history_retention* est **int**, avec une valeur par défaut **-1**.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` Est le nom de l’agent de nettoyage d’historique. *history_cleanupagent* est **nvarchar (100)**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` Est le nom de l’agent de nettoyage d’historique. *history_cleanupagent* est **nvarchar (100)** , avec une valeur par défaut **%** , qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` Est le nom de l’agent de nettoyage de distribution. *agent_de_nettoyage_de_distribution* est **nvarchar (100)**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` Est le nom de l’agent de nettoyage de distribution. *agent_de_nettoyage_de_distribution* est **nvarchar (100)** , avec une valeur par défaut **%** , qui est la seule valeur qui retourne un jeu de résultats.  
   
 `[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
-`[ @local = ] 'local'` Est si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit obtenir les valeurs de serveur local. *local* est **nvarchar (5)**, avec NULL comme valeur par défaut.  
+`[ @local = ] 'local'` Est si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit obtenir les valeurs de serveur local. *local* est **nvarchar (5)** , avec NULL comme valeur par défaut.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` Est le nom du serveur qui émet des appels de procédure distante. *nom_rpcsrv* est **sysname**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` Est le nom du serveur qui émet des appels de procédure distante. *nom_rpcsrv* est **sysname**, avec une valeur par défaut **%** , qui est la seule valeur qui retourne un jeu de résultats.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT` Est le type de serveur de publication du serveur de publication. *publisher_type* est **sysname**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` Est le type de serveur de publication du serveur de publication. *publisher_type* est **sysname**, avec une valeur par défaut **%** , qui est la seule valeur qui retourne un jeu de résultats.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**distributor**|**sysname**|Nom du serveur de distribution.|  
 |**base de données de distribution**|**sysname**|Nom de la base de données de distribution.|  
 |**directory**|**nvarchar(255)**|Nom du répertoire de travail.|  
 |**account**|**nvarchar(255)**|Nom du compte d'utilisateur Windows.|  
-|**rétention de distrib min**|**Int**|Période de rétention de distribution minimale.|  
-|**rétention de distrib max**|**Int**|Période maximale de rétention de distribution.|  
-|**rétention de l’historique**|**Int**|Période de rétention de l'historique.|  
+|**rétention de distrib min**|**int**|Période de rétention de distribution minimale.|  
+|**rétention de distrib max**|**int**|Période maximale de rétention de distribution.|  
+|**rétention de l’historique**|**int**|Période de rétention de l'historique.|  
 |**agent de nettoyage d’historique**|**nvarchar(100)**|Nom de l'Agent de nettoyage de l'historique|  
 |**agent de nettoyage de distribution**|**nvarchar(100)**|Nom de l'Agent de nettoyage de distribution.|  
 |**nom du serveur RPC**|**sysname**|Nom du serveur de distribution local ou distant.|  

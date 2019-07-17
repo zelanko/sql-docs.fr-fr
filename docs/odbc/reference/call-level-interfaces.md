@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99ec2d9a1995502a4bfd96dad02157ccc6574f6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6c37084ad91a931c4479ecf826c5cb554765412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135672"
 ---
 # <a name="call-level-interfaces"></a>Interfaces de niveau d’appel
 La dernière technique pour l’envoi d’instructions SQL au SGBD est via une interface de niveau d’appel (CLI). Une interface de niveau d’appel fournit une bibliothèque de fonctions de SGBD qui peut être appelée par le programme d’application. Par conséquent, au lieu de tenter de fusion SQL avec un autre langage de programmation, une interface de niveau d’appel est similaire aux bibliothèques routines la plupart des programmeurs sont habitués à utiliser, telles que la chaîne, d’e/s ou des bibliothèques de mathématiques dans C. Notez ce SGBD qui prennent en charge embedded SQL vous disposez déjà d’une interface de niveau d’appel, les appels à laquelle sont générés par le précompilateur. Toutefois, ces appels sont non documentées et l’objet de modifications sans préavis.  

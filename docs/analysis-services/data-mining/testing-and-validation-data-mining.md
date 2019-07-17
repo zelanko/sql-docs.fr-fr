@@ -1,5 +1,5 @@
 ---
-title: Test et Validation (exploration de données) | Documents Microsoft
+title: Test et Validation (exploration de données) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e4ce983ed5d5a645f32466ab38d5c67ff1c68897
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018406"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182305"
 ---
 # <a name="testing-and-validation-data-mining"></a>Test et validation (exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34018406"
  *L’utilité* inclut diverses mesures indiquant si le modèle fournit des informations utiles. Par exemple, un modèle d'exploration de données qui met en corrélation l'emplacement du magasin et les ventes peut être précis et fiable, mais ne pas être utile, parce que vous ne pouvez pas généraliser ce résultat en ajoutant d'autres magasins au même emplacement. De plus, il ne répond pas à la question fondamentale de savoir pourquoi certains emplacements enregistrent plus de ventes. Vous pouvez également découvrir qu'un modèle semblant satisfaisant est en fait inutile, car il est basé sur des corrélations mutuelles des données.  
   
 ## <a name="tools-for-testing-and-validation-of-mining-models"></a>Outils de test et de validation des modèles d'exploration de données  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] propose plusieurs approches de validation des solutions d'exploration de données qui prennent en charge toutes les phases de la méthodologie de test de l'exploration de données.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] propose plusieurs approches de validation des solutions d’exploration de données qui prennent en charge toutes les phases de la méthodologie de test de l’exploration de données.  
   
 -   Partitionnement des données en jeux d'apprentissage et de test.  
   
@@ -67,14 +67,14 @@ ms.locfileid: "34018406"
   
 |Rubriques|Liens|  
 |------------|-----------|  
-|Découvrez comment configurer un jeu de données de test à l'aide d'un Assistant ou de commandes DMX|[Apprentissage et jeux de données de test](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
-|Apprenez à tester la distribution et la représentativité des données dans une structure d'exploration de données|[La Validation croisée & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
-|En savoir plus sur les types de graphique d’analyse de précision fournies.|[Graphique de courbes d’élévation & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
-|Apprenez à créer une matrice de classification, parfois appelée matrice de confusion, pour évaluer le nombre d'éléments positifs et négatifs vrais ou faux.|[Matrice de classification & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
+|Découvrez comment configurer un jeu de données de test à l'aide d'un Assistant ou de commandes DMX|[Jeux de données d'apprentissage et de test](../../analysis-services/data-mining/training-and-testing-data-sets.md)|  
+|Apprenez à tester la distribution et la représentativité des données dans une structure d'exploration de données|[Validation croisée &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
+|En savoir plus sur les types de graphique de précision fournis.|[Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/lift-chart-analysis-services-data-mining.md)<br /><br /> [Graphique des bénéfices &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/profit-chart-analysis-services-data-mining.md)<br /><br /> [Nuage de points &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/scatter-plot-analysis-services-data-mining.md)|  
+|Apprenez à créer une matrice de classification, parfois appelée matrice de confusion, pour évaluer le nombre d'éléments positifs et négatifs vrais ou faux.|[Matrice de classification &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/classification-matrix-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
  [Solutions d’exploration de données](../../analysis-services/data-mining/data-mining-solutions.md)   
- [Test et de tâches de Validation et de procédures & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tâches de test et validation et procédures &#40;exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
   

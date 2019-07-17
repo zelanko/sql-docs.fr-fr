@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: shamikg
+ms.openlocfilehash: ef71a9355bc11c4d377f00a44b2b8cd2958f8656
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782067"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264446"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Bien démarrer avec SSMA pour Oracle (OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour Oracle vous permet de rapidement convertir des schémas de base de données Oracle à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] schémas, charger les schémas qui en résulte dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et migrer les données d’Oracle vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -65,7 +65,7 @@ Vous pouvez utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] p
 Pour plus d’informations, consultez [le chargement des objets de base de données convertis dans SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/loading-converted-database-objects-into-sql-server-oracletosql.md).  
   
 ### <a name="metadata"></a>Métadonnées  
-À droite de chaque Explorateur de métadonnées des onglets qui décrivent l’objet sélectionné. Par exemple, si vous sélectionnez une table dans l’Explorateur de métadonnées d’Oracle, six onglets apparaissent : **Table**, **SQL**, **le mappage de Type, le rapport**, **propriétés**, et **données**. Le **rapport** onglet contient des informations uniquement après avoir créé un rapport qui contient l’objet sélectionné. Si vous sélectionnez une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées, les trois onglets s’afficheront : **Table**, **SQL**, et **données**.  
+À droite de chaque Explorateur de métadonnées des onglets qui décrivent l’objet sélectionné. Par exemple, si vous sélectionnez une table dans l’Explorateur de métadonnées d’Oracle, six onglets s’affichent : **Table**, **SQL**, **mappage, le rapport de Type**, **propriétés**, et **données**. Le **rapport** onglet contient des informations uniquement après avoir créé un rapport qui contient l’objet sélectionné. Si vous sélectionnez une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées, les trois onglets s’afficheront : **Table**, **SQL**, et **données**.  
   
 La plupart des paramètres de métadonnées sont en lecture seule. Toutefois, vous pouvez modifier les métadonnées suivantes :  
   
@@ -96,9 +96,9 @@ Le tableau suivant présente les menus SSMA.
   
 |Menu|Description|  
 |----|-----------|  
-|**Fichier**|Contient des commandes pour travailler avec des projets, la connexion à Oracle et la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Modifier**|Contient des commandes pour la recherche et de travailler avec du texte dans les pages de détails, telles que la copie [!INCLUDE[tsql](../../includes/tsql-md.md)] depuis le volet de détails SQL. Contient également le **gérer les signets** option, où vous serez en mesure de voir une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
-|**Afficher**|Contient le **synchroniser les explorateurs de métadonnées** commande. Qui synchronise les objets entre l’Explorateur de métadonnées d’Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées. Contient également des commandes pour afficher et masquer le **sortie** et **liste d’erreurs** volets et une option **dispositions** pour gérer les dispositions.|  
+|**File**|Contient des commandes pour travailler avec des projets, la connexion à Oracle et la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**Edition**|Contient des commandes pour la recherche et de travailler avec du texte dans les pages de détails, telles que la copie [!INCLUDE[tsql](../../includes/tsql-md.md)] depuis le volet de détails SQL. Contient également le **gérer les signets** option, où vous serez en mesure de voir une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
+|**Affichage**|Contient le **synchroniser les explorateurs de métadonnées** commande. Qui synchronise les objets entre l’Explorateur de métadonnées d’Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées. Contient également des commandes pour afficher et masquer le **sortie** et **liste d’erreurs** volets et une option **dispositions** pour gérer les dispositions.|  
 |**Outils**|Contient des commandes pour créer des rapports et de migrer des objets et données. Permet également d’accéder à la **paramètres globaux** et **paramètres du projet** boîtes de dialogue.|  
 |**Testeur**|Contient des commandes pour créer et utiliser des cas de test, référentiel et système de gestion des sauvegardes.|  
 |**Aide**|Fournit l’accès à l’aide de SSMA et en le **sur** boîte de dialogue.|  

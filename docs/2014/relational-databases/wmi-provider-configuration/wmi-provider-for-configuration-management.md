@@ -16,11 +16,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ac064258da9ae55039c350f50d153d0c60323621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778576"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211621"
 ---
 # <a name="wmi-provider-for-configuration-management-concepts"></a>Fournisseur WMI pour les concepts de gestion de configuration
   Le fournisseur WMI est une couche publiée utilisée avec le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le composant logiciel enfichable Gestionnaire de Configuration pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) et le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Il offre une méthode d'interface unifiée avec les appels API qui gèrent les opérations de registre requises par le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il permet également un contrôle et une manipulation avancés des services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionnés.  

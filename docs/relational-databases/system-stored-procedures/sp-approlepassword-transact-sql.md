@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a226b17a1394cdb37982367d5c4b367f72a84ffe
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 201daf29a40d0d7c7a4f49539c75fdc07bad1e31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117761"
 ---
 # <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 `[ @newpwd = ] 'password'` Est le nouveau mot de passe pour le rôle d’application. *mot de passe* est **sysname**, sans valeur par défaut. *mot de passe* ne peut pas être NULL.  
   
 > [!IMPORTANT]  
->  N'utilisez pas de mot de passe NULL, Utilisez un mot de passe fort. Pour plus d’informations, consultez [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
+>  N'utilisez pas de mot de passe NULL, Utilisez un mot de passe fort. Pour plus d’informations, consultez la page [Mots de passe forts](../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

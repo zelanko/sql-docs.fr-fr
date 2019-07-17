@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2008f066d537b1f88b9bf674c4a864217eae9890
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 41ff4c51d3dc357f253a42689565849f07235ff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685566"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162131"
 ---
 # <a name="mark-as-date-table"></a>Marquer en tant que table de dates
 
@@ -33,7 +33,7 @@ Durée estimée pour effectuer cette leçon : **Trois minutes**
   
 ## <a name="prerequisites"></a>Prérequis  
 
-Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 2 : Obtenir des données](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
+Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 2 : Obtenir des données](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>Pour renommer la colonne FullDateAlternateKey
 
@@ -53,7 +53,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
     ![as-lesson3-date-table](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
   
 
-## <a name="whats-next"></a>Quelle est l’étape suivante ?
+## <a name="whats-next"></a>Étapes suivantes
 
 [Leçon 4 : Créer des relations](../tutorial-tabular-1400/as-lesson-4-create-relationships.md).
   

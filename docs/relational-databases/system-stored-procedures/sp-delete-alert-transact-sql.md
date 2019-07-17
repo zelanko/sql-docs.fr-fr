@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a72db6e0579afb27aac281dade5f21fd1ab1b099
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 609151e71e0ee59f8a428a7c9f193124e047818c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120073"
 ---
 # <a name="spdeletealert-transact-sql"></a>sp_delete_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_delete_alert [ @name = ] 'name'
  **0** (réussite) ou **1** (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  En supprimant une alerte, vous supprimez également toute notification associée à celle-ci.  

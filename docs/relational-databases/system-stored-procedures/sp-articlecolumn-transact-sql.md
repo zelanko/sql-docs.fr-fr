@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e10d4e46e01f4da5a36d7bdf59d7566f2a989e75
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105077"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` Est le nom de la colonne à ajouter ou à supprimer. *colonne* est **sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, toutes les colonnes sont publiées.  
   
-`[ @operation = ] 'operation'` Spécifie s’il faut ajouter ou supprimer des colonnes dans un article. *opération* est **nvarchar (5)**, avec une valeur par défaut de l’ajouter. **ajouter** marque la colonne pour la réplication. **DROP** annule la désignation de la colonne.  
+`[ @operation = ] 'operation'` Spécifie s’il faut ajouter ou supprimer des colonnes dans un article. *opération* est **nvarchar (5)** , avec une valeur par défaut de l’ajouter. **ajouter** marque la colonne pour la réplication. **DROP** annule la désignation de la colonne.  
   
 `[ @refresh_synctran_procs = ] refresh_synctran_procs` Spécifie si les procédures stockées prenant en charge les abonnements avec mise à jour immédiate sont régénérées pour correspondre au nombre de colonnes répliquées. *refresh_synctran_procs* est **bits**, avec une valeur par défaut **1**. Si **1**, les procédures stockées sont régénérées.  
   
@@ -68,7 +67,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **1** Spécifie que les modifications apportées à l’article peuvent invalider l’instantané n’est pas valide et il existe des abonnements qui nécessitent un nouvel instantané, autorise l’instantané existant soit marqué comme obsolète et de générer un nouvel instantané.  
   
- [**@force_reinit_subscription =** ] *force_reinit_subscription*  
+ [ **@force_reinit_subscription =** ] *force_reinit_subscription*  
  Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications de l’article n’invalident pas l’abonnement à réinitialiser. Si la procédure stockée détecte que la modification requiert la réinitialisation des abonnements, une erreur se produit et aucune modification n'est effectuée. **1** indique que les modifications apportées à l’article entraînent la réinitialisation des abonnements existants et autorise la réinitialisation des abonnements se produise.  

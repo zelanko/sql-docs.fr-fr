@@ -17,24 +17,23 @@ helpviewer_keywords:
 ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 427eb765a5310eeded49981f497f07eea8d98e51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69bfcbb7e1eeaf6b456a2e10d1f3bfcc581c3d76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106705"
 ---
 # <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Retourne des informations sur les fuseaux horaires pris en charge. Tous les fuseaux horaires installés sur l’ordinateur sont stockés dans la ruche de Registre suivante :  
-`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones` .  
+`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom du fuseau horaire au format standard de Windows. Par exemple, **CEN. Heure d’hiver Australie** ou **Europe centrale**.|  
+|**name**|**sysname**|Nom du fuseau horaire au format standard de Windows. Par exemple, **CEN. Heure d’hiver Australie** ou **Europe centrale**.|  
 |**current_utc_offset**|**nvarchar(12)**|En cours de l’offset UTC. Par exemple, **+ 01:00** ou **-07:00**.|  
 |**is_currently_dst**|**bit**|True si actuellement en observant l’heure d’été.|  
   

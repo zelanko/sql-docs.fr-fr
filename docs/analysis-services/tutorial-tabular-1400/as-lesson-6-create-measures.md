@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 715fe6144cc430e545feb3c484d148531cff6ec9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685646"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207349"
 ---
 # <a name="create-measures"></a>Créer des mesures
 
@@ -51,7 +51,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
     Notez que la cellule en haut à gauche contient maintenant une mesure nommée **DaysCurrentQuarterToDate**, suivie du résultat, **92**. Le résultat n’est pas pertinent à ce stade, car aucun filtre de l’utilisateur n’a été appliqué.
     
-      ![as-lesson6-newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
+      ![en tant que newmeasure de lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
     Contrairement aux colonnes calculées, avec les formules de mesure, vous pouvez taper le nom de mesure, suivi par un signe deux-points, suivi par l’expression de formule.
 
@@ -89,7 +89,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
 
     |colonne|Nom de la mesure|Somme automatique (∑)|Formule|  
     |----------------|----------|-----------------|-----------|  
-    |SalesOrderLineNumber|InternetOrderLinesCount|Compter|=COUNTA([SalesOrderLineNumber])|  
+    |SalesOrderLineNumber|InternetOrderLinesCount|Count|=COUNTA([SalesOrderLineNumber])|  
     |OrderQuantity|InternetTotalUnits|Sum|=SUM([OrderQuantity])|  
     |DiscountAmount|InternetTotalDiscountAmount|Sum|=SUM([DiscountAmount])|  
     |TotalProductCost|InternetTotalProductCost|Sum|=SUM([TotalProductCost])|  
@@ -126,7 +126,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
 Les mesures créées pour la table FactInternetSales peuvent être utilisées pour analyser les données financières critiques telles que les ventes, les coûts et marge pour les éléments définis par le filtre sélectionné d’utilisateur.  
   
-## <a name="whats-next"></a>Quelle est l’étape suivante ?
+## <a name="whats-next"></a>Étapes suivantes
 
 [Leçon 7 : Créer des indicateurs de Performance clés](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md).  
 

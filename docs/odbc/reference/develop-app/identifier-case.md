@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee8a31aa-389d-4dd1-bfa9-547f6b50bc70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6445cffd5faa8b825c81ec729d7b28c90e14a7b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70728908f081ab89e08cad1265f04394f29b66ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138972"
 ---
 # <a name="identifier-case"></a>Casse des identificateurs
 Dans les instructions SQL et les arguments de fonction de catalogue, identificateurs et les identificateurs entre guillemets peuvent être respect de la casse ou non, pour laquelle une application peut déterminer en appelant **SQLGetInfo** avec le SQL_IDENTIFIER_CASE et SQL_QUOTED_ Options de IDENTIFIER_CASE.  

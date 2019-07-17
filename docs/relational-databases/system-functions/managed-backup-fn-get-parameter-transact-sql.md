@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a3fca21870bda4a5a47ba4a8d898939a5f09f6a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18a42273218bb73de55694b9b54877a4f2e0f669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140653"
 ---
 # <a name="managedbackupfngetparameter-transact-sql"></a>managed_backup.fn_get_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
   
 ##  <a name="Arguments"></a> Arguments  
  parameter_name  
- Nom du paramètre. valeur de parameter_name est **nvarchar (128)**. Si la valeur NULL ou une chaîne vide est fournie comme un argument à la fonction, les paires nom-valeur de tous les paramètres Smart Admin configurés sont retournées.  
+ Nom du paramètre. valeur de parameter_name est **nvarchar (128)** . Si la valeur NULL ou une chaîne vide est fournie comme un argument à la fonction, les paires nom-valeur de tous les paramètres Smart Admin configurés sont retournées.  
   
 ## <a name="table-returned"></a>Table retournée  
   
@@ -58,7 +57,7 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Requiert des autorisations SELECT sur la fonction.  
   
 ## <a name="examples"></a>Exemples  

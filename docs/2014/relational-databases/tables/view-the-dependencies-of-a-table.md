@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100744"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196608"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Afficher les dépendances d'une table
   Vous pouvez afficher les dépendances d’une table dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "54100744"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation VIEW DEFINITION sur la base de données et l'autorisation SELECT sur sys.sql_expression_dependencies pour la base de données. Par défaut, l'autorisation SELECT est accordée uniquement aux membres du rôle de base de données fixe db_owner. Lorsque les autorisations SELECT et VIEW DEFINITION sont accordées à un autre utilisateur, le bénéficiaire peut consulter toutes les dépendances dans la base de données.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -52,7 +52,7 @@ ms.locfileid: "54100744"
   
 2.  Cliquez avec le bouton droit sur une table, puis cliquez sur **Afficher les dépendances**.  
   
-3.  Dans la boîte de dialogue **Dépendances d’objets**_\<nom_objet>_, sélectionnez soit **Objets dépendants de** _\<nom_objet>_, soit **Objets dont**_\<nom_objet>_**dépend**.  
+3.  Dans la boîte de dialogue **Dépendances d’objets** _\<nom_objet>_ , sélectionnez soit **Objets dépendants de** _\<nom_objet>_ , soit **Objets dont** _\<nom_objet>_ **dépend**.  
   
 4.  Sélectionnez un objet dans la grille **Dépendances** . Le type de l’objet (par exemple « déclencheur » ou « procédure stockée ») apparaît dans la zone **Type** .  
   

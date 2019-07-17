@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e98485d0a1887b2ac24da20d8b8a672c0060591
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798931"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196656"
 ---
 # <a name="use-sparse-columns"></a>Utiliser des colonnes éparses
   Les colonnes éparses sont des colonnes ordinaires qui ont un stockage optimisé pour les valeurs NULL. Les colonnes éparses réduisent l'espace nécessaire pour les valeurs NULL, en échange d'une augmentation du coût d'extraction des valeurs autres que NULL. Envisagez d'utiliser des colonnes éparses lorsque l'espace économisé est d'au moins 20 à 40 pour cent. Les colonnes éparses et les jeux de colonnes sont définis à l'aide des instructions [CREATE TABLE](/sql/t-sql/statements/create-table-transact-sql) ou [ALTER TABLE](/sql/t-sql/statements/alter-table-transact-sql) .  
@@ -71,9 +71,9 @@ ms.locfileid: "52798931"
   
 |Type de données|Octets non alloués|Octets alloués|Pourcentage NULL|  
 |---------------|---------------------|------------------|---------------------|  
-|`bit`|0.125|5|98%|  
-|`tinyint`|1|5|86%|  
-|`smallint`|2|6|76%|  
+|`bit`|0.125|5\.|98%|  
+|`tinyint`|1|5\.|86%|  
+|`smallint`|2|6\.|76%|  
 |`int`|4|8|64%|  
 |`bigint`|8|12|52%|  
 |`real`|4|8|64%|  
@@ -89,13 +89,13 @@ ms.locfileid: "52798931"
   
 |Type de données|Octets non alloués|Octets alloués|Pourcentage NULL|  
 |---------------|---------------------|------------------|---------------------|  
-|`datetime2(0)`|6|10|57%|  
+|`datetime2(0)`|6\.|10|57%|  
 |`datetime2(7)`|8|12|52%|  
 |`time(0)`|3|7|69%|  
-|`time(7)`|5|9|60%|  
+|`time(7)`|5\.|9|60%|  
 |`datetimetoffset(0)`|8|12|52%|  
 |`datetimetoffset (7)`|10|14|49%|  
-|`decimal/numeric(1,s)`|5|9|60%|  
+|`decimal/numeric(1,s)`|5\.|9|60%|  
 |`decimal/numeric(38,s)`|17|21|42%|  
 |`vardecimal(p,s)`|Utilisez le type `decimal` comme évaluation pessimiste.|||  
   

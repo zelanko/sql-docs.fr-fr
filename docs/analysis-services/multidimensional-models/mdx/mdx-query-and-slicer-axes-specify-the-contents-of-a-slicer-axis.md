@@ -1,5 +1,5 @@
 ---
-title: Spécification du contenu d’un axe de secteur (MDX) | Documents Microsoft
+title: Spécification du contenu d’un axe de secteur (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9c21efd8ac93c6d105d11cc6b006d0cc3b916f81
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025806"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208737"
 ---
-# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>Requête MDX et les Axes de segment - spécifier le contenu d’un axe de secteur
+# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>Axes de requête et de segment MDX - Spécifier le contenu d’un axe de segment
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   L'axe de secteur filtre les données retournées par l'instruction SELECT MDX (Multidimensional Expressions), en restreignant les données retournées de telle sorte que seules les données communes aux membres spécifiés soient retournées. Il peut être perçu comme un axe supplémentaire invisible dans une requête. L'axe de secteur est défini dans la clause WHERE de l'instruction SELECT de MDX.  
   

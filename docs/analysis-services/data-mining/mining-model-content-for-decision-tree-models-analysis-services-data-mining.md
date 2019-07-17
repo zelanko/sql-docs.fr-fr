@@ -1,5 +1,5 @@
 ---
-title: Contenu pour les modèles d’arbre de décision du modèle d’exploration de données | Documents Microsoft
+title: Contenu pour les modèles d’arbre de décision du modèle d’exploration de données | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 493ee56380a3e4665b10cbe27ef1cd1ea764438b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019366"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182764"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34019366"
 > [!NOTE]  
 >  Si votre modèle inclut plusieurs arborescences, vous ne pouvez en consulter qu’une seule à la fois dans la **Visionneuse d'arborescences Microsoft**. Toutefois, toutes les arborescences du même modèle sont affichées en même temps dans la **Visionneuse de l'arborescence de contenu générique** .  
   
- ![structure du contenu de modèle pour arbre de décision](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "structure du contenu de modèle pour arbre de décision")  
+ ![structure du contenu du modèle pour arbre de décision](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "structure du contenu du modèle pour arbre de décision")  
   
  L'arborescence de chaque attribut prédictible contient des informations qui décrivent la manière dont les colonnes d'entrée choisies affectent le résultat de l'attribut prédictible concerné. Chaque arborescence est menée par un nœud (NODE_TYPE = 9) qui contient l'attribut prédictible, suivi d'une série de nœuds (NODE_TYPE = 10) qui représentent les attributs d'entrée. Un attribut correspond à une colonne de niveau de cas ou aux valeurs des colonnes de table imbriquée, qui représentent généralement les valeurs de la colonne **Key** de la table imbriquée.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34019366"
  L'algorithme MDT (Microsoft Decision Trees) ne permet pas d’avoir des types de données continues en tant qu’entrées ; par conséquent, si les colonnes ont un type de données numériques continues, les valeurs sont discrétisées. L'algorithme effectue sa propre discrétisation à l’endroit du fractionnement pour tous les attributs continus.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] choisit automatiquement une méthode de création de compartiments des attributs continus ; Toutefois, vous pouvez contrôler comment les valeurs continues dans les entrées en définissant le type de contenu de la colonne de structure d’exploration de données à **Discretized** , puis en définissant le <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> ou <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> propriété.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] choisit automatiquement une méthode pour placer les attributs continus dans un compartiment ; toutefois, vous pouvez déterminer comment les valeurs continues dans les entrées sont discrétisées en affectant au type de contenu de la colonne de structure d’exploration de données la valeur **Discretized** , puis en définissant la propriété <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> ou <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> .  
   
  [Top](#bkmk_Top)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "34019366"
  NODE_TYPE  
  Dans les modèles d'arbre de décision, les types de nœud suivants sont créés :  
   
-|Type de nœud| Description|  
+|Type de nœud|Description|  
 |---------------|-----------------|  
 |1 (Modèle)|Nœud racine pour le modèle.|  
 |2 (Arbre)|Nœud parent pour les arbres de classification dans le modèle. Étiqueté **Tout**.|  
@@ -202,7 +202,7 @@ ms.locfileid: "34019366"
  L'attribut représenté par le fragment XML peut être simple ou complexe. Un attribut simple contient le nom de la colonne du modèle, ainsi que la valeur de l’attribut. Si la colonne du modèle contient une table imbriquée, l'attribut de table imbriquée est représenté sous la forme d’une concaténation du nom de la table, de la valeur de clé et de l'attribut.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge la version 2.0 du PMML standard, ainsi que les extensions permettant l'utilisation de la table imbriquée. Si vos données contiennent des tables imbriquées et si vous générez une version PMML du modèle, tous les éléments du modèle qui incluent les prédicats sont marqués comme extensions.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge la version 2.0 du PMML standard, avec des extensions prenant en charge l’utilisation d’une table imbriquée. Si vos données contiennent des tables imbriquées et si vous générez une version PMML du modèle, tous les éléments du modèle qui incluent les prédicats sont marqués comme extensions.  
   
  [Top](#bkmk_Top)  
   
@@ -231,7 +231,7 @@ ms.locfileid: "34019366"
 |Âge < 30|40|Âge < 30 et Genre = Homme|30|30/40 = .75|30/100 = .30|  
 |||Âge < 30 et Genre = Femme|10|10/40 = .25|10/100 = .10|  
   
- Un petit ajustement est effectué dans tous les modèles afin de compenser pour les valeurs manquantes éventuelles. Pour les attributs continus, chaque valeur ou plage de valeurs est représentée comme un état (par exemple, âge \<30, âge = 30 et l’âge > 30) et les probabilités sont calculées comme suit : état existe (valeur = 1), un autre état existe (valeur = 0), l’état est **manquant**. Pour plus d’informations sur l’ajustement des probabilités afin de représenter les valeurs manquantes, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
+ Un petit ajustement est effectué dans tous les modèles afin de compenser pour les valeurs manquantes éventuelles. Pour les attributs continus, chaque valeur ou plage de valeurs est représentée sous forme d’état (par exemple, âge \<30, âge = 30 et âge > 30) et les probabilités sont calculées comme suit : état existe (valeur = 1), un autre état existe (valeur = 0), l’état est  **Manquant**. Pour plus d’informations sur l’ajustement des probabilités afin de représenter les valeurs manquantes, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
  Les probabilités pour chaque nœud sont calculées presque directement à partir de la distribution, comme suit :  
   
@@ -246,12 +246,12 @@ ms.locfileid: "34019366"
   
  Pour plus d’informations sur le calcul de l’écart pour les valeurs continues, consultez [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
-#### <a name="value-type"></a>Type de valeur  
+#### <a name="value-type"></a>Type valeur  
  La colonne de type de valeur fournit des informations sur la signification de la valeur numérique indiquée dans les autres colonnes de la table NODE_DISTRIBUTION. Vous pouvez utiliser le type de valeur dans les requêtes pour extraire des lignes spécifiques dans les tables imbriquées. Pour obtenir des exemples, consultez [Exemples de requêtes de modèle d’arbre de décision](../../analysis-services/data-mining/decision-trees-model-query-examples.md).  
   
  Parmi les types de l’énumération <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> , les types suivants sont utilisés dans les arbres de classification.  
   
-|Type de valeur| Description|  
+|Type de valeur|Description|  
 |----------------|-----------------|  
 |1 (Manquante)|Indique un nombre, une probabilité ou d’autres statistiques en rapport avec les valeurs manquantes.|  
 |4 (Discrète)|Indique un nombre, une probabilité ou d’autres statistiques en rapport avec une valeur discrète ou discrétisée.|  
@@ -267,7 +267,7 @@ ms.locfileid: "34019366"
   
  Pour tous les autres nœuds de l'arborescence (excepté les nœuds terminaux), le score de chaque nœud représente le meilleur score de fractionnement du nœud actuel, moins le score de fractionnement du nœud parent. En règle générale, le score de fractionnement d’un nœud parent doit toujours être meilleur que celui de ses nœuds enfants. Cela est dû au fait qu'un modèle d'arbre de décision se fractionne normalement en premier sur les attributs les plus importants.  
   
- Il existe de nombreuses façons de calculer un score pour un fractionnement, selon le paramètre d'algorithme choisi. La manière dont les scores sont calculés pour chacune des méthodes de calcul de score dépasse le cadre de cette rubrique. Pour plus d'informations, consultez «[Learning Bayesian Networks: The Combination of Knowledge and Statistical Data](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)» (en anglais) sur le site Web [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research.  
+ Il existe de nombreuses façons de calculer un score pour un fractionnement, selon le paramètre d'algorithme choisi. La manière dont les scores sont calculés pour chacune des méthodes de calcul de score dépasse le cadre de cette rubrique. Pour plus d’informations, consultez «[réseaux BAYÉSIENS : La connaissance et données statistiques](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)», dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] site Web de recherche.  
   
 > [!NOTE]  
 >  Si vous créez un modèle d'arbre de décision ayant des attributs prédictibles continus et discrets, vous verrez des scores complètement différents dans les nœuds (Tout) qui représentent chaque type d'arborescence. Chaque modèle doit être considéré indépendamment, et les méthodes utilisées pour calculer le score de la régression sont complètement différentes de celles utilisées pour calculer le score de la classification. Les valeurs de score de nœud ne peuvent pas être comparées.  
@@ -290,9 +290,9 @@ ms.locfileid: "34019366"
  Pour plus d’informations sur les nœuds de régression, consultez [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algorithme MDT (Microsoft Decision Trees)](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   

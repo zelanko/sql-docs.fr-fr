@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43ce8d82bc286e7005d57d5a829e09814ffdd240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2a51cc56b37325d760ca77f014594496c8ab6b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122748"
 ---
 # <a name="sysfunctionordercolumns-transact-sql"></a>sys.function_order_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +32,10 @@ ms.locfileid: "63004730"
   Retourne une ligne par colonne qui fait partie d’un **commande** expression d’une fonction table incluse de Common language runtime (CLR).  
 
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**Int**|ID de l'objet (fonction table CLR) sur lequel l'ordre est défini.|  
-|**order_column_id**|**Int**|ID de la colonne d'ordre. **order_column_id** est unique seulement dans **object_id**.<br /><br /> **order_column_id** représente la position de cette colonne dans le classement.|  
+|**order_column_id**|**int**|ID de la colonne d'ordre. **order_column_id** est unique seulement dans **object_id**.<br /><br /> **order_column_id** représente la position de cette colonne dans le classement.|  
 |**column_id**|**Int**|ID de la colonne dans **object_id**.<br /><br /> **column_id** est unique seulement dans **object_id**.|  
 |**is_descending**|**bit**|1 = colonne d'ordre avec un ordre de tri descendant.<br /><br /> 0 = colonne d'ordre avec un ordre de tri ascendant.|  
   

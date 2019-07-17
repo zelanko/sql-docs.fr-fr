@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785621"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211505"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurer un ordinateur multirésident pour l'accès à SQL Server
   Lorsqu'un serveur doit fournir une connexion à plusieurs réseaux ou sous-réseaux, le scénario classique consiste à utiliser un ordinateur multirésident. Bien souvent, cet ordinateur se trouve dans un réseau de périmètre (également appelé sous-réseau filtré). Cette rubrique explique comment configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le Pare-feu Windows avec fonctions avancées de sécurité pour fournir des connexions réseau à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement multirésident.  
@@ -68,7 +68,7 @@ ms.locfileid: "52785621"
   
 1.  Cliquez sur **Démarrer**, pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], sur **Outils de configuration**, puis cliquez sur **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Gestionnaire de configuration**.  
   
-2.  Dans le volet de la console du **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestionnaire de configuration**, développez **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration du réseau** et **Protocoles pour \<nom d’instance>**, puis double-cliquez sur **TCP/IP**.  
+2.  Dans le volet de la console du **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Gestionnaire de configuration**, développez **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration du réseau** et **Protocoles pour \<nom d’instance>** , puis double-cliquez sur **TCP/IP**.  
   
 3.  Dans la boîte de dialogue **Propriétés TCP/IP** , sous l’onglet **Adresses IP** , plusieurs adresses IP apparaissent au format **IP1**, **IP2**, jusqu’à **IPAll**. Une de ces adresses correspond à l'adresse IP de la carte de bouclage, 127.0.0.1. D'autres adresses IP apparaissent pour chaque adresse IP configurée sur l'ordinateur.  
   

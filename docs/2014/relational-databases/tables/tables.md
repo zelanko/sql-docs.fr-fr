@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7a456d68283d81cf7eb4f879d76f086484c5e052
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782881"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211789"
 ---
 # <a name="tables"></a>Tables
   Les tables sont des objets de base de données qui contiennent toutes les données d'une base de données. Dans les tables, les données sont logiquement organisées en lignes et en colonnes, à la manière d'un tableur. Chaque ligne représente un enregistrement unique et chaque colonne représente un champ dans l'enregistrement. Par exemple, une table qui contient les données relatives aux employés d'une société peut contenir une ligne pour chaque employé et des colonnes représentant des informations sur l'employé, telles que son numéro, son nom, son adresse, son poste et son numéro de téléphone privé.  

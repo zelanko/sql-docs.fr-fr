@@ -1,5 +1,5 @@
 ---
-title: Ajouter un modèle d’exploration de données à une Structure d’exploration de données existante | Documents Microsoft
+title: Ajouter un modèle d’exploration de données à une Structure d’exploration de données existante | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8b995a5b3fb89956e690598c786dc0a09474021
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019776"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210224"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Ajouter un modèle d'exploration de données à une structure d'exploration de données existante
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,6 +35,6 @@ ms.locfileid: "34019776"
  Un nouveau modèle d’exploration de données apparaît dans l’onglet **Modèles d’exploration de données** . Le modèle utilise les colonnes par défaut qui existent dans la structure. Pour plus d’informations sur la modification des colonnes, consultez [Modifier les propriétés d’un modèle d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches liées aux modèles d’exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tâches et procédures des modèles d’exploration de données](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

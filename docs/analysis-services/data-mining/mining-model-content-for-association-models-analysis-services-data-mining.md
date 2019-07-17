@@ -1,5 +1,5 @@
 ---
-title: Contenu pour les modèles d’Association du modèle d’exploration de données (Analysis Services - Exploration de données) | Documents Microsoft
+title: Contenu pour les modèles d’Association du modèle d’exploration de données (Analysis Services - Exploration de données) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5b9c977cbe5a31672d6738e2aaa7f3f911975e8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017576"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182788"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles d'association (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "34017576"
 ## <a name="understanding-the-structure-of-an-association-model"></a>Fonctionnement de la structure d'un modèle d'association  
  La structure d'un modèle d'association est simple. Chaque modèle possède un nœud parent unique qui représente le modèle et ses métadonnées, et chaque nœud parent possède une liste plate de jeux d'éléments et de règles. Les jeux d'éléments et les règles ne sont pas organisés dans des arbres. Comme le montre le diagramme suivant, les jeux d'éléments précèdent les règles.  
   
- ![structure du contenu de modèle pour les modèles d’association](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "structure du contenu de modèle pour les modèles d’association")  
+ ![structure de contenu de modèle pour les modèles d’association](../../analysis-services/data-mining/media/modelcontentstructure-assoc.gif "structure du contenu du modèle pour les modèles d’association")  
   
  Chaque jeu d'éléments est contenu dans son propre nœud (NODE_TYPE = 7). Le *nœud* : inclut la définition du jeu d’éléments, le nombre de cas contenant ce jeu d’éléments, ainsi que d’autres informations.  
   
@@ -54,10 +54,10 @@ ms.locfileid: "34017576"
  NODE_TYPE  
  Un modèle d'association génère uniquement en sortie les types de nœuds suivants :  
   
-|ID du type de nœud|Type|  
+|ID du type de nœud|type|  
 |------------------|----------|  
 |1 (Modèle)|Nœud racine ou parent.|  
-|7 (Jeu d'éléments)|Jeu d'éléments ou collection de paires attribut/valeur. Exemples :<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> ou<br /><br /> `Gender = Male`.|  
+|7 (Jeu d'éléments)|Jeu d'éléments ou collection de paires attribut/valeur. Exemples :<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> ou Gestionnaire de configuration<br /><br /> `Gender = Male`.|  
 |8 (Règle)|Règle définissant la façon dont les éléments sont liés les uns aux autres.<br /><br /> Exemple :<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  
@@ -89,7 +89,7 @@ ms.locfileid: "34017576"
   
  **Nœud parent** : inclut une liste des informations suivantes à propos du modèle, séparées par des virgules :  
   
-|Élément| Description|  
+|Item|Description|  
 |----------|-----------------|  
 |ITEMSET_COUNT|Nombre de jeux d'éléments dans le modèle.|  
 |RULE_COUNT|Nombre de règles dans le modèle.|  
@@ -97,14 +97,14 @@ ms.locfileid: "34017576"
 |MAX_SUPPORT|Prise en charge maximale trouvée pour un jeu d'éléments unique.<br /><br /> **Remarque** : Cette valeur peut différer de celle à laquelle vous avez défini le paramètre *MAXIMUM_SUPPORT* .|  
 |MIN_ITEMSET_SIZE|Taille du plus petit jeu d'éléments, représentée par un nombre d'éléments.<br /><br /> La valeur 0 indique que l’état **Manquant** a été traité en tant qu’élément indépendant.<br /><br /> **Remarque** : La valeur par défaut du paramètre *MINIMUM_ITEMSET_SIZE* est 1.|  
 |MAX_ITEMSET_SIZE|Indique la taille du plus grand jeu d'éléments trouvé.<br /><br /> **Remarque** : Cette valeur est conditionnée par la valeur que vous avez attribuée au paramètre *MAX_ITEMSET_SIZE* quand vous avez créé le modèle. Cette valeur ne peut jamais dépasser cette valeur ; toutefois, elle peut être inférieure à celle-ci. La valeur par défaut est 3.|  
-|MIN_PROBABILITY|Probabilité minimale détectée pour un jeu d'éléments ou une règle unique dans le modèle.<br /><br /> Exemple : 0.400390625<br /><br /> **Remarque** : Pour les jeux d’éléments, cette valeur est toujours supérieure à celle que vous avez attribuée au paramètre *MINIMUM_PROBABILITY* lors de la création du modèle.|  
-|MAX_PROBABILITY|Probabilité maximale détectée pour un jeu d'éléments ou une règle unique dans le modèle.<br /><br /> Exemple : 1<br /><br /> **Remarque** : Il n’existe pas de paramètre pour conditionner la probabilité maximale des jeux d’éléments. Si vous voulez éliminer des éléments qui sont trop fréquents, utilisez à la place le paramètre *MAXIMUM_SUPPORT* .|  
-|MIN_LIFT|Quantité minimale de finesse fournie par le modèle pour un jeu d'éléments.<br /><br /> Exemple : 0,14309369632511<br /><br /> Remarque : le fait de connaître la finesse minimale peut vous aider à déterminer si la finesse est significative pour un jeu d’éléments.|  
-|MAX_LIFT|Quantité maximale de finesse fournie par le modèle pour un jeu d'éléments.<br /><br /> Exemple: 1,95758227647523 **Remarque** : Le fait de connaître la finesse maximale peut vous aider à déterminer si la finesse est significative pour un jeu d’éléments.|  
+|MIN_PROBABILITY|Probabilité minimale détectée pour un jeu d'éléments ou une règle unique dans le modèle.<br /><br /> Exemple : 0.400390625<br /><br /> **Remarque** : Pour les jeux d’éléments, cette valeur est toujours supérieure à celle que vous avez attribuée au paramètre *MINIMUM_PROBABILITY* lors de la création du modèle.|  
+|MAX_PROBABILITY|Probabilité maximale détectée pour un jeu d'éléments ou une règle unique dans le modèle.<br /><br /> Exemple : 1<br /><br /> **Remarque** : Il n’existe pas de paramètre pour conditionner la probabilité maximale des jeux d’éléments. Si vous voulez éliminer des éléments qui sont trop fréquents, utilisez à la place le paramètre *MAXIMUM_SUPPORT* .|  
+|MIN_LIFT|Quantité minimale de finesse fournie par le modèle pour un jeu d'éléments.<br /><br /> Exemple : 0.14309369632511<br /><br /> Remarque : Le fait de connaître la finesse minimale peut vous aider à déterminer si l’élévation pour tout un jeu d’éléments est significative.|  
+|MAX_LIFT|Quantité maximale de finesse fournie par le modèle pour un jeu d'éléments.<br /><br /> Exemple : 1,95758227647523 **Remarque** connaître la finesse maximale peut vous aider à déterminer si l’élévation pour tout un jeu d’éléments est significative.|  
   
  **Nœud de jeu d’éléments** : les nœuds de jeu d’éléments contiennent une liste des éléments qui est affichée sous forme d’une chaîne de texte avec une virgule comme séparateur.  
   
- Exemple :  
+ Exemple :  
   
  `Touring Tire = Existing, Water Bottle = Existing`  
   
@@ -126,7 +126,7 @@ ms.locfileid: "34017576"
  **Nœud de règle** : le fragment XML inclut d’autres informations utiles sur la règle, comme la prise en charge, la confiance et le nombre d’éléments, ainsi que l’ID du nœud qui représente la partie gauche de la règle.  
   
  MARGINAL_RULE  
- Vide.  
+ : vide.  
   
  NODE_PROBABILITY  
  Une probabilité ou un score de confiance associé au jeu d'éléments ou à la règle.  
@@ -187,8 +187,8 @@ ms.locfileid: "34017576"
  : vide.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Algorithme Microsoft Association](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Exemples de requêtes de modèle association](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [Exemples de requête de modèle d’association](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   

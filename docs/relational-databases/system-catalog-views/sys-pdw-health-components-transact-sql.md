@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: d5c7589b-09b0-4f12-ab84-feb3ec3fbaaa
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69e5d36db3d5ed69b0a0ecc062a0692955b84398
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5205c1ac6248f5aadee01410b4ba5e8f00332a73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127489"
 ---
 # <a name="syspdwhealthcomponents-transact-sql"></a>sys.pdw_health_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "56011551"
   
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
-|component_id|**Int**|Identificateur unique d’un composant ou d’un appareil.<br /><br /> Clé pour cette vue.|NOT NULL|  
+|component_id|**int**|Identificateur unique d’un composant ou d’un appareil.<br /><br /> Clé pour cette vue.|NOT NULL|  
 |group_id|**Int**|Le groupe de composants de logique à laquelle appartient ce composant. Consultez [sys.pdw_health_components (Parallel Data Warehouse)](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md).|NOT NULL|  
 |component_name|**nvarchar(255)**|Nom du composant.|NOT NULL|  
   

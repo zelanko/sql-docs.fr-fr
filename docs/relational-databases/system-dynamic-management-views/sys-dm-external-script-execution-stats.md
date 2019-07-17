@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
 author: HeidiSteen
 ms.author: heidist
-manager: cgronlund
-ms.openlocfilehash: 8bdbaf1fdb0fb0c27127611ace0fac00d861838f
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+manager: cgronlun
+ms.openlocfilehash: 06b8e29e9aaf02c8e82f541a9113d5943b829b3b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743134"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262157"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,14 +34,14 @@ Renvoie une ligne pour chaque type de demande de script externe. Les demandes de
 > [!NOTE]  
 > Cette vue de gestion dynamique (DMV) est disponible uniquement si vous avez installé et activé la fonctionnalité qui prend en charge l’exécution du script externe. Pour plus d’informations, consultez [R Services dans SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) et [Machine Learning Services (R, Python) dans SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|langue|**nvarchar**|Nom du langage enregistré de script externe. Chaque script externe doit spécifier le langage dans la demande de requête utilisé pour le démarrage du lanceur associé. |  
+|langage|**nvarchar**|Nom du langage enregistré de script externe. Chaque script externe doit spécifier le langage dans la demande de requête utilisé pour le démarrage du lanceur associé. |  
 |counter_name|**nvarchar**|Nom de la fonction enregistrée de script externe. N'accepte pas la valeur NULL.|  
 |counter_value|**entier**|Nombre total d’instance appelée de la fonction enregistrée de script externe sur le serveur. Cette valeur, cumulative, commence par l’horodatage d’installation de la fonction sur l’instance. Elle ne peut pas être réinitialisée.|  
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW SERVER STATE sur le serveur.  
   
 > [!NOTE]  

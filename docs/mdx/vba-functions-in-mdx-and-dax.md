@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135019"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Fonctions VBA dans MDX et DAX
 
@@ -23,7 +22,7 @@ ms.locfileid: "67500041"
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Référence des fonctions Visual Basic for Applications (VBA)  
   
-|Nom de fonction|Pris en charge|Remarques|  
+|Nom de fonction|Pris en charge|Notes|  
 |-------------------|---------------|-----------|  
 |Abs|DAX, MDX||  
 |Tableau|Non pris en charge||  
@@ -114,7 +113,7 @@ ms.locfileid: "67500041"
 |ExtracChaîne|DAX, MDX||  
 |Minute|DAX, MDX||  
 |MIRR|MDX uniquement||  
-|Month|DAX, MDX||  
+|Mois|DAX, MDX||  
 |MonthName|Non pris en charge||  
 |MsgBox|Non pris en charge||  
 |maintenant|DAX, MDX||  
@@ -128,7 +127,7 @@ ms.locfileid: "67500041"
 |RVBC|MDX uniquement||  
 |Taux|MDX uniquement||  
 |Remplacer|Non pris en charge||  
-|RGB|MDX uniquement||  
+|RVB|MDX uniquement||  
 |Droit|DAX, MDX||  
 |Aléat|MDX uniquement||  
 |Arrondi|DAX, MDX||  
@@ -164,6 +163,6 @@ ms.locfileid: "67500041"
 |VarType|Non pris en charge||  
 |JourSem|DAX, MDX||  
 |WeekdayName|Non pris en charge||  
-|Année|DAX, MDX||  
+|Year|DAX, MDX||  
   
   

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 870f12fa569eb0c6046377472a6122d69cd35d6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124137"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_fulltext_table
 |**Créer**|Crée les métadonnées pour un index de recherche en texte intégral pour la table référencée par *nom_table_qualifée* et spécifie que les données d’index de recherche en texte intégral pour cette table doivent résider dans *fulltext_catalog_name*. Cette opération permet également l’utilisation de *nom_index_unique* en tant que la colonne de clé de recherche en texte intégral. Cet index unique doit déjà exister et être défini sur une colonne de la table.<br /><br /> Une recherche en texte intégral ne peut pas être réalisée vis à vis de cette table tant que le catalogue de texte intégral n'est pas rempli.|  
 |**Supprimer**|Supprime les métadonnées sur l’index de recherche en texte intégral pour *nom_table_qualifée*. Si cet index est actif, il est automatiquement désactivé avant d'être supprimé. Il n'est pas nécessaire de supprimer les colonnes avant de supprimer l'index de texte intégral.|  
 |**Activate**|Active la possibilité pour les données d’index de recherche en texte intégral pour *nom_table_qualifée*, une fois qu’il a été désactivé. Une colonne au moins doit faire partie de l'index de texte intégral pour pouvoir activer cette option.<br /><br /> Un index de texte intégral est automatiquement activé (au niveau du remplissage) dès l'ajout de la première colonne à indexer. Si la dernière colonne est supprimée de l'index, celui-ci devient inactif. Si le suivi des modifications est activé, l'activation d'un index inactif démarre un nouveau remplissage.<br /><br /> Notez que cela n’est pas réellement effectué l’index de recherche en texte intégral, mais simplement la table est inscrite dans le catalogue de texte intégral dans le système de fichiers afin que les lignes à partir de *nom_table_qualifée* peuvent être récupérées au cours de l’index de recherche en texte intégral suivant remplissage.|  
-|**Deactivate**|Désactive l’index de recherche en texte intégral pour *nom_table_qualifée* afin que les données d’index de recherche en texte intégral n’est plus peuvent être collectées pour le *nom_table_qualifée*. Les métadonnées de l'index de texte intégral sont conservées et la table peut être réactivée.<br /><br /> Si le suivi des modifications est activé, la désactivation d'un index actif gèle l'état de l'index : tout remplissage en cours est arrêté et aucune modification supplémentaire n'est diffusée à l'index.|  
+|**Désactiver**|Désactive l’index de recherche en texte intégral pour *nom_table_qualifée* afin que les données d’index de recherche en texte intégral n’est plus peuvent être collectées pour le *nom_table_qualifée*. Les métadonnées de l'index de texte intégral sont conservées et la table peut être réactivée.<br /><br /> Si le suivi des modifications est activé, la désactivation d'un index actif gèle l'état de l'index : tout remplissage en cours est arrêté et aucune modification supplémentaire n'est diffusée à l'index.|  
 |**start_change_tracking**|Démarre un remplissage incrémentiel de l'index de texte intégral. Si la table ne dispose pas de données d'une colonne de type timestamp, démarre un remplissage complet de l'index de texte intégral. Démarre le suivi des modifications apportées à la table.<br /><br /> Suivi des modifications de texte intégral ne suit pas les opérations WRITETEXT ou UPDATETEXT effectuées sur les colonnes indexées en texte intégral qui sont de type **image**, **texte**, ou **ntext**.|  
 |**stop_change_tracking**|Arrête le suivi des modifications apportées à la table.|  
 |**update_index**|Diffuse le jeu courant des modifications suivies à l'index de texte intégral.|  
@@ -77,7 +76,7 @@ sp_fulltext_table
  0 (réussite) ou 1 (échec)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  Une fois un index de recherche en texte intégral est désactivé pour une table particulière, l’index de recherche en texte intégral existant reste en place jusqu'à ce que le remplissage complet suivant ; Toutefois, cet index n’est pas utilisé car [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bloque les requêtes sur les tables désactivées.  
@@ -93,7 +92,7 @@ sp_fulltext_table
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-enabling-a-table-for-full-text-indexing"></a>A. Activation d'une table pour l'indexation de texte intégral  
+### <a name="a-enabling-a-table-for-full-text-indexing"></a>R. Activation d'une table pour l'indexation de texte intégral  
  L'exemple ci-dessous crée des métadonnées d'index de texte intégral pour la table `Document` de la base de données `AdventureWorks`. `Cat_Desc` est un catalogue de texte intégral. `PK_Document_DocumentID` est un index à colonne unique sur `Document`.  
   
 ```  
