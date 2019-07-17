@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa470b663a28a69014a7884b30fb384fe62276a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 837cf72fd303259a4fb2a9fd23c6cac925f054ca
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943647"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793641"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -99,7 +99,7 @@ Si une valeur de retour est hors limites pour **int** (-2 147 483 648 à +2 147 
   
 Si *startdate* et *enddate* se voient tous les deux assigner uniquement une valeur d’heure et que *datepart* n’est pas un *datepart* d’heure, `DATEDIFF` retourne 0.
   
-`DATEDIFF` n’utilise pas un composant de décalage de fuseau horaire de *startdate* ou *enddate* pour calculer la valeur de retour.
+`DATEDIFF` utilise le composant de décalage de fuseau horaire de *startdate* ou *enddate* pour calculer la valeur de retour.
   
 Dans la mesure où [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md) n’offre qu’une précision à la minute, les secondes et millisecondes ont toujours la valeur 0 dans la valeur de retour quand vous utilisez une valeur *smalldatetime* pour *startdate* ou **enddate**.
   

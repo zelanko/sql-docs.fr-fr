@@ -1,7 +1,7 @@
 ---
 title: Niveau de compatibilité ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccc7241c6d549985df4a838ebcc8cbb2120d3eb0
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 151e6573ebeb5497f2de001d57272af647f5e737
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469197"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860691"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Niveau de compatibilité ALTER DATABASE (Transact-SQL)
 
@@ -91,7 +91,7 @@ Pour tirer parti du niveau de compatibilité de base de données 140 pour une ba
 
 Pour savoir comment comparer les performances de requêtes utilisant deux niveaux de compatibilité différents dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], consultez [Amélioration des performances de requête avec le niveau de compatibilité 130 dans Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/). Notez que cet article fait référence au niveau de compatibilité 130 et à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais la même méthodologie s’applique pour passer au niveau 140 pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-Exécutez la requête suivante pour déterminer la version du [!INCLUDE[ssDE](../../includes/ssde-md.md)] auquel vous êtes connecté, exécutez la requête suivante.
+Exécutez la requête suivante pour déterminer la version du [!INCLUDE[ssDE](../../includes/ssde-md.md)] auquel vous êtes connecté.
 
 ```sql
 SELECT SERVERPROPERTY('ProductVersion');
@@ -165,7 +165,7 @@ Pour plus d’informations, notamment sur le flux de travail recommandée pour l
 > - Les noms de colonne modifiés dans les objets système. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la colonne *single_pages_kb* de sys.dm_os_sys_info a été renommée *pages_kb*. Quel que soit le niveau de compatibilité, la requête `SELECT single_pages_kb FROM sys.dm_os_sys_info` génère l’erreur 207 (nom de colonne non valide).
 > - Les objets système supprimés. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], `sp_dboption` a été supprimé. Quel que soit le niveau de compatibilité, l’instruction `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` génère l’erreur 2812 (procédure stockée ’sp_dboption’ introuvable).
 >
-> Pour plus d’informations sur les changements importants, consultez [Changements importants dans les fonctionnalités du moteur de base de données de SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Changements importants dans les fonctionnalités du moteur de base de données de SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Changements importants dans les fonctionnalités du moteur de base de données de SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014), [Changements importants dans les fonctionnalités du moteur de base de données de SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali) et [Changements importants dans les fonctionnalités du moteur de base de données de SQL Server 2008](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#KJKatmai).
+> Pour plus d’informations sur les changements importants, consultez [Changements importants dans les fonctionnalités du moteur de base de données de SQL Server 2017](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [Changements importants dans les fonctionnalités du moteur de base de données de SQL Server 2016](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [Changements importants dans les fonctionnalités du moteur de base de données de SQL Server 2014](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) et [Changements importants dans les fonctionnalités du moteur de base de données de SQL Server 2012](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali).
 
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>Bonnes pratiques pour la mise à niveau du niveau de compatibilité de base de données
 

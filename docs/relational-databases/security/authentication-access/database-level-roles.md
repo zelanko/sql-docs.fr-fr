@@ -1,7 +1,7 @@
 ---
 title: Rôles au niveau de la base de données | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,12 +39,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a035182b6436f723abfb2a53a034ddac30fe2165
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 65330658d47ad371d992eaf15d648e7abfd4d5b6
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516495"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832953"
 ---
 # <a name="database-level-roles"></a>Rôles au niveau de la base de données
 
@@ -89,7 +89,7 @@ Les autorisations accordées aux rôles de base de données fixe ne peuvent pas 
 
 ## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>Rôles spéciaux pour [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
-Ces rôles de base de données existent uniquement dans la base de données MASTER virtuelle. Leurs autorisations sont limitées aux actions effectuées dans MASTER. Seuls les utilisateurs de base de données de MASTER peuvent être ajoutés à ces rôles. Aucune connexion ne peut être ajoutée à ces rôles, toutefois les utilisateurs peuvent être créés en fonction des connexions et ensuite ces utilisateurs peuvent être ajoutés aux rôles. Les utilisateurs de base de données autonome dans MASTER peuvent également être ajoutés à ces rôles.
+Ces rôles de base de données existent uniquement dans la base de données MASTER virtuelle. Leurs autorisations sont limitées aux actions effectuées dans MASTER. Seuls les utilisateurs de base de données de MASTER peuvent être ajoutés à ces rôles. Aucune connexion ne peut être ajoutée à ces rôles, toutefois les utilisateurs peuvent être créés en fonction des connexions et ensuite ces utilisateurs peuvent être ajoutés aux rôles. Les utilisateurs de base de données autonome dans MASTER peuvent également être ajoutés à ces rôles. Toutefois, les utilisateurs de base de données autonome ajoutés au rôle **dbmanager** dans MASTER ne peuvent pas être utilisés pour créer de nouvelles bases de données.
 
 |Nom du rôle|Description|  
 |--------------------|-----------------|

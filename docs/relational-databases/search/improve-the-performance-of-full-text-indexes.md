@@ -18,12 +18,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a38cad4af807d5d9d7a64e6ca45a4fdfa0df77c7
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6d3abb2fe6d16b89ce80b50c5e33d397d1c38403
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973578"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652811"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,11 +133,11 @@ Pour obtenir des informations essentielles sur les formules suivantes, consultez
   
 |Plateforme|Estimation des besoins en mémoire de fdhost.exe en Mo : *F*^1|Formule de calcul de la mémoire maximum du serveur : *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *Nombre de plages d’analyse* * 50|*M* =minimum(*T*, 2000) - F - 500|  
-|x64|*F* = *Nombre de plages d’analyse* * 10 * 8|*M* = *T* - *F* - 500|  
+|x86|*F* = *Nombre de plages d’analyse* \* 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = *Nombre de plages d’analyse* \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **Remarques sur les formules**
-1.  Si plusieurs alimentations complètes sont en cours, calculez séparément les besoins en mémoire de chaque processus fdhost.exe, comme *F1*, *F2*, etc. Ensuite, calculez *M* comme _T_**-** sigma **(**_F_i **)**.  
+1.  Si plusieurs alimentations complètes sont en cours, calculez séparément les besoins en mémoire de chaque processus fdhost.exe, comme *F1*, *F2*, etc. Ensuite, calculez *M* comme _T_ **-** sigma **(** _F_i **)** .  
 2.  500 Mo est une estimation de la mémoire requise par les autres processus dans le système. Si le système effectue un travail supplémentaire, augmentez cette valeur en conséquence.  
 3.  .*ism_size* est censé être de 8 Mo pour les plateformes x64.  
   
@@ -209,7 +209,7 @@ Le moteur d’indexation et de recherche en texte intégral utilise deux types d
   
 Pour contourner ce problème, marquez le filtre du document conteneur (le document Word dans cet exemple) en tant que filtre monothread. Pour ce faire, définissez la valeur de Registre **ThreadingModel** pour le filtre en spécifiant **Thread cloisonné**. Pour plus d’informations sur les threads uniques cloisonnés (STA), consultez le livre blanc intitulé [Présentation et utilisation des modèles de threads COM](https://go.microsoft.com/fwlink/?LinkId=209159).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mémoire du serveur (option de configuration de serveur)](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Maximum de la plage de l’analyse de texte intégral (option de configuration de serveur)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Alimenter des index de recherche en texte intégral](../../relational-databases/search/populate-full-text-indexes.md)   

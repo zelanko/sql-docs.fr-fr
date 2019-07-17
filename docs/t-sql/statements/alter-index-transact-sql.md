@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 758c6524e124557083fc61af234283b567633a7b
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: af5142fe96cc26bd18f71f8a67a7856950b966b4
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388851"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652702"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -728,7 +728,7 @@ Toutes les autres opérations en ligne sur les index exécutées en même temps 
 La reconstruction d’index en ligne est spécifiée comme pouvant être reprise avec l’option RESUMABLE=ON. 
 -  L’option RESUMABLE n’est pas persistante dans les métadonnées d’un index donné et s’applique uniquement à la durée d’une instruction DDL actuelle. C’est pourquoi la clause RESUMABLE=ON doit être spécifiée explicitement pour permettre la reprise.
 -  L’option MAX_DURATION est prise en charge pour l’option RESUMABLE = ON ou l’option d’argument **low_priority_lock_wait**. 
-   -  MAX_DURATION pour l’option RESUMABLE spécifie l’intervalle de temps pour un index en cours de reconstruction. Une fois que cette durée est utilisée, la reconstruction d’index est mise en pause ou termine son exécution. L’utilisateur décide quand une reconstruction d’un index en pause peut être reprise. La **durée** en minutes de MAX_DURATION doit être supérieure à 0 minute et inférieur ou égale à une semaine (7 * 24 * 60 = 10080 minutes). Si la mise en pause d’une opération d’index est longue, les performances DML d’une table spécifique et la capacité de disque de la base de données risquent d’être impactées parce que les deux index, l’original et celui nouvellement créé, ont besoin d’espace disque et doivent être mis à jour au cours des opérations DML. Si l’option MAX_DURATION est omise, l’opération d’index se poursuit jusqu'à ce qu’elle se termine ou qu’une défaillance se produise. 
+   -  MAX_DURATION pour l’option RESUMABLE spécifie l’intervalle de temps pour un index en cours de reconstruction. Une fois que cette durée est utilisée, la reconstruction d’index est mise en pause ou termine son exécution. L’utilisateur décide quand une reconstruction d’un index en pause peut être reprise. La **durée** en minutes de MAX_DURATION doit être supérieure à 0 minute et inférieur ou égale à une semaine (7 \* 24 \* 60 = 10080 minutes). Si la mise en pause d’une opération d’index est longue, les performances DML d’une table spécifique et la capacité de disque de la base de données risquent d’être impactées parce que les deux index, l’original et celui nouvellement créé, ont besoin d’espace disque et doivent être mis à jour au cours des opérations DML. Si l’option MAX_DURATION est omise, l’opération d’index se poursuit jusqu'à ce qu’elle se termine ou qu’une défaillance se produise. 
    -  L’option d’argument \<low_priority_lock_wait > vous permet de décider comment l’opération d’index peut continuer quand elle est bloquée sur le verrou SCH-M.
  
 -  La réexécution de l’instruction ALTER INDEX REBUILD d’origine avec les mêmes paramètres reprend une opération de reconstruction d’index mise en pause. Vous pouvez également reprendre une opération de reconstruction d’index en pause en exécutant l’instruction ALTER INDEX RESUME.

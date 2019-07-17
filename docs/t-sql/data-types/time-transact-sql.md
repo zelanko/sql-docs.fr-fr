@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03f63929d54039399a292e086315c0b8d660f206
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 88eb2923a9037ad0e4ad07f2f560b85b45260cd2
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079455"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866254"
 ---
 # <a name="time-transact-sql"></a>time (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "56079455"
   
 |ISO 8601|Remarques|  
 |--------------|-----------|  
-|hh:mm:ss<br /><br /> hh:mm[:ss][.fractions de seconde]|hh comprend deux chiffres, entre 0 et 14, qui représentent le nombre d'heures dans le décalage de fuseau horaire.<br /><br /> mm comprend deux chiffres, entre 0 et 59, qui représentent le nombre de minutes supplémentaires dans le décalage de fuseau horaire.|  
+|hh:mm:ss<br /><br /> hh:mm[:ss][.fractions de seconde]|hh comprend deux chiffres, entre 0 et 23, qui représentent le nombre d'heures dans le décalage de fuseau horaire.<br /><br /> mm comprend deux chiffres, entre 0 et 59, qui représentent le nombre de minutes supplémentaires dans le décalage de fuseau horaire.|  
   
 |ODBC|Remarques|  
 |----------|-----------|  
@@ -105,7 +105,7 @@ ms.locfileid: "56079455"
 ### <a name="converting-timen-data-type-to-other-date-and-time-types"></a>Conversion de types de données time(n) vers d'autres types de date et d'heure  
  Cette section décrit ce qui se produit quand un type de données **time** est converti en d’autres types de données date et time.  
   
- Dans le cas d’une conversion en **time(n)**, les heures, minutes et secondes sont copiées. Lorsque la précision de destination est inférieure à la précision source, les fractions de seconde sont arrondies selon la précision de destination. L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en valeur `time(3)`.  
+ Dans le cas d’une conversion en **time(n)** , les heures, minutes et secondes sont copiées. Lorsque la précision de destination est inférieure à la précision source, les fractions de seconde sont arrondies selon la précision de destination. L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en valeur `time(3)`.  
   
 ```  
 DECLARE @timeFrom time(4) = '12:34:54.1237';  
@@ -166,7 +166,7 @@ SELECT @time AS '@time', @smalldatetime AS '@smalldatetime';
   
 ```  
   
- Dans le cas d’une conversion en **datetimeoffset(n)**, la date est définie sur « 1900-01-01 » et l’heure est copiée. Le décalage de fuseau horaire est défini sur +00:00. Quand la précision à la fraction de seconde de la valeur **time(n)** est supérieure à la précision de la valeur **datetimeoffset(n)**, la valeur est arrondie en conséquence. L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en type `datetimeoffset(3)`.  
+ Dans le cas d’une conversion en **datetimeoffset(n)** , la date est définie sur « 1900-01-01 » et l’heure est copiée. Le décalage de fuseau horaire est défini sur +00:00. Quand la précision à la fraction de seconde de la valeur **time(n)** est supérieure à la précision de la valeur **datetimeoffset(n)** , la valeur est arrondie en conséquence. L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en type `datetimeoffset(3)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -183,7 +183,7 @@ SELECT @time AS '@time', @datetimeoffset AS '@datetimeoffset';
   
 ```  
   
- Dans le cas d’une conversion en **datetime2(n)**, la date est définie sur « 1900-01-01 », le composant heure est copié et le décalage de fuseau horaire est défini sur 00:00. Quand la précision à la fraction de seconde de la valeur **datetime2(n)** est supérieure à la valeur **time(n)**, la valeur est arrondie en conséquence.  L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en valeur `datetime2(2)`.  
+ Dans le cas d’une conversion en **datetime2(n)** , la date est définie sur « 1900-01-01 », le composant heure est copié et le décalage de fuseau horaire est défini sur 00:00. Quand la précision à la fraction de seconde de la valeur **datetime2(n)** est supérieure à la valeur **time(n)** , la valeur est arrondie en conséquence.  L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en valeur `datetime2(2)`.  
   
 ```  
 DECLARE @time time(4) = '12:15:04.1237';  
@@ -269,7 +269,7 @@ SELECT
 |'12:12:12.1234567'|**datetime2(7)**|1900-01-01 12:12:12.1234567|Si la précision en fractions de seconde dépasse la valeur spécifiée pour la colonne, la chaîne sera tronquée sans erreur.|  
 |'12:12:12.1234567'|**datetimeoffset(7)**|1900-01-01 12:12:12.1234567 +00:00|Si la précision en fractions de seconde dépasse la valeur spécifiée pour la colonne, la chaîne sera tronquée sans erreur.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   
   

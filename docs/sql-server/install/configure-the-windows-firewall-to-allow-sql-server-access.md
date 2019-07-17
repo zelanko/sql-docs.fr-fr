@@ -23,12 +23,12 @@ ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5233d1bf98d332187e38f3806a9483fee38355d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48b1e9b9b7c2b48736a54e255649c409d3b4bfd2
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506620"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624581"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +57,7 @@ Pour accéder à une instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversi
   
  Le choix d'une stratégie de pare-feu est plus complexe que le fait de déterminer si un port donné doit être ouvert ou fermé. Lors de la conception d'une stratégie de pare-feu pour votre entreprise, veillez à prendre en considération toutes les règles et les options de configuration disponibles. Cet article n’examine pas toutes les options de pare-feu possibles. Nous vous recommandons de consulter les documents suivants :  
   
- [Guide de déploiement du Pare-feu Windows ](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide)    
+ [Guide de déploiement du Pare-feu Windows](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-deployment-guide)    
  [Guide de conception du Pare-feu Windows](/windows/security/threat-protection/windows-firewall/windows-firewall-with-advanced-security-design-guide)    
  [Introduction à l'isolation de serveur et de domaine](/windows/security/threat-protection/windows-firewall/domain-isolation-policy-design)  
   

@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 674a785d0e5d3dd6b847c8f26701ad0ce48e2d20
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c5af94179548923fa29344e3861f91dd0e201b79
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582522"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860507"
 ---
 # <a name="configure-web-synchronization"></a>Configurer la synchronisation Web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

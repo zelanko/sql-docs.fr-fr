@@ -13,12 +13,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e400ada65efa69dd1b3e5ccc7dbdc21f67e3674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edc81e7f148a2d0c2572da4902a90499baf9db7e
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690787"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866278"
 ---
 # <a name="manage-trigger-security"></a>Gérer la sécurité des déclencheurs
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,14 +41,31 @@ ms.locfileid: "47690787"
 ## <a name="trigger-security-best-practices"></a>Méthodes conseillées pour la sécurité liée aux déclencheurs  
  Nous vous proposons les mesures suivantes pour éviter que du code de déclencheur s'exécute sous des privilèges promus :  
   
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+
 -   Prenez connaissance des déclencheurs DML et DDL existant dans la base de données et sur l’instance du serveur en interrogeant les vues de catalogue [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) et [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) . La requête suivante renvoie tous les déclencheurs DML de la base de données actuelle, tous les déclencheurs DDL au niveau de la base de données actuelle et tous les déclencheurs DDL de niveau serveur inclus dans l'instance du serveur :  
   
-    ```  
+    ```sql
     SELECT type, name, parent_class_desc FROM sys.triggers  
     UNION  
     SELECT type, name, parent_class_desc FROM sys.server_triggers ;  
     ```  
+
+   > [!NOTE]
+   > Seul **sys.triggers** est disponible pour Azure SQL Database, sauf si vous utilisez Managed Instance.
+
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+-   Prenez connaissance des déclencheurs DML et DDL existant dans la base de données en interrogeant la vue de catalogue [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). La requête suivante retourne tous les déclencheurs DDL de niveau base de données et DML dans la base de données actuelle :  
   
+    ```sql
+    SELECT type, name, parent_class_desc FROM sys.triggers ; 
+    ```  
+  
+::: moniker-end
+
 -   Utilisez [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) afin de désactiver les déclencheurs pouvant mettre en péril l’intégrité de la base de données ou du serveur si les déclencheurs s’exécutent sous des privilèges promus. L'instruction suivante désactive tous les déclencheurs DDL de niveau base de données dans la base de données actuelle :  
   
     ```  
@@ -94,7 +111,7 @@ ms.locfileid: "47690787"
     DEALLOCATE trig_cur;  
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Déclencheurs DML](../../relational-databases/triggers/dml-triggers.md)   
  [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)  

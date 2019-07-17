@@ -29,12 +29,12 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: ab639417592966f1c591116743d2d38bfacc837f
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: d580ed70608dc68fbd86b31177a568e7b74e3796
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342897"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866233"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ Le tableau suivant décrit les colonnes du jeu de résultats.
 >[!NOTE]
 > Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n'affiche pas de ligne pour les fichiers qui ne sont pas réduits.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 
 >[!NOTE]
 > Actuellement, Azure SQL Data Warehouse ne prend pas en charge DBCC SHRINKDATABASE. L’exécution de cette commande n’est pas recommandée, car c’est une opération qui consomme beaucoup d’E/S et qui peut déconnecter votre entrepôt de données. Par ailleurs, l’exécution de cette commande entraîne de coûteuses implications sur vos instantanés d’entrepôt de données. 
@@ -165,7 +165,7 @@ DBCC SHRINKDATABASE (UserDB, 10);
 GO  
 ```  
   
-### <a name="b-truncating-a-database"></a>b. Troncation d'une base de données  
+### <a name="b-truncating-a-database"></a>B. Troncation d'une base de données  
 L’exemple suivant réduit la taille des fichiers de données et des fichiers journaux de l’exemple de base de données `AdventureWorks` jusqu’à la dernière extension affectée.  
   
 ```sql  

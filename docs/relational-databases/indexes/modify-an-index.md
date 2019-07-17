@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ee26ba8891c2854bf772c0af021f48b8420d3356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2aba0c1526473d48fe1171bbd41f4e006ca1690
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680237"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732417"
 ---
 # <a name="modify-an-index"></a>Modifier un index
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -61,15 +61,11 @@ ms.locfileid: "47680237"
   
 #### <a name="to-modify-an-index"></a>Pour modifier un index  
   
-1.  Connectez-vous au [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
-  
-3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple supprime et recrée un index existant sur la colonne `ProductID` de la table `Production.WorkOrder` avec l'option `DROP_EXISTING` . Les options `FILLFACTOR` et `PAD_INDEX` sont également définies.  
+L'exemple suivant supprime et recrée un index existant sur la colonne `ProductID` de la table `Production.WorkOrder` dans la base de données AdventureWorks avec l'option `DROP_EXISTING`. Les options `FILLFACTOR` et `PAD_INDEX` sont également définies.  
   
      [!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
   
-     L'exemple suivant utilise ALTER INDEX pour définir plusieurs options de l'index `AK_SalesOrderHeader_SalesOrderNumber`.  
+     The following example uses ALTER INDEX to set several options on the index `AK_SalesOrderHeader_SalesOrderNumber`.  
   
      [!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_2.sql)]  
   
@@ -77,7 +73,7 @@ ms.locfileid: "47680237"
   
 1.  Pour ajouter, supprimer, ou modifier la position d'une colonne d'index, vous devez supprimer et recréer l'index.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   

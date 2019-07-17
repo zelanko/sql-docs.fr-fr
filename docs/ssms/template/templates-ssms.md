@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Management Studio
 - source controls [SQL Server Management Studio], tutorials
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 30b40d10ec7a4da7df0bfc9e4ba1f3aa6bb68ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a634a106704cebd91ce74910de17166c85c6c4de
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822943"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866259"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Utiliser des modèles dans SQL Server Management Studio
 
@@ -35,8 +35,9 @@ Ce tutoriel vous présente les modèles Transact-SQL (T-SQL) prédéfinis qui so
 
 Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et de l’accès à un serveur SQL.
 
-- Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+
+* Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 ## <a name="use-template-browser"></a>Utiliser l’Explorateur de modèles
 
@@ -108,15 +109,17 @@ Vous pouvez aussi créer un modèle dans l’Explorateur de modèles. Les étape
 
 5. Cliquez avec le bouton droit sur le modèle que vous avez créé, puis sélectionnez **Modifier**. Une nouvelle fenêtre de requête s’ouvre.
 
-6. Entrez le texte T-SQL à enregistrer. 
+6. Entrez le texte T-SQL à enregistrer.
 
 7. Dans le menu **Fichier**, sélectionnez **Enregistrer**.
 
-8. Fermez la fenêtre de requête existante et ouvrez votre nouveau modèle personnalisé. 
+8. Fermez la fenêtre de requête existante et ouvrez votre nouveau modèle personnalisé.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-L’article suivant propose des conseils et astuces supplémentaires pour utiliser SQL Server Management Studio. 
+La meilleure façon de se familiariser avec SSMS est d’effectuer des exercices pratiques. Ces articles *Tutoriel* et *Procédure* vous aident à vous familiariser avec les différentes fonctionnalités disponibles dans SSMS.  Ces articles vous apprennent à gérer les composants de SSMS et à trouver les fonctionnalités utilisées régulièrement.
 
-> [!div class="nextstepaction"]
-> [Conseils et astuces supplémentaires pour utiliser SSMS](../tutorials/ssms-tricks.md)
+* [Se connecter à une instance et l’interroger](../tutorials/connect-query-sql-server.md)
+* [Création de scripts](../tutorials/scripting-ssms.md)
+* [Configuration de SSMS](../tutorials/ssms-configuration.md)
+* [Conseils et astuces supplémentaires pour utiliser SSMS](../tutorials/ssms-tricks.md)
