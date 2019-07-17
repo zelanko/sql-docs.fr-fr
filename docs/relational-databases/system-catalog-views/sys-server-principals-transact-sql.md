@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: c5dbe0d8-a1c8-4dc4-b9b1-22af20effd37
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1fa743255397aee03b71a8b7d77f79237a8b009
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 408ad309ade858c800b79ee83993fda4fe78467a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133087"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   Contient une ligne par principal au niveau serveur.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom du principal. Nom unique dans un serveur.|  
-|**principal_id**|**Int**|Numéro d'identification du principal. Nom unique dans un serveur.|  
+|**name**|**sysname**|Nom du principal. Nom unique dans un serveur.|  
+|**principal_id**|**int**|Numéro d'identification du principal. Nom unique dans un serveur.|  
 |**sid**|**varbinary(85)**|SID (Security-IDentifier) du principal. S'il s'agit d'un principal Windows, correspond au SID Windows.|  
 |**type**|**char(1)**|Type de principal :<br /><br /> S = Nom de connexion SQL<br /><br /> U = Connexion Windows<br /><br /> G = groupe Windows<br /><br /> R = Rôle SQL Server<br /><br /> C = Connexion mappée sur un certificat<br /><br /> K = Connexion mappée sur une clé asymétrique|  
 |**type_desc**|**nvarchar(60)**|Description du type de principal :<br /><br /> SQL_LOGIN<br /><br /> WINDOWS_LOGIN<br /><br /> WINDOWS_GROUP<br /><br /> SERVER_ROLE<br /><br /> CERTIFICATE_MAPPED_LOGIN<br /><br /> ASYMMETRIC_KEY_MAPPED_LOGIN|  
@@ -45,7 +44,7 @@ ms.locfileid: "62744045"
 |**modify_date**|**datetime**|Heure de dernière modification de la définition du principal.|  
 |**default_database_name**|**sysname**|Base de données par défaut de ce principal.|  
 |**default_language_name**|**sysname**|Langue par défaut de ce principal.|  
-|**credential_id**|**Int**|ID d'une information d'identification associée à ce principal. Si aucune information d'identification n'est associée à ce principal, credential_id a la valeur NULL.|  
+|**credential_id**|**int**|ID d'une information d'identification associée à ce principal. Si aucune information d'identification n'est associée à ce principal, credential_id a la valeur NULL.|  
 |**owning_principal_id**|**Int**|Le **principal_id** du propriétaire d’un rôle de serveur. NULL, si le principal n'est pas un rôle serveur.|  
 |**is_fixed_role**|**bit**|Retourne 1 si le principal est un des rôles de serveur intégré avec des autorisations fixes. Pour plus d’informations, consultez [Rôles de niveau serveur](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   

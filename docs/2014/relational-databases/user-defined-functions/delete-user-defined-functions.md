@@ -11,11 +11,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f6c2580e17c204b534ec4c8ebadec3a1e992a4d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529269"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196463"
 ---
 # <a name="delete-user-defined-functions"></a>Supprimer des fonctions définies par l'utilisateur
   Vous pouvez supprimer des fonctions définies par l’utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -44,7 +44,7 @@ ms.locfileid: "52529269"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Exige l'autorisation ALTER sur le schéma auquel la fonction appartient, ou l'autorisation CONTROL sur la fonction.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

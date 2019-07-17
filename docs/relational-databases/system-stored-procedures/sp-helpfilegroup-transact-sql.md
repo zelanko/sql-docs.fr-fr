@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a01132d30a293bca084669a733834c7d034048e4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6fe9798b6a9f560621eba9806e25081f72e316c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122536"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +46,15 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**groupname**|**sysname**|Nom du groupe de fichiers|  
 |**groupid**|**smallint**|Identificateur numérique du groupe de fichiers.|  
-|**filecount**|**Int**|Nombre de fichiers appartenant au groupe de fichiers.|  
+|**filecount**|**int**|Nombre de fichiers appartenant au groupe de fichiers.|  
   
  Si *nom* est spécifié, une ligne pour chaque fichier dans le groupe de fichiers est retournée.  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|Nom logique du fichier dans le groupe de fichiers.|  
 |**fileid**|**smallint**|Identificateur numérique du fichier.|  
@@ -69,7 +68,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-returning-all-filegroups-in-a-database"></a>A. Renvoi de tous les groupes de fichiers d'une base de données  
+### <a name="a-returning-all-filegroups-in-a-database"></a>R. Renvoi de tous les groupes de fichiers d'une base de données  
  L'exemple suivant renvoie des informations sur les groupes de fichiers dans la base de données exemple [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  

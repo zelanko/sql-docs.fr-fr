@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : Création d’une alerte de l’Agent SQL Server avec le fournisseur WMI | Microsoft Docs'
+title: 'Aperçu : Création d’une alerte de l’Agent SQL Server avec le fournisseur WMI | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 03802fba0b2a36716fdac5674053a56061f26c85
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 875751bd4b2dffd0039ffb40aa884bb9731a75d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139493"
 ---
-# <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Exemple : création d’une alerte SQL Server Agent avec le fournisseur WMI
+# <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>Aperçu : Création d’une alerte SQL Server Agent avec le fournisseur WMI
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Une façon courante d'utiliser le fournisseur d'événements WMI consiste à créer des alertes de l'Agent SQL Server qui répondent à des événements spécifiques. L'exemple suivant présente une alerte simple qui enregistre les événements du graphique de blocage XML dans une table pour leur analyse ultérieure. L'Agent SQL Server soumet une demande WQL, reçoit des événements WMI et exécute un travail en réponse à l'événement. Remarquez que, bien que plusieurs objets Service Broker soient impliqués dans le traitement du message de notification, le fournisseur d'événements WMI gère les détails de la création et de la gestion de ces objets.  
   
 ## <a name="example"></a>Exemple  
- En premier lieu, une table est créée dans la base de données `AdventureWorks` pour contenir l'événement du graphique du blocage. La table contient deux colonnes : la colonne `AlertTime` contient l'heure à laquelle l'alerte s'exécute et la colonne `DeadlockGraph` contient le document XML qui inclut le graphique du blocage.  
+ En premier lieu, une table est créée dans la base de données `AdventureWorks` pour contenir l'événement du graphique du blocage. Le tableau contient deux colonnes : Le `AlertTime` colonne contient l’heure à laquelle l’alerte s’exécute, et le `DeadlockGraph` colonne contient le document XML qui contient le graphique de blocage.  
   
  Ensuite, l'alerte est créée. Le script commence par créer le travail que l'alerte exécutera, ajoute une étape de travail au travail et cible le travail sur l'instance actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le script crée alors l'alerte.  
   
@@ -104,7 +103,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Exécutez le script ci-dessous sous le second onglet de requête. Ce script produit un jeu de résultats, puis se bloque, en attendant d'acquérir un verrou sur `Production.Product`.  
+ Exécutez le script suivant dans le deuxième onglet de requête. Ce script génère un jeu de résultats, puis se bloque, attend pour acquérir un verrou sur `Production.Product`.  
   
 ```  
 USE AdventureWorks ;  
@@ -120,7 +119,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- Exécutez le script ci-dessous sous le premier onglet de requête. Ce script se bloque, en attendant d'acquérir un verrou sur `Production.Location`. Après un court délai d'attente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisira soit ce script, soit le script dans l'exemple comme victime du blocage et mettra un terme à la transaction.  
+ Exécutez le script suivant dans le premier onglet de requête. Ce script se bloque, attend pour acquérir un verrou sur `Production.Location`. Après un court délai d'attente, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] choisira soit ce script, soit le script dans l'exemple comme victime du blocage et mettra un terme à la transaction.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

@@ -1,5 +1,5 @@
 ---
-title: Démarrer ou arrêter un PowerPivot pour SharePoint Server | Documents Microsoft
+title: Démarrer ou arrêter un PowerPivot pour SharePoint Server | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b53cc7730f962d790ebdb9a0373bf98e9bf32bf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037403"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208094"
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Démarrer ou arrêter un serveur PowerPivot pour SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "34037403"
 ##  <a name="effects"></a> Conséquences de l’arrêt d’un serveur PowerPivot  
  Le tableau suivant décrit les conséquences de l’arrêt du service système [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] et du service Analysis Services sur un serveur SharePoint.  
   
-|Éléments affectés| Description|  
+|Éléments affectés|Description|  
 |---------------|-----------------|  
 |Requêtes existantes|Les requêtes en cours sur un serveur Analysis Services s'arrêtent immédiatement. L'utilisateur reçoit une erreur signalant des données introuvables ou une connexion à la source de données introuvable.|  
 |Travaux d'actualisation des données en cours de traitement|Les travaux en cours sur le serveur Analysis Services actif s'arrêtent immédiatement. L'actualisation des données échoue et une erreur est journalisée dans l'historique d'actualisation des données.<br /><br /> Vous pouvez consulter l'état des travaux en cours avant d'arrêter le service en utilisant la page Vérifier l'état du travail dans l'Administration centrale de SharePoint.<br /><br /> Vous avez la possibilité de savoir quels sont les travaux en cours de traitement. En revanche, il est impossible d'afficher la file d'attente pour voir si d'autres travaux sont sur le point de démarrer.|  

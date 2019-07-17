@@ -1,5 +1,5 @@
 ---
-title: cdc.&lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs
+title: capture de données modifiées. &lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c4d6202e3ac68a1c1d36e307b9073ce23f1efb6e
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: e4ad2d32c313919ed4446a5506f22e9048e09288
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119311"
 ---
-# <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
+# <a name="cdcltcaptureinstancegtct-transact-sql"></a>capture de données modifiées. &lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Table de modifications créée lorsque la capture de données modifiées est activée sur une table source. La table retourne une ligne pour chaque opération d'insertion et de suppression effectuée sur la table source, et deux lignes pour chaque opération de mise à jour effectuée sur la table source. Lorsque le nom de la table de modifications n'est pas spécifié au moment de l'activation de la table source, le nom est dérivé. Le format du nom est cdc. *capture_instance*_CT où *capture_instance* est le nom de schéma de la table source et le nom de la table source au format *schema_table*. Par exemple, si la table **Person.Address** dans le **AdventureWorks** exemple de base de données est activée pour la capture de données modifiées, le nom de table de modifications dérivé serait **capture de données modifiées. Person_Address_CT**.  
@@ -34,7 +33,7 @@ ms.locfileid: "67586378"
   
 
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|Numéro séquentiel dans le journal associé à la transaction de validation pour la modification.<br /><br /> Toutes les modifications validées dans la même transaction partagent le même numéro séquentiel dans le journal de validation. Par exemple, si une opération de suppression sur la table source supprime deux lignes, la table de modifications contiendra deux lignes, chacune avec la même **__ $start_lsn** valeur.|  
 |**__$end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cette colonne a toujours pour valeur NULL.|  
@@ -42,7 +41,7 @@ ms.locfileid: "67586378"
 |**__$operation**|**Int**|Identifie l'opération de langage de manipulation de données associée à la modification. Les valeurs possibles sont les suivantes :<br /><br /> 1 = suppression<br /><br /> 2 = insertion<br /><br /> 3 = mise à jour (anciennes valeurs)<br /><br /> Les données de colonne ont des valeurs de ligne avant d'exécuter l'instruction UPDATE.<br /><br /> 4 = mise à jour (nouvelles valeurs)<br /><br /> Les données de colonne ont des valeurs de ligne après l'exécution de l'instruction UPDATE.|  
 |**__$update_mask**|**varbinary(128)**|Un masque de bits basé sur les ordinaux de colonne de la table de modifications identifiant les colonnes modifiées.|  
 |*\<<colonnes_de_table_source_capturées>*|variable|Les colonnes restantes de la table de modifications sont les colonnes de la table source qui ont été identifiées comme colonnes capturées lorsque l'instance de capture a été créée. Si aucune colonne n'a été spécifiée dans la liste des colonnes capturées, toutes les colonnes de la table source sont incluses dans cette table.|  
-|**__$command_id** |**Int** |Effectue le suivi de l’ordre des opérations dans une transaction. |  
+|**__$command_id** |**int** |Effectue le suivi de l’ordre des opérations dans une transaction. |  
   
 ## <a name="remarks"></a>Notes  
 

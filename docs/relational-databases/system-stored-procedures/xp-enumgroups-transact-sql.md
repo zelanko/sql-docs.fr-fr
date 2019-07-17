@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 43366fd6463c885a41ad0304d45c2df1375015f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116769"
 ---
 # <a name="xpenumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,17 +47,17 @@ xp_enumgroups [ 'domain_name' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Groupe**|**sysname**|Nom du groupe Windows|  
-|**Commentaire**|**sysname**|Description du groupe Windows fourni par Windows|  
+|**comment**|**sysname**|Description du groupe Windows fourni par Windows|  
   
 ## <a name="remarks"></a>Notes  
  Si *nom_domaine* est le nom de l’ordinateur basé sur Windows qui une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution, ou aucun nom de domaine est spécifié, **xp_enumgroups** énumère les groupes locaux à partir de l’ordinateur qui est en cours d’exécution [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  **xp_enumgroups** ne peut pas être utilisé lorsqu’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution sur Windows 98.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance au **db_owner** rôle de base de données fixe dans le **master** base de données ou l’appartenance à la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

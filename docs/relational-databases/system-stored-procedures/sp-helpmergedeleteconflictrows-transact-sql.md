@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222be651-5690-4341-9dfb-f9ec1d80c970
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6c60f56980aedc29c8262089748a77f113cc0449
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 86e8d3d21246cbb308db5b698a29f2b02ce45ac3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137745"
 ---
 # <a name="sphelpmergedeleteconflictrows-transact-sql"></a>sp_helpmergedeleteconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**. Si la publication est spécifiée, tous les conflits qualifiés par la publication sont renvoyés.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%** . Si la publication est spécifiée, tous les conflits qualifiés par la publication sont renvoyés.  
   
-`[ @source_object = ] 'source_object'` Est le nom de l’objet source. *source_object* est **nvarchar (386)**, avec NULL comme valeur par défaut.  
+`[ @source_object = ] 'source_object'` Est le nom de l’objet source. *source_object* est **nvarchar (386)** , avec NULL comme valeur par défaut.  
   
 `[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *publisher* est **sysname**, avec NULL comme valeur par défaut.  
   
@@ -51,11 +50,11 @@ sp_helpmergedeleteconflictrows [ [ @publication = ] 'publication']
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**source_object**|**nvarchar(386)**|Objet source du conflit de suppression.|  
 |**rowguid**|**uniqueidentifier**|Identificateur de ligne associé au conflit de suppression.|  
-|**conflict_type**|**Int**|Code indiquant le type de conflit :<br /><br /> **1** = UpdateConflict: le conflit est détecté au niveau de la ligne.<br /><br /> **2** = ColumnUpdateConflict: Conflit est détecté au niveau de la colonne.<br /><br /> **3** = UpdateDeleteWinsConflict: la suppression gagne le conflit.<br /><br /> **4** = UpdateWinsDeleteConflict: le GUID de ligne supprimé qui perd le conflit est enregistré dans cette table.<br /><br /> **5** = UploadInsertFailed : impossibilité d'appliquer sur le serveur de publication l'insertion effectuée sur l'abonné.<br /><br /> **6** = DownloadInsertFailed: impossibilité d'appliquer sur l'abonné l'insertion effectuée sur le serveur de publication.<br /><br /> **7** = UploadDeleteFailed : impossibilité de télécharger vers le serveur de publication la suppression appliquée sur l'abonné.<br /><br /> **8** = DownloadDeleteFailed: impossibilité de télécharger vers l'abonné la suppression appliquée sur le serveur de publication.<br /><br /> **9** = UploadUpdateFailed : impossibilité d'appliquer sur le serveur de publication la mise à jour effectuée sur l'abonné.<br /><br /> **10** = DownloadUpdateFailed: impossibilité d'appliquer sur l'abonné la mise à jour effectuée sur le serveur de publication.|  
+|**conflict_type**|**Int**|Code indiquant le type de conflit :<br /><br /> **1** = UpdateConflict : Conflit est détecté au niveau de la ligne.<br /><br /> **2** = ColumnUpdateConflict : Conflit est détecté au niveau de la colonne.<br /><br /> **3** = UpdateDeleteWinsConflict: Suppression gagne le conflit.<br /><br /> **4** = UpdateWinsDeleteConflict: Le rowguid supprimé qui perd le conflit est enregistré dans cette table.<br /><br /> **5** = UploadInsertFailed : Insertion de l’abonné n’a pas pu être appliquée sur le serveur de publication.<br /><br /> **6** = DownloadInsertFailed : Insertion provenant du serveur de publication n’a pas pu être appliquée sur l’abonné.<br /><br /> **7** = UploadDeleteFailed : Suppression appliquée à l’abonné n’a pas pu être téléchargée vers le serveur de publication.<br /><br /> **8** = DownloadDeleteFailed: Suppression appliquée au serveur de publication n’a pas pu être téléchargée à l’abonné.<br /><br /> **9** = UploadUpdateFailed : Mise à jour sur l’abonné n’a pas pu être appliquée sur le serveur de publication.<br /><br /> **10** = DownloadUpdateFailed : Mise à jour sur le serveur de publication n’a pas pu être appliquée à l’abonné.|  
 |**reason_code**|**Int**|Code d'erreur pouvant dépendre du contexte.|  
 |**reason_text**|**varchar(720)**|Description de l'erreur qui peut dépendre du contexte.|  
 |**origin_datasource**|**varchar(255)**|Origine du conflit.|  

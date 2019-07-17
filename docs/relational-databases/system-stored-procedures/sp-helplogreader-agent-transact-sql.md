@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e6a3c403fde55213e093b70ced1cb6a59d15fd28
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b6ecac979077dd83d6549b408c8c9e4d2bd4402f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122435"
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,10 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**Int**|ID de l’agent.|  
-|**nom**|**nvarchar(100)**|Nom de l'Agent.|  
+|**id**|**int**|ID de l’agent.|  
+|**name**|**nvarchar(100)**|Nom de l'Agent.|  
 |**publisher_security_mode**|**smallint**|Mode de sécurité utilisé par l'Agent lors de la connexion au serveur de publication. Il peut prendre l'une des valeurs suivantes :<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification<br /><br /> **1** = l’authentification Windows.|  
 |**publisher_login**|**sysname**|Nom de connexion utilisé lors de la connexion au serveur de publication.|  
 |**publisher_password**|**nvarchar(524)**|Pour des raisons de sécurité, la valeur **\* \* \* \* \* \* \* \* \* \*** est toujours retourné.|  

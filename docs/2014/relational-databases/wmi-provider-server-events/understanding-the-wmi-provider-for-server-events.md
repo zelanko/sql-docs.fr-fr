@@ -15,18 +15,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2deedb64e5c8995524978a19b02110a068bde08d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358211"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195812"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>Présentation du fournisseur WMI pour les événements serveur
   Le fournisseur WMI pour les événements de serveur vous permet d'utiliser WMI (Windows Management Instrumentation) pour surveiller les événements dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce fournisseur fonctionne en transformant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un objet WMI managé. Tout événement qui peut générer une notification d'événements dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut tirer parti de WMI via ce fournisseur. En outre, l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en tant qu'application de gestion qui interagit avec WMI, peut répondre à ces événements, ce qui augmente l'étendue des événements traités par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par rapport aux versions antérieures.  
   
  Les applications de gestion telles que l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent accéder aux événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via le fournisseur WMI pour les événements serveur en publiant des instructions WQL (WMI Query Language). Le langage WQL est un sous-ensemble simplifié du langage SQL, avec quelques extensions spécifiques à WMI. À l'aide du langage WQL, une application récupère un type d'événement à partir d'une base de données ou d'un objet de base de données spécifique. Le fournisseur WMI pour les événements serveur traduit la requête en une notification d'événements, ce qui entraîne la création effective d'une notification d'événements dans la base de données cible. Pour plus d’informations sur le fonctionnement des notifications d’événements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [fournisseur WMI pour les Concepts des événements serveur](https://technet.microsoft.com/library/ms180560.aspx). Les événements qui peuvent être interrogés sont répertoriés dans [fournisseur WMI pour les Classes d’événements de serveur et les propriétés](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
- Lorsqu’un événement survient qui déclenche la notification d’événement pour envoyer un message, le message est envoyé à un service cible prédéfini dans **msdb** qui est nommé **SQL/Notifications/ProcessWMIEventProviderNotification/v1.0**. Le service place l’événement dans une file d’attente prédéfinie dans **msdb** qui est nommé **WMIEventProviderNotificationQueue**. (Le service et la file d'attente sont créés dynamiquement par le fournisseur lorsqu'il se connecte pour la première fois à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Le fournisseur lit ensuite les données d'événement de cette file d'attente et les convertit au format MOF avant de les retourner à l'application. L'illustration ci-dessous montre ce processus.  
+ Lorsqu’un événement survient qui déclenche la notification d’événement pour envoyer un message, le message est envoyé à un service cible prédéfini dans **msdb** qui est nommé **SQL/Notifications/ProcessWMIEventProviderNotification/v1.0**. Le service place l’événement dans une file d’attente prédéfinie dans **msdb** qui est nommé **WMIEventProviderNotificationQueue**. (Le service et la file d’attente sont créés dynamiquement par le fournisseur lorsqu’il se connecte d’abord à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) Le fournisseur lit les données d’événement à partir de cette file d’attente, puis convertit au format d’objet géré (MOF) avant de retourner à l’application. L'illustration ci-dessous montre ce processus.  
   
  ![Diagramme de flux du fournisseur WMI pour les événements serveur](../../../2014/database-engine/dev-guide/media/wmi-provider-functional-spec.gif "diagramme de flux du fournisseur WMI pour les événements serveur")  
   

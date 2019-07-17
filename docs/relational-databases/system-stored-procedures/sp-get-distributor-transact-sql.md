@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ccdc8529bb62e4e1db15f0a5ea85a64c5b679abf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124118"
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +38,13 @@ sp_get_distributor
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**installed**|**Int**|**0** = No ; **1** = yes|  
+|**installed**|**int**|**0** = No ; **1** = yes|  
 |**serveur de distribution**|**sysname**|Nom du serveur du serveur de distribution|  
 |**base de données de distribution installé**|**Int**|**0** = No ; **1** = yes|  
-|**est le serveur de publication de distribution**|**Int**|**0** = No ; **1** = yes|  
-|**a le serveur de publication de distribution distant**|**Int**|**0** = No ; **1** = yes|  
+|**est le serveur de publication de distribution**|**int**|**0** = No ; **1** = yes|  
+|**a le serveur de publication de distribution distant**|**int**|**0** = No ; **1** = yes|  
   
 ## <a name="remarks"></a>Notes  
  **sp_get_distributor** est principalement utilisée par le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et de capture instantanée, transactionnelle, la réplication de fusion.  

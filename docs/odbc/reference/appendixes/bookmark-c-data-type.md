@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76846a5027ff5229997151b36a93b1ea553ddbc8
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 86488da93470a61a54638e9c60e6e1795a9da4dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125754"
 ---
 # <a name="bookmark-c-data-type"></a>Type de données C pour les signets
 Le type de données C de signet permet à une application récupérer un signet. Les types de signet C sont utilisés seulement pour récupérer les valeurs de signet qui peuvent être variable en longueur ; ils ne doivent pas être convertis en autres types de données. Une application récupère un signet à partir de la colonne 0 du résultat défini avec **SQLBulkOperations** (avec une opération de SQL_ADD), **SQLFetch**, **SQLFetchScroll**, ou **SQLGetData**. Pour plus d’informations, consultez [signets](../../../odbc/reference/develop-app/bookmarks-odbc.md).  

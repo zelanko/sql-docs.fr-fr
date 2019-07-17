@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7267097b1a06cb44c801ed20cbfd206c330328ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165467"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Règles d'attribution de noms aux objets (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -66,11 +66,11 @@ ms.locfileid: "52509472"
   
 |Object|Caractères non valides|  
 |------------|------------------------|  
-|**Server**|Suivez les conventions d'attribution des noms de serveur Windows lorsque vous nommez un objet serveur. Pour plus d'informations, consultez [Conventions d'attribution des noms (Windows)](/windows/desktop/DNS/naming-conventions) .|  
+|**Serveur**|Suivez les conventions d'attribution des noms de serveur Windows lorsque vous nommez un objet serveur. Pour plus d'informations, consultez [Conventions d'attribution des noms (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |**DataSource**|: / \ * &#124; ? « [] () {} <>|  
-|**Level** ou **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**Dimension** ou **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
-|Tous les autres objets|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} < >|  
+|**Level** ou **Attribute**|. , ; ' ` : / \ * &#124; ? « & % $ ! + = [] {} < >|  
+|**Dimension** ou **Hierarchy**|. , ; ' ` : / \ * &#124; ? « & % $ ! + = [] () {} \<, >|  
+|Tous les autres objets|. , ; ' ` : / \ * &#124; ? « & % $ ! + = [] () {} < >|  
   
  **Exceptions : Lorsque les caractères réservés sont autorisés**  
   

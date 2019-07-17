@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c00e7c26a429836f0d350e60530d2dc1db8c2a61
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6875e745cc05735b9f116c2d4afa5e5218defb99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122390"
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,13 +45,13 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**alternate_publisher**|**sysname**|Nom de l'autre serveur de publication.|  
 |**alternate_publisher_db**|**sysname**|Nom de la base de données de publication.|  
 |**alternate_publication**|**sysname**|Nom de la publication.|  
 |**alternate_distributor**|**sysname**|Nom du serveur de distribution.|  
-|**friendly_name**|**nvarchar(255)**|Description de l'autre serveur de publication.|  
+|**nom_convivial**|**nvarchar(255)**|Description de l'autre serveur de publication.|  
 |**enabled**|**bit**|Indique si le serveur est un autre serveur de publication. **1** Spécifie que le serveur de publication est activée en tant qu’un autre serveur de publication. **0** Spécifie qu’il n’est pas activé.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 96515727-728b-4bea-804a-36ce915b8b75
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 495dd51ede4adf27b488fa35847117fddf64cafc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e65e33e8fc11bbe01497758542d3b332a862a42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125333"
 ---
 # <a name="syspartitionfunctions-transact-sql"></a>sys.partition_functions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Contient une ligne par fonction de partition dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de la fonction de partition Unique dans la base de données.|  
-|**function_id**|**Int**|ID de la fonction de partition. Unique dans la base de données.|  
+|**name**|**sysname**|Nom de la fonction de partition Unique dans la base de données.|  
+|**function_id**|**int**|ID de la fonction de partition. Unique dans la base de données.|  
 |**type**|**char(2)**|Type de fonction.<br /><br /> R = plage|  
 |**type_desc**|**nvarchar(60)**|Type de fonction.<br /><br /> RANGE|  
 |**sortance**|**Int**|Nombre de partitions créées par la fonction.|  
@@ -45,7 +44,7 @@ ms.locfileid: "47645127"
 |**create_date**|**datetime**|Date de création de la fonction.|  
 |**modify_date**|**datetime**|Date de la dernière modification de la fonction à l'aide d'une instruction ALTER.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

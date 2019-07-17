@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5db87d77-85fa-45a3-a23a-3ea500f9a5ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3636ce2bb082d4686d0895716fb10567b5dc750
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ac8bc2087b4c100b784aadac8458e106538f76d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47853407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124004"
 ---
 # <a name="spgetbindtoken-transact-sql"></a>sp_getbindtoken (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ sp_getbindtoken [@out_token =] 'return_value' OUTPUT
  Jeton à utiliser pour lier les sessions. *return_value* est **varchar (255)** sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
- None  
+ Aucun  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- None  
+ Aucun  
   
 ## <a name="remarks"></a>Notes  
  sp_getbindtoken retourne un jeton valide uniquement lorsque la procédure stockée est exécutée dans une transaction active. Sinon, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] retournera un message d’erreur. Exemple :  
@@ -105,7 +104,7 @@ PKb'gN5<9aGEedk_16>8U=5---/5G=--
 > [!NOTE]  
 >  Nous vous conseillons d'utiliser l'API Open Data Services srv_getbindtoken pour obtenir un jeton de liaison susceptible d'être utilisé à partir d'une procédure stockée étendue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  

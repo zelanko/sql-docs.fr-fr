@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d5e62117f620a93d61d9216ad46383c116c930ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cace39108f3f99d5c165f42b4337e837e1fb7c5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121028"
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ Si vous utilisez SQL Database V12, vous devez utiliser [sys.dm_geo_replication_l
 |**partner_database**|**sysname**|Nom de la base de données liée sur le serveur SQL Database lié.|  
 |**last_replication**|**datetimeoffset**|Horodateur de la dernière transaction dupliquée appliquée.|  
 |**replication_lag_sec**|**Int**|Décalage horaire en secondes entre l'heure actuelle et l'horodateur de la dernière transaction validée dans la base de données primaire qui n'a pas été acceptée par la base de données secondaire active.|  
-|**replication_state**|**tinyint**|L’état de réplication de copie continue pour cette base de données. Voici les valeurs possibles et leurs descriptions.<br /><br /> 1 : Amorçage. La cible de réplication est amorcée et est dans un état incohérent d'un point de vue transactionnel. Tant que l'amorçage n'est pas terminé, vous ne pouvez pas vous connecter à la base de données secondaire active. <br />2 : Rattrapage. La base de données secondaire active rattrape la base de données primaire et est dans un état cohérent d'un point de vue transactionnel.<br />3: Réamorçage. La base de données secondaire active est automatiquement réamorcée, en raison d'une erreur irrécupérable de réplication.<br />4 : Suspendu. Il ne s'agit pas d'une relation de copie continue active. Cet état indique généralement que la bande passante disponible pour l'interlien est insuffisante pour le niveau d'activité de transaction dans la base de données primaire. Toutefois, la relation de copie continue est toujours intacte.|  
+|**replication_state**|**tinyint**|L’état de réplication de copie continue pour cette base de données. Voici les valeurs possibles et leurs descriptions.<br /><br /> 1 : L’amorçage. La cible de réplication est amorcée et est dans un état incohérent d'un point de vue transactionnel. Tant que l'amorçage n'est pas terminé, vous ne pouvez pas vous connecter à la base de données secondaire active. <br />2 : Rattrapage. La base de données secondaire active rattrape la base de données primaire et est dans un état cohérent d'un point de vue transactionnel.<br />3 : Réamorçage. La base de données secondaire active est automatiquement réamorcée, en raison d'une erreur irrécupérable de réplication.<br />4 : Suspendu. Il ne s'agit pas d'une relation de copie continue active. Cet état indique généralement que la bande passante disponible pour l'interlien est insuffisante pour le niveau d'activité de transaction dans la base de données primaire. Toutefois, la relation de copie continue est toujours intacte.|  
 |**replication_state_desc**|**nvarchar (256)**|Description de replication_state :<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
 |**is_rpo_limit_reached**|**bit**|A toujours pour valeur 0.|  
 |**is_target_role**|**bit**|0 = Source de la relation de copie<br /><br /> 1 = Cible de la relation de copie|  

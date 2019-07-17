@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375941"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206603"
 ---
 # <a name="working-with-query-notifications"></a>Utilisation de notifications de requêtes
   Les notifications de requêtes ont été introduites dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Basées sur l'infrastructure de Service Broker introduite dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], les notifications de requêtes permettent aux applications d'être notifiées en cas de modification des données. Cette fonctionnalité est particulièrement utile pour les applications qui fournissent un cache d'informations à partir d'une base de données, par exemple une application Web, et qui doivent être notifiées en cas de modification des données sources.  
@@ -73,7 +73,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Le jeu de propriétés DBPROPSET_SQLSERVERROWSET  
  Pour prendre en charge les notifications de requêtes via OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ajoute les nouvelles propriétés suivantes au jeu de propriétés DBPROPSET_SQLSERVERROWSET.  
   
-|Créer une vue d’abonnement|Type|Description|  
+|Nom|type|Description|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Nombre de secondes pendant lesquelles la notification de requête doit rester active.<br /><br /> La valeur par défaut est 432 000 secondes (5 jours). La valeur minimale est 1 seconde, et la valeur maximale est 2^31-1 secondes.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texte du message de la notification. Il est défini par l'utilisateur et n'a aucun format prédéfini.<br /><br /> Par défaut, la chaîne est vide. Vous pouvez spécifier un message à l'aide de 1-2000 caractères.|  
@@ -131,7 +131,7 @@ RECEIVE * FROM MyQueue
   
  Si une demande d'abonnement est soumise pour un lot ou une procédure stockée, une demande d'abonnement séparée est soumise pour chaque instruction exécutée dans le traitement ou la procédure stockée. Les instructions EXECUTE n'inscrivent aucune notification mais la demande de notification est envoyée à la commande exécutée. S'il s'agit d'un lot, le contexte est appliqué aux instructions exécutées et les mêmes règles décrites ci-dessus sont appliquées.  
   
- La soumission d'une requête pour la notification qui a été soumise par le même utilisateur sous le même contexte de base de données et qui possède le même modèle, les mêmes valeurs de paramètre, la même ID de notification et le même emplacement de remise d'un abonnement actif existant, renouvellera l'abonnement existant en réinitialisant le nouveau délai d'attente spécifié. Cela signifie que si une notification est demandée pour des requêtes identiques, une seule notification est envoyée. Cette situation concerne une requête dupliquée dans un lot ou une requête dans une procédure stockée qui a été appelée plusieurs fois.  
+ Soumission d’une requête de notification a été envoyée par le même utilisateur sous le même contexte de base de données a le même modèle, les valeurs de paramètre même, même ID de notification et même emplacement de remise d’un abonnement actif existant, renouvellera existant abonnement, réinitialisation de la nouvelle spécifié du délai d’attente. Cela signifie que si la notification est demandée pour des requêtes identiques, qu’une seule notification sera envoyée. Cette situation concerne une requête dupliquée dans un lot ou une requête dans une procédure stockée qui a été appelée plusieurs fois.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités de SQL Server Native Client](sql-server-native-client-features.md)  

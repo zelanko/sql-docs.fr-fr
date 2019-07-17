@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b74d52f21b056caa14b2ade7fca85426f877128
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120205"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,44 +79,44 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x04**|Les colonnes d'identité font l'objet d'un script utilisant la propriété IDENTITY.|  
 ||**0x08**|Répliquer **timestamp** colonnes. Si ce n’est pas définie, **timestamp** les colonnes sont répliquées en tant que **binaire**.|  
 ||**0x10**|Génère un index cluster correspondant.|  
-||**0x20**|Convertit les types de données définis par l'utilisateur (UDT) en types de données de base auprès de l'Abonné. Vous ne pouvez pas utiliser cette option lorsqu'il existe une contrainte CHECK ou DEFAULT sur une colonne de type défini par l'utilisateur (UDT), si une colonne UDT fait partie de la clé primaire, ou si une colonne calculée désigne une colonne UDT. Non pris en charge pour les serveurs de publication Oracle.|  
-||**0x40**|Génère les index non-cluster correspondants.|  
+||**0 x 20**|Convertit les types de données définis par l'utilisateur (UDT) en types de données de base auprès de l'Abonné. Vous ne pouvez pas utiliser cette option lorsqu'il existe une contrainte CHECK ou DEFAULT sur une colonne de type défini par l'utilisateur (UDT), si une colonne UDT fait partie de la clé primaire, ou si une colonne calculée désigne une colonne UDT. Non pris en charge pour les serveurs de publication Oracle.|  
+||**0 x 40**|Génère les index non-cluster correspondants.|  
 ||**0x80**|Inclut l'intégrité référentielle déclarée dans les clés primaires.|  
-||**0x100**|Réplique les déclencheurs utilisateur, si ceux-ci sont définis, sur un article de table.|  
-||**0x200**|Réplique les contraintes FOREIGN KEY. Si la table référencée ne fait pas partie d'une publication, aucune contrainte FOREIGN KEY appliquée à une table publiée n'est répliquée.|  
-||**0x400**|Réplique les contraintes CHECK.|  
-||**0x800**|Réplique les valeurs par défaut.|  
-||**0x1000**|Réplique le classement au niveau des colonnes.|  
-||**0x2000**|Réplique les propriétés étendues associées à l'objet source de l'article publié.|  
-||**0x4000**|Réplique les clés uniques, si celles-ci sont définies, sur un article de table.|  
-||**0x8000**|Réplique la clé primaire et les clés uniques sur un article de table sous forme de contraintes, à l'aide d'instructions ALTER TABLE.<br /><br /> Remarque : Cette option est déconseillée. Utilisez **0 x 80** et **0 x 4000** à la place.|  
-||**0x10000**|Réplique les contraintes CHECK en tant que NOT FOR REPLICATION afin que les contraintes ne soient pas appliquées durant la synchronisation.|  
-||**0x20000**|Réplique les contraintes FOREIGN KEY en tant que NOT FOR REPLICATION afin que les contraintes ne soient pas appliquées durant la synchronisation.|  
-||**0x40000**|Réplique les groupes de fichiers associés à une table ou un index partitionné.|  
-||**0x80000**|Réplique le schéma de partition d'une table partitionnée.|  
-||**0x100000**|Réplique le schéma de partition d'un index partitionné.|  
+||**0 x 100**|Réplique les déclencheurs utilisateur, si ceux-ci sont définis, sur un article de table.|  
+||**0 x 200**|Réplique les contraintes FOREIGN KEY. Si la table référencée ne fait pas partie d'une publication, aucune contrainte FOREIGN KEY appliquée à une table publiée n'est répliquée.|  
+||**0 x 400**|Réplique les contraintes CHECK.|  
+||**0 x 800**|Réplique les valeurs par défaut.|  
+||**0 x 1000**|Réplique le classement au niveau des colonnes.|  
+||**0 x 2000**|Réplique les propriétés étendues associées à l'objet source de l'article publié.|  
+||**0 x 4000**|Réplique les clés uniques, si celles-ci sont définies, sur un article de table.|  
+||**0 x 8000**|Réplique la clé primaire et les clés uniques sur un article de table sous forme de contraintes, à l'aide d'instructions ALTER TABLE.<br /><br /> Remarque : Cette option est déconseillée. Utilisez **0 x 80** et **0 x 4000** à la place.|  
+||**0 x 10000**|Réplique les contraintes CHECK en tant que NOT FOR REPLICATION afin que les contraintes ne soient pas appliquées durant la synchronisation.|  
+||**0 x 20000**|Réplique les contraintes FOREIGN KEY en tant que NOT FOR REPLICATION afin que les contraintes ne soient pas appliquées durant la synchronisation.|  
+||**0 x 40000**|Réplique les groupes de fichiers associés à une table ou un index partitionné.|  
+||**0 x 80000**|Réplique le schéma de partition d'une table partitionnée.|  
+||**0 x 100000**|Réplique le schéma de partition d'un index partitionné.|  
 ||**0x200000**|Réplique les statistiques d'une table.|  
-||**0x400000**|Liaisons par défaut|  
+||**0 x 400000**|Liaisons par défaut|  
 ||**0x800000**|Liaisons de règle|  
 ||**0x1000000**|Index de recherche en texte intégral|  
 ||**0x2000000**|Collections de schéma XML liées aux **xml** colonnes ne sont pas répliquées.|  
 ||**0x4000000**|Réplique les index sur **xml** colonnes.|  
-||**0x8000000**|Crée tout schéma non encore présent chez l'abonné.|  
-||**0x10000000**|Convertit **xml** colonnes à **ntext** sur l’abonné.|  
-||**0x20000000**|Types de données de l’objet convertit volumineux (**nvarchar (max)** , **varchar (max)** , et **varbinary (max)** ) qui ont été introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] aux types de données qui sont prises en charge sur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
-||**0x40000000**|Réplique les autorisations.|  
-||**0x80000000**|Tente de supprimer les dépendances envers tous les objets qui ne font pas partie de la publication.|  
-||**0x100000000**|Utilisez cette option pour répliquer l’attribut FILESTREAM s’il est spécifié sur **varbinary (max)** colonnes. Ne spécifiez pas cette option si vous répliquez des tables sur des Abonnés [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La réplication de tables qui possèdent des colonnes FILESTREAM sur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] abonnés n'est pas pris en charge, quelle que soit la façon dont cette option de schéma est définie.<br /><br /> Consultez l’option connexe **0 x 800000000**.|  
+||**0 x 8000000**|Crée tout schéma non encore présent chez l'abonné.|  
+||**0 x 10000000**|Convertit **xml** colonnes à **ntext** sur l’abonné.|  
+||**0 x 20000000**|Types de données de l’objet convertit volumineux (**nvarchar (max)** , **varchar (max)** , et **varbinary (max)** ) qui ont été introduits dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] aux types de données qui sont prises en charge sur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+||**0 x 40000000**|Réplique les autorisations.|  
+||**0 x 80000000**|Tente de supprimer les dépendances envers tous les objets qui ne font pas partie de la publication.|  
+||**0 x 100000000**|Utilisez cette option pour répliquer l’attribut FILESTREAM s’il est spécifié sur **varbinary (max)** colonnes. Ne spécifiez pas cette option si vous répliquez des tables sur des Abonnés [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La réplication de tables qui possèdent des colonnes FILESTREAM sur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] abonnés n'est pas pris en charge, quelle que soit la façon dont cette option de schéma est définie.<br /><br /> Consultez l’option connexe **0 x 800000000**.|  
 ||**0x200000000**|Convertit les types de données de date et heure (**date**, **temps**, **datetimeoffset**, et **datetime2**) qui ont été introduits dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] types de données qui sont prises en charge sur les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0x400000000**|Réplique l'option de compression pour les données et les index. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md).|  
-||**0x800000000**|Définissez cette option pour stocker les données FILESTREAM dans leur propre groupe de fichiers sur l'Abonné. Si cette option n'est pas définie, les données FILESTREAM sont stockées dans le groupe de fichiers par défaut. La réplication ne crée pas de groupes de fichiers ; par conséquent, si vous définissez cette option, vous devez créer le groupe de fichiers avant d'appliquer l'instantané à l'Abonné. Pour plus d’informations sur la création d’objets avant d’appliquer l’instantané, consultez [exécuter des Scripts avant et après l’instantané est appliqué](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> Consultez l’option connexe **0 x 100000000**.|  
+||**0 x 800000000**|Définissez cette option pour stocker les données FILESTREAM dans leur propre groupe de fichiers sur l'Abonné. Si cette option n'est pas définie, les données FILESTREAM sont stockées dans le groupe de fichiers par défaut. La réplication ne crée pas de groupes de fichiers ; par conséquent, si vous définissez cette option, vous devez créer le groupe de fichiers avant d'appliquer l'instantané à l'Abonné. Pour plus d’informations sur la création d’objets avant d’appliquer l’instantané, consultez [exécuter des Scripts avant et après l’instantané est appliqué](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> Consultez l’option connexe **0 x 100000000**.|  
 ||**0x1000000000**|Convertit les types common language runtime (CLR) défini par l’utilisateur (UDT) supérieurs à 8 000 octets pour **varbinary (max)** afin que les colonnes de type UDT puissent être répliquées sur les abonnés qui sont en cours d’exécution [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-||**0x2000000000**|Convertit le **hierarchyid** type de données à **varbinary (max)** afin que les colonnes de type **hierarchyid** peuvent être répliquées sur les abonnés qui sont en cours d’exécution [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations sur l’utilisation **hierarchyid** colonnes dans les tables répliquées, consultez [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+||**0 x 2000000000**|Convertit le **hierarchyid** type de données à **varbinary (max)** afin que les colonnes de type **hierarchyid** peuvent être répliquées sur les abonnés qui sont en cours d’exécution [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations sur l’utilisation **hierarchyid** colonnes dans les tables répliquées, consultez [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|Réplique tous les index filtrés sur la table. Pour plus d’informations sur les index filtrés, consultez [créer des index filtrés](../../relational-databases/indexes/create-filtered-indexes.md).|  
 ||**0x8000000000**|Convertit le **geography** et **geometry** types de données **varbinary (max)** afin que les colonnes de ces types peuvent être répliquées sur les abonnés qui sont en cours d’exécution [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 ||**0x10000000000**|Réplique les index sur des colonnes de type **geography** et **geometry**.|  
 ||**0x20000000000**|Réplique l'attribut SPARSE pour les colonnes. Pour plus d’informations sur cet attribut, consultez [utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).|  
-||**0x40000000000**|Activer la génération de scripts par l’agent d’instantané pour créer la table optimisée en mémoire sur l’abonné.|  
+||**0 x 40000000000**|Activer la génération de scripts par l’agent d’instantané pour créer la table optimisée en mémoire sur l’abonné.|  
 ||**0x80000000000**|Convertit un index cluster en index non cluster pour les articles optimisés en mémoire.|  
 |**status**||Spécifie le nouvel état de la propriété.|  
 ||**partitions horizontales DTS**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -213,7 +212,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 |Type de l'article|Type de réplication||  
 |------------------|----------------------|------|  
-||Transactionnelle|Snapshot|  
+||Transactionnelle|Instantané|  
 |**logbased**|Toutes les options|Toutes les options mais **0 x 02**|  
 |**logbased manualfilter**|Toutes les options|Toutes les options mais **0 x 02**|  
 |**logbased manualview**|Toutes les options|Toutes les options mais **0 x 02**|  

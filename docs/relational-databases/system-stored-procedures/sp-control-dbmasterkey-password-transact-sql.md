@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: af6e23ba3cce2ef4dfaa6901f51a9d6c0b034e60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0af97dacdf5927428042d8e67593a0c6ee78542d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108772"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,14 +74,14 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  Lorsque vous utilisez les informations d'identification ajoutées à l'aide de sp_control_dbmasterkey_password pour ouvrir la clé principale de la base de données, celle-ci est rechiffrée par la clé principale du service. Si la base de données est en mode lecture seule, l'opération de rechiffrement échouera et la clé principale de la base de données restera non chiffrée. Pour un accès ultérieur à la clé principale de la base de données, vous devez utiliser l'instruction OPEN MASTER KEY et un mot de passe. Pour ne pas à avoir à utiliser un mot de passe, créez les informations d'identification avant de placer la base de données en mode lecture seule.  
   
- **Problème de compatibilité descendante potentiel :** actuellement, la procédure stockée ne vérifie pas si une clé principale existe. Cette opération est autorisée à des fins de compatibilité descendante, mais affiche un avertissement. Ce comportement est déconseillé. Dans une prochaine version de la clé principale doit exister et le mot de passe utilisé dans la procédure stockée **sp_control_dbmasterkey_password** doit être le même mot de passe comme l’un des mots de passe utilisés pour chiffrer la clé principale de base de données.  
+ **Problème de compatibilité descendante potentiel :** Actuellement, la procédure stockée ne vérifie pas l’existence d’une clé principale. Cette opération est autorisée à des fins de compatibilité descendante, mais affiche un avertissement. Ce comportement est déconseillé. Dans une prochaine version de la clé principale doit exister et le mot de passe utilisé dans la procédure stockée **sp_control_dbmasterkey_password** doit être le même mot de passe comme l’un des mots de passe utilisés pour chiffrer la clé principale de base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. Création d'informations d'identification pour la clé principale d'AdventureWorks2012  
+### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>R. Création d'informations d'identification pour la clé principale d'AdventureWorks2012  
  Dans l'exemple ci-dessous, des informations d'identification sont créées pour la clé principale de la base de données `AdventureWorks2012` et le mot de passe de la clé principale est enregistré en tant que secret dans les informations d'identification. Étant donné que tous les paramètres qui sont passés à `sp_control_dbmasterkey_password` doit être de type de données **nvarchar**, les chaînes de texte sont converties avec l’opérateur de cast `N`.  
   
 ```  

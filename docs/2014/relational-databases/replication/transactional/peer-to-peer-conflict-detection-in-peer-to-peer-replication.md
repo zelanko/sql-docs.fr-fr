@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135444"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198994"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Détection de conflit dans la réplication d'égal à égal
   La réplication transactionnelle d'égal à égal vous permet d'insérer, de mettre à jour et de supprimer des données sur un nœud quelconque dans une topologie, puis de propager les modifications aux autres nœuds. Comme vous pouvez modifier des données sur un nœud quelconque, les modifications de données sur des nœuds différents peuvent être en conflit les unes avec les autres. Si une ligne est modifiée au niveau de plusieurs nœuds, elle peut provoquer un conflit, voire la perte de la mise à jour, lorsque la ligne est propagée à d'autres nœuds.  
