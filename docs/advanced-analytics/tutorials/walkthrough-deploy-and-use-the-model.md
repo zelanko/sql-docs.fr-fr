@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f1c684aff9c4b31049a04add04e8def642dca1d2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e79dd0bce559259863128de1d2490f0fd9197cf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961695"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>Déployer le modèle R et l’utiliser dans SQL Server (procédure pas à pas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,7 +72,7 @@ Créer une procédure stockée, *PredictTipBatchMode*, qui génère plusieurs pr
 
     + Vous utilisez une instruction SELECT pour appeler le modèle stocké à partir d’une table SQL. Le modèle est récupéré à partir de la table en tant que **varbinary (max)** données, stockées dans la variable SQL  _\@lmodel2_et passée comme paramètre *mod* au système procédure stockée [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-    + Les données utilisées comme entrées pour la notation est définie comme une requête SQL et stockée sous forme de chaîne dans la variable SQL  _\@d’entrée_. Comme les données sont récupérées à partir de la base de données, il est stocké dans une trame de données appelée *InputDataSet*, qui est simplement le nom par défaut pour les données d’entrée pour le [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procédure ; vous pouvez définir un autre nom de variable si nécessaire en utilisant le paramètre   *_\@input_data_1_name_*.
+    + Les données utilisées comme entrées pour la notation est définie comme une requête SQL et stockée sous forme de chaîne dans la variable SQL  _\@d’entrée_. Comme les données sont récupérées à partir de la base de données, il est stocké dans une trame de données appelée *InputDataSet*, qui est simplement le nom par défaut pour les données d’entrée pour le [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) procédure ; vous pouvez définir un autre nom de variable si nécessaire en utilisant le paramètre * _\@input_data_1_name_* .
 
     + Pour générer les scores, la procédure stockée appelle la fonction rxPredict à partir de la **RevoScaleR** bibliothèque.
 

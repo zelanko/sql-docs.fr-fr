@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24367bfec4b0e25fec60eb49c77a74e1ccd54f46
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579758"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68187130"
 ---
 # <a name="bcp-utility"></a>Utilitaire bcp
   Le **bcp** utilitaire copie en bloc des données entre une instance de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et un fichier de données dans un format spécifié par l’utilisateur. L’utilitaire **bcp** permet d’importer un grand nombre de nouvelles lignes dans des tables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou d’exporter des données de tables dans des fichiers de données. Sauf lorsqu’il est utilisé avec l’option **queryout** , l’utilitaire ne nécessite aucune connaissance de [!INCLUDE[tsql](../includes/tsql-md.md)]. Pour importer des données dans une table, vous devez utiliser un fichier de format créé pour cette table ou comprendre la structure de la table et les types de données valides pour ses colonnes.  
@@ -99,7 +99,7 @@ ms.locfileid: "57579758"
   
 -   **queryout** copie à partir d’une requête et doit être spécifié uniquement lors d’une copie de données en bloc à partir d’une requête.  
   
--   **format** crée un fichier de format basé sur l’option spécifiée (**- n**, `-c`, `-w`, ou **-N**) et les délimiteurs de table ou vue. Lors d’une copie en bloc de données, la commande **bcp** peut se référer à un fichier de format, ce qui permet d’éviter de ressaisir les informations de format de manière interactive. L’option **format** nécessite l’option **-f** ; la création d’un fichier de format XML nécessite aussi l’option **-x**. Pour plus d’informations, consultez [Créer un fichier de format &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). Vous devez spécifier **nul** comme valeur (**format nul**).  
+-   **format** crée un fichier de format basé sur l’option spécifiée ( **- n**, `-c`, `-w`, ou **-N**) et les délimiteurs de table ou vue. Lors d’une copie en bloc de données, la commande **bcp** peut se référer à un fichier de format, ce qui permet d’éviter de ressaisir les informations de format de manière interactive. L’option **format** nécessite l’option **-f** ; la création d’un fichier de format XML nécessite aussi l’option **-x**. Pour plus d’informations, consultez [Créer un fichier de format &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). Vous devez spécifier **nul** comme valeur (**format nul**).  
   
  *Propriétaire*  
  Nom du propriétaire de la table ou de la vue. *owner* est facultatif si l'utilisateur qui effectue l'opération est le propriétaire de la table ou de la vue. Si la valeur de *owner* n’est pas spécifiée et si l’utilisateur effectuant l’opération ne possède pas la table ou la vue spécifiée, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] retourne un message d’erreur et l’opération est annulée.  
@@ -123,7 +123,7 @@ ms.locfileid: "57579758"
  **-b** _batch_size_  
  Nombre de lignes par lot de données importées. Chaque lot est importé et consigné dans un journal comme transaction distincte important le lot complet avant d'être validée. Par défaut, toutes les lignes du fichier de données sont importées comme un lot. Pour distribuer les lignes entre les différents lots, spécifiez une valeur de *batch_size* inférieure au nombre de lignes du fichier de données. Si la transaction d'un lot échoue, seules les insertions du lot actif sont restaurées. Les lots dont l'importation a été effectuée par des transactions validées ne sont pas affectés par une défaillance ultérieure.  
   
- N’utilisez pas cette option conjointement avec le **-h «** ROWS_PER_BATCH  **= *`bb`*»** option.  
+ N’utilisez pas cette option conjointement avec le **-h «** ROWS_PER_BATCH  **= *`bb`* »** option.  
   
  `-c`  
  Effectue l'opération en utilisant un type de données caractères. Cette option n’affiche aucune invite pour chaque champ. Il utilise `char` comme type de stockage, avec et sans préfixes **\t** (tabulation) comme séparateur de champs et **\r\n** (caractère de saut de ligne) comme indicateur de fin de ligne. `-c` n'est pas compatible avec `-w`.  
@@ -175,13 +175,13 @@ ms.locfileid: "57579758"
   
  *first_row* peut être un entier positif avec une valeur maximale de 2^63-1. **-F**_first_row_ est de base 1.  
   
- **-h"** _hint_[ **,**... *n*] **"**  
+ **-h"** _hint_[ **,** ... *n*] **"**  
  Indicateur ou indicateurs à utiliser lors de l'importation en bloc de données vers une table ou vue.  
   
- ORDER **(**_column_[ASC | DESC] [**,**...*n*]**)**  
+ ORDER **(** _column_[ASC | DESC] [ **,** ...*n*] **)**  
  Ordre de tri des données dans le fichier de données. Les performances de l'importation en bloc sont améliorées si les données importées sont triées en fonction de l'index cluster de la table, le cas échéant. Si le fichier de données est trié dans un ordre différent, c'est-à-dire dans un ordre autre que celui d'une clé d'index cluster, ou s'il n'existe pas d'index cluster dans la table, l'option ORDER est ignorée. Les noms de colonnes fournis doivent être des noms de colonnes valides dans la table de destination. Par défaut, **bcp** considère que le fichier de données n’est pas ordonné. Pour une importation en bloc optimisée, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] valide également le fait que les données importées sont triées.  
   
- ROWS_PER_BATCH **=**_bb_  
+ ROWS_PER_BATCH **=** _bb_  
  Nombre de lignes de données par lot (*bb*). Utilisée quand **-b** n’est pas spécifié, cette option provoque l’envoi au serveur de la totalité du fichier de données au cours d’une transaction unique. Le serveur optimise le chargement en masse en fonction de la valeur de *bb*. Par défaut, ROWS_PER_BATCH est inconnu.  
   
  KILOBYTES_PER_BATCH **=** _cc_  
@@ -210,7 +210,7 @@ ms.locfileid: "57579758"
  Spécifié avec l’argument **in**, n’importe quel déclencheur d’insertion sur la table de destination s’exécute pendant l’opération de copie en bloc. Si FIRE_TRIGGERS n'est pas spécifié, aucun déclencheur d'insertion ne s'exécute. FIRE_TRIGGERS est ignoré pour les arguments **out**, **queryout** et **format**.  
   
  **-i** _input_file_  
- Spécifie le nom d’un fichier de réponse contenant les réponses aux questions d’invite de commandes pour chaque champ de données lorsqu’une copie en bloc est effectuée en mode interactif (**- n**, `-c`, `-w`, ou **- N** sauf indication contraire).  
+ Spécifie le nom d’un fichier de réponse contenant les réponses aux questions d’invite de commandes pour chaque champ de données lorsqu’une copie en bloc est effectuée en mode interactif ( **- n**, `-c`, `-w`, ou **- N** sauf indication contraire).  
   
  Si *input_file* commence par un trait d’union (-) ou une barre oblique (/), n’incluez pas d’espace entre **-i** et la valeur *input_file* .  
   
@@ -281,8 +281,8 @@ ms.locfileid: "57579758"
  **-R**  
  Spécifie que les données de type devise, date et heure sont copiées en bloc dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en utilisant le format régional défini par les paramètres régionaux de l'ordinateur client. Par défaut, les paramètres régionaux sont ignorés.  
   
- **-S** _server_name_[ **\\**_instance_name_]  
- Spécifie l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à laquelle établir une connexion. Si aucun serveur n’est spécifié, l’utilitaire **bcp** se connecte à l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l’ordinateur local. Cette option est requise lorsqu’une commande **bcp** est exécutée depuis un ordinateur distant sur le réseau ou sur une instance nommée locale. Pour se connecter à l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un serveur, spécifiez uniquement *server_name*. Pour vous connecter à une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], spécifiez *server_name**_\\_** instance_name*.  
+ **-S** _server_name_[ **\\** _instance_name_]  
+ Spécifie l'instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] à laquelle établir une connexion. Si aucun serveur n’est spécifié, l’utilitaire **bcp** se connecte à l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l’ordinateur local. Cette option est requise lorsqu’une commande **bcp** est exécutée depuis un ordinateur distant sur le réseau ou sur une instance nommée locale. Pour se connecter à l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur un serveur, spécifiez uniquement *server_name*. Pour vous connecter à une instance nommée de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], spécifiez *server_name  ** _\\_** instance_name*.  
   
  `-t` *field_term*  
  Spécifie l’indicateur de fin de champ. Par défaut, il s’agit du caractère de tabulation ( **\t** ). Utilisez ce paramètre pour remplacer l'indicateur de fin de champ par défaut. Pour plus d’informations, consultez [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
@@ -412,11 +412,11 @@ ms.locfileid: "57579758"
 -   (Utilisateur) Utilisez un terminateur long et unique (n'importe quelle séquence d'octets ou de caractères) pour minimiser les risques de conflits avec la valeur de chaîne actuelle. Cette tâche peut être réalisée à l'aide des options -t et -r.  
   
 ## <a name="examples"></a>Exemples  
- Cette section contient les exemples suivants :  
+ Cette section contient les exemples suivants :  
   
--   A. Copie de lignes de table dans un fichier de données (avec une connexion approuvée)  
+-   R. Copie de lignes de table dans un fichier de données (avec une connexion approuvée)  
   
--   b. Copie de lignes de table dans un fichier de données (avec l'authentification en mode mixte)  
+-   B. Copie de lignes de table dans un fichier de données (avec l'authentification en mode mixte)  
   
 -   C. Copie de données depuis un fichier dans une table  
   
@@ -432,7 +432,7 @@ ms.locfileid: "57579758"
   
 -   I. Utilisation d’un fichier de format pour une importation en bloc avec **bcp**  
   
-### <a name="a-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>A. Copie de lignes de table dans un fichier de données (avec une connexion approuvée)  
+### <a name="a-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>R. Copie de lignes de table dans un fichier de données (avec une connexion approuvée)  
  L’exemple suivant illustre l’option **out** sur la table `AdventureWorks2012.Sales.Currency` . Cet exemple crée un fichier de données nommé `Currency.dat` et y copie les données de table au format caractère. Cet exemple part du principe que vous utilisez l’authentification Windows et que vous disposez d’une connexion approuvée à l’instance du serveur sur laquelle vous exécutez la commande **bcp** .  
   
  À partir d'une invite de commandes, entrez la commande suivante :  
@@ -441,7 +441,7 @@ ms.locfileid: "57579758"
 bcp AdventureWorks2012.Sales.Currency out Currency.dat -T -c  
 ```  
   
-### <a name="b-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>b. Copie de lignes de table dans un fichier de données (avec l'authentification en mode mixte)  
+### <a name="b-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>B. Copie de lignes de table dans un fichier de données (avec l'authentification en mode mixte)  
  L’exemple suivant illustre l’option **out** sur la table `AdventureWorks2012.Sales.Currency` . Cet exemple crée un fichier de données nommé `Currency.dat` et y copie les données de table au format caractère.  
   
  L’exemple part du principe que vous utilisez l’authentification en mode mixte ; vous devez utiliser le commutateur **-U** pour spécifier votre ID de connexion. De même, à moins que vous vous connectiez à l’instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l’ordinateur local, utilisez le commutateur **-S** pour spécifier le nom du système et, éventuellement, un nom d’instance.  
