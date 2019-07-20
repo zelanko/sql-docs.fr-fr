@@ -1,7 +1,7 @@
 ---
 title: SQLDescribeParam, fonction | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLDescribeParam
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLDescribeParam
@@ -19,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 337ed5808b8eb3cf964977fcba70307984d1b2b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c1ba115766b820cdcc4f671eeacf9eeec90a894
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104716"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345449"
 ---
 # <a name="sqldescribeparam-function"></a>Fonction SQLDescribeParam
 **Conformité**  
- Version introduite : Conformité aux normes 1.0 ODBC : ODBC  
+ Version introduite: Conformité des normes ODBC 1,0: ODBC  
   
  **Résumé**  
  **SQLDescribeParam** retourne la description d’un marqueur de paramètre associé à une instruction SQL préparée. Ces informations sont également disponibles dans les champs de l’IPD.  
@@ -48,67 +49,67 @@ SQLRETURN SQLDescribeParam(
   
 ## <a name="argument"></a>Argument  
  *StatementHandle*  
- [Entrée] Descripteur d’instruction.  
+ Entrée Descripteur d’instruction.  
   
  *ParameterNumber*  
- [Entrée] Numéro de marqueur de paramètre triées séquentiellement ordre croissant des paramètres, en commençant à 1.  
+ Entrée Numéro de marqueur de paramètre ordonné séquentiellement dans l’ordre croissant des paramètres, à partir de 1.  
   
  *DataTypePtr*  
- [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le type de données SQL du paramètre. Cette valeur est lue à partir du champ d’enregistrement SQL_DESC_CONCISE_TYPE de l’IPD. Il s’agit d’une des valeurs dans le [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) section de l’annexe d : Types de données, ou un type de données spécifiques au pilote SQL.  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner le type de données SQL du paramètre. Cette valeur est lue à partir du champ d’enregistrement SQL_DESC_CONCISE_TYPE de l’IPD. Il s’agira de l’une des valeurs de la section [types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) de l’annexe D: Types de données, ou un type de données SQL spécifique au pilote.  
   
- Dans ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME et SQL_TYPE_TIMESTAMP s’affichera dans  *\*DataTypePtr* de date, d’heure ou de données timestamp, respectivement ; dans ODBC 2. *x*, SQL_DATE, SQL_TIME ou SQL_TIMESTAMP sera retourné. Le Gestionnaire de pilotes effectue les mappages requis lorsqu’un ODBC 2. *x* application fonctionne avec un ODBC 3. *x* pilote ou lorsqu’un ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote.  
+ Dans ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME ou SQL_TYPE_TIMESTAMP sont retournés dans  *\*DataTypePtr* pour les données de date, d’heure ou d’horodatage, respectivement; dans ODBC 2. *x*, SQL_DATE, SQL_TIME ou SQL_TIMESTAMP sont retournés. Le gestionnaire de pilotes effectue les mappages requis lorsqu’un ODBC 2. l’application *x* fonctionne avec ODBC 3. *x* ou lorsqu’un pilote ODBC 3. l’application *x* fonctionne avec ODBC 2. pilote *x* .  
   
- Lorsque *ColumnNumber* est égal à 0 (pour une colonne de signet), SQL_BINARY est retourné dans  *\*DataTypePtr* pour les signets de longueur variable. (SQL_INTEGER est retournée si les signets sont utilisés par un ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote ou par un ODBC 2. *x* application fonctionne avec un ODBC 3. *x* pilote.)  
+ Lorsque *ColumnNumber* est égal à 0 (pour une colonne de signets), SQL_BINARY est retourné dans  *\*DataTypePtr* pour les signets de longueur variable. (SQL_INTEGER est renvoyé si les signets sont utilisés par ODBC 3. *x* qui fonctionne avec ODBC 2. *x* ou ODBC 2. *x* qui fonctionne avec une application ODBC 3. pilote *x* .)  
   
- Pour plus d’informations, consultez [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) dans l’annexe d : Types de données. Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.  
+ Pour plus d’informations, consultez [types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) dans l’annexe D: Types de données. Pour plus d’informations sur les types de données SQL spécifiques au pilote, consultez la documentation du pilote.  
   
  *ParameterSizePtr*  
- [Sortie] Pointeur vers une mémoire tampon dans lequel retourner la taille, en caractères, de la colonne ou l’expression du marqueur de paramètre correspondant, tel que défini par la source de données. Pour plus d’informations sur la taille de colonne, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner la taille, en caractères, de la colonne ou de l’expression du marqueur de paramètre correspondant, comme défini par la source de données. Pour plus d’informations sur la taille des colonnes, consultez [taille de colonne, chiffres décimaux, longueur d’octet de transfert et taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
   
  *DecimalDigitsPtr*  
- [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le nombre de chiffres décimaux de la colonne ou expression de paramètre correspondant, tel que défini par la source de données. Pour plus d’informations sur les chiffres décimaux, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner le nombre de chiffres décimaux de la colonne ou de l’expression du paramètre correspondant, comme défini par la source de données. Pour plus d’informations sur les chiffres décimaux, consultez [taille de colonne, chiffres décimaux, longueur d’octet de transfert et taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
   
  *NullablePtr*  
- [Sortie] Pointeur vers une mémoire tampon dans lequel retourner une valeur qui indique si le paramètre autorise les valeurs NULL. Cette valeur est lue à partir du champ SQL_DESC_NULLABLE de l’IPD. Il peut s'agir :  
+ Sortie Pointeur vers une mémoire tampon dans laquelle retourner une valeur qui indique si le paramètre autorise les valeurs NULL. Cette valeur est lue à partir du champ SQL_DESC_NULLABLE de l’IPD. Il peut s'agir :  
   
--   SQL_NO_NULLS : Le paramètre n’autorise pas les valeurs NULL (il s’agit de la valeur par défaut).  
+-   SQL_NO_NULLS: Le paramètre n’autorise pas les valeurs NULL (il s’agit de la valeur par défaut).  
   
--   SQL_NULLABLE : Le paramètre accepte les valeurs NULL.  
+-   SQL_NULLABLE: Le paramètre autorise les valeurs NULL.  
   
--   SQL_NULLABLE_UNKNOWN : Le pilote ne peut pas déterminer si le paramètre autorise les valeurs NULL.  
+-   SQL_NULLABLE_UNKNOWN: Le pilote ne peut pas déterminer si le paramètre autorise les valeurs NULL.  
   
 ## <a name="returns"></a>Valeur renvoyée  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLDescribeParam** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLDescribeParam** et explique chacune dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
+ Lorsque **SQLDescribeParam** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *comme HandleType* de SQL_HANDLE_STMT et un *handle* de *StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLDescribeParam** et explique chacune d’elles dans le contexte de cette fonction. la notation «(DM)» précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|07009|Index de descripteur non valide|(DM) la valeur spécifiée pour l’argument *ParameterNumber* est inférieur à 1.<br /><br /> La valeur spécifiée pour l’argument *ParameterNumber* a été supérieur au nombre de paramètres dans l’instruction SQL associée.<br /><br /> Le marqueur de paramètre fait partie d’une instruction non-DML.<br /><br /> Le marqueur de paramètre faisait partie d’un **sélectionnez** liste.|  
-|08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et de la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
-|21S01|Liste de valeurs d’insertion ne correspond pas à la liste des colonnes|Le nombre de paramètres dans le **insérer** instruction ne correspondait pas au nombre de colonnes dans la table nommée dans l’instruction.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifiques à l’implémentation a été défini. Le message d’erreur retourné par **SQLGetDiagRec** dans le  *\*MessageText* tampon décrit l’erreur et sa cause.|  
-|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire qui est nécessaire pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
-|HY008|Opération annulée|Traitement asynchrone a été activé pour le *au paramètre StatementHandle*. La fonction a été appelée et avant qu’il exécutée avec succès, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *au paramètre StatementHandle*. La fonction a été appelée à nouveau sur le *au paramètre StatementHandle*.<br /><br /> La fonction a été appelée et avant qu’il exécutée avec succès, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *au paramètre StatementHandle* d’un thread différent dans un application multithread.|  
-|HY010|Erreur de séquence de fonction|(DM) la fonction a été appelée avant d’appeler **SQLPrepare** ou **SQLExecDirect** pour le *au paramètre StatementHandle*.<br /><br /> (DM) une fonction de façon asynchrone en cours d’exécution a été appelée pour le handle de connexion qui est associé à la *au paramètre StatementHandle*. Cette fonction asynchrone était en cours d’exécution lorsque le **SQLDescribeParam** fonction a été appelée.<br /><br /> (DM) une fonction de façon asynchrone en cours d’exécution (pas celui-ci) a été appelée pour le *au paramètre StatementHandle* et était en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** a été appelé pour le  *Au paramètre StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi de données pour tous les paramètres de data-at-execution ou les colonnes.|  
-|HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, probablement en raison de conditions de mémoire insuffisante.|  
-|HY117|Connexion est suspendue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Délai de connexion expiré|Le délai de connexion a expiré avant que la source de données a répondu à la demande. Le délai de connexion est défini via **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Pilote ne prend pas en charge cette fonction|Le pilote (DM) associé le *au paramètre StatementHandle* ne prend pas en charge la fonction.|  
+|01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|07009|Index de descripteur non valide|(DM) la valeur spécifiée pour l’argument *ParameterNumber* est inférieure à 1.<br /><br /> La valeur spécifiée pour l’argument *ParameterNumber* est supérieure au nombre de paramètres dans l’instruction SQL associée.<br /><br /> Le marqueur de paramètre faisait partie d’une instruction non DML.<br /><br /> Le marqueur de paramètre faisait partie d’une liste de **sélection** .|  
+|08S01|Échec de la liaison de communication|Le lien de communication entre le pilote et la source de données à laquelle le pilote a été connecté a échoué avant la fin du traitement de la fonction.|  
+|21S01|La liste d’insertion de valeurs ne correspond pas à la liste de colonnes|Le nombre de paramètres dans l’instruction **Insert** ne correspondait pas au nombre de colonnes dans la table nommée dans l’instruction.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans  *\** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
+|HY008|Opération annulée|Le traitement asynchrone a été activé pour *StatementHandle*. La fonction a été appelée, et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle*. Ensuite, la fonction a été appelée à nouveau sur le *StatementHandle*.<br /><br /> La fonction a été appelée et avant la fin de l’exécution, **SQLCancel** ou **SQLCancelHandle** a été appelé sur le *StatementHandle* à partir d’un thread différent dans une application multithread.|  
+|HY010|Erreur de séquence de fonction|(DM) la fonction a été appelée avant d’appeler **SQLPrepare** ou **SQLExecDirect** pour *StatementHandle*.<br /><br /> (DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction **SQLDescribeParam** .<br /><br /> (DM) une fonction d’exécution asynchrone (pas celle-ci) a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et a retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.|  
+|HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
+|HY117|La connexion est interrompue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Délai d’attente de connexion expiré|Le délai d’attente de connexion a expiré avant que la source de données ait répondu à la demande. Le délai d’expiration de la connexion est défini par le biais de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Le pilote ne prend pas en charge cette fonction|(DM) le pilote associé au *StatementHandle* ne prend pas en charge la fonction.|  
 |IM017|L’interrogation est désactivée en mode de notification asynchrone|Chaque fois que le modèle de notification est utilisé, l’interrogation est désactivée.|  
-|IM018|**SQLCompleteAsync** n’a pas été appelé pour terminer l’opération asynchrone précédente sur ce handle.|Si l’appel de fonction précédente sur le handle retourne SQL_STILL_EXECUTING et si le mode de notification est activé, **SQLCompleteAsync** doit être appelée sur le handle de post-traitement et terminer l’opération.|  
+|IM018|**SQLCompleteAsync** n’a pas été appelé pour terminer l’opération asynchrone précédente sur ce handle.|Si l’appel de fonction précédent sur le descripteur retourne SQL_STILL_EXECUTING et si le mode de notification est activé, **SQLCompleteAsync** doit être appelé sur le handle pour effectuer un traitement postérieur et terminer l’opération.|  
   
 ## <a name="comments"></a>Commentaires  
- Marqueurs de paramètres sont numérotés dans l’ordre croissant des paramètres, en commençant par 1, dans l’ordre de qu'apparition dans l’instruction SQL.  
+ Les marqueurs de paramètres sont numérotés dans l’ordre des paramètres d’incrémentation, à partir de 1, dans l’ordre dans lequel ils apparaissent dans l’instruction SQL.  
   
- **SQLDescribeParam** ne retourne pas de type (entrée, entrée/sortie ou de sortie) d’un paramètre dans une instruction SQL. Sauf dans les appels aux procédures, tous les paramètres dans les instructions SQL sont des paramètres d’entrée. Pour déterminer le type de chaque paramètre dans un appel à une procédure, une application appelle **SQLProcedureColumns**.  
+ **SQLDescribeParam** ne retourne pas le type (entrée, entrée/sortie ou sortie) d’un paramètre dans une instruction SQL. Sauf dans les appels aux procédures, tous les paramètres dans les instructions SQL sont des paramètres d’entrée. Pour déterminer le type de chaque paramètre dans un appel à une procédure, une application appelle **SQLProcedureColumns**.  
   
- Pour plus d’informations, consultez [décrivant les paramètres](../../../odbc/reference/develop-app/describing-parameters.md).  
+ Pour plus d’informations, consultez [Description des paramètres](../../../odbc/reference/develop-app/describing-parameters.md).  
   
 ## <a name="code-example"></a>Exemple de code  
- L’exemple suivant invite l’utilisateur pour une instruction SQL et prépare ensuite cette instruction. Ensuite, il appelle **SQLNumParams** pour déterminer si l’instruction contient tous les paramètres. Si l’instruction contient des paramètres, il appelle **SQLDescribeParam** pour décrire ces paramètres et **SQLBindParameter** pour les lier. Enfin, il invite l’utilisateur pour les valeurs des paramètres et exécute ensuite l’instruction.  
+ L’exemple suivant invite l’utilisateur à entrer une instruction SQL, puis prépare cette instruction. Ensuite, il appelle **SQLNumParams** pour déterminer si l’instruction contient des paramètres. Si l’instruction contient des paramètres, elle appelle **SQLDescribeParam** pour décrire ces paramètres et **SQLBindParameter** pour les lier. Enfin, il invite l’utilisateur à entrer les valeurs de tous les paramètres, puis il exécute l’instruction.  
   
 ```cpp  
 SQLCHAR       Statement[100];  
@@ -173,10 +174,10 @@ free(LenOrIndArray);
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |Liaison d’une mémoire tampon à un paramètre|[SQLBindParameter, fonction](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|Annulation de traitement d’instruction|[SQLCancel, fonction](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Exécuter une instruction SQL préparée|[SQLExecute, fonction](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Annulation du traitement des instructions|[SQLCancel, fonction](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Exécution d’une instruction SQL préparée|[SQLExecute, fonction](../../../odbc/reference/syntax/sqlexecute-function.md)|  
 |Préparation d’une instruction pour l’exécution|[SQLPrepare, fonction](../../../odbc/reference/syntax/sqlprepare-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)

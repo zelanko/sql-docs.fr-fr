@@ -1,34 +1,34 @@
 ---
-title: Former et enregistrer un modèle de Python à l’aide de T-SQL - SQL Server Machine Learning
-description: Didacticiel Python montrant comment former et enregistrer un modèle à l’aide de Transact-SQL sur SQL Server.
+title: Former et enregistrer un modèle Python à l’aide de T-SQL
+description: Didacticiel python expliquant comment former et enregistrer un modèle à l’aide de Transact-SQL sur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f2793c6773dc38ebeb4a420e24c38504deb412d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dbe5bcb39ddbcc2b4968beccb9363a92cf6e8817
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961854"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345876"
 ---
-# <a name="train-and-save-a-python-model-using-t-sql"></a>Former et enregistrer un modèle de Python à l’aide de T-SQL
+# <a name="train-and-save-a-python-model-using-t-sql"></a>Former et enregistrer un modèle Python à l’aide de T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article fait partie d’un didacticiel, [analytique en base de données Python pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
+Cet article fait partie d’un didacticiel, [l’analytique Python en base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
 
-Dans cette étape, vous allez apprendre à former un modèle d’apprentissage en utilisant les packages Python **scikit-Découvrez** et **revoscalepy**. Ces bibliothèques Python sont déjà installés avec SQL Server Machine Learning Services.
+Dans cette étape, vous allez apprendre à former un modèle de Machine Learning à l’aide des packages python **scikit-Learn** et **revoscalepy**. Ces bibliothèques Python sont déjà installées avec SQL Server Machine Learning Services.
 
-Vous chargez les modules et appelez les fonctions nécessaires pour créer et former le modèle à l’aide d’une procédure stockée SQL Server. Le modèle requiert les fonctionnalités de données que vous conçu dans les leçons précédentes. Enfin, vous enregistrez le modèle formé à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
+Vous chargez les modules et appelez les fonctions nécessaires pour créer et effectuer l’apprentissage du modèle à l’aide d’une procédure stockée SQL Server. Le modèle nécessite les fonctionnalités de données que vous avez développées dans les leçons précédentes. Enfin, vous enregistrez le modèle formé dans une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.
  
 
-## <a name="split-the-sample-data-into-training-and-testing-sets"></a>Fractionner les exemples de données dans l’apprentissage et jeux de test
+## <a name="split-the-sample-data-into-training-and-testing-sets"></a>Fractionner les exemples de données en jeux d’apprentissage et jeux de test
 
-1. Créer une procédure stockée appelée **PyTrainTestSplit** pour diviser les données dans la table nyctaxi_sample en deux parties : nyctaxi_sample_training et nyctaxi_sample_testing. 
+1. Créez une procédure stockée appelée **PyTrainTestSplit** pour diviser les données de la table nyctaxi_sample en deux parties: nyctaxi_sample_training et nyctaxi_sample_testing. 
 
-    Cette procédure stockée doit déjà être créée pour vous, mais vous pouvez exécuter le code suivant pour la créer :
+    Cette procédure stockée doit déjà être créée pour vous, mais vous pouvez exécuter le code suivant pour la créer:
 
     ```sql
     DROP PROCEDURE IF EXISTS PyTrainTestSplit;
@@ -46,27 +46,27 @@ Vous chargez les modules et appelez les fonctions nécessaires pour créer et fo
     GO
     ```
 
-2. Pour diviser vos données à l’aide d’un fractionnement personnalisé, exécutez la procédure stockée et tapez un entier qui représente le pourcentage de données allouées au jeu d’apprentissage. Par exemple, l’instruction suivante alloue 60 % des données au jeu d’apprentissage.
+2. Pour diviser vos données à l’aide d’un fractionnement personnalisé, exécutez la procédure stockée et tapez un entier qui représente le pourcentage de données allouées au jeu d’apprentissage. Par exemple, l’instruction suivante alloue 60% des données au jeu d’apprentissage.
 
     ```sql
     EXEC PyTrainTestSplit 60
     GO
     ```
 
-## <a name="build-a-logistic-regression-model"></a>Générer un modèle de régression logistique
+## <a name="build-a-logistic-regression-model"></a>Créer un modèle de régression logistique
 
-Une fois que les données a été préparées, vous pouvez l’utiliser pour former un modèle. Pour cela en appelant un stockée procédure qui s’exécute du code Python, en prenant comme entrée de la table de données d’apprentissage. Pour ce didacticiel, vous créez deux modèles, les deux modèles de classification binaire :
+Une fois les données préparées, vous pouvez les utiliser pour effectuer l’apprentissage d’un modèle. Pour ce faire, vous devez appeler une procédure stockée qui exécute du code Python, en prenant comme entrée la table de données d’apprentissage. Pour ce didacticiel, vous créez deux modèles, à la fois les modèles de classification binaire:
 
-+ La procédure stockée **PyTrainScikit** crée un modèle de prédiction de pointe avec la **scikit-Découvrez** package.
-+ La procédure stockée **TrainTipPredictionModelRxPy** crée un modèle de prédiction de pointe avec la **revoscalepy** package.
++ La procédure stockée **PyTrainScikit** crée un modèle de prédiction Tip à l’aide du package **scikit-Learn** .
++ La procédure stockée **TrainTipPredictionModelRxPy** crée un modèle de prédiction Tip à l’aide du package **revoscalepy** .
 
-Chaque procédure stockée utilise les données d’entrée que vous fournissez pour créer et former un modèle de régression logistique. Tout le code Python est encapsulé dans la procédure stockée système, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
+Chaque procédure stockée utilise les données d’entrée que vous fournissez pour créer et effectuer l’apprentissage d’un modèle de régression logistique. Tout le code Python est encapsulé dans la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-Pour faciliter le reformer le modèle sur les nouvelles données, vous encapsulez l’appel à sp_execute_exernal_script dans une autre procédure stockée et passez les nouvelles données d’apprentissage en tant que paramètre. Cette section vous guidera tout au long de ce processus.
+Pour faciliter la reformation du modèle sur les nouvelles données, vous encapsulez l’appel à sp_execute_exernal_script dans une autre procédure stockée et transmettez les nouvelles données d’apprentissage en tant que paramètre. Cette section va vous guider tout au long de ce processus.
 
 ### <a name="pytrainscikit"></a>PyTrainScikit
 
-1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ouvrez une nouvelle **requête** fenêtre et exécutez l’instruction suivante pour créer la procédure stockée **PyTrainScikit**.  La procédure stockée contient une définition des données d’entrée, vous n’avez pas besoin de fournir une requête d’entrée.
+1.  Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ouvrez une nouvelle fenêtre de **requête** et exécutez l’instruction suivante pour créer la procédure stockée **PyTrainScikit**.  La procédure stockée contient une définition des données d’entrée. vous n’avez donc pas besoin de fournir une requête d’entrée.
 
     ```sql
     DROP PROCEDURE IF EXISTS PyTrainScikit;
@@ -105,7 +105,7 @@ Pour faciliter le reformer le modèle sur les nouvelles données, vous encapsule
     GO
     ```
 
-2. Exécutez la commande suivante des instructions SQL pour insérer le modèle formé dans table nyc\_taxi_models.
+2. Exécutez les instructions SQL suivantes pour insérer le modèle formé dans la table\_New taxi_models.
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -113,22 +113,22 @@ Pour faciliter le reformer le modèle sur les nouvelles données, vous encapsule
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    Traitement des données et l’ajustement du modèle peuvent prendre quelques minutes. Les messages éventuellement redirigés vers de Python **stdout** flux sont affichés dans le **Messages** fenêtre de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Exemple :
+    Le traitement des données et l’ajustement du modèle peuvent prendre quelques minutes. Les messages qui seraient dirigés vers le flux **stdout** de Python s’affichent dans la [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fenêtre **messages** de. Exemple :
 
-    *Message (s) STDOUT du script externe :* 
+    *Message (s) stdout provenant du script externe:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
-3. Ouvrez la table *nyc\_taxi_models*. Vous pouvez voir qu’une nouvelle ligne a été ajoutée, avec le modèle sérialisé dans la colonne _model_.
+3. Ouvrez le tableau *\_taxi_models*. Vous pouvez voir qu’une nouvelle ligne a été ajoutée, avec le modèle sérialisé dans la colonne _model_.
 
-    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561...*
+    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561...* .
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
-Cette procédure stockée utilise le nouveau **revoscalepy** package, qui est un nouveau package pour Python. Il contient des objets, de transformation et d’algorithmes semblables à ceux fournis pour le langage R **RevoScaleR** package. 
+Cette procédure stockée utilise le nouveau package **revoscalepy** , qui est un nouveau package pour Python. Il contient des objets, des transformations et des algorithmes similaires à ceux fournis pour le package **RevoScaleR** du langage R. 
 
-À l’aide de **revoscalepy**, vous pouvez créer des contextes de calcul distants, déplacer des données entre les contextes de calcul, transformer des données et former des modèles prédictifs à l’aide d’algorithmes populaires comme la régression logistique et linéaire, arbres de décision, et plus. Pour plus d’informations, consultez [module revoscalepy dans SQL Server](../python/ref-py-revoscalepy.md) et [revoscalepy de référence des fonctions](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
+En utilisant **revoscalepy**, vous pouvez créer des contextes de calcul distants, déplacer des données entre des contextes de calcul, transformer des données et former des modèles prédictifs à l’aide d’algorithmes populaires tels que la régression logistique et linéaire, les arbres de décision, etc. Pour plus d’informations, consultez [module revoscalepy dans SQL Server](../python/ref-py-revoscalepy.md) et [référence des fonctions revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
 
-1. Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ouvrez une nouvelle **requête** fenêtre et exécutez l’instruction suivante pour créer la procédure stockée _TrainTipPredictionModelRxPy_.  Étant donné que la procédure stockée contenant déjà une définition des données d’entrée, vous n’avez pas besoin de fournir une requête d’entrée.
+1. Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], ouvrez une nouvelle fenêtre de **requête** et exécutez l’instruction suivante pour créer la procédure stockée _TrainTipPredictionModelRxPy_.  Étant donné que la procédure stockée contient déjà une définition des données d’entrée, vous n’avez pas besoin de fournir une requête d’entrée.
 
     ```sql
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
@@ -163,13 +163,13 @@ Cette procédure stockée utilise le nouveau **revoscalepy** package, qui est un
     GO
     ```
 
-    Cette procédure stockée effectue les étapes suivantes dans le cadre de l’apprentissage du modèle :
+    Cette procédure stockée effectue les étapes suivantes dans le cadre de la formation du modèle:
 
-    - La requête SELECT s’applique la fonction scalaire personnalisée _fnCalculateDistance_ pour calculer la distance directe entre les emplacements de prélèvement et de débarquement. Les résultats de la requête sont stockés dans la variable d’entrée de Python par défaut, `InputDataset`.
-    - La variable binaire _tipped_ est utilisé comme le *étiquette* ou de la colonne de résultat et le modèle est adapté à l’aide de ces colonnes de caractéristiques : _passenger_count_, _trip_ distance_, _trip_time_in_secs_, et _direct_distance_.
-    - Le modèle formé est sérialisé et stocké dans la variable Python `logitObj`. En ajoutant le mot clé de T-SQL OUTPUT, vous pouvez ajouter la variable en tant que sortie de la procédure stockée. Dans l’étape suivante, cette variable est utilisée pour insérer le code binaire du modèle dans une table de base de données _nyc_taxi_models_. Ce mécanisme permet facile de stocker et réutiliser les modèles.
+    - La requête SELECT applique la fonction scalaire personnalisée _fnCalculateDistance_ pour calculer la distance directe entre les emplacements de sélection et de dépose. Les résultats de la requête sont stockés dans la variable d’entrée python par `InputDataset`défaut,.
+    - La variable binaire _bonhommed_ est utilisée comme colonne d' *étiquette* ou de résultat, et le modèle est adapté à l’aide des colonnes de fonctionnalités suivantes: _passenger_count_, _trip_distance_, _trip_time_in_secs_et _direct_distance_.
+    - Le modèle formé est sérialisé et stocké dans la variable `logitObj`Python. En ajoutant le résultat du mot clé T-SQL, vous pouvez ajouter la variable en tant que sortie de la procédure stockée. À l’étape suivante, cette variable est utilisée pour insérer le code binaire du modèle dans une table de base de données _nyc_taxi_models_. Ce mécanisme facilite le stockage et la réutilisation des modèles.
 
-2. Exécutez la procédure stockée suivante pour insérer le formé **revoscalepy** modèle dans la table *nyc_taxi_models*.
+2. Exécutez la procédure stockée comme suit pour insérer le modèle **revoscalepy** formé dans la table *nyc_taxi_models*.
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -177,20 +177,20 @@ Cette procédure stockée utilise le nouveau **revoscalepy** package, qui est un
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    Traitement des données et l’ajustement du modèle peuvent prendre un certain temps. Les messages éventuellement redirigés vers de Python **stdout** flux sont affichés dans le **Messages** fenêtre de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Exemple :
+    Le traitement des données et l’ajustement du modèle peuvent prendre un certain temps. Les messages qui seraient dirigés vers le flux **stdout** de Python s’affichent dans la [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]fenêtre **messages** de. Exemple :
 
-    *Message (s) STDOUT du script externe :* 
+    *Message (s) stdout provenant du script externe:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. Ouvrez la table *nyc_taxi_models*. Vous pouvez voir qu’une nouvelle ligne a été ajoutée, avec le modèle sérialisé dans la colonne _model_.
 
-    *revoscalepy_model* *0x8003637265766F7363616c...*
+    *revoscalepy_model* *0x8003637265766F7363616c...* .
 
-Dans l’étape suivante, vous utilisez les modèles formés pour créer des prédictions.
+À l’étape suivante, vous utiliserez les modèles formés pour créer des prédictions.
 
 ## <a name="next-step"></a>Étape suivante
 
-[Exécuter des prédictions à l’aide de Python incorporé dans une procédure stockée](sqldev-py6-operationalize-the-model.md)
+[Exécuter des prédictions à l’aide de Python Embedded dans une procédure stockée](sqldev-py6-operationalize-the-model.md)
 
 ## <a name="previous-step"></a>Étape précédente
 
