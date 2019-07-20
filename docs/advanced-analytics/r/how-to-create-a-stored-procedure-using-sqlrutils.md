@@ -1,31 +1,31 @@
 ---
-title: Comment créer une procédure stockée à l’aide de sqlrutils - SQL Server Machine Learning Services
-description: Utiliser le package sqlrutils R dans SQL Server pour regrouper le code de langage R en une seule fonction qui peut être passée en tant qu’argument à une procédure stockée.
+title: Comment créer une procédure stockée à l’aide de sqlrutils
+description: Utilisez le package R sqlrutils dans SQL Server pour regrouper du code de langage R dans une fonction unique qui peut être passée comme argument à une procédure stockée.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a9519356bcd4add6887cf5ff41c754583607d1c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0713a126a237f20b2de4e3b16225bb9e5ae26307
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962657"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345580"
 ---
-# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Créer une procédure stockée à l’aide de sqlrutils
+# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Créer un pProcedure stocké à l’aide de sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article décrit les étapes pour convertir votre code R à exécuter en tant qu’une procédure stockée T-SQL. Pour de meilleurs résultats, vous devrez peut-être modifier un peu votre code pour être sûr que toutes les entrées peuvent être paramétrées.
+Cet article décrit les étapes de conversion de votre code R pour qu’il s’exécute en tant que procédure stockée T-SQL. Pour de meilleurs résultats, vous devrez peut-être modifier un peu votre code pour être sûr que toutes les entrées peuvent être paramétrées.
 
-## <a name="bkmk_rewrite"></a>Étape 1. Réécrivez le Script R
+## <a name="bkmk_rewrite"></a>Étape 1. Réécrire le script R
 
-Pour de meilleurs résultats, vous devez réécrire votre code R pour encapsuler en tant qu’une seule fonction.
+Pour obtenir les meilleurs résultats, vous devez réécrire votre code R pour l’encapsuler en tant que fonction unique.
 
-Toutes les variables utilisées par la fonction doivent être définies à l’intérieur de la fonction, ou doivent être définis en tant que paramètres d’entrée. Consultez le [exemple de code](#samples) dans cet article.
+Toutes les variables utilisées par la fonction doivent être définies à l’intérieur de la fonction ou définies en tant que paramètres d’entrée. Consultez l' [exemple de code](#samples) dans cet article.
 
-En outre, étant donné que les paramètres d’entrée pour la fonction R deviendront les paramètres d’entrée de l’instruction SQL de procédure stockée, vous devez vous assurer que vos entrées et les sorties sont conformes aux exigences de type suivantes :
+En outre, étant donné que les paramètres d’entrée de la fonction R deviendront les paramètres d’entrée de la procédure stockée SQL, vous devez vous assurer que vos entrées et sorties sont conformes aux exigences de type suivantes:
 
 ### <a name="inputs"></a>Entrées
 
@@ -49,77 +49,77 @@ La fonction peut générer l’une des sorties suivantes :
 - Une liste nommée contenant au plus une trame de données. Tous les membres de la liste doivent utiliser l’un des types de données pris en charge.
 - Une valeur NULL, si la fonction ne retourne pas de résultat.
 
-## <a name="step-2-generate-required-objects"></a>Étape 2. Générer des objets requis
+## <a name="step-2-generate-required-objects"></a>Étape 2. Générer les objets requis
 
-Une fois que votre code R a été nettoyé et peut être appelé comme une seule fonction, vous allez utiliser les fonctions dans le **sqlrutils** package pour préparer les entrées et sorties dans un formulaire qui peut être passé au constructeur qui génère réellement les procédure stockée.
+Une fois que votre code R a été nettoyé et peut être appelé en tant que fonction unique, vous allez utiliser les fonctions du package **sqlrutils** pour préparer les entrées et les sorties dans un format qui peut être passé au constructeur qui crée réellement la procédure stockée.
 
-**sqlrutils** fournit des fonctions qui définissent le schéma de données d’entrée et le type et définissent le schéma de données de sortie et le type. Il inclut également des fonctions qui peuvent convertir des objets R pour le type de sortie requis. Vous pouvez effectuer plusieurs appels de fonction pour créer les objets requis, en fonction de votre code utilise les types de données.
+**sqlrutils** fournit des fonctions qui définissent le schéma et le type des données d’entrée, et définissent le schéma et le type des données de sortie. Il comprend également des fonctions qui peuvent convertir des objets R vers le type de sortie requis. Vous pouvez effectuer plusieurs appels de fonction pour créer les objets requis, en fonction des types de données utilisés par votre code.
 
 ### <a name="inputs"></a>Entrées
 
-Si votre fonction accepte des entrées, pour chaque entrée, appellent les fonctions suivantes :
+Si votre fonction prend des entrées, pour chaque entrée, appelez les fonctions suivantes:
 
-- `setInputData` Si l’entrée est une trame de données
-- `setInputParameter` pour tous les autres types d’entrée
+- `setInputData`Si l’entrée est une trame de données
+- `setInputParameter`pour tous les autres types d’entrée
 
-Lorsque vous apportez chaque fonction à appeler, R création d’un objet que vous allez passer ultérieurement en tant qu’argument à `StoredProcedure`, pour créer la procédure stockée terminée.
+Lorsque vous effectuez chaque appel de fonction, un objet R est créé, que vous passerez ultérieurement comme argument `StoredProcedure`à pour créer la procédure stockée complète.
 
 ### <a name="outputs"></a>Outputs
 
-**sqlrutils** fournit plusieurs fonctions pour convertir de R les objets, tels que les listes à la trame de données requis par SQL Server.
+**sqlrutils** fournit plusieurs fonctions pour convertir des objets R tels que des listes en données. Frame requis par SQL Server.
 Si votre fonction génère une trame de données directement, sans l’encapsuler au préalable dans une liste, vous pouvez ignorer cette étape.
-Vous pouvez également ignorer de la conversion de cette étape si votre fonction retourne NULL.
+Vous pouvez également ignorer cette étape si votre fonction retourne la valeur NULL.
 
-Lorsque la conversion d’une liste ou l’obtention d’un élément particulier dans une liste, choisissez à partir de ces fonctions :
+Lors de la conversion d’une liste ou de l’obtention d’un élément particulier d’une liste, choisissez l’une des fonctions suivantes:
 
-- `setOutputData` Si la variable à obtenir à partir de la liste est une trame de données
-- `setOutputParameter` pour tous les autres membres de la liste
+- `setOutputData`Si la variable à obtenir de la liste est une trame de données
+- `setOutputParameter`pour tous les autres membres de la liste
 
-Lorsque vous apportez chaque fonction à appeler, R création d’un objet que vous allez passer ultérieurement en tant qu’argument à `StoredProcedure`, pour créer la procédure stockée terminée.
+Lorsque vous effectuez chaque appel de fonction, un objet R est créé, que vous passerez ultérieurement comme argument `StoredProcedure`à pour créer la procédure stockée complète.
 
 ## <a name="step-3-generate-the-stored-procedure"></a>Étape 3. Générer la procédure stockée
 
-Lorsque tous les paramètres d’entrée et de sortie sont prêts, effectuez un appel à la `StoredProcedure` constructeur.
+Lorsque tous les paramètres d’entrée et de sortie sont prêts, effectuez un `StoredProcedure` appel au constructeur.
 
 **Utilisation**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 
-Pour illustrer cela, supposons que vous souhaitez créer une procédure stockée nommée **sp_rsample** avec ces paramètres :
+Pour illustrer cela, supposons que vous souhaitez créer une procédure stockée nommée **sp_rsample** avec les paramètres suivants:
 
-- Utilise une fonction existante **foosql**. La fonction était basée sur du code existant dans la fonction R **foo**, mais vous a retravaillé conforme aux exigences, comme décrit dans la fonction [cette section](#bkmk_rewrite)et nommé de la fonction de mise à jour en tant que  **foosql**.
-- Utilise la trame de données **queryinput** en tant qu’entrée
-- Génère en sortie une trame de données avec le nom de variable R **sqloutput**
-- Vous souhaitez créer le code T-SQL en tant que fichier dans le `C:\Temp` dossier, afin que vous puissiez exécuter ultérieurement à l’aide de SQL Server Management Studio
+- Utilise une fonction existante **foosql**. La fonction était basée sur du code existant dans R Function **foo**, mais vous avez réécrit la fonction pour qu’elle soit conforme aux exigences comme décrit dans [cette section](#bkmk_rewrite)et nommé la fonction mise à jour en tant que **foosql**.
+- Utilise la trame de données **queryinput** comme entrée
+- Génère comme sortie une trame de données avec le nom de la variable R, **SQLOutput**
+- Vous souhaitez créer le code T-SQL sous la forme d’un fichier `C:\Temp` dans le dossier, afin de pouvoir l’exécuter à l’aide de SQL Server Management Studio plus tard
 
 ```R
 StoredProcedure (foosql, sp_rsample, queryinput, sqloutput, filePath = "C:\\Temp")
 ```
 
 > [!NOTE]
-> Étant donné que vous écrivez le fichier dans le système de fichiers, vous pouvez omettre les arguments qui définissent la connexion de base de données.
+> Étant donné que vous écrivez le fichier dans le système de fichiers, vous pouvez omettre les arguments qui définissent la connexion à la base de données.
 
-La sortie de la fonction est une procédure stockée T-SQL qui peut être exécutée sur une instance de SQL Server 2016 (nécessite les Services R) ou SQL Server 2017 (nécessite les Services Machine Learning avec R). 
+La sortie de la fonction est une procédure stockée T-SQL qui peut être exécutée sur une instance de SQL Server 2016 (nécessite R services) ou SQL Server 2017 (requiert Machine Learning Services avec R). 
 
-Pour obtenir des exemples supplémentaires, consultez l’aide du package, en appelant `help(StoredProcedure)` à partir d’un environnement R.
+Pour obtenir des exemples supplémentaires, consultez l’aide du package `help(StoredProcedure)` en appelant à partir d’un environnement R.
 
-## <a name="step-4-register-and-run-the-stored-procedure"></a>Étape 4. Enregistrer et exécuter la procédure stockée
+## <a name="step-4-register-and-run-the-stored-procedure"></a>Étape 4. Inscrire et exécuter la procédure stockée
 
-Il existe deux façons que vous pouvez exécuter la procédure stockée :
+Vous pouvez exécuter la procédure stockée de deux manières:
 
-- À l’aide de T-SQL, à partir de n’importe quel client qui prend en charge les connexions à l’instance SQL Server 2016 ou SQL Server 2017
+- À l’aide de T-SQL, depuis n’importe quel client qui prend en charge les connexions à l’instance SQL Server 2016 ou SQL Server 2017
 - À partir d’un environnement R
 
-Les deux méthodes requièrent que la procédure stockée est enregistrée dans la base de données dans laquelle vous souhaitez utiliser la procédure stockée.
+Les deux méthodes requièrent que la procédure stockée soit enregistrée dans la base de données où vous avez l’intention d’utiliser la procédure stockée.
 
 ### <a name="register-the-stored-procedure"></a>Inscrire la procédure stockée
 
-Vous pouvez inscrire la procédure stockée à l’aide de R, ou vous pouvez exécuter l’instruction CREATE PROCEDURE dans T-SQL.
+Vous pouvez inscrire la procédure stockée à l’aide de R, ou vous pouvez exécuter l’instruction CREATe PROCEDURE dans T-SQL.
 
-- À l’aide de T-SQL.  Si vous êtes plus à l’aise avec T-SQL, ouvrez SQl Server Management Studio (ou tout autre client qui peut exécuter des commandes SQL DDL) et exécutez l’instruction CREATE PROCEDURE en utilisant le code préparé par le `StoredProcedure` (fonction).
-- À l’aide de R. Lorsque vous êtes toujours dans votre environnement R, vous pouvez utiliser la `registerStoredProcedure` fonctionner dans **sqlrutils** pour inscrire la procédure stockée avec la base de données.
+- À l’aide de T-SQL.  Si vous êtes plus familiarisé avec T-SQL, ouvrez SQL Server Management Studio (ou tout autre client qui peut exécuter des commandes DDL SQL) et exécutez l’instruction CREATE PROCEDURE à l’aide du `StoredProcedure` code préparé par la fonction.
+- À l’aide de R. Si vous êtes toujours dans votre environnement R, vous pouvez utiliser la `registerStoredProcedure` fonction dans **sqlrutils** pour enregistrer la procédure stockée avec la base de données.
 
-  Par exemple, vous pourriez inscrire la procédure stockée **sp_rsample** dans l’instance et de la base de données définie dans *sqlConnStr*, en effectuant cet appel R :
+  Par exemple, vous pouvez inscrire la procédure stockée **sp_rsample** dans l’instance et la base de données définies dans *sqlConnStr*, en effectuant cet appel R:
 
   ```R
   registerStoredProcedure(sp_rsample, sqlConnStr)
@@ -127,29 +127,29 @@ Vous pouvez inscrire la procédure stockée à l’aide de R, ou vous pouvez ex�
 
 
 > [!IMPORTANT]
-> Que vous utilisiez R ou SQL, vous devez exécuter l’instruction à l’aide d’un compte qui dispose des autorisations pour créer des objets de base de données.
+> Que vous utilisiez R ou SQL, vous devez exécuter l’instruction à l’aide d’un compte disposant des autorisations nécessaires pour créer des objets de base de données.
 
 ### <a name="run-using-sql"></a>Exécuter à l’aide de SQL
 
-Une fois la procédure stockée a été créée, ouvrir une connexion à la base de données SQL à l’aide de n’importe quel client qui prend en charge T-SQL et passer des valeurs pour tous les paramètres requis par la procédure stockée.
+Une fois la procédure stockée créée, ouvrez une connexion à la base de données SQL à l’aide de n’importe quel client qui prend en charge T-SQL et transmettez les valeurs des paramètres requis par la procédure stockée.
 
 ### <a name="run-using-r"></a>Exécuter à l’aide de R
 
-Certaines tâches de préparation supplémentaire est nécessaire si vous souhaitez exécuter la procédure stockée à partir du code R, plutôt qu’à partir de SQL Server. Par exemple, si la procédure stockée requiert des valeurs d’entrée, vous devez définir ces paramètres d’entrée avant de la fonction peut être exécutée, puis transmettre ces objets à la procédure stockée dans votre code R.
+Une préparation supplémentaire est nécessaire si vous souhaitez exécuter la procédure stockée à partir du code R, plutôt qu’à partir de SQL Server. Par exemple, si la procédure stockée requiert des valeurs d’entrée, vous devez définir ces paramètres d’entrée avant que la fonction puisse être exécutée, puis passer ces objets à la procédure stockée dans votre code R.
 
-Le processus global de l’appel de la procédure stockée SQL préparée est comme suit :
+L’ensemble du processus d’appel de la procédure stockée SQL préparée est le suivant:
 
 1. Appelez `getInputParameters` pour obtenir une liste d’objets de paramètres d’entrée.
 2. Définissez un `$query` ou un `$value` pour chaque paramètre d’entrée.
 3. Utilisez `executeStoredProcedure` pour exécuter la procédure stockée à partir de l’environnement de développement R, en passant la liste des objets de paramètres d’entrée que vous avez définis.
 
-## <a name = "samples"></a>Exemple
+## <a name = "samples"></a>Tels
 
-Cet exemple montre l’avant et après les versions d’un script R qui obtient des données à partir d’une base de données SQL Server, effectue certaines transformations sur les données et l’enregistre dans une autre base de données.
+Cet exemple montre les versions avant et après d’un script R qui obtient des données d’une base de données SQL Server, effectue certaines transformations sur les données et les enregistre dans une autre base de données.
 
-Cet exemple simple sert uniquement à illustrer comment vous pouvez réorganiser votre code R pour faciliter la conversion d’une procédure stockée.
+Cet exemple simple est utilisé uniquement pour montrer comment vous pouvez réorganiser votre code R pour faciliter la conversion en une procédure stockée.
 
-### <a name="before-code-preparation"></a>Avant la préparation de code
+### <a name="before-code-preparation"></a>Avant la préparation du code
 
 
 ```R
@@ -187,12 +187,12 @@ rxDataStep(inData = dsSqlFrom,
 
 > [!NOTE]
 > 
-> Lorsque vous utilisez une connexion ODBC au lieu d’appeler le *RxSqlServerData* (fonction), vous devez ouvrir la connexion en utilisant *rxOpen* avant de pouvoir effectuer des opérations sur la base de données.
+> Lorsque vous utilisez une connexion ODBC au lieu d’appeler la fonction *RxSqlServerData* , vous devez ouvrir la connexion à l’aide de *rxOpen* avant de pouvoir effectuer des opérations sur la base de données.
 
 
 ### <a name="after-code-preparation"></a>Après la préparation du code
 
-Dans la version mise à jour, la première ligne définit le nom de fonction. Reste du code à partir de la solution R d’origine devient une partie de cette fonction.
+Dans la version mise à jour, la première ligne définit le nom de la fonction. Tout autre code de la solution R d’origine devient une partie de cette fonction.
 
 ```R
 myetl1function <- function() { 

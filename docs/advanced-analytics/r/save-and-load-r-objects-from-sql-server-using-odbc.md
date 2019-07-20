@@ -1,17 +1,17 @@
 ---
-title: Enregistrer et charger des objets R à partir de SQL Server à l’aide de ODBC - SQL Server Machine Learning Services
+title: Enregistrer et charger des objets R à partir de SQL Server à l’aide d’ODBC
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6556602e080587b9be1ff8c02fafb378b4497606
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 70c290d494f7dcb97dd197c057e11dfcc38ada0a
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962466"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345054"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>Enregistrer et charger des objets R à partir de SQL Server à l’aide d’ODBC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,13 +22,13 @@ Pour améliorer les performances de cette étape critique, le package **RevoScal
 
 ## <a name="overview"></a>Vue d'ensemble
 
-Le package **RevoScaleR** inclut désormais de nouvelles fonctions qui facilitent l’enregistrement des objets R dans SQL Server, puis la lecture des objets à partir de la table SQL Server. En général, chaque appel de fonction utilise un magasin de valeurs de clés simple, dans lequel la clé est le nom de l’objet, et la valeur associée à la clé est l’objet varbinary R à déplacer dans ou hors d’une table.
+Le package **RevoScaleR** inclut désormais de nouvelles fonctions qui facilitent l’enregistrement des objets R dans SQL Server, puis la lecture des objets à partir de la table SQL Server. En général, chaque appel de fonction utilise un magasin de valeurs de clé simple, dans lequel la clé est le nom de l’objet, et la valeur associée à la clé est l’objet varbinary R à déplacer dans ou hors d’une table.
 
-Pour enregistrer des objets R dans SQL Server directement à partir d’un environnement R, vous devez :
+Pour enregistrer des objets R dans SQL Server directement à partir d’un environnement R, vous devez:
 
-+ établir une connexion à SQL Server à l’aide de la *RxOdbcData* source de données.
++ Établissez une connexion à SQL Server à l’aide de la source de données *RxOdbcData* .
 + Appeler les nouvelles fonctions via la connexion ODBC
-+ Si vous le souhaitez, vous pouvez spécifier que l’objet ne pas être sérialisé. Ensuite, choisissez un nouvel algorithme de compression à utiliser au lieu de l’algorithme de compression par défaut.
++ Si vous le souhaitez, vous pouvez spécifier que l’objet ne soit pas sérialisé. Choisissez ensuite un nouvel algorithme de compression à utiliser à la place de l’algorithme de compression par défaut.
 
 Par défaut, tout objet que vous appelez à partir de R pour passer à SQL Server est sérialisé et compressé. Inversement, quand vous chargez un objet à partir d’une table SQL Server pour l’utiliser dans votre code R, l’objet est désérialisé et décompressé.
 
@@ -42,7 +42,7 @@ Par défaut, tout objet que vous appelez à partir de R pour passer à SQL Serve
 
 - `rxListKeys` énumère comme paires clé-valeur tous les objets disponibles. Cela vous permet de déterminer les noms et les versions des objets R.
 
-Pour obtenir des informations détaillées sur la syntaxe de chaque fonction, utilisez l’aide de R. Détails sont également disponibles dans le [de référence ScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
+Pour obtenir des informations détaillées sur la syntaxe de chaque fonction, utilisez l’aide de R. Les détails sont également disponibles dans la [référence scaler](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
 
 ## <a name="how-to-store-r-objects-in-sql-server-using-odbc"></a>Guide pratique pour stocker des objets R dans SQL Server à l’aide d’ODBC
 

@@ -1,35 +1,35 @@
 ---
-title: Jeu de données IRIS démonstration de didacticiels Python et R - SQL Server Machine Learning
-Description: Créer une base de données contenant le jeu de données Iris et une table pour stocker les modèles. Ce jeu de données est utilisé dans les exercices montrant comment encapsuler le langage R ou Python code dans une procédure stockée SQL Server.
+title: Jeu de données de démonstration Iris pour les didacticiels Python et R
+Description: Créer une base de données contenant le jeu de données Iris et une table pour le stockage des modèles. Ce jeu de données est utilisé dans les exercices qui montrent comment encapsuler le code R ou python dans une procédure stockée SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 26358fea3b7d08d986a5078cf6484e7c4e0d3dd1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5050fc0d0fcbb6c70b7aabea1b67d75cc686b96b
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962113"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345231"
 ---
-#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Données de démonstration d’iris de didacticiels Python et R dans SQL Server 
+#  <a name="iris-demo-data-for-python-and-r-tutorials-in-sql-server"></a>Données de démonstration Iris pour les didacticiels Python et R dans SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dans cet exercice, créez une base de données SQL Server pour stocker des données à partir de la [jeu de données Iris fleur](https://en.wikipedia.org/wiki/Iris_flower_data_set) et modèles basés sur les mêmes données. Données IRIS sont incluses dans les distributions de R et Python installées par SQL Server et sont utilisées dans les didacticiels de machine learning pour SQL Server. 
+Dans cet exercice, créez une base de données SQL Server pour stocker des données à partir du jeu de données de la [fleur Iris](https://en.wikipedia.org/wiki/Iris_flower_data_set) et des modèles basés sur les mêmes données. Les données de l’iris sont incluses dans les distributions R et Python installées par SQL Server, et sont utilisées dans les didacticiels de Machine Learning pour SQL Server. 
 
-Pour effectuer cet exercice, vous devez disposer [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) ou un autre outil qui peut exécuter des requêtes T-SQL.
+Pour effectuer cet exercice, vous devez disposer d' [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) ou d’un autre outil capable d’exécuter des requêtes T-SQL.
 
-Didacticiels et guides de démarrage rapide à l’aide de ce jeu de données sont les suivantes :
+Les didacticiels et les guides de démarrage rapide utilisant ce jeu de données sont les suivants:
 
 +  [Démarrage rapide : Créer, former et utiliser un modèle Python avec des procédures stockées dans SQL Server](quickstart-python-train-score-in-tsql.md)
 
 ## <a name="create-the-database"></a>Créer la base de données
 
-1. Démarrez SQL Server Management Studio et ouvrez une nouvelle **requête** fenêtre.  
+1. Démarrez SQL Server Management Studio, puis ouvrez une nouvelle fenêtre de **requête** .  
 
-2. Créer une base de données pour ce projet et de modifier le contexte de votre **requête** fenêtre à utiliser la nouvelle base de données.
+2. Créez une nouvelle base de données pour ce projet, puis modifiez le contexte de votre fenêtre de **requête** pour utiliser la nouvelle base de données.
 
     ```sql
     CREATE DATABASE irissql
@@ -39,9 +39,9 @@ Didacticiels et guides de démarrage rapide à l’aide de ce jeu de données so
     ```
 
     > [!TIP] 
-    > Si vous ne connaissez pas SQL Server, ou que vous travaillez sur un serveur que vous possédez, une erreur courante consiste à se connecter et commencer à travailler sans remarquer que vous êtes dans le **master** base de données. Pour être sûr que vous utilisez la base de données, spécifiez toujours le contexte à l’aide de la `USE <database name>` instruction (par exemple, `use irissql`).
+    > Si vous ne connaissez pas SQL Server ou que vous travaillez sur un serveur que vous possédez, une erreur courante consiste à vous connecter et à commencer à travailler sans remarquer que vous êtes dans la base de données **Master** . Pour vous assurer que vous utilisez la base de données correcte, spécifiez toujours le contexte `USE <database name>` à l’aide de l' `use irissql`instruction (par exemple,).
 
-3. Ajouter des tables vides : un pour stocker les données et un pour stocker les modèles formés. Le **iris_models** table est utilisée pour stocker les modèles sérialisés générés dans d’autres exercices.
+3. Ajoutez des tables vides: l’une pour stocker les données et l’autre pour stocker les modèles formés. La table **iris_models** est utilisée pour stocker les modèles sérialisés générés dans d’autres exercices.
 
     Le code suivant crée la table pour les données d’apprentissage.
 
@@ -57,9 +57,9 @@ Didacticiels et guides de démarrage rapide à l’aide de ce jeu de données so
     ```
 
     > [!TIP] 
-    > Si vous débutez avec T-SQL, il est judicieux de mémoriser la `DROP...IF` instruction. Lorsque vous essayez de créer une table, et il en existe déjà, SQL Server retourne une erreur : « Il existe déjà un objet nommé « iris_data » dans la base de données. » Pour éviter de telles erreurs consiste à supprimer des tables existantes ou autres objets dans le cadre de votre code.
+    > Si vous débutez avec T-SQL, il est payant de mémoriser `DROP...IF` l’instruction. Lorsque vous essayez de créer une table et qu’une table existe déjà, SQL Server retourne une erreur: «Il existe déjà un objet nommé «iris_data» dans la base de données». Pour éviter de telles erreurs, vous pouvez supprimer des tables ou d’autres objets existants dans le cadre de votre code.
 
-4. Exécutez le code suivant pour créer la table utilisée pour stocker le modèle formé. Pour enregistrer les modèles Python (ou R) dans SQL Server, il doivent être sérialisés et stockés dans une colonne de type **varbinary (max)** . 
+4. Exécutez le code suivant pour créer la table utilisée pour le stockage du modèle formé. Pour enregistrer des modèles Python (ou R) dans SQL Server, ils doivent être sérialisés et stockés dans une colonne de type **varbinary (max)** . 
 
     ```sql
     DROP TABLE IF EXISTS iris_models;
@@ -72,17 +72,17 @@ Didacticiels et guides de démarrage rapide à l’aide de ce jeu de données so
     GO
     ```
 
-    En plus du contenu du modèle, en règle générale, vous également ajouter des colonnes pour les autres métadonnées utiles, telles que le nom du modèle, la date, qu'il a été formé, l’algorithme de source et les paramètres, les données sources et ainsi de suite. Pour l’instant nous plus de simplicité et utilisez le nom du modèle.
+    En plus du contenu du modèle, en général, vous ajoutez également des colonnes pour d’autres métadonnées utiles, telles que le nom du modèle, la date à laquelle il a été formé, l’algorithme source, les paramètres, les données sources, etc. Pour l’instant, nous allons simplifier et utiliser simplement le nom du modèle.
 
-## <a name="populate-the-table"></a>Remplissez la table
+## <a name="populate-the-table"></a>Remplir la table
 
-Vous pouvez obtenir des données Iris intégré à partir de R ou Python. Vous pouvez utiliser Python ou R pour charger les données dans une trame de données et puis l’insérer dans une table dans la base de données. Déplacement des données d’apprentissage à partir d’une session externe dans une table SQL Server est un processus en plusieurs étapes :
+Vous pouvez obtenir des données d’IRIS intégrées à partir de R ou de Python. Vous pouvez utiliser python ou R pour charger les données dans une trame de données, puis les insérer dans une table de la base de données. Le déplacement des données d’apprentissage d’une session externe dans une table de SQL Server est un processus à étapes:
 
-+ Concevoir une procédure stockée qui obtient les données souhaitées.
-+ Exécutez la procédure stockée pour accéder aux données.
-+ Construisez une instruction INSERT pour spécifier où les données récupérées doivent être enregistrées.
++ Concevez une procédure stockée qui obtient les données souhaitées.
++ Exécutez la procédure stockée pour récupérer les données.
++ Construisez une instruction INSERT pour spécifier l’emplacement où les données récupérées doivent être enregistrées.
 
-1. Sur les systèmes avec l’intégration de Python, créez la procédure stockée suivante qui utilise le code Python pour charger les données.
+1. Sur les systèmes avec intégration Python, créez la procédure stockée suivante qui utilise le code Python pour charger les données.
 
     ```sql
     CREATE PROCEDURE get_iris_dataset
@@ -103,9 +103,9 @@ Vous pouvez obtenir des données Iris intégré à partir de R ou Python. Vous p
     GO
     ```
 
-    Lorsque vous exécutez ce code, vous devez obtenir le message « Commandes sont bien déroulée. » Cela signifie est que la procédure stockée a été créée en fonction de vos spécifications.
+    Lorsque vous exécutez ce code, vous devez recevoir le message «commandes terminées avec succès». Cela signifie que la procédure stockée a été créée en fonction de vos spécifications.
 
-2. Vous pouvez également sur les systèmes avec intégration de R, vous devez créer une procédure qui utilise à la place de R.
+2. En guise d’alternative, sur les systèmes dotés de l’intégration R, créez une procédure qui utilise R à la place.
 
     ```sql
     CREATE PROCEDURE get_iris_dataset
@@ -125,26 +125,26 @@ Vous pouvez obtenir des données Iris intégré à partir de R ou Python. Vous p
     GO
     ```
 
-3. Pour réellement remplir la table, exécutez la procédure stockée et spécifier la table où les données doivent être écrites. Lors de l’exécution, la procédure stockée s’exécute le code Python ou R, qui charge le jeu de données Iris intégré et puis insère les données dans le **iris_data** table.
+3. Pour remplir réellement la table, exécutez la procédure stockée et spécifiez la table dans laquelle les données doivent être écrites. Quand elle est exécutée, la procédure stockée exécute le code python ou R, qui charge le jeu de données Iris intégré, puis insère les données dans la table **iris_data** .
 
     ```sql
     INSERT INTO iris_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width", "Species", "SpeciesId")
     EXEC dbo.get_iris_dataset;
     ```
 
-    Si vous débutez avec T-SQL, n’oubliez pas que l’instruction INSERT ajoute uniquement les nouvelles données ; Il ne vérifier les données existantes, ou supprimer et recréer la table. Pour éviter d’obtenir plusieurs copies des mêmes données dans une table, vous pouvez exécuter cette instruction tout d’abord : `TRUNCATE TABLE iris_data`. Le code T-SQL [TRUNCATE TABLE](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) instruction supprime les données existantes, mais conserve la structure de la table intact.
+    Si vous débutez avec T-SQL, sachez que l’instruction INSERT ajoute uniquement de nouvelles données; il ne recherche pas les données existantes, ou supprime et régénère la table. Pour éviter d’obtenir plusieurs copies des mêmes données dans une table, vous pouvez exécuter l’instruction en premier `TRUNCATE TABLE iris_data`:. L’instruction T-SQL [truncate table](https://docs.microsoft.com/sql/t-sql/statements/truncate-table-transact-sql) supprime les données existantes, mais conserve la structure de la table intacte.
 
     > [!TIP]
-    > Pour modifier la procédure stockée plus tard, vous n’avez pas besoin supprimer et recréer. Utilisez le [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql) instruction. 
+    > Pour modifier la procédure stockée ultérieurement, vous n’avez pas besoin de la supprimer et de la recréer. Utilisez l’instruction [ALTER PROCEDURE](https://docs.microsoft.com/sql/t-sql/statements/alter-procedure-transact-sql) . 
 
 
 ## <a name="query-the-data"></a>Interroger les données
 
-Comme une étape de validation, exécutez une requête pour confirmer que le téléchargement de données.
+En guise d’étape de validation, exécutez une requête pour confirmer que les données ont été téléchargées.
 
-1. Dans l’Explorateur d’objets, des bases de données, cliquez sur le **irissql** de base de données et démarrer une nouvelle requête.
+1. Dans l’Explorateur d’objets, sous bases de données, cliquez avec le bouton droit sur la base de données **irissql** et démarrez une nouvelle requête.
 
-2. Exécutez des requêtes simples :
+2. Exécuter des requêtes simples:
 
     ```sql
     SELECT TOP(10) * FROM iris_data;
@@ -153,6 +153,6 @@ Comme une étape de validation, exécutez une requête pour confirmer que le té
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Dans le démarrage rapide suivant, vous créez un modèle d’apprentissage automatique et enregistrez-le dans une table et ensuite utiliser le modèle pour générer les résultats prédits.
+Dans le démarrage rapide suivant, vous allez créer un modèle de Machine Learning et l’enregistrer dans une table, puis utiliser le modèle pour générer des résultats prédits.
 
 + [Démarrage rapide : Créer, former et utiliser un modèle Python avec des procédures stockées dans SQL Server](quickstart-python-train-score-in-tsql.md)

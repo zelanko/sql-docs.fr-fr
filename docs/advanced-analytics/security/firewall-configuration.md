@@ -1,5 +1,5 @@
 ---
-title: Configuration du pare-feu - SQL Server Machine Learning Services
+title: Configuration du pare-feu
 description: Comment configurer le pare-feu pour les connexions sortantes à partir de SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,36 +7,36 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f62b42754b56ac07714eeade0d86e6c8ac582698
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58a10c36eff06cd4e36f3e326407564b2657fec1
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962342"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345593"
 ---
 # <a name="firewall-configuration-for-sql-server-machine-learning-services"></a>Configuration du pare-feu pour SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article répertorie les considérations sur les configurations de pare-feu qui l’administrateur ou un architecte devez garder à l’esprit lors de l’utilisation des services machine learning.
+Cet article répertorie les considérations relatives à la configuration du pare-feu que l’administrateur ou l’architecte doit garder à l’esprit lors de l’utilisation des services Machine Learning.
 
 ## <a name="default-firewall-rules"></a>Règles de pare-feu par défaut
 
 Par défaut, le programme d’installation de SQL Server désactive les connexions sortantes en créant des règles de pare-feu.
 
-Dans SQL Server 2016 et 2017, ces règles sont basées sur les comptes d’utilisateurs locaux, où le programme d’installation créé une règle sortante pour **SQLRUserGroup** qui refuse l’accès de réseau à ses membres (chaque compte de travail a été répertoriée comme un principe local soumis aux la règle. Pour plus d’informations sur SQLRUserGroup, consultez [vue d’ensemble de la sécurité pour l’infrastructure d’extensibilité dans SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#sqlrusergroup).
+Dans SQL Server 2016 et 2017, ces règles sont basées sur les comptes d’utilisateurs locaux, où le programme d’installation a créé une règle de trafic sortant pour **SQLRUserGroup** qui a refusé l’accès réseau à ses membres (chaque compte de travail était répertorié comme un principe local soumis à la règle. Pour plus d’informations sur SQLRUserGroup, consultez [vue d’ensemble de la sécurité pour l’infrastructure d’extensibilité dans SQL Server machine learning services](../../advanced-analytics/concepts/security.md#sqlrusergroup).
 
-Dans SQL Server 2019, dans le cadre du passage à AppContainers, voici les nouvelles règles de pare-feu en fonction des AppContainer SIDs : un pour chacune des 20 AppContainers créé par le programme d’installation de SQL Server. Conventions d’affectation de noms pour le nom de règle de pare-feu sont **bloquer l’accès réseau pour AppContainer-00 dans l’instance SQL Server MSSQLSERVER**où 00 est le nombre de l’AppContainer (00-20 par défaut) et MSSQLSERVER est le nom de l’instruction SQL Instance de serveur.
+Dans SQL Server 2019, dans le cadre de la migration vers AppContainers, il existe de nouvelles règles de pare-feu basées sur les SID AppContainer: une pour chacune des 20 AppContainers créés par le programme d’installation de SQL Server. Les conventions d’affectation de noms pour le nom de règle de pare-feu sont **accès réseau de blocage pour AppContainer-00 dans SQL Server instance MSSQLSERVER**, où 00 est le numéro de l’appcontainer (00-20 par défaut) et MSSQLSERVER est le nom de l’instance de SQL Server.
 
 > [!Note]
-> Si les appels réseau sont nécessaires, vous pouvez désactiver les règles de trafic sortant dans le pare-feu Windows.
+> Si des appels réseau sont requis, vous pouvez désactiver les règles de trafic sortant dans le pare-feu Windows.
 
 ## <a name="restrict-network-access"></a>Restreindre l’accès réseau
 
-Dans une installation par défaut, une règle de pare-feu Windows est utilisée pour bloquer tout accès réseau sortant à partir de processus du runtime externe. Règles de pare-feu doivent être créées pour empêcher les processus externes runtime de télécharger des packages ou à partir d’autres appels de réseau qui pourraient être malveillant.
+Dans une installation par défaut, une règle de pare-feu Windows est utilisée pour bloquer tout accès réseau sortant des processus d’exécution externes. Des règles de pare-feu doivent être créées pour empêcher les processus d’exécution externes de télécharger des packages ou d’effectuer d’autres appels réseau potentiellement malveillants.
 
-Si vous utilisez un autre programme de pare-feu, vous pouvez également créer des règles pour bloquer les connexions réseau sortantes pour les runtimes externes, en définissant des règles pour les comptes d’utilisateur local ou du groupe représenté par le pool de comptes d’utilisateur.
+Si vous utilisez un autre programme de pare-feu, vous pouvez également créer des règles pour bloquer les connexions réseau sortantes pour les runtimes externes, en définissant des règles pour les comptes d’utilisateurs locaux ou pour le groupe représenté par le pool de comptes d’utilisateurs.
 
-Nous recommandons vivement que vous activez le pare-feu de Windows (ou un autre pare-feu de votre choix) pour empêcher un accès illimité au réseau par les runtimes R ou Python.
+Nous vous recommandons vivement d’activer le pare-feu Windows (ou un autre pare-feu de votre choix) pour empêcher l’accès réseau non restreint par les runtimes R ou python.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

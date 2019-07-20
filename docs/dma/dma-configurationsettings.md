@@ -1,6 +1,6 @@
 ---
-title: Configurer les paramètres de l’Assistant Migration de données (SQL Server) | Microsoft Docs
-description: Découvrez comment configurer les paramètres de l’Assistant Migration de données en mettant à jour les valeurs dans le fichier de configuration
+title: Configurer les paramètres de Assistant Migration de données (SQL Server) | Microsoft Docs
+description: Découvrez comment configurer les paramètres du Assistant Migration de données en mettant à jour les valeurs dans le fichier de configuration.
 ms.custom: ''
 ms.date: 03/12/2019
 ms.prod: sql
@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: cb50b5380a305382bfb5494273cd335c8b60f51e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058872"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345240"
 ---
-# <a name="configure-settings-for-data-migration-assistant"></a>Configurer les paramètres de l’Assistant Migration des données
+# <a name="configure-settings-for-data-migration-assistant"></a>Configurer les paramètres de Assistant Migration de données
 
-Vous pouvez affiner certain comportement de l’Assistant Migration de données en définissant les valeurs de configuration dans le fichier dma.exe.config. Cet article décrit les valeurs de configuration de la clé.
+Vous pouvez ajuster certains comportements de Assistant Migration de données en définissant les valeurs de configuration dans le fichier DMA. exe. config. Cet article décrit les valeurs de configuration de clé.
 
-Vous trouverez le fichier dma.exe.config pour l’application de bureau Data Migration Assistant et l’utilitaire de ligne de commande, dans les dossiers suivants sur votre ordinateur.
+Vous pouvez trouver le fichier DMA. exe. config pour l’application de bureau Assistant Migration de données et l’utilitaire de ligne de commande, dans les dossiers suivants sur votre ordinateur.
 
 - Application de bureau
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\dma.exe.config
+  % ProgramFiles%\\Assistant Migration de données Microsoft\\DMA. exe. config
 
 - Utilitaire de ligne de commande
 
-  % ProgramFiles%\\Microsoft Data Migration Assistant\\dmacmd.exe.config 
+  % ProgramFiles%\\Assistant Migration de données Microsoft\\dmacmd. exe. config 
 
-Veillez à enregistrer une copie du fichier de configuration d’origine avant d’apporter des modifications. Après avoir apporté les modifications, redémarrez Data Migration Assistant pour les nouvelles valeurs de configuration prenne effet.
+Veillez à enregistrer une copie du fichier de configuration d’origine avant d’apporter des modifications. Après avoir apporté des modifications, redémarrez Assistant Migration de données pour que les nouvelles valeurs de configuration prennent effet.
 
 ## <a name="number-of-databases-to-assess-in-parallel"></a>Nombre de bases de données à évaluer en parallèle
 
-Assistant Migration de données évalue plusieurs bases de données en parallèle. Pendant l’évaluation Data Migration Assistant extrait l’application de la couche données (dacpac) pour comprendre le schéma de base de données. Cette opération peut expirer si plusieurs bases de données sur le même serveur sont évaluées en parallèle. 
+Assistant Migration de données évalue plusieurs bases de données en parallèle. Pendant l’évaluation Assistant Migration de données extrait l’application de la couche données (dacpac) pour comprendre le schéma de la base de données. Cette opération peut expirer si plusieurs bases de données sur le même serveur sont évaluées en parallèle. 
 
-À partir de Data Migration Assistant v2.0, vous pouvez contrôler cela en définissant le parallelDatabases valeur de configuration. Valeur par défaut est 8.
+À partir de Assistant Migration de données v 2.0, vous pouvez contrôler cela en définissant la valeur de configuration parallelDatabases. La valeur par défaut est 8.
 
 ```
 <advisorGroup>
@@ -60,9 +60,9 @@ Assistant Migration de données évalue plusieurs bases de données en parallèl
 
 ## <a name="number-of-databases-to-migrate-in-parallel"></a>Nombre de bases de données à migrer en parallèle
 
-Data Migration Assistant migre plusieurs bases de données en parallèle, avant migration de connexions. Pendant la migration, Data Migration Assistant sera effectuer une sauvegarde de la base de données source, copiez éventuellement la sauvegarde et sa restauration sur le serveur cible. Vous pouvez rencontrer des échecs de délai d’attente lorsque plusieurs bases de données sont sélectionnés pour la migration. 
+Assistant Migration de données migre plusieurs bases de données en parallèle avant de migrer les connexions. Pendant la migration, Assistant Migration de données effectue une sauvegarde de la base de données source, copie éventuellement la sauvegarde, puis la restaure sur le serveur cible. Vous pouvez rencontrer des échecs de délai d’attente lorsque plusieurs bases de données sont sélectionnées pour la migration. 
 
-En commençant par v2.0 Data Migration Assistant, si vous rencontrez ce problème, vous pouvez réduire la valeur de configuration parallelDatabases. Vous pouvez augmenter la valeur pour réduire la durée globale de la migration.
+À compter de Assistant Migration de données v 2.0, si vous rencontrez ce problème, vous pouvez réduire la valeur de configuration de parallelDatabases. Vous pouvez augmenter la valeur pour réduire l’heure globale de la migration.
 
 ```
 <advisorGroup>
@@ -77,24 +77,24 @@ En commençant par v2.0 Data Migration Assistant, si vous rencontrez ce problèm
 ```
 
 
-## <a name="dacfx-settings"></a>Paramètres de DacFX
+## <a name="dacfx-settings"></a>Paramètres DacFX
 
-Pendant l’évaluation, Data Migration Assistant extrait l’application de la couche données (dacpac) pour comprendre le schéma de base de données. Cette opération peut échouer avec des délais d’attente de bases de données extrêmement volumineux, ou si le serveur est sous charge. À compter de la Migration des données v1.0, vous pouvez modifier les valeurs de configuration suivantes pour éviter les erreurs. 
+Pendant l’évaluation, Assistant Migration de données extrait l’application de la couche données (dacpac) pour comprendre le schéma de la base de données. Cette opération peut échouer avec des délais d’attente pour les bases de données très volumineuses, ou si le serveur est en cours de chargement. À partir de la migration de données v 1.0, vous pouvez modifier les valeurs de configuration suivantes pour éviter les erreurs. 
 
 > [!NOTE]
-> L’intégralité de &lt;dacfx&gt; entrée est commentée par défaut. Supprimez les commentaires et modifiez la valeur en fonction des besoins.
+> La totalité &lt;de&gt; l’entrée dacfx est commentée par défaut. Supprimez les commentaires, puis modifiez la valeur si nécessaire.
 
 - commandTimeout
 
-   Ce paramètre définit la propriété IDbCommand.CommandTimeout *secondes*. (Par défaut = 60)
+   Ce paramètre définit la propriété IDbCommand. CommandTimeout en *secondes*. (Valeur par défaut = 60)
 
 - databaseLockTimeout
 
-   Ce paramètre équivaut à [verrou définir\_délai d’expiration du délai d’attente\_période](../t-sql/statements/set-lock-timeout-transact-sql.md) dans *millisecondes*. (Par défaut = 5000)
+   Ce paramètre équivaut à définir le délai d’expiration du délai d’attente du [verrou\_\_](../t-sql/statements/set-lock-timeout-transact-sql.md) en *millisecondes*. (Valeur par défaut = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Ce paramètre définit le nombre de connexions de pool de connexion SQL à utiliser. (Default=8)
+  Ce paramètre définit le nombre de connexions du pool de connexions SQL à utiliser. (Default=8)
 
 ```
 <advisorGroup>
@@ -109,11 +109,11 @@ maxDataReaderDegreeOfParallelism="8"/>
 </advisorGroup>
 ```
 
-## <a name="stretch-database-recommendation-threshold"></a>Stretch Database : Seuil de recommandation
+## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Seuil de recommandation
 
-Avec [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), vous pouvez étendre dynamiquement les données transactionnelles froides et à chaudes de Microsoft SQL Server 2016 vers Azure. Stretch Database cibles bases de données transactionnelles comportant de grandes quantités de données à froid. La recommandation de Stretch Database, sous la recommandation de fonctionnalité de stockage, identifie tout d’abord les tables qu’elle croit appartenir bénéficieront de cette fonctionnalité, et puis elle identifie les modifications devant être apportées afin de bénéficier de la table pour cette fonctionnalité.
+Avec [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), vous pouvez étendre dynamiquement les données transactionnelles à chaud et à froid de Microsoft SQL Server 2016 vers Azure. Stretch Database cible les bases de données transactionnelles avec de grandes quantités de données à froid. La recommandation Stretch Database, sous recommandation relative aux fonctionnalités de stockage, identifie d’abord les tables qu’elle estime tirera parti de cette fonctionnalité, puis identifie les modifications qui doivent être apportées pour activer la table pour cette fonctionnalité.
 
-À partir de Data Migration Assistant v2.0, vous pouvez contrôler ce seuil pour une table être éligible pour la fonctionnalité Stretch Database à l’aide de la valeur de configuration recommendedNumberOfRows. Valeur par défaut est 100 000 lignes. Si vous souhaitez analyser les fonctionnalités de stretch pour encore plus petites tables, puis que vous réduisez la valeur en conséquence.
+À partir de Assistant Migration de données v 2.0, vous pouvez contrôler ce seuil pour qu’une table qualifie la fonctionnalité de Stretch Database à l’aide de la valeur de configuration recommendedNumberOfRows. La valeur par défaut est 100 000 lignes. Si vous souhaitez analyser les capacités d’étirement pour des tables encore plus petites, diminuez la valeur en conséquence.
 
 ```
 <advisorGroup>
@@ -130,7 +130,7 @@ Avec [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/str
 
 ## <a name="sql-connection-timeout"></a>Délai de connexion SQL
 
-Vous pouvez contrôler le [délai de connexion SQL](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx) pour les instances source et cible lors de l’exécution d’une évaluation ou migration, en définissant la valeur de délai d’expiration de connexion à un nombre spécifié de secondes. La valeur par défaut est 15 secondes.
+Vous pouvez contrôler le délai d’expiration de la [connexion SQL](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx) pour les instances source et cible lors de l’exécution d’une évaluation ou d’une migration, en définissant la valeur du délai d’attente de la connexion sur un nombre de secondes spécifié. La valeur par défaut est 15 secondes.
 
 ```
 <appSettings>
@@ -140,7 +140,18 @@ Vous pouvez contrôler le [délai de connexion SQL](https://msdn.microsoft.com/l
 </appSettings>
 ```
 
+## <a name="ignore-error-codes"></a>Ignorer les codes d’erreur
+
+Chaque règle contient un code d’erreur dans son titre. Si vous n’avez pas besoin de règles et que vous souhaitez les ignorer, utilisez la propriété ignoreErrorCodes. Vous pouvez spécifier qu’il faut ignorer une seule erreur ou plusieurs erreurs. Pour ignorer plusieurs erreurs, utilisez un point-virgule, par exemple ignoreErrorCodes = "46010; 71501". La valeur par défaut est 71501, qui est associée à des références non résolues identifiées lorsqu’un objet fait référence à des objets système tels que des procédures, des vues, etc.
+
+```
+<workflowSettings>
+
+<assessment parallelDatabases="8" ignoreErrorCodes="71501" />
+
+</workflowSettings>
+```
 
 ## <a name="see-also"></a>Voir aussi
 
-[Télécharger l’Assistant de Migration de données](https://www.microsoft.com/download/details.aspx?id=53595)
+[Télécharger Assistant Migration de données](https://www.microsoft.com/download/details.aspx?id=53595)

@@ -1,5 +1,5 @@
 ---
-title: Charger des données dans la mémoire à l’aide de rxImport RevoScaleR - SQL Server Machine Learning
+title: Charger des données en mémoire à l’aide de RevoScaleR rxImport
 description: Didacticiel pas à pas sur la façon de charger des données à l’aide du langage R sur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,25 +7,25 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 53d13c0771fd06ae8e91f4ad69fe4646a01fc770
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fb98887d9cfd3f1997ce82620eeff5df98ba6b1e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962222"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344674"
 ---
-# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>Charger des données dans la mémoire à l’aide de rxImport (didacticiel sur SQL Server et RevoScaleR)
+# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>Charger des données en mémoire à l’aide de rxImport (didacticiel SQL Server et RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cette leçon fait partie de la [RevoScaleR didacticiel](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Cette leçon fait partie du [didacticiel RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-Le [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) fonction peut être utilisée pour déplacer des données à partir d’une source de données dans une trame de données en mémoire de session, ou dans un fichier XDF sur disque. Si vous ne spécifiez pas de fichier de destination, les données sont placées en mémoire sous la forme d’une trame de données.
+La fonction [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) peut être utilisée pour déplacer des données d’une source de données dans une trame de données de la mémoire de la session ou dans un fichier XDF sur le disque. Si vous ne spécifiez pas de fichier de destination, les données sont placées en mémoire sous la forme d’une trame de données.
 
-Dans cette étape, vous allez apprendre à obtenir des données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puis utilisez le **rxImport** (fonction) pour placer les données d’intérêt dans un fichier local. De cette façon, vous pouvez les analyser dans le contexte de calcul local à plusieurs reprises, sans devoir réinterroger la base de données.
+Dans cette étape, vous allez apprendre à obtenir des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]à partir de, puis à utiliser la fonction **rxImport** pour placer les données intéressantes dans un fichier local. De cette façon, vous pouvez les analyser dans le contexte de calcul local à plusieurs reprises, sans devoir réinterroger la base de données.
 
-## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>Extraire un sous-ensemble de données à partir de SQL Server dans la mémoire locale
+## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>Extraire un sous-ensemble de données de SQL Server à la mémoire locale
 
-Vous avez décidé que vous souhaitez examiner uniquement les individus à haut risque plus en détail. La table source dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étant volumineuse, vous souhaitez obtenir les informations concernant uniquement les clients à haut risque. Ensuite, vous chargez ces données dans une trame de données dans la mémoire de la station de travail locale.
+Vous avez décidé de n’examiner que les individus à risque élevé plus en détail. La table source dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est volumineuse et vous souhaitez obtenir les informations sur les clients à haut risque. Vous chargez ensuite ces données dans une trame de données dans la mémoire de la station de travail locale.
 
 1. Réinitialisez le contexte de calcul sur votre station de travail locale.
 
@@ -48,9 +48,9 @@ Vous avez décidé que vous souhaitez examiner uniquement les individus à haut 
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    Si l’opération a réussi, vous devez voir un message d’état semblable à celle-ci : « Lignes lues : 35, nombre total de lignes traité : 35, durée du segment total : 0,036 seconde »
+    Si l’opération a réussi, vous devez voir un message d’état semblable à celui-ci: «Lignes lues: 35, nombre total de lignes traitées: 35, durée totale du segment: 0,036 secondes»
 
-4. Maintenant que les observations à haut risque se trouvent dans une trame de données en mémoire, vous pouvez utiliser différentes fonctions R pour manipuler cette trame de données. Par exemple, vous pouvez classer les clients par leur score de risque et imprimer la liste des clients qui présentent le risque le plus élevé.
+4. Maintenant que les observations à haut risque se trouvent dans une trame de données en mémoire, vous pouvez utiliser différentes fonctions R pour manipuler la trame de données. Par exemple, vous pouvez commander des clients en fonction de leur score de risque et imprimer une liste des clients qui présentent le risque le plus élevé.
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -74,7 +74,7 @@ ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans credit
 
 Vous pouvez utiliser **rxImport** non seulement pour déplacer des données, mais aussi pour transformer les données pendant leur lecture. Par exemple, vous pouvez spécifier le nombre de caractères pour les colonnes à largeur fixe, fournir une description des variables, définir des niveaux pour les colonnes de facteur et même créer des niveaux à utiliser après l’importation.
 
-Le **rxImport** fonction attribue des noms de variables aux colonnes pendant le processus d’importation, mais vous pouvez indiquer des noms de variables à l’aide de la *colInfo* paramètre ou modifier les types de données à l’aide de la *colClasses* paramètre.
+La fonction **rxImport** attribue des noms de variables aux colonnes pendant le processus d’importation, mais vous pouvez indiquer de nouveaux noms de variables à l’aide du paramètre *colInfo* ou modifier les types de données à l’aide du paramètre *colClasses* .
 
 En spécifiant des opérations supplémentaires dans le paramètre *transforms* , vous pouvez effectuer un traitement élémentaire sur chaque segment de données lu.
 

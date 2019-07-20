@@ -1,34 +1,34 @@
 ---
-title: Effectuer une analyse de segmentation à l’aide de rxDataStep RevoScaleR - SQL Server Machine Learning
-description: Didacticiel pas à pas sur la façon de segmenter des données pour l’analyse distribuée à l’aide du langage R sur SQL Server.
+title: Effectuer une analyse de segmentation à l’aide de RevoScaleR rxDataStep
+description: Didacticiel procédure pas à pas sur la façon de segmenter des données pour l’analyse distribuée à l’aide du langage R sur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6ccc64c98f0519b33b6ba9da180c01e4478492f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3026fa03ff654079e355364587d694c9c3fe127f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962204"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344716"
 ---
-# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Effectuer une analyse de segmentation à l’aide de rxDataStep (didacticiel sur SQL Server et RevoScaleR)
+# <a name="perform-chunking-analysis-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>Effectuer une analyse de segmentation à l’aide de rxDataStep (didacticiel SQL Server et RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cette leçon fait partie de la [RevoScaleR didacticiel](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Cette leçon fait partie du [didacticiel RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-Dans cette leçon, vous utilisez le **rxDataStep** fonction pour traiter les données en segments, plutôt que de nécessiter que l’ensemble du dataset être chargé en mémoire et traité en même temps, comme dans R. traditionnel Le **rxDataStep** fonctions lit les données dans le bloc, applique des fonctions R pour chaque segment de données à son tour et puis enregistre les synthèse des résultats pour chaque segment dans un commun [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données. Lorsque toutes les données ont été lues, les résultats sont combinés.
+Dans cette leçon, vous utilisez la fonction **rxDataStep** pour traiter les données en segments, plutôt que d’exiger que l’ensemble du jeu de données soit chargé en mémoire et traité en une seule fois, comme dans R traditionnel. Les fonctions **rxDataStep** lisent les données en bloc, appliquent des fonctions R à chaque segment de données, puis enregistre les résultats de synthèse pour chaque segment dans une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] source de données commune. Lorsque toutes les données ont été lues, les résultats sont combinés.
 
 > [!TIP]
-> Pour cette leçon, vous calculer un tableau de contingence en utilisant le **table** fonction dans R. Cet exemple est destiné uniquement à des fins pédagogiques. 
+> Pour cette leçon, vous calculez une table de contingence à l’aide de la fonction **table** dans R. Cet exemple est destiné à des fins pédagogiques uniquement. 
 > 
-> Si vous avez besoin tabuler les jeux de données réels, nous vous recommandons d’utiliser le **rxCrossTabs** ou **rxCube** dans les fonctions **RevoScaleR**, qui sont optimisés pour cela de quelque sorte opération.
+> Si vous avez besoin de classer les jeux de données réels, nous vous recommandons d’utiliser les fonctions **rxCrossTabs** ou **rxCube** dans **RevoScaleR**, qui sont optimisées pour ce type d’opération.
 
 ## <a name="partition-data-by-values"></a>Partitionner les données par valeurs
 
-1. Créer une fonction R personnalisée qui appelle R **table** fonction sur chaque segment de données, puis nommez la nouvelle fonction **ProcessChunk**.
+1. Créez une fonction R personnalisée qui appelle la fonction de **table** r sur chaque segment de données et nommez la nouvelle fonction **ProcessChunk**.
   
     ```R
     ProcessChunk <- function( dataList) {
@@ -53,7 +53,7 @@ Dans cette leçon, vous utilisez le **rxDataStep** fonction pour traiter les don
     rxSetComputeContext(sqlCompute)
     ```
   
-3. Définir une source de données SQL Server pour stocker les données que vous traitez. Commencez par attribuer une requête SQL à une variable. Ensuite, utilisez cette variable dans le *sqlQuery* argument d’une nouvelle source de données SQL Server.
+3. Définissez une source de données SQL Server pour stocker les données que vous traitez. Commencez par attribuer une requête SQL à une variable. Utilisez ensuite cette variable dans l’argument *SQLQuery* d’une nouvelle source de données SQL Server.
   
     ```R
     dayQuery <-  "SELECT DayOfWeek FROM AirDemoSmallTest"
@@ -64,9 +64,9 @@ Dans cette leçon, vous utilisez le **rxDataStep** fonction pour traiter les don
             levels = as.character(1:7))))
     ```
 
-4. Si vous le souhaitez, vous pouvez exécuter **rxGetVarInfo** sur cette source de données. À ce stade, il contient une seule colonne : *Var 1 : DayOfWeek, Type : facteur, aucun niveau de facteur disponible*
+4. Si vous le souhaitez, vous pouvez exécuter **rxGetVarInfo** sur cette source de données. À ce stade, elle contient une seule colonne: *Var 1: DayOfWeek, type: facteur, aucun niveau de facteur disponible*
      
-5. Avant d’appliquer cette variable de facteur à la source de données, créez une autre table pour stocker les résultats intermédiaires. Là encore, vous utilisez simplement la **RxSqlServerData** (fonction) pour définir les données, en veillant à supprimer des tables existantes du même nom.
+5. Avant d’appliquer cette variable de facteur à la source de données, créez une autre table pour stocker les résultats intermédiaires. Là encore, vous utilisez simplement la fonction **RxSqlServerData** pour définir les données, en veillant à supprimer toutes les tables existantes portant le même nom.
   
     ```R
     iroDataSource = RxSqlServerData(table = "iroResults",   connectionString = sqlConnString)
@@ -74,13 +74,13 @@ Dans cette leçon, vous utilisez le **rxDataStep** fonction pour traiter les don
     if (rxSqlServerTableExists(table = "iroResults",  connectionString = sqlConnString))  { rxSqlServerDropTable( table = "iroResults", connectionString = sqlConnString) }
     ```
   
-7.  Appeler la fonction personnalisée **ProcessChunk** pour transformer les données qu’il est lu, en l’utilisant comme le *transformFunc* l’argument de la **rxDataStep** (fonction).
+7.  Appelez la fonction personnalisée **ProcessChunk** pour transformer les données au fur et à mesure de leur lecture, en l’utilisant comme argument *transformfunc est utilisé* pour la fonction **rxDataStep** .
   
     ```R
     rxDataStep( inData = inDataSource, outFile = iroDataSource, transformFunc = ProcessChunk, overwrite = TRUE)
     ```
   
-8.  Pour afficher les résultats intermédiaires de **ProcessChunk**, affectez les résultats de **rxImport** à une variable, puis affichez les résultats dans la console.
+8.  Pour afficher les résultats intermédiaires de **ProcessChunk**, assignez les résultats de **rxImport** à une variable, puis affichez les résultats dans la console.
   
     ```R
     iroResults <- rxImport(iroDataSource)

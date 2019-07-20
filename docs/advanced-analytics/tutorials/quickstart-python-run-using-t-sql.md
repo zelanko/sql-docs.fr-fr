@@ -1,39 +1,39 @@
 ---
-title: Guide de démarrage rapide pour un Python de base « Hello World » de code d’exécution dans T-SQL - SQL Server Machine Learning
-description: Guide de démarrage rapide pour le script Python dans SQL Server. Découvrez les principes fondamentaux de l’appel de script Python à l’aide de la procédure stockée système sp_execute_external_script dans un exercice hello-world.
+title: Démarrage rapide pour une exécution de code «Hello World» de base python dans T-SQL
+description: Démarrage rapide pour le script Python dans SQL Server. Découvrez les principes fondamentaux de l’appel de script Python à l’aide de la procédure stockée système sp_execute_external_script dans un exercice Hello World.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/10/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a2d0987441f8f26304590f5ccbde15a2e15cf3c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: caa462fa6449d4d130ace629f99c8061c7b8a35f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962066"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345500"
 ---
-# <a name="quickstart-hello-world-python-script-in-sql-server"></a>Démarrage rapide : Script Python « Hello world » dans SQL Server 
+# <a name="quickstart-hello-world-python-script-in-sql-server"></a>Démarrage rapide : Script Python «Hello World» dans SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dans ce démarrage rapide, vous découvrez les concepts clés en exécutant « Hello World » Python script inT-SQL, une introduction à la **sp_execute_external_script** procédure stockée système. 
+Dans ce guide de démarrage rapide, vous allez apprendre les concepts clés en exécutant un «Hello World» de script Python inT-SQL, avec une introduction à la procédure stockée système **sp_execute_external_script** . 
 
 ## <a name="prerequisites"></a>Prérequis
 
-Un guide de démarrage rapide précédent, [Python vérifier existe dans SQL Server](quickstart-python-verify.md), fournit des informations et des liens pour la configuration de l’environnement Python requis pour ce démarrage rapide.
+Un démarrage rapide précédent, [Vérifiez que Python existe dans SQL Server](quickstart-python-verify.md), fournit des informations et des liens pour configurer l’environnement python requis pour ce guide de démarrage rapide.
 
-## <a name="basic-python-interaction"></a>Interaction de Python de base
+## <a name="basic-python-interaction"></a>Interaction python de base
 
-Il existe deux façons d’exécuter le code Python dans SQL Server :
+Il existe deux façons d’exécuter du code python dans SQL Server:
 
-+ Ajouter un script Python en tant qu’argument de la procédure stockée système, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
++ Ajoutez un script Python en tant qu’argument de la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md).
 
-+ À partir d’un [à distance client Python](../python/setup-python-client-tools-sql.md), connectez-vous à SQL Server et d’exécuter du code à l’aide de SQL Server comme contexte de calcul. Cela nécessite [revoscalepy](../python/ref-py-revoscalepy.md).
++ À partir d’un [client python distant](../python/setup-python-client-tools-sql.md), connectez-vous à SQL Server et exécutez le code à l’aide du SQL Server comme contexte de calcul. Cela requiert [revoscalepy](../python/ref-py-revoscalepy.md).
 
-L’exercice suivant se concentre sur le premier modèle d’interaction : comment passer de code Python à une procédure stockée.
+L’exercice suivant est axé sur le premier modèle d’interaction: comment passer du code Python à une procédure stockée.
 
-1. Exécuter du code simple pour voir comment les données sont transmises dans les deux sens entre SQL Server et Python.
+1. Exécutez du code simple pour voir comment les données sont transmises entre SQL Server et Python.
 
     ```sql
     execute sp_execute_external_script 
@@ -47,7 +47,7 @@ L’exercice suivant se concentre sur le premier modèle d’interaction : comm
     '
     ```
 
-2. En supposant que vous avez tout configuré correctement et que Python et SQL Server sont communiquent entre eux, le résultat correct est calculé et Python `print` fonction retourne le résultat à la **Messages** windows.
+2. En supposant que tout est configuré correctement et que Python et SQL Server communiquent entre eux, le résultat correct est calculé et la fonction python `print` retourne le résultat dans les fenêtres de **messages** .
 
     **Résultats**
 
@@ -56,19 +56,19 @@ L’exercice suivant se concentre sur le premier modèle d’interaction : comm
     0.5 2
     ```
 
-    Lors de l’obtention **stdout** messages est pratique lorsque vous testez votre code, plus souvent vous avez besoin retourner les résultats dans un format tabulaire, afin que vous pouvez utiliser dans une application ou écrire dans une table.
+    Bien que l’obtention de messages **stdout** soit pratique lors du test de votre code, il est souvent nécessaire de retourner les résultats sous forme de tableau, afin de pouvoir les utiliser dans une application ou les écrire dans une table.
 
-Pour l’instant, n’oubliez pas ces règles :
+Pour le moment, rappelez-vous des règles suivantes:
 
-+ Tous les éléments à l’intérieur de la `@script` argument doit être le code Python valide. 
-+ Le code doit respecter toutes les règles Python concernant la mise en retrait, les noms de variables et ainsi de suite. Lorsque vous recevez une erreur, vérifiez votre espace blanc et la casse.
-+ Parmi les langages de programmation Python est un des plus flexible en ce qui concerne les guillemets simples et des guillemets doubles ; ils sont pratiquement interchangeables. Toutefois, T-SQL utilise des guillemets simples pour uniquement certaines choses et le `@script` argument utilise les guillemets simples pour encadrer le code Python sous forme de chaîne Unicode. Par conséquent, vous devrez peut-être vérifier votre code Python et remplacer des guillemets simples par des guillemets doubles.
-+ Si vous utilisez toutes les bibliothèques qui ne sont pas chargés par défaut, vous devez utiliser une instruction d’importation au début de votre script pour les charger. SQL Server ajoute plusieurs bibliothèques spécifiques au produit. Pour plus d’informations, consultez [bibliothèques Python](../python/python-libraries-and-data-types.md).
-+ Si la bibliothèque n’est pas déjà installée, arrêter et installez le package Python en dehors de SQL Server, comme décrit ici : [Installer de nouveaux packages Python sur SQL Server](../python/install-additional-python-packages-on-sql-server.md)
++ Tout ce qui `@script` se trouve à l’intérieur de l’argument doit être un code python valide. 
++ Le code doit suivre toutes les règles python relatives à la mise en retrait, aux noms de variable, etc. Lorsque vous recevez une erreur, vérifiez les espaces blancs et la casse.
++ Parmi les langages de programmation, Python est l’une des plus flexibles en ce qui concerne les guillemets simples et les guillemets doubles. ils sont à peu près interchangeables. Toutefois, T-SQL utilise des guillemets simples uniquement pour certains éléments, `@script` et l’argument utilise des guillemets simples pour encadrer le code python sous la forme d’une chaîne Unicode. Par conséquent, vous devrez peut-être examiner votre code Python et remplacer des guillemets simples par des guillemets doubles.
++ Si vous utilisez des bibliothèques qui ne sont pas chargées par défaut, vous devez utiliser une instruction import au début de votre script pour les charger. SQL Server ajoute plusieurs bibliothèques spécifiques à un produit. Pour plus d’informations, consultez [bibliothèques python](../python/python-libraries-and-data-types.md).
++ Si la bibliothèque n’est pas déjà installée, arrêtez et installez le package Python en dehors de SQL Server, comme décrit ici: [Installer de nouveaux packages Python sur SQL Server](../python/install-additional-python-packages-on-sql-server.md)
 
 ## <a name="run-a-hello-world-script"></a>Exécuter un script de Hello World
 
-L’exercice suivant exécute un autre scripts Python simple.
+L’exercice suivant exécute un autre script Python simple.
 
 ```sql
 EXEC sp_execute_external_script
@@ -79,12 +79,12 @@ WITH RESULT SETS (([Hello World] int));
 GO
 ```
 
-Entrées dans cette procédure stockée sont les suivantes :
+Les entrées de cette procédure stockée sont les suivantes:
 
-+ *@language* paramètre définit l’extension du langage pour appeler, dans ce cas, Python.
-+ *@script* paramètre définit les commandes passées au runtime Python. Votre script Python entier doit être placé entre cet argument, en tant que texte Unicode. Vous pouvez également ajouter le texte à une variable de type **nvarchar**, puis appeler cette variable.
-+ *@input_data_1* données sont retournées par la requête, passée au runtime Python, qui retourne les données vers SQL Server comme une trame de données.
-+ DES jeux de résultats clause définit le schéma de la table de données retournées pour SQL Server, ajout de « Hello World » comme nom de colonne, **int** pour le type de données.
++ *@language* le paramètre définit l’extension de langage à appeler, dans ce cas, Python.
++ *@script* définit les commandes passées au runtime Python. L’intégralité de votre script Python doit être placée dans cet argument, en tant que texte Unicode. Vous pouvez également ajouter le texte à une variable de type **nvarchar**, puis appeler cette variable.
++ *@input_data_1* données retournées par la requête, passées au runtime Python, qui retourne les données à SQL Server sous la forme d’une trame de données.
++ La clause WITH RESULT SETS définit le schéma de la table de données retournée pour SQL Server, en ajoutant «Hello World» comme nom de colonne, **int** pour le type de données.
 
 **Résultats**
 
@@ -94,7 +94,7 @@ Entrées dans cette procédure stockée sont les suivantes :
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Maintenant que vous avez exécuté des scripts de Python simples, examinons plus en détail la structuration des entrées et sorties.
+Maintenant que vous avez exécuté quelques scripts Python simples, examinez de plus près la structuration des entrées et des sorties.
 
 > [!div class="nextstepaction"]
-> [Démarrage rapide : Gérer les entrées et sorties](quickstart-python-inputs-and-outputs.md)
+> [Démarrage rapide : Gérer les entrées et les sorties](quickstart-python-inputs-and-outputs.md)

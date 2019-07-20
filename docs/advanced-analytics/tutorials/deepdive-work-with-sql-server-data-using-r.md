@@ -1,39 +1,39 @@
 ---
-title: Créer une base de données et des autorisations pour les didacticiels de RevoScaleR - SQL Server Machine Learning
-description: Didacticiel pas à pas sur la création d’une base de données SQL Server pour les didacticiels R...
+title: Créer une base de données et des autorisations pour les didacticiels RevoScaleR
+description: Didacticiel procédure pas à pas sur la création d’une base de données SQL Server pour les didacticiels R..
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 84f78219bf4bb188f7a29e79718e107d7fa43347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88a8bb4ab81f3e7c18bcafce70488583fa0421fa
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962169"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344637"
 ---
-# <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Créer une base de données et des autorisations (didacticiel sur SQL Server et RevoScaleR)
+# <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Créer une base de données et des autorisations (didacticiel SQL Server et RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cette leçon fait partie de la [RevoScaleR didacticiel](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
+Cette leçon fait partie du [didacticiel RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sur l’utilisation des [fonctions RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) avec SQL Server.
 
-Leçon 1 est sur la configuration d’une base de données SQL Server et les autorisations nécessaires pour suivre ce didacticiel. Utilisez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) ou un autre éditeur de requête pour effectuer les tâches suivantes :
+La première leçon concerne la configuration d’une base de données SQL Server et les autorisations nécessaires à l’exécution de ce didacticiel. Utilisez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) ou un autre éditeur de requête pour effectuer les tâches suivantes:
 
 > [!div class="checklist"]
-> * Créer une base de données pour stocker les données de formation et la notation des deux modèles R
-> * Créez une connexion d’utilisateur de base de données avec des autorisations pour créer et utiliser des objets de base de données
+> * Créer une base de données pour stocker les données pour l’apprentissage et le score de deux modèles R
+> * Créer une connexion d’utilisateur de base de données avec des autorisations pour créer et utiliser des objets de base de données
   
 ## <a name="create-the-database"></a>Créer la base de données
 
-Ce didacticiel requiert une base de données pour le stockage des données et le code. Si vous n’êtes pas un administrateur, demandez à votre administrateur pour créer la base de données et de la connexion pour vous. Vous aurez besoin des autorisations pour écrire et lire des données et à exécuter des scripts R.
+Ce didacticiel nécessite une base de données pour le stockage des données et du code. Si vous n’êtes pas administrateur, demandez à votre administrateur de base de données de créer la base de données et la connexion pour vous. Vous aurez besoin d’autorisations pour écrire et lire des données, et pour exécuter des scripts R.
 
-1. Dans SQL Server Management Studio, connectez-vous à une instance de base de données prenant en charge de R.
+1. Dans SQL Server Management Studio, connectez-vous à une instance de base de données compatible R.
 
-2. Avec le bouton droit **bases de données**, puis sélectionnez **nouvelle base de données**.
+2. Cliquez avec le bouton droit sur **bases de données**, puis sélectionnez **nouvelle base de données**.
   
-2. Tapez un nom pour la nouvelle base de données : RevoDeepDive.
+2. Tapez un nom pour la nouvelle base de données: RevoDeepDive.
   
 
 ## <a name="create-a-login"></a>Créer un compte de connexion
@@ -42,7 +42,7 @@ Ce didacticiel requiert une base de données pour le stockage des données et le
   
 2. Dans la fenêtre **Nouvelle requête** , exécutez les commandes suivantes pour créer les comptes d’utilisateurs et les assigner à la base de données utilisée pour ce didacticiel. Le cas échéant, modifiez le nom de la base de données.
 
-3. Pour vérifier la connexion, sélectionnez la nouvelle base de données, développez **sécurité**et développez **utilisateurs**.
+3. Pour vérifier la connexion, sélectionnez la nouvelle base de données, développez **sécurité**, puis développez **utilisateurs**.
   
 **utilisateur Windows**
   
@@ -74,9 +74,9 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 
 ## <a name="assign-permissions"></a>Affecter des autorisations
 
-Ce didacticiel montre le script R et les opérations DDL, notamment la création et suppression de tables et procédures stockées et en cours d’exécution de script R dans un processus externe sur SQL Server. Dans cette étape, affecter des autorisations pour permettre ces tâches.
+Ce didacticiel présente les opérations DDL et script R, notamment la création et la suppression de tables et de procédures stockées, ainsi que l’exécution de script R dans un processus externe sur SQL Server. Dans cette étape, affectez autorisations pour autoriser ces tâches.
 
-Cet exemple suppose une connexion SQL (DDUser01), mais si vous avez créé un compte de connexion Windows, utilisez à la place.
+Cet exemple suppose une connexion SQL (DDUser01), mais si vous avez créé une connexion Windows, utilisez-la à la place.
 
 ```sql
 USE RevoDeepDive
@@ -87,7 +87,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO DDUser01
 GO
 ```
 
-## <a name="troubleshoot-connections"></a>Résoudre les problèmes de connexions
+## <a name="troubleshoot-connections"></a>Résoudre les problèmes de connexion
 
 Cette section répertorie quelques problèmes courants que vous pouvez rencontrer au cours de la configuration de la base de données.
 
@@ -97,15 +97,15 @@ Cette section répertorie quelques problèmes courants que vous pouvez rencontre
   
     Si vous ne souhaitez pas installer des outils de gestion de base de données supplémentaires, vous pouvez créer une connexion de test à l’instance de SQL Server à l’aide de [l’Administrateur de sources de données ODBC](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator?view=sql-server-2017) dans le Panneau de configuration. Si la base de données est correctement configurée et que vous entrez les nom d’utilisateur et mot de passe corrects, vous devriez pouvoir voir la base de données que vous venez de créer et la sélectionner comme base de données par défaut.
   
-    Raisons courantes d’échecs de connexion des sites distants connexions ne sont pas activées pour le serveur et le protocole des canaux nommés n’est pas activé. Vous trouverez des conseils de dépannage plus dans cet article : [Résoudre les problèmes de connexion au moteur de base de données SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
+    Les causes courantes des échecs de connexion incluent les connexions à distance qui ne sont pas activées pour le serveur, et le protocole canaux nommés n’est pas activé. Vous trouverez d’autres conseils de dépannage dans cet article: [Résoudre les problèmes de connexion au moteur de base de données de SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   
 - **Pourquoi le nom de ma table est-il précédé de « datareader » ?**
   
-    Lorsque vous spécifiez le schéma par défaut pour cet utilisateur en tant que **db_datareader**, toutes les tables et les autres nouveaux objets créés par cet utilisateur sont précédés de la *schéma* nom. Un schéma ressemble à un dossier que vous pouvez ajouter à une base de données pour organiser des objets. Le schéma définit également les privilèges d’un utilisateur dans la base de données.
+    Lorsque vous spécifiez le schéma par défaut pour cet utilisateur comme **db_datareader**, toutes les tables et les autres nouveaux objets créés par cet utilisateur sont précédés du nom de *schéma* . Un schéma ressemble à un dossier que vous pouvez ajouter à une base de données pour organiser des objets. Le schéma définit également les privilèges d’un utilisateur dans la base de données.
   
     Lorsque le schéma est associé à un nom d’utilisateur particulier, l’utilisateur est le _propriétaire du schéma_. Quand vous créez un objet, vous le créez toujours dans votre propre schéma, sauf si vous demandez spécifiquement qu’il soit créé dans un autre schéma.
   
-    Par exemple, si vous créez une table portant le nom **TestData**, et votre schéma par défaut est **db_datareader**, la table est créée avec le nom `<database_name>.db_datareader.TestData`.
+    Par exemple, si vous créez une table portant le nom **TestData**et que votre schéma par défaut est **db_datareader**, la table est créée avec le `<database_name>.db_datareader.TestData`nom.
   
     Pour cette raison, une base de données peut contenir plusieurs tables portant le même nom, tant que les tables appartiennent à des schémas différents.
    
@@ -113,9 +113,9 @@ Cette section répertorie quelques problèmes courants que vous pouvez rencontre
   
 - **Je ne dispose pas de privilèges DDL. Puis-je quand même suivre le didacticiel ?**
   
-    Oui, mais vous devez demander à quelqu'un de précharger les données dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tables, puis passez à l’avance à la leçon suivante. Les fonctions qui requièrent des privilèges DDL sont appelées dans le didacticiel dans la mesure du possible.
+    Oui, mais vous devez demander à quelqu’un de précharger les données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les tables et passer directement à la leçon suivante. Les fonctions qui requièrent des privilèges DDL sont appelées dans le didacticiel dans la mesure du possible.
 
-    En outre, demandez à votre administrateur de vous accorder l’autorisation EXECUTE ANY EXTERNAL SCRIPT. Il est nécessaire pour l’exécution du script R, si à distance ou à l’aide de `sp_execute_external_script`.
+    En outre, demandez à votre administrateur de vous accorder l’autorisation, d’exécuter n’importe quel SCRIPT externe. Il est nécessaire pour l’exécution de script R, qu’il soit `sp_execute_external_script`distant ou à l’aide de.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

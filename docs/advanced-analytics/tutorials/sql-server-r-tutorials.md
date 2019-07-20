@@ -1,39 +1,39 @@
 ---
-title: Présentation du didacticiel SQL Server R - SQL Server Machine Learning
-description: Introduction aux didacticiels de langage R pour l’analytique en base de données de SQL Server.
+title: Vue d’ensemble du didacticiel SQL Server R
+description: Présentation des didacticiels de langage R pour SQL Server l’analytique dans la base de données.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 467c9320880f1b113cecd36101345f6ee99f7b75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a020478cc59ceb1688f2c93f64c69685ab74972f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961932"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345942"
 ---
-# <a name="sql-server-r-language-tutorials"></a>Didacticiels sur le langage SQL Server R
+# <a name="sql-server-r-language-tutorials"></a>Didacticiels sur le langage R SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article décrit les didacticiels de langage R pour la base de données analytique sur [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) ou [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).
+Cet article décrit les didacticiels de langage R pour l’analyse en base de données sur [SQL Server 2016 R services](../install/sql-r-services-windows-install.md) ou [SQL Server 2017 machine learning services](../install/sql-machine-learning-services-windows-install.md).
 
-+ Apprenez à encapsuler et exécuter le code R dans les procédures stockées.
-+ Sérialiser et enregistrer des modèles basés sur r aux bases de données SQL Server.
-+ En savoir plus sur les contextes de calcul locaux et distants et quand les utiliser.
-+ Explorez les bibliothèques Microsoft R pour la science des données et les tâches d’apprentissage.
++ Découvrez comment encapsuler et exécuter du code R dans des procédures stockées.
++ Sérialisez et enregistrez les modèles basés sur r pour SQL Server bases de données.
++ En savoir plus sur les contextes de calcul locaux et distants et leur utilisation.
++ Explorez les bibliothèques Microsoft R pour la science des données et les tâches de Machine Learning.
 
 <a name="bkmk_sqltutorials"></a>
 
-## <a name="r-quickstarts-and-tutorials"></a>Didacticiels et guides de démarrage rapide R
+## <a name="r-quickstarts-and-tutorials"></a>Guides de démarrage rapide et didacticiels R
 
 | Lien | Description |
 |------|-------------|
-| [Démarrage rapide : À l’aide de R dans T-SQL](rtsql-using-r-code-in-transact-sql-quickstart.md) | Première de plusieurs guides de démarrage rapide, avec celle-ci illustrant la syntaxe de base pour appeler une fonction R à l’aide d’un éditeur de requête T-SQL comme SQL Server Management Studio. |
-| [Tutoriel : Découvrez l’analytique de R en base de données pour les scientifiques de données](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Pour les développeurs R familiarisés avec SQL Server, ce didacticiel explique comment effectuer les tâches de science des données courantes dans SQL Server. Charger et visualiser les données, former et enregistrer un modèle dans SQL Server et utiliser le modèle pour l’analytique prédictive. |
-| [Tutoriel : Découvrez l’analytique de R en base de données pour les développeurs SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Générer et déployer une solution complète de R, à l’aide uniquement [!INCLUDE[tsql](../../includes/tsql-md.md)] outils. Se concentre sur le déplacement d’une solution en production. Vous découvrirez comment encapsuler du code R dans une procédure stockée, enregistrer un modèle R dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et effectuer des appels paramétrables au modèle R pour la prédiction. |
-| [Tutoriel : Présentation approfondie RevoScalepR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | Découvrez comment utiliser les fonctions dans les packages RevoScaleR. Déplacer des données entre R et SQL Server et commutateur contextes de calcul pour répondre à une tâche particulière. Créer des modèles et des tracés et déplacez-les entre votre environnement de développement et le serveur de base de données. |
+| [Démarrage rapide : Utilisation de R dans T-SQL](rtsql-using-r-code-in-transact-sql-quickstart.md) | Tout d’abord, ce qui illustre la syntaxe de base pour appeler une fonction R à l’aide d’un éditeur de requête T-SQL comme SQL Server Management Studio. |
+| [Tutoriel : En savoir plus sur la base de données analytique R pour les scientifiques des données](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | Pour les développeurs R qui débutent dans SQL Server, ce didacticiel explique comment effectuer des tâches courantes de science des données dans SQL Server. Charger et visualiser des données, former et enregistrer un modèle dans SQL Server, et utiliser le modèle pour l’analyse prédictive. |
+| [Tutoriel : Découvrez les analyses en base de données R pour les développeurs SQL](../tutorials/sqldev-in-database-r-for-sql-developers.md) | Créez et déployez une solution R complète, en [!INCLUDE[tsql](../../includes/tsql-md.md)] utilisant uniquement des outils. Se concentre sur le déplacement d’une solution en production. Vous découvrirez comment encapsuler du code R dans une procédure stockée, enregistrer un modèle R dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et effectuer des appels paramétrables au modèle R pour la prédiction. |
+| [Tutoriel : Présentation approfondie de RevoScalepR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | Découvrez comment utiliser les fonctions des packages RevoScaleR. Déplacer des données entre R et SQL Server, et basculer les contextes de calcul pour les adapter à une tâche particulière. Créez des modèles et des tracés, puis déplacez-les entre votre environnement de développement et le serveur de base de données. |
 
 <a name ="bkmk_samples"></a>
 
@@ -41,11 +41,11 @@ Cet article décrit les didacticiels de langage R pour la base de données analy
 
 | Lien | Description |
 |------|-------------|
-| [Créer un modèle prédictif à l’aide de R et SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Découvrez comment une entreprise de location de skis peut utiliser machine learning pour prédire les locations à venir, qui permet du plan d’activités et du personnel pour répondre à la demande future. |
-| [Exécuter le client clustering à l’aide de R et SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | Utiliser l’apprentissage non supervisé pour segmenter les clients basés sur les données de ventes. |
+| [Créer un modèle prédictif à l’aide de R et SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Découvrez comment une entreprise de location de ski peut utiliser Machine Learning pour prédire les futurs loyers, ce qui aide le plan et le personnel de l’entreprise à répondre à la demande future. |
+| [Effectuer un clustering des clients à l’aide de R et SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | Utilisez l’apprentissage non supervisé pour segmenter les clients en fonction des données de ventes. |
 
 ## <a name="see-also"></a>Voir aussi
 
-+ [Extension de R vers SQL Server](../concepts/extension-r.md)
-+ [Didacticiels de SQL Server Machine Learning Services](machine-learning-services-tutorials.md)
++ [Extension R pour SQL Server](../concepts/extension-r.md)
++ [Didacticiels de Machine Learning Services SQL Server](machine-learning-services-tutorials.md)
 

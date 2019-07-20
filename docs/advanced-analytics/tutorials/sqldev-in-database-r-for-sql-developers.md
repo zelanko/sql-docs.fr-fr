@@ -1,67 +1,67 @@
 ---
-title: Didacticiel pour l’analytique en base de données à l’aide de R - SQL Server Machine Learning
-description: Découvrez comment incorporer le code de langue dans les procédures stockées SQL Server et des fonctions T-SQL de programmation R.
+title: Didacticiel sur l’analytique en base de données à l’aide de R
+description: Découvrez comment incorporer du code du langage de programmation R dans SQL Server procédures stockées et des fonctions T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8bf0485b63e341dbeff24a1974df840b0a28dfef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64995cc5de7bb3609f1923b7755be9b33b55e764
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961893"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345901"
 ---
-# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutoriel : Analytique de données R pour les développeurs SQL
+# <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutoriel : Analyse des données R pour les développeurs SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dans ce didacticiel pour les programmeurs SQL, en savoir plus sur l’intégration de R en création et en déployant une basée sur R d’apprentissage à l’aide de la solution un [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) base de données sur SQL Server. Vous allez utiliser T-SQL, SQL Server Management Studio et une instance du moteur de base de données avec [Services Machine Learning] ([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) et la prise en charge du langage R
+Dans ce didacticiel pour les programmeurs SQL, découvrez l’intégration de R en créant et en déployant une solution de Machine Learning basée sur R à l’aide d’une base de données [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) sur SQL Server. Vous allez utiliser T-SQL, SQL Server Management Studio et une instance du moteur de base de données avec [Machine Learning Services] ([machine learning services](../install/sql-machine-learning-services-windows-install.md) et la prise en charge du langage R
 
-Ce didacticiel vous présente les fonctions R utilisées dans un flux de travail de modélisation de données. Étapes comprennent l’exploration de données, création et l’apprentissage d’un modèle de classification binaire et un déploiement de modèle. Le modèle que vous générerez prédit si un voyage est susceptible d’entraîner une info-bulle en fonction de l’heure du jour, la distance parcourue et d’enlèvement. 
+Ce didacticiel présente les fonctions R utilisées dans un flux de travail de modélisation des données. Les étapes incluent l’exploration de données, la création et l’apprentissage d’un modèle de classification binaire et le déploiement de modèle. Le modèle que vous allez créer prévoit si un voyage est susceptible d’entraîner un pourboire en fonction de l’heure de la journée, de la distance parcourue et de l’emplacement de récupération. 
 
-Tout le code R utilisé dans ce didacticiel est encapsulé dans des procédures stockées que vous créez et exécutez dans Management Studio.
+Tout le code R utilisé dans ce didacticiel est encapsulé dans les procédures stockées que vous créez et exécutez dans Management Studio.
 
-## <a name="background-for-sql-developers"></a>En arrière-plan pour les développeurs SQL
+## <a name="background-for-sql-developers"></a>Arrière-plan pour les développeurs SQL
 
-Le processus de création d’une solution d’apprentissage est complexe qui peut impliquer plusieurs outils et la coordination des experts du sujet dans plusieurs phases :
+Le processus de création d’une solution de Machine Learning est un processus complexe qui peut impliquer plusieurs outils et la coordination des experts de l’objet entre plusieurs phases:
 
-+ obtention et le nettoyage des données
-+ Explorer des données et création de fonctionnalités utiles pour la modélisation
-+ apprentissage et le modèle de paramétrage
++ obtention et nettoyage des données
++ exploration des données et création de fonctionnalités utiles pour la modélisation
++ apprentissage et paramétrage du modèle
 + déploiement en production
 
-Développement et le test du code réel est préférable d’effectuer à l’aide d’un environnement de développement R dédié. Toutefois, une fois que le script est entièrement testé, vous pouvez facilement déployer à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)] des procédures stockées dans l’environnement familier de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+Le développement et le test du code réel s’effectuent mieux à l’aide d’un environnement de développement R dédié. Toutefois, une fois le script entièrement testé, vous pouvez le déployer facilement à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l' [!INCLUDE[tsql](../../includes/tsql-md.md)] aide de procédures stockées dans l’environnement [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]familier de.
 
-L’objectif de ce didacticiel en plusieurs parties est une introduction à un flux de travail typique pour migration » terminé le code R » pour SQL Server. 
+L’objectif de ce didacticiel en plusieurs parties est une introduction à un flux de travail classique pour la migration de «code R terminé» vers SQL Server. 
 
-- [Leçon 1 : Explorer et visualiser la forme de données et la distribution en appelant des fonctions R dans les procédures stockées](../tutorials/sqldev-explore-and-visualize-the-data.md)
+- [Leçon 1 : Explorez et visualisez la forme et la distribution des données en appelant des fonctions R dans des procédures stockées](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [Leçon 2 : Créer des caractéristiques de données à l’aide de R dans les fonctions T-SQL](sqldev-create-data-features-using-t-sql.md)
+- [Leçon 2 : Créer des fonctionnalités de données à l’aide de R dans les fonctions T-SQL](sqldev-create-data-features-using-t-sql.md)
   
-- [Leçon 3 : Former et enregistrer un modèle R à l’aide des fonctions et procédures stockées](sqldev-train-and-save-a-model-using-t-sql.md)
+- [Leçon 3 : Former et enregistrer un modèle R à l’aide de fonctions et de procédures stockées](sqldev-train-and-save-a-model-using-t-sql.md)
   
 - [Leçon 4 : Prédire les résultats potentiels à l’aide d’un modèle R dans une procédure stockée](../tutorials/sqldev-operationalize-the-model.md)
 
-Une fois que le modèle a été enregistré dans la base de données, appelez le modèle pour les prédictions à partir de [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide de procédures stockées.
+Une fois que le modèle a été enregistré dans la base de données, appelez le modèle [!INCLUDE[tsql](../../includes/tsql-md.md)] pour les prédictions à partir de à l’aide de procédures stockées.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Toutes les tâches peuvent être effectuées à l’aide [!INCLUDE[tsql](../../includes/tsql-md.md)] procédures stockées dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+Toutes les tâches peuvent être effectuées [!INCLUDE[tsql](../../includes/tsql-md.md)] à l’aide [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]de procédures stockées dans.
 
-Ce didacticiel suppose que vous êtes familiarisé avec les opérations de base de données telles que la création de tables et des bases de données, l’importation de données et l’écriture des requêtes SQL. Il ne suppose pas que vous R. Par conséquent, tout le code R est fourni. 
+Ce didacticiel part du principe que vous êtes familiarisé avec les opérations de base de données de base, telles que la création de bases de données et de tables, l’importation de données et l’écriture de requêtes SQL. Il ne suppose pas que vous connaissiez R. Ainsi, tout le code R est fourni. 
 
-+ [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) ou [SQL Server 2017 Machine Learning Services avec R est activé](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [SQL Server 2016 r services](../install/sql-r-services-windows-install.md#verify-installation) ou [SQL Server 2017 machine learning services avec l’option R activée](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
 + [Bibliothèques R](../package-management/installed-package-information.md)
 
 + [autorisations](../security/user-permission.md)
 
-+ [Base de données de démonstration NYC Taxi](demo-data-nyctaxi-in-sql.md)
++ [Base de données de démonstration du taxi de New York](demo-data-nyctaxi-in-sql.md)
 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 > [!div class="nextstepaction"]
-> [Explorer et visualiser des données à l’aide des fonctions R dans les procédures stockées](../tutorials/sqldev-explore-and-visualize-the-data.md)
+> [Explorer et visualiser les données à l’aide des fonctions R dans les procédures stockées](../tutorials/sqldev-explore-and-visualize-the-data.md)

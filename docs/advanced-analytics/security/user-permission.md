@@ -1,23 +1,23 @@
 ---
-title: Accorder des autorisations de base de données pour l’exécution du script R et Python - SQL Server Machine Learning Services
-description: Comment accorder des autorisations d’utilisateur de base de données pour l’exécution du script R et Python sur SQL Server Machine Learning Services.
+title: Accorder des autorisations de base de données pour l’exécution de scripts R et Python
+description: Octroi d’autorisations d’utilisateur de base de données pour l’exécution de scripts R et Python sur SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e24095b7ec5aafd3439a3d344123c0a7f9dae86d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6b2fb46cb2ee361d858fa460119e6960d78fda7
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962325"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345095"
 ---
-# <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Autoriser les utilisateurs à SQL Server Machine Learning Services
+# <a name="give-users-permission-to-sql-server-machine-learning-services"></a>Accorder aux utilisateurs l’autorisation d’SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article décrit comment vous pouvez autoriser les utilisateurs à exécuter des scripts externes dans SQL Server Machine Learning Services et donner des autorisations language (DDL) aux bases de données en lecture, écriture ou définition de données.
+Cet article explique comment permettre aux utilisateurs d’exécuter des scripts externes dans SQL Server Machine Learning Services et fournir des autorisations de lecture, d’écriture ou de langage de définition de données (DDL) aux bases de données.
 
 Pour plus d’informations, consultez la section autorisations dans [vue d’ensemble de la sécurité pour l’infrastructure d’extensibilité](../../advanced-analytics/concepts/security.md#permissions).
 
@@ -25,9 +25,9 @@ Pour plus d’informations, consultez la section autorisations dans [vue d’ens
 
 ## <a name="permission-to-run-scripts"></a>Autorisation d’exécuter des scripts
 
-Si vous avez installé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous-même et que vous exécutez des scripts R ou Python dans votre propre instance, en général, vous exécutez les scripts en tant qu’administrateur. Par conséquent, vous avez une autorisation implicite sur différentes opérations et toutes les données dans la base de données.
+Si vous vous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] êtes installé et que vous exécutez des scripts R ou python dans votre propre instance, vous exécutez généralement des scripts en tant qu’administrateur. Ainsi, vous disposez d’une autorisation implicite sur diverses opérations et sur toutes les données de la base de données.
 
-La plupart des utilisateurs, toutefois, n’ont pas de ces autorisations élevées. Par exemple, les utilisateurs d’une organisation qui utilisent des connexions SQL pour accéder à la base de données généralement n’ont pas des autorisations élevées. Par conséquent, pour chaque utilisateur qui est à l’aide de R ou Python, vous devez accorder aux utilisateurs des Services Machine Learning l’autorisation d’exécuter des scripts externes dans chaque base de données où la langue est utilisée. Voici comment :
+Toutefois, la plupart des utilisateurs ne disposent pas de ces autorisations élevées. Par exemple, les utilisateurs d’une organisation qui utilisent des connexions SQL pour accéder à la base de données ne disposent généralement pas d’autorisations élevées. Par conséquent, pour chaque utilisateur qui utilise R ou python, vous devez accorder aux utilisateurs de Machine Learning Services l’autorisation d’exécuter des scripts externes dans chaque base de données où la langue est utilisée. Voici comment :
 
 ```sql
 USE <database_name>
@@ -36,17 +36,17 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO [UserName]
 ```
 
 > [!NOTE]
-> Autorisations ne sont pas spécifiques au langage de script pris en charge. En d’autres termes, il ne sont pas des niveaux d’autorisation distincts pour le script R et le script Python. Si vous avez besoin de mettre à jour les autorisations distinctes pour ces langues, vous devez installer R et Python sur des instances distinctes.
+> Les autorisations ne sont pas spécifiques au langage de script pris en charge. En d’autres termes, il n’existe pas de niveaux d’autorisation distincts pour les scripts R et Python. Si vous avez besoin de conserver des autorisations distinctes pour ces langues, installez R et Python sur des instances distinctes.
 
 <a name="permissions-db"></a> 
 
-## <a name="grant-databases-permissions"></a>Accorder des autorisations de bases de données
+## <a name="grant-databases-permissions"></a>Autorisations de base de données Grant
 
-Pendant l’exécution de scripts est un utilisateur, l’utilisateur devra peut-être lire les données à partir d’autres bases de données. L’utilisateur peut également besoin créer des tables pour stocker les résultats et écrire des données dans des tables.
+Lorsqu’un utilisateur exécute des scripts, il peut avoir besoin de lire des données d’autres bases de données. L’utilisateur peut également être amené à créer des tables pour stocker les résultats et à écrire des données dans des tables.
 
-Pour chaque compte d’utilisateur Windows ou un compte de connexion SQL qui est en cours d’exécution des scripts R ou Python, vérifiez qu’il possède les autorisations appropriées sur la base de données : `db_datareader` pour lire les données, `db_datawriter` pour enregistrer les objets à la base de données, ou `db_ddladmin` pour créer des objets tels que des procédures stockées ou des tables contenant formé et des données sérialisées.
+Pour chaque compte d’utilisateur Windows ou connexion SQL qui exécute des scripts R ou python, assurez-vous qu’il dispose des autorisations appropriées sur `db_datareader` la base de données `db_datawriter` spécifique: pour lire des données, pour `db_ddladmin` enregistrer des objets dans la base de données ou pour créer des objets tels que les procédures stockées ou les tables contenant des données formées et sérialisées.
 
-Par exemple, ce qui suit [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction donne la connexion SQL *MySQLLogin* les droits pour exécuter des requêtes T-SQL le *ML_Samples* base de données. Pour exécuter cette instruction, la connexion SQL doit déjà exister dans le contexte de sécurité du serveur.
+Par exemple, l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante donne à la connexion SQL *MySQLLogin* les droits d’exécuter des requêtes T-SQL dans la base de données *ML_Samples* . Pour exécuter cette instruction, la connexion SQL doit déjà exister dans le contexte de sécurité du serveur.
 
 ```sql
 USE ML_Samples

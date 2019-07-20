@@ -1,42 +1,42 @@
 ---
-title: Guide de démarrage rapide sur les types de données R et SQL et des objets - SQL Server Machine Learning
-description: Dans ce démarrage rapide, découvrez comment travailler avec les types de données et les objets de données dans R et SQL Server.
+title: Guide de démarrage rapide sur les types de données et les objets R et SQL
+description: Dans ce guide de démarrage rapide, Découvrez comment utiliser les types de données et les objets de données dans R et SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: baa7a378c85668ac87ff8dc28422d4a6bbbcd225
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8c8ccd60417d4c1d492d53041280ab0c8e318af
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962025"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345428"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Démarrage rapide : Gérer les types de données et des objets à l’aide de R dans SQL Server
+# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Démarrage rapide : Gérer les types de données et les objets à l’aide de R dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dans ce démarrage rapide, obtenir une introduction pratique aux problèmes courants qui surviennent lors du déplacement des données entre R et SQL Server. L’expérience que vous bénéficiez via cet exercice fournit des informations essentielles lorsque vous travaillez avec des données dans votre propre script.
+Dans ce guide de démarrage rapide, vous découvrirez les problèmes courants qui se produisent lors du déplacement de données entre R et SQL Server. L’expérience que vous obtenez dans le cadre de cet exercice fournit un arrière-plan essentiel lorsque vous travaillez avec des données dans votre propre script.
 
-Problèmes courants de savoir à l’avance sont les suivantes :
+Voici les problèmes courants à connaître:
 
 + Les types de données ne correspondent pas toujours.
-+ Les conversions implicites peuvent avoir lieu
++ Des conversions implicites peuvent avoir lieu
 + Des opérations de cast et de conversion sont parfois nécessaires.
 + R et SQL utilisent des objets de données différents.
 
 ## <a name="prerequisites"></a>Prérequis
 
-Un guide de démarrage rapide précédent, [R vérifier existe dans SQL Server](quickstart-r-verify.md), fournit des informations et des liens pour la configuration de l’environnement R requis pour ce démarrage rapide.
+Un démarrage rapide précédent, [Vérifiez que R existe dans SQL Server](quickstart-r-verify.md), fournit des informations et des liens pour configurer l’environnement r requis pour ce guide de démarrage rapide.
 
-## <a name="always-return-a-data-frame"></a>Retourne toujours une trame de données
+## <a name="always-return-a-data-frame"></a>Retourner toujours une trame de données
 
-Quand votre script retourne les résultats de R vers SQL Server, il doit retourner les données sous forme de trame de données (objet **data.frame**). N’importe quel autre type d’objet que vous générez dans votre script - que ce soit par une liste, facteur, vecteur ou des données binaires - doit être converti en une trame de données si vous souhaitez retourner la sortie en tant que partie des résultats de la procédure stockée. Heureusement, vous avez plusieurs fonctions R à votre disposition pour changer des objets différents en trame de données. Vous pouvez même sérialiser un modèle binaire et le retourner dans une trame de données, ce que vous ferez plus tard dans ce didacticiel.
+Quand votre script retourne les résultats de R vers SQL Server, il doit retourner les données sous forme de trame de données (objet **data.frame**). Tout autre type d’objet que vous générez dans votre script, qu’il s’agisse d’une liste, d’un facteur, d’un vecteur ou de données binaires, doit être converti en une trame de données si vous souhaitez le générer dans le cadre des résultats de la procédure stockée. Heureusement, vous avez plusieurs fonctions R à votre disposition pour changer des objets différents en trame de données. Vous pouvez même sérialiser un modèle binaire et le retourner dans une trame de données, ce que vous ferez plus tard dans ce didacticiel.
 
-Tout d’abord, nous allons faire des essais avec certains objets R de base - vecteurs, matrices et listes - et voir comment la conversion en une trame de données change la sortie passée à SQL Server.
+Tout d’abord, expérimentons quelques objets r de base r (vecteurs, matrices et listes) et voyons comment la conversion en une trame de données modifie la sortie transmise à SQL Server.
 
-Comparer ces deux scripts de « Hello World » dans R. Les scripts se ressemblent beaucoup, mais la première renvoie une seule colonne de trois valeurs, tandis que la seconde retourne trois colonnes avec une seule valeur chacune.
+Comparez ces deux scripts «Hello World» dans R. Les scripts semblent presque identiques, mais la première retourne une seule colonne de trois valeurs, tandis que la seconde retourne trois colonnes avec une seule valeur chacune.
 
 **Exemple 1**
 
@@ -57,7 +57,7 @@ EXECUTE sp_execute_external_script
       , @input_data_1 = N'  ';
 ```
 
-## <a name="identify-schema-and-data-types"></a>Identifier les types de données et de schéma
+## <a name="identify-schema-and-data-types"></a>Identifier les types de schéma et de données
 
 Pourquoi les résultats sont-ils si différents ? 
 
@@ -65,7 +65,7 @@ La réponse est généralement liée à l’utilisation de la commande R `str()`
 
 Pour comprendre pourquoi les exemples 1 et 2 ont des résultats très différents, insérez la ligne `str(OutputDataSet)` à la fin de la définition de variable _@script_ dans chaque instruction, comme ceci :
 
-**Exemple 1 avec la fonction str ajoutée**
+**Exemple 1 avec la fonction Str ajoutée**
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -77,7 +77,7 @@ EXECUTE sp_execute_external_script
 ;
 ```
 
-**Exemple 2 avec la fonction str ajoutée**
+**Exemple 2 avec la fonction Str ajoutée**
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -107,18 +107,18 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-Comme vous pouvez le constater, un léger changement dans la syntaxe R transforme le schéma des résultats. Nous n’entrerons pas dans la raison pour laquelle, mais les différences dans les types de données R sont expliquées en détail dans le *des Structures de données* section [« Advanced R » par Hadley Wickham](http://adv-r.had.co.nz).
+Comme vous pouvez le constater, un léger changement dans la syntaxe R transforme le schéma des résultats. Nous n’allons pas expliquer pourquoi, mais les différences dans les types de données R sont expliquées en détail dans la section *structures de données* de [«avancé R» de Hadley Wickham](http://adv-r.had.co.nz).
 
 Pour l’instant, gardez seulement à l’esprit que vous devez vérifier les résultats attendus quand vous convertissez des objets R en trames de données.
 
 > [!TIP]
-> Vous pouvez également utiliser les fonctions d’identité R, tel que `is.matrix`, `is.vector`, pour retourner des informations sur la structure de données interne.
+> Vous pouvez également utiliser des fonctions d’identité R, `is.matrix`telles `is.vector`que, pour retourner des informations sur la structure de données interne.
 
 ## <a name="implicit-conversion-of-data-objects"></a>Conversion implicite des objets de données
 
 Chaque objet de données R a ses propres règles pour le traitement des valeurs qui sont combinées avec un autre objet de données ayant le même nombre de dimensions ou avec un objet de données contenant des types de données hétérogènes.
 
-Par exemple, supposez que vous exécutez l’instruction suivante pour effectuer une multiplication de matrice à l’aide de R. Vous multipliez une matrice à colonne unique avec les valeurs par un tableau avec quatre valeurs et attendez une matrice 4 x 3 en conséquence.
+Par exemple, supposons que vous exécutez l’instruction suivante pour effectuer une multiplication de matrice à l’aide de R. Vous multipliez une matrice à une seule colonne par les trois valeurs d’un tableau avec quatre valeurs, et vous attendez une matrice 4x3 comme résultat.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -141,7 +141,7 @@ En réalité, la colonne de trois valeurs est convertie en une matrice à une se
 |120|130|140|150|
 |1 200|1300|1400|1 500|
 
-Notez, cependant, que se passe-t-il lorsque vous modifiez la taille du tableau `y`.
+Toutefois, notez ce qui se produit lorsque vous modifiez la taille du `y`tableau.
 
 ```sql
 execute sp_execute_external_script
@@ -162,21 +162,21 @@ R retourne maintenant une seule valeur comme résultat.
 |---|
 |1542|
 
-Pourquoi ? Dans ce cas, étant donné que les deux arguments peuvent être gérés comme des vecteurs de la même longueur, R retourne le produit interne sous forme de matrice.  C’est le comportement attendu selon les règles de l’algèbre linéaire, mais cela peut poser problème si votre application en aval s’attend à ce que le schéma de sortie reste toujours le même !
+Pourquoi ? Dans ce cas, étant donné que les deux arguments peuvent être traités comme des vecteurs de la même longueur, R retourne le produit interne sous forme de matrice.  C’est le comportement attendu selon les règles de l’algèbre linéaire, mais cela peut poser problème si votre application en aval s’attend à ce que le schéma de sortie reste toujours le même !
 
 > [!TIP]
 > 
-> Obtenir des erreurs ? Ces exemples nécessitent de la table **RTestData**. Si vous n’avez pas créé la table de données de test, revenez à cette rubrique pour créer la table : [Gérer les entrées et sorties](../tutorials/rtsql-working-with-inputs-and-outputs.md).
+> Vous obtenez des erreurs? Ces exemples requièrent la table **RTestData**. Si vous n’avez pas créé la table de données de test, revenez à cette rubrique pour créer la table: [Gérer les entrées et les sorties](../tutorials/rtsql-working-with-inputs-and-outputs.md).
 > 
-> Si vous avez créé la table mais que vous recevez une erreur, assurez-vous que vous exécutez la procédure stockée dans le contexte de la base de données qui contient la table et pas **master** ou une autre base de données.
+> Si vous avez créé la table tout en obtenant une erreur, assurez-vous que vous exécutez la procédure stockée dans le contexte de la base de données qui contient la table, et non dans **Master** ou dans une autre base de données.
 > 
-> En outre, nous vous suggérons d’éviter d’utiliser des tables temporaires pour ces exemples. Certains clients R seront termine une connexion entre chaque lot, la suppression de tables temporaires.
+> Nous vous suggérons également d’éviter d’utiliser des tables temporaires pour ces exemples. Certains clients R mettent fin à une connexion entre les lots, en supprimant les tables temporaires.
 
 ## <a name="merge-or-multiply-columns-of-different-length"></a>Fusionner ou multiplier des colonnes de longueur différente
 
-R offre une grande souplesse pour l’utilisation des vecteurs de tailles différentes et la combinaison de ces structures de colonnes en trames de données. Les listes de vecteurs ressemblent parfois à des tables, mais elles ne suivent pas toutes les règles qui régissent les tables de base de données.
+R offre une grande flexibilité pour travailler avec des vecteurs de différentes tailles, et pour combiner ces structures de type colonne en trames de données. Les listes de vecteurs ressemblent parfois à des tables, mais elles ne suivent pas toutes les règles qui régissent les tables de base de données.
 
-Par exemple, le script suivant définit un tableau numérique de longueur 6 et le stocke dans la variable R `df1`. Le tableau numérique est ensuite combiné aux entiers de la table RTestData, qui contient les valeurs de trois (3), pour créer une trame de données, `df2`.
+Par exemple, le script suivant définit un tableau numérique de longueur 6 et le stocke dans la variable R `df1`. Le tableau numérique est ensuite combiné aux entiers de la table RTestData, qui contient trois (3) valeurs, pour créer une nouvelle trame de données `df2`,.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -208,12 +208,12 @@ N’oubliez pas qu’une trame de données est une liste de vecteurs, même si e
 
 R et SQL Server n’utilisent pas les mêmes types de données. Quand vous exécutez une requête dans SQL Server pour obtenir des données que vous voulez ensuite passer au runtime R, un type de conversion implicite a généralement lieu. D’autres conversions sont effectuées quand vous retournez les données de R vers SQL Server.
 
-- SQL Server envoie les données à partir de la requête au processus R géré par le service Launchpad et le convertit en une représentation interne pour une plus grande efficacité.
+- SQL Server transmet les données de la requête au processus R géré par le service Launchpad et les convertit en représentation interne pour une plus grande efficacité.
 - Le runtime R charge les données dans une variable data.frame et effectue ses propres opérations sur les données.
 - Le moteur de base de données retourne les données à SQL Server par le biais d’une connexion sécurisée interne et présente les données en termes de types de données SQL Server.
 - Vous obtenez les données en vous connectant à SQL Server à l’aide d’une bibliothèque cliente ou réseau qui peut envoyer des requêtes SQL et gérer des jeux de données tabulaires. Cette application cliente est susceptible de modifier les données d’autres manières.
 
-Pour voir comment cela fonctionne, exécutez une requête telle que celle-ci le [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) entrepôt de données. Cette requête retourne les données de ventes utilisées pour effectuer des prévisions.
+Pour voir comment cela fonctionne, exécutez une requête telle que celle-ci dans l’entrepôt de données [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) . Cette requête retourne les données de ventes utilisées pour effectuer des prévisions.
 
 ```sql
 USE AdventureWorksDW
@@ -229,9 +229,9 @@ SELECT ReportingDate
 
 > [!NOTE]
 > 
-> Vous pouvez utiliser n’importe quelle version d’AdventureWorks, ou créer une autre requête à l’aide d’une base de données de votre choix. Le point consiste à essayer de manipuler des données qui contient le texte, date/heure et les valeurs numériques.
+> Vous pouvez utiliser n’importe quelle version d’AdventureWorks ou créer une requête différente à l’aide d’une base de données de votre choix. Le point est de tenter de gérer des données qui contiennent du texte, des valeurs DateTime et des valeurs numériques.
 
-Maintenant, essayez de coller cette requête comme entrée à la procédure stockée.
+À présent, essayez de coller cette requête comme entrée de la procédure stockée.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -262,24 +262,24 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 ```
 
 + La colonne date/heure a été traitée avec le type de données R **POSIXct**.
-+ La colonne de texte « ProductSeries » a été identifié comme un **facteur**, ce qui signifie qu’une variable catégorielle. Par défaut, les valeurs de chaîne sont gérées comme des facteurs. Si vous passez une chaîne à R, cette chaîne est convertie en entier pour un usage interne, puis la valeur est mappée à la chaîne dans la sortie.
++ La colonne de texte «ProductSeries» a été identifiée comme un **facteur**, ce qui signifie une variable catégorique. Par défaut, les valeurs de chaîne sont gérées comme des facteurs. Si vous passez une chaîne à R, cette chaîne est convertie en entier pour un usage interne, puis la valeur est mappée à la chaîne dans la sortie.
 
 ### <a name="summary"></a>Récapitulatif
 
-Dans ces exemples courts, vous pouvez voir la nécessité de vérifier les effets de la conversion de données lors de la transmission SQL interroge en tant qu’entrée. Étant donné que certains types de données SQL Server ne sont pas pris en charge par R, tenez compte des manières suivantes pour éviter les erreurs :
+À partir de ces exemples courts, vous pouvez voir la nécessité de vérifier les effets de la conversion de données lors du passage de requêtes SQL en entrée. Étant donné que certains types de données SQL Server ne sont pas pris en charge par R, utilisez les méthodes suivantes pour éviter les erreurs:
 
-+ Tester vos données à l’avance et vérifiez les colonnes ou valeurs dans votre schéma peut être un problème quand il est passé au code R.
++ Testez vos données à l’avance et vérifiez les colonnes ou les valeurs de votre schéma qui peuvent être un problème lorsqu’elles sont transmises à du code R.
 + Spécifiez les colonnes dans votre source de données d’entrée individuellement, et non en utilisant `SELECT *`. Déterminez de quelle manière gérer chaque colonne.
 + Effectuez les opérations de cast explicites nécessaires lors de la phase de préparation de vos données d’entrée, pour éviter tout comportement inattendu.
-+ Évitez les colonnes de transmission de données (par exemple, le GUID ou rowguid) provoquent des erreurs et ne sont pas utiles pour la modélisation.
++ Évitez de passer des colonnes de données (telles que des GUID ou des rowguid) qui provoquent des erreurs et qui ne sont pas utiles pour la modélisation.
 
-Pour plus d’informations sur les types de données pris en charge et non pris en charge, consultez [R bibliothèques et types de données](../r/r-libraries-and-data-types.md).
+Pour plus d’informations sur les types de données pris en charge et non pris en charge, consultez [bibliothèques et types de données R](../r/r-libraries-and-data-types.md).
 
-Pour plus d’informations sur l’impact sur les performances de la conversion d’exécution de chaînes en facteurs numériques au, consultez [le réglage des performances de SQL Server R Services](../r/sql-server-r-services-performance-tuning.md).
+Pour plus d’informations sur l’impact sur les performances de la conversion des chaînes au moment de l’exécution en facteurs numériques, consultez [SQL Server R services le réglage des performances](../r/sql-server-r-services-performance-tuning.md).
 
 ## <a name="next-step"></a>Étape suivante
 
-Dans le Guide de démarrage rapide suivant, vous allez apprendre à appliquer des fonctions R aux données de SQL Server.
+Dans le prochain démarrage rapide, vous apprendrez à appliquer des fonctions R à SQL Server données.
 
 > [!div class="nextstepaction"]
 > [Démarrage rapide : Utiliser des fonctions R avec des données de SQL Server](quickstart-r-functions.md)

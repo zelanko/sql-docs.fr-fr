@@ -1,58 +1,58 @@
 ---
-title: Jeu de données de démonstration de flight compagnies aériennes pour les didacticiels SQL Server Python et R - SQL Server Machine Learning
-Description: Créer une base de données contenant le jeu de données de compagnies aériennes à partir de R et Python. Ce jeu de données est utilisé dans les exercices montrant comment encapsuler le langage R ou Python code dans une procédure stockée SQL Server.
+title: Jeu de données de démonstration des vols aériens pour SQL Server didacticiels Python et R
+Description: Créer une base de données contenant le jeu de données de la compagnie aérienne à partir de R et Python. Ce jeu de données est utilisé dans les exercices qui montrent comment encapsuler le code R ou python dans une procédure stockée SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/22/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d317053721d3c3288e58bcfbd467bb282020db48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 82afddf861ecda2d25260f69e532c63a1203030b
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962123"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344625"
 ---
-#  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Données de démonstration de d’arrivée de vol compagnies aériennes pour les didacticiels de SQL Server Python et R
+#  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Données de démonstration de l’arrivée d’un avion de transport pour SQL Server les didacticiels Python et R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Dans cet exercice, créez une base de données SQL Server pour stocker les données importées à partir de R ou Python intégrées Airline demo jeux de données. Distributions de R et Python fournissent des données équivalentes, que vous pouvez importer une base de données SQL Server à l’aide de Management Studio.
+Dans cet exercice, créez une base de données SQL Server pour stocker des données importées à partir de jeux de données de démonstration de la compagnie aérienne intégrés R ou python. Les distributions R et Python fournissent des données équivalentes, que vous pouvez importer dans une base de données SQL Server à l’aide de Management Studio.
 
-Pour effectuer cet exercice, vous devez disposer [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) ou un autre outil qui peut exécuter des requêtes T-SQL.
+Pour effectuer cet exercice, vous devez disposer d' [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-2017) ou d’un autre outil capable d’exécuter des requêtes T-SQL.
 
-Didacticiels et guides de démarrage rapide à l’aide de ce jeu de données sont les suivantes :
+Les didacticiels et les guides de démarrage rapide utilisant ce jeu de données sont les suivants:
 
-+  [Créer un modèle de Python à l’aide de revoscalepy](use-python-revoscalepy-to-create-model.md)
++  [Créer un modèle Python à l’aide de revoscalepy](use-python-revoscalepy-to-create-model.md)
 
 ## <a name="create-the-database"></a>Créer la base de données
 
-1. Démarrez SQL Server Management Studio, connectez-vous à une instance du moteur de base de données qui a l’intégration de R ou Python.  
+1. Démarrez SQL Server Management Studio, connectez-vous à une instance du moteur de base de données qui dispose de l’intégration R ou python.  
 
-2. Dans l’Explorateur d’objets, cliquez sur **bases de données** et créer une base de données appelée **flightdata**.
+2. Dans l’Explorateur d’objets, cliquez avec le bouton droit sur **bases de données** et créez une nouvelle base de données appelée **FlightData**.
 
-3. Avec le bouton droit **flightdata**, cliquez sur **tâches**, cliquez sur **importer un fichier plat**.
+3. Cliquez avec le bouton droit sur **FlightData**, cliquez sur **tâches**, puis sur **Importer un fichier plat**.
 
-4. Ouvrez le fichier AirlineDemoData.csv fourni dans la distribution de R ou Python, selon la langue que vous avez installé.
+4. Ouvrez le fichier AirlineDemoData. csv fourni dans la distribution R ou python, selon la langue que vous avez installée.
 
-   Pour R, recherchez **AirlineDemoSmall.csv** à C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData
+   Pour R, recherchez **AirlineDemoSmall. csv** dans C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library\RevoScaleR\SampleData
    
-   Pour Python, recherchez **AirlineDemoSmall.csv** à C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\data\sample_data
+   Pour Python, recherchez **AirlineDemoSmall. csv** dans C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\data\sample_data
   
-Lorsque vous sélectionnez le fichier, les valeurs par défaut sont renseignés pour le schéma et le nom de la table.
+Lorsque vous sélectionnez le fichier, les valeurs par défaut sont renseignées pour le nom et le schéma de la table.
 
-  ![Assistant Importation de fichier plat montrant les valeurs par défaut de démonstration de compagnies aériennes](media/import-airlinedemosmall.png)
+  ![Assistant importation de fichier plat avec les valeurs par défaut de la démo de la compagnie aérienne](media/import-airlinedemosmall.png)
 
-Parcourez les pages restantes, en acceptant les valeurs par défaut, pour importer les données.
+Cliquez sur les pages restantes, en acceptant les valeurs par défaut, pour importer les données.
 
 
 ## <a name="query-the-data"></a>Interroger les données
 
-Comme une étape de validation, exécutez une requête pour confirmer que le téléchargement de données.
+En guise d’étape de validation, exécutez une requête pour confirmer que les données ont été téléchargées.
 
-1. Dans l’Explorateur d’objets, des bases de données, cliquez sur le **flightdata** de base de données et démarrer une nouvelle requête.
+1. Dans l’Explorateur d’objets, sous bases de données, cliquez avec le bouton droit sur la base de données **FlightData** et démarrez une nouvelle requête.
 
-2. Exécutez des requêtes simples :
+2. Exécuter des requêtes simples:
 
     ```sql
     SELECT TOP(10) * FROM AirlineDemoSmall;
@@ -63,4 +63,4 @@ Comme une étape de validation, exécutez une requête pour confirmer que le té
 
 Dans la leçon suivante, vous allez créer un modèle de régression linéaire basé sur ces données.
 
-+ [Créer un modèle de Python à l’aide de revoscalepy](use-python-revoscalepy-to-create-model.md)
++ [Créer un modèle Python à l’aide de revoscalepy](use-python-revoscalepy-to-create-model.md)

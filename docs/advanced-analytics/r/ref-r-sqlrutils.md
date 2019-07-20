@@ -1,18 +1,18 @@
 ---
-title: fonctions d’assistance de sqlrutils - SQL Server Machine Learning Services
-description: Utiliser la bibliothèque de fonctions sqlrutils dans SQL Server 2016 R Services et SQL Server 2017 Machine Learning Services avec R pour générer des procédures stockées contenant le script R.
+title: fonctions d’assistance sqlrutils
+description: Utilisez la bibliothèque de fonctions sqlrutils dans SQL Server 2016 R services et SQL Server 2017 Machine Learning Services avec R pour générer des procédures stockées contenant un script R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6a66d79d376806383f1376510bb6de79493cb7ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 361093be372e77a869996e6ffb67a6bd6e701c44
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962475"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345088"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (bibliothèque R dans SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,41 +34,41 @@ Vous pouvez également exécuter la procédure stockée à partir d’un environ
   
 ## <a name="full-reference-documentation"></a>Documentation de référence complète
 
-Le **sqlrutils** library est distribué dans plusieurs produits Microsoft, mais l’utilisation est la même, si vous obtenez la bibliothèque dans SQL Server ou un autre produit. Étant donné que les fonctions sont les mêmes, [documentation pour les fonctions individuelles sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) est publié dans un seul emplacement sous la [référence de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) pour Microsoft Machine Learning Server. Doivent tout propres au produit comportements existent, les différences sont notées dans la page d’aide (fonction).
+La bibliothèque **sqlrutils** est distribuée dans plusieurs produits Microsoft, mais l’utilisation est la même que vous obteniez la bibliothèque dans SQL Server ou un autre produit. Étant donné que les fonctions sont identiques, la [documentation des fonctions sqlrutils individuelles](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) est publiée dans un seul emplacement sous la [référence R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) pour Microsoft machine learning Server. Si des comportements spécifiques à un produit existent, les différences seront signalées dans la page d’aide de la fonction.
 
 ## <a name="functions-list"></a>Liste des fonctions
 
-La section suivante fournit une vue d’ensemble des fonctions que vous pouvez appeler à partir de la **sqlrutils** package pour développer une procédure stockée contenant incorporé code R. Pour plus d’informations des paramètres de chaque méthode ou fonction, consultez l’aide de R pour le package : `help(package="sqlrutils")`
+La section suivante fournit une vue d’ensemble des fonctions que vous pouvez appeler à partir du package **sqlrutils** pour développer une procédure stockée contenant du code R incorporé. Pour plus d’informations sur les paramètres de chaque méthode ou fonction, consultez l’aide de R pour le package:`help(package="sqlrutils")`
 
 |Fonction | Description |
 |------|-------------|
-|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Exécuter une procédure stockée SQL.|
-|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Obtenir la liste des paramètres d’entrée à la procédure stockée.| 
+|[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Exécutez une procédure stockée SQL.|
+|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Obtient la liste des paramètres d’entrée de la procédure stockée.| 
 |[InputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| Définit la source de données dans SQL Server qui sera utilisée dans la trame de données R. Vous spécifiez le nom de la trame de données dans laquelle stocker les données d’entrée, et une requête pour obtenir les données ou une valeur par défaut. Seules les requêtes SELECT simples sont prises en charge. | 
 |[InputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| Définit un seul paramètre d’entrée qui est incorporé dans le script T-SQL. Vous devez fournir le nom du paramètre et son type de données R.| 
 |[OutputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputdata)| Génère un objet de données intermédiaire qui est nécessaire si votre fonction R retourne une liste contenant une trame de données. L’objet *OutputData* est utilisé pour stocker le nom d’une trame de données unique obtenue à partir de la liste.| 
 |[OutputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputparameter) | Génère un objet de données intermédiaire qui est nécessaire si votre fonction R retourne une liste. L’objet *OutputParameter* stocke le nom et le type de données d’un seul membre de la liste, en supposant que ce membre n’est **pas** une trame de données. |
-|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Inscrire la procédure stockée avec une base de données.|
-|[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| Assigner une requête à un paramètre d’entrée de données de la procédure stockée.| 
-|[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Affecter une valeur à un paramètre d’entrée de la procédure stockée.| 
-|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| Un objet de la procédure stockée.|
+|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Enregistrez la procédure stockée avec une base de données.|
+|[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| Assigner une requête à un paramètre de données d’entrée de la procédure stockée.| 
+|[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Affectez une valeur à un paramètre d’entrée de la procédure stockée.| 
+|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| Objet de procédure stockée.|
 
 
-## <a name="how-to-use-sqlrutils"></a>L’utilisation de sqlrutils
+## <a name="how-to-use-sqlrutils"></a>Utilisation de sqlrutils
 
-Le **sqlrutils** fonctions de bibliothèque doivent s’exécuter sur un ordinateur disposant de SQL Server Machine Learning avec R. Si vous travaillez sur une station de travail cliente, définir un contexte de calcul à distance à l’exécution de la touche MAJ enfoncée à SQL Server. Le flux de travail pour l’utilisation de ce package comprend les étapes suivantes :
+Les fonctions de la bibliothèque **sqlrutils** doivent s’exécuter sur un ordinateur qui a SQL Server machine learning avec R. Si vous travaillez sur une station de travail cliente, définissez un contexte de calcul distant pour déplacer l’exécution vers SQL Server. Le flux de travail pour l’utilisation de ce package comprend les étapes suivantes:
 
-+ Définir les paramètres de procédure stockée (entrées, sorties ou les deux) 
++ Définir des paramètres de procédure stockée (entrées, sorties ou les deux) 
 + Générer et inscrire la procédure stockée    
 + Exécuter la procédure stockée  
 
-Dans une session R, chargez **sqlrutils** à partir de la ligne de commande en tapant `library(sqlrutils)`.
+Dans une session R, chargez **sqlrutils** à partir de la ligne `library(sqlrutils)`de commande en tapant.
 
 > [!Note]
-> Vous pouvez charger cette bibliothèque sur un ordinateur qui ne dispose pas de SQL Server (par exemple, sur une instance de R Client) si vous modifiez le contexte de calcul à SQL Server et que vous exécutez le code dans ce contexte de calcul.
+> Vous pouvez charger cette bibliothèque sur un ordinateur qui n’a pas de SQL Server (par exemple, sur une instance de client R) si vous modifiez le contexte de calcul pour SQL Server et que vous exécutez le code dans ce contexte de calcul.
 
 
-### <a name="define-stored-procedure-parameters-and-inputs"></a>Définir des entrées et des paramètres de procédure stockée
+### <a name="define-stored-procedure-parameters-and-inputs"></a>Définir les paramètres et les entrées des procédures stockées
 
 `StoredProcedure` est le constructeur principal utilisé pour générer la procédure stockée. Ce constructeur génère un objet de *procédure stockée SQL Server* et crée éventuellement un fichier texte contenant une requête qui peut servir à générer la procédure stockée à l’aide d’une commande T-SQL. 
 
@@ -92,7 +92,7 @@ Si vous le souhaitez, la fonction *StoredProcedure* peut également inscrire la 
 
 Aucune donnée ou valeur n’est généralement associé à l’objet de procédure stockée, sauf si une valeur par défaut a été spécifiée. Les données ne sont récupérées qu’une fois que la procédure stockée est exécutée. 
 
-### <a name="specify-inputs-and-execute"></a>Spécifier les entrées et exécuter
+### <a name="specify-inputs-and-execute"></a>Spécifier les entrées et les exécuter
 
 + Utilisez `setInputDataQuery` pour assigner une requête à un objet *InputParameter* . Par exemple, si vous avez créé un objet de procédure stockée dans R, vous pouvez utiliser `setInputDataQuery` pour passer des arguments à la fonction *StoredProcedure* afin d’exécuter la procédure stockée avec les entrées souhaitées.
 

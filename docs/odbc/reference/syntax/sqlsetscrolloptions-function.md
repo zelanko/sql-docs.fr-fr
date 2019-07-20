@@ -1,7 +1,7 @@
 ---
-title: Sqlsetscrolloptions, fonction | Microsoft Docs
+title: SQLSetScrollOptions fonction) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLSetScrollOptions
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLSetScrollOptions
@@ -19,29 +20,29 @@ helpviewer_keywords:
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7ad13ef3d443e2c99a44ad1cbefbf9f08fa2e742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77a85caefadb54c3db2716c4db18b504e02da996
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039669"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68342937"
 ---
 # <a name="sqlsetscrolloptions-function"></a>SQLSetScrollOptions, fonction
 **Conformité**  
- Version introduite : Conformité aux normes 1.0 ODBC : Déconseillé  
+ Version introduite: Conformité des normes ODBC 1,0: Déconseillé  
   
  **Résumé**  
- Dans ODBC *3.x*, la fonction ODBC 2.0 **SQLSetScrollOptions** a été remplacé par des appels à **SQLGetInfo** et **SQLSetStmtAttr**.  
+ Dans ODBC *3. x*, la fonction ODBC 2,0 **SQLSetScrollOptions** a été remplacée par des appels à **SQLGetInfo** et **SQLSetStmtAttr**.  
   
 > [!NOTE]
->  Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction lorsqu’une application ODBC *2.x* application fonctionne avec une application ODBC *3.x* pilote, consultez [mappage de fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)dans l’annexe g : Instructions de pilote pour la compatibilité descendante.  
+>  Pour plus d’informations sur le mappage de cette fonction par le gestionnaire de pilotes lorsqu’une application ODBC *2. x* utilise un pilote ODBC *3. x* , consultez [mappage des fonctions](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) dépréciées dans l’annexe G: Instructions relatives aux pilotes pour la compatibilité descendante.  
 > 
 > [!NOTE]
->  Lorsque le Gestionnaire de pilotes mappe **SQLSetScrollOptions** pour une application fonctionne avec une application ODBC *3.x* pilote qui ne prend pas en charge **SQLSetScrollOptions**, le pilote Le gestionnaire définit l’option d’instruction SQL_ROWSET_SIZE, pas l’attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE, à la *la RowsetSize* argument dans **SQLSetScrollOption**. Par conséquent, **SQLSetScrollOptions** ne peut pas être utilisé par une application lors de l’extraction de plusieurs lignes par un appel à **SQLFetch** ou **SQLFetchScroll**. Il peut être uniquement utilisé lorsque l’extraction de plusieurs lignes par un appel à **SQLExtendedFetch**.  
+>  Quand le gestionnaire de pilotes mappe **SQLSetScrollOptions** pour une application qui utilise un pilote ODBC *3. x* qui ne prend pas en charge **SQLSetScrollOptions**, le gestionnaire de pilotes définit l’option d’instruction SQL_ROWSET_SIZE, et non le SQL_ATTR_ROW_ Attribut d’instruction ARRAY_SIZE, à l’argument *RowsetSize* dans **SQLSetScrollOption**. Par conséquent, **SQLSetScrollOptions** ne peut pas être utilisé par une application lors de l’extraction de plusieurs lignes par un appel à **SQLFetch** ou **SQLFetchScroll**. Il peut être utilisé uniquement lors de l’extraction de plusieurs lignes par un appel à **SQLExtendedFetch**.  
   
 ## <a name="remarks"></a>Notes  
- Si votre application s’exécutera sur un système d’exploitation 64 bits, consultez [informations sur ODBC 64 bits](../../../odbc/reference/odbc-64-bit-information.md).  
+ Si votre application s’exécute sur un système d’exploitation 64 bits, consultez [informations ODBC 64](../../../odbc/reference/odbc-64-bit-information.md)bits.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)

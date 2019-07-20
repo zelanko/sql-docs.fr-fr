@@ -1,43 +1,43 @@
 ---
-title: Exécuter des fonctions R personnalisées sur SQL Server à l’aide de RevoScaleR rxExec - SQL Server Machine Learning
-description: Didacticiel pas à pas expliquant comment exécuter un script R personnalisé sur SQL Server à l’aide de fonctions RevoScaleR.
+title: Exécuter des fonctions R personnalisées sur SQL Server à l’aide de RevoScaleR rxExec
+description: Didacticiel pas à pas sur la façon d’exécuter un script R personnalisé sur SQL Server à l’aide des fonctions RevoScaleR.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c9cb9d84637d20f3f0e73f97fa6565d84d12fb4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfbd5417106d8e6ddd0ab5c76c2c05dae07c0605
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961956"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345981"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>Exécuter des fonctions R personnalisées sur SQL Server à l’aide de rxExec
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Vous pouvez exécuter des fonctions R personnalisées dans le contexte de SQL Server en passant votre fonction via [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec), en supposant que toutes les bibliothèques nécessite votre script sont également installés sur le serveur et ces bibliothèques sont compatibles avec la base distribution de R. 
+Vous pouvez exécuter des fonctions R personnalisées dans le contexte d’SQL Server en passant votre fonction via [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec), en supposant que toutes les bibliothèques requises par votre script sont également installées sur le serveur et que ces bibliothèques sont compatibles avec la distribution de base de R. 
 
-Le **rxExec** fonctionner dans **RevoScaleR** fournit un mécanisme pour l’exécution de n’importe quel script R que vous avez besoin. En outre, **rxExec** est en mesure de répartir explicitement le travail sur plusieurs cœurs dans un seul serveur, ajout de mise à l’échelle vers des scripts qui sont sinon limités aux contraintes de ressources du moteur R natif.
+La fonction **rxExec** dans **RevoScaleR** fournit un mécanisme permettant d’exécuter n’importe quel script R dont vous avez besoin. En outre, **rxExec** est en mesure de distribuer explicitement le travail entre plusieurs cœurs sur un seul serveur, en ajoutant une mise à l’échelle aux scripts qui sont autrement limités aux contraintes de ressources du moteur R natif.
 
 Dans ce didacticiel, vous allez utiliser des données simulées pour illustrer l’exécution d’une fonction R personnalisée qui s’exécute sur un serveur distant.
 
 ## <a name="prerequisites"></a>Prérequis
 
-+ [SQL Server 2017 Machine Learning Services (avec R)](../install/sql-machine-learning-services-windows-install.md) ou [SQL Server 2016 R Services (en base de données)](../install/sql-r-services-windows-install.md)
++ [SQL Server 2017 machine learning services (avec R)](../install/sql-machine-learning-services-windows-install.md) ou [SQL Servers 2016 r services (en base de données)](../install/sql-r-services-windows-install.md)
   
-+ [Autorisations de base de données](../security/user-permission.md) et une connexion d’utilisateur de base de données SQL Server
++ [Autorisations de base de](../security/user-permission.md) données et connexion utilisateur de base de données SQL Server
 
 + [Une station de travail de développement avec les bibliothèques RevoScaleR](../r/set-up-a-data-science-client.md)
 
-La distribution de R sur la station de travail cliente fournit un intégré **Rgui** outil que vous pouvez utiliser pour exécuter le script R dans ce didacticiel. Vous pouvez également utiliser un IDE tel que RStudio ou les outils R pour Visual Studio.
+La distribution R sur la station de travail cliente fournit un outil **RGUI** intégré que vous pouvez utiliser pour exécuter le script R dans ce didacticiel. Vous pouvez également utiliser un IDE tel que RStudio ou Outils R pour Visual Studio.
 
-## <a name="create-the-remote-compute-context"></a>Créer le contexte de calcul à distance
+## <a name="create-the-remote-compute-context"></a>Créer le contexte de calcul distant
 
-Exécutez les commandes R suivantes sur une station de travail cliente. Par exemple, vous utilisez **Rgui**, démarrez-le à partir de cet emplacement : C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64\.
+Exécutez les commandes R suivantes sur une station de travail cliente. Par exemple, vous utilisez **RGUI**, démarrez-le à partir de cet emplacement: C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64\.
 
-1. Spécifiez la chaîne de connexion pour l’instance de SQL Server où les calculs sont effectués. Le serveur doit être configuré pour l’intégration de R. Le nom de la base de données n’est pas utilisé dans cet exercice, mais la chaîne de connexion requiert un. Si vous avez une base de données de test ou d’exemple, vous pouvez l’utiliser.
+1. Spécifiez la chaîne de connexion pour l’instance de SQL Server dans laquelle les calculs sont effectués. Le serveur doit être configuré pour l’intégration R. Le nom de la base de données n’est pas utilisé dans cet exercice, mais la chaîne de connexion en requiert une. Si vous disposez d’un test ou d’un exemple de base de données, vous pouvez l’utiliser.
 
     **Utilisation d’une connexion SQL**
 
@@ -51,26 +51,26 @@ Exécutez les commandes R suivantes sur une station de travail cliente. Par exem
     sqlConnString <- "Driver=SQL Server;Server=<SQL-Server-instance-name>;Database=<database-name>;Trusted_Connection=True"
     ```
 
-2. Créer un contexte de calcul à distance à l’instance de SQL Server référencé dans la chaîne de connexion.
+2. Créez un contexte de calcul distant pour l’instance SQL Server référencée dans la chaîne de connexion.
 
     ```R
     sqlCompute <- RxInSqlServer(connectionString = sqlConnString)
     ```
 
-3. Activer le contexte de calcul, puis retournez la définition d’objet comme une étape de confirmation. Vous devez voir les propriétés de l’objet de contexte de calcul.
+3. Activez le contexte de calcul, puis retournez la définition de l’objet en tant qu’étape de confirmation. Vous devez voir les propriétés de l’objet de contexte de calcul.
 
     ```R
     rxSetComputeContext(sqlCompute)
     rxGetComputeContext()
     ```
 
-## <a name="create-the-custom-function"></a>Créez la fonction personnalisée
+## <a name="create-the-custom-function"></a>Créer la fonction personnalisée
 
-Dans cet exercice, vous allez créer une fonction R personnalisée qui simule un casino commun consistant à lancer une paire de dés. Règles du jeu déterminent un résultat win ou perte :
+Dans cet exercice, vous allez créer une fonction R personnalisée qui simule un casino courant consistant à rouler une paire de dés. Les règles du jeu déterminent un résultat de réussite ou de perte:
 
-+ À la version 7 ou 11 au premier lancer, vous gagnez.
-+ À la version 2, 3 ou 12, vous perdez.
-+ Déployer un 4, 5, 6, 8, 9 ou 10, ce nombre devient votre référence et continue à propagée jusqu'à ce que vous que soit restaurer à nouveau votre point de (auquel cas win) ou pour annuler un 7, dans lequel cas vous perdez.
++ En reportant 7 ou 11 sur votre rouleau initial, vous gagnez.
++ Le Roll 2, 3 ou 12, vous perdez.
++ Si vous avez 4, 5, 6, 8, 9 ou 10, ce nombre devient votre point, et vous continuez à rouler jusqu’à ce que vous reportiez à nouveau votre point (auquel cas vous gagnez) ou que vous remontez un 7, auquel cas vous perdez.
 
 Vous pouvez facilement simuler le jeu en R, en créant une fonction personnalisée, puis en l’exécutant plusieurs fois.
 
@@ -102,7 +102,7 @@ Vous pouvez facilement simuler le jeu en R, en créant une fonction personnalis�
     }
     ```
   
-2.  Simuler un jeu de dés unique par la fonction en cours d’exécution.
+2.  Simulez un seul jeu de dés en exécutant la fonction.
   
     ```R
     rollDice()
@@ -110,13 +110,13 @@ Vous pouvez facilement simuler le jeu en R, en créant une fonction personnalis�
   
     Avez-vous gagné ou perdu ?
   
-Maintenant que vous disposez d’un script opérationnels, nous allons voir comment vous pouvez utiliser **rxExec** pour exécuter la fonction plusieurs fois afin de créer une simulation qui permet de déterminer la probabilité d’une victoire.
+Maintenant que vous avez un script opérationnel, voyons comment vous pouvez utiliser **rxExec** pour exécuter la fonction plusieurs fois afin de créer une simulation qui permet de déterminer la probabilité d’une victoire.
 
-## <a name="pass-rolldice-in-rxexec"></a>Transmettez rollDice() rxExec
+## <a name="pass-rolldice-in-rxexec"></a>Pass rollDice () dans rxExec
 
-Pour exécuter une fonction arbitraire dans le contexte d’un serveur SQL distant, appelez le **rxExec** (fonction).
+Pour exécuter une fonction arbitraire dans le contexte d’un SQL Server distant, appelez la fonction **rxExec** .
 
-1. Appelez la fonction personnalisée en tant qu’argument à **rxExec**, avec les autres paramètres qui modifient la simulation.
+1. Appelez la fonction personnalisée comme argument de **rxExec**, ainsi que d’autres paramètres qui modifient la simulation.
   
     ```R
     sqlServerExec <- rxExec(rollDice, timesToRun=20, RNGseed="auto")
@@ -127,7 +127,7 @@ Pour exécuter une fonction arbitraire dans le contexte d’un serveur SQL dista
   
     + Les arguments *RNGseed* et *RNGkind* peuvent être utilisés pour contrôler la génération de nombres aléatoires. Quand *RNGseed* est défini sur **auto**, un flux de nombres aléatoires parallèle est initialisé sur chaque processus de travail.
   
-2. La fonction **rxExec** crée une liste comportant un élément pour chaque exécution. Toutefois, vous ne verrez pas grand-chose se produire tant que la liste n’est pas complète. Lorsque toutes les itérations sont terminées, la ligne commençant par **longueur** retournera une valeur.
+2. La fonction **rxExec** crée une liste comportant un élément pour chaque exécution. Toutefois, vous ne verrez pas grand-chose se produire tant que la liste n’est pas complète. Lorsque toutes les itérations sont terminées, la ligne qui commence par **Length** retourne une valeur.
   
     Vous pouvez ensuite passer à l’étape suivante pour obtenir un résumé de votre bilan de victoires et de pertes.
   
@@ -139,18 +139,18 @@ Pour exécuter une fonction arbitraire dans le contexte d’un serveur SQL dista
   
     Vos résultats doivent se présenter comme suit :
   
-     *Perte Win* *12 8*
+     *Perte de victoire* *12 8*
 
 ## <a name="conclusion"></a>Conclusion
 
-Bien que cet exercice est simpliste, il montre un moyen important pour l’intégration des fonctions R arbitraires dans le script R s’exécutant sur SQL Server. Pour résumer les points clés qui rendent cette technique possible :
+Bien que cet exercice soit simple, il montre un mécanisme important pour l’intégration de fonctions R arbitraires dans le script R exécuté sur SQL Server. Pour résumer les points clés qui rendent cette technique possible:
 
-+ SQL Server doit être configuré pour l’apprentissage automatique et intégration de R : [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) avec la fonctionnalité R, ou [SQL Server 2016 R Services (en base de données)](../install/sql-r-services-windows-install.md).
++ SQL Server devez être configuré pour l’intégration de Machine Learning et de R: [SQL Server 2017 machine learning services](../install/sql-machine-learning-services-windows-install.md) avec la fonctionnalité r ou [SQL Server 2016 r services (en base de données)](../install/sql-r-services-windows-install.md).
 
-+ Les bibliothèques Open source ou tierces utilisées dans votre fonction, y compris toutes les dépendances, doivent être installés sur SQL Server. Pour plus d’informations, consultez [installer de nouveaux packages R](../r/install-additional-r-packages-on-sql-server.md).
++ Les bibliothèques Open source ou tierces utilisées dans votre fonction, y compris les dépendances, doivent être installées sur SQL Server. Pour plus d’informations, consultez [installer de nouveaux packages R](../r/install-additional-r-packages-on-sql-server.md).
 
-+ Déplacement de script à partir d’un environnement de développement vers un environnement de production renforcée peut introduire des restrictions de pare-feu et du réseau. Tester soigneusement pour vous assurer que votre script est en mesure d’effectuer comme prévu.
++ Le déplacement du script d’un environnement de développement vers un environnement de production renforcé peut introduire des restrictions de pare-feu et de réseau. Testez soigneusement pour vous assurer que votre script peut s’exécuter comme prévu.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour obtenir un exemple plus complexe de l’utilisation de **rxExec**, consultez cet article : [Parallélisme de granularité grossière avec foreach et rxExec](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)
+Pour obtenir un exemple plus complexe de l’utilisation de **rxExec**, consultez cet article: [Parallélisme de grain grossier avec foreach et rxExec](https://blog.revolutionanalytics.com/2015/04/coarse-grain-parallelism-with-foreach-and-rxexec.html)

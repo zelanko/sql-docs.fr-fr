@@ -1,71 +1,71 @@
 ---
-title: package microsoftml Python - SQL Server Machine Learning Services
-description: Présente les algorithmes d’apprentissage Microsoft et d’un modèle pour Python, associées aux charges de travail de SQL Server machine learning.
+title: package Python microsoftml
+description: Présente les algorithmes et les modèles de Microsoft Machine Learning pour Python, en ce qui concerne les charges de travail SQL Server Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8f4c0eb20b0e0cd64065c7db0687b1dc36b2dbe7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 298328db563cac8183b14b47e5c75c850c782d58
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962755"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345454"
 ---
-# <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (module Python dans SQL Server)
+# <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (module python dans SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-**microsoftml** est un module Python35 compatible de Microsoft en fournissant des algorithmes d’apprentissage automatique hautes performances. Il inclut des fonctions pour l’apprentissage et transformations, notation, analyse de texte et image et l’extraction des caractéristiques pour dériver les valeurs de données existantes.
+**microsoftml** est un module compatible Python35 de Microsoft fournissant des algorithmes de machine learning hautes performances. Il comprend des fonctions de formation et de transformations, de notation, d’analyse de texte et d’image, et d’extraction de fonctionnalités pour dériver des valeurs de données existantes.
 
-La machine learning API ont été développées par Microsoft pour les applications d’apprentissage automatique interne et ont été affinées au fil des années pour prendre en charge des performances élevées sur les big data, à l’aide de traitement multicœur et le streaming rapide des données. Ce package d’origine comme équivalent d’une version de R, Python [MicrosoftML](../r/ref-r-microsoftml.md), qui a des fonctions similaires. 
+Les API Machine Learning ont été développées par Microsoft pour les applications Machine Learning internes et ont été affinées au fil des années pour prendre en charge des performances élevées sur Big Data, à l’aide du traitement multicœur et de la diffusion rapide de données. Ce package est issu d’un équivalent python d’une version R, [MicrosoftML](../r/ref-r-microsoftml.md), qui a des fonctions similaires. 
 
 ## <a name="full-reference-documentation"></a>Documentation de référence complète
 
-Le **microsoftml** library est distribué dans plusieurs produits Microsoft, mais l’utilisation est la même, si vous obtenez la bibliothèque dans SQL Server ou un autre produit. Étant donné que les fonctions sont les mêmes, [documentation pour les fonctions individuelles microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) est publié dans un seul emplacement sous la [référence Python](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) pour Microsoft Machine Learning Server. Doivent tout propres au produit comportements existent, les différences sont notées dans la page d’aide (fonction).
+La bibliothèque **microsoftml** est distribuée dans plusieurs produits Microsoft, mais l’utilisation est la même que vous obteniez la bibliothèque dans SQL Server ou un autre produit. Étant donné que les fonctions sont identiques, la [documentation des fonctions microsoftml individuelles](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) est publiée dans un seul emplacement sous la [référence python](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) pour Microsoft machine learning Server. Si des comportements spécifiques à un produit existent, les différences seront signalées dans la page d’aide de la fonction.
 
 ## <a name="versions-and-platforms"></a>Versions et plateformes
 
-Le **microsoftml** module est en fonction de Python 3.5 et disponible uniquement lorsque vous installez un des produits Microsoft ou des téléchargements suivants :
+Le module **microsoftml** est basé sur Python 3,5 et n’est disponible que lorsque vous installez l’un des produits ou téléchargements Microsoft suivants:
 
 + [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 ou version ultérieure](https://docs.microsoft.com/machine-learning-server/)
-+ [Bibliothèques de client Python pour un client de science des données](setup-python-client-tools-sql.md)
++ [Bibliothèques clientes Python pour un client de science des données](setup-python-client-tools-sql.md)
 
 > [!NOTE]
-> Les versions de produit complet sont Windows uniquement, en commençant par SQL Server 2017. Prise en charge de Linux pour **microsoftml** est une nouveauté de [SQL Server 2019 Preview](../../linux/sql-server-linux-setup-machine-learning.md).
+> Les versions complètes du produit sont uniquement Windows, à partir de SQL Server 2017. La prise en charge de Linux pour **microsoftml** est une nouveauté de [SQL Server 2019 Preview](../../linux/sql-server-linux-setup-machine-learning.md).
 
 ## <a name="package-dependencies"></a>Dépendances de package
 
-Algorithmes dans **microsoftml** dépendent [revoscalepy](ref-py-revoscalepy.md) pour :
+Les algorithmes dans **microsoftml** dépendent de [revoscalepy](ref-py-revoscalepy.md) pour:
 
-+ Objets de source de données. Les données utilisées par **microsoftml** fonctions sont créées à l’aide de **revoscalepy** fonctions.
-+ Distant computing (exécution de fonction évolution vers une instance distante de SQL Server). Le **revoscalepy** bibliothèque fournit des fonctions pour la création et l’activation à distance de contexte pour SQL server de calcul.
++ Objets de source de données. Les données consommées par les fonctions **microsoftml** sont créées à l’aide de fonctions **revoscalepy** .
++ L’informatique à distance (passage de l’exécution des fonctions à une instance SQL Server distante). La bibliothèque **revoscalepy** fournit des fonctions permettant de créer et d’activer un contexte de calcul distant pour SQL Server.
 
-Dans la plupart des cas, vous allez charger les packages ensemble chaque fois que vous utilisez **microsoftml**.
+Dans la plupart des cas, vous devez charger les packages ensemble chaque fois que vous utilisez **microsoftml**.
 
 ## <a name="functions-by-category"></a>Fonctions par catégorie
 
-Cette section répertorie les fonctions par catégorie pour vous donner une idée de l’utilisation de chacun d’eux. Vous pouvez également utiliser le [table des matières](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) pour rechercher des fonctions dans l’ordre alphabétique.
+Cette section répertorie les fonctions par catégorie pour vous faire une idée de la façon dont chacune d’elles est utilisée. Vous pouvez également utiliser la [table des matières](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) pour rechercher des fonctions dans l’ordre alphabétique.
 
-## <a name="1-training-functions"></a>Fonctions de 1-formation
+## <a name="1-training-functions"></a>1-fonctions de formation
 
 | Fonction | Description |
 |----------|-------------|
 |[microsoftml.rx_ensemble](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-ensemble) | Former un ensemble de modèles. |
-|[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | Forêts aléatoires. |
-|[microsoftml.rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear) | Modèle linéaire. avec stochastique Ascent coordonnée double. |
-|[microsoftml.rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees) | Arbres augmentés. |
+|[microsoftml.rx_fast_forest](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-forest)  | Forêt aléatoire. |
+|[microsoftml.rx_fast_linear](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-linear) | Modèle linéaire. avec la jambage de coordonnée double stochastique. |
+|[microsoftml.rx_fast_trees](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-fast-trees) | Arbres amplifiés. |
 |[microsoftml.rx_logistic_regression](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-logistic-regression) | Régression logistique. |
 |[microsoftml.rx_neural_network](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-neural-network) | Réseau neuronal. |
 |[microsoftml.rx_oneclass_svm](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-oneclass-svm) | Détection des anomalies. |
 
 <a name="ml-transforms"></a>
 
-## <a name="2-transform-functions"></a>Fonctions de transformation de 2
+## <a name="2-transform-functions"></a>2-fonctions de transformation
 
-### <a name="categorical-variable-handling"></a>Gestion des variables catégorielles
+### <a name="categorical-variable-handling"></a>Gestion des variables catégoriques
 
 | Fonction | Description |
 |----------|-------------|
@@ -76,8 +76,8 @@ Cette section répertorie les fonctions par catégorie pour vous donner une idé
 
 | Fonction | Description |
 |----------|-------------|
-|[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | Concatène plusieurs colonnes dans un vecteur unique. |
-|[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | Supprime les colonnes à partir d’un jeu de données. |
+|[microsoftml.concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat) | Concatène plusieurs colonnes en un seul vecteur. |
+|[microsoftml.drop_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/drop-columns) | Supprime des colonnes d’un jeu de données. |
 |[microsoftml.select_columns](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/select-columns) | Conserve les colonnes d’un jeu de données. |
 
 
@@ -86,10 +86,10 @@ Cette section répertorie les fonctions par catégorie pour vous donner une idé
 | Fonction | Description |
 |----------|-------------|
 |[microsoftml.count_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/count-select) |Sélection des fonctionnalités en fonction du nombre. |
-|[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | Sélection des fonctionnalités selon les informations réciproques. |
+|[microsoftml.mutualinformation_select](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/mutualinformation-select) | Sélection des fonctionnalités basées sur des informations mutuelles. |
 
 
-### <a name="text-analytics"></a>Analytique de texte
+### <a name="text-analytics"></a>Analyse de texte
 
 | Fonction | Description |
 |----------|-------------|
@@ -97,36 +97,36 @@ Cette section répertorie les fonctions par catégorie pour vous donner une idé
 |[microsoftml.get_sentiment](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/get-sentiment) | Analyse des sentiments. |
 
 
-### <a name="image-analytics"></a>Analytique de l’image 
+### <a name="image-analytics"></a>Image Analytics 
 
 | Fonction | Description |
 |----------|-------------|
 |[microsoftml.load_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/load-image) | Charge une image. |
-|[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | Redimensionne une Image. |
+|[microsoftml.resize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/resize-image) | Redimensionne une image. |
 |[microsoftml.extract_pixels](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/extract-pixels) | Extrait les pixels d’une image. |
 |[microsoftml.featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Convertit une image en fonctionnalités. |
 
-### <a name="featurization-functions"></a>Fonctions de personnalisation
+### <a name="featurization-functions"></a>Caractérisation, fonctions
 
 | Fonction | Description |
 |----------|-------------|
-|[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | Transformation des données pour les sources de données |
+|[microsoftml.rx_featurize](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-featurize) | Transformation de données pour les sources de données |
 
 <a name="ml-scoring"></a>
 
-## <a name="3-scoring-functions"></a>Fonctions de calcul de score 3
+## <a name="3-scoring-functions"></a>3-fonctions de calcul de score
 
 | Fonction | Description |
 |----------|-------------|
-|[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | Résultats à l’aide d’un modèle d’apprentissage automatique Microsoft |
+|[microsoftml.rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/rx-predict) | Scores à l’aide d’un modèle de Machine Learning Microsoft |
 
-## <a name="how-to-call-microsoftml"></a>L’appel de microsoftml
+## <a name="how-to-call-microsoftml"></a>Comment appeler microsoftml
 
-Fonctions dans **microsoftml** peuvent être appelées dans le code Python encapsulé dans des procédures stockées. La plupart des développeurs build **microsoftml** solutions localement, puis migrez le code Python terminé à des procédures stockées comme un exercice de déploiement.
+Les fonctions dans **microsoftml** peuvent être appelées dans du code python encapsulé dans des procédures stockées. La plupart des développeurs créent des solutions **microsoftml** localement, puis migrent le code python terminé vers les procédures stockées en tant qu’exercice de déploiement.
 
-Le **microsoftml** package pour Python est installé par défaut, mais contrairement à **revoscalepy**, il n’est pas chargé par défaut lorsque vous démarrez une session de Python à l’aide de fichiers exécutables Python installés avec SQL Server.
+Le package **microsoftml** pour Python est installé par défaut, mais contrairement à **revoscalepy**, il n’est pas chargé par défaut quand vous démarrez une session Python à l’aide des exécutables python installés avec SQL Server.
 
-Dans un premier temps importer le **microsoftml** empaqueter et importer **revoscalepy** si vous devez utiliser des contextes de calcul distants ou les objets connexes de source des données ou de connectivité. Ensuite, référencez les fonctions individuelles que vous avez besoin.
+Dans un premier temps, importez le package **microsoftml** , puis importez **revoscalepy** si vous devez utiliser des contextes de calcul à distance ou des objets de source de données ou de connectivité associés. Ensuite, référencez les fonctions individuelles dont vous avez besoin.
 
 ```python
 from microsoftml.modules.logistic_regression.rx_logistic_regression import rx_logistic_regression
@@ -137,6 +137,6 @@ from revoscalepy.etl.RxImport import rx_import_datasource
 ## <a name="see-also"></a>Voir aussi
 
 + [Didacticiels Python](../tutorials/sql-server-python-tutorials.md)
-+ [Tutoriel : Incorporer le code Python dans T-SQL](../tutorials/run-python-using-t-sql.md)
-+ [Référence Python (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)
++ [Tutoriel : Incorporer du code python dans T-SQL](../tutorials/run-python-using-t-sql.md)
++ [Informations de référence sur Python (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference)
 

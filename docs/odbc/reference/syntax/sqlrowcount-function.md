@@ -1,7 +1,7 @@
 ---
-title: SQLRowCount, fonction | Microsoft Docs
+title: SQLRowCount fonction) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLRowCount
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLRowCount
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 61e00a8a-9b3b-45b9-b397-7fe818822416
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: bf24afb193742125fda0d6693274acb98d186c90
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65683174ee5b48a8f7b861f3ba838334d70025ae
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018929"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345438"
 ---
 # <a name="sqlrowcount-function"></a>SQLRowCount (fonction)
 **Conformité**  
- Version introduite : Conformité aux normes 1.0 ODBC : ISO 92  
+ Version introduite: Conformité des normes ODBC 1,0: ISO 92  
   
  **Résumé**  
- **SQLRowCount** retourne le nombre de lignes affectées par une **mise à jour**, **insérer**, ou **supprimer** instruction ; une SQL_ADD, SQL_UPDATE_BY_BOOKMARK ou SQL_ Opération DELETE_BY_BOOKMARK dans **SQLBulkOperations**; ou une opération SQL_UPDATE ou SQL_DELETE dans **SQLSetPos**.  
+ **SQLRowCount** retourne le nombre de lignes affectées par une instruction **Update**, **Insert**ou **Delete** . opération SQL_ADD, SQL_UPDATE_BY_BOOKMARK ou SQL_DELETE_BY_BOOKMARK dans **SQLBulkOperations**; ou une opération SQL_UPDATE ou SQL_DELETE dans **SQLSetPos**.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,45 +45,45 @@ SQLRETURN SQLRowCount(
   
 ## <a name="arguments"></a>Arguments  
  *StatementHandle*  
- [Entrée] Descripteur d’instruction.  
+ Entrée Descripteur d’instruction.  
   
  *RowCountPtr*  
- [Sortie] Pointe vers une mémoire tampon dans lequel retourner un nombre de lignes. Pour **mise à jour**, **insérer**, et **supprimer** les instructions pour les opérations SQL_ADD, SQL_UPDATE_BY_BOOKMARK et SQL_DELETE_BY_BOOKMARK dans  **SQLBulkOperations**et pour les opérations SQL_UPDATE ou SQL_DELETE dans **SQLSetPos**, la valeur retournée dans **RowCountPtr* est soit le nombre de lignes affectées par le demande ou -1 si le nombre de lignes affectées n’est pas disponible.  
+ Sortie Pointe vers une mémoire tampon dans laquelle retourner un nombre de lignes. Pour les instructions **Update**, **Insert**et **Delete** , pour les opérations SQL_ADD, SQL_UPDATE_BY_BOOKMARK et SQL_DELETE_BY_BOOKMARK dans **SQLBULKOPERATIONS**, ainsi que pour les opérations SQL_UPDATE ou SQL_DELETE dans **SQLSetPos** , la valeur retournée dans **RowCountPtr* est le nombre de lignes affectées par la demande ou-1 si le nombre de lignes affectées n’est pas disponible.  
   
- Lorsque **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, **SQLSetPos ou SQLMoreResults** est appelée, le SQL_DIAG_ROW_COUNT champ de la structure de données de diagnostic est défini sur le nombre de lignes, et le nombre de lignes est mis en cache de manière dépend de l’implémentation. **SQLRowCount** retourne la valeur de nombre de lignes mises en cache. La valeur de nombre de lignes mises en cache est valide jusqu'à ce que le descripteur d’instruction est rétabli à l’état alloué ou préparé, l’instruction est exécutée de nouveau, ou **SQLCloseCursor** est appelée. Notez que si une fonction a été appelée dans la mesure où le champ SQL_DIAG_ROW_COUNT a été défini, la valeur retournée par **SQLRowCount** peut être différente de la valeur dans le champ SQL_DIAG_ROW_COUNT, car le champ SQL_DIAG_ROW_COUNT est réinitialisé à 0 par un appel de fonction.  
+ Lorsque **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, **SQLSetPos ou SQLMoreResults** est appelé, le champ SQL_DIAG_ROW_COUNT de la structure de données de diagnostic est défini sur le nombre de lignes et le nombre de lignes est mis en cache dans un méthode dépendante de l’implémentation. **SQLRowCount** retourne la valeur du nombre de lignes mises en cache. La valeur du nombre de lignes mises en cache est valide jusqu’à ce que le descripteur d’instruction soit rétabli à l’état préparé ou alloué, que l’instruction soit réexécutée ou que **SQLCloseCursor** soit appelé. Notez que si une fonction a été appelée depuis que le champ SQL_DIAG_ROW_COUNT a été défini, la valeur retournée par **SQLRowCount** peut être différente de la valeur du champ SQL_DIAG_ROW_COUNT, car le champ SQL_DIAG_ROW_COUNT est réinitialisé à 0 par un appel de fonction.  
   
- Pour les autres instructions et les fonctions, le pilote peut définir la valeur retournée dans \* *RowCountPtr*. Par exemple, certaines sources de données peuvent être en mesure de retourner le nombre de lignes retournées par une **sélectionnez** instruction ou une fonction de catalogue avant l’extraction de lignes.  
+ Pour les autres instructions et fonctions, le pilote peut définir la valeur retournée dans \* *RowCountPtr*. Par exemple, certaines sources de données peuvent être en mesure de retourner le nombre de lignes retournées par une instruction **Select** ou une fonction de catalogue avant d’extraire les lignes.  
   
 > [!NOTE]  
->  Nombreuses sources de données ne peut pas retourner le nombre de lignes dans un jeu de résultats avant l’extraction pour une interopérabilité maximale, les applications ne doivent pas compter sur ce comportement.  
+>  De nombreuses sources de données ne peuvent pas retourner le nombre de lignes d’un jeu de résultats avant de les récupérer. pour une interopérabilité maximale, les applications ne doivent pas s’appuyer sur ce comportement.  
   
 ## <a name="returns"></a>Valeur renvoyée  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLRowCount** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_ HANDLE_STMT et un *gérer* de *au paramètre StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLRowCount** et explique chacune dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
+ Quand **SQLRowCount** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *comme HandleType* de SQL_HANDLE_STMT et un *handle* de *StatementHandle*. Le tableau suivant répertorie les valeurs SQLSTATE couramment retournées par **SQLRowCount** et les explique dans le contexte de cette fonction. la notation «(DM)» précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifiques à l’implémentation a été défini. Le message d’erreur retourné par **SQLGetDiagRec** dans le  *\*MessageText* tampon décrit l’erreur et sa cause.|  
-|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
-|HY010|Erreur de séquence de fonction|(DM) une fonction de façon asynchrone en cours d’exécution a été appelée pour le handle de connexion qui est associé à la *au paramètre StatementHandle*. Cette fonction asynchrone était en cours d’exécution lorsque le **SQLRowCount** fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** a été appelé pour le *au paramètre StatementHandle* et retourné SQL_PARAM_DATA_ DISPONIBLE. Cette fonction a été appelée avant que les données ont été récupérées pour tous les paramètres transmis en continu.<br /><br /> (DM) la fonction a été appelée avant d’appeler **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** pour la  *Au paramètre StatementHandle*.<br /><br /> (DM) une fonction de façon asynchrone en cours d’exécution a été appelée pour le *au paramètre StatementHandle* et était en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** a été appelé pour le  *Au paramètre StatementHandle* et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi de données pour tous les paramètres de data-at-execution ou les colonnes.|  
-|HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, probablement en raison de conditions de mémoire insuffisante.|  
-|HY117|Connexion est suspendue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Délai de connexion expiré|Le délai de connexion a expiré avant que la source de données a répondu à la demande. Le délai de connexion est défini via **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Pilote ne prend pas en charge cette fonction|Le pilote (DM) associé le *au paramètre StatementHandle* ne prend pas en charge la fonction.|  
+|01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans  *\** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
+|HY010|Erreur de séquence de fonction|(DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *StatementHandle*. Cette fonction asynchrone était toujours en cours d’exécution lors de l’appel de la fonction **SQLRowCount** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour *StatementHandle* et retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.<br /><br /> (DM) la fonction a été appelée avant l’appel de **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** pour *StatementHandle*.<br /><br /> (DM) une fonction d’exécution asynchrone a été appelée pour le *StatementHandle* et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour *StatementHandle* et a retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.|  
+|HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
+|HY117|La connexion est interrompue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Délai d’attente de connexion expiré|Le délai d’attente de connexion a expiré avant que la source de données ait répondu à la demande. Le délai d’expiration de la connexion est défini par le biais de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Le pilote ne prend pas en charge cette fonction|(DM) le pilote associé au *StatementHandle* ne prend pas en charge la fonction.|  
   
 ## <a name="comments"></a>Commentaires  
- Si la dernière instruction SQL exécutée sur le descripteur d’instruction n’était pas un **mise à jour**, **insérer**, ou **supprimer** instruction ou si le *opération* argument dans l’appel précédent à **SQLBulkOperations** n’était pas SQL_ADD, SQL_UPDATE_BY_BOOKMARK ou SQL_DELETE_BY_BOOKMARK, ou si le *opération* argument dans l’appel précédent à  **SQLSetPos** n’était pas SQL_UPDATE ou SQL_DELETE, la valeur de **RowCountPtr* est définie par le pilote. Pour plus d’informations, consultez [déterminer le nombre de lignes affectées](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md).  
+ Si la dernière instruction SQL exécutée sur le descripteur d’instruction n’est pas une instruction **Update**, **Insert**ou **Delete** , ou si l’argument *operation* dans l’appel précédent à **SQLBulkOperations** n’était pas SQL_ADD, SQL_UPDATE_BY_ BOOKMARK, ou SQL_DELETE_BY_BOOKMARK, ou si l’argument *operation* de l’appel précédent à **SQLSetPos** n’était pas SQL_UPDATE ou SQL_DELETE, la valeur de **RowCountPtr* est définie par le pilote. Pour plus d’informations, consultez [détermination du nombre de lignes affectées](../../../odbc/reference/develop-app/determining-the-number-of-affected-rows.md).  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
-|L’exécution d’une instruction SQL|[SQLExecDirect, fonction](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
-|Exécuter une instruction SQL préparée|[SQLExecute, fonction](../../../odbc/reference/syntax/sqlexecute-function.md)|  
+|Exécution d’une instruction SQL|[SQLExecDirect, fonction](../../../odbc/reference/syntax/sqlexecdirect-function.md)|  
+|Exécution d’une instruction SQL préparée|[SQLExecute, fonction](../../../odbc/reference/syntax/sqlexecute-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)

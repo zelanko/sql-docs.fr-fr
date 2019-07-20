@@ -1,25 +1,25 @@
 ---
-title: Créer des caractéristiques de données à l’aide des fonctions T-SQL et Python - SQL Server Machine Learning
-description: Didacticiel montrant comment ajouter des calculs à des procédures stockées pour une utilisation dans les modèles d’apprentissage automatique Python.
+title: Créer des fonctionnalités de données à l’aide des fonctions T-SQL et Python
+description: Didacticiel expliquant comment ajouter des calculs aux procédures stockées à utiliser dans les modèles python Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a7c17af9ab7302e2856130be58759b56430e1341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d421d4fc3ed28276b950f797529f089f94aaf6a
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961887"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345917"
 ---
-# <a name="create-data-features-using-t-sql"></a>Créer des caractéristiques de données à l’aide de T-SQL
+# <a name="create-data-features-using-t-sql"></a>Créer des fonctionnalités de données à l’aide de T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Après l’exploration de données, vous avez recueilli des informations à partir des données et êtes prêt à passer à *ingénierie*. Ce processus de création de caractéristiques à partir des données brutes peut être essentiel d’analytique avancée de modélisation.
+Après l’exploration des données, vous avez collecté des Insights à partir des données et vous êtes prêt à passer à l' *ingénierie des caractéristiques*. Ce processus de création de fonctionnalités à partir des données brutes peut être une étape critique dans la modélisation avancée des analyses.
 
-Cet article fait partie d’un didacticiel, [analytique en base de données Python pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
+Cet article fait partie d’un didacticiel, [l’analytique Python en base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 Lors de cette étape, vous allez découvrir comment créer des caractéristiques à partir de données brutes en utilisant une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ensuite, vous appellerez cette fonction à partir d’une procédure stockée pour créer une table qui contient les valeurs des caractéristiques.
 
@@ -29,7 +29,7 @@ Les valeurs de distance indiquées dans les données d’origine sont basées su
 
 Vous allez utiliser une fonction T-SQL personnalisée, _fnCalculateDistance_, pour calculer la distance à l’aide de la formule de Haversine, et utiliser une seconde fonction T-SQL personnalisée, _fnEngineerFeatures_, pour créer une table contenant toutes les caractéristiques.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calculer la distance de course à l’aide de fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calculer la distance du trajet à l’aide de fnCalculateDistance
 
 1.  La fonction _fnCalculateDistance_ doit avoir été téléchargée et inscrite auprès de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le cadre de la préparation de cette procédure pas à pas. Prenez une minute pour examiner le code.
   
@@ -106,16 +106,16 @@ Pour ajouter la valeur calculée à une table qui peut être utilisée pour l’
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Comme vous pouvez le voir, la distance signalée par le compteur ne correspond pas toujours à la distance géographique. C’est pourquoi l’ingénierie est important.
+    Comme vous pouvez le voir, la distance signalée par le compteur ne correspond pas toujours à la distance géographique. C’est pourquoi l’ingénierie des fonctionnalités est importante.
 
-Dans l’étape suivante, vous allez apprendre à utiliser ces fonctionnalités de données pour créer et former un modèle d’apprentissage automatique à l’aide de Python.
+À l’étape suivante, vous apprendrez à utiliser ces fonctionnalités de données pour créer et effectuer l’apprentissage d’un modèle de Machine Learning à l’aide de Python.
 
 ## <a name="next-step"></a>Étape suivante
 
-[Former et enregistrer un modèle de Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[Former et enregistrer un modèle Python à l’aide de T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>Étape précédente
 
-[Explorer et visualiser les données](sqldev-py3-explore-and-visualize-the-data.md)
+[Explorez et Visualisez les données](sqldev-py3-explore-and-visualize-the-data.md)
 
 

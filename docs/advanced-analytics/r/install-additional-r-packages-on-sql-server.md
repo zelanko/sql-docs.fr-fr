@@ -1,93 +1,93 @@
 ---
-title: Installer de nouveaux packages de langage R - Services de SQL Server Machine Learning
-description: Ajouter de nouveaux packages R pour SQL Server 2016 R Services ou SQL Server 2017 Machine Learning Services (en base de données)
+title: Installer de nouveaux packages de langage R
+description: Ajouter de nouveaux packages R à SQL Server 2016 R services ou SQL Server 2017 Machine Learning Services (en base de données)
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 218003efa75ead5ab795fa5ef10ac09c4d97a6a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8de02f679af1bbeed8f65f4e4dc5456cd414e75e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962624"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345543"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>Installer de nouveaux packages R sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article décrit comment installer de nouveaux packages R à une instance de SQL Server où l’apprentissage automatique est activé. Il existe plusieurs méthodes pour l’installation de nouveaux packages R, en fonction de la version de SQL Server que vous avez et indique si le serveur possède une connexion internet. Les approches suivantes pour une nouvelle installation de package sont possibles.
+Cet article explique comment installer de nouveaux packages R sur une instance de SQL Server où Machine Learning est activé. Il existe plusieurs méthodes pour installer de nouveaux packages R, en fonction de la version de SQL Server que vous possédez et si le serveur dispose d’une connexion Internet. Les approches suivantes pour l’installation de nouveaux packages sont possibles.
 
-| Approche                           | Autorisations               | Distante/locale |
+| Approche                           | Autorisations               | Distant/local |
 |------------------------------------|---------------------------|--------------|
-| [Utilisation des gestionnaires de package R conventionnelles](use-r-package-managers-on-sql-server.md)  | Admin | Local |
-| [Utiliser RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  Administrateur activé par la suite les rôles de base de données | both|
-| [Utiliser T-SQL (créer une bibliothèque externe)](install-r-packages-tsql.md) | Administrateur activé par la suite les rôles de base de données | both 
+| [Utiliser les gestionnaires de packages R conventionnels](use-r-package-managers-on-sql-server.md)  | Admin | Local |
+| [Utiliser RevoScaleR](use-revoscaler-to-manage-r-packages.md) |  Rôles de base de données activés par l’administrateur | both|
+| [Utiliser T-SQL (créer une bibliothèque externe)](install-r-packages-tsql.md) | Rôles de base de données activés par l’administrateur | both 
 
-## <a name="who-installs-permissions"></a>Qui l’installe (autorisations)
+## <a name="who-installs-permissions"></a>Qui installe (autorisations)
 
-La bibliothèque de packages R se trouve physiquement dans le dossier Program Files de votre instance de SQL Server, dans un dossier sécurisé avec un accès restreint. L’écriture à cet emplacement nécessite des autorisations d’administrateur.
+La bibliothèque de packages R se trouve physiquement dans le dossier Program Files de votre instance SQL Server, dans un dossier sécurisé avec accès restreint. L’écriture dans cet emplacement nécessite des autorisations d’administrateur.
 
-Non, les administrateurs peuvent installer des packages, mais cela requiert une configuration supplémentaire et fonctionnalité non disponible dans les installations initiales. Il existe deux approches pour les installations de package non administrateur : RevoScaleR à l’aide de la version 9.0.1 et version ultérieure, ou en utilisant CREATE EXTERNAL LIBRARY (SQL Server 2017 uniquement). Dans SQL Server 2017, **dbo_owner** ou un autre utilisateur avec l’autorisation de créer une bibliothèque externe peut installer des packages R à la base de données actuelle.
+Les non-administrateurs peuvent installer des packages, mais cela nécessite une configuration et des fonctionnalités supplémentaires qui ne sont pas disponibles dans les installations initiales. Il existe deux approches pour les installations de packages non-administrateur: RevoScaleR à l’aide de la version 9.0.1 et ultérieure, ou à l’aide de CREATe EXTERNAL LIBRARY (SQL Server 2017 uniquement). Dans SQL Server 2017, **dbo_owner** ou un autre utilisateur disposant de l’autorisation CREATE external library peut installer des packages R dans la base de données actuelle.
 
-R développeurs sont habitués à créer des bibliothèques utilisateur pour les packages que dont ils ont besoin si les bibliothèques centralisées sont hors d’atteinte. Cette pratique est problématique pour le code R exécuté dans une instance du moteur de base de données SQL Server. SQL Server ne peut pas charger des packages à partir de bibliothèques externes, même si cette bibliothèque est sur le même ordinateur. Uniquement les packages à partir de la bibliothèque d’instance peuvent être utilisés dans le code R dans SQL Server.
+Les développeurs R sont habitués à créer des bibliothèques utilisateur pour les packages dont ils ont besoin si les bibliothèques situées de manière centralisée sont hors limites. Cette pratique est problématique pour le code R s’exécutant dans une instance de moteur de base de données SQL Server. SQL Server ne peut pas charger les packages à partir de bibliothèques externes, même si cette bibliothèque est sur le même ordinateur. Seuls les packages de la bibliothèque d’instances peuvent être utilisés dans le code R s’exécutant dans SQL Server.
 
-Accès au système de fichiers est généralement limité sur le serveur, et même si vous avez des droits d’administrateur et l’accès à un dossier de documents d’utilisateur sur le serveur, le runtime de script externe qui s’exécute dans SQL Server ne peut pas accéder à tous les packages installés à l’extérieur de l’instance par défaut bibliothèque. 
+L’accès au système de fichiers est généralement limité sur le serveur, et même si vous disposez des droits d’administrateur et de l’accès à un dossier de documents utilisateur sur le serveur, le runtime de script externe qui s’exécute dans SQL Server ne peut pas accéder aux packages installés en dehors de l’instance par défaut Bibliothèque. 
 
-## <a name="considerations-for-package-installation"></a>Considérations pour l’installation du package
+## <a name="considerations-for-package-installation"></a>Considérations relatives à l’installation de packages
 
-Avant d’installer de nouveaux packages, vérifiez si les fonctionnalités activées par un package donné sont appropriées dans un environnement SQL Server. Dans un environnement sécurisé de manière renforcé de SQL Server, vous souhaiterez sans doute éviter les éléments suivants :
+Avant d’installer de nouveaux packages, déterminez si les fonctionnalités activées par un package donné sont appropriées dans un environnement de SQL Server. Dans un environnement de SQL Server renforcé, vous souhaiterez peut-être éviter ce qui suit:
 
 + Packages qui nécessitent un accès réseau
-+ Packages qui nécessitent un accès de système de fichier avec élévation de privilèges
-+ Package est utilisé pour le développement web ou d’autres tâches qui ne bénéficient pas en cours d’exécution à l’intérieur de SQL Server
++ Packages nécessitant un accès avec système de fichiers élevé
++ Le package est utilisé pour le développement Web ou d’autres tâches qui ne bénéficient pas de l’exécution dans SQL Server
 
-## <a name="offline-installation-no-internet-access"></a>Installation hors connexion (aucun accès internet)
+## <a name="offline-installation-no-internet-access"></a>Installation hors connexion (pas d’accès Internet)
 
-En général, les serveurs qui hébergent les bases de données de production bloquent des connexions internet. L’installation de nouveaux packages R ou Python dans de tels environnements nécessite que vous préparez à l’avance les packages et les dépendances et copiez les fichiers dans un dossier sur le serveur pour l’installation hors connexion.
+En général, les serveurs qui hébergent des bases de données de production bloquent les connexions Internet. Pour installer de nouveaux packages R ou python dans de tels environnements, vous devez préparer les packages et les dépendances à l’avance, puis copier les fichiers dans un dossier sur le serveur pour une installation hors connexion.
 
-Identifier toutes les dépendances se complique. Pour R, nous vous recommandons d’utiliser [miniCRAN pour créer un référentiel local](create-a-local-package-repository-using-minicran.md) , puis transférer le référentiel entièrement défini à une instance de SQL Server isolée.
+L’identification de toutes les dépendances devient compliquée. Pour R, nous vous recommandons d’utiliser [miniCRAN pour créer un référentiel local](create-a-local-package-repository-using-minicran.md) , puis de transférer le référentiel entièrement défini vers une instance SQL Server isolée.
 
-Vous pouvez également effectuer ces étapes manuellement :
+Vous pouvez également effectuer ces étapes manuellement:
 
-1. Identifier toutes les dépendances de package. 
-2. Vérifiez si tous les packages requis sont déjà installés sur le serveur. Si le package est installé, vérifiez que la version est correcte.
+1. Identifiez toutes les dépendances du package. 
+2. Vérifiez si des packages requis sont déjà installés sur le serveur. Si le package est installé, vérifiez que la version est correcte.
 3. Téléchargez le package et toutes les dépendances sur un ordinateur distinct.
-4. Déplacer les fichiers vers un dossier accessible par le serveur.
-5. Exécuter une commande d’installation pris en charge ou une instruction DDL pour installer le package dans la bibliothèque de l’instance.
+4. Déplacez les fichiers vers un dossier accessible par le serveur.
+5. Exécutez une commande d’installation prise en charge ou une instruction DDL pour installer le package dans la bibliothèque d’instances.
 
-### <a name="download-the-package-as-a-zipped-file"></a>Télécharger le package dans un fichier compressé
+### <a name="download-the-package-as-a-zipped-file"></a>Télécharger le package en tant que fichier zippé
 
-Pour l’installation sur un serveur sans accès à internet, vous devez télécharger une copie du package dans le format d’un fichier compressé pour l’installation hors connexion. **Ne décompressez pas le package.**
+Pour une installation sur un serveur sans accès à Internet, vous devez télécharger une copie du package au format d’un fichier zippé pour une installation hors connexion. **Ne Décompressez pas le package.**
 
-Par exemple, la procédure suivante décrit dès maintenant pour obtenir la version correcte de la [FISHalyseR](https://bioconductor.org/packages/release/bioc/html/FISHalyseR.html) package à partir de Bioconductor, en supposant que l’ordinateur a accès à internet.
+Par exemple, la procédure suivante décrit maintenant comment obtenir la version correcte du package [FISHalyseR](https://bioconductor.org/packages/release/bioc/html/FISHalyseR.html) à partir du bioconductrice, en supposant que l’ordinateur a accès à Internet.
 
 1.  Dans la liste d’ **archives de package** , recherchez la version **binaire Windows** .
 
-2.  Cliquez sur le lien vers la. Fichier ZIP, puis sélectionnez **enregistrer la cible sous**.
+2.  Cliquez avec le bouton droit sur le lien vers le. Fichier ZIP, puis sélectionnez **enregistrer la cible sous**.
 
-3.  Accédez au dossier local dans lequel les packages compressés sont stockés, puis cliquez sur **enregistrer**.
+3.  Accédez au dossier local dans lequel les packages compressés sont stockés, puis cliquez sur **Enregistrer**.
 
     Ce processus crée une copie locale du package. 
 
-4. Si vous obtenez une erreur de téléchargement, essayez un site miroir différents.
+4. Si vous recevez une erreur de téléchargement, essayez un autre site miroir.
 
-5. Une fois que l’archive du package a été téléchargé, vous pouvez installer le package, ou copier le package compressé vers un serveur qui n’a pas accès à internet.
+5. Une fois l’archive du package téléchargée, vous pouvez installer le package ou copier le package compressé sur un serveur qui n’a pas accès à Internet.
 
 > [!TIP]
-> Si par inadvertance, vous installez le package au lieu de télécharger les fichiers binaires, une copie du fichier compressé téléchargé est également enregistrée sur votre ordinateur. Regardez les messages d’état que le package est installé pour déterminer l’emplacement du fichier. Vous pouvez copier ce fichier compressé au serveur qui n’a pas accès à internet.
+> Si, par erreur, vous installez le package au lieu de télécharger les fichiers binaires, une copie du fichier compressé téléchargé est également enregistrée sur votre ordinateur. Observez les messages d’état lors de l’installation du package pour déterminer l’emplacement du fichier. Vous pouvez copier ce fichier compressé sur le serveur qui n’a pas accès à Internet.
 > 
-> Toutefois, lorsque vous obtenez des packages à l’aide de cette méthode, les dépendances ne sont pas inclus. 
+> Toutefois, lorsque vous obtenez des packages à l’aide de cette méthode, les dépendances ne sont pas incluses. 
 
 
-## <a name="side-by-side-installation-with-standalone-r-or-python-servers"></a>Installation côte à côte avec Standalone R ou Python serveurs
+## <a name="side-by-side-installation-with-standalone-r-or-python-servers"></a>Installation côte à côte avec des serveurs R ou python autonomes
 
-Fonctionnalités de R et Python sont incluses dans plusieurs produits Microsoft, qui peut coexister sur le même ordinateur.
+Les fonctionnalités R et Python sont incluses dans plusieurs produits Microsoft, qui peuvent tous coexister sur le même ordinateur.
 
-Si vous avez installé SQL Server 2017 Microsoft Machine Learning Server (autonome) ou SQL Server 2016 R Server (autonome) en plus de l’analytique en base de données (SQL Server 2017 Machine Learning Services et SQL Server 2016 R Services), votre ordinateur a distinct installations de R pour chacune, avec les doublons de tous les outils R et les bibliothèques.
+Si vous avez installé SQL Server 2017 Microsoft Machine Learning Server (autonome) ou SQL Server 2016 R Server (autonome) en plus de l’analyse en base de données (SQL Server 2017 Machine Learning Services et 2016 SQL Server R services R), votre ordinateur a des installations de R pour chaque, avec des doublons de tous les outils et bibliothèques R.
 
-Les packages qui sont installés dans la bibliothèque R_SERVER sont utilisés uniquement par un serveur autonome et ne sont pas accessibles par une instance de SQL Server (en base de données). Utilisez toujours le `R_SERVICES` bibliothèque lors de l’installation des packages que vous souhaitez utiliser dans la base de données sur SQL Server. Pour plus d’informations sur les chemins d’accès, consultez [emplacement de la bibliothèque du Package](../package-management/default-packages.md).
+Les packages qui sont installés dans la bibliothèque R_SERVER sont utilisés uniquement par un serveur autonome et ne sont pas accessibles par une instance SQL Server (dans la base de données). Utilisez toujours la `R_SERVICES` bibliothèque lors de l’installation des packages que vous souhaitez utiliser dans la base de données sur SQL Server. Pour plus d’informations sur les chemins d’accès, consultez emplacement de la [bibliothèque de packages](../package-management/default-packages.md).
 
 ## <a name="see-also"></a>Voir aussi
 

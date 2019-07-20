@@ -1,7 +1,7 @@
 ---
-title: SQLSetDescRec, fonction | Microsoft Docs
+title: SQLSetDescRec fonction) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLSetDescRec
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLSetDescRec
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: bf55256c-7eb7-4e3f-97ef-b0fee09ba829
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a733c2b88954c9937e8a170b949535ffa118bad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b9940d55ca10292d6c90a241f47479a2178eff3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039736"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343060"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec, fonction
 **Conformité**  
- Version introduite : Conformité aux normes 3.0 de ODBC : ISO 92  
+ Version introduite: Conformité des normes ODBC 3,0: ISO 92  
   
  **Résumé**  
- Le **SQLSetDescRec** fonction définit plusieurs champs de descripteur qui affectent le type de données et la mémoire tampon à une colonne ou le paramètre des données liées.  
+ La fonction **SQLSetDescRec** définit plusieurs champs de descripteur qui affectent le type de données et la mémoire tampon liés à une colonne ou à des données de paramètre.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -52,61 +53,61 @@ SQLRETURN SQLSetDescRec(
   
 ## <a name="arguments"></a>Arguments  
  *DescriptorHandle*  
- [Entrée] Handle du descripteur. Cela ne doit pas être un descripteur IRD.  
+ Entrée Handle de descripteur. Ce ne doit pas être un handle IRD.  
   
  *RecNumber*  
- [Entrée] Indique que l’enregistrement de descripteur qui contient les champs à définir. Enregistrements de descripteurs sont numérotés de 0, avec le numéro d’enregistrement 0 en cours de l’enregistrement de signet. Cet argument doit être égale ou supérieure à 0. Si *RecNumber* est supérieure à la valeur de SQL_DESC_COUNT, SQL_DESC_COUNTis modifié à la valeur de *RecNumber*.  
+ Entrée Indique l’enregistrement du descripteur qui contient les champs à définir. Les enregistrements de descripteur sont numérotés à partir de 0, le numéro d’enregistrement 0 étant l’enregistrement du signet. Cet argument doit être supérieur ou égal à 0. Si *recnumber* est supérieur à la valeur de SQL_DESC_COUNT, SQL_DESC_COUNTis a été remplacé par la valeur de *recnumber*.  
   
  *Type*  
- [Entrée] La valeur à laquelle définir le champ SQL_DESC_TYPE pour l’enregistrement de descripteur.  
+ Entrée Valeur à laquelle définir le champ SQL_DESC_TYPE pour l’enregistrement du descripteur.  
   
  *SubType*  
- [Entrée] Pour les enregistrements dont le type est SQL_DATETIME ou SQL_INTERVAL, il s’agit de la valeur à laquelle définir le champ de valeur SQL_DESC_DATETIME_INTERVAL_CODE.  
+ Entrée Pour les enregistrements dont le type est SQL_DATETIME ou SQL_INTERVAL, il s’agit de la valeur à laquelle définir le champ SQL_DESC_DATETIME_INTERVAL_CODE.  
   
  *Longueur*  
- [Entrée] La valeur à laquelle définir le champ SQL_DESC_OCTET_LENGTH pour l’enregistrement de descripteur.  
+ Entrée Valeur à laquelle définir le champ SQL_DESC_OCTET_LENGTH pour l’enregistrement du descripteur.  
   
  *Précision*  
- [Entrée] La valeur à laquelle définir le champ SQL_DESC_PRECISION pour l’enregistrement de descripteur.  
+ Entrée Valeur à laquelle définir le champ SQL_DESC_PRECISION pour l’enregistrement du descripteur.  
   
  *Échelle*  
- [Entrée] La valeur à laquelle définir le champ SQL_DESC_SCALE pour l’enregistrement de descripteur.  
+ Entrée Valeur à laquelle définir le champ SQL_DESC_SCALE pour l’enregistrement du descripteur.  
   
  *DataPtr*  
- [Différée entrée ou sortie] La valeur à laquelle définir le champ SQL_DESC_DATA_PTR pour l’enregistrement de descripteur. *DataPtr* peut être définie sur un pointeur null.  
+ [Entrée ou sortie différée] Valeur à laquelle définir le champ SQL_DESC_DATA_PTR pour l’enregistrement du descripteur. *DataPtr* peut être défini sur un pointeur null.  
   
- Le *DataPtr* argument peut être défini à un pointeur null pour le champ SQL_DESC_DATA_PTR la valeur est un pointeur null. Si le handle dans le *DescriptorHandle* argument est associé à un ARD, cela annule la liaison de la colonne.  
+ L’argument *DataPtr* peut être défini sur un pointeur null pour définir le champ SQL_DESC_DATA_PTR sur un pointeur null. Si le descripteur de l’argument *DescriptorHandle* est associé à un ARD, cela annule la liaison de la colonne.  
   
  *StringLengthPtr*  
- [Différée entrée ou sortie] La valeur à laquelle définir le champ SQL_DESC_OCTET_LENGTH_PTR pour l’enregistrement de descripteur. *StringLengthPtr* peut être défini sur un pointeur null pour le champ SQL_DESC_OCTET_LENGTH_PTR la valeur est un pointeur null.  
+ [Entrée ou sortie différée] Valeur à laquelle définir le champ SQL_DESC_OCTET_LENGTH_PTR pour l’enregistrement du descripteur. *StringLengthPtr* peut être défini sur un pointeur null pour définir le champ SQL_DESC_OCTET_LENGTH_PTR sur un pointeur null.  
   
  *IndicatorPtr*  
- [Différée entrée ou sortie] La valeur à laquelle définir le champ SQL_DESC_INDICATOR_PTR pour l’enregistrement de descripteur. *IndicatorPtr* peut être défini sur un pointeur null pour le champ SQL_DESC_INDICATOR_PTR la valeur est un pointeur null.  
+ [Entrée ou sortie différée] Valeur à laquelle définir le champ SQL_DESC_INDICATOR_PTR pour l’enregistrement du descripteur. *IndicatorPtr* peut être défini sur un pointeur null pour définir le champ SQL_DESC_INDICATOR_PTR sur un pointeur null.  
   
 ## <a name="returns"></a>Valeur renvoyée  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR ou SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLSetDescRec** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenu en appelant **SQLGetDiagRec** avec un *HandleType* de SQL_ HANDLE_DESC et un *gérer* de *DescriptorHandle*. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLSetDescRec** et explique chacune dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
+ Quand **SQLSetDescRec** retourne SQL_ERROR ou SQL_SUCCESS_WITH_INFO, une valeur SQLSTATE associée peut être obtenue en appelant **SQLGetDiagRec** avec un *comme HandleType* de SQL_HANDLE_DESC et un *handle* de *DescriptorHandle*. Le tableau suivant répertorie les valeurs SQLSTATE couramment retournées par **SQLSetDescRec** et les explique dans le contexte de cette fonction. la notation «(DM)» précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|07009|Index de descripteur non valide|Le *RecNumber* argument a été défini sur 0 et le *DescriptorHandle* auquel un descripteur IPD.<br /><br /> Le *RecNumber* argument était inférieure à 0.<br /><br /> Le *RecNumber* argument était supérieur au nombre maximal de colonnes ou paramètres de la source de données peut prendre en charge, et le *DescriptorHandle* argument était un APD, IPD ou ARD.<br /><br /> Le *RecNumber* argument était égal à 0 et le *DescriptorHandle* argument auquel une APD alloué implicitement. (Cette erreur ne se produit pas avec un descripteur d’application alloués explicitement, car on ne sait pas si un descripteur d’application explicitement alloué soit un APD ARD jusqu'à ce que l’exécution.)|  
-|08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et de la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifiques à l’implémentation a été défini. Le message d’erreur retourné par **SQLGetDiagRec** dans le  *\*MessageText* tampon décrit l’erreur et sa cause.|  
-|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
-|HY010|Erreur de séquence de fonction|(DM) le *DescriptorHandle* a été associé à un *au paramètre StatementHandle* pour laquelle une fonction de façon asynchrone en cours d’exécution (pas celui-ci) a été appelée et l’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** a été appelé pour le  *Au paramètre StatementHandle* avec lequel le *DescriptorHandle* a été associé et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi de données pour tous les paramètres de data-at-execution ou les colonnes.<br /><br /> (DM) une fonction de façon asynchrone en cours d’exécution a été appelée pour le handle de connexion qui est associé à la *DescriptorHandle*. Cette fonction aynchronous était en cours d’exécution lorsque le **SQLSetDescRec** fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** a été appelée pour l’une des descripteurs d’instruction associés à la *DescriptorHandle* et retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ont été récupérées pour tous les paramètres transmis en continu.|  
-|HY013|Erreur de gestion de mémoire|L’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, probablement en raison de conditions de mémoire insuffisante.|  
-|HY016|Impossible de modifier un descripteur de ligne d’implémentation|Le *DescriptorHandle* argument a été associé à un IRD.|  
-|HY021|Informations de descripteur incohérentes|Le *Type* champ, ou tout autre champ associé au champ SQL_DESC_TYPE dans le descripteur, n’était pas valide ou cohérente.<br /><br /> Informations de descripteur vérifiées pendant une vérification de cohérence n’étaient pas cohérentes. (Voir « Vérifications de cohérence, » plus loin dans cette section.)|  
-|HY090|Longueur de chaîne ou une mémoire tampon non valide|(DM) le pilote a été une ODBC *2.x* pilote, le descripteur a été un ARD, le *ColumnNumber* argument a été défini sur 0 et la valeur spécifiée pour l’argument *BufferLength* a été non égal à 4.|  
-|HY117|Connexion est suspendue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Délai de connexion expiré|Le délai de connexion a expiré avant que la source de données a répondu à la demande. Le délai de connexion est défini via **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Pilote ne prend pas en charge cette fonction|Le pilote (DM) associé le *DescriptorHandle* ne prend pas en charge la fonction.|  
+|01000|Avertissement général|Message d’information spécifique au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|07009|Index de descripteur non valide|L’argument *recnumber* a été défini sur 0, et le *DescriptorHandle* a référencé un handle IPD.<br /><br /> L’argument *recnumber* est inférieur à 0.<br /><br /> L’argument *recnumber* a une valeur supérieure au nombre maximal de colonnes ou de paramètres que la source de données peut prendre en charge, et l’argument *DESCRIPTORHANDLE* était un APD, un IPD ou un ARD.<br /><br /> L’argument *recnumber* était égal à 0, et l’argument *DescriptorHandle* faisait appel à un APD alloué de manière implicite. (Cette erreur ne se produit pas avec un descripteur d’application explicitement alloué, car il n’est pas connu qu’un descripteur d’application explicitement alloué est un APD ou un ARD jusqu’à l’exécution.)|  
+|08S01|Échec de la liaison de communication|Le lien de communication entre le pilote et la source de données à laquelle le pilote a été connecté a échoué avant la fin du traitement de la fonction.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans  *\** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
+|HY010|Erreur de séquence de fonction|(DM) le *DescriptorHandle* a été associé à un *StatementHandle* pour lequel une fonction d’exécution asynchrone (pas celui-ci) a été appelée et était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé pour le *StatementHandle* avec lequel le *DescriptorHandle* a été associé et a retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.<br /><br /> (DM) une fonction d’exécution asynchrone a été appelée pour le handle de connexion associé à *DescriptorHandle*. Cette fonction aynchronous était toujours en cours d’exécution lors de l’appel de la fonction **SQLSetDescRec** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour l’un des descripteurs d’instruction associés à *DescriptorHandle* et a retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.|  
+|HY013|Erreur de gestion de la mémoire|Impossible de traiter l’appel de fonction, car les objets mémoire sous-jacents sont inaccessibles, probablement en raison de conditions de mémoire insuffisante.|  
+|HY016|Impossible de modifier un descripteur de ligne d’implémentation|L’argument *DescriptorHandle* a été associé à un IRD.|  
+|HY021|Informations de descripteur incohérentes|Le champ de *type* ou tout autre champ associé au champ SQL_DESC_TYPE dans le descripteur n’est pas valide ou est cohérent.<br /><br /> Les informations de descripteur vérifiées pendant une vérification de cohérence ne sont pas cohérentes. (Consultez «vérifications de cohérence», plus loin dans cette section.)|  
+|HY090|Longueur de chaîne ou de mémoire tampon non valide|(DM) le pilote était un pilote ODBC *2. x* , le descripteur était un ARD, l’argument *ColumnNumber* était défini sur 0, et la valeur spécifiée pour l’argument *BufferLength* n’était pas égale à 4.|  
+|HY117|La connexion est interrompue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Délai d’attente de connexion expiré|Le délai d’attente de connexion a expiré avant que la source de données ait répondu à la demande. Le délai d’expiration de la connexion est défini par le biais de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Le pilote ne prend pas en charge cette fonction|(DM) le pilote associé au *DescriptorHandle* ne prend pas en charge la fonction.|  
   
 ## <a name="comments"></a>Commentaires  
- Une application peut appeler **SQLSetDescRec** pour définir les champs suivants pour une seule colonne ou un paramètre :  
+ Une application peut appeler **SQLSetDescRec** pour définir les champs suivants pour une seule colonne ou un seul paramètre:  
   
 -   SQL_DESC_TYPE  
   
@@ -125,40 +126,40 @@ SQLRETURN SQLSetDescRec(
 -   SQL_DESC_INDICATOR_PTR  
   
 > [!NOTE]  
->  Si un appel à **SQLSetDescRec** échoue, le contenu de l’enregistrement de descripteur identifié par le *RecNumber* argument ne sont pas définis.  
+>  Si un appel à **SQLSetDescRec** échoue, le contenu de l’enregistrement de descripteur identifié par l’argument *recnumber* n’est pas défini.  
   
- Lors de la liaison d’une colonne ou un paramètre **SQLSetDescRec** vous permet de modifier plusieurs champs qui affectent la liaison sans appeler **SQLBindCol** ou **SQLBindParameter** ou effectuer plusieurs appels à **SQLSetDescField**. **SQLSetDescRec** pouvez définir des champs sur un descripteur pas actuellement associé à une instruction. Notez que **SQLBindParameter** définit plus de champs que **SQLSetDescRec**, peut définir les champs sur un APD et une infrastructure ou IPD dans un seul appel et ne nécessite pas un handle de descripteur.  
+ Lors de la liaison d’une colonne ou d’un paramètre, **SQLSetDescRec** vous permet de modifier plusieurs champs qui affectent la liaison sans appeler **SQLBindCol** ou **SQLBindParameter** ou effectuer plusieurs appels à **SQLSetDescField**. **SQLSetDescRec** peut définir des champs sur un descripteur qui n’est pas actuellement associé à une instruction. Notez que **SQLBindParameter** définit plus de champs que **SQLSetDescRec**, peut définir des champs sur un APD et un IPD dans un appel et ne nécessite pas de handle de descripteur.  
   
 > [!NOTE]  
->  L’attribut d’instruction SQL_ATTR_USE_BOOKMARKS doit toujours être définie avant d’appeler **SQLSetDescRec** avec un *RecNumber* argument 0 pour définir des champs de signet. Bien que cela ne soit pas obligatoire, il est fortement recommandé.  
+>  L’attribut d’instruction SQL_ATTR_USE_BOOKMARKS doit toujours être défini avant d’appeler **SQLSetDescRec** avec un argument *recnumber* égal à 0 pour définir les champs de signet. Bien que ce ne soit pas obligatoire, il est vivement recommandé.  
   
 ## <a name="consistency-checks"></a>Vérifications de cohérence  
- Une vérification de cohérence est effectuée par le pilote automatiquement chaque fois qu’une application définit le champ SQL_DESC_DATA_PTR d’APD, ARD ou IPD. Si aucun champ n’est pas cohérente avec les autres champs, **SQLSetDescRec** retourne SQLSTATE HY021 (informations de descripteur incohérent).  
+ Une vérification de cohérence est effectuée automatiquement par le pilote chaque fois qu’une application définit le champ SQL_DESC_DATA_PTR d’un APD, ARD ou IPD. Si l’un des champs est incohérent avec d’autres champs, **SQLSetDescRec** retourne SQLState HY021 (informations de descripteur incohérentes).  
   
- Chaque fois qu’une application définit le champ SQL_DESC_DATA_PTR d’APD, ARD ou IPD, le pilote vérifie que la valeur du champ SQL_DESC_TYPE et les valeurs applicables à ce champ SQL_DESC_TYPE sont valides et cohérentes. Cette vérification est toujours effectuée quand **SQLBindParameter** ou **SQLBindCol** est appelée ou quand **SQLSetDescRec** est appelée pour un APD, ARD ou IPD. Cette vérification de cohérence inclut les vérifications suivantes sur les champs de descripteur :  
+ Chaque fois qu’une application définit le champ SQL_DESC_DATA_PTR d’un APD, ARD ou IPD, le pilote vérifie que la valeur du champ SQL_DESC_TYPE et les valeurs applicables à ce champ SQL_DESC_TYPE sont valides et cohérentes. Cette vérification est toujours effectuée lorsque **SQLBindParameter** ou **SQLBindCol** est appelé ou lorsque **SQLSETDESCREC** est appelé pour un APD, ARD ou IPD. Cette vérification de cohérence comprend les vérifications suivantes sur les champs de descripteur:  
   
--   Le champ SQL_DESC_TYPE doit être le C ODBC valide ou types SQL ou un type de pilote SQL. Le champ SQL_DESC_CONCISE_TYPE doit être un des types valides ODBC C ou SQL ou un type de C ou SQL spécifiques au pilote, y compris les types date/heure et intervalle concis.  
+-   Le champ SQL_DESC_TYPE doit être l’un des types ODBC C ou SQL valides ou un type SQL spécifique au pilote. Le champ SQL_DESC_CONCISE_TYPE doit être l’un des types ODBC C ou SQL valides ou un type C ou SQL spécifique au pilote, y compris les types DateTime et Interval concis.  
   
--   Si le champ d’enregistrement SQL_DESC_TYPE est SQL_DATETIME ou SQL_INTERVAL, le champ de valeur SQL_DESC_DATETIME_INTERVAL_CODE doit être un des codes intervalle datetime valide. (Consultez la description du champ valeur SQL_DESC_DATETIME_INTERVAL_CODE dans [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
+-   Si le champ d’enregistrement SQL_DESC_TYPE est SQL_DATETIME ou SQL_INTERVAL, le champ SQL_DESC_DATETIME_INTERVAL_CODE doit être l’un des codes d’intervalle ou DateTime valides. (Consultez la description du champ SQL_DESC_DATETIME_INTERVAL_CODE dans [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   
--   Si le champ SQL_DESC_TYPE indique un type numérique, les champs SQL_DESC_PRECISION et SQL_DESC_SCALE sont vérifiés pour être valide.  
+-   Si le champ SQL_DESC_TYPE indique un type numérique, les champs SQL_DESC_PRECISION et SQL_DESC_SCALE sont vérifiés comme valides.  
   
--   Si le champ SQL_DESC_CONCISE_TYPE est un type de données heure ou d’horodatage, un intervalle type avec un composant « secondes », ou l’un des types de données d’intervalle avec un composant au moment, le champ SQL_DESC_PRECISION est vérifié à être une précision de secondes valide.  
+-   Si le champ SQL_DESC_CONCISE_TYPE est un type de données Time ou TIMESTAMP, un type Interval avec un composant seconds ou l’un des types de données Interval avec un composant Time, le champ SQL_DESC_PRECISION est vérifié comme étant une précision de secondes valide.  
   
--   Si le SQL_DESC_CONCISE_TYPE est un type de données d’intervalle, le champ SQL_DESC_DATETIME_INTERVAL_PRECISION est vérifié pour être une valeur de précision de début intervalle valide.  
+-   Si le SQL_DESC_CONCISE_TYPE est un type de données Interval, le champ SQL_DESC_DATETIME_INTERVAL_PRECISION est vérifié comme étant une valeur de précision d’intervalle valide.  
   
- Le champ SQL_DESC_DATA_PTR d’une infrastructure ou IPD n’est pas normalement défini ; Toutefois, une application peut le faire pour forcer une vérification de cohérence de champs IPD. Impossible d’effectuer une vérification de cohérence sur un IRD. La valeur définie pour le champ SQL_DESC_DATA_PTR de l’IPD n’est pas réellement stockée et ne peut pas être récupérée par un appel à **SQLGetDescField** ou **SQLGetDescRec**; le paramètre est effectué uniquement pour forcer le vérification de cohérence.  
+ Le champ SQL_DESC_DATA_PTR d’une IPD n’est normalement pas défini; Toutefois, une application peut le faire pour forcer une vérification de cohérence des champs IPD. Une vérification de cohérence ne peut pas être effectuée sur un IRD. La valeur définie pour le champ SQL_DESC_DATA_PTR de l’IPD n’est pas réellement stockée et ne peut pas être récupérée par un appel à **SQLGetDescField** ou **SQLGetDescRec**; le paramètre est défini uniquement pour forcer la vérification de cohérence.  
   
 ## <a name="related-functions"></a>Fonctions connexes  
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
 |Liaison d’une colonne|[SQLBindCol, fonction](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Un paramètre de liaison|[SQLBindParameter, fonction](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
-|Obtention d’un champ de descripteur unique|[SQLGetDescField, fonction](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
+|Liaison d’un paramètre|[SQLBindParameter, fonction](../../../odbc/reference/syntax/sqlbindparameter-function.md)|  
+|Obtention d’un seul champ de descripteur|[SQLGetDescField, fonction](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
 |Obtention de plusieurs champs de descripteur|[SQLGetDescRec, fonction](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|Définition des champs de descripteur unique|[SQLSetDescField, fonction](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Définition des champs de descripteur uniques|[SQLSetDescField, fonction](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)

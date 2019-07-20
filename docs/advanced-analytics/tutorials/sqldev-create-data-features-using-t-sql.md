@@ -1,45 +1,45 @@
 ---
-title: 'Leçon 2 fonctionnalités de données de créer à l’aide des fonctions R et T-SQL : SQL Server Machine Learning'
-description: Didacticiel montrant comment ajouter des calculs à des procédures stockées pour une utilisation dans les modèles d’apprentissage de R.
+title: Leçon 2 créer des fonctionnalités de données à l’aide des fonctions R et T-SQL
+description: Didacticiel expliquant comment ajouter des calculs aux procédures stockées à utiliser dans les modèles R Machine Learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5d304bdf03eaea53ede0cf4b2f8d82f64c3d1021
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7570c6769a780c5a6d98bdfc762092524bf5000c
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961923"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345927"
 ---
-# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Leçon 2 : Créer des caractéristiques de données à l’aide de R et T-SQL
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Leçon 2 : Créer des fonctionnalités de données à l’aide de R et de T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Cet article fait partie d’un didacticiel pour les développeurs SQL sur l’utilisation de R dans SQL Server.
 
 Lors de cette étape, vous allez découvrir comment créer des caractéristiques à partir de données brutes en utilisant une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ensuite, vous appellerez cette fonction à partir d’une procédure stockée pour créer une table qui contient les valeurs des caractéristiques.
 
-## <a name="about-feature-engineering"></a>À propos de l’ingénierie
+## <a name="about-feature-engineering"></a>À propos de l’ingénierie des fonctionnalités
 
-Après plusieurs séries d’exploration de données, vous avez recueilli des informations utiles grâce aux données et vous êtes prêt à passer à *l’ingénierie des caractéristiques*. Ce processus de création de caractéristiques significatives à partir des données brutes est une étape essentielle dans la création de modèles analytiques.
+Après plusieurs séries d’exploration de données, vous avez recueilli des informations utiles grâce aux données et vous êtes prêt à passer à *l’ingénierie des caractéristiques*. Ce processus de création de fonctionnalités significatives à partir des données brutes est une étape critique dans la création de modèles d’analyse.
 
-Dans ce jeu de données, les valeurs de distance sont basés sur la distance signalée au compteur et ne représentent pas nécessairement distance géographique ou la distance réelle parcourus. Ainsi, vous devrez calculer la distance directe entre les lieux de prise en charge et de dépose, en utilisant les coordonnées disponibles dans le dataset source « NYC Taxi ». Vous pouvez pour cela utiliser la [formule de Haversine](https://en.wikipedia.org/wiki/Haversine_formula) dans une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] personnalisée.
+Dans ce jeu de données, les valeurs de distance sont basées sur la distance de compteur signalée et ne représentent pas nécessairement la distance géographique ou la distance réelle parcourue. Ainsi, vous devrez calculer la distance directe entre les lieux de prise en charge et de dépose, en utilisant les coordonnées disponibles dans le dataset source « NYC Taxi ». Vous pouvez pour cela utiliser la [formule de Haversine](https://en.wikipedia.org/wiki/Haversine_formula) dans une fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] personnalisée.
 
 Vous allez utiliser une fonction T-SQL personnalisée, _fnCalculateDistance_, pour calculer la distance à l’aide de la formule de Haversine, et utiliser une seconde fonction T-SQL personnalisée, _fnEngineerFeatures_, pour créer une table contenant toutes les caractéristiques.
 
-Le processus global est comme suit :
+Le processus global est le suivant:
 
-- Créez la fonction T-SQL qui effectue les calculs
+- Créer la fonction T-SQL qui effectue les calculs
 
-- Appelez la fonction pour générer les données de fonctionnalité
+- Appeler la fonction pour générer les données de fonctionnalité
 
-- Enregistrer les données de fonctionnalité dans une table
+- Enregistrer les données de fonctionnalités dans une table
 
-## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calculer la distance de course à l’aide de fnCalculateDistance
+## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calculer la distance du trajet à l’aide de fnCalculateDistance
 
-La fonction _fnCalculateDistance_ doit avoir téléchargé et enregistré avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le cadre de la préparation de ce didacticiel. Prenez une minute pour examiner le code.
+La fonction _fnCalculateDistance_ doit avoir été téléchargée et inscrite avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le cadre de la préparation de ce didacticiel. Prenez une minute pour examiner le code.
   
 1. Dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], développez **Programmabilité**, **Fonctions** puis **Fonctions scalaires**.   
 
@@ -75,7 +75,7 @@ La fonction _fnCalculateDistance_ doit avoir téléchargé et enregistré avec [
 
 ## <a name="generate-the-features-using-fnengineerfeatures"></a>Générer les fonctionnalités à l’aide de _fnEngineerFeatures_
 
-Pour ajouter les valeurs calculées dans une table qui peut être utilisée pour l’apprentissage du modèle, vous allez utiliser une autre fonction, _fnEngineerFeatures_. La nouvelle fonction appelle la fonction T-SQL créée précédemment, _fnCalculateDistance_, afin d’obtenir la distance directe entre les emplacements de prélèvement et de débarquement. 
+Pour ajouter les valeurs calculées à une table qui peut être utilisée pour l’apprentissage du modèle, vous allez utiliser une autre fonction, _fnEngineerFeatures_. La nouvelle fonction appelle la fonction T-SQL créée précédemment, _fnCalculateDistance_, pour atteindre la distance directe entre les emplacements de prise en charge et de dépose. 
 
 1. Prenez une minute pour examiner le code de la fonction T-SQL personnalisée, _fnEngineerFeatures_, qui doit avoir été créé pour vous dans le cadre de la préparation de cette procédure pas à pas.
   
@@ -103,11 +103,11 @@ Pour ajouter les valeurs calculées dans une table qui peut être utilisée pour
     GO
     ```
 
-    + Cette fonction table qui prend plusieurs colonnes comme entrées et génère une table avec plusieurs colonnes de fonctionnalité.
+    + Cette fonction à valeur de table qui prend plusieurs colonnes comme entrées et génère une table avec plusieurs colonnes de fonctionnalités.
 
-    + L’objectif de cette fonction consiste à créer de nouvelles fonctionnalités pour une utilisation dans la création d’un modèle.
+    + L’objectif de cette fonction est de créer de nouvelles fonctionnalités à utiliser pour la création d’un modèle.
 
-2.  Pour vérifier que cette fonction fonctionne, vous devez l’utiliser pour calculer la distance géographique pour les trajets où la distance au compteur était égale à 0, mais les emplacements de prélèvement et de dépose étaient différents.
+2.  Pour vérifier que cette fonction fonctionne, utilisez-la pour calculer la distance géographique pour les voyages où la distance mesurée est égale à 0, alors que les emplacements de sélection et de décollage étaient différents.
   
     ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
@@ -118,7 +118,7 @@ Pour ajouter les valeurs calculées dans une table qui peut être utilisée pour
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Comme vous pouvez le voir, la distance signalée par le compteur ne correspond pas toujours à la distance géographique. C’est pourquoi l’ingénierie des caractéristiques est si importante. Vous pouvez utiliser ces fonctionnalités de données améliorées pour former un modèle d’apprentissage à l’aide de R.
+    Comme vous pouvez le voir, la distance signalée par le compteur ne correspond pas toujours à la distance géographique. C’est pourquoi l’ingénierie des caractéristiques est si importante. Vous pouvez utiliser ces fonctionnalités de données améliorées pour effectuer l’apprentissage d’un modèle de Machine Learning à l’aide de R.
 
 ## <a name="next-lesson"></a>Leçon suivante
 
@@ -126,4 +126,4 @@ Pour ajouter les valeurs calculées dans une table qui peut être utilisée pour
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Leçon 1 : Explorer et visualiser les données à l’aide de R et des procédures stockées](sqldev-explore-and-visualize-the-data.md)
+[Leçon 1 : Explorez et Visualisez les données à l’aide de R et de procédures stockées](sqldev-explore-and-visualize-the-data.md)
