@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3ba1be72858cea8813b500020b7a429f63570da0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d026e01ee6675d0af462492469913d280124cc31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000368"
 ---
 # <a name="write-database-engine"></a>Write (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ Objet **BinaryWriter** dans lequel la représentation binaire de ce nœud **hier
 ## <a name="return-types"></a>Types de retour  
 **Type de retour CLR : void**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Write est utilisée en interne par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cas de nécessité, par exemple lors du chargement de données à partir d’une colonne **hierarchyid**. Write est également appelée en interne quand une conversion est effectuée entre **hierarchyid** et **varbinary**.
   
 ## <a name="examples"></a>Exemples  

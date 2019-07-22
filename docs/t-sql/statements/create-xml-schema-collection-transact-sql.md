@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 350684e8-b3f6-4b58-9dbc-0f05cc776ebb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d79f0859a79496878ce0ca257b66bb3635d1380d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 28409675fda41f030e82337b1fcf0f1a6ec5821e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927723"
 ---
 # <a name="create-xml-schema-collection-transact-sql"></a>CREATE XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,12 +56,12 @@ CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expressio
  *Expression*  
  Constante de type chaîne ou variable scalaire. Est de type **varchar**, **varbinary**, **nvarchar** ou **xml**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous pouvez également ajouter des espaces de noms à la collection ou ajouter des composants aux espaces de noms existants de la collection, à l’aide de l’instruction [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md).  
   
  Pour supprimer des collections, utilisez [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  CREATE XML SCHEMA COLLECTION nécessite au moins l'un des groupes d'autorisations suivants :  
   
 -   Autorisation CONTROL sur le serveur  
@@ -171,8 +170,8 @@ CREATE XML SCHEMA COLLECTION MyCollection AS @MySchemaCollection
   
  CREATE XML SCHEMA COLLECTION stocke uniquement les composants de schéma que SQL Server comprend ; tous les éléments du schéma XML ne sont pas stockés dans la base de données. Par conséquent, si vous voulez récupérer la collection de schémas XML exactement comme elle a été fournie, il est recommandé d'enregistrer vos schémas XML dans une colonne de la base de données ou dans un autre dossier de votre ordinateur.  
   
-### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>b. Spécification de plusieurs espaces de noms de schémas dans une collection de schémas  
- Vous pouvez spécifier plusieurs schémas XML lorsque vous créez une collection de schémas XML. Exemple :  
+### <a name="b-specifying-multiple-schema-namespaces-in-a-schema-collection"></a>B. Spécification de plusieurs espaces de noms de schémas dans une collection de schémas  
+ Vous pouvez spécifier plusieurs schémas XML lorsque vous créez une collection de schémas XML. Par exemple :  
   
 ```  
 CREATE XML SCHEMA COLLECTION MyCollection AS N'  
@@ -263,7 +262,7 @@ CREATE TABLE T (Col1 xml (mySC));
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md)   
  [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

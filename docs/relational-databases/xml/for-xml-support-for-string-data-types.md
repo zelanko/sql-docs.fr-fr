@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bf069da8-de1e-44d2-a1fb-ade383076ac1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e56377044abe7377f110e534ea7c1e08144b76c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: e0ad8310f5938d757c30732cf6b1a78a9770254e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943326"
 ---
 # <a name="for-xml-support-for-string-data-types"></a>Prise en charge de FOR XML pour les types de données string
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ after line feed" />
   
 -   Le saut de ligne de la troisième ligne est défini comme l'entité &#xA.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge FOR XML des différents types de données SQL Server](../../relational-databases/xml/for-xml-support-for-various-sql-server-data-types.md)  
   
   
