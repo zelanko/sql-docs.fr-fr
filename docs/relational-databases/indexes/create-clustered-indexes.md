@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024992"
 ---
 # <a name="create-clustered-indexes"></a>Créer des index cluster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ ms.locfileid: "52539017"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -84,11 +83,11 @@ ms.locfileid: "52539017"
   
 1.  Dans l'Explorateur d'objets, développez la table sur laquelle vous souhaitez créer un index cluster.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index cluster...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Index**, pointez sur **Nouvel index**, puis sélectionnez **Index cluster...** .  
   
 3.  Dans la boîte de dialogue **Nouvel index** , sur la page **Général** , entrez le nom du nouvel index dans la zone **Nom de l'index** .  
   
-4.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…**.  
+4.  Sous **Colonnes clés d’index**, cliquez sur **Ajouter…** .  
   
 5.  Dans la boîte de dialogue **Sélectionner des colonnes dans**_nom\_table_, cochez la case de la colonne de table à ajouter à l’index cluster.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "52539017"
   
 1.  Dans l'Explorateur d'objets, développez la base de données sur laquelle vous souhaitez créer une table avec un index cluster.  
   
-2.  Cliquez avec le bouton droit sur le dossier **Tables** et sélectionnez **Nouvelle table...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Tables** et sélectionnez **Nouvelle table...** .  
   
 3.  Créez une table comme vous le feriez normalement. Pour plus d’informations, consultez [Créer des tables &#40;moteur de base de données&#41;](../../relational-databases/tables/create-tables-database-engine.md).  
   
@@ -146,7 +145,7 @@ ms.locfileid: "52539017"
   
  Pour plus d’informations, consultez [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer des clés primaires](../../relational-databases/tables/create-primary-keys.md)   
  [Créer des contraintes uniques](../../relational-databases/tables/create-unique-constraints.md)  
   

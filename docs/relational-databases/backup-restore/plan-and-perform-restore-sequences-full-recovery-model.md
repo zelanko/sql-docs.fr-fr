@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca126d0d8708e28af73c0faf6ddb9bc3d2ee280d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d402848978592ab98ae54445f60d46304addaa0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033682"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>Planifier et exécuter des séquences de restauration (mode de récupération complète)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "47726217"
 ## <a name="restarting-a-restore-sequence"></a>Redémarrage d'une séquence de restauration  
  Si vous rencontrez un problème avec le résultat d'une séquence de restauration, vous pouvez l'arrêter et la redémarrer à partir du début. Par exemple, si vous restaurez accidentellement un trop grand nombre de sauvegardes de journal et allez au-delà du point de récupération souhaité, vous devez redémarrer la séquence de restauration jusqu'à la sauvegarde du journal qui contient le point de récupération cible.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble de la sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-overview-sql-server.md)   
  [Vue d’ensemble de la restauration et de la récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

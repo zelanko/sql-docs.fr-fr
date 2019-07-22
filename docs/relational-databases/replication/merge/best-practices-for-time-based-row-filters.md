@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 773c5c62-fd44-44ab-9c6b-4257dbf8ffdb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3a2b86b5f9b08e9915adae27132b6beb5647394f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6182b480c83b8e6b2d0f0a50217823fd14f30c30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033354"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Bonnes pratiques en matière de filtres de lignes basés sur le temps
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "62639320"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Avec un filtre de ce type, il est généralement admis que deux événements se produisent systématiquement à l'exécution de l'Agent de fusion : les lignes qui satisfont aux critères de ce filtre sont répliquées vers les Abonnés, tandis que celles qui n'y satisfont plus sont nettoyées sur ceux-ci. (Pour plus d’informations sur les options de filtrage avec **HOST_NAME()**, consultez [Filtres de lignes paramétrés](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).) Toutefois, la réplication de fusion ne fait que répliquer et nettoyer les données qui ont changé depuis la dernière synchronisation, quelle que soit la façon dont vous définissez un filtre de lignes pour ces données.  
+ Avec un filtre de ce type, il est généralement admis que deux événements se produisent systématiquement à l'exécution de l'Agent de fusion : les lignes qui satisfont aux critères de ce filtre sont répliquées vers les Abonnés, tandis que celles qui n'y satisfont plus sont nettoyées sur ceux-ci. (Pour plus d’informations sur les options de filtrage avec **HOST_NAME()** , consultez [Filtres de lignes paramétrés](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).) Toutefois, la réplication de fusion ne fait que répliquer et nettoyer les données qui ont changé depuis la dernière synchronisation, quelle que soit la façon dont vous définissez un filtre de lignes pour ces données.  
   
  Pour que la réplication de fusion traite une ligne, les données contenues dans celle-ci doivent satisfaire aux critères du filtre de lignes et avoir changé depuis la dernière synchronisation. Dans le cas de la table **SalesOrderHeader** , **OrderDate** est entré lorsqu'une ligne est insérée. Les lignes sont répliquées vers l'Abonné comme prévu car l'insertion constitue une modification de données. Toutefois, s'il existe des lignes sur l'Abonné qui ne satisfont plus aux critères de filtre (relatives en l'occurrence aux commandes qui datent de plus de sept jours), elles ne sont supprimées de l'Abonné que si elles ont été mises à jour pour une raison quelconque.  
   
@@ -92,7 +91,7 @@ GO
   
  Les événements relatifs à la semaine à venir sont désormais signalés comme étant prêts à être répliqués. La prochaine fois que l'Agent de fusion s'exécutera pour l'abonnement utilisé par le coordinateur d'événements 112, les lignes 2, 3 et 4 seront téléchargées vers l'Abonné tandis que la ligne 1 sera supprimée de celui-ci.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
  [Implémenter des travaux](../../../ssms/agent/implement-jobs.md)   
  [Filtres de lignes paramétrés](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86bdd12d5dabd7ad74662cd47b2004594328a6c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048142"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ DEFAULT <xml_namespace_uri>
  *xml_namespace_prefix*  
  Spécifie un préfixe à mapper sur l’URI de l’espace de noms associé indiqué dans *xml_namespace_uri*. *xml_namespace_prefix* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsque vous utilisez la clause WITH XMLNAMESPACES dans une instruction qui comprend également une expression de table commune, la clause doit précéder l'expression dans l'instruction.  
   
  Les règles générales de syntaxe suivantes s'appliquent lorsque vous utilisez la clause WITH XMLNAMESPACES :  
@@ -87,7 +86,7 @@ DEFAULT <xml_namespace_uri>
   
 -   Le préfixe d'espace de noms XML `xsi` ne peut pas être redéclaré lorsque la directive ELEMENTS XSINIL est utilisée sur la requête.  
 
--   Il n’est pas nécessaire de déclarer le 'http://www.w3.org/2001/XMLSchema-instance' pour utiliser l’espace de noms standard xsi. Il est implicitement ajouté par le processeur XML/XPATH en l’absence de spécification et les expressions xpath peuvent utiliser le préfixe xsi tant que le schéma 'http://www.w3.org/2001/XMLSchema-instance' est correctement déclaré dans le document xml.
+-   Il n’est pas nécessaire de déclarer le 'http://www.w3.org/2001/XMLSchema-instance ' pour utiliser l’espace de noms standard xsi. Il est implicitement ajouté par le processeur XML/XPATH en l’absence de spécification et les expressions xpath peuvent utiliser le préfixe xsi tant que le schéma 'http://www.w3.org/2001/XMLSchema-instance ' est correctement déclaré dans le document xml.
 
 -   Les valeurs des chaînes URI sont encodées conformément à la page de codes de classement de la base de données actuelle et elles sont converties au format Unicode.  
   
@@ -102,7 +101,7 @@ DEFAULT <xml_namespace_uri>
 ## <a name="examples"></a>Exemples  
  Pour obtenir des exemples, consultez [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Références relatives au langage Xquery &#40;SQL Server&#41;](../../xquery/xquery-language-reference-sql-server.md)  
   
   

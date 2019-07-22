@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e7f4c132-a5ec-49d8-a964-45775432731f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3c8fbab9c430f28b5814dee137056c5c7f69a02e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35bb112313bb7a94425fc11eb192d9343ea73031
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941373"
 ---
 # <a name="look-up-infoobject"></a>Rechercher un InfoObject
 
@@ -83,7 +82,7 @@ ms.locfileid: "65726758"
   
  Lorsque la liste d'InfoObjects disponibles apparaît, sélectionnez l'InfoObject de votre choix. La destination remplira les options associées à l'aide des valeurs requises.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer un InfoCube pour les données de transaction](../../integration-services/data-flow/create-infocube-for-transaction-data.md)   
  [Créer un InfoSource](../../integration-services/data-flow/create-infosource.md)   
  [Créer un InfoSource pour les données de transaction](../../integration-services/data-flow/create-infosource-for-transaction-data.md)   

@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 06fb3549-e970-4ca2-a61f-59affb9c6dcc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a5115d9c66dd7baf091635b06ff413aa8c4ca736
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41e68c4ab43a4c2838721321341ce42ce12883d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023435"
 ---
 # <a name="catalogcreatefolder-ssisdb-database"></a>catalog.create_folder (base de données SSISDB)
 
@@ -35,7 +34,7 @@ catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUT
   
 ## <a name="arguments"></a>Arguments  
  [@folder_name =] *folder_name*  
- Nom du nouveau dossier. *folder_name* est de type **nvarchar(128)**.  
+ Nom du nouveau dossier. *folder_name* est de type **nvarchar(128)** .  
   
  [@folder_name =] *folder_id*  
  Identificateur (ID) unique du dossier. *folder_id* est de type **bigint**.  

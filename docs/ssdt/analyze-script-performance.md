@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 01b197d8c196bb94ae399a251563bba48f4fe5ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 355259372566758c48d6a20451627a51e65c6c09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984680"
 ---
 # <a name="analyze-script-performance"></a>Analyser les performances de script
 Utilisez les outils fournis par SQL Server Data Tools pour déterminer si vous pouvez améliorer les performances de votre requête, de vos procédures stockées ou de vos scripts. Par exemple, en surveillant les statistiques du client, telles que les temps de réponse des requêtes les plus fréquentes, vous pouvez déterminer s'il faut modifier les requêtes ou les index des tables. Ces statistiques peuvent inclure le temps d'exécution du client, le profil de requête et les paquets/octets envoyés et reçus.  

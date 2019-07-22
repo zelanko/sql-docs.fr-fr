@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 084ac587-25e7-4bd0-a385-556bbe07d02f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 413fc991d9f908d4390de109dededa07056e5b63
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b2bc4cf6348180e52dea28698e90cafda4f32f79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895491"
 ---
 # <a name="updatable-subscriptions---queued-updating-conflict-resolution"></a>Abonnements pouvant être mis à jour - Résolution des conflits de mise à jour en attente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ ms.locfileid: "54125530"
 ### <a name="subscriber-wins"></a>L'abonné gagne  
  La détection de conflit d'après la stratégie " L'abonné gagne " signifie que la dernière transaction de l'abonné destinée à mettre à jour l'éditeur l'emporte. Dans ce cas, en cas de détection de conflit, la transaction envoyée par l'abonné est utilisée et l'éditeur est mis à jour. Cette stratégie s'adresse aux applications où de telles modifications ne compromettent pas l'intégrité des données.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Updatable Subscriptions for Transactional Replication](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)  
   
   

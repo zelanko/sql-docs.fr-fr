@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: bc1fb5a5d5c397c8d7eb1a3d784394b46ca5a6fe
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 3137bffef524faf061322224e92941687bb16046
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987273"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Utiliser le Générateur de profils SQL Server pour créer et tester des repères de plan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  Ouvrez le fichier du texte de traitement dans l'application Bloc-notes puis copiez le texte dans le Presse-papiers.  
   
-8.  Créez le repère de plan, puis collez le texte copié entre les guillemets (**''**) de l’argument **@stmt** . Vous devez isoler tout guillemet simple contenu dans l'argument **@stmt** en le faisant précéder par un autre guillemet simple. Faites attention de ne pas ajouter ou supprimer d'autres caractères lorsque vous insérez ces guillemets simples. Par exemple, le littéral de date **'** 20000101 **'** doit être délimité de la façon suivante : **''** 20000101 **''**.  
+8.  Créez le repère de plan, puis collez le texte copié entre les guillemets ( **''** ) de l’argument **@stmt** . Vous devez isoler tout guillemet simple contenu dans l'argument **@stmt** en le faisant précéder par un autre guillemet simple. Faites attention de ne pas ajouter ou supprimer d'autres caractères lorsque vous insérez ces guillemets simples. Par exemple, le littéral de date **'** 20000101 **'** doit être délimité de la façon suivante : **''** 20000101 **''** .  
   
  Voici le repère de plan :  
   
@@ -97,7 +96,7 @@ EXEC sp_create_plan_guide
   
 5.  Si le repère de plan est de type OBJECT ou SQL, vérifiez que l'événement **Showplan XML** contient les attributs **PlanGuideDB** et **PlanGuideName** du repère de plan qui doit correspondre à la requête. Ou, dans le cas d'un repère de plan TEMPLATE, vérifiez que l'événement **Showplan XML** contient les attributs **TemplatePlanGuideDB** et **TemplatePlanGuideName** du repère de plan prévu. Cette opération vérifie que le repère de plan fonctionne. Ces attributs sont contenus sous l’élément **\<StmtSimple>** du plan.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)  
   
   

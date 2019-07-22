@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b94f389814ff0d0fc9a4adcb26b33431286d1119
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8c785e98a06e31448c22422f85f3be34efcffa6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051112"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>Estimer la taille d’un index cluster
 
@@ -43,7 +42,7 @@ ms.locfileid: "51559356"
   
 3.  Faites la somme des valeurs calculées.  
   
-## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Étape 1. Calculer l'espace utilisé pour le stockage des données au niveau feuille  
+## <a name="step-1-calculate-the-space-used-to-store-data-in-the-leaf-level"></a>Étape 1. Calculer l'espace utilisé pour le stockage des données au niveau feuille  
   
 1.  Déterminez le nombre de lignes que contiendra la table :  
   
@@ -121,7 +120,7 @@ ms.locfileid: "51559356"
      ***Leaf_space_used***  = 8192 x ***Num_Leaf_Pages***  
   
 ## <a name="step-2-calculate-the-space-used-to-store-index-information"></a>Étape 2. Calculer l'espace utilisé pour le stockage des informations d'index  
- Vous pouvez estimer la quantité d'espace nécessaire au stockage des niveaux supérieurs de l'index en procédant comme suit :  
+ Vous pouvez estimer la quantité d'espace nécessaire au stockage des niveaux supérieurs de l'index en procédant comme suit :  
   
 1.  Spécifiez le nombre de colonnes de longueur fixe et de longueur variable de la clé d'index et calculez l'espace nécessaire à leur stockage :  
   
@@ -147,7 +146,7 @@ ms.locfileid: "51559356"
   
      Ces modifications supposent que toutes ces valeurs ne seront pas uniques.  
   
-3.  Calculez la taille de null bitmap :  
+3.  Calculez la taille de null bitmap :  
   
      En présence de colonnes autorisant des valeurs Null dans la clé d'index, une partie de la ligne d'index est réservée à la bitmap Null. Calculez sa taille :  
   
@@ -189,7 +188,7 @@ ms.locfileid: "51559356"
   
      où 1 <= Level <= ***Non-leaf_Levels***  
   
-     Arrondissez chaque élément de la somme au nombre entier supérieur le plus proche. À titre d’exemple simple, imaginez un index où ***Num_Leaf_Pages*** = 1000 et ***Index_Rows_Per_Page*** = 25. Le premier niveau d'index au-dessus du niveau feuille stocke 1 000 lignes d'index, ce qui représente une ligne d'index par page feuille et 25 lignes d'index par page. Par conséquent, il faut 40 pages pour stocker ces 1 000 lignes d'index. Le niveau suivant de l'index doit stocker 40 lignes. Cela requiert donc 2 pages. Le niveau final de l'index doit stocker 2 lignes. Cela requiert donc 1 page. Il en résulte 43 pages d'index non-feuille. Lorsque ces nombres sont utilisés dans les formules précédentes, le résultat est le suivant :  
+     Arrondissez chaque élément de la somme au nombre entier supérieur le plus proche. À titre d’exemple simple, imaginez un index où ***Num_Leaf_Pages*** = 1000 et ***Index_Rows_Per_Page*** = 25. Le premier niveau d'index au-dessus du niveau feuille stocke 1 000 lignes d'index, ce qui représente une ligne d'index par page feuille et 25 lignes d'index par page. Par conséquent, il faut 40 pages pour stocker ces 1 000 lignes d'index. Le niveau suivant de l'index doit stocker 40 lignes. Cela requiert donc 2 pages. Le niveau final de l'index doit stocker 2 lignes. Cela requiert donc 1 page. Il en résulte 43 pages d'index non-feuille. Lorsque ces nombres sont utilisés dans les formules précédentes, le résultat est le suivant :  
   
      ***Non-leaf_Levels***  = 1 + log(25) (1000 / 25) = 3  
   
@@ -216,7 +215,7 @@ ms.locfileid: "51559356"
   
 -   Valeurs LOB  
   
-     L’algorithme permettant de déterminer avec exactitude la quantité d’espace qui sera utilisée pour stocker les valeurs des types de données LOB **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**et **image** est complexe. Il suffit simplement de faire la somme de la taille moyenne des valeurs LOB attendues, de la multiplier par ***Num_Rows***, puis d’ajouter le résultat à la taille totale de l’index cluster.  
+     L’algorithme permettant de déterminer avec exactitude la quantité d’espace qui sera utilisée pour stocker les valeurs des types de données LOB **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml**et **image** est complexe. Il suffit simplement de faire la somme de la taille moyenne des valeurs LOB attendues, de la multiplier par ***Num_Rows***, puis d’ajouter le résultat à la taille totale de l’index cluster.  
   
 -   Compression  
   
@@ -226,7 +225,7 @@ ms.locfileid: "51559356"
   
      Pour plus d'informations sur l'espace nécessaire pour les colonnes éparses, consultez [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Description des index cluster et non-cluster](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Estimer la taille d'une table](../../relational-databases/databases/estimate-the-size-of-a-table.md)   
  [Créer des index cluster](../../relational-databases/indexes/create-clustered-indexes.md)   

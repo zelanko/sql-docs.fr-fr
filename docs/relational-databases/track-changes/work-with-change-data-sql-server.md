@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5346b852-1af8-4080-b278-12efb9b735eb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c55ff97602a2c56a54523c68b5ef76a832888676
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 2d08ef02a81832ad532e184d6cae79d7fd03119a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006057"
 ---
 # <a name="work-with-change-data-sql-server"></a>Utiliser les données modifiées (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -128,7 +127,7 @@ ms.locfileid: "53991892"
 ### <a name="using-the-datetime-wrapper-functions-to-transition-between-capture-instances"></a>Utilisation des fonctions wrapper Datetime pour assurer la transition entre des instances de capture  
  La capture de données modifiées prend en charge jusqu'à deux instances de capture pour une seule table source suivie. Cette fonction est principalement utilisée pour permettre une transition entre plusieurs instances de capture lorsque les modifications de langage de définition de données (DDL) effectuées sur la table source étendent le jeu des colonnes disponibles à des fins de suivi. Lors de la transition vers une nouvelle instance de capture, l'une des méthodes permettant de protéger les niveaux d'application supérieurs contre tout changement éventuel de nom des fonctions de requête sous-jacentes consiste à utiliser une fonction wrapper pour inclure dans un wrapper l'appel sous-jacent. Ensuite, vous devez vous assurer que le nom de la fonction wrapper reste le même. Lorsque le changement est sur le point de se produire, l'ancienne fonction wrapper peut être supprimée, et une nouvelle fonction wrapper portant le même nom et faisant référence aux nouvelles fonctions de requête peut être créée. Le fait de commencer par modifier le script généré pour créer une fonction wrapper du même nom vous permet de passer à une nouvelle instance de capture sans affecter les couches d'application supérieures.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Suivi des modifications de données &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [Activer et désactiver la capture de données modifiées &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)   

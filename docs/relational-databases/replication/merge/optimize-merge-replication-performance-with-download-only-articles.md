@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7dadf635e055a06a8f86349c73d4921c124f7f4c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7875347d1bc002f32721c00ac1ad470b5ec75281
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018717"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "54123799"
 ## <a name="using-different-article-types-in-your-applications"></a>Utilisation de différents types d'articles dans vos applications  
  Grâce à la compréhension des besoins de votre application, vous pouvez faire des compromis entre flexibilité maximale et performance optimale. Par exemple, les applications comportant de nombreux conflits et modifications, à la fois sur le serveur de publication et sur les abonnés, utiliseront une publication composée d'articles standards. Certaines applications, comme une application d'automatisation des forces de vente, peuvent comporter des articles potentiellement conflictuels et d'autres articles fonctionnant comme des tables de correspondances, pouvant être spécifiés comme étant en téléchargement seul. Les applications d'entrée de données, comme les systèmes de points de vente et les applications d'automatisation des groupes opérationnels, partitionnent souvent les données de façon à éliminer les conflits, et les données d'un abonné ne vont jamais vers un autre. Dans ces situations, une combinaison de partitions ne se chevauchant pas, d'articles en téléchargement seul et de partitions précalculées offre des performances et une évolutivité maximales. Pour plus d'informations sur les partitions ne se chevauchant pas et les partitions précalculées, consultez [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options d’articles pour la réplication de fusion](../../../relational-databases/replication/merge/article-options-for-merge-replication.md)   
  [Optimiser les performances de la réplication de fusion avec le suivi conditionnel des suppressions](../../../relational-databases/replication/merge/optimize-merge-replication-performance-with-conditional-delete-tracking.md)  
   

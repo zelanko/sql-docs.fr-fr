@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: df955d32-8194-438e-abee-387eebebcbb7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7be3bc3a5d49dc7ef978c6bc2dba98f97258d5cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f46f8c23723bd467e649fd90c2f30741eb6bc9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907044"
 ---
 # <a name="x40x40spid-transact-sql"></a>&#x40;&#x40;SPID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "65947713"
 ## <a name="return-types"></a>Types de retour  
  **smallint**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  @@SPID permet d’identifier le processus utilisateur actuel dans la sortie de **sp_who**.  
   
 ## <a name="examples"></a>Exemples  
@@ -73,7 +72,7 @@ ID     Login Name                     User Name
 SELECT SESSION_ID() AS ID, @@SPID AS 'Control ID', SYSTEM_USER AS 'Login Name', USER AS 'User Name';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions de configuration](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sp_who](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  

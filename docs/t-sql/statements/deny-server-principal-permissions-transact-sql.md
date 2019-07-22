@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bb2b43324d9147dfdd55f3109842dceb2ffcb975
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 2fc90354abf3c18a5eba7a92b7a5ffa54a84ce3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984494"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY – refus d'autorisations du principal de serveur (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ DENY permission [ ,...n ] }
  Spécifie une autorisation qui peut être refusée sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
  LOGIN **::** *SQL_Server_login*  
- Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle l'autorisation doit être refusée. Le qualificateur d’étendue (**::**) est obligatoire.  
+ Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle l'autorisation doit être refusée. Le qualificateur d’étendue ( **::** ) est obligatoire.  
   
  SERVER ROLE **::** *server_role*  
- Spécifie le rôle de serveur sur lequel l'autorisation est refusée. Le qualificateur d’étendue (**::**) est obligatoire.  
+ Spécifie le rôle de serveur sur lequel l'autorisation est refusée. Le qualificateur d’étendue ( **::** ) est obligatoire.  
   
  TO \<server_principal>  
  Spécifie le compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le rôle de serveur pour lequel l'autorisation est accordée.  
@@ -93,7 +92,7 @@ DENY permission [ ,...n ] }
  AS *SQL_Server_login*  
  Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de laquelle le principal qui exécute cette requête dérive son droit de refuser l'autorisation.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les autorisations dans l'étendue du serveur peuvent être refusées seulement lorsque la base de données en cours est master.  
   
  Des informations sur les autorisations de serveur sont disponibles dans la vue de catalogue [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Des informations sur les principaux de serveur sont disponibles dans la vue de catalogue [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -109,7 +108,7 @@ DENY permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour les comptes de connexion, requiert l'autorisation CONTROL sur le compte de connexion ou l'autorisation ALTER ANY LOGIN sur le serveur.  
   
  Pour les rôles de serveur, requiert l'autorisation CONTROL sur le rôle de serveur ou l'autorisation ALTER ANY SERVER ROLE sur le serveur.  
@@ -125,7 +124,7 @@ DENY IMPERSONATE ON LOGIN::WanidaBenshoof TO [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-denying-view-definition-permission-with-cascade"></a>b. Refus d’une autorisation VIEW DEFINITION avec l’option CASCADE  
+### <a name="b-denying-view-definition-permission-with-cascade"></a>B. Refus d’une autorisation VIEW DEFINITION avec l’option CASCADE  
  Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `EricKurjan` est refusée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `RMeyyappan`. L'option `CASCADE` indique que l'autorisation `VIEW DEFINITION` sur `EricKurjan` sera également refusée aux principaux auxquels `RMeyyappan` a accordé cette autorisation.  
   
 ```  
@@ -144,7 +143,7 @@ DENY VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [Autorisations du principal du serveur GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   
