@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9fdd06bf-5bc9-445c-95bf-709e0ca5989b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dff95f63c43425f9189413bde0c1ee71c5eae287
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26fe36ec71463721adf2810221fa3fc118917ae9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967681"
 ---
 # <a name="token--ssis-expression"></a>TOKEN  (expression SSIS)
 
@@ -44,7 +43,7 @@ TOKEN(character_expression, delimiter_string, occurrence)
 ## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette fonction fractionne la chaîne <character_expression> en un ensemble de jetons séparés par les délimiteurs spécifiés dans la chaîne <delimiter_string>, puis retourne le N-ième jeton, où N est le nombre d’occurrences du jeton spécifié par le paramètre \<occurrence>. Consultez la section Exemples pour obtenir des exemples d'utilisation de cette fonction.  
   
  Les remarques suivantes s'appliquent à la fonction TOKEN :  
@@ -104,7 +103,7 @@ TOKEN("2009/01/01", "/"), 1
 TOKEN(@[User::Path], "\\", TOKENCOUNT(@[User::Path], "\\"))  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

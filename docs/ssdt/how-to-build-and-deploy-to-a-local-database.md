@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3dddd702582cdc8b2baea11838b0ad7e0ccd8cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 612ed6750946dfa5e77970bf6e3a4859cbb0045b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911870"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>Procédure : Générer et déployer dans une base de données locale
 Microsoft SQL Server 2012 fournit une instance de serveur local à la demande, appelée SQL Server Express Local Database Runtime, qui est activée lorsque vous déboguez un projet de base de données SQL Server. Cette instance de serveur local peut être utilisée en tant que sandbox pour la création, le test et le débogage de votre projet. Elle est indépendante des instances SQL Server installées et n'est pas accessible en dehors de SQL Server Data Tools (SSDT). Cette organisation convient pour les développeurs qui ont un accès limité ou aucun accès aux bases de données de production, mais souhaiteraient tester les projets localement avant de les remettre au personnel autorisé qui les déploiera en production. En outre, lorsque vous développez une solution de base de données pour SQL Azure, vous pouvez utiliser les fonctionnalités fournies par ce serveur local pour développer et tester votre projet de base de données localement, avant de le déployer dans le nuage.  

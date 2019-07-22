@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 0b496ecde35917702f1bb976df390c8f5832ac77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930131"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ Retourne la courbe spécifiée à partir d’une instance **geometry** qui est *
 ## <a name="exceptions"></a>Exceptions  
  Si *curve_index* < 1, `ArgumentOutOfRangeException` est levé.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  **NULL** est retourné dans l’une des situations suivantes :  
   
 -   L’instance **geometry** est déclarée, mais pas instanciée  
@@ -111,7 +110,7 @@ Retourne la courbe spécifiée à partir d’une instance **geometry** qui est *
  END
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [STNumCurves &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   

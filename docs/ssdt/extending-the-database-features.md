@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1c43d9e4-6fb1-4d15-a5fb-cd572daf2951
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c7a0271ff900ced1331308db67fc23d488a83caa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2170d8e9da577062779183efe49202b9fa7e62c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912815"
 ---
 # <a name="extending-the-database-features"></a>Extension des fonctionnalités de base de données
 Vous pouvez créer des extensions de fonctionnalités qui vous permettent d'étendre des fonctionnalités telles que les tests unitaires et l'analyse du code de base de données. Pour plus d'informations, consultez les rubriques suivantes :  

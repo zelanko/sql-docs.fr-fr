@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a2c252c2-e815-4ac8-a101-7af5b32e3233
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d6c4ad312340df31e5a5c1d689cefe2f30f97f85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bf076dd8a3dc3dc912ec7ec2155e477dff83f30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62860647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912143"
 ---
 # <a name="mssqlserver12304"></a>MSSQLSERVER_12304
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,6 +35,6 @@ ms.locfileid: "62860647"
 ## <a name="user-action"></a>Action de l'utilisateur  
 N'utilisez pas un type de table optimisée en mémoire qui utilise la propriété d'identité avec l'une de ses colonnes.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [OLTP en mémoire &#40;Optimisation en mémoire&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

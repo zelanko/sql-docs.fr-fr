@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2a073699-79a2-4ea1-a68e-fc17a80b74ba
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3d207f253b3604cfc15b5cf5cc792eeba4e668fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52abc0392a20325288be4803f83b5350af63429e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947141"
 ---
 # <a name="cdc-control-task-custom-properties"></a>Propriétés personnalisées de la tâche de contrôle de capture de données modifiées
 
@@ -37,7 +36,7 @@ ms.locfileid: "65727911"
 |StateTable|String|Spécifie le nom de la table dans laquelle l'état de contexte de capture de données modifiées est stocké. Cette table doit être accessible à l'aide de la connexion configurée pour ce composant. Cette table doit inclure des colonnes varchar appelées **nom** et **état**. (La colonne **état** doit comporter au moins 256 caractères.)<br /><br /> Cette propriété s’applique uniquement quand **AutomaticStatePersistence** a la valeur **true**.|  
 |CommandTimeout|entier|Cette valeur indique le délai d’attente (en secondes) à utiliser pour communiquer avec la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cette valeur est utilisée lorsque le temps de réponse de la base de données est très lent et que la valeur par défaut (30 secondes) n’est pas suffisante.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tâche de contrôle de capture de données modifiées](../../integration-services/control-flow/cdc-control-task.md)   
  [Éditeur de tâche de contrôle CDC](../../integration-services/control-flow/cdc-control-task-editor.md)  
   

@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: eb1f7d9efbbf260395cff607d5f8aa3209c677c4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930327"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ Le tableau suivant décrit les colonnes du jeu de résultats.
 |**UsedPages**|Nombre de pages de 8 Ko que le fichier utilise actuellement.|  
 |**EstimatedPages**|Nombre de pages de 8 Ko estimé par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] auquel la taille du fichier peut être ramenée.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 DBCC SHRINKFILE s'applique aux fichiers de la base de données active. Pour plus d’informations sur le changement de base de données active, consultez [USE &#40;Transact-SQL&#41;](../../t-sql/language-elements/use-transact-sql.md).
   
 Il est à tout moment possible d’arrêter les opérations DBCC SHRINKFILE ; le travail accompli est alors conservé. Si vous utilisez le paramètre EMPTYFILE et annulez l’opération, le fichier n’est pas marqué pour empêcher l’ajout de données supplémentaires.
@@ -238,7 +237,7 @@ REMOVE FILE Test1data;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)  

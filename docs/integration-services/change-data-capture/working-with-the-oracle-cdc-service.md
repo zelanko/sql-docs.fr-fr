@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 04be5896-2301-45f5-a8ce-5f4ef2b69aa5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5fecc4e8454842c059ecd74ca7da5e78135342c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1844396dfda42dd7a20292977b792dd731fbb3cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898942"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilisation du service de capture de données modifiées Oracle
 
@@ -113,7 +112,7 @@ ms.locfileid: "65728433"
 |ref_count|Cet élément compte le nombre d'ordinateurs où le même service de capture de données modifiées Oracle est installé. Il est augmenté à chaque ajout de service de capture de données modifiées Oracle portant le même nom, et il est réduit lorsque ce service est supprimé. Lorsque le compteur atteint zéro, cette ligne est supprimée.|  
 |active_service_node|Nom du nœud Windows qui gère actuellement le service de capture de données modifiées. Lorsque le service est arrêté correctement, cette colonne a la valeur Null, ce qui indique qu'il ne s'agit plus d'un service actif.|  
 |active_service_heartbeat|Cet élément suit le service de capture de données modifiées actuel pour déterminer s'il est encore actif.<br /><br /> Cet élément est mis à jour avec l'horodateur UTC de la base de données active du service de capture de données modifiées actif à intervalles réguliers. L'intervalle par défaut est de 30 secondes ; cependant, vous pouvez le configurer.<br /><br /> Lorsqu'un service de capture de données modifiées en attente détecte que la pulsation n'a pas été mise à jour après que l'intervalle configuré est passé, le service en attente tente d'assumer le rôle de service de capture de données modifiées actif.|  
-|options|Cet élément spécifie les options secondaires, telles que suivi ou paramétrage. Il est enregistré au format **name[=value][; ]**. La chaîne d'options utilise la même sémantique que la chaîne de connexion ODBC. Si l'option est booléenne (avec une valeur oui/non), la valeur peut inclure le nom uniquement.<br /><br /> Les valeurs possibles de trace sont les suivantes :<br /><br /> **true**<br /><br /> **actif**<br /><br /> **false**<br /><br /> **inactif**<br /><br /> **\<nom_classe>[,nom_classe>]**<br /><br /> <br /><br /> La valeur par défaut est **false**.<br /><br /> **service_heartbeat_interval** est l’intervalle de temps (en secondes) pour que le service mette à jour la colonne active_service_heartbeat. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **service_config_polling_interval** est la fréquence d’interrogation (en secondes) pour que le service de capture de données modifiées vérifie les modifications de configuration. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **sql_command_timeout** est le délai d’attente de commande qui fonctionne avec le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est **1**. La valeur maximale est **3600**.|  
+|options|Cet élément spécifie les options secondaires, telles que suivi ou paramétrage. Il est enregistré au format **name[=value][; ]** . La chaîne d'options utilise la même sémantique que la chaîne de connexion ODBC. Si l'option est booléenne (avec une valeur oui/non), la valeur peut inclure le nom uniquement.<br /><br /> Les valeurs possibles de trace sont les suivantes :<br /><br /> **true**<br /><br /> **actif**<br /><br /> **false**<br /><br /> **inactif**<br /><br /> **\<nom_classe>[,nom_classe>]**<br /><br /> <br /><br /> La valeur par défaut est **false**.<br /><br /> **service_heartbeat_interval** est l’intervalle de temps (en secondes) pour que le service mette à jour la colonne active_service_heartbeat. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **service_config_polling_interval** est la fréquence d’interrogation (en secondes) pour que le service de capture de données modifiées vérifie les modifications de configuration. La valeur par défaut est **30**. La valeur maximale est **3600**.<br /><br /> **sql_command_timeout** est le délai d’attente de commande qui fonctionne avec le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La valeur par défaut est **1**. La valeur maximale est **3600**.|  
 ||  
   
 ### <a name="the-msxdbcdc-database-stored-procedures"></a>Procédures stockées de base de données MSXDBCDC  
@@ -162,7 +161,7 @@ ms.locfileid: "65728433"
 ###  <a name="BKMK_dboxcbcdc_add_service"></a> dbo.xcbcdc_add_service (svcname,sqlusr)  
  La procédure **dbo.xcbcdc_add_service** ajoute une entrée à la table **MSXDBCDC.xdbcdc_services** et ajoute un incrément de un à la colonne ref_count pour le nom du service dans la table **MSXDBCDC.xdbcdc_services** . Quand **ref_count** a la valeur 0, elle supprime la ligne.  
   
- Pour utiliser la procédure **dbo.xcbcdc_add_service\<nom_service, nom_utilisateur>**, l’utilisateur doit être membre du rôle de base de données **db_owner** pour la base de données d’instanceCDC nommée ou membre du rôle serveur fixe **sysadmin** ou **serveradmin**.  
+ Pour utiliser la procédure **dbo.xcbcdc_add_service\<nom_service, nom_utilisateur>** , l’utilisateur doit être membre du rôle de base de données **db_owner** pour la base de données d’instanceCDC nommée ou membre du rôle serveur fixe **sysadmin** ou **serveradmin**.  
   
 ###  <a name="BKMK_dboxdbcdc_start"></a> dbo.xdbcdc_start(dbname)  
  La procédure **dbo.xdbcdc_start** envoie une demande de démarrage au service de capture de données modifiées qui gère l’instance de capture de données modifiées sélectionnée pour démarrer le traitement des modifications.  
@@ -177,7 +176,7 @@ ms.locfileid: "65728433"
 ##  <a name="BKMK_CDCdatabase"></a> Bases de données CDC  
  Chaque instance Oracle CDC utilisée dans un service de capture de données modifiées est associée à une base de données spécifique [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelée base de données CDC. Cette base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est hébergée dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associée au service de capture de données modifiées Oracle.  
   
- La base de données CDC contient un schéma cdc spécial. Le service de capture de données modifiées Oracle utilise ce schéma avec des noms de tables ayant le préfixe **xdbcdc_**. Ce schéma est utilisé à des fins de sécurité et de cohérence.  
+ La base de données CDC contient un schéma cdc spécial. Le service de capture de données modifiées Oracle utilise ce schéma avec des noms de tables ayant le préfixe **xdbcdc_** . Ce schéma est utilisé à des fins de sécurité et de cohérence.  
   
  L'instance Oracle CDC et les bases de données CDC sont créées à l'aide de la console du concepteur de capture de données modifiées Oracle. Pour plus d'informations sur les bases de données CDC, consultez la documentation fournie avec votre installation de la console du concepteur CDC Oracle.  
   
@@ -222,7 +221,7 @@ ms.locfileid: "65728433"
   
  **sql-username**, **sql-password** sont les informations d’identification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mises à jour. Si sqlacct a un nom d'utilisateur vide et un mot de passe vide, le service de capture de données modifiées Oracle se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l'authentification Windows.  
   
- **Remarque** : Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"**).  
+ **Remarque** : Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"** ).  
   
 ###  <a name="BKMK_create"></a> Créer  
  Utilisez `Create` pour créer un service de capture de données modifiées Oracle à partir d'un script. La commande doit être exécutée par un administrateur de l'ordinateur. Voici un exemple de commande `Create` :  
@@ -248,7 +247,7 @@ ms.locfileid: "65728433"
   
  **sql-username**, **sql-password** sont le nom et le mot de passe du compte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisés pour se connecter à l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si ces deux paramètres sont vides, le service de capture de données modifiées pour Oracle se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant l'authentification Windows.  
   
- **Remarque** : Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"**).  
+ **Remarque** : Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"** ).  
   
 ###  <a name="BKMK_delete"></a> Supprimer  
  Utilisez `Delete` pour supprimer correctement le service de capture de données modifiées Oracle à partir d'un script. Cette commande doit être exécutée par un administrateur de l'ordinateur. Voici un exemple de commande `Delete` .  
@@ -263,9 +262,9 @@ ms.locfileid: "65728433"
   
  **cdc-service-name** est le nom du service de capture de données modifiées (CDC) à supprimer.  
   
- **Remarque** : Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"**).  
+ **Remarque** : Un paramètre qui contient des espaces ou des guillemets doubles doit être inclus entre guillemets doubles ("). Les guillemets doubles incorporés doivent être doublés (par exemple, pour utiliser **"A#B" D** comme mot de passe, entrez **""A#B"" D"** ).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédure : utiliser l'interface de ligne de commande du service de capture de données modifiées](../../integration-services/change-data-capture/how-to-use-the-cdc-service-command-line-interface.md)   
  [Guide pratique pour préparer SQL Server pour CDC](../../integration-services/change-data-capture/how-to-prepare-sql-server-for-cdc.md)  
   

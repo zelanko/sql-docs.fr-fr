@@ -10,14 +10,13 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bfaaca6a0f3c35814264d404ceaae9daebc34d4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903458"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SELECT et JOIN à partir de vues système pour les événements étendus dans SQL Server
 
@@ -574,8 +573,8 @@ type           package0       xml                           Well formed XML frag
 
 L’instruction SELECT suivante retourne tous les champs de données propres à votre type d’événement.
 
-- Notez l’élément de clause WHERE : *column_type = 'data'*.
-- Vous devez aussi modifier la valeur de la clause WHERE pour *o.name =*.
+- Notez l’élément de clause WHERE : *column_type = 'data'* .
+- Vous devez aussi modifier la valeur de la clause WHERE pour *o.name =* .
 
 
 ```sql
@@ -727,8 +726,8 @@ you could put:
 
 L’instruction SELECT suivante retourne chaque paramètre pour votre cible. Chaque paramètre est balisé pour indiquer s’il est obligatoire. Les valeurs que vous assignez aux paramètres affectent le comportement de la cible.
 
-- Notez l’élément de clause WHERE : *object_type = 'customizable'*.
-- Vous devez aussi modifier la valeur de la clause WHERE pour *o.name =*.
+- Notez l’élément de clause WHERE : *object_type = 'customizable'* .
+- Vous devez aussi modifier la valeur de la clause WHERE pour *o.name =* .
 
 
 ```sql
@@ -793,7 +792,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 Cette instruction SELECT de DMV retourne les lignes de données à partir de la cible de votre session d’événements active. Les données sont converties au format XML, ce qui rend la cellule retournée interactive pour faciliter l’affichage dans SSMS.
 
 - Si votre session d’événements est arrêtée, cette instruction SELECT retourne zéro ligne.
-- Vous devez modifier la valeur de la clause WHERE pour *s.name =*.
+- Vous devez modifier la valeur de la clause WHERE pour *s.name =* .
 
 
 ```sql

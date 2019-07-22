@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 07b4c7d08816d84f3e1273f3fcdcf5324602cfc0
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 80c62c0048f40ba945d3204c414180be9f8e0d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995646"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, objet Transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "53380550"
 |**Espace disponible dans tempdb (Ko)**|Quantité d’espace (en kilo-octets) disponible dans **tempdb**. Il faut suffisamment d'espace libre pour contenir le magasin de versions avec niveau d'isolement d'instantané et tous les nouveaux objets temporaires créés dans cette instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |**Délai le plus long d'exécution de transaction**|Durée d'attente (en secondes) depuis le démarrage de la transaction qui a été active plus longtemps que toute autre transaction actuelle. Ce compteur ne montre une activité que lorsque la base de données est exécutée avec le niveau d'isolement d'instantané de lecture validée. Il ne consigne aucune activité si la base de données se trouve dans n'importe quel autre niveau d'isolement.|  
 |**Transactions de versions non liées à des instantanés**|Nombre de transactions actives n'utilisant pas le niveau d'isolement d'instantané et ayant apporté des modifications aux données, qui ont généré des versions de lignes dans le magasin de versions **tempdb** .|  
-|**Transactions d'instantanés**|Nombre de transactions actives utilisant le niveau d'isolement d'instantané.<br /><br /> Remarque : Le compteur d’objets **Transactions d’instantanés** répond lors du premier accès aux données et non lors de l’émission de l’instruction `BEGIN TRANSACTION`.|  
+|**Transactions d'instantanés**|Nombre de transactions actives utilisant le niveau d'isolement d'instantané.<br /><br /> Remarque : Le compteur d’objets **Transactions d’instantanés** répond lors du premier accès aux données et non lors de l’émission de l’instruction `BEGIN TRANSACTION`.|  
 |**Transactions**|Nombre de transactions actives de tous types.|  
 |**Proportion de conflits de mise à jour**|Pourcentage des transactions utilisant le niveau d'isolement d'instantané et qui ont rencontré des conflits de mise à jour au cours de la dernière seconde. Un conflit de mise à jour se produit lorsqu'une transaction de niveau d'isolement d'instantané tente de modifier une ligne dont la dernière modification a été effectuée par une autre transaction qui n'était pas validée lors du démarrage de la transaction de niveau d'isolement d'instantané.|  
 |**Base de la proportion de conflits de mise à jour**|À usage interne uniquement|
@@ -48,7 +47,7 @@ ms.locfileid: "53380550"
 |**Création d'unité dans le magasin de versions**|Nombre d'unités d'allocation ayant été créées dans le magasin d'isolement d'instantané depuis le démarrage de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  
 |**Troncation d'unité dans le magasin de versions**|Nombre d'unités d'allocation ayant été supprimées du magasin d'isolement d'instantané depuis le démarrage de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2ba986e4aeacc122e613a804893dbf755a8df481
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 962f92044ea81cb7bb420176103a3df63c4b7ddd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967809"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (expression SSIS)
 
@@ -43,7 +42,7 @@ SIGN(numeric_expression)
 ## <a name="result-types"></a>Types des résultats  
  DT_I4  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction SIGN renvoie un résultat NULL si l'argument est NULL.  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
@@ -59,7 +58,7 @@ SIGN(-123.45)
 SIGN(DealerPrice - StandardCost)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

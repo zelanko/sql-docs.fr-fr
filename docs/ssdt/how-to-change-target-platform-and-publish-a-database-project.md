@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6012e120-5f72-4f4f-ae6e-f9a57ae1dea7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3a95768fd863c7584c98a5135dccef826fabbc56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2dd22b47da751294b60f57aaad246234004e946
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897369"
 ---
 # <a name="how-to-change-target-platform-and-publish-a-database-project"></a>Procédure : Modifier la plateforme cible et publier un projet de base de données
 Vous pouvez remplacer la version cible de SQL Server de votre projet de base de données SQL Server Data Tools (SSDT) par n’importe quelle instance prise en charge de SQL Server (SQL Server 2005, 2008, 2008 R2, Microsoft SQL Server 2012 ou SQL Azure). Cela vous permettra de centraliser le développement de votre base de données dans un seul projet, tout en la publiant dans plusieurs instances SQL Server en cas de besoin.  

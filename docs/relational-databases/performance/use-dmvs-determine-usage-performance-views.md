@@ -1,7 +1,6 @@
 ---
 title: Utiliser des vues de gestion dynamique pour déterminer les statistiques d’utilisation et les performances des vues
 description: Utiliser des vues de gestion dynamique pour déterminer les statistiques d’utilisation et les performances des vues
-manager: craigg
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -9,12 +8,12 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944ba06bc1ccf590e8d02a4fd6e44e6c57ec9001
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986669"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>Utiliser des vues de gestion dynamique pour déterminer les statistiques d’utilisation et les performances des vues
 Cet article décrit la méthodologie et les scripts utilisés pour obtenir des informations sur les **performances des requêtes qui utilisent des vues**. Le but de ces scripts est de fournir des indicateurs sur l’utilisation et les performances des différentes vues trouvées dans une base de données. 

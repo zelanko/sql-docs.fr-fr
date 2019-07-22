@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dc240fdb9a0b3bf18105ebec6313e77d342e6f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21a5b491cd359546c20559f10cb04410c0e7f90c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967764"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (expression SSIS)
 
@@ -42,7 +41,7 @@ SQUARE(numeric_expression)
 ## <a name="result-types"></a>Types des résultats  
  DT_R8  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction SQUARE renvoie un résultat NULL si l'argument est NULL.  
   
  L'argument est converti vers le type de données DT_R8 avant le calcul du carré.  
@@ -69,7 +68,7 @@ SQRT(SQUARE(@Side1) + SQUARE(@Side2))
 > [!NOTE]  
 >  Dans les expressions, les noms de variables comportent toujours le préfixe \@.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

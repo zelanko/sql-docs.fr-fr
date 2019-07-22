@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3b278f5147cad9fbd86a5f1d241ea77b9b15017a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: da6d7934951b683976a1a55f116def120bc515a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000432"
 ---
 # <a name="tostring-database-engine"></a>ToString (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,9 +47,9 @@ string ToString  ( )
 ## <a name="return-types"></a>Types de retour
 **Type de retour SQL Server : nvarchar(4000)**
   
-**Type de retour CLR : String** 
+**Type de retour CLR : String**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Retourne l'emplacement logique dans la hiérarchie. Par exemple, `/2/1/` représente la quatrième ligne ([!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) de la structure hiérarchique suivante d’un système de fichiers :
   
 ```sql
@@ -88,7 +87,7 @@ OrgNode   Node
 ...  
 ```  
   
-### <a name="b-converting-transact-sql-values-without-a-table"></a>b. Conversion de valeurs Transact-SQL sans table  
+### <a name="b-converting-transact-sql-values-without-a-table"></a>B. Conversion de valeurs Transact-SQL sans table  
 L’exemple de code suivant utilise `ToString` pour convertir une valeur **hierarchyid** en une chaîne et `Parse` pour convertir une valeur de chaîne en **hierarchyid**.
   
 ```sql

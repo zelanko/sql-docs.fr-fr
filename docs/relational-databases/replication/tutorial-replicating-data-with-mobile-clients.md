@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : configurer la réplication entre un serveur et des clients mobiles (réplication de fusion) | Microsoft Docs'
+title: 'Tutoriel : configurer la réplication entre un serveur et des clients mobiles (réplication de fusion) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/03/2018
 ms.prod: sql
@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7e7a186efb5da3ef509f3ada02e301d0777ffd2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895369"
 ---
-# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Didacticiel : configurer la réplication entre un serveur et des clients mobiles (fusion)
+# <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>Tutoriel : configurer la réplication entre un serveur et des clients mobiles (fusion)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 La réplication de fusion constitue une bonne solution au problème de transfert des données entre un serveur central et des clients mobiles qui ne sont connectés que de façon occasionnelle. Grâce aux Assistants de réplication, vous pouvez aisément configurer et administrer une topologie de réplication de fusion. 
 
@@ -58,7 +57,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server, SQL Server Management S
 > - Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous devez vous connecter au serveur de publication et à l’abonné à l’aide d’un identifiant de connexion membre du rôle serveur fixe **sysadmin**. Pour plus d’informations sur ce rôle, consultez [Rôles de niveau serveur](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles).  
   
   
-**Durée estimée pour effectuer le didacticiel : 60 minutes**  
+**Durée estimée pour terminer ce didacticiel : 60 minutes**  
   
 ## <a name="configure-a-publisher-for-merge-replication"></a>Configurer un serveur de publication pour la réplication de fusion
 Dans cette leçon, vous allez créer une publication de fusion à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour publier un sous-ensemble des tables **Employee**, **SalesOrderHeader** et **SalesOrderDetail** dans l’exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]. Ces tables sont filtrées avec des filtres de lignes paramétrables pour que chaque abonnement contienne une partition unique des données. Vous ajouterez également la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée par l’Agent de fusion à la liste d’accès à la publication.  
@@ -108,7 +107,7 @@ Dans cette leçon, vous allez créer une publication de fusion à l’aide de [!
 
     
   
-10. Dans la page **Filtrer les lignes de la table**, sélectionnez **Employee (HumanResources)**. Ensuite, sélectionnez **Ajouter**, puis **Ajouter une jointure pour étendre le filtre sélectionné**.  
+10. Dans la page **Filtrer les lignes de la table**, sélectionnez **Employee (HumanResources)** . Ensuite, sélectionnez **Ajouter**, puis **Ajouter une jointure pour étendre le filtre sélectionné**.  
   
     A. Dans la boîte de dialogue **Ajouter une jointure**, sélectionnez **Sales.SalesOrderHeader** sous **Table jointe**. Sélectionnez **Write the join statement manually** (Écrire l’instruction de jointure manuellement), puis finalisez l’instruction de jointure de la façon suivante :  
   
@@ -139,7 +138,7 @@ Dans cette leçon, vous allez créer une publication de fusion à l’aide de [!
 
     ![Sélection pour la création immédiate d’un instantané](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. Dans la page **Sécurité de l’agent**, sélectionnez **Paramètres de sécurité**. Entrez <*nom_ordinateur_serveur_de_publication*>**\repl_snapshot** dans la zone **Compte de processus**, spécifiez le mot de passe du compte, puis sélectionnez **OK**. Sélectionnez **Suivant**.  
+22. Dans la page **Sécurité de l’agent**, sélectionnez **Paramètres de sécurité**. Entrez <*nom_ordinateur_serveur_de_publication*> **\repl_snapshot** dans la zone **Compte de processus**, spécifiez le mot de passe du compte, puis sélectionnez **OK**. Sélectionnez **Suivant**.  
 
     ![Sélections pour la définition de la sécurité de l’agent d’instantané](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
@@ -167,7 +166,7 @@ Dans cette leçon, vous allez créer une publication de fusion à l’aide de [!
   
    A. Sélectionnez la page **Liste d’accès à la publication**, puis sélectionnez **Ajouter**. 
   
-   B. Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez <*nom_ordinateur_serveur_de_publication*>**\repl_merge**, puis **OK**. Sélectionnez **OK** à nouveau. 
+   B. Dans la boîte de dialogue **Ajouter un accès à une publication**, sélectionnez <*nom_ordinateur_serveur_de_publication*> **\repl_merge**, puis **OK**. Sélectionnez **OK** à nouveau. 
 
    ![Sélections pour l’ajout de la connexion de l’Agent de fusion](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
@@ -205,7 +204,7 @@ Dans cette section, vous allez ajouter un abonnement à la publication de fusion
 
    ![Sélections pour l’ajout d’une base de données à l’abonné](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. Dans la page **Sécurité de l’agent de fusion**, cliquez sur le bouton de sélection (**...** ). Entrez <*nom_ordinateur_abonné*>**\repl_merge** dans la zone **Compte de processus** et fournissez le mot de passe pour ce compte. Sélectionnez **OK**, **Suivant**, puis à nouveau **Suivant**.  
+8. Dans la page **Sécurité de l’agent de fusion**, cliquez sur le bouton de sélection ( **...** ). Entrez <*nom_ordinateur_abonné*> **\repl_merge** dans la zone **Compte de processus** et fournissez le mot de passe pour ce compte. Sélectionnez **OK**, **Suivant**, puis à nouveau **Suivant**.  
 
    ![Sélections pour la sécurité de l’Agent de fusion](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
@@ -227,7 +226,7 @@ Dans cette section, vous allez ajouter un abonnement à la publication de fusion
   
 1. Connectez-vous à l’abonné dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Développez **Sécurité**, cliquez avec le bouton droit sur **Connexions**, puis sélectionnez **Nouvelle connexion**.  
   
-   Dans la page **Général**, sélectionnez **Rechercher**, puis entrez <*nom_ordinateur_abonné*>**\repl_merge** dans la zone **Entrer le nom d’objet**. Sélectionnez **Vérifier les noms**, puis **OK**. 
+   Dans la page **Général**, sélectionnez **Rechercher**, puis entrez <*nom_ordinateur_abonné*> **\repl_merge** dans la zone **Entrer le nom d’objet**. Sélectionnez **Vérifier les noms**, puis **OK**. 
     
    ![Sélections pour la définition de la connexion](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   

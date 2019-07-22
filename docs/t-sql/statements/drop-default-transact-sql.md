@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 72accd7718280b4994c3339531c8e5d0fef067c1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 885336e48d7b8820ac7c1015be6d770b851978af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898078"
 ---
 # <a name="drop-default-transact-sql"></a>DROP DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]
  *default_name*  
  Nom de la valeur par défaut existante. Pour afficher la liste des valeurs par défaut qui existent, exécutez **sp_help**. Les valeurs par défaut doivent respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md). La définition du nom de schéma par défaut est facultative.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Avant de supprimer une valeur par défaut, supprimez sa liaison en exécutant **sp_unbindefault** si la valeur par défaut est actuellement liée à une colonne ou à un type de données alias.  
   
  Après avoir supprimé une valeur par défaut d'une colonne qui autorise les valeurs NULL, NULL est inséré dans cette position lorsque des lignes sont ajoutées et qu'aucune valeur n'est explicitement fournie. Après avoir supprimé une valeur par défaut dans une colonne NOT NULL, vous recevez un message d'erreur lorsque vous tentez d'ajouter des lignes sans fournir explicitement une valeur. Ces lignes sont ajoutées ultérieurement comme composantes du comportement général de l'instruction INSERT.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter DROP DEFAULT, l'utilisateur doit avoir l'autorisation ALTER sur le schéma auquel la valeur par défaut appartient.  
   
 ## <a name="examples"></a>Exemples  
@@ -84,7 +83,7 @@ DROP DEFAULT IF EXISTS datedflt;
 GO  
 ```  
   
-### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>b. Suppression d'une valeur par défaut liée à une colonne  
+### <a name="b-dropping-a-default-that-has-been-bound-to-a-column"></a>B. Suppression d'une valeur par défaut liée à une colonne  
  L'exemple suivant dissocie la valeur par défaut associée à la colonne `EmergencyContactPhone` de la table `Contact` et supprime la valeur par défaut `phonedflt`.  
   
 ```  
@@ -97,7 +96,7 @@ GO
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b74ad99ac0ade660e524241a0368cacc92e6852
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 83fbc6c183216cedcbb664a0c3a2e3a9337e1513
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946773"
 ---
 # <a name="how-query-store-collects-data"></a>Comment le magasin de requêtes collecte les données
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "59542199"
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- Pour réduire la surcharge d’E/S, les nouvelles données sont capturées en mémoire. Les opérations d’écriture sont mises en file d’attente et vidées sur le disque par la suite. Les informations sur la requête et le plan (Plan Store dans le schéma ci-dessous) sont vidées avec une latence minimale. Les statistiques d’exécution (Runtime Stats) sont conservées en mémoire pendant une période définie avec l’option `DATA_FLUSH_INTERVAL_SECONDS` de l’instruction `SET QUERY_STORE` . La boîte de dialogue Magasin des requêtes de SSMS vous permet d’entrer **l’intervalle de vidage des données (en minutes)**, qui est converti en secondes.  
+ Pour réduire la surcharge d’E/S, les nouvelles données sont capturées en mémoire. Les opérations d’écriture sont mises en file d’attente et vidées sur le disque par la suite. Les informations sur la requête et le plan (Plan Store dans le schéma ci-dessous) sont vidées avec une latence minimale. Les statistiques d’exécution (Runtime Stats) sont conservées en mémoire pendant une période définie avec l’option `DATA_FLUSH_INTERVAL_SECONDS` de l’instruction `SET QUERY_STORE` . La boîte de dialogue Magasin des requêtes de SSMS vous permet d’entrer **l’intervalle de vidage des données (en minutes)** , qui est converti en secondes.  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   
@@ -70,7 +69,7 @@ Si une session est arrêtée ou que l’application cliente redémarre ou se pla
  ![query-store-process-4planinfo](../../relational-databases/performance/media/query-store-process-4planinfo.png "query-store-process-4planinfo")    
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)   
  [Affichages catalogue du magasin de requêtes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)  

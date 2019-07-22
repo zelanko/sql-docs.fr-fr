@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3829348777930a9184620d21a0969e166ce37efc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5316bb4daa281c0abedd133803965a0b0af63bdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912760"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,10 +72,10 @@ CREATE FULLTEXT STOPLIST stoplist_name
  AUTHORIZATION *owner_name*  
  Spécifie le nom d'un principal de base de données comme propriétaire de la liste de mots vides. *owner_name* doit être le nom d’un principal dont l’utilisateur actuel est membre ou l’utilisateur actuel doit avoir l’autorisation IMPERSONATE sur *owner_name*. En l'absence de spécification, la propriété revient à l'utilisateur actuel.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le créateur d'une liste de mots vides est son propriétaire.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  La création d'une liste de mots vides requiert les autorisations CREATE FULLTEXT CATALOG. Le propriétaire d'une liste de mots vides peut accorder explicitement l'autorisation CONTROL sur une liste de mots vides pour autoriser les utilisateurs à ajouter et supprimer des mots et à supprimer la liste de mots vides.  
   
 > [!NOTE]  
@@ -108,7 +107,7 @@ CREATE FULLTEXT STOPLIST myStoplist3 FROM SYSTEM STOPLIST;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-stoplist-transact-sql.md)   
  [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-stoplist-transact-sql.md)   
  [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   

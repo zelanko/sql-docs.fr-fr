@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac9ba9a291b88b8fc1091ff72e3a7af782b1e618
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62705653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948413"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - Clause INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +66,7 @@ SELECT...INTO crée une table dans le groupe de fichiers par défaut et y insèr
  **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="data-types"></a>Types de données  
- L'attribut FILESTREAM n'est pas transféré dans la nouvelle table. Les objets BLOB FILESTREAM sont copiés et stockés dans la nouvelle table en tant qu’objets BLOB **varbinary(max)**. Sans l’attribut FILESTREAM, le type de données **varbinary(max)** est limité à 2 Go. Si un objet BLOB FILESTREAM dépasse cette valeur, l'erreur 7119 se déclenche et l'instruction s'arrête.  
+ L'attribut FILESTREAM n'est pas transféré dans la nouvelle table. Les objets BLOB FILESTREAM sont copiés et stockés dans la nouvelle table en tant qu’objets BLOB **varbinary(max)** . Sans l’attribut FILESTREAM, le type de données **varbinary(max)** est limité à 2 Go. Si un objet BLOB FILESTREAM dépasse cette valeur, l'erreur 7119 se déclenche et l'instruction s'arrête.  
   
  Lorsque vous sélectionnez une colonne d'identité existante dans une nouvelle table, la nouvelle colonne hérite de la propriété IDENTITY sauf si l'une des conditions suivantes est vraie :  
   
@@ -83,7 +82,7 @@ SELECT...INTO crée une table dans le groupe de fichiers par défaut et y insèr
   
 Si l'une de ces conditions est vérifiée, la colonne est créée avec l'attribut NOT NULL au lieu d'hériter de la propriété IDENTITY. Si une colonne d'identité est requise dans la nouvelle table et si ce type de colonne n'est pas disponible, ou si vous voulez une valeur initiale ou une valeur d'incrément différente de la colonne d'identité source, définissez la colonne dans la liste de sélection à l'aide de la fonction IDENTITY. Consultez « Création d'une colonne d'identité à l'aide de la fonction IDENTITY » dans la section Exemples ci-dessous.  
 
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 L’instruction `SELECT...INTO` s’exécute en deux temps : la nouvelle table est créée, puis les lignes sont insérées.  Cela signifie que, si les insertions échouent, elles sont toutes annulées, mais la nouvelle table (vide) est conservée.  Si l’opération doit réussir ou échouer dans sa globalité, utilisez une [transaction explicite](../language-elements/begin-transaction-transact-sql.md).
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
@@ -247,7 +246,7 @@ GO
 SELECT * INTO [dbo].[FactResellerSalesXL] ON FG2 FROM [dbo].[FactResellerSales];
 ```
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [Exemples SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   

@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4093d18cfce9e7a5632039cf819955762c84adc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fad9b94c83a314ab252ed52377d6fb332e7029e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897204"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>Procédure : Créer une capture instantanée d’un projet
 Chaque fichier d'**application de la couche Données** vous fournit une représentation en lecture seule du schéma de la base de données au moment de la création de l'instantané. Il est essentiellement traité comme un schéma de base de données à partir duquel vous pouvez réimporter les objets de schéma vers un projet. Vous pouvez aussi le comparer au schéma d'une base de données ou d'un projet, et mettre à jour la base de données ou le projet pour refléter le schéma défini dans l'instantané.  

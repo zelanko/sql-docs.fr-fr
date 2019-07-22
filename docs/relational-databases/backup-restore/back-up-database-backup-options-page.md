@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: df0ddcdb-c94e-472b-b786-469ae8117b93
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6e0e783a4d6a75e87abd366663c5d712d79ee81e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f461997fbbbbc7e63256b67b8fecf40381aab788
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940974"
 ---
 # <a name="back-up-database-backup-options-page"></a>Sauvegarder la base de données (page Options de sauvegarde)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "47840547"
 ### <a name="backup-set"></a>Jeu de sauvegarde  
  Les options du volet **Jeu de sauvegarde** vous permettent de spécifier des informations facultatives concernant le jeu de sauvegarde créé par l'opération de sauvegarde.  
   
- **Nom**  
+ **Name**  
  Spécifiez le nom du jeu de sauvegarde. Le système suggère automatiquement un nom par défaut en fonction du nom de la base de données et du type de sauvegarde.  
   
  Pour plus d’informations sur les jeux de sauvegarde, consultez [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
@@ -71,7 +70,7 @@ ms.locfileid: "47840547"
 |**Ne pas compresser la sauvegarde**|Cliquez sur cette option pour créer une sauvegarde non compressée, indépendamment de la valeur par défaut au niveau du serveur.|  
   
 ### <a name="encryption"></a>Chiffrement  
- Pour créer une sauvegarde chiffrée, activez la case à cocher **Chiffrer le fichier de sauvegarde** . Sélectionnez l'algorithme de chiffrement à utiliser pour l'étape de chiffrement et fournissez un certificat ou une clé asymétrique dans la liste des certificats ou clés numériques existants. Les algorithmes disponibles pour le chiffrement sont :  
+ Pour créer une sauvegarde chiffrée, activez la case à cocher **Chiffrer le fichier de sauvegarde** . Sélectionnez l'algorithme de chiffrement à utiliser pour l'étape de chiffrement et fournissez un certificat ou une clé asymétrique dans la liste des certificats ou clés numériques existants. Les algorithmes disponibles pour le chiffrement sont :  
   
 -   AES 128  
   
@@ -88,7 +87,7 @@ ms.locfileid: "47840547"
 >   
 >  Seules les clés résidant dans la gestion de clés extensible (EKM) sont prises en charge.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Sauvegarder un journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md)   
  [Sauvegarder des fichiers et des groupes de fichiers &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-files-and-filegroups-sql-server.md)   

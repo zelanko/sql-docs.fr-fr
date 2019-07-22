@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0b126b8d-4fe7-443d-8a9a-c266350181e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e603ba0df7124e1f3ad7b04407d761cc27b5870e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d171085f34e2a20f9e4b1db809327d078ce08436
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62516114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990590"
 ---
 # <a name="system-data-collection-set-reports"></a>Rapports de jeux d'éléments de collecte de données système
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "62516114"
  La table située au-dessous du graphique répertorie les heures de collecte de données et les données d'utilisation correspondantes.  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Sous-rapport Utilisation du disque pour la base de données : <nom_base_de_données>  
- Le sous-rapport **Utilisation du disque pour la base de données :**_<nom_base_de_données>_ s’affiche quand vous cliquez sur un nom de base de données dans la table de résumé du rapport Jeu d’éléments de collecte Utilisation du disque. Ce rapport fournit une répartition numérique et graphique de l'utilisation de l'espace par les fichiers de données et les fichiers journaux de transactions de la base de données. L'utilisation de l'espace pour les fichiers de données est catégorisée en tant que pourcentage alloué aux pages d'index, à l'espace non alloué, aux pages de données et à l'espace inutilisé. Ces catégories sont définies comme suit :  
+ Le sous-rapport **Utilisation du disque pour la base de données :** _<nom_base_de_données>_ s’affiche quand vous cliquez sur un nom de base de données dans la table de résumé du rapport Jeu d’éléments de collecte Utilisation du disque. Ce rapport fournit une répartition numérique et graphique de l'utilisation de l'espace par les fichiers de données et les fichiers journaux de transactions de la base de données. L'utilisation de l'espace pour les fichiers de données est catégorisée en tant que pourcentage alloué aux pages d'index, à l'espace non alloué, aux pages de données et à l'espace inutilisé. Ces catégories sont définies comme suit :  
   
 |Catégorie|Définition|  
 |--------------|----------------|  
@@ -133,7 +132,7 @@ ms.locfileid: "62516114"
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Attentes|Le graphique Attentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche les attentes rencontrées par les threads exécutés par catégorie d'attente. Vous pouvez accéder à un rapport détaillé en cliquant sur un segment du graphique. En plus de fournir des statistiques sur les attentes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une plage de temps plus étroite, ce rapport fournit des informations à propos des catégories d'attente sous forme de tableau. Pour chaque catégorie, telle que l'UC et ses sous-catégories, le tableau indique le nombre d'attentes, le temps d'attente et le pourcentage total de temps d'attente.|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Activité|Les différents aspects de l'activité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont accessibles à partir du graphique Activité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les rapports que vous pouvez obtenir en cliquant sur un point sur la courbe de graphique de Compilations SQL/s sont les suivants :<br /><br /> <br /><br /> Connexions et sessions<br /><br /> Demandes<br /><br /> Taux d'accès au plan du travail<br /><br /> Caractéristiques tempdb|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Collecte de données](../../relational-databases/data-collection/data-collection.md)   
  [Afficher un rapport de jeu d’éléments de collecte &#40;SQL Server Management Studio&#41;](../../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md)  
   

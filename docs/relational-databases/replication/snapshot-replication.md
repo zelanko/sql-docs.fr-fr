@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8218845aa40e78578dc590be0f00b27841c69d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 066021013e2c3e3f43c229965152d66ce2c328e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907594"
 ---
 # <a name="snapshot-replication"></a>Réplication d'instantané
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47650457"
 > [!NOTE]  
 >  La réplication d'instantané peut être utilisée seule, mais le processus d'instantané (qui crée une copie de tous les objets et données spécifiés par une publication) est également couramment utilisé pour fournir le jeu initial de données et d'objets de base de données pour les publications transactionnelles et de fusion.  
   
- L'utilisation de la réplication d'instantané seule est la plus appropriée quand une ou plusieurs des conditions suivantes sont remplies :  
+ L'utilisation de la réplication d'instantané seule est la plus appropriée quand une ou plusieurs des conditions suivantes sont remplies :  
   
 -   Les données changent peu fréquemment.  
   

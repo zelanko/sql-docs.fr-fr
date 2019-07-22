@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 816f1983723b119d7092013fad6296668621fe75
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: e431b51db33f889acd9bcce5e93222b451ad3237
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000463"
 ---
 # <a name="table-transact-sql"></a>table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ Pour plus d’informations sur la syntaxe, consultez [CREATE TABLE &#40;Transact
 *collation_definition*  
 Classement de la colonne composée de paramètres régionaux [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows et d’un style de comparaison, de paramètres régionaux Windows et d’une notation binaire ou d’un classement [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l’argument *collation_definition* n’est pas spécifié, la colonne hérite du classement de la base de données active. Ou, si la colonne est définie comme un type CLR (Common Language Runtime) défini par l'utilisateur, elle hérite du classement du type défini par l'utilisateur.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Variables de référence **table** par nom dans la clause FROM d’un traitement, comme dans l’exemple suivant :
   
 ```sql
@@ -141,7 +140,7 @@ Pour réactiver la compilation différée des variables de table dans toutes les
 ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
 ```
 
-Vous pouvez également désactiver la compilation différée des variables de table pour une requête spécifique en désignant DISABLE_DEFERRED_COMPILATION_TV comme un indicateur de requête USE HINT.  Exemple :
+Vous pouvez également désactiver la compilation différée des variables de table pour une requête spécifique en désignant DISABLE_DEFERRED_COMPILATION_TV comme un indicateur de requête USE HINT.  Par exemple :
 
 ```sql
 DECLARE @LINEITEMS TABLE 
@@ -199,7 +198,7 @@ FROM HumanResources.Employee;
 GO  
 ```  
   
-### <a name="b-creating-an-inline-table-valued-function"></a>b. Création d'une fonction table incluse  
+### <a name="b-creating-an-inline-table-valued-function"></a>B. Création d'une fonction table incluse  
 L'exemple suivant retourne une fonction table incluse. Pour chaque produit vendu au magasin, il retourne trois colonnes : `ProductID`, `Name` et la somme des totaux annuels par magasin sous `YTD Total`.
   
 ```sql

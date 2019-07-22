@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 273ea09d-60ee-47f5-8828-8bdc7a3c3529
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 418259da44f85c3dadbadc413affc937991b2974
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+ms.openlocfilehash: 40f30fd646e166cc9b8db433934d22a378c907cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995626"
 ---
 # <a name="determining-effective-database-engine-permissions"></a>Détermination des autorisations effectives du moteur de base de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -146,7 +145,7 @@ SELECT pr.type_desc, pr.name, pe.state_desc,
    ON oj.schema_id = s.schema_id
  WHERE class_desc = 'OBJECT_OR_COLUMN';
 ```
-Utilisez la fonction `HAS_PERMS_BY_NAME` pour déterminer si un utilisateur particulier (dans ce cas `TestUser`) dispose d’une autorisation. Exemple :   
+Utilisez la fonction `HAS_PERMS_BY_NAME` pour déterminer si un utilisateur particulier (dans ce cas `TestUser`) dispose d’une autorisation. Par exemple :   
 ```sql
 EXECUTE AS USER = 'TestUser';
 SELECT HAS_PERMS_BY_NAME ('dbo.T1', 'OBJECT', 'SELECT');
@@ -157,5 +156,5 @@ Pour obtenir des détails sur la syntaxe, consultez [HAS_PERMS_BY_NAME](../../..
 ## <a name="see-also"></a>Voir aussi :
 
 [Prise en main des autorisations du moteur de base de données](../../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)    
-[Didacticiel : Bien démarrer avec le moteur de base de données](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
+[Tutoriel : Bien démarrer avec le moteur de base de données](Tutorial:%20Getting%20Started%20with%20the%20Database%20Engine.md) 
 

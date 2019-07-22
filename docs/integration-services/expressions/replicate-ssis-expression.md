@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e7a37b93-6d1d-42d5-9a65-de1790abf6a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 09c4ff1eaccf529ba30a7bd0d4b9884ae94139ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 720104d8ad0c69898377eb909bc4e92a1c3d4d08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967915"
 ---
 # <a name="replicate-ssis-expression"></a>REPLICATE (expression SSIS)
 
@@ -47,7 +46,7 @@ REPLICATE(character_expression,times)
 ## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si l’argument *times* a pour valeur zéro, la fonction retourne une chaîne de longueur nulle.  
   
  Si l'argument *times* est un nombre négatif, la fonction renvoie une erreur.  
@@ -77,7 +76,7 @@ REPLICATE(Name, @Times)
 REPLICATE(@Name, (DT_I4(Times))  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

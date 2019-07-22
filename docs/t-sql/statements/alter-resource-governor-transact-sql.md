@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7c3b106d89db436ebf2a2d60abe7f5eee5fca2f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 710604102132d3b50b328c80f12cf41cd66a1219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927212"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  L'instruction ALTER RESOURCE GOVERNOR RECONFIGURE doit être exécutée pour que les modifications de configuration soient appliquées.  
   
- CLASSIFIER_FUNCTION = { _schema_name_**.**_function_name_ | NULL }  
+ CLASSIFIER_FUNCTION = { _schema_name_ **.** _function_name_ | NULL }  
  Enregistre la fonction de classification spécifiée par *schema_name.function_name*. Cette fonction classifie chaque nouvelle session et assigne les demandes et requêtes de session à un groupe de charges de travail. Lorsque la valeur NULL est utilisée, les nouvelles sessions sont assignées automatiquement au groupe de charges de travail par défaut.  
   
  RESET STATISTICS  
@@ -99,14 +98,14 @@ ALTER RESOURCE GOVERNOR
   
  Définit les opérations d'E/S maximales en file d'attente par volume disque. Ces opérations d'E/S en peuvent être des lectures ou des écritures de toute taille.  La valeur maximale pour MAX_OUTSTANDING_IO_PER_VOLUME est 100. Ce n'est pas un pourcentage. Ce paramètre est conçu pour adapter la gouvernance des ressources d'E/S aux spécifications d'E/S d'un volume disque. Nous vous recommandons de faire des essais avec différentes valeurs et d’utiliser un outil d’étalonnage comme IOMeter, [DiskSpd](https://gallery.technet.microsoft.com/DiskSpd-a-robust-storage-6cd2f223) ou SQLIO (déprécié) afin d’identifier la valeur maximale pour votre sous-système de stockage. Ce paramètre offre une vérification de la sécurité au niveau du système qui permet à SQL Server d'obtenir le minimum d'E/S par seconde pour les pools de ressources même si d'autres pools sont définis avec le paramètre MAX_IOPS_PER_VOLUME illimité. Pour plus d’informations sur MAX_IOPS_PER_VOLUME, consultez [CREATE RESOURCE POOL](../../t-sql/statements/create-resource-pool-transact-sql.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  ALTER RESOURCE GOVERNOR DISABLE, ALTER RESOURCE GOVERNOR RECONFIGURE et ALTER RESOURCE GOVERNOR RESET STATISTICS ne peuvent pas être utilisés dans une transaction utilisateur.  
   
  Le paramètre RECONFIGURE fait partie de la syntaxe de Resource Governor et ne doit pas être confondu avec [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), qui est une instruction DDL distincte.  
   
  Nous vous recommandons de connaître les états du gouverneur de ressources avant d'exécuter des instructions DDL. Pour plus d’informations, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
@@ -187,7 +186,7 @@ ALTER RESOURCE GOVERNOR
 WITH (MAX_OUTSTANDING_IO_PER_VOLUME = 20);   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   

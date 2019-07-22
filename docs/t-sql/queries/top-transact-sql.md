@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70102127d7d48160c5320e02a97113cdd903fb0b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948249"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -182,7 +181,7 @@ ORDER BY HireDate DESC;
 GO  
 ```  
   
-#### <a name="b-using-top-with-a-variable"></a>b. Utilisation de TOP avec une variable  
+#### <a name="b-using-top-with-a-variable"></a>B. Utilisation de TOP avec une variable  
 L'exemple suivant utilise une variable pour spécifier le nombre d'employés retournés dans le jeu de résultats de la requête.  
   
 ```sql  
@@ -253,7 +252,7 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-#### <a name="b-using-top-to-limit-the-number-of-rows-inserted"></a>b. Utilisation de TOP pour limiter le nombre de lignes insérées  
+#### <a name="b-using-top-to-limit-the-number-of-rows-inserted"></a>B. Utilisation de TOP pour limiter le nombre de lignes insérées  
 L’exemple suivant crée la table `EmployeeSales` et insère le nom et les ventes de l’année des 5 premiers employés de la table `HumanResources.Employee`. L’instruction INSERT choisit 5 lignes retournées par l’instruction `SELECT`, qui répondent aux critères définis dans la clause WHERE. La clause OUTPUT affiche les lignes insérées dans la table `EmployeeSales`. Notez que la clause ORDER BY dans l’instruction SELECT n’est pas utilisée pour déterminer les 5 premiers employés.  
   
 ```sql  
@@ -337,7 +336,7 @@ FROM DimEmployee ORDER BY LastName;
   
 Résultat : 33 lignes sont retournées, car 3 employés du nom de Brown sont regroupés à la ligne 31.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   

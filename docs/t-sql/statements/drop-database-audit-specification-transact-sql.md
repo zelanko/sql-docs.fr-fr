@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e1b3affaf97a04ddbe16b114d340fa989dab7f5b
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 828ff285606fcd1f0daf1c7dd2343a1c3cfed9e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898182"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +44,10 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
  *audit_specification_name*  
  Nom d'un objet de spécification d'audit existant.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  DROP DATABASE AUDIT SPECIFICATION supprime les métadonnées pour la spécification d'audit, mais pas les données d'audit recueillies avant l'exécution de la commande DROP. Vous devez définir l’état d’une spécification d’audit de base de données sur OFF à l’aide de `ALTER DATABASE AUDIT SPECIFICATION` pour que cette spécification puisse être supprimée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les utilisateurs disposant de l’autorisation **ALTER ANY DATABASE AUDIT** peuvent supprimer des spécifications d’audit de base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -63,7 +62,7 @@ GO
   
  Pour obtenir un exemple complet de création d’audit, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e58d15af6605a8b50440fcff6e181a39c58098f4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 9d7e3e718cae97ece079bbd44ad1a17068201668
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939219"
 ---
 # <a name="enhance-general-replication-performance"></a>Améliorer les performances générales de la réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ ms.locfileid: "54134362"
   
 -   Limitez l'utilisation des types de données d'objets volumineux (LOB).  
   
-     Les objets volumineux nécessitent plus d'espace de stockage et de traitement que les autres types de données de colonnes. N'incluez pas ces colonnes dans les articles à moins que votre application en ait besoin. Les types de données **text**, **ntext**et **image** sont déconseillés. Si vous incluez des données de type LOB, il est recommandé d'utiliser respectivement les types de données **varchar(max)**, **nvarchar(max)**, **varbinary(max)**.  
+     Les objets volumineux nécessitent plus d'espace de stockage et de traitement que les autres types de données de colonnes. N'incluez pas ces colonnes dans les articles à moins que votre application en ait besoin. Les types de données **text**, **ntext**et **image** sont déconseillés. Si vous incluez des données de type LOB, il est recommandé d'utiliser respectivement les types de données **varchar(max)** , **nvarchar(max)** , **varbinary(max)** .  
   
      Dans le cas d'une réplication transactionnelle, envisagez d'utiliser le profil de l'Agent de distribution appelé **Profil de distribution pour le flux OLEDB**. Pour plus d’informations, voir [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

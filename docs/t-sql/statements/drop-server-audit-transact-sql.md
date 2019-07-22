@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3e6e67c4be74332bb9faf25eeac62f811ad86526
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f0bb90a3dd13ffd245c1cac5a9ee1610055aae55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929283"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +39,14 @@ DROP SERVER AUDIT audit_name
     [ ; ]  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous devez définir l'état d'un audit sur l'option OFF afin d'apporter toute modification à un audit. Si DROP AUDIT est exécuté alors qu'un audit est activé avec des options autres que STATE=OFF, un message d'erreur MSG_NEED_AUDIT_DISABLED s'affiche.  
   
  Un DROP SERVER AUDIT supprime les métadonnées pour l'audit, mais pas les données d'audit recueillies avant l'exécution de la commande.  
   
  DROP SERVER AUDIT ne supprime pas de spécifications d'audit de serveur ou de base de données associées. Ces spécifications doivent être supprimées manuellement ou laissées orphelines et mappées ultérieurement à un nouvel audit du serveur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour créer, modifier ou supprimer des principaux de l'audit du serveur, vous devez posséder l'autorisation ALTER ANY SERVER AUDIT ou CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
@@ -61,7 +60,7 @@ DROP SERVER AUDIT HIPAA_Audit;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   

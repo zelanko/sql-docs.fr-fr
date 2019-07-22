@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 223d1f8cab99a75d78bfa75b25a2092e4ba83865
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6776cea91288d22ed6765e8c4651266c0bcffa7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943708"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Connexion des abonnements pouvant être mis à jour
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "62760339"
   
  Les connexions sont utilisées par les déclencheurs qui sont activés pour l’Abonné et propagent les modifications sur le serveur de publication. Ce compte est nécessaire même si vous avez sélectionné **Mettre les modifications en file d’attente et valider dès que possible** dans la page **Abonnements pouvant être mis à jour**. L’Assistant Nouvel abonnement par défaut configure la mise à jour en attente avec la possibilité de passer à une mise à jour immédiate si nécessaire.  
   
-> **IMPORTANT** Le compte spécifié pour la connexion doit uniquement avoir l’autorisation d’insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d’autres autorisations. Accordez des autorisations sur les vues de la base de données de publication se présentant sous la forme **syncobj_**_\<Nombre_hexadécimal>_ au compte que vous avez configuré pour chaque Abonné.  
+> **IMPORTANT** Le compte spécifié pour la connexion doit uniquement avoir l’autorisation d’insérer, de mettre à jour et de supprimer des données sur les vues créées par la réplication dans la base de données de publication. Il ne doit pas bénéficier d’autres autorisations. Accordez des autorisations sur les vues de la base de données de publication se présentant sous la forme **syncobj_** _\<Nombre_hexadécimal>_ au compte que vous avez configuré pour chaque Abonné.  
   
  Trois options sont possibles pour le type de connexion :  
   
@@ -36,7 +35,7 @@ ms.locfileid: "62760339"
   
 -   Un serveur lié créé par la réplication. La connexion se fait à l'aide des informations d'identification de l'utilisateur qui apporte la modification pour l'abonné.  
   
- Vous pouvez spécifier les deux premières options dans cet Assistant. La dernière option peut uniquement être spécifiée à l’aide de [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Indiquez la valeur **1** pour le paramètre **@security_mode**.  
+ Vous pouvez spécifier les deux premières options dans cet Assistant. La dernière option peut uniquement être spécifiée à l’aide de [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md). Indiquez la valeur **1** pour le paramètre **@security_mode** .  
   
 ## <a name="options"></a>Options  
  **Créer un serveur lié qui se connecte par une connexion d'authentification SQL Server :**  

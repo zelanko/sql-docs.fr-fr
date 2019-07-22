@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cf3099efd6ccb301be024c6a18b2279d0482f26
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.openlocfilehash: e407ab5ac5e69c78d19a1022210ca8da5e470d64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927594"
 ---
 # <a name="username-transact-sql"></a>USER_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +51,7 @@ USER_NAME ( [ id ] )
 ## <a name="return-types"></a>Types de retour  
  **nvarchar (256)**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si *id* est omis, l’utilisateur actuel dans le contexte actuel est pris en compte. Si le paramètre contient le mot NULL, retourne NULL. Lorsque USER_NAME est appelé sans spécifier un *id* après une instruction EXECUTE AS, USER_NAME renvoie le nom de l’utilisateur impersonné. Si un principal Windows accède à la base de données par l'intermédiaire de son appartenance à un groupe, USER_NAME renvoie le nom du principal Windows à la place du groupe.  
   
 ## <a name="examples"></a>Exemples  
@@ -65,7 +64,7 @@ SELECT USER_NAME(13);
 GO  
 ```  
   
-### <a name="b-using-username-without-an-id"></a>b. Utilisation de USER_NAME sans ID  
+### <a name="b-using-username-without-an-id"></a>B. Utilisation de USER_NAME sans ID  
  Le code exemple suivant recherche le nom de l'utilisateur actuel sans spécifier un ID.  
   
 ```  
@@ -155,7 +154,7 @@ name
 User7                              
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CURRENT_TIMESTAMP &#40;Transact-SQL&#41;](../../t-sql/functions/current-timestamp-transact-sql.md)   

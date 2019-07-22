@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c5e1669-a987-4dda-9ebf-f573ce615c34
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 8d4a1365424adcf8601fdccb6cd59dc5d94b7f2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8aae17057d9b4b114ed7ad03fd7e29ad61f127b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937735"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930246"
 ---
 # <a name="hasz-geography-data-type"></a>HasZ (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65937735"
   
  Type de retour CLR : **Booléen**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="examples"></a>Exemples  
   
@@ -52,7 +51,7 @@ SELECT @p.HasZ
 --Returns: 1 (true)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes étendues sur des instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [Z &#40;type de données geography&#41;](../../t-sql/spatial-geography/z-geography-data-type.md)  
   

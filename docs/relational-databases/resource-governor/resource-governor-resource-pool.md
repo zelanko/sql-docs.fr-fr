@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 306b6278-e54f-42e6-b746-95a9315e0cbe
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 7132cacb79266243aab94e0b71e18b4a8cdcbb0f
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 0a65cb01d34082e59d85198505740c345bb7bd08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942668"
 ---
 # <a name="resource-governor-resource-pool"></a>Pool de ressources du gouverneur de ressources
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -124,7 +123,7 @@ Les pools de ressources définis par l'utilisateur sont ceux que vous créez pou
 |Décrit comment modifier les paramètres du pool de ressources.|[Modifier les paramètres de pool de ressources](../../relational-databases/resource-governor/change-resource-pool-settings.md)|  
 |Décrit comment supprimer un pool de ressources.|[Supprimer un pool de ressources](../../relational-databases/resource-governor/delete-a-resource-pool.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [gouverneur de ressources](../../relational-databases/resource-governor/resource-governor.md)   
  [Groupe de charge de travail du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor-workload-group.md)   
  [Fonction classifieur du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor-classifier-function.md)   

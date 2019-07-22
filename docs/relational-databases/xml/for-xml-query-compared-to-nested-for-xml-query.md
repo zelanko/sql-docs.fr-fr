@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5bc778a2f0b1126925003ebb13df0f5a0dd1ec0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f00e060bf477d6e43f2ddd42e0fd4bbbf6515898
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943347"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Comparaison de la requête FOR XML et de la requête FOR XML imbriquée
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Cette rubrique compare une requête FOR XML d'un seul niveau à une requête FOR XML imbriquée. L'un des avantages liés à l'utilisation des requêtes FOR XML imbriquées est que vous pouvez spécifier une combinaison de données XML centrées sur l'attribut et centrées sur l'élément pour les résultats de requête. L'exemple suivant en offre une illustration.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  La requête `SELECT` suivante extrait de la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] des informations sur les catégories et les sous-catégories de produits. La requête ne contient aucune clause FOR XML imbriquée.  
   
 ```  
@@ -202,7 +201,7 @@ FOR XML AUTO, TYPE
   
  Si vous supprimez la directive `ELEMENTS` de la requête `FOR XML` imbriquée qui génère les sous-catégories de produits, la totalité du résultat est centrée sur l'attribut. Vous pouvez ensuite écrire cette requête sans imbrication. L'ajout de la directive `ELEMENTS` aboutit à un document XML en partie centré sur l'attribut et en partie centré sur l'élément. Ce résultat ne peut pas être généré par une requête FOR XML d'un seul niveau.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser des requêtes FOR XML imbriquées](../../relational-databases/xml/use-nested-for-xml-queries.md)  
   
   
