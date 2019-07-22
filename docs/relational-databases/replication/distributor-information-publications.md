@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0275065ac80f9b34e32da885ba838da63ea6711
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 90459364211bef6714ba3af63cdc4669e0190049
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128298"
 ---
 # <a name="distributor-information-publications"></a>Informations du serveur de distribution, publications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +159,7 @@ L'onglet **Agents** affiche des informations sur les agents et les travaux de ma
  Nombre de conflits sur l'abonné pendant le processus de fusion.  
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Surveillance de la réplication](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)  
   

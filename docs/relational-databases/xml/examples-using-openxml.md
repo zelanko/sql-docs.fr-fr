@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c072fc97536259b16938cc36dcbc21dbbbb97b57
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943386"
 ---
 # <a name="examples-using-openxml"></a>Exemples : Utilisation de OPENXML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ LILAS      Carlos Gonzlez
   
  Dans la mesure où les éléments <`Customer`> n’ont pas de sous-éléments, si la même instruction SELECT s’exécute avec une valeur *flags* de **2**, pour indiquer qu’il s’agit d’un mappage centré sur l’élément, les valeurs de **CustomerID** et de **ContactName** pour les deux clients sont renvoyées comme NULL.  
   
- \@xmlDocument peut également être de type **xml** ou de type **(n)varchar(max)**.  
+ \@xmlDocument peut également être de type **xml** ou de type **(n)varchar(max)** .  
   
  Si, dans le document XML, les éléments <`CustomerID`> et <`ContactName`> sont des sous-éléments, le mappage centré sur l'élément extrait les valeurs.  
   
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
  Dans *SchemaDeclaration* (dans la clause WITH), le paramètre *ColPattern* est également spécifié avec les paramètres *ColName* et *ColType* . Le paramètre facultatif *ColPattern* correspond au modèle XPath spécifié pour définir les éléments suivants :  
   
--   Le modèle XPath (**.**) spécifié pour le paramètre *ColPattern* de la colonne **ProdID** de l’ensemble de lignes identifie le nœud de contexte (nœud actuel). Comme pour le paramètre *rowpattern* spécifié, il s’agit de l’attribut **ProductID** de l’élément <`OrderDetail`>.  
+-   Le modèle XPath ( **.** ) spécifié pour le paramètre *ColPattern* de la colonne **ProdID** de l’ensemble de lignes identifie le nœud de contexte (nœud actuel). Comme pour le paramètre *rowpattern* spécifié, il s’agit de l’attribut **ProductID** de l’élément <`OrderDetail`>.  
   
 -   Le paramètre *ColPattern* **../\@Quantity**, spécifié pour la colonne **Qty** de l’ensemble de lignes, identifie l’attribut **Quantity** du parent <`OrderDetail`>, nœud du nœud de contexte\<ProductID>.  
   
@@ -578,7 +577,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Il s’agit plus précisément de transmettre une variable de type **xml** (\@x) à la fonction **sp_xml_preparedocument()**.  
+ Il s’agit plus précisément de transmettre une variable de type **xml** (\@x) à la fonction **sp_xml_preparedocument()** .  
   
  Voici le résultat obtenu :  
   
@@ -597,7 +596,7 @@ id  lname   xmlname                   OverFlow
   
  Notez les points suivants par rapport au résultat obtenu :  
   
--   Pour la colonne **lname** de type **varchar(30)**, la valeur est récupérée à partir de l’élément <`lname`> correspondant.  
+-   Pour la colonne **lname** de type **varchar(30)** , la valeur est récupérée à partir de l’élément <`lname`> correspondant.  
   
 -   Pour la colonne **xmlname** de type **xml**, le même élément name est renvoyé en tant que valeur.  
   
@@ -802,7 +801,7 @@ Col1        BinaryCol
 1           0x1234567890  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)   
  [sp_xml_removedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)   
  [OPENXML &#40;Transact-SQL&#41;](../../t-sql/functions/openxml-transact-sql.md)   

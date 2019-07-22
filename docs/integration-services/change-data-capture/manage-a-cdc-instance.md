@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b5d988854d3dcf63b1a6be85d672fb2af31d6620
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04c7c9818bd008b87a0b6a76760674ea7112a605
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074031"
 ---
 # <a name="manage-a-cdc-instance"></a>Gérer une instance de capture de données modifiées
 
@@ -122,7 +121,7 @@ ms.locfileid: "65728719"
   
  Pour plus d'informations sur ces propriétés et la façon de les modifier, consultez [Edit the Advanced Properties](../../integration-services/change-data-capture/edit-the-advanced-properties.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédure : créer l'instance SQL Server de base de données de modifications](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Procédure : afficher les propriétés d'une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-view-the-cdc-instance-properties.md)   
  [Procédure : modifier les propriétés d'une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   

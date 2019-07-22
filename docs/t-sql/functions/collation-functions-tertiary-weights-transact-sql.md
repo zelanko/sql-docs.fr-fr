@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b9c1ce066768207f7a04d16e2f4c18666eb231d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d5012cadf7bdb028ce921f9039d5502363cbc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064692"
 ---
 # <a name="collation-functions---tertiaryweights-transact-sql"></a>Fonctions de classement - TERTIARY_WEIGHTS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -84,7 +83,7 @@ TERTIARY_WEIGHTS( non_Unicode_character_string_expression )
 |183|SQL_Danish_Pref_CP1_CI_AS|  
 |184|SQL_SwedishPhone_Pref_CP1_CI_AS|  
 |185|SQL_SwedishStd_Pref_CP1_CI_AS|  
-|186\.|SQL_Icelandic_Pref_CP1_CI_AS|  
+|186.|SQL_Icelandic_Pref_CP1_CI_AS|  
   
 Utilisez `TERTIARY_WEIGHTS` pour la définition d’une colonne calculée définie sur les valeurs d’une colonne de type **char**, **varchar** ou **varchar(max)** . La définition d’index sur la colonne calculée et sur la colonne de type **char**, **varchar** ou **varchar(max)** peut améliorer les performances quand la clause ORDER BY d’une requête spécifie cette colonne de type **char**, **varchar** ou **varchar(max)** .
   

@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc421f1fabd9f9efae8eaa187428c6136cfa2db8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 4661fa1963b120a091953bff883a0510a396345e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099995"
 ---
 # <a name="set-transaction-isolation-level-transact-sql"></a>SET TRANSACTION ISOLATION LEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,7 +126,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
  Des verrous de groupes sont placés dans les groupes de valeurs de clés qui correspondent aux conditions de recherche de chaque instruction exécutée dans une transaction. Cela empêche les autres transactions de mettre à jour ou d'insérer des lignes qui pourraient intervenir dans les instructions exécutées par la transaction active. Autrement dit, si l'une ou l'autre des instructions d'une transaction est exécutée une seconde fois, elle lira le même groupe de lignes. Les verrous de groupes sont conservés jusqu'au terme de la transaction. C'est le plus restrictif des niveaux d'isolation, parce qu'il verrouille des groupes de clés entiers et laisse les verrous en place jusqu'à la fin de la transaction. Comme l'accès concurrentiel est plus limité, utilisez cette option uniquement lorsque cela s'avère nécessaire. Cette option a le même effet que l'utilisation de l'option HOLDLOCK dans toutes les tables de toutes les instructions SELECT d'une transaction.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Une seule des options de niveau d'isolation peut être définie à la fois, et elle reste en vigueur durant cette connexion tant qu'elle n'est pas explicitement modifiée. Toutes les opérations de lecture effectuées au sein de la transaction obéissent aux règles du niveau d'isolation spécifié, sauf si un indicateur de table de la clause FROM d'une instruction spécifie un autre verrouillage ou un autre comportement de contrôle de version pour une table.  
   
  Les niveaux d'isolation des transactions définissent le type de verrous placés sur les opérations de lecture. Les verrous partagés placés pour READ COMMITTED ou REPEATABLE READ sont généralement des verrous de ligne, bien que ceux-ci puissent être promus au rang de verrous de page ou de table si la lecture fait référence à un nombre important de lignes d'une page ou d'une table. Si une ligne est modifiée par la transaction après avoir été lue, la transaction acquiert un verrou exclusif pour protéger cette ligne et ce verrou est maintenu jusqu'à la fin de la transaction. Par exemple, si une transaction REPEATABLE READ utilise un verrou partagé sur une ligne et qu'elle modifie ensuite cette ligne, le verrou partagé est converti en verrou exclusif de ligne.  
@@ -186,7 +185,7 @@ COMMIT TRANSACTION;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [DBCC USEROPTIONS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   

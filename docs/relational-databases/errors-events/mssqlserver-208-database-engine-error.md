@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4b1895f5-3197-4da1-af86-954c93507956
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a56971347adc1523ad2d65758c611a42c27c45ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a1b39638bf7ac09cac4a37d948ba13753ffb6d04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056808"
 ---
 # <a name="mssqlserver208"></a>MSSQLSERVER_208
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ Vérifiez les informations suivantes et corrigez l'instruction comme il convient
   
 -   L'utilisateur a l'autorisation d'accéder à l'objet. Pour vérifier les autorisations de l’utilisateur sur l’objet, utilisez la fonction système **Has_Perms_By_Name**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [USE &#40;Transact-SQL&#41;](~/t-sql/language-elements/use-transact-sql.md)  
 [Configuration de la visibilité des métadonnées](~/relational-databases/security/metadata-visibility-configuration.md)  
 [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](~/t-sql/functions/has-perms-by-name-transact-sql.md)  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f19a8450-2a28-40a6-8a7d-9f4eaea0447d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ca9de3172458d22d13ac6260138aa9895bdeff72
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 14333d96ce4a1022979a2998cb808bfa16cd7a0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51511905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087384"
 ---
 # <a name="export-as-policy-dialog-box"></a>Exporter en tant que stratégie, boîte de dialogue
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "51511905"
  Sélectionnez cette option pour enregistrer la stratégie sur l'instance de serveur locale.  
   
  **Vers le fichier**  
- Pour enregistrer la stratégie en tant que fichier XML, tapez le nom et le chemin d’accès du fichier ou utilisez le bouton d’exploration (**...**).  
+ Pour enregistrer la stratégie en tant que fichier XML, tapez le nom et le chemin d’accès du fichier ou utilisez le bouton d’exploration ( **...** ).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   
   

@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04d4881d79996a7795435cbaad12c8dc7259fdf9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: fb8915aa3c47225e2c4fe881388327e5758c4163
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117375"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +58,7 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
  PASSWORD ='*password*'  
  Mot de passe utilisé pour chiffrer la clé principale dans la base de données. *password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *password* est facultatif dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La clé principale de base de données est une clé symétrique qui permet de protéger les clés privées des certificats et des clés asymétriques présentes dans la base de données. Lors de sa création, la clé principale est chiffrée à l'aide de l'algorithme AES_256 et d'un mot de passe fourni par l'utilisateur. Dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], l'algorithme triple DES est utilisé. Pour permettre le déchiffrement automatique de la clé principale, une copie de la clé est chiffrée à l'aide de la clé principale de service et stockée dans la base de données et dans master. En général, la copie stockée dans master est mise à jour sans avertissement chaque fois que la clé principale est modifiée. Ce comportement par défaut peut être changé à l’aide de l’option DROP ENCRYPTION BY SERVICE MASTER KEY d’[ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md). Une clé principale qui n’est pas chiffrée par la clé principale de service doit être ouverte à l’aide de l’instruction [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md) et d’un mot de passe.  
   
  La colonne is_master_key_encrypted_by_server de l'affichage catalogue sys.databases dans master indique si la clé principale de base de données est chiffrée au moyen de la clé principale de service.  
@@ -75,7 +74,7 @@ Pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../
   
  La clés principale du service et les clés principales de base de données sont protégées à l'aide de l'algorithme AES-256.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -87,7 +86,7 @@ GO
 ```  
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md)   

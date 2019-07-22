@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6a7382cf-a360-4d62-b9d2-5d747f56f076
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a2a2bbe6261d2a20e410fb12743751cb9203f32e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63744a6731e7c57a21a821ce7ab65cb49e095e67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071533"
 ---
 # <a name="fileid-transact-sql"></a>FILE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ Une expression de type **sysname**, représentant le nom logique du fichier dont
 ## <a name="return-types"></a>Types de retour  
 **smallint**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 *file_name* correspond au nom de fichier logique affiché dans la colonne Nom de l’affichage catalogue sys.master_files ou sys.database_files.  
 
 `FILE_ID` retourne `NULL` si *file_name* ne correspond pas au nom logique d’un fichier de composant de la base de données active.
@@ -79,7 +78,7 @@ File ID
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités du moteur de base de données dépréciées dans SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [FILE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/file-name-transact-sql.md)   
  [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   

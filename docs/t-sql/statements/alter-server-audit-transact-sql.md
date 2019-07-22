@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 14ee8d172f48640f414bb27d4c600248acac99cb
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 85820073391fe2c61c297fc3b5d1ddae7e6163bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070312"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,13 +81,13 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > Dans l’instance managée Azure SQL Database, SQL Audit fonctionne au niveau du serveur et stocke des fichiers `.xel` dans le Stockage Blob Azure.
   
- FILEPATH **= '**_os\_file\_path_**'**  
+ FILEPATH **= '** _os\_file\_path_ **'**  
  Chemin d'accès de la piste d'audit. Le nom de fichier est généré en fonction du nom d'audit et du GUID d'audit.  
   
- MAXSIZE **=**_max\_size_  
+ MAXSIZE **=** _max\_size_  
  Taille maximale que peut atteindre le fichier d'audit. La valeur *max_size* doit être un entier suivi de **MB**, **GB**, **TB** ou **UNLIMITED**. La taille minimale que vous pouvez spécifier pour *max_size* est 2 **MB** et la taille maximale est 2 147 483 647 **TB**. Quand **UNLIMITED** est spécifié, la taille du fichier croît jusqu’à ce que le disque soit saturé. La spécification d’une valeur inférieure à 2 Mo génère l’erreur MSG_MAXSIZE_TOO_SMALL. La valeur par défaut est **UNLIMITED**.  
   
- MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=** _integer_ | **UNLIMITED**  
  Spécifie le nombre maximal de fichiers à conserver dans le système de fichiers. Quand le paramètre MAX_ROLLOVER_FILES=0 est défini, aucune limite n’est imposée quant au nombre de fichiers de substitution créés. La valeur par défaut est 0 : Le nombre maximal de fichiers qui peuvent être spécifiés est 2 147 483 647.  
   
  MAX_FILES =*integer*  
@@ -98,7 +97,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  Cette option pré-alloue la valeur MAXSIZE au fichier sur le disque. S'applique uniquement si MAXSIZE n'est pas égal à UNLIMITED. La valeur par défaut est OFF.  
   
- QUEUE_DELAY **=**_integer_  
+ QUEUE_DELAY **=** _integer_  
  Détermine la durée, en millisecondes, qui peut s'écouler avant que le traitement des actions d'audit soit forcé. Une valeur de 0 indique la remise synchrone. La valeur minimale du délai de requête définissable est 1000 (1 seconde), qui est la valeur par défaut. Le maximum est 2 147 483 647 (2 147 483,647 secondes ou 24 jours, 20 heures, 31 minutes, 23,647 secondes). La spécification d’un nombre non valide génère l’erreur MSG_INVALID_QUEUE_DELAY.  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
@@ -136,7 +135,7 @@ Force l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
  Chaîne ANSI ou Unicode, comme requis par la comparaison de prédicat. Aucune conversion implicite de type chaîne n'est effectuée pour les fonctions de comparaison de prédicat. La transmission d'un type incorrect provoque une erreur.  
  **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous devez spécifier au moins l'une des clauses TO, WITH ou MODIFY NAME lorsque vous appelez ALTER AUDIT.  
   
  Vous devez définir l'état d'un audit sur l'option OFF pour apporter des modifications à un audit. Si ALTER AUDIT est exécuté pendant qu’un audit est activé avec des options autres que STATE=OFF, un message d’erreur MSG_NEED_AUDIT_DISABLED s’affiche.  
@@ -145,7 +144,7 @@ Force l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 
   
  Vous ne pouvez pas modifier le GUID d’un audit après sa création.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour créer, modifier ou supprimer un principal de l'audit du serveur, vous devez posséder l'autorisation ALTER ANY SERVER AUDIT ou CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
@@ -167,7 +166,7 @@ WITH (STATE = ON);
 GO  
 ```  
   
-### <a name="b-changing-a-server-audit-target"></a>b. Modification de la cible d'un audit du serveur  
+### <a name="b-changing-a-server-audit-target"></a>B. Modification de la cible d'un audit du serveur  
  L'exemple suivant attribue à l'audit du serveur nommé `HIPAA_Audit` un fichier comme cible.  
   
 ```  
@@ -227,7 +226,7 @@ ALTER SERVER AUDIT [AuditDataAccess] WITH (STATE = ON);
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-specification-transact-sql.md)   
  [ALTER SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-specification-transact-sql.md)   

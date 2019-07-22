@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 322a2903-d7a6-4f52-9048-1bd413b4c799
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1d70fe813437ff6204173dc20df90d029f6568fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91fddb94bf028ec884a4589c7c4a88bd3be923e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65096864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097480"
 ---
 # <a name="how-to-use-the-table-designer-to-manage-tables-and-relationships"></a>Procédure : Utiliser le Concepteur de tables pour gérer les tables et les relations
 Le Concepteur de tables offre une expérience visuelle parallèle à l’Éditeur Transact\-SQL pour la création et la modification de la structure des tables, y compris des objets de programmation propres aux tables, pour les bases de données SQL Server.  Il s’exécute lorsque l’utilisateur crée une table pour une base de données connectée ou un projet, ou double-clique pour modifier une table dans l’Explorateur d’objets SQL Server ou l’Explorateur de solutions.  

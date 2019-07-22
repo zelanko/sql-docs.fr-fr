@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 1197c9b58b1bb6830aa7d1eb4811d5b82c4e7182
-ms.sourcegitcommit: cead0faa2fa91d849a41d25e247a0ceba4310d4a
+ms.openlocfilehash: 595ef410a631da1eb1d71e7b2d20c75fd09e4bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56893449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113479"
 ---
 # <a name="plan-guides"></a>Repères de plan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -170,7 +169,7 @@ where SalesOrderID =  @so_id',
 |Explique comment utiliser SQL Server Profiler pour créer et tester des repères de plan.|[Utiliser le Générateur de profils SQL Server pour créer et tester des repères de plan](../../relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md)|  
 |Explique comment valider des repères de plan.|[Valider des repères de plan après la mise à niveau](../../relational-databases/performance/validate-plan-guides-after-upgrade.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)   

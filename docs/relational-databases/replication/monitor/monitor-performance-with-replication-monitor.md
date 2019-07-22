@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0881bb74dbd5018d194464d6a8ce58161062a901
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 784bfc96edf7e3ed589dbafe6359529214a0c6c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111685"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>Analyser les performances avec le Moniteur de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +97,7 @@ ms.locfileid: "54130579"
 ## <a name="view-transactions-and-delivery-time-for-transactional-replication"></a>Afficher les transactions et les temps de remise pour la réplication transactionnelle  
  Pour la réplication transactionnelle, le moniteur de réplication affiche des informations sur le nombre de transactions dans la base de données de distribution qui n'ont pas encore été distribuées à un Abonné et sur le temps estimé pour distribuer ces transactions. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication.md)   
  [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)  
   

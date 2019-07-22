@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 17899078-8ba3-4f40-8769-e9837dc3ec60
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8b5f187d7efb44997cf53a4064daee4a83206a82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 446143898d6537ac03ab0203f81973ed7fdaba36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086623"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Spécifier un intervalle de données modifiées
 
@@ -112,7 +111,7 @@ ms.locfileid: "65728582"
   
  **Rubrique suivante :** [Déterminer si les données modifiées sont prêtes](../../integration-services/change-data-capture/determine-whether-the-change-data-is-ready.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)   
  [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   
  [Tache d'exécution de requêtes SQL](../../integration-services/control-flow/execute-sql-task.md)   

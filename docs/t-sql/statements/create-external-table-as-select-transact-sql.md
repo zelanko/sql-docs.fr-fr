@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d1c06397b74ecab0f29cb293d7efa591b36fa1ac
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073142"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -120,7 +119,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  SELECT \<select_criteria> Remplit la nouvelle table avec les résultats d’une instruction SELECT. *select_criteria* correspond au corps de l’instruction SELECT qui détermine les données à copier vers la nouvelle table. Pour plus d’informations sur les instructions SELECT, consultez [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette commande, les **utilisateurs de la base de données** ont besoin des autorisations ou appartenances suivantes :  
   
 -   Autorisation **ALTER SCHEMA** pour le schéma local devant contenir la nouvelle table ou appartenance au rôle de base de données fixe **db_ddladmin**.  
@@ -217,7 +216,7 @@ WITH (
 ) AS SELECT * FROM dimCustomer;  
 ```  
   
-### <a name="b-use-a-query-hint-with-create-external-table-as-select-cetas"></a>b. Utiliser un indicateur de requête avec CREATE EXTERNAL TABLE AS SELECT (CETAS)  
+### <a name="b-use-a-query-hint-with-create-external-table-as-select-cetas"></a>B. Utiliser un indicateur de requête avec CREATE EXTERNAL TABLE AS SELECT (CETAS)  
  Cette requête montre la syntaxe de base pour l’utilisation d’un indicateur de jointure de requête avec l’instruction CETAS. Une fois la requête envoyée, la base de données utilise la stratégie de jointure hachée pour générer le plan de requête. Pour plus d’informations sur les indicateurs de jointure et sur l’utilisation de la clause OPTION, consultez [Clause OPTION &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).  
   
 > [!NOTE]  
@@ -238,7 +237,7 @@ ON ( T1.CustomerKey = T2.CustomerKey )
 OPTION ( HASH JOIN );  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
  [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md)   

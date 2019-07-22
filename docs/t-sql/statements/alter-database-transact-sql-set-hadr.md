@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 040c30ce4c48ce8d1fc596b88bae4bc1fec242aa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065734"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ALTER DATABASE database_name
  SET HADR  
  Exécute la commande [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] spécifiée sur le serveur spécifié.  
   
- { AVAILABILITY GROUP **=**_group_name_ | OFF }  
+ { AVAILABILITY GROUP **=** _group_name_ | OFF }  
  Joint ou supprime la base de données de disponibilité dans le groupe de disponibilité spécifié, comme suit :  
   
  *group_name*  
@@ -129,7 +128,7 @@ ALTER DATABASE database_name
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER sur la base de données. La jointure d’une base de données à un groupe de disponibilité nécessite l’appartenance au rôle de base de données fixe **db_owner**.  
   
 ## <a name="examples"></a>Exemples  
@@ -142,7 +141,7 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 > [!NOTE]  
 >  Pour consulter cette instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] utilisée en contexte, consultez [Créer un groupe de disponibilité &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   

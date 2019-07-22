@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3d35982c6c1b26b957f1aa59b934106f4c09edc8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f9caf29596f3a5cf610e02ffcf4f27bfacbce668
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001636"
 ---
 # <a name="alter-search-property-list-transact-sql"></a>ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +106,7 @@ SELECT property_int_id FROM sys.registered_search_properties;
  DROP  
  Supprime la propriété spécifiée de la liste de propriétés spécifiée par *list_name*. La suppression d'une propriété annule son inscription ; elle ne peut donc plus faire l'objet d'une recherche.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Chaque index de recherche en texte intégral ne peut avoir qu'une seule liste de propriétés de recherche.  
   
  Pour permettre l'interrogation sur une propriété de recherche donnée, vous devez l'ajouter à la liste des propriétés de recherche de l'index de recherche en texte intégral, puis remplir à nouveau l'index.  
@@ -170,7 +169,7 @@ GO
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CONTROL sur la liste de propriétés.  
   
 ## <a name="examples"></a>Exemples  
@@ -210,7 +209,7 @@ ALTER SEARCH PROPERTY LIST DocumentPropertyList
 DROP 'Comments' ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [DROP SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)   
  [sys.registered_search_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-registered-search-properties-transact-sql.md)   

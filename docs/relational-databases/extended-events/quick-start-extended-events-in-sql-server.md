@@ -10,14 +10,13 @@ ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc8a06380e54e49f188813f29fe6c0f4ee68346f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a378daeb4307b9f99e055edafd5cb21d95c30977
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009410"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Démarrage rapide : Événements étendus dans SQL Server
 
@@ -110,11 +109,11 @@ Le texte et les captures d’écran qui l’accompagnent peuvent perdre en préc
 
     ![Nouvelle session > Événements > Configurer > Filtre (prédicat) > Champ](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Cliquez sur l’onglet **Filtre (prédicat)**. Ensuite, cliquez sur **Cliquez ici pour ajouter une clause**, dans le but de capturer toutes les instructions SQL SELECT qui ont une clause HAVING.
+7. Cliquez sur l’onglet **Filtre (prédicat)** . Ensuite, cliquez sur **Cliquez ici pour ajouter une clause**, dans le but de capturer toutes les instructions SQL SELECT qui ont une clause HAVING.
 
 8. Dans la liste déroulante **Champ** , choisissez **sqlserver.sql_text**.
    - Pour **Opérateur** , choisissez un opérateur LIKE.
-   - Pour **Valeur** , tapez **%SELECT%HAVING%**.
+   - Pour **Valeur** , tapez **%SELECT%HAVING%** .
 
     > [!NOTE]
     > Dans ce nom en deux parties, *sqlserver* correspond au nom du package et *sql_text* au nom du champ. L’événement que nous avons choisi précédemment, *sql_statement_completed* doit être dans le même package que le champ que nous choisissons.
@@ -411,7 +410,7 @@ Dans l’ **Explorateur d’objets**de SSMS, vous pouvez cliquer avec le bouton 
 Il existe d’innombrables scénarios d’utilisation efficace des événements étendus. Les articles suivants donnent des exemples de scénarios qui impliquent les verrous utilisés pendant les requêtes.
 
 
-Les scénarios spécifiques des sessions d’événements dont le but est d’évaluer des verrous sont décrits dans les articles suivants. Les articles présentent également certaines techniques avancées, telles que l’utilisation de **@dbid**et de l’instruction `EXECUTE (@YourSqlString)`dynamique :
+Les scénarios spécifiques des sessions d’événements dont le but est d’évaluer des verrous sont décrits dans les articles suivants. Les articles présentent également certaines techniques avancées, telles que l’utilisation de **@dbid** et de l’instruction `EXECUTE (@YourSqlString)`dynamique :
 
 - [Trouver les objets comportant le plus de verrous](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - Ce scénario utilise l’objet package0.histogram cible, qui traite les données d’événement brutes avant de vous les afficher.

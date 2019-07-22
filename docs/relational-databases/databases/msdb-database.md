@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5032cb2d-65a0-40dd-b569-4dcecdd58ceb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ecbe9589a1219920847adf9af9aa99c24672d94d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 2551ad6702eea03fc440b52437faef8cea8dc75f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100437"
 ---
 # <a name="msdb-database"></a>Base de données msdb
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "51560183"
   
 |Option de base de données|Valeur par défaut|Peut être modifiée|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|non|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|Non|  
 |ANSI_NULL_DEFAULT|OFF|Oui|  
 |ANSI_NULLS|OFF|Oui|  
 |ANSI_PADDING|OFF|Oui|  
@@ -61,20 +60,20 @@ ms.locfileid: "51560183"
 |AUTO_SHRINK|OFF|Oui|  
 |AUTO_UPDATE_STATISTICS|ON|Oui|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Oui|  
-|CHANGE_TRACKING|OFF|non|  
+|CHANGE_TRACKING|OFF|Non|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Oui|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Oui|  
 |CURSOR_DEFAULT|GLOBAL|Oui|  
-|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|non<br /><br /> Oui<br /><br /> Oui|  
+|Options de disponibilité de base de données|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Non<br /><br /> Oui<br /><br /> Oui|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Oui|  
 |DB_CHAINING|ON|Oui|  
-|ENCRYPTION|OFF|non|  
-|MIXED_PAGE_ALLOCATION|ON|non|  
+|ENCRYPTION|OFF|Non|  
+|MIXED_PAGE_ALLOCATION|ON|Non|  
 |NUMERIC_ROUNDABORT|OFF|Oui|  
 |PAGE_VERIFY|CHECKSUM|Oui|  
 |PARAMETERIZATION|SIMPLE|Oui|  
 |QUOTED_IDENTIFIER|OFF|Oui|  
-|READ_COMMITTED_SNAPSHOT|OFF|non|  
+|READ_COMMITTED_SNAPSHOT|OFF|Non|  
 |RECOVERY|SIMPLE|Oui|  
 |RECURSIVE_TRIGGERS|OFF|Oui|  
 |Options de Service Broker|ENABLE_BROKER|Oui|  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 1114a1bb-7556-40d9-b44e-f18ff7f63ed5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9d016237a9793b89406091088ae9c973620f4631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f8c690b90d3a0e4daa7d8030f9a2f83bae8382e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011566"
 ---
 # <a name="edit-the-advanced-properties"></a>Modifier les propriétés avancées
 
@@ -38,7 +37,7 @@ ms.locfileid: "65728877"
   
  Pour une description des propriétés que vous pouvez entrer, consultez la table d'options disponible dans [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md)   
  [Procédure : modifier les propriétés d'une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)  
   

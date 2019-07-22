@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4da73ca1-6c06-4e96-8ab8-2ecba30b6c86
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 69156738d3302cbe9d0a1d198489bd293af771ec
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: f5433d6082f2860805368f636383eb2e17959e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048861"
 ---
 # <a name="event-notifications"></a>Notifications d'événements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ TO SERVICE '//Adventure-Works.com/ArchiveService' ,
 |Décrit comment configurer la sécurité du dialogue [!INCLUDE[ssSB](../../includes/sssb-md.md)] pour les notifications d'événements qui envoient des messages à Service Broker sur un serveur distant.|[Configurer la sécurité du dialogue pour les notifications d'événements](../../relational-databases/service-broker/configure-dialog-security-for-event-notifications.md)|  
 |Décrit comment retourner des informations sur les notifications d'événements.|[Obtenir des informations concernant les notifications d'événements](../../relational-databases/service-broker/get-information-about-event-notifications.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Déclencheurs DML](../../relational-databases/triggers/dml-triggers.md)   
  [Trace SQL](../../relational-databases/sql-trace/sql-trace.md)  

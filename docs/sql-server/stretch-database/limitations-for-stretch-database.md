@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2b1fbec1-7859-44fc-8417-724fc57a59c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 90e6bbd804d69af00d8e006d3ca363e09dacd8c3
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 968425c6ecee0622c8a1e30b3e7a68ad05eccfaa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136164"
 ---
 # <a name="limitations-for-stretch-database"></a>Limitations concernant Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -86,7 +85,7 @@ Les tables compatibles Stretch présentent les limitations suivantes.
   
 -   Vues indexées référençant la table  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Identifier des bases de données et tables pour Stretch Database en exécutant Stretch Database Advisor](../../sql-server/stretch-database/stretch-database-databases-and-tables-stretch-database-advisor.md)   
  [Activer Stretch Database pour une base de données](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md)   
  [Activer Stretch Database pour une table](../../sql-server/stretch-database/enable-stretch-database-for-a-table.md)  

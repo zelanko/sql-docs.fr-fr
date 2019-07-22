@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2e8a6d88387fb0674cd8d39f44a30358009e44f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 84dfb4e9f5027650ae3a35146b13f70fd0f84a2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076166"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Se connecter à Stockage Microsoft Azure (Restauration)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,10 +30,10 @@ ms.locfileid: "52503978"
  **Clé de compte**  
  Spécifiez la clé d'accès du compte de stockage Windows Azure.  
   
- Case à cocher**Utiliser des points de terminaisons sécurisés (HTTPS)**   
+ Case à cocher**Utiliser des points de terminaisons sécurisés (HTTPS)**  
  Sélectionnez cette option pour établir une connexion sécurisée au stockage Windows Azure (recommandé).  
   
- Case à cocher**Enregistrer la clé de compte**   
+ Case à cocher**Enregistrer la clé de compte**  
  Cochez cette case si vous souhaitez que SQL Server se souvienne de la clé d'accès de ce compte de stockage.  
   
 ### <a name="sql-credential"></a>Informations d'identification SQL  

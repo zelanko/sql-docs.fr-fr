@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 413d6ad71b70cc4ddca8205589d25e224bbcad76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ae4fe656cbd299d46960ec9b711de4c51d30a51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102031"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064794"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>Vue d'ensemble des chaînes de connexion et des autorisations
 Pour exécuter des tests unitaires SQL Server, vous devez vous connecter à un serveur de base de données en utilisant une ou deux chaînes de connexion spécifiques. Chaque chaîne de connexion représente un compte disposant des autorisations spécifiques nécessaires pour effectuer une tâche ou un ensemble de tâches dans un script particulier dans le cadre du test. Vous pouvez spécifier ces chaînes dans la boîte de dialogue **Configuration de test SQL Server** ou en modifiant manuellement le fichier app.config de votre projet de test.  

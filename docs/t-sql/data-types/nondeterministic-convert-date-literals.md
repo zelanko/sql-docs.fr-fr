@@ -11,14 +11,13 @@ dev_langs:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4ca2837780145af3c7f4428c446215ed3510bc50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eba0e28d8f2d5587a07308a4ffcbf5f7eaedf278
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63214257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119850"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversion non déterministe de chaînes de date littérale en valeurs DATE
 
@@ -82,7 +81,7 @@ The preceding claim of "no guarantee" might be incorrect, in the minds of the SQ
 
 Au Japon et en Chine, le format DATEFORMAT **ymd** (amj) est utilisé. Les parties du format sont dans un ordre significatif, qui va de la plus grande unité à la plus petite. Ce format est donc trié correctement. Ce format est considéré comme étant le format _international_. Il est international, car les quatre chiffres de l’année ne sont pas ambigus, et qu’aucun pays sur terre n’utilise le format archaïque **ydm** (ajm).
 
-Dans d’autres pays, comme l’Allemagne et la France, le format DATEFORMAT est **dmy** (jma), ce qui signifie **« jj-mm-aaaa »**. Le format **dmy** (jma) ne se trie pas correctement, mais c’est une séquence significative allant de la plus petite unité à la plus grande.
+Dans d’autres pays, comme l’Allemagne et la France, le format DATEFORMAT est **dmy** (jma), ce qui signifie **« jj-mm-aaaa »** . Le format **dmy** (jma) ne se trie pas correctement, mais c’est une séquence significative allant de la plus petite unité à la plus grande.
 
 Les États-Unis et les États fédérés de Micronésie sont les seuls pays à utiliser **mdy** (mja), qui ne se trie pas. La séquence mixte du format correspond à un modèle de discours parlé dans les dates énoncées verbalement.
 

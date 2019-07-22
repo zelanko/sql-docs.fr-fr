@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c40f251759959f86d360bf495b8b405a831c5e6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 034e4c9ed8df53c6600896b4a5877f1b48a3288d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66376138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084080"
 ---
 # <a name="database-checkpoints-sql-server"></a>Points de contrôle de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,8 +45,8 @@ Pour des raisons de performances, le [!INCLUDE[ssDE](../../includes/ssde-md.md)]
   
 |Créer une vue d’abonnement|[!INCLUDE[tsql](../../includes/tsql-md.md)] .|Description|  
 |----------|----------------------------------|-----------------|  
-|Automatic|EXEC sp_configure **'** recovery interval **','**_seconds_**'**|Émis automatiquement en arrière-plan pour respecter la limite de durée supérieure suggérée par l'option de configuration de serveur **recovery interval** . Les points de contrôle automatiques s'exécutent jusqu'à la fin.  Les points de contrôle automatiques sont accélérés en fonction du nombre d’écritures en attente et si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détecte une augmentation de latence d’écriture supérieure à 50 millisecondes.<br /><br /> Pour plus d'informations, consultez [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indirect|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=**_temps\_récupération\_cible_ { SECONDES &#124; MINUTES }|Émis en arrière-plan pour obtenir un temps de récupération cible spécifié par l'utilisateur pour une base de données. À partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], la valeur par défaut est de 1 minute. La valeur par défaut est 0 pour les anciennes versions, ce qui indique que la base de données utilisera les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur.<br /><br /> Pour plus d'informations, consultez [Modifier la durée de récupération cible d’une base de données &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Automatic|EXEC sp_configure **'** recovery interval **','** _seconds_ **'**|Émis automatiquement en arrière-plan pour respecter la limite de durée supérieure suggérée par l'option de configuration de serveur **recovery interval** . Les points de contrôle automatiques s'exécutent jusqu'à la fin.  Les points de contrôle automatiques sont accélérés en fonction du nombre d’écritures en attente et si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détecte une augmentation de latence d’écriture supérieure à 50 millisecondes.<br /><br /> Pour plus d'informations, consultez [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
+|Indirect|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=** _temps\_récupération\_cible_ { SECONDES &#124; MINUTES }|Émis en arrière-plan pour obtenir un temps de récupération cible spécifié par l'utilisateur pour une base de données. À partir de [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)], la valeur par défaut est de 1 minute. La valeur par défaut est 0 pour les anciennes versions, ce qui indique que la base de données utilisera les points de contrôle automatiques, dont la fréquence dépend du paramètre d’intervalle de récupération de l’instance de serveur.<br /><br /> Pour plus d'informations, consultez [Modifier la durée de récupération cible d’une base de données &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manuel|CHECKPOINT [*durée_point_de_contrôle*]|Émis lorsque vous exécutez une commande CHECKPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le point de contrôle manuel intervient dans la base de données active pour votre connexion. Par défaut, les points de contrôle manuels s'exécutent jusqu'à la fin. L'accélération fonctionne de la même manière que pour les points de contrôle automatiques.  Le paramètre *checkpoint_duration* peut aussi spécifier la durée demandée (en secondes) de l’exécution du point de contrôle.<br /><br /> Pour plus d'informations, consultez [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md).|  
 |Interne|Aucun.|Émis par différentes opérations de serveur, telles que la création de sauvegarde et d'instantané de base de données pour garantir que les images de disque correspondent à l'état actuel du journal.|  
   
@@ -65,7 +64,7 @@ Pour des raisons de performances, le [!INCLUDE[ssDE](../../includes/ssde-md.md)]
 |target_recovery_time|'recovery interval'|Type de point de contrôle utilisé|  
 |----------------------------|-------------------------|-----------------------------|  
 |0|0|Points de contrôle automatiques dont l'intervalle de récupération cible est de 1 minute.|  
-|0|>0|Points de contrôle automatiques dont l’intervalle de récupération cible est spécifié par le paramètre défini par l’utilisateur de l’option **sp_configure 'recovery interval'**.|  
+|0|>0|Points de contrôle automatiques dont l’intervalle de récupération cible est spécifié par le paramètre défini par l’utilisateur de l’option **sp_configure 'recovery interval'** .|  
 |>0|Non applicable.|Points de contrôle indirects dont le temps de récupération cible est déterminé par le paramètre TARGET_RECOVERY_TIME, exprimé en secondes.|  
   
 ##  <a name="AutomaticChkpt"></a> Points de contrôle automatiques  

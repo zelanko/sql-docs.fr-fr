@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11bf0c61a676b697254571785f1e581480464728
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 01ce9869db83cd620ebade613f2582ff2adb9b19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009319"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Utiliser le fournisseur PowerShell pour les événements étendus
 
@@ -40,7 +39,7 @@ ms.locfileid: "58478084"
   
  Vous pouvez parcourir l'arborescence des dossiers XEvent pour consulter les sessions Événements étendus existantes, ainsi que leurs événements, cibles et prédicats associés. Par exemple, à partir du chemin PS SQLSERVER:\XEvent\\*nom_serveur*\\*nom_instance*>, si vous tapez **cd sessions**, puis appuyez sur Entrée, tapez **dir**, puis appuyez sur Entrée, vous pouvez consulter la liste des sessions stockées sur cette instance. Vous pouvez également voir si la session est en cours (et si c'est le cas, pour combien de temps), et savoir si elle est configurée pour démarrer en même temps que l'instance.  
   
- Pour consulter les événements, leurs prédicats et les cibles associés à une session, vous pouvez attribuer le nom de la session aux répertoires, puis voir le dossier des événements ou des cibles. Par exemple, pour voir les événements et leurs prédicats associés à la session d’intégrité du système par défaut, à partir du chemin PS SQLSERVER:\XEvent\\\*nom_serveur*\\*nom_instance*\Sessions>, tapez **cd system_health\events,**, appuyez sur Entrée, tapez **dir**, puis appuyez sur Entrée.  
+ Pour consulter les événements, leurs prédicats et les cibles associés à une session, vous pouvez attribuer le nom de la session aux répertoires, puis voir le dossier des événements ou des cibles. Par exemple, pour voir les événements et leurs prédicats associés à la session d’intégrité du système par défaut, à partir du chemin PS SQLSERVER:\XEvent\\\*nom_serveur*\\*nom_instance*\Sessions>, tapez **cd system_health\events,** , appuyez sur Entrée, tapez **dir**, puis appuyez sur Entrée.  
   
  Le fournisseur PowerShell [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un outil puissant que vous pouvez utiliser pour créer, modifier et gérer des sessions Événements étendus. La section suivante fournit quelques exemples simples d'utilisation de scripts PowerShell avec des Événements étendus.  
   
@@ -114,7 +113,7 @@ $session.Create()
 ## <a name="security"></a>Sécurité  
  Pour créer, modifier ou supprimer une session Événements étendus, vous devez disposer de l'autorisation ALTER ANY EVENT SESSION.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server PowerShell](../../relational-databases/scripting/sql-server-powershell.md)   
  [Utiliser la session system_health](../../relational-databases/extended-events/use-the-system-health-session.md)   
  [Outils associés aux événements étendus](../../relational-databases/extended-events/extended-events-tools.md)  

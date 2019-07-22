@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c95e031051e15af24ac854e4cf42cadcdb2431e0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b681050bdcb101078a8dbab6027e8a2fc162ba4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065504"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT – octroi d'autorisations de principal de base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,7 +113,7 @@ GRANT permission [ ,...n ]
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Des informations sur les principaux de base de données sont consultables dans la vue de catalogue [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md). Des informations sur les autorisations au niveau base de données sont consultables dans la vue de catalogue [sys.database_permissions](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md).  
   
 ## <a name="database-user-permissions"></a>Autorisations d'un utilisateur de base de données  
@@ -146,7 +145,7 @@ GRANT permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée.  
   
  Si vous utilisez l'option AS, les conditions supplémentaires ci-dessous s'appliquent.  
@@ -176,8 +175,8 @@ GRANT CONTROL ON USER::Wanida TO RolandX;
 GO  
 ```  
   
-### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>b. Octroi de l'autorisation VIEW DEFINITION sur un rôle à un utilisateur avec l'option GRANT OPTION  
- Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur le rôle `AdventureWorks2012``SammamishParking` est accordée avec l'option `GRANT OPTION` à l'utilisateur de base de données `JinghaoLiu`.  
+### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>B. Octroi de l'autorisation VIEW DEFINITION sur un rôle à un utilisateur avec l'option GRANT OPTION  
+ Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur le rôle `AdventureWorks2012` `SammamishParking` est accordée avec l'option `GRANT OPTION` à l'utilisateur de base de données `JinghaoLiu`.  
   
 ```  
 GRANT VIEW DEFINITION ON ROLE::SammamishParking   
@@ -186,7 +185,7 @@ GO
 ```  
   
 ### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. Octroi de l'autorisation IMPERSONATE sur un utilisateur à un rôle d'application  
- Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est accordée au rôle d'application `AdventureWorks2012``AccountsPayable17`.  
+ Dans l'exemple ci-dessous, l'autorisation `IMPERSONATE` sur l'utilisateur `HamithaL` est accordée au rôle d'application `AdventureWorks2012` `AccountsPayable17`.  
   
 **S’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
@@ -195,7 +194,7 @@ GRANT IMPERSONATE ON USER::HamithaL TO AccountsPayable17;
 GO    
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DENY - Refuser des autorisations sur un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/deny-database-principal-permissions-transact-sql.md)   
  [REVOKE - Révoquer des autorisations sur un principal de base de données &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-database-principal-permissions-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   

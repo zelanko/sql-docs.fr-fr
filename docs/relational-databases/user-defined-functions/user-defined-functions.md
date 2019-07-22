@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56e4f6239ce68c5bd93791849082f9f56c3a80f2
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: ec08bd8459e51c3ace52fc4eea433aaa046050b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123563"
 ---
 # <a name="user-defined-functions"></a>Fonctions définies par l'utilisateur
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ Les types d'instructions valides dans une fonction sont les suivants :
   
 -   Les affectations de valeurs à des objets locaux de la fonction, comme l’attribution de valeurs à des variables locales scalaires ou de table à l’aide de `SET`.  
   
--   Les opérations de curseur faisant référence à des curseurs locaux déclarés, ouverts, fermés et désalloués dans la fonction. Les instructions `FETCH` qui retournent des données au client ne sont pas autorisées. Seules celles qui affectent des valeurs à des variables locales à l’aide de la clause `INTO` le sont.  
+-   les opérations de curseur faisant référence à des curseurs locaux déclarés, ouverts, fermés et désalloués dans la fonction. Les instructions `FETCH` qui retournent des données au client ne sont pas autorisées. Seules celles qui affectent des valeurs à des variables locales à l’aide de la clause `INTO` le sont.  
   
 -   Les instructions de contrôle de flux, à l’exception des instructions `TRY...CATCH`.  
   

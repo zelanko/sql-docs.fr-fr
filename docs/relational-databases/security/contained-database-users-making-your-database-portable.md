@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: e57519bb-e7f4-459b-ba2f-fd42865ca91d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8db5bf0ed872ed55b2578ed106e84645f5517df8
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: f568d57f84397f0ebc4b636c4911cc51b197ebf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116741"
 ---
 # <a name="contained-database-users---making-your-database-portable"></a>Utilisateurs de base de données autonome - Rendre votre base de données portable
 
@@ -41,7 +40,7 @@ ms.locfileid: "58161726"
 
  Dans le modèle utilisateur de la base de données autonome, la connexion de la base de données MASTER n'est pas présente. Au lieu de cela, le processus d'authentification se produit sur la base de données utilisateur, et l'utilisateur de base de données de la base de données utilisateur n'a pas de connexion associée dans la base de données MASTER. Le modèle utilisateur de base de données autonome prend en charge l’authentification Windows et l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], et il peut être utilisé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Pour vous connecter en tant qu'utilisateur de base de données autonome, la chaîne de connexion doit toujours contenir un paramètre de la base de données utilisateur afin que [!INCLUDE[ssDE](../../includes/ssde-md.md)] sache quelle base de données est chargée de gérer le processus d'authentification. L'activité de l'utilisateur de base de données autonome étant limitée à l'authentification de base de données, lorsque vous vous connectez en tant qu'utilisateur de base de données autonome, le compte d'utilisateur base de données doit être créé indépendamment dans chaque base de données dont l'utilisateur a besoin. Pour modifier les bases de données, les utilisateurs [!INCLUDE[ssSDS](../../includes/sssds-md.md)] doivent créer une connexion. Les utilisateurs de base de données autonome dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent modifier les bases de données si un même utilisateur est présent dans une autre base de données.  
   
-**Azure :**[!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] prennent en charge les identités Azure Active Directory en tant qu’utilisateurs de base de données autonome. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] prend en charge les utilisateurs de base de données autonome utilisant l’authentification [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], à la différence de [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Pour plus d’informations, voir [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Lorsque vous utilisez l’authentification Azure Active Directory, les connexions à partir de SSMS peut être établies à l’aide de l’authentification Active Directory universelle.  Les administrateurs peuvent configurer une authentification universelle pour exiger l’authentification multifacteur, qui vérifie l’identité à l’aide d’un appel téléphonique, d’un SMS, d’une carte à puce avec code confidentiel ou d’une notification d’application mobile. Pour plus d’informations, consultez [Prise en charge SSMS pour Azure AD MFA avec SQL Database et SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
+**Azure :** [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] et [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] prennent en charge les identités Azure Active Directory en tant qu’utilisateurs de base de données autonome. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] prend en charge les utilisateurs de base de données autonome utilisant l’authentification [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], à la différence de [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] . Pour plus d’informations, voir [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). Lorsque vous utilisez l’authentification Azure Active Directory, les connexions à partir de SSMS peut être établies à l’aide de l’authentification Active Directory universelle.  Les administrateurs peuvent configurer une authentification universelle pour exiger l’authentification multifacteur, qui vérifie l’identité à l’aide d’un appel téléphonique, d’un SMS, d’une carte à puce avec code confidentiel ou d’une notification d’application mobile. Pour plus d’informations, consultez [Prise en charge SSMS pour Azure AD MFA avec SQL Database et SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
  Pour [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], dans la mesure où le nom de la base de données est toujours requis dans la chaîne de connexion, aucune modification n’est requise sur la chaîne de connexion lorsque vous passez du modèle traditionnel au modèle utilisateur de base de données autonome. Pour les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le nom de la base de données doit être ajoutée à la chaîne de connexion, s’il n'est pas déjà présent.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "58161726"
 |-----------------------|-----------------------------------|  
 |Pour modifier un mot de passe dans le contexte d'une base de données MASTER :<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|Pour modifier un mot de passe dans le contexte d'une base de données utilisateur :<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 - Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les utilisateurs de base de données autonome doivent être activés pour l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Authentification de la base de données autonome (option de configuration de serveur)](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
 - Les connexions et les utilisateurs de base de données autonome sans chevauchement de noms peuvent coexister dans vos applications.  
@@ -85,7 +84,7 @@ ms.locfileid: "58161726"
 - Étant donné que les utilisateurs de base de données autonome sont des principaux au niveau de la base de données, vous devez créer ces utilisateurs dans chaque base de données où vous souhaitez les utiliser. L'identité est limitée à la base de données. En ce sens, elle est indépendante en tous points de l'identité d'un utilisateur possédant un nom et un mot de passe identiques dans une autre base de données située sur le même serveur.  
 - Définissez des mots de passe avec un niveau de force semblable à celui des mots de passe utilisés normalement pour les connexions.  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
  [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)   
  [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../../relational-databases/databases/security-best-practices-with-contained-databases.md)   

@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e61c1dc4501dfdfe45d10b2fda4434be2f35e7b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc76bc81bc1f8573430bec9cdeba62b04e25167f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116954"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ Ce document répertorie uniquement les arguments appartenant à un graphe SQL. P
  EDGE  
  Crée une table d’arêtes.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Le création d’une table temporaire en tant que nœud ou table d’arêtes n’est pas prise en charge.  
 
 Le création d’une table de nœuds ou d’arêtes temporelle n’est pas prise en charge.
@@ -120,7 +119,7 @@ Les exemples suivants montrent comment créer des tables `EDGE`.
 ```
 
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [INSERT (SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [Traitement des graphes avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)

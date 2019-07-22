@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c310f6df-7adf-493b-b56b-8e3143b13ae7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4958921d446e4678ce09eeb4c16f8faf5809dd2a
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 6b7bfc41b827cdfc2584c50a44e4e1f1e7c60be4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051227"
 ---
 # <a name="replace-value-of-xml-dml"></a>replace value of (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ SELECT @myDoc;
   
 La cible de la mise à jour doit être, tout au plus, un nœud explicitement spécifié dans l’expression de chemin d’accès par l’ajout de « [1] » à la fin de l’expression.  
   
-### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>b. Utilisation de l'expression if pour déterminer la valeur de remplacement  
+### <a name="b-using-the-if-expression-to-determine-replacement-value"></a>B. Utilisation de l'expression if pour déterminer la valeur de remplacement  
 Vous pouvez spécifier l’expression **if** dans Expression2 de l’instruction DML XML **replace value of**, comme dans l’exemple ci-dessous. Expression1 identifie l’attribut LaborHours du premier centre de travail comme étant la valeur à mettre à jour. Expression2 utilise une expression **if** pour déterminer la nouvelle valeur de l’attribut LaborHours.  
   
 ```sql
@@ -191,7 +190,7 @@ from T
   
 Remarquez l’utilisation de **cast** pour remplacer la valeur LotSize. Celui-ci est requis lorsque la valeur doit être d’un type spécifique. Dans cet exemple, si 500 était la valeur, aucune conversion explicite ne serait nécessaire.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
 [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
 [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   

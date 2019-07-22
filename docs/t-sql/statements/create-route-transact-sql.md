@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a8c027df69ca11c88c82195c2d621ecd33f470d6
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006503"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -67,10 +66,10 @@ WITH
  par  
  Introduit les clauses qui définissent l'itinéraire créé.  
   
- SERVICE_NAME = **'**_service\_name_**'**  
+ SERVICE_NAME = **'** _service\_name_ **'**  
  Spécifie le nom du service distant vers lequel pointe cet itinéraire. *service_name* doit correspondre exactement au nom utilisé par le service distant. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise une comparaison octet par octet pour la concordance avec la chaîne *service_name*. En d'autres termes, la comparaison respecte la casse et ne prend pas en compte le classement actuel. Si la clause SERVICE_NAME est omise, cet itinéraire correspond à n'importe quel nom de service, mais la priorité affectée à la correspondance est inférieure à celle d'un itinéraire pour lequel la clause SERVICE_NAME est spécifiée. Un itinéraire dont le nom de service est **« SQL/ServiceBroker/BrokerConfiguration »** est un itinéraire vers un service de notification de la configuration de Service Broker. Un itinéraire vers ce service ne peut pas spécifier d'instance de Service Broker.  
   
- BROKER_INSTANCE = **'**_broker\_instance\_identifier_**'**  
+ BROKER_INSTANCE = **'** _broker\_instance\_identifier_ **'**  
  Spécifie la base de données qui héberge le service cible. Le paramètre *broker_instance_identifier* doit être l’identificateur de l’instance Service Broker pour la base de données distante et peut être obtenu en exécutant la requête suivante dans la base de données sélectionnée :  
   
 ```  
@@ -81,15 +80,15 @@ WHERE database_id = DB_ID()
   
  Si la clause BROKER_INSTANCE est omise, cet itinéraire correspond à n'importe quelle instance Service Broker. La priorité d'un itinéraire qui correspond à n'importe quelle instance de service Broker est plus élevée que celle d'un itinéraire pour lequel une instance service Broker explicite est spécifiée lorsque la conversation ne spécifie aucune instance Service Broker. Pour les conversations spécifiant une instance service Broker, la priorité d'un itinéraire pour lequel une instance Service Broker est spécifiée est plus élevée que celle d'un itinéraire qui correspond à n'importe quelle instance de Service Broker.  
   
- LIFETIME **=**_route\_lifetime_  
+ LIFETIME **=** _route\_lifetime_  
  Spécifie la durée, en secondes, pendant laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve l'itinéraire dans la table de routage. Lorsque la durée de vie expire, l'itinéraire expire et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'en tient plus compte lors de la sélection d'un itinéraire pour une nouvelle conversation. Si cette clause est omise, *route_lifetime* est NULL et l’itinéraire n’expire jamais.  
   
- ADDRESS **='**_next\_hop\_address_**'**  
+ ADDRESS **='** _next\_hop\_address_ **'**  
 Pour l’instance managée SQL Database, `ADDRESS` doit être local. 
 
 Spécifie l'adresse réseau pour cet itinéraire. *next_hop_address* spécifie une adresse TCP/IP au format suivant :  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:**_port\_number_  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** _port\_number_  
   
  Le *port_number* spécifié doit correspondre au numéro de port du point de terminaison de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une instance de [!INCLUDE[ssSB](../../includes/sssb-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
   
@@ -107,10 +106,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Si un itinéraire spécifie **'TRANSPORT'** pour le paramètre *next_hop_address*, l’adresse réseau est déterminée en fonction de l’adresse réseau spécifiée dans le nom du service. Un itinéraire qui spécifie **'TRANSPORT'** ne peut pas spécifier un nom de service ou une instance Service Broker.  
   
- MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
+ MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  Spécifie l’adresse réseau d’une base de données miroir et d’une base de données miroir hébergée à l’adresse *next_hop_address*. *next_hop_mirror_address* spécifie une adresse TCP/IP au format suivant :  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  Le *port_number* spécifié doit correspondre au numéro de port du point de terminaison de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une instance de [!INCLUDE[ssSB](../../includes/sssb-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
   
@@ -124,7 +123,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Si la clause MIRROR_ADDRESS est spécifiée, l'itinéraire doit spécifier les clauses SERVICE_NAME et BROKER_INSTANCE. Un itinéraire qui spécifie **'LOCAL'** ou **'TRANSPORT'** pour le paramètre *next_hop_address* ne peut pas spécifier une adresse miroir.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La table de routage qui stocke les itinéraires est une table de métadonnées consultable dans la vue de catalogue **sys.routes**. Cet affichage catalogue peut être mis à niveau uniquement à l'aide des instructions CREATE ROUTE, ALTER ROUTE et DROP ROUTE.  
   
  Par défaut, la table de routage de chaque base de données utilisateur ne contient qu'un seul itinéraire. Cet itinéraire est nommée **AutoCreatedLocal**. L’itinéraire spécifie **'LOCAL'** pour le paramètre *next_hop_address* et correspond à n’importe quel nom de service et identificateur d’instance de Service Broker.  
@@ -137,7 +136,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  Un itinéraire ne peut pas être un objet temporaire. Les noms d’itinéraires commençant par **#** sont autorisés, mais sont des objets permanents.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’autorisation de création d’un itinéraire revient par défaut aux membres du rôle de base de données fixe **db_ddladmin** ou **db_owner** et aux membres du rôle serveur fixe **sysadmin**.  
   
 ## <a name="examples"></a>Exemples  
@@ -153,7 +152,7 @@ CREATE ROUTE ExpenseRoute
     ADDRESS = 'TCP://www.Adventure-Works.com:1234' ;  
 ```  
   
-### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>b. Création d'un itinéraire TCP/IP à l'aide d'un nom NetBIOS  
+### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>B. Création d'un itinéraire TCP/IP à l'aide d'un nom NetBIOS  
  L'exemple suivant crée un itinéraire vers le service `//Adventure-Works.com/Expenses`. L'itinéraire spécifie que les messages vers ce service utilisent le protocole TCP jusqu'au port `1234` de l'hôte identifié par le nom NetBIOS `SERVER02`. Au fur et à mesure de leur réception, le serveur cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remet les messages à l'instance de base de données identifiée par l'identificateur unique `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
 ```  
@@ -225,7 +224,7 @@ CREATE ROUTE TransportRoute
     WITH ADDRESS = 'TRANSPORT' ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-route-transact-sql.md)   
  [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
