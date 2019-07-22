@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 304e5ec2722f8556c2d9c873f4ff5c3cfab4b7d2
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927185"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -60,12 +59,12 @@ WITH
  par  
  Introduit les clauses qui définissent l'itinéraire modifié.  
   
- SERVICE_NAME **='**_service\_name_**'**  
+ SERVICE_NAME **='** _service\_name_ **'**  
  Spécifie le nom du service distant vers lequel pointe cet itinéraire. *service_name* doit correspondre exactement au nom utilisé par le service distant. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise une comparaison octet par octet pour la concordance avec la chaîne *service_name*. En d'autres termes, la comparaison respecte la casse et ne prend pas en compte le classement actuel. Un itinéraire dont le nom de service est **« SQL/ServiceBroker/BrokerConfiguration »** est un itinéraire vers un service de notification de la configuration de Service Broker. Un itinéraire vers ce service ne peut pas spécifier d'instance de Service Broker.  
   
  Si la clause SERVICE_NAME est omise, le nom de service pour l'itinéraire reste le même.  
   
- BROKER_INSTANCE **='**_broker\_instance_**'**  
+ BROKER_INSTANCE **='** _broker\_instance_ **'**  
  Spécifie la base de données qui héberge le service cible. Le paramètre *broker_instance* doit être l’identificateur de l’instance Service Broker pour la base de données distante et peut être obtenu en exécutant la requête suivante dans la base de données sélectionnée :  
   
 ```  
@@ -79,10 +78,10 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données autonome.  
   
- LIFETIME **=**_route\_lifetime_  
+ LIFETIME **=** _route\_lifetime_  
  Spécifie la durée, en secondes, pendant laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve l'itinéraire dans la table de routage. Lorsque la durée de vie expire, l'itinéraire expire et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'en tient plus compte lors de la sélection d'un itinéraire pour une nouvelle conversation. Si cette clause est omise, la durée de vie de l'itinéraire reste la même.  
   
- ADDRESS **='**_next\_hop\_address_'  
+ ADDRESS **='** _next\_hop\_address_'  
 
  Pour l’instance managée Azure SQL Database, `ADDRESS` doit être local.
 
@@ -109,10 +108,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données autonome.  
   
- MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
+ MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  Spécifie l’adresse réseau pour le serveur miroir d’une paire mise en miroir dont le serveur principal se trouve à l’adresse *next_hop_address*. *next_hop_mirror_address* spécifie une adresse TCP/IP au format suivant :  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  Le *port_number* spécifié doit correspondre au numéro de port du point de terminaison de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour une instance de [!INCLUDE[ssSB](../../includes/sssb-md.md)] sur l’ordinateur spécifié. Cela peut être obtenu en exécutant la requête ci-après dans la base de données sélectionnée :  
   
@@ -129,7 +128,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données autonome.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La table de routage qui stocke les itinéraires est une table de métadonnées. Elle peut être lue dans la vue de catalogue **sys.routes**. La mise à jour de la table de routage s'effectue uniquement au moyen des instructions CREATE ROUTE, ALTER ROUTE et DROP ROUTE.  
   
  Les clauses qui ne sont pas spécifiées dans la commande ALTER ROUTE restent inchangées. Par conséquent, il n'est pas possible de MODIFIER un itinéraire pour spécifier que ce dernier n'expire pas, qu'il correspond à n'importe quel nom de service ou à n'importe quelle instance de Service Broker. Pour modifier ces caractéristiques d'un itinéraire, vous devez supprimer l'itinéraire existant et en créer un nouveau avec les informations mises à jour.  
@@ -140,7 +139,7 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  L'instruction ALTER AUTHORIZATION permet de modifier l'AUTORISATION pour un service.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’autorisation de modification d’un itinéraire revient par défaut au propriétaire de l’itinéraire, aux membres du rôle de base de données fixe **db_ddladmin** ou **db_owner** et aux membres du rôle serveur fixe **sysadmin**.  
   
 ## <a name="examples"></a>Exemples  
@@ -154,7 +153,7 @@ ALTER ROUTE ExpenseRoute
      SERVICE_NAME = '//Adventure-Works.com/Expenses';  
 ```  
   
-### <a name="b-changing-the-target-database-for-a-route"></a>b. Modification de la base de données cible d'un itinéraire  
+### <a name="b-changing-the-target-database-for-a-route"></a>B. Modification de la base de données cible d'un itinéraire  
  L'exemple suivant change la base de données cible de l'itinéraire `ExpenseRoute` en base de données identifiée par l'identificateur unique `D8D4D268-00A3-4C62-8F91-634B89B1E317.`.  
   
 ```  
@@ -182,7 +181,7 @@ ALTER ROUTE ExpenseRoute
      ADDRESS = 'TCP://www.Adventure-Works.com:1234';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/create-route-transact-sql.md)   
  [DROP ROUTE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-route-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

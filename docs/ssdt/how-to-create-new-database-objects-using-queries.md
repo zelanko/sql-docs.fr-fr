@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 383992f5e1fc9891fb570dec168d1648913f4254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 778783c61be2d3b9cfac784d271bce584ef37f68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897191"
 ---
 # <a name="how-to-create-new-database-objects-using-queries"></a>Procédure : Créer de nouveaux objets de base de données à l’aide de requêtes
 Si vous préférez utiliser des scripts pour créer ou modifier des affichages, des procédures stockées, des fonctions, des déclencheurs ou des types définis par l'utilisateur, vous pouvez utiliser l'Éditeur Transact\-SQL. L'Éditeur Transact\-SQL offre la prise en charge d'IntelliSense et d'autres langages. Pour plus d’informations, consultez [Utiliser l'Éditeur Transact-SQL pour modifier et exécuter des scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  

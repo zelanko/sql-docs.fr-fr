@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f087a61c-f063-4fb8-8f1c-251a2fed76a1
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 9f1071dafdb4f1f012aab06724cd8c3865242dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c67174927ea913f50bc23db7e940a79e224dcf2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894700"
 ---
 # <a name="stmpolyfromtext-geometry-data-type"></a>STMPolyFromText (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *multipolygon_tagged_text*  
- Représentation WKT de l’instance **geometryMultiPolygon** à retourner. *multipolygon_tagged_text* est une expression **nvarchar(max)**.  
+ Représentation WKT de l’instance **geometryMultiPolygon** à retourner. *multipolygon_tagged_text* est une expression **nvarchar(max)** .  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geometryMultiPolygon** à retourner.  
@@ -51,7 +50,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
  Type OGC : **MultiPolygon**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
@@ -63,7 +62,7 @@ SET @g = geometry::STMPolyFromText('MULTIPOLYGON (((5 5, 10 5, 10 10, 5 5)), ((1
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes geometry statiques de l’OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

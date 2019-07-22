@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b3e7ba8-b565-4689-af1a-34cc255b7c60
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e28464059101f6385380ced0a307a61f1e76ba53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cff6d8342ea1fe4d40616bf07e1189e0ffba030e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897144"
 ---
 # <a name="how-to-create-a-test-project-for-sql-server-database-unit-testing"></a>Procédure : Créer un projet de test pour un test unitaire de base de données SQL Server
 Avant de commencer à écrire des tests unitaires qui évaluent les objets de base de données, vous devez d'abord créer un projet de test. Ce projet contient des tests unitaires SQL Server, mais il pourrait en comporter d’autres types.  
@@ -55,6 +54,6 @@ Chaque approche est décrite dans les procédures suivantes.
   
 -   Suivez la procédure qui est décrite dans [Procédure : créer un test unitaire SQL Server vide](../ssdt/how-to-create-an-empty-sql-server-unit-test.md) ou [Procédure : créer des tests unitaires SQL Server pour des fonctions, des déclencheurs ou des procédures stockées](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   
