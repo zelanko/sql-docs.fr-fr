@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da5528a606fdfc72aec7f1b0bba4348d389f3c98
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909691"
 ---
 # <a name="indexes-on-computed-columns"></a>Index sur les colonnes calculées
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ La propriété **IsPrecise** de la fonction COLUMNPROPERTY indique si un paramè
 ## <a name="data-type-requirements"></a>Conditions requises liées aux types de données
   
 -   Le paramètre *computed_column_expression* défini pour la colonne calculée ne peut pas correspondre aux types de données **text**, **ntext**ou **image** .  
--   Les colonnes calculées dérivées des types de données **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** et **xml** peuvent être indexées tant que le type de données de lacolonne calculée est autorisé en tant que colonne clé d’index.  
+-   Les colonnes calculées dérivées des types de données **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** et **xml** peuvent être indexées tant que le type de données de lacolonne calculée est autorisé en tant que colonne clé d’index.  
 -   Les colonnes calculées dérivées des types de données **image**, **ntext**et **text** peuvent être des colonnes (incluses) non-clés dans un index non-cluster tant que le type de données utilisé dans la colonne calculée lui permet d’être une colonne d’index non-clés.  
 
 

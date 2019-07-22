@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 27b5fd7de403e252967d0d2a9b8073eafbe0c959
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87d4cb0c16df80b23414644b550be8cb8c4ec3f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941274"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>Mapper des paramètres de requête à des variables dans un composant de flux de données
 
@@ -48,7 +47,7 @@ ms.locfileid: "65726705"
   
 7.  Cliquez sur **Paramètres**.  
   
-8.  Dans la boîte de dialogue **Définition des paramètres de la requête**, mappez chaque paramètre de la liste **Paramètres** à une variable de la liste **Variables** ou créez une variable en cliquant sur **\<Nouvelle variable>**. Cliquez sur **OK**.  
+8.  Dans la boîte de dialogue **Définition des paramètres de la requête**, mappez chaque paramètre de la liste **Paramètres** à une variable de la liste **Variables** ou créez une variable en cliquant sur **\<Nouvelle variable>** . Cliquez sur **OK**.  
   
     > [!NOTE]  
     >  Seules les variables système et les variables définies par l'utilisateur qui se trouvent dans l'étendue du package, dans un conteneur parent tel qu'une boucle Foreach ou dans la tâche de flux de données contenant le composant de flux de données, peuvent être mappées. La variable doit avoir un type de données compatible avec la colonne de la clause WHERE à laquelle le paramètre est affecté.  
@@ -57,7 +56,7 @@ ms.locfileid: "65726705"
   
 10. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Source OLE DB](../../integration-services/data-flow/ole-db-source.md)   
  [Transformation de recherche](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   

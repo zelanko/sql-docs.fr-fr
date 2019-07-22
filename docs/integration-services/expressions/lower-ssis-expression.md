@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 109328e1-5604-40ff-895e-f2e7c13fff41
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bea0342ef01511621629559cb627447d66340071
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc0309a47b19cc4df0ece6c0785ba47644082a89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941265"
 ---
 # <a name="lower-ssis-expression"></a>LOWER (expression SSIS)
 
@@ -44,7 +43,7 @@ LOWER(character_expression)
 ## <a name="result-types"></a>Types des résultats  
  DT_WSTR  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction LOWER n'est opérationnelle qu'avec le type de données DT_WSTR. Un argument *character_expression* qui est un littéral de chaîne ou une colonne de données avec le type de données DT_STR est implicitement converti dans le type de données DT_WSTR avant que UPPER effectue son opération. Les autres types de données doivent être explicitement convertis vers le type de données DT_WSTR. Pour plus d’informations, consultez [Types de données d’Integration Services](../../integration-services/data-flow/integration-services-data-types.md) et [Cast &#40;expression SSIS&#41;](../../integration-services/expressions/cast-ssis-expression.md).  
   
  La fonction LOWER renvoie un résultat NULL si l'argument est NULL.  
@@ -68,7 +67,7 @@ LOWER(SUBSTRING(Color, 2, 15))
 LOWER(@CityName)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [UPPER &#40;expression SSIS&#41;](../../integration-services/expressions/upper-ssis-expression.md)   
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e06cc6312c88139be3d4225ddd4e92fe432f4bb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3d39fcd8df1f62bd089361a9a32ef7a59aa113a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907691"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Remettre un instantané via FTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +47,11 @@ Par défaut, les instantanés sont stockés dans des dossiers définis sous form
  Lorsque cela est possible, invitez les utilisateurs à saisir leurs informations d'identification au moment de l'exécution. Si vous stockez les informations d'identification dans un fichier de script, vous devez sécuriser ce fichier.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Après avoir configuré le serveur FTP, spécifiez des informations de répertoire et de sécurité pour ce serveur dans la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Après avoir configuré le serveur FTP, spécifiez des informations de répertoire et de sécurité pour ce serveur dans la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-ftp-information"></a>Pour spécifier des informations FTP  
   
-1.  Dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez **Autoriser les Abonnés à télécharger des fichiers d’instantanés via le protocole FTP (File Transfer Protocol)** dans l’une des pages suivantes :  
+1.  Dans la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez **Autoriser les Abonnés à télécharger des fichiers d’instantanés via le protocole FTP (File Transfer Protocol)** dans l’une des pages suivantes :  
   
     -   Page **Instantané FTP** , pour les publications transactionnelles et d'instantané ainsi que les publications de fusion pour les serveurs de publication exécutant des versions antérieures à [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
@@ -77,7 +76,7 @@ Pour plus d’informations sur la modification des propriétés d’emplacement 
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>Pour activer la remise d'instantanés via FTP pour une publication transactionnelle ou d'instantané  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Spécifiez **@publication**, affectez la valeur **true** à **@enabled_for_internet**et les valeurs appropriées aux paramètres suivants :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Spécifiez **@publication** , affectez la valeur **true** à **@enabled_for_internet** et les valeurs appropriées aux paramètres suivants :  
   
     -   **@ftp_address** - l'adresse du serveur FTP utilisé pour remettre l'instantané.  
   
@@ -93,7 +92,7 @@ Pour plus d’informations sur la modification des propriétés d’emplacement 
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>Pour activer la remise d'instantanés via FTP pour une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Spécifiez **@publication**, affectez la valeur **true** à **@enabled_for_internet** et les valeurs appropriées aux paramètres suivants :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Spécifiez **@publication** , affectez la valeur **true** à **@enabled_for_internet** et les valeurs appropriées aux paramètres suivants :  
   
     -   **@ftp_address** - l'adresse du serveur FTP utilisé pour remettre l'instantané.  
   
@@ -109,23 +108,23 @@ Pour plus d’informations sur la modification des propriétés d’emplacement 
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>Pour créer un abonnement par extraction vers une publication transactionnelle ou d'instantané qui utilise la remise d'instantanés via FTP  
   
-1.  Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Spécifiez **@publisher** et **@publication**.  
+1.  Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md). Spécifiez **@publisher** et **@publication** .  
   
-    -   Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez **@publisher**, **@publisher_db**, **@publication**, les informations d'identification [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows sous lesquelles l'Agent de distribution s'exécute sur l'Abonné pour **@job_login** et **@job_password**et affectez la valeur **true** à **@use_ftp**.  
+    -   Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addpullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md). Spécifiez **@publisher** , **@publisher_db** , **@publication** , les informations d'identification [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows sous lesquelles l'Agent de distribution s'exécute sur l'Abonné pour **@job_login** et **@job_password** et affectez la valeur **true** à **@use_ftp** .  
   
 2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) pour inscrire l'abonnement par extraction. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>Pour créer un abonnement par extraction à une publication de fusion qui utilise la remise d'instantanés via FTP  
   
-1.  Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Spécifiez **@publisher** et **@publication**.  
+1.  Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Spécifiez **@publisher** et **@publication** .  
   
-2.  Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Spécifiez **@publisher**, **@publisher_db**, **@publication**, les informations d'identification Windows sous lesquelles l'Agent de distribution s'exécute sur l'Abonné pour **@job_login** et **@job_password**et affectez la valeur **true** à **@use_ftp**.  
+2.  Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md). Spécifiez **@publisher** , **@publisher_db** , **@publication** , les informations d'identification Windows sous lesquelles l'Agent de distribution s'exécute sur l'Abonné pour **@job_login** et **@job_password** et affectez la valeur **true** à **@use_ftp** .  
   
 3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) pour inscrire l'abonnement par extraction. Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../../../relational-databases/replication/create-a-pull-subscription.md).  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>Pour modifier un ou plusieurs paramètres de remise d'instantanés sur FTP pour une publication transactionnelle ou d'instantané  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Affectez l'une des valeurs suivantes à **@property** et une nouvelle valeur de ce paramètre à **@value**:  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Affectez l'une des valeurs suivantes à **@property** et une nouvelle valeur de ce paramètre à **@value** :  
   
     -   **ftp_address** - l'adresse du serveur FTP utilisé pour remettre l'instantané.  
   
@@ -139,11 +138,11 @@ Pour plus d’informations sur la modification des propriétés d’emplacement 
   
 2.  (Facultatif) Répétez l'étape 1 pour chaque paramètre FTP modifié.  
   
-3.  (Facultatif) Pour désactiver la remise d'instantanés via FTP, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) au niveau du serveur de publication dans la base de données de publication. Affectez la valeur **enabled_for_internet** à **@property** et la valeur **false** à **@value**.  
+3.  (Facultatif) Pour désactiver la remise d'instantanés via FTP, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) au niveau du serveur de publication dans la base de données de publication. Affectez la valeur **enabled_for_internet** à **@property** et la valeur **false** à **@value** .  
   
 #### <a name="to-change-ftp-snapshot-delivery-settings-for-a-merge-publication"></a>Pour modifier les paramètres de remise d'instantanés via FTP pour une publication de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Affectez l'une des valeurs suivantes à **@property** et une nouvelle valeur de ce paramètre à **@value**:  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Affectez l'une des valeurs suivantes à **@property** et une nouvelle valeur de ce paramètre à **@value** :  
   
     -   **ftp_address** - l'adresse du serveur FTP utilisé pour remettre l'instantané.  
   
@@ -157,7 +156,7 @@ Pour plus d’informations sur la modification des propriétés d’emplacement 
   
 2.  (Facultatif) Répétez l'étape 1 pour chaque paramètre FTP modifié.  
   
-3.  (Facultatif) Pour désactiver la remise d'instantanés via FTP, exécutez [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) au niveau du serveur de publication dans la base de données de publication. Affectez la valeur **enabled_for_internet** à **@property** et la valeur **false** à **@value**.  
+3.  (Facultatif) Pour désactiver la remise d'instantanés via FTP, exécutez [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) au niveau du serveur de publication dans la base de données de publication. Affectez la valeur **enabled_for_internet** à **@property** et la valeur **false** à **@value** .  
   
 ###  <a name="TsqlExample"></a> Exemples (Transact-SQL)  
  L'exemple suivant crée une publication de fusion qui permet aux Abonnés d'accéder aux données des  instantanés en utilisant FTP. L'Abonné doit utiliser une connexion VPN sécurisée lors de l'accès au partage FTP. Les variables de script**sqlcmd** sont utilisées pour fournir les valeurs de connexion et de mot de passe. Pour plus d’informations, consultez [Utiliser sqlcmd avec des variables de script](../../../relational-databases/scripting/sqlcmd-use-with-scripting-variables.md).  
@@ -170,7 +169,7 @@ Pour plus d’informations sur la modification des propriétés d’emplacement 
   
  [!code-sql[HowTo#sp_createmergepullsubagent_ftp](../../../relational-databases/replication/codesnippet/tsql/deliver-a-snapshot-throu_3.sql)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepts liés aux procédures stockées système de réplication](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Changer les propriétés des publications et des articles](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [Initialiser un abonnement avec un instantané](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  

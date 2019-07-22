@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 08475db4-7d90-486a-814c-01a99d783d41
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 230a87a1138bf2b97ece66246d86a8264341446c
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: 0d6b786725dfb50fceb1376fd104a4b5e5afbc76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902846"
 ---
 # <a name="create-default-transact-sql"></a>CREATE DEFAULT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,9 +54,9 @@ AS constant_expression [ ; ]
  Nom de la valeur par défaut. Le nom des valeurs par défaut doit respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md). Vous n'êtes pas obligé de spécifier le nom du propriétaire par défaut.  
   
 *constant_expression*  
-[Expression](../../t-sql/language-elements/expressions-transact-sql.md) qui ne contient que des valeurs constantes (ne peut pas inclure les noms de colonnes ou d’autres objets de base de données). Vous pouvez utiliser toute constante, fonction intégrée ou expression mathématique, à l'exception de celles contenant des types d'alias. Les fonctions définies par l’utilisateur ne peuvent pas être utilisées. Placez les constantes de caractère et de date entre guillemets simples (**'**) ; les constantes monétaires, entières et à virgule flottante ne nécessitent pas de guillemets. Les données binaires doivent être précédées de 0x et les données monétaires du signe dollar ($). La valeur par défaut doit être compatible avec le type de données de la colonne.  
+[Expression](../../t-sql/language-elements/expressions-transact-sql.md) qui ne contient que des valeurs constantes (ne peut pas inclure les noms de colonnes ou d’autres objets de base de données). Vous pouvez utiliser toute constante, fonction intégrée ou expression mathématique, à l'exception de celles contenant des types d'alias. Les fonctions définies par l’utilisateur ne peuvent pas être utilisées. Placez les constantes de caractère et de date entre guillemets simples ( **'** ) ; les constantes monétaires, entières et à virgule flottante ne nécessitent pas de guillemets. Les données binaires doivent être précédées de 0x et les données monétaires du signe dollar ($). La valeur par défaut doit être compatible avec le type de données de la colonne.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous ne pouvez créer un nom de valeur par défaut que dans la base de données active. Au sein d'une base de données, les noms de valeurs par défaut doivent être uniques pour chaque schéma. Quand vous créez une valeur par défaut, utilisez **sp_bindefault** pour la lier à une colonne ou à un type de données alias.  
   
  En cas d'incompatibilité entre la valeur par défaut et la colonne à laquelle elle est liée, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un message d'erreur lors d'une tentative d'insertion de la valeur par défaut. Par exemple, vous ne pouvez pas utiliser N/A comme valeur par défaut pour une colonne de type **numérique**.  
@@ -85,7 +84,7 @@ AS constant_expression [ ; ]
   
  Pour renommer une valeur par défaut, utilisez **sp_rename**. Pour obtenir un rapport sur une valeur par défaut, utilisez **sp_help**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour utiliser CREATE DEFAULT, un utilisateur doit posséder, au minimum, une autorisation CREATE DEFAULT sur la base de données active et une autorisation ALTER sur le schéma dans lequel la valeur par défaut est créée.  
   
 ## <a name="examples"></a>Exemples  
@@ -99,7 +98,7 @@ GO
 CREATE DEFAULT phonedflt AS 'unknown';  
 ```  
   
-### <a name="b-binding-a-default"></a>b. Liaison d'une valeur par défaut  
+### <a name="b-binding-a-default"></a>B. Liaison d'une valeur par défaut  
  L'exemple suivant lie la valeur par défaut créée dans l'exemple A. Celle-ci ne prend effet que si aucune entrée n'est spécifiée pour la colonne `Phone` de la table `Contact`. 
  
  > [!Note] 
@@ -113,7 +112,7 @@ GO
 sp_bindefault 'phonedflt', 'Person.PersonPhone.PhoneNumber';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
