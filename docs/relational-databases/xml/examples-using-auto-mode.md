@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91a2e3a44ba68d280f52b35c3d62026455d4e615
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1a280477dbc8a41292ff3ee3519ec74df4d5c7ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943416"
 ---
 # <a name="examples-using-auto-mode"></a>Exemples : Utilisation du mode AUTO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -271,7 +270,7 @@ SELECT * FROM [Special Chars] FOR XML AUTO;
   
 -   Si les valeurs des éléments ou des attributs contiennent un des caractères URL spéciaux ayant donc une signification particulière dans l'URL, ils sont encodés seulement dans la valeur URL DBOBJECT et uniquement lorsque le caractère spécial fait partie d'un nom de table ou de colonne. Dans le résultat, le caractère « `#` » qui fait partie du nom de table `Col#&2` est encodé sous la forme `_x0023_ in the DBOJBECT URL`.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [UTiliser le mode AUTO avec FOR XML](../../relational-databases/xml/use-auto-mode-with-for-xml.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 7670b7f7ac2d80f596c3a192eb23fbf2b9e94a6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 139d5e3b2ec72917ed021fba005cacc306bce191
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66775105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945675"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>Afficher ou configurer l'option de configuration de serveur backup compression default
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,7 +114,7 @@ GO
 ##  <a name="FollowUp"></a> Suivi : Après avoir configuré l’option Compression par défaut des sauvegardes  
  Le paramètre prend effet immédiatement sans redémarrage du serveur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
