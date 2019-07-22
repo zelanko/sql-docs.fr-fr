@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a033eb0e5d4064c3289a3275763150e097a7e4a5
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: eb41f051eca6a837abb61c308b67167a1874a44d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914281"
 ---
 # <a name="revoke-schema-permissions-transact-sql"></a>REVOKE - Révoquer les autorisations sur un schéma (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un schéma est un élément sécurisable au niveau base de données contenu dans la base de données parente dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de révoquer pour un schéma sont répertoriées dans le tableau ci-dessous, accompagnées des autorisations plus générales qui les incluent de manière implicite.  
   
 |Autorisation de schéma|Déduite d'une autorisation de schéma|Impliquée par une autorisation de base de données|  
@@ -117,10 +116,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |VIEW CHANGE TRACKING|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL pour le schéma.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   

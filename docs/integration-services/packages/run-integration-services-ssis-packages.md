@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fb256646e7bf71a2829cfa35ef70184d0b267748
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5046708ffd705ca937b89a7780e47cd62cdc3f97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65805261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913702"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Exécuter des packages Integration Services (SSIS)
 
@@ -172,7 +171,7 @@ ms.locfileid: "65805261"
 ###  <a name="script"></a> Création de script avec les options de la boîte de dialogue Exécuter le package  
  Lorsque vous vous trouvez dans la boîte de dialogue **Exécuter le package** , vous pouvez également utiliser le bouton **Script** de la barre d'outils pour écrire du code [!INCLUDE[tsql](../../includes/tsql-md.md)] . Le script généré appelle les procédures stockées [catalog.start_execution &#40;base de données SSISDB&#41;](../../integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database.md) avec les options que vous avez sélectionnées dans la boîte de dialogue **Exécuter le package**. Le script s'affiche dans une nouvelle fenêtre de script dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilitaire dtexec](../../integration-services/packages/dtexec-utility.md)   
 [Démarrer l’Assistant Importation et Exportation SQL Server](../../integration-services/import-export-data/start-the-sql-server-import-and-export-wizard.md)
   

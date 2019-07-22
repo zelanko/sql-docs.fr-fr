@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: fd66ad1f-df01-4240-9e89-8f41bff12c1e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 10d1920a4205bb1ec258c0b81303b2b61a50cb1f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f31d1f0f53c158274b760e800de54c68cf08c579
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927956"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>Options de validation d'abonnement (abonnements transactionnels)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "54123629"
  **Arrêter l'Agent de distribution une fois la validation terminée**  
  Par défaut, l'Agent de distribution s'exécute en permanence. Sélectionnez cette option pour arrêter l'agent lorsque la validation est terminée. Cela permet de vérifier que la validation a réussi avant de continuer à répliquer des données vers l'Abonné.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Valider des données sur l’abonné](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [Valider des données répliquées](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7f24104c-201d-4361-9759-f78a27936011
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 85482d1df6e27d103b97ce3e00b02baeea3a9a5f
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 968dadccedcd2b58a7ff69bd0d098cf5779a4338
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903396"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Consulter les Événements étendus équivalents aux classes d’événements Trace SQL
 
@@ -70,7 +69,7 @@ Lorsque vous affichez les résultats, gardez présentes à l'esprit les considé
   
 -   Pour les classes d’événements Trace SQL utilisateur configurables (UserConfigurable:1 via UserConfigurable:9), les événements étendus utilisent un événement unique pour les remplacer. L’événement se nomme user_event. Cet événement est déclenché à l’aide de sp_trace_generateevent, qui est la même procédure stockée que celle utilisée par Trace SQL. L’événement user_event est retourné indépendamment de l’ID d’événement passé à la procédure stockée. Toutefois, un champ event_id est retourné dans les données d’événement. Cela vous permet de générer un prédicat basé sur l'ID d'événement. Par exemple, si vous utilisez UserConfigurable:0 (ID d’événement : 82) dans le code, vous pouvez ajouter l’événement user_event à la session et spécifier un prédicat 'event_id = 82'. Par conséquent, vous n’avez pas à modifier le code parce que la procédure stockée sp_trace_generateevent génère l’événement user_event des événements étendus, et la classe d’événements Trace SQL équivalente.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_trace_generateevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)  
   
   

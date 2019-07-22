@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 798c4a40fe5a6e28b0c24324ac28b1ff188ee64e
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 8ac643b3c0c095dee143c3feca878bd4072273bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901100"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Glossaire des termes de la publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "58478244"
 #### <a name="user-schema"></a>Schéma utilisateur  
  Un schéma utilisateur peut être vu comme un utilisateur de base de données qui détient un ensemble donné d'objets de base de données. Le schéma utilisateur d'administration de réplication détient tous les objets créés par le processus de réplication de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans la base de données Oracle, à l'exception du synonyme public **MSSQLSERVERDISTRIBUTOR** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Objets créés sur le serveur de publication Oracle](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)   
  [Serveurs de publication non SQL Server](../../../relational-databases/replication/non-sql/non-sql-server-publishers.md)   

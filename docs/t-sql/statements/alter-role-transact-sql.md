@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 535a64f7ab8ca820149313d9b5add1de65239675
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 3d49f852c69af4335d3243fb84c921e11268669f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927200"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +94,7 @@ WITH NAME = *new_name*
   
  La modification du nom d'un rôle de base de données ne modifie pas le numéro d'identification, le propriétaire ou les autorisations du rôle.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette commande, vous devez disposer d’une ou de plusieurs des autorisations ou appartenances suivantes :  
   
 -   Autorisation **ALTER** sur le rôle  
@@ -127,7 +126,7 @@ De plus, pour changer l’appartenance à un rôle de base de données fixe, vou
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
-### <a name="b-add-or-remove-role-members"></a>b. Ajouter ou supprimer des membres d’un rôle  
+### <a name="b-add-or-remove-role-members"></a>B. Ajouter ou supprimer des membres d’un rôle  
  **S’APPLIQUE À :** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis la version 2012), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  Cet exemple crée un rôle de base de données nommé `Sales`. Il ajoute un utilisateur de base de données nommé Barry à l’appartenance, puis montre comment supprimer le membre Barry.   Cet exemple peut être exécuté dans la base de données exemple [AdventureWorks](https://msftdbprodsamples.codeplex.com/).
@@ -138,7 +137,7 @@ ALTER ROLE Sales ADD MEMBER Barry;
 ALTER ROLE Sales DROP MEMBER Barry;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   

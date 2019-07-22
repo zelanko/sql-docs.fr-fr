@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1b4bcffb5ec575c90561daf5c8c3757b3cdcb65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 909a8156556cd4a654dcfd6406de2bd45826e31b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990486"
 ---
 # <a name="join-a-role"></a>joindre un rôle
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "52539125"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l’autorisation **ALTER ANY ROLE** sur la base de données, ou l’autorisation **ALTER** sur le rôle, ou l’appartenance au rôle **db_securityadmin**.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -79,9 +78,9 @@ ms.locfileid: "52539125"
   
 4.  Cliquez avec le bouton droit sur le rôle à modifier, puis sélectionnez **Propriétés**.  
   
-5.  Dans la boîte de dialogue **Propriétés du rôle de serveur -**_nom\_rôle\_serveur_, dans la page **Membres**, cliquez sur **Ajouter**.  
+5.  Dans la boîte de dialogue **Propriétés du rôle de serveur -** _nom\_rôle\_serveur_, dans la page **Membres**, cliquez sur **Ajouter**.  
   
-6.  Dans la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle serveur à ajouter à ce rôle serveur. Vous pouvez également cliquer sur **Parcourir…** et sélectionner l’ensemble ou certains des objets disponibles dans la boîte de dialogue **Rechercher des objets**. Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de serveur -**_nom\_rôle\_serveur_.  
+6.  Dans la boîte de dialogue **Sélectionner la connexion au serveur ou le rôle de serveur** , sous **Entrez les noms des objets à sélectionner (exemples)** , entrez la connexion ou le rôle serveur à ajouter à ce rôle serveur. Vous pouvez également cliquer sur **Parcourir…** et sélectionner l’ensemble ou certains des objets disponibles dans la boîte de dialogue **Rechercher des objets**. Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de serveur -** _nom\_rôle\_serveur_.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -101,9 +100,9 @@ ms.locfileid: "52539125"
   
 7.  Cliquez avec le bouton droit sur le rôle à modifier, puis sélectionnez **Propriétés**.  
   
-8.  Dans la boîte de dialogue **Propriétés du rôle de base de données -**_nom\_rôle\_base de données_, dans la page **Général**, cliquez sur **Ajouter**.  
+8.  Dans la boîte de dialogue **Propriétés du rôle de base de données -** _nom\_rôle\_base de données_, dans la page **Général**, cliquez sur **Ajouter**.  
   
-9. Dans la boîte de dialogue **Sélectionner l’utilisateur ou le rôle de la base de données** , sous **Entrez les noms des objets à sélectionner (exemples)**, entrez la connexion ou le rôle de base de données à ajouter à ce rôle de base de données. Vous pouvez également cliquer sur **Parcourir…** et sélectionner l’ensemble ou certains des objets disponibles dans la boîte de dialogue **Rechercher des objets**. Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de base de données-**_nom\_rôle\_base de données_.  
+9. Dans la boîte de dialogue **Sélectionner l’utilisateur ou le rôle de la base de données** , sous **Entrez les noms des objets à sélectionner (exemples)** , entrez la connexion ou le rôle de base de données à ajouter à ce rôle de base de données. Vous pouvez également cliquer sur **Parcourir…** et sélectionner l’ensemble ou certains des objets disponibles dans la boîte de dialogue **Rechercher des objets**. Cliquez sur **OK** pour revenir à la boîte de dialogue **Propriétés du rôle de base de données-** _nom\_rôle\_base de données_.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -139,7 +138,7 @@ ms.locfileid: "52539125"
   
  Pour plus d’informations, consultez [sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Rôles de niveau serveur](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [Rôles au niveau de la base de données](../../../relational-databases/security/authentication-access/database-level-roles.md)   
  [Rôles d'applications](../../../relational-databases/security/authentication-access/application-roles.md)  

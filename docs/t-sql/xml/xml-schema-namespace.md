@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d01697fe773de96c80dc9ea79e4e0c9ac4f253d5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bb3b19e67a4a85ef3f7a26d7ad792e7e39459302
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948038"
 ---
 # <a name="xmlschemanamespace"></a>xml_schema_namespace
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,12 +49,12 @@ xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespa
  Nom de la collection de schémas XML à reconstruire. *XML_schema_collection_name* est de type **sysname**.  
   
  *Espace de noms*  
- Espace de noms URI du schéma XML que vous voulez reconstruire. Il est limité à 1 000 caractères. Si cet argument n'est pas fourni, l'ensemble de la collection de schémas XML est reconstruit. *Namespace* est de type **nvarchar(4000)**.  
+ Espace de noms URI du schéma XML que vous voulez reconstruire. Il est limité à 1 000 caractères. Si cet argument n'est pas fourni, l'ensemble de la collection de schémas XML est reconstruit. *Namespace* est de type **nvarchar(4000)** .  
   
 ## <a name="return-types"></a>Types de retour  
  **xml**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsque vous importez des composants de schéma XML dans la base de données à l’aide de [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md) ou [ALTER XML SCHEMA COLLECTION](../../t-sql/statements/alter-xml-schema-collection-transact-sql.md), les aspects du schéma utilisé pour la validation sont conservés. Par conséquent, le schéma reconstruit peut être lexicalement différent du document du schéma d'origine. En particulier, les commentaires, les espaces et les annotations sont perdus ; les informations de type implicite deviennent explicites. Par exemple, \<xs:element name="e1" /> devient \<xs:element name="e1" type="xs:anyType"/>. Également, les préfixes des espaces de noms ne sont pas conservés.  
   
  Si vous spécifiez un paramètre d'espace de noms, le document du schéma résultant contient les définitions de tous les composants de schéma dans cet espace de noms, même s'ils ont été ajoutés dans des documents de schémas différents ou dans des étapes DDL, ou dans les deux.  
@@ -72,7 +71,7 @@ SELECT xml_schema_namespace(N'production',N'ProductDescriptionSchemaCollection')
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher une collection de schémas XML stockée](../../relational-databases/xml/view-a-stored-xml-schema-collection.md)   
  [Collections de schémas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 1270cc8f84113433954a5178f791f3795ed419fc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f9b69ec02d8f436ccaacf8f9fc75fbb01b429316
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914262"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>Autorisations de liste des propriétés de recherche REVOKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Nom d'une autorisation. Les mappages valides des autorisations des éléments sécurisables sont décrits dans la section « Notes », plus loin dans cette rubrique.  
   
- ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
+ ON SEARCH PROPERTY LIST **::** _search_property_list_name_  
  Indique la liste de propriétés de recherche pour laquelle l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
  *database_principal*  
@@ -100,7 +99,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="search-property-list-permissions"></a>Autorisations SEARCH PROPERTY LIST  
  Une liste de propriétés de recherche est un élément sécurisable au niveau base de données inclus dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de révoquer pour une liste de propriétés de recherche sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
@@ -113,10 +112,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur le catalogue de texte intégral.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   

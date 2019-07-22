@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 59990fe2-7036-4e9c-8efc-6ece9e66eda7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 48f34b1637ce5e388ff5961b984485de8a2e08ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80c5e4e9fe4faf0bfc11d9ed1e193d4ca43f2c18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902711"
 ---
 # <a name="lesson-1-2---creating-the-deployment-project"></a>Leçon 1-2 : Création du projet de déploiement
 
@@ -46,7 +45,7 @@ Dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], l'unité déplo
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 3 : Ajout de packages et autres fichiers](../integration-services/lesson-1-3-adding-packages-and-other-files.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Projets Integration Services &#40;SSIS&#41;](~/integration-services/integration-services-ssis-projects-and-solutions.md)  
   
   

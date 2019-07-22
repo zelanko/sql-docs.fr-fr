@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f7d97977-0e2b-40c6-a4ce-2d5bc32a91a7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a25b2347d3d9f68b9a3adf919605c77646b08c6f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f64acaac92078b673466874f4fbae02ed4fabbbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903261"
 ---
 # <a name="configure-distribution-wizard"></a>Configure Distribution Wizard
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "54125329"
   
 -   [Mot de passe du serveur de distribution](../../relational-databases/replication/distributor-password.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)   
  [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
 

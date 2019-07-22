@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 85ba2e56-a0b2-489c-aea2-fb135cce0cfc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3f4dc9a023b74c104e232546ec6c4f8c2bd93919
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afc0e433a7d39dffa2e4d31d03292d2aee07a4a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899168"
 ---
 # <a name="how-to-add-test-conditions-to-sql-server-unit-tests"></a>Procédure : Ajouter des conditions de test à des tests unitaires SQL Server
 Ajoutez d'autres conditions de test à un test unitaire SQL Server à l'aide du **Concepteur de test unitaire SQL Server**. Lorsque vous enregistrez la classe de test, les conditions de test sont automatiquement enregistrées dans votre projet de test en tant que code Visual C\# ou Visual Basic dans le fichier de code source contenant la classe de test. Après avoir enregistré une condition de test, modifiez-la dans le **Concepteur de test unitaire SQL Server** ou dans son fichier de code source.  
@@ -47,7 +46,7 @@ Ajoutez d'autres conditions de test à un test unitaire SQL Server à l'aide du 
   
     Configurez la condition de test dans la fenêtre Propriétés. Par exemple, modifiez la propriété **Durée d'exécution** d'une condition de test Durée d'exécution. Si vous définissez cette propriété, vous provoquez l'échec du test si le script Transact\-SQL ne s'exécute pas dans le laps de temps spécifié.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
 [Procédure : créer un test unitaire SQL Server vide](../ssdt/how-to-create-an-empty-sql-server-unit-test.md)  
 [Procédure : créer des tests unitaires SQL Server pour des fonctions, des déclencheurs ou des procédures stockées](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)  

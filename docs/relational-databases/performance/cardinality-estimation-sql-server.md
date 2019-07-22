@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946995"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
 
@@ -290,7 +289,7 @@ WHERE s.ticket = r.ticket AND
       r.date = '2016-05-11';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Optimisation de vos plans de requête avec l’estimateur de cardinalité SQL Server 2014)  
  [Indicateurs de requête](../../t-sql/queries/hints-transact-sql-query.md)     

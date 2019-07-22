@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9cdc8cd5-c36f-4bee-a191-87ed457803e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3240bd208a13342782fefeb19532fbabed7e81e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a7d2f4fa27623a75bd49a32a7ce800801f63e9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929593"
 ---
 # <a name="how-to-install-and-manage-feature-extensions"></a>Procédure : Installer et gérer des extensions de fonctionnalités
 Il est possible d’ajouter des règles d’analyse du code de la base de données, des conditions pour les tests unitaires de base de données et des contributeurs Build and Deployment pour améliorer les fonctionnalités offertes par les différentes éditions de Visual Studio, y compris SQL Server Data Tools. Cependant, vous devrez tout d’abord installer l’extension de fonctionnalité pour pouvoir l’utiliser, qu’elle ait été créée par vous ou par quelqu’un d’autre.  

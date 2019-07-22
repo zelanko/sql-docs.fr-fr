@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 302e5397-b499-4ea3-9a7f-c24ccad698eb
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bea3b5533edfee7867f03440c55ebc7dd8bd4b4a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9ddab9f3375a490e1c0d11912da89612320fa877
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928046"
 ---
 # <a name="use-for-json-output-in-sql-server-and-in-client-apps-sql-server"></a>Utiliser la sortie de FOR JSON dans SQL Server et les applications clientes (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -120,7 +119,7 @@ Pour obtenir une présentation visuelle de la prise en charge intégrée de JSON
 
 -   [JSON : un pont entre les mondes relationnel et NoSQL](https://channel9.msdn.com/events/DataDriven/SQLServer2016/JSON-as-a-bridge-betwen-NoSQL-and-relational-worlds)
  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mettre les résultats de requête au format JSON avec FOR JSON &#40;SQL Server&#41;](../../relational-databases/json/format-query-results-as-json-with-for-json-sql-server.md)  
   
   

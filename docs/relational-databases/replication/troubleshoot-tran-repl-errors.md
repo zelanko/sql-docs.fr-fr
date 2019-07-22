@@ -10,13 +10,12 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7547ce03478e810eac4725b8b543afd9862f9ca2
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 03ffb9e8259e463c261838ffc79cf0b9c5908b39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895542"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Outil de résolution des problèmes : Rechercher des erreurs dans la réplication transactionnelle SQL Server 
 Le dépannage des erreurs de réplication peuvent être frustrant si vous n’avez pas une connaissance de base du fonctionnement de la réplication transactionnelle. La première étape de création d’une publication consiste à faire en sorte que l’Agent d’instantané crée l’instantané et l’enregistre dans le dossier des instantanés. Ensuite, l’Agent de distribution applique l’instantané à l’abonné. 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 83d47694-e56d-4dae-b54e-14945bf8ba31
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0cf5f24bc4c330c40323ee18189cc10b0aed080e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 22a1a5d0a4a1e3bc9e1b7afad1aafeaa01e63ac5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398732"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951205"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sauvegarde d'une base de données avec des tables mémoire optimisées
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "52398732"
   
  Le premier scénario de charge de travail concerne l'insertion (pour la plupart). Dans ce scénario, la plupart des fichiers de données présentent l’état Actif, sont totalement chargés et comportent très peu de lignes supprimées. La taille de la sauvegarde de base de données est proche de celle des données en mémoire.  
   
- Le second scénario de charge de travail correspond à des opérations fréquentes d’insertion, de suppression et de mise à jour. Dans le pire des cas, chacune des paires de fichiers de point de contrôle sont chargées, à 50 % après prise en compte les lignes supprimées. La taille de la sauvegarde de base de données sera égale à au moins 2 fois la taille des données en mémoire.  
+ Le second scénario de charge de travail correspond à des opérations fréquentes d’insertion, de suppression et de mise à jour. Dans le pire des cas, chacune des paires de fichiers de point de contrôle sont chargées, à 50 % après prise en compte les lignes supprimées. La taille de la sauvegarde de base de données sera égale à au moins 2 fois la taille des données en mémoire.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Sauvegardes différentielles de bases de données avec des tables mémoire optimisées  
  Le stockage des tables optimisées en mémoire comprend des données et des fichiers delta, comme décrit dans [Durabilité pour les tables optimisées en mémoire](../../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md). La sauvegarde différentielle d'une base de données avec des tables mémoire optimisées contient les données suivantes :  
@@ -65,11 +64,11 @@ ms.locfileid: "52398732"
   
     -   Un fichier de données contient les nouvelles lignes insérées et, une fois plein, est fermé et marqué en lecture seule. Un fichier de données est sauvegardé uniquement s'il est fermé après la dernière sauvegarde complète de la base de données. La sauvegarde différentielle sauvegarde uniquement les fichiers de données contenant les lignes insérées depuis la dernière sauvegarde complète de la base de données. Une exception à cette règle existe dans le cadre d’un scénario de mise à jour et de suppression où certaines des lignes insérées peuvent déjà avoir été marquées pour le processus de garbage collection ou déjà avoir été soumises à cette opération.  
   
-    -   Un fichier delta stocke les référence aux lignes de données supprimées. Étant donné qu'une transaction ultérieure peut supprimer une ligne, un fichier delta peut être modifié à tout moment au cours de sa durée de vie, et n'est jamais fermé. Un fichier delta est toujours sauvegardé. Les fichiers delta utilisent généralement moins de 10 % du stockage, par conséquent, ils ont un impact minime sur la taille de la sauvegarde différentielle.  
+    -   Un fichier delta stocke les référence aux lignes de données supprimées. Étant donné qu'une transaction ultérieure peut supprimer une ligne, un fichier delta peut être modifié à tout moment au cours de sa durée de vie, et n'est jamais fermé. Un fichier delta est toujours sauvegardé. Les fichiers delta utilisent généralement moins de 10 % du stockage, par conséquent, ils ont un impact minime sur la taille de la sauvegarde différentielle.  
   
  Si les tables mémoire optimisées représentent une partie significative de la taille de votre base de données, la sauvegarde différentielle peut considérablement réduire la taille de votre sauvegarde. Pour les charges de travail OLTP typiques, les sauvegardes différentielles seront considérablement inférieures aux sauvegardes de base de données complètes.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarder, restaurer et récupérer des tables optimisées en mémoire](https://msdn.microsoft.com/library/3f083347-0fbb-4b19-a6fb-1818d545e281)  
   
   

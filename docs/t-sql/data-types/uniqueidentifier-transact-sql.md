@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: b026035b-f3d2-4d70-989d-3884b4ca0233
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7b627fb357fba635d6aaa74ac4d1cd1c8a2d2295
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5471791b3f75130bc2fb262a05683aa953f7f3a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000450"
 ---
 # <a name="uniqueidentifier-transact-sql"></a>uniqueidentifier (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 GUID sur 16 octets.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Il existe deux manières d’affecter une valeur initiale à une colonne ou à une variable locale du type de données **uniqueidentifier** :
 -   en utilisant les fonctions [NEWID](../../t-sql/functions/newid-transact-sql.md) ou [NEWSEQUENTIALID](../../t-sql/functions/newsequentialid-transact-sql.md) ;    
 -   en convertissant à partir d’une constante de chaîne de la forme *xxxxxxxx*-*xxxx*-*xxxx*-*xxxx*-*xxxxxxxxxxxx*, où chaque *x* est un chiffre hexadécimal compris dans la plage 0-9 ou a-f. Par exemple, 6F9619FF-8B86-D011-B42D-00C04FC964FF est une valeur **uniqueidentifier** valide.  

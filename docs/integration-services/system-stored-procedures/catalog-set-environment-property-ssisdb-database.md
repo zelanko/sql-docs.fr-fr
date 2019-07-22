@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: a345675b-d32e-4624-96cf-ec656730b114
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 427af0f98682975e040452f1e2fd009526bd067d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 336262ae9d1779b44b5c0cb7f7f3a4664e834312
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949092"
 ---
 # <a name="catalogsetenvironmentproperty-ssisdb-database"></a>catalog.set_environment_property (base de données SSISDB)
 
@@ -38,16 +37,16 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Arguments  
  [ @folder_name = ] *folder_name*  
- Nom du dossier qui contient l'environnement. *folder_name* est de type **nvarchar(128)**.  
+ Nom du dossier qui contient l'environnement. *folder_name* est de type **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- Nom de l'environnement. *environment_name* est de type **nvarchar(128)**.  
+ Nom de l'environnement. *environment_name* est de type **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
- Nom d'une propriété d'environnement. *property_name* est de type **nvarchar(128)**.  
+ Nom d'une propriété d'environnement. *property_name* est de type **nvarchar(128)** .  
   
  [ @property_value = ] *property_value*  
- Valeur de la propriété d'environnement. *property_value* est de type **nvarchar(1024)**.  
+ Valeur de la propriété d'environnement. *property_value* est de type **nvarchar(1024)** .  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  
@@ -73,7 +72,7 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 -   Le nom de l'environnement n'est pas valide.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Dans cette version finale, seule la propriété `Description` peut être définie. La valeur de la propriété `Description` ne peut pas dépasser 4000 caractères.  
   
   

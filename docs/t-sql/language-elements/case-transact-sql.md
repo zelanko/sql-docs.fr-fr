@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f9207027f8d5b94c631b4406903dae77694371
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950359"
 ---
 # <a name="case-transact-sql"></a>CASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,7 +111,7 @@ END
   
 -   Si aucune *Boolean_expression* n’a la valeur TRUE, [!INCLUDE[ssDE](../../includes/ssde-md.md)] retourne la valeur *else_result_expression* si une clause ELSE est spécifiée ou une valeur NULL si aucune clause ELSE n’est spécifiée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise uniquement 10 niveaux d'imbrication dans les expressions CASE.  
   
  L'expression CASE ne peut pas être utilisée pour contrôler le flux d'exécution d'instructions, de blocs d'instructions, de fonctions définies par l'utilisateur et de procédures stockées Transact-SQL. Pour obtenir la liste des méthodes de contrôle de flux, consultez [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
@@ -351,7 +350,7 @@ WHERE SalariedFlag = 0;
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [COALESCE &#40;Transact-SQL&#41;](../../t-sql/language-elements/coalesce-transact-sql.md)   

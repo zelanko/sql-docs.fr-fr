@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 64ea4a6f152ebeaa5898de35e386fbde8d09aab6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: eaee3cdadacf57e410e27dc1f3e92f2c917f43ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902880"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ CREATE CONTRACT contract_name
  [ DEFAULT ]  
  Indique que le contrat prend en charge les messages du type de message par défaut. Par défaut, toutes les bases de données contiennent un type de message nommé DEFAULT. Ce type de message utilise l'option de validation NONE. Dans le contexte de cette clause, DEFAULT n'est pas un mot clé et il doit être délimité comme un identificateur. Microsoft SQL Server fournit également un contrat DEFAULT qui spécifie le type de message DEFAULT.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'ordre des types de messages dans le contrat n'a pas d'importance. Une fois que la cible a reçu le premier message, [!INCLUDE[ssSB](../../includes/sssb-md.md)] permet à chaque côté de la conversation d'envoyer à tout moment les messages autorisés pour ce côté. Par exemple, si l’initiateur de la conversation peut envoyer le type de message **//Adventure-Works.com/Expenses/SubmitExpense**, [!INCLUDE[ssSB](../../includes/sssb-md.md)] l’autorise à envoyer un nombre illimité de messages **SubmitExpense** au cours de la conversation.  
   
  Il est impossible de modifier les types de messages et leurs directions dans un contrat. Pour modifier le paramètre AUTHORIZATION au niveau d'un contrat, utilisez l'instruction ALTER AUTHORIZATION.  
@@ -87,7 +86,7 @@ CREATE CONTRACT contract_name
   
  Un contrat ne peut pas être un objet temporaire. Les noms de contrats commençant par # sont autorisés mais ce sont des objets permanents.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres des rôles de base de données fixes **db_ddladmin** ou **db_owner** et les membres du rôle serveur fixe **sysadmin** peuvent créer des contrats.  
   
  L’autorisation REFERENCES sur un contrat est accordée par défaut au propriétaire du contrat, aux membres du rôle de base de données fixe **db_ddladmin** ou **db_owner**, ainsi qu’aux membres du rôle serveur fixe **sysadmin**.  
@@ -123,7 +122,7 @@ CREATE CONTRACT
     ) ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DROP CONTRACT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-contract-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

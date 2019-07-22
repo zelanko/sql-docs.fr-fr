@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: a8430421-7bce-4fab-a2d2-56c00a3c6fa4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d43fc27fc3536f296f49f40bb6233e961c4b9f12
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: a5ca209108c9f462368ef6fe5bbc38d9557b3599
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948218"
 ---
 # <a name="where-transact-sql"></a>WHERE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +58,7 @@ FROM DimEmployee
 WHERE LastName = 'Smith' ;  
 ```  
   
-### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>b. Recherche de lignes qui contiennent une valeur incluse dans une chaîne  
+### <a name="b-finding-rows-that-contain-a-value-as-part-of-a-string"></a>B. Recherche de lignes qui contiennent une valeur incluse dans une chaîne  
   
 ```  
 -- Uses AdventureWorksDW  
@@ -119,7 +118,7 @@ FROM DimEmployee
 WHERE EmployeeKey Between 100 AND 200;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [Prédicats &#40;Transact-SQL&#41;](~/t-sql/queries/predicates.md)   
  [Condition de recherche &#40;Transact-SQL&#41;](../../t-sql/queries/search-condition-transact-sql.md)   

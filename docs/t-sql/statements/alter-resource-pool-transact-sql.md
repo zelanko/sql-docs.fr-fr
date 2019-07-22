@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 711ac97cd2376cc924075d67b2f25ece1a4744e0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6b95fd77e973e918dda99ef4a1053b45d3f3f067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927193"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- { *pool_name* | **"default"** }  
+ { *pool_name* |  **"default"** }  
  Nom d'un pool de ressources défini par l'utilisateur existant ou du pool de ressources par défaut créé lors de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Le paramètre default doit être placé entre des guillemets doubles ("") ou des crochets ([]) lorsqu'il est utilisé avec l'instruction ALTER RESOURCE POOL pour éviter tout conflit avec DEFAULT, qui est un mot réservé au système. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
@@ -117,7 +116,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
   
  Si le MAX_IOPS_PER_VOLUME pour un pool a la valeur 0, le pool n'est pas régi du tout et peut prendre toutes les E/S par seconde dans le système même si MIN_IOPS_PER_VOLUME est défini pour d'autres pools. Dans ce cas, nous vous recommandons de définir la valeur MAX_IOPS_PER_VOLUME de ce pool sur un nombre élevé (par exemple, la valeur maximale 2^31-1) si vous voulez que ce pool soit régi pour les E/S.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  MAX_CPU_PERCENT et MAX_MEMORY_PERCENT doivent respectivement être supérieurs ou égaux à MIN_CPU_PERCENT et MIN_MEMORY_PERCENT.  
   
  MAX_CPU_PERCENT peut utiliser une capacité d’UC supérieure à la valeur de MAX_CPU_PERCENT si elle est disponible. Bien qu’il puisse y avoir des pics périodiques au-dessus de CAP_CPU_PERCENT, les charges de travail ne doivent pas dépasser CAP_CPU_PERCENT pendant de longues périodes, même quand une capacité d’UC supplémentaire est disponible.  
@@ -135,7 +134,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
 > [!CAUTION]  
 >  L’effacement des plans mis en cache à partir d’un pool de ressources associé à plusieurs groupes de charges de travail affecte tous les groupes de charges de travail contenant le pool de ressources défini par l’utilisateur identifié par *pool_name*.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
@@ -171,7 +170,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)   

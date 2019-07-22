@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47975bd5-373f-43cd-946a-da8e8088b610
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c495930d3c3013a521f391d9a70c8deab188b3d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f3e07e6762a288fe646477ad0218e5f54eb3b2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951065"
 ---
 # <a name="checkpoint-operation-for-memory-optimized-tables"></a>Opération de point de contrôle pour les tables mémoire optimisées
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47677477"
   
  Pour les tables à mémoire optimisée, un point de contrôle automatique est pris quand le journal des transactions occupe plus de 1,5 Go depuis le dernier point de contrôle. Cette taille de 1,5 Go comprend les enregistrements du journal des transactions pour les tables sur disque et celles à mémoire optimisée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création et gestion du stockage des objets mémoire optimisés](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

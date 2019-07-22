@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3b67961b62e3d6629aaa23b485a96d855fe72a9c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4ed6e67bbf6f3fcda872650c2d3394d6311802b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914225"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>Autorisations REVOKE dans Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,19 +62,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Spécifie une autorisation qui peut être révoquée sur un élément sécurisable [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Pour obtenir la liste de ces autorisations, consultez la section Remarques plus loin dans cette rubrique.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Spécifie le contrat sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Spécifie le type de message sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Spécifie la liaison de service distant sur laquelle l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Spécifie l'itinéraire sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
- SERVICE **::**_message_type_name_  
+ SERVICE **::** _message_type_name_  
  Spécifie le service sur lequel l'autorisation est révoquée. Le qualificateur d’étendue **::** est obligatoire.  
   
  *database_principal*  
@@ -122,7 +121,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
   
 -   Utilisateur de base de données mappé à un principal de serveur  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="service-broker-contracts"></a>Contrats Service Broker  
  Un contrat [!INCLUDE[ssSB](../../includes/sssb-md.md)] est un élément sécurisable au niveau base de données, contenu dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu’il est possible de révoquer pour un contrat [!INCLUDE[ssSB](../../includes/sssb-md.md)] sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales, qui les incluent naturellement.  
@@ -177,10 +176,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite des autorisations CONTROL sur le contrat, le type de message, la liaison de service distant, l'itinéraire ou le service [!INCLUDE[ssSB](../../includes/sssb-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Autorisations GRANT dans Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/grant-service-broker-permissions-transact-sql.md)   
  [Autorisations DENY dans Service Broker &#40;Transact-SQL&#41;](../../t-sql/statements/deny-service-broker-permissions-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

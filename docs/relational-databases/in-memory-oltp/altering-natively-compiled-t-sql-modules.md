@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 010318a0-6807-47c3-8ecc-bb7cb60513f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 92ff4159d8584a6670b60dd7c0d9c0b890c8df09
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 03f7e4fd87068e31674e74dc81dd33dadba323cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951265"
 ---
 # <a name="altering-natively-compiled-t-sql-modules"></a>Altering Natively Compiled T-SQL Modules
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ Pour en savoir plus sur la fonctionnalité `ALTER PROCEDURE` et sur sa syntaxe, 
   
 Vous pouvez exécuter [sp_recompile](../../relational-databases/system-stored-procedures/sp-recompile-transact-sql.md) sur des modules [!INCLUDE[tsql](../../includes/tsql-md.md)] compilés en mode natif, ce qui entraîne leur recompilation lors de la prochaine exécution.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
 L’exemple suivant représente la création d’une table optimisée en mémoire (T1) et d’une procédure stockée compilée en mode natif (usp_1) qui sélectionne toutes les colonnes de la table T1. Ensuite, usp_1 est modifiée pour supprimer la clause `EXECUTE AS`, changer `LANGUAGE` et sélectionner une seule colonne (C1) à partir de T1.  
   
 ```sql  
@@ -73,5 +72,5 @@ END
 GO    
 ```   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)    

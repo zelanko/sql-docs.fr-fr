@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4958c4ab-2025-42ce-b836-6fb4e9e6f24d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3dbca4ecaab2f358e83b00a27a5f62ccbc99b9b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a2cad4f3215be1fcb5681f9bed6e0df73f69ebd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62752243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927977"
 ---
 # <a name="subscription-validation-options-merge-subscriptions"></a>Options de validation d'abonnement (Abonnements de fusion)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "62752243"
  **Vérifier le nombre de lignes et comparer les totaux de contrôle pour vérifier les données de ligne**  
  Outre le comptage des lignes sur le serveur de publication et sur l'Abonné, une somme de contrôle de toutes les données est calculée à l'aide de l'algorithme de somme de contrôle binaire. Si le nombre de lignes est erroné, la somme de contrôle n'est pas effectuée. Cette option n'est pas valide pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)].  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Valider des données sur l’abonné](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [Valider des données répliquées](../../relational-databases/replication/validate-data-at-the-subscriber.md)  
   

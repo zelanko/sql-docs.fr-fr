@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: df144237-3fbb-41ac-8624-efd92b6522b9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f6e94c381e6303d380b2d1447f98299a0f28ec89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86add979aa790e438454c319dee68b8df95a6669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968096"
 ---
 # <a name="null-ssis-expression"></a>NULL (expression SSIS)
 
@@ -42,12 +41,12 @@ NULL(typespec)
 ## <a name="result-types"></a>Types des résultats  
  Tout type de données valide avec une valeur Null.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La fonction NULL renvoie un résultat NULL si l'argument est NULL.  
   
  Des paramètres sont nécessaires pour demander une valeur NULL pour certains types de données. Le tableau suivant décrit ces types de données et leurs paramètres.  
   
-|Type de données|Paramètre| Exemple|  
+|Type de données|Paramètre|Exemple|  
 |---------------|---------------|-------------|  
 |DT_STR|*charcount*<br /><br /> *codepage*|L'expression (DT_STR,30,1252) convertit 30 caractères vers le type de données DT_STR à l'aide de la page de codes 1252.|  
 |DT_WSTR|*charcount*|L'expression (DT_WSTR,20) convertit 20 caractères vers le type de données DT_WSTR.|  
@@ -65,7 +64,7 @@ NULL(DT_DATE)
 NULL(DT_BOOL)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ISNULL &#40;expression SSIS&#41;](../../integration-services/expressions/isnull-ssis-expression.md)   
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   

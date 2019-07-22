@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 7c42724e6bf59d68d665d1907c97084eba22d1ba
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 01336bc87411fec167a3f78dfd3bf397a93b6d2c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947795"
 ---
 # <a name="sql-server-xtp-databases"></a>Bases de données SQL Server XTP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,5 +65,5 @@ Le tableau suivant décrit les compteurs **Bases de données SQL Server XTP** .
 |**Nombre maximal de pages de fin du cache**|Nombre maximal de pages allouées en fin de cache. Il s'agit d'un compteur de très bas niveau, non destiné au client.|
 
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [SQL Server XTP &#40;OLTP en mémoire&#41;, compteurs de performances](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)

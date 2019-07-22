@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2be43a9ed439d3f4fb72c26683973ca4c18b263f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90eb59652bf64e6e3be4edaa3cce2f0bf3c02df7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897999"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "47619853"
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si SET STATISTICS TIME est défini à ON, les statistiques se rapportant à la durée d'une instruction sont affichées. Si l'option est désactivée (OFF), elles ne sont pas affichées.  
   
  L'option SET STATISTICS TIME est appliquée lors de l'exécution, et non pas lors de l'analyse.  
@@ -57,7 +56,7 @@ SET STATISTICS TIME { ON | OFF }
   
  L'activation ou la désactivation de cette option a également une incidence sur la colonne CPU de la vue Informations sur le processus pour l'activité en cours dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour utiliser SET STATISTICS TIME, les utilisateurs doivent disposer des autorisations appropriées pour exécuter l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'autorisation SHOWPLAN n'est pas nécessaire.  
   
 ## <a name="examples"></a>Exemples  
@@ -93,7 +92,7 @@ SQL Server parse and compile time:
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [SET STATISTICS IO &#40;Transact-SQL&#41;](../../t-sql/statements/set-statistics-io-transact-sql.md)  
   

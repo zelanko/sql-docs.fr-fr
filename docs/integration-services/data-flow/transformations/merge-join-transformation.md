@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: cd8b0412-f83b-4bd2-b227-e53dcfd941a8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 785f7f0af9a41052a870edc8feaf566585a45e89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0613c05ef9db6f19af850ed1ed4d63a1cdad30e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944126"
 ---
 # <a name="merge-join-transformation"></a>transformation de jointure de fusion
 
@@ -91,7 +90,7 @@ ms.locfileid: "65725970"
  **Alias de sortie**  
  Permet de saisir un alias pour chaque colonne de sortie. Par défaut, il s'agit du nom de la colonne d'entrée ; vous pouvez néanmoins choisir un nom unique et descriptif.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Transformation de fusion](../../../integration-services/data-flow/transformations/merge-transformation.md)   
  [Transformation d'union totale](../../../integration-services/data-flow/transformations/union-all-transformation.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

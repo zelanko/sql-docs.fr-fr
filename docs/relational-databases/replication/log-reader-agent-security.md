@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d6981e74-ddb8-41b8-9ea1-56c2ece63b8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1dcfcdbc86259d59d4bf6ddb925d48e3f7e34d62
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d3a7ec4984d7426886ddeb39817a75a865314d37
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943720"
 ---
 # <a name="log-reader-agent-security"></a>Sécurité de l'Agent de lecture du journal
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "54129029"
   
  Le compte Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisé pour la connexion doit être au moins un membre du rôle de base de données fixe **db_owner** dans la base de données de publication.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Identité et contrôle d’accès dans la réplication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Modèle de sécurité de l’Agent de réplication](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Vue d’ensemble des agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)   

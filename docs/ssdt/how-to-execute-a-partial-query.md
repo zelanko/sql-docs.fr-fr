@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: af04ab37-6cbb-4185-9382-e5922fa5b1df
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0dff2087286035b078f59ac1673a733fb3cc8358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f7861e3ef232dd3f244c9c325468e6ba4d51d16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929613"
 ---
 # <a name="how-to-execute-a-partial-query"></a>Procédure : Exécuter une requête partielle
 L'éditeur Transact\-SQL permet de mettre en surbrillance un segment spécifique du script et de l'exécuter en tant que requête unique. Ainsi, il est plus facile pour vous de déboguer des sections de requêtes complexes.  

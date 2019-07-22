@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 715effa0eb16a298f5064f08d2751df07bfa8677
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c10c5b34f7a3364113062821aba99e11536cc2ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948043"
 ---
 # <a name="xml-data-type-methods"></a>Méthodes des types de données xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "56020211"
 |[Liaison de données relationnelles dans des données XML](../../t-sql/xml/binding-relational-data-inside-xml-data.md)|Décrit comment lier des données non-XML à l'intérieur de code XML.|  
 |[Instructions pour l’utilisation des méthodes de type de données XML](../../t-sql/xml/guidelines-for-using-xml-data-type-methods.md)|Fournit des instructions sur l’utilisation des méthodes de type de données **xml**.|  
   
- Vous appelez ces méthodes au moyen de la syntaxe d'appel de méthode de type défini par l'utilisateur. Exemple :  
+ Vous appelez ces méthodes au moyen de la syntaxe d'appel de méthode de type défini par l'utilisateur. Par exemple :  
   
 ```  
 SELECT XmlCol.query(' ... ')  
@@ -47,9 +46,9 @@ FROM   Table
 ```  
   
 > [!NOTE]  
->  Les méthodes de type de données **xml** **query()**, **value()** et **exist()** retournent NULL si elles sont exécutées sur une instance XML NULL. De plus, **modify()** ne retourne rien, mais **nodes()** retourne des ensembles de lignes avec un ensemble de lignes vide avec une entrée NULL.  
+>  Les méthodes de type de données **xml** **query()** , **value()** et **exist()** retournent NULL si elles sont exécutées sur une instance XML NULL. De plus, **modify()** ne retourne rien, mais **nodes()** retourne des ensembles de lignes avec un ensemble de lignes vide avec une entrée NULL.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)  
   
