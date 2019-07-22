@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5dd029115c99ae4826bf1070a7556c7fbdcb8c55
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948104"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ WRITETEXT [BULK]
  Nom de la table et de la colonne **text**, **ntext** ou **image** à mettre à jour. Les noms de la table et de la colonne doivent suivre les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md). La spécification des noms de la base de données et du propriétaire est facultative.  
   
  *text_ptr*  
- Valeur qui stocke le pointeur des données **text**, **ntext** ou **image**. *text_ptr* doit être de type **binary(16)**. Pour créer un pointeur de texte, exécutez une instruction [INSERT](../../t-sql/statements/insert-transact-sql.md) ou [UPDATE](../../t-sql/queries/update-transact-sql.md) avec des données non NULL pour la colonne **text**, **ntext** ou **image**.  
+ Valeur qui stocke le pointeur des données **text**, **ntext** ou **image**. *text_ptr* doit être de type **binary(16)** . Pour créer un pointeur de texte, exécutez une instruction [INSERT](../../t-sql/statements/insert-transact-sql.md) ou [UPDATE](../../t-sql/queries/update-transact-sql.md) avec des données non NULL pour la colonne **text**, **ntext** ou **image**.  
   
  WITH LOG  
  Ignoré par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. L'enregistrement dans un journal est déterminé par le mode de récupération en vigueur dans la base de données.  
@@ -69,7 +68,7 @@ WRITETEXT [BULK]
  *data*  
  Données **text**, **ntext** ou **image** à stocker. *data* peut être un littéral ou un paramètre. La longueur maximale du texte que vous pouvez insérer de manière interactive au moyen de WRITETEXT est d’environ 120 Ko pour les données **text**, **ntext** et **image**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez WRITETEXT pour remplacer des données **text**, **ntext** et **image**, et UPDATETEXT pour modifier des données **text**, **ntext** et **image**. UPDATETEXT est plus souple, car il modifie uniquement une partie d’une colonne **text**, **ntext** ou **image**, au lieu de la colonne entière.  
   
  Pour obtenir des performances optimales, il est recommandé d’ajouter ou de mettre à jour les données **text**, **ntext** et **image** dans des tailles de bloc qui sont des multiples de 8040 octets.  
@@ -87,7 +86,7 @@ WRITETEXT [BULK]
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les pointeurs de texte dans la ligne vers les données **text**, **ntext** ou **image** sont possibles, mais ils peuvent ne pas être valides. Pour plus d’informations sur l’option text in row, consultez [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md). Pour plus d’informations sur l’invalidation des pointeurs de texte, consultez [sp_invalidate_textptr &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite une autorisation UPDATE sur la table spécifiée. L'autorisation est transférable lorsque l'autorisation UPDATE est transférée.  
   
 ## <a name="examples"></a>Exemples  
@@ -112,7 +111,7 @@ ALTER DATABASE pubs SET RECOVERY SIMPLE;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)   
  [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   

@@ -41,13 +41,12 @@ helpviewer_keywords:
 ms.assetid: 56f5df6a-56f6-43df-bca9-08476a3bd931
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d075bdbd593d450cbeef18162da5e8329d4ea850
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4efdff475f51eab9ffd55a491ace3dd2084cd41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943913"
 ---
 # <a name="transformation-custom-properties"></a>Propriétés personnalisées des transformations
 
@@ -631,7 +630,7 @@ ms.locfileid: "65725798"
   
  Pour plus d’informations, voir [Unpivot Transformation](../../../integration-services/data-flow/transformations/unpivot-transformation.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)   
  [Common Properties](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)   
  [Propriétés du chemin](https://msdn.microsoft.com/library/89b1e347-9579-4f6b-af74-c6519ea08eea)   

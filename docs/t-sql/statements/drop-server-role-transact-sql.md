@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f1a93bf22d1f96745aed7c71dd1f3ee231a7d22
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929254"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -46,7 +45,7 @@ DROP SERVER ROLE role_name
  *role_name*  
  Spécifie le rôle de serveur défini par l'utilisateur à supprimer du serveur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les rôles de serveur définis par l'utilisateur qui possèdent leurs propres éléments sécurisables ne peuvent pas être supprimés du serveur. Pour supprimer un rôle de serveur défini par l'utilisateur qui possède des éléments sécurisables, vous devez tout d'abord transférer la propriété de ces éléments ou supprimer ces derniers.  
   
  Les rôles de serveur définis par l'utilisateur qui comportent des membres ne peuvent pas être supprimés. Pour supprimer un rôle serveur défini par l’utilisateur qui comporte des membres, vous devez d’abord supprimer les membres du rôle à l’aide de l’instruction [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).  
@@ -55,7 +54,7 @@ DROP SERVER ROLE role_name
   
  Vous pouvez afficher des informations sur l’appartenance à des rôles en interrogeant la vue de catalogue [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur le rôle de serveur ou l'autorisation ALTER ANY SERVER ROLE.  
   
 ## <a name="examples"></a>Exemples  
@@ -68,7 +67,7 @@ DROP SERVER ROLE purchasing;
 GO  
 ```  
   
-### <a name="b-to-view-role-membership"></a>b. Pour consulter l'appartenance à un rôle  
+### <a name="b-to-view-role-membership"></a>B. Pour consulter l'appartenance à un rôle  
  Pour afficher l’appartenance à un rôle, utilisez la page **Rôle serveur (Membres**) dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou exécutez la requête suivante :  
   
 ```  
@@ -93,7 +92,7 @@ JOIN sys.server_principals AS SP2
 ORDER BY SP1.name ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

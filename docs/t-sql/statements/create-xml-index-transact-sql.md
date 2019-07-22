@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e07f3083f29d40f67b8ecf7716aae7a68979bfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93571a71662f8d24044b77c2c65dec01778096d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948068"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +99,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *index_name*  
  Nom de l'index. Les noms d'index doivent être uniques dans une table, mais ne doivent pas être nécessairement uniques dans une base de données. Les noms d’index doivent se conformer aux règles régissant les [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
- Les noms d’index XML primaires ne peuvent pas commencer par les caractères suivants : **#**, **##**, **@** ou **@@**.  
+ Les noms d’index XML primaires ne peuvent pas commencer par les caractères suivants : **#** , **##** , **@** ou **@@** .  
   
  *xml_column_name*  
  Colonne **xml** sur laquelle l’index est basé. Une seule colonne **xml** peut être spécifiée dans une même définition d’index XML. Toutefois, vous pouvez créer plusieurs index XML secondaires sur une colonne **xml**.  
@@ -148,7 +147,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  L'option PAD_INDEX est utile seulement si FILLFACTOR est spécifié, car PAD_INDEX utilise le pourcentage spécifié par FILLFACTOR. Si le pourcentage défini pour FILLFACTOR n'est pas suffisamment élevé pour autoriser une ligne, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] remplace en interne le pourcentage de façon à ce qu'il autorise le minimum. Le nombre de lignes dans une page d’index intermédiaire n’est jamais inférieur à deux, quelle que soit la faiblesse de la valeur de *fillfactor*.  
   
- FILLFACTOR **=**_fillfactor_  
+ FILLFACTOR **=** _fillfactor_  
  Spécifie un pourcentage indiquant le taux de remplissage appliqué par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] au niveau feuille de chaque page d'index lors de la création ou de la reconstruction de l'index. *fillfactor* doit être une valeur entière comprise entre 1 et 100. La valeur par défaut est 0. Si *fillfactor* a pour valeur 100 ou 0, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée des index avec des pages de niveau feuille intégralement remplies.  
   
 > [!NOTE]  
@@ -212,7 +211,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  Les verrous de page ne sont pas utilisés.  
   
- MAXDOP **=**_max_degree_of_parallelism_  
+ MAXDOP **=** _max_degree_of_parallelism_  
  Remplace l’option de configuration [Configurer l’option de configuration du serveur Degré maximal de parallélisme](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) pendant la durée de l’opération d’index. Utilisez MAXDOP pour limiter le nombre de processeurs utilisés dans une exécution de plan parallèle. Le nombre maximal de processeurs est égal à 64.  
   
 > [!IMPORTANT]  
@@ -234,7 +233,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 > [!NOTE]
 >  Les opérations d’index parallèles ne sont pas disponibles dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les colonnes calculées dérivées des types de données **xml** peuvent être indexées comme des colonnes clés ou non-clés incluses dès lors que les types de données des colonnes calculées peuvent être utilisés comme des colonnes clés ou des colonnes non-clés d’index. Vous ne pouvez pas créer d’index XML primaire sur une colonne **xml** calculée.  
   
  Pour consulter des informations sur les index XML, utilisez la vue de catalogue [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md).  
@@ -279,7 +278,7 @@ CREATE XML INDEX IXML_ProductModel_CatalogDescription_Path
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   

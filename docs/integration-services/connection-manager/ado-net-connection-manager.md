@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bee4d3ea71aaeacf682a6e90fad91786fa7a0c9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32b01cce82cd1fd2af018b002a3c551ea480c000
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66221173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897987"
 ---
 # <a name="adonet-connection-manager"></a>Gestionnaire de connexions ADO.NET
 
@@ -120,7 +119,7 @@ Pour utiliser l’authentification par identité managée pour Azure SQL Databas
     
 1. **[Provisionnez un administrateur Azure Active Directory](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance)** pour votre instance managée sur le portail Azure si ce n’est déjà fait. L’administrateur Azure AD peut être un utilisateur Azure AD ou un groupe Azure AD. Si vous accordez au groupe détenant l’identité managée un rôle d’administrateur, ignorez les étapes 2 à 5. L’administrateur a un accès complet à la base de données.
 
-1. **[Recherchez l’identité managée de la fabrique de données à partir du portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)**. Accédez aux **Propriétés** de votre fabrique de données. Copiez l’**ID d’application de l’identité managée** (pas l’**ID d’objet de l’identité managée**).
+1. **[Recherchez l’identité managée de la fabrique de données à partir du portail Azure](https://docs.microsoft.com/azure/data-factory/data-factory-service-identity)** . Accédez aux **Propriétés** de votre fabrique de données. Copiez l’**ID d’application de l’identité managée** (pas l’**ID d’objet de l’identité managée**).
 
 1. **Convertissez l’identité managée de la fabrique de données en type binaire**. Connectez-vous à la base de données **MASTER** dans votre instance managée à l’aide d’outils tels que SSMS, avec votre compte d’administrateur SQL/Active Directory. Exécutez la commande T-SQL suivante sur la base de données **MASTER** pour obtenir votre ID d’application de l’identité managée sous forme binaire :
     
@@ -155,7 +154,7 @@ Enfin, **configurez l’authentification d’identité managée** pour le gestio
 > [!NOTE]
 >  Pour configurer l’authentification d’identité managée sur les packages existants, regénérez votre projet SSIS avec le [dernier concepteur SSIS](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) au moins une fois et redéployez ce projet SSIS sur votre runtime d’intégration Azure-SSIS afin que la nouvelle propriété de gestionnaire de connexions **ConnectUsingManagedIdentity** soit automatiquement ajoutée à tous les gestionnaires de connexions ADO.NET dans votre projet SSIS.
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Connexions Integration Services &#40;SSIS&#41;](../../integration-services/connection-manager/integration-services-ssis-connections.md)  
   
   

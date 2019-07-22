@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 48d6db7b2c68fac233dbc585ddbcf4ffb795ca8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2184475ac3da6629a70b5013277686636a6fc8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897073"
 ---
 # <a name="save-packages"></a>Enregistrer des packages
 
@@ -111,7 +110,7 @@ ms.locfileid: "65718947"
   
 2.  Dans l’Explorateur de solutions, cliquez avec le bouton droit sur le projet, pointez sur **Ajouter**, puis cliquez sur **Nouvel élément**.  
   
-3.  Dans la boîte de dialogue **Ajouter un nouvel élément -\<nom_projet>**, cliquez sur le package que vous voulez utiliser comme modèle.  
+3.  Dans la boîte de dialogue **Ajouter un nouvel élément -\<nom_projet>** , cliquez sur le package que vous voulez utiliser comme modèle.  
   
      La liste de modèles inclut le modèle de package par défaut nommé Nouveau package SSIS. L'icône de package identifie les modèles pouvant être utilisés comme modèles de packages.  
   

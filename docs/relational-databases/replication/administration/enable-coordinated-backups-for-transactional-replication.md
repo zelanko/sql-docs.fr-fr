@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73a914ba-8b2d-4f4d-ac1b-db9bac676a30
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8a42406af2eb1a3133ffb3e6e65699f75f08bf46
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 553855ab21f9910f244a6ee0e300f66bf0e7eb74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939258"
 ---
 # <a name="enable-coordinated-backups-for-transactional-replication"></a>Activer les sauvegardes coordonnées pour la réplication transactionnelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "54124469"
   
 1.  Sur le serveur de publication, utilisez la fonction [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../../t-sql/functions/databasepropertyex-transact-sql.md) pour retourner la propriété **IsSyncWithBackup** de la base de données de publication. Si la fonction retourne **1**, les sauvegardes coordonnées sont déjà activées pour la base de données publiée.  
   
-2.  Si la fonction de l’étape 1 retourne **0**, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) sur le serveur de publication de la base de données de publication. Spécifiez la valeur **sync with backup** pour **@optname**et **true** pour **@value**.  
+2.  Si la fonction de l’étape 1 retourne **0**, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) sur le serveur de publication de la base de données de publication. Spécifiez la valeur **sync with backup** pour **@optname** et **true** pour **@value** .  
   
     > [!NOTE]  
     >  Si vous modifiez l'option **sync with backup** en **false**, le point de troncation de la base de données de publication sera mis à jour après que l'Agent de lecture du journal se soit exécuté ou après un intervalle si l'Agent de lecture du journal s'exécute continuellement. L'intervalle maximal est contrôlé par le paramètre d'agent **-MessageInterval** (lequel a une valeur par défaut de 30 secondes).  
@@ -43,10 +42,10 @@ ms.locfileid: "54124469"
   
 1.  Sur le serveur de distribution, utilisez la fonction [DATABASEPROPERTYEX &#40;Transact-SQL&#41;](../../../t-sql/functions/databasepropertyex-transact-sql.md) pour retourner la propriété **IsSyncWithBackup** de la base de données de distribution. Si la fonction retourne **1**, les sauvegardes coordonnées sont déjà activées pour la base de données de distribution.  
   
-2.  Si la fonction de l’étape 1 retourne **0**, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) sur le serveur de distribution de la base de données de distribution. Spécifiez la valeur **sync with backup** pour **@optname** et **true** pour **@value**.  
+2.  Si la fonction de l’étape 1 retourne **0**, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) sur le serveur de distribution de la base de données de distribution. Spécifiez la valeur **sync with backup** pour **@optname** et **true** pour **@value** .  
   
 ### <a name="to-disable-coordinated-backups"></a>Pour désactiver les sauvegardes coordonnées  
   
-1.  Sur le serveur de publication de la base de données de publication ou sur le serveur de distribution de la base de données de distribution, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Spécifiez la valeur **sync with backup** pour **@optname** et **false** pour **@value**.  
+1.  Sur le serveur de publication de la base de données de publication ou sur le serveur de distribution de la base de données de distribution, exécutez [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md). Spécifiez la valeur **sync with backup** pour **@optname** et **false** pour **@value** .  
   
   

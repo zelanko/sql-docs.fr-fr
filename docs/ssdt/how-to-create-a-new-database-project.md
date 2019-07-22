@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5861f16d20d95ae6ba9d2024d2199b853934d355
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fb617241f9af31122993bc1d341e433ac62904f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897159"
 ---
 # <a name="how-to-create-a-new-database-project"></a>Procédure : Créer un projet de base de données
 Vous pouvez créer un nouveau projet de base de données et importer un schéma de base de données à partir d'une base de données existante, d'un fichier de script SQL ou d'une application de la couche Données (.dacpac). Vous pouvez ensuite appeler les mêmes outils du concepteur visuel (Éditeur Transact\-SQL, Concepteur de tables) disponibles pour le développement de base de données connectée afin d'apporter des modifications au projet de base de données en mode hors connexion, et republier les modifications dans la base de données de production. Les modifications peuvent aussi être enregistrées en tant que script pour être publiées ultérieurement. Le volet **Propriétés du projet** permet de modifier la plateforme cible vers différentes versions de SQL Server (y compris SQL Azure).  
