@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc6b596f6cd55fbd0642768a3323fddb611033ba
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071172"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -117,7 +116,7 @@ Modèle de recherche fourni à la clause `MATCH` comme partie intégrante du pr�
 Les utilisateurs doivent fournir des valeurs pour `$from_id` et `$to_id` à l’occasion d’une opération d’insertion dans une arête. Une erreur est retournée si aucune valeur n’est fournie ou que des valeurs NULL sont insérées dans ces colonnes. 
   
 
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Une insertion dans un nœud équivaut à une insertion dans une table relationnelle. Les valeurs de la colonne $node_id sont générées automatiquement.
 
 À l’occasion d’une insertion dans une table d’arêtes, les utilisateurs doivent fournir des valeurs pour les colonnes `$from_id` et `$to_id`.   
@@ -127,7 +126,7 @@ Une insertion en bloc (BULK) dans une table de nœuds s’effectue de la même f
 Avant de procéder à une insertion en bloc dans une table d’arêtes, les tables de nœuds doivent être importées. Les valeurs pour `$from_id` et `$to_id` peuvent ensuite être extraites de la colonne `$node_id` de la table de nœuds, puis insérées comme arêtes. 
 
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
 L'autorisation INSERT est obligatoire sur la table cible.  
   
 Les autorisations INSERT sont accordées par défaut aux membres du rôle serveur fixe **sysadmin**, aux rôles de base de données fixes **db_owner** et **db_datawriter**, ainsi qu’au propriétaire de la table. Les membres des rôles **sysadmin**, **db_owner** et **db_securityadmin** et le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  
@@ -149,7 +148,7 @@ INSERT INTO dbo.Person VALUES (1, 'Alice');
 INSERT INTO dbo.Person VALUES (2,'John');
 ```
   
-#### <a name="b--insert-into-edge-table"></a>b.  Insertion dans une table d’arêtes  
+#### <a name="b--insert-into-edge-table"></a>B.  Insertion dans une table d’arêtes  
 L’exemple suivant crée une table d’arêtes nommée friend et y insère une arête.
 
 ```sql
@@ -162,7 +161,7 @@ INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Al
 ```
 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
 [Traitement des graphiques avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
 

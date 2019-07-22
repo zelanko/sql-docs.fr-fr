@@ -8,14 +8,13 @@ ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1299b67b30561ffcd8168879a04840c3efebfe25
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141270"
 ---
 # <a name="rename-transact-sql"></a>RENAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -70,7 +69,7 @@ Modifiez le nom d’une base de données définie par l’utilisateur, de *datab
 - DWDiagnostics
 - DWQueue
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Pour exécuter cette commande, vous avez besoin de cette autorisation :
 
@@ -112,7 +111,7 @@ RENAME DATABASE AdWorks to AdWorks2;
 
  Quand vous renommez une table, tous les objets et les propriétés associés à la table sont mis à jour pour référencer le nouveau nom de la table. Par exemple, les définitions, les index, les contraintes et les autorisations de la table sont mis à jour. Les vues ne sont pas mises à jour.
 
-### <a name="b-rename-a-table"></a>b. Renommer une table
+### <a name="b-rename-a-table"></a>B. Renommer une table
 
 **S’APPLIQUE À :** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 

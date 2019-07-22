@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df9cc3231b9e883857563b2f7ed0bf8bc8d1a2f3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070275"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -65,10 +64,10 @@ Ajoute le principal de serveur spécifié au rôle de serveur. *server_principal
 DROP MEMBER *server_principal*  
 Supprime le principal de serveur spécifié du rôle de serveur. *server_principal* peut être un compte de connexion ou un rôle serveur défini par l’utilisateur. *server_principal* ne peut pas être un rôle serveur fixe, un rôle de base de données ou un administrateur système.  
   
-WITH NAME **=**_new_server_role_name_  
+WITH NAME **=** _new_server_role_name_  
 Spécifie le nouveau nom du rôle de serveur défini par l'utilisateur. Ce nom ne peut pas déjà exister dans le serveur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 La modification du nom d'un rôle de serveur défini par l'utilisateur ne modifie pas le numéro d'identification, le propriétaire ou les autorisations du rôle.  
   
 Pour modifier l’appartenance au rôle, `ALTER SERVER ROLE` remplace sp_addsrvrolemember et sp_dropsrvrolemember. Ces procédures stockées sont déconseillées.  
@@ -77,7 +76,7 @@ Vous pouvez consulter des rôles de serveur en interrogeant les affichages catal
   
 Pour modifier le propriétaire d’un rôle serveur défini par l’utilisateur, utilisez [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l’autorisation `ALTER ANY SERVER ROLE` sur le serveur pour changer le nom d’un rôle serveur défini par l’utilisateur.  
   
 **Rôles serveur fixes**  
@@ -105,7 +104,7 @@ ALTER SERVER ROLE Product WITH NAME = Production ;
 GO  
 ```  
   
-### <a name="b-adding-a-domain-account-to-a-server-role"></a>b. Ajout d'un compte de domaine à un rôle de serveur  
+### <a name="b-adding-a-domain-account-to-a-server-role"></a>B. Ajout d'un compte de domaine à un rôle de serveur  
 L’exemple suivant ajoute un compte de domaine nommé `adventure-works\roberto0` au rôle serveur défini par l’utilisateur nommé `Production`.  
   
 ```  
@@ -173,7 +172,7 @@ L’exemple suivant supprime l’appartenance d’Anna au rôle serveur `LargeRC
 ALTER SERVER ROLE LargeRC DROP MEMBER Anna;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [CREATE SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-role-transact-sql.md)   
 [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
 [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   

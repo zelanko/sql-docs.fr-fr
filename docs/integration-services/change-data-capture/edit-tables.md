@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: fed8fada-2abc-45e2-8228-0656f9c599cb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2eaf455da969e1b8a50a2c174aefeec3aef40666
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1bdff1386edf4563eadfb04694cbe573f6b1d5c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060753"
 ---
 # <a name="edit-tables"></a>Modifier des tables
 
@@ -48,7 +47,7 @@ ms.locfileid: "65728890"
  **Supprimer**  
  Sélectionnez une table dans la liste et cliquez sur **Supprimer** pour supprimer la table de l’instance CDC.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédure : modifier les propriétés d'une instance de capture de données modifiées](../../integration-services/change-data-capture/how-to-edit-the-cdc-instance-properties.md)   
  [Sélectionner des tables et des colonnes Oracle](../../integration-services/change-data-capture/select-oracle-tables-and-columns.md)  
   

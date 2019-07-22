@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: f1054809-04f2-4995-9ebd-cb67098e6708
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac11edc8ecd416ff42fd6c89d5de1b583fb586d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2c26669059facb851668b6b226dac7aaa2387e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122074"
 ---
 # <a name="not-equal-to-transact-sql---exclamation"></a>Différent de (Transact SQL) - exclamation
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Teste si une expression est différente d'une autre expression (opérateur de comparaison). Si un des deux opérandes, ou les deux, ont la valeur NULL, NULL est renvoyé. Fonctionne comme l’opérateur de comparaison[<> (Différent de)](../../t-sql/language-elements/not-equal-to-transact-sql-traditional.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
   

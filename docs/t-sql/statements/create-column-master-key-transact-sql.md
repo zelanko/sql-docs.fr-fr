@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 17e717fd999109390c001bdab9aeee5629c1a119
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061066"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -169,13 +168,13 @@ Spécifie que la clé principale de colonne prend en charge les enclaves. Vous p
 Un littéral binaire qui est un résultat du *chemin de clé* fournissant la signature numérique et du paramètre ENCLAVE_COMPUTATIONS avec la clé principale de colonne. La signature indique si ENCLAVE_COMPUTATIONS est spécifié ou non. La signature empêche les valeurs signées d’être altérées par des utilisateurs non autorisés. Un pilote client prenant en charge Always Encrypted vérifie la signature et renvoie une erreur à l’application si la signature n’est pas valide. La signature doit être générée à l’aide d’outils côté client. Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 
 Créez une entrée de métadonnées de clé principale de colonne avant de créer une entrée de métadonnées de clé de chiffrement de colonne dans la base de données et avant que toute colonne dans la base de données puisse être chiffrée à l’aide d’Always Encrypted. Une entrée de clé principale de colonne dans les métadonnées ne contient pas la clé principale de colonne réelle. La clé principale de colonne doit être stockée dans un magasin de clés de colonne externe (en dehors de SQL Server). Le nom du fournisseur de magasin de clés et le chemin de clé principale de colonne dans les métadonnées doivent être valides pour une application cliente. L’application cliente doit utiliser la clé principale de colonne pour déchiffrer une clé de chiffrement de colonne. La clé de chiffrement de colonne est chiffrée avec la clé principale de colonne. L’application cliente doit également interroger les colonnes chiffrées.
 
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l’autorisation **ALTER ANY COLUMN MASTER KEY**.  
   
 ## <a name="examples"></a>Exemples  
@@ -220,7 +219,7 @@ WITH (
     KEY_PATH = 'https://contoso.vault/sales_db_tce_key'  
 );  
 ```  
-### <a name="b-creating-an-enclave-enabled-column-master-key"></a>b. Création d’une clé principale de colonne prenant en charge les enclaves  
+### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. Création d’une clé principale de colonne prenant en charge les enclaves  
 L’exemple suivant crée une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne prenant en charge les enclaves. La clé principale de colonne prenant en charge les enclaves est stockée dans le magasin de certificats, pour les applications clientes qui utilisent le fournisseur MSSQL_CERTIFICATE_STORE afin d’accéder à la clé principale de colonne :  
   
 ```  
@@ -243,7 +242,7 @@ WITH (
   );
 ```  
   
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
  
 * [DROP COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-master-key-transact-sql.md)   
 * [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)
