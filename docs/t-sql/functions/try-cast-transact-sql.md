@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 20f6cf51157746f167186ad041943167d40e6d65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 313f1bd13cf1b12a0685eeb101998792e0586767
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098770"
 ---
 # <a name="trycast-transact-sql"></a>TRY_CAST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
 ## <a name="return-types"></a>Types de retour  
  Retourne une valeur convertie en type de données spécifié si la conversion aboutit ; sinon, retourne NULL.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  **TRY_CAST** prend la valeur qui lui est transmise et tente de la convertir vers le type *data_type* spécifié. Si le transtypage réussit, **TRY_CAST** renvoie la valeur dans le type *data_type* spécifié ; si une erreur se produit, la valeur NULL est renvoyée. Toutefois, si vous demandez une conversion qui n’est pas autorisée explicitement, **TRY_CAST** échoue avec une erreur.  
   
  **TRY_CAST** n’est pas un nouveau mot clé réservé et est disponible à tous les niveaux de compatibilité. **TRY_CAST** a la même sémantique que **TRY_CONVERT** lors de la connexion à des serveurs distants.  
@@ -134,7 +133,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [TRY_CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/try-convert-transact-sql.md)   
  [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
   

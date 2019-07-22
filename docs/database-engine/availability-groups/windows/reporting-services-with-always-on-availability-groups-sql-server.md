@@ -13,12 +13,12 @@ ms.assetid: edeb5c75-fb13-467e-873a-ab3aad88ab72
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: 7adcc36bfaf41240ae5c1da0d8934ffdda67bada
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f0820f42d95f0320dbdf843ab1715b49994cb613
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506516"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252122"
 ---
 # <a name="reporting-services-with-always-on-availability-groups-sql-server"></a>Reporting Services avec les groupes de disponibilité Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,25 +28,7 @@ ms.locfileid: "59506516"
  L'un des principaux avantages d'utiliser [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] avec des sources de données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] réside dans l'exploitation de réplicas secondaires accessibles en lecture en tant que source de données de rapports tandis que, dans le même temps, les réplicas secondaires permettent le basculement vers une base de données principale.  
   
  Pour obtenir des informations générales sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez le [Forum aux questions sur Always On pour SQL Server 2012 (https://msdn.microsoft.com/sqlserver/gg508768)](https://msdn.microsoft.com/sqlserver/gg508768).  
-  
- **Dans cette rubrique :**  
-  
--   [Conditions préalables requises pour l’utilisation de Reporting Services et des groupes de disponibilité Always On](#bkmk_requirements)  
-  
--   [Sources de données de rapport et groupes de disponibilité](#bkmk_reportdatasources)  
-  
--   [Conception de rapports et groupes de disponibilité](#bkmk_reportdesign)  
-  
--   [Bases de données de serveur de rapports et groupes de disponibilité](#bkmk_reportserverdatabases)  
-  
--   -   [Différences entre le mode natif et le mode SharePoint](#bkmk_differences_in_server_mode)  
-  
-    -   [Préparer les bases de données de serveur de rapports pour les groupes de disponibilité](#bkmk_prepare_databases)  
-  
-    -   [Étapes pour effectuer une récupération d'urgence de bases de données de serveur de rapports](#bkmk_steps_to_complete_failover)  
-  
-    -   [Comportement d'un serveur de rapports en cas de basculement](#bkmk_failover_behavior)  
-  
+
 ##  <a name="bkmk_requirements"></a> Conditions préalables requises pour l’utilisation de Reporting Services et des groupes de disponibilité Always On  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] et Power BI Report Server utilisent le composant .Net Framework 4.0 et prennent en charge les propriétés de chaîne de connexion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les utiliser avec des sources de données.  
   
@@ -190,7 +172,7 @@ ms.locfileid: "59506516"
   
 -   Une fois que le basculement de la base de données est terminé et que le service du serveur de rapports a été redémarré, les travaux de SQL Server Agent sont recréés automatiquement. Tant que les travaux de SQL Server Agent n'ont pas été recréés, les exécutions en arrière-plan associées aux travaux de SQL Server Agent ne sont pas traitées. Cela inclut les abonnements [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , les planifications et les instantanés.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge des fonctionnalités de récupération d'urgence, haute disponibilité par SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)   
  [Groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [Bien démarrer avec les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/getting-started-with-always-on-availability-groups-sql-server.md)   

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 6f3e5802-864b-4e77-9862-657bb5430b68
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1fc40d263e5b7e22c38f225f50809d35e0b73415
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 866c2eaadb8cd946fb7a7b9b2ffdd46a81ec9e27
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65949236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109430"
 ---
 # <a name="isnull-transact-sql"></a>ISNULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +52,7 @@ ISNULL ( check_expression , replacement_value )
 ## <a name="return-types"></a>Types de retour  
  Renvoie le même type que *check_expression*. Si une valeur littérale NULL est fournie en tant que *check_expression*, renvoie le type de données de *replacement_value*. Si une valeur littérale NULL est fournie en tant que *check_expression* et qu’aucun argument *replacement_value* n’est fourni, renvoie un type **int**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La valeur de *check_expression* est renvoyée si elle n’est pas NULL ; sinon, l’argument *replacement_value* est renvoyé après avoir été implicitement converti vers le type de *check_expression*, si les types sont différents. *replacement_value* peut être tronqué si *replacement_value* dépasse *check_expression*.  
   
 > [!NOTE]  
@@ -181,7 +180,7 @@ FROM dbo.DimProduct
 WHERE Weight IS NULL;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [IS NULL &#40;Transact-SQL&#41;](../../t-sql/queries/is-null-transact-sql.md)   
  [Fonctions système &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   

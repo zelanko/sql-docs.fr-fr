@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9d96bcf5-eba8-44bd-b113-ed51ad0d0521
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 40749286c45dc418161c04b8730b9a27f20cd42f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5076d158ce4d8f58d06ba30ecf51083ecf7e1386
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024707"
 ---
 # <a name="creating-a-custom-data-flow-component"></a>Création d'un composant de flux de données personnalisé
 
@@ -87,7 +86,7 @@ Public Class BasicComponent
 End Class  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Développement d’une interface utilisateur pour un composant de flux de données](../../../integration-services/extending-packages-custom-objects/data-flow/developing-a-user-interface-for-a-data-flow-component.md)  
   
   

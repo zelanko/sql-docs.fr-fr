@@ -13,14 +13,13 @@ dev_langs:
 - TSQL
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 718d03619165f94ae9b0820a7c2c6319549069be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de42757543ebc09a63de250178cc1c2e00aa8a74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019792"
 ---
 # <a name="approxcountdistinct-transact-sql"></a>APPROX_COUNT_DISTINCT (Transact-SQL)
 [!INCLUDE[appliesto-xx-asdb-asdw-pdw-md](../../includes/appliesto-xx-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ APPROX_COUNT_DISTINCT ( expression )
 ## <a name="return-types"></a>Types de retour
  **bigint**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `APPROX_COUNT_DISTINCT( expression )`Évalue une expression pour chaque ligne d’un groupe et renvoie le nombre de valeurs non NULL uniques dans un groupe. Cette fonction est conçue pour fournir des agrégations dans de vastes jeux de données où la réactivité est plus importante que la précision absolue.  
 
 `APPROX_COUNT_DISTINCT` est conçu pour une utilisation dans les scénarios big data et optimisé pour les conditions suivantes :

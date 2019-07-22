@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f172d631-3b8c-4912-bd0f-568366cd9870
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3e83f1a2e61a26e54713a5dae9dd2ef7cc092479
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a5b5a6215127b59d90e1de1188223281024304f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113911"
 ---
 # <a name="specify-data-type-mappings-for-an-oracle-publisher"></a>Spécifier des mappages de types de données pour un Serveur de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,15 +34,15 @@ ms.locfileid: "53212358"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Spécifiez des mappages de type de données sous l’onglet **Mappage de données** de la boîte de dialogue **Propriétés de l’article - \<Article>**. Celle-ci est disponible dans la page **Articles** de l’Assistant Nouvelle publication et la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication à partir d’une base de données Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md) et [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Spécifiez des mappages de type de données sous l’onglet **Mappage de données** de la boîte de dialogue **Propriétés de l’article - \<Article>** . Celle-ci est disponible dans la page **Articles** de l’Assistant Nouvelle publication et la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication à partir d’une base de données Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md) et [Afficher et modifier les propriétés d’une publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-a-data-type-mapping"></a>Pour spécifier un mappage de types de données  
   
-1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez une table et cliquez sur **Propriétés de l’article**.  
+1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>** , sélectionnez une table et cliquez sur **Propriétés de l’article**.  
   
 2.  Cliquez sur **Définir les propriétés de l'article de Table en surbrillance**.  
   
-3.  Sous l’onglet **Mappage de données** de la boîte de dialogue **Propriétés de l’article - \<Article>**, sélectionnez des mappages dans la colonne **Type de données de l’Abonné** :  
+3.  Sous l’onglet **Mappage de données** de la boîte de dialogue **Propriétés de l’article - \<Article>** , sélectionnez des mappages dans la colonne **Type de données de l’Abonné** :  
   
     -   Pour certains types de données, il existe uniquement une seule possibilité de mappage dans laquelle la colonne de la grille de propriétés est en lecture seule.  
   
@@ -58,25 +57,25 @@ ms.locfileid: "53212358"
   
 1.  S'il n'en existe pas encore, créez une publication Oracle.  
   
-2.  Sur le serveur de distribution, exécutez [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Spécifiez la valeur **0** pour **@use_default_datatypes**. Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
+2.  Sur le serveur de distribution, exécutez [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Spécifiez la valeur **0** pour **@use_default_datatypes** . Pour plus d’informations, consultez [définir un Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 3.  Sur le serveur de distribution, exécutez [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) pour afficher le mappage existant pour une colonne dans un article publié.  
   
-4.  Sur le serveur de distribution, exécutez [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md). Spécifiez le nom du serveur de publication Oracle pour **@publisher**, ainsi que **@publication**, **@article**et **@column** pour définir la colonne publiée. Spécifiez le nom du type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers lequel effectuer le mappage pour **@type**, ainsi que **@length**, **@precision**et **@scale**, le cas échéant.  
+4.  Sur le serveur de distribution, exécutez [sp_changearticlecolumndatatype](../../../relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql.md). Spécifiez le nom du serveur de publication Oracle pour **@publisher** , ainsi que **@publication** , **@article** et **@column** pour définir la colonne publiée. Spécifiez le nom du type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers lequel effectuer le mappage pour **@type** , ainsi que **@length** , **@precision** et **@scale** , le cas échéant.  
   
 5.  Sur le serveur de distribution, exécutez [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md). Cela crée la vue utilisée pour générer l'instantané à partir de la publication Oracle.  
   
 #### <a name="to-specify-a-mapping-as-the-default-mapping-for-a-data-type"></a>Pour spécifier un mappage comme mappage par défaut pour un type de données  
   
-1.  (Facultatif) Exécutez [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)sur une base de données quelconque du serveur de distribution. Spécifiez **@source_dbms**, **@source_type**, **@destination_dbms**, **@destination_version**et tous les autres paramètres éventuellement requis pour identifier le SGBD source. Les informations sur le type de données actuellement mappé dans le SGBD de destination sont retournées à l'aide des paramètres de sortie.  
+1.  (Facultatif) Exécutez [sp_getdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)sur une base de données quelconque du serveur de distribution. Spécifiez **@source_dbms** , **@source_type** , **@destination_dbms** , **@destination_version** et tous les autres paramètres éventuellement requis pour identifier le SGBD source. Les informations sur le type de données actuellement mappé dans le SGBD de destination sont retournées à l'aide des paramètres de sortie.  
   
 2.  (Facultatif) Exécutez [sp_helpdatatypemap](../../../relational-databases/system-stored-procedures/sp-helpdatatypemap-transact-sql.md)sur une base de données quelconque du serveur de distribution. Spécifiez **@source_dbms** et tous les autres paramètres éventuellement requis pour filtrer le jeu de résultats. Notez la valeur de **mapping_id** pour le mappage souhaité dans le jeu de résultats.  
   
 3.  Exécutez [sp_setdefaultdatatypemapping](../../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)sur une base de données quelconque du serveur de distribution.  
   
-    -   Si vous connaissez la valeur souhaitée de **mapping_id** obtenue à l'étape 2, spécifiez-la pour **@mapping_id**.  
+    -   Si vous connaissez la valeur souhaitée de **mapping_id** obtenue à l'étape 2, spécifiez-la pour **@mapping_id** .  
   
-    -   Si vous ne connaissez pas **mapping_id**, spécifiez les paramètres **@source_dbms**, **@source_type**, **@destination_dbms**, **@destination_type**et tous les autres paramètres éventuellement requis pour identifier un mappage existant.  
+    -   Si vous ne connaissez pas **mapping_id**, spécifiez les paramètres **@source_dbms** , **@source_type** , **@destination_dbms** , **@destination_type** et tous les autres paramètres éventuellement requis pour identifier un mappage existant.  
   
 #### <a name="to-find-valid-data-types-for-a-given-oracle-data-type"></a>Pour rechercher les types de données valides pour un type de données Oracle donné  
   
@@ -95,7 +94,7 @@ ms.locfileid: "53212358"
   
  [!code-sql[HowTo#sp_helpcolumndatatype_number](../../../relational-databases/replication/codesnippet/tsql/specify-data-type-mappin_3.sql)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)   
  [Réplication hétérogène d’une base de données](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Concepts liés aux procédures stockées système de réplication](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   

@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102110"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -169,7 +168,7 @@ DATA_PURITY
 > [!WARNING] 
 > Si MAXDOP est défini avec la valeur zéro, SQL Server choisit le degré maximal de parallélisme à utiliser.    
 
-## <a name="remarks"></a>Notes     
+## <a name="remarks"></a>Notes    
 DBCC CHECKDB n'examine pas les index désactivés. Pour plus d’informations sur les index désactivés, consultez [Désactiver les index et contraintes](../../relational-databases/indexes/disable-indexes-and-constraints.md).    
 
 Si un type défini par l'utilisateur est marqué comme étant ordonné par octet, il ne doit y avoir qu'une seule sérialisation du type défini par l'utilisateur. En l'absence de sérialisation cohérente de type défini par l'utilisateur ordonné par octet, l'erreur 2537 est générée à l'exécution de DBCC CHECKDB. Pour plus d’informations, consultez [Configuration requise pour les types définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    
@@ -390,7 +389,7 @@ DBCC CHECKDB WITH NO_INFOMSGS;
 GO    
 ```    
     
-## <a name="see-also"></a> Voir aussi    
+## <a name="see-also"></a>Voir aussi    
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Afficher la taille du fichier partiellement alloué d’un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  

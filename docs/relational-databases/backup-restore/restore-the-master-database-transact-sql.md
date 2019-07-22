@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08da0ac24a7999235efc6150d313ca2bb2ae0ea7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce115a0df8ca77b37a78234247174ca9f2dd006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041469"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>Restaurer la base de données MASTER (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "52502190"
   
 1.  Démarrez l'instance de serveur en mode mono-utilisateur.  
   
-     Pour savoir comment spécifier le paramètre de démarrage mono-utilisateur (**-m**), consultez [Configurer les options de démarrage du serveur &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
+     Pour savoir comment spécifier le paramètre de démarrage mono-utilisateur ( **-m**), consultez [Configurer les options de démarrage du serveur &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
 2.  Pour restaurer une sauvegarde complète de la base de données **master**, utilisez l’instruction [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
   
@@ -42,11 +41,11 @@ ms.locfileid: "52502190"
   
 3.  Redémarrez l'instance du serveur et poursuivez les autres étapes de récupération telles que la restauration d'autres bases de données, l'attachement de bases de données et la correction des incompatibilités au niveau utilisateur.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Dans l'exemple suivant, la base de données `master` est restaurée sur l'instance du serveur par défaut. L'exemple suppose que l'instance du serveur s'exécute déjà en mode mono-utilisateur. L’exemple démarre `sqlcmd` et exécute une instruction `RESTORE DATABASE` qui restaure une sauvegarde complète de la base de données de `master` à partir d’une unité de disque : `Z:\SQLServerBackups\master.bak`.  
   
 > [!NOTE]  
->  Dans le cas d’une instance nommée, la commande **sqlcmd** doit spécifier l’option **-S**_\<NomOrdinateur>_\\*\<NomInstance>*.  
+>  Dans le cas d’une instance nommée, la commande **sqlcmd** doit spécifier l’option **-S** _\<NomOrdinateur>_ \\ *\<NomInstance>* .  
   
 ```  
   
@@ -55,7 +54,7 @@ ms.locfileid: "52502190"
 2> GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Restaurations complètes de bases de données &#40;mode de récupération simple&#41;](../../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   
  [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)   

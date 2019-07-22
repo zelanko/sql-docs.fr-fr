@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4ea7fc8-1cb2-4c98-bc86-8991c5e748b2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b2f95f3fcc7f904ef7ff51139c71ee77fbfad213
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7c587edde597b3b1dffeb60675a1c3c5cb886bc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084075"
 ---
 # <a name="log-file-viewer"></a>Visionneuse du fichier journal
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47671677"
   
 -   SQL Server  
   
--   Agent SQL Server  
+-   SQL Server Agent  
   
 -   Windows NT (ces événements Windows sont également accessibles à partir de l'Observateur d'événements)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "47671677"
 |Explique comment afficher des fichiers journaux hors ligne par le biais de serveurs inscrits et comment vérifier les autorisations WMI.|[Afficher les fichiers journaux hors connexion](../../relational-databases/logs/view-offline-log-files.md)|  
 |Fournit l'aide (accessible à l'aide de la touche F1) relative à la Visionneuse du fichier journal.|[Visionneuse du fichier journal - Aide (F1)](../../relational-databases/logs/log-file-viewer-f1-help.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Audit &#40moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)   
  [Journal des erreurs de l'Agent SQL Server](../../ssms/agent/sql-server-agent-error-log.md)  
   

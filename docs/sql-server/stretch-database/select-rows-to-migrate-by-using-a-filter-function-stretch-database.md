@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a3099541a4eb83e321c0a73422c98b303c375e6
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 5456a9c8febe97f7dbfc09ebba52be469b30c3e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136057"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>Sélectionner les lignes à migrer à l’aide d’une fonction de filtre (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -152,7 +151,7 @@ RETURN  SELECT 1 AS is_eligible
  Vous ne pouvez pas utiliser des sous-requêtes ou des fonctions non déterministes telles que RAND() ou GETDATE().  
   
 ## <a name="add-a-filter-function-to-a-table"></a>Ajouter une fonction de filtre à une table  
- Pour ajouter une fonction de filtre à une table, exécutez l’instruction **ALTER TABLE** et spécifiez une fonction table incluse existante comme valeur du paramètre **FILTER_PREDICATE** . Exemple :  
+ Pour ajouter une fonction de filtre à une table, exécutez l’instruction **ALTER TABLE** et spécifiez une fonction table incluse existante comme valeur du paramètre **FILTER_PREDICATE** . Par exemple :  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -484,7 +483,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>Comment Stretch Database applique la fonction de filtre  
- Stretch Database applique la fonction de filtre à la table, et détermine les lignes pouvant être migrées à l’aide de l’opérateur CROSS APPLY. Exemple :  
+ Stretch Database applique la fonction de filtre à la table, et détermine les lignes pouvant être migrées à l’aide de l’opérateur CROSS APPLY. Par exemple :  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -493,7 +492,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  Si la fonction retourne un résultat non vide pour la ligne, celle-ci peut être migrée.  
   
 ## <a name="replacePredicate"></a>Remplacer une fonction de filtre existante  
- Vous pouvez remplacer une fonction de filtre spécifiée précédemment en réexécutant l’instruction **ALTER TABLE** et en spécifiant une nouvelle valeur pour le paramètre **FILTER_PREDICATE** . Exemple :  
+ Vous pouvez remplacer une fonction de filtre spécifiée précédemment en réexécutant l’instruction **ALTER TABLE** et en spécifiant une nouvelle valeur pour le paramètre **FILTER_PREDICATE** . Par exemple :  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -588,7 +587,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>Supprimer une fonction de filtre d’une table  
- Pour migrer la table entière plutôt que des lignes sélectionnées, supprimez la fonction existante en affectant la valeur null à **FILTER_PREDICATE**  . Exemple :  
+ Pour migrer la table entière plutôt que des lignes sélectionnées, supprimez la fonction existante en affectant la valeur null à **FILTER_PREDICATE**  . Par exemple :  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -610,7 +609,7 @@ Un compte compromis avec des privilèges db_owner peut effectuer les opérations
   
 -   Créer et appliquer une fonction table qui permet de déduire le contenu d’une table pour laquelle l’accès en lecture a été explicitement refusé à l’utilisateur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
   
   

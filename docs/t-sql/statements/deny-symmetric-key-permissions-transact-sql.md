@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8aec17fc676ef975a1655be1b7af0e70eb5ee599
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: b4be2767bd0ae3a2486e598678e7654a50b1dc93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984415"
 ---
 # <a name="deny-symmetric-key-permissions-transact-sql"></a>DENY – refus d'autorisations de clé symétrique (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ DENY permission [ ,...n ]
  *Database_user_with_no_login*  
  Spécifie un utilisateur de base de données sans principal au niveau serveur correspondant.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Des informations sur les clés symétriques sont consultables dans la vue de catalogue [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md).  
   
  Une clé symétrique est un élément sécurisable au niveau base de données inclus dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de refuser sur une clé symétrique sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
@@ -106,7 +105,7 @@ DENY permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL sur la clé symétrique ou l'autorisation ALTER ANY SYMMETRIC KEY sur la base de données. Si vous utilisez l'option AS, le principal spécifié doit posséder la clé symétrique.  
   
 ## <a name="examples"></a>Exemples  
@@ -118,7 +117,7 @@ DENY ALTER ON SYMMETRIC KEY::SamInventory42 TO HamidS;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [GRANT - Octroyer des autorisations sur une clé symétrique &#40;Transact-SQL&#41;](../../t-sql/statements/grant-symmetric-key-permissions-transact-sql.md)   
  [REVOKE - Révoquer des autorisations sur une clé symétrique &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-symmetric-key-permissions-transact-sql.md)   

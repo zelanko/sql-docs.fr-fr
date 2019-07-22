@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0ccb3c2ce2784bf27dc84584eeceec1ee4692f25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f8809b5fad7f9f5a31615bdbe92d6f949b52106
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128323"
 ---
 # <a name="distribution-database"></a>Base de données de distribution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47693887"
 > [!NOTE]  
 >  Vous pouvez réduire le délai d'écriture des transactions et améliorer les performances de la réplication en plaçant le journal de la base de données de distribution sur un disque différent de celui de la base de données de distribution.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)   
  [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)  

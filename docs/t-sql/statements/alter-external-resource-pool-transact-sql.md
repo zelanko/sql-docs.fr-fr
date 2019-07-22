@@ -17,11 +17,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 ms.openlocfilehash: 3b6ef1bd5ea4c307ea8e2fc004e2d4dba815ba82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722457"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68223565"
 ---
 # <a name="alter-external-resource-pool-transact-sql"></a>ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Spécifie la bande passante processeur moyenne maximale que toutes les demandes 
 AFFINITY {CPU = AUTO | ( \<CPU_range_spec> ) | NUMANODE = (\<NUMA_node_range_spec>)}  
 Joint le pool de ressources externe aux UC spécifiées. La valeur par défaut est AUTO.
 
-AFFINITY CPU = **(** \<CPU_range_spec> **)** mappe le pool de ressources externes aux unités centrales [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiées par les valeurs CPU_ID données. Quand vous utilisez AFFINITY NUMANODE =  **(** \<NUMA_node_range_spec> **)**, le pool de ressources externes est associé par affinité aux unités centrales physiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondant au nœud NUMA ou à la plage de nœuds spécifique.
+AFFINITY CPU = **(** \<CPU_range_spec> **)** mappe le pool de ressources externes aux unités centrales [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiées par les valeurs CPU_ID données. Quand vous utilisez AFFINITY NUMANODE =  **(** \<NUMA_node_range_spec> **)** , le pool de ressources externes est associé par affinité aux unités centrales physiques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] correspondant au nœud NUMA ou à la plage de nœuds spécifique.
 
 
 MAX_MEMORY_PERCENT =*value*  
@@ -81,14 +81,14 @@ Spécifie la mémoire totale du serveur qui peut être utilisée par les demande
 MAX_PROCESSES =*value*  
 Spécifie le nombre maximal de processus autorisés pour le pool de ressources externes. Spécifiez 0 pour définir un seuil illimité pour le pool, qui est alors limité uniquement par les ressources de l’ordinateur. La valeur par défaut est 0.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] implémente le pool de ressources quand vous exécutez l’instruction [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md).
 
 Pour obtenir des informations générales sur les pools de ressources, consultez [Pool de ressources du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md) et [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md).  
 
 Pour plus d’informations sur l’utilisation de pools de ressources externes pour gouverner les travaux de Machine Learning, consultez [Gouvernance des ressources de Machine Learning dans SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md).
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Nécessite l'autorisation `CONTROL SERVER`.
 

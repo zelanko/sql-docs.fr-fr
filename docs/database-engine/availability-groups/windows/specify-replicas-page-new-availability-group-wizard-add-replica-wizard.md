@@ -13,17 +13,16 @@ f1_keywords:
 ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 9b9bf633e4014197dcf92d730806b669540f6403
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a793ddb2f1b16c8b2f7596c348966e24d2785345
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013992"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Page Spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajouter un réplica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique décrit les options de la page **Spécifier les réplicas** . Cette page s'applique à l' **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** et à l' **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Utilisez la page **Spécifier les réplicas** pour spécifier et configurer un ou plusieurs réplicas de disponibilité afin d'ajouter le groupe de disponibilité. Cette page contient quatre onglets, qui sont présentés dans le tableau suivant. Cliquez sur le nom d'un onglet du tableau pour atteindre la section correspondante, plus loin dans cette rubrique.  
+  Cette rubrique décrit les options de la page **Spécifier les réplicas** . Cette page s'applique à l' **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** et à l' **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** . Utilisez la page **Spécifier les réplicas** pour spécifier et configurer un ou plusieurs réplicas de disponibilité afin d'ajouter le groupe de disponibilité. Cette page contient quatre onglets, qui sont présentés dans le tableau suivant. Cliquez sur le nom d'un onglet du tableau pour atteindre la section correspondante, plus loin dans cette rubrique.  
   
 |Onglet|Brève description|  
 |---------|-----------------------|  
@@ -147,7 +146,7 @@ ms.locfileid: "66777631"
  Spécifiez vos préférences d'écouteur pour ce groupe de disponibilité, comme suit :  
   
  **Nom DNS de l'écouteur**  
- Indiquez le nom réseau de l'écouteur. Ce nom doit être unique sur le domaine et ne peut contenir que des caractères alphanumériques, des tirets (**-**) et des traits d’union (**_**), dans n’importe quel ordre. Lorsqu'il est spécifié à l'aide de l'onglet **Écouteur** , le nom DNS peut contenir jusqu'à 15 caractères.  
+ Indiquez le nom réseau de l'écouteur. Ce nom doit être unique sur le domaine et ne peut contenir que des caractères alphanumériques, des tirets ( **-** ) et des traits d’union ( **_** ), dans n’importe quel ordre. Lorsqu'il est spécifié à l'aide de l'onglet **Écouteur** , le nom DNS peut contenir jusqu'à 15 caractères.  
   
 > [!IMPORTANT]  
 >  Si vous entrez un nom d’écouteur DNS (ou un numéro de port) non valide dans l’onglet **Écouteur** , le bouton **Suivant** est désactivé dans la page **Spécifier les réplicas** .  
@@ -166,10 +165,10 @@ ms.locfileid: "66777631"
   
  Si l’option **Adresse IP statique** est sélectionnée comme mode réseau (il s’agit de la sélection par défaut), une grille affiche les colonnes **Sous-réseau** et **Adresse IP** , et les boutons associés **Ajouter** et **Supprimer** sont affichés. Notez que la grille est vide tant que vous n'avez pas ajouté le premier sous-réseau.  
   
- Colonne**Sous-réseau**   
+ Colonne**Sous-réseau**  
  Affiche l'adresse de sous-réseau que vous avez sélectionnée pour chaque sous-réseau ajouté pour l'écouteur.  
   
- Colonne**Adresse IP**   
+ Colonne**Adresse IP**  
  Affiche l'adresse IPv4 ou IPv6 que vous avez spécifiée pour un sous-réseau donné.  
   
  **Ajouter**  
@@ -209,7 +208,7 @@ ms.locfileid: "66777631"
   
 -   [Créer un point de terminaison de mise en miroir de bases de données pour les groupes de disponibilité Always On &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../../t-sql/statements/create-availability-group-transact-sql.md)   
  [Conditions préalables, restrictions et recommandations pour les groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)  

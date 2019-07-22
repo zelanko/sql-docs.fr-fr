@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 712b1a10-2f87-41df-a111-1ed9f14102d4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cad6c107e6ca130ef19908f71e356a929589e1cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1461bf8fd10324c610e5df99c8bfe48da0d397e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031080"
 ---
 # <a name="mssqlserver5242"></a>MSSQLSERVER_5242
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47631007"
 ## <a name="explanation"></a>Explication  
 Une incohérence structurelle s'est produite dans la page de base de données qui est référencée dans le message d'erreur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [Groupes de fichiers et fichiers de base de données](~/relational-databases/databases/database-files-and-filegroups.md)  
   

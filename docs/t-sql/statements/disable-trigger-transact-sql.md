@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0ce241446bdcb928b0edc976117731e78dca7f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cabd08fa2e4ba8797d5fe7fc5e4f623f24cda856
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984307"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,12 +71,12 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données autonome.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les déclencheurs sont activés par défaut lors de leur création. La désactivation d'un déclencheur ne le supprime pas. Le déclencheur existe toujours en tant qu'objet dans la base de données actuelle. Cependant, il ne se déclenche pas lorsque des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sur lesquelles il a été programmé sont exécutées. Il est possible de réactiver des déclencheurs à l’aide de [ENABLE TRIGGER](../../t-sql/statements/enable-trigger-transact-sql.md). Il est également possible d’activer ou de désactiver les déclencheurs DML définis sur des tables au moyen de la commande [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
  Le fait de modifier le déclencheur à l’aide de l’instruction **ALTER TRIGGER** active le déclencheur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour désactiver un déclencheur DML, un utilisateur doit avoir au minimum l'autorisation ALTER pour la table ou la vue sur laquelle le déclencheur a été créé.  
   
  La désactivation d'un déclencheur DDL avec une étendue de serveur (ON ALL SERVER) ou d'un déclencheur de connexion nécessite l'autorisation CONTROL SERVER sur le serveur. Pour désactiver un déclencheur DDL sur l'étendue d'une base de données (ON DATABASE), un utilisateur doit avoir au minimum l'autorisation ALTER ANY DATABASE DDL TRIGGER pour la base de données active.  
@@ -116,7 +115,7 @@ DISABLE Trigger ALL ON ALL SERVER;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

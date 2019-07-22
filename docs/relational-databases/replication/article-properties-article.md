@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6dd601a4-1233-43d9-a9f0-bc8d84e5d188
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d33dc0d7103e821eaf2796630cada56f199eebd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 77aa27a444437a9d1fb887fe01e4cff64051f524
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085869"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriétés de l’article - &lt;Article&gt;
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +173,7 @@ ms.locfileid: "54133929"
   
 -   Pour certains types, vous pouvez sélectionner plus d'un type. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'utiliser le mappage par défaut si l'application ne nécessite pas un mappage différent. Pour plus d’informations, voir [Data Type Mapping for Oracle Publishers](../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Afficher et modifier les propriétés d’une publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Créer et appliquer l’instantané initial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   

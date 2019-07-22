@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b2106d2683a47e31c2f9c76535ee059a7f151883
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a73d1f7109e31daa34f5fd25381f011905833be8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082400"
 ---
 # <a name="revert-transact-sql"></a>REVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ REVERT
   
 ## <a name="arguments"></a>Arguments  
  WITH COOKIE = @*varbinary_variable*  
- Spécifie le cookie créé dans une instruction [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) autonome correspondante. *@varbinary_variable* est **varbinary(100)**.  
+ Spécifie le cookie créé dans une instruction [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) autonome correspondante. *@varbinary_variable* est **varbinary(100)** .  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  REVERT peut figurer dans un module tel qu'une procédure stockée ou une fonction définie par l'utilisateur, mais aussi en tant qu'instruction autonome. À l'intérieur d'un module, REVERT s'applique uniquement aux instructions EXECUTE AS définies dans le module. Par exemple, la procédure stockée suivante exécute une instruction `EXECUTE AS` suivie d'une instruction `REVERT`.  
   
 ```  
@@ -82,7 +81,7 @@ EXECUTE dbo.usp_myproc;
   
  Ce mécanisme est utile dans un environnement utilisant le groupement de connexions. Le groupement de connexions est la maintenance d'un groupe de connexions de base de données en vue de leur réutilisation par plusieurs utilisateurs finaux. Comme la valeur passée à *@varbinary_variable* n’est connue que de l’appelant de l’instruction EXECUTE AS (en l’occurrence, l’application), celui-ci peut garantir que le contexte d’exécution qu’il établit ne sera pas modifié par l’utilisateur final qui appelle l’application. Après restauration du contexte d'exécution, l'application peut changer de contexte au profit d'un autre principal.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Aucune autorisation n'est requise.  
   
 ## <a name="examples"></a>Exemples  
@@ -131,7 +130,7 @@ DROP USER user2;
 GO  
 ```  
   
-### <a name="b-using-the-with-cookie-clause"></a>b. Utilisation de la clause WITH COOKIE  
+### <a name="b-using-the-with-cookie-clause"></a>B. Utilisation de la clause WITH COOKIE  
  L’exemple suivant définit le contexte d’exécution d’une session sur un utilisateur spécifié et précise la clause WITH NO REVERT COOKIE = @*varbinary_variable*. L'instruction `REVERT` doit spécifier la valeur passée à la variable `@cookie` dans l'instruction `EXECUTE AS` pour ramener le contexte à l'appelant. Pour exécuter cet exemple, la connexion `login1` et l'utilisateur `user1` créés dans l'exemple A doivent exister.  
   
 ```  
@@ -153,7 +152,7 @@ SELECT SUSER_NAME(), USER_NAME();
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)   
  [Clause EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   

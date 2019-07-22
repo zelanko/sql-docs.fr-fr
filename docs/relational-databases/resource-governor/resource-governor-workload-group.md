@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a84c3c3f-55b6-4a30-9c42-13f082d9281e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 7a2a900bdb72e13d2521e8da0a3b971c2b9edccb
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 4f15d4e443f0ffd6df700bff67ed6ba7514e0c90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126880"
 ---
 # <a name="resource-governor-workload-group"></a>Groupe de charge de travail de Resource Governor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "55689882"
 |Décrit comment modifier les paramètres de groupe de charge de travail.|[Modifier les paramètres de groupe de charge de travail](../../relational-databases/resource-governor/change-workload-group-settings.md)|  
 |Décrit comment supprimer un groupe de charge de travail.|[Supprimer un groupe de charge de travail](../../relational-databases/resource-governor/delete-a-workload-group.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de ressources du gouverneur de ressources](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

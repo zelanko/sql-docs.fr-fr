@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 17a920a45381b20e4ea246619810856624a29025
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3784135455a29d3d1662793d743d9d788e64b5f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095646"
 ---
 # <a name="secure-the-publisher"></a>Sécuriser le serveur de publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "54132949"
  Cette dernière constitue le mécanisme principal assurant la sécurité des publications sur le serveur de publication. La liste d'accès à la publication fonctionne de manière similaire à une liste de contrôle d'accès [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Lorsque vous créez une publication, la réplication crée une liste d'accès aux publications pour cette première. Cette PAL peut être configurée pour contenir un ensemble de noms de connexions et de groupes disposant de l'autorisation d'accès à la publication. Lorsqu'un agent se connecte au serveur de publication ou de distribution et demande l'accès à une publication, les informations d'authentification figurant dans la PAL sont comparées aux informations de connexion fournies par l'agent. Ce processus permet d'assurer un niveau de sécurité supplémentaire vis-à-vis du serveur de publication en empêchant l'utilisation des informations de connexion du serveur de publication et du serveur de distribution par un outil client pouvant procéder à des modifications directement sur le serveur de publication.  
   
 > [!NOTE]  
->  La réplication crée un rôle sur le serveur de publication pour que chaque publication exige l'appartenance à la PAL. Le rôle a un nom sous la forme **Msmerge_**_\<ID_Publication>_ pour la réplication de fusion et **MSReplPAL_**_\<Id_base_de_données_publication>_**_**_\<ID_Publication>_ pour la réplication transactionnelle et d’instantané.  
+>  La réplication crée un rôle sur le serveur de publication pour que chaque publication exige l'appartenance à la PAL. Le rôle a un nom sous la forme **Msmerge_** _\<ID_Publication>_ pour la réplication de fusion et **MSReplPAL_** _\<Id_base_de_données_publication>_ **_** _\<ID_Publication>_ pour la réplication transactionnelle et d’instantané.  
   
  Par défaut, les connexions suivantes figurent dans la PAL : les membres du rôle serveur fixe **sysadmin** (au moment de la création de la publication) et le nom de connexion utilisé pour créer la publication. Par défaut, toutes les connexions qui sont membres du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** sur la base de données de publication peuvent s'abonner à une publication sans être explicitement ajoutées à la PAL.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "54132949"
 ## <a name="queue-reader-agent"></a>Agent de lecture de la file d'attente  
  Il existe un Agent de lecture de la file d'attente pour tous les serveurs de publication et les publications (qui permettent les abonnements avec mise à jour en attente) associés à un serveur de distribution donné. Pour plus d’informations, consultez [Activer les abonnements de mise à jour pour les publications transactionnelles](../../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)  

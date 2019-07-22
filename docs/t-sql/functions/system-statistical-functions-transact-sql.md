@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 45828c67-1b9a-4653-bb24-86246084d8ba
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6c6038b73db5b99bd457b3c5ee92008f5a194aac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c55a051866ae346d5f83c898dc8292833d6d0679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117508"
 ---
 # <a name="system-statistical-functions-transact-sql"></a>Fonctions statistiques système (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "65948569"
   
  Toutes les fonctions statistiques système sont non déterministes. Cela signifie qu'elles ne renvoient pas toujours les mêmes résultats chaque fois qu'elles sont appelées, même avec un ensemble identique de valeurs d'entrée. Pour plus d’informations sur le déterminisme des fonctions, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

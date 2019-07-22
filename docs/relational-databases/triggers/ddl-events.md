@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d72081cb6787e291bd0809d01acf66e951ce185
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f166963f1325379d4545f9d8a334e7b77590a14f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075482"
 ---
 # <a name="ddl-events"></a>Événements DDL
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ ms.locfileid: "47751597"
 |CREATE_SERVER_AUDIT_SPECIFICATION|ALTER_SERVER_AUDIT_SPECIFICATION|DROP_SERVER_AUDIT_SPECIFICATION|  
 |CREATE_WORKLOAD_GROUP|ALTER_WORKLOAD_GROUP|DROP_WORKLOAD_GROUP|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)   
  [Notifications d’événements](../../relational-databases/service-broker/event-notifications.md)   
  [Groupes d’événements DDL](../../relational-databases/triggers/ddl-event-groups.md)  

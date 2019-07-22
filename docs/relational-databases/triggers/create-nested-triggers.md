@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: cd522dda-b4ab-41b8-82b0-02445bdba7af
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a0055e87ea9cdd93f232b9e93468db66a4f96ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe633bc88750173f974ccf41a75f4bcad7e5c03b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075510"
 ---
 # <a name="create-nested-triggers"></a>Créer des déclencheurs imbriqués
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47694007"
   
  Si l'imbrication est permise et qu'un déclencheur de la chaîne démarre une boucle infinie, le niveau d'imbrication maximal est dépassé et le déclencheur s'arrête.  
   
- Les déclencheurs imbriqués peuvent s'avérer utiles pour effectuer certaines fonctions de maintenance, comme stocker une copie de sauvegarde des lignes concernées par un déclencheur précédent. Par exemple, vous pouvez créer un déclencheur sur `PurchaseOrderDetail` , qui enregistre une copie de sauvegarde des lignes `PurchaseOrderDetail` qui ont été supprimées par le déclencheur `delcascadetrig` . Lorsque le déclencheur `delcascadetrig` est actif, la suppression de `PurchaseOrderID` 1965 de `PurchaseOrderHeader` supprime la ou les lignes correspondantes de `PurchaseOrderDetail`. Pour enregistrer les données, vous pouvez créer un déclencheur DELETE sur `PurchaseOrderDetail` , qui enregistre les données supprimées dans une autre table `del_save`créée séparément. Exemple :  
+ Les déclencheurs imbriqués peuvent s'avérer utiles pour effectuer certaines fonctions de maintenance, comme stocker une copie de sauvegarde des lignes concernées par un déclencheur précédent. Par exemple, vous pouvez créer un déclencheur sur `PurchaseOrderDetail` , qui enregistre une copie de sauvegarde des lignes `PurchaseOrderDetail` qui ont été supprimées par le déclencheur `delcascadetrig` . Lorsque le déclencheur `delcascadetrig` est actif, la suppression de `PurchaseOrderID` 1965 de `PurchaseOrderHeader` supprime la ou les lignes correspondantes de `PurchaseOrderDetail`. Pour enregistrer les données, vous pouvez créer un déclencheur DELETE sur `PurchaseOrderDetail` , qui enregistre les données supprimées dans une autre table `del_save`créée séparément. Par exemple :  
   
 ```  
 CREATE TRIGGER Purchasing.savedel  
@@ -186,7 +185,7 @@ Paul                           Alice                          0
   
 -   [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Configurer l'option de configuration du serveur nested triggers](../../database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option.md)  
   

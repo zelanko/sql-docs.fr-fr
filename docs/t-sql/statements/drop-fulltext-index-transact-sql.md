@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7443a4ab-1d43-4a22-bbba-a07f620892cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b1a3c7aa59a3b7c69c0f0483f51227e34a550a9b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 09fe23c827b1d3d4561a4333180ad3eb508a3adc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044243"
 ---
 # <a name="drop-fulltext-index-transact-sql"></a>DROP FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ DROP FULLTEXT INDEX ON table_name
  *table_name*  
  Nom de la table ou de la vue indexée contenant l'index de recherche en texte intégral à supprimer.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous n'avez pas besoin de supprimer toutes les colonnes à partir de l'index de recherche en texte intégral avant d'utiliser la commande DROP FULLTEXT INDEX.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’utilisateur doit soit disposer de l’autorisation ALTER sur la table ou la vue indexée, soit être un membre du rôle serveur fixe **sysadmin** ou du rôle de base de données fixe **db_owner** ou **db_ddladmin**.  
   
 ## <a name="examples"></a>Exemples  
@@ -63,7 +62,7 @@ DROP FULLTEXT INDEX ON HumanResources.JobCandidate;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.fulltext_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   

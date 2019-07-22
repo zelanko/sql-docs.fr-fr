@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8abb6c22fc45cb57183816027d4e735c4df52c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d76080b714d2ede1f2368ab2a98e8d3a216bf85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906916"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,13 +55,13 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  *expression*  
  [Expression](../../t-sql/language-elements/expressions-transact-sql.md) numérique. Les fonctions d'agrégation et les sous-requêtes ne sont pas autorisées. *expression* est une expression de la catégorie de type de données numérique exacte ou approximative, à l’exception du type de données **bit** .  
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* divise le jeu de résultats généré par la clause FROM en partitions auxquelles la fonction est appliquée. S'il n'est pas spécifié, la fonction gère toutes les lignes du jeu de résultats de la requête en un seul groupe. *order_by_clause* détermine l’ordre logique dans lequel l’opération est effectuée. *order_by_clause* est requis. Pour plus d’informations, consultez [Clause OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
  **float**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si la fonction STDEVP est exécutée sur tous les éléments d'une instruction SELECT, chaque valeur du jeu de résultats est comprise dans le calcul. La fonction STDEVP ne peut être utilisée qu'avec des colonnes de type numérique. Les valeurs NULL sont ignorées.  
   
  STDEVP est une fonction déterministe lorsqu'elle est utilisée sans les clauses OVER et ORDER BY. Elle n'est pas déterministe avec les clauses OVER et ORDER BY. Pour plus d’informations, consultez [Fonctions déterministes et non déterministes](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
@@ -123,7 +122,7 @@ Year  Quarter  SalesQuota              StdDeviation
 2002  4        154000.0000             34426.55
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions d’agrégation &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [OVER, clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   

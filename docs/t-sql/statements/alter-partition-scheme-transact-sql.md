@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b184b04c2f1535aed86d0eb2dc1fd33a840f0e0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 593c2d8bf9cff3e10aaafc339aa82ef16c4bc09f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071242"
 ---
 # <a name="alter-partition-scheme-transact-sql"></a>ALTER PARTITION SCHEME (Transact-SQL)
 
@@ -61,10 +60,10 @@ NEXT USED [ filegroup_name ] [ ; ]
   
  Si *filegroup_name* n’est pas spécifié et si aucun groupe de fichiers n’est marqué comme NEXT USED, ALTER PARTITION SCHEME retourne un avertissement.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Tout groupe de fichiers affecté par ALTER PARTITION SCHEME doit être en ligne.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations suivantes peuvent être utilisées pour exécuter ALTER PARTITION SCHEME :  
   
 -   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
@@ -83,7 +82,7 @@ NEXT USED test5fg;
   
  Le groupe de fichiers `test5fg` recevra toute partition supplémentaire d'une table ou d'un index partitionné à la suite d'une instruction ALTER PARTITION FUNCTION.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)   
  [DROP PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-scheme-transact-sql.md)   
  [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   

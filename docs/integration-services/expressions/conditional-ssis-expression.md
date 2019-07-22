@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e7b89ac833f428a098671cbf5eceaab0b338e2e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21797dffcb3f3343c05658d24199191510fe31b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027550"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (Conditionnel) (expression SSIS)
 
@@ -49,7 +48,7 @@ boolean_expression?expression1:expression2
 ## <a name="result-types"></a>Types des résultats  
  Type de données de *expression1* ou de *expression2*.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si l’argument *expression_booléenne* est évalué à NULL, le résultat de l’expression est NULL. Si une expression sélectionnée, *expression1* ou *expression2* est NULL, le résultat est NULL. Si une expression sélectionnée n'est pas NULL, mais que l'expression non sélectionnée est NULL, le résultat est la valeur de l'expression sélectionnée.  
   
  Si *expression1* et *expression2* ont le même type de données, le résultat est de ce type de données. Les règles supplémentaires suivantes s'appliquent aux types de résultats :  
@@ -102,7 +101,7 @@ boolean_expression?expression1:expression2
 ListPrice < 350.00 ? ListPrice * .2 : ListPrice * .1  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

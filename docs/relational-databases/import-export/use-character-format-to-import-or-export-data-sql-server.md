@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d925e66a-1a73-43cd-bc06-1cbdf8174a4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d129c6d0efb5659c0e10aa1c131b6e99a930896d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bf664a8171afabadc458cc9f4e24c8b77687e94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091512"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Utiliser le format caractère pour importer ou exporter des données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,7 +69,7 @@ Le format caractère est pris en charge par les options de commande suivantes :
 |BULK INSERT|DATAFILETYPE **='char'**|Utilise le format caractère lors de l'importation en bloc des données.|  
 |OPENROWSET|Néant|Doit utiliser un fichier de format.|
   
- \*Pour charger les données caractères (**-c**) dans un format compatible avec les versions antérieures des clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez le commutateur **-V** . Pour plus d’informations, consultez [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ \*Pour charger les données caractères ( **-c**) dans un format compatible avec les versions antérieures des clients [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , utilisez le commutateur **-V** . Pour plus d’informations, consultez [Importer des données au format natif et caractère à partir de versions antérieures de SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
    
 > [!NOTE]
 >  Vous pouvez également spécifier le formatage par champ dans un fichier de format. Pour plus d’informations, consultez [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).
@@ -219,7 +218,7 @@ Pour utiliser des formats de données pour l'importation ou l'exportation en blo
   
 -   [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [bcp Utility](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/bulk-insert-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

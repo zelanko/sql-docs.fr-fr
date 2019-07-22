@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 11caad507a8d8af50bae6c3d2b51807287ee694c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 81a8422cbab7eb10d0c74ad5cd758817a665eaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050782"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT – octroi d'autorisations de principal de serveur (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ GRANT permission [ ,...n ] }
  Spécifie une autorisation qui peut être accordée sur une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des autorisations, consultez la section Notes plus loin dans cette rubrique.  
   
  LOGIN **::** *SQL_Server_login*  
- Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle l'autorisation est accordée. Le qualificateur d’étendue (**::**) est obligatoire.  
+ Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur laquelle l'autorisation est accordée. Le qualificateur d’étendue ( **::** ) est obligatoire.  
   
  SERVER ROLE **::** *server_role*  
- Spécifie le rôle de serveur défini par l'utilisateur sur lequel l'autorisation est accordée. Le qualificateur d’étendue (**::**) est obligatoire.  
+ Spécifie le rôle de serveur défini par l'utilisateur sur lequel l'autorisation est accordée. Le qualificateur d’étendue ( **::** ) est obligatoire.  
   
  TO \<server_principal> spécifie le rôle serveur ou la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auquel accorder l’autorisation.  
   
@@ -89,7 +88,7 @@ GRANT permission [ ,...n ] }
  AS *SQL_Server_login*  
  Spécifie la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir de laquelle le principal qui exécute cette requête dérive son droit d'accorder l'autorisation.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les autorisations dans l'étendue du serveur peuvent être accordées seulement lorsque la base de données en cours est master.  
   
  Les informations sur les autorisations de serveur sont consultables dans la vue de catalogue [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md). Les informations sur les principaux de serveur sont consultables dans la vue de catalogue [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -103,7 +102,7 @@ GRANT permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour les comptes de connexion, requiert l'autorisation CONTROL sur le compte de connexion ou l'autorisation ALTER ANY LOGIN sur le serveur.  
   
  Pour les rôles de serveur, requiert l'autorisation CONTROL sur le rôle de serveur ou l'autorisation ALTER ANY SERVER ROLE sur le serveur.  
@@ -119,7 +118,7 @@ GRANT IMPERSONATE ON LOGIN::WanidaBenshoof to [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-granting-view-definition-permission-with-grant-option"></a>b. Octroi d'une autorisation VIEW DEFINITION avec l'option GRANT OPTION  
+### <a name="b-granting-view-definition-permission-with-grant-option"></a>B. Octroi d'une autorisation VIEW DEFINITION avec l'option GRANT OPTION  
  Dans l'exemple ci-dessous, l'autorisation `VIEW DEFINITION` sur la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `EricKurjan` est accordée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `RMeyyappan` avec l'option `GRANT OPTION`.  
   
 ```  
@@ -138,7 +137,7 @@ GRANT VIEW DEFINITION ON SERVER ROLE::Sales TO Auditors ;
 GO   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys.server_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   

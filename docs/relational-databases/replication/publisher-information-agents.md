@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5e6192da995dac47d974c3c3f2ff6c5f576acc2e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 9f7594aa07bf4b193a9bea6ac0ebede78cd10eda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113863"
 ---
 # <a name="publisher-information-agents"></a>Informations sur le serveur de publication, Agents
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -196,7 +195,7 @@ ms.locfileid: "54123960"
  **Dernière action**  
  Dernière action effectuée lors de la dernière exécution du travail.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication.md)  

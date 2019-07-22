@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eddb60b6-20a9-416c-adf3-4bc1687944fa
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 6f1e6360b1e99ce5a11be7c0e65e96a781ce31a9
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 8a6a8bc83c1842676220f384d39179c74c47a336
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987062"
 ---
 # <a name="sql-server-broker---dbm-transport-object"></a>SQL Server, objet Broker - DBM Transport
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "53380290"
 |**Base de longueur moyenne des E/S envoyées**|À usage interne uniquement|
 |**E/S envoyées/s**|Ce compteur indique le nombre d'opérations d'E/S du transport en envoi par seconde qui ont été effectuées. Il se peut qu'une opération d'envoi du transport contienne plusieurs fragments de message.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.dm_broker_forwarded_messages &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-broker-forwarded-messages-transact-sql.md)   
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

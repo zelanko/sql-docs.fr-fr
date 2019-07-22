@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c1e77e91-2a69-40d9-b8b3-97cffc710586
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e55e29f428185f195b65ae046df3aa63b8c35c3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 675e152dfffa6bfce8decf37dc1716e7149bae83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095039"
 ---
 # <a name="create-a-credential"></a>Create a Credential
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "62716066"
   
 1.  Dans l’Explorateur d’objets, développez le dossier **Sécurité** .  
   
-2.  Cliquez avec le bouton droit sur le dossier **Informations d’identification** et sélectionnez **Nouvelles informations d’identification...**.  
+2.  Cliquez avec le bouton droit sur le dossier **Informations d’identification** et sélectionnez **Nouvelles informations d’identification...** .  
   
 3.  Dans la boîte de dialogue **Nouvelles informations d'identification** , saisissez le nom des information d'identification dans la zone **Nom d'identification** .  
   

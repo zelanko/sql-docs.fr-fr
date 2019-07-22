@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f06a2fd1b8734701fe261cba42d66ca1652e06fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140703"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Résolution des problèmes et maintenance du connecteur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -168,7 +167,7 @@ Les sauvegardes des clés peuvent être restaurées dans les régions Azure, tan
 
 **Quels sont les points de terminaison auxquels le connecteur SQL Server doit pouvoir accéder ?** Le connecteur communique avec deux points de terminaison, qui doivent figurer dans la liste verte. Le seul port requis pour la communication sortante à ces autres services est le port 443 pour Https :
 -  login.microsoftonline.com/*:443
--  *.vault.azure.net/*:443
+-  *.vault.azure.net/* :443
   
 **Quels sont les niveaux d’autorisation minimaux exigés pour chaque étape de configuration dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
  Même si vous pouvez effectuer toutes les étapes de configuration comme membre du rôle serveur fixe sysadmin, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] vous encourage à réduire les autorisations que vous utilisez. La liste suivante définit le niveau d’autorisation minimal pour chaque action.  
@@ -293,7 +292,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
 -   Informations de référence sur les [applets de commande Azure Key Vault](/powershell/module/azurerm.keyvault/) de PowerShell  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
  [Fournisseur EKM activé (option de configuration de serveur)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  

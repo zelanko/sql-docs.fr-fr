@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4fd6b9b539488baacb9dbe5b7ec962789b9da177
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9e763c2873c018ca53a0c36db2b5c72b3b5d22b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123069"
 ---
 # <a name="mssqlserver4846"></a>MSSQLSERVER_4846
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ Pour corriger des erreurs de mémoire, procédez comme suit :
   
 1.  Vérifiez si d'autres applications ou services consomment de la mémoire sur ce serveur. Reconfigurez les applications ou les services moins importants pour consommer moins de mémoire.  
   
-2.  Commencez la collecte des compteurs de l’analyseur de performances pour **SQL Server : Buffer Manager**, **SQL Server : Memory Manager**.  
+2.  Démarrez la collecte des compteurs de l’analyseur de performances pour **SQL Server : Buffer Manager**, **SQL Server : Memory Manager**.  
   
 3.  Vérifiez les paramètres de configuration de la mémoire de SQL Server suivants :  
   

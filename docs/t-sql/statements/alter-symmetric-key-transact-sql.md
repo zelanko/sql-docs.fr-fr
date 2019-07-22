@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d3c776a4-7d71-4e6f-84fc-1db47400c465
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6c9a5f59a076c857b335a4a8f82298b94b1c4ea3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7314659cc8d0ba18b5b7b7b562ad5df467988638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070251"
 ---
 # <a name="alter-symmetric-key-transact-sql"></a>ALTER SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  CERTIFICATE *Certificate_name*  
  Spécifie le certificat utilisé pour chiffrer la clé symétrique. Ce certificat doit déjà exister dans la base de données.  
   
- PASSWORD **='**_password_**'**  
+ PASSWORD **='** _password_ **'**  
  Spécifie le mot de passe utilisé pour chiffrer la clé symétrique. *password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  SYMMETRIC KEY *Symmetric_Key_Name*  
@@ -78,7 +77,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
  ASYMMETRIC KEY *Asym_Key_Name*  
  Spécifie la clé asymétrique utilisée pour chiffrer la clé symétrique en cours de modification. Cette clé asymétrique doit déjà exister dans la base de données.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 > [!CAUTION]  
 >  Lorsqu'une clé symétrique est chiffrée à l'aide d'un mot de passe à la place de la clé publique de la clé principale de base de données, l'algorithme de chiffrement TRIPLE_DES est utilisé. Pour cette raison, les clés créées à l'aide d'un algorithme de chiffrement renforcé, tel qu'AES, sont elles-mêmes sécurisées par un algorithme plus faible.  
@@ -90,7 +89,7 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
 > [!NOTE]  
 >  L'algorithme RC4 est uniquement pris en charge pour des raisons de compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], le matériel chiffré à l'aide de RC4 ou de RC4_128 peut être déchiffré dans n'importe quel niveau de compatibilité.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation ALTER sur la clé symétrique. En cas d'ajout d'un chiffrement par certificat ou clé asymétrique, l'autorisation VIEW DEFINITION est requise sur le certificat ou la clé asymétrique. En cas de suppression d'un chiffrement par certificat ou clé asymétrique, l'autorisation CONTROL est requise sur le certificat ou la clé asymétrique.  
   
 ## <a name="examples"></a>Exemples  
@@ -111,7 +110,7 @@ ALTER SYMMETRIC KEY JanainaKey043
 CLOSE SYMMETRIC KEY JanainaKey043;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md)   
  [CLOSE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/close-symmetric-key-transact-sql.md)   

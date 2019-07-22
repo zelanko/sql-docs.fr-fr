@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e062a9ab-1e6b-4061-845a-4f8a0552b09d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1ff09c90aece19ea306ec91b8d5cb0d95da937c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 923ff84b7f5e6616083f0d965f917cd1ecc21b6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045565"
 ---
 # <a name="ado-net-custom-properties"></a>Propriétés personnalisées ADO NET
 
@@ -53,7 +52,7 @@ ms.locfileid: "65727234"
   
  Pour plus d’informations, consultez [Destination ADO NET](../../integration-services/data-flow/ado-net-destination.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Propriétés communes](https://msdn.microsoft.com/library/51973502-5cc6-4125-9fce-e60fa1b7b796)  
   
   

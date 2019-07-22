@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 041f05a2d7ae623ee40db320676555dad5468459
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af093b4d46e658e0673352201c9499be77da6b5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023633"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Éditeur de source SAP BW (page Gestionnaire de connexions)
 
@@ -128,7 +127,7 @@ ms.locfileid: "65726386"
  **ID de demande**  
  Entrez l'ID de demande qui est associé à l'extraction.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Éditeur de source SAP BW &#40;page Colonnes&#41;](../../integration-services/data-flow/sap-bw-source-editor-columns-page.md)   
  [Éditeur de source SAP BW &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [Éditeur de source SAP BW &#40;page Avancé&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   

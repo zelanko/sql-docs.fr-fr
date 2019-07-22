@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b7a75a72-b267-444f-9eb8-d23eb333fc35
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 168e53dde51641d79569eb3ef6a1930d0084d10f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d3e27e4f4fdf813e30775c2cf44cfb4ca272b10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114660"
 ---
 # <a name="connect-to-a-postgresql-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données PostgreSQL (Assistant Importation et Exportation SQL Server)
 
@@ -55,7 +54,7 @@ Pour vous connecter à PostgreSQL au moyen du pilote ODBC PostgreSQL, assemblez 
 > Obtenez de l’aide pour l’assemblage d’une chaîne de connexion correcte. Au lieu de produire une chaîne de connexion, vous pouvez fournir un nom de source de données (DSN, data source name) existant ou en créer un. Pour obtenir plus d’informations sur ces options, consultez [Se connecter à une source de données ODBC](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md).
 
 **Driver**  
-Nom du pilote ODBC, soit **PostgreSQL ODBC Driver(UNICODE)** ou **PostgreSQL ODBC Driver(ANSI)**.
+Nom du pilote ODBC, soit **PostgreSQL ODBC Driver(UNICODE)** ou **PostgreSQL ODBC Driver(ANSI)** .
 
 **Server**  
 Nom du serveur PostgreSQL. 

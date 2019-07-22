@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 586dd799-f383-4d6d-b1a1-f09233d14f0a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0e26853a97cbadf0855eae7bfe24eefad206ddfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6b84a8010b51705fd996de52dfdd3ff85d70a8a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104021"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Configuration du composant Script dans l'éditeur de composant de script
 
@@ -131,7 +130,7 @@ Dim myADONETConnectionManager As IDTSConnectionManager100 = _
   
  Pour plus d’informations, consultez [Connexion aux sources de données dans le composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/connecting-to-data-sources-in-the-script-component.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Codage et débogage du composant Script](../../../integration-services/extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  
   
   

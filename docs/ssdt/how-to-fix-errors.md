@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba41850e214de60da9a7e64f328939e4660a9367
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035170"
 ---
 # <a name="how-to-fix-errors"></a>Procédure : Corriger les erreurs
 La volet Liste d'erreurs affiche toutes les erreurs de déploiement ou de build. Les erreurs de syntaxe et sémantique dues à la modification dans l'Éditeur Transact\-SQL ou dans le Concepteur de tables s'affichent aussi dans la liste lorsque vous modifiez des entités de base de données et leurs définitions. La Liste d'erreurs est mise à jour dynamiquement au fur et à mesure que vous modifiez des scripts dans les différents onglets. Vous pouvez ensuite suivre les erreurs identifiées pour la résolution des problèmes.  

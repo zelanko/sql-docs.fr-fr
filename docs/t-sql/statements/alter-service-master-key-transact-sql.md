@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5fe3a72c49f04d2e9a6a6ac8300ae3732adf06d0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112858"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ ALTER SERVICE MASTER KEY
 > [!WARNING]  
 >  Cette option est obsolète. Ne pas utiliser. Utilisez à la place le Gestionnaire de configuration d'[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La clé principale de service est générée automatiquement la première fois qu'elle est requise pour chiffrer un mot de passe, des informations d'identification ou la clé principale de base de données d'un serveur lié. La clé principale de service est chiffrée à l'aide de la clé de l'ordinateur local ou de l'API de protection des données Windows. Cette API utilise une clé dérivée des informations d'identification Windows du compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] utilise l’algorithme de chiffrement AES pour protéger la clé principale du service (SMK) et la clé principale de base de données (DMK). AES est un algorithme de chiffrement plus récent que 3DES, qui était utilisé dans les versions antérieures. Au terme de la mise à niveau d'une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , les clés SMK et DMK doivent être régénérées pour mettre à niveau les clés principales vers AES. Pour plus d’informations sur la régénération de la clé DMK, consultez [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md).  
@@ -103,7 +102,7 @@ ALTER SERVICE MASTER KEY
   
  Si vous déplacez SQL sur un autre ordinateur, vous devez utiliser le même compte de service pour déchiffrer la clé SMK. SQL Server résoudra automatiquement le chiffrement du compte d’ordinateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -114,7 +113,7 @@ ALTER SERVICE MASTER KEY REGENERATE;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [RESTORE SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-service-master-key-transact-sql.md)   
  [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
  [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 71ecd9b7eb0dc1f1371d31d4e97c230536249168
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39e1fea1a230d831a24ee1eab1dc8abf9483711f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112760"
 ---
 # <a name="conditional-split-transformation"></a>transformation de fractionnement conditionnel
 
@@ -99,7 +98,7 @@ ms.locfileid: "65726230"
  **Configurer l'affichage des erreurs**  
  Spécifiez comment gérer les erreurs dans la boîte de dialogue [Configurer la sortie d’erreur](https://msdn.microsoft.com/library/5f8da390-fab5-44f8-b268-d8fa313ce4b9) .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Flux de données](../../../integration-services/data-flow/data-flow.md)   
  [Transformations Integration Services](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  
   
