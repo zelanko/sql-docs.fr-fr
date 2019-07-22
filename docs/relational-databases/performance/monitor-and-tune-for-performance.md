@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 828e0c79d3d68cded07e3dc1204f92f409033e9c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fd6fdf81a74e015995f5bf9bd5500f196ccf5cc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020251"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Surveiller et régler les performances
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ La demande des ressources du serveur croît proportionnellement au nombre d'util
 |[Isoler les problèmes de performance](../../relational-databases/performance/isolate-performance-problems.md)|Isoler les problèmes de performance des bases de données.|  
 |[Identifier les goulots d'étranglement](../../relational-databases/performance/identify-bottlenecks.md)|Surveiller et suivre les performances du serveur afin d’identifier les goulots d’étranglement.|  
 |[Utiliser des vues de gestion dynamique pour déterminer les statistiques d’utilisation et les performances des vues](../../relational-databases/performance/use-dmvs-determine-usage-performance-views.md)|Traite de la méthodologie et des scripts utilisés pour obtenir des informations sur les performances des requêtes.|  
-|[Analyse des performances et surveillance de l’activité du serveur](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les outils de surveillance de l’activité et des performances Windows.|  
+|[Analyse des performances et surveillance de l'activité du serveur](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et les outils de surveillance de l’activité et des performances Windows.|  
 |[Superviser l’utilisation des ressources](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|Utilisation du Moniteur système (également appelé perfmon) pour mesurer les performances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de compteurs de performance.|  
 
   

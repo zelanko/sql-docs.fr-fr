@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64deeb6482784c77fa68d4eea3d7c91c58b4ee64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f687cbc61971638cc91689b4c6b7d9d3a54e3b2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034309"
 ---
 # <a name="request-log"></a>Journal des requêtes
 
@@ -64,7 +63,7 @@ ms.locfileid: "65726500"
  **Message**  
  Affiche le texte du message associé à l'événement journalisé.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Éditeur de source SAP BW &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Aide (F1) sur Microsoft Connector pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-f1-help.md)  
   

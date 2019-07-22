@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a612ed91-b89b-4173-a0b1-0bce381e1e28
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6ae27f40a1da682ee0254d3605f3f05d47ceba44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 688ef80602783a3e9e362d58f74a73bbf4f6085b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034174"
 ---
 # <a name="sap-bw-destination"></a>Destination SAP BW
 
@@ -46,9 +45,9 @@ ms.locfileid: "65726424"
   
 1.  Créer un nouveau système source :  
   
-    1.  Sélectionnez le type **« Interfaces BAPI intermédiaires/tierces »**.  
+    1.  Sélectionnez le type **« Interfaces BAPI intermédiaires/tierces »** .  
   
-    2.  Pour **Type de communication avec le système cible**, sélectionnez **Non-Unicode (Paramètres MDMP inactifs)**.  
+    2.  Pour **Type de communication avec le système cible**, sélectionnez **Non-Unicode (Paramètres MDMP inactifs)** .  
   
     3.  Attribuez un ID de programme approprié.  
   
@@ -119,7 +118,7 @@ ms.locfileid: "65726424"
   
 -   [Créer un InfoPackage](../../integration-services/data-flow/create-infopackage.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Composants Microsoft Connector 1.1 pour SAP BW](../../integration-services/microsoft-connector-for-sap-bw-components.md)  
   
   

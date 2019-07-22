@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 665e63e6-4bd2-4091-92a5-327364db2f8d
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: c7e3e4632141040f791b6b83640c5261017726c6
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 3b408951b0a1f32bda0920260aae18ab93350fdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986716"
 ---
 # <a name="sql-server-catalog-metadata-object"></a>SQL Server, objet Catalog Metadata
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,5 +35,5 @@ Le tableau suivant décrit les objets de performance **Métadonnées de catalogu
 
 Il existe une instance du compteur pour chaque base de données.
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Analyser l'utilisation des ressources (Moniteur système)](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)

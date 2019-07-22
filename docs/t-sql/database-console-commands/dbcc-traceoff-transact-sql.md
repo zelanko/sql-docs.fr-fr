@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: b66d02c4f2b480f4238b87e190d63ee2682e86a7
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 27524b92157657779e49ff8facaf235e5a524065
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040613"
 ---
 # <a name="dbcc-traceoff-transact-sql"></a>DBCC TRACEOFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ Désactive globalement les indicateurs de trace spécifiés.
 WITH NO_INFOMSGS  
 Supprime tous les messages d'information dont les niveaux de gravité sont compris entre 0 et 10.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Les indicateurs de trace sont utilisés pour personnaliser certains attributs qui contrôlent le mode de fonctionnement de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -62,7 +61,7 @@ DBCC TRACEOFF retourne :
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l'appartenance au rôle serveur fixe **sysadmin** .
   
 ## <a name="examples"></a>Exemples  
@@ -87,7 +86,7 @@ DBCC TRACEOFF (3205, 260, -1);
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEON &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  
 [DBCC TRACESTATUS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md)  

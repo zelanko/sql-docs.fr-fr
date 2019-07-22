@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 39be659b50c7cc068c3887a0c0139b312c46cf0b
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: a5cbc96390799219347415719ddf6754e3c33bbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984751"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>Nouveautés de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -59,7 +58,7 @@ SQL Server 2016 Analysis Services offre une amélioration des performances, de l
 - **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** intègre le langage de programmation R, utilisé pour l’analyse statistique, dans SQL Server. 
 - Le nouveau **vérificateur de cohérence de base de données (DBCC)** s’exécute en interne pour détecter les problèmes potentiels d’altération des données.
 - **Direct Query**, qui interroge des données externes en direct plutôt qu’après les avoir importées, prend désormais en charge d’autres sources de données, notamment SQL Azure, Oracle et Teradata. 
-- Il y a beaucoup de nouvelles **fonctions DAX (Data Access Expressions)**.
+- Il y a beaucoup de nouvelles **fonctions DAX (Data Access Expressions)** .
 - Le nouvel espace de noms **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** gère les modèles et les instances en mode tabulaire. 
 - [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) a été réusiné de façon à inclure un deuxième assembly, **Microsoft.AnalysisServices.Core.dll**.
 

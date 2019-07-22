@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 72e7f25c0bdc3ba77e90e8d9384537948efe4b3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5651f61f33d598930aff2fb482b415e9749f6d44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042532"
 ---
 # <a name="stbuffer-geography-data-type"></a>STBuffer (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "65937151"
   
  Type de retour CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  STBuffer() calcule une mémoire tampon de la même manière que [BufferWithTolerance](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md), en spécifiant *tolerance* = abs(distance) \* 0,001 et *relative* = **false**.  
   
  Une mémoire tampon négative supprime tous les points dans la distance donnée de la limite de l’instance **geography**.  
@@ -74,7 +73,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STBuffer(1).ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BufferWithTolerance &#40;type de données geography&#41;](../../t-sql/spatial-geography/bufferwithtolerance-geography-data-type.md)   
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   

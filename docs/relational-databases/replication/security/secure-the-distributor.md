@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76d78229-0ff2-4aa4-9b4e-ad97534c5296
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b4466c75a8d0e873f2e82954dfff42f00669c1da
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: fef7b32c2da62c4e61e0ef2da4f4e2a5d17f777c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051901"
 ---
 # <a name="secure-the-distributor"></a>Sécuriser le serveur de distribution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "54135649"
 ## <a name="snapshot-folder-security"></a>Sécurité du répertoire d'instantanés  
  Assurez-vous que le partage de fichiers d'instantanés dispose d'une autorisation de lecture sur le compte sous lequel s'exécute l'Agent de fusion (pour la réplication de fusion) ou l'Agent de distribution (pour la réplication d'instantané ou transactionnelle), et d'une autorisation d'écriture sur le compte sous lequel s'exécute l'Agent d'instantané. Pour plus d’informations sur le dossier d’instantanés, consultez [Sécuriser le dossier d’instantanés](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher et modifier les paramètres de sécurité de la réplication](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
  [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   

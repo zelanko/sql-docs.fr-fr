@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 366f0ff8-722a-40a9-934f-854147e4933d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f78b3e8cb60b326f6ec7be8d23ad9c24026c1f97
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: d362670facc0638b435cfa604777a6631ac87e30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021742"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Boîte de dialogue Vue détaillée des résultats
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "51512564"
  **Aide supplémentaire**  
  Cliquez sur le lien hypertexte pour ouvrir une page Web en rapport avec cette stratégie. Le lien hypertexte d'aide supplémentaire est configuré lors de la création de la stratégie et il peut être vide ou non disponible.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Nœud Gestion de la stratégie &#40;Explorateur d’objets&#41;](../../relational-databases/policy-based-management/policy-management-node-object-explorer.md)   
  [Administrer des serveurs à l'aide de la Gestion basée sur des stratégies](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

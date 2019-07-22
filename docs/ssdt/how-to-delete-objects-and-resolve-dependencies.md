@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cd4b8ab01b2b9f16938e9493d5e762cae59a6446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae25dbc584e564130348507e5aef657823502923
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026611"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>Procédure : Supprimer des objets et résoudre des dépendances
 Lorsque vous renommez ou supprimez un objet dans l'**Explorateur d'objets SQL Server**, SQL Server Data Tools détecte automatiquement tous ses objets dépendants et prépare un script ALTER pour renommer ou supprimer les dépendances selon les besoins.  

@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: d431f216-82cf-4d97-825e-bb35d3d53a45
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5405ce2b779f4caa9b8fdee7681e904bd8b90924
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0bf81a84acbec65334ec02d7bd358215f6a0b0ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016353"
 ---
 # <a name="getting-started-with-system-versioned-temporal-tables"></a>Prise en main des tables temporelles de contrôle de version du système
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ Le schéma suivant illustre le flux de travail type relatif aux tables temporell
   
 -   [Arrêt du contrôle de version du système sur une table temporelle avec contrôle de version par le système](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables temporelles](../../relational-databases/tables/temporal-tables.md)   
  [Vérifications de cohérence système des tables temporelles](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   
  [Partitionnement des tables temporelles](../../relational-databases/tables/partitioning-with-temporal-tables.md)   

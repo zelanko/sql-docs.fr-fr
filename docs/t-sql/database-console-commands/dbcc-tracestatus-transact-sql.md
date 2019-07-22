@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 02c9c35d8609a0afd150be7a645a614250755aaa
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: e6bdd627d0ce40ca44ef42c263d04beb6104edd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040557"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ Numéro d'indicateur de trace dont l'état est affiché. Si *trace#* et -1 ne so
 Espace réservé précisant qu'il est possible de spécifier plusieurs indicateurs de trace.
   
 -1  
-Affiche l'état des indicateurs de trace activés globalement. Si -1 est spécifié sans *trace#*, tous les indicateurs de trace globaux activés sont affichés.
+Affiche l'état des indicateurs de trace activés globalement. Si -1 est spécifié sans *trace#* , tous les indicateurs de trace globaux activés sont affichés.
   
 WITH NO_INFOMSGS  
 Supprime tous les messages d'information dont les niveaux de gravité sont compris entre 0 et 10.
@@ -71,10 +70,10 @@ Le tableau suivant décrit les informations du jeu de résultats.
   
 DBCC TRACESTATUS retourne une colonne correspondant au numéro de l'indicateur de trace et une colonne pour l'état. Celle-ci précise si l'indicateur de trace est activé (1) ou non (0). L’en-tête de colonne du numéro d’indicateur de trace est **Global Trace Flag** ou **Session Trace Flag**, selon que vous vérifiez l’état d’un indicateur de trace global ou de session.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il existe deux types d'indicateurs de trace : les indicateurs de trace de session et les indicateurs de trace globaux. Les indicateurs de trace de session sont actifs pour une connexion et visibles uniquement pour celle-ci. Les indicateurs de trace globaux sont définis au niveau du serveur et sont visibles pour chaque connexion sur celui-ci.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l'appartenance au rôle **public** .
   
 ## <a name="examples"></a>Exemples  
@@ -106,7 +105,7 @@ DBCC TRACESTATUS();
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [DBCC TRACEOFF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)  
 [DBCC TRACEON &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)  

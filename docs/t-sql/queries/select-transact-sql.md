@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b92d260901efdec91add2d785774bfd826c8b46
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948287"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -101,7 +100,7 @@ SELECT <select_criteria>
   
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  En raison de la complexité de l'instruction SELECT, les éléments et les arguments de la syntaxe sont détaillés par clause :  
   
 |||  
@@ -141,7 +140,7 @@ SELECT <select_criteria>
 >
 > Par exemple, supposons qu’un index cluster est appliqué à un affichage qui exclut certaines lignes de la table, et que la liste de colonnes SELECT dans l’affichage utilise une clause CONVERT qui convertit un type de données *varchar* en *integer*. Dans ce cas, la clause CONVERT peut s’exécuter avant la clause WHERE. Ce cas se produit rarement. Il y a souvent un moyen de modifier votre affichage pour éviter tout changement de la séquence, si cela est important dans votre cas. 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  La sélection de données requiert l'autorisation **SELECT** sur la table ou la vue, qui pourrait être héritée d'une étendue supérieure telle que l'autorisation **SELECT** sur le schéma ou l'autorisation **CONTROL** sur la table. La sélection peut également nécessiter l’appartenance au rôle de base de données fixe **db_datareader** ou **db_owner**, ou au rôle de serveur fixe **sysadmin**. La création d’une table à l’aide de **SELECTINTO** nécessite également l’autorisation **CREATETABLE** et l’autorisation **ALTERSCHEMA** sur le schéma propriétaire de la nouvelle table.  
   
 ## <a name="examples"></a>Exemples :   
@@ -182,7 +181,7 @@ AND MaritalStatus = 'M'
 ORDER BY LastName;  
 ```  
   
-### <a name="b-using-select-with-column-headings-and-calculations"></a>b. Utilisation de SELECT avec des en-têtes de colonne et des calculs  
+### <a name="b-using-select-with-column-headings-and-calculations"></a>B. Utilisation de SELECT avec des en-têtes de colonne et des calculs  
  L’exemple suivant retourne toutes les lignes de la table `DimEmployee`, et calcule le salaire brut de chaque employé sur la base de la valeur `BaseRate` et d’une semaine de 40 heures de travail.  
   
 ```sql  
@@ -264,7 +263,7 @@ HAVING OrderDateKey > 20010000
 ORDER BY OrderDateKey;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemples SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)  
  [Indicateurs &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql.md)
   
