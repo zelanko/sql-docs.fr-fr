@@ -1,7 +1,7 @@
 ---
 title: SQLFreeHandle, fonction | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLFreeHandle
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLFreeHandle
@@ -19,22 +20,22 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d853d843e7b2cf168516fa4007883f280029e53b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e312bcbc6efcb96ff02657b98034f0340ae377dc
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006233"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345177"
 ---
 # <a name="sqlfreehandle-function"></a>Fonction SQLFreeHandle
 **Conformité**  
- Version introduite : Conformité aux normes 3.0 de ODBC : ISO 92  
+ Version introduite: Conformité des normes ODBC 3,0: ISO 92  
   
  **Résumé**  
- **SQLFreeHandle** libère les ressources associées à un descripteur d’environnement, connexion, instruction ou descripteur spécifique.  
+ **SQLFreeHandle** libère les ressources associées à un environnement, une connexion, une instruction ou un handle de descripteur spécifique.  
   
 > [!NOTE]
->  Cette fonction est une fonction générique de libérer les handles. Il remplace les fonctions ODBC 2.0 **SQLFreeConnect** (pour libérer un handle de connexion) et **SQLFreeEnv** (pour libérer un handle d’environnement). **SQLFreeConnect** et **SQLFreeEnv** sont déconseillés dans ODBC 3 *.x*. **SQLFreeHandle** remplace également la fonction ODBC 2.0 **SQLFreeStmt** (avec le SQL_DROP *Option*) de libérer un descripteur d’instruction. Pour plus d’informations, consultez « Commentaires ». Pour plus d’informations sur ce que le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 3 *.x* application fonctionne avec un ODBC 2 *.x* pilote, consultez [mappage des fonctions de remplacement pour vers l’arrière Compatibilité des Applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
+>  Cette fonction est une fonction générique permettant de libérer des handles. Il remplace les fonctions ODBC 2,0 **sqlfreeconnect,** (pour libérer un handle de connexion) et **sqlfreeenv,** (pour libérer un handle d’environnement). **Sqlfreeconnect,** et **sqlfreeenv,** sont déconseillés dans ODBC 3 *. x*. **SQLFreeHandle** remplace également la fonction ODBC 2,0 **SQLFreeStmt** (avec l' *option*SQL_DROP) pour la libération d’un descripteur d’instruction. Pour plus d’informations, consultez la section «commentaires». Pour plus d’informations sur le mappage de cette fonction par le gestionnaire de pilotes lorsqu’une application ODBC 3 *. x* utilise un pilote ODBC 2 *. x* , consultez [mappage des fonctions de remplacement pour la compatibilité descendante des applications](../../../odbc/reference/develop-app/mapping-replacement-functions-for-backward-compatibility-of-applications.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,7 +48,7 @@ SQLRETURN SQLFreeHandle(
   
 ## <a name="arguments"></a>Arguments  
  *HandleType*  
- [Entrée] Le type de handle à libérer par **SQLFreeHandle**. Doit être une des valeurs suivantes :  
+ Entrée Type de descripteur à libérer par **SQLFreeHandle**. Il doit s’agir de l’une des valeurs suivantes:  
   
 -   SQL_HANDLE_DBC  
   
@@ -59,12 +60,12 @@ SQLRETURN SQLFreeHandle(
   
 -   SQL_HANDLE_STMT  
   
- Handle SQL_HANDLE_DBC_INFO_TOKEN est utilisée uniquement par le Gestionnaire de pilotes et le pilote. Applications ne doivent pas utiliser ce type de handle. Pour plus d’informations sur SQL_HANDLE_DBC_INFO_TOKEN, consultez [développer la reconnaissance des pools de connexion dans un pilote ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
+ Le descripteur SQL_HANDLE_DBC_INFO_TOKEN est utilisé uniquement par le gestionnaire de pilotes et le pilote. Les applications ne doivent pas utiliser ce type de handle. Pour plus d’informations sur SQL_HANDLE_DBC_INFO_TOKEN, consultez [développement de la reconnaissance des pools de connexions dans un pilote ODBC](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md).  
   
- Si *HandleType* ne fait pas partie de ces valeurs, **SQLFreeHandle** retourne SQL_INVALID_HANDLE.  
+ Si *comme HandleType* n’est pas l’une de ces valeurs, **SQLFreeHandle** retourne SQL_INVALID_HANDLE.  
   
  *Handle*  
- [Entrée] Le handle à libérer.  
+ Entrée Handle à libérer.  
   
 ## <a name="returns"></a>Valeur renvoyée  
  SQL_SUCCESS, SQL_ERROR ou SQL_INVALID_HANDLE.  
@@ -72,51 +73,51 @@ SQLRETURN SQLFreeHandle(
  Si **SQLFreeHandle** retourne SQL_ERROR, le handle est toujours valide.  
   
 ## <a name="diagnostics"></a>Diagnostics  
- Lorsque **SQLFreeHandle** retourne SQL_ERROR, une valeur SQLSTATE associée peut être obtenu à partir de la structure de données de diagnostic pour le handle qui **SQLFreeHandle** a tenté de libérer mais n’était pas possible. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLFreeHandle** et explique chacune dans le contexte de cette fonction ; la notation « (DM) » précède les descriptions de SQLSTATE retournée par le Gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
+ Lorsque **SQLFreeHandle** retourne SQL_ERROR, une valeur SQLSTATE associée peut être obtenue à partir de la structure de données de diagnostic pour le handle que **SQLFreeHandle** a tenté de libérer, mais pas. Le tableau suivant répertorie les valeurs SQLSTATE généralement retournées par **SQLFreeHandle** et explique chacune d’elles dans le contexte de cette fonction. la notation «(DM)» précède les descriptions des SQLSTATEs retournées par le gestionnaire de pilotes. Le code de retour associé à chaque valeur SQLSTATE est SQL_ERROR, sauf indication contraire.  
   
 |SQLSTATE|Error|Description|  
 |--------------|-----------|-----------------|  
-|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucun code SQLSTATE spécifique est survenu et pour lequel aucune SQLSTATE spécifiques à l’implémentation a été défini. Le message d’erreur retourné par **SQLGetDiagRec** dans le  *\*MessageText* tampon décrit l’erreur et sa cause.|  
-|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire qui est nécessaire pour prendre en charge l’exécution ou à l’achèvement de la fonction.|  
-|HY010|Erreur de séquence de fonction|(DM) le *HandleType* argument était SQL_HANDLE_ENV et au moins une connexion était dans un état connecté ou non alloué. **SQLDisconnect** et **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_DBC doit être appelée pour chaque connexion avant d’appeler **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_ENV.<br /><br /> (DM) le *HandleType* argument était SQL_HANDLE_DBC et la fonction a été appelée avant d’appeler **SQLDisconnect** pour la connexion.<br /><br /> (DM) le *HandleType* SQL_HANDLE_DBC a été l’argument. Une fonction d’exécution asynchrone a été appelée avec *gérer* et la fonction s’exécute toujours quand cette fonction a été appelée.<br /><br /> (DM) le *HandleType* SQL_HANDLE_STMT a été l’argument. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, ou **SQLSetPos** a été appelée avec le descripteur d’instruction et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi de données pour tous les paramètres de data-at-execution ou les colonnes.<br /><br /> (DM) le *HandleType* SQL_HANDLE_STMT a été l’argument. Une fonction d’exécution asynchrone a été appelée sur le descripteur d’instruction ou sur le handle de connexion associé et la fonction s’exécute toujours quand cette fonction a été appelée.<br /><br /> (DM) le *HandleType* SQL_HANDLE_DESC a été l’argument. Une fonction d’exécution asynchrone a été appelée sur le handle de connexion associé ; et la fonction s’exécute toujours quand cette fonction a été appelée.<br /><br /> (DM) gère toutes les filiales et autres ressources publiées pas avant **SQLFreeHandle** a été appelée.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, ou **SQLMoreResults** a été appelée pour l’une des descripteurs d’instruction associés à la *gérer* et *HandleType* a été défini à SQL_HANDLE_STMT ou SQL_HANDLE_DESC retourné SQL_PARAM_DATA_AVAILABLE. Cette fonction a été appelée avant que les données ont été récupérées pour tous les paramètres transmis en continu.|  
-|HY013|Erreur de gestion de mémoire|Le *HandleType* argument était SQL_HANDLE_STMT ou SQL_HANDLE_DESC, et l’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, probablement en raison de conditions de mémoire insuffisante.|  
-|HY017|Utilisation non valide d’un handle de descripteur alloué automatiquement.|(DM) le *gérer* argument a été défini sur le handle pour un descripteur alloué automatiquement.|  
-|HY117|Connexion est suspendue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYT01|Délai de connexion expiré|Le délai de connexion a expiré avant que la source de données a répondu à la demande. Le délai de connexion est défini via **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Pilote ne prend pas en charge cette fonction|(DM) le *HandleType* SQL_HANDLE_DESC a été l’argument et le pilote a été un ODBC 2 *.x* pilote.<br /><br /> (DM) le *HandleType* SQL_HANDLE_STMT a été l’argument et le pilote n’a pas un pilote ODBC valid.|  
+|HY000|Erreur générale|Une erreur s’est produite pour laquelle aucune SQLSTATE spécifique n’a été définie et pour lesquelles aucune SQLSTATE spécifique à l’implémentation n’a été définie. Le message d’erreur retourné par **SQLGetDiagRec** dans  *\** la mémoire tampon MessageText décrit l’erreur et sa cause.|  
+|HY001|Erreur d’allocation de mémoire|Le pilote n’a pas pu allouer de la mémoire requise pour prendre en charge l’exécution ou l’achèvement de la fonction.|  
+|HY010|Erreur de séquence de fonction|(DM) l’argument *comme HandleType* était SQL_HANDLE_ENV, et au moins une connexion était dans un État alloué ou connecté. **SQLDisconnect** et **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_DBC doivent être appelés pour chaque connexion avant d’appeler **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_ENV.<br /><br /> (DM) l’argument *comme HandleType* a été SQL_HANDLE_DBC, et la fonction a été appelée avant l’appel de **SQLDisconnect** pour la connexion.<br /><br /> (DM) l’argument *comme HandleType* a été SQL_HANDLE_DBC. Une fonction d’exécution asynchrone a été appelée avec un *handle* et la fonction était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) l’argument *comme HandleType* a été SQL_HANDLE_STMT. **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**ou **SQLSetPos** a été appelé avec le descripteur d’instruction et retourné SQL_NEED_DATA. Cette fonction a été appelée avant l’envoi des données pour l’ensemble des paramètres ou des colonnes de données en cours d’exécution.<br /><br /> (DM) l’argument *comme HandleType* a été SQL_HANDLE_STMT. Une fonction d’exécution asynchrone a été appelée sur le descripteur d’instruction ou sur le handle de connexion associé et la fonction était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) l’argument *comme HandleType* a été SQL_HANDLE_DESC. Une fonction d’exécution asynchrone a été appelée sur le handle de connexion associé; et la fonction était toujours en cours d’exécution quand cette fonction a été appelée.<br /><br /> (DM) tous les descripteurs subsidiaires et autres ressources n’ont pas été libérés avant l’appel de **SQLFreeHandle** .<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**ou **SQLMoreResults** a été appelé pour l’un des descripteurs d’instruction associés au *handle* et *comme HandleType* a été défini sur SQL_HANDLE_STMT ou SQL_HANDLE_DESC a retourné SQL_PARAM_DATA_ Téléchargé. Cette fonction a été appelée avant que les données ne soient récupérées pour tous les paramètres transmis en continu.|  
+|HY013|Erreur de gestion de la mémoire|L’argument *comme HandleType* était SQL_HANDLE_STMT ou SQL_HANDLE_DESC, et l’appel de fonction n’a pas pu être traité parce que les objets mémoire sous-jacents n’ont pas pu être accédés, probablement en raison de conditions de mémoire insuffisante.|  
+|HY017|Utilisation non valide d’un handle de descripteur alloué automatiquement.|(DM) l' *argument* descripteur a été défini sur le handle d’un descripteur alloué automatiquement.|  
+|HY117|La connexion est interrompue en raison d’un état de transaction inconnu. Seules les fonctions de déconnexion et de lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [fonction SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYT01|Délai d’attente de connexion expiré|Le délai d’attente de connexion a expiré avant que la source de données ait répondu à la demande. Le délai d’expiration de la connexion est défini par le biais de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|Le pilote ne prend pas en charge cette fonction|(DM) l’argument *comme HandleType* a été SQL_HANDLE_DESC, et le pilote était un pilote ODBC 2 *. x* .<br /><br /> (DM) l’argument *comme HandleType* a été SQL_HANDLE_STMT, et le pilote n’était pas un pilote ODBC valide.|  
   
 ## <a name="comments"></a>Commentaires  
- **SQLFreeHandle** est utilisée pour libérer les handles pour les environnements, les connexions, les instructions et les descripteurs, comme décrit dans les sections suivantes. Pour obtenir des informations générales sur les descripteurs, consultez [Handles](../../../odbc/reference/develop-app/handles.md).  
+ **SQLFreeHandle** est utilisé pour libérer des handles pour les environnements, les connexions, les instructions et les descripteurs, comme décrit dans les sections suivantes. Pour obtenir des informations générales sur les [descripteurs](../../../odbc/reference/develop-app/handles.md), consultez Handles.  
   
- Une application ne doit pas utiliser un handle après que qu’il a été libéré ; le Gestionnaire de pilotes ne vérifie pas la validité d’une poignée dans un appel de fonction.  
+ Une application ne doit pas utiliser de handle après qu’elle a été libérée; le gestionnaire de pilotes ne vérifie pas la validité d’un descripteur dans un appel de fonction.  
   
-## <a name="freeing-an-environment-handle"></a>Libération d’un Handle d’environnement  
- Avant d’appeler **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_ENV, une application doit appeler **SQLFreeHandle** avec un *HandleType*de SQL_HANDLE_DBC pour toutes les connexions attribuées dans l’environnement. Sinon, l’appel à **SQLFreeHandle** retourne SQL_ERROR et de l’environnement et de toute connexion active reste valide. Pour plus d’informations, consultez [environnement gère](../../../odbc/reference/develop-app/environment-handles.md) et [allouer le Handle d’environnement](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
+## <a name="freeing-an-environment-handle"></a>Libération d’un descripteur d’environnement  
+ Avant d’appeler **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_ENV, une application doit appeler **SQLFREEHANDLE** avec un *comme HandleType* de SQL_HANDLE_DBC pour toutes les connexions allouées dans l’environnement. Dans le cas contraire, l’appel de **SQLFreeHandle** retourne SQL_ERROR et l’environnement et toute connexion active restent valides. Pour plus d’informations, consultez Handles d' [environnement](../../../odbc/reference/develop-app/environment-handles.md) et [allocation du handle d’environnement](../../../odbc/reference/develop-app/allocating-the-environment-handle.md).  
   
- Si l’environnement est un environnement partagé, l’application qui appelle **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_ENV n’a plus accès à l’environnement après l’appel, mais l’environnement ressources ne sont pas nécessairement libérées. L’appel à **SQLFreeHandle** décrémente le décompte de références de l’environnement. Le décompte de références est conservé par le Gestionnaire de pilotes. Si elle ne parvient pas à zéro, l’environnement partagé n’est pas libéré, car il est toujours utilisé par un autre composant. Si le décompte de références atteint zéro, les ressources de l’environnement partagé sont libérées.  
+ Si l’environnement est un environnement partagé, l’application qui appelle **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_ENV n’a plus accès à l’environnement après l’appel, mais les ressources de l’environnement ne sont pas nécessairement libérées. L’appel à **SQLFreeHandle** décrémente le décompte de références de l’environnement. Le nombre de références est géré par le gestionnaire de pilotes. S’il n’atteint pas zéro, l’environnement partagé n’est pas libéré, car il est toujours utilisé par un autre composant. Si le nombre de références atteint zéro, les ressources de l’environnement partagé sont libérées.  
   
 ## <a name="freeing-a-connection-handle"></a>Libération d’un descripteur de connexion  
- Avant d’appeler **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_DBC, une application doit appeler **SQLDisconnect** pour la connexion s’il existe une connexion sur ce gérer *.* Sinon, l’appel à **SQLFreeHandle** retourne SQL_ERROR et la connexion reste valide.  
+ Avant d’appeler **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_DBC, une application doit appeler **SQLDisconnect** pour la connexion s’il existe une connexion sur ce handle *.* Dans le cas contraire, l’appel à **SQLFreeHandle** retourne SQL_ERROR et la connexion reste valide.  
   
- Pour plus d’informations, consultez [Handles de connexion](../../../odbc/reference/develop-app/connection-handles.md) et [déconnexion d’une Source de données ou le pilote](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
+ Pour plus d’informations, consultez Handles de [connexion](../../../odbc/reference/develop-app/connection-handles.md) et [déconnexion à partir d’une source de données ou d’un pilote](../../../odbc/reference/develop-app/disconnecting-from-a-data-source-or-driver.md).  
   
 ## <a name="freeing-a-statement-handle"></a>Libération d'un descripteur d'instruction  
- Un appel à **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_STMT libère toutes les ressources qui ont été alloués par un appel à **SQLAllocHandle** avec un  *HandleType* de SQL_HANDLE_STMT. Lorsqu’une application appelle **SQLFreeHandle** pour libérer une instruction qui a des résultats en attente, les résultats en attente sont supprimés. Lorsqu’une application libère un descripteur d’instruction, il libère les descripteurs alloués automatiquement quatre associés à ce handle. Pour plus d’informations, consultez [instruction gère](../../../odbc/reference/develop-app/statement-handles.md) et [libération d’un Handle d’instruction](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  
+ Un appel à **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_STMT libère toutes les ressources qui ont été allouées par un appel à **SQLALLOCHANDLE** avec un *comme HandleType* de SQL_HANDLE_STMT. Quand une application appelle **SQLFreeHandle** pour libérer une instruction qui a des résultats en attente, les résultats en attente sont supprimés. Lorsqu’une application libère un handle d’instruction, le pilote libère les quatre descripteurs alloués automatiquement associés à ce handle. Pour plus d’informations, consultez Handles d' [instruction](../../../odbc/reference/develop-app/statement-handles.md) et [libération d’un descripteur d’instruction](../../../odbc/reference/develop-app/freeing-a-statement-handle-odbc.md).  
   
- Notez que **SQLDisconnect** supprime automatiquement les instructions et les descripteurs ouverts sur la connexion.  
+ Notez que **SQLDisconnect** supprime automatiquement toutes les instructions et descripteurs ouverts sur la connexion.  
   
-## <a name="freeing-a-descriptor-handle"></a>Libération d’un Handle de descripteur  
- Un appel à **SQLFreeHandle** avec un *HandleType* de SQL_HANDLE_DESC libère le handle de descripteur dans *gérer*. L’appel à **SQLFreeHandle** ne libère pas de mémoire allouée par l’application qui peut-être être référencée par un champ de pointeur (y compris les SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR) de n’importe quel enregistrement de descripteur de *gérer*. La mémoire allouée par le pilote pour les champs qui ne sont pas des champs de pointeur est libérée lorsque le handle est libéré. Lorsqu’un handle de descripteur alloué par l’utilisateur est libéré, toutes les instructions qui le handle libéré avait été associé à revenir à leurs handles de descripteur alloué automatiquement respectifs.  
+## <a name="freeing-a-descriptor-handle"></a>Libération d’un handle de descripteur  
+ Un appel à **SQLFreeHandle** avec un *comme HandleType* de SQL_HANDLE_DESC libère le handle de descripteur dans *handle*. L’appel à **SQLFreeHandle** ne libère pas la mémoire allouée par l’application qui peut être référencée par un champ de pointeur (y compris SQL_DESC_DATA_PTR, SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR) d’un enregistrement de descripteur de  *Handle*. La mémoire allouée par le pilote pour les champs qui ne sont pas des champs de pointeur est libérée quand le handle est libéré. Lorsqu’un handle de descripteur alloué par l’utilisateur est libéré, toutes les instructions que le handle libéré a été associé à reprennent leurs handles de descripteurs alloués automatiquement respectifs.  
   
 > [!NOTE]
->  ODBC 2 *.x* pilotes ne prennent pas en charge la libération des handles de descripteur, comme ils ne prennent pas en charge les allouer des handles de descripteur.  
+>  Les pilotes ODBC 2 *. x* ne prennent pas en charge la libération des handles de descripteur, tout comme ils ne prennent pas en charge l’allocation des handles de descripteur  
   
- Notez que **SQLDisconnect** supprime automatiquement les instructions et les descripteurs ouverts sur la connexion. Lorsqu’une application libère un descripteur d’instruction, il libère tous les descripteurs de généré automatiquement associés à ce handle.  
+ Notez que **SQLDisconnect** supprime automatiquement toutes les instructions et descripteurs ouverts sur la connexion. Lorsqu’une application libère un handle d’instruction, le pilote libère tous les descripteurs générés automatiquement associés à ce handle.  
   
- Pour plus d’informations sur les descripteurs, consultez [descripteurs](../../../odbc/reference/develop-app/descriptors.md).  
+ Pour plus d’informations sur les [descripteurs](../../../odbc/reference/develop-app/descriptors.md), consultez descripteurs.  
   
 ## <a name="code-example"></a>Exemple de code  
- Pour obtenir des exemples de code supplémentaire, consultez [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) et [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
+ Pour obtenir des exemples de code supplémentaires, consultez [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md) et [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
 ### <a name="code"></a>Code  
   
@@ -176,11 +177,11 @@ int main() {
   
 |Pour obtenir des informations sur|Consultez|  
 |---------------------------|---------|  
-|Allocation d’un handle|[SQLAllocHandle, fonction](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
-|Annulation de traitement d’instruction|[SQLCance Functionl](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Allocation d’un descripteur|[SQLAllocHandle, fonction](../../../odbc/reference/syntax/sqlallochandle-function.md)|  
+|Annulation du traitement des instructions|[SQLCance fonction)](../../../odbc/reference/syntax/sqlcancel-function.md)|  
 |Définition d’un nom de curseur|[SQLSetCursorName, fonction](../../../odbc/reference/syntax/sqlsetcursorname-function.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence de l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
+ [Informations de référence sur l’API ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   
  [Fichiers d’en-tête ODBC](../../../odbc/reference/install/odbc-header-files.md)   
  [Exemple de programme ODBC](../../../odbc/reference/sample-odbc-program.md)
