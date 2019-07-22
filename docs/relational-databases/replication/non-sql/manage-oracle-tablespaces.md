@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 437cab6e91e7fe607eea88370c654ad9848824b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e132bea4e0926719092d9a7055735210e2b5908b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942756"
 ---
 # <a name="manage-oracle-tablespaces"></a>Gérer des espaces disque logiques Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,17 +32,17 @@ ms.locfileid: "47777997"
   
 -   Utilisez [sp_changearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md). Pour utiliser **sp_changearticle**, spécifiez les éléments suivants :  
   
-    -   Nom du serveur de publication Oracle pour le paramètre **@publisher**.  
+    -   Nom du serveur de publication Oracle pour le paramètre **@publisher** .  
   
-    -   Nom du serveur de publication Oracle pour le paramètre **@publication**.  
+    -   Nom du serveur de publication Oracle pour le paramètre **@publication** .  
   
-    -   Nom de l'article pour le paramètre **@article**.  
+    -   Nom de l'article pour le paramètre **@article** .  
   
-    -   Une valeur d'espace disque logique pour le paramètre **@property**.  
+    -   Une valeur d'espace disque logique pour le paramètre **@property** .  
   
-    -   Le nom de l'espace disque logique pour le paramètre **@value**.  
+    -   Le nom de l'espace disque logique pour le paramètre **@value** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Objets créés sur le serveur de publication Oracle](../../../relational-databases/replication/non-sql/objects-created-on-the-oracle-publisher.md)  
   

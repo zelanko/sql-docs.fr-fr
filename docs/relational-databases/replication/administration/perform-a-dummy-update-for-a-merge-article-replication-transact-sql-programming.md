@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2f339210-4d85-4843-bd94-e86f7100d3ef
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00eeea1fd020e4e3e2667ca54b1869a084d86798
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38076ebad44e59d6004ac852486788a4b22c32f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939093"
 ---
 # <a name="perform-a-dummy-update-for-a-merge-article-replication-transact-sql-programming"></a>Exécuter une mise à jour factice pour un article de fusion (programmation Transact-SQL de la réplication)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47806197"
   
 1.  Exécutez l'opération (par exemple, UPDATETEXT) sur une ligne d'une table de fusion publiée qui requiert une mise à jour factice.  
   
-2.  Sur le serveur (serveur de publication ou Abonné) de la base de données où la modification a été effectuée, exécutez [sp_mergedummyupdate &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql.md). Spécifiez la table sur laquelle la modification a été apportée pour **@source_object**et l'identificateur unique de la ligne modifiée pour **@rowguid**.  
+2.  Sur le serveur (serveur de publication ou Abonné) de la base de données où la modification a été effectuée, exécutez [sp_mergedummyupdate &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergedummyupdate-transact-sql.md). Spécifiez la table sur laquelle la modification a été apportée pour **@source_object** et l'identificateur unique de la ligne modifiée pour **@rowguid** .  
   
 3.  Synchronisez l'abonnement pour répliquer la ligne modifiée.  
   

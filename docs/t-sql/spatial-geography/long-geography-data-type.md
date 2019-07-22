@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 2287205c91f2ceaef44af7bf8322d3c31e201c0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20f1521091a295d1293c9f3e06958f36930ba4e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930204"
 ---
 # <a name="long-geography-data-type"></a>Long (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65937657"
   
  Type CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Dans le modèle OpenGIS, Long est défini uniquement sur les instances **geography** composées d’un seul point. Cette propriété retourne NULL si les instances **geography** contiennent plusieurs points. Cette propriété est précise et en lecture seule.  
   
 ## <a name="examples"></a>Exemples  
@@ -54,7 +53,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100)', 4326);
 SELECT @g.Long;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   
   

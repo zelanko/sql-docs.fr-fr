@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 61ef1731-cb3a-4afb-b4a4-059b04aeade0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e1d4761db172138eb86e3cf511b904c5b86b90c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b323966abfe00f8ce6c118423ce32f31868fecc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945565"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Générer de fichiers de vidage pour l'exécution des packages
 
@@ -50,7 +49,7 @@ ms.locfileid: "65713747"
   
  Le tableau ci-dessous décrit uniquement certaines sections du fichier .tmp. Le fichier .tmp inclut des données supplémentaires qui ne sont pas répertoriées dans ce tableau.  
   
-|Type d'informations|Description| Exemple|  
+|Type d'informations|Description|Exemple|  
 |-------------------------|-----------------|-------------|  
 |Environnement|Version de système d'exploitation, données d'utilisation de la mémoire, ID de processus et nom d'image de processus. Les informations d'environnement se trouvent au début du fichier .tmp.|# Vidage texte SSIS effectué le 13/09/2007 à 13:50:34<br /><br /> # PID 4120<br /><br /> #Nom de l'image [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Exécution sur 2 processeurs amd64 sous WOW64<br /><br /> # Mémoire : 58 % utilisés. Physique : 845M/2044M  Pagination : 2404M/4095M (dispo/total)|  
 |Chemin d'accès et version des bibliothèques de liens dynamiques (DLL)|Chemin d'accès et numéro de version de chaque DLL que le système charge pendant le traitement d'un package.|# Module chargé : c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Module chargé : C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Module chargé : C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  

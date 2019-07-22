@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 52e2d08a629a2e7272a409f0e84ab9b79299649b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912616"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Nom de la fonction de partition. Les noms des fonctions de partition doivent être uniques dans la base de données et respecter les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md).  
   
  *input_parameter_type*  
- Type de données de la colonne utilisée pour le partitionnement. Tous les types de données sont utilisables comme colonnes de partitionnement, à l’exception de **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, des types de données d’alias ou des types de données CLR définis par l’utilisateur.  
+ Type de données de la colonne utilisée pour le partitionnement. Tous les types de données sont utilisables comme colonnes de partitionnement, à l’exception de **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , des types de données d’alias ou des types de données CLR définis par l’utilisateur.  
   
  La colonne effectivement utilisée, appelée « colonne de partitionnement », est spécifiée dans l'instruction CREATE TABLE ou CREATE INDEX.  
   
@@ -74,14 +73,14 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Spécifie le nombre de valeurs fournies par *boundary_value*, dans la limite de 14 999. Le nombre de partitions créées est égal à *n* + 1. Il n'est pas nécessaire que les valeurs soient recensées dans l'ordre. Si les valeurs ne sont pas dans l'ordre, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] les trie, crée la fonction et affiche un message d'avertissement indiquant qu'elles ne sont pas fournies dans l'ordre. Le moteur de base de données retourne une erreur si *n* comprend des valeurs dupliquées.  
   
  **LEFT** | RIGHT  
- Spécifie à quel côté de chaque intervalle de valeur limite, gauche ou droite, appartient *boundary_value* [ **,**_...n_ ] quand les valeurs de l’intervalle sont triées par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l’ordre croissant, de la gauche vers la droite. Si cet argument n'est pas spécifié, la valeur par défaut est LEFT.  
+ Spécifie à quel côté de chaque intervalle de valeur limite, gauche ou droite, appartient *boundary_value* [ **,** _...n_ ] quand les valeurs de l’intervalle sont triées par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] dans l’ordre croissant, de la gauche vers la droite. Si cet argument n'est pas spécifié, la valeur par défaut est LEFT.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'étendue d'une fonction de partition est limitée à la base de données dans laquelle elle est créée. Dans la base de données, les fonctions de partition résident dans un espace de noms indépendant des autres fonctions.  
   
  Toutes les lignes dont la colonne de partitionnement possède des valeurs NULL sont placées dans la partition située le plus à gauche, sauf si NULL est spécifié comme valeur limite et que RIGHT est indiqué. Dans ce cas, la partition située le plus à gauche est une partition vide et les valeurs NULL sont placées dans la partition suivante.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  N'importe laquelle des autorisations suivantes permet d'exécuter CREATE PARTITION FUNCTION :  
   
 -   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
@@ -106,8 +105,8 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |---------------|-------|-------|-------|-------|  
 |**Valeurs**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
-### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>b. Création d'une fonction de partition RANGE RIGHT sur une colonne de type int  
- La fonction de partition suivante utilise pour *boundary_value* [ **,**_...n_ ] les mêmes valeurs que l’exemple précédent, mais elle spécifie RANGE RIGHT.  
+### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. Création d'une fonction de partition RANGE RIGHT sur une colonne de type int  
+ La fonction de partition suivante utilise pour *boundary_value* [ **,** _...n_ ] les mêmes valeurs que l’exemple précédent, mais elle spécifie RANGE RIGHT.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
@@ -188,7 +187,7 @@ EXEC sp_executesql @DatePartitionFunction;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
  [$PARTITION &#40;Transact-SQL&#41;](../../t-sql/functions/partition-transact-sql.md)   
  [ALTER PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-partition-function-transact-sql.md)   
