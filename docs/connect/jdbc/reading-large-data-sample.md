@@ -1,5 +1,5 @@
 ---
-title: Exemple de données volumineuses de lecture | Microsoft Docs
+title: Lecture de l’exemple de données volumineuses | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 658c9f61829f2ba979f2d3e877d17905040dee97
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dde0c8eb487fed00996b56a684a0e28326750679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956164"
 ---
 # <a name="reading-large-data-sample"></a>Exemple de lecture de données volumineuses
 

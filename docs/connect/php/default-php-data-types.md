@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993666"
 ---
 # <a name="default-php-data-types"></a>Types de données PHP par défaut
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -84,7 +83,7 @@ Le tableau suivant répertorie le type de données SQL Server (type des données
 
 6. Il s’agit d’un type hérité mappé sur le type nvarchar(max).
 
-7.  sql_variant n’est pas pris en charge dans les paramètres bidirectionnel ou de sortie.
+7.  sql_variant n’est pas pris en charge dans les paramètres de sortie ou bidirectionnel.
 
 8.  Il s’agit d’un type hérité mappé sur le type varchar(max).  
   

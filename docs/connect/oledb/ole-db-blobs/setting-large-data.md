@@ -1,6 +1,6 @@
 ---
 title: Définition de données volumineuses | Microsoft Docs
-description: Définition de données volumineuses à l’aide de OLE DB Driver pour SQL Server
+description: Définition de données volumineuses à l’aide du pilote OLE DB pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5d050a978efcfc1067f8adc5a346382f5b598ff7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 03baaafbc3fed654bcd463a2971bf1fca6712304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936525"
 ---
 # <a name="setting-large-data"></a>Définition de données volumineuses
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Avec le pilote OLE DB pour SQL Server, vous pouvez définir des données BLOB en passant un pointeur vers un objet de stockage du consommateur.  
+  Avec le pilote OLE DB pour SQL Server, vous pouvez définir des données BLOB en passant un pointeur vers un objet de stockage consommateur.  
   
  Le consommateur crée un objet de stockage qui contient les données et passe au fournisseur un pointeur vers cet objet de stockage. Le fournisseur lit ensuite les données de l'objet de stockage du consommateur et les écrit dans la colonne BLOB.  
   

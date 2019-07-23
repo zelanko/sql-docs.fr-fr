@@ -1,6 +1,6 @@
 ---
-title: Copie de données avec IRowsetFastLoad (OLE DB) | Microsoft Docs
-description: Copier en bloc des données dans une interface de bloc avec IRowsetFastLoad de table SQL Server de OLE DB Driver pour SQL Server
+title: Copier des données en bloc avec IRowsetFastLoad (OLE DB) | Microsoft Docs
+description: Copie en bloc de données dans une table SQL Server à l’aide de l’interface IRowsetFastLoad du pilote OLE DB pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - bulk copy [OLE DB], about bulk copy
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1e4581d06d04727133f5a48f5b663a4b689755f2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 926cc4f4d3dd1f3022c2b653a32f12ee58492b24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015640"
 ---
 # <a name="bulk-copy-data-using-irowsetfastload-ole-db"></a>Copier des données en bloc avec IRowsetFastLoad (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66785997"
 
   Cet exemple illustre l'utilisation d IRowsetFastLoad pour effectuer une copie en bloc des enregistrements dans une table.  
   
- Le consommateur notifie le pilote OLE DB pour SQL Server de son besoin de copie en bloc en définissant le pilote OLE DB pour la propriété de spécifiques au pilote SQL Server SSPROP_ENABLEFASTLOAD avec la valeur VARIANT_TRUE. Avec la propriété définie sur la source de données, le consommateur crée un pilote OLE DB pour la session de SQL Server. La nouvelle session permet au client d’accéder à **IRowsetFastLoad**.  
+ Le consommateur notifie OLE DB pilote pour SQL Server de son besoin en vue de la copie en bloc en définissant le pilote OLE DB pour SQL Server propriété SSPROP_ENABLEFASTLOAD spécifique au pilote à VARIANT_TRUE. Avec la propriété définie sur la source de données, le consommateur crée un pilote OLE DB pour SQL Server session. La nouvelle session permet à l’utilisateur d’accéder à **IRowsetFastLoad**.  
   
  Un exemple complet illustrant l’utilisation de **IRowsetFastLoad** pour copier en bloc les enregistrements dans une table est disponible. Dans cet exemple, 10 enregistrements sont ajoutés à la table **IRFLTable**. Vous devez créer la table **IRFLTable** dans la base de données.  
   
@@ -43,17 +42,17 @@ ms.locfileid: "66785997"
   
 1.  Établissez une connexion à la source de données.  
   
-2.  Le pilote OLE DB pour la propriété de source de données spécifique au pilote SQL Server SSPROP_ENABLEFASTLOAD la valeur VARIANT_TRUE. Avec cette propriété définie sur VARIANT_TRUE, la session nouvellement créée accorde au consommateur l’accès à **IRowsetFastLoad**.  
+2.  Définissez le pilote OLE DB pour SQL Server propriété de source de données spécifique au pilote SSPROP_ENABLEFASTLOAD sur VARIANT_TRUE. Avec cette propriété définie sur VARIANT_TRUE, la session nouvellement créée accorde au consommateur l’accès à **IRowsetFastLoad**.  
   
-3.  Créer une session qui demande le **IOpenRowset** interface.  
+3.  Créez une session demandant l’interface **IOpenRowset** .  
   
 4.  Appelez **IOpenRowset::OpenRowset** pour ouvrir un ensemble de lignes qui inclut toutes les lignes de la table (dans laquelle les données doivent être copiées avec l’opération de copie en bloc).  
   
-5.  Effectuez les liaisons nécessaires et créez un accesseur à l’aide de **IAccessor::CreateAccessor**.  
+5.  Effectuez les liaisons nécessaires et créez un accesseur à l’aide de **IAccessor:: CreateAccessor**.  
   
 6.  Configurez la mémoire tampon à partir de laquelle les données seront copiées vers la table.  
   
-7.  Appelez **IRowsetFastLoad::InsertRow** pour copier en bloc les données dans la table.  
+7.  Appelez **IRowsetFastLoad:: InsertRow** pour copier en bloc les données dans la table.  
   
 ## <a name="example"></a>Exemple  
  Dans cet exemple, 10 enregistrements sont ajoutés à la table IRFLTable. Vous devez créer la table IRFLTable dans la base de données. Cet exemple n'est pas pris en charge sur la plateforme IA64.  

@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’une instruction SQL pour modifier des données | Microsoft Docs
+title: Utilisation d’une instruction SQL pour modifier des données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2da0381f06e5092a7bcdb056d88df1160486ce0f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cbcdf01eed0114e1788f23cec3a24cf4a69329e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004013"
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>Utilisation d'une instruction SQL pour modifier des données
 
@@ -35,7 +34,7 @@ Dans l’exemple suivant, une connexion ouverte à l’exemple de base de donné
 >
 > Si la colonne dans laquelle vous tentez d'insérer des données contient des caractères spéciaux, tels que des espaces, vous devez fournir les valeurs à insérer, même s'il s'agit de valeurs par défaut. Si vous ne le faites pas, l'insertion échoue.
 >
-> Si vous souhaitez que le pilote JDBC retourne tous les nombres de mises à jour, y compris les nombres de mises à jour retournées par des déclencheurs qui ont pu se déclencher, définissez la propriété de chaîne de connexion lastUpdateCount sur « false ». Pour plus d’informations sur la propriété lastUpdateCount, consultez [définissant les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).
+> Si vous souhaitez que le pilote JDBC retourne tous les nombres de mises à jour, y compris les nombres de mises à jour retournées par des déclencheurs qui ont pu se déclencher, définissez la propriété de chaîne de connexion lastUpdateCount sur « false ». Pour plus d’informations sur la propriété lastUpdateCount, consultez [définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).
 
 ## <a name="see-also"></a>Voir aussi
 

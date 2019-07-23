@@ -1,5 +1,5 @@
 ---
-title: updatenull, méthode (int) | Microsoft Docs
+title: Méthode updateNull, (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b22336a1-fe53-4e00-a5ff-ede8d3f2b9f9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3e1b4b391cf0c2106a705e272d891158c8ab5e3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7de1531b16578cacf70c6493029edcd2d853f7fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998657"
 ---
 # <a name="updatenull-method-int"></a>Méthode updateNull (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public void updateNull(int index)
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -47,7 +46,7 @@ public void updateNull(int index)
  Cette méthode updateNull est spécifiée par la méthode updateNull de l’interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthode updateNull &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)   
+ [Méthode &#40;updateNull, SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenull-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

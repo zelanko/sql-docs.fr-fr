@@ -1,5 +1,5 @@
 ---
-title: Utilisation des Types de données (JDBC) | Microsoft Docs
+title: Utilisation des types de données (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76af99170edeaca8f600d12955a6de2b09897548
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6af72a4e9157de72a46ecbb7443c0f58d3b400d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783264"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003852"
 ---
 # <a name="working-with-data-types-jdbc"></a>Travail sur des types de données (JDBC)
 
@@ -37,7 +36,7 @@ Les rubriques de cette section décrivent comment utiliser les types de données
 |-----------|-----------------|  
 |[Exemple de types de données de base](../../connect/jdbc/basic-data-types-sample.md)|Décrit l’utilisation des méthodes getter du jeu de résultats pour récupérer les valeurs des types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base, ainsi que l’utilisation des méthodes update du jeu de résultats pour mettre à jour ces valeurs.|  
 |[Exemple de type de données SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Explique comment stocker des données XML dans une base de données relationnelle, comment récupérer des données XML à partir d’une base de données et comment analyser des données XML à l’aide du type de données Java **SQLXML**.|  
-|[Exemple de types de données spatiales](../../connect/jdbc/spatial-data-types-sample.md)|Décrit comment stocker et récupérer des données avec les types de données spatiales 'Geometry' et 'Geography' de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec la base de données **Geometry** et **Geography** types Java définies par le pilote JDBC de Microsoft.|
+|[Exemple de types de données spatiales](../../connect/jdbc/spatial-data-types-sample.md)|Décrit comment stocker et récupérer des données avec des types de données spatiaux «Geometry» et « [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Geography» de base de données avec des types Java de **géométrie** et **Geography** définis par Microsoft JDBC Driver.|
 
 ## <a name="see-also"></a>Voir aussi
 

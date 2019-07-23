@@ -1,5 +1,5 @@
 ---
-title: Détail de l’erreur SQL Server | Microsoft Docs
+title: Détails de l’erreur de SQL Server | Microsoft Docs
 description: Détails des erreurs SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - ISQLServerErrorInfo interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: aa151a9cf85d2ddf131a530d09d884c6fd7bbca4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ddc9a1b1a242f9a92b1e854520d16abeb7baf809
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015649"
 ---
 # <a name="sql-server-error-detail"></a>Détail des erreurs SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

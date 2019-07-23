@@ -1,5 +1,5 @@
 ---
-title: Prise en charge les Transactions locales | Microsoft Docs
+title: Prise en charge des transactions locales | Microsoft Docs
 description: Transactions locales dans le pilote OLE DB pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,53 +17,52 @@ helpviewer_keywords:
 - local transactions [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9aacaf8c52ad45a3d61087d1029bdd6f7176629e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0cfc1ad6ff3439efe458f97394909c919b77075
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993963"
 ---
 # <a name="supporting-local-transactions"></a>Prise en charge des transactions locales
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Une session délimite l’étendue de transaction pour un pilote OLE DB pour la transaction locale de SQL Server. Lorsque, à l’initiative d’un consommateur, le pilote OLE DB pour SQL Server soumet une demande à une instance connectée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la demande constitue une unité de travail pour le pilote OLE DB pour SQL Server. Transactions locales encapsulent toujours une ou plusieurs unités de travail sur un pilote OLE DB unique pour la session de SQL Server.  
+  Une session délimite l’étendue de la transaction pour un pilote OLE DB pour SQL Server transaction locale. Quand, à la direction d’un consommateur, le pilote OLE DB pour SQL Server soumet une requête à une instance connectée de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la demande constitue une unité de travail pour le pilote OLE DB pour SQL Server. Les transactions locales encapsulent toujours une ou plusieurs unités de travail sur un seul pilote de OLE DB pour SQL Server session.  
   
  À l’aide du mode de validation automatique par défaut du pilote OLE DB pour SQL Server, une même unité de travail est traitée comme étendue d’une transaction locale. Une seule unité participe à la transaction locale. Lorsqu’une session est créée, le pilote OLE DB pour SQL Server commence une transaction pour la session. Une fois que l'unité de travail a été exécutée avec succès, le travail est validé. En cas d'échec, tout travail commencé est annulé et l'erreur est signalée au consommateur. Dans l’un et l’autre cas, le pilote OLE DB pour SQL Server commence une nouvelle transaction locale pour la session, afin que tout le travail soit effectué au sein d’une transaction.  
   
- Le consommateur du pilote OLE DB pour SQL Server peut obtenir un contrôle plus précis sur l’étendue de la transaction locale en utilisant l’interface **ITransactionLocal**. Lorsqu’une session de consommateur démarre une transaction, toutes les unités de travail de la session entre le point de départ de la transaction et les appels éventuels de la méthode **Commit** ou **Abort** sont traités comme une unité atomique. Le pilote OLE DB pour SQL Server lance implicitement une transaction lorsque vous y êtes invité par le consommateur. Si le consommateur ne demande pas la rétention, la session revient au comportement parent du niveau de la transaction, soit le plus généralement le mode de validation automatique.  
+ Le consommateur du pilote OLE DB pour SQL Server peut obtenir un contrôle plus précis sur l’étendue de la transaction locale en utilisant l’interface **ITransactionLocal**. Lorsqu’une session de consommateur démarre une transaction, toutes les unités de travail de la session entre le point de départ de la transaction et les appels éventuels de la méthode **Commit** ou **Abort** sont traités comme une unité atomique. Le pilote OLE DB pour SQL Server démarre implicitement une transaction lorsqu’il y est invité par le consommateur. Si le consommateur ne demande pas la rétention, la session revient au comportement parent du niveau de la transaction, soit le plus généralement le mode de validation automatique.  
   
- Le pilote OLE DB pour SQL Server prend en charge **ITransactionLocal::StartTransaction** paramètres comme suit.  
+ Le pilote OLE DB pour SQL Server prend en charge les paramètres **ITransactionLocal:: StartTransaction** comme suit.  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*isoLevel*[in]|Niveau d'isolation à utiliser avec cette transaction. Dans les transactions locales, le pilote OLE DB pour SQL Server prend en charge les éléments suivants :<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Remarque : Dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures, ISOLATIONLEVEL_SNAPSHOT est valide pour l’argument *isoLevel*, que le suivi des versions soit activé ou non pour la base de données. Cependant, une erreur se produit si l'utilisateur essaie d'exécuter une instruction et que le suivi des versions n'est pas activé et/ou que la base de données n'est pas en lecture seule. De plus, l’erreur XACT_E_ISOLATIONLEVEL se produit si ISOLATIONLEVEL_SNAPSHOT est spécifié comme *isoLevel* lors de la connexion à une version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].|  
-|*isoFlags*[in]|Le pilote OLE DB pour SQL Server retourne une erreur pour toute valeur différente de zéro.|  
-|*pOtherOptions*[in]|Si ce n’est pas NULL, le pilote OLE DB pour SQL Server demande l’objet d’options à partir de l’interface. Le pilote OLE DB pour SQL Server retourne XACT_E_NOTIMEOUT si l’objet d’options *ulTimeout* membre n’est pas égal à zéro. Le pilote OLE DB pour SQL Server ignore la valeur de la *szDescription* membre.|  
-|*pulTransactionLevel*[out]|Si ce n’est pas NULL, le pilote OLE DB pour SQL Server retourne le niveau imbriqué de la transaction.|  
+|*isoLevel*[in]|Niveau d'isolation à utiliser avec cette transaction. Dans les transactions locales, le pilote OLE DB pour SQL Server prend en charge les éléments suivants:<br /><br /> **ISOLATIONLEVEL_UNSPECIFIED**<br /><br /> **ISOLATIONLEVEL_CHAOS**<br /><br /> **ISOLATIONLEVEL_READUNCOMMITTED**<br /><br /> **ISOLATIONLEVEL_READCOMMITTED**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_CURSORSTABILITY**<br /><br /> **ISOLATIONLEVEL_REPEATABLEREAD**<br /><br /> **ISOLATIONLEVEL_SERIALIZABLE**<br /><br /> **ISOLATIONLEVEL_ISOLATED**<br /><br /> **ISOLATIONLEVEL_SNAPSHOT**<br /><br /> <br /><br /> Remarque : Dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et versions ultérieures, ISOLATIONLEVEL_SNAPSHOT est valide pour l’argument *isoLevel*, que le suivi des versions soit activé ou non pour la base de données. Cependant, une erreur se produit si l'utilisateur essaie d'exécuter une instruction et que le suivi des versions n'est pas activé et/ou que la base de données n'est pas en lecture seule. De plus, l’erreur XACT_E_ISOLATIONLEVEL se produit si ISOLATIONLEVEL_SNAPSHOT est spécifié comme *isoLevel* lors de la connexion à une version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].|  
+|*isoFlags*[in]|Le pilote OLE DB pour SQL Server retourne une erreur pour toute valeur autre que zéro.|  
+|*pOtherOptions*[in]|Si la valeur n’est pas NULL, le pilote OLE DB pour SQL Server demande l’objet d’options à partir de l’interface. Le pilote OLE DB pour SQL Server retourne XACT_E_NOTIMEOUT si le membre *ulTimeout* de l’objet options n’est pas égal à zéro. Le pilote OLE DB pour SQL Server ignore la valeur du membre *szDescription* .|  
+|*pulTransactionLevel*[out]|Si la valeur n’est pas NULL, le pilote de OLE DB pour SQL Server retourne le niveau imbriqué de la transaction.|  
   
- Pour les transactions locales, le pilote OLE DB pour SQL Server implémente **ITransaction::Abort** paramètres comme suit.  
+ Pour les transactions locales, le pilote OLE DB pour SQL Server implémente les paramètres **ITransaction:: Abort** comme suit.  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
 |*pboidReason*[in]|Ignoré s'il est défini. Peut être égal à NULL en toute sécurité.|  
-|*fRetaining*[in]|Lorsque la valeur est TRUE, une nouvelle transaction est commencée implicitement pour la session. La transaction doit être validée ou terminée par le consommateur. Si la valeur est FALSE, le pilote OLE DB pour SQL Server revient au mode de validation automatique pour la session.|  
-|*fAsync*[in]|Abandon asynchrone n’est pas prise en charge par le pilote OLE DB pour SQL Server. Le pilote OLE DB pour SQL Server retourne XACT_E_NOTSUPPORTED si la valeur n’est pas FALSE.|  
+|*fRetaining*[in]|Lorsque la valeur est TRUE, une nouvelle transaction est commencée implicitement pour la session. La transaction doit être validée ou terminée par le consommateur. Si la valeur est FALSe, le pilote de OLE DB pour SQL Server revient en mode de validation automatique pour la session.|  
+|*fAsync*[in]|L’abandon asynchrone n’est pas pris en charge par le pilote OLE DB pour SQL Server. Le pilote OLE DB pour SQL Server retourne XACT_E_NOTSUPPORTED si la valeur n’est pas FALSe.|  
   
- Pour les transactions locales, le pilote OLE DB pour SQL Server implémente **ITransaction::Commit** paramètres comme suit.  
+ Pour les transactions locales, le pilote OLE DB pour SQL Server implémente les paramètres **ITransaction:: Commit** comme suit.  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*fRetaining*[in]|Lorsque la valeur est TRUE, une nouvelle transaction est commencée implicitement pour la session. La transaction doit être validée ou terminée par le consommateur. Si la valeur est FALSE, le pilote OLE DB pour SQL Server revient au mode de validation automatique pour la session.|  
-|*grfTC*[in]|Asynchrone et phase une renvoie ne sont pas pris en charge par le pilote OLE DB pour SQL Server. Le pilote OLE DB pour SQL Server retourne XACT_E_NOTSUPPORTED pour toute valeur autre que XACTTC_SYNC.|  
+|*fRetaining*[in]|Lorsque la valeur est TRUE, une nouvelle transaction est commencée implicitement pour la session. La transaction doit être validée ou terminée par le consommateur. Si la valeur est FALSe, le pilote de OLE DB pour SQL Server revient en mode de validation automatique pour la session.|  
+|*grfTC*[in]|Les retours asynchrones et de phase 1 ne sont pas pris en charge par le pilote OLE DB pour SQL Server. Le pilote OLE DB pour SQL Server retourne XACT_E_NOTSUPPORTED pour toute valeur autre que XACTTC_SYNC.|  
 |*grfRM*[in]|Doit être égal à 0.|  
   
  Les ensembles de lignes du pilote OLE DB pour SQL Server de la session sont conservés lors d’une opération de validation ou d’abandon, selon les valeurs des propriétés d’ensemble de lignes DBPROP_ABORTPRESERVE et DBPROP_COMMITPRESERVE. Par défaut, ces propriétés ont toutes les deux la valeur VARIANT_FALSE, et tous les ensembles de lignes du pilote OLE DB pour SQL Server de la session sont perdus après une opération d’abandon ou de validation.  
   
- Le pilote OLE DB pour SQL Server n’implémente pas le **ITransactionObject** interface. La tentative d'un consommateur pour extraire une référence sur l'interface retourne E_NOINTERFACE.  
+ Le pilote OLE DB pour SQL Server n’implémente pas l’interface **ITransactionObject** . La tentative d'un consommateur pour extraire une référence sur l'interface retourne E_NOINTERFACE.  
   
  L’exemple suivant utilise **ITransactionLocal**.  
   

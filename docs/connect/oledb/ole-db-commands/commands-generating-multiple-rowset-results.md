@@ -1,5 +1,5 @@
 ---
-title: Commandes générant des résultats de plusieurs ensembles de lignes | Microsoft Docs
+title: Commandes générant des résultats à plusieurs ensembles de lignes | Microsoft Docs
 description: Commandes générant des résultats dans plusieurs ensembles de lignes
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,27 +17,26 @@ helpviewer_keywords:
 - multiple-rowset results
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 29504408c66cb5bada0e180eeda8f41834e10288
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016058"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Commandes générant des résultats dans plusieurs ensembles de lignes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server peut retourner plusieurs ensembles de lignes à partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instructions. Les instructions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retournent des résultats dans plusieurs ensembles de lignes dans les conditions suivantes :  
+  Le pilote OLE DB pour SQL Server peut retourner plusieurs ensembles de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] lignes à partir d’instructions. Les instructions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] retournent des résultats dans plusieurs ensembles de lignes dans les conditions suivantes :  
   
 -   des instructions SQL groupées sont soumises en tant que commande unique ;  
   
 -   des procédures stockées implémentent un lot d'instructions SQL ;  
   
 ## <a name="batches"></a>Lots  
- Le pilote OLE DB pour SQL Server reconnaît le point-virgule comme délimiteur de lot pour les instructions SQL :  
+ Le pilote OLE DB pour SQL Server reconnaît le point-virgule comme délimiteur de lot pour les instructions SQL:  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

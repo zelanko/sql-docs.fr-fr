@@ -1,5 +1,5 @@
 ---
-title: Propriétés de la définition des données Source | Microsoft Docs
+title: Définition des propriétés de la source de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f3363d05-07fc-4bf8-ae5e-2a7a968808ad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6804e8bb0f68ed88934e5bc86d61556b9bbbd499
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 97e285f5f2680e028a9d8fd00901e3e977ffdd80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004424"
 ---
 # <a name="setting-the-data-source-properties"></a>Définition des propriétés de la source de données
 
@@ -26,7 +25,7 @@ Les sources de données représentent le mécanisme recommandé de création de 
 
 Les produits Java EE, tels que les serveurs d'applications et les moteurs servlet/JSP, vous permettent généralement de configurer des sources de données pour l'accès à la base de données. Toute propriété répertoriée dans la rubrique [Définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md) peut être spécifiée à n’importe quel endroit où la configuration vous permet d’entrer une propriété en tant que paire propriété=valeur.
 
-Pour plus d’informations sur les sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Pour obtenir un exemple montrant comment utiliser la classe SQLServerDataSource pour établir une connexion à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base de données, consultez [exemple de Source de données](../../connect/jdbc/data-source-sample.md).
+Pour plus d’informations sur les sources de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md). Pour obtenir un exemple d’utilisation de la classe SQLServerDataSource pour établir une connexion à une [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données, consultez [exemple de source de données](../../connect/jdbc/data-source-sample.md).
 
 ## <a name="see-also"></a>Voir aussi
 

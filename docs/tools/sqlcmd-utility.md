@@ -26,38 +26,37 @@ helpviewer_keywords:
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: afbb8ce321418cce7797b12b161bcef88b88183e
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: d57369af9e621b9b2700104aff9050fda43593fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065482"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> Pour SQL Server 2014 et inférieur, consultez [utilitaire sqlcmd](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
-> ).
+> Pour plus d’SQL Server 2014 et versions [antérieures,](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
+> )consultez l’utilitaire sqlcmd.
 > 
-> Pour l’utilisation de sqlcmd sur Linux, consultez [installer sqlcmd et bcp sur Linux](../linux/sql-server-linux-setup-tools.md).
+> Pour utiliser SQLCMD sur Linux, consultez [installer sqlcmd et BCP sur Linux](../linux/sql-server-linux-setup-tools.md).
 
- Le **sqlcmd** utilitaire vous permet d’entrer des instructions Transact-SQL, des procédures système et des fichiers de script via une variété de modes disponibles :
+ L’utilitaire **sqlcmd** vous permet d’entrer des instructions Transact-SQL, des procédures système et des fichiers de script par le biais de différents modes disponibles:
 
 - À l'invite de commandes.
-- Dans **éditeur de requête** en mode SQLCMD.
+- Dans l' **éditeur de requête** en mode SQLCMD.
 - Dans un fichier de script Windows.
-- Dans une étape de travail de système d’exploitation (Cmd.exe) d’un travail de l’Agent SQL Server.
+- Dans une étape de travail de système d’exploitation (cmd. exe) d’un travail de SQL Server Agent.
 
 L’utilitaire utilise ODBC pour exécuter des lots Transact-SQL.
 
-## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Téléchargez la dernière version de l’utilitaire sqlcmd
+## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Télécharger la dernière version de l’utilitaire sqlcmd
 
 **[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15.0.x pour SQL Server (x64) (2,6 Mo)](https://go.microsoft.com/fwlink/?linkid=2082790)**
 <br>**[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15.0.x pour SQL Server (x86) (2,3 Mo)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
-Les outils de ligne de commande sont la disponibilité générale (GA), mais ils sont publiés avec le package d’installation [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+Les outils en ligne de commande sont la disponibilité générale (GA), mais ils sont publiés avec le package [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]d’installation de.
 
 **Informations sur la version**
 
@@ -65,19 +64,19 @@ Numéro de version : 15.0 <br>
 Numéro de build : 15.0.1300.359<br>
 Date de sortie : 13 mars 2019
 
-La nouvelle version de SQLCMD prend en charge l’authentification Azure AD, y compris la prise en charge de l’authentification multifacteur (MFA) pour les fonctionnalités de base de données SQL, SQL Data Warehouse et toujours chiffrés.
-Le nouveau BCP prend en charge l’authentification Azure AD, y compris la prise en charge de l’authentification multifacteur (MFA) pour SQL Database et SQL Data Warehouse.
+La nouvelle version de SQLCMD prend en charge l’authentification Azure AD, y compris la prise en charge de l’authentification multifacteur (MFA) pour les fonctionnalités de SQL Database, SQL Data Warehouse et Always Encrypted.
+Le nouveau BCP prend en charge l’authentification Azure AD, y compris la prise en charge de l’authentification multifacteur (MFA) pour les SQL Database et les SQL Data Warehouse.
 
-**Configuration système requise** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 ce composant requiert [programme d’installation de Windows 4.5](https://www.microsoft.com/download/details.aspx?id=8483) et [Microsoft ODBC Driver 17.3.1.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+**Configuration système requise** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 ce composant requiert à la fois [Windows Installer 4,5](https://www.microsoft.com/download/details.aspx?id=8483) et le [pilote Microsoft ODBC 17.3.1.1 pour SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
  
-Pour vérifier la version SQLCMD exécuter `sqlcmd -?` commande et de confirmer que 15.0.1300.359 version ou version ultérieure est en cours d’utilisation.
+Pour vérifier la commande sqlcmd version `sqlcmd -?` Execute et vérifiez que 15.0.1300.359 version ou supérieure est en cours d’utilisation.
 
 
 
 > [!NOTE]
-> Vous avez besoin d’une version 13.1 ou supérieure pour prendre en charge Always Encrypted (`-g`) et l’authentification Azure Active Directory (`-G`). (Plusieurs versions de sqlcmd.exe peuvent être installées sur votre ordinateur. Assurez-vous d’utiliser la version correcte. Pour déterminer la version, exécutez `sqlcmd -?`.)
+> Vous avez besoin de la version 13,1 ou supérieure pour`-g`prendre en charge Always Encrypted (`-G`) et l’authentification Azure Active Directory (). (Plusieurs versions de sqlcmd.exe peuvent être installées sur votre ordinateur. Assurez-vous d’utiliser la version correcte. Pour déterminer la version, exécutez `sqlcmd -?`.)
 
-Vous pouvez essayer de l’utilitaire sqlcmd à partir d’Azure Cloud Shell comme il est préinstallé par défaut : [ ![lancer Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "lancer Cloud Shell")](https://shell.azure.com)
+Vous pouvez essayer l’utilitaire sqlcmd à partir de Azure Cloud Shell car il est préinstallé par défaut: [ ![lancer Cloud Shell](https://shell.azure.com/images/launchcloudshell.png "lancement Cloud Shell")](https://shell.azure.com)
 
   Pour exécuter des instructions sqlcmd dans SSMS, sélectionnez le Mode SQLCMD à partir de la liste déroulante du menu Requête.  
   
@@ -146,7 +145,7 @@ sqlcmd
 ## <a name="command-line-options"></a>Options de ligne de commande  
  **Options relatives à la connexion**  
   **-A**  
- Se connecte à SQL Server avec une connexion administrateur dédiée (DAC, Dedicated Administrator Connection). Ce type de connexion est utilisé pour dépanner un serveur. Cette connexion fonctionne uniquement avec les serveurs qui prennent en charge les DAC. Si DAC n’est pas disponible, **sqlcmd** génère un message d’erreur et se termine. Pour plus d’informations sur DAC, consultez [Connexion de diagnostic pour les administrateurs de base de données](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). L’option-a n’est pas pris en charge avec l’option -G. Lors de la connexion à la base de données SQL à l’aide de - A, vous devez être un administrateur SQL server. DAC n’est pas disponible pour un administrateur Azure Active Directory.
+ Se connecte à SQL Server avec une connexion administrateur dédiée (DAC, Dedicated Administrator Connection). Ce type de connexion est utilisé pour dépanner un serveur. Cette connexion fonctionne uniquement avec les ordinateurs serveurs qui prennent en charge la DAC. Si DAC n’est pas disponible, **sqlcmd** génère un message d’erreur et se termine. Pour plus d’informations sur DAC, consultez [Connexion de diagnostic pour les administrateurs de base de données](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md). L’option-A n’est pas prise en charge avec l’option-G. Quand vous vous connectez à SQL Database à l’aide de-A, vous devez être administrateur SQL Server. La DAC n’est pas disponible pour un administrateur de Azure Active Directory.
   
  **-C**  
  Ce commutateur est utilisé par le client pour le configurer afin d'approuver implicitement le certificat de serveur sans validation. Cette option est équivalente à l'option ADO.NET `TRUSTSERVERCERTIFICATE = true`.  
@@ -166,11 +165,11 @@ sqlcmd
 Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d’informations, consultez [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Uniquement les clés principales stockées dans le magasin de certificats Windows sont prises en charge. Le commutateur -g nécessite au moins **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez `sqlcmd -?`.
 
  **-G**  
- Ce commutateur est utilisé par le client durant la connexion à SQL Database ou à SQL Data Warehouse pour indiquer que l’utilisateur soit authentifié à l’aide de l’authentification Azure Active Directory. Cette option définit la variable de script **sqlcmd** SQLCMDUSEAAD = true. Le commutateur -G nécessite au moins **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez `sqlcmd -?`. Pour plus d’informations, voir [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). L’option-a n’est pas pris en charge avec l’option -G.
+ Ce commutateur est utilisé par le client durant la connexion à SQL Database ou à SQL Data Warehouse pour indiquer que l’utilisateur soit authentifié à l’aide de l’authentification Azure Active Directory. Cette option définit la variable de script **sqlcmd** SQLCMDUSEAAD = true. Le commutateur -G nécessite au moins **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez `sqlcmd -?`. Pour plus d’informations, voir [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). L’option-A n’est pas prise en charge avec l’option-G.
 
 > [!IMPORTANT]
 > L’option `-G` s’applique uniquement à Azure SQL Database et à Azure Data Warehouse.
-> AAD intégrée et l’authentification Interactive n'est pas actuellement pris en charge Linux ou macOS.
+> L’authentification intégrée et interactive AAD n’est actuellement pas prise en charge sur Linux ou macOS.
 
 - **Nom d’utilisateur et mot de passe Azure Active Directory :** 
 
@@ -179,7 +178,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
     ``` 
     Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G 
     ``` 
-    Le paramètre -G génère la chaîne de connexion suivante sur le serveur principal : 
+    Le paramètre-G génère la chaîne de connexion suivante dans le serveur principal: 
 
     ```
      SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID= bob@contoso.com;PWD=MyAADPassword;AUTHENTICATION = ActiveDirectoryPassword 
@@ -188,7 +187,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
 - **Intégrée à Azure Active Directory** 
  
    Pour l’authentification intégrée à Azure Active Directory, spécifiez l’option **-G** sans nom d’utilisateur ni mot de passe.
-   *L’authentification intégrée de AAD n’est pas actuellement pris en charge sur Linux ou macOS*.
+   *L’authentification intégrée AAD n’est actuellement pas prise en charge sur Linux ou MacOS*.
 
     ```
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
@@ -206,36 +205,36 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
 
 - **Azure Active Directory Interactive**  
  
-   L’authentification Interactive d’Azure AD pour Azure SQL Database et SQL Data Warehouse, vous permet d’utiliser une méthode interactive prenant en charge l’authentification multifacteur. Pour plus d’informations, consultez [authentification Interactive Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
+   La Azure AD l’authentification interactive pour Azure SQL Database et SQL Data Warehouse, vous permet d’utiliser une méthode interactive qui prend en charge l’authentification multifacteur. Pour plus d’informations, consultez [Active Directory l’authentification interactive](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
-   Azure AD interactif nécessite **sqlcmd** [version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) ou version ultérieure ainsi que [ODBC version 17.2 ou ultérieure](https://www.microsoft.com/download/details.aspx?id=56567).  
+   Azure AD interactive requiert **sqlcmd** [version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) ou ultérieure, ainsi que [ODBC version 17,2 ou ultérieure](https://www.microsoft.com/download/details.aspx?id=56567).  
 
-   Pour activer l’authentification interactive, fournissez l’option -G avec le nom d’utilisateur (-U) uniquement, sans mot de passe.
+   Pour activer l’authentification interactive, fournissez l’option-G avec le nom d’utilisateur (-U) uniquement, sans mot de passe.
 
-   L’exemple suivant exporte les données à l’aide de mode interactif Azure AD indiquant le nom d’utilisateur où utilisateur représente un compte AAD. Il s’agit du même exemple que celui utilisé dans la section précédente : *Azure Active Directory Username et Password*.  
+   L’exemple suivant exporte des données à l’aide d’Azure AD mode interactif indiquant le nom d’utilisateur où l’utilisateur représente un compte AAD. Il s’agit du même exemple que celui utilisé dans la section précédente: *Azure Active Directory nom d’utilisateur et mot de passe*.  
 
-   Mode interactif nécessite un mot de passe doit être entré manuellement, ou pour des comptes avec l’authentification multifacteur est activée, terminer votre méthode d’authentification Multifacteur configurée.
+   Le mode interactif nécessite que vous entriez un mot de passe manuellement ou, pour les comptes pour lesquels l’authentification multifacteur est activée, effectuez votre méthode d’authentification MFA configurée.
 
    ``` 
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com
    ```
 
-   La commande précédente génère la chaîne de connexion suivante sur le serveur principal :  
+   La commande précédente génère la chaîne de connexion suivante dans le serveur principal:  
 
    ```
    SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=alice@aadtest.onmicrosoft.com; AUTHENTICATION = ActiveDirectoryInteractive   
    ```
 
-   Au cas où un utilisateur Azure AD est un utilisateur de domaine fédéré à l’aide d’un compte Windows, le nom d’utilisateur requis dans la ligne de commande, contient son compte de domaine (par exemple, joe@contoso.com voir ci-dessous) :
+   Si un utilisateur Azure AD est un utilisateur fédéré à un domaine utilisant un compte Windows, le nom d’utilisateur requis dans la ligne de commande contient son compte de domaine (par joe@contoso.com exemple, voir ci-dessous):
 
    ```
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
  
-   Si les utilisateurs invités dans un annuaire Azure AD spécifique et font partie d’un groupe qui existe dans la base de données SQL qui dispose des autorisations de base de données pour exécuter la commande sqlcmd, leurs alias de l’utilisateur invité est utilisé (par exemple, *keith0@adventureworks.com* ).
+   Si des utilisateurs invités existent dans un Azure AD spécifique et font partie d’un groupe qui existe dans la base de données SQL et qui dispose d’autorisations de base de données pour exécuter la commande sqlcmd, leur *keith0@adventureworks.com* alias d’utilisateur invité est utilisé (par exemple,).
 
   >[!IMPORTANT]
-  >Il existe un problème connu lorsque vous utilisez le `-G` et `-U` option avec SQLCMD, où placer le `-U` option avant la `-G` option peut entraîner l’échec de l’authentification. Toujours commencer par le `-G` option suivie par la `-U` option.
+  >Il existe un problème connu lors de l' `-G` utilisation `-U` de l’option et avec sqlcmd, `-U` où l’utilisation `-G` de l’option avant l’option peut entraîner l’échec de l’authentification. Commencez toujours par l' `-G` option suivie de l' `-U` option.
 
     
  **-H** _workstation_name_  
@@ -254,7 +253,7 @@ Définissez le paramètre de chiffrement de colonne sur `Enabled`. Pour plus d�
  Ce commutateur est utilisé par le client pour demander une connexion chiffrée.  
   
  **-P** _password_  
- Spécifie le mot de passe pour l'utilisateur. Les mots de passe respectent la casse. Si l’option -U est utilisée sans l’option **-P** et que la variable d’environnement SQLCMDPASSWORD n’a pas été définie, **sqlcmd** demande à l’utilisateur d’entrer un mot de passe. Nous ne recommandons pas l’utilisation du mot de passe null, mais vous pouvez spécifier le mot de passe null à l’aide d’une paire de guillemets doubles contigus pour la valeur du paramètre :
+ Spécifie le mot de passe pour l'utilisateur. Les mots de passe respectent la casse. Si l’option -U est utilisée sans l’option **-P** et que la variable d’environnement SQLCMDPASSWORD n’a pas été définie, **sqlcmd** demande à l’utilisateur d’entrer un mot de passe. Nous déconseillons d’utiliser le mot de passe Null, mais vous pouvez spécifier le mot de passe NULL à l’aide d’une paire de guillemets doubles contigus pour la valeur du paramètre:
 
 - **-P ""**
 
@@ -278,7 +277,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
   
  Si la combinaison de nom d'utilisateur et de mot de passe est incorrecte, un message d'erreur est généré.  
   
-**REMARQUE**  La variable d’environnement OSQLPASSWORD a été conservée pour garantir une compatibilité descendante. La variable d’environnement SQLCMDPASSWORD est prioritaire sur la variable d’environnement OSQLPASSWORD. Maintenant que OSQLPASSWORD n’est plus partagé, les utilitaires **sqlcmd** et **osql** peut être utilisé en regard de l’autre sans interférence. Anciens scripts continuent à fonctionner.  
+**REMARQUE**  La variable d’environnement OSQLPASSWORD a été conservée pour garantir une compatibilité descendante. La variable d’environnement SQLCMDPASSWORD est prioritaire sur la variable d’environnement OSQLPASSWORD. Maintenant que OSQLPASSWORD n’est plus partagé, les utilitaires **sqlcmd** et **osql** peuvent être utilisés l’un à côté de l’autre sans interférence. Les anciens scripts continueront de fonctionner.  
   
  Si l’option **-P** est utilisée avec l’option **-E** , un message d’erreur est généré.  
   
@@ -350,7 +349,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
  **-o** _output_file_  
  Identifie le fichier recevant une sortie de **sqlcmd**.  
   
- Si **-u** est spécifié, le *fichier_sortie* est stocké au format Unicode. Si le nom de fichier n’est pas valide, un message d’erreur est généré et **sqlcmd** se termine. **sqlcmd** ne prend pas en charge l’écriture simultanée de plusieurs processus **sqlcmd** dans le même fichier. La sortie fichier sera endommagée ou incorrecte. Consultez le **-f** commutateur concerne également les formats de fichier. Ce fichier sera créé s'il n'existe pas. Un fichier portant le même nom qui provient d’une session **sqlcmd** antérieure est remplacé. Le fichier spécifié ici n'est pas le fichier **stdout** . Si un fichier **stdout** est spécifié, ce fichier ne sera pas utilisé.  
+ Si **-u** est spécifié, le *fichier_sortie* est stocké au format Unicode. Si le nom de fichier n’est pas valide, un message d’erreur est généré et **sqlcmd** se termine. **sqlcmd** ne prend pas en charge l’écriture simultanée de plusieurs processus **sqlcmd** dans le même fichier. La sortie fichier sera endommagée ou incorrecte. Voir le commutateur **-f** s’applique également aux formats de fichier. Ce fichier sera créé s'il n'existe pas. Un fichier portant le même nom qui provient d’une session **sqlcmd** antérieure est remplacé. Le fichier spécifié ici n'est pas le fichier **stdout** . Si un fichier **stdout** est spécifié, ce fichier ne sera pas utilisé.  
   
  Exemples de chemins :  
 
@@ -507,7 +506,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
 > [!NOTE]  
 >  Compte tenu de la nature de la diffusion sur les réseaux, il est possible que **sqlcmd** ne reçoive pas de réponse de tous les serveurs dans les délais impartis. Par conséquent, la liste des serveurs retournée peut varier à chaque invocation de cette option.  
   
- Si le paramètre optionnel **c** est spécifié, la sortie s'affiche sans les **serveurs** : la ligne d'en-tête et chaque ligne de serveur apparaissent sans espace de début. Cette présentation est appelée une sortie propre. Une sortie propre améliore les performances de traitement des langages de script.  
+ Si le paramètre optionnel **c** est spécifié, la sortie s'affiche sans les **serveurs** : la ligne d'en-tête et chaque ligne de serveur apparaissent sans espace de début. Cette présentation est appelée sortie propre. Une sortie propre améliore les performances de traitement des langages de script.  
   
  **-p**[**1**]  
  Imprime des statistiques de performances pour chaque jeu de résultats. L'écran suivant illustre le format des statistiques de performances :  
@@ -678,7 +677,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
   
  **Commandes de sortie**  
   **:Error**   
- _ **\<**_  _nom_fichier_  ** _>|_  STDERR|STDOUT**  
+ _**\<**_  _nom_fichier_  **_>|_  STDERR|STDOUT**  
  Redirige l’ensemble de la sortie d’erreur dans le fichier spécifié par *nom_fichier*vers **stderr** ou vers **stdout**. La commande **Error** peut apparaître plusieurs fois dans un script. Par défaut, la sortie d'erreur est envoyée à **stderr**.  
   
  *nom de fichier*  
@@ -753,7 +752,7 @@ Nous vous recommandons d’utiliser un mot de passe fort.
 |-102|Erreur de conversion survenue lors de la sélection d'une valeur retournée.|  
   
  **GO** [*count*]  
- GO indique la fin d'un traitement et l'exécution des instructions Transact-SQL placées dans le cache. Le lot est exécuté plusieurs fois sous forme de lots distincts. Vous ne pouvez pas déclarer une variable plusieurs fois dans un lot unique.
+ GO indique la fin d'un traitement et l'exécution des instructions Transact-SQL placées dans le cache. Le lot est exécuté plusieurs fois en tant que lots distincts. Vous ne pouvez pas déclarer une variable plusieurs fois dans un même lot.
   
  **Commandes diverses**  
   **:r \<** _filename_ **>**  
@@ -831,7 +830,7 @@ Dans l’invite de commandes, tapez la commande :
 
 `sqlcmd`
   
-À l’invite sqlcmd, tapez :
+À l’invite sqlcmd, tapez:
 
 `USE AdventureWorks2012;`
 

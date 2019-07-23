@@ -1,5 +1,5 @@
 ---
-title: getdisablestatementpooling, méthode (SQLServerConnection) | Microsoft Docs
+title: Méthode Getdisablestatementpooling, (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f475d3d02f671cc9c6d277cc50589c4e6980070
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a2da0a2f04fa90b2d25dbd68baf7b769d5afdcf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983639"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverconnection"></a>getDisableStatementPooling, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Retourne la valeur de **disableStatementPooling** propriété de connexion. Ce paramètre contrôle si le regroupement d’instructions est activé ou non pour cette connexion.
+ Retourne la valeur de la propriété de connexion **disableStatementPooling** . Ce paramètre contrôle si le regroupement d’instructions est activé ou non pour cette connexion.
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +35,13 @@ public boolean getDisableStatementPooling()
 ```  
 
 ## <a name="return-value"></a>Valeur retournée
- Un **booléenne** qui contient la valeur de **disableStatementPooling** propriété de connexion.
+ Valeur **booléenne** qui contient la valeur de la propriété de connexion **disableStatementPooling** .
 
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Notes  
- Cette méthode est disponible à partir de la version du pilote JDBC 6.4 et ultérieur.
+ Cette méthode est disponible dans la version 6,4 et les versions ultérieures du pilote JDBC.
  
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

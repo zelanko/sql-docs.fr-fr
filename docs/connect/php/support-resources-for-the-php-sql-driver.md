@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dc3a6edb0d1108123b5ea22ca717a06409582cbc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0b7054a390f8318b3c4c2db39eda3d2bd2fb842
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014866"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Ressources de support pour les pilotes Microsoft pour PHP pour SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,12 +46,12 @@ Pour obtenir une aide de la communauté, accédez aux [Forums IIS](https://forum
 ## <a name="php-support-resources"></a>Ressources de support PHP  
 [Documentation de PHP pour Windows](https://windows.php.net/)  
   
-Pour obtenir les informations les plus récentes sur PHP, visitez [ http://www.php.net/ ](http://www.php.net).  
+Pour obtenir les informations les plus récentes sur [http://www.php.net/](http://www.php.net)php, consultez.  
   
-Pour obtenir une documentation PHP, visitez [ http://www.php.net/docs.php ](http://www.php.net/docs.php).  
+Pour obtenir de la documentation [http://www.php.net/docs.php](http://www.php.net/docs.php)sur php, consultez.  
   
 ## <a name="microsoft-customer-support"></a>Support technique Microsoft  
-Pour les questions de support correspondant à la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], vous pouvez contacter [Support Microsoft](https://support.microsoft.com/contactus/), ou posez sur le [page de projet Github](https://github.com/Microsoft/msphpsql/issues).  
+Pour les questions de support liées [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]au, vous pouvez contacter [support Microsoft](https://support.microsoft.com/contactus/)ou poser une question sur la [page du projet GitHub](https://github.com/Microsoft/msphpsql/issues).  
   
 ## <a name="see-also"></a>Voir aussi  
 [Vue d’ensemble de Microsoft Drivers for PHP for SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)

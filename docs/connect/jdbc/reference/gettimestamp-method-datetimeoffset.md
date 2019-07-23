@@ -1,5 +1,5 @@
 ---
-title: getTimestamp, méthode (DateTimeOffset) | Microsoft Docs
+title: Méthode getTimestamp (DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: e51dffdb-438b-4e74-a042-c064ae473f4d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b9c407712659d9b57795677b4b5edc3ed6886057
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3f4610ac2be4976fdab75c91b4827e4f9adaf6d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978878"
 ---
 # <a name="gettimestamp-method-datetimeoffset"></a>Méthode getTimestamp (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Retourne le point d’heure représentée par ce **DateTimeOffset** objet comme un java.sql.Timestamp.  
+  Retourne le point dans le temps représenté par cet objet **DateTimeOffset** en tant que Java. Sql. timestamp.  
   
 ## <a name="syntax"></a>Syntaxe  
   

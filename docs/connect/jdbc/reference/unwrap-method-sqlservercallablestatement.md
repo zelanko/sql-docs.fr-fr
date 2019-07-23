@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbbf2728-b8c8-4c35-875a-6e967c8285dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 034fb09dec2504a2cb722e227fa5db437f6053f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0dc8ddf82859b8bf47853a3d72a7461567388b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995199"
 ---
 # <a name="unwrap-method-sqlservercallablestatement"></a>Méthode unwrap (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,9 +45,9 @@ public <T> T unwrap(Class<T> iface)
   
  Les applications devront peut-être accéder à des extensions de l’API JDBC propres au [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]. La méthode unwrap prend en charge la désencapsulation dans les classes publiques étendues par cet objet, si les classes exposent des extensions de fournisseur.  
   
- [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) implémente [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), qui est étendue à partir de la [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Lorsque cette méthode est appelée, l’objet se désencapsule dans les classes suivantes : [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) et [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
+ [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md) implémente [ISQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), qui est étendu à partir de [ISQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md). Lorsque cette méthode est appelée, l’objet se désencapsule dans les classes suivantes : [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) et [SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md).  
   
- Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Pour plus d’informations, consultez [wrappers et interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
  L’exemple de code suivant indique comment utiliser les méthodes isWrapperFor et unwrap pour vérifier les extensions du pilote et appeler les méthodes spécifiques des fournisseurs, comme [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) et [getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverstatement.md).  
   

@@ -1,5 +1,5 @@
 ---
-title: ispoolable, méthode (SQLServerStatement) | Microsoft Docs
+title: Méthode isPoolable (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b8a12ac5-57cb-4288-9973-c7d5cebd197c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a5fcc6d842299884bec758ca66f303bf3e8ed625
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 225584f3c60f0494af987581574d8f4205e04e2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977516"
 ---
 # <a name="ispoolable-method-sqlserverstatement"></a>isPoolable, méthode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,13 +30,13 @@ public boolean isPoolable() throws SQLException
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- **true** si l’instruction peut être ajoutée au pool instruction fourni par l’utilisateur ; **false** dans le cas contraire.  
+ **true** si l’instruction peut être ajoutée au pool d’instructions fourni par l’utilisateur; **false** dans le cas contraire.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- [setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md) modifie le comportement regroupé d’un objet.  
+ [setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md) modifie le comportement regroupable d’un objet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

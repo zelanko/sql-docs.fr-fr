@@ -1,5 +1,5 @@
 ---
-title: Méthode getTransactionTimeout (SQLServerXAResource) | Microsoft Docs
+title: Méthode getTransactionTimeout, (SQLServerXAResource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ed0a37e9-1132-4d3f-b88f-8be674e852b1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71a6a0247cc4de5b5ca610525466abb4d6a41a2c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e7aa67a0d4cc8a218500d278783f9dc8b6026fb0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978624"
 ---
 # <a name="gettransactiontimeout-method-sqlserverxaresource"></a>Méthode getTransactionTimeout (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public int getTransactionTimeout()
  javax.transaction.xa.XAException  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getTransactionTimeout est spécifiée par la méthode getTransactionTimeout dans l’interface javax.transaction.xa.XAResource.  
+ Cette méthode getTransactionTimeout, est spécifiée par la méthode getTransactionTimeout, dans l’interface javax. transaction. XA. XAResource.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerXAResource, méthodes](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

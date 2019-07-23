@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b3fb1a97-86ee-4977-adca-c35ae199dbb3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50eace66b5f792ce9876d56dab8768555a43392f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4774dcda174d5260289409053a892cc4039b4f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66775613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980463"
 ---
 # <a name="getreference-method-sqlserverdatasource"></a>Méthode getReference (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +35,10 @@ public javax.naming.Reference getReference()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet de référence.  
+ Objet de référence.  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getReference est spécifiée par la méthode getReference dans l’interface javax.naming.Referenceable.  
+ Cette méthode getReference est spécifiée par la méthode getReference dans l’interface javax. naming. reréférençable.  
   
  Avant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0, si SQLServerDataSource.setTrustStorePassword était appelé sur un objet SQLServerDataSource, le mot de passe était présent dans l’objet retourné par SQLServerDataSource.getReference, ce qui permettait l’utilisation de l’objet pour effectuer des connexions supplémentaires. Dans la version 3.0 du pilote JDBC, vous devez définir le mot de passe sur l'objet retourné par SQLServerDataSource.getReference avant d'établir des connexions avec l'objet.  
   

@@ -1,5 +1,5 @@
 ---
-title: Prise en charge de la requête dans les ensembles de lignes de schéma distribuées | Microsoft Docs
+title: Prise en charge des requêtes distribuées dans les ensembles de lignes de schéma | Microsoft Docs
 description: Prise en charge des requêtes distribuées dans les ensembles de lignes de schéma
 ms.custom: ''
 ms.date: 06/12/2018
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 575ce4f2522299be723be159bb87e19f8fff1a1d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 139186d64d2b7df6aca883a253e1f9fe3f062214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993883"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Ensembles de lignes de schéma - Prise en charge des requêtes distribuées
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,6 +51,6 @@ ms.locfileid: "66795958"
   
 ## <a name="see-also"></a>Voir aussi  
  [Prise en charge des ensembles de lignes de schéma &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
- [Ensemble de lignes LINKEDSERVERS &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [OLE DB de &#40;l’ensemble de lignes LINKEDSERVERS&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: af6fc51c3aba34e8118d5519b5acf2fc9583738f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004284"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Étape 3 : Preuve de concept pour la connexion à SQL à l’aide de Java
   
-Cet exemple doit être considérée comme une preuve de concept uniquement. L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement meilleures pratiques recommandées par Microsoft.  
+Cet exemple doit être considéré comme une preuve de concept uniquement. L’exemple de code est simplifié par souci de clarté et ne représente pas nécessairement les meilleures pratiques recommandées par Microsoft.  
   
-## <a name="step-1--connect"></a>Étape 1 : se connecter  
+## <a name="step-1--connect"></a>Étape 1: se connecter  
   
-Utilisez la classe de connexion pour se connecter à la base de données SQL.   
+Utilisez la classe Connection pour vous connecter à SQL Database.   
   
 ```java  
 import java.sql.Connection;
@@ -56,7 +55,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-2-execute-a-query"></a>Étape 2 : Exécuter une requête  
-Dans cet exemple, vous connecter à la base de données SQL Azure, exécuter une instruction SELECT et renvoyez les lignes sélectionnées.   
+Dans cet exemple, connectez-vous à Azure SQL Database, exécutez une instruction SELECT et retournez les lignes sélectionnées.   
   
 ```java  
 import java.sql.Connection;
@@ -100,8 +99,8 @@ public class SQLDatabaseConnection {
 }
 ```  
   
-## <a name="step-3-insert-a-row"></a>Étape 3 : Insérer une ligne  
-Dans cet exemple, exécuter une instruction INSERT, passer des paramètres et récupérer la valeur de clé primaire générée automatiquement.   
+## <a name="step-3-insert-a-row"></a>Étape 3: insérer une ligne  
+Dans cet exemple, exécutez une instruction INSERT, transmettez des paramètres et récupérez la valeur de clé primaire générée automatiquement.   
   
 ```java  
 import java.sql.Connection;

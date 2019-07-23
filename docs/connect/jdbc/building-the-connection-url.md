@@ -1,5 +1,5 @@
 ---
-title: Création de l’URL de connexion | Microsoft Docs
+title: Génération de l’URL de connexion | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957374"
 ---
 # <a name="building-the-connection-url"></a>Création de l'URL de connexion
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "66770269"
 -   **property** (facultatif) correspond à une ou plusieurs propriétés de connexion. Pour plus d’informations, consultez [Définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md). Vous pouvez spécifier n'importe quelle propriété de la liste. Les propriétés peuvent séparées seulement des points-virgules (« ; ») et ne peuvent pas figurer en doublon.  
   
 > [!CAUTION]  
->  Pour des raisons de sécurité, il convient d'éviter de créer les URL de connexion en se basant sur des entrées utilisateur. Il est préférable de spécifier uniquement le nom du serveur et le pilote dans l'URL. Pour les valeurs de nom d'utilisateur et de mot de passe, utilisez des collections de propriétés de connexion. Pour plus d’informations sur la sécurité de vos applications JDBC, consultez [sécurisation des Applications de pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md).  
+>  Pour des raisons de sécurité, il convient d'éviter de créer les URL de connexion en se basant sur des entrées utilisateur. Il est préférable de spécifier uniquement le nom du serveur et le pilote dans l'URL. Pour les valeurs de nom d'utilisateur et de mot de passe, utilisez des collections de propriétés de connexion. Pour plus d’informations sur la sécurité dans vos applications JDBC, consultez Sécurisation des [applications de pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md).  
   
 ## <a name="connection-examples"></a>Exemples de connexion  
  Connectez-vous à la base de données par défaut sur l'ordinateur local à l'aide d'un nom d'utilisateur et d'un mot de passe :  
@@ -99,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  \<*installation directory*>\sqljdbc_\<*version*>\\<*language*>\auth\  
   
- Pour n’importe quel système d’exploitation pris en charge par le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], consultez [à l’aide de l’authentification intégrée Kerberos pour se connecter à SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) pour obtenir une description de la fonctionnalité ajoutée dans [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] qui permet à une application pour se connecter à un base de données à l’aide de l’authentification intégrée avec le Kerberos Type 4.  
+ Pour tout système d’exploitation pris en [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]charge par l', consultez Utilisation de l' [authentification intégrée Kerberos pour se connecter à SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) pour [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] obtenir une description d’une fonctionnalité ajoutée dans qui permet à une application de se connecter à une base de données à l’aide d’Integrated authentification avec Kerberos de type 4.  
   
 > [!NOTE]  
 >  Si vous exécutez une machine virtuelle Java (JVM) 32 bits, utilisez le fichier sqljdbc_auth.dll dans le dossier x86, même si la version du système d'exploitation est x64. Si vous exécutez une machine virtuelle Java (JVM) 64 bits sur un processeur x64, utilisez le fichier sqljdbc_auth.dll dans le dossier x64.  

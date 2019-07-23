@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’instructions avec des procédures stockées | Microsoft Docs
+title: Utilisation d’instructions avec des procédures stockées | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2dd4ead601700baefaf356840fba4184ab427ef2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 774e79b6baa3db1c6356768de4b04226ddbc7688
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003940"
 ---
 # <a name="using-statements-with-stored-procedures"></a>Utilisation d'instructions avec des procédures stockées
 
@@ -33,17 +32,17 @@ Une procédure stockée est une procédure de base de données, similaire à une
 > [!NOTE]  
 > Pour plus d’informations sur les procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez « Procédures stockées » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-Pour utiliser des données dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’une procédure stockée, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les classes [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) et [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). La classe que vous utilisez dépend des paramètres d'entrée (IN) ou de sortie (OUT) requis par la procédure stockée. Si la procédure stockée ne nécessite aucun paramètre IN ou OUT, vous pouvez utiliser la classe SQLServerStatement ; si la procédure stockée est appelée plusieurs fois, ou requiert uniquement des paramètres IN, vous pouvez utiliser la classe SQLServerPreparedStatement. Si la procédure stockée requiert les deux IN et les paramètres de sortie, vous devez utiliser la classe SQLServerCallableStatement. Vous ne devez utiliser la classe SQLServerCallableStatement que si la procédure stockée nécessite des paramètres OUT.  
+Pour utiliser des données dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide d’une procédure stockée, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les classes [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) et [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md). La classe que vous utilisez dépend des paramètres d'entrée (IN) ou de sortie (OUT) requis par la procédure stockée. Si la procédure stockée ne nécessite aucun paramètre IN ou OUT, vous pouvez utiliser la classe SQLServerStatement ; si la procédure stockée est appelée plusieurs fois, ou requiert uniquement des paramètres IN, vous pouvez utiliser la classe SQLServerPreparedStatement. Si la procédure stockée requiert des paramètres IN et OUT, vous devez utiliser la classe SQLServerCallableStatement. Vous ne devez utiliser la classe SQLServerCallableStatement que si la procédure stockée nécessite des paramètres OUT.  
   
 > [!NOTE]  
-> Les procédures stockées peuvent également retourner des nombres de mises à jour et des jeux de résultats multiples. Pour plus d’informations, consultez [à l’aide d’une procédure stockée avec un nombre de mise à jour](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) et [à l’aide de plusieurs jeux de résultats](../../connect/jdbc/using-multiple-result-sets.md).  
+> Les procédures stockées peuvent également retourner des nombres de mises à jour et des jeux de résultats multiples. Pour plus d’informations, consultez [utilisation d’une procédure stockée avec un nombre de mises à jour](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) et [utilisation de plusieurs jeux de résultats](../../connect/jdbc/using-multiple-result-sets.md).  
   
 Quand vous utilisez le pilote JDBC pour appeler une procédure stockée avec des paramètres, vous devez utiliser la séquence d’échappement SQL `call` conjointement avec la méthode [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). La syntaxe complète de la séquence d’échappement `call` est la suivante :  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
-> Pour plus d’informations sur la `call` et autres SQL séquences d’échappement, consultez [à l’aide les séquences d’échappement SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
+> Pour plus d’informations sur `call` et d’autres séquences d’échappement SQL, consultez Utilisation de séquences d' [échappement SQL](../../connect/jdbc/using-sql-escape-sequences.md).  
   
 Les rubriques composant cette section décrivent comment appeler des procédures stockées [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du pilote JDBC et de la séquence d’échappement SQL `call`.  
   

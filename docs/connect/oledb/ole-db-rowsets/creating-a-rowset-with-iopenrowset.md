@@ -1,6 +1,6 @@
 ---
 title: Création d’un ensemble de lignes avec IOpenRowset | Microsoft Docs
-description: Création d’un ensemble de lignes avec IOpenRowset, interface de pilote OLE DB pour SQL Server
+description: Création d’un ensemble de lignes avec l’interface IOpenRowset du pilote OLE DB pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - OLE DB rowsets, creating
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 78b08a3da3da89e0db0d801945416dcdb1ff9c03
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c6da41d19fed61fd83a7d4a1521ddba8726ba46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994309"
 ---
 # <a name="creating-a-rowset-with-iopenrowset"></a>Création d'un ensemble de lignes avec IOpenRowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server prend en charge la **IOpenRowset::OpenRowset** méthode avec les restrictions suivantes :  
+  Le pilote OLE DB pour SQL Server prend en charge la méthode **IOpenRowset:: OpenRowset** avec les restrictions suivantes:  
   
 -   Une vue ou une table de base doit être spécifiée dans une structure d’ID de base de données (DBID) vers laquelle pointe le paramètre *pTableID*.  
   

@@ -1,5 +1,5 @@
 ---
-title: setResponseBuffering, méthode (SQLServerStatement) | Microsoft Docs
+title: Méthode setResponseBuffering (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9f489835-6cda-4c8c-b139-079639a169cf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5b4490ac15558a0f6268a3d400d197367d028b9d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a55f1d5695c2595b5ea721680fc77f88d13494ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973108"
 ---
 # <a name="setresponsebuffering-method-sqlserverstatement"></a>Méthode setResponseBuffering (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public final void setResponseBuffering(java.lang.String value)
 #### <a name="parameters"></a>Paramètres  
  *value*  
   
- Un **chaîne** qui contient le mode de mise en mémoire tampon de réponse. Le mode valide peut être l’une des chaînes non sensibles à la casse suivantes : **full** ou **adaptive**.  
+ **Chaîne** qui contient le mode de mise en mémoire tampon des réponses. Le mode valide peut être l’une des chaînes non sensibles à la casse suivantes : **full** ou **adaptive**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -48,9 +47,9 @@ public final void setResponseBuffering(java.lang.String value)
   
  **full** consiste à lire l’intégralité du résultat du serveur à l’exécution.  
   
- « Adaptive » est la valeur par défaut dans le pilote JDBC version 2.0 et 3.0. la valeur par défaut avant la version 2.0 du pilote JDBC a été complète.  
+ Adaptive est la valeur par défaut dans les versions 2,0 et 3,0 du pilote JDBC. Full était la valeur par défaut avant la version 2,0 du pilote JDBC.  
   
- La méthode [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) permet de remplacer la propriété **String** de connexion **responseBuffering** de l’objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) actuel. Pour plus d’informations sur l’utilisation de la réponse en mode de mise en mémoire tampon, consultez [à l’aide de mise en mémoire tampon adaptative](../../../connect/jdbc/using-adaptive-buffering.md).  
+ La méthode [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) permet de remplacer la propriété **String** de connexion **responseBuffering** de l’objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) actuel. Pour plus d’informations sur l’utilisation du mode de mise en mémoire tampon des réponses, consultez Utilisation de la [mise en mémoire tampon adaptative](../../../connect/jdbc/using-adaptive-buffering.md).  
   
  Si l’application fournit une valeur de paramètre non valide à la méthode [setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md), une exception [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) est levée.  
   

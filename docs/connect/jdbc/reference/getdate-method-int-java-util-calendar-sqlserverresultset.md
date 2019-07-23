@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 150411f7-2a73-4380-b921-9698acd5d1f9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aec9dda321477e15c3bc984283e29a2a29170f17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17f2762975f72ccd1e6482ea7120701eacf0c4c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984078"
 ---
 # <a name="getdate-method-int-javautilcalendar-sqlserverresultset"></a>getDate, méthode (int, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,14 +38,14 @@ public java.sql.Date getDate(int columnIndex,
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
  *cal*  
   
- Un objet de calendrier.  
+ Objet de calendrier.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet Date.  
+ Objet date.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

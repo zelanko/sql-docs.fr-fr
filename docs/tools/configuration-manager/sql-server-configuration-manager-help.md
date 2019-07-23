@@ -13,20 +13,19 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 2610106e0ab691af885bb8eb3c1d62555db7f56f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: fa579e072ffdddc70e10d3ad1e9a205840374aee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024095"
 ---
 # <a name="sql-server-configuration-manager-help"></a>Aide sur le Gestionnaire de configuration SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   Le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous permet de configurer les services [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et la connectivité réseau. Pour créer ou gérer des objets de base de données, configurer la sécurité et écrire des requêtes [!INCLUDE[tsql](../../includes/tsql-md.md)] , utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour plus d'informations sur [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
 
  > [!TIP]
- > Si vous devez configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Linux, utilisez le **mssql-conf** outil. Pour plus d’informations, consultez [configurer SQL Server sur Linux avec l’outil mssql-conf](../../linux/sql-server-linux-configure-mssql-conf.md).
+ > Si vous avez besoin de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurer sur Linux, utilisez l’outil **MSSQL-conf** . Pour plus d’informations, consultez [configurer SQL Server sur Linux avec l’outil MSSQL-conf](../../linux/sql-server-linux-configure-mssql-conf.md).
 
  Cette section contient les rubriques d'aide accessibles au moyen de la touche F1, relatives aux boîtes de dialogue du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

@@ -1,5 +1,5 @@
 ---
-title: Écran 3 (pilote ODBC pour SQL Server) de l’Assistant Source de données | Microsoft Docs
+title: Assistant source de données-écran 3 (pilote ODBC pour SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 63391969f378fdefbfa9547c079dcce4ff259e22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936544"
 ---
 # <a name="data-source-wizard-screen-3"></a>Assistant Source de données, écran 3
 
@@ -68,19 +67,19 @@ Déclare le type de la charge de travail de l'application lors de la connexion �
 
 ### <a name="multi-subnet-failover"></a>Basculement de sous-réseaux multiples.
 
-Si votre application se connecte à un groupe de disponibilité des récupération (groupes de disponibilité AlwaysOn) de d’urgence haute disponibilité (AG) sur des sous-réseaux différents, l’activation **basculement de sous-réseaux multiples.** Configure ODBC Driver for SQL Server de façon à accélérer la détection du serveur (actuellement) actif et la connexion à ce dernier.
+Si votre application se connecte à un groupe de disponibilité de récupération d’urgence à haute disponibilité (groupes de disponibilité AlwaysOn) sur des sous-réseaux différents, ce qui active le basculement de **sous-réseaux multiples.** Configure ODBC Driver for SQL Server de façon à accélérer la détection du serveur (actuellement) actif et la connexion à ce dernier.
 
 ### <a name="transparent-network-ip-resolution"></a>Résolution transparente d’adresses IP réseau.
 
-Modifie le comportement de **basculement de sous-réseaux multiples** pour permettre une reconnexion plus rapide pendant le basculement. Pour plus d’informations, consultez [Utilisation de la résolution d’adresses IP réseau transparente](../../../connect/odbc/using-transparent-network-ip-resolution.md).
+Modifie le comportement du basculement de **plusieurs sous-réseaux** pour permettre une reconnexion plus rapide pendant le basculement. Pour plus d’informations, consultez [Utilisation de la résolution d’adresses IP réseau transparente](../../../connect/odbc/using-transparent-network-ip-resolution.md).
 
 ### <a name="column-encryption"></a>Chiffrement de colonnes.
 
-Permet le déchiffrement automatique et le chiffrement des transferts de données vers et à partir de colonnes chiffrées avec la [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) fonctionnalité disponible dans SQL Server 2016 et versions ultérieure.
+Permet le déchiffrement et le chiffrement automatiques des transferts de données vers et à partir des colonnes chiffrées avec la fonctionnalité [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) disponible dans SQL Server 2016 et versions ultérieures.
 
-### <a name="use-fmtonly-metadata-discovery"></a>Utilisez la découverte de métadonnées FMTONLY :
+### <a name="use-fmtonly-metadata-discovery"></a>Utiliser la découverte de métadonnées FMTONLY:
 
-Utilisez la méthode de découverte de métadonnées SET FMTONLY héritée lors de la connexion à SQL Server 2012 ou version ultérieure. Activez cette option uniquement lorsque vous utilisez des requêtes non pris en charge par [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), telles que celles contenant des tables temporaires. 
+Utilisez la méthode de découverte des métadonnées FMTONLY du jeu hérité lors de la connexion à SQL Server 2012 ou version ultérieure. Activez cette fonction uniquement lors de l’utilisation de requêtes non prises en charge par [sp_describe_first_result_set](../../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md), telles que celles contenant des tables temporaires. 
 
 ### <a name="next"></a>Suivant
 
@@ -88,7 +87,7 @@ Passe à l’écran suivant de l’Assistant.
 
 ### <a name="back"></a>Précédent
 
-Retourne à l’écran précédent de l’Assistant.
+Revient à l’écran précédent de l’Assistant.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

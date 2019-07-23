@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3c8cf05f56d4102ec020a99337e3107c4b767a52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a5d87ab4f78a5f006e87c34fa774fd9f430aaae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979534"
 ---
 # <a name="getstatementhandlecacheentrycount-method-sqlserverconnection"></a>getStatementHandleCacheEntryCount, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Retourne le nombre actuel de descripteurs d’instruction préparée mis en pool.
+ Retourne le nombre actuel de handles d’instruction préparée regroupés.
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +35,13 @@ public int getStatementHandleCacheEntryCount()
 ```  
 
 ## <a name="return-value"></a>Valeur retournée
- Un **int** qui contient le nombre actuel de descripteurs d’instruction préparée mis en pool.
+ **Entier** qui contient le nombre actuel de handles d’instruction préparée regroupés.
 
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Notes  
- Cette méthode est disponible à partir de la version du pilote JDBC 6.4 et ultérieur.
+ Cette méthode est disponible dans la version 6,4 et les versions ultérieures du pilote JDBC.
  
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

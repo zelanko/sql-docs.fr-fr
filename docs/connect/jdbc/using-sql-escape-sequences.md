@@ -1,5 +1,5 @@
 ---
-title: À l’aide de séquences d’échappement SQL | Microsoft Docs
+title: Utilisation de séquences d’échappement SQL | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d029bf6b0a1e50bec104879a64d9411774ffeda5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005938"
 ---
 # <a name="using-sql-escape-sequences"></a>Utilisation de séquences d'échappement SQL
 
@@ -112,7 +111,7 @@ Une procédure est un objet exécutable stocké dans la base de données. Géné
 
 où `procedure-name` spécifie le nom d’une procédure stockée et `parameter` un paramètre de procédure stockée.  
   
-Pour plus d’informations sur l’utilisation de la `call` séquence avec des procédures stockées d’échappement, consultez [à l’aide d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md).  
+Pour plus d’informations sur l' `call` utilisation de la séquence d’échappement avec des procédures stockées, consultez [utilisation d’instructions avec des procédures stockées](../../connect/jdbc/using-statements-with-stored-procedures.md).  
 
 ## <a name="outer-joins"></a>Jointures externes
 

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 43813a4c-1cc7-4659-ba27-f1786f1371eb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0e54dedff95332d5ea62dc4dd2a79d9d8e1bec15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 518be09d4a4929a06866eec253a49a39d7865263
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955419"
 ---
 # <a name="connect-method-sqlserverdriver"></a>Méthode connect (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public java.sql.Connection connect(java.lang.String Url,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode de connexion est spécifiée par la méthode de connexion dans l’interface java.sql.Driver.  
+ Cette méthode Connect est spécifiée par la méthode Connect dans l’interface java. Sql. Driver.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDriver, méthodes](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

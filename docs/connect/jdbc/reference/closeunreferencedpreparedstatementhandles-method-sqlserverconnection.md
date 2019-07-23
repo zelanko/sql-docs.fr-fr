@@ -1,5 +1,5 @@
 ---
-title: closeunreferencedpreparedstatementhandles, méthode (SQLServerConnection) | Microsoft Docs
+title: Méthode closeUnreferencedPreparedStatementHandles (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d0fb6ae351cde68956defff6081fa19f02c092e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7256475421b8666e28eaaf03f3ff4cb9768aa289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955603"
 ---
 # <a name="closeunreferencedpreparedstatementhandles-method-sqlserverconnection"></a>closeUnreferencedPreparedStatementHandles, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Force les Nations unies-préparer des demandes pour des instructions préparées rejetées en suspens doit être exécuté.
+ Force l’exécution des demandes de non-préparation pour les instructions préparées ignorées en suspens.
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,7 +39,7 @@ public void closeUnreferencedPreparedStatementHandles()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
 
 ## <a name="remarks"></a>Notes  
- Cette méthode est disponible à partir de la version du pilote JDBC 6.4 et ultérieur.
+ Cette méthode est disponible dans la version 6,4 et les versions ultérieures du pilote JDBC.
  
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

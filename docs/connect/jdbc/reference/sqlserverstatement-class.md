@@ -1,5 +1,5 @@
 ---
-title: Classe SQLServerStatement | Microsoft Docs
+title: SQLServerStatement, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0901763b2f7b6c62e365df953012c2f54dba6f6d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 89547655fd734ca9e6e340d94832dea5816f2733
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970379"
 ---
 # <a name="sqlserverstatement-class"></a>SQLServerStatement, classe
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public class SQLServerStatement
 ## <a name="remarks"></a>Notes  
  La classe SQLServerStatement fournit également un certain nombre de méthodes d’implémentation de classe de base pour l’instruction préparée JDBC et les instructions pouvant être appelées. Le rôle de base de la classe SQLServerStatement est d’exécuter des instructions SQL, puis de retourner des nombres de mises à jour et des jeux de résultats à l’application utilisateur.  
   
- Cette classe prend en charge la Désencapsulation dans la classe SQLServerStatement, l’interface ISQLServerStatement et l’interface java.sql.Statement. Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Cette classe prend en charge la désencapsulation dans la classe SQLServerStatement, l’interface ISQLServerStatement et l’interface java. Sql. Statement. Pour plus d’informations, consultez [wrappers et interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

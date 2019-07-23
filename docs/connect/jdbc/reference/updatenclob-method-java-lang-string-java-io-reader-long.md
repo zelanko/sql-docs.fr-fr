@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad5c8d9b-f8c8-4ddf-85c8-23420bba54ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76271038cab9fbf46194b2f6d1302f30ecbd26ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a99434485ad244eec1f9cbb8ff4707e04f9d9907
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998895"
 ---
 # <a name="updatenclob-method-javalangstring-javaioreader-long"></a>Méthode updateNClob (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,11 +34,11 @@ public void updateNClob(java.lang.String columnLabel,
 #### <a name="parameters"></a>Paramètres  
  *columnLabel*  
   
- Un **chaîne** qui indique l’étiquette de colonne.  
+ **Chaîne** qui indique l’étiquette de colonne.  
   
  *reader*  
   
- Un objet de lecteur.  
+ Objet lecteur.  
   
  *length*  
   
@@ -49,9 +48,9 @@ public void updateNClob(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateNClob est spécifiée par la méthode updateNClob de l’interface java.sql.ResultSet.  
+ Cette méthode getNClob est spécifiée par la méthode getNClob de l’interface java.sql.ResultSet.  
   
- Cette méthode est prise en charge uniquement sur **nvarchar (max)** , **ntext**, et **xml** colonnes. L'utilisation de cette méthode sur n'importe quel autre type de données entraîne la levée d'une exception.  
+ Cette méthode est prise en charge uniquement sur les colonnes **nvarchar (max)** , **ntext**et **XML** . L'utilisation de cette méthode sur n'importe quel autre type de données entraîne la levée d'une exception.  
   
 ## <a name="see-also"></a>Voir aussi  
  [updateNClob, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

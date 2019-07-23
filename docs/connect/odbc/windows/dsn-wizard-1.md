@@ -1,5 +1,5 @@
 ---
-title: Écran 1 (pilote ODBC pour SQL Server) de l’Assistant Source de données | Microsoft Docs
+title: Assistant source de données-écran 1 (pilote ODBC pour SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8c961487aaff7e6aa57ea8add571ccbc2945dee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936603"
 ---
 # <a name="data-source-wizard-screen-1"></a>Assistant Source de données, écran 1
 
@@ -34,7 +33,7 @@ Nom de la source de données utilisé par une application ODBC lorsqu'elle deman
 
 ### <a name="select-or-enter-a-server-name"></a>Sélectionnez ou entrez un nom de serveur.
 
-Le nom d’une instance de SQL Server sur votre réseau. Vous devrez spécifier un serveur dans la prochaine zone d'édition.
+Nom d’une instance de SQL Server sur votre réseau. Vous devrez spécifier un serveur dans la prochaine zone d'édition.
 
 Dans la plupart des cas, le pilote ODBC peut se connecter suivant l’ordre de protocole par défaut et le nom du serveur fourni dans cette zone. Utilisez le Gestionnaire de configuration SQL Server si vous souhaitez créer un alias pour le serveur ou configurer des bibliothèques réseau de client.
 
@@ -48,7 +47,7 @@ Si toutes les informations nécessaires pour se connecter à SQL Server sont sp�
 
 ### <a name="next"></a>Suivant
 
-Pour procéder à l’écran suivant de l’Assistant, cliquez sur **suivant**.
+Pour passer à l’écran suivant de l’Assistant, cliquez sur **suivant**.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

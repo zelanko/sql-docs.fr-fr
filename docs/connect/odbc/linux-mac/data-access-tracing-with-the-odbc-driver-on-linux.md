@@ -13,21 +13,20 @@ helpviewer_keywords:
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd71429e5a407e595cc3f65e73e984bfc12280b1
-ms.sourcegitcommit: 5d27fb187006e676d652884f0c1f5133a1bd62b2
+ms.openlocfilehash: 1fa39cd11f70a661de5c284e56f2ccc0f7a5777f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67152211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008822"
 ---
 # <a name="data-access-tracing-with-the-odbc-driver-on-linux-and-macos"></a>Traçage de l’accès aux données avec le pilote ODBC sur Linux et macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Le Gestionnaire de pilotes unixODBC sur macOS et Linux prend en charge le traçage de l’entrée des appels API ODBC et de sortie du pilote ODBC pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+Le gestionnaire de pilotes unixODBC sur macOS et Linux prend en charge le traçage de l’entrée d’appel d’API ODBC [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]et la sortie du pilote ODBC pour.
 
-Pour suivre le comportement de votre application ODBC, vous devez modifier le `odbcinst.ini` du fichier `[ODBC]` section pour définir les valeurs `Trace=Yes` et `TraceFile` pour le chemin d’accès du fichier qui doit contenir la trace de sortie ; par exemple :
+Pour suivre le comportement ODBC de votre application, modifiez `odbcinst.ini` la section `[ODBC]` du fichier pour définir les `Trace=Yes` valeurs `TraceFile` et le chemin d’accès du fichier qui doit contenir la sortie de suivi, par exemple:
 
 ```ini
 [ODBC]
@@ -35,9 +34,9 @@ Trace=Yes
 TraceFile=/home/myappuser/odbctrace.log
 ```
 
-(Vous pouvez également utiliser `/dev/stdout` ou tout autre nom d’appareil pour envoyer la trace de sortie il au lieu de dans un fichier persistant.) Avec les paramètres ci-dessus, chaque fois qu’une application charge le Gestionnaire de pilotes unixODBC il enregistrera tous les appels d’API ODBC qui elle est effectuée dans le fichier de sortie.
+(Vous pouvez également utiliser `/dev/stdout` ou tout autre nom de périphérique pour envoyer la sortie de trace à la place de dans un fichier persistant.) Avec les paramètres ci-dessus, chaque fois qu’une application charge le gestionnaire de pilotes unixODBC, elle enregistre tous les appels d’API ODBC qu’elle a effectués dans le fichier de sortie.
 
-Une fois que vous avez terminé le traçage de votre application, supprimez `Trace=Yes` à partir de la `odbcinst.ini` pour éviter la baisse des performances du suivi de fichier et assurez-vous que tous les fichiers inutiles de trace sont supprimés.
+Une fois que vous avez fini de tracer `Trace=Yes` votre application `odbcinst.ini` , supprimez du fichier afin d’éviter une altération des performances du suivi et assurez-vous que tous les fichiers de trace inutiles sont supprimés.
 
 Le traçage s’applique à toutes les applications qui utilisent le pilote dans `odbcinst.ini`. Pour ne pas tracer toutes les applications (par exemple, pour éviter la divulgation d’informations sensibles par utilisateur), vous pouvez tracer une instance d’application individuelle en lui fournissant l’emplacement d’un fichier `odbcinst.ini` privé, à l’aide de la variable d’environnement `ODBCSYSINI`. Par exemple :
 
@@ -49,7 +48,7 @@ Dans ce cas, vous pouvez ajouter `Trace=Yes` à la `[ODBC Driver 13 for SQL Serv
 
 ## <a name="determining-which-odbcini-file-the-driver-is-using"></a>Détermination du fichier odbc.ini utilisé par le pilote
 
-Les pilotes ODBC de Linux et macOS ne savez pas quelle `odbc.ini` est utilisée, ou le chemin d’accès à la `odbc.ini` fichier. Toutefois, les informations sur les `odbc.ini` fichier est en cours est disponible à partir des outils unixODBC `odbc_config` et `odbcinst`et à partir de la documentation du Gestionnaire de pilotes unixODBC.
+Les pilotes ODBC Linux et MacOS ne savent pas lequel `odbc.ini` est en cours d’utilisation ou le chemin `odbc.ini` d’accès au fichier. Toutefois, les informations sur `odbc.ini` le fichier en cours d’utilisation sont disponibles à partir `odbc_config` des `odbcinst`outils unixODBC et et de la documentation du gestionnaire de pilotes unixodbc.
 
 Par exemple, la commande suivante imprime (parmi d’autres informations) l’emplacement des fichiers `odbc.ini` système et utilisateur qui contiennent, respectivement, les noms de source de données système et utilisateur :
 
@@ -65,11 +64,11 @@ SQLLEN Size........: 8
 SQLSETPOSIROW Size.: 8
 ```
 
-Le [documentation unixODBC](http://www.unixodbc.org/doc/UserManual/) explique les différences entre l’utilisateur et les sources de données système. En résumé :
+La [documentation unixodbc](http://www.unixodbc.org/doc/UserManual/) explique les différences entre les DSN utilisateur et système. En Résumé:
 
-- Sources de données utilisateur---il s’agit des sources de données qui sont disponibles uniquement pour un utilisateur spécifique. Les utilisateurs peuvent se connecter à l’aide, ajouter, modifier et supprimer leur propres sources de données utilisateur. Sources de données utilisateur sont stockés dans un fichier dans le répertoire de base utilisateur ou un sous-répertoire.
+- Les DSN utilisateur---ce sont des noms de sources de notification qui sont disponibles uniquement pour un utilisateur spécifique. Les utilisateurs peuvent se connecter à l’aide de, ajouter, modifier et supprimer leurs propres DSN utilisateur. Les noms de sources de fichiers utilisateur sont stockés dans un fichier dans le répertoire de démarrage de l’utilisateur ou dans un sous-répertoire de celui-ci.
 
-- Système DSN---ces sources de données sont disponibles pour chaque utilisateur sur le système de se connecter à leur utilisation, mais peuvent uniquement être ajoutés, modifiées et supprimés par un administrateur système. Si un utilisateur a un DSN utilisateur portant le même nom en tant que système DSN, le DSN utilisateur sera utilisé lors de connexions par cet utilisateur.
+- Les noms de sources de session système---ces DSN sont disponibles pour tous les utilisateurs du système qui se connectent à leur utilisation, mais ils peuvent uniquement être ajoutés, modifiés et supprimés par un administrateur système. Si un utilisateur possède un nom de source de nom d’utilisateur avec le même nom qu’un DSN système, le DSN utilisateur est utilisé sur les connexions de cet utilisateur.
 
 ## <a name="see-also"></a>Voir aussi
 

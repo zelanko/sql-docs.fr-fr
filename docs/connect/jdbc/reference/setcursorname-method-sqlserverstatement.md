@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3f3ec4f2-103a-4e16-9206-c5bd8639f946
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 35039fae2f3e3215a0df254f7b1d4619e97d3634
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3f743ddb27b079a4b98d5e00c8ab378a5a6859a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66793995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974506"
 ---
 # <a name="setcursorname-method-sqlserverstatement"></a>Méthode setCursorName (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public final void setCursorName(java.lang.String name)
 #### <a name="parameters"></a>Paramètres  
  *nom*  
   
- Un **chaîne** qui contient le nom du curseur.  
+ **Chaîne** qui contient le nom du curseur.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setCursorName est spécifiée par la méthode setCursorName dans l’interface java.sql.Statement.  
+ Cette méthode setCursorName est spécifiée par la méthode setCursorName dans l’interface java. Sql. Statement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

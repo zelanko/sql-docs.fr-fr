@@ -1,5 +1,5 @@
 ---
-title: Méthode updateNClob (int, java.io.Reader) | Microsoft Docs
+title: Méthode updateNClob (int, Java. IO. Reader) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 17adafd4-3ac3-4ff0-af9d-f087cc5ef936
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0e56d72efac1965887a4e6b75f7d6915dd2b6a65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ffcdfc9249457f0371f0f400fb28e06ea02d9f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998749"
 ---
 # <a name="updatenclob-method-int-javaioreader"></a>Méthode updateNClob (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,19 +33,19 @@ public void updateNClob(int columnIndex,
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
  *reader*  
   
- Un objet de lecteur.  
+ Objet lecteur.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateNClob est spécifiée par la méthode updateNClob de l’interface java.sql.ResultSet.  
+ Cette méthode getNClob est spécifiée par la méthode getNClob de l’interface java.sql.ResultSet.  
   
- Cette méthode est prise en charge uniquement sur **nvarchar (max)** , **ntext**, et **xml** colonnes. L'utilisation de cette méthode sur n'importe quel autre type de données entraîne la levée d'une exception.  
+ Cette méthode est prise en charge uniquement sur les colonnes **nvarchar (max)** , **ntext**et **XML** . L'utilisation de cette méthode sur n'importe quel autre type de données entraîne la levée d'une exception.  
   
 ## <a name="see-also"></a>Voir aussi  
  [updateNClob, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

@@ -1,5 +1,5 @@
 ---
-title: Élément de table pour le schéma (DTA) | Microsoft Docs
+title: Élément table pour Schema (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a59e8319-05d1-47f3-af39-7d970ab8e7dc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 12bcab75d2c208dd53bb4f4c77bc5a882f3b32b1
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0064376a229e2fe9f87fe09048c9e923810d4172
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733451"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105958"
 ---
 # <a name="table-element-for-schema-dta"></a>Table, élément pour les schémas (Assistant Paramétrage de base de données)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: Connexion avec chiffrement SSL | Microsoft Docs
+title: Connexion avec le chiffrement SSL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/21/2019
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c88caea8916cf7b3cd2b6655613135f7cbe10e19
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 209ced9fbf6d1ceb21ed4e5b6d686dd87eec0de2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956804"
 ---
 # <a name="connecting-with-ssl-encryption"></a>Connexion avec le chiffrement SSL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ String connectionUrl =
   
  Quand la propriété **encrypt** est définie sur **true** et que la propriété **trustServerCertificate** est définie sur **false**, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] valide le certificat SSL [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La validation du certificat de serveur est une partie de la négociation SSL qui garantit qu'il s'agit du serveur correct avec lequel établir une connexion. Pour valider le certificat de serveur, les informations d’approbation doivent être fournies au moment de la connexion en utilisant explicitement les propriétés de connexion **trustStore** et **trustStorePassword**, ou en utilisant implicitement le magasin d’approbations par défaut de la machine virtuelle Java (JVM) sous-jacente.  
   
- La propriété **trustStore** spécifie le chemin (y compris le nom de fichier) du fichier trustStore de certificat, qui contient la liste des certificats approuvés par le client. La propriété **trustStorePassword** spécifie le mot de passe utilisé pour vérifier l’intégrité des données trustStore. Pour plus d’informations sur l’utilisation du magasin d’approbations par défaut de la machine virtuelle Java, consultez le [configuration du Client pour le chiffrement SSL](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
+ La propriété **trustStore** spécifie le chemin (y compris le nom de fichier) du fichier trustStore de certificat, qui contient la liste des certificats approuvés par le client. La propriété **trustStorePassword** spécifie le mot de passe utilisé pour vérifier l’intégrité des données trustStore. Pour plus d’informations sur l’utilisation du magasin d’approbations par défaut de la machine virtuelle Java, consultez [configuration du client pour le chiffrement SSL](../../connect/jdbc/configuring-the-client-for-ssl-encryption.md).  
   
  L’exemple de code suivant montre comment définir les propriétés **trustStore** et **trustStorePassword** dans une chaîne de connexion :  
   
@@ -64,7 +63,7 @@ String connectionUrl =
 > [!NOTE]  
 >  Vous pouvez également définir la valeur des propriétés de connexion en utilisant les méthodes **setter** appropriées fournies par la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).  
   
- Si le **chiffrer** propriété est définie sur **true** et **trustServerCertificate** propriété est définie sur **false** et si le nom de serveur dans le chaîne de connexion ne correspond pas au nom du serveur dans le certificat SSL, l’erreur suivante s’affichera : `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`. Depuis la version 7.2, le pilote prend en charge le modèle de caractère générique correspondant dans l’étiquette la plus à gauche du nom du serveur dans le certificat SSL.
+ Si la propriété **Encrypt** a la valeur **true** et que la propriété **TrustServerCertificate** a la valeur **false** et si le nom du serveur dans la chaîne de connexion ne correspond pas au nom du serveur dans le certificat SSL, l’erreur suivante est publié le `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`:. À partir de la version 7,2, le pilote prend en charge la correspondance de modèle de caractères génériques dans l’étiquette la plus à gauche du nom du serveur dans le certificat SSL.
 ## <a name="see-also"></a>Voir aussi  
  [Utilisation du chiffrement SSL](../../connect/jdbc/using-ssl-encryption.md)   
  [Sécurisation des applications de pilote JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)  

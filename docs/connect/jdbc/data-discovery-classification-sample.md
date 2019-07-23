@@ -9,21 +9,20 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ae1ea54ae5f980c84e83922ffcfb9ad6ac83ded9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08a02ed004c5edd7b849b0c5ae1a43f21da031ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66782054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956743"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Découverte et classification des données SQL
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Cela [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] exemple d’application montre comment utiliser les méthodes getter du jeu de résultats pour récupérer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 'SQL découverte et classification de données' à partir des tables contenant ces informations.
+Cet [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] exemple d’application montre comment utiliser les méthodes getter du jeu de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] résultats pour récupérer les informations de «découverte et de classification des données SQL» à partir des tables contenant ces informations.
   
-Le fichier de code pour cet exemple est nommé DataDiscoveryAndClassification.java, et il peut être trouvé à l’emplacement suivant :  
+Le fichier de code de cet exemple se nomme DataDiscoveryAndClassification. Java et se trouve à l’emplacement suivant:  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  

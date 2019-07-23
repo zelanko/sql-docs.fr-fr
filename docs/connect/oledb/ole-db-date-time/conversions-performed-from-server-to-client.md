@@ -1,5 +1,5 @@
 ---
-title: Conversions effectuées à partir du serveur au Client | Microsoft Docs
+title: Conversions effectuées du serveur au client | Microsoft Docs
 description: Conversions effectuées de serveur à client
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3ff9bc3f85340eb86aa0fa21820977e70ab51c5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22f3b681f9c4256087c17bd1e74011c2ba0916fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015807"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversions de serveur à client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,9 +27,9 @@ ms.locfileid: "66769373"
   Cet article décrit les conversions de date/heure effectuées entre [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] (ou une version ultérieure) et une application cliente écrite avec le pilote OLE DB pour SQL Server.  
   
 ## <a name="conversions"></a>Conversions  
- Le tableau suivant décrit les conversions entre le type retourné au client et le type de la liaison. Paramètres de sortie, si ICommandWithParameters::SetParameterInfo a été appelée et que le type spécifié dans *pwszDataSourceType* ne correspond pas au type réel sur le serveur, une conversion implicite sera effectué par le serveur , et le type retourné au client correspond au type spécifié via ICommandWithParameters::SetParameterInfo. Ceci peut aboutir à des résultats de conversion inattendus quand les règles de conversion du serveur sont différentes de celles décrites dans cet article. Par exemple, quand une date par défaut doit être fournie, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise 1900-1-1, plutôt que 1899-12-30.  
+ Le tableau suivant décrit les conversions entre le type retourné au client et le type de la liaison. Pour les paramètres de sortie, si ICommandWithParameters:: SetParameterInfo a été appelé et que le type spécifié dans *pwszDataSourceType* ne correspond pas au type réel sur le serveur, une conversion implicite est effectuée par le serveur et le type retourné le client correspond au type spécifié par le biais de ICommandWithParameters:: SetParameterInfo. Ceci peut aboutir à des résultats de conversion inattendus quand les règles de conversion du serveur sont différentes de celles décrites dans cet article. Par exemple, quand une date par défaut doit être fournie, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise 1900-1-1, plutôt que 1899-12-30.  
   
-|Vers -><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
+|><br /><br /> From|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
 |Date|1, 7|OK|-|-|1|1, 3|1, 7|-|OK (VT_BSTR)|OK|OK|4|4|  
 |Time|5, 6, 7|-|9|OK|6|3, 6|5, 6|-|OK (VT_BSTR)|OK|OK|4|4|  
@@ -51,7 +50,7 @@ ms.locfileid: "66769373"
 |Symbole|Signification|  
 |------------|-------------|  
 |OK|Aucune conversion nécessaire.|  
-|-|Aucune conversion n'est prise en charge. Si la liaison est validée lorsque IAccessor::CreateAccessor est appelée, DBBINDSTATUS_UPSUPPORTEDCONVERSION est retourné dans *rgStatus*. Lorsque la validation pour l'accesseur est différée, DBSTATUS_E_BADACCESSOR est défini.|  
+|-|Aucune conversion n'est prise en charge. Si la liaison est validée quand IAccessor:: CreateAccessor est appelé, DBBINDSTATUS_UPSUPPORTEDCONVERSION est retourné dans *rgStatus*. Lorsque la validation pour l'accesseur est différée, DBSTATUS_E_BADACCESSOR est défini.|  
 |1|Les champs heure sont définis avec la valeur zéro.|  
 |2|DBSTATUS_E_CANTCONVERTVALUE est défini.|  
 |3|Le décalage est défini avec la valeur zéro.|  

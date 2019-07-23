@@ -1,6 +1,6 @@
 ---
-title: Insertion de données dans les paramètres table | Microsoft Docs
-description: À l’aide de OLE DB Driver pour SQL Server pour insérer des données dans les paramètres table
+title: Insertion de données dans des paramètres table | Microsoft Docs
+description: Utilisation du pilote OLE DB pour SQL Server pour l’insertion de données dans des paramètres table
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - table-valued parameters, inserting data into
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c1edbe7d411e06e477db016db62b4245e0893aee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 064dcfa74cd6471c8c279ef4b08e874097d98d64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994128"
 ---
 # <a name="inserting-data-into-table-valued-parameters"></a>Insertion de données dans des paramètres table
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "66801156"
   
  Le consommateur est censé fournir toutes les données de paramètres table au fournisseur avant d'exécuter une commande. Pour fournir les données, le consommateur remplit un objet d'ensemble de lignes de paramètres table pour chaque paramètre table. L'objet d'ensemble de lignes de paramètres table expose les opérations d'insertion, de définition et de suppression de l'ensemble de lignes, qui permettent au consommateur de manipuler les données de paramètres table. Le fournisseur extrait les données de cet objet d'ensemble de lignes de paramètres table au moment de l'exécution.  
   
- Lorsqu'un objet d'ensemble de lignes de paramètres table est fourni au consommateur, ce dernier peut le traiter comme un objet d'ensemble de lignes. Le consommateur peut obtenir les informations de type de chaque colonne (type, longueur maximale, précision et échelle) à l’aide de la méthode d’interface IColumnsInfo::GetColumnInfo ou IColumnsRowset::GetColumnsRowset. Le consommateur crée ensuite un accesseur pour spécifier les liaisons des données. L'étape suivante consiste à insérer des lignes de données dans l'ensemble de lignes de paramètres table. Cela est possible à l’aide de IRowsetChange::InsertRow. IRowsetChange::SetData ou IRowsetChange::DeleteRows peut également être utilisé sur l’objet d’ensemble de lignes de paramètre table si vous devez manipuler les données. Les objets d'ensembles de lignes de paramètres table ont un décompte de références, à l'instar des objets de flux.  
+ Lorsqu'un objet d'ensemble de lignes de paramètres table est fourni au consommateur, ce dernier peut le traiter comme un objet d'ensemble de lignes. Le consommateur peut obtenir les informations de type de chaque colonne (type, longueur maximale, précision et échelle) à l’aide de la méthode d’interface IColumnsInfo:: GetColumnInfo ou IColumnsRowset:: GetColumnsRowset. Le consommateur crée ensuite un accesseur pour spécifier les liaisons des données. L'étape suivante consiste à insérer des lignes de données dans l'ensemble de lignes de paramètres table. Pour ce faire, vous pouvez utiliser IRowsetChange:: InsertRow. IRowsetChange:: SetData ou IRowsetChange::D eleteRows peut également être utilisé sur l’objet d’ensemble de lignes de paramètre table si vous devez manipuler les données. Les objets d'ensembles de lignes de paramètres table ont un décompte de références, à l'instar des objets de flux.  
   
- Si IColumnsRowset::GetColumnsRowset est utilisé, il y aura des appels ultérieurs à IRowset::GetNextRows IRowset::GetData, méthodes et IRowset::ReleaseRows sur l’objet d’ensemble de lignes de la colonne résultante.  
+ Si IColumnsRowset:: GetColumnsRowset est utilisé, il y aura des appels ultérieurs aux méthodes IRowset:: GetNextRows, IRowset:: GetData et IRowset:: ReleaseRows sur l’objet rowset de la colonne résultante.  
   
  Une fois que le pilote OLE DB pour SQL Server commence à exécuter la commande, les valeurs de paramètre table sont récupérées dans cet objet d’ensemble de lignes de paramètres table, puis envoyées au serveur.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66801156"
   
  Dans le modèle d'extraction des données, le consommateur fournit des données au fournisseur à la demande. Utilisez cette approche si votre application comporte de nombreuses insertions de données et si les données d'ensembles de lignes de paramètres table en mémoire peuvent entraîner une sollicitation excessive de la mémoire. Si plusieurs fournisseurs OLE DB sont utilisés, le modèle d'extraction des données du consommateur permet à ce dernier de fournir n'importe quel objet d'ensemble de lignes en tant que valeur de paramètre table.  
   
- Pour utiliser le modèle d'extraction des données, les consommateurs doivent fournir leur propre implémentation d'un objet d'ensemble de lignes. Lorsque vous utilisez le modèle d’extraction avec des ensembles de lignes de paramètre table (CLSID_ROWSET_TVP), le consommateur est requis pour agréger l’objet d’ensemble de lignes de paramètre table que le fournisseur expose via la ITableDefinitionWithConstraints :: Méthode de CreateTableWithConstraints ou la méthode IOpenRowset::OpenRowset. L'objet du consommateur est uniquement supposé substituer l'implémentation de l'interface IRowset. Vous devez substituer les fonctions suivantes :  
+ Pour utiliser le modèle d'extraction des données, les consommateurs doivent fournir leur propre implémentation d'un objet d'ensemble de lignes. Lorsque vous utilisez le modèle d’extraction avec des ensembles de lignes de paramètre table (CLSID_ROWSET_TVP), le consommateur est requis pour agréger l’objet d’ensemble de lignes de paramètre table que le fournisseur expose via le ITableDefinitionWithConstraints:: Méthode CreateTableWithConstraints ou IOpenRowset:: OpenRowset. L'objet du consommateur est uniquement supposé substituer l'implémentation de l'interface IRowset. Vous devez substituer les fonctions suivantes :  
   
 -   IRowset::GetNextRows  
   
@@ -66,7 +65,7 @@ ms.locfileid: "66801156"
   
  Le pilote OLE DB pour SQL Server lit une ou plusieurs lignes à la fois à partir de l’objet d’ensemble de lignes du consommateur, afin de prendre en charge le comportement de streaming dans les paramètres table. Par exemple, l’utilisateur peut disposer des données d’ensembles de lignes de paramètres table sur disque (et non en mémoire) et peut implémenter les fonctionnalités de lecture des données à partir du disque lorsque cela est exigé par le pilote OLE DB pour SQL Server.  
   
- Le consommateur communique son format de données à OLE DB Driver pour SQL Server à l’aide de IAccessor::CreateAccessor sur l’objet d’ensemble de lignes de paramètre table. Lors de la lecture des données à partir de la mémoire tampon du consommateur, le fournisseur s'assure que toutes les colonnes accessibles en écriture et non définies par défaut sont disponibles à travers au moins un handle d'accesseur, et utilise les handles correspondants pour lire les données des colonnes. Pour éviter toute ambiguïté, il doit exister une correspondance unique entre une colonne d’ensemble de lignes de paramètres table et une liaison. Les liaisons en double à la même colonne génèrent une erreur. En outre, chaque accesseur est censé avoir la *iOrdinal* membre dans la séquence de DBBindings. Il y a autant d’appels à IRowset::GetData que d’accesseurs par ligne. En outre, l’ordre des appels est basé sur l’ordre de la valeur *iOrdinal*, du plus petit au plus grand.  
+ Le consommateur communique son format de données à OLE DB pilote pour SQL Server à l’aide de IAccessor:: CreateAccessor sur l’objet d’ensemble de lignes de paramètre table. Lors de la lecture des données à partir de la mémoire tampon du consommateur, le fournisseur s'assure que toutes les colonnes accessibles en écriture et non définies par défaut sont disponibles à travers au moins un handle d'accesseur, et utilise les handles correspondants pour lire les données des colonnes. Pour éviter toute ambiguïté, il doit exister une correspondance unique entre une colonne d’ensemble de lignes de paramètres table et une liaison. Les liaisons en double à la même colonne génèrent une erreur. En outre, chaque accesseur est supposé avoir le membre *iOrdinal* de DBBINDINGS dans l’ordre. Il y a autant d’appels à IRowset::GetData que d’accesseurs par ligne. En outre, l’ordre des appels est basé sur l’ordre de la valeur *iOrdinal*, du plus petit au plus grand.  
   
  Le fournisseur est supposé implémenter la plupart des interfaces exposées par l'objet d'ensemble de lignes de paramètres table. Le consommateur implémente un objet d’ensemble de lignes avec des interfaces minimales (IRowset). Avec une agrégation indifférenciée, les interfaces d'objets d'ensembles de lignes obligatoires restantes sont implémentées par l'objet d'ensemble de lignes de paramètres table.  
   

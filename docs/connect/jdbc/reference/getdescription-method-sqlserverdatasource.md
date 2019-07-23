@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dce7aa3a-9a2f-4a45-8191-e37949e2202f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b3e7edbc0868ae3683d6cd07fb9dbeb80491afff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23cfb3abcb0dfa59b5cade8b53678157a0cef099
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983613"
 ---
 # <a name="getdescription-method-sqlserverdatasource"></a>Méthode getDescription (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.lang.String getDescription()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **chaîne** qui contient la description de source de données ou null si aucune valeur n’est définie.  
+ **Chaîne** qui contient la description de la source de données ou null si aucune valeur n’est définie.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

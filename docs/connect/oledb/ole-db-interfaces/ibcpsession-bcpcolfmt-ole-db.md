@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fdb46a6a2391c70f452d2fcf2c49045c59bd1e0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66791016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994575"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +78,7 @@ HRESULT BCPColFmt(
  Index de champ dans le fichier de données de l'utilisateur.  
   
  *eUserDataType*[in]  
- Type de données de champ dans le fichier de données de l'utilisateur. Les types de données disponibles sont répertoriés dans le pilote OLE DB pour le fichier d’en-tête SQL Server (msoledbsql.h) au format bcp_type_xxx ; par exemple, BCP_TYPE_SQLINT4. Si la valeur BCP_TYPE_DEFAULT est spécifiée, le fournisseur essaie d'utiliser le même type que la table ou la colonne de vue. Pour les opérations de copie en bloc de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un fichier lorsque l'argument **eUserDataType** est BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC :  
+ Type de données de champ dans le fichier de données de l'utilisateur. Les types de données disponibles sont répertoriés dans le OLE DB pilote pour SQL Server fichier d’en-tête (msoledbsql. h) avec le format BCP_TYPE_XXX, par exemple, BCP_TYPE_SQLINT4. Si la valeur BCP_TYPE_DEFAULT est spécifiée, le fournisseur essaie d'utiliser le même type que la table ou la colonne de vue. Pour les opérations de copie en bloc de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un fichier lorsque l'argument **eUserDataType** est BCP_TYPE_SQLDECIMAL ou BCP_TYPE_SQLNUMERIC :  
   
 -   Si la colonne source n'est pas décimale ou numérique, la précision et l'échelle par défaut sont utilisées.  
   
