@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d853b2f3-fb72-4d4b-8997-f4a45a9dfefc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fc8f47e7c4f5b92658735b8ca904655020f58d2f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47b1cff27860a09e4f9b8cc43f8523b5a1846a3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972079"
 ---
 # <a name="seturl-method-sqlserverpreparedstatement"></a>setURL, méthode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,11 +38,11 @@ public final void setURL(int parameterIndex,
 #### <a name="parameters"></a>Paramètres  
  *parameterindex*  
   
- Un **int** qui indique le numéro de paramètre.  
+ **Entier** qui indique le numéro du paramètre.  
   
  *x*  
   
- Un objet d’URL.  
+ Objet URL.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

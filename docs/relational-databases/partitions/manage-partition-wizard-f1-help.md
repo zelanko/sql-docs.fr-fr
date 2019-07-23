@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 0bcc98052bf076515ff3d961fee24e6550830118
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: b921ed801297659b02a8f8cb2d22dcf1b498502e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024887"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Aide sur l'Assistant Gestion de partition via la touche F1
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -180,7 +179,7 @@ ms.locfileid: "53414164"
 ### <a name="options"></a>Options  
  Sélectionnez le type de planification qui vous intéresse pour le travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- **Nom**  
+ **Name**  
  Tapez un nouveau nom pour la planification.  
   
  **Travaux planifiés**  
@@ -304,7 +303,7 @@ ms.locfileid: "53414164"
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../analysis-services/instances/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début")[Dans cette section](#Top)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md)  
   
   

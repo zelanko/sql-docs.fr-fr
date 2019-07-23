@@ -16,12 +16,12 @@ ms.assetid: 2bc294f6-2312-4b6b-9478-2fb8a656e645
 author: MashaMSFT
 ms.author: mathoma
 manager: erikre
-ms.openlocfilehash: b5e4ba32dd96186a05df55ac57cadb31fa522ebe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f97f9814192077dfbe8d361c34b3cf7424f19920
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62510328"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264689"
 ---
 # <a name="configure-a-listener-for-an-always-on-availability-group"></a>Configurer un écouteur Always On pour un groupe de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -240,7 +240,7 @@ ms.locfileid: "62510328"
   
 -   Si vous disposez d'une autorisation vous permettant de manipuler les ressources du cluster, l'approche privilégiée consiste à définir le nom du réseau de votre écouteur de groupe de disponibilité en tant que `RegisterAllProvidersIP=0`. Pour plus d’informations, consultez « Paramètre RegisterAllProvidersIP » plus loin dans cette section.  
   
-     **Avantages** : vous n'avez pas besoin d’augmenter la valeur du délai de connexion du client.  
+     **Avantages** : vous n’avez pas besoin d’augmenter la valeur du délai de connexion du client.  
   
      **Inconvénients :** en cas de basculement entre sous-réseaux, la durée de récupération du client peut être de 15 minutes ou plus, en fonction de votre paramètre **HostRecordTTL** et du paramètre de votre planification de la réplication DNS/AD intersites.  
   
@@ -276,7 +276,7 @@ ms.locfileid: "62510328"
 ```  
 Import-Module FailoverClusters  
 Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProvidersIP 0   
-Get-ClusterResource yourListenerName|Set-ClusterParameter HostRecordTTL 300  
+Get-ClusterResource yourListenerName | Set-ClusterParameter HostRecordTTL 300  
 Stop-ClusterResource yourListenerName  
 Start-ClusterResource yourListenerName  
 ```  

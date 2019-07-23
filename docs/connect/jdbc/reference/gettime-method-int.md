@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6c13dea2-511f-48dc-b3db-2d3b72ccc9de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 454848e471548fbd47e5a0f7985b97546ef87457
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6e0426a89de1e3cf78f1f41e45fc35ba81816362
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979096"
 ---
 # <a name="gettime-method-int"></a>Méthode getTime (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ public java.sql.Time getTime(int index)
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- Un **int** qui indique l’index de paramètre.  
+ **Entier** qui indique l’index du paramètre.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet de temps.  
+ Objet d’heure.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -49,7 +48,7 @@ public java.sql.Time getTime(int index)
 ## <a name="remarks"></a>Notes  
  Cette méthode getTime est spécifiée par la méthode getTime de l’interface java.sql.CallableStatement.  
   
- Consultez le graphique intitulé « Conversions de méthode d’accesseur get » dans [Conversions de types de données de présentation](../../../connect/jdbc/understanding-data-type-conversions.md) pour voir quelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les types de données peuvent être récupérés avec cette méthode.  
+ Consultez le graphique intitulé «conversions de méthode Getter» pour [comprendre](../../../connect/jdbc/understanding-data-type-conversions.md) les conversions de types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour voir quels types de données peuvent être récupérés avec cette méthode.  
   
 ## <a name="see-also"></a>Voir aussi  
  [getTime, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

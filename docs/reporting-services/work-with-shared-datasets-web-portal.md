@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 85d63fa9515552f2c2acc5851f36e38f52017dda
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e034b911ec5817ac82214466fdc2bf7087e8865a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539105"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68222710"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>Utilisation de datasets partagés (portail web)
 
@@ -52,7 +52,7 @@ Procédez comme suit pour gérer un dataset existant.
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   
-2.  Sélectionnez **Gérer**. L’écran de modification s’affiche alors.  
+2.  Sélectionnez **Gérer** . L’écran de modification s’affiche alors.  
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
@@ -68,11 +68,11 @@ Vous disposez de différentes options de mise en cache des données d’un datas
   
 1.  **Toujours exécuter ce rapport avec les données les plus récentes** interroge la source de données en cas de requête.  
   
-2.  **Mettre en cache des copies de ce rapport et les utiliser en cas de disponibilité** place une copie temporaire des données dans un cache pour une utilisation avec les éléments qui utilisent ce dataset. La mise en cache améliore habituellement les performances, car les données sont retournées à partir du cache ; la requête de dataset n'est pas réexécutée.  
+2.  **Mettre en cache des copies de ce rapport et les utiliser en cas de disponibilité** place une copie temporaire des données dans un cache pour une utilisation avec les éléments qui utilisent ce dataset. La mise en cache améliore habituellement les performances, car les données sont retournées à partir du cache ; la requête de dataset n'est pas réexécutée.  
   
 ![ssRSDataset-Caching1](../reporting-services/media/ssrsdataset-caching1.png)  
   
-Vous disposerez d’options supplémentaires en sélectionnant **Mettre en cache des copies de ce rapport et les utiliser en cas de disponibilité**.  
+Vous disposerez d’options supplémentaires en sélectionnant **Mettre en cache des copies de ce rapport et les utiliser en cas de disponibilité** .  
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   

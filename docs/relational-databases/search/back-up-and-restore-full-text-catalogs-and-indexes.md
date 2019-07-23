@@ -16,13 +16,12 @@ ms.assetid: 6a4080d9-e43f-4b7b-a1da-bebf654c1194
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: e9b4477827dc782c99b8017bcf56d35a471b1577
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 51ab502a0b4aa1c0740a41fee15bee098bddfd5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024435"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Sauvegarder et restaurer des catalogues et des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ GO
 -   [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md)   
  [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md)  
   

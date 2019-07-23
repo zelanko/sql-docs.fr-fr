@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 707d33dd-644e-4cc9-ac51-dddd49031530
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fe7dcd06dc103762e8a8258fd0e90fa06b4ff330
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: de88753aaa2968824e155ce58d3017463611e634
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110998"
 ---
 # <a name="mssqleng003165"></a>MSSQL_ENG003165
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "47602867"
   
      Reconfigurez la réplication si nécessaire. Si la topologie de réplication a fait l'objet d'un script comme il a été recommandé, utilisez des scripts pour reconfigurer la topologie.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Sauvegarder et restaurer des bases de données répliquées](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  

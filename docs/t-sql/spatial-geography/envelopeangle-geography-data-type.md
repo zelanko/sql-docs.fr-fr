@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 8d45a98495ab04b2c9ef106b2a432325b294f425
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3289956dd79c852eef6534ad1f72623ad4dcaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066461"
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ EnvelopeAngle( )
   
  Type de retour CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode retourne un point de l’instance **geography** en degrés. En cas d’utilisation avec EnvelopeCenter(), `EnvelopeAngle()` retourne un cercle englobant d’une instance **geography**.  
   
  Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cette méthode a été étendue aux instances **FullGlobe**.  
@@ -58,7 +57,7 @@ DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)';
 SELECT @g.EnvelopeAngle();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes étendues sur des instances Geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [EnvelopeCenter &#40;type de données geography&#41;](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   

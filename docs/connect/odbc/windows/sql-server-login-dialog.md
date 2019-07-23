@@ -1,5 +1,5 @@
 ---
-title: Boîte de dialogue de connexion SQL Server (ODBC) | Microsoft Docs
+title: Boîte de dialogue SQL Server la connexion (ODBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/21/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: jroth
-ms.openlocfilehash: 2d7cf1f31ce5cf42b9c2e4c7b72938b8def2ed4f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fcfde122b978fa1e77baa690a1f3e09417dab1c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989421"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Compte de connexion SQL Server, boîte de dialogue (ODBC)
 
@@ -26,7 +25,7 @@ Lorsque vous appelez une connexion ODBC sans spécifier suffisamment d’informa
 
 ### <a name="server"></a>Serveur
 
-Le nom d’une instance de SQL Server sur votre réseau. Tapez le nom serveur\instance dans la zone **Serveur**, ou sélectionnez-en un dans la liste. Vous pouvez si vous le souhaitez créer un alias de serveur sur l’ordinateur client avec le **Gestionnaire de configuration SQL Server** et taper ce nom dans la zone **Serveur**.
+Nom d’une instance de SQL Server sur votre réseau. Tapez le nom serveur\instance dans la zone **Serveur**, ou sélectionnez-en un dans la liste. Vous pouvez si vous le souhaitez créer un alias de serveur sur l’ordinateur client avec le **Gestionnaire de configuration SQL Server** et taper ce nom dans la zone **Serveur**.
 
 Vous pouvez entrer "(local)" lorsque vous utilisez le même ordinateur que SQL Server. Vous pouvez alors vous connecter à une instance locale de SQL Server, même s’il s’agit d’une version de SQL Server qui n’est pas en réseau.
 
@@ -34,14 +33,14 @@ Pour plus d’informations sur les noms de serveurs de différents types de rés
 
 ### <a name="authentication-mode"></a>Mode d'authentification
 
-Sélectionne le mode d’authentification à partir d’une des opérations suivantes :
-- **SQL Server** avec l’ID de connexion et mot de passe
-- **Windows intégrée** authentification à l’aide d’actuellement connecté en compte de l’utilisateur
-- **Mot de passe Active Directory** avec l’ID de connexion et mot de passe
-- **Intégrée à Active Directory** authentification à l’aide d’actuellement connecté en compte de l’utilisateur
+Sélectionne le mode d’authentification parmi les éléments suivants:
+- **SQL Server** avec l’ID de connexion et le mot de passe
+- Authentification **intégrée de Windows** à l’aide du compte d’utilisateur actuellement connecté
+- **Active Directory mot de passe** avec l’ID de connexion et le mot de passe
+- **Active Directory** l’authentification intégrée à l’aide du compte de l’utilisateur actuellement connecté
 - Authentification **interactive Active Directory** avec ID de connexion
 
-Consultez [Data Source Assistant écran 2](../../../connect/odbc/windows/dsn-wizard-2.md) pour plus d’informations sur les modes d’authentification.
+Pour plus d’informations sur les modes d’authentification, consultez [Assistant source de données-écran 2](../../../connect/odbc/windows/dsn-wizard-2.md) .
 
 ### <a name="server-spn"></a>SPN du serveur
 
@@ -49,11 +48,11 @@ Si vous utilisez une connexion approuvée, vous pouvez spécifier un nom de prin
 
 ### <a name="login-id"></a>Nom d'accès
 
-Spécifie l’ID de connexion SQL Server ou Azure Active Directory à utiliser pour la connexion si **Mode d’authentification** a la valeur **SQL Server** ou **mot de passe Active Directory** ou **Active Directory Interactive**. Sinon, le **ID de connexion** zone est désactivée.
+Spécifie l’ID de connexion SQL Server ou Azure Active Directory à utiliser pour la connexion si le **mode d’authentification** est défini sur **SQL Server** ou **Active Directory mot de passe** ou **Active Directory interactif**. Dans le cas contraire, la zone **ID de connexion** est désactivée.
 
 ### <a name="password"></a>Mot de passe
 
-Spécifie le mot de passe pour l’ID de connexion SQL Server ou Azure Active Directory est utilisé pour la connexion si **Mode d’authentification** a la valeur **SQL Server** ou **Directory mot de passe Active**. Sinon, le **mot de passe** zone est désactivée.
+Spécifie le mot de passe de la SQL Server ou Azure Active Directory ID de connexion utilisé pour la connexion si le **mode d’authentification** est défini sur **SQL Server** ou **Active Directory mot de passe**. Dans le cas contraire, la zone **de mot de passe** est désactivée.
 
 ### <a name="options"></a>Options
 
@@ -97,11 +96,11 @@ Spécifie la langue nationale à utiliser pour les messages système SQL Server.
 
 ### <a name="use-strong-encryption-for-data"></a>Utiliser le chiffrement renforcé pour les données
 
-Lorsque sélectionné, les données qui sont transmises via la connexion seront chiffrées. Les noms de connexion sont chiffrés par défaut, même si la case à cocher est désactivée.
+Lorsque cette option est sélectionnée, les données transmises via la connexion sont chiffrées. Les noms de connexion sont chiffrés par défaut, même si la case à cocher est désactivée.
 
 ### <a name="trust-server-certificate"></a>Faire confiance au certificat de serveur
 
-Cette option est applicable uniquement lorsque **utiliser un chiffrement renforcé pour les données** est activé. Quand sélectionné, il est possible que le certificat du serveur n’est pas validé pour avoir le nom d’hôte correct du serveur et être émis par une autorité de certification approuvée.
+Cette option s’applique uniquement lorsque l’option **utiliser un chiffrement renforcé pour les données** est activée. Lorsque cette option est sélectionnée, le certificat du serveur n’est pas validé pour avoir le nom d’hôte correct du serveur et doit être émis par une autorité de certification approuvée.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,5 +1,5 @@
 ---
-title: GetString, méthode (int) | Microsoft Docs
+title: getString, méthode (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f3fce8bf-8d6e-476f-aa6d-992daa79b899
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 92257f0941b34ffdf108b10debad55ce7532b98d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2160e7214b3ad60d2c8629d55bd79de8a5b15905
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979494"
 ---
 # <a name="getstring-method-int"></a>Méthode getString (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public java.lang.String getString(int index)
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- Un **int** qui indique l’index de paramètre.  
+ **Entier** qui indique l’index du paramètre.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Valeur de **chaîne**.  

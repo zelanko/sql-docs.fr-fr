@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: cf9e1aec04b5a91b097c8bc533290473c4197b3d
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: d75739e2a8594bbd049a7d9b1c2a6908b1c0e29c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102199"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ DBCC CHECKCATALOG
  WITH NO_INFOMSGS  
  Supprime tous les messages d'information.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Une fois la commande DBCC CATALOG terminée, un message est enregistré dans le journal des erreurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si la commande DBCC est correctement exécutée, le message indique que l'exécution a réussi, ainsi que la durée d'exécution de la commande. Si la commande DBCC est interrompue avant la fin de la vérification en raison d’une erreur, le message indique que la commande n’a pas abouti et précise une valeur d’état ainsi que la durée d’exécution de la commande. Le tableau suivant répertorie et décrit les valeurs d'état pouvant être incluses dans le message.
   
 |État|Description|  
@@ -93,7 +92,7 @@ Si [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] est spéc
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance au rôle serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner**.  
   
 ## <a name="examples"></a>Exemples  
@@ -108,7 +107,7 @@ DBCC CHECKCATALOG (AdventureWorks2012);
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Tables système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)
   

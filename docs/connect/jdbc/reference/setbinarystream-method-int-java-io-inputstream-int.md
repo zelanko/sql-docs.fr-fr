@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fd6be063-08eb-40cf-9201-5a9f62387726
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5b68714f1fe78a356556bc2a8f379eab60003c57
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0265f06d589ea89b38f995f8a9616fd22bcf92ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975276"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-int"></a>Méthode setBinaryStream (int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,21 +39,21 @@ public final void setBinaryStream(int n,
 #### <a name="parameters"></a>Paramètres  
  *n*  
   
- Un **int** qui indique le numéro de paramètre.  
+ **Entier** qui indique le numéro du paramètre.  
   
  *x*  
   
- Un objet InputStream.  
+ Objet InputStream.  
   
  *length*  
   
- Un **int** qui indique le nombre d’octets.  
+ **Entier** qui indique le nombre d’octets.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setBinaryStream est spécifiée par la méthode setBinaryStream dans l’interface java.sql.PreparedStatement.  
+ Cette méthode setBinaryStream est spécifiée par la méthode setBinaryStream dans l’interface java. Sql. PreparedStatement.  
   
  Si la longueur du flux diffère de ce qui est spécifié dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   

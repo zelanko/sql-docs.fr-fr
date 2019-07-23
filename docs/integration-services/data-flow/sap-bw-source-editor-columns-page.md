@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c2ec8bb7-be9b-4783-ad88-32512de784b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c68ab7fd6392d8740c03ab891a587859dec2c000
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caf9e1724d72113ed67421f516ac9fdcd298e936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034092"
 ---
 # <a name="sap-bw-source-editor-columns-page"></a>Éditeur de source SAP BW (page Colonnes)
 
@@ -61,7 +60,7 @@ ms.locfileid: "65726431"
  **Colonne de sortie**  
  Spécifiez un nom unique pour chaque colonne de sortie. La valeur par défaut correspond au nom de la colonne externe (source) sélectionnée. Toutefois, vous pouvez entrer un nom descriptif unique. [!INCLUDE[ssIS](../../includes/ssis-md.md)] affiche les noms **Colonne de sortie** pour les colonnes lorsque vous configurez les composants en aval qui consomment des données de cette source.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Éditeur de source SAP BW &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/sap-bw-source-editor-connection-manager-page.md)   
  [Éditeur de source SAP BW &#40;page Sortie d’erreur&#41;](../../integration-services/data-flow/sap-bw-source-editor-error-output-page.md)   
  [Éditeur de source SAP BW &#40;page Avancé&#41;](../../integration-services/data-flow/sap-bw-source-editor-advanced-page.md)   

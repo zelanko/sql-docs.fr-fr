@@ -1,5 +1,5 @@
 ---
-title: À l’aide de la Classification des données avec Microsoft ODBC Driver pour SQL Server | Microsoft Docs
+title: Utilisation de la classification des données avec Microsoft ODBC Driver for SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 07/26/2018
 ms.prod: sql
@@ -13,25 +13,25 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: 0d010bcfc74011cb0e7e2864aeff97e65bf16203
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75688cc1e5155c83501204f1634d320b9ae7d8be
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637442"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264002"
 ---
 # <a name="data-classification"></a>Classification des données
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
 
 ## <a name="overview"></a>Vue d’ensemble
-Pour les besoins de la gestion des données sensibles, SQL Server et Azure SQL Server a introduit la possibilité de fournir des colonnes de la base de données avec des métadonnées de sensibilité qui permet à l’application cliente pour gérer différents types de données sensibles (telles que le contrôle d’intégrité, financière, etc. ) conformément aux stratégies de protection des données.
+Dans le cadre de la gestion des données sensibles, SQL Server et Azure SQL Server ont introduit la possibilité de fournir des colonnes de base de données avec des métadonnées de sensibilité permettant à l’application cliente de gérer différents types de données sensibles (telles que l’intégrité, la finance, etc.). ) conformément aux stratégies de protection des données.
 
-Pour plus d’informations sur la façon d’affecter la classification à des colonnes, consultez [découverte de données SQL et la Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
+Pour plus d’informations sur la façon d’attribuer une classification aux colonnes, consultez [découverte et classification des données SQL](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification?view=sql-server-2017).
 
-Microsoft ODBC Driver 17.2 permet la récupération de ces métadonnées via SQLGetDescField à l’aide de l’identificateur de champ SQL_CA_SS_DATA_CLASSIFICATION.
+Le pilote Microsoft ODBC 17,2 permet la récupération de ces métadonnées via SQLGetDescField à l’aide de l’identificateur de champ SQL_CA_SS_DATA_CLASSIFICATION.
 
 ## <a name="format"></a>Format
-SQLGetDescField présente la syntaxe suivante :
+SQLGetDescField a la syntaxe suivante:
 
 ```  
 SQLRETURN SQLGetDescField(  
@@ -43,7 +43,7 @@ SQLRETURN SQLGetDescField(
      SQLINTEGER *    StringLengthPtr);  
 ```
 *DescriptorHandle*  
- [Entrée] Handle IRD (descripteur de ligne d’implémentation). Peut être récupéré par un appel à SQLGetStmtAttr avec l’attribut d’instruction SQL_ATTR_IMP_ROW_DESC
+ Entrée Handle du descripteur de ligne d’implémentation (IRD). Peut être récupéré par un appel à SQLGetStmtAttr avec l’attribut d’instruction SQL_ATTR_IMP_ROW_DESC
   
  *RecNumber*  
  [Entrée] 0
@@ -52,44 +52,44 @@ SQLRETURN SQLGetDescField(
  [Entrée] SQL_CA_SS_DATA_CLASSIFICATION
   
  *ValuePtr*  
- [Sortie] Mémoire tampon de sortie
+ Sortie Mémoire tampon de sortie
   
  *BufferLength*  
- [Entrée] Longueur de la mémoire tampon de sortie en octets
+ Entrée Longueur de la mémoire tampon de sortie en octets
 
- *StringLengthPtr* pointeur [sortie] vers la mémoire tampon dans lequel retourner le nombre total d’octets à retourner dans *ValuePtr*.
+ *StringLengthPtr* Sortie Pointeur vers la mémoire tampon dans laquelle retourner le nombre total d’octets disponibles à retourner dans *ValuePtr*.
  
 > [!NOTE]
-> Si la taille de la mémoire tampon est inconnue, il peut être déterminé en appelant SQLGetDescField avec *ValuePtr* en tant que valeur NULL et en examinant la valeur de *StringLengthPtr*.
+> Si la taille de la mémoire tampon est inconnue, elle peut être déterminée en appelant SQLGetDescField avec *ValuePtr* comme null et en examinant la valeur de *StringLengthPtr*.
  
-Si les informations de Classification des données ne sont pas disponibles, un *champ de descripteur non valide* erreur est renvoyée.
+Si les informations de classification des données ne sont pas disponibles, une erreur de champ de descripteur *non valide* est retournée.
 
-Lors d’un appel réussi à SQLGetDescField, la mémoire tampon vers laquelle pointe *ValuePtr* contiendra les données suivantes :
+Lors d’un appel réussi à SQLGetDescField, la mémoire tampon vers laquelle pointe *ValuePtr* contient les données suivantes:
 
  `nn nn [n sensitivitylabels] tt tt [t informationtypes] cc cc [c columnsensitivitys]`
 
 > [!NOTE]
-> `nn nn`, `tt tt`, et `cc cc` sont des entiers multioctets, qui sont stockées avec l’octet le moins significatif à l’adresse la plus basse.
+> `nn nn`, `tt tt` et`cc cc` sont des entiers multioctets, qui sont stockés avec l’octet le moins significatif à l’adresse la plus basse.
 
-*`sensitivitylabel`* et *`informationtype`* sont tous deux du formulaire
+*`sensitivitylabel`* et *`informationtype`* sont tous deux de la forme
 
  `nn [n bytes name] ii [i bytes id]`
 
-*`columnsensitivity`* est au format
+*`columnsensitivity`* est de la forme
 
  `nn nn [n sensitivityprops]`
 
-Pour chaque colonne *(c)* , *n* 4 octets *`sensitivityprops`* sont présents :
+Pour chaque colonne *(c)* , *n* 4 octets *`sensitivityprops`* sont présents:
 
  `ss ss tt tt`
 
-s - index dans le *`sensitivitylabels`* tableau, `FF FF` si ne pas d’étiquette
+s-index dans le *`sensitivitylabels`* tableau, `FF FF` s’il n’est pas étiqueté
 
-t - l’index dans le *`informationtypes`* tableau, `FF FF` si ne pas d’étiquette
+index t dans le tableau *`informationtypes`* , `FF FF` s’il n’est pas étiqueté
 
 
 <br><br>
-Le format des données peut être exprimé en tant que les structures de pseudo suivants :
+Le format des données peut être exprimé sous la forme des Pseudo-structures suivantes:
 
 ```
 struct IDnamePair {
@@ -117,7 +117,7 @@ struct {
 
 
 ## <a name="code-sample"></a>Exemple de code
-Tester l’application qui illustre comment lire les métadonnées de Classification des données. Sur Windows il peut être compilé à l’aide de `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` et exécuter avec une chaîne de connexion et une requête SQL (que retourne colonnes classifiées) en tant que paramètres :
+Application de test qui montre comment lire les métadonnées de classification des données. Sur Windows, il peut être compilé `cl /MD dataclassification.c /I (directory of msodbcsql.h) /link odbc32.lib` à l’aide de et exécuté avec une chaîne de connexion, et une requête SQL (qui retourne des colonnes classifiées) en tant que paramètres:
 
 ```
 #ifdef _WIN32

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c8c29543-d1f6-49d5-b6c8-e8c3aa373090
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dd28038ac1230ecd584c0cacefe751e006a9f8a4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a5a366cceef67bc92465bc9a8645b4c862ac7d1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091974"
 ---
 # <a name="mssqleng021075"></a>MSSQL_ENG021075
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "54132809"
   
  Si l'erreur continue de se produire, augmentez le facteur de journalisation de l'agent et spécifiez un fichier de sortie pour le journal. En fonction du contexte de l'erreur, cette action peut fournir des pistes conduisant à l'erreur et/ou à d'autres messages d'erreur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)  
   
   
