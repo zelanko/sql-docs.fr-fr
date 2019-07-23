@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58ba90d2f94c08160ec5ad5382ca31a9c5dc7c44
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 28de1be430d02a9288b0a1fe27567965fb0a32e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140888"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>Langage de modification de données XML (XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +44,9 @@ ms.locfileid: "56013940"
   
 -   Utilisez la [méthode modify()](../../t-sql/xml/modify-method-xml-data-type.md) du type de données **xml**.  
   
--   Spécifiez les instructions DML XML appropriées dans la méthode **modify()**.  
+-   Spécifiez les instructions DML XML appropriées dans la méthode **modify()** .  
   
- Notez que certains attributs ne peuvent pas être insérés ou supprimés, et que leur valeur ne peut pas être modifiée. Exemple :  
+ Notez que certains attributs ne peuvent pas être insérés ou supprimés, et que leur valeur ne peut pas être modifiée. Par exemple :  
   
 -   Pour le **xml** typé et non typé, les attributs sont **xmlns**, **xmlns:\*** et **xml:base**.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "56013940"
   
  Lorsque vous modifiez une instance XML typée, le format final doit être une instance valide de ce type. Dans le cas contraire, une erreur de validation est retournée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [insert &#40;DML XML&#41;](../../t-sql/xml/insert-xml-dml.md)   
  [delete &#40;DML XML&#41;](../../t-sql/xml/delete-xml-dml.md)   
  [replace value of &#40;DML XML&#41;](../../t-sql/xml/replace-value-of-xml-dml.md)   

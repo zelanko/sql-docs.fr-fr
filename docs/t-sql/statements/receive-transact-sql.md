@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c835ea8b1610256f41ee9d0d0787e84b7afcda3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe629bc5d165489f733d0250b0f60bea8a3a677a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141276"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ ms.locfileid: "65503671"
  TIMEOUT *timeout*  
  Indique le temps, en millisecondes, pendant lequel l'instruction attend un message. Cette clause ne peut être utilisée qu'avec la clause WAITFOR. Si cette clause n’est pas spécifiée ou si le délai d’expiration a la valeur -**1**, le délai d’attente est illimité. Si le délai expire, l'instruction RECEIVE retourne un jeu de résultats vide.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 > [!IMPORTANT]  
 >  Si l'instruction RECEIVE n'est pas la première instruction dans un lot ou une procédure stockée, l'instruction précédente doit se terminer par un point-virgule (;).  
@@ -328,7 +327,7 @@ WAITFOR(
 ), TIMEOUT 60000 ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [BEGIN DIALOG CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/begin-dialog-conversation-transact-sql.md)   
  [BEGIN CONVERSATION TIMER &#40;Transact-SQL&#41;](../../t-sql/statements/begin-conversation-timer-transact-sql.md)   
  [END CONVERSATION &#40;Transact-SQL&#41;](../../t-sql/statements/end-conversation-transact-sql.md)   

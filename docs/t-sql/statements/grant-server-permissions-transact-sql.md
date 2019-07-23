@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 352cbbbbb0ea3e67d8025e36bc4e90d7571aa893
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050791"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT – octroi d'autorisations de serveur (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ GRANT permission [ ,...n ]
  *server_role*  
  Spécifie un rôle de serveur défini par l'utilisateur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les autorisations dans l'étendue du serveur peuvent être accordées seulement lorsque la base de données en cours est master.  
   
  Les informations sur les autorisations de serveur peuvent être consultées dans la vue de catalogue [sys.server_permissions](../../relational-databases/system-catalog-views/sys-server-permissions-transact-sql.md), tandis que les informations sur les principaux de serveur peuvent être consultées dans la vue de catalogue [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). Des informations sur l’appartenance des rôles de serveur peuvent être consultées dans la vue de catalogue [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md).  
@@ -128,7 +127,7 @@ GRANT permission [ ,...n ]
 |VIEW ANY DEFINITION|CONTROL SERVER|  
 |VIEW SERVER STATE|ALTER SERVER STATE|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les trois autorisations de serveur suivantes ont été ajoutées dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
  Autorisation **CONNECT ANY DATABASE**  
@@ -140,7 +139,7 @@ GRANT permission [ ,...n ]
  Autorisation **SELECT ALL USER SECURABLES**  
  Lorsque cette autorisation est accordée, une connexion telle qu'un auditeur peut afficher les données de toutes les bases de données auxquelles l'utilisateur se connecte. Quand cette autorisation est refusée, elle empêche l’accès aux objets sauf s’ils se trouvent dans le schéma **sys**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée. Les membres du rôle serveur fixe sysadmin peuvent accorder toutes les autorisations.  
   
 ## <a name="examples"></a>Exemples  
@@ -154,7 +153,7 @@ GRANT CONTROL SERVER TO TerryEminhizer;
 GO  
 ```  
   
-### <a name="b-granting-a-permission-that-has-grant-permission"></a>b. Octroi d'une autorisation qui possède l'autorisation GRANT  
+### <a name="b-granting-a-permission-that-has-grant-permission"></a>B. Octroi d'une autorisation qui possède l'autorisation GRANT  
  Dans l'exemple suivant, l'autorisation `ALTER ANY EVENT NOTIFICATION` est accordée à la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `JanethEsteves` avec le droit d'accorder cette autorisation à une autre connexion.  
   
 ```  
@@ -175,7 +174,7 @@ GRANT ALTER ANY DATABASE TO ITDevelopers AS ITDevAdmin ;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [DENY - Refuser des autorisations sur un serveur &#40;Transact-SQL&#41;](../../t-sql/statements/deny-server-permissions-transact-sql.md)   

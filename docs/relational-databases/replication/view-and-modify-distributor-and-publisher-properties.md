@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 43830b86ef02a0d9d3edf2db3ee8ebde129963c0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5d654627a3e35aacfebe4b3c69573eff83beaa39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115232"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Afficher et modifier les propriétés d'un serveur de distribution ou d'un serveur de publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,11 +59,11 @@ ms.locfileid: "54133389"
   
 2.  Cliquez avec le bouton droit sur le dossier **Réplication** , puis cliquez sur **Propriétés du serveur de distribution**.  
   
-3.  Affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>**.  
+3.  Affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de distribution - \<serveur_distribution>** .  
   
-    -   Pour afficher et modifier les propriétés d’une base de données de distribution, cliquez sur le bouton des propriétés (**...**) pour la base de données dans la page **Général** de la boîte de dialogue.  
+    -   Pour afficher et modifier les propriétés d’une base de données de distribution, cliquez sur le bouton des propriétés ( **...** ) pour la base de données dans la page **Général** de la boîte de dialogue.  
   
-    -   Pour afficher et modifier les propriétés du serveur de publication associées au serveur de distribution, cliquez sur le bouton des propriétés (**...**) pour le serveur de publication sur la page **Serveurs de publication** de la boîte de dialogue.  
+    -   Pour afficher et modifier les propriétés du serveur de publication associées au serveur de distribution, cliquez sur le bouton des propriétés ( **...** ) pour le serveur de publication sur la page **Serveurs de publication** de la boîte de dialogue.  
   
     -   Pour accéder aux profils des agents de réplication, cliquez sur le bouton **Profils par défaut** sur la page **Général** de la boîte de dialogue. Pour plus d'informations, voir [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   
@@ -78,7 +77,7 @@ ms.locfileid: "54133389"
   
 2.  Cliquez avec le bouton droit sur le dossier **Réplication** , puis cliquez sur **Propriétés du serveur de publication**.  
   
-3.  Affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de publication - <serveur_publication>**.  
+3.  Affichez et modifiez les propriétés dans la boîte de dialogue **Propriétés du serveur de publication - <serveur_publication>** .  
   
     -   Un utilisateur du rôle serveur fixe **sysadmin** peut activer des bases de données pour la réplication sur la page **Bases de données de publication** . L'activation d'une base de données ne publie pas cette dernière, elle permet plutôt à n'importe quel utilisateur du rôle de base de données fixe **db_owner** de cette base de données de créer une ou plusieurs publications dans la base de données.  
   
@@ -199,7 +198,7 @@ ms.locfileid: "54133389"
   
  [!code-vb[HowTo#rmo_vb_ChangeDistPub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changedistpub)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepts liés à RMO (Replication Management Objects)](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Désactiver la publication et la distribution](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)   

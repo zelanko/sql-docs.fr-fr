@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 153d7027f0c87cf81a5958e4aaf930932fa9b5d1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 66830b3000d749ab17a5800c3450c5880c5d1aba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076446"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
  WITH NORESET  
  Spécifie que les instructions SETUSER suivantes (sans *username* spécifié) ne doivent pas réinitialiser l’identité de l’utilisateur avec l’administrateur système ou le propriétaire de la base de données.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L’instruction SETUSER peut être utilisée par un membre du rôle serveur fixe **sysadmin** ou le propriétaire de la base de données pour tester les autorisations d’un autre utilisateur en adoptant l’identité de ce dernier. L’appartenance au rôle de base de données fixe db_owner ne suffit pas.  
   
  Utilisez SETUSER uniquement avec des utilisateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. SETUSER n'est pas prise en charge avec les utilisateurs Windows. Lorsque l'instruction SETUSER est exécutée pour représenter un autre utilisateur, tout objet créé par l'utilisateur qui emprunte l'identité est la propriété de l'utilisateur représenté. Par exemple, si le propriétaire de la base de données utilise l’identité de l’utilisateur **Margaret** et crée une table appelée **orders**, la table **orders** est la propriété de **Margaret**, et non celle de l’administrateur système.  
@@ -62,7 +61,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 > [!NOTE]  
 >  Si l'instruction SETUSER WITH NORESET est exécutée, le propriétaire de la base de données ou l'administrateur système doit rétablir ses propres droits en se déconnectant, puis en se connectant de nouveau.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance au rôle serveur fixe **sysadmin** ou doit être le propriétaire de la base de données. L’appartenance au rôle de base de données fixe **db_owner** ne suffit pas.  
   
 ## <a name="examples"></a>Exemples  
@@ -77,7 +76,7 @@ GO
 SETUSER;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   

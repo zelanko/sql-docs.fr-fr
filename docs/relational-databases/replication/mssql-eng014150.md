@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c3dd3109-abf3-4b38-a4e9-ef48d0235656
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 78a147080f33cb78b4a752d362d6f62c6123cdf9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d41e532936b29d7824c27da57653bafe0a304408
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100189"
 ---
 # <a name="mssqleng014150"></a>MSSQL_ENG014150
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47674357"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nom symbolique||  
-|Texte du message|Réplication-%s : réussite de l'agent %s. %s|  
+|Texte du message|Réplication-%s : réussite de l'agent %s. %s|  
   
 ## <a name="explanation"></a>Explication  
  Ce message indique qu'un agent de réplication s'est correctement exécuté. La réplication utilise les agents suivants :  
@@ -52,13 +51,13 @@ ms.locfileid: "47674357"
 ## <a name="user-action"></a>Action de l'utilisateur  
  L'Agent de lecture du journal, l'Agent de lecture de la file d'attente et l'Agent de distribution s'exécutent généralement en continu, tandis que les autres agents s'exécutent généralement à la demande ou selon un calendrier. Si vous ne pensez pas qu'un agent doit avoir terminé son exécution, vérifiez son état. Pour plus d’informations, voir [Monitor Replication Agents](../../relational-databases/replication/monitor/monitor-replication-agents.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Administration de l’Agent de réplication](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Agent de distribution de réplication](../../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Agent de lecture du journal de réplication](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Agent de fusion de réplication](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [Agent de lecture de la file d’attente de réplication](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Agent d'instantané de réplication](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

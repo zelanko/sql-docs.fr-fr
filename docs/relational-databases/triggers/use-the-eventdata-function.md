@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 675b8320-9c73-4526-bd2f-91ba42c1b604
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 06c73cfa612b5348659fec9c8a2022b11ddc5936
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: aef51bd94bf7cffb3e9481b409477a3830fabffb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058602"
 ---
 # <a name="use-the-eventdata-function"></a>Utiliser la fonction EVENTDATA
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ ALTER TABLE Person.Address ALTER COLUMN ModifiedDate date;
   
  L’instruction EVENTDATA() du déclencheur DDL capture le texte de l’instruction `ALTER TABLE` qui n’est pas autorisé.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Vous pouvez utiliser la fonction EVENTDATA pour créer un journal des événements. Dans l'exemple suivant, une table est créée pour stocker des informations sur l'événement. Un déclencheur DDL est ensuite créé sur la base de données active qui remplit la table avec les informations ci-dessous, chaque fois qu'un événement DDL se produit au niveau de la base de données :  
   
 -   l'heure de l'événement (avec la fonction GETDATE) ;  
@@ -131,7 +130,7 @@ GO
   
  L'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] fournit un exemple similaire de déclencheur DDL. Pour trouver cet exemple, accédez au dossier des déclencheurs de base de données à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ce dossier se trouve dans le dossier **Programmabilité** de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Cliquez avec le bouton droit sur **ddlDatabaseTriggerLog** et sélectionnez **Générer un script du déclencheur de la base de données en tant que**. Par défaut, le déclencheur DDL **ddlDatabaseTriggerLog** est désactivé.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements DDL](../../relational-databases/triggers/ddl-events.md)   
  [Groupes d'événements DDL](../../relational-databases/triggers/ddl-event-groups.md)  
   

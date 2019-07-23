@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 301204b2-140d-4495-98ed-021a9b5025f5
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: dcbf57bfed8a22c957487f82f4f4d0b2086cce89
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 31cf75a57bff14e463864611bc8088e16a0ec998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035518"
 ---
 # <a name="performance-center-for-sql-server-database-engine-and-azure-sql-database"></a>Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ ms.locfileid: "57579502"
 |![security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[OLTP en mémoire &#40;Optimisation en mémoire&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)**|[Tables optimisées en mémoire](../../relational-databases/in-memory-oltp/memory-optimized-tables.md)<br />[Procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md)<br />[Création de tables et accès dans TempDB à partir de procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md)<br />[Résoudre les problèmes de performance courants avec les index de hachage à mémoire optimisée](https://msdn.microsoft.com/library/1954a997-7585-4713-81fd-76d429b8d095)<br />[Démonstration : optimisation des performances de l’OLTP en mémoire](../../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md)|
 |![Security-center-both](../../relational-databases/performance/media/security-center-both.png "security-center-both")  **[Traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md)**|[Traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md)|
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surveiller et régler les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)   
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [Conseils sur les performances d’Azure SQL Database pour les bases de données uniques](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)   

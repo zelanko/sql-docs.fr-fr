@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 22fc66d9f579305a4160b2de0ee6ad047e560ea3
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: b4b322231f546871d5581de470fdc894ed4fe41e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099256"
 ---
 # <a name="delete-a-workload-group"></a>Supprimer un groupe de charge de travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "55689842"
   
 -   Redémarrez le serveur. Au terme du processus de redémarrage, le groupe supprimé ne sera pas créé, et un groupe déplacé utilisera la nouvelle affectation de pool de ressources.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  La suppression d'un groupe de charge de travail nécessite l'autorisation CONTROL SERVER.  
   
 ##  <a name="DelWGObjEx"></a> Supprimer un groupe de charge de travail à l'aide de l'Explorateur d'objets  
@@ -92,7 +91,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Créer un pool de ressources](../../relational-databases/resource-governor/create-a-resource-pool.md)   
  [Créer un groupe de charge de travail](../../relational-databases/resource-governor/create-a-workload-group.md)   

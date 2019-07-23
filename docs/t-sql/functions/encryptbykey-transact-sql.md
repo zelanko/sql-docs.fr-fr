@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0e11f8c5-f79d-46c1-ab11-b68ef05d6787
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e0883513725000588fe53ee31939f331902ba147
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 94f179d9c1b8342e5c1cdfd7fcb62e6673634e7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135854"
 ---
 # <a name="encryptbykey-transact-sql"></a>ENCRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ EncryptByKey ( key_GUID , { 'cleartext' | @cleartext }
  
  Retourne NULL si la valeur *cleartext* est NULL.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  EncryptByKey utilise une clé symétrique. Cette clé doit être ouverte. Si la clé symétrique est déjà ouverte dans la session en cours, il n'est pas nécessaire de l'ouvrir à nouveau dans le contexte de la requête.  
   
  L'authentificateur vous permet d'empêcher la substitution en valeurs entières des champs chiffrés. Par exemple, considérons la table suivante des données de salaires du personnel :  
@@ -145,7 +144,7 @@ SET CardNumber_Encrypted = EncryptByKey(Key_GUID('CreditCards_Key11'),
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DECRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykey-transact-sql.md)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-symmetric-key-transact-sql.md)   
  [ALTER SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-symmetric-key-transact-sql.md)   

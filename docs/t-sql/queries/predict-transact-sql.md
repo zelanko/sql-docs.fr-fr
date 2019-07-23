@@ -16,14 +16,13 @@ helpviewer_keywords:
 - PREDICT clause
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f93217e87bf081ed8f7c551fd4c9e6ccb7807ef
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c50bdedab94a2bd9dd1c6da6556fbd882412fe45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141308"
 ---
 # <a name="predict-transact-sql"></a>PREDICT (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ Les messages d’erreur liés aux données, au modèle ou au format de colonne s
 
 La fonction `PREDICT` ne permet pas d’afficher la structure de modèle interne. Si vous souhaitez comprendre le contenu du modèle lui-même, vous devez charger l’objet modèle, le désérialiser et utiliser le code R approprié pour analyser le modèle.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction `PREDICT` est prise en charge dans toutes les éditions de SQL Server 2017 et des versions ultérieures. Cette prise en charge inclut SQL Server 2017 sous Linux. `PREDICT` est également pris en charge dans Azure SQL Database dans le cloud. Toutes ces prises en charge sont actives, qu’il y ait ou non d’autres fonctionnalités de Machine Learning activées.
 
@@ -101,7 +100,7 @@ Vous n’avez pas besoin d’installer R, Python ou un autre langage d’apprent
 
 Le modèle que vous utilisez doit avoir été créé à l’aide d’un des algorithmes pris en charge fournis dans le package RevoScaleR. Pour obtenir la liste des modèles pris en charge, consultez [Calcul des scores en temps réel](../../advanced-analytics/real-time-scoring.md).
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorisations
 
 Aucune autorisation n’est requise pour `PREDICT`. Cependant, l’utilisateur doit avoir l’autorisation `EXECUTE` sur la base de données, ainsi que l’autorisation d’effectuer des requêtes sur les données utilisées comme entrées. L’utilisateur doit également pouvoir lire le modèle à partir d’une table, si le modèle a été stocké dans une table.
 

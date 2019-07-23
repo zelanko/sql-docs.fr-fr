@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97e6792bcd9ed9ea106e93e65c1c8bbdef70ec88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebe60252bc1f0b950ff2f5b4342c30d99c5bd6c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058543"
 ---
 # <a name="round-transact-sql"></a>ROUND (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,10 +63,10 @@ ROUND ( numeric_expression , length [ ,function ] )
 |Catégorie **money** et **smallmoney**|**money**|  
 |Catégorie **float** et **real**|**float**|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  ROUND retourne toujours une valeur. Si *length* est une valeur négative supérieure au nombre de chiffres placés avant la virgule décimale, ROUND retourne 0.  
   
-| Exemple|Résultats|  
+|Exemple|Résultats|  
 |-------------|------------|  
 |ROUND(748.58, -4)|0|  
   
@@ -135,7 +134,7 @@ GO
 (1 row(s) affected)  
 ```
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CEILING &#40;Transact-SQL&#41;](../../t-sql/functions/ceiling-transact-sql.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

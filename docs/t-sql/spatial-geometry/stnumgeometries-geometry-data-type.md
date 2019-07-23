@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9402b03d-3039-42ca-ac59-f96b7f1a48de
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 99e8dd51d546a7f65771a23fd8748d9d0b17d6fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a0c123b367fa2a85a1a3732200452a474b032c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088925"
 ---
 # <a name="stnumgeometries-geometry-data-type"></a>STNumGeometries (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ Retourne le nombre de géométries qui composent une instance **geometry**.
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode retourne 1 si l’instance **geometry** n’est pas une instance **MultiPoint**, **MultiLineString**, **MultiPolygon** ou **GeometryCollection**, et 0 si l’instance **geometry** est vide.  
   
 > [!NOTE]  
