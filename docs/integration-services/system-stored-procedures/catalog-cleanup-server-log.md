@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0dedb685-d3a6-4bd6-8afd-58d98853deee
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7c03018fefd6b4d09987a67ced7694d8f5e574db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e76309c0bd487591708506e383d6f5528997b9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110453"
 ---
 # <a name="catalogcleanupserverlog"></a>catalog.cleanup_server_log 
 
@@ -58,7 +57,7 @@ catalog.cleanup_server_log
   
 -   La base de données SSISDB n’est pas en mode mono-utilisateur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  SQL Server 2012 Service Pack 2 a ajouté la propriété SERVER_OPERATION_ENCRYPTION_LEVEL à la table **internal.catalog_properties**. Cette propriété a deux valeurs possibles :  
   
 -   **PER_EXECUTION (1)**  : le certificat et la clé symétrique utilisés pour la protection des paramètres d’exécution sensibles et des journaux d’exécution sont créés pour chaque exécution. Vous risquez de rencontrer des problèmes de performances (blocages, échecs de travaux de maintenance, etc.) dans un environnement de production, car les certificats/clés sont générés pour chaque exécution. Toutefois, ce paramètre offre un niveau de sécurité supérieur à l’autre valeur (2).  
@@ -81,7 +80,7 @@ catalog.cleanup_server_log
   
  Pour plus d’informations, consultez l’article suivant de la Base de connaissances : [CORRECTIF : problèmes de performance lorsque SSISDB sert de magasin de déploiement dans SQL Server 2012](https://support.microsoft.com/kb/2972285)  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant appelle la procédure stockée cleanup_server_log.  
   
 ```sql  

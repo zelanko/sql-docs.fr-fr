@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 62eebc19-9f15-4245-94fa-b3fcd64a9d42
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3a6b17b2e157042c41690c3c2cdf6ab92cd84a09
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d811d5d36b88024604d217f440911d0dabad2b14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141133"
 ---
 # <a name="create-aggregate-transact-sql"></a>CREATE AGGREGATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,15 +78,15 @@ EXTERNAL NAME assembly_name [ .class_name ]
  *udt_type_name*  
  Nom d'un type CLR défini par l'utilisateur et déjà créé dans la base de données active. Si le paramètre *udt_schema_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose que le type appartient au schéma de l’utilisateur actuel.  
   
- *assembly_name* [ **.**_class_name_ ]  
+ *assembly_name* [ **.** _class_name_ ]  
  Spécifie l'assembly à lier à la fonction d'agrégation définie par l'utilisateur et, éventuellement, le nom du schéma auquel appartient l'assembly et le nom de la classe d'assembly qui met en œuvre l'agrégation définie par l'utilisateur. L'assembly doit avoir été déjà créé dans la base de données à l'aide de l'instruction CREATE ASSEMBLY. Le paramètre *class_name* doit être un identificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide et doit correspondre au nom d’une classe qui existe dans l’assembly. *class_name* peut être un nom qualifié par l’espace de noms, si le langage de programmation utilisé pour écrire la classe utilise des espaces de noms, comme C#. Si le paramètre *class_name* n’est pas spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suppose qu’il est identique à *aggregate_name*.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Par défaut, la possibilité de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'exécuter du code CLR est désactivée. Vous pouvez créer, modifier et supprimer des objets de base de données qui font référence à des modules de code managé. Cependant, le code de ces modules ne s’exécute pas dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], sauf si l’[option clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) est activée à l’aide de l’argument [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md).  
   
  La classe de l’assembly référencé dans *assembly_name* et ses méthodes doivent répondre à toutes les exigences en matière d’implémentation d’une fonction d’agrégation définie par l’utilisateur dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Agrégats CLR définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-aggregates.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite les autorisations CREATE AGGREGATE et REFERENCES pour l'assembly mentionné dans la clause EXTERNAL NAME.  
   
 ## <a name="examples"></a>Exemples  
@@ -116,7 +115,7 @@ EXTERNAL NAME [StringUtilities].[Microsoft.Samples.SqlServer.Concatenate];
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DROP AGGREGATE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-aggregate-transact-sql.md)  
   
   

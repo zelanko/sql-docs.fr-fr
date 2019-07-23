@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1dc06f65e1c724466154197d156517b2c72827f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: d3eb9e5c5b451854876cf31ae05641f12e8bc722
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006517"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +54,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  AUTHORIZATION *owner_name*  
  Utilisateur ou rôle de base de données qui doit posséder le nouveau rôle. Si aucun utilisateur n'est spécifié, le rôle appartient à l'utilisateur qui exécute CREATE ROLE.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les rôles sont des éléments sécurisables au niveau base de données. Lorsque vous avez créé un rôle, configurez les autorisations au niveau base de données à l'aide des instructions GRANT, DENY et REVOKE. Pour ajouter des membres à un rôle de base de données, utilisez [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md). Pour plus d’informations, consultez [Rôles au niveau de la base de données](../../relational-databases/security/authentication-access/database-level-roles.md).  
   
  Les rôles de base de données sont visibles dans les vues de catalogue sys.database_role_members et sys.database_principals.  
@@ -65,7 +64,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation **CREATE ROLE** sur la base de données ou l’appartenance au rôle de base de données fixe **db_securityadmin**. Quand vous utilisez l’option **AUTHORIZATION**, les autorisations suivantes sont également exigées :  
   
 -   Pour affecter la propriété d'un rôle à un autre utilisateur, l'autorisation IMPERSONATE est requise pour cet utilisateur.  
@@ -85,7 +84,7 @@ CREATE ROLE buyers AUTHORIZATION BenMiller;
 GO  
 ```  
   
-### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>b. Création d'un rôle de base de données possédé par un rôle de base de données fixe  
+### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>B. Création d'un rôle de base de données possédé par un rôle de base de données fixe  
  Le code exemple suivant crée le rôle de base de données `auditors` possédé par le rôle de base de données fixe `db_securityadmin`.  
   
 ```  
@@ -93,7 +92,7 @@ CREATE ROLE auditors AUTHORIZATION db_securityadmin;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
  [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   

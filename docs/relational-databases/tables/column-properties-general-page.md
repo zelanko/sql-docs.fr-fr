@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0ff3f6ce612a3a5cb22cd61a5304f0c37d23db5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 732c1c759eec875af0bd65b763b21d912ffe2de7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085762"
 ---
 # <a name="column-properties-general-page"></a>Propriétés de la colonne (page Général)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47756827"
  Les informations de cette page sont en lecture seule. Pour modifier la colonne, fermez la boîte de dialogue **Propriétés de la colonne** , développez la table et les colonnes dans l’Explorateur d’objets, cliquez avec le bouton droit sur la colonne, puis cliquez sur **Conception**.  
   
 ## <a name="options"></a>Options  
- **Nom**  
+ **Name**  
  Nom de la colonne.  
   
  **Type de données**  

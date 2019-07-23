@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: b73233c5-9afa-48ca-ba34-a9f86b9b1d2e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0a4ea1f4977440ee53835f3c96ab5e60b3083ba
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 680e944326046ea2fc7694257977c6bc15a4f959
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082271"
 ---
 # <a name="revoke-database-scoped-credential-transact-sql"></a>REVOKE - Révoquer des autorisations sur des informations d’identification délimitées à la base de données (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Spécifie une autorisation qui peut être révoquée sur des informations d’identification délimitées à la base de données. Voir ci-dessous.  
   
- ON CERTIFICATE **::**_credential_name_  
+ ON CERTIFICATE **::** _credential_name_  
  Spécifie les informations d’identification délimitées à la base de données sur lesquelles l’autorisation est révoquée. Le qualificateur d'étendue "::" est indispensable.  
   
  *database_principal*  
@@ -102,7 +101,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les informations d’identification délimitées à la base de données sont des éléments sécurisables au niveau base de données inclus dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être révoquées sur des informations d’identification délimitées à la base de données sont indiquées ci-dessous, avec les autorisations plus générales qui les incluent implicitement.  
   
 |Autorisation sur des informations d’identification délimitées à la base de données|Implicite avec l’autorisation sur les informations d’identification délimitées à la base de données|Impliquée par une autorisation de base de données|  
@@ -113,10 +112,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation CONTROL sur les informations d’identification délimitées à la base de données.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [REVOKE (Transact-SQL)](../../t-sql/statements/revoke-transact-sql.md)      
  [GRANT - Accorder des autorisations sur les informations d’identification délimitées à la base de données (Transact-SQL)](../../t-sql/statements/grant-database-scoped-credential-transact-sql.md)   
  [DENY - Refuser des autorisations sur des informations d’identification délimitées à la base de données (Transact-SQL)](../../t-sql/statements/deny-database-scoped-credential-transact-sql.md)   

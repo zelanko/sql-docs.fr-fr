@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4a29245c790f97d92529ff2bf1e100675b3c9530
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aed5435091125200df30dadf5ff771e5965f2d94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091720"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>Fournir une requête de source OData au moment de l’exécution
 
@@ -32,7 +31,7 @@ ms.locfileid: "65726694"
 ## <a name="provide-the-query-as-a-parameter"></a>Fournir la requête en tant que paramètre  
  La procédure suivante montre comment fournir la requête utilisée par un composant source OData en tant que paramètre du package.  
   
-1.  Cliquez avec le bouton droit sur **Tâche de flux de données** et sélectionnez l’option **Paramétrer...**.  
+1.  Cliquez avec le bouton droit sur **Tâche de flux de données** et sélectionnez l’option **Paramétrer...** .  
   
 2.  Dans la boîte de dialogue **Paramétrer**, sélectionnez **[\<<Nom du composant source OData].[Query]** pour **Propriété**.  
   

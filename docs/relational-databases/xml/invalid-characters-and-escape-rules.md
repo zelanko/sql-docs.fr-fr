@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f2e9b997-f400-4963-b225-59d46c6b93e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7528da1f04967203d90d083b03fbd46ca1ba1831
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35c3537371df1cb9fc83976605b65fdcfedd1000
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62938971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026648"
 ---
 # <a name="invalid-characters-and-escape-rules"></a>Caractères non valides et règles d'échappement
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "62938971"
   
      Notez qu'il est quand même préférable d'utiliser WITH XMLNAMESPACES pour ajouter des espaces de noms XML.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c82c9913b75ca363d4ace1413c0c4413989c116a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db839c3afa5b3188a7a37f0575f23d3f9ebadce7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081732"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Modifier le schéma dans les bases de données de publication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,9 +92,9 @@ ms.locfileid: "47605367"
   
 -   Pour ajouter une nouvelle colonne à une table sans inclure cette colonne dans une publication existante, désactivez la réplication des modifications de schéma, puis exécutez ALTER TABLE \<Table> ADD \<Colonne>.  
   
--   Pour inclure une colonne existante dans une publication existante, utilisez [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ou la boîte de dialogue **Propriétés de la publication - \<Publication>**.  
+-   Pour inclure une colonne existante dans une publication existante, utilisez [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ou la boîte de dialogue **Propriétés de la publication - \<Publication>** .  
   
-     Pour plus d'informations, voir [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Cette opération exige la réinitialisation des abonnements.  
+     Pour plus d'informations, voir [Définir et modifier un filtre de colonne](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Cette opération exige la réinitialisation des abonnements.  
   
 -   L'ajout d'une colonne d'identité à une table publiée n'est pas pris en charge, car la nouvelle colonne peut entraîner une non-convergence quand la colonne est répliquée vers l'Abonné. Les valeurs de la colonne d'identité sur l'Abonné dépendent de l'ordre dans lequel les lignes sont physiquement stockées dans la table affectée. Les lignes sont susceptibles d'être stockées différemment sur l'Abonné ; la valeur de la colonne d'identité peut donc être différente pour les mêmes lignes.  
   
@@ -103,13 +102,13 @@ ms.locfileid: "47605367"
   
 -   Pour supprimer une colonne d’une publication existante et de la table sur le serveur de publication, exécutez ALTER TABLE \<Table> DROP \<Colonne>. Par défaut, la colonne est alors supprimée de la table sur tous les Abonnés.  
   
--   Pour supprimer une colonne d’une publication existante, tout en la conservant dans la table sur le serveur de publication, utilisez [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ou la boîte de dialogue **Propriétés de la publication - \<Publication>**.  
+-   Pour supprimer une colonne d’une publication existante, tout en la conservant dans la table sur le serveur de publication, utilisez [sp_articlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) ou la boîte de dialogue **Propriétés de la publication - \<Publication>** .  
   
      Pour plus d’informations, voir [Définir et modifier un filtre de colonne](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md). Cette opération exige la génération d'un nouvel instantané.  
   
 -   La colonne à supprimer ne peut pas être utilisée dans les clauses de filtrage d'un article quelconque d'une publication de la base de données.  
   
--   La suppression d'une colonne d'un article publié nécessite la prise en compte des éventuels contraintes, index ou propriétés de la colonne susceptibles d'affecter la base de données. Exemple :  
+-   La suppression d'une colonne d'un article publié nécessite la prise en compte des éventuels contraintes, index ou propriétés de la colonne susceptibles d'affecter la base de données. Par exemple :  
   
     -   Vous ne pouvez pas supprimer les colonnes utilisées dans une clé primaire d'articles de publications transactionnelles car elles sont utilisées par la réplication.  
   
@@ -160,7 +159,7 @@ ms.locfileid: "47605367"
   
 -   La réplication de fusion fournit des procédures stockées qui permettent d'ignorer les modifications de schéma pendant le dépannage. Pour plus d’informations, consultez [sp_markpendingschemachange &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md) et [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER VIEW &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-view-transact-sql.md)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-procedure-transact-sql.md)   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34f30a8eb8a2d894b1de0a62f5151956c80f5653
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 3e2b32c6804de71d9af074de15b8506c493dfa99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030486"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>Prise en charge DAC pour les objets et versions SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "53588723"
 |FUNCTION : Fonction table à instructions multiples|FUNCTION : Scalaire|  
 |INDEX : Cluster|INDEX : Non cluster|  
 |INDEX : Spatial|INDEX : Unique|  
-|Connexion|Permissions|  
+|Connexion|Autorisations|  
 |Appartenances aux rôles|SCHEMA|  
 |Statistiques|STORED PROCEDURE : Transact-SQL|  
 |Synonymes|TABLE : Contrainte CHECK|  
@@ -125,7 +124,7 @@ ms.locfileid: "53588723"
   
 -   **Solutions de contournement** : les opérations d’extraction et d’exportation écrivent les fichiers de données BCP haute fidélité dans les fichiers .dacpac ou .bacpac. Pour éviter les limitations, utilisez l'utilitaire en ligne de commande SQL Server BCP.exe pour déployer des données haute fidélité dans une base de données cible d'un package DAC.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Applications de la couche Données](../../relational-databases/data-tier-applications/data-tier-applications.md)  
   
   

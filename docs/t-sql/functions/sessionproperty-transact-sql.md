@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1f3730b4-1495-4d3a-af43-e57952812df9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ba08b2273102d43eed26d7b383a285d6568a63d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e22d0c36c3a5ce614357566079ec81dc54b7c70e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65942885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022201"
 ---
 # <a name="sessionproperty-transact-sql"></a>SESSIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ SESSIONPROPERTY (option)
 ## <a name="return-types"></a>Types de retour  
  **sql_variant**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les options SET sont représentées en combinant les options de niveau serveur, de niveau base de données, et les options spécifiées par l'utilisateur.  
   
 ## <a name="examples"></a>Exemples  
@@ -69,7 +68,7 @@ SESSIONPROPERTY (option)
 SELECT   SESSIONPROPERTY ('CONCAT_NULL_YIELDS_NULL')  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)   
  [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md)   
  [SET ANSI_PADDING &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-padding-transact-sql.md)   

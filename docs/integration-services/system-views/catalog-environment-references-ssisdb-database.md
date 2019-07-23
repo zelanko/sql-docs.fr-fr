@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: efec53ef-3e5a-4b76-b71d-a0cf9e11ac00
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e1f2bb65c000cc2e355a21b11596dad65b0f8b3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c70439da5ba3f09cd39ea9cec78a14ea366d126d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038413"
 ---
 # <a name="catalogenvironmentreferences-ssisdb-database"></a>catalog.environment_references (base de données SSISDB)
 
@@ -37,7 +36,7 @@ ms.locfileid: "65715330"
 |validation_status|**char(1)**|État de la validation.|  
 |last_validation_time|**datatimeoffset(7)**|Heure de la dernière validation.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette vue affiche une ligne pour chaque référence environnementale dans le catalogue.  
   
 ## <a name="permissions"></a>Autorisations  
@@ -52,7 +51,7 @@ ms.locfileid: "65715330"
 > [!NOTE]  
 >  Si vous avez l'autorisation READ sur un projet, vous avez également l'autorisation READ sur toutes les packages et les références environnementales associés à ce projet. La sécurité au niveau de la ligne est imposée ; uniquement les lignes que vous avez l'autorisation d'afficher s'affichent.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un projet peut avoir des références environnementales relatives ou absolues. Les références relatives font référence à l'environnement par nom et requièrent qu'il réside dans le même dossier que le projet. Les références absolues font référence à l'environnement par nom et par dossier et peuvent faire référence aux environnements qui résident dans un dossier différent que le projet. Un projet peut référencer plusieurs environnements.  
   
   

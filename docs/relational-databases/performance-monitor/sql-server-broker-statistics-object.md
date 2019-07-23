@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e9e36f01-93f6-4e6e-90c6-c7f3fd121737
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: ee2c8523751222c17d993360e2a7be08889f708e
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 77a6174931924c30b8d482c0bd5d3f4a358f4a10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987016"
 ---
 # <a name="sql-server-broker-statistics-object"></a>Objet SQL Server:Broker Statistics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "53380520"
 |**Total SQL SEND**|Nombre total d'instructions SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutées.|  
 |**SQL SEND/s**|Nombre d'instructions SEND [!INCLUDE[tsql](../../includes/tsql-md.md)] exécutées par seconde.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   

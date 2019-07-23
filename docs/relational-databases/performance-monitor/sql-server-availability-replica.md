@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e402f996-c1fb-484a-b804-45c49972f2e0
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: c4cc61d3e255da5b113e017439fab9659cbcc2c1
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 6dfb020026ba431669a0e551d5cb3aa85fbea637
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095322"
 ---
 # <a name="sql-server-availability-replica"></a>SQL Server, réplica de disponibilité
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "53379310"
 |**Envois au réplica par seconde**|Nombre de messages Always On envoyés à ce réplica de disponibilité par seconde.|  
 |**Envois au transport par seconde**|Nombre réel de messages Always On envoyés par seconde sur le réseau au réplica de disponibilité distant. Sur le réplica primaire, il s'agit du nombre de messages envoyés au réplica secondaire. Sur le réplica secondaire, il s'agit du nombre de messages envoyés au réplica primaire.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [SQL Server, réplica de base de données](../../relational-databases/performance-monitor/sql-server-database-replica.md)   
  [Groupes de disponibilité Always On (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  

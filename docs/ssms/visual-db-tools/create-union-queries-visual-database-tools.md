@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b5aafb1d-e4ed-4922-b790-56abc5ec551a
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 510b22c7b4f384e59d8839ff0009855970378ae6
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 04a8206b39ff3138bccbc4ffbbed05972010833a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690469"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264628"
 ---
 # <a name="create-union-queries-visual-database-tools"></a>Créer des requêtes UNION (Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

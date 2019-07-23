@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c42aa04a-4945-4417-b4c7-50589d727e9c
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 4ed8568dd53d02df3e0788b79d0b9240f47dbe5f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a262ba4daf1a54e4a57a71baa0b97308d473720
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057890"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurer la copie des journaux de transaction (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ ms.locfileid: "66794639"
   
 5.  Dans la zone **Chemin d'accès réseau au dossier de sauvegarde** , tapez le chemin d'accès réseau vers le partage que vous avez créé pour le dossier de sauvegarde des journaux de transactions.  
   
-6.  **Si le dossier de sauvegarde se trouve sur le serveur principal, tapez un chemin d’accès local au dossier dans la boîte de dialogue ** du dossier de sauvegarde. Si le dossier de sauvegarde n'est pas situé sur le serveur principal, vous pouvez laisser cette zone vide.  
+6.  **Si le dossier de sauvegarde se trouve sur le serveur principal, tapez un chemin d’accès local au dossier dans la boîte de dialogue**  du dossier de sauvegarde. Si le dossier de sauvegarde n'est pas situé sur le serveur principal, vous pouvez laisser cette zone vide.  
   
     > [!IMPORTANT]  
     >  Si le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur votre serveur principal est exécuté sous le compte système local, vous devez créer votre dossier de sauvegarde sur le serveur principal et spécifier un chemin d'accès local vers ce dossier.  
@@ -167,7 +166,7 @@ ms.locfileid: "66794639"
   
 -   [Basculer vers une base de données secondaire de copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [À propos de la copie des journaux des transactions &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tables et procédures stockées liées à la copie des journaux de transaction](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

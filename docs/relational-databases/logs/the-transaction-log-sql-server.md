@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: fb0aef082375ebc3c278e982232b7a69fe41d187
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083938"
 ---
 # <a name="the-transaction-log-sql-server"></a>Journal des transactions (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ L’Agent de lecture du journal surveille le journal des transactions de chaque 
 ### <a name="supporting-high-availability-and-disaster-recovery-solutions"></a>Prise en charge des solutions de récupération d’urgence et de haute disponibilité
 Les solutions à serveur de secours, [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], les mises en miroir de base de données et les copies des journaux de transactions dépendent fortement du journal des transactions. 
 
-Dans un **scénario [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]**, chaque mise à jour d’une base de données, le réplica principal, est immédiatement reproduite dans des copies distinctes et complètes de la base de données, les réplicas secondaires. Le réplica principal envoie immédiatement chaque enregistrement de journal aux réplicas secondaires, qui appliquent les enregistrements de journal entrants aux bases de données du groupe de disponibilité, avec une restauration par progression continue. Pour plus d’informations, consultez [Instances de cluster de basculement AlwaysOn](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
+Dans un **scénario [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]** , chaque mise à jour d’une base de données, le réplica principal, est immédiatement reproduite dans des copies distinctes et complètes de la base de données, les réplicas secondaires. Le réplica principal envoie immédiatement chaque enregistrement de journal aux réplicas secondaires, qui appliquent les enregistrements de journal entrants aux bases de données du groupe de disponibilité, avec une restauration par progression continue. Pour plus d’informations, consultez [Instances de cluster de basculement AlwaysOn](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)
 
 Dans un **scénario de copie des journaux de transactions**, le serveur principal envoie le journal des transactions actif de la base de données primaire vers une ou plusieurs destinations. Chaque serveur secondaire restaure le journal dans sa base de données secondaire locale. Pour plus d’informations, consultez [À propos de la copie des journaux de transaction](../../database-engine/log-shipping/about-log-shipping-sql-server.md). 
 
