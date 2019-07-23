@@ -1,5 +1,5 @@
 ---
-title: Écran 4 (pilote ODBC pour SQL Server) de l’Assistant Source de données | Microsoft Docs
+title: Assistant source de données-écran 4 (pilote ODBC pour SQL Server) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93145892c96d2b255dca758e7028d2884cec359b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989464"
 ---
 # <a name="data-source-wizard-screen-4"></a>Assistant Source de données, écran 4
 
@@ -34,7 +33,7 @@ Si l'option est sélectionnée, les données transférées via les connexions é
 
 ### <a name="trust-server-certificate"></a>Faire confiance au certificat de serveur
 
-Cette option est applicable uniquement lorsque **utiliser un chiffrement renforcé pour les données** est activé. Quand sélectionné, il est possible que le certificat du serveur n’est pas validé pour avoir le nom d’hôte correct du serveur et être émis par une autorité de certification approuvée. 
+Cette option s’applique uniquement lorsque l’option **utiliser un chiffrement renforcé pour les données** est activée. Lorsque cette option est sélectionnée, le certificat du serveur n’est pas validé pour avoir le nom d’hôte correct du serveur et doit être émis par une autorité de certification approuvée. 
 
 ### <a name="perform-translation-for-character-data"></a>Traduire les données de type caractère
 
@@ -62,11 +61,11 @@ Le journal de statistiques est un fichier délimité par des tabulations qui peu
 
 ### <a name="connect-retry-count"></a>Nombre de nouvelles tentatives de connexion
 
-Spécifie le nombre de tentatives d’une tentative de connexion échoue.
+Spécifie le nombre de tentatives d’une tentative de connexion ayant échoué.
 
 ### <a name="connect-retry-interval-seconds"></a>Intervalle avant nouvelle tentative de connexion (en secondes)
 
-Spécifie le nombre de secondes entre chaque nouvelle tentative de connexion. Pour plus d’informations sur le fonctionnement de ce et **nombre de tentatives de connexion** options, consultez [résilience des connexions dans le pilote ODBC de Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
+Spécifie le nombre de secondes entre chaque nouvelle tentative de connexion. Pour plus d’informations sur le fonctionnement de cette et sur les options de **nombre de tentatives** de connexion, consultez [résilience des connexions dans le pilote ODBC de Windows](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md).
 
 ### <a name="back"></a>Précédent
 
@@ -74,7 +73,7 @@ Cliquez sur ce bouton pour revenir à la page précédente de l’Assistant.
 
 ### <a name="finish"></a>Terminer
 
-Si les informations spécifiées dans cet écran sont terminées, vous pouvez cliquer sur **Terminer**. La source de données est créé à l’aide de tous les attributs spécifiés sur cette offre et autres écrans de l’Assistant, et vous ont la possibilité de tester la source de données qui vient d’être créé.
+Si les informations spécifiées sur cet écran sont terminées, vous pouvez cliquer sur **Terminer**. Le nom de source de données est créé à l’aide de tous les attributs spécifiés dans cet écran et dans d’autres écrans de l’Assistant, et vous avez la possibilité de tester le nom de source de données nouvellement créé.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
