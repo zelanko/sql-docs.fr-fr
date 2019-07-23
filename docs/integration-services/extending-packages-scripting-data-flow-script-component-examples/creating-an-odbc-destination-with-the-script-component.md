@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 812915337b03927af5b23a66a0452d0d6a875112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be4616aa2ea73d2f4c78d7fe06bb3674486ff022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114688"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>Création d'une destination ODBC à l'aide du composant Script
 
@@ -33,7 +32,7 @@ ms.locfileid: "65724476"
 > [!NOTE]  
 >  Si vous souhaitez créer un composant que vous pouvez réutiliser plus facilement dans plusieurs tâches de flux de données et plusieurs packages, utilisez le code présenté dans cet exemple de composant Script comme point de départ pour un composant de flux de données personnalisé. Pour plus d’informations, consultez [Développement d’un composant de flux de données personnalisé](../../integration-services/extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L’exemple suivant montre comment créer un composant de destination qui utilise un gestionnaire de connexions ODBC existant pour enregistrer des données du flux de données dans une table [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Cet exemple est une version modifiée de la destination [!INCLUDE[vstecado](../../includes/vstecado-md.md)] personnalisée présentée dans la rubrique [Création d’une destination à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md). Toutefois, dans cet exemple, la destination [!INCLUDE[vstecado](../../includes/vstecado-md.md)] personnalisée a été modifiée afin d'utiliser un gestionnaire de connexions ODBC et d'enregistrer les données dans une destination ODBC. Ces modifications incluent également les points suivants :  
@@ -42,7 +41,7 @@ ms.locfileid: "65724476"
   
 -   **OdbcCommand** attend des paramètres positionnels. Les positions des paramètres sont indiquées par les points d'interrogation (?) dans le texte de la commande. (Par opposition, un objet **SqlCommand** attend des paramètres nommés.)  
   
- Cet exemple utilise la table **Person.Address** de l’exemple de base de données **AdventureWorks**. L’exemple passe la première colonne et la quatrième colonne, à savoir les colonnes **int _AddressID_** et **nvarchar(30) _City_**, de cette table dans le flux de données. Ces mêmes données sont utilisées dans les exemples de sources, transformations et destinations de la rubrique [Développement de types spécifiques de composants Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
+ Cet exemple utilise la table **Person.Address** de l’exemple de base de données **AdventureWorks**. L’exemple passe la première colonne et la quatrième colonne, à savoir les colonnes **int _AddressID_** et **nvarchar(30) _City_** , de cette table dans le flux de données. Ces mêmes données sont utilisées dans les exemples de sources, transformations et destinations de la rubrique [Développement de types spécifiques de composants Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/developing-specific-types-of-script-components.md).  
   
 #### <a name="to-configure-this-script-component-example"></a>Pour configurer cet exemple de composant Script  
   
@@ -170,7 +169,7 @@ ms.locfileid: "65724476"
     }  
     ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’une destination à l’aide du composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   
   

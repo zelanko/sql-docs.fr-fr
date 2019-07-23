@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b2d49f2-b91c-4aee-a52b-6cc49bed03af
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 5b9be222b517d644cdfbabb0b3457a59450216b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d3ee24f8bf3d698314b5eb32a166ef7080622b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803264"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012043"
 ---
 # <a name="cross-db-ownership-chaining-server-configuration-option"></a>cross db ownership chaining (option de configuration de serveur)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ Un résultat égal à 1 indique que le chaînage des propriétés des bases de 
   
 -   Si des bases de données spécifiques requièrent le chaînage des propriétés des bases de données croisées, il est conseillé de désactiver l’option **cross db ownership chaining** pour l’instance à l’aide de **sp_configure**; ensuite, activez le chaînage des propriétés des bases de données croisées pour les bases de données qui le requièrent à l’aide de l’instruction ALTER DATABASE.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Options de configuration de serveur &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

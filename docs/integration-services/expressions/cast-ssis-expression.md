@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d4e915cc-1c7b-4b2e-93b0-13a8b0cb9242
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c035be98a8327ff0abc6fa6beece3c5cb6a2d7ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bf33110b09b4ecc5e3709a59a19eaa47bdafad2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033992"
 ---
 # <a name="cast-ssis-expression"></a>Cast (expression SSIS)
 
@@ -49,14 +48,14 @@ ms.locfileid: "65725587"
 ## <a name="result-types"></a>Types des résultats  
  Type de données de *type_spec*. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le schéma suivant montre les opérations de conversion valides.  
   
  ![Conversions légales et illégales entre types de données](../../integration-services/expressions/media/data-conversion.gif "Conversions légales et illégales entre types de données")  
   
  La conversion vers certains types de données nécessite des paramètres. Le tableau suivant décrit ces types de données et leurs paramètres.  
   
-|Type de données|Paramètre| Exemple|  
+|Type de données|Paramètre|Exemple|  
 |---------------|---------------|-------------|  
 |DT_STR|*charcount*<br /><br /> *codepage*|L'expression (DT_STR,30,1252) convertit 30 octets, ou 30 caractères codés sur un octet, vers le type de données DT_STR à l'aide de la page de codes 1252.|  
 |DT_WSTR|*Charcount*|L'expression (DT_WSTR,20) convertit 20 paires d'octets, ou 20 caractères Unicode, vers le type de données DT_WSTR.|  
@@ -147,7 +146,7 @@ ms.locfileid: "65725587"
 (DT_DBTIMESTAMPOFFSET, 7) "1999-10-11 16:34:52.1234567 + 5:35"  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)   
  [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md)   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cbb02c95f606f6a5fdcca694d35fef6ee4447383
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6974e8c3d07bd1da5fd48a4bbbc8e49c86e2d314
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128087"
 ---
 # <a name="filter-table-rows"></a>Filtrer les lignes de la table
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47637457"
  Ce volet est rempli avec des filtres à mesure que vous les ajoutez aux articles de table dans la publication. Les tables avec filtres de lignes sont affichées en tant que nœuds de niveau supérieur dans le volet. Pour les publications de fusion, les tables auxquelles les filtres ont été étendus par le biais d'un filtre de jointure sont affichées en tant que nœuds enfants.  
   
  **Ajouter**  
- Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. Si vous cliquez sur **Ajouter** pour une publication de fusion, trois choix s'affichent : **Ajouter un filtre**; **Ajouter une jointure pour étendre le filtre sélectionné**; **Générer automatiquement des filtres**.  
+ Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. Si vous cliquez sur **Ajouter** pour une publication de fusion, trois choix s’affichent : **Ajouter un filtre**, **Ajouter une jointure pour étendre le filtre sélectionné** et **Générer automatiquement des filtres**.  
   
 -   Sélectionnez **Ajouter un filtre** pour ouvrir la boîte de dialogue du **même nom** . Elle vous permet d'appliquer des filtres de lignes à un article de table. Dans la boîte de dialogue **Ajouter un filtre** , vous pouvez, par exemple, indiquer qu'une table contenant des données client doit uniquement comporter des données relatives aux clients français lors de sa réplication vers des abonnés.  
   
@@ -74,18 +73,18 @@ ms.locfileid: "47637457"
  **Rechercher une table**  
  Fusionnez les publications uniquement avec des filtres de jointure. Cliquez sur **Rechercher une table** pour trouver une table dans une arborescence de filtres complexe. Dans une base de données comportant des relations complexes, une table peut être jointe à plusieurs tables et apparaître dès lors à plusieurs endroits dans l'arborescence des filtres.  
   
- La table réelle apparaît à un seul endroit dans l'arborescence. Aux autres endroits, elle est représentée par un raccourci. Ce raccourci n'est qu'une référence à la table ; il n'affiche pas les nœuds enfants de la table. Un nœud de raccourci est identifié par une flèche. En développant ce nœud, vous affichez le texte **Cliquez sur Rechercher une table pour afficher la table de \<nom_table>**.  
+ La table réelle apparaît à un seul endroit dans l'arborescence. Aux autres endroits, elle est représentée par un raccourci. Ce raccourci n'est qu'une référence à la table ; il n'affiche pas les nœuds enfants de la table. Un nœud de raccourci est identifié par une flèche. En développant ce nœud, vous affichez le texte **Cliquez sur Rechercher une table pour afficher la table de \<nom_table>** .  
   
  Choisissez un nœud de raccourci dans le volet et cliquez sur **Rechercher une table**. Ce volet est développé et la table est mise en surbrillance. Si vous cliquez sur **Rechercher une table** sans sélectionner un nœud de raccourci, une boîte de dialogue **Rechercher une table** s'ouvre.  
   
  **Filter**  
  Contient la définition [!INCLUDE[tsql](../../includes/tsql-md.md)] du filtre sélectionné dans le volet.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Afficher et modifier les propriétés d’une publication](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md)   
- [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
+ [Filtres de jointure](../../relational-databases/replication/merge/join-filters.md)   
  [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

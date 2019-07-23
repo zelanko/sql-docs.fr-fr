@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b11a1206e691e834c3ed44d7ab83c73ffc002ec
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a24d9a25409290288afa8a0b23b49c5f55fba217
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111065"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>Afficher l'état des publications et des abonnements dans le Moniteur de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +111,7 @@ ms.locfileid: "54127730"
 |Synchronisation|![Icône d’interface utilisateur : agent de réplication en cours d’exécution](../../../relational-databases/replication/monitor/media/repl-icon-running.gif "Icône d’interface utilisateur : agent de réplication en cours d’exécution")|  
 |Sans synchronisation|![Icône d’interface utilisateur : agent de réplication arrêté](../../../relational-databases/replication/monitor/media/repl-icon-stopped.gif "Icône d’interface utilisateur : agent de réplication arrêté")|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

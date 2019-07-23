@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7ffaa3267a512fc85b223290c76e239013612d11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0009ec924ebe935b60194f950da5d30593adfd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68232254"
 ---
 # <a name="alter-table-computedcolumndefinition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ column_name AS computed_column_expression
  Nom de la colonne à ajouter, modifier ou supprimer. *column_name* peut comporter entre 1 et 128 caractères. Pour les nouvelles colonnes, *column_name* peut être omis pour les colonnes créées avec un type de données **timestamp**. Si aucun *column_name* n’est spécifié pour une colonne de type de données **timestamp**, le **timestamp** du nom est utilisé.  
   
 *computed_column_expression*  
- Expression définissant la valeur d'une colonne calculée. Une colonne calculée est une colonne virtuelle qui n'est pas physiquement stockée dans la table, mais traitée à partir d'une expression utilisant d'autres colonnes figurant dans la même table. Par exemple, une colonne calculée peut avoir la définition suivante : cost AS price * qty. L'expression peut être un nom de colonne non calculée, une constante, une fonction, une variable et toute combinaison de ces éléments reliés par un ou plusieurs opérateurs. L'expression ne peut pas être une sous-requête ou comporter un type de données d'alias.  
+ Expression définissant la valeur d'une colonne calculée. Une colonne calculée est une colonne virtuelle qui n'est pas physiquement stockée dans la table, mais traitée à partir d'une expression utilisant d'autres colonnes figurant dans la même table. Par exemple, une colonne calculée peut avoir la définition suivante : cost AS price * qty. L’expression peut être un nom de colonne non calculée, une constante, une fonction, une variable et toute combinaison de ces éléments reliés par un ou plusieurs opérateurs. L'expression ne peut pas être une sous-requête ou comporter un type de données d'alias.  
   
  Les colonnes calculées peuvent être utilisées dans les listes de sélections, dans les clauses WHERE ou ORDER BY ou chaque fois qu'une expression régulière peut être utilisée, à l'exception des cas suivants :  
   
@@ -146,8 +145,8 @@ ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}
 > [!NOTE]  
 >  L'élément « default » n'est pas un mot clé dans ce contexte. Il s'agit de l'identificateur du groupe de fichiers par défaut et il doit être délimité, comme dans ON "default" ou ON [default]. Si "default" est spécifié, l'option QUOTED_IDENTIFIER doit être activée (ON) pour la session active. Il s'agit du paramètre par défaut. Pour plus d’informations, consultez [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Chaque contrainte PRIMARY KEY et UNIQUE génère un index. Quel que soit le nombre de contraintes UNIQUE et PRIMARY KEY, le nombre d'index sur la table ne peut en aucun cas dépasser 999 index cluster et 1 index cluster.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 07b16209f335dae6f2439b790898ebe4aa609c65
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a02bda17b1da0be95c0aea68720f8747ad6e672f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117167"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +58,10 @@ FOR SERVER AUDIT audit_name
  WITH **(** STATE **=** { ON | OFF } **)**  
  Active ou désactive la collecte d'enregistrements d'audit pour cette spécification d'audit.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un audit doit exister pour que vous puissiez créer une spécification d'audit de serveur correspondante. Lorsqu'une spécification d'audit de serveur est créée, elle est dans un état désactivé.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les utilisateurs disposant de l'autorisation ALTER ANY SERVER AUDIT peuvent créer des spécifications d'audit du serveur et les lier à un audit quelconque.  
   
  Une fois qu’une spécification d’audit du serveur est créée, elle est consultable par des principaux disposant des autorisations CONTROL SERVER ou ALTER ANY SERVER AUDIT, le compte sysadmin ou des principaux ayant un accès explicite à l’audit.  
@@ -79,7 +78,7 @@ GO
   
  Pour obtenir un exemple complet de création d’audit, consultez [SQL Server Audit &#40;moteur de base de données&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

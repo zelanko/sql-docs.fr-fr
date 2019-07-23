@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ded1e5f6aeace66f4be991b192e601c455871c26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c1a9bf666ac79b76d94cfbd04c88bde6eafd85b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119882"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>Procédure : Écrire un test unitaire SQL Server qui s'exécute dans l'étendue d'une seule transaction
 Modifiez les tests unitaires de façon à ce qu'ils s'exécutent dans l'étendue d'une transaction. Si vous adoptez cette approche, vous pouvez restaurer les modifications apportées par le test une fois le test terminé. Les procédures suivantes expliquent comment effectuer les tâches suivantes :  
@@ -173,6 +172,6 @@ Certaines procédures de cette rubrique utilisent des types dans l'assembly Syst
 > [!IMPORTANT]  
 > L'erreur suivante peut apparaître, même si vous avez démarré le service Distributed Transaction Controller : `System.Transactions.TransactionManagerCommunicationException: Network access for Distributed Transaction Manager (MSDTC) has been disabled. Please enable DTC for network access in the security configuration for MSDTC using the Component Services Administrative tool. ---> System.Runtime.InteropServices.COMException: The transaction manager has disabled its support for remote/network transactions. (Exception from HRESULT: 0x8004D024)`. Si cette erreur se produit, vous devez configurer le service Distributed Transaction Controller pour l'accès réseau. Pour plus d'informations, consultez [Activation de l’accès DTC réseau](https://go.microsoft.com/fwlink/?LinkId=193916).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Création et définition de tests unitaires SQL Server](../ssdt/creating-and-defining-sql-server-unit-tests.md)  
   

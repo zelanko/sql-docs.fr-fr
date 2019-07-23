@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c2b7547f569b9b645fd81766ad4c98510d8d9c8
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: e4010930a669caf5b74b1c38c88c78f6b94e80b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136268"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Désactiver Stretch Database et récupérer les données distantes
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -111,7 +110,7 @@ GO
 > [!NOTE]
 > La désactivation de Stretch Database pour une base de données ne supprime pas la base de données distante. Si vous souhaitez supprimer la base de données distante, vous devez la supprimer à l'aide du portail de gestion Azure. La base de données distante continue d’entraîner des coûts Azure tant qu’elle n’a pas été supprimée. Pour plus d'informations, consultez la rubrique [Tarification de SQL Server Stretch Database](https://azure.microsoft.com/pricing/details/sql-server-stretch-database/).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)   
  [Suspension et reprise de la migration de données &#40;Stretch Database&#41;](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md)  
   

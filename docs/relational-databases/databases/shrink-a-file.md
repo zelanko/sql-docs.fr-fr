@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ce5c8798-c039-4ab2-81e7-90a8d688b893
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d54c9880353ef8352624dcdd59cf187283fdd2e2
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 330bdd5e1857df0ad605ca42e3bd5f83c8072b8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127387"
 ---
 # <a name="shrink-a-file"></a>Réduire un fichier
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ ms.locfileid: "51558686"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -137,7 +136,7 @@ ms.locfileid: "51558686"
   
  [!code-sql[DBCC#DBCC_SHRINKFILE1](../../relational-databases/databases/codesnippet/tsql/shrink-a-file_1.sql)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DBCC SHRINKDATABASE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md)   
  [Réduire une base de données](../../relational-databases/databases/shrink-a-database.md)   
  [Supprimer des fichiers de données ou des fichiers journaux d'une base de données](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   

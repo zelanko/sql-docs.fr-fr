@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 67e0345c73041ee7084695ec94adb79239a68462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e0848a5452ad7cdb189b00c5ed90a6ad1cb8a1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127873"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>Initialiser un abonnement transactionnel à partir d’une sauvegarde
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47648600"
   
     -   Si la valeur est **1**, la publication prend en charge cette fonctionnalité.  
   
-    -   Si la valeur est **0**, exécutez [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) au niveau du serveur de publication sur la base de données de publication. Spécifiez la valeur **allow_initialize_from_backup** pour **@property** et la valeur **true** pour **@value**.  
+    -   Si la valeur est **0**, exécutez [sp_changepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) au niveau du serveur de publication sur la base de données de publication. Spécifiez la valeur **allow_initialize_from_backup** pour **@property** et la valeur **true** pour **@value** .  
   
 2.  Pour une nouvelle publication, exécutez [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) au niveau du serveur de publication sur la base de données de publication. Spécifiez la valeur **true** pour **allow_initialize_from_backup**. Pour plus d’informations, consultez [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md).  
   
@@ -71,7 +70,7 @@ ms.locfileid: "47648600"
   
 7.  (Facultatif) Démarrez l'Agent de distribution. Pour plus d'informations, consultez [Synchronize a Pull Subscription](../../relational-databases/replication/synchronize-a-pull-subscription.md) ou [Synchronize a Push Subscription](../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Copier des bases de données avec la sauvegarde et la restauration](../../relational-databases/databases/copy-databases-with-backup-and-restore.md)   
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   

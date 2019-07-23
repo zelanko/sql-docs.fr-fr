@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9aea2cb62ad12745a8ad03fd9998a47ee77173e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b318f7be6b403cb540305eb492cf99a776efc9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044228"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,12 +65,12 @@ DROP FUNCTION [ schema_name. ] function_name
  *function_name*  
  Nom de la fonction ou des fonctions définies par l'utilisateur à supprimer. La spécification du nom de schéma est facultative. Il n'est pas possible de spécifier le nom du serveur et de la base de données.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  DROP FUNCTION échoue si la base de données contient des fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] ou des vues qui font référence à cette fonction et qui ont été créées au moyen de SCHEMABINDING. Elle échoue également s'il existe des colonnes calculées, des contraintes CHECK ou DEFAULT qui font référence à cette fonction.  
   
  DROP FUNCTION échoue si des colonnes calculées qui ont été indexées font référence à cette fonction.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter DROP FUNCTION, un utilisateur doit avoir au minimum l'autorisation ALTER sur le schéma auquel appartient la fonction ou l'autorisation CONTROL sur la fonction.  
   
 ## <a name="examples"></a>Exemples  
@@ -83,7 +82,7 @@ DROP FUNCTION [ schema_name. ] function_name
 DROP FUNCTION Sales.fn_SalesByStore;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-function-transact-sql.md)   
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)   
  [OBJECT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/object-id-transact-sql.md)   
