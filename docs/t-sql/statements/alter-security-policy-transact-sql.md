@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a8efc37e-113d-489c-babc-b914fea2c316
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 403887d4e573f28214e5fd82586fd07e20c338d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca38818b0c64c46631d3ec17348f0189f2844bf2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62648717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140993"
 ---
 # <a name="alter-security-policy-transact-sql"></a>ALTER SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -89,7 +88,7 @@ Indique que la stratégie de sécurité ne doit pas être exécutée quand un ag
 table_schema_name.table_name  
 Est la table cible pour le prédicat de sécurité appliqué. Plusieurs stratégies de sécurité désactivées peuvent cibler une même table, mais une seule peut être activée à un moment donné.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 L'instruction ALTER SECURITY POLICY fait partie de l'étendue d'une transaction. Si la transaction est restaurée, l'instruction l'est également.  
   
 Quand vous utilisez des fonctions de prédicat avec des tables optimisées en mémoire, les stratégies de sécurité doivent inclure **SCHEMABINDING** et utiliser l’indicateur de compilation **WITH NATIVE_COMPILATION**. L’argument SCHEMABINDING ne peut pas être modifié avec l’instruction ALTER, car elle s’applique à tous les prédicats. Pour changer la liaison de schéma, vous devez supprimer et recréer la stratégie de sécurité.  
@@ -155,7 +154,7 @@ ALTER SECURITY POLICY rls.SecPol
     ON dbo.Sales AFTER INSERT;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md)   
 [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
 [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   

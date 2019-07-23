@@ -1,5 +1,5 @@
 ---
-title: À l’aide de la mise en mémoire tampon adaptative | Microsoft Docs
+title: Utilisation de la mise en mémoire tampon adaptative | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 160300be692ff21af1cc33c1fd6fc49d415b22e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 07a7a67addb10d91b011f821f5b85ed03981d055
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916462"
 ---
 # <a name="using-adaptive-buffering"></a>Utilisation de la mise en mémoire tampon adaptative
 
@@ -28,9 +27,9 @@ Normalement, quand le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.m
 
 Pour permettre aux applications de gérer des résultats très volumineux, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit la mise en mémoire tampon adaptative. Avec la mise en mémoire tampon adaptative, le pilote récupère les résultats de l’exécution des instructions à partir du serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] chaque fois que l’application en a besoin, et non en une seule fois. Le pilote ignore également les résultats dès que l'application ne peut plus y accéder. Voici quelques exemples de situations où la mise en mémoire tampon adaptative peut être utile :
 
-- **La requête génère un jeu de résultats très volumineux :** l’application peut exécuter une instruction SELECT qui produit plus de lignes que l’application peut stocker en mémoire. Dans les versions précédentes, l’application devait utiliser un curseur côté serveur pour éviter une erreur OutOfMemoryError. La mise en mémoire tampon adaptative permet d'effectuer un passage en lecture seule avant uniquement d'un jeu de résultats arbitrairement volumineux sans nécessiter de curseur côté serveur.
+- **La requête produit un jeu de résultats très volumineux:** L’application peut exécuter une instruction SELECT qui produit plus de lignes que l’application ne peut stocker en mémoire. Dans les versions précédentes, l’application devait utiliser un curseur côté serveur pour éviter une erreur OutOfMemoryError. La mise en mémoire tampon adaptative permet d'effectuer un passage en lecture seule avant uniquement d'un jeu de résultats arbitrairement volumineux sans nécessiter de curseur côté serveur.
 
-- **La requête produit très volumineux** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **colonnes ou** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **les valeurs de paramètre :** L’application peut récupérer une valeur unique (colonne ou paramètre de sortie) qui sont trop volumineuses pour tenir entièrement dans la mémoire de l’application. Mise en mémoire tampon adaptative permet à l’application cliente récupérer une telle valeur en tant que flux, en utilisant le getAsciiStream, le getBinaryStream ou les méthodes getCharacterStream. L’application récupère la valeur à partir du serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à mesure qu’elle lit le flux.
+- **La requête produit de très grandes** [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) **colonnes ou** [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) **Valeurs de paramètre de sortie:** L’application peut récupérer une valeur unique (colonne ou paramètre de sortie) qui est trop grande pour tenir entièrement dans la mémoire de l’application. La mise en mémoire tampon adaptative permet à l’application cliente de récupérer une telle valeur en tant que flux, en utilisant getAsciiStream, getBinaryStream ou les méthodes getCharacterStream. L’application récupère la valeur à partir du serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à mesure qu’elle lit le flux.
 
 > [!NOTE]  
 > Avec la mise en mémoire tampon adaptative, le pilote JDBC ne met en mémoire tampon que la quantité de données requise. Le pilote ne fournit aucune méthode publique pour contrôler ou limiter la taille de la mémoire tampon.
@@ -41,15 +40,15 @@ Pour permettre aux applications de gérer des résultats très volumineux, le [!
 
 Il existe trois manières pour une application de demander que l'exécution d'instructions utilise la mise en mémoire tampon adaptative :
 
-- L’application peut définir la propriété de connexion **responseBuffering** « Adaptive ». Pour plus d’informations sur la définition des propriétés de connexion, consultez [définissant les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).
+- L’application peut définir la propriété de connexion **responseBuffering** sur «Adaptive». Pour plus d’informations sur la définition des propriétés de connexion, consultez [définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).
 
 - L’application peut utiliser la méthode [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverdatasource.md) de l’objet [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) pour définir le mode de mise en mémoire tampon de la réponse pour toutes les connexions créées par le biais de cet objet [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md).
 
 - L’application peut utiliser la méthode [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) de la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) pour définir le mode de mise en mémoire tampon de la réponse pour un objet statement particulier.
 
-Lors de l’utilisation du pilote JDBC version 1.2, les applications devaient effectuer une conversion de type (transtypage) de l’objet statement vers une classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) pour pouvoir utiliser la méthode [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md). Les exemples de code dans le [l’échantillon de données volumineux lecture](../../connect/jdbc/reading-large-data-sample.md) et [lecture des données volumineuses avec exemple de procédures stockées](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) illustrent cet ancien mode d’utilisation.
+Lors de l’utilisation du pilote JDBC version 1.2, les applications devaient effectuer une conversion de type (transtypage) de l’objet statement vers une classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) pour pouvoir utiliser la méthode [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md). Les exemples de code de l’exemple [lecture de données volumineuses](../../connect/jdbc/reading-large-data-sample.md) et [lecture de données volumineuses avec des procédures stockées](../../connect/jdbc/reading-large-data-with-stored-procedures-sample.md) illustrent cette ancienne utilisation.
 
-Toutefois, avec le pilote JDBC version 2.0, les applications peuvent utiliser les méthodes [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) et [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) pour accéder aux fonctionnalités propres aux fournisseurs sans hypothèse relative à la hiérarchie de la classe d’implémentation. Par exemple de code, consultez le [la mise à jour des exemples de données volumineux](../../connect/jdbc/updating-large-data-sample.md) rubrique.
+Toutefois, avec le pilote JDBC version 2.0, les applications peuvent utiliser les méthodes [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) et [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) pour accéder aux fonctionnalités propres aux fournisseurs sans hypothèse relative à la hiérarchie de la classe d’implémentation. Pour obtenir un exemple de code, consultez la rubrique [mise à jour](../../connect/jdbc/updating-large-data-sample.md) d’un exemple de données volumineuses.
 
 ## <a name="retrieving-large-data-with-adaptive-buffering"></a>Récupération de données volumineuses avec la mise en mémoire tampon adaptative
 
@@ -62,7 +61,7 @@ Quand des valeurs élevées sont lues une fois à l’aide des méthodes get\<Ty
 Quand l’application utilise la mise en mémoire tampon adaptative, les valeurs extraites par les méthodes get\<Type>Stream peuvent être extraites une seule fois. Si vous essayez d’appeler toute méthode get\<Type> sur la même colonne ou le même paramètre après avoir appelé la méthode get\<Type>Stream du même objet, une exception est levée avec le message « Un utilisateur a accédé aux données et elles ne sont pas disponibles pour cette colonne ou ce paramètre ».
 
 > [!NOTE]
-> Un appel à ResultSet.close() au milieu du traitement d’un jeu de résultats nécessiterait Microsoft JDBC Driver for SQL Server lire et ignorer tous les paquets restants. Cette opération peut prendre de temps si la requête a retourné un jeu de données volumineux et plus particulièrement la connexion réseau est lente.
+> Un appel à ResultSet. Close () au milieu du traitement d’un jeu de résultats nécessite que le pilote Microsoft JDBC pour SQL Server Lise et ignore tous les paquets restants. Cela peut prendre beaucoup de temps si la requête a retourné un grand jeu de données et surtout si la connexion réseau est lente.
 
 ## <a name="guidelines-for-using-adaptive-buffering"></a>Consignes pour l'utilisation de la mise en mémoire tampon adaptative
 
@@ -70,7 +69,7 @@ Les développeurs doivent respecter les recommandations importantes suivantes af
 
 - Évitez d’utiliser la propriété de chaîne de connexion **electMethod=cursor** pour permettre à l’application de traiter un jeu de résultats très volumineux. La fonctionnalité de mise en mémoire tampon adaptative permet aux applications de traiter de très grands jeux de résultats avant uniquement en lecture seule sans utiliser de curseur côté serveur. Notez que, quand vous définissez **selectMethod=cursor**, tous les jeux de résultats en lecture seule de type avant produits par cette connexion sont affectés. En d’autres termes, si votre application traite régulièrement des jeux de résultats de petite taille avec peu de lignes, la création, la lecture et la fermeture d’un curseur côté serveur pour chaque jeu de résultats utilisera davantage de ressources à la fois côté client et côté serveur que dans le cas où **selectMethod** n’a pas la valeur **cursor**.
 
-- Lire les grandes valeurs de texte ou binaires sous forme de flux en utilisant le getAsciiStream, le getBinaryStream ou les méthodes getCharacterStream au lieu du getBlob ou les méthodes getClob. À partir de la version 1.2, la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) fournit de nouvelles méthodes get\<Type>Stream à cet effet.
+- Lire des valeurs de texte ou binaires volumineuses en tant que flux à l’aide des méthodes getAsciiStream, getBinaryStream ou getCharacterStream à la place des méthodes getBlob ou getClob,. À partir de la version 1.2, la classe [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) fournit de nouvelles méthodes get\<Type>Stream à cet effet.
 
 - Vérifiez que les colonnes avec des valeurs potentiellement grandes sont placées en dernier dans la liste de colonnes dans une instruction SELECT et que les méthodes get\<Type>Stream du [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) sont utilisées pour accéder aux colonnes dans l’ordre dans lequel elles sont sélectionnées.
 
@@ -78,7 +77,7 @@ Les développeurs doivent respecter les recommandations importantes suivantes af
 
 - Évitez d'exécuter simultanément plusieurs instructions sur la même connexion. L'exécution d'une autre instruction avant le traitement des résultats de l'instruction précédente peut provoquer la mise en mémoire tampon des résultats non traités dans la mémoire d'application.
 
-- Il existe quelques cas où l’utilisation **selectMethod = cursor** au lieu de **responseBuffering = adaptive** serait plus avantageux, telles que :
+- Dans certains cas, l’utilisation de **selectMethod = cursor** au lieu de **responseBuffering = Adaptive** serait plus avantageuse, par exemple:
 
   - Si votre application traite avant uniquement, en lecture seule jeu de résultats lentement, par exemple la lecture de chaque ligne après une entrée utilisateur, à l’aide de **selectMethod = cursor** au lieu de **responseBuffering = adaptive** peut aider à réduire l’utilisation des ressources par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
