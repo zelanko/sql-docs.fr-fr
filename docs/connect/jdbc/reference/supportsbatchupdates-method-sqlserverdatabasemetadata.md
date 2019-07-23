@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 47b7b0da-e467-465a-aa19-bc702efcfaa0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f7ffdc84d40f68b1f1697357a892fb2d136be2e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bd3027348673bfb85d9ab512a3f89f2e278edde9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969785"
 ---
 # <a name="supportsbatchupdates-method-sqlserverdatabasemetadata"></a>Méthode supportsBatchUpdates (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsBatchUpdates()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode supportsBatchUpdates est spécifiée par la méthode supportsBatchUpdates dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode supportsBatchUpdates est spécifiée par la méthode supportsBatchUpdates dans l’interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

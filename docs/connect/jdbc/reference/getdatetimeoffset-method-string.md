@@ -1,5 +1,5 @@
 ---
-title: getdatetimeoffset, méthode (String) | Microsoft Docs
+title: Méthode getDateTimeOffset (String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fedb1d75-0c3d-4eb3-ae65-da0e153265cc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e8ebcc7a803a0b13c85e6cefaeea9fa60d0355b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d831ff519f72fb5b68cec3c7dc359f1d54106c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983790"
 ---
 # <a name="getdatetimeoffset-method-string"></a>Méthode getDateTimeOffset (String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(String sCol)
  Nom d'un paramètre.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) objet.  
+ Objet de [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Vous pouvez définir un [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) valeur de paramètre avec [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md).  
+ Vous pouvez définir une valeur de paramètre de [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) avec [SQLServerCallableStatement. SetDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [getDateTimeOffset, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   

@@ -6,14 +6,13 @@ ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.date: 06/06/2019
-ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826905"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255170"
 ---
 # <a name="configure-report-builder-access"></a>Configurer l'accès au Générateur de rapports
 Le Générateur de rapports est un outil de génération d’états ad hoc qui s’installe avec un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuré pour le mode natif ou pour le mode intégré SharePoint.  
@@ -30,15 +29,15 @@ L'accès au Générateur de rapports dépend des facteurs suivants :
 
 Le Générateur de rapports n’est pas disponible dans toutes les éditions de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-L’ordinateur client doit avoir le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 ou 4.6.1 installé respectivement de SSRS 2016 et 2017. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournit l’infrastructure permettant d’exécuter les applications [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
+L’ordinateur client doit avoir le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4,6 ou 4.6.1 installé pour SSRS 2016 et 2017, respectivement. Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] fournit l’infrastructure permettant d’exécuter les applications [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
 
-Vous devez utiliser [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 ou version ultérieure, ou un autre navigateur modern.  
+Vous devez utiliser [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 ou une version ultérieure, ou un autre navigateur moderne.  
 
 Le Générateur de rapports s'exécute toujours en confiance totale ; vous ne pouvez pas le configurer pour qu'il s'exécute en confiance partielle. Dans les versions antérieures, il était possible d'exécuter le Générateur de rapports en mode de confiance partielle, mais cette option n'est pas prise en charge dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>Activation et désactivation du Générateur de rapports  
 
-Le Générateur de rapports est activé par défaut. Les administrateurs du serveur de rapports ont la possibilité de désactiver la fonctionnalité du Générateur de rapports en définissant la propriété système **ShowDownloadMenu** de ce serveur sur la valeur **false**. Définition de cette propriété désactive Générateur de rapports, éditeur de rapports mobiles, et Power BI Mobile téléchargements pour ce serveur de rapports.  
+Le Générateur de rapports est activé par défaut. Les administrateurs du serveur de rapports ont la possibilité de désactiver la fonctionnalité du Générateur de rapports en définissant la propriété système **ShowDownloadMenu** de ce serveur sur la valeur **false**. La définition de cette propriété désactivera les téléchargements Générateur de rapports, Éditeur de rapports mobiles et Power BI Mobile pour ce serveur de rapports.  
 
  Pour définir les propriétés système du serveur de rapports, vous pouvez utiliser Management Studio ou un script :   
 
@@ -110,8 +109,8 @@ Une fois les attributions de rôles créées, les utilisateurs seront autorisés
 
 1. Démarrer le portail web.  
 
-2. Cliquez sur l’icône d’engrenage dans le coin supérieur droit de la page d’accueil portail web et sélectionnez **paramètres du Site** dans le menu déroulant.  
-![l’icône d’engrenage portail web et un menu](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
+2. Cliquez sur l’icône d’engrenage en haut à droite de la page d’hébergement du portail Web et sélectionnez **paramètres du site** dans le menu déroulant.  
+![icône et menu de l’engrenage portail Web](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Cliquez sur **Sécurité**.  
 

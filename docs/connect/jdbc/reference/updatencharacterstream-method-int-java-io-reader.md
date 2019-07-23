@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fc746413-bdbf-4109-aee0-385a1270c847
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7ba829563b81584e14d713be0ca91d4d48124ce2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6ce089832227a9f44cd1adfd0a4682b53002a2fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998716"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader"></a>Méthode updateNCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,19 +33,19 @@ public void updateNCharacterStream(int columnIndex,
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
  *x*  
   
- Un objet de lecteur.  
+ Objet lecteur.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateNCharacterStream est spécifiée par la méthode updateNCharacterStream dans l’interface java.sql.ResultSet.  
+ Cette méthode updateNCharacterStream est spécifiée par la méthode updateNCharacterStream dans l’interface java. Sql. ResultSet.  
   
- Cette méthode passe les caractères Unicode à partir d’un objet lecteur sélectionné **nchar**, **nvarchar (max)** , **ntext** et **xml** colonnes. L'utilisation de cette méthode sur d'autres colonnes de type de données lève une exception.  
+ Cette méthode passe les caractères Unicode d’un objet lecteur aux colonnes **nchar**, **nvarchar (max)** , **ntext** et **XML** sélectionnées. L'utilisation de cette méthode sur d'autres colonnes de type de données lève une exception.  
   
 ## <a name="see-also"></a>Voir aussi  
  [updateNCharacterStream, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   

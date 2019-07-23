@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dd113dec0a7ed8ba8bdcf66bca5cfbd454d5a500
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8f4ad3463cce03e9c83c936d028e480aef52dd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972780"
 ---
 # <a name="setstatementpoolingcachesize-method-sqlserverconnection"></a>setStatementPoolingCacheSize, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Définit la taille du cache d’instruction préparée pour cette connexion. Fonctionne si disableStatementPooling est définie sur false et la valeur > 0.
+ Définit la taille du cache d’instructions préparé pour cette connexion. Fonctionne si disableStatementPooling est défini sur false et que la valeur > 0.
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,13 +37,13 @@ public void setStatementPoolingCacheSize(int statementPoolingCacheSize)
 #### <a name="parameters"></a>Paramètres  
  *statementPoolingCacheSize*  
   
- La nouvelle valeur de la **regroupement d’instructions** propriété de connexion.  
+ Nouvelle valeur de la propriété de connexion **instructions** .  
 
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Notes  
- Cette méthode est disponible à partir de la version du pilote JDBC 6.4 et ultérieur.
+ Cette méthode est disponible dans la version 6,4 et les versions ultérieures du pilote JDBC.
  
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

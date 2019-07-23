@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 905dd02a-0c7f-475b-8be4-341b4359c766
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3e9f964f6a9ace8984e63018f556550c1631bc1c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f7796b766ac8593f557e64d2ebb6e324abf0ec82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980590"
 ---
 # <a name="getref-method-int"></a>Méthode getRef (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ public java.sql.Ref getRef(int i)
 #### <a name="parameters"></a>Paramètres  
  *i*  
   
- Un **int** qui indique l’index de paramètre.  
+ **Entier** qui indique l’index du paramètre.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet Ref.  
+ Objet Ref.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 2048bb9f-7d9b-4aaa-b135-c716910cc800
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 03a11c4479ac860e84009fcd528d932098bdc661
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbe3bc040ba79ad7699a571b13b48f2c41965c60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981423"
 ---
 # <a name="getnstring-method-int"></a>Méthode getNString (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère la valeur de l’élément désigné **NCHAR**, **NVARCHAR**, ou **LONGNVARCHAR** paramètre sous forme de chaîne dans le Java en langage de programmation.  
+  Récupère la valeur du paramètre **nchar**, **nvarchar**ou **LONGNVARCHAR** désigné sous la forme d’une chaîne dans le langage de programmation Java.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -33,7 +32,7 @@ public final java.lang.String getNString(int parameterIndex)
 #### <a name="parameters"></a>Paramètres  
  *parameterIndex*  
   
- Un **int** qui indique l’index de paramètre.  
+ **Entier** qui indique l’index du paramètre.  
   
 ## <a name="return-value"></a>Valeur retournée  
  AStringobject.  

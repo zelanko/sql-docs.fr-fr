@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8c2973e6-d57f-4f64-b812-350ce4098ce6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 51eaf47a34a11d813c096e77f61bead4ea142ef2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 848400e46992369d10c57170a1aeccbeac402f84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953393"
 ---
 # <a name="getbytes-method-int"></a>Méthode getBytes (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ public byte[] getBytes(int index)
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- Un **int** qui indique l’index de paramètre.  
+ **Entier** qui indique l’index du paramètre.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un tableau de **octets** valeurs.  
+ Tableau de valeurs d' **octets** .  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

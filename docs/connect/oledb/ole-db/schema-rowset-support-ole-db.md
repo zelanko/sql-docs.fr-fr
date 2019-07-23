@@ -1,5 +1,5 @@
 ---
-title: Prise en charge de l’ensemble de lignes de schéma (OLE DB) | Microsoft Docs
+title: Prise en charge des ensembles de lignes de schéma (OLE DB) | Microsoft Docs
 description: Prise en charge des ensembles de lignes de schéma (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: b799ebd6205ebac01f832910dff0775afe5c0a93
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4734255bc71b7f658b15db5c615910fbf3c6f5a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993922"
 ---
 # <a name="schema-rowset-support-ole-db"></a>Prise en charge des ensembles de lignes de schéma (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "66795947"
   Le pilote OLE DB pour SQL Server prend également en charge le retour des informations de schéma d’un serveur lié lors du traitement de requêtes distribuées [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
 > [!NOTE]  
->  Bien que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les synonymes, les métadonnées de synonymes n’est pas retournée par le pilote OLE DB pour SQL Server.  
+>  Bien [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que prenne en charge les synonymes, les métadonnées des synonymes ne sont pas retournées par OLE DB pilote pour les SQL Server.  
   
  Les tableaux suivants répertorient les ensembles de lignes de schéma et les colonnes de restriction prises en charge par le pilote OLE DB pour SQL Server.  
   
@@ -57,7 +56,7 @@ ms.locfileid: "66795947"
 ## <a name="in-this-section"></a>Dans cette section  
  [Prise en charge des requêtes distribuées dans les ensembles de lignes de schéma](../../oledb/ole-db/schema-rowsets-distributed-query-support.md)  
   
- [Ensemble de lignes LINKEDSERVERS &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [OLE DB de &#40;l’ensemble de lignes LINKEDSERVERS&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation du pilote OLE DB pour SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)   

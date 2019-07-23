@@ -1,5 +1,5 @@
 ---
-title: Sqlserverxaresource, classe | Microsoft Docs
+title: SQLServerXAResource, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: df957b79-536f-4db7-b6ac-3d59343559fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8cde4f1b80ae1167ba7f99c80505e3b838890113
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 282201b7ff3f5b2ebfe4d8a1224d4d1b39285c53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970086"
 ---
 # <a name="sqlserverxaresource-class"></a>Classe SQLServerXAResource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

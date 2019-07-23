@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a2a0dfbb-11ec-429f-aea6-8f44148ebb8e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: abd3db2e2140db54bf5994423596fb355f046af9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79995b672219c456284809ee16593fbe800a9638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979740"
 ---
 # <a name="getsqlkeywords-method-sqlserverdatabasemetadata"></a>Méthode getSQLKeywords (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public java.lang.String getSQLKeywords()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **chaîne** qui contient les mots clés SQL.  
+ **Chaîne** qui contient les mots clés SQL.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getSQLKeywords est spécifiée par la méthode getSQLKeywords dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getSQLKeywords est spécifiée par la méthode getSQLKeywords dans l’interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: setserverpreparedstatementdiscardthreshold, méthode (SQLServerDataSource) | Microsoft Docs
+title: Méthode Setserverpreparedstatementdiscardthreshold, (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fb2962f6514fec7211b6d3a5ccd5f3af09a1f066
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 28c3a442f89813a4ce93ded9035c1bc16f9e47c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66782923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972846"
 ---
 # <a name="setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource"></a>setServerPreparedStatementDiscardThreshold, méthode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Définit la valeur de propriété de connexion serverPreparedStatementDiscardThreshold. Ce paramètre contrôle préparé en suspens combien rejet instruction actions (sp_unprepare) peuvent être en attente par connexion avant l’exécution d’un appel pour nettoyer les handles en attente sur le serveur. Lorsque le paramètre est < = 1 ces actions sont exécutées immédiatement sur une instruction préparée fermer. Si la valeur est définie sur 1 > ces appels sont regroupés afin d’éviter le traitement de l’appel de sp_unprepare trop souvent.
+  Définit la valeur de la propriété de connexion serverPreparedStatementDiscardThreshold. Ce paramètre contrôle le nombre d’actions d’instruction préparée en suspens (sp_unprepare) qui peuvent être en attente par connexion avant qu’un appel pour nettoyer les descripteurs en suspens sur le serveur soit exécuté. Lorsque le paramètre est < = 1 les actions d’annulation de préparation sont exécutées immédiatement lors de la fermeture de l’instruction préparée. Si la valeur est définie sur > 1, ces appels sont regroupés pour éviter la surcharge de l’appel de sp_unprepare trop souvent.
  
 ## <a name="syntax"></a>Syntaxe  
   
@@ -32,13 +31,13 @@ public void setServerPreparedStatementDiscardThreshold(int enablePrepareOnFirstP
 #### <a name="parameters"></a>Paramètres  
  *serverPreparedStatementDiscardThreshold*  
   
- La nouvelle valeur de la **serverPreparedStatementDiscardThreshold** propriété de connexion.  
+ Nouvelle valeur de la propriété de connexion **serverPreparedStatementDiscardThreshold** .  
 
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Notes  
- Cette méthode est disponible à partir de la version du pilote JDBC 6.4 et ultérieur.
+ Cette méthode est disponible dans la version 6,4 et les versions ultérieures du pilote JDBC.
  
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
