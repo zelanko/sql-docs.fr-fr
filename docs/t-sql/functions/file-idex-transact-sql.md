@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 44cb6fa7f32616f7a1616c334c438b7a752546e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59b44b3356a0f71074543eb35107040ff8c47982
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071503"
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ Une expression de type **sysname** qui retourne la valeur d’ID de fichier 'FIL
   
 **NULL** en cas d’erreur  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 *file_name* correspond au nom de fichier logique affiché dans la colonne **name** des affichages catalogue [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md) ou [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).  
   
 Utilisez `FILE_IDEX` dans une liste SELECT, une clause WHERE, ou à n’importe quel emplacement prenant en charge une expression. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md).  
@@ -104,7 +103,7 @@ SELECT FILE_IDEX((SELECT name FROM sys.master_files WHERE type = 4))
 AS 'File_ID';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions de métadonnées &#40;Transact-SQL&#41;](../../t-sql/functions/metadata-functions-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  

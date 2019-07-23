@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e6bead506a9e7b84aba4f5ec2cee1668e6483e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075059"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +52,7 @@ test_expression [ NOT ] IN
  *subquery*  
  Sous-requête avec un jeu de résultats d'une colonne. Cette colonne doit avoir le même type de données que *test_expression*.  
   
- *expression*[ **,**... *n* ]  
+ *expression*[ **,** ... *n* ]  
  Liste d'expressions utilisée pour vérifier une correspondance. Toutes les expressions doivent avoir le même type de données que *test_expression*.  
   
 ## <a name="result-types"></a>Types des résultats  
@@ -67,7 +66,7 @@ test_expression [ NOT ] IN
 > [!CAUTION]  
 >  Toute valeur Null retournée par la *sous-requête* ou l’*expression* comparée à *test_expression* en utilisant IN ou NOT IN retourne UNKNOWN. L'utilisation de valeurs Null avec IN ou NOT IN peut produire des résultats inattendus.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Incluant explicitement un très grand nombre de valeurs (plusieurs milliers de valeurs séparées par des virgules) entre parenthèses, une clause IN peut consommer des ressources et retourner des erreurs 8623 ou 8632. Pour contourner ce problème, stockez les éléments dans la liste IN dans une table et utilisez une sous-requête SELECT dans une clause IN.  
   
  Error 8623 :  
@@ -206,7 +205,7 @@ FROM DimEmployee
 WHERE FirstName IN ('Mike', 'Michael');  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   

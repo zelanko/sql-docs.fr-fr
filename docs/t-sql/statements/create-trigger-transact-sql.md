@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 737f337369b04c59d34bb8ab4335a2491e843927
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 900d91223aea28d0809c3d3aab9acd574c3d2df2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130130"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -220,7 +219,7 @@ Vous pouvez tout au plus définir un déclencheur INSTEAD OF par instruction INS
   
 Vous ne pouvez pas définir de déclencheurs INSTEAD OF sur des vues pouvant être mises à jour qui utilisent l'option WITH CHECK OPTION. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] signale une erreur lorsqu'un déclencheur INSTEAD OF est ajouté à une telle vue avec l'option WITH CHECK OPTION spécifiée. Vous supprimez cette option à l'aide de l'instruction ALTER VIEW avant de définir le déclencheur INSTEAD OF.  
   
-{ [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }   
+{ [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 Spécifie les instructions de modification des données qui activent le déclencheur DML lorsqu'une tentative a lieu pour l'appliquer à cette table ou à cette vue. Spécifier au moins une option. Utilisez une combinaison de ces options dans un ordre quelconque dans la définition du déclencheur.  
   
 Dans le cas des déclencheurs INSTEAD OF, vous ne pouvez pas utiliser l'option DELETE sur les tables dont la relation référentielle spécifie une action en cascade ON DELETE. De même, l'option UPDATE n'est pas autorisée sur les tables dont la relation référentielle spécifie une action en cascade ON UPDATE.  
@@ -263,7 +262,7 @@ Les déclencheurs DDL et de connexion capturent des informations sur l’événe
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise la mise à jour des colonnes **text**, **ntext**, ou **image** via le déclencheur INSTEAD OF sur des tables ou des vues.  
   
 > [!IMPORTANT]
->  Les types de données**ntext**, **text** et **image** seront supprimés dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces types de données dans un nouveau développement. Prévoyez de modifier les applications qui les utilisent actuellement. Utilisez plutôt les types de données [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)et [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . Les déclencheurs AFTER et INSTEAD OF prennent tous les deux en charge les données **varchar(MAX)**, **nvarchar(MAX)** et **varbinary(MAX)** dans les tables inserted et deleted.  
+>  Les types de données**ntext**, **text** et **image** seront supprimés dans une version ultérieure de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces types de données dans un nouveau développement. Prévoyez de modifier les applications qui les utilisent actuellement. Utilisez plutôt les types de données [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)et [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) . Les déclencheurs AFTER et INSTEAD OF prennent tous les deux en charge les données **varchar(MAX)** , **nvarchar(MAX)** et **varbinary(MAX)** dans les tables inserted et deleted.  
   
 Pour les déclencheurs sur les tables optimisées en mémoire, la seule instruction *sql_statement* autorisée au niveau supérieur est un bloc ATOMIC. Le code T-SQL autorisé dans le bloc ATOMIC est limité par le code T-SQL autorisé dans les procédures natives.  
   
@@ -409,7 +408,7 @@ Le premier déclencheur AFTER imbriqué dans un déclencheur INSTEAD OF se déc
 ### <a name="deferred-name-resolution"></a>Résolution de noms différée  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet aux procédures stockées, aux déclencheurs et aux lots d'instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] de faire référence à des tables qui n'existent pas au moment de la compilation. Cette fonction s'appelle la résolution différée des noms.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 La création d'un déclencheur DML nécessite l'autorisation ALTER sur la table ou la vue sur laquelle le déclencheur est créé.  
   
 La création d'un déclencheur DDL avec une étendue de serveur (ON ALL SERVER) ou d’un déclencheur de connexion nécessite l'autorisation CONTROL SERVER sur le serveur. La création d'un déclencheur DDL avec l'étendue de la base de données (ON DATABASE) nécessite l'autorisation ALTER ANY DATABASE DDL TRIGGER sur la base de données active.  
@@ -427,7 +426,7 @@ AS RAISERROR ('Notify Customer Relations', 16, 10);
 GO  
 ```  
   
-### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>b. Utilisation d'un déclencheur DML avec un message de rappel par courrier électronique  
+### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>B. Utilisation d'un déclencheur DML avec un message de rappel par courrier électronique  
 L'exemple suivant envoie un message électronique à une personne spécifiée (`MaryM`) lorsque la table `Customer` est modifiée.  
   
 ```sql  
@@ -570,7 +569,7 @@ GO
 
     
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [COLUMNS_UPDATED &#40;Transact-SQL&#41;](../../t-sql/functions/columns-updated-transact-sql.md)   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c0e75a7c-85c5-423c-a218-77247bf071aa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b1227fdc2783207d9ab4ebfe7240884ab50f5ba1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: cdc11ab9550b0faaf1fcdc9aa3ba5d7d3fe09eaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58913304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063871"
 ---
 # <a name="sql-server-failover-cluster-installation"></a>Installation d'un cluster de basculement SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ ms.locfileid: "58913304"
 ##### <a name="includessnoversionincludesssnoversion-mdmd-multi-subnet-failover-cluster"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cluster de basculement de sous-réseaux multiples  
  Vous pouvez définir des dépendances OR lorsque les nœuds du cluster se trouvent sur des sous-réseaux différents. Toutefois, chaque nœud du cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit être un propriétaire possible d'au moins une d'adresse IP spécifiée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Avant l'installation du clustering de basculement](../../../sql-server/failover-clusters/install/before-installing-failover-clustering.md)   
  [Créer un cluster de basculement SQL Server &#40;programme d’installation&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)   
  [Installer SQL Server 2016 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   

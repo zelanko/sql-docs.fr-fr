@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8aed6c45ec44e6373db0d018a1190f7295e9775f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8285b4de85be5ce6f6fe79b60afe68650634a2b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128080"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implémenter un gestionnaire de logique métier pour un article de fusion
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -101,18 +100,18 @@ ms.locfileid: "47658077"
   
 1.  Sur le serveur de publication, exécutez [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) pour vérifier que l’assembly n’a pas été inscrit en tant que gestionnaire de logique métier.  
   
-2.  Sur le serveur de distribution, exécutez [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md), en spécifiant un nom convivial pour le gestionnaire de logique métier pour **@article_resolver**, une valeur **true** pour **@is_dotnet_assembly**, le nom de l’assembly pour **@dotnet_assembly_name** et le nom qualifié complet de la classe qui substitue <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> pour **@dotnet_class_name**.  
+2.  Sur le serveur de distribution, exécutez [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md), en spécifiant un nom convivial pour le gestionnaire de logique métier pour **@article_resolver** , une valeur **true** pour **@is_dotnet_assembly** , le nom de l’assembly pour **@dotnet_assembly_name** et le nom qualifié complet de la classe qui substitue <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> pour **@dotnet_class_name** .  
   
     > [!NOTE]  
-    >  Si l'assembly n'est pas déployé dans le même répertoire que l'exécutable de l'Agent de fusion, dans le même répertoire que l'application qui démarre de façon synchrone l'Agent de fusion ni dans le GAC (Global Assembly Cache), vous devez spécifier le chemin d'accès complet avec le nom de l'assembly pour **@dotnet_assembly_name**. Lorsque vous utilisez la synchronisation Web, vous devez spécifier l'emplacement de l'assembly sur le serveur Web.  
+    >  Si l'assembly n'est pas déployé dans le même répertoire que l'exécutable de l'Agent de fusion, dans le même répertoire que l'application qui démarre de façon synchrone l'Agent de fusion ni dans le GAC (Global Assembly Cache), vous devez spécifier le chemin d'accès complet avec le nom de l'assembly pour **@dotnet_assembly_name** . Lorsque vous utilisez la synchronisation Web, vous devez spécifier l'emplacement de l'assembly sur le serveur Web.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>Pour utiliser un gestionnaire de logique métier avec un nouvel article de table  
   
-1.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) pour définir un article, en spécifiant le nom convivial du gestionnaire de logique métier pour **@article_resolver**. Pour plus d'informations, voir [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+1.  Exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) pour définir un article, en spécifiant le nom convivial du gestionnaire de logique métier pour **@article_resolver** . Pour plus d’informations, consultez [définir un Article](../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Pour utiliser un gestionnaire de logique métier avec un article de table existant  
   
-1.  Exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), en spécifiant **@publication**, **@article**, en affectant la valeur **article_resolver** à **@property** et le nom convivial du gestionnaire de logique métier obtenu à l’étape 1 à **@value**.  
+1.  Exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md), en spécifiant **@publication** , **@article** , en affectant la valeur **article_resolver** à **@property** et le nom convivial du gestionnaire de logique métier obtenu à l’étape 1 à **@value** .  
   
 ###  <a name="TsqlExample"></a> Exemples (programmation de la réplication)  
  Cet exemple illustre un gestionnaire de logique métier qui crée un journal d'audit.  
@@ -204,7 +203,7 @@ ms.locfileid: "47658077"
   
     -   le nom convivial du gestionnaire de logique métier (<xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A>) pour <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>.  
   
-3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Article.Create%2A> . Pour plus d'informations, voir [Define an Article](../../relational-databases/replication/publish/define-an-article.md).  
+3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.Article.Create%2A> . Pour plus d’informations, consultez [définir un Article](../../relational-databases/replication/publish/define-an-article.md).  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>Pour utiliser un gestionnaire de logique métier avec un article de table existant  
   
@@ -239,7 +238,7 @@ ms.locfileid: "47658077"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Implémenter un outil personnalisé de résolution des conflits pour un article de fusion](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [Déboguer un gestionnaire de logique métier &#40;programmation de la réplication&#41;](../../relational-databases/replication/debug-a-business-logic-handler-replication-programming.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   

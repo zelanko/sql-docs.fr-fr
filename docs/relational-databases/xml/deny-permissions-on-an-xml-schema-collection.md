@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: baa1f607e9bdce0dfedc989125e5d29111d44f93
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 068701e16d192ca5edfb45267ebee0cece3619a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052282"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Refuser des autorisations sur une collection de schémas XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -190,7 +189,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Collections de schémas XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-schema-collections-sql-server.md)   
  [Spécifications et limitations relatives aux collections de schémas XML sur le serveur](../../relational-databases/xml/requirements-and-limitations-for-xml-schema-collections-on-the-server.md)   

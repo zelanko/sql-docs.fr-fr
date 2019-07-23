@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07cf3d71690dd7f7b493970b62ac0130a8530b16
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137324"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copier des bases de données avec la sauvegarde et la restauration
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ D’autres points sont susceptibles d’affecter cette procédure :
  Le nom de la base de données fourni explicitement lors de la restauration d’une base de données est utilisé automatiquement comme nouveau nom. Le nom de la base de données n'existant pas encore, un nouveau nom est créé en utilisant les fichiers figurant dans la sauvegarde.  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>Lors de la mise à niveau d’une base de données en utilisant la restauration  
- Lors de la restauration de sauvegardes à partir d'une version antérieure, il est utile de savoir à l'avance si le chemin d'accès (lecteur ou répertoire) de chaque catalogue de texte intégral figurant dans la sauvegarde existe sur l'ordinateur de destination. Pour établir la liste des noms logiques et des noms physiques, du chemin et du nom de chaque fichier dans une sauvegarde, y compris les fichiers de catalogues, utilisez l’instruction RESTORE FILELISTONLY FROM *<unité_sauvegarde>*. Pour plus d’informations, consultez [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
+ Lors de la restauration de sauvegardes à partir d'une version antérieure, il est utile de savoir à l'avance si le chemin d'accès (lecteur ou répertoire) de chaque catalogue de texte intégral figurant dans la sauvegarde existe sur l'ordinateur de destination. Pour établir la liste des noms logiques et des noms physiques, du chemin et du nom de chaque fichier dans une sauvegarde, y compris les fichiers de catalogues, utilisez l’instruction RESTORE FILELISTONLY FROM *<unité_sauvegarde>* . Pour plus d’informations, consultez [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
  Si le même chemin n'existe pas sur l'ordinateur de destination, vous pouvez procéder de l'une des deux manières suivantes :  
   

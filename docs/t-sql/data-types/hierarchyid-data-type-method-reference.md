@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69b756e0-a1df-45b3-8a24-6ded8658aefe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4c3f4ed7312afcd19e7244b98ba781753ee22b9f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 122630048b7e4ff9cef34c49bfde68177020630f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077912"
 ---
 # <a name="hierarchyid-data-type-method-reference"></a>Référence de méthodes de type de données hierarchyid
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ Une valeur du type de données **hierarchyid** représente une position dans une
   
 Le type **hierarchyid** est disponible pour les clients CLR comme le type de données **SqlHierarchyId**.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Le type **hierarchyid** encode logiquement les informations sur un nœud unique dans une arborescence hiérarchique en encodant le chemin de la racine de l’arborescence au nœud. Un tel chemin d'accès est représenté logiquement comme une séquence d'étiquettes de nœud de tous les enfants visités après la racine. Une barre oblique démarre la représentation et un chemin d'accès qui visite uniquement la racine est représenté par une barre oblique unique. Pour les niveaux sous la racine, chaque étiquette est encodée comme une séquence d'entiers séparés par des points. La comparaison entre les enfants est effectuée en comparant les séquences d'entiers séparés par des points dans le classement du dictionnaire. Chaque niveau est suivi d'une barre oblique. Par conséquent, une barre oblique sépare les parents de leurs enfants. Par exemple, les éléments suivants sont des chemins de **hierarchyid** valides de longueurs 1, 2, 2, 3, sur 3 niveaux respectivement :
   
 -   /  
@@ -56,11 +55,11 @@ Le type **hierarchyid** encode logiquement les informations sur un nœud unique 
   
 -   /0.1/0.2/  
   
-Les nœuds peuvent être insérés à tout emplacement. Les nœuds insérés après **/1/2/** mais avant **/1/3/** peuvent être représentés comme **/1/2.5/**. Les nœuds insérés avant 0 ont comme représentation logique un nombre négatif. Par exemple, un nœud placé avant **/1/1/** peut être représenté sous la forme **/1/-1/**. Les nœuds ne peuvent pas avoir de zéros non significatifs. Par exemple, **/1/1.1/** est valide, mais **/1/1.01/** ne l’est pas. Pour éviter des erreurs, insérez des nœuds à l’aide de la méthode [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
+Les nœuds peuvent être insérés à tout emplacement. Les nœuds insérés après **/1/2/** mais avant **/1/3/** peuvent être représentés comme **/1/2.5/** . Les nœuds insérés avant 0 ont comme représentation logique un nombre négatif. Par exemple, un nœud placé avant **/1/1/** peut être représenté sous la forme **/1/-1/** . Les nœuds ne peuvent pas avoir de zéros non significatifs. Par exemple, **/1/1.1/** est valide, mais **/1/1.01/** ne l’est pas. Pour éviter des erreurs, insérez des nœuds à l’aide de la méthode [GetDescendant](../../t-sql/data-types/getdescendant-database-engine.md).
   
 ## <a name="data-type-conversion"></a>Conversion de type de données
 Le type de données **hierarchyid** peut être converti en d’autres types de données comme suit :
--   Utilisez la méthode [ToString()](../../t-sql/data-types/tostring-database-engine.md) pour convertir la valeur **hierarchyid** en représentation logique comme type de données **nvarchar(4000)**.  
+-   Utilisez la méthode [ToString()](../../t-sql/data-types/tostring-database-engine.md) pour convertir la valeur **hierarchyid** en représentation logique comme type de données **nvarchar(4000)** .  
 -   Utilisez [Read ()](../../t-sql/data-types/read-database-engine.md) et [Write ()](../../t-sql/data-types/write-database-engine.md) pour convertir **hierarchyid** en **varbinary**.  
 -   Pour transmettre des paramètres **hierarchyid** par SOAP, convertissez-les d’abord en chaînes.  
   

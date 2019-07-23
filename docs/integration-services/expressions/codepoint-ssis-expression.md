@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f7e25feaf6e39ec586afe55c5a99f448573fa61f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d097a135cbca0714b53797fbaa4d5357849b15c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107684"
 ---
 # <a name="codepoint-ssis-expression"></a>CODEPOINT (expression SSIS)
 
@@ -42,7 +41,7 @@ CODEPOINT(character_expression)
 ## <a name="result-types"></a>Types des résultats  
  DT_UI2  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  *character_expression* doit être du type de données DT_WSTR.  
   
  CODEPOINT retourne un résultat Null si *character_expression* est Null ou est une chaîne vide.  
@@ -60,7 +59,7 @@ CODEPOINT("Mountain Bike")
 CODEPOINT(@Name)  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions &#40;expression SSIS&#41;](../../integration-services/expressions/functions-ssis-expression.md)  
   
   

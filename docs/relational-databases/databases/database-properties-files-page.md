@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 3c030e51-db82-4b43-b1e5-8547ddd3de87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2db9bd87635737487677ccd043e06a7716f7c29f
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: f3c0493192381bc3dedbf23ab1e01c0142e88be4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099608"
 ---
 # <a name="database-properties-files-page"></a>Propriétés de la base de données (page Fichiers)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette page vous permet de créer une nouvelle base de données, ainsi que d'afficher et de modifier les propriétés de la base de données sélectionnée. Cette rubrique s’applique aux **Propriétés de la base de données (page Fichiers)** pour les bases de données existantes et à la **Nouvelle base de données (page Général)**.  
+  Cette page vous permet de créer une nouvelle base de données, ainsi que d'afficher et de modifier les propriétés de la base de données sélectionnée. Cette rubrique s’applique aux **Propriétés de la base de données (page Fichiers)** pour les bases de données existantes et à la **Nouvelle base de données (page Général)** .  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Nom de la base de données**  
@@ -48,7 +47,7 @@ ms.locfileid: "51350011"
  Pour ajouter des fichiers (conteneurs) à un groupe de fichiers de données Filestream, FILESTREAM doit être activé. Vous pouvez activer FILESTREAM à l’aide de la boîte de dialogue [Propriétés du serveur (page Avancé)](../../database-engine/configure-windows/server-properties-advanced-page.md) .  
   
  **Groupe de fichiers**  
- Sélectionnez le groupe de fichiers du fichier dans la liste. Par défaut, le groupe de fichiers est PRIMARY. Vous pouvez créer un groupe de fichiers en sélectionnant **\<nouveau groupe de fichiers>**, puis en entrant les informations sur le groupe de fichiers dans la boîte de dialogue **Nouveau groupe de fichiers**. Il est également possible de créer un groupe de fichiers dans la page **Groupe de fichiers** . Vous ne pouvez pas modifier le groupe de fichiers d'un fichier existant.  
+ Sélectionnez le groupe de fichiers du fichier dans la liste. Par défaut, le groupe de fichiers est PRIMARY. Vous pouvez créer un groupe de fichiers en sélectionnant **\<nouveau groupe de fichiers>** , puis en entrant les informations sur le groupe de fichiers dans la boîte de dialogue **Nouveau groupe de fichiers**. Il est également possible de créer un groupe de fichiers dans la page **Groupe de fichiers** . Vous ne pouvez pas modifier le groupe de fichiers d'un fichier existant.  
   
  Lors de l’ajout de fichiers (conteneurs) à un groupe de fichiers optimisé en mémoire, le champ **Groupe de fichiers** est rempli avec le nom du groupe de fichiers optimisé en mémoire de la base de données.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "51350011"
   
  Pour plus d’informations sur les fichiers, consultez [Groupes de fichiers et fichiers de base de données](../../relational-databases/databases/database-files-and-filegroups.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

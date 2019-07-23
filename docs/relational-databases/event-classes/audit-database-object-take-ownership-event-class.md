@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 26409a60-9616-484b-b608-ca554aef08f6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9f2cbe96239d577fb6cd8bc703b603489de02ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 279f8ea49f62c97f939ed273ec12985b65f39e8a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109042"
 ---
 # <a name="audit-database-object-take-ownership-event-class"></a>Audit Database Object Take Ownership (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "62686770"
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
 |**XactSequence**|**bigint**|Jeton utilisé pour décrire la transaction en cours.|50|Oui|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

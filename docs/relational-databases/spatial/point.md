@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a50b1d70ac6e65002c33fe7604f95d54947dedb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91bcaba1008ee0ca67de6562d681b81bcc5641e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048549"
 ---
 # <a name="point"></a>Point
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ DECLARE @g geometry;
 SET @g = geometry::Parse('POINT(3 4 NULL NULL)');  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [MultiPoint](../../relational-databases/spatial/multipoint.md)   
  [STX &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STY &#40;type de données geometry&#41;](../../t-sql/spatial-geometry/sty-geometry-data-type.md)   

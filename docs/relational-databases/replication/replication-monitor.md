@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9646f61d6cb8d9a277f08711dc8326f34064c5ad
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7a926e4735c29d92f9faaec69e06171e134360aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005436"
 ---
 # <a name="replication-monitor"></a>Moniteur de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ ms.locfileid: "54124599"
   
 -   [Trier les colonnes](../../relational-databases/replication/sort-columns.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer le moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
 
   

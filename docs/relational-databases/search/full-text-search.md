@@ -11,14 +11,13 @@ ms.assetid: a0ce315d-f96d-4e5d-b4eb-ff76811cab75
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b769bf2bff3c9958bc4a4fd9bedafe140e96c67f
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: d17a2d0f2abb6324d1cb990dcf673458fb5205dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082766"
 ---
 # <a name="full-text-search"></a>Recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
  Les requêtes de texte intégral ne respectent pas la casse. Par exemple, la recherche du terme « Aluminium » ou « aluminium » retourne les mêmes résultats.  
   
- Les requêtes de texte intégral utilisent un ensemble réduit de prédicats [!INCLUDE[tsql](../../includes/tsql-md.md)] (CONTAINS et FREETEXT) et de fonctions (CONTAINSTABLE et FREETEXTTABLE). Toutefois, les objectifs de la recherche pour un scénario d'entreprise donné influencent la structure des requêtes de texte intégral. Exemple :  
+ Les requêtes de texte intégral utilisent un ensemble réduit de prédicats [!INCLUDE[tsql](../../includes/tsql-md.md)] (CONTAINS et FREETEXT) et de fonctions (CONTAINSTABLE et FREETEXTTABLE). Toutefois, les objectifs de la recherche pour un scénario d'entreprise donné influencent la structure des requêtes de texte intégral. Par exemple :  
   
 -   Entreprise e-business : rechercher un produit sur un site web :  
   
@@ -124,7 +123,7 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
 -   **Gestionnaire de protocole.** Ce composant extrait les données de la mémoire en vue de leur traitement ultérieur et accède aux données d'une table utilisateur de la base de données spécifiée. Il est chargé, entre autres, de collecter les données des colonnes indexées en texte intégral et de transmettre ces données à l'hôte de démon de filtre, qui applique le filtrage et l'analyse lexicale, si besoin est.  
   
--   **Filtres.** Un filtrage peut être nécessaire sur certains types de données avant que les données d’un document puissent être indexées en texte intégral, notamment les données des colonnes **varbinary**, **varbinary(max)**, **image**ou **xml** . Le filtre utilisé pour un document donné dépend du type de celui-ci. Ainsi, différents filtres sont utilisés pour les documents Microsoft Word (.doc), les documents Microsoft Excel (.xls) et les documents XML (.xml). Ensuite, le filtre extrait des segments de texte du document, en supprimant la mise en forme incorporée et en conservant le texte et, éventuellement, les informations sur l'emplacement du texte. Un flux d'informations textuelles est ainsi généré. Pour plus d’informations, consultez [Configurer et gérer les extensions analytiques avancées](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
+-   **Filtres.** Un filtrage peut être nécessaire sur certains types de données avant que les données d’un document puissent être indexées en texte intégral, notamment les données des colonnes **varbinary**, **varbinary(max)** , **image**ou **xml** . Le filtre utilisé pour un document donné dépend du type de celui-ci. Ainsi, différents filtres sont utilisés pour les documents Microsoft Word (.doc), les documents Microsoft Excel (.xls) et les documents XML (.xml). Ensuite, le filtre extrait des segments de texte du document, en supprimant la mise en forme incorporée et en conservant le texte et, éventuellement, les informations sur l'emplacement du texte. Un flux d'informations textuelles est ainsi généré. Pour plus d’informations, consultez [Configurer et gérer les extensions analytiques avancées](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
   
 -   **Analyseurs lexicaux et générateurs de formes dérivées.** Un analyseur lexical est un composant spécifique d’une langue qui recherche des limites de mots en utilisant les règles lexicales de cette langue (*analyse lexicale*). Chaque analyseur lexical est associé à un composant de générateur de formes dérivées spécifique d'une langue qui conjugue des verbes et effectue des expansions fléchies. Au moment de l'indexation, l'hôte de démon de filtre utilise un analyseur lexical et un générateur de formes dérivées pour effectuer l'analyse linguistique sur les données textuelles d'une colonne de table donnée. La langue associée à une colonne de table dans l'index de recherche en texte intégral détermine l'analyseur lexical et le générateur de formes dérivées à utiliser pour indexer la colonne. Pour plus d’informations, consultez [Configurer et gérer les analyseurs lexicaux et générateurs de formes dérivées pour la recherche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
@@ -136,7 +135,7 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
  Pendant l’indexation des données stockées dans une colonne **varbinary(max)** ou **image** , le filtre qui implémente l’interface **IFilter** extrait le texte en fonction du format de fichier spécifié pour ces données (par exemple, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word). Dans certains cas, les composants de filtrage imposent que les données **varbinary(max)** ou **image** soient écrites dans le dossier de filtrage de données, au lieu d’être envoyées (push) en mémoire.  
   
- Dans le cadre du traitement, les données de texte collectées sont transmises à un analyseur lexical pour décomposer le texte en jetons individuels ou mots clés. La langue utilisée pour la création de jetons peut être spécifiée au niveau de la colonne ou être identifiée au sein des données **varbinary(max)**, **image**ou **xml** par le composant de filtrage.  
+ Dans le cadre du traitement, les données de texte collectées sont transmises à un analyseur lexical pour décomposer le texte en jetons individuels ou mots clés. La langue utilisée pour la création de jetons peut être spécifiée au niveau de la colonne ou être identifiée au sein des données **varbinary(max)** , **image**ou **xml** par le composant de filtrage.  
   
  Un traitement supplémentaire peut être effectué pour supprimer les mots vides et normaliser les jetons avant leur stockage dans l'index de recherche en texte intégral ou un fragment d'index.  
   
@@ -150,7 +149,7 @@ Un index de recherche en texte intégral comporte une ou plusieurs colonnes de c
   
  À compter de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], les index de recherche en texte intégral sont intégrés au Moteur de base de données, au lieu de résider dans le système de fichiers comme dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour une nouvelle base de données, le catalogue de texte intégral est désormais un objet virtuel qui n'appartient à aucun groupe de fichiers ; il s'agit tout simplement d'un concept logique qui fait référence à un groupe d'index de recherche en texte intégral. Notez toutefois que pendant la mise à niveau d’une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , pour tout catalogue de texte intégral qui contient des fichiers de données, un nouveau groupe de fichiers est créé ; pour plus d’informations, consultez [Mise à niveau de la fonction de recherche en texte intégral](../../relational-databases/search/upgrade-full-text-search.md).  
   
-Un seul index de recherche en texte intégral est autorisé par table. Pour qu'un index de recherche en texte intégral puisse être créé sur une table, cette dernière doit posséder une colonne d'index unique, qui n'accepte pas les valeurs Null. Vous pouvez créer un index de recherche en texte intégral sur les colonnes de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**et **varbinary(max)** peut être indexé pour la recherche en texte intégral. Lorsque vous créez un index de recherche en texte intégral sur une colonne de type de données  **varbinary**, **varbinary(max)**, **image**ou **xml** , vous devez spécifier une colonne de type. Une *colonne de type* est une colonne de table dans laquelle vous stockez l’extension de fichier (.doc, .pdf, .xls, etc.) du document dans chaque ligne.  
+Un seul index de recherche en texte intégral est autorisé par table. Pour qu'un index de recherche en texte intégral puisse être créé sur une table, cette dernière doit posséder une colonne d'index unique, qui n'accepte pas les valeurs Null. Vous pouvez créer un index de recherche en texte intégral sur les colonnes de type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**et **varbinary(max)** peut être indexé pour la recherche en texte intégral. Lorsque vous créez un index de recherche en texte intégral sur une colonne de type de données  **varbinary**, **varbinary(max)** , **image**ou **xml** , vous devez spécifier une colonne de type. Une *colonne de type* est une colonne de table dans laquelle vous stockez l’extension de fichier (.doc, .pdf, .xls, etc.) du document dans chaque ligne.  
 
 ###  <a name="structure"></a> Structure d’index de recherche en texte intégral  
  La compréhension de la structure d'un index de recherche en texte intégral vous permet de comprendre également le fonctionnement du Moteur d'indexation et de recherche en texte intégral. Cette rubrique utilise l'extrait suivant de la table **Document** dans [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] comme exemple de table. L'extrait suivant montre deux colonnes, la colonne **DocumentID** et la colonne **Title** , ainsi que trois lignes provenant de cette table.  
@@ -250,7 +249,7 @@ Un seul index de recherche en texte intégral est autorisé par table. Pour qu'u
   
 -   **Fichiers du dictionnaire des synonymes.** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installe aussi un fichier de dictionnaire des synonymes pour chaque langue de texte intégral, ainsi qu’un fichier de dictionnaire des synonymes global. Les fichiers de dictionnaire des synonymes installés sont essentiellement vides, mais vous pouvez les modifier et définir des synonymes pour une langue ou un scénario d'entreprise spécifique. En développant un dictionnaire des synonymes adapté à vos données de texte intégral, vous pouvez élargir efficacement l'étendue des requêtes de texte intégral sur ces données. Pour plus d’informations, consultez [Configurer et gérer les fichiers de dictionnaire des synonymes pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
--   **Filtres (iFilters).**  L’indexation d’un document dans une colonne dont le type de données est **varbinary(max)**, **image**ou **xml** exige le traitement supplémentaire d’un filtre. Ce filtre doit être spécifique au type de document (.doc, .pdf, .xls, .xml, etc.). Pour plus d’informations, consultez [Configurer et gérer les extensions analytiques avancées](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
+-   **Filtres (iFilters).**  L’indexation d’un document dans une colonne dont le type de données est **varbinary(max)** , **image**ou **xml** exige le traitement supplémentaire d’un filtre. Ce filtre doit être spécifique au type de document (.doc, .pdf, .xls, .xml, etc.). Pour plus d’informations, consultez [Configurer et gérer les extensions analytiques avancées](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
   
  Les analyseurs lexicaux (et les générateurs de formes dérivées) et les filtres s'exécutent dans le processus hôte de démon de filtre (fdhost.exe).  
 

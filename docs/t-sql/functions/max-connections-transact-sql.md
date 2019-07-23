@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 57eb9f4b-548f-4212-9684-a11d831c4732
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: afa109292950aff8565484673e9fe50af0b1b1a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0066488fd917e5ffbe88767318954c1727adf238
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130326"
 ---
 # <a name="x40x40maxconnections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "65948289"
 ## <a name="return-types"></a>Types de retour  
  **entier**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le nombre réel de connexions utilisateur autorisées dépend également de la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utilisez ainsi que des limites de vos applications et de votre matériel.  
   
  Pour reconfigurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d’autoriser un plus petit nombre de connexions, utilisez **sp_configure**.  
@@ -65,7 +64,7 @@ Max Connections
 32767            
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Fonctions de configuration](../../t-sql/functions/configuration-functions-transact-sql.md)   
  [Configurer l’option de configuration du serveur user connections](../../database-engine/configure-windows/configure-the-user-connections-server-configuration-option.md)  

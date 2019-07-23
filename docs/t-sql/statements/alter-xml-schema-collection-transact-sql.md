@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e311c425-742a-4b0d-b847-8b974bf66d53
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c828a7db7a15e9a25073a5c6246a5c354934400
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ae87d5c125ae3eac01013843c9fe2db183b9c1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62664583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055963"
 ---
 # <a name="alter-xml-schema-collection-transact-sql"></a>ALTER XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Com
  **'** *Schema Component* **'**  
  Composant de schéma à insérer.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Utilisez ALTER XML SCHEMA COLLECTION pour ajouter de nouveaux schémas XML dont les espaces de noms ne se trouvent pas déjà dans la collection de schémas XML ou pour ajouter de nouveaux composants aux espaces de noms existants dans la collection.  
   
  Le code exemple suivant ajoute un nouvel \<element> à l’espace de noms existant `https://MySchema/test_xml_schema` dans la collection `MyColl`.  
@@ -262,7 +261,7 @@ ON     sys.xml_schema_collections.xml_collection_id =
 WHERE  sys.xml_schema_namespaces.name='';  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-xml-schema-collection-transact-sql.md)   
  [DROP XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-xml-schema-collection-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

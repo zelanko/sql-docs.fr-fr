@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 116b321fd2be08cf1a432507f53f2a50da21e45a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1a820bc4f951fcbe294060825979d83a34f8969
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066371"
 ---
 # <a name="stpointonsurface-geometry-data-type"></a>STPointOnSurface (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ Retourne un point arbitraire situé à l’intérieur d’une instance **geometr
   
  Type OGC (Open Geospatial Consortium) : **Point**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode retourne la valeur Null si l'instance est vide.  
   
 ## <a name="examples"></a>Exemples  
@@ -56,7 +55,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STPointOnSurface().ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

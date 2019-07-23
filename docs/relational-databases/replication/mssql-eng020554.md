@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ef1a1b88-b2ab-43e8-99cd-163a973262d6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2067c4c267cf1b010a2a72a92b402d3f02034a7e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cb63b09dabefea029354c7718243e8d38ed5874a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010939"
 ---
 # <a name="mssqleng020554"></a>MSSQL_ENG020554
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ ms.locfileid: "54126618"
   
     -   [Replication Agent Executables Concepts](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Administration de l’Agent de réplication](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [Guide de référence des erreurs et des événements &#40;réplication&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
  [Agent de distribution de réplication](../../relational-databases/replication/agents/replication-distribution-agent.md)   

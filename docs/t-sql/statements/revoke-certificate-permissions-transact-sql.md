@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 4cd2c67c8dd24a7e6a39a98285235090017adb1e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: fc7a59b36d7fce90315833baf8461a1860be2a64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140908"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE (Autorisations de certificat) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  Spécifie une autorisation qui peut être révoquée sur un certificat Voir ci-dessous.  
   
- ON CERTIFICATE **::**_certificate_name_  
+ ON CERTIFICATE **::** _certificate_name_  
  Spécifie le certificat sur lequel l'autorisation est révoquée. Le qualificateur d'étendue "::" est indispensable.  
   
  *database_principal*  
@@ -99,7 +98,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un certificat est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être révoquées sur un certificat sont énumérées ci-dessous, ainsi que les autorisations plus générales qui les incluent par implication.  
   
 |Autorisation de certificat|Découlant de l'autorisation de certificat|Impliquée par une autorisation de base de données|  
@@ -110,10 +109,10 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur le certificat.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

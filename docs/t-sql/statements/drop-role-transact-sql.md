@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45ad478b02f5abfeea07024a74af90b02ecc808a
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 3b3227fa8aa15b2254e6f4a38caa0e5ac60163a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043920"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -61,7 +60,7 @@ DROP ROLE role_name
  *role_name*  
  Spécifie le rôle à supprimer de la base de données.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les rôles qui possèdent des éléments sécurisables ne peuvent pas être supprimés de la base de données. Pour supprimer un rôle de base de données qui possède des éléments sécurisables, vous devez tout d'abord transférer la propriété de ces éléments ou supprimer ces derniers de la base de données. Les rôles qui comprennent des membres ne peuvent pas être supprimés de la base de données. Pour supprimer un rôle qui comprend des membres, vous devez au préalable supprimer les membres du rôle.  
   
  Pour supprimer des membres d’un rôle de base de données, utilisez [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md).  
@@ -75,7 +74,7 @@ DROP ROLE role_name
   
  Pour supprimer un rôle serveur, utilisez [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation **ALTER ANY ROLE** sur la base de données, ou l’autorisation **CONTROL** sur le rôle, ou l’appartenance au rôle **db_securityadmin**.  
   
 ## <a name="examples"></a>Exemples  
@@ -87,7 +86,7 @@ GO
 ```  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)   
  [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

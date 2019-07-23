@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ae3565f2-ddb2-4469-a992-7531d4f9ebb8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4f751ec11f66c3edfa61920d17394dd6237e560
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 30bf006998ac543b732b4aecac97280f07d36a99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081434"
 ---
 # <a name="backup-timeline"></a>Chronologie de sauvegarde
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "47850957"
  Ligne rouge  
  Peut être positionnée uniquement le long de la chronologie où la restauration est possible. En déplaçant la ligne rouge le long de la chronologie, vous pouvez régler les date et heure affichées dans les zones **Date** et **Heure** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Restaurer la base de données &#40;page Général&#41;](../../relational-databases/backup-restore/restore-database-general-page.md)  
   
   

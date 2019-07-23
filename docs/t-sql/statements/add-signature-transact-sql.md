@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c86a8bf325bc12ce9fc4843038898a579c2308be
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066100"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  Nom d'une clé asymétrique avec laquelle signer ou contresigner la procédure stockée, la fonction, l'assembly ou le déclencheur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Le module signé ou contresigné et le certificat ou la clé asymétrique utilisés pour la signature doivent déjà exister. Chaque caractère du module est inclus dans le calcul de la signature, y compris les retours chariot et les sauts de ligne.  
   
  Un module peut être signé et contresigné par n'importe quel nombre de certificats et de clés asymétriques.  
@@ -99,7 +98,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 Toutefois, en contresignant procSelectT1 avec le même certificat que celui utilisé pour signer ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve la signature sur la chaîne d’appel et autorise l’accès à T1. Si Alice essaie d'appeler procSelectT1 directement, elle ne peut pas accéder à T1, parce que la contre-signature n'accorde pas de droits. L'exemple C ci-dessous affiche le code [!INCLUDE[tsql](../../includes/tsql-md.md)] pour cet exemple.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER sur l'objet et l'autorisation CONTROL sur le certificat ou la clé asymétrique. Si une clé privée associée est protégée par un mot de passe, l'utilisateur doit également disposer de ce mot de passe.  
   
 ## <a name="examples"></a>Exemples  
@@ -114,7 +113,7 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>b. Signature d'une procédure stockée à l'aide d'un BLOB signé  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>B. Signature d'une procédure stockée à l'aide d'un BLOB signé  
  L'exemple suivant crée une base de données et un certificat à utiliser dans cet exemple. L'exemple crée et signe une procédure stockée simple et récupère le BLOB de signature de `sys.crypt_properties`. La signature est ensuite supprimée, puis ajoutée de nouveau. L'exemple signe la procédure à l'aide de la syntaxe WITH SIGNATURE.  
   
 ```  
@@ -246,7 +245,7 @@ DROP LOGIN Alice;
   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
  [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
   

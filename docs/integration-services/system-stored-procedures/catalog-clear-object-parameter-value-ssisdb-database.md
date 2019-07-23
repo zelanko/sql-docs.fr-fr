@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: dcbbb714-a051-4805-9e2b-2c2fb647c890
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 036fa3398103108cd4b49d1690cd5943cc53ff02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4535f674fb6494d6af1619cab514c94d9f30c450
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023529"
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (base de données SSISDB)
 
@@ -39,19 +38,19 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Arguments  
  [ \@folder_name = ] *folder_name*  
- Nom du dossier qui contient le projet. *folder_name* est de type **nvarchar(128)**.  
+ Nom du dossier qui contient le projet. *folder_name* est de type **nvarchar(128)** .  
   
  [ \@project_name = ] *project_name*  
- Nom de projet. *project_name* est de type **nvarchar(128)**.  
+ Nom de projet. *project_name* est de type **nvarchar(128)** .  
   
  [ \@object_type = ] *object_type*  
  Type de l'objet. Les valeurs valides incluent `20` pour un projet et `30` pour un package. *object_type* est de type **smallInt**.  
   
  [ \@ object _name = ] *object _name*  
- Nom du package. *object _name* est de type **nvarchar(260)**.  
+ Nom du package. *object _name* est de type **nvarchar(260)** .  
   
  [ \@parameter_ name = ] *parameter_name*  
- Nom du paramètre. *parameter_ name* est de type **nvarchar(128)**.  
+ Nom du paramètre. *parameter_ name* est de type **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valeur du code de retour  
  0 (succès)  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014200"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>Redirection de connexion en lecture/écriture depuis un réplica secondaire vers le réplica principal (groupes de disponibilité Always On)
 
@@ -35,7 +34,7 @@ Par exemple, la chaîne de connexion peut cibler un réplica secondaire. Selon l
 
 ## <a name="use-cases"></a>Cas d’utilisation
 
-Dans les versions antérieures à la [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], l’écouteur du groupe de disponibilité et la ressource de cluster correspondante redirigent le trafic utilisateur vers le réplica principal afin de garantir la reconnexion après un basculement. La [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] continue de prendre en charge la fonctionnalité d’écouteur du groupe de disponibilité, et permet de rediriger la connexion de réplica pour les scénarios qui ne peuvent pas inclure d’écouteur. Exemple :
+Dans les versions antérieures à la [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], l’écouteur du groupe de disponibilité et la ressource de cluster correspondante redirigent le trafic utilisateur vers le réplica principal afin de garantir la reconnexion après un basculement. La [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] continue de prendre en charge la fonctionnalité d’écouteur du groupe de disponibilité, et permet de rediriger la connexion de réplica pour les scénarios qui ne peuvent pas inclure d’écouteur. Par exemple :
 
 * La technologie de cluster qui est intégrée aux groupes de disponibilité SQL Server ne propose pas d’écouteur. 
 * Une configuration à plusieurs sous-réseaux comme dans le cloud, ou une adresse IP flottante à plusieurs sous-réseaux avec Pacemaker où les configurations sont complexes, sujettes aux erreurs et difficiles à corriger en raison des nombreux composants impliqués
@@ -80,7 +79,7 @@ Une fois la redirection des connexions en lecture/écriture définie, le réplic
 
 Le tableau précédent montre que lorsque `READ_WRITE_ROUTING_URL` est défini dans le réplica principal, le réplica secondaire redirige les connexions vers le réplica principal lorsque `SECONDARY_ROLE (ALLOW CONNECTIONS = ALL)`, et que la connexion spécifie `ReadWrite`.
 
-## <a name="example"></a> Exemple 
+## <a name="example"></a>Exemple 
 
 Dans cet exemple, un groupe de disponibilité a trois réplicas :
 * Un réplica principal sur COMPUTER01
@@ -157,7 +156,7 @@ Dans le diagramme suivant, le réplica principal a fait l’objet d’un bascule
 
 Si l’instance de SQL Server qui est spécifiée dans la chaîne de connexion n’est pas disponible (en cas de panne), la connexion échoue, quel que soit le rôle que joue le réplica sur le serveur cible. Pour éviter les temps d’arrêt prolongés du service, configurez un autre `FailoverPartner` dans la chaîne de connexion. L’application doit implémenter une logique de nouvelle tentative puisque les réplicas principaux et secondaires seront hors connexion pendant le basculement. Pour plus d’informations sur les chaînes de connexion, consultez [SqlConnection.ConnectionString, propriété](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx).
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 [Vue d’ensemble des groupes de disponibilité Always On &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  

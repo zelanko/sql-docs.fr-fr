@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c9beeacd220108b2df83049716387439f0e2a90
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: 046ce79c989fdfb24c6615968e6bad951aeb7280
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024902"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Créer des tables et des index partitionnés
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ ms.locfileid: "53414184"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  La création d'une table partitionnée nécessite une autorisation CREATE TABLE dans la base de données et une autorisation ALTER pour le schéma dans lequel la table est créée. La création d'un index partitionné nécessite l'autorisation ALTER sur la table ou la vue dans laquelle l'index est créé. La création d'une table ou d'un index partitionné(e) nécessite l'une des autorisations supplémentaires suivantes :  
   
 -   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
@@ -112,13 +111,13 @@ ms.locfileid: "53414184"
   
 #### <a name="to-create-a-partitioned-table"></a>Pour créer une table partitionnée  
   
-1.  Cliquez avec le bouton droit sur la table à partitionner, pointez sur **Stockage**, puis cliquez sur **Créer une partition...**.  
+1.  Cliquez avec le bouton droit sur la table à partitionner, pointez sur **Stockage**, puis cliquez sur **Créer une partition...** .  
   
 2.  Dans l' **Assistant Création de partition**, sur la page **Assistant Création de partition** , cliquez sur **Suivant**.  
   
 3.  Sur la page **Sélectionner une colonne de partitionnement** , dans la grille **Colonnes de partitionnement disponibles** , sélectionnez la colonne sur laquelle vous souhaitez partitionner votre table. Seules les colonnes dont le type de données peut être utilisé pour partitionner des données seront affichées dans la grille **Colonnes de partitionnement disponibles** . Si vous sélectionnez une colonne calculée comme colonne de partitionnement, celle-ci doit être désignée en tant que colonne persistante.  
   
-     Le degré avec lequel vous pouvez regrouper les données de façon logique déterminent les options dont vous disposez pour définir la colonne de partitionnement et la plage de valeurs. Par exemple, vous pouvez choisir de diviser vos données en regroupements logiques par mois ou trimestres d'une année. Les requêtes que vous projetez d'exécuter sur vos données détermineront si ce regroupement logique est adéquat pour gérer vos partitions de table. Tous les types de données sont utilisables comme colonnes de partitionnement, à l’exception de **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, des types de données d’alias ou des types de données CLR définis par l’utilisateur.  
+     Le degré avec lequel vous pouvez regrouper les données de façon logique déterminent les options dont vous disposez pour définir la colonne de partitionnement et la plage de valeurs. Par exemple, vous pouvez choisir de diviser vos données en regroupements logiques par mois ou trimestres d'une année. Les requêtes que vous projetez d'exécuter sur vos données détermineront si ce regroupement logique est adéquat pour gérer vos partitions de table. Tous les types de données sont utilisables comme colonnes de partitionnement, à l’exception de **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , des types de données d’alias ou des types de données CLR définis par l’utilisateur.  
   
      Les options supplémentaires suivantes sont disponibles sur cette page :  
   
@@ -210,7 +209,7 @@ ms.locfileid: "53414184"
   
             -   Si vous sélectionnez **Une fois à**, entrez l'heure spécifique à laquelle la planification du travail doit s'exécuter dans la zone **Une fois à** . Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
-            -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)**. Notez que le nombre maximum autorisé dans la première zone est « 100 ».  
+            -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)** . Notez que le nombre maximum autorisé dans la première zone est « 100 ».  
   
                  Dans la zone **Début** , entrez l'heure à laquelle l'exécution de la planification du travail doit démarrer. Dans la zone **Fin** , entrez l'heure à laquelle la planification du travail doit s'arrêter. Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   

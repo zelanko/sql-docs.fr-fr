@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b2ff22b3a5dfde43e4202062cb40737fb7d4c02e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f7c22a7c8120e67034e8a22a42948e607bec177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104858"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions (base de données SSISDB)
 
@@ -63,7 +62,7 @@ ms.locfileid: "65714853"
 |machine_name|**nvarchar(128)**|Nom de l'ordinateur sur lequel s'exécute l'instance du serveur.|  
 |dump_id|**uniqueidentifier**|ID d'un vidage d'exécution.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette vue affiche une ligne pour chaque instance d'exécution dans le catalogue.  
   
 ## <a name="permissions"></a>Autorisations  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5502814-b281-42dd-b885-5c9368025ae6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ea74b05a3ee8c8337f734a8a2aa9ef10f1da2abd
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 2a84a40c5d35335e4fbd73aaa65291ddabe303ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072906"
 ---
 # <a name="delete-a-trace-transact-sql"></a>Supprimer une trace (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "51570550"
 > [!NOTE]  
 >  Une trace doit d'abord être arrêtée avant d'être fermée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Procédures stockées de SQL Server Profiler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)  

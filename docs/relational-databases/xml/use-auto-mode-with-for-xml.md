@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7140d656-1d42-4f01-a533-5251429f4450
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1214896161513ea50611d6120fd9d7f3c1202c6b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 5331a474d24d2204ca81e37427fc2615ecede622
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078002"
 ---
 # <a name="use-auto-mode-with-for-xml"></a>Utiliser le mode AUTO avec FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ FOR XML AUTO, ELEMENTS
   
 -   [Exemples : Utilisation du mode AUTO](../../relational-databases/xml/examples-using-auto-mode.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   

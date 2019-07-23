@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: ab351c50-eed4-493a-87ed-89ec10933477
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 901c7d35d7979b46649f051420d97cf134833c31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb9f3a891fa81345d7ae9d167419a02356a035af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093682"
 ---
 # <a name="cursorrecompile-event-class"></a>CursorRecompile (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "62686090"
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
 |**XactSequence**|**bigint**|Jeton qui décrit la transaction en cours.|50|Oui|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce814d567aa695be417fa4fa92d988938dfec6bf
-ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
+ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049034"
 ---
 # <a name="database-properties-options-page"></a>Propriétés de la base de données (page Options)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -205,7 +204,7 @@ Active cette fonctionnalité.
  Spécifiez l'option utilisée pour détecter et signaler les transactions d'E/S incomplètes à cause d'erreurs d'E/S de disque. Les valeurs possibles sont **None**, **TornPageDetection**et **Checksum**. Pour plus d’informations, consultez [Gérer la table suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
  **Temps de récupération cible (en secondes)**  
- Spécifie la durée maximale (en secondes) de la récupération de la base de données spécifiée en cas de plantage. Pour plus d’informations, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
+ Spécifie la durée maximale (en secondes) de la récupération de la base de données spécifiée en cas d'incident. Pour plus d’informations, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
 
 ## <a name="service-broker"></a>Service Broker  
 **Service Broker activé**  
@@ -244,7 +243,7 @@ Identificateur en lecture seule.
   
 
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)  
   

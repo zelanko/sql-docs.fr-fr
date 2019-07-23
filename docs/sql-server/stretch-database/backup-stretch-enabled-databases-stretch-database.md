@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7e7fb7bc85c3dbe56ed0ba4e694c04e0abea66c1
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 9755cb5c732ce1d3b6cd71d1ff9a540f3a4a9639
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136303"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>Sauvegarder des bases de données Stretch (Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,7 +60,7 @@ Pour augmenter le nombre d’heures de données migrées que Stretch Database co
 
 Pour vérifier le nombre d’heures de données que Stretch Database conserve actuellement temporairement dans la table intermédiaire, exécutez la procédure stockée [sys.sp_rda_get_rpo_duration](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md).
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Restaurer des bases de données Stretch](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)  
  [Gérer Stretch Database et résoudre ses problèmes](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)   
    

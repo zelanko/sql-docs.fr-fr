@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 440de44e-3a56-4531-b4e4-1533ca933cac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20fe338b7208dfcc239f8ad14232fdb0697faf22
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 0d8fb8fc597fd0562640821769e3314b4f3020bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112904"
 ---
 # <a name="columns-without-a-name"></a>Colonnes sans nom
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ GO
 </row>
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode PATH avec FOR XML](../../relational-databases/xml/use-path-mode-with-for-xml.md)  
   
   

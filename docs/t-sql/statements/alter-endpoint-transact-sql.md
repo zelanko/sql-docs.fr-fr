@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a7f6c4caca64f53dd08b4f13a46dd94b266f5df7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b07cc17344e27d82155ceaae8e55494deb0bd57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065669"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +110,7 @@ FOR DATABASE_MIRRORING (
  **FOR** { **TSQL** | **SERVICE_BROKER** | **DATABASE_MIRRORING** }  
  Vous ne pouvez pas changer le type de charge utile avec **ALTER ENDPOINT**.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsque vous utilisez ALTER ENDPOINT, spécifiez uniquement les paramètres que vous souhaitez mettre à jour. Toutes les propriétés d'un point de terminaison existant restent inchangées tant que vous ne les modifiez pas explicitement.  
   
  Il n'est pas possible d'exécuter d'instructions ENDPOINT DDL à l'intérieur d'une transaction utilisateur.  
@@ -123,14 +122,14 @@ FOR DATABASE_MIRRORING (
 >   
 >  RC4 est un algorithme relativement faible et AES est un algorithme relativement fort. Toutefois, AES est considérablement plus lent que RC4. Si vous considérez que la sécurité est une priorité plus importante que la vitesse, nous vous recommandons d'utiliser AES.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’utilisateur doit être membre du rôle serveur fixe **sysadmin**, propriétaire du point de terminaison ou bénéficier de l’autorisation ALTER ANY ENDPOINT.  
   
  Pour modifier l'appartenance d'un point de terminaison existant, vous devez utiliser l'instruction ALTER AUTHORIZATION. Pour plus d’informations, consultez [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md).  
   
  Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DROP ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  
   

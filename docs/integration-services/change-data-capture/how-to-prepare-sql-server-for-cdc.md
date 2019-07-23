@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7cb1e51817c4263bdd649ca2f1ea40c0cc968b89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c5409f63971fe626e1692e2086af1b2557ae9fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101731"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>Procédure : préparer SQL Server pour la capture de données modifiées
 
@@ -43,7 +42,7 @@ ms.locfileid: "65728750"
   
  **Remarque** : vous pouvez cliquer sur **Afficher le script** pour afficher une version en lecture seule du script d’installation. Un administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut copier ce script dans la console de gestion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en vue de le modifier et de l'exécuter, si nécessaire.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Préparer SQL Server pour la capture de données modifiées](../../integration-services/change-data-capture/prepare-sql-server-for-cdc.md)  
   
   

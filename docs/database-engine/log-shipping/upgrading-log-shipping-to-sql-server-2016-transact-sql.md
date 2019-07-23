@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: ca18e2b1a58da7d270d8352cddf15dc0f5281cc7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1006e7cb677ec6d06af633191b10ab1f341ef1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020789"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Mise à niveau de la copie des journaux de transaction vers SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ ms.locfileid: "66794550"
 > [!NOTE]  
 >  La copie des journaux de transaction de journaux permet aussi de [Basculer vers une base de données secondaire de copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) et éventuellement de [Changer des rôles entre les serveurs primaire et secondaire de copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md). Cependant, étant donné que la copie des journaux de transaction est rarement configurée en tant que solution à haute disponibilité de nos jours (les nouvelles options sont bien plus robustes), le basculement ne réduira généralement pas le temps d’arrêt, car les objets de base de données système ne sont pas synchronisés. De plus, permettre aux clients de localiser et se connecter facilement à un serveur secondaire promu peut être un calvaire.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Effectuer une mise à niveau vers SQL Server 2016 à l’aide de l’Assistant Installation &#40;programme d’installation&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Installer SQL Server 2016 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Configurer la copie des journaux de transaction &#40;Transact-SQL&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d464ba2cd7b3b5b3cb2ac687f9f9e1b3ae8023b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52818b0d76ae5201fb9bf53376696fab54180cb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035155"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>Procédure : Ouvrir un test unitaire SQL Server à modifier
 Après avoir créé un test unitaire SQL Server, utilisez le **Concepteur de test unitaire SQL Server** pour ajouter des instructions Transact\-SQL et des conditions de test. Les tests créés à l'aide du concepteur génèrent du code Visual C# ou Visual Basic. Ce code s'exécute lors de l'exécution du test.  

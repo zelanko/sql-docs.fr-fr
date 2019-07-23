@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: fd8f7ff879e3e5a6ec2729abce4c294f69ad2c83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087110"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Leçon 1 : Créer et appliquer une stratégie Désactivé par défaut
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d�
   
 2.  Dans la boîte de dialogue **Créer une nouvelle condition** , dans la zone **Nom** , tapez **Mail Off**.   
     1. Dans la zone **Facette** , vérifiez que la facette **Configuration de la surface d’exposition** est sélectionnée.
-    1. Dans la boîte de dialogue **Expression** , dans la zone **Champ** , sélectionnez **@DatabaseMailEnabled**; ensuite, dans la zone **Opérateur** , sélectionnez **=**; enfin, dans **Valeur** , sélectionnez **Faux**.  
+    1. Dans la boîte de dialogue **Expression** , dans la zone **Champ** , sélectionnez **@DatabaseMailEnabled** ; ensuite, dans la zone **Opérateur** , sélectionnez **=** ; enfin, dans **Valeur** , sélectionnez **Faux**.  
     1. Dans la page **Description** , entrez une description de la condition, puis cliquez sur **OK** pour créer la condition.  
 
     ![Condition mail-off](Media/lesson-1-create-and-apply-an-off-by-default-policy/mail-off-condition.png) 
@@ -91,7 +90,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d�
 
    
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 2 : Créer et appliquer une stratégie de standards de nommage](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
+[Leçon 2 : Créer et appliquer une stratégie de standards de nommage](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   
   

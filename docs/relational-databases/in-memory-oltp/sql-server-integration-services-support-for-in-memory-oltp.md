@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c56202600415e44087f0716fb9f084d831b72c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9dfaedb283f7b1dd6af08405f5229c994b8987a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111690"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>Prise en charge d'OLTP en mémoire par SQL Server Integration Services
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47834237"
   
  Utilisez également la source ADO.NET et la source OLE DB pour appeler une procédure stockée compilée en mode natif. Cependant, nous vous recommandons d'utiliser la source ODBC. Si vous configurez la source ADO.NET pour exécuter une procédure stockée compilée en mode natif, un message d'erreur s'affiche, car le fournisseur de données pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient), que la source ADO.NET utilise par défaut, ne prend pas en charge l'exécution des procédures stockées compilées en mode natif. Configurez la source ADO .NET de façon à ce qu'elle utilise le fournisseur de données ODBC, le fournisseur OLE DB pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Cependant, notez que la source ODBC est plus performante que la source ADO.NET avec le fournisseur de données ODBC.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge d'OLTP en mémoire par SQL Server](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)  
   
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ddc31964a018bec7dc0829d21e85283db5f069e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a36cfa888b5a00e8f69404db3989cf9852f0d47e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110753"
 ---
 # <a name="running-sql-server-unit-tests"></a>Exécution de tests unitaires SQL Server
 Pour améliorer et gérer la qualité de votre code, créez et exécutez des tests unitaires SQL Server qui vérifient le comportement d'un objet de base de données, puis archivez ces tests dans le contrôle de version. Lorsque vous ou un membre de l'équipe modifiez le schéma de la base de données, vous exécutez des tests unitaires SQL Server et des tests unitaires de logiciel pour vérifier que les modifications n'empêchent pas l'exécution des fonctionnalités existantes. Exécutez des tests individuels ou des groupes de tests, appelés listes de tests. Pour plus d'informations, consultez [Utilisation de listes de tests (Visual Studio 2010)](https://msdn.microsoft.com/library/ms182461(VS.100).aspx).  
@@ -61,6 +60,6 @@ Définissez des tests unitaires pour vérifier le comportement des objets de bas
 [Conditions de test personnalisées pour les tests unitaires SQL Server](../ssdt/custom-test-conditions-for-sql-server-unit-tests.md)  
 Créez une condition de test personnalisée afin déterminer toute condition que vous ne pouvez pas vérifier en utilisant des conditions de test par défaut.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
   

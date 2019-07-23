@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5023d29379ab254e85c38e0b9e0b6ae3c8772133
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e39f991982fbde13259039e8794218819f366b89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081834"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "53590763"
 |Fonctionnalité|ON|Les tables optimisées en mémoire ne peuvent pas être placées sur un groupe de fichiers ou un schéma de partition. Supprimez la clause ON de l'instruction **CREATE TABLE** .<br /><br /> Toutes les tables optimisées en mémoire sont associées à un groupe de fichiers/données optimisé en mémoire.|  
 |Type de données|*Nom du type de données*|Le type de données spécifié n'est pas pris en charge. Remplacez le type par un des types de données pris en charge. Pour plus d’informations, consultez [Types de données pris en charge pour l’OLTP en mémoire](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md).|  
 |Fonctionnalité|Colonnes calculées|**S’applique à** : [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] et [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>Les colonnes calculées ne sont pas prises en charge pour les tables mémoire optimisées. Supprimez les colonnes calculées de l'instruction **CREATE TABLE** .<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] et SQL Server (à partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) prennent en charge les colonnes calculées dans les tables et index à mémoire optimisée.|  
-|Fonctionnalité|REPLICATION|La réplication n'est pas pris en charge avec les tables mémoire optimisées.|  
+|Fonctionnalité|Réplication|La réplication n'est pas pris en charge avec les tables mémoire optimisées.|  
 |Fonctionnalité|FILESTREAM|Le stockage FILESTREAM n'est pas pris en charge pour les colonnes de tables mémoire optimisées. Supprimez le mot clé **FILESTREAM** de la définition de colonne.|  
 |Fonctionnalité|SPARSE|Les colonnes de tables mémoire optimisées ne peuvent pas être définies comme SPARSE. Supprimez le mot clé **SPARSE** de la définition de colonne.|  
 |Fonctionnalité|ROWGUIDCOL|L'option ROWGUIDCOL n'est pas prise en charge pour les colonnes de tables mémoire optimisées. Supprimez le mot clé **ROWGUIDCOL** de la définition de colonne.|  
@@ -104,7 +103,7 @@ ms.locfileid: "53590763"
 |Fonctionnalité|Curseurs|Les curseurs ne sont pas pris en charge sur ou dans les procédures stockées compilées en mode natif.<br /><br /> Lors de l'exécution de la procédure à partir du client, utilisez RPC plutôt que l'API de curseur. Avec ODBC, évitez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] . **EXECUTE**, et spécifiez directement le nom de la procédure à la place.<br /><br /> Lors de l'exécution de la procédure à partir d'une autre procédure stockée ou d'un lot [!INCLUDE[tsql](../../includes/tsql-md.md)] , évitez d'utiliser un curseur avec la procédure stockée compilée en mode natif.<br /><br /> Lors de la création d’une procédure stockée compilée en mode natif, plutôt que d’utiliser un curseur, utilisez une logique basée sur un ensemble ou une boucle **WHILE** .|  
 |Fonctionnalité|Valeurs par défaut non constantes des paramètres|Lors de l'utilisation des valeurs par défaut avec des paramètres sur les procédures stockées compilées en mode natif, les valeurs doivent être constantes. Supprimez les caractères génériques des déclarations de paramètre.|  
 |Fonctionnalité|EXTERNAL|Les procédures stockées CLR ne peuvent pas être compilées en mode natif. Supprimez la clause AS EXTERNAL ou l'option NATIVE_COMPILATION de l'instruction CREATE PROCEDURE.|  
-|Fonctionnalité|Procédures stockées numérotées|Les procédures stockées compilées en mode natif ne peuvent pas être numérotées. Supprimez le **;**_numéro_ de l’instruction **CREATE PROCEDURE** .|  
+|Fonctionnalité|Procédures stockées numérotées|Les procédures stockées compilées en mode natif ne peuvent pas être numérotées. Supprimez le **;** _numéro_ de l’instruction **CREATE PROCEDURE** .|  
 |Fonctionnalité|Instructions INSERT ... VALUES multilignes|Impossible d'insérer plusieurs lignes en utilisant la même instruction **INSERT** dans une procédure stockée compilée en mode natif. Créez des instructions **INSERT** pour chaque ligne.|  
 |Fonctionnalité|Expressions de table communes|Les expressions de table communes ne sont pas prises en charge dans les procédures stockées compilées en mode natif. Réécrire la requête.|  
 |Fonctionnalité|COMPUTE|La clause **COMPUTE** n'est pas prise en charge. Supprimez-la de la requête.|  
@@ -186,7 +185,7 @@ ms.locfileid: "53590763"
 |Fonctionnalité|transaction liée|Les sessions liées ne peuvent pas participer dans des transactions qui accèdent aux tables mémoire optimisées. Ne liez pas la session avant d'exécuter la procédure.|  
 |Fonctionnalité|DTC|Les transactions qui accèdent aux tables mémoire optimisées ne peuvent pas être des transactions distribuées.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Migration vers OLTP en mémoire](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

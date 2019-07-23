@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d4c843fa7af8e3390e820714886b7988edab878d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d6e2115c42fb5fa7e0abb71e12db0c8c28569a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082170"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>Leçon 6-4 : Déployer le package de la leçon 6
 
@@ -39,7 +38,7 @@ Dans cette tâche, vous effectuez les opérations suivantes :
   
 1.  Sélectionnez **Démarrer** > **Tous les programmes** > **Microsoft SQL Server 2017**, puis **SQL Management Studio**.  
   
-2.  Dans la boîte de dialogue **Se connecter au serveur**, vérifiez les paramètres par défaut, puis sélectionnez **Se connecter**. Pour vous connecter, le nom du **Serveur** doit être le nom de l’ordinateur sur lequel SQL Server est installé. Si le **moteur de base de données** est une instance nommée, le nom du **Serveur** doit être le nom de l’instance au format *\<nom_ordinateur>\\\<nom_instance>*. 
+2.  Dans la boîte de dialogue **Se connecter au serveur**, vérifiez les paramètres par défaut, puis sélectionnez **Se connecter**. Pour vous connecter, le nom du **Serveur** doit être le nom de l’ordinateur sur lequel SQL Server est installé. Si le **moteur de base de données** est une instance nommée, le nom du **Serveur** doit être le nom de l’instance au format *\<nom_ordinateur>\\\<nom_instance>* . 
   
 3.  Dans l’**Explorateur d’objets**, développez **Catalogues Integration Services**.  
   
@@ -97,7 +96,7 @@ Quand vous fermez l'Assistant Conversion de projet Integration Services, SSIS af
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Créer et remplir un nouveau dossier d’exemples de données  
   
-1.  Dans l’**Explorateur Windows**, au niveau racine de votre lecteur (par exemple, **C:\\**), créez un dossier appelé **Sample Data Two**.  
+1.  Dans l’**Explorateur Windows**, au niveau racine de votre lecteur (par exemple, **C:\\** ), créez un dossier appelé **Sample Data Two**.  
   
 2.  Ouvrez le dossier **Exemples de données** mentionné dans les [prérequis de la leçon 1](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md#prerequisites), puis copiez les trois exemples de fichiers.  
   

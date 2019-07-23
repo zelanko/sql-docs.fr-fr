@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d69e7f5e7e6a97405a81df189893dfb89601cc3e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004715"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "56015410"
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La définition de SET STATISTICS XML s'effectue au moment de l'exécution, et non au moment de l'analyse.  
   
  Lorsque SET STATISTICS XML a la valeur ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne des informations d'exécution sur chaque instruction exécutée. Une fois cette option activée, des informations sur toutes les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] consécutives sont retournées, jusqu'à ce que l'option soit désactivée (OFF). Notez qu'un traitement peut comporter d'autres instructions en plus de SET STATISTICS XML.  
@@ -63,7 +62,7 @@ SET STATISTICS XML { ON | OFF }
 > [!NOTE]  
 >  Si l’option **Inclure le plan d’exécution réel** est sélectionnée dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], cette option SET ne produit aucune sortie de la représentation au format XML. Désactivez l’option **Inclure le plan d’exécution réel** avant d’utiliser l’option SET.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour utiliser SET STATISTICS XML et afficher la sortie, les utilisateurs doivent bénéficier des autorisations suivantes :  
   
 -   Autorisations adéquates pour exécuter les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -94,7 +93,7 @@ SET STATISTICS XML OFF;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](../../t-sql/statements/set-showplan-xml-transact-sql.md)   
  [sqlcmd Utility](../../tools/sqlcmd-utility.md)  
   

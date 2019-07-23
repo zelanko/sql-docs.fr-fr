@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: b7442cff-e616-475a-9c5a-5a765089e5f2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 07a13b9a2d6cf54922e0e2ca5d718909a61fd831
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 83cb5bb61d64cab7dc9d45b5aae871a863368f3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007164"
 ---
 # <a name="enable-compression-on-a-table-or-index"></a>Activer la compression sur une table ou un index
 
@@ -63,7 +62,7 @@ ms.locfileid: "52502994"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou l'index.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -74,7 +73,7 @@ ms.locfileid: "52502994"
   
 2.  Pour compresser un index, développez la table contenant l'index que vous souhaitez compresser, puis développez le dossier **Index** .  
   
-3.  Cliquez avec le bouton droit sur la table ou l’index à compresser, pointez sur **Stockage** et sélectionnez **Gérer la compression...**.  
+3.  Cliquez avec le bouton droit sur la table ou l’index à compresser, pointez sur **Stockage** et sélectionnez **Gérer la compression...** .  
   
 4.  Dans l'Assistant Compression de données, sur la page **Assistant Compression de données** , cliquez sur **Suivant**.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "52502994"
   
      Les options suivantes sont disponibles dans la page **Sélectionner le type de compression** :  
   
-     Case**Utiliser le même type de compression pour toutes les partitions**   
+     Case**Utiliser le même type de compression pour toutes les partitions**  
      Sélectionnez cette option pour configurer le même paramètre de compression pour toutes les partitions. La zone de sélection est alors activée et la colonne **Type de compression** de la grille est désactivée. Lorsqu'une option est sélectionnée, les options dans la liste adjacente sont **None**, **Row**et **Page**.  
   
      **Numéro de partition**  
@@ -145,15 +144,15 @@ ms.locfileid: "52502994"
   
             -   Si vous sélectionnez **Mensuelle**, sélectionnez **Jour** ou **Le**.  
   
-                -   Si vous sélectionnez **Jour**, entrez la date du mois à laquelle vous souhaitez que la planification du travail s'exécute, ainsi que la fréquence de répétition de la planification du travail en mois. Par exemple, si vous souhaitez que la planification du travail s’exécute le 15 du mois un mois sur deux, sélectionnez **Jour**, puis entrez « 15 » dans la première zone et « 2 » dans la deuxième zone. Notez également que le nombre maximum autorisé dans la deuxième zone est « 99 ».  
+                -   Si vous sélectionnez **Jour**, entrez la date du mois à laquelle vous souhaitez que la planification du travail s'exécute, ainsi que la fréquence de répétition de la planification du travail en mois. Par exemple, si vous souhaitez que la planification du travail s’exécute le 15 du mois un mois sur deux, sélectionnez **Jour**, puis entrez « 15 » dans la première zone et « 2 » dans la deuxième zone. Notez que le nombre maximum autorisé dans la deuxième zone est « 99 ».  
   
-                -   Si vous sélectionnez **Le**, sélectionnez le jour spécifique de la semaine et du mois pendant lequel vous voulez que la planification du travail s'exécute et la fréquence à laquelle la planification du travail doit se répéter en mois. Par exemple, si vous souhaitez que la planification du travail s’exécute le dernier jour de la semaine un mois sur deux, sélectionnez **Jour**, puis **dernier** dans la première liste, **jour ouvrable** dans la deuxième liste et « 2 » dans la dernière zone. Vous pouvez également sélectionner **premier**, **deuxième**, **troisième**ou **quatrième**, ainsi que des jours de la semaine spécifiques (par exemple, dimanche ou mercredi) dans les deux premières listes. Notez également que le nombre maximum autorisé dans la dernière zone est « 99 ».  
+                -   Si vous sélectionnez **Le**, sélectionnez le jour spécifique de la semaine et du mois pendant lequel vous voulez que la planification du travail s'exécute et la fréquence à laquelle la planification du travail doit se répéter en mois. Par exemple, si vous souhaitez que la planification du travail s’exécute le dernier jour de la semaine un mois sur deux, sélectionnez **Jour**, puis **dernier** dans la première liste, **jour ouvrable** dans la deuxième liste et « 2 » dans la dernière zone. Vous pouvez également sélectionner **premier**, **deuxième**, **troisième**ou **quatrième**, ainsi que des jours de la semaine spécifiques (par exemple, dimanche ou mercredi) dans les deux premières listes. Notez que le nombre maximum autorisé dans la dernière zone est « 99 ».  
   
         2.  Sous **Fréquence quotidienne**, spécifiez la fréquence à laquelle la planification du travail se répète le jour de son exécution :  
   
             -   Si vous sélectionnez **Une fois à**, entrez l'heure spécifique à laquelle la planification du travail doit s'exécuter dans la zone **Une fois à** . Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
-            -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)**. Notez également que le nombre maximum autorisé dans la première zone est « 100 ».  
+            -   Si vous sélectionnez **Toutes les**, spécifiez la fréquence à laquelle la planification du travail s'exécute pendant la journée choisie sous **Fréquence**. Par exemple, si vous souhaitez que la planification du travail se répète toutes les 2 heures le jour d’exécution de la planification du travail, sélectionnez **Toutes les**, entrez « 2 » dans la première zone, puis sélectionnez **heure(s)** dans la liste. Dans cette liste, vous pouvez également sélectionner **minute(s)** et **seconde(s)** . Notez que le nombre maximum autorisé dans la première zone est « 100 ».  
   
                  Dans la zone **Début** , entrez l'heure à laquelle l'exécution de la planification du travail doit démarrer. Dans la zone **Fin** , entrez l'heure à laquelle la planification du travail doit s'arrêter. Entrez l'heure, les minutes et les secondes du jour, ainsi que AM ou PM.  
   
@@ -195,7 +194,7 @@ ms.locfileid: "52502994"
      Ouvre la boîte de dialogue **Enregistrer le rapport sous** .  
   
      **Copier le rapport dans le Presse-papiers**  
-     Copie les résultats du rapport de progression de l’Assistant dans le presse-papiers.  
+     Copie les résultats du rapport de progression de l’Assistant dans le Presse-papiers.  
   
      **Envoyer le rapport sous forme de courrier électronique**  
      Copie les résultats du rapport de progression de l’Assistant dans un e-mail.  
@@ -250,7 +249,7 @@ ms.locfileid: "52502994"
   
  Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) et [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Compression des données](../../relational-databases/data-compression/data-compression.md)   
  [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md)  
   

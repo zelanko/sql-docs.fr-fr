@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cbda6137d9b844b13485c63488fad9efa85366c7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a282ed4ce04df00a062fb1b910318125e23b1634
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078783"
 ---
 # <a name="replication-security-best-practices"></a>Bonnes pratiques en matière de sécurité de la réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "54131559"
   
     -   Dans les situations exigeant l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , l'accès aux partages d'instantanés UNC n'est souvent pas disponible (par exemple, l'accès peut être bloqué par un pare-feu). Dans ce cas, vous pouvez transférer l'instantané aux abonnés via FTP (File Transfer Protocol). Pour plus d’informations, consultez [Transférer des instantanés via FTP](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   
  [Réplication sur Internet](../../../relational-databases/replication/replication-over-the-internet.md)   
  [Sécuriser l’abonné](../../../relational-databases/replication/security/secure-the-subscriber.md)   

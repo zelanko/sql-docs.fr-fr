@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 9a6e6c16-7f71-412b-bba6-7bffac001277
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 98fde530e6d6d15d4abfdd97d53d6beff354a394
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: cf224dd8c5d6973c6aaf5b0af869ace7d43c891c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032061"
 ---
 # <a name="log-shipping-transaction-log-backup-settings"></a>Paramètres de sauvegarde des journaux de transactions
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "51558676"
  Affiche le nom du travail de l'Agent SQL Server servant à créer les sauvegardes des journaux de transactions pour la copie des journaux de transactions. Lors de la création du travail, vous pouvez modifier son nom en tapant un nouveau nom dans cette zone.  
   
  **Planification**  
- Affiche la planification actuelle pour la sauvegarde des journaux de transactions de la base de données principale. Avant la création du travail de sauvegarde, vous pouvez modifier cette planification en cliquant sur **Planification...**. Une fois que le travail a été créé, vous pouvez modifier cette planification en cliquant sur **Modifier le travail...**.  
+ Affiche la planification actuelle pour la sauvegarde des journaux de transactions de la base de données principale. Avant la création du travail de sauvegarde, vous pouvez modifier cette planification en cliquant sur **Planification...** . Une fois que le travail a été créé, vous pouvez modifier cette planification en cliquant sur **Modifier le travail...** .  
   
 ### <a name="backup-job"></a>Travail de sauvegarde  
  **Planification...**  
@@ -72,7 +71,7 @@ ms.locfileid: "51558676"
 |**Compresser la sauvegarde**|Cliquez sur cette option pour compresser la sauvegarde, indépendamment de la valeur par défaut au niveau du serveur.<br /><br /> **\*\* Important \*\*** Par défaut, la compression augmente considérablement l’utilisation de l’UC et l’UC supplémentaire consommée par le processus de compression peut avoir un impact néfaste sur les opérations simultanées. Par conséquent, il peut être préférable, dans une session où l’utilisation de l’UC est limitée, de créer une sauvegarde compressée de priorité basse à l’aide de [Resource Governor](../../relational-databases/resource-governor/resource-governor.md). Pour plus d'informations, consultez [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
 |**Ne pas compresser la sauvegarde**|Cliquez sur cette option pour créer une sauvegarde non compressée, indépendamment de la valeur par défaut au niveau du serveur.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer un utilisateur de manière à créer et à gérer des travaux de l'Agent SQL Server](../../ssms/agent/configure-a-user-to-create-and-manage-sql-server-agent-jobs.md)   
  [À propos de la copie des journaux de transaction &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

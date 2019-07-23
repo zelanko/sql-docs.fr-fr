@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d9cbc0842265a077d7167bdd0f613a9aed3f0e66
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7b7c9706f3b2943780e48ba5fe99769ddc059c94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065530"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>Autorisations de certificat GRANT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ GRANT permission  [ ,...n ]
  *permission*  
  Spécifie une autorisation qui peut être accordée sur un certificat. Voir ci-dessous.  
   
- ON CERTIFICATE **::**_certificate_name_  
+ ON CERTIFICATE **::** _certificate_name_  
  Spécifie le certificat sur lequel l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
  *database_principal*  
@@ -75,7 +74,7 @@ AS *granting_principal*
 -   d'un utilisateur de base de données mappé à une clé asymétrique ;  
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Un certificat est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qui peuvent être accordées sur un certificat sont indiquées ci-dessous, avec les autorisations plus générales, qui les incluent naturellement.  
   
 |Autorisation de certificat|Découlant de l'autorisation de certificat|Impliquée par une autorisation de base de données|  
@@ -86,7 +85,7 @@ AS *granting_principal*
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée.  
   
  En cas d'utilisation de l'option AS, ces critères s'appliquent.  
@@ -106,7 +105,7 @@ AS *granting_principal*
   
  Les bénéficiaires de l’autorisation CONTROL SERVER, comme les membres du rôle serveur fixe **sysadmin**, peuvent accorder n’importe quelle autorisation sur n’importe quel sécurisable du serveur. Les bénéficiaires de l’autorisation CONTROL sur une base de données, comme les membres du rôle de base de données fixe **db_owner**, peuvent accorder n’importe quelle autorisation sur n’importe quel sécurisable de la base de données. Les détenteurs de l'autorisation CONTROL sur un schéma peuvent accorder une autorisation sur n'importe quel objet dans ce schéma.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   

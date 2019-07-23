@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: e912a06d-9fde-4e26-b057-801255d79504
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: c691fe3f4f39de28c1f6649fe712b3cdb6e50854
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: f35532913a21ed6f90d1e940dd6346137fc3feda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039095"
 ---
 # <a name="dbcc-outputbuffer-transact-sql"></a>DBCC OUTPUTBUFFER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ WHERE session_id = @@spid;
  NO_INFOMSGS  
  Supprime tous les messages d'information dont les niveaux de gravité sont compris entre 0 et 10.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 DBCC OUTPUTBUFFER affiche les résultats envoyés au client spécifié (*session_id*). Pour les processus qui ne possèdent pas de flux de sortie, un message d'erreur est renvoyé.
   
 Pour afficher l'instruction exécutée qui a renvoyé les résultats affichés par DBCC OUTPUTBUFFER, exécutez DBCC INPUTBUFFER.
@@ -84,7 +83,7 @@ Output Buffer
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l'appartenance au rôle serveur fixe **sysadmin** .
   
 ## <a name="examples"></a>Exemples  
@@ -94,7 +93,7 @@ L'exemple suivant renvoie les informations du tampon de sortie actif pour l'ID d
 DBCC OUTPUTBUFFER (52);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  
 [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)

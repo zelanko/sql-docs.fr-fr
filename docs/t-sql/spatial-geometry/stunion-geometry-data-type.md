@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5b168118-137d-402f-9173-fee3f365a89c
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 9fe364e8e1f3ca9d610d95283e8a1957a6d60e31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 868b344a18494e4b92cd3ee5944cb80ad15ab845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066221"
 ---
 # <a name="stunion-geometry-data-type"></a>STUnion (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ Retourne un objet qui représente l’union entre une instance **geometry** et u
   
  Type de retour CLR : **SqlGeometry**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode retourne toujours une valeur Null si les SRID (ID de référence spatiale) des instances **geometry** ne correspondent pas. Le résultat peut contenir des segments d'arc de cercle uniquement si les instances d'entrée contiennent des segments d'arc de cercle.  
   
 ## <a name="examples"></a>Exemples  
@@ -73,7 +72,7 @@ SELECT @g.STUnion(@h).ToString();
   
  `STUnion()` retourne un résultat qui contient un segment d'arc de cercle car l'instance qui a appelé `STUnion()` contient un segment d'arc de cercle.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

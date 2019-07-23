@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6ac4fde8a0058d05125346167e07c3d99e687a8e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066114"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ ALTER ASSEMBLY assembly_name
   
  Pour plus d’informations, consultez [Implémentation de points de terminaison](../../relational-databases/clr-integration/assemblies-implementing.md).  
   
- [ DROP FILE { *file_name*[ **,**_...n_] | ALL } ]  
+ [ DROP FILE { *file_name*[ **,** _...n_] | ALL } ]  
  Supprime le nom de fichier associé à l'assembly ou tous les fichiers associés à l'assembly, de la base de données. Si DROP FILE est utilisé avec ADD FILE qui suit, il s'exécute en premier. Cela vous permet de remplacer un fichier avec le même nom de fichier.  
   
 > [!NOTE]  
@@ -126,7 +125,7 @@ ALTER ASSEMBLY assembly_name
 > [!NOTE]  
 >  Cette option n’est disponible ni dans une base de données autonome, ni dans Azure SQL Database.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  ALTER ASSEMBLY n'interrompt pas les sessions en cours qui exécutent du code dans l'assembly modifié. Ces sessions se terminent en utilisant les bits non modifiés de l'assembly.  
   
  Si la clause FROM est spécifiée, ALTER ASSEMBLY met à jour l'assembly par rapport aux dernières copies des modules fournis. Comme il peut y avoir dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des fonctions, des procédures stockées, des déclencheurs, des types de données et des fonctions d'agrégation définies par l'utilisateur CLR qui sont déjà définis dans l'assembly, l'instruction ALTER ASSEMBLY les réassocie à la dernière mise en œuvre de l'assembly. Pour cela, les méthodes qui effectuent le mappage avec les fonctions, les procédures stockées et les déclencheurs CLR doivent toujours exister dans l'assembly modifié, avec les mêmes signatures. Les classes qui mettent en œuvre des types et des fonctions d'agrégation CLR définis par l'utilisateur doivent toutefois satisfaire aux exigences inhérentes aux types ou agrégations définis par l'utilisateur.  
@@ -168,7 +167,7 @@ ALTER ASSEMBLY assembly_name
   
  Si l'instruction ALTER ASSEMBLY est exécutée sans la clause de données UNCHECKED, des vérifications sont effectuées pour s'assurer que la nouvelle version de l'assembly n'affecte pas les données existantes dans les tables. Selon la quantité de données à vérifier, cela peut affecter les performances.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER sur l'assembly. Il y a d'autres exigences :  
   
 -   Pour modifier un assembly dont le jeu d’autorisations existant est EXTERNAL_ACCESS, vous devez avoir l’autorisation **EXTERNAL ACCESS ASSEMBLY** sur le serveur.  
@@ -209,7 +208,7 @@ Les autorisations suivantes sont nécessaires pour modifier un assembly CLR quan
 > [!IMPORTANT]
 > Azure SQL Database ne prend pas en charge le référencement d’un fichier.
 
-### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>b. Ajout d'un fichier à associer à un assembly  
+### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>B. Ajout d'un fichier à associer à un assembly  
  L'exemple suivant télécharge le fichier du code source `Class1.cs` à associer à l'assembly `MyClass`. Cet exemple suppose que l'assembly `MyClass` est déjà créé dans la base de données.  
   
 ```  
@@ -227,7 +226,7 @@ ADD FILE FROM 'C:\MyClassProject\Class1.cs';
 ALTER ASSEMBLY ComplexNumber WITH PERMISSION_SET = EXTERNAL_ACCESS;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md)   
  [DROP ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-assembly-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

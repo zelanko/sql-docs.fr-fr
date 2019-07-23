@@ -16,21 +16,20 @@ helpviewer_keywords:
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2dc3cd6f52d0c43903cb663ec6e6aa6d8bd60f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cbb165d6c0b56626849a74eed191402b65623de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062535"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Spécifier la longueur des champs au moyen de bcp (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   La longueur de champ indique le nombre maximal de caractères nécessaires pour représenter les données au format caractères. La longueur de champ est déjà connue si les données sont enregistrées au format natif. Par exemple, les données de type **int** occupent 4 octets. Si vous indiquez 0 pour la longueur du préfixe, la commande **bcp** vous demande la longueur des champs, les longueurs par défaut des champs et l’influence de la longueur des champs sur le stockage des données dans des fichiers de données qui contiennent des données de type **char** .  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Invite bcp pour la longueur des champs  
- Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format (**-f**) ou sans commutateur de format de données (**-n**, **-c**, **-w** ou **-N**), la commande demande la longueur de champ de chaque champ de données, comme suit :  
+ Si une commande **bcp** interactive contient l’option **in** ou **out** sans commutateur de fichier de format ( **-f**) ou sans commutateur de format de données ( **-n**, **-c**, **-w** ou **-N**), la commande demande la longueur de champ de chaque champ de données, comme suit :  
   
  `Enter length of field <field_name> [<default>]:`  
   
@@ -123,7 +122,7 @@ ms.locfileid: "64946141"
   
  Dans tous les cas précédents, pour créer un fichier de données pour un chargement ultérieur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et faire en sorte que l'espace de stockage soit minimal, utilisez un préfixe de longueur avec le type de stockage de fichier et la longueur du champ par défaut.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Spécifier des indicateurs de fin de champ et de fin de ligne &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)   

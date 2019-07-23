@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6fd9f7ffc5c07fdfb310984426b57cd84e521137
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72b833d5e11e5a034001eca4cac698b5ef392930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023509"
 ---
 # <a name="catalogcreateexecutiondump"></a>catalog.create_execution_dump 
 
@@ -25,7 +24,7 @@ ms.locfileid: "65716976"
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Provoque la suspension d'un package en cours d'exécution et la création d'un fichier de vidage par ce dernier. Le fichier est stocké dans le dossier *\<lecteur>*:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.  
+  Provoque la suspension d'un package en cours d'exécution et la création d'un fichier de vidage par ce dernier. Le fichier est stocké dans le dossier *\<lecteur>* :\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,7 +37,7 @@ catalog.create_execution_dump [ @execution_id = ] execution_id
  [ @execution_id = ] *execution_id*  
  ID d'exécution du package en cours d'exécution. *execution_id* est de type **bigint**.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Dans l'exemple suivant, le package en cours d'exécution dont l'ID d'exécution est 88 est invité à créer un fichier de vidage.  
   
 ```sql
@@ -65,7 +64,7 @@ EXEC create_execution_dump @execution_id = 88
   
 -   Le package crée actuellement un fichier de vidage.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Générer de fichiers de vidage pour l’exécution des packages](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
