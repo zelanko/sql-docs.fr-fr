@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b8b28e23bd9f795b9c8530b0c267589bd2525fe5
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: abec4388ccc56d2d643794cc354167359efa15f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127303"
 ---
 # <a name="rebuild-system-databases"></a>Reconstruire des bases de données système
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -200,7 +199,7 @@ ms.locfileid: "56590414"
   
  Une fois l'opération de reconstruction terminée, examinez les journaux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour vérifier s'ils contiennent des erreurs. L’emplacement par défaut des journaux est C:\Program Files\Microsoft SQL Server\130\Setup Bootstrap\Logs. Pour localiser le fichier journal qui contient les résultats du processus de reconstruction, accédez au dossier Logs à partir d'une invite de commandes, puis exécutez `findstr /s RebuildDatabase summary*.*`. Cette recherche vous dirige vers les fichiers journaux qui contiennent les résultats de la reconstruction des bases de données système. Ouvrez les fichiers journaux et recherchez les messages d'erreur pertinents.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Bases de données système](../../relational-databases/databases/system-databases.md)  
   
   

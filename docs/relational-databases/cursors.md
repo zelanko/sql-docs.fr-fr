@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52195cc99c61fb8dbf074f2362e0d7e13eb0b68d
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140811"
 ---
 # <a name="cursors"></a>Curseurs
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ Un curseur avant uniquement est spécifié avec `FORWARD_ONLY` et `READ_ONLY` et
 Le curseur ne reflète pas les modifications de la base de données qui concernent soit l'appartenance de l'ensemble de résultats, soit les modifications apportées aux valeurs des colonnes des lignes constituant l'ensemble de résultats. Après son ouverture, un curseur statique n’affiche pas les nouvelles lignes insérées dans la base de données, même si celles-ci correspondent aux conditions de recherche de l'instruction `SELECT` du curseur. Si certaines lignes constituant l'ensemble de résultats sont mises à jour par d'autres utilisateurs, les nouvelles valeurs des données ne sont pas affichées dans le curseur statique. Le curseur statique affiche les lignes supprimées de la base de données après l'ouverture du curseur. Aucune opération `UPDATE`, `INSERT` ou `DELETE` n’apparaît dans un curseur statique (à moins qu’il soit fermé et rouvert), ni même les modifications effectuée en utilisant la même connexion que celle qui a ouvert le curseur.  
   
 > [!NOTE]
-> Les curseurs statiques [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont toujours en lecture seule.  
+> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Les curseurs statiques sont toujours en lecture seule.  
   
 > [!NOTE]
 > Étant donné que l’ensemble de résultats d’un curseur statique est stocké dans une table de travail de la base de données **tempdb**, la taille des lignes de l’ensemble de résultats ne peut pas dépasser la taille maximale des lignes d’une table [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -133,7 +132,7 @@ Dans le cas où ni un curseur [!INCLUDE[tsql](../includes/tsql-md.md)] , ni un c
 [Comportements des curseurs](../relational-databases/native-client-odbc-cursors/cursor-behaviors.md)    
 [Comment les curseurs sont implémentés](../relational-databases/native-client-odbc-cursors/implementation/how-cursors-are-implemented.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DECLARE CURSOR &#40;Transact-SQL&#41;](../t-sql/language-elements/declare-cursor-transact-sql.md)   
 [Curseurs &#40;Transact-SQL&#41;](../t-sql/language-elements/cursors-transact-sql.md)   
 [Fonctions de curseur &#40;Transact-SQL&#41;](../t-sql/functions/cursor-functions-transact-sql.md)   

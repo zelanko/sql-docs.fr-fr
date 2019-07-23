@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 248df62a-7334-4bca-8262-235a28f4b07f
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e2d6c3a22ebae4a8617a4f788f9feb259d9bb7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ccb51c6934a60fa60fa7fbcb12967928d63de92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121558"
 ---
 # <a name="trycatch-transact-sql"></a>TRY...CATCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +63,7 @@ END CATCH
  *statement_block*  
  Tout groupe d’instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un lot ou contenues dans un bloc BEGIN...END.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Une construction TRY...CATCH intercepte toutes les erreurs d’exécution dont la gravité est supérieure à 10 et qui ne ferment pas la connexion de la base de données.  
   
  Un bloc TRY doit être suivi immédiatement d'un bloc CATCH associé. L'inclusion d'une autre instruction entre les instructions END TRY et BEGIN CATCH génère une erreur de syntaxe.  
@@ -345,7 +344,7 @@ END CATCH;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)   
  [Niveaux de gravité des erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-error-severities.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   

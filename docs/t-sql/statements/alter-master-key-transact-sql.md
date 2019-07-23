@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 563f031d16e725fb58535c03c0ea77a81dbef2eb
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: e2f8c5534e58299f17f89543668404e7ea8507bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071296"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY (Transact-SQL)
 
@@ -99,7 +98,7 @@ ALTER MASTER KEY <alter_option>
 
 PASSWORD ='*password*' Spécifie un mot de passe avec lequel chiffrer ou déchiffrer la clé principale de la base de données. *password* doit satisfaire aux critères de la stratégie de mot de passe Windows de l’ordinateur qui exécute l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 L'option REGENERATE permet de créer de nouveau la clé principale de base de données et toutes les clés qu'elle protège. Les clés sont déchiffrées au préalable au moyen de l'ancienne clé principale, puis chiffrées au moyen de la nouvelle clé principale. Cette opération gourmande en ressources doit être planifiée au cours d'une période de faible demande, à moins que la clé principale ait été compromise.
 
@@ -111,7 +110,7 @@ L'option DROP ENCRYPTION BY SERVICE MASTER KEY permet de supprimer le chiffremen
 
 ADD ENCRYPTION BY SERVICE MASTER KEY entraîne le chiffrement d'une copie de la clé principale au moyen de la clé principale du service et le stockage de cette copie dans la base de données en cours et dans master.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Requiert l'autorisation CONTROL sur la base de données. Si la clé principale de base de données a été chiffrée à l'aide d'un mot de passe, ce mot de passe doit également être connu.
 
@@ -135,7 +134,7 @@ ALTER MASTER KEY REGENERATE WITH ENCRYPTION BY PASSWORD = 'dsjdkflJ435907NnmM#sX
 GO
 ```
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [CREATE MASTER KEY](../../t-sql/statements/create-master-key-transact-sql.md)
 - [OPEN MASTER KEY](../../t-sql/statements/open-master-key-transact-sql.md)

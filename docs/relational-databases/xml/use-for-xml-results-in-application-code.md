@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41ae67bd-ece9-49ea-8062-c8d658ab4154
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be1c2f24083d86ee03156617acaa8c18b903fed0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 754b7a4baaff71cf0abe7193e5ba9c9cbd0a943a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039185"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Utiliser des résultats FOR XML dans le code de l'application
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -294,7 +293,7 @@ SqlConnection closed.
 > [!NOTE]  
 >  La méthode [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**xml** vous permet de demander que le résultat d’une requête FOR XML soit retourné avec le type de données **xml** plutôt que sous forme de données de type chaîne ou image ; pour cela, il vous suffit de spécifier la [directive TYPE](../../relational-databases/xml/type-directive-in-for-xml-queries.md). L’emploi d’une directive TYPE dans les requêtes FOR XML donne automatiquement accès à des résultats FOR XML très similaires à ceux qui sont présentés dans [Utiliser des données XML dans les applications](../../relational-databases/xml/use-xml-data-in-applications.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

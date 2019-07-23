@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3952706cebfd5f26f68e2dd103de1cb19c46bd05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa22592bbe86707ec4efa43ba0c188c21a07351e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110575"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>Personnaliser la génération et le déploiement de bases de données à l'aide de contributeurs de génération et de déploiement
 Visual Studio fournit des points d'extensibilité que vous pouvez utiliser pour modifier le comportement des actions de génération et de déploiement pour les projets de base de données.  

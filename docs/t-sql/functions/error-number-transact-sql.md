@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 536e45d86f0f40fdfa3269aad5e168573a16c9f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 085832fdb8d0918c76dbbcadb759c2fdf1169b5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65949082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094715"
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +50,7 @@ Quand elle est appelée dans un bloc CATCH, la fonction `ERROR_NUMBER` retourne 
 
 `ERROR_NUMBER` retourne NULL quand l’appel a lieu en dehors de l’étendue d’un bloc CATCH.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `ERROR_NUMBER` prend en charge les appels à partir de n’importe quel emplacement dans l’étendue d’un bloc CATCH.  
   
 `ERROR_NUMBER` retourne un numéro d’erreur pertinent, quel que soit le nombre de fois où elle s’exécute, ou l’emplacement de son exécution dans l’étendue du bloc `CATCH`. Ce comportement contraste avec celui d’une fonction comme @@ERROR, qui retourne uniquement un numéro d’erreur dans l’instruction immédiatement après celle qui a provoqué une erreur.  
@@ -120,7 +119,7 @@ ErrorNumber ErrorSeverity ErrorState  ErrorProcedure   ErrorLine  ErrorMessage
 
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   
  [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)   
  [ERROR_LINE &#40;Transact-SQL&#41;](../../t-sql/functions/error-line-transact-sql.md)   

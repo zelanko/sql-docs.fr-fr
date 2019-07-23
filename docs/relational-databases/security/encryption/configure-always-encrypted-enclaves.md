@@ -9,14 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87ae14a8acaa94873b81238d998f755a8ee0a8bd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7fd710359f6a2d97bebd9785dd010ff586f43cd1
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583661"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307586"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurer Always Encrypted avec enclaves sécurisées
 
@@ -151,7 +150,7 @@ Pour approvisionner une clé de chiffrement de colonne prenant en charge les enc
 
 Les limitations suivantes s’appliquent actuellement à l’approvisionnement des clés prenant en charge les enclaves :
 
-- Les clés principales de colonne prenant en charge les enclaves doivent être stockées dans le [magasin de certificats Windows](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores/) ou dans [Azure Key Vault](/azure/key-vault/key-vault-whatis/). Le stockage de clés principales de colonne prenant en charge les enclaves dans d’autres types de magasins de clés, par exemple modules de sécurité matériels ou magasins de clés personnalisés, n’est actuellement pas pris en charge.
+- Les clés principales de colonne prenant en charge les enclaves doivent être stockées dans le [magasin de certificats Windows](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores) ou dans [Azure Key Vault](/azure/key-vault/key-vault-whatis/). Le stockage de clés principales de colonne prenant en charge les enclaves dans d’autres types de magasins de clés, par exemple modules de sécurité matériels ou magasins de clés personnalisés, n’est actuellement pas pris en charge.
 
 ### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>Approvisionner des clés prenant en charge les enclaves avec SQL Server Management Studio (SSMS)
 

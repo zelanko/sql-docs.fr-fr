@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 9883127b-aa34-4235-88cc-c161cd2112cc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f20de20e00e43ee172eab82b3f95d790a32a9d7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f9677502f863f63f26cc2e922d14663cd1c3878
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062600"
 ---
 # <a name="lockdeadlock-chain-event-class"></a>Classe d'événements Lock:Deadlock Chain
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +32,8 @@ ms.locfileid: "47840717"
 |BinaryData|**image**|Identificateur de ressource du verrou.|2|Oui|  
 |DatabaseID|**int**|ID de la base de données à laquelle cette ressource appartient. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] affiche le nom de la base de données si la colonne de données ServerName est capturée dans la trace et que le serveur est disponible. Déterminez la valeur pour une base de données à l'aide de la fonction DB_ID.|3|Oui|  
 |DatabaseName|**nvarchar**|Nom de la base de données à laquelle la ressource appartient.|35|Oui|  
-|EventClass|**Int**|Type d’événement = 59.|27|non|  
-|EventSequence|**Int**|Séquence d'un événement donné au sein de la demande.|51|non|  
+|EventClass|**Int**|Type d’événement = 59.|27|Non|  
+|EventSequence|**Int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
 |EventSubClass|**Int**|Type de sous-classe d'événements.<br /><br /> 101=Type de ressource verrou<br /><br /> 102=Type de ressource échange|21|Oui|  
 |IntegerData|**Int**|Numéro de l'interblocage. Des numéros sont affectés à partir de 0 lors du démarrage du serveur, puis sont incrémentés à chaque interblocage.|25|Oui|  
 |IntegerData2|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Oui|  
@@ -45,7 +44,7 @@ ms.locfileid: "47840717"
 |ObjectID2|**bigint**|ID de l'objet ou de l'entité associé, s'il est disponible et applicable.|56|Oui|  
 |OwnerID|**Int**|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE|58|Oui|  
 |RequestID|**Int**|ID de la demande contenant l'instruction.|49|Oui|  
-|ServerName|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|non|  
+|ServerName|**nvarchar**|Nom de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tracée.|26|Non|  
 |SessionLoginName|**nvarchar**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le nom Connexion1 et que vous exécutez une instruction en tant que Connexion2, SessionLoginName affiche Connexion1 et LoginName, Connexion2. Cette colonne affiche à la fois les connexions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.|64|Oui|  
 |SPID|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |StartTime|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
@@ -53,7 +52,7 @@ ms.locfileid: "47840717"
 |TransactionID|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
 |Type|**Int**|1=NULL_RESOURCE<br /><br /> 2=DATABASE<br /><br /> 3=FILE<br /><br /> 5=OBJECT<br /><br /> 6=PAGE<br /><br /> 7=KEY<br /><br /> 8=EXTENT<br /><br /> 9=RID<br /><br /> 10=APPLICATION<br /><br /> 11=METADATA<br /><br /> 12=AUTONAMEDB<br /><br /> 13=HOBT<br /><br /> 14=ALLOCATION_UNIT|57|Oui|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)  
   

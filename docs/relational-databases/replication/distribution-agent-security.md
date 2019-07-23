@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f13f8769a5f97bab03b9466974c649dd2c5e7129
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5c8971810d7122bad77142d61d36820092e39a6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128348"
 ---
 # <a name="distribution-agent-security"></a>Sécurité de l'Agent de distribution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "54135009"
   
 -   Si vous accédez à la boîte de dialogue à partir de l'Assistant Nouvel abonnement, elle permet de spécifier le contexte dans lequel l'Agent de distribution établit les connexions avec l'Abonné (pour les abonnements par envoi de données) ou avec le serveur de distribution (pour les abonnements par extraction). La connexion peut avoir lieu en empruntant l'identité du compte Windows ou dans le contexte d'un compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous spécifiez.  
   
--   Si vous accédez à la boîte de dialogue à partir de la boîte de dialogue **Propriétés de l'abonnement** , spécifiez le contexte dans lequel l'Agent de distribution établit les connexions en cliquant sur le bouton des propriétés (**...**) dans **Connexion de l'Abonné** ou sur la ligne **Connexion du serveur de distribution** de cette boîte de dialogue. Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement**, consultez [Afficher et modifier les propriétés d’un abonnement par émission de données](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) et le guide pratique pour [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
+-   Si vous accédez à la boîte de dialogue à partir de la boîte de dialogue **Propriétés de l'abonnement** , spécifiez le contexte dans lequel l'Agent de distribution établit les connexions en cliquant sur le bouton des propriétés ( **...** ) dans **Connexion de l'Abonné** ou sur la ligne **Connexion du serveur de distribution** de cette boîte de dialogue. Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement**, consultez [Afficher et modifier les propriétés d’un abonnement par émission de données](../../relational-databases/replication/view-and-modify-push-subscription-properties.md) et le guide pratique pour [Afficher et modifier les propriétés d’un abonnement par extraction](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md).  
   
  Tous les comptes doivent être valides, le mot de passe correct étant spécifié pour chaque compte. Les comptes et les mots de passe ne sont pas validés tant qu'un agent ne s'exécute pas.  
   
@@ -95,7 +94,7 @@ Persist Security Info=False;Connection Pooling=True;
   
  La plupart des options de cette chaîne sont spécifiques du serveur DB2 que vous configurez, mais vous devez attribuer à l'option **Traiter les données binaires comme des caractères** la valeur **False**. Une valeur est exigée de façon que l'option **Catalogue initial** identifie la base de données d'abonnement. Pour plus d’informations, voir [IBM DB2 Subscribers](../../relational-databases/replication/non-sql/ibm-db2-subscribers.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Identité et contrôle d’accès pour la réplication](../../relational-databases/replication/security/identity-and-access-control-replication.md)   
  [Modèle de sécurité de l’Agent de réplication](../../relational-databases/replication/security/replication-agent-security-model.md)   
  [Présentation des Agents de réplication](../../relational-databases/replication/agents/replication-agents-overview.md)   

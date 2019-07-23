@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: c2addb0ed4dea6114b1abaa5e7474d6de6912f75
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 5389413091f57a5a0dfdad887edad675ee68ff64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136933"
 ---
 # <a name="change-workload-group-settings"></a>Modifier les paramètres de groupe de charge de travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "55689812"
   
  La création d'index est autorisée à utiliser un espace de travail de mémoire supérieur à celui qui lui a été initialement alloué, pour des raisons de performances. Cette gestion spéciale est prise en charge par Resource Governor. Toutefois, l'allocation initiale et toute allocation de mémoire supplémentaire sont limitées par les paramètres du pool de ressources et du groupe de charge de travail.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  La modification des paramètres de groupe de charge de travail nécessite l'autorisation CONTROL SERVER.  
   
 ##  <a name="ChgWGProp"></a> Modifier les paramètres de groupe de charge de travail à l'aide de SQL Server Management Studio  
@@ -73,7 +72,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Créer un groupe de charge de travail](../../relational-databases/resource-governor/create-a-workload-group.md)   
  [Créer un pool de ressources](../../relational-databases/resource-governor/create-a-resource-pool.md)   

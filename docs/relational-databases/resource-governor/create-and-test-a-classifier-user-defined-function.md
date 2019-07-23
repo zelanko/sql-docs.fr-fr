@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7866b3c9-385b-40c6-aca5-32d3337032be
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: fdb5e407c690ef7dd9a3bdfb4c77fe6897d66585
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: aff12e92692ebd3bd53319a91b0a480338458dc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136871"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Créer et tester une fonction classifieur définie par l'utilisateur
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -268,7 +267,7 @@ ms.locfileid: "55689782"
         > [!WARNING]  
         >  Nous vous recommandons vivement d'appliquer ces meilleures pratiques. Si des problèmes vous empêchent de les mettre en œuvre, nous vous recommandons de contacter le suport technique de Microsoft afin de d'éviter d'éventuels problèmes futurs.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)   
  [Activer Resource Governor](../../relational-databases/resource-governor/enable-resource-governor.md)   
  [Pool de ressources de Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)   

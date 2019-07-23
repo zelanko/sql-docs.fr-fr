@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 0f0dec8faf609eeef7d82e2d746a0f84aec6a6de
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093591"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, objet Deprecated Features
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ Le tableau suivant décrit l’objet de performance **Deprecated Features** .
 |Instances du compteur de l'objet SQL Server Deprecated Features|Description|  
 |------------------------------------------------------|-----------------|  
 |'#' et '##' comme nom des tables temporaires et procédures stockées|Un identifiant ne contenant pas d'autres caractères que # a été rencontré. Utilisez au moins un caractère supplémentaire. Se produit une fois par compilation.|  
-|Syntaxe d'appel de fonction '::'|La syntaxe d'appel de fonction :: a été rencontrée pour une fonction table. Remplacez par `SELECT column_list FROM` *<nom_fonction>*`()`. Par exemple, remplacez `SELECT * FROM ::fn_virtualfilestats(2,1)` par `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produit une fois par compilation.|  
+|Syntaxe d'appel de fonction '::'|La syntaxe d'appel de fonction :: a été rencontrée pour une fonction table. Remplacez par `SELECT column_list FROM` *<nom_fonction>* `()`. Par exemple, remplacez `SELECT * FROM ::fn_virtualfilestats(2,1)` par `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produit une fois par compilation.|  
 |\@ et noms commençant par \@\@ comme identificateurs [!INCLUDE[tsql](../../includes/tsql-md.md)]|Un identificateur commençant par \@ ou \@\@ a été trouvé. N’utilisez pas \@, \@v@ ou des noms commençant par \@\@ comme identificateurs. Se produit une fois par compilation.|  
 |ADDING TAPE DEVICE|La fonctionnalité dépréciée sp_addumpdevice'**bande**' a été rencontrée. Utilisez à la place sp_addumpdevice'**disque**'. Se produit une fois par utilisation.|  
 |Autorisation ALL|Nombre total de fois où la syntaxe GRANT ALL, DENY ALL ou REVOKE ALL a été rencontrée. Modifiez la syntaxe pour refuser des autorisations spécifiques. Se produit une fois par requête.|  
@@ -279,7 +278,7 @@ Le tableau suivant décrit l’objet de performance **Deprecated Features** .
 |xp_loginconfig|La procédure xp_loginconfig a été rencontrée. Utilisez à la place l'argument IsIntegratedSecurityOnly de SERVERPROPERTY. Se produit une fois par requête.|  
 |xp_revokelogin|La procédure xp_revokelogin a été rencontrée. Utilisez à la place ALTER LOGIN DISABLE ou DROP LOGIN. Se produit une fois par compilation.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités du moteur de base de données déconseillées dans SQL Server 2016](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Fonctionnalités de recherche en texte intégral déconseillées dans SQL Server 2016](../../relational-databases/search/deprecated-full-text-search-features-in-sql-server-2016.md)   
  [Classe d'événements Deprecation Announcement](../../relational-databases/event-classes/deprecation-announcement-event-class.md)   

@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: c880ac0db330ce03f45d469cffd717970d0b2d5e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7d983f2e7e370ec9fe385e6d46602c4703ca6d1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040463"
 ---
 # <a name="dbcc-updateusage-transact-sql"></a>DBCC UPDATEUSAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ Supprime tous les messages d'information.
 COUNT_ROWS  
 Spécifie que la colonne row_count est mise à jour à l'aide du nombre actuel de lignes dans la table ou la vue.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 DBCC UPDATEUSAGE corrige le nombre de lignes, de pages utilisées, de pages réservées, de pages de feuilles et de pages de données pour chaque partition d'une table ou d'un index. S'il n'y a pas d'imprécisions dans les tables système, DBCC UPDATEUSAGE ne retourne aucune donnée. Si des imprécisions sont trouvées et corrigées et si l'option WITH NO_INFOMSGS n'est pas utilisée, DBCC UPDATEUSAGE retourne les lignes et les colonnes mises à jour dans les tables système.
   
 DBCC CHECKDB a été amélioré pour détecter le moment où les nombres de pages ou de lignes deviennent négatifs. Une fois cette détection effectuée, la sortie de DBCC CHECKDB contient un avertissement et une recommandation relatifs à l'exécution de DBCC UPDATEUSAGE afin de régler le problème.
@@ -92,7 +91,7 @@ DBCC UPDATEUSAGE retourne le résultat suivant (les valeurs peuvent varier) :
   
 `DBCC execution completed. If DBCC printed error messages, contact your system administrator.`
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .
   
 ## <a name="examples"></a>Exemples  
@@ -105,7 +104,7 @@ DBCC UPDATEUSAGE (0);
 GO  
 ```  
   
-### <a name="b-updating-page-or-row-counts-or-both-for-adventureworks-and-suppressing-informational-messages"></a>b. Mise à jour du nombre de pages ou de lignes, ou les deux, pour AdventureWorks et suppression des messages d'information  
+### <a name="b-updating-page-or-row-counts-or-both-for-adventureworks-and-suppressing-informational-messages"></a>B. Mise à jour du nombre de pages ou de lignes, ou les deux, pour AdventureWorks et suppression des messages d'information  
 L'exemple suivant spécifie [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] en tant que nom de la base de données et supprime tous les messages d'information.
   
 ```sql
@@ -129,7 +128,7 @@ DBCC UPDATEUSAGE (AdventureWorks2012, 'HumanResources.Employee', IX_Employee_Org
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sp_spaceused &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)  
 [UPDATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/update-statistics-transact-sql.md)

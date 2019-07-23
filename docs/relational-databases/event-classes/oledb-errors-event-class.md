@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 0ce1e906-5d92-42f2-ab38-8771ad5ca008
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f80b2f656cd640c61e3a9a41229c374fd7ef19c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bd355a313b3f25424c2c392d13a5d0cdb15287f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115842"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors (classe d'événements)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "62665720"
 |TextData|**nvarchar**|Paramètres envoyés et reçus au sein de l'appel OLE DB.|1|Non|  
 |TransactionID|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Objets OLE Automation dans Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  
   

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: f0d5dd10-73fd-4e05-9177-07f56552bdf7
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8c69ac0361f29c81341831b25e3591716484902
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 62d63c65ce1fae63fa9453a0dc37ddc134a87012
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579714"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138753"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Créer des fonctions définies par l'utilisateur (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "57579714"
   
     -   `SEND`  
   
-###  <a name="Security"></a> Permissions 
+###  <a name="Security"></a> Autorisations 
 
 Nécessite l’autorisation `CREATE FUNCTION` dans la base de données et l’autorisation `ALTER` sur le schéma dans lequel la fonction est créée. Si la fonction spécifie un type défini par l’utilisateur, elle nécessite l’autorisation `EXECUTE` sur le type.  
   
@@ -205,7 +204,7 @@ Il est possible de se joindre à une fonction table à instructions multiples da
 > [!NOTE]  
 > ANSI_WARNINGS n'est pas honoré lorsque vous transmettez des paramètres dans une procédure stockée, dans une fonction définie par l'utilisateur ou lorsque vous déclarez et définissez des variables dans une instruction par lot. Par exemple, si une variable est définie comme **char(3)** et qu’une valeur de plus de trois caractères lui est attribuée, les données sont tronquées en fonction de la taille définie, et l’instruction `INSERT` ou `UPDATE` réussit.
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctions définies par l’utilisateur](../../relational-databases/user-defined-functions/user-defined-functions.md)     
  [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)    
  [ALTER FUNCTION &#40;Transact-SQL&#41;](../../tools/sql-server-profiler/start-sql-server-profiler.md)    

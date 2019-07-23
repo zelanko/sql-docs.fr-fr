@@ -26,11 +26,11 @@ helpviewer_keywords:
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493091"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68223593"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -58,7 +58,7 @@ Nom de la colonne de base de données contenant la classification à supprimer. 
     - *table_name* : nom du schéma auquel appartient la table classifiée.
     - *column_name* : nom de la colonne de base de données contenant la classification à supprimer.
 
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 
 - Plusieurs classifications d’objet peuvent être supprimées avec une seule instruction « DROP SENSITIVITY CLASSIFICATION ».
 
@@ -88,7 +88,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     dbo.sales.price, dbo.sales.discount, SalesLT.Customer.Phone  
 ```
 
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 
 [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](../../t-sql/statements/add-sensitivity-classification-transact-sql.md)
 
