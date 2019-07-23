@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5c19e21af440dd7f3293b706d38498e102c76248
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 834a5ba4ee456ad7e9dfd538468b66fe3472cd1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54257084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006540"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,14 +77,14 @@ CREATE MESSAGE TYPE message_type_name
  VALID_XML WITH SCHEMA COLLECTION *schema_collection_name*  
  Spécifie que le corps du message doit contenir du code XML conforme à un schéma de la collection de schémas spécifiée. L’argument *schema_collection_name* doit représenter le nom d’une collection de schémas XML existante.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] valide les messages entrants. Lorsqu'un message contient un corps de message non conforme au type de validation spécifié, [!INCLUDE[ssSB](../../includes/sssb-md.md)] ignore le message non valide et retourne un message d'erreur au service émetteur du message.  
   
  Les deux parties d'une conversation doivent définir le même nom pour un type de message. Pour faciliter le dépannage, les deux parties d'une conversation spécifient généralement la même validation pour le type de message, bien que [!INCLUDE[ssSB](../../includes/sssb-md.md)] ne l'impose pas.  
   
  Il est possible qu'un type de message ne soit pas un objet temporaire. Les noms de type de message commençant par **#** sont autorisés, mais ils représentent des objets permanents.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L’autorisation de création d’un type de message est accordée par défaut aux membres du rôle de base de données fixe **db_ddladmin** ou **db_owner** et aux membres du rôle serveur fixe **sysadmin**.  
   
  L’autorisation REFERENCES pour un type de message est accordée par défaut au propriétaire du type de message, aux membres du rôle de base de données fixe **db_owner** et aux membres du rôle serveur fixe **sysadmin**.  
@@ -103,7 +102,7 @@ CREATE MESSAGE TYPE
   VALIDATION = WELL_FORMED_XML ;     
 ```  
   
-### <a name="b-creating-a-message-type-containing-typed-xml"></a>b. Création d'un type de message contenant du code XML typé  
+### <a name="b-creating-a-message-type-containing-typed-xml"></a>B. Création d'un type de message contenant du code XML typé  
  L'exemple suivant crée un type de message pour un rapport de frais encodé en XML. L'exemple crée une collection de schémas XML contenant le schéma d'un rapport de frais simple. L'exemple crée ensuite un type de message qui valide les messages par rapport au schéma.  
   
 ```  
@@ -160,7 +159,7 @@ CREATE MESSAGE TYPE
     VALIDATION = NONE ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-message-type-transact-sql.md)   
  [DROP MESSAGE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-message-type-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

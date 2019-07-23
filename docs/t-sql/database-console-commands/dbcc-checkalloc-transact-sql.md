@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 4e0bdec7737c98b8b28267344dd9b8e2acb86f1c
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102136"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -98,7 +97,7 @@ Les noms de base de données doivent suivre les règles applicables aux [identif
  ESTIMATE ONLY  
  Affiche une estimation de la quantité d’espace tempdb nécessaire pour exécuter DBCC CHECKALLOC quand toutes les autres options sont spécifiées.
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 DBCC CHECKALLOC vérifie l'allocation de toutes les pages de la base de données, quel que soit le type de page ou le type d'objet auquel elles appartiennent. Il valide également les différentes structures internes qui sont utilisées pour garder la trace de ces pages et des relations entre elles.
 Si NO_INFOMSGS n'est pas spécifié, DBCC CHECKALLOC collecte les informations d'utilisation de l'espace pour tous les objets de la base de données. Ces informations sont imprimées avec les erreurs détectées.
   
@@ -151,7 +150,7 @@ DBCC CHECKALLOC fournit aussi un résumé de l'allocation pour chaque index et p
 |ID de partition (Partition ID)|À usage interne uniquement|  
 |ID d'unité d'allocation|À usage interne uniquement|  
 |Données dans la ligne (In-row data)|Les pages contiennent des données de segment de mémoire ou d'index.|  
-|Données LOB (LOB data)|Les pages contiennent des données de type **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, **xml** et **image**.|  
+|Données LOB (LOB data)|Les pages contiennent des données de type **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext**, **xml** et **image**.|  
 |Données de dépassement de ligne (Row-overflow data)|Les pages contiennent des données de colonne de longueur variable qui ont été envoyées hors ligne.|  
   
 DBCC CHECKALLOC renvoie le jeu de résultats suivant (les valeurs peuvent varier), sauf lorsque ESTIMATEONLY ou NO_INFOMSGS est spécifié.
@@ -228,7 +227,7 @@ Estimated TEMPDB space needed for CHECKALLOC (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l’appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner.
   
 ## <a name="examples"></a>Exemples  
@@ -243,7 +242,7 @@ DBCC CHECKALLOC (AdventureWorks2012);
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   
