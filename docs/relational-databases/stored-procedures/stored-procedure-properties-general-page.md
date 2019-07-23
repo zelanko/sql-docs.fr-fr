@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a87351a2aae1eeace37d3af347350163cc3c710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c78124b3836026ced3f36500ed5558b58009fe5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136626"
 ---
 # <a name="stored-procedure-properties-general-page"></a>Propriétés de la procédure stockée (page Général)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47752227"
  **Date de création**  
  Affiche la date à laquelle la procédure stockée a été créée.  
   
- **Nom**  
+ **Name**  
  Nom de la procédure stockée actuelle.  
   
  **Schéma**  
@@ -62,7 +61,7 @@ ms.locfileid: "47752227"
  **Recompiler**  
  Indique si l'objet a été créé avec l'option RECOMPILE.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédures stockées &#40;moteur de base de données&#41;](../../relational-databases/stored-procedures/stored-procedures-database-engine.md)   
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)   
  [ALTER PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-procedure-transact-sql.md)  

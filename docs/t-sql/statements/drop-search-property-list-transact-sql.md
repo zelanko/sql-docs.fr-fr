@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7c7ce52a-6b77-4a1c-9abf-d5feb664bea8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4eeee8a769931fdd28dfa608a49162df545732bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 746d2f33d780e4eada7accabdd029998c9e61742
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070183"
 ---
 # <a name="drop-search-property-list-transact-sql"></a>DROP SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ DROP SEARCH PROPERTY LIST property_list_name
 SELECT name FROM sys.registered_search_property_lists;  
 ```  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous ne pouvez pas supprimer de liste de propriétés de recherche d'une base de données tant que la liste est associée à un index de recherche en texte intégral, et toute tentative dans ce sens échoue. Pour supprimer une liste de propriétés de recherche d’un index de recherche en texte intégral donné, utilisez l’instruction [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) et spécifiez la clause SET SEARCH PROPERTY LIST avec OFF ou le nom d’une autre liste de propriétés de recherche.  
   
  **Pour consulter les listes de propriétés sur une instance de serveur**  
@@ -66,7 +65,7 @@ SELECT name FROM sys.registered_search_property_lists;
   
 -   [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CONTROL dans la liste de propriétés de recherche.  
   
 > [!NOTE]  
@@ -80,7 +79,7 @@ DROP SEARCH PROPERTY LIST JobCandidateProperties;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/alter-search-property-list-transact-sql.md)   
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](../../t-sql/statements/create-search-property-list-transact-sql.md)   
  [Rechercher les propriétés du document à l’aide des listes de propriétés de recherche](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   

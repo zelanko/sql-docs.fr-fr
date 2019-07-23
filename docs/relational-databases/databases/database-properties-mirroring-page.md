@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5bdcd20f-532d-4ee6-b2c7-18dbb7584a87
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7a3b3027489b819cd5058f9080ca9633a2cf3ed
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a25b2b40b147cd0bd23e8c7554e548b6a577d539
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099595"
 ---
 # <a name="database-properties-mirroring-page"></a>Propriétés de la base de données (page Mise en miroir)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "54132529"
   
  L'adresse réseau du serveur présente la syntaxe de base suivante :  
   
- TCP **://**_nom_de_domaine_complet_**:**_port_  
+ TCP **://** _nom_de_domaine_complet_ **:** _port_  
   
  où  
   
@@ -100,7 +99,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Basculement**  
  Cliquez sur ce bouton pour basculer manuellement de la base de données principale vers la base de données miroir.  
   
-> **REMARQUE :** Si la session de mise en miroir est exécutée en mode haute performance, le basculement manuel n'est pas pris en charge. Pour effectuer un basculement manuel, vous devez d’abord définir le mode d’opération sur **Haute sécurité sans basculement automatique (synchrone)**. Une fois le basculement terminé, vous pouvez restaurer le mode **Haute performance (asynchrone)** sur l’instance de serveur principal.  
+> **REMARQUE :** Si la session de mise en miroir est exécutée en mode haute performance, le basculement manuel n'est pas pris en charge. Pour effectuer un basculement manuel, vous devez d’abord définir le mode d’opération sur **Haute sécurité sans basculement automatique (synchrone)** . Une fois le basculement terminé, vous pouvez restaurer le mode **Haute performance (asynchrone)** sur l’instance de serveur principal.  
   
  Vous êtes invité à confirmer l'opération. Si vous cliquez sur **Oui**, une tentative de basculement est effectuée. Le serveur principal commence par essayer de se connecter au serveur miroir à l'aide de l'authentification Windows. Si l’authentification Windows ne fonctionne pas, le serveur principal affiche la boîte de dialogue **Se connecter au serveur** . Si le serveur miroir utilise l’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , sélectionnez **Authentification SQL Server** dans la zone **Authentification** . Dans la zone de texte **Connexion** , spécifiez le compte de connexion à utiliser pour se connecter sur le serveur miroir puis, dans la zone de texte **Mot de passe** , spécifiez le mot de passe de ce compte.  
   
@@ -140,7 +139,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
  **Actualiser**  
  Cliquez ici pour mettre à jour la zone **État** .  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si vous n’êtes pas familiarisé avec la mise en miroir de base de données, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
 ### <a name="adding-a-witness-to-an-existing-session"></a>Ajout d'un témoin à une session existante  
@@ -176,7 +175,7 @@ TCP://DBSERVER9.COMPANYINFO.ADVENTURE-WORKS.COM:7022
   
 -   [Démarrer le moniteur de mise en miroir de bases de données &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   

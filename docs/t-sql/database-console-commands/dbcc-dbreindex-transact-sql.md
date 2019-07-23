@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 9bc65e7f29f75d4aaf2f1e6366f29d45f04cafd0
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101987"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ DBCC DBREINDEX
   
 ## <a name="arguments"></a>Arguments  
  *table_name*  
- Nom de la table contenant le ou les index spécifiés à reconstruire. Les noms de table doivent suivre les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md)*.*  
+ Nom de la table contenant le ou les index spécifiés à reconstruire. Les noms de table doivent suivre les règles applicables aux [identificateurs](../../relational-databases/databases/database-identifiers.md) *.*  
   
  *index_name*  
  Nom de l'index à reconstruire. Les noms d'index doivent respecter les règles applicables aux identificateurs. Si la valeur de l’argument *index_name* est spécifiée, vous devez définir *table_name*. Si la valeur de l’argument *index_name* n’est pas spécifiée ou est « », tous les index de la table sont reconstruits.  
@@ -67,7 +66,7 @@ DBCC DBREINDEX
  WITH NO_INFOMSGS  
  Supprime tous les messages d'information dont les niveaux de gravité sont compris entre 0 et 10.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 L'instruction DBCC DBREINDEX reconstruit un index pour une table ou tous les index définis pour une table. En permettant la reconstruction dynamique d'un index, les index qui appliquent les contraintes PRIMARY KEY ou UNIQUE peuvent être reconstruits sans devoir supprimer et recréer ces contraintes. Autrement dit, vous pouvez reconstruire un index sans connaître la structure d'une table ou ses contraintes. Cela peut arriver après une copie en bloc de données dans la table.
 
 DBCC DBREINDEX peut reconstruire tous les index d'une table en une seule instruction. Cette opération est plus simple que de coder plusieurs instructions DROP INDEX et CREATE INDEX. Comme le travail est effectué par une seule instruction, DBCC DBREINDEX est automatiquement atomique, tandis que les instructions individuelles DROP INDEX et CREATE INDEX doivent être intégrées à une transaction pour être atomiques. De même, DBCC DBREINDEX offre un plus grand nombre d'optimisations que les instructions individuelles DROP INDEX et CREATE INDEX.
@@ -89,7 +88,7 @@ DBCC DBREINDEX n'est pas pris en charge pour une utilisation sur les objets suiv
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 L’appelant doit être propriétaire de la table ou être membre du rôle serveur fixe **sysadmin**, du rôle de base de données fixe **db_owner** ou du rôle de base de données fixe **db_ddladmin**.
   
 ## <a name="examples"></a>Exemples  
@@ -103,7 +102,7 @@ DBCC DBREINDEX ('HumanResources.Employee', PK_Employee_BusinessEntityID,80);
 GO  
 ```  
   
-### <a name="b-rebuilding-all-indexes"></a>b. Reconstruction de tous les index  
+### <a name="b-rebuilding-all-indexes"></a>B. Reconstruction de tous les index  
 Dans l'exemple suivant, tous les index de la table `Employee` de `AdventureWorks` sont reconstruits avec un facteur de remplissage de `70`.
   
 ```sql
@@ -113,7 +112,7 @@ DBCC DBREINDEX ('HumanResources.Employee', ' ', 70);
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  

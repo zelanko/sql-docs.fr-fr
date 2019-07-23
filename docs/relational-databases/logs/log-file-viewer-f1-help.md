@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bbb2bda32081afff414f33a107381bfa46bc571
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084096"
 ---
 # <a name="log-file-viewer-f1-help"></a>Aide sur la visionneuse du fichier journal via la touche F1
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,12 +73,12 @@ ms.locfileid: "47595085"
  **Source du journal**  
  Affiche une description du journal source dans lequel l'événement est capturé.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour accéder aux fichiers journaux pour les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont en ligne, l’appartenance au rôle serveur fixe securityadmin est obligatoire.  
   
  L’accès aux fichiers journaux des instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hors connexion nécessite un accès en lecture à l’espace de noms WMI **Root\Microsoft\SqlServer\ComputerManagement10** et au dossier où sont stockés les fichiers journaux. Pour plus d’informations, consultez la section Sécurité de la rubrique [Afficher les fichiers journaux hors connexion](../../relational-databases/logs/view-offline-log-files.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Visionneuse du fichier journal](../../relational-databases/logs/log-file-viewer.md)   
  [Ouvrir la Visionneuse du fichier journal](../../relational-databases/logs/open-log-file-viewer.md)   
  [Afficher les fichiers journaux hors connexion](../../relational-databases/logs/view-offline-log-files.md)  

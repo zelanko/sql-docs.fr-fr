@@ -37,13 +37,12 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 00726a70cc40548f3c75b786a9fa2b601ec9dd57
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2fc021cec09a7f62d05f5e435db9d6fc2597fce3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117339"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ CREATE REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  Spécifie si l'authentification anonyme est utilisée lors des communications avec le service distant. Si ANONYMOUS = ON, l’authentification anonyme est utilisée et les opérations dans la base de données distante sont effectuées en tant que membre du rôle de base de données fixe **public**. Si ANONYMOUS = OFF, les opérations de la base de données distante sont exécutées en tant qu'utilisateur spécifique dans cette base de données. Lorsque cette clause est omise, la valeur par défaut est OFF.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise une liaison de service distant afin de localiser le certificat à utiliser pour une nouvelle conversation. La clé publique du certificat associé à *user_name* est utilisée pour authentifier les messages envoyés au service distant et pour chiffrer une clé de session qui sert ensuite à chiffrer la conversation. Le certificat de *user_name* doit correspondre au certificat d’un utilisateur de la base de données qui héberge le service distant.  
   
  Une liaison de service distant n'est nécessaire que pour démarrer des services qui communiquent avec des services cibles en dehors de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une base de données qui héberge un service d'initialisation doit contenir des liaisons de service distant pour tous les services cibles en dehors de l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Une base de données qui héberge un service cible n'a pas besoin de contenir des liaisons de service distant pour les services d'initialisation qui communiquent avec le service cible. Lorsque les services initiateur et cible sont dans la même instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], aucune liaison de service distant n'est nécessaire. Toutefois, si une liaison de service distant est présente à l’endroit où le *service_name* spécifié pour TO SERVICE correspond au nom du service local, [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise cette liaison.  
@@ -88,7 +87,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
  Lorsqu'un utilisateur possède plusieurs certificats actuellement valides et marqués comme étant AVAILABLE FOR BEGIN_DIALOG, [!INCLUDE[ssSB](../../includes/sssb-md.md)] sélectionne celui qui est doté de la date d'expiration la plus lointaine.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations de création d’une liaison de service distant sont octroyées par défaut à l’utilisateur spécifié dans la clause USER, aux membres du rôle de base de données fixe **db_owner**, aux membres du rôle de base de données fixe **db_ddladmin** et aux membres du rôle serveur fixe **sysadmin**.  
   
  L'utilisateur qui exécute l'instruction CREATE REMOTE SERVICE BINDING doit avoir l'autorisation d'emprunt d'identité pour le principal spécifié dans l'instruction.  
@@ -106,7 +105,7 @@ CREATE REMOTE SERVICE BINDING APBinding
     WITH USER = APUser ;  
 ```  
   
-### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>b. Création d'une liaison de service distant avec une authentification anonyme  
+### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>B. Création d'une liaison de service distant avec une authentification anonyme  
  L'exemple suivant crée une liaison pour le service `//Adventure-Works.com/services/AccountsPayable`. [!INCLUDE[ssSB](../../includes/sssb-md.md)] utilise le certificat appartenant au principal de base de données `APUser` pour échanger la clé de chiffrement de la session avec le service distant. Il ne s'authentifie pas auprès du service distant. Dans la base de données qui héberge le service distant, les messages sont remis en tant qu’utilisateur **guest**.  
   
 ```  
@@ -115,7 +114,7 @@ CREATE REMOTE SERVICE BINDING APBinding
     WITH USER = APUser, ANONYMOUS=ON ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-remote-service-binding-transact-sql.md)   
  [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

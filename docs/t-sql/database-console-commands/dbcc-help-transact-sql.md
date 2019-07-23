@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 81523c69052a89b5a94c170c65be077ba17e56c6
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: da8c23819a2f47caf087ab44cd654b795a9a044d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039112"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *dbcc_statement* | *@dbcc_statement_var*  
+ *dbcc_statement* |  *@dbcc_statement_var*  
  Nom de la commande DBCC pour laquelle les informations de syntaxe sont reçues. Fournit uniquement la partie de la commande DBCC qui suit DBCC, par exemple, CHECKDB plutôt que DBCC CHECKDB.  
   
  ?  
@@ -53,7 +52,7 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 ## <a name="result-sets"></a>Jeux de résultats  
 DBCC HELP retourne un ensemble de résultats affichant la syntaxe de la commande DBCC spécifiée.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l'appartenance au rôle serveur fixe **sysadmin** .
   
 ## <a name="examples"></a>Exemples  
@@ -67,7 +66,7 @@ DBCC HELP (@dbcc_stmt);
 GO  
 ```  
   
-### <a name="b-using-dbcc-help-with-the--option"></a>b. Utilisation de DBCC HELP avec l'option Option  
+### <a name="b-using-dbcc-help-with-the--option"></a>B. Utilisation de DBCC HELP avec l'option Option  
 L'exemple suivant retourne toutes les instructions DBCC pour lesquelles l'Aide est disponible.
   
 ```sql  
@@ -75,7 +74,7 @@ DBCC HELP ('?');
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

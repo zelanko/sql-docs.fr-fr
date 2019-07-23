@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 8e896e73-af27-4cae-a725-7a156733f3bd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cfc981e1d76f476c6dd09582cf016d9c2283bbf0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea7697294cd25412d4ac78c92f3b1bf689f1ff34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086116"
 ---
 # <a name="waitfor-transact-sql"></a>WAITFOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ WAITFOR
 > [!IMPORTANT]  
 >  Vous pouvez appliquer WAITFOR avec TIMEOUT uniquement aux messages [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Pour plus d’informations, consultez [RECEIVE &#40;Transact-SQL&#41;](../../t-sql/statements/receive-transact-sql.md) et [GET CONVERSATION GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/get-conversation-group-transact-sql.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pendant l'exécution de l'instruction WAITFOR, la transaction est exécutée et aucune autre demande ne peut s'exécuter sous cette même transaction.  
   
  Le délai réel peut être différent du délai spécifié dans *time_to_pass*, *time_to_execute* ou *timeout*, et il dépend du niveau d’activité du serveur. Le compteur démarre quand le thread de l’instruction WAITFOR est planifié. Si le serveur est occupé, il est possible que le thread ne soit pas immédiatement planifié ; par conséquent, le délai peut être supérieur à la durée spécifiée.  
@@ -169,7 +168,7 @@ GO
   
  `A total time of 00:00:10, in hh:mm:ss, has elapsed. Your time is up.`  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Langage de contrôle de flux &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md)   
  [datetime &#40;Transact-SQL&#41;](../../t-sql/data-types/datetime-transact-sql.md)   
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6934f2c3f1776ff1e7c685beec84d68dbb7e71af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08c252c6b78c31a8221dbd969ddb49ba0abc647f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128166"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>Exécuter des scripts pendant la synchronisation (programmation Transact-SQL de la réplication)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47617637"
   
 2.  Enregistrez le fichier de script dans un emplacement accessible à l'Agent d'instantané pour la publication.  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md). Spécifiez **@publication**, le nom du fichier de script avec le chemin d'accès complet UNC créé à l'étape 2 pour **@scriptfile**et l'une des valeurs suivantes pour **@skiperror**:  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md). Spécifiez **@publication** , le nom du fichier de script avec le chemin d'accès complet UNC créé à l'étape 2 pour **@scriptfile** et l'une des valeurs suivantes pour **@skiperror** :  
   
     -   **0** – l'agent arrêtera d'exécuter le script en cas d'erreur.  
   
@@ -43,7 +42,7 @@ ms.locfileid: "47617637"
   
 4.  Le script spécifié sera exécuté sur chaque Abonné lorsque l'agent s'exécutera de nouveau pour synchroniser l'abonnement.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Synchroniser les données](../../relational-databases/replication/synchronize-data.md)  
   
   

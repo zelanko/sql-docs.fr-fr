@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: c64bf911c10558cdc2c1c7be7f3e1fe6dc02a6d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb3ad4cf2da399c32af4ccdcb183ebebc393dbe5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120937"
 ---
 # <a name="stmpolyfromwkb-geography-data-type"></a>STMPolyFromWKB (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f4a1fe05a5662dad7e674831c5e5b76b9c8c8263
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a357eea4f29dc65365db7d5ca7274cf8c385aaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65801350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112416"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Création d'une destination à l'aide du composant Script
 
@@ -73,7 +72,7 @@ ms.locfileid: "65801350"
 ### <a name="adding-variables"></a>Ajout de variables  
  Si vous voulez utiliser des variables existantes dans votre script, vous pouvez les ajouter dans les champs de propriété **ReadOnlyVariables** et **ReadWriteVariables** de la page **Script** de l’**Éditeur de transformation de script**.  
   
- Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton de sélection (**...**) en regard des champs de propriété **ReadOnlyVariables** et **ReadWriteVariables**, puis en sélectionnant les variables dans la boîte de dialogue **Sélectionner des variables**.  
+ Lorsque vous ajoutez plusieurs variables dans les champs de propriété, séparez les noms de variables par des virgules. Vous pouvez également sélectionner plusieurs variables en cliquant sur le bouton de sélection ( **...** ) en regard des champs de propriété **ReadOnlyVariables** et **ReadWriteVariables**, puis en sélectionnant les variables dans la boîte de dialogue **Sélectionner des variables**.  
   
  Pour obtenir des informations générales sur l’utilisation de variables avec le composant Script, consultez [Utilisation de variables dans le composant Script](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md).  
   
@@ -354,7 +353,7 @@ public class ScriptMain:
 }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Création d’une source à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-source-with-the-script-component.md)   
  [Développement d’un composant de destination personnalisé](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-destination-component.md)  
   

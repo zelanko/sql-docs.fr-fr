@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: ec93e67b-04ce-4aae-ab96-3ad20e9793ad
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a018123080076cfcc3886395345e29df62feed79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fd328fa1d1112e0bafc8fda98f1fdaa986a3b40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065266"
 ---
 # <a name="catalogexecutionparametervalues-ssisdb-database"></a>catalog.execution_parameter_values (base de données SSISDB)
 
@@ -35,12 +34,12 @@ ms.locfileid: "65714744"
 |parameter_data_type|**nvarchar(128)**|Type de données du paramètre.|  
 |parameter_name|**sysname**|Nom du paramètre.|  
 |parameter_value|**sql_variant**|Valeur du paramètre. Quand sensitive est `0`, la valeur en texte en clair est indiquée. Quand sensitive est `1`, la valeur **NULL** s’affiche.|  
-| sensible|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est sensible. Lorsque la valeur est `0`, la valeur de paramètre n'est pas sensible.|  
+|sensible|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est sensible. Lorsque la valeur est `0`, la valeur de paramètre n'est pas sensible.|  
 |required|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est obligatoire pour démarrer l'exécution. Lorsque la valeur est `0`, la valeur de paramètre n'est pas obligatoire pour démarrer l'exécution.|  
 |value_set|**bit**|Lorsque la valeur est `1`, la valeur de paramètre a été affectée. Lorsque la valeur est `0`, la valeur de paramètre n'a pas été affectée.|  
 |runtime_override|**bit**|Lorsque la valeur est `1`, la valeur d'origine a été modifiée avant le démarrage de l'exécution. Lorsque la valeur est `0`, la valeur de paramètre est la valeur d'origine définie.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette vue affiche une ligne pour chaque paramètre d'exécution dans le catalogue. Une valeur de paramètre d'exécution est la valeur affectée à un paramètre du projet ou à un paramètre du package pendant une instance d'exécution unique.  
   
 ## <a name="permissions"></a>Autorisations  

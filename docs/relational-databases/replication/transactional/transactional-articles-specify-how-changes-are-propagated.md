@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36e6c524a03aef1a55f95d174fff71421d5abe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a53c0ac886185e2d6723a5a01c055c1c828fe51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121258"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>Articles transactionnels - Spécifier le mode de propagation des modifications
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "47683047"
 ## <a name="default-and-custom-stored-procedures"></a>Procédures stockées par défaut et personnalisées  
  Trois procédures sont créées par défaut par la réplication pour chaque article de table :  
   
--   **sp_MSins_\<** *nomdetable* **>**, qui gère les insertions.  
+-   **sp_MSins_\<** *nomdetable* **>** , qui gère les insertions.  
   
--   **sp_MSupd_\<** *nomdetable* **>**, qui gère les mises à jour.  
+-   **sp_MSupd_\<** *nomdetable* **>** , qui gère les mises à jour.  
   
--   **sp_MSdel_\<** *nomdetable* **>**, qui gère les suppressions.  
+-   **sp_MSdel_\<** *nomdetable* **>** , qui gère les suppressions.  
   
- Le **\<**_nomdetable_**>** employé dans la procédure varie en fonction de la méthode utilisée pour ajouter l’article à la publication et si la base de données d’abonnement contient une table au nom identique mais avec un propriétaire différent.  
+ Le **\<** _nomdetable_ **>** employé dans la procédure varie en fonction de la méthode utilisée pour ajouter l’article à la publication et si la base de données d’abonnement contient une table au nom identique mais avec un propriétaire différent.  
   
  N'importe laquelle de ces procédures peut être remplacée par une procédure personnalisée que vous spécifiez lors de l'ajout d'un article à une publication. Les procédures personnalisées sont utilisées dans le cas où l'application exige une logique personnalisée, par exemple l'insertion de données dans une table d'audit lors de la mise à jour d'une ligne sur l'Abonné. Pour plus d'informations sur la définition de procédures stockées personnalisées, reportez-vous à la liste des rubriques ci-dessus.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "47683047"
   
 -   Si vous modifiez le schéma d'une table publiée, les procédures personnalisées doivent être régénérées. Pour plus d’informations, consultez [Régénérer des procédures transactionnelles personnalisées pour refléter des modifications de schéma](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   Si vous utilisez une valeur supérieure à 1 pour le paramètre **-SubscriptionStreams** de l’Agent de distribution, vérifiez que les mises à jour des colonnes clés primaires se sont correctement déroulées. Exemple :  
+-   Si vous utilisez une valeur supérieure à 1 pour le paramètre **-SubscriptionStreams** de l’Agent de distribution, vérifiez que les mises à jour des colonnes clés primaires se sont correctement déroulées. Par exemple :  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  
@@ -118,7 +117,7 @@ pkc1, pkc2, pkc3,... pkcn
   
 #### <a name="scall-syntax"></a>Syntaxe SCALL  
  Procédures stockées UPDATE  
- Les procédures stockées gérant des instructions UPDATE ne recevront les valeurs mises à jour que pour les colonnes qui ont été modifiées, suivies tout d'abord des valeurs d'origine des colonnes clés primaire, puis d'un paramètre de masque binaire (**binary(n)**) indiquant les colonnes modifiées. Dans l'exemple suivant, la colonne 2 (c2) n'a pas été modifiée :  
+ Les procédures stockées gérant des instructions UPDATE ne recevront les valeurs mises à jour que pour les colonnes qui ont été modifiées, suivies tout d'abord des valeurs d'origine des colonnes clés primaire, puis d'un paramètre de masque binaire (**binary(n)** ) indiquant les colonnes modifiées. Dans l'exemple suivant, la colonne 2 (c2) n'a pas été modifiée :  
   
 ```  
 c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  
@@ -126,7 +125,7 @@ c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask
   
 #### <a name="mcall-syntax"></a>Syntaxe MCALL  
  Procédures stockées UPDATE  
- Les procédures stockées gérant des instructions UPDATE recevront les valeurs mises à jour de toutes les colonnes définies dans l'article, suivies tout d'abord des valeurs d'origine des colonnes clés primaire, puis d'un paramètre de masque binaire (**binary(n)**) indiquant les colonnes modifiées :  
+ Les procédures stockées gérant des instructions UPDATE recevront les valeurs mises à jour de toutes les colonnes définies dans l'article, suivies tout d'abord des valeurs d'origine des colonnes clés primaire, puis d'un paramètre de masque binaire (**binary(n)** ) indiquant les colonnes modifiées :  
   
 ```  
 c1, c2, c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  
@@ -215,7 +214,7 @@ end
 go  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Article Options for Transactional Replication](../../../relational-databases/replication/transactional/article-options-for-transactional-replication.md)  
   
   

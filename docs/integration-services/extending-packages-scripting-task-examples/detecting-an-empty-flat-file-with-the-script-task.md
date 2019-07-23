@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1b4defb8-886a-483d-8056-d1b91d37bc90
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 41795aafbbb63e88ef400bffbbd563c11d7207e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 860fb5e2b33c4e68e8f7321eff6325639f5757db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112301"
 ---
 # <a name="detecting-an-empty-flat-file-with-the-script-task"></a>Détection d'un fichier plat vide à l'aide de la tâche de script
 
@@ -144,7 +143,7 @@ public void Main()
         }  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemples de tâche de script](../../integration-services/extending-packages-scripting-task-examples/script-task-examples.md)  
   
   

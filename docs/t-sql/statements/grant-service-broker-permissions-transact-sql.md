@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c5579976-97c4-4123-be0c-d0b98a9e38fb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 272702dcf1d6fa05af9c8df3fa1562a1752890ec
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 33a8623c3e098589015a00185c8ab2a895b1410b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050763"
 ---
 # <a name="grant-service-broker-permissions-transact-sql"></a>GRANT - Autorisations sur Service Broker (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,19 +55,19 @@ GRANT permission  [ ,...n ] ON
  *permission*  
  Spécifie une autorisation qu'il est possible d'accorder sur un élément sécurisable Service Broker.  Voir ci-dessous.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Indique le contrat sur lequel l'autorisation est accordée. Le qualificateur d’étendue « ::» est obligatoire.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Spécifie le type de message sur lequel l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Spécifie la liaison de service distant sur laquelle l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Indique l'itinéraire sur lequel l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
- SERVICE **::**_service_name_  
+ SERVICE **::** _service_name_  
  Indique le service sur lequel l'autorisation est accordée. Le qualificateur d'étendue "::" est indispensable.  
   
  *database_principal*  
@@ -112,7 +111,7 @@ GRANT permission  [ ,...n ] ON
   
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="service-broker-contracts"></a>Contrats Service Broker  
  Un contrat Service Broker est un élément sécurisable au niveau base de données contenu dans la base de données parente dans la hiérarchie des autorisations. Les autorisations les plus particulières et les plus limitées qu'il est possible d'accorder sur un contrat Service Broker sont mentionnées ci-dessous, ainsi que les autorisations plus générales qui les englobent implicitement.  
@@ -167,7 +166,7 @@ GRANT permission  [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Le fournisseur d'autorisations (ou le principal spécifié avec l'option AS) doit posséder l'autorisation elle-même avec l'option GRANT OPTION ou une autorisation plus élevée qui implique l'autorisation accordée.  
   
  En cas d'utilisation de l'option AS, ces critères s'appliquent.  
@@ -187,7 +186,7 @@ GRANT permission  [ ,...n ] ON
   
  Les bénéficiaires de l’autorisation CONTROL SERVER, comme les membres du rôle serveur fixe **sysadmin**, peuvent accorder n’importe quelle autorisation sur n’importe quel sécurisable du serveur. Les bénéficiaires de l’autorisation CONTROL sur une base de données, comme les membres du rôle de base de données fixe **db_owner**, peuvent accorder n’importe quelle autorisation sur n’importe quel sécurisable de la base de données. Les détenteurs de l'autorisation CONTROL sur un schéma peuvent accorder une autorisation sur n'importe quel objet dans ce schéma.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   

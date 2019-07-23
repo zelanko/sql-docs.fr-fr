@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4070580b-880d-4f4c-abcc-626a4fe0c9a2
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 502ee4eb72f476d3e63eee6efbe2aaa21df88d75
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 8273d3c86cbfa6774458d40a964e64ba415f1de0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114043"
 ---
 # <a name="sql-server-xtp-storage"></a>Stockage XTP SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "53379740"
 |**Fusions installées**|Nombre de fusions correctement installées.|  
 |**Fichiers totaux fusionnés**|Nombre total de fichiers sources fusionnés. Ce nombre peut être utilisé pour rechercher le nombre moyen de fichiers sources dans la fusion.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [SQL Server XTP &#40;OLTP en mémoire&#41;, compteurs de performances](../../relational-databases/performance-monitor/sql-server-xtp-in-memory-oltp-performance-counters.md)  
   
   

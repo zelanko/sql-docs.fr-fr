@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 21a37c16-60aa-4b3f-8bca-ac90ad1697ac
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 98238937164a1b09a9389d22717541f25393d000
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1f0a4c2964e61b7eaa0a3064615b36629bc464e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047969"
 ---
 # <a name="catalogfolders-ssisdb-database"></a>catalog.folders (base de données SSISDB)
 
@@ -36,7 +35,7 @@ ms.locfileid: "65714797"
 |created_by_name|**nvarchar(128)**|Nom de l'utilisateur qui a créé le dossier.|  
 |created_time|**datetimeoffset(7)**|Date et heure de création du dossier.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette vue affiche une ligne pour chaque dossier dans le catalogue.  
   
 ## <a name="permissions"></a>Autorisations  

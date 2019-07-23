@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e10313d27d7760d05ed79e1fa5d5cd1944009778
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115740"
 ---
 # <a name="maintenance-plan-design-tab"></a>Plan de maintenance, onglet Conception
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "51215957"
  **Serveurs**  
  Affichez la boîte de dialogue **Serveurs** qui permet de sélectionner les serveurs où sont exécutées les tâches du sous-plan. Cette option est activée uniquement sur des serveurs maîtres dans des environnements multiserveurs. Pour plus d’informations, consultez [Créer un environnement multiserveur](../../ssms/agent/create-a-multiserver-environment.md).  
   
- **Nom**  
+ **Name**  
  Affichez le nom du plan de maintenance. Pour les nouveaux plans de maintenance, le nom est spécifié dans une boîte de dialogue avant l'ouverture du concepteur de plan de maintenance. Pour renommer un plan de maintenance, cliquez dessus avec le bouton droit dans l’Explorateur d’objets, puis cliquez sur **Renommer**.  
   
  **Description**  
@@ -115,7 +114,7 @@ ms.locfileid: "51215957"
  **Zoom**  
  Modifie la taille des tâches sur l’aire de conception  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Plans de maintenance](../../relational-databases/maintenance-plans/maintenance-plans.md)   
  [Créer un plan de maintenance](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   

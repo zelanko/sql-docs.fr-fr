@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa1e912b6a0ec2cce562e6ed6506acfb74a3a17e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 12bcff24be2bf0a722375fa6f7c06444ba818e9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140358"
 ---
 # <a name="use-sparse-columns"></a>Utiliser des colonnes éparses
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -119,7 +118,7 @@ ms.locfileid: "52520968"
 ## <a name="in-memory-overhead-required-for-updates-to-sparse-columns"></a>Charge en mémoire requise pour les mises à jour de colonnes éparses  
  Lorsque vous concevez des tables comportant des colonnes éparses, gardez à l'esprit qu'une charge supplémentaire de 2 octets est requise pour chaque colonne éparse non Null dans la table lorsqu'une ligne est mise à jour. Conséquemment à cette exigence de mémoire supplémentaire, les mises à jour peuvent échouer de façon inattendue avec l'erreur 576 lorsque la taille totale de la ligne, y compris sa charge de mémoire, dépasse 8019 et qu'aucune colonne ne peut être sortie de la ligne.  
   
- Prenons l'exemple d'une table contenant 600 colonnes éparses de type bigint. S'il y a 571 colonnes non Null, alors la taille totale sur le disque est de 571 * 12 = 6852 octets. Après l'ajout de la charge de ligne supplémentaire et de l'en-tête de colonne éparse, ce chiffre augmente pour atteindre 6895 octets environ. La page dispose toujours d'environ 1124 octets disponibles sur le disque. Cela peut donner l'impression que des colonnes supplémentaires peuvent être mises à jour sans problème. Cependant, pendant la mise à jour, une charge supplémentaire en mémoire équivalente à 2\*le nombre de colonnes éparses non Null est requise. Dans cet exemple, en incluant la charge supplémentaire (2 \* 571 = 1 142 octets), la taille de la ligne sur le disque atteint environ 8 037 octets. Cette valeur dépasse la taille de ligne autorisée maximale de 8019 octets. Étant donné que toutes les colonnes ont un type de données de longueur fixe, elles ne peuvent pas être sorties de la ligne. En conséquence, la mise à jour échoue avec l'erreur 576.  
+ Prenons l'exemple d'une table contenant 600 colonnes éparses de type bigint. S'il y a 571 colonnes non Null, alors la taille totale sur le disque est de 571 * 12 = 6852 octets. Après l'ajout de la charge de ligne supplémentaire et de l'en-tête de colonne éparse, ce chiffre augmente pour atteindre 6895 octets environ. La page dispose toujours d'environ 1124 octets disponibles sur le disque. Cela peut donner l'impression que des colonnes supplémentaires peuvent être mises à jour sans problème. Cependant, pendant la mise à jour, une charge supplémentaire en mémoire équivalente à 2\*le nombre de colonnes éparses non Null est requise. Dans cet exemple, en incluant la charge supplémentaire (2 \* 571 = 1 142 octets), la taille de la ligne sur le disque atteint environ 8 037 octets. Cette valeur dépasse la taille de ligne autorisée maximale de 8019 octets. Étant donné que toutes les colonnes ont un type de données de longueur fixe, elles ne peuvent pas être sorties de la ligne. En conséquence, la mise à jour échoue avec l'erreur 576.  
   
 ## <a name="restrictions-for-using-sparse-columns"></a>Restrictions relatives à l'utilisation des colonnes éparses  
  Les colonnes éparses peuvent contenir n'importe quel type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; en outre, elles se comportent comme n'importe quelle autre colonne avec les restrictions suivantes :  
@@ -237,7 +236,7 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  `1      Tire Spec 1  AXZZ217                  27`  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   

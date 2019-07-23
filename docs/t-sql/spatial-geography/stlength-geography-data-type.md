@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 56a0c72b86e6dcb671b0f18197e7d0046cb2f36e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61487b976322f8725f9398e54f8292919ff0ca58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936743"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139111"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65936743"
   
  Type de retour CLR : **SqlDouble**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si une instance **geography** est fermée, sa longueur est calculée en tant que longueur totale autour de l’instance ; la longueur d’un polygone correspond à son périmètre et la longueur d’un point est 0. La longueur de **GeometryCollection** est déterminée en calculant la somme des longueurs de toutes les instances **geography** contenues dans la collection.  
   
  STLength () fonctionne sur LineStrings valide et non valide. Généralement, un LineString n'est pas valide à cause du chevauchement des segments, qui peut être provoqué par des anomalies telles que des traces de longitude GPS inexactes. STLength () ne supprime pas les segments chevauchés ou non valides. Il les inclut dans la valeur de longueur retournée. La méthode MakeValid () peut supprimer les segments chevauchés d'un LineString.  
@@ -56,7 +55,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STLength();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

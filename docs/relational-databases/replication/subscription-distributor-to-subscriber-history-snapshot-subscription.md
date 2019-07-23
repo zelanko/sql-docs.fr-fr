@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: d3575964-f287-4bcf-8d2e-f81a33141b25
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11f65d21533d106c9cdb5a0f0916254540102d38
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5d742339e597ad64b351514c7a5a335897717ef5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129854"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Abonnement, Historique du serveur de distribution vers l'Abonné (abonnement aux instantanés)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "54124219"
  **Détails de l'erreur ou message de la session sélectionnée**  
  S'affiche uniquement si la session sélectionnée affiche une valeur **Erreur** dans la colonne **État** . La zone de texte affiche des informations d'erreur détaillées, ainsi que la commande émise au moment de l'erreur. Elle comporte également des liens vers des informations supplémentaires à propos de l'erreur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Démarrer le Moniteur de réplication](../../relational-databases/replication/monitor/start-the-replication-monitor.md)   
  [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Surveillance de la réplication](../../relational-databases/replication/monitor/monitoring-replication.md)   

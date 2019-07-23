@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad70ec97-d5fb-41aa-b72a-915e74b61b76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0a48024f13777992469ff0b7ace86bf2defc5437
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0738c1e661c679022a6a635af756003fdd98dfe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086022"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>supprimer un instantané de base de données (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "51558356"
   
 ## <a name="security"></a>Sécurité  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  Tout utilisateur doté des autorisations DROP DATABASE peut supprimer un instantané de base de données.  
   
 ##  <a name="TsqlProcedure"></a> Procédure de suppresssion d'un instantané de base de données (à l'aide de Transact-SQL)  
@@ -38,7 +37,7 @@ ms.locfileid: "51558356"
   
 2.  Exécutez l’instruction [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) en définissant le nom de l’instantané de base de données à supprimer. La syntaxe de base est la suivante :  
   
-     DROP DATABASE *nom_instantané_base_de_données* [ **,**...*n* ]  
+     DROP DATABASE *nom_instantané_base_de_données* [ **,** ...*n* ]  
   
      où *nom_instantané_base_de_données* est le nom de l’instantané de base de données à supprimer.  
   
@@ -63,7 +62,7 @@ DROP DATABASE SalesSnapshot0600 ;
 -   [Rétablir une base de données dans l’état d’un instantané de base de données](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [Instantanés de base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   

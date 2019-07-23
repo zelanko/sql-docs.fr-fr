@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 02a844a9a4d498db367ee5ad91a02f07699aa95d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81df6387bf6744e436922c5b031d01fb86bc50dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081440"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -150,7 +149,7 @@ ms.locfileid: "47606417"
   
 -   [Restaurer une sauvegarde à partir d’une unité &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
--   [Didacticiel : Sauvegarde et restauration SQL Server dans le service de stockage d'objets blob Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **Créer une sauvegarde**  
   
@@ -173,7 +172,7 @@ ms.locfileid: "47606417"
   
 -   [Utiliser Resource Governor pour limiter l’utilisation de l’UC par compression de la sauvegarde &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [Didacticiel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Microsoft Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Windows Azure](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="and-more"></a>Et plus encore 
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1e1fad43-d747-4775-ac0d-c50648e56d78
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1671b59c2b7b9ecaa376e1d5ef46a6743c0b558e
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 262860781ba99abf8c4f6de783cd477db0e15d81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009349"
 ---
 # <a name="use-the-systemhealth-session"></a>Utiliser la session system_health
 
@@ -90,7 +89,7 @@ Si vous supprimez la session system_health, vous pouvez la restaurer en exécuta
   
 Sachez qu’après avoir restauré la session, vous devez la démarrer en utilisant l’instruction `ALTER EVENT SESSION` ou en utilisant le nœud **Événements étendus** dans l’Explorateur d’objets. Sinon, la session démarre automatiquement la prochaine fois que vous redémarrerez le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Événements étendus](../../relational-databases/extended-events/extended-events.md)    
  [Outils associés aux événements étendus](../../relational-databases/extended-events/extended-events-tools.md)    
  [Erreurs du moteur de base de données](../../relational-databases/errors-events/database-engine-events-and-errors.md)    

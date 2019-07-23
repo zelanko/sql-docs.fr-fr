@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ea99b2118c915e03270475e607678ca6f9e92678
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7bf65224506e820ad6c486f3bb0e78d002cc793
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127909"
 ---
 # <a name="initialize-subscriptions"></a>Initialiser les abonnements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47744943"
 > [!NOTE]  
 >  Il se peut que l'Assistant demande une connexion au serveur de distribution pour pouvoir démarrer le travail approprié pour l'Agent de distribution ou l'Agent de fusion.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Créer un abonnement par émission (push)](../../relational-databases/replication/create-a-push-subscription.md)   
  [Initialiser un abonnement](../../relational-databases/replication/initialize-a-subscription.md)   

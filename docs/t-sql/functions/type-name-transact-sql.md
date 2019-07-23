@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: e4075a2e-5f70-440f-986b-9ec8434e07c1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 610fe4a3eee5ee6db5e0e00f7940208b38df7ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33f282c79c15a8b9548d799ef86e026fd7357d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098702"
 ---
 # <a name="typename-transact-sql"></a>TYPE_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,10 +54,10 @@ TYPE_NAME ( type_id )
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'un droit d'accès. Cela signifie que les fonctions intégrées générant des métadonnées, telles que TYPE_NAME, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  TYPE_NAME renvoie la valeur NULL lorsque *type_id* n’est pas valide ou lorsque l’appelant n’a pas les autorisations suffisantes pour référencer le type.  
   
- TYPE_NAME fonctionne pour les types de données système ainsi que pour les types de données définis par l'utilisateur. Le type peut être contenu dans n'importe quel schéma, mais un nom de type non qualifié est toujours renvoyé. Cela signifie que le nom n’a pas le préfixe _schema_**.** .  
+ TYPE_NAME fonctionne pour les types de données système ainsi que pour les types de données définis par l'utilisateur. Le type peut être contenu dans n'importe quel schéma, mais un nom de type non qualifié est toujours renvoyé. Cela signifie que le nom n’a pas le préfixe _schema_ **.** .  
   
  Les fonctions système peuvent être utilisées dans la liste de sélection, dans une clause WHERE, et partout où une expression est autorisée. Pour plus d’informations, consultez [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) et [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md).  
   
@@ -107,7 +106,7 @@ SELECT * FROM sys.types;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [TYPE_ID &#40;Transact-SQL&#41;](../../t-sql/functions/type-id-transact-sql.md)   
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

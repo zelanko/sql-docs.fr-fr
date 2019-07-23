@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045646"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spécifications des capacités maximales pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "57973808"
 |Octets par ligne||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge le stockage avec dépassement de ligne, qui permet d’envoyer hors ligne les colonnes de longueur variable. Seule une racine de 24 octets est stockée dans l'enregistrement principal des colonnes de longueur variable envoyées hors ligne ; par conséquent, la limite effective par ligne est supérieure dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Prise en charge des lignes de grande taille](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support).|  
 |Octets par ligne dans les tables optimisées en mémoire||8,060|À compter de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , les tables optimisées en mémoire prennent en charge le stockage hors ligne. Les colonnes de longueur variable sont envoyées hors ligne si la taille maximale de toutes les colonnes dans la table dépasse 8060 octets. Cette décision est prise au moment de la compilation. Seule une référence de huit octets est stockée dans la ligne pour les colonnes stockées hors ligne. Pour plus d’informations, consultez [Taille de la table et des lignes dans les tables optimisées en mémoire](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Octets dans le texte source d'une procédure stockée||Taille de lot inférieure ou 250 Mo||  
-|Octets par colonne **varchar(max)**, **varbinary(max)**, **xml**, **text**ou **image**||2^31-1||  
+|Octets par colonne **varchar(max)** , **varbinary(max)** , **xml**, **text**ou **image**||2^31-1||  
 |Caractères par colonne **ntext** ou **nvarchar (max)**||2^30-1||  
 |Index cluster par table||1||  
 |Colonnes dans les clauses GROUP BY, ORDER BY||Limité uniquement par le nombre d'octets||  
@@ -119,7 +118,7 @@ ms.locfileid: "57973808"
 |Fichiers journaux par base de données||1|  
 |Volumes par ordinateur||3|  
   
- * Le nombre maximal d’instances gérées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prises en charge par l’utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut varier en fonction de la configuration matérielle du serveur. Pour obtenir des informations de prise en main, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’est pas disponible dans toutes les éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
+ \* Le nombre maximal d’instances gérées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prises en charge par l’utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut varier en fonction de la configuration matérielle du serveur. Pour obtenir des informations de prise en main, consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’est pas disponible dans toutes les éditions de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour obtenir la liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).    
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objets d’application de la couche Données  
  Taille maximale et nombre maximal des différents objets testés dans les applications de la couche Données (DAC) [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -129,7 +128,7 @@ ms.locfileid: "57973808"
 |Bases de données par DAC||1|  
 |Objets par DAC*||Limité par le nombre d'objets dans une base de données ou la mémoire disponible.|  
   
- * Les types d’objets inclus dans la limite sont des utilisateurs, des tables, des vues, des procédures stockées, des fonctions définies par l’utilisateur, des types de données définis par l’utilisateur, des rôles de base de données, des schémas et des types de table définis par l’utilisateur.  
+ \* Les types d’objets inclus dans la limite sont des utilisateurs, des tables, des vues, des procédures stockées, des fonctions définies par l’utilisateur, des types de données définis par l’utilisateur, des rôles de base de données, des schémas et des types de table définis par l’utilisateur.  
   
 ##  <a name="Replication"></a> Objets de réplication  
  Taille maximale et nombre maximal des différents objets définis dans la réplication [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -144,11 +143,11 @@ ms.locfileid: "57973808"
 |Octets pour une colonne utilisée dans un filtre de lignes (publication de fusion)||1,024|  
 |Octets pour une colonne utilisée dans un filtre de lignes (publication d'instantané ou transactionnelle)||8,000|  
 
- * Si le suivi de lignes est utilisé pour la détection de conflits (valeur par défaut), la table de base peut inclure 1 024 colonnes au maximum, mais les colonnes doivent être filtrées à partir de l’article afin que 246 colonnes au maximum soient publiées. Si le suivi de colonnes est utilisé, la table de base peut inclure 246 colonnes au maximum.  
+ \* Si le suivi de lignes est utilisé pour la détection de conflits (valeur par défaut), la table de base peut inclure 1 024 colonnes au maximum, mais les colonnes doivent être filtrées à partir de l’article afin que 246 colonnes au maximum soient publiées. Si le suivi de colonnes est utilisé, la table de base peut inclure 246 colonnes au maximum.  
   
  ** La table de base peut inclure le nombre maximal de colonnes autorisées dans la base de données de publication (1 024 pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), mais les colonnes doivent être filtrées à partir de l’article si elles sont plus nombreuses que le maximum spécifié pour le type de publication.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Paramètres de l'outil d'analyse de configuration système](../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  

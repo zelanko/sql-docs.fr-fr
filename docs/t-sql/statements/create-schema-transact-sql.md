@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9b2fad9fc09736a335e8fc5797cda836f907191
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117299"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +87,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
  *deny_statement*  
  Spécifie une instruction DENY qui refuse des autorisations sur tout élément sécurisable à l'exception du nouveau schéma.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 > [!NOTE]  
 >  Les instructions qui contiennent CREATE SCHEMA AUTHORIZATION sans spécifier un nom sont acceptées uniquement pour des raisons de compatibilité descendante. L'instruction ne génère pas d'erreur, mais un schéma n'est pas créé.  
@@ -130,7 +129,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ## <a name="deprecation-notice"></a>Note relative à la suppression de fonctionnalités  
  Les instructions CREATE SCHEMA qui ne spécifient pas de nom de schéma continuent à être prises en charge pour des raisons de compatibilité descendante. De telles instructions ne créent pas réellement un schéma dans la base de données, mais créent plutôt des tables et des vues, et accordent des autorisations. Les principaux n'ont pas besoin de l'autorisation CREATE SCHEMA pour exécuter cette version antérieure de CREATE SCHEMA, car aucun schéma n'est créé. Cette fonctionnalité sera retirée dans une version future de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CREATE SCHEMA sur la base de données.  
   
  Pour créer un objet spécifié dans l'instruction CREATE SCHEMA, l'utilisateur doit disposer de l'autorisation CREATE correspondante.  
@@ -157,7 +156,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>b. Création d’un schéma et d’une table dans le schéma  
+### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>B. Création d’un schéma et d’une table dans le schéma  
  L’exemple suivant crée un schéma `Sales`, puis une table `Sales.Region` dans ce schéma.  
   
 ```  
@@ -179,7 +178,7 @@ CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
  [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 1a5cf36976538bc264ec96ea7a3f5835dc9ad9bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a1150128c281be485ca23dab65db3d82b88e1f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120905"
 ---
 # <a name="stnumgeometries-geography-data-type"></a>STNumGeometries (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65935728"
   
  Type de retour CLR : **SqlInt32**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode retourne 1 si l’instance **geography** n’est pas une instance **MultiPoint**, **MultiLineString**, **MultiPolygon** ou **GeometryCollection**, ou 0 si l’instance **geography** est vide.  
   
 ## <a name="examples"></a>Exemples  
@@ -54,7 +53,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT((-122.360 47.656), (-122.343 47.6
 SELECT @g.STNumGeometries();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes OGC sur des instances geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

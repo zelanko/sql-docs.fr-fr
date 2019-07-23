@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: d742fd30-347a-452f-b5fc-b03232360c6b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f24cf20be07ac4b632f4daa6f7f7e35278452f19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8158aed0298afe295e82a1b240a3f24ec05b1647
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100022"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Script pour l'attribution d'autorisations Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Le script fourni dans cette rubrique est utilisé lors de la configuration d'une base de données Oracle qui publiera des données à l'aide de la réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ce script est également disponible dans le répertoire suivant après l’installation : *\<lecteur>*:\\\Program Files\Microsoft SQL Server\\*\<Nom_Instance>* \MSSQL\Install\oracleadmin.sql. Pour plus d’informations sur la configuration de la base de données Oracle, consultez [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
+  Le script fourni dans cette rubrique est utilisé lors de la configuration d'une base de données Oracle qui publiera des données à l'aide de la réplication [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Ce script est également disponible dans le répertoire suivant après l’installation : *\<lecteur>* :\\\Program Files\Microsoft SQL Server\\ *\<Nom_Instance>* \MSSQL\Install\oracleadmin.sql. Pour plus d’informations sur la configuration de la base de données Oracle, consultez [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Ce script contient l'instruction `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`, qui est requise pour les déclencheurs utilisés par la réplication transactionnelle. Si vous allez utiliser seulement la réplication d'instantané, supprimez cette ligne du script.  
@@ -126,7 +125,7 @@ GRANT CREATE VIEW TO &&ReplLogin;
 GRANT CREATE ANY TRIGGER TO &&ReplLogin;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)  
   
   

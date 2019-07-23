@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 749f94658d03828b30de3b328df1abfc8c932d43
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4da908b06e467e1c80ce528ec95f1a5af0db7638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113313"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>Démarrer et utiliser l'Assistant Paramétrage du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -399,7 +398,7 @@ database_name.owner_name.table_name
  **Sélectionnez les bases de données et les tables à analyser**  
  Spécifiez les bases de données et les tables à paramétrer. Pour sélectionner toutes les bases de données, activez la case à cocher de l'en-tête de la colonne **Nom** . Pour sélectionner seulement certaines bases de données, activez la case à cocher en regard du nom de chaque base de données à paramétrer. Par défaut, toutes les tables des bases de données sélectionnées sont automatiquement incluses dans la session de paramétrage. Pour exclure certaines tables, cliquez sur la flèche de la colonne **Tables sélectionnées** , puis désactivez la case à cocher en regard des tables que vous ne voulez pas paramétrer.  
   
- Flèche de déroulement**Tables sélectionnées**   
+ Flèche de déroulement**Tables sélectionnées**  
  Développe la liste des tables pour vous permettre de sélectionner chacune des tables à paramétrer.  
   
  **Enregistrer le journal de paramétrage**  
@@ -516,7 +515,7 @@ database_name.owner_name.table_name
  **Journal des paramétrages**  
  Contient des informations relatives à la session de paramétrage actuelle. Pour imprimer le journal, cliquez avec le bouton droit sur celui-ci, puis cliquez sur **Imprimer**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Afficher et utiliser la sortie de l’Assistant Paramétrage du moteur de base de données](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
  [dta Utility](../../tools/dta/dta-utility.md)  
   

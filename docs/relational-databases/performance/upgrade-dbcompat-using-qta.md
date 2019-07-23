@@ -19,11 +19,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516555"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68231641"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -161,7 +161,7 @@ L’Assistant Paramétrage de requêtes est une fonctionnalité basée sur la se
 
         La liste contient les informations suivantes :
         -  **ID de requête** 
-        -  **Texte de la requête** : instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous pouvez développer en cliquant sur le bouton **...**.
+        -  **Texte de la requête** : instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous pouvez développer en cliquant sur le bouton **...** .
         -  **Exécutions** : affiche le nombre d’exécutions de cette requête pour toute la collection de charges de travail.
         -  **Métrique de référence** : métrique sélectionnée (durée ou temps processeur), en ms, pour la collecte de données de référence avant la mise à niveau de la compatibilité de base de données.
         -  **Métrique observée** : métrique sélectionnée (durée ou temps processeur), en ms, pour la collecte de données après la mise à niveau de la compatibilité de base de données.
@@ -183,7 +183,7 @@ L’Assistant Paramétrage de requêtes est une fonctionnalité basée sur la se
 
     La liste contient les informations suivantes :
     -  **ID de requête** 
-    -  **Texte de la requête** : instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous pouvez développer en cliquant sur le bouton **...**.
+    -  **Texte de la requête** : instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] que vous pouvez développer en cliquant sur le bouton **...** .
     -  **État** : affiche l’état actuel de l’expérimentation pour la requête.
     -  **Métrique de référence** : métrique sélectionnée (durée ou temps processeur), en ms, pour la requête telle qu’exécutée à l’**Étape 2 Sous-étape 3**, représentant la requête régressée après la mise à niveau de la compatibilité de base de données.
     -  **Métrique observée** : métrique sélectionnée (durée ou temps processeur), en ms, pour la requête après l’expérimentation, pour une optimisation proposée suffisamment bonne.
@@ -209,7 +209,7 @@ L’Assistant Paramétrage de requêtes est une fonctionnalité basée sur la se
 ## <a name="permissions"></a>Autorisations  
 Nécessite l’appartenance au rôle **db_owner**.
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Niveaux de compatibilité et mises à niveau SQL Server](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
  [Outils de surveillance et d’optimisation des performances](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     

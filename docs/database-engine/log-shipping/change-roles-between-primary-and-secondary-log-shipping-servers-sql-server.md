@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2d7cc40a-47e8-4419-9b2b-7c69f700e806
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 9e12acaaef6e4bbfd4816bea70f8b381ba78691e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1263cec8cf59826357388a148e0bb19bc332bdf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057921"
 ---
 # <a name="change-roles-between-primary-and-secondary-log-shipping-servers-sql-server"></a>Changer des rôles entre les serveurs primaire et secondaire de copie des journaux de transaction (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ ms.locfileid: "66794647"
   
 -   [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Tables et procédures stockées liées à la copie des journaux de transaction](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   
   

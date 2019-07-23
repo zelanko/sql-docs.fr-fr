@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fbd30a8b0e112d74bf9bd0d009592d753688fadd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d683bc743fe621b35cdc59588ce04f6ee96c5bbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068975"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Procédure pas à pas : Étendre le déploiement du projet de base de données pour modifier le plan de déploiement
 Vous pouvez créer des contributeurs de déploiement pour effectuer des actions personnalisées lorsque vous déployez un projet SQL. Vous pouvez créer soit un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) ou un [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx). Utilisez un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) pour changer le plan avant son exécution et un [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) pour effectuer des opérations alors que le plan est en cours d'exécution. Dans cette procédure pas à pas, vous allez créer un [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) nommé SqlRestartableScriptContributor qui ajoute des instructions IF aux lots dans le script de déploiement pour permettre la réexécution du script jusqu'à son aboutissement si une erreur se produit pendant l'exécution.  

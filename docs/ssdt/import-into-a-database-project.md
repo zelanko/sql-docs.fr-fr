@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d2c08af731fc8f75089250c92ec4f0912a96eee6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89ca0b89957081fa2e93d5d28bbef79ecb7d7834
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119844"
 ---
 # <a name="import-into-a-database-project"></a>Importer dans un projet de base de données
 Vous pouvez utiliser la fonction Importer pour remplir un projet avec de nouveaux objets provenant d'une base de données active ou d'un fichier .dacpac, ou pour mettre à jour des objets existants dans votre projet avec une nouvelle définition d'un script. Il convient de noter plusieurs différences de comportement entre ces trois choix, comme décrit ci-dessous.  

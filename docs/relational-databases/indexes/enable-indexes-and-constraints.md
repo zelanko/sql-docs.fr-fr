@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c55c8865-322e-4ab0-ba04-ea1f56735353
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b1666c57bf13b8eba0f76c717ae585ddc0ae110
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: c1f860f69ef95af42627d0d2bad869afbb366fc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107108"
 ---
 # <a name="enable-indexes-and-constraints"></a>Activer les index et contraintes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ ms.locfileid: "53979625"
 
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. S’il utilise DBCC DBREINDEX, l’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner**.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

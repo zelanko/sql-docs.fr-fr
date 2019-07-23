@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61961ff888b5de3ffa55ffb47c4986a60583b79e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: ad51052db3f5e86f5d349f8a4fc10fb46a5e311e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114811"
 ---
 # <a name="deny-search-property-list-permissions-transact-sql"></a>Autorisations de liste des propriétés de recherche DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +46,7 @@ DENY permission [ ,...n ] ON
  *permission*  
  Nom d'une autorisation. Les mappages valides des autorisations des éléments sécurisables sont décrits dans la section « Notes », plus loin dans cette rubrique.  
   
-ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
+ON SEARCH PROPERTY LIST **::** _search_property_list_name_  
  Indique la liste de propriétés de recherche pour laquelle l'autorisation est refusée. Le qualificateur d'étendue :: est requis.  
   
 *database_principal*  
@@ -77,7 +76,7 @@ CASCADE
 -   d'un utilisateur de base de données mappé à une clé asymétrique ;  
 -   d'un utilisateur de base de données qui n'est pas mappé sur le principal d'un serveur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="search-property-list-permissions"></a>Autorisations SEARCH PROPERTY LIST  
  Une liste de propriétés de recherche est un élément sécurisable au niveau base de données inclus dans la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de refuser sur une liste de propriétés de recherche sont répertoriées dans le tableau ci-dessous, avec les autorisations plus générales qui les incluent de manière implicite.  
@@ -90,10 +89,10 @@ CASCADE
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur le catalogue de texte intégral. Si vous utilisez l'option AS, le principal spécifié doit être propriétaire du catalogue de texte intégral.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)   
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   

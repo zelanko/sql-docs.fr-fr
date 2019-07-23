@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 787e3c18581339de78a5f4fcd653967566f85ece
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: da88119ea55f758d6c56a72a2acd8ac5807bf714
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051853"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architecture de la sécurité pour la synchronisation web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ ms.locfileid: "54124659"
 |Type de compte|Emplacement de spécification du compte|  
 |---------------------|------------------------------------|  
 |Utilisateur Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: paramètres **@job_login** et **@job_password** de [sp_addmergepullsubscription_agent](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md).<br /><br /> RMO (Replication Management Objects) : propriétés <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> et <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> de <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Compte de service Windows pour l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Gestionnaire de configuration[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
+|Compte de service Windows pour l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Gestionnaire de configuration[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |Application indépendante|L'Agent de fusion est exécuté dans le contexte de l'utilisateur Windows qui exécute l'application.|  
   
-## <a name="b-connection-to-the-subscriber"></a>b. Connexion à l'Abonné  
+## <a name="b-connection-to-the-subscriber"></a>B. Connexion à l'Abonné  
  L'Agent de fusion se connecte à l'Abonné à l'aide de l'authentification Windows ou de l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'utilisateur Windows ou la connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spécifié doit être associé à un utilisateur de base de données membre du rôle de base de données fixe **dbowner** dans la base de données d'abonnement.  
   
 > [!NOTE]  
@@ -137,7 +136,7 @@ ms.locfileid: "54124659"
 |---------------------|------------------------------------|  
 |Tout utilisateur Windows disposant des autorisations nécessaires.|Gestionnaire IIS (Internet Information Services). |  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer la synchronisation web](../../../relational-databases/replication/configure-web-synchronization.md)   
  [Replication Merge Agent](../../../relational-databases/replication/agents/replication-merge-agent.md)  
   
