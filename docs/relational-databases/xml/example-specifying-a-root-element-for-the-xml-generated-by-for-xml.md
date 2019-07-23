@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: bcc54b11-0713-4e43-8dbe-d6f3ad1993b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0a48671cd5174b18d6bb4a525ef33cec8aa4b90
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: d7e3693d40de9233779808bba40d643908363148
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006758"
 ---
 # <a name="example-specifying-a-root-element-for-the-xml-generated-by-for-xml"></a>Exemple : Spécification d’un élément racine pour les données XML générées par FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   En spécifiant l'option `ROOT` dans la requête `FOR XML` , vous pouvez demander un élément de niveau supérieur unique pour les données XML résultantes, comme illustré dans cette requête. L'argument spécifié pour la directive `ROOT` fournit le nom de l'élément racine.  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
   
 ```  
 USE AdventureWorks2012;  
@@ -47,7 +46,7 @@ go
 </MyRoot>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Utiliser le mode RAW avec FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)  
   
   

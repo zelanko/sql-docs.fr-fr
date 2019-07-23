@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 32a15d61-e908-4ae1-a238-4fd0f988d8c8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6573a8667224eacef61c9c22cb4ede026e7d0a61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1292666a44f93d8b8dd551975eed4b7ea46f5ffe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984563"
 ---
 # <a name="custom-test-conditions--for-sql-server-unit-tests"></a>Conditions de test personnalisées pour les tests unitaires SQL Server
 Il est possible d’ajouter des conditions de test personnalisées aux tests unitaires SQL Server. Cependant, vous devez d'abord installer la condition de test pour pouvoir l'utiliser, que vous ayez créé l'extension ou que vous en installiez une créée par un autre utilisateur.  
@@ -45,6 +44,6 @@ Pour plus d’informations sur les conditions de test personnalisées des tests 
   
 -   [Procédure pas à pas : utilisation d’une condition de test personnalisée pour vérifier le résultat d’une procédure stockée](../ssdt/walkthrough-use-custom-test-condition-to-verify-stored-procedure-results.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Vérifier le code de la base de données à l’aide de tests unitaires SQL Server](../ssdt/verifying-database-code-by-using-sql-server-unit-tests.md)  
   

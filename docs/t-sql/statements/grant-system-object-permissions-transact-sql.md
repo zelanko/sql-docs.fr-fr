@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8925e71fb7ed3ea6d53f29b438602cae65820fa6
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050672"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT – octroi d'autorisations d'objet système (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
  *principal*  
  Spécifie le principal auquel l'autorisation est accordée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette instruction permet d'accorder des autorisations sur des procédures stockées, procédures stockées étendues, fonctions table, fonctions scalaires, vues, affichages catalogue, vues de compatibilité, vues INFORMATION_SCHEMA, vues de gestion dynamique et tables système installées par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Chacun de ces objets système existe sous la forme d'un enregistrement unique dans la base de données des ressources du serveur (mssqlsystemresource). La base de données des ressources est en lecture seule. Un lien à l'objet est exposé comme un enregistrement dans le schéma sys de chaque base de données. L'autorisation d'exécuter ou de sélectionner un objet système peut être accordée, refusée ou révoquée.  
   
  L'octroi de l'autorisation d'exécuter ou de sélectionner un objet n'implique pas nécessairement toutes les autorisations requises pour utiliser l'objet. La plupart des objets effectuent des opérations qui nécessitent des autorisations supplémentaires. Par exemple, un utilisateur auquel est accordée l'autorisation EXECUTE sur sp_addlinkedserver ne peut pas créer un serveur lié, à moins que l'utilisateur soit également membre du rôle de serveur fixe sysadmin.  
@@ -71,7 +70,7 @@ SELECT * FROM master.sys.database_permissions AS dp
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER.  
   
 ## <a name="examples"></a>Exemples  
@@ -86,7 +85,7 @@ GRANT VIEW SERVER STATE to Sylvester1;
 GO  
 ```  
   
-### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>b. Octroi d'une autorisation EXECUTE sur une procédure stockée étendue  
+### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>B. Octroi d'une autorisation EXECUTE sur une procédure stockée étendue  
  Dans l'exemple suivant, l'autorisation `EXECUTE` sur `xp_readmail` est accordée à `Sylvester1`.  
   
 ```  
@@ -94,7 +93,7 @@ GRANT EXECUTE ON xp_readmail TO Sylvester1;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sys.system_objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-system-objects-transact-sql.md)   
  [sys.database_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-permissions-transact-sql.md)   
  [REVOKE - Révoquer des autorisations sur un objet système &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-system-object-permissions-transact-sql.md)   

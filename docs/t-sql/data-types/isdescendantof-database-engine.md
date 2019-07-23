@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bddc7c269443446a6b8de6498cf73dd35f218e16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f38ee0e89201a1ecc0a8faa145167ad58601c133
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077822"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ Nœud **hierarchyid** pour lequel le test IsDescendantOf doit être effectué.
   
 **Type de retour CLR : SqlBoolean**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Retourne la valeur true pour tous les nœuds de la sous-arborescence dont la racine est le parent, et false pour tous les autres nœuds.
   
 Le parent est considéré comme étant son propre descendant.
@@ -70,7 +69,7 @@ SELECT * FROM HumanResources.EmployeeDemo
 WHERE OrgNode.IsDescendantOf(@Manager) = 1  
 ```  
   
-### <a name="b-using-isdescendantof-to-evaluate-a-relationship"></a>b. Utilisation d'IsDescendantOf pour évaluer une relation  
+### <a name="b-using-isdescendantof-to-evaluate-a-relationship"></a>B. Utilisation d'IsDescendantOf pour évaluer une relation  
 Le code suivant déclare et remplit trois variables. Il évalue ensuite la relation hiérarchique et retourne l'un de deux résultats imprimés selon la comparaison :
   
 ```sql

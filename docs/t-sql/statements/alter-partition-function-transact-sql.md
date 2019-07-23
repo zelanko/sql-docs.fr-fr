@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a7790e54a3418a7771f2355a071db9b8aab7a1d9
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: c2418bedb172464002fd640a50c8b57f3daca712
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071256"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ ALTER PARTITION FUNCTION échoue s'il existe un index cluster désactivé dans u
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'assure pas la prise en charge de la réplication lors de la modification d'une fonction de partition. Les modifications apportées à une fonction de partition dans la base de données de publication doivent être appliquées manuellement dans la base de données d'abonnement.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 L'instruction ALTER PARTITION FUNCTION peut être exécutée avec les autorisations suivantes :  
   
 -   Autorisation ALTER ANY DATASPACE. Cette autorisation est attribuée par défaut aux membres du rôle de serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_ddladmin** .  
@@ -130,7 +129,7 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 SPLIT RANGE (500);  
 ```  
   
-### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>b. Fusion de deux partitions d'une table partitionnée en une seule partition  
+### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>B. Fusion de deux partitions d'une table partitionnée en une seule partition  
 L'exemple suivant crée une fonction de partition (identique à celle de l'exemple précédent), puis fusionne deux des partitions en une seule partition, pour un total de trois partitions.  
   
 ```sql  
@@ -148,7 +147,7 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 MERGE RANGE (100);  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Tables et index partitionnés](../../relational-databases/partitions/partitioned-tables-and-indexes.md)   
 [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)   
 [DROP PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-partition-function-transact-sql.md)   

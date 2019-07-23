@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30636d3dca44e93b67d67d330dbabd04d6feb4ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90163caba595936f5c9ef9854b8e1f0af2890673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129841"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Expiration et désactivation des abonnements
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47820387"
      Si un abonnement par envoi de données expire, il est totalement supprimé, mais ce n'est pas le cas pour les abonnements par extraction de données. Vous devez nettoyer les abonnements par extraction de données au niveau de l'Abonné. Pour plus d’informations, voir [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md).  
   
 ## <a name="merge-replication"></a>Réplication de fusion  
- La réplication de fusion utilise la période de rétention de publication (paramètres **@retention** et **@retention_period_unit** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Lorsqu'un abonnement expire il doit être réinitialisé, parce que les métadonnées de l'abonnement sont supprimées. Les abonnements qui ne sont pas réinitialisés sont supprimés par le travail de **nettoyage de l'abonnement expiré** sur le serveur de publication. Par défaut, ce travail s'exécute chaque jour ; il supprime tous les abonnements par envoi de données qui ne se sont pas synchronisés au bout de deux fois la période de rétention de publication. Exemple :  
+ La réplication de fusion utilise la période de rétention de publication (paramètres **@retention** et **@retention_period_unit** de [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)). Lorsqu'un abonnement expire il doit être réinitialisé, parce que les métadonnées de l'abonnement sont supprimées. Les abonnements qui ne sont pas réinitialisés sont supprimés par le travail de **nettoyage de l'abonnement expiré** sur le serveur de publication. Par défaut, ce travail s'exécute chaque jour ; il supprime tous les abonnements par envoi de données qui ne se sont pas synchronisés au bout de deux fois la période de rétention de publication. Par exemple :  
   
 -   Si une publication a une période de rétention de 14 jours, un abonnement peut expirer s'il ne s'est pas synchronisé au bout de 14 jours.  
   
@@ -64,13 +63,13 @@ ms.locfileid: "47820387"
   
     -   La réplication ne peut pas nettoyer les métadonnées dans les bases de données de publication et d'abonnement tant que la période de rétention n'est pas achevée. Soyez prudent si vous spécifiez une longue période de rétention, car cela peut affecter négativement les performances de réplication. Vous avez intérêt à spécifier une valeur faible si vous êtes certain que tous les Abonnés procéderont régulièrement à la synchronisation dans ce délai.  
   
-    -   Il est possible de spécifier que les abonnements n'expirent jamais (valeur 0 pour **@retention**), mais ceci est fortement déconseillé car les métadonnées ne pourront pas être nettoyées.  
+    -   Il est possible de spécifier que les abonnements n'expirent jamais (valeur 0 pour **@retention** ), mais ceci est fortement déconseillé car les métadonnées ne pourront pas être nettoyées.  
   
 -   La période de rétention pour tout serveur de republication doit être égale ou inférieure à la période de rétention définie sur le serveur de publication d'origine. Veillez à utiliser les mêmes valeurs de conservation des publications pour tous les serveurs de publication et leurs partenaires de synchronisation respectifs. L’utilisation de valeurs différentes peut produire une non-convergence. Pour modifier cette valeur, réinitialisez l'Abonné afin d'éviter la non-convergence des données.  
   
 -   Après un nettoyage, si la période de conservation des publications est augmentée et qu’un abonnement essaie de fusionner avec le serveur de publication (qui a déjà supprimé les métadonnées), l’abonnement n’expire pas en raison de l’augmentation de la valeur de rétention. Cependant, le serveur de publication ne dispose pas d'une quantité suffisante de métadonnées pour télécharger les modifications apportées à l'Abonné, ce qui génère une non-convergence.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Réinitialiser des abonnements](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [Administration de l’Agent de réplication](../../relational-databases/replication/agents/replication-agent-administration.md)   
  [S'abonner à des publications](../../relational-databases/replication/subscribe-to-publications.md)  

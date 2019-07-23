@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2e013259-0022-4897-a08d-5f8deb880fa8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1a9699fd12b438fabcb2ebafa34e073732c3a586
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 02d36b72c949db673bcc2d00918bd7571821d025
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111082"
 ---
 # <a name="oracle-publishing-overview"></a>Présentation de la publication Oracle  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47785127"
   
  Lorsqu'une publication Oracle est créée, des déclencheurs et des tables de suivi sont créés pour chaque table publiée dans la base de données Oracle. Lorsque des modifications de données sont apportées aux tables publiées, les déclencheurs de base de données sont activés sur les tables et insèrent des informations dans les tables de suivi de réplication pour chaque ligne modifiée. L'Agent de lecture du journal sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] déplace alors les informations de modification des données à partir des tables de suivi vers la base de données de distribution sur le serveur de distribution. Enfin, comme dans la réplication transactionnelle standard, l'Agent de distribution déplace les modifications du serveur de distribution vers les Abonnés.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer un serveur de publication Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Glossaire des termes de la publication Oracle](../../../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md)   
  [Heterogeneous Database Replication](../../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)  

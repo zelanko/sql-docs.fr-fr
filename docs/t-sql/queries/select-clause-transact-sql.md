@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 2616d800-4853-4cf1-af77-d32d68d8c2ef
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6aa033ce84271e2ac9c4a8efc65b517d9ffe3318
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 51707d97a738df13b7aae3c9e7208af76d440492
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141063"
 ---
 # <a name="select-clause-transact-sql"></a>Clause SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -146,7 +145,7 @@ FROM Cities;
   
  *column_alias* peut être utilisé dans une clause ORDER BY. Il ne peut toutefois pas être utilisé dans une clause WHERE, GROUP BY ou HAVING. Si l’expression de requête fait partie d’une instruction DECLARE CURSOR, *column_alias* ne peut pas être utilisé dans la clause FOR UPDATE.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La longueur des données retournées pour les colonnes **text** ou **ntext** incluses dans la liste de sélection est égale à la plus petite des valeurs suivantes : la taille réelle de la colonne **text**, le paramètre de session TEXTSIZE par défaut ou la limite codée en dur dans l’application. Pour modifier la longueur du texte renvoyé dans une session, utilisez l'instruction SET. Par défaut, la limite de longueur pour des données textuelles renvoyées avec une instruction SELECT est de 4 Ko.  
   
  Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] déclenche l'exception 511 et annule l'instruction en cours d'exécution dans les cas suivants :  
@@ -157,7 +156,7 @@ FROM Cities;
   
  Une erreur se produit si aucun nom de colonne n'est attribué à une colonne créée par une instruction SELECT INTO ou CREATE VIEW.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemples SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-examples-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  

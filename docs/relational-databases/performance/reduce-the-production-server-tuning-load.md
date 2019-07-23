@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e351bc252246491e356d1bab53496669b94f938
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: f05ede948892b7f9ae6a9f9ee24a3b6878586917
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113379"
 ---
 # <a name="reduce-the-production-server-tuning-load"></a>Réduire la charge de paramétrage du serveur de production
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "54256664"
 > [!NOTE]  
 >  La fonction de paramétrage du serveur de test n'est pas prise en charge par l'interface utilisateur graphique de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  Tout d'abord, vérifiez que l'utilisateur qui veut effectuer le paramétrage existe sur le serveur de test et sur le serveur de production.  
   
  Une fois les informations de l'utilisateur copiées sur le serveur de test, vous pouvez définir la session de paramétrage du serveur de test dans le fichier d'entrée XML de l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . L'exemple suivant de fichier d'entrée XML montre comment définir un serveur de test pour paramétrer une base de données avec l'Assistant Paramétrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] .  
@@ -95,7 +94,7 @@ ms.locfileid: "54256664"
 </DTAXML>  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Observations relatives à l'utilisation de serveurs de test](../../relational-databases/performance/considerations-for-using-test-servers.md)   
  [Référence des fichiers d’entrée XML &#40;Assistant Paramétrage du moteur de base de données&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   

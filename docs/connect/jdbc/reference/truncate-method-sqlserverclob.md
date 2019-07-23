@@ -1,5 +1,5 @@
 ---
-title: TRUNCATE, méthode (SQLServerClob) | Microsoft Docs
+title: Truncate, méthode (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ea3b2a03-387e-49d7-a4d6-ca6a6a354c90
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2f07f68e179dcac33a67778dd3671442d0b78b6d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 842e16a3e2544bf9d85187d039d3050bf16afa23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968476"
 ---
 # <a name="truncate-method-sqlserverclob"></a>Méthode truncate (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void truncate(long len)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode truncate est spécifiée par la méthode truncate dans l’interface java.sql.Clob.  
+ Cette méthode Truncate est spécifiée par la méthode Truncate dans l’interface java. Sql. CLOB.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerClob, méthodes](../../../connect/jdbc/reference/sqlserverclob-methods.md)   

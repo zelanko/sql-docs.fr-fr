@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f8e3050afe889fd1c7f7de489b7ed6d22d3a50f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 99e3910e3c97b4dcda725e80ce45d9fd928cdead
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051634"
 ---
 # <a name="snapshot-folder"></a>Dossier d'instantanés
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "54133199"
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'utiliser un partage réseau comme emplacement pour le dossier d'instantanés. Les chemins locaux (ceux qui commencent par une lettre de lecteur, tel que C:\\) ne sont pas accessibles aux agents sur les autres ordinateurs.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modifier les options d’instantané](../../relational-databases/replication/snapshot-options.md)   
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)   
  [Configurer la publication et la distribution](../../relational-databases/replication/configure-publishing-and-distribution.md)   

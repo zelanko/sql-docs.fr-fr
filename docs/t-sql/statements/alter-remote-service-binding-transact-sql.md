@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ee620b4a-9375-4eaa-a016-69916c9e1e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b32bbcb94aa1f52c951c0bce341828e7df202b4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b91242524f3edada4de8112558a01f09fb3310cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927225"
 ---
 # <a name="alter-remote-service-binding-transact-sql"></a>ALTER REMOTE SERVICE BINDING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ ALTER REMOTE SERVICE BINDING binding_name
  ANONYMOUS  
  Spécifie si l'authentification anonyme est utilisée lors des communications avec le service distant. Si ANONYMOUS = ON, l'authentification anonyme est utilisée et les informations d'identification de l'utilisateur local ne sont pas transférées au service distant. Si ANONYMOUS = OFF (désactivé), les informations d'identification de l'utilisateur sont transférées. Lorsque cette clause est omise, la valeur par défaut est OFF.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  La clé publique du certificat associé à *user_name* est utilisée pour authentifier les messages envoyés au service distant et pour chiffrer une clé de session qui sert ensuite à chiffrer la conversation. Le certificat de *user_name* doit correspondre au certificat d’une connexion dans la base de données qui héberge le service distant.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations de modification des liaisons de service distant sont accordées par défaut au propriétaire de ces liaisons, aux membres du rôle de base de données fixe **db_owner** et aux membres du rôle serveur fixe **sysadmin**.  
   
  L'utilisateur qui exécute l'instruction ALTER REMOTE SERVICE BINDING doit disposer de l'autorisation d'emprunt d'identité pour l'utilisateur spécifié dans l'instruction.  
@@ -71,7 +70,7 @@ ALTER REMOTE SERVICE BINDING APBinding
     WITH USER = SecurityAccount ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/create-remote-service-binding-transact-sql.md)   
  [DROP REMOTE SERVICE BINDING &#40;Transact-SQL&#41;](../../t-sql/statements/drop-remote-service-binding-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

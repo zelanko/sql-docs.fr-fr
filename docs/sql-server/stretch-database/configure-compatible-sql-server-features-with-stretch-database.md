@@ -7,13 +7,12 @@ ms.topic: conceptual
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3e9b286a114e3f748c6b87789cbbc8b171377463
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: e7ff4a816d7255f667ece0a4984f464d152280ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136291"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Configurer les fonctionnalités de SQL Server compatibles avec Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +21,7 @@ ms.locfileid: "56240753"
 Suivez des étapes simples pour configurer les fonctionnalités SQL Server suivantes afin de les rendre compatibles avec Stretch Database.
 -   Always On
 -   Always Encrypted
--   Chiffrement transparent des données (TDE)
+-   Transparent Data Encryption (TDE)
 -   Tables temporelles
 
 ## <a name="configure-always-on-with-stretch-database"></a>Configurer Always On avec Stretch Database

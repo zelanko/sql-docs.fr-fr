@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8d06e859-73dd-4019-b6e8-99c5c5297697
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94a6520e5d7dcc21bdf4ad0c816b26597d24f587
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: fd94228e072f670e2bf32a46281f195bdf9b80ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099619"
 ---
 # <a name="database-properties-filegroups-page"></a>Propriétés de la base de données (page Groupes de fichiers)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "51350343"
  Les groupes de fichiers optimisés en mémoire sont nécessaires pour toute base de données devant contenir une ou plusieurs tables optimisées en mémoire.  
   
 ## <a name="row-and-filestream-data-filegroup-options"></a>Options des groupes de fichiers de ligne et de données FILESTREAM  
- **Nom**  
+ **Name**  
  Entrez le nom du groupe de fichiers.  
   
  **Fichiers**  
@@ -52,7 +51,7 @@ ms.locfileid: "51350343"
  Supprime la ligne sélectionnée des groupes de fichiers de la grille.  
   
 ## <a name="memory-optimized-data-filegroup-options"></a>Options des groupes de fichiers optimisés en mémoire  
- **Nom**  
+ **Name**  
  Entrez le nom du groupe de fichiers optimisé en mémoire.  
   
  **Fichiers FILESTREAM**  
@@ -64,7 +63,7 @@ ms.locfileid: "51350343"
  **Supprimer**  
  Supprime la ligne sélectionnée des groupes de fichiers de la grille.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)  
   

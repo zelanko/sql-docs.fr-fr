@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6c9d9f975bcc18341c3f0465e92523815083e2de
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 1a6856b2bf297293fcf26c73885cbd46e68b3b1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133239"
 ---
 # <a name="sql-trace"></a>Trace SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,7 +163,7 @@ La trace SQL utilise les colonnes de données du résultat de la trace pour déc
 |Explique comment réduire la quantité de données collectées par la trace.|[Limiter les tailles de fichier et de table de trace](../../relational-databases/sql-trace/limit-trace-file-and-table-sizes.md)|  
 |Décrit les deux façons de planifier le traçage dans Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Planifier les traces](../../relational-databases/sql-trace/schedule-traces.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Modèles et autorisations du générateur de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [Guide de programmation SQL Server Management Objects &#40;SMO&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   

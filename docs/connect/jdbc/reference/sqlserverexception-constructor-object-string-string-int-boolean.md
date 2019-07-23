@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 868e14c72fbb7c32d394df2fbbdf5cd3a7c36738
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72ae0e8ed3c65a795723326d7ca49e2f5a909f18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66766984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971148"
 ---
 # <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>Constructeur SQLServerException (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Initialise une nouvelle instance de la [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) classe en fonction d’un **objet**, un **chaîne** objet, un **chaîne** (objet), un **int**et un **booléenne**.
+  Initialise une nouvelle instance de la classe [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) en fonction d’un **objet**, d’un objet **String** , d’un objet **String** , d’un **entier**et d’un **booléen**.
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -42,23 +41,23 @@ public SQLServerException(java.lang.Object obj,
 #### <a name="parameters"></a>Paramètres  
  *obj*  
   
- La mémoire tampon d’e/s qui a généré l’exception.
+ Mémoire tampon d’e/s qui a généré l’exception.
 
  *errText*  
   
- Chaîne contenant le texte d’erreur.
+ Chaîne contenant le texte de l’erreur.
   
  *sqlState*  
   
- Un objet d’énumération qui contient l’état SQL.
+ Objet enum qui contient l’état SQL.
  
  *errNum*  
   
- Int qui contiennent le code d’erreur pour l’exception.
+ Entier qui contient le code d’erreur de l’exception.
  
  *bStack*  
   
- Valeur booléenne qui indique si la trace de pile doit être générée.
+ Valeur booléenne qui indique si la trace de la pile doit être générée.
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerException, constructeurs](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

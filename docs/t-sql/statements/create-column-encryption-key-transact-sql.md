@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4c99c5348b5ba0f3638fd3eaaaf261caa984a6fd
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: ed1fb6d31d22f04657288e2c924316b891841946
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061085"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ Objet blob de la valeur de la clé CEK chiffrée.
 > [!WARNING]  
 >  Ne passez jamais des valeurs de clé CEK en texte clair dans cette instruction. Cela compromet l’avantage de cette fonctionnalité.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 L’instruction CREATE COLUMN ENCRYPTION KEY doit inclure au moins une clause VALUES et peut en avoir jusqu’à deux. Si vous n’en spécifiez qu’une seule, vous pouvez utiliser l’instruction ALTER COLUMN ENCRYPTION KEY pour ajouter une seconde valeur ultérieurement. Vous pouvez également utiliser l’instruction ALTER COLUMN ENCRYPTION KEY pour supprimer une clause VALUES.  
   
 En général, une clé CEK est créée avec une seule valeur chiffrée. Parfois, vous devez faire pivoter une clé CMK. Remplacez la clé CMK actuelle par la nouvelle clé CMK. Lorsque vous avez besoin de faire pivoter la clé, ajoutez une nouvelle valeur de la clé de chiffrement de colonne, chiffrée avec la nouvelle clé CMK. Cette rotation vous permet de garantir que les applications clientes peuvent accéder aux données chiffrées avec la clé CMK, tandis que la nouvelle clé CMK est mise à la disposition des applications clientes. Un pilote avec Always Encrypted dans une application cliente qui n’a pas accès à la nouvelle clé principale utilisera la valeur de la clé CMK chiffrée avec l’ancienne clé CMK pour accéder aux données sensibles.  
@@ -87,7 +86,7 @@ Une valeur chiffrée doit être générée à l’aide d’un fournisseur de mag
   
 Pour afficher les informations sur les clés de chiffrement de colonne, utilisez [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) et [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l’autorisation **ALTER ANY COLUMN ENCRYPTION KEY**.  
   
 ## <a name="examples"></a>Exemples  
@@ -126,7 +125,7 @@ WITH VALUES
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [ALTER COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)   
 [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
 [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   

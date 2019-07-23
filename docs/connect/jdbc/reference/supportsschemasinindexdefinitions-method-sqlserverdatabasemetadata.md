@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 55ce9e4f-6e3f-482a-93a5-b9ae1b91d7a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1cd00994d21113a8b8470738bdabc54562095846
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b472c7df1b0bade87dad979421636cb8a386c3bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968901"
 ---
 # <a name="supportsschemasinindexdefinitions-method-sqlserverdatabasemetadata"></a>Méthode supportsSchemasInIndexDefinitions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsSchemasInIndexDefinitions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode supportsSchemasInIndexDefinitions est spécifiée par la méthode supportsSchemasInIndexDefinitions dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode supportsSchemasInIndexDefinitions est spécifiée par la méthode supportsSchemasInIndexDefinitions dans l’interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6c2fd2c71c5272b8104eaf5b24fa8e7c0a9fc8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8cf804f934a08db335c55b15ab23b9e42a7ee9c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051319"
 ---
 # <a name="delete-xml-dml"></a>delete (DML XML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ SET @myDoc.modify('
 SELECT @myDoc  
 ```  
   
-### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>b. Suppression de nœuds d'un document stocké dans une colonne xml non typée  
+### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>B. Suppression de nœuds d'un document stocké dans une colonne xml non typée  
  Dans l’exemple suivant, une instruction DML XML **delete** supprime le second élément enfant de <`Features`> du document stocké dans la colonne.  
   
 ```  
@@ -185,7 +184,7 @@ drop table T
 go  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Comparer du XML typé et du XML non typé](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
  [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 83c60c5d-7a69-498b-be9c-bbdbfafec157
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aca217a0918595f9538dd509498d6cd28d8d232f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fbb9a65610730ba23e157aabf81c04c1f4af8eec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980587"
 ---
 # <a name="getref-method-javalangstring-sqlserverresultset"></a>getRef, méthode (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Ref getRef(java.lang.String colName)
  Valeur **String** qui contient le nom de la colonne.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet Ref.  
+ Objet Ref.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -50,7 +49,7 @@ public java.sql.Ref getRef(java.lang.String colName)
  Cette méthode getRef est spécifiée par la méthode getRef de l’interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthode getRef &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
+ [getRef, &#40;méthode SQLServerResultSet&#41;](../../../connect/jdbc/reference/getref-method-sqlserverresultset.md)   
  [SQLServerResultSet, membres](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [SQLServerResultSet, classe](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

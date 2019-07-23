@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84a2318f89872f490d8d3fc08902438f7a189443
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 1c5bd7fef54ee28993472bd6b3f4e4df3bba739f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060984"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,15 +50,15 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  Spécifie le nom des informations d’identification délimitées à la base de données en cours de création. *credential_name* ne peut pas commencer par le signe dièse (#). Les informations d'identification système commencent avec ##.  
   
- IDENTITY **='**_identity\_name_**'**  
+ IDENTITY **='** _identity\_name_ **'**  
  Spécifie le nom du compte à utiliser lors d'une connexion en dehors du serveur. Pour importer un fichier à partir du stockage Blob Azure avec une clé de partage, le nom de l’identité doit être `SHARED ACCESS SIGNATURE`. Pour charger des données dans SQL DW, n’importe quelle valeur valide peut être utilisée pour l’identité. Pour plus d’informations sur les signatures d’accès partagé, consultez [Utilisation des signatures d’accès partagé (SAP)](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1).  
   
- SECRET **='**_secret_**'**  
+ SECRET **='** _secret_ **'**  
  Spécifie le secret requis pour l'authentification sortante. `SECRET` est obligatoire pour importer un fichier à partir du stockage Blob Azure. Pour effectuer le chargement du Stockage Blob Azure vers SQL DW ou Parallel Data Warehouse, le secret doit être la clé de stockage Azure.  
 > [!WARNING]
 >  La valeur de clé SAP peut commencer par un point d’interrogation (« ? »). Quand vous utilisez la clé SAP, vous devez supprimer le caractère « ? » initial. Sinon, vos efforts risquent d’être vains.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les informations d’identification délimitées à la base de données sont un enregistrement qui contient les informations d’authentification exigées pour la connexion à une ressource en dehors de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La plupart des informations d'identification incluent un utilisateur et un mot de passe Windows.  
   
  Avant de créer des informations d’identification délimitées à la base de données, la base de données doit avoir une clé principale pour protéger les informations d’identification. Pour plus d’informations, consultez [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md).  
@@ -83,7 +82,7 @@ WITH IDENTITY = 'identity_name'
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md) utilisent les informations d’identification délimitées à la base de données pour accéder aux données à partir du stockage Blob Azure. Pour plus d’informations, consultez [Exemples d’accès en bloc à des données dans Stockage Blob Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md). 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Exige l’autorisation **CONTROL** sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -100,7 +99,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 GO  
 ```  
 
-### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>b. Création d’informations d’identification délimitées à la base de données pour une signature d’accès partagé.   
+### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>B. Création d’informations d’identification délimitées à la base de données pour une signature d’accès partagé.   
 L’exemple suivant crée des informations d’identification délimitées à la base de données qui peuvent être utilisées pour créer une [source de données externe](../../t-sql/statements/create-external-data-source-transact-sql.md), qui peut effectuer des opérations en bloc, telles que [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) et [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md). Les signatures d’accès partagé ne peuvent pas être utilisées avec PolyBase dans SQL Server, APS ou SQL DW.
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6145a0bba1418846bdc45a1354138ac5592ffcd
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 59b1a599a38e31abeee677059d5a99842e76d807
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033220"
 ---
 # <a name="optimize-sql-trace"></a>Optimiser Trace SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "51571279"
   
 -   Limitez le nombre d'événements renvoyés. Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] vous permet de limiter le nombre d'événements renvoyés en enregistrant la trace dans une table et en définissant le nombre de lignes maximal. Les résultats de la trace sont toujours renvoyés à l'écran du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] après que le nombre de lignes maximal a été atteint, mais le coût d'enregistrement des résultats dans une table est éliminé.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Filtrer une trace](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

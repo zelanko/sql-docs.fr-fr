@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 13817a83bc82e8b2d3ec44f326c22829e6e167e9
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 639d661dd9a7196119bbb34f11f0ed5a9161a978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986678"
 ---
 # <a name="sql-server-database-mirroring-object"></a>SQL Server, objet Database Mirroring
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +53,10 @@ ms.locfileid: "53380420"
 > [!NOTE]  
 >  Sur chaque partenaire, certains des compteurs affichent une valeur de zéro en fonction du rôle que le partenaire détient actuellement.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les compteurs de performances vous permettent d'analyser les performances de la mise en miroir de bases de données. Par exemple, vous pouvez examiner le compteur **Délai de transaction** pour savoir si la mise en miroir de bases de données a une incidence sur les performances du serveur principal, et vous pouvez examiner les compteurs **File d'attente de restauration par progression** et **File d'attente d'envoi du journal** pour savoir si la mise en miroir de la base de données est synchronisée avec la base de données principale. Vous pouvez examiner le compteur **Octets du journal envoyés/s** pour analyser la quantité de données de journal envoyées par seconde.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
   
   

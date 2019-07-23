@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c0439c5230d39ae9dc856c9e1c5c5553e250c42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 143bba36c1f85877fd3a0504dd8345c754ec055d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023592"
 ---
 # <a name="install-integration-services"></a>Installer Integration Services
 
@@ -85,7 +84,7 @@ Par défaut, dans une nouvelle installation, [!INCLUDE[ssISnoversion](../../incl
 
 Pour une installation complète de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], sélectionnez les composants dont vous avez besoin dans la liste suivante :
 
--   **Integration Services (SSIS)**. Installer SSIS avec l’Assistant Installation de SQL Server. La sélection de SSIS installe les éléments suivants :
+-   **Integration Services (SSIS)** . Installer SSIS avec l’Assistant Installation de SQL Server. La sélection de SSIS installe les éléments suivants :
 
     -   Prise en charge du catalogue SSIS sur le moteur de base de données SQL Server
 
@@ -97,7 +96,7 @@ Pour une installation complète de [!INCLUDE[ssISnoversion](../../includes/ssisn
 
 -   **Moteur de base de données SQL Server**. Installer le moteur de base de données avec l’Assistant Installation de SQL Server. La sélection du moteur de base de données vous permet de créer et d’héberger la base de données du catalogue SSIS, `SSISDB`, afin de stocker, gérer, exécuter et surveiller des packages SSIS.
 
--   **SQL Server Data Tools (SSDT)**. Pour télécharger et installer SSDT, consultez [Télécharger SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). L’installation de SSDT vous permet de concevoir et de déployer des packages SSIS. SSDT installe les éléments suivants :
+-   **SQL Server Data Tools (SSDT)** . Pour télécharger et installer SSDT, consultez [Télécharger SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md). L’installation de SSDT vous permet de concevoir et de déployer des packages SSIS. SSDT installe les éléments suivants :
 
     -   Les outils de conception et de développement de package SSIS, notamment le concepteur SSIS
 

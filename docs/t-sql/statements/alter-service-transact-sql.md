@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 82c14fd14460f3b134441931493357a33a2cacf4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cade91c9c654b9cfae83c1dbf8a7684c2f7dba81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070239"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ALTER SERVICE service_name
  *service_name*  
  Nom du service à modifier. Les noms du serveur, de la base de données et du schéma ne peuvent pas être spécifiés.  
   
- ON QUEUE [ _schema_name_**.** ] *queue_name*  
+ ON QUEUE [ _schema_name_ **.** ] *queue_name*  
  Spécifie la nouvelle file d'attente de ce service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] déplace tous les messages destinés à ce service de la file d'attente actuelle vers la nouvelle file d'attente.  
   
  ADD CONTRACT *contract_name*  
@@ -61,12 +60,12 @@ ALTER SERVICE service_name
  DROP CONTRACT *contract_name*  
  Spécifie un contrat à supprimer de l'ensemble de contrats exposé par ce service. [!INCLUDE[ssSB](../../includes/sssb-md.md)] envoie un message d'erreur sur toutes les conversations existantes avec ce service qui utilisent ce contrat.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Lorsque l'instruction ALTER SERVICE supprime un contrat d'un service, ce dernier ne peut plus être la destination des conversations qui utilisent ce contrat. Par conséquent, [!INCLUDE[ssSB](../../includes/sssb-md.md)] n'autorise aucune nouvelle conversation avec le service sur ce contrat. Les conversations existantes qui utilisent le contrat ne sont pas affectées.  
   
  L'instruction ALTER AUTHORIZATION permet de modifier l'AUTORISATION pour un service.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, l’autorisation de modification d’un service est octroyée au propriétaire de ce service, aux membres des rôles de base de données fixes **db_ddladmin** ou **db_owner** et aux membres du rôle serveur fixe **sysadmin**.  
   
 ## <a name="examples"></a>Exemples  
@@ -96,7 +95,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
      DROP CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/create-service-transact-sql.md)   
  [DROP SERVICE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-service-transact-sql.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)  

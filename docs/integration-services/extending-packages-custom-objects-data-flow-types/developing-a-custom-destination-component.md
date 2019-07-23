@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 24619363-9535-4c0e-8b62-1d22c6630e40
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: cb842aa871516beef2b1484a9f76d93b7371999d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af7ae4c5adba2b32a38c4b0da7dc1e73a0b92208
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109157"
 ---
 # <a name="developing-a-custom-destination-component"></a>Développement d'un composant de destination personnalisé
 
@@ -486,7 +485,7 @@ Namespace BlobDst
 End Namespace  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Développement d’un composant source personnalisé](../../integration-services/extending-packages-custom-objects-data-flow-types/developing-a-custom-source-component.md)   
  [Création d’une destination à l’aide du composant Script](../../integration-services/extending-packages-scripting-data-flow-script-component-types/creating-a-destination-with-the-script-component.md)  
   

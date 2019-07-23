@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 9fd3ee0706e30d6a7077f22488a1f64084b5ae8a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58797009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136480"
 ---
 # <a name="sql-server-2017-release-notes"></a>Notes de publication de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ Cet article décrit les limitations et les problèmes de SQL Server 2017. Pour 
     3. Recochez **Activer FILESTREAM pour l’accès aux E/S de fichier** avec le nom du partage d’origine, puis cliquez sur **Appliquer**.
 
 ### <a name="master-data-services-mds"></a>Master Data Services (MDS)
-- **Problème et impact sur le client :**  dans la page des autorisations des utilisateurs, quand vous accordez une autorisation au niveau racine dans l’arborescence des entités, vous voyez l’erreur suivante : `"The model permission cannot be saved. The object guid is not valid"`
+- **Problème et impact sur le client :**   dans la page des autorisations des utilisateurs, quand vous accordez une autorisation au niveau racine dans l’arborescence des entités, vous voyez l’erreur suivante : `"The model permission cannot be saved. The object guid is not valid"`
 
 - **Solution de contournement :** 
   - Accordez l’autorisation sur les sous-nœuds de l’arborescence au lieu de le faire au niveau racine.

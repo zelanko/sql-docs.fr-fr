@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a82624d43f63ff8e774c61198021e29cd080366e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a921aaeebc57ab72f75c980b0877a9fa0723fdca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997845"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages (base de données SSISDB)
 
@@ -47,7 +46,7 @@ ms.locfileid: "65714512"
 |validation_status|**char(1)**|État de la validation.|  
 |last_validation_time|**datetimeoffset(7)**|Heure de la dernière validation.|  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette vue affiche une ligne pour chaque package dans le catalogue.  
   
 ## <a name="permissions"></a>Autorisations  

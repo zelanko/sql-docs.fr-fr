@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7edca09192abc207ef4879c8d8275777451d51a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82b2d76905d232c78bb5b4e055e21b4d66777879
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62649205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073546"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Définir la période d'expiration des abonnements
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,11 +51,11 @@ ms.locfileid: "62649205"
     -   Il est possible de spécifier que les abonnements n'expirent jamais, mais ceci est fortement déconseillé car les métadonnées ne pourront pas être nettoyées.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
- Définissez la période d’expiration des abonnements dans la page **Général** de la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+ Définissez la période d’expiration des abonnements dans la page **Général** de la boîte de dialogue **Propriétés de la publication - \<Publication>** . Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un serveur de publication](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>Pour définir la période d'expiration des abonnements  
   
-1.  Dans la section **Expiration de l’abonnement** de la page **Général** de la boîte de dialogue **Propriétés de la publication - \<Publication>**, spécifiez si l’abonnement doit expirer.  
+1.  Dans la section **Expiration de l’abonnement** de la page **Général** de la boîte de dialogue **Propriétés de la publication - \<Publication>** , spécifiez si l’abonnement doit expirer.  
   
 2.  S'il doit expirer, spécifiez un délai d'expiration.  
   
@@ -65,11 +64,11 @@ ms.locfileid: "62649205"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Pour définir la période d'expiration d'un abonnement à une publication transactionnelle ou d'instantané  
   
-1.  Sur le serveur de publication, exécutez [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Spécifiez la période de l'expiration de l'abonnement souhaitée, en heures, pour **@retention**. La période d'expiration par défaut est de 336 heures. Pour plus d’informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  Sur le serveur de publication, exécutez [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Spécifiez la période de l'expiration de l'abonnement souhaitée, en heures, pour **@retention** . La période d'expiration par défaut est de 336 heures. Pour plus d’informations, voir [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Pour définir la période d'expiration d'un abonnement à une publication de fusion  
   
-1.  Sur le serveur de publication, exécutez [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Spécifiez la période d'expiration de l'abonnement en affectant la valeur de votre choix à **@retention**. Spécifiez les unités dans lesquelles la période d'expiration est exprimée pour **@retention_period_unit**; les unités possibles sont les suivantes :  
+1.  Sur le serveur de publication, exécutez [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Spécifiez la période d'expiration de l'abonnement en affectant la valeur de votre choix à **@retention** . Spécifiez les unités dans lesquelles la période d'expiration est exprimée pour **@retention_period_unit** ; les unités possibles sont les suivantes :  
   
     -   **1** = semaine  
   
@@ -81,11 +80,11 @@ ms.locfileid: "62649205"
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Pour modifier la période d'expiration d'un abonnement à une publication transactionnelle ou d'instantané  
   
-1.  Sur le serveur de publication, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Spécifiez **retention** pour **@property** et la nouvelle période d'expiration de l'abonnement, en heures, pour **@value**.  
+1.  Sur le serveur de publication, exécutez [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Spécifiez **retention** pour **@property** et la nouvelle période d'expiration de l'abonnement, en heures, pour **@value** .  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Pour modifier la période d'expiration d'un abonnement à une publication de fusion  
   
-1.  Sur le serveur de publication, exécutez [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), en spécifiant **@publication** et **@publisher**. Notez la valeur de **retention_period_unit** dans le jeu de résultats ; elle peut correspondre à l'une des valeurs suivantes :  
+1.  Sur le serveur de publication, exécutez [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), en spécifiant **@publication** et **@publisher** . Notez la valeur de **retention_period_unit** dans le jeu de résultats ; elle peut correspondre à l'une des valeurs suivantes :  
   
     -   **0** = jour  
   
@@ -95,11 +94,11 @@ ms.locfileid: "62649205"
   
     -   **3** = année  
   
-2.  Sur le serveur de publication, exécutez [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Spécifiez **retention** pour **@property** et la nouvelle période d'expiration de l'abonnement, sous forme de texte basé sur l'unité de période de rétention définie à l'étape 1, pour **@value**.  
+2.  Sur le serveur de publication, exécutez [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Spécifiez **retention** pour **@property** et la nouvelle période d'expiration de l'abonnement, sous forme de texte basé sur l'unité de période de rétention définie à l'étape 1, pour **@value** .  
   
-3.  (Facultatif) Sur le serveur de publication, exécutez [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Spécifiez **retention_period_unit** pour **@property** et une nouvelle unité pour la période d'expiration de l'abonnement pour **@value**.  
+3.  (Facultatif) Sur le serveur de publication, exécutez [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Spécifiez **retention_period_unit** pour **@property** et une nouvelle unité pour la période d'expiration de l'abonnement pour **@value** .  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Concepts liés aux procédures stockées système de réplication](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   

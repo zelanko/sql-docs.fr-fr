@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2e58ef266f992911dc8360925649959b1aedd13f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3e542e49811ed7f57a9b60dbf1f0428f69706bdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128310"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>Réplication SQL Server, boîte de dialogue Propriétés du serveur de distribution 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ La page **Général** de la boîte de dialogue **Propriétés du serveur de dist
  **Bases de données**  
  La grille de propriétés **Bases de données** répertorie le nom et les propriétés de rétention des bases de données de distribution se trouvant sur le serveur de distribution. La**rétention des transactions** est la durée pendant laquelle les transactions sont stockées en vue de leur réplication transactionnelle (la rétention des transactions est également connue sous le nom de rétention de distribution). La**rétention des historiques** est la durée pendant laquelle les métadonnées des historiques sont stockées en vue de leur réplication de quelque type que ce soit. Pour plus d’informations sur la rétention de la distribution, consultez [Expiration et désactivation des abonnements](../../relational-databases/replication/subscription-expiration-and-deactivation.md).  
   
- Cliquez sur le bouton représenté par des points de suspension (**...**) dans la grille des propriétés **Bases de données** pour ouvrir la boîte de dialogue **Propriétés de la base de données de distribution** .  
+ Cliquez sur le bouton représenté par des points de suspension ( **...** ) dans la grille des propriétés **Bases de données** pour ouvrir la boîte de dialogue **Propriétés de la base de données de distribution** .  
   
  **Nouveau**  
  Permet de créer une base de données de distribution.  
@@ -65,7 +64,7 @@ La page **Serveurs de publication** de la boîte de dialogue **Propriétés du s
 ## <a name="distribution-database"></a>Base de données de distribution 
  La boîte de dialogue **Propriétés de la base de données de distribution** vous permet d'afficher certaines propriétés et de définir la période de rétention de transaction ainsi que la période de rétention d'historique pour la base de données.  
   
- **Nom**  
+ **Name**  
  Nom de la base de données de distribution, dont la valeur par défaut est « distribution » (en lecture seule).  
   
  **Emplacements des fichiers**  
@@ -86,7 +85,7 @@ La page **Serveurs de publication** de la boîte de dialogue **Propriétés du s
 -   L'Agent se connecte au serveur de publication à l'aide des informations d'identification spécifiées dans la boîte de dialogue **Propriétés du serveur de publication** , qui est accessible à partir de la page **Serveurs de publication** de la boîte de dialogue **Propriétés du serveur de distribution** .    
 -   L'Agent se connecte à l'Abonné à l'aide des informations d'identification spécifiées pour l'Agent de distribution dans l'Assistant Nouvel abonnement.  Pour plus d’informations, consultez  [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md). 
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Configurer la distribution](../../relational-databases/replication/configure-distribution.md)   
  [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
   

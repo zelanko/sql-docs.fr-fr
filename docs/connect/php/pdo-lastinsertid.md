@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 0c617b53-a74b-4d5b-b76b-3ec7f1b8e8de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6106d830a48b4ef89d85b88e7264e08209947ecc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2068b4099649b7ebd8aa2bcb4c58aa0d59e123d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936218"
 ---
 # <a name="pdolastinsertid"></a>PDO::lastInsertId
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Retourne l’identificateur de la dernière ligne insérée dans une table de la base de données. La table doit comporter une colonne IDENTITY NOT NULL. Si un nom de la séquence est fourni, `lastInsertId` retourne inséré le dernier numéro de séquence pour le nom de la séquence fournie (pour plus d’informations sur les numéros de séquence, consultez [ici](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
+Retourne l’identificateur de la dernière ligne insérée dans une table de la base de données. La table doit comporter une colonne IDENTITY NOT NULL. Si un nom de séquence est fourni `lastInsertId` , retourne le numéro de séquence le plus récemment inséré pour le nom de séquence fourni (pour plus d’informations sur les numéros de séquence, voir [ici](https://docs.microsoft.com/sql/relational-databases/sequence-numbers/sequence-numbers)).
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -34,16 +33,16 @@ string PDO::lastInsertId ([ $name = NULL ] );
 $*name* : chaîne facultative qui vous permet de spécifier un nom de séquence. 
   
 ## <a name="return-value"></a>Valeur retournée  
-Si aucun nom de la séquence n’est fourni, une chaîne de l’identificateur de la ligne récemment ajoutées.
-Si un nom de la séquence est fourni, une chaîne de l’identificateur de la séquence récemment ajoutées.
-Si l’appel de méthode échoue, une chaîne vide est retournée.
+Si aucun nom de séquence n’est fourni, chaîne de l’identificateur de la dernière ligne ajoutée.
+Si un nom de séquence est fourni, chaîne de l’identificateur de la séquence ajoutée récemment.
+Si l’appel de la méthode échoue, une chaîne vide est retournée.
   
 ## <a name="remarks"></a>Notes  
 La prise en charge de PDO a été ajoutée dans la version 2.0 de [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
-Entre la version 2.0 et 4.3, le paramètre facultatif est un nom de table, et la valeur de retour est l’ID de la ligne récemment ajoutée à la table fournie.
-À compter de 5.0, le paramètre facultatif est considéré comme un nom de la séquence et la valeur de retour est la séquence récemment ajoutée pour le nom de la séquence fournie.
-Si un nom de table est fourni pour les versions après 4.3, `lastInsertId` retourne une chaîne vide.
-Séquences sont prises en charge uniquement dans SQL Server 2012 et versions ultérieures.
+Entre la version 2,0 et 4,3, le paramètre facultatif est un nom de table, et la valeur de retour est l’ID de la ligne la plus récemment ajoutée à la table fournie.
+À partir de 5,0, le paramètre facultatif est considéré comme un nom de séquence et la valeur de retour est la séquence la plus récemment ajoutée pour le nom de séquence fourni.
+Si un nom de table est fourni pour les versions ultérieures à 4,3, `lastInsertId` retourne une chaîne vide.
+Les séquences sont prises en charge uniquement dans SQL Server 2012 et versions ultérieures.
   
 ## <a name="example"></a>Exemple
   

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e21f0ad-68d0-432f-9c7c-a119dd2d3fc9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 86b23a92006e4a2f3e3896cd1fe20c8b566d14e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 680d4e62838ed49c72c8b637c19cc00af804c763
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62681484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084533"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ Pour un déclencheur DDL, indique que *trigger_name* a été créé ou modifié 
 > [!NOTE]  
 >  Cette option n'est pas disponible dans une base de données autonome.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Un déclencheur n'est pas recréé par son activation. Un déclencheur désactivé continue d'exister en tant qu'objet de la base de données active, mais il ne s'exécute pas. Une fois activé, un déclencheur s'exécute dès lors qu'une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] dans laquelle il était initialement programmé est exécuté. Les déclencheurs sont désactivés à l’aide de [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md). Il est également possible d’activer ou de désactiver les déclencheurs DML définis sur des tables au moyen de la commande [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="permissions"></a>Autorisations  
@@ -115,7 +114,7 @@ ENABLE Trigger ALL ON ALL SERVER;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DISABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/disable-trigger-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

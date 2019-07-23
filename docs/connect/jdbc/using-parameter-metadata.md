@@ -1,5 +1,5 @@
 ---
-title: À l’aide des métadonnées de paramètre | Microsoft Docs
+title: Utilisation des métadonnées de paramètre | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: db2c1957-91c6-4989-a07b-9f8be6d2033a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e2c0e9f7589f58a1ef3c1cc5ee4026dd9eea5076
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 168a153ecf12acda5adfbae22d13618669c6c2a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916215"
 ---
 # <a name="using-parameter-metadata"></a>Utilisation des métadonnées de paramètre
 
@@ -24,9 +23,9 @@ ms.locfileid: "66798569"
 
 Pour interroger un objet [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) ou [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) sur les paramètres qu’il contient, le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] implémente la classe [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md). Cette classe contient plusieurs champs et méthodes qui retournent des informations sous la forme d'une valeur unique.
 
-Pour créer un objet SQLServerParameterMetaData, vous pouvez utiliser la [getParameterMetaData](../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md) méthodes des classes SQLServerPreparedStatement et SQLServerCallableStatement.
+Pour créer un objet SQLServerParameterMetaData, vous pouvez utiliser les méthodes [getParameterMetaData](../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md) des classes SQLServerPreparedStatement et SQLServerCallableStatement.
 
-Dans l’exemple suivant, une connexion ouverte à la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de données est transmise à la fonction, la méthode getParameterMetaData de la classe SQLServerCallableStatement est utilisée pour retourner un objet SQLServerParameterMetaData et divers méthodes de l’objet SQLServerParameterMetaData sont utilisées pour afficher des informations sur le type et le mode des paramètres qui sont contenus dans la procédure stockée HumanResources.uspUpdateEmployeeHireInfo.
+Dans l’exemple suivant, une connexion ouverte à l' [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] exemple de base de données est transmise à la fonction, la méthode getParameterMetaData de la classe SQLServerCallableStatement est utilisée pour retourner un objet SQLServerParameterMetaData, puis différentes les méthodes de l’objet SQLServerParameterMetaData sont utilisées pour afficher des informations sur le type et le mode des paramètres contenus dans la procédure stockée HumanResources. uspUpdateEmployeeHireInfo.
 
 [!code[JDBC#UsingParamMetaData1](../../connect/jdbc/codesnippet/Java/using-parameter-metadata_1.java)]  
 
@@ -37,4 +36,4 @@ Dans l’exemple suivant, une connexion ouverte à la [!INCLUDE[ssSampleDBnormal
 
 Les requêtes MERGE ne sont pas non plus prises en charge pour la classe SQLServerParameterMetaData lors de l’utilisation de SQL Server 2008 ou 2008 R2. Pour SQL Server 2012 et versions ultérieures, les métadonnées de paramètres avec des requêtes complexes sont prises en charge.
 
-Récupération de métadonnées de paramètre pour les colonnes chiffrées ne sont pas pris en charge. **Avec Microsoft JDBC Driver 4.1 ou 4.2 pour SQL Server** : Le pilote JDBC prend en charge les instructions SELECT, DELETE, INSERT et UPDATE tant que ces instructions ne contiennent pas de sous-requêtes et/ou de jointures. FUSIONNER des requêtes ne sont pas également pris en charge pour la classe SQLServerParameterMetaData.
+La récupération de métadonnées de paramètres pour les colonnes chiffrées n’est pas prise en charge. **Avec Microsoft JDBC Driver 4.1 ou 4.2 pour SQL Server** : Le pilote JDBC prend en charge les instructions SELECT, DELETE, INSERT et UPDATE tant que ces instructions ne contiennent pas de sous-requêtes et/ou de jointures. Les requêtes de fusion ne sont pas non plus prises en charge pour la classe SQLServerParameterMetaData.

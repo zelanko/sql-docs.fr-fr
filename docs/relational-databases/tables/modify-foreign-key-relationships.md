@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 646a0e6b7885c2b220d7ea5c0165dbcd5a3c4de4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139599"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modifier des relations de clé étrangère
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "52517079"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -86,7 +85,7 @@ ms.locfileid: "52517079"
      Vérifie en fonction de la contrainte, toutes les données qui existaient dans la table avant la création ou la réactivation de la contrainte.  
   
      **Catégorie Spécification de tables et colonnes**  
-     Se développe pour afficher les colonnes des tables jouant le rôle de clé étrangère et de clé primaire (ou unique) dans la relation. Pour modifier ou définir ces valeurs, cliquez sur le bouton de sélection (**...**) à droite du champ de propriété.  
+     Se développe pour afficher les colonnes des tables jouant le rôle de clé étrangère et de clé primaire (ou unique) dans la relation. Pour modifier ou définir ces valeurs, cliquez sur le bouton de sélection ( **...** ) à droite du champ de propriété.  
   
      **Table de base de clé étrangère**  
      Affiche la table qui contient la colonne jouant le rôle de clé étrangère dans la relation sélectionnée.  
@@ -103,7 +102,7 @@ ms.locfileid: "52517079"
      **Catégorie Identité**  
      Se développe pour afficher les champs de propriété pour le **Nom** et la **Description**.  
   
-     **Nom**  
+     **Name**  
      Indique le nom de la relation. Lorsqu'une nouvelle relation est créée, elle obtient un nom par défaut basé sur la table affichée dans la fenêtre active du **Concepteur de tables**. Vous pouvez modifier le nom à tout moment.  
   
      **Description**  

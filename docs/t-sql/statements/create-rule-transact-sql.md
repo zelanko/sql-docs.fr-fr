@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 50360a46d7eaba31ad60a94e3e624a641ec1c6ea
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006491"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,15 +67,15 @@ AS condition_expression
  *condition_expression*  
  Condition(s) définissant la règle. Une règle peut être toute expression valide d'une clause WHERE et inclure des éléments tels que des opérateurs arithmétiques, des opérateurs relationnels et des prédicats (par exemple, IN, LIKE, BETWEEN). Elle ne peut pas faire référence à des colonnes ou à d'autres objets de base de données. Vous pouvez y inclure des fonctions intégrées qui ne font pas référence à des objets de base de données. Les fonctions définies par l'utilisateur ne peuvent pas être utilisées.  
   
- *condition_expression* inclut une variable. Le signe arobase (**@**) précède chaque variable locale. L'expression fait référence à la valeur entrée à l'aide des instructions UPDATE ou INSERT. Vous pouvez utiliser n’importe quel nom ou symbole pour représenter la valeur lors de la création de la règle, mais le premier caractère doit être le signe arobase (**@**).  
+ *condition_expression* inclut une variable. Le signe arobase ( **@** ) précède chaque variable locale. L'expression fait référence à la valeur entrée à l'aide des instructions UPDATE ou INSERT. Vous pouvez utiliser n’importe quel nom ou symbole pour représenter la valeur lors de la création de la règle, mais le premier caractère doit être le signe arobase ( **@** ).  
   
 > [!NOTE]  
 >  Évitez de créer des règles d'après des expressions de type alias. Bien que ce cas de figure soit prévu, les expressions ne parviennent pas à se compiler si elles sont référencées après que la liaison des règles aux colonnes ou au type de données alias est créée.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  L'instruction CREATE RULE ne peut pas s'utiliser conjointement avec d'autres instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans un même traitement. Les règles ne s'appliquent pas aux données qui existent déjà dans la base de données au moment de leur création et elles ne peuvent pas être liées aux types de données système.  
   
- Une règle ne peut être créée que dans la base de données actuelle. Après la création de la règle, exécutez **sp_bindrule** pour la lier à une colonne ou à un type de données alias. Une règle doit être compatible avec le type de données de la colonne. Par exemple, « \@value LIKE A% » ne peut pas servir de règle pour une colonne numérique. Une règle ne peut pas être liée à un type **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, à un type CLR défini par l’utilisateur, ou à une colonne **timestamp**. Enfin, une règle ne peut pas être liée à une colonne calculée.  
+ Une règle ne peut être créée que dans la base de données actuelle. Après la création de la règle, exécutez **sp_bindrule** pour la lier à une colonne ou à un type de données alias. Une règle doit être compatible avec le type de données de la colonne. Par exemple, « \@value LIKE A% » ne peut pas servir de règle pour une colonne numérique. Une règle ne peut pas être liée à un type **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, à un type CLR défini par l’utilisateur, ou à une colonne **timestamp**. Enfin, une règle ne peut pas être liée à une colonne calculée.  
   
  Délimitez les constantes de type caractère et date par des apostrophes droites (') et faites précéder les constantes binaires de 0x. Si la règle n’est pas compatible avec la colonne à laquelle elle est liée, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] retourne un message d’erreur lors de l’insertion d’une valeur, mais pas au moment de la liaison de la règle.  
   
@@ -95,7 +94,7 @@ AS condition_expression
   
  Si une valeur par défaut et une règle sont toutes deux liées à une colonne, la valeur par défaut doit être cohérente avec le domaine défini par la règle. Une valeur par défaut qui est en conflit avec une règle n'est jamais insérée. Le moteur de base de données SQL Server génère un message d'erreur à chaque tentative d'insertion d'une telle valeur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter CREATE RULE, un utilisateur doit au moins disposer de l'autorisation CREATE RULE sur la base de données actuelle et de l'autorisation ALTER sur le schéma dans lequel la règle est créée.  
   
 ## <a name="examples"></a>Exemples  
@@ -109,7 +108,7 @@ AS
 @range>= $1000 AND @range <$20000;  
 ```  
   
-### <a name="b-creating-a-rule-with-a-list"></a>b. Création d'une règle avec une liste  
+### <a name="b-creating-a-rule-with-a-list"></a>B. Création d'une règle avec une liste  
  L'exemple suivant crée une règle qui limite aux seules valeurs répertoriées dans la règle, les valeurs réelles entrées dans la ou les colonnes auxquelles la règle est liée.  
   
 ```  
@@ -127,7 +126,7 @@ AS
 @value LIKE '__-%[0-9]'  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   

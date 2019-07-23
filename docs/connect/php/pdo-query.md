@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 68f06811c0c56fa46f1e3769c794d48ad0e43488
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7131e96277ea05b43f30923dcc64c5be602696
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936206"
 ---
 # <a name="pdoquery"></a>PDO::Query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +51,7 @@ Vous pouvez spécifier les options suivantes pour $*fetch_style*.
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Recherche les données dans la colonne spécifiée. La première colonne de la table est la colonne 0.|  
 |PDO::FETCH_CLASS, ’*nom_classe*’, array( *arglist* )|Crée une instance d’une classe et attribue des noms de colonne aux propriétés de la classe. Si le constructeur de classe accepte un ou plusieurs paramètres, vous pouvez également passer un *arglist*.|  
-|À PDO::FETCH_CLASS, «*classname*'|Assigne des noms de colonne aux propriétés dans une classe existante.|  
+|PDO:: FETCH_CLASS, '*className*'|Assigne des noms de colonne aux propriétés dans une classe existante.|  
   
 Appelez PDOStatement::closeCursor pour libérer les ressources de base de données associées à l’objet PDOStatement avant de rappeler PDO::query.  
   

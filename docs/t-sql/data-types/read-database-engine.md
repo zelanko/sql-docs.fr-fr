@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7aa7978fb568eafc62060130c4e8220f4d5612dd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000603"
 ---
 # <a name="read-database-engine"></a>Read (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ void Read( BinaryReader r )
 ## <a name="return-types"></a>Types de retour
  **Type de retour CLR : void**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Read ne valide pas son entrée. Si une entrée binaire non valide est fournie, Read peut lever une exception. Elle peut aussi réussir et produire un objet **SqlHierarchyId** non valide dont les méthodes peuvent donner des résultats imprévisibles ou lever une exception.  
   
  Read peut être appelée uniquement sur un objet **SqlHierarchyId** créé récemment.  
@@ -60,7 +59,7 @@ SqlHierarchyId hid = new SqlHierarchyId();
 hid.Read(br);   
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Write &#40;moteur de base de données&#41;](../../t-sql/data-types/write-database-engine.md)  
 [ToString &#40;moteur de base de données&#41;](../../t-sql/data-types/tostring-database-engine.md)  
 [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  

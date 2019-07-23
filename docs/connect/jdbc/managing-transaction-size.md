@@ -1,5 +1,5 @@
 ---
-title: Gestion de la taille de Transaction | Microsoft Docs
+title: Gestion de la taille des transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: effb3d9d1274d19915c9a5eb1850a7e47deb655f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0e53ab6e5f2fc2cc12db37d81b1c8f687b503158
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956352"
 ---
 # <a name="managing-transaction-size"></a>Gestion de la taille des transactions
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -5,16 +5,15 @@ ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ms.reviewer: ''
 ms.custom: SSDT
 ms.date: 02/09/2017
-ms.openlocfilehash: b8ce668d62cc26c6d5e6a62cb43a3c02e4b660fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8ff16ab27f47cd283c81606a4db9b580db523d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984697"
 ---
 # <a name="add-database-reference-dialog-box"></a>Boîte de dialogue Ajouter une référence de base de données (boîte de dialogue )
 Cette rubrique décrit les procédures que vous pouvez effectuer dans la boîte de dialogue **Ajouter une référence de base de données**.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4c6df1fe4c6954539afe8043ffb36c89e5f428fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e3681d88f0cd91ce955919ad24f0e95b0600c5e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061445"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>Présentation de l'interface du moniteur de réplication
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +46,11 @@ ms.locfileid: "54128549"
 ## <a name="viewing-information-and-performing-tasks-related-to-distributors"></a>Affichage d'informations et réalisation de tâches associées aux serveurs de distribution  
  Le moniteur de réplication présente des informations sur les serveurs de distribution dans trois onglets :  
   
--   Onglet**Publications**   
+-   Onglet**Publications**  
   
      Cet onglet fournit des informations de résumé pour toutes les publications d'un serveur de distribution.  
   
--   Onglet**Liste de suivi des abonnements**   
+-   Onglet**Liste de suivi des abonnements**  
   
      Cet onglet fournit des informations sur les abonnements pour le serveur de distribution sélectionné. Vous pouvez filtrer la liste des abonnements pour identifier les erreurs, les avertissements et les abonnements qui ne fonctionnent pas correctement. Cet onglet vous permet également d'effectuer les tâches suivantes : accéder aux propriétés d'abonnement, accéder aux informations détaillées sur l'agent ou les agents associés à un abonnement, réinitialiser des abonnements et valider des abonnements.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "54128549"
   
      Cet onglet n'est pas disponible pour les serveurs de distribution qui exécutent des versions de [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou versions antérieures.  
   
--   Onglet**Agents**   
+-   Onglet**Agents**  
   
      Cet onglet affiche les informations détaillées sur les agents et les travaux utilisés par tous les types de réplication. L'onglet permet également de démarrer et d'arrêter chaque agent ou travail.  
   
@@ -82,11 +81,11 @@ ms.locfileid: "54128549"
 ## <a name="viewing-information-and-performing-tasks-related-to-publishers"></a>Affichage d'informations et réalisation de tâches associées aux serveurs de publication  
  Le moniteur de réplication présente des informations sur les serveurs de publication dans trois onglets :  
   
--   Onglet**Publications**   
+-   Onglet**Publications**  
   
      Cet onglet fournit des informations de résumé pour toutes les publications sur un serveur de publication.  
   
--   Onglet**Liste de suivi des abonnements**   
+-   Onglet**Liste de suivi des abonnements**  
   
      Cet onglet affiche des informations sur les abonnements provenant de toutes les publications disponibles sur le serveur de publication sélectionné. Vous pouvez filtrer la liste des abonnements pour identifier les erreurs, les avertissements et les abonnements qui ne fonctionnent pas correctement. Cet onglet vous permet également de : accéder aux propriétés d'abonnement, accéder aux informations détaillées sur l'agent ou les agents associés à un abonnement, réinitialiser des abonnements et valider des abonnements.  
   
@@ -102,7 +101,7 @@ ms.locfileid: "54128549"
   
      Cet onglet ne s'affiche pas pour les serveurs de distribution exécutant des versions antérieures à [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
--   Onglet**Agents**   
+-   Onglet**Agents**  
   
      Cet onglet affiche les informations détaillées sur les agents et les travaux utilisés par tous les types de réplication. L'onglet permet également de démarrer et d'arrêter chaque agent ou travail.  
   
@@ -121,7 +120,7 @@ ms.locfileid: "54128549"
 ## <a name="viewing-information-and-performing-tasks-related-to-publications"></a>Affichage d'informations et réalisation de tâches associées aux publications  
  Le moniteur de réplication présente des informations sur les publications dans trois onglets ainsi que dans plusieurs fenêtres de détails :  
   
--   Onglet**Tous les abonnements**   
+-   Onglet**Tous les abonnements**  
   
      Cet onglet montre des informations sur tous les abonnements à la publication sélectionnée. Par défaut, cet onglet est trié par ordre de priorité : erreurs, puis avertissements, ensuite dans l'ordre croissant des performances (les abonnements les moins performants étant tout en haut).  
   
@@ -135,7 +134,7 @@ ms.locfileid: "54128549"
   
          La grille de cet onglet présente des icônes d'erreur et d'avertissement pour tous les abonnements qui nécessitent une attention particulière.  
   
--   Onglet**Agents**   
+-   Onglet**Agents**  
   
      Cet onglet affiche des informations sur les agents utilisés par la réplication. Cet onglet affiche des informations sur les agents suivants :  
   
@@ -147,7 +146,7 @@ ms.locfileid: "54128549"
   
      L'onglet permet aussi d'effectuer les tâches suivantes : accéder aux informations détaillées à propos de chaque agent, et démarrer ou arrêter chaque agent. Pour plus d'informations sur les agents associés aux abonnements (l'Agent de distribution et l'Agent de fusion), consultez la section « Affichage d'informations et réalisation de tâches associées aux abonnements » dans cette rubrique.  
   
--   Onglets**Avertissements**   
+-   Onglets**Avertissements**  
   
      Cet onglet permet de spécifier des avertissements et des alertes pour les agents. Pour plus d’informations, voir [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
@@ -235,7 +234,7 @@ ms.locfileid: "54128549"
   
      Cette boîte de dialogue vous permet de créer un profil incluant en option les valeurs d'un profil existant.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Surveillance de la réplication](../../../relational-databases/replication/monitor/monitoring-replication.md)  
   
   

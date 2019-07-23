@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 09d4279501110d15eab2ca339e33ddb9ab0cee3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f169daa1a885024366e0d2f5aae4df3d245ff75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911492"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>Leçon 5-3 : Modifier la valeur de configuration de la propriété Directory
 
@@ -30,7 +29,7 @@ Dans cette tâche, vous modifiez le paramètre de configuration, stocké dans le
   
 1.  Dans le Bloc-notes ou dans tout autre éditeur de texte, recherchez et ouvrez le fichier de configuration **SSISTutorial.dtsConfig** que vous avez créé à l’aide de l’Assistant Configuration de package au cours de la tâche précédente.  
   
-2.  Modifiez la valeur de l’élément **ConfiguredValue** pour qu’elle corresponde au chemin du dossier **New Sample Data** que vous avez créé dans la tâche précédente. N’encadrez pas le chemin de guillemets. Si le dossier **New Sample Data** se trouve à la racine de votre lecteur (par exemple, **C:\\**), le code XML mis à jour doit être semblable à l’exemple suivant :  
+2.  Modifiez la valeur de l’élément **ConfiguredValue** pour qu’elle corresponde au chemin du dossier **New Sample Data** que vous avez créé dans la tâche précédente. N’encadrez pas le chemin de guillemets. Si le dossier **New Sample Data** se trouve à la racine de votre lecteur (par exemple, **C:\\** ), le code XML mis à jour doit être semblable à l’exemple suivant :  
   
     ```
     <?xml version="1.0"?>

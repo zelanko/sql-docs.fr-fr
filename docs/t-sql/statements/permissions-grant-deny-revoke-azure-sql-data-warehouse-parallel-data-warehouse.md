@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dda1ea78f8a3c795562faa52478d736f9525a252
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129365"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>Autorisations : GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>Arguments  
- \<permission>[ **,**...*n* ]  
+ \<permission>[ **,** ...*n* ]  
  Une ou plusieurs autorisations à accorder, refuser ou révoquer.  
   
  ON [ \<class_type> :: ] *securable* La clause **ON** décrit le paramètre de l’élément sécurisable pour lequel accorder, refuser ou révoquer des autorisations.  
@@ -88,10 +87,10 @@ REVOKE
  *securable*  
  Nom de l’objet (connexion, base de données, table, vue, schéma, procédure, rôle ou utilisateur) pour lequel accorder, refuser ou révoquer des autorisations. Le nom de l’objet peut être spécifié avec les règles de nommage en trois parties qui sont décrites dans [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
- TO *principal* [ **,**...*n* ]  
+ TO *principal* [ **,** ...*n* ]  
  Un ou plusieurs principaux pour lesquels les autorisations sont accordées, refusées ou révoquées. Le principal est le nom d’une connexion, d’un utilisateur de base de données ou d’un rôle de base de données.  
   
- FROM *principal* [ **,**...*n* ]  
+ FROM *principal* [ **,** ...*n* ]  
  Un ou plusieurs principaux pour lesquels révoquer des autorisations.  Le principal est le nom d’une connexion, d’un utilisateur de base de données ou d’un rôle de base de données. **FROM** peut uniquement être utilisé avec une instruction **REVOKE**. **TO** peut être utilisé avec **GRANT**, **DENY** ou **REVOKE**.  
   
  WITH GRANT OPTION  
@@ -106,7 +105,7 @@ REVOKE
 > [!IMPORTANT]  
 >  Si le principal a l’autorisation spécifiée sans l’option **GRANT**, l’autorisation elle-même est révoquée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour accorder une autorisation, le fournisseur d’autorisations doit avoir l’autorisation elle-même avec **WITH GRANT OPTION** ou une autorisation plus élevée qui implique l’autorisation accordée.  Les propriétaires d'objets peuvent accorder des autorisations sur les objets qu'ils possèdent. Les principaux avec l’autorisation **CONTROL** sur un élément sécurisable peuvent accorder une autorisation sur cet élément.  Les membres des rôles de base de données fixes **db_owner** et **db_securityadmin** peuvent accorder n’importe quelle autorisation dans la base de données.  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
@@ -244,7 +243,7 @@ REVOKE
   
  ![Schéma des autorisations de sécurité APS](../../t-sql/statements/media/aps-security-perms-poster.png "Schéma des autorisations de sécurité APS")  
   
- Pour télécharger une version en taille réelle de ce schéma, consultez [Autorisations de SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) dans la section de fichiers du site APS Yammer (ou envoyez une demande par e-mail à **apsdoc@microsoft.com**.  
+ Pour télécharger une version en taille réelle de ce schéma, consultez [Autorisations de SQL Server PDW](https://go.microsoft.com/fwlink/?LinkId=244249) dans la section de fichiers du site APS Yammer (ou envoyez une demande par e-mail à **apsdoc@microsoft.com** .  
   
 ## <a name="default-permissions"></a>Autorisations par défaut  
  La liste suivante décrit les autorisations par défaut :  
@@ -276,7 +275,7 @@ GRANT CONTROL SERVER TO [Ted];
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
-### <a name="b-granting-a-server-level-permission-to-a-login"></a>b. Accord d’une autorisation de niveau serveur à une connexion  
+### <a name="b-granting-a-server-level-permission-to-a-login"></a>B. Accord d’une autorisation de niveau serveur à une connexion  
  L’exemple suivant accorde une autorisation de niveau serveur sur une connexion à un principal de serveur (une autre connexion).  
   
 ```  

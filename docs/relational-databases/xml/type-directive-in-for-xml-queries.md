@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e99b9c4fbfa9b0d20a78a9d76e4730ce46966d3b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078028"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>Directive TYPE dans les requêtes FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ GO
 ```  
   
 ### <a name="querying-results-of-a-for-xml-query"></a>Interrogation des résultats d'une requête FOR XML  
- Les requêtes FOR XML renvoient des données XML. Par conséquent, vous pouvez appliquer des méthodes de type **xml** , telles que **query()** et **value()**, au résultat XML retourné par des requêtes FOR XML.  
+ Les requêtes FOR XML renvoient des données XML. Par conséquent, vous pouvez appliquer des méthodes de type **xml** , telles que **query()** et **value()** , au résultat XML retourné par des requêtes FOR XML.  
   
  Dans la requête suivante, la méthode `query()` du type de données **xml** permet d’interroger le résultat de la requête `FOR XML`. Pour plus d’informations, consultez [Méthode query&#40;&#41; &#40;type de données xml&#41;](../../t-sql/xml/query-method-xml-data-type.md).  
   
@@ -128,7 +127,7 @@ SELECT @FirstPhoneFromAdditionalContactInfo;
  L'expression de chemin d'accès XQuery dans la méthode `value()` extrait le premier numéro de téléphone d'un contact client dont `BusinessEntityID` a pour valeur `1`.  
   
 > [!NOTE]  
->  Si la directive TYPE n’est pas spécifiée, le résultat de la requête FOR XML est retourné en tant que type **nvarchar(max)**.  
+>  Si la directive TYPE n’est pas spécifiée, le résultat de la requête FOR XML est retourné en tant que type **nvarchar(max)** .  
   
 ### <a name="using-for-xml-query-results-in-insert-update-and-delete-transact-sql-dml"></a>Utilisation des résultats de la requête FOR XML dans INSERT, UPDATE et DELETE (Transact-SQL DML)  
  L'exemple suivant montre comment des requêtes FOR XML peuvent être utilisées dans des instructions DML (Data Manipulation Language, langage de manipulation de données). Dans l’exemple, la requête `FOR XML` retourne une instance de type **xml** . L'instruction `INSERT` insère ce document XML dans une table.  
@@ -149,7 +148,7 @@ SELECT (SELECT XmlCol.query('/Root')
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [FOR XML &#40;SQL Server&#41;](../../relational-databases/xml/for-xml-sql-server.md)  
   
   

@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: 2ee95a32-5140-41bd-9ab3-a947b9990688
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7effa50d8e280cbb310b7aeadd9100e82a62a77f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: da59f10213eab84f52b764f41625d6f9361f0a40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060989"
 ---
 # <a name="create-database-encryption-key-transact-sql"></a>CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -79,7 +78,7 @@ Spécifie le nom du chiffreur utilisé pour chiffrer la clé de chiffrement de b
 ENCRYPTION BY SERVER ASYMMETRIC KEY Encryptor_Name  
 Spécifie le nom de la clé asymétrique utilisée pour chiffrer la clé de chiffrement de base de données. Afin de chiffrer la clé de chiffrement de base de données avec une clé asymétrique, la clé asymétrique doit résider sur un fournisseur de gestion de clés extensible.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Une clé de chiffrement de base de données est nécessaire avant qu’une base de données puisse être chiffrée en utilisant le *chiffrement transparent des données* (TDE). Lorsqu'une base de données est chiffrée de façon transparente, elle l'est entièrement au niveau des fichiers, sans aucune modification de code spéciale. Le certificat ou la clé asymétrique utilisé pour chiffrer la clé de chiffrement de base de données doit se trouver dans la base de données système principale.  
   
 Les instructions de chiffrement de base de données ne sont autorisées que sur les bases de données utilisateur.  
@@ -90,7 +89,7 @@ La clé de chiffrement de base de données n'a pas besoin d'être régénérée 
   
 Une clé de chiffrement de base de données est automatiquement créée pour une base de données [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Vous n’avez pas besoin de créer une clé à l’aide de l’instruction CREATE DATABASE ENCRYPTION KEY.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l'autorisation CONTROL sur la base de données et l'autorisation VIEW DEFINITION sur le certificat ou la clé asymétrique permettant de chiffrer la clé de chiffrement de base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -107,7 +106,7 @@ ENCRYPTION BY SERVER CERTIFICATE MyServerCert;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Chiffrement transparent des données &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)   
 [Chiffrement SQL Server](../../relational-databases/security/encryption/sql-server-encryption.md)   
 [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)   
