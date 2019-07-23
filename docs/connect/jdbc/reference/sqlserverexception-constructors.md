@@ -1,5 +1,5 @@
 ---
-title: Sqlserverexception, constructeurs | Microsoft Docs
+title: Constructeurs SQLServerException | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8d0173778acb15fe9588eb5959b7fd03c5391767
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 963eb40a05206125fe6d941af4af6b4fade2197e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971033"
 ---
 # <a name="sqlserverexception-constructors"></a>SQLServerException, constructeurs
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Initialise une nouvelle instance de la [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) classe.
+  Initialise une nouvelle instance de la classe [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) .
 
-  Pour plus d’informations sur les membres de [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), consultez [membres de SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md).  
+  Pour plus d’informations sur les membres de [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md), consultez [membres SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md).  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Méthode setWorkstationID (SQLServerDataSource) | Microsoft Docs
+title: Méthode setWorkstationID, (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c1093615-90bf-4918-9f05-8abd765ffb03
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3b9b4dd4ce34dcc39148a2346fd729a8dfb6b87f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08b09958276a5cc7f7cc3de6e56f7d7336ca9e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972031"
 ---
 # <a name="setworkstationid-method-sqlserverdatasource"></a>Méthode setWorkstationID (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ public void setWorkstationID(java.lang.String workstationID)
 #### <a name="parameters"></a>Paramètres  
  *workstationID*  
   
- Un **chaîne** qui contient le nom de l’ordinateur client.  
+ **Chaîne** qui contient le nom de l’ordinateur client.  
   
 ## <a name="remarks"></a>Notes  
- Le workstationID est le nom de l'ordinateur client ou du poste de travail. Si la propriété workstationID n’est pas définie, la valeur par défaut est construite en appelant la méthode de InetAddress.getLocalHost().getHostName(). Si getHostName retourne une valeur vide, la méthode getHostAddress().toString() est appelée.  
+ Le workstationID est le nom de l'ordinateur client ou du poste de travail. Si la propriété workstationID n’est pas définie, la valeur par défaut est construite en appelant la méthode InetAddress. getLocalHost (). getHostName (). Si getHostName retourne une valeur vide, la méthode getHostAddress (). toString () est appelée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

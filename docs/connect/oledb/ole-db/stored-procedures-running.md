@@ -14,13 +14,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0059c7c6e03c9abb9edf4cb3db35f8435174d8fc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993804"
 ---
 # <a name="stored-procedures---running"></a>Procédures stockées - Exécution
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "66795894"
   
 -   des fonctionnalités supplémentaires.  
   
- Le pilote OLE DB pour SQL Server prend en charge trois des mécanismes qui [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisent des procédures stockées pour retourner des données :  
+ Le pilote OLE DB pour SQL Server prend en charge trois des mécanismes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisés par les procédures stockées pour retourner les données:  
   
 -   Chaque instruction SELECT dans la procédure génère un jeu de résultats.  
   

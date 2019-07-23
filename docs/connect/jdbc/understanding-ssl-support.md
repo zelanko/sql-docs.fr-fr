@@ -1,5 +1,5 @@
 ---
-title: Présentation de prise en charge SSL | Microsoft Docs
+title: Fonctionnement de la prise en charge SSL | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe0ef2f88f2db6035bce1e7e72fd216882964e82
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 32820e38a8292068aa95c505a04292fbac2c69af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916612"
 ---
 # <a name="understanding-ssl-support"></a>Fonctionnement de la prise en charge SSL
 
@@ -37,11 +36,11 @@ Pour permettre aux applications d’utiliser le chiffrement SSL, le [!INCLUDE[j
   
  Le tableau suivant résume le comportement de la version du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] pour les différents scénarios de connexion SSL possibles. Chaque scénario utilise un ensemble différent de propriétés de connexion SSL. Le tableau inclut :  
   
-- **vide**: « la propriété n’existe pas dans la chaîne de connexion »  
+- **vide**: «la propriété n’existe pas dans la chaîne de connexion»  
   
-- **valeur**: « la propriété existe dans la chaîne de connexion et sa valeur est valide »  
+- **valeur**: «la propriété existe dans la chaîne de connexion et sa valeur est valide»  
   
-- **n’importe quel**: « Il n’a pas d’importance si la propriété existe dans la chaîne de connexion ou sa valeur n’est valide »  
+- **any**: «il n’est pas important que la propriété existe dans la chaîne de connexion ou que sa valeur soit valide»  
   
 > [!NOTE]  
 > Le même comportement s’applique à l’authentification utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à l’authentification intégrée Windows.  

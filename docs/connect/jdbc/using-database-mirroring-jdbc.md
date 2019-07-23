@@ -1,5 +1,5 @@
 ---
-title: À l’aide de la base de données mise en miroir (JDBC) | Microsoft Docs
+title: Utilisation de la mise en miroir de bases de données (JDBC) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2914adb0a69c680624365b7fe0af23f9615f6f05
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6c00b6a0697a4dc6f6e0a358b85fe1e211791826
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916251"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Utilisation de la mise en miroir de bases de données (JDBC)
 
@@ -41,7 +40,7 @@ Lorsque le serveur de la base de données principale échoue, l'application clie
 Lorsqu'une connexion est établie initialement, le serveur principal envoie l'identité de son partenaire de basculement au client qui sera utilisé lors d'un basculement. Lorsqu’une application tente d’établir une connexion initiale avec un serveur principal en échec, le client ne connaît pas l’identité du partenaire de basculement. Pour permettre aux clients de faire face à ce scénario, la propriété de chaîne de connexion failoverPartner, et éventuellement la méthode de source de données [setFailoverPartner](../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md), permet au client de spécifier tout seul l’identité du partenaire de basculement. La propriété du client ne sert que dans ce scénario ; si le serveur principal est disponible, elle n’est pas utilisée.
 
 > [!NOTE]  
-> Lorsqu'une propriété failoverPartner est spécifiée dans la chaîne de connexion ou conjointement avec un objet de la source de données, la propriété databaseName doit également être définie, sinon une exception sera levée. Si les propriétés failoverPartner et databaseName ne sont pas spécifiées explicitement, l'application ne tentera pas de basculer en cas d'échec du serveur de base de données principal. En d'autres termes, la redirection transparente fonctionne uniquement pour les connexions qui spécifient explicitement les propriétés failoverPartner et databaseName. Pour plus d’informations sur failoverPartner et d’autres propriétés de chaîne de connexion, consultez [définissant les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).
+> Lorsqu'une propriété failoverPartner est spécifiée dans la chaîne de connexion ou conjointement avec un objet de la source de données, la propriété databaseName doit également être définie, sinon une exception sera levée. Si les propriétés failoverPartner et databaseName ne sont pas spécifiées explicitement, l'application ne tentera pas de basculer en cas d'échec du serveur de base de données principal. En d'autres termes, la redirection transparente fonctionne uniquement pour les connexions qui spécifient explicitement les propriétés failoverPartner et databaseName. Pour plus d’informations sur failoverPartner et d’autres propriétés de chaîne de connexion, consultez [définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).
 
 Si le serveur partenaire de basculement fourni par le client ne fait pas référence à un serveur jouant le rôle de partenaire de basculement de la base de données spécifiée et si le serveur/la base de données mentionné(e) est mis(e) en miroir, la connexion est refusée par le serveur. Bien que la classe [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) fournisse la méthode [getFailoverPartner](../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md), cette méthode retourne uniquement le nom du partenaire de basculement spécifié dans la chaîne de connexion ou la méthode setFailoverPartner. Pour extraire le nom du partenaire de basculement réel actuellement en cours d’utilisation, utilisez l’instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :
 

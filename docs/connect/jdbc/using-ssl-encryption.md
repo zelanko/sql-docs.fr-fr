@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2cb0e7789e5b75aeed1f8e7bcbe50e25925606da
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 98c9cd99d8fd8a54c96a9301ac3a050b54614c17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003965"
 ---
 # <a name="using-ssl-encryption"></a>Utilisation du chiffrement SSL
 
@@ -33,7 +32,7 @@ L'activation du chiffrement SSL améliore la sécurité des données transmises 
 Les rubriques de cette section expliquent comment le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] prend en charge le chiffrement SSL, notamment les nouvelles propriétés de connexion, et comment vous pouvez configurer le magasin d’approbations côté client.  
   
 > [!NOTE]  
-> Le **hostNameInCertificate** propriété de connexion est recommandée pour valider un certificat SSL.  
+> La propriété de connexion **hostNameInCertificate** est recommandée pour valider un certificat SSL.  
 
 ## <a name="in-this-section"></a>Dans cette section  
 

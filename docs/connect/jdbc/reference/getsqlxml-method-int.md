@@ -1,5 +1,5 @@
 ---
-title: GetSqlXml, méthode (int) | Microsoft Docs
+title: Méthode getSQLXML (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a1b32d3a-d7c9-4086-ae2b-fc1da96949b1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9e64d3ae8cabd18b2c3e34e81bf0a515a64de1b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 957def695287bbd63d21e02859a441f07e3583be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979696"
 ---
 # <a name="getsqlxml-method-int"></a>Méthode getSQLXML (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +32,7 @@ public final java.sql.SQLXML getSQLXML(int parameterIndex)
 #### <a name="parameters"></a>Paramètres  
  *parameterIndex*  
   
- Un **int** qui indique l’index de paramètre.  
+ **Entier** qui indique l’index du paramètre.  
   
 ## <a name="return-value"></a>Valeur retournée  
  ASQLXMLobject.  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0c85a9c1-f27c-457e-8461-403cc03e2d17
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8bb95e1eb547037d7ecf1855f71fa519102cf621
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 248213fed555ffc029162c44bdcccb656c311703
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773493"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974288"
 ---
 # <a name="setencrypt-method-sqlserverdatasource"></a>Méthode setEncrypt (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public void setEncypt(boolean encrypt)
 #### <a name="parameters"></a>Paramètres  
  *encrypt*  
   
- **true** si le chiffrement Secure Sockets Layer (SSL) est activé entre le client et le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Dans le cas contraire, la valeur est **false**.  
+ **true** si le chiffrement protocole SSL (SSL) est activé entre le client et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]le. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="remarks"></a>Notes  
  Si la propriété encrypt est définie sur **true**, le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] vérifie que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise le chiffrement SSL pour toutes les données envoyées entre le client et le serveur, si un certificat est installé sur le serveur. La valeur par défaut est **false**.  

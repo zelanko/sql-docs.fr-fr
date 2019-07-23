@@ -13,13 +13,12 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB Driver for SQL Server)
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d520d07940acaefeb67d38c1e4da9547c8fea344
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: af89c2e803be83143351db85b48173b15fad04d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988885"
 ---
 # <a name="table-valued-parameters-ole-db-driver-for-sql-server"></a>Paramètres table (OLE DB Driver pour SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66802907"
   Les paramètres table ont été introduits dans [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] et offrent un moyen efficace de passer plusieurs lignes de données au serveur. Les paramètres table fournissent des fonctionnalités semblables aux tableaux de paramètres, mais offrent plus de souplesse et une intégration plus étroite avec [!INCLUDE[tsql](../../../includes/tsql-md.md)] ; ils améliorent souvent les performances. Les paramètres table peuvent également participer aux opérations basées sur des ensembles, contrairement aux tableaux de paramètres.  
   
   
- Pour plus d’informations sur les paramètres table et OLE DB, consultez [paramètres table &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
+ Pour plus d’informations sur les paramètres table et les OLE DB, consultez [ &#40;paramètres table OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md) 

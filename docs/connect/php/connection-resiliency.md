@@ -8,46 +8,46 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
-manager: v-hakaka
-ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 3edba0cde94d8661eed053319142ce7f84a70613
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62522040"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265166"
 ---
 # <a name="idle-connection-resiliency"></a>Résilience des connexions inactives
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Résilience des connexions](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) est le principe qu’une connexion inactive interrompue peut être rétablie, dans certaines contraintes. Si une connexion à Microsoft SQL Server échoue, la résilience des connexions permet au client tente automatiquement de rétablir la connexion. Résilience des connexions est une propriété de la source de données ; seul SQL Server 2014 et versions ultérieur et Azure SQL Database prend en charge la résilience des connexions.
+La résilience des [connexions](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) est le principe selon lequel une connexion inactive interrompue peut être rétablie, dans certaines limites. Si une connexion à Microsoft SQL Server échoue, la résilience des connexions permet au client de tenter automatiquement de rétablir la connexion. La résilience de connexion est une propriété de la source de données; Seuls les SQL Server 2014 et versions ultérieures et Azure SQL Database prennent en charge la résilience des connexions.
 
-Résilience des connexions est implémentée avec les deux mots clés de connexion qui peuvent être ajoutées aux chaînes de connexion : **ConnectRetryCount** et **ConnectRetryInterval**.
+La résilience des connexions est implémentée avec deux mots clés de connexion qui peuvent être ajoutés aux chaînes de connexion: **ConnectRetryCount** et **ConnectRetryInterval**.
 
 |Mot clé|Valeurs|Valeur par défaut|Description|
 |-|-|-|-|
-|**ConnectRetryCount**| Entier compris entre 0 et 255 (inclus)|1|Le nombre maximal de tentatives de rétablissement d’une connexion interrompue avant d’abandonner. Par défaut, une seule tentative pour rétablir la connexion lorsque le rompu. Une valeur de 0 signifie qu’aucune reconnexion ne sera tentée.|
-|**ConnectRetryInterval**| Entier compris entre 1 et 60 (inclus)|1| Durée, en secondes, entre les tentatives de rétablir une connexion. L’application tente de se reconnecter immédiatement lors de la détection d’une connexion interrompue et qu’il attendra puis **ConnectRetryInterval** secondes avant de réessayer. Ce mot clé est ignoré si **ConnectRetryCount** est égal à 0.
+|**ConnectRetryCount**| Entier compris entre 0 et 255 (inclus)|1|Nombre maximal de tentatives de rétablissement d’une connexion interrompue avant abandon. Par défaut, une seule tentative est effectuée pour rétablir une connexion en cas de rupture. La valeur 0 signifie qu’aucune reconnexion n’est tentée.|
+|**ConnectRetryInterval**| Entier compris entre 1 et 60 (inclus)|1| Durée, en secondes, entre les tentatives de rétablissement d’une connexion. L’application tentera de se reconnecter immédiatement lors de la détection d’une connexion interrompue, puis patienterez **ConnectRetryInterval** secondes avant de réessayer. Ce mot clé est ignoré si **ConnectRetryCount** est égal à 0.
 
-Si le produit de **ConnectRetryCount** multipliée par **ConnectRetryInterval** est supérieure à **LoginTimeout**, puis le client cesse d’une tentative de connexion une fois  **LoginTimeout** est atteinte ; sinon, il continuera à essayer de vous reconnecter jusqu'à ce que **ConnectRetryCount** est atteinte.
+Si le produit de **ConnectRetryCount** multiplié par **ConnectRetryInterval** est supérieur à **LoginTimeout**, le client cesse d’essayer de se connecter une fois que **LoginTimeout** est atteint. dans le cas contraire, il continuera à tenter de se reconnecter jusqu’à ce que **ConnectRetryCount** soit atteint.
 
 #### <a name="remarks"></a>Notes
 
-Résilience des connexions s’applique lorsque la connexion est inactive. Les défaillances qui se produisent pendant l’exécution d’une transaction, par exemple, ne déclenche pas les tentatives de reconnexion - elles échoue comme prévu. Les cas suivants, appelés des États de session non récupérable, ne déclenchent pas les tentatives de reconnexion :
+La résilience de la connexion s’applique lorsque la connexion est inactive. Les défaillances qui se produisent lors de l’exécution d’une transaction, par exemple, ne déclenchent pas de tentatives de reconnexion. elles échoueront normalement. Les situations suivantes, appelées États de session non récupérables, ne déclenchent pas de tentatives de reconnexion:
 
 * tables temporaires ;
 * Curseurs globaux et locaux
-* Verrous de transaction de niveau session et du contexte de transaction
+* Verrous de transaction au niveau du contexte de transaction et de la session
 * Verrous d’applications
-* EXECUTE AS / rétablir le contexte de sécurité
-* Gère OLE automation
+* EXÉCUTER en tant que/rétablir le contexte de sécurité
+* Handles OLE Automation
 * Handles XML préparés
 * Indicateurs de trace
 
 ## <a name="example"></a>Exemple
 
-Le code suivant se connecte à une base de données et exécute une requête. La connexion est interrompue par l’arrêt de la session et qu’une nouvelle requête est tentée à l’aide de la connexion interrompue. Cet exemple utilise l’exemple de base de données [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx).
+Le code suivant se connecte à une base de données et exécute une requête. La connexion est interrompue en arrêtant la session et une nouvelle requête est tentée à l’aide de la connexion rompue. Cet exemple utilise l’exemple de base de données [AdventureWorks](https://msdn.microsoft.com/library/ms124501%28v=sql.100%29.aspx).
 
-Dans cet exemple, nous spécifions un curseur mis en mémoire tampon avant d’interrompre la connexion. Si nous ne spécifiez pas un curseur mis en mémoire tampon, la connexion ne serait pas rétablie, car il y aurait un curseur côté serveur actif et par conséquent, la connexion ne serait pas inactive quand rompu. Toutefois, dans ce cas, nous pouvions sqlsrv_free_stmt() avant de s’arrêter la connexion pour videz pas le curseur, et la connexion est rétablie avec succès.
+Dans cet exemple, nous spécifions un curseur mis en mémoire tampon avant de rompre la connexion. Si nous ne spécifions pas de curseur mis en mémoire tampon, la connexion n’est pas rétablie, car il y a un curseur côté serveur actif et la connexion n’est donc pas inactive en cas de rupture. Toutefois, dans ce cas, nous pourrions appeler sqlsrv_free_stmt () avant de rompre la connexion pour libéré le curseur, et la connexion sera correctement rétablie.
 
 ```php
 <?php
@@ -122,7 +122,7 @@ sqlsrv_close( $conn );
 sqlsrv_close( $conn_break );
 ?>
 ```
-Sortie attendue :
+Sortie attendue:
 ```
 Statement 1 successful.
 290 rows in result set.

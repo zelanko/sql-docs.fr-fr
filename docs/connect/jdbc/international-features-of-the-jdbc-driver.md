@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b555568ae93936c1f8659b52ba6bb731e8398e0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5e9d6902733ea8a9cca91b4bd33adcb66708672
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956475"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Caractéristiques internationales du pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66781662"
 ## <a name="handling-of-character-data"></a>Gestion des données de type caractères  
  Les données de type caractère dans Java sont traitées par défaut en tant qu’Unicode ; l’objet Java **String**représente des données de type caractère Unicode. Dans le pilote JDBC, les méthodes getter et setter du flux de données ASCII constituent la seule exception à cette règle ; il s'agit de cas à part, car ces méthodes utilisent des flux d'octets en se basant sur l'hypothèse implicite de pages de codes uniques et bien connues (ASCII).  
   
- En outre, le pilote JDBC fournit la **sendStringParametersAsUnicode** propriété chaîne de connexion. Cette propriété peut être utilisée pour spécifier que les paramètres préparés pour les données caractères sont envoyés en tant que caractères ASCII ou en tant que jeu de caractères multioctets (MBCS), et non en tant que caractères Unicode. Pour plus d’informations sur la **sendStringParametersAsUnicode** propriété de chaîne de connexion, consultez [définissant les propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
+ En outre, le pilote JDBC fournit la propriété de chaîne de connexion **sendStringParametersAsUnicode** . Cette propriété peut être utilisée pour spécifier que les paramètres préparés pour les données caractères sont envoyés en tant que caractères ASCII ou en tant que jeu de caractères multioctets (MBCS), et non en tant que caractères Unicode. Pour plus d’informations sur la propriété de chaîne de connexion **sendStringParametersAsUnicode** , consultez [définition des propriétés de connexion](../../connect/jdbc/setting-the-connection-properties.md).  
   
 ### <a name="driver-incoming-conversions"></a>Conversions entrantes du pilote  
  Les données de type texte Unicode provenant du serveur ne doivent pas être converties. Elles sont transmises directement en Unicode. Les données non-Unicode provenant du serveur sont converties en Unicode à partir de la page de codes des données, au niveau base de données ou colonne. Le pilote JDBC utilise les routines de conversion de machine virtuelle Java (Java Virtual Machine, JVM) pour effectuer ces conversions. Ces conversions sont effectuées sur toutes les méthodes getter des flux de données de type chaînes et caractères.  
@@ -47,7 +46,7 @@ ms.locfileid: "66781662"
  Par ailleurs, les méthodes d’API basées sur des caractères non nationaux, comme les méthodes setString, setCharacterStream et setClob methods des classes [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) et [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), envoient leurs valeurs au serveur au format Unicode seulement quand la propriété **sendStringParametersAsUnicode** est définie sur « true », qui est la valeur par défaut.  
   
 ## <a name="non-unicode-parameters"></a>Paramètres non Unicode  
- Pour des performances optimales avec **CHAR**, **VARCHAR** ou **LONGVARCHAR** type de paramètres non Unicode, définissez le **sendStringParametersAsUnicode** connexion propriété sur « false » de type chaîne et utiliser les méthodes des caractères non nationaux.  
+ Pour obtenir des performances optimales avec les types **char**, **varchar** ou **LONGVARCHAR** de paramètres non-Unicode, définissez la propriété de chaîne de connexion **sendStringParametersAsUnicode** sur «false» et utilisez les méthodes de caractères non nationales.  
   
 ## <a name="formatting-issues"></a>Problèmes de mise en forme  
  Pour les dates, les heures et les devises, toute la mise en forme des données localisées est effectuée au niveau du langage Java avec l’objet Locale, et les différentes méthodes de mise en forme pour les types de données **Date**, **Calendar** et **Number**. Dans le cas, rare, où le pilote JDBC doit passer des données sensibles respectant les paramètres régionaux dans un format localisé, le programme approprié de mise en forme est utilisé avec les paramètres régionaux par défaut de la machine virtuelle Java.  

@@ -1,5 +1,5 @@
 ---
-title: Les objets de Source de données persistants | Microsoft Docs
+title: Objets de source de données persistants | Microsoft Docs
 description: Objets de source de données persistants
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - persisted data source objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9369c4a533778fa460a1aa55cf6e7172ae78c340
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c8ba02b1b459e3f1381138eaa708658b317cd9f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015943"
 ---
 # <a name="persisted-data-source-objects"></a>Objets source de données persistants
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server prend en charge les objets de source de données persistantes avec la **IPersistFile** interface.  
+  Le pilote OLE DB pour SQL Server prend en charge les objets de source de données persistants avec l’interface **IPersistFile** .  
   
 ## <a name="examples"></a>Exemples  
  **A. Rendre persistante l’initialisation d’une source de données :**  
@@ -233,6 +232,6 @@ HRESULT InitFromPersistedDS
  La méthode **IPersistFile::Save** peut être appelée avant ou après l’appel de **IDBInitialize::Initialize**. Le fait d’appeler cette méthode après un retour réussi de **IDBInitialize::Initialize** garantit qu’une spécification de source de données valide est rendue persistante.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets Source de données &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objets &#40;de source de données OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

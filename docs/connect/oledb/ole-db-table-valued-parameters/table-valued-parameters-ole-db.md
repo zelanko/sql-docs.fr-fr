@@ -13,25 +13,24 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB)
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0c146939a0bc980b61e3871b57fb13bd8891f519
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3f942130244aaf08d533ac4a1abdc1752971209d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015271"
 ---
 # <a name="table-valued-parameters-ole-db"></a>Paramètres table (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cette section décrit la prise en charge pour les paramètres table dans OLE DB Driver pour SQL Server. Contient des informations de présentation supplémentaires, consultez [paramètres table &#40;OLE DB Driver pour SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md). Pour obtenir un exemple, consultez [utiliser les paramètres &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md).  
+  Cette section décrit la prise en charge des paramètres table dans OLE DB Driver for SQL Server. Pour plus d’informations sur la vue d’ensemble, consultez [paramètres &#40;table OLE DB&#41;pilote pour SQL Server](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md). Pour obtenir un exemple, consultez [utiliser des &#40;paramètres table OLE DB&#41;](../../oledb/ole-db-how-to/use-table-valued-parameters-ole-db.md).  
   
 ## <a name="remarks"></a>Notes  
  Vous pouvez actuellement envoyer des données à lignes multiples au serveur en tant que paramètres à une procédure, avec des jeux de paramètres (le paramètre DBPARAMS dans **ICommand::Execute**). Avec des jeux de paramètres, chaque élément du jeu doit être envoyé dans une demande d'appel de procédure distante séparée au serveur. Les paramètres table fournissent des fonctionnalités semblables, mais l'intégration avec le serveur est meilleure. Cela réduit le nombre de demandes d’appel de procédure distante et autorise des opérations basées sur des jeux sur le serveur.  
   
- Paramètres table sont pris en charge dans OLE DB Driver pour SQL Server en tant que OLE DB **ensemble de lignes** objets. Tout objet **Rowset** peut être fourni par le consommateur (autrement dit, l’application cliente utilisant OLE DB Driver for SQL Server) en tant qu’espace réservé pour les paramètres de paramètre table. Les paramètres table sont traités comme tout autre type de paramètre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le pilote OLE DB pour SQL Server fournit la création, la découverte, spécification, liaison et les interfaces de schéma.  
+ Les paramètres de valeur de table sont pris en charge dans OLE DB pilote pour les SQL Server en tant qu’objets d' **ensemble de lignes** OLE DB. Tout objet **Rowset** peut être fourni par le consommateur (autrement dit, l’application cliente utilisant OLE DB Driver for SQL Server) en tant qu’espace réservé pour les paramètres de paramètre table. Les paramètres table sont traités comme tout autre type de paramètre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le pilote OLE DB pour SQL Server fournit des interfaces de création, de découverte, de spécification, de liaison et de schéma.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   

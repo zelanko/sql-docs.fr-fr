@@ -1,6 +1,6 @@
 ---
 title: Exécuter une procédure stockée avec ODBC CALL et traiter la sortie | Microsoft Docs
-description: Traiter les codes de retour et paramètres à l’aide de OLE DB Driver pour SQL Server de sortie
+description: Traiter les codes de retour et les paramètres de sortie à l’aide du pilote OLE DB pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 - ODBC CALL syntax
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2985c343d7e7b330197ed5c0e3b7aeff1284d279
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c8b591cf2c903bb974af613dec17269c2d9f10fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015629"
 ---
 # <a name="execute-stored-procedure-with-odbc-call-and-process-output"></a>Exécuter une procédure stockée avec ODBC CALL et traiter la sortie
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,13 +36,13 @@ ms.locfileid: "66791257"
   
 2.  Créez un jeu de liaisons (un pour chaque marqueur de paramètre) en utilisant un tableau de structures DBBINDING.  
   
-3.  Créez un accesseur pour les paramètres définis à l’aide de la **IAccessor::CreateAccessor** (méthode). **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
+3.  Créez un accesseur pour les paramètres définis à l’aide de la méthode **IAccessor:: CreateAccessor** . **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
   
 4.  Remplissez la structure DBPARAMS.  
   
 5.  Appelez la commande **Execute** (dans ce cas, un appel à une procédure stockée).  
   
-6.  Traiter l’ensemble de lignes et libérez-le à l’aide du **IRowset::Release** (méthode).  
+6.  Traitez l’ensemble de lignes et libérez-le à l’aide de la méthode **IRowset:: Release** .  
   
 7.  Traitez les valeurs de codes de retour et de paramètres de sortie reçues à partir de la procédure stockée.  
   

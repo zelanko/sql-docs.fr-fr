@@ -1,5 +1,5 @@
 ---
-title: Relire les données de Trace | Microsoft Docs
+title: Relire les données de trace | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8717043764d67ab16217da7beecdc7bfee6515c3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 7495e00200455be05b621124c0276d07727d58cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949955"
 ---
 # <a name="replay-trace-data"></a>Relire les données de trace
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "67729345"
   
  Utilisez l’option de **relecture** de l’outil d’administration pour initialiser l’étape de relecture d’événements de la relecture distribuée. Cette étape consiste en deux parties : la répartition des données de trace et le démarrage et la synchronisation de la relecture distribuée.  
   
- ![Distributed Replay d’événement](../../tools/distributed-replay/media/eventreplay.gif "Distributed Replay d’événement")  
+ ![Relecture d’événements distribués](../../tools/distributed-replay/media/eventreplay.gif "Relecture d’événements distribués")  
   
  Vous pouvez relire les données de trace dans l'un de ces deux modes de mise en séquence : mode simultané (stress) ou mode de synchronisation. Le comportement par défaut consiste à relire les données de trace en mode simultané (stress). Pour plus d'informations sur l'étape de relecture d'événements et les modes de mise en séquence, consultez [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md).  
   

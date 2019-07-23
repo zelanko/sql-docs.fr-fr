@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8d050831-8305-48a8-bd22-207932111040
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50e21e43670b1cc84899aa363a2024983068f7a8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7673bf2aff3d5ea60966a8594d3b4ab13950f92d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974632"
 ---
 # <a name="setclientinfo-method-javalangstring-javalangstring"></a>Méthode setClientInfo (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public void setClientInfo (java.lang.String name,
   
  *value*  
   
- Chaîne qui contient la valeur pour affecter à la propriété d’informations client.  
+ Chaîne qui contient la valeur à affecter à la propriété d’informations client.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setClientInfo est spécifiée par la méthode setClientInfo dans l’interface java.sql.Connection.  
+ Cette méthode setClientInfo est spécifiée par la méthode setClientInfo dans l’interface java. Sql. Connection.  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] ne prend en charge aucune propriété d’informations client. Dans la version 2.0 du pilote JDBC, cette méthode génère un avertissement pour une propriété. Les applications doivent utiliser la méthode [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) pour récupérer un avertissement.  
   

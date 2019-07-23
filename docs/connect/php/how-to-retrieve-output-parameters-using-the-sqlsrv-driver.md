@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1157bab7-6ad1-4bdb-a81c-662eea3e7fcd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a2dac9b1561fbe5b05c96ce8a9ba5f5dd74594ce
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db1216f513f353a6c703805c7aabe7b8dd468115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993399"
 ---
 # <a name="how-to-retrieve-output-parameters-using-the-sqlsrv-driver"></a>Procédure : récupérer des paramètres de sortie à l’aide du pilote SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -121,10 +120,10 @@ sqlsrv_close( $conn);
 ```  
 
 > [!NOTE]
-> Lors de la liaison d’un paramètre de sortie à un type bigint, si la valeur peut retrouver en dehors de la plage d’un [entier](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), vous devez spécifier son type de champ SQL en tant que SQLSRV_SQLTYPE_BIGINT. Sinon, elle peut entraîner une exception de « valeur hors limites ».
+> Lors de la liaison d’un paramètre de sortie à un type bigint, si la valeur peut se terminer en dehors de la plage d’un [entier](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md), vous devez spécifier son type de champ SQL comme SQLSRV_SQLTYPE_BIGINT. Dans le cas contraire, une exception «valeur hors limites» peut se produire.
 
 ## <a name="example-2"></a>Exemple 2
-Cet exemple de code montre comment lier une valeur bigint volumineux comme paramètre de sortie.  
+Cet exemple de code montre comment lier une valeur bigint de grande taille en tant que paramètre de sortie.  
 
 ```
 <?php

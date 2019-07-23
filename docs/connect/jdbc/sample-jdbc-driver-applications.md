@@ -1,5 +1,5 @@
 ---
-title: Exemples d’Applications de pilote JDBC | Microsoft Docs
+title: Exemples d’applications de pilote JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 385a5d46129aac81125e29b182cb5a9fdde13897
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3227aa1fc886c72b1655fc8ef9770be2c914af3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945837"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Exemples d'applications du pilote JDBC
 
@@ -40,7 +39,7 @@ Les rubriques de cette section décrivent la configuration et l'exécution des e
 | [Utiliser des types de données &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | Ces exemples d’applications présentent l’utilisation des méthodes des types de données du pilote JDBC pour travailler avec des données dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].                                                                                           |
 | [Utilisation de jeux de résultats](../../connect/jdbc/working-with-result-sets.md)                                   | Ces exemples d’applications présentent l’utilisation de jeux de résultats pour traiter des données contenues dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].                                                                                                         |
 | [Utilisation de données volumineuses](../../connect/jdbc/working-with-large-data.md)                                     | Ces exemples d’applications montrent comment utiliser la mise en mémoire tampon adaptative pour récupérer des données de valeur élevée d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sans la charge mémoire associée aux curseurs côté serveur.                                                      |
-| [Découverte et classification des données SQL](../../connect/jdbc/data-discovery-classification-sample.md) | Cet exemple d’application montre comment récupérer les informations de Classification et de découverte de données contenues dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données à partir d’un objet de jeu de résultats à l’aide du pilote JDBC.                                      |
+| [Découverte et classification des données SQL](../../connect/jdbc/data-discovery-classification-sample.md) | Cet exemple d’application montre comment récupérer les informations de découverte et de classification des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] données contenues dans une base de données à partir d’un objet ResultSet à l’aide du pilote JDBC.                                      |
   
 ## <a name="see-also"></a>Voir aussi
 

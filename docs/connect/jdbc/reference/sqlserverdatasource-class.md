@@ -1,5 +1,5 @@
 ---
-title: Classe SQLServerDataSource | Microsoft Docs
+title: SQLServerDataSource, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 916a3c318cf96fa5114b7e0e6bc1a3caae815d4b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a1de4bc16b37c6224c0dfbb5556f59b6e15d825a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971524"
 ---
 # <a name="sqlserverdatasource-class"></a>SQLServerDataSource, classe
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public class SQLServerDataSource
 ```  
   
 ## <a name="remarks"></a>Notes  
- Cette classe prend en charge la Désencapsulation dans la classe SQLServerDataSource, l’interface ISQLServerDataSource et l’interface de source de données. Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Cette classe prend en charge la désencapsulation dans la classe SQLServerDataSource, l’interface ISQLServerDataSource et l’interface DataSource. Pour plus d’informations, consultez [wrappers et interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

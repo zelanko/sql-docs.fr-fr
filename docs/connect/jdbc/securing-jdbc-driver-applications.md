@@ -1,5 +1,5 @@
 ---
-title: Sécurisation des Applications de pilote JDBC | Microsoft Docs
+title: Sécurisation des applications de pilote JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3a7a8079f60336bbdfe7b837afa2313f5fda2691
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c539e94b9fdcd3d1cd281e1a0f1043eec55739bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945744"
 ---
 # <a name="securing-jdbc-driver-applications"></a>Sécurisation des applications de pilote JDBC
 
@@ -34,7 +33,7 @@ Les rubriques de cette section décrivent certains problèmes de sécurité cour
 | [Validation des entrées utilisateur](../../connect/jdbc/validating-user-input.md)             | Décrit des techniques permettant de valider l'entrée utilisateur.                                                                                                                          |
 | [Sécurité des applications](../../connect/jdbc/application-security.md)               | Décrit comment utiliser des autorisations de stratégie Java afin d'aider à sécuriser une application de pilote JDBC.                                                                                |
 | [Utilisation du chiffrement SSL](../../connect/jdbc/using-ssl-encryption.md)               | Décrit comment établir un canal de communication sécurisé avec une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide du protocole SSL (Secure Sockets Layer). |
-| [Mode FIPS](../../connect/jdbc/fips-mode.md)                                     | Décrit comment utiliser le pilote JDBC dans un mode conforme à FIPS.                                                                                                              |
+| [Mode FIPS](../../connect/jdbc/fips-mode.md)                                     | Décrit comment utiliser le pilote JDBC en mode compatible FIPS.                                                                                                              |
   
 ## <a name="see-also"></a>Voir aussi  
 

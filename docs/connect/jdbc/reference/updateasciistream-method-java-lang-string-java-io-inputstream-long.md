@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d426e8b9-62b7-49f8-9863-8697fd3a7085
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f340131d0f08b77efe1b497299405fcae8dc1dfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf88e18d8b68bff0f2d82d589e5760bfbb25d12e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986278"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream-long"></a>Méthode updateAsciiStream (java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateAsciiStream(java.lang.String columnName,
   
  *streamValue*  
   
- Un objet InputStream.  
+ Objet InputStream.  
   
  *length*  
   
@@ -49,7 +48,7 @@ public void updateAsciiStream(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateAsciiStream est spécifiée par la méthode updateAsciiStream dans l’interface java.sql.ResultSet.  
+ Cette méthode updateAsciiStream est spécifiée par la méthode updateAsciiStream dans l’interface java. Sql. ResultSet.  
   
  Cette méthode passe les caractères ASCII (octets) à partir d’un objet InputStream vers des colonnes de caractères convertibles, qui correspondent à la plage ASCII [0x00 - 0x7F] Unicode et aux pages de codes 874, 932, 936, 949, 950 et 1250 jusqu’à 1258. Cette méthode effectue une conversion de la page de classement de destination. La tentative de mise à jour d'une colonne de destination non convertible entraîne la levée d'une exception. Pour les colonnes binaires, des octets bruts sont passés.  
   

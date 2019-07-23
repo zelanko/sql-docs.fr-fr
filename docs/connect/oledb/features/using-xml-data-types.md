@@ -1,6 +1,6 @@
 ---
-title: À l’aide des Types de données XML | Microsoft Docs
-description: À l’aide des Types de données XML avec OLE DB Driver pour SQL Server
+title: Utilisation des types de données XML | Microsoft Docs
+description: Utilisation de types de données XML avec OLE DB pilote pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -30,13 +30,12 @@ helpviewer_keywords:
 - COLUMNS rowset
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 8de7c74e41a3f61105c7b70cc453ee8d361ba7ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d3554363e4813dfb4b3f6cbeefec00214d5a2d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988788"
 ---
 # <a name="using-xml-data-types"></a>Utilisation de types de données XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "66796072"
  `INSERT INTO xmltable(xmlcol) VALUES(N'<?xml version="1.0" encoding="UTF-8"?><doc/>')`  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver pour SQL Server 
- DBTYPE_XML est un nouveau type de données au format XML dans le pilote OLE DB pour SQL Server. De plus, vous pouvez accéder aux données XML par le biais des types OLE DB existants DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT et DBTYPE_IUNKNOWN. Les données stockées dans les colonnes de type XML peuvent être récupérées à partir d’une colonne d’un ensemble de lignes OLE DB Driver pour SQL Server dans les formats suivants :  
+ DBTYPE_XML est un nouveau type de données spécifique à XML dans le pilote OLE DB pour SQL Server. De plus, vous pouvez accéder aux données XML par le biais des types OLE DB existants DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT et DBTYPE_IUNKNOWN. Les données stockées dans les colonnes de type XML peuvent être récupérées à partir d’une colonne d’un ensemble de lignes OLE DB Driver pour SQL Server dans les formats suivants :  
   
 -   Chaîne de texte  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66796072"
 > [!NOTE]  
 >  OLE DB Driver pour SQL Server n’inclut pas de lecteur SAX, mais vous pouvez aisément passer l’interface **ISequentialStream** à des objets SAX et DOM dans MSXML.  
   
- **ISequentialStream** doit être utilisée pour la récupération de documents XML volumineux. Les mêmes techniques utilisées pour les types de valeur élevée s'appliquent également à XML. Pour plus d’informations, consultez [à l’aide des Types de valeur volumineux](../../oledb/features/using-large-value-types.md).  
+ **ISequentialStream** doit être utilisée pour la récupération de documents XML volumineux. Les mêmes techniques utilisées pour les types de valeur élevée s'appliquent également à XML. Pour plus d’informations, consultez [utilisation de types de valeur élevée](../../oledb/features/using-large-value-types.md).  
   
  Les données stockées dans les colonnes de type XML dans un ensemble de lignes peuvent également être récupérées, insérées ou mises à jour par une application via les interfaces classiques, comme **IRow::GetColumns**, **IRowChange::SetColumns** et **ICommand::Execute**. De la même façon que pour la récupération, une application peut passer une chaîne de texte ou une interface **ISequentialStream** à OLE DB Driver pour SQL Server.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "66796072"
   
  Les conversions de données fournies par les services principaux OLE DB (**IDataConvert**) ne s’appliquent pas à DBTYPE_XML.  
   
- La validation s'effectue lorsque les données sont envoyées au serveur. Validation côté client et l’encodage des modifications doivent être gérés par votre application. Il est recommandé que vous ne pas traiter les données XML directement, mais utilisez plutôt un lecteur DOM ou SAX pour le traiter.  
+ La validation s'effectue lorsque les données sont envoyées au serveur. Les modifications de validation et d’encodage côté client doivent être gérées par votre application. Il est recommandé de ne pas traiter les données XML directement, mais plutôt d’utiliser un lecteur DOM ou SAX pour le traiter.  
   
  Les types DBTYPE_NULL et DBTYPE_EMPTY peuvent être liés pour des paramètres d'entrée mais pas pour des paramètres de résultats ou pour des sorties. S'ils sont liés pour des paramètres d'entrée, l'état doit être défini sur DBSTATUS_S_ISNULL ou DBSTATUS_S_DEFAULT.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "66796072"
  DBTYPE_IUNKNOWN est une liaison prise en charge (voir le tableau précédent), mais il n’existe aucune conversion entre DBTYPE_XML et DBTYPE_IUNKNOWN. DBTYPE_IUNKNOWN ne peut pas être utilisé avec DBTYPE_BYREF.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Ajout et modifications dans les ensembles de lignes OLE DB  
- OLE DB Driver pour SQL Server ajoute de nouvelles valeurs ou modifie à la plupart des principaux ensembles de lignes de schéma OLE DB.  
+ OLE DB pilote pour SQL Server ajoute de nouvelles valeurs ou des modifications à un grand nombre d’ensembles de lignes de schéma OLE DB principaux.  
   
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Ensembles de lignes de schéma COLUMNS et PROCEDURE_PARAMETERS  
  Les ajouts réalisés dans les ensembles de lignes de schéma COLUMNS et PROCEDURE_PARAMETERS incluent les colonnes suivantes :  
@@ -167,7 +166,7 @@ ms.locfileid: "66796072"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Ajouts et modifications effectués dans le jeu de propriétés OLE DB  
- OLE DB Driver pour SQL Server ajoute de nouvelles valeurs ou modifie à la plupart de la propriété OLE DB core jeux.  
+ OLE DB pilote pour SQL Server ajoute de nouvelles valeurs ou des modifications à un grand nombre de jeux de propriétés de OLE DB principaux.  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERPARAMETER  
  Pour permettre la prise en charge du type de données **xml** via OLE DB, OLE DB Driver pour SQL Server implémente le nouveau jeu de propriétés DBPROPSET_SQLSERVERPARAMETER qui contient les valeurs suivantes.  
@@ -190,7 +189,7 @@ ms.locfileid: "66796072"
  De même que les valeurs SSPROP_PARAM, toutes ces propriétés sont facultatives et sont vides par défaut. Les valeurs SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME et SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME peuvent être spécifiées uniquement si la valeur SSPROP_COL_XML_SCHEMACOLLECTIONNAME est spécifiée. Lorsque vous passez des données XML au serveur, si ces valeurs sont incluses, leur raison d'être (validité) est vérifiée par rapport à la base de données actuelle et les données d'instance sont vérifiées par rapport au schéma. Dans tous les cas, pour être valides, elles doivent toutes être vides ou renseignées.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Ajout et modifications dans l'interface OLE DB  
- OLE DB Driver pour SQL Server ajoute de nouvelles valeurs ou modifie à la plupart des principales qu'interfaces OLE DB.  
+ OLE DB pilote pour SQL Server ajoute de nouvelles valeurs ou des modifications à la plupart des interfaces OLE DB principales.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Interface ISSCommandWithParameters  
  Pour permettre la prise en charge du type de données **xml** via OLE DB, OLE DB Driver pour SQL Server implémente plusieurs modifications, notamment l’ajout de l’interface [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md). Cette nouvelle interface hérite de l’interface OLE DB **ICommandWithParameters** principale. Outre les trois méthodes héritées **d’ICommandWithParameters** (**GetParameterInfo**, **MapParameterNames** et **SetParameterInfo**), **ISSCommandWithParameters** fournit les méthodes [GetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) et [SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) employées pour la gestion des types de données spécifiques au serveur.  

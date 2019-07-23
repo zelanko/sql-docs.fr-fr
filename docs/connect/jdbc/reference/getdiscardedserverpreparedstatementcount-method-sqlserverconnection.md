@@ -1,5 +1,5 @@
 ---
-title: getdiscardedserverpreparedstatementcount, méthode (SQLServerConnection) | Microsoft Docs
+title: Méthode getDiscardedServerPreparedStatementCount (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2910453562cf78c4b88140de15885d4ddca5fe3a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5843deb0b1d598525efcc657b16fe0b610048a35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983626"
 ---
 # <a name="getdiscardedserverpreparedstatementcount-method-sqlserverconnection"></a>getDiscardedServerPreparedStatementCount, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- Retourne le nombre d’actuellement en attente préparée instruction ces actions.
+ Retourne le nombre d’actions d’annulation de préparation d’instruction préparée en suspens.
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -36,13 +35,13 @@ public int getDiscardedServerPreparedStatementCount()
 ```  
 
 ## <a name="return-value"></a>Valeur retournée
- Un **int** qui contient le nombre d’instruction préparée en suspens ces actions.
+ **Entier** qui contient le nombre d’actions d’annulation de préparation d’instruction préparée en suspens.
 
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Notes  
- Cette méthode est disponible à partir de la version du pilote JDBC 6.4 et ultérieur.
+ Cette méthode est disponible dans la version 6,4 et les versions ultérieures du pilote JDBC.
  
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

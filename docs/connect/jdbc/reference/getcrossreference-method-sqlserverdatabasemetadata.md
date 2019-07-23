@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 099dd0bf-b017-479d-9696-f5b06f4c6bf9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2fc70ed3e449840793dbd32e4d2014031256f3bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f23da4d83217fbed39e6dddacfe92541eae0db23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66763004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984220"
 ---
 # <a name="getcrossreference-method-sqlserverdatabasemetadata"></a>Méthode getCrossReference (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,27 +42,27 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
 #### <a name="parameters"></a>Paramètres  
  *cat1*  
   
- Un **chaîne** qui contient le nom du catalogue de la table qui contient la clé primaire.  
+ **Chaîne** qui contient le nom du catalogue de la table qui contient la clé primaire.  
   
  *schem1*  
   
- Un **chaîne** qui contient le nom de schéma de la table qui contient la clé primaire.  
+ **Chaîne** qui contient le nom de schéma de la table qui contient la clé primaire.  
   
  *tab1*  
   
- Un **chaîne** qui contient le nom de la table de la table qui contient la clé primaire.  
+ **Chaîne** qui contient le nom de table de la table qui contient la clé primaire.  
   
  *cat2*  
   
- Un **chaîne** qui contient le nom du catalogue de la table qui contient la clé étrangère.  
+ **Chaîne** qui contient le nom du catalogue de la table qui contient la clé étrangère.  
   
  *schem2*  
   
- Un **chaîne** qui contient le nom de schéma de la table qui contient la clé étrangère.  
+ **Chaîne** qui contient le nom de schéma de la table qui contient la clé étrangère.  
   
  *tab2*  
   
- Un **chaîne** qui contient le nom de la table de la table qui contient la clé étrangère.  
+ **Chaîne** qui contient le nom de table de la table qui contient la clé étrangère.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
@@ -72,7 +71,7 @@ public java.sql.ResultSet getCrossReference(java.lang.String cat1,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getCrossReference est spécifiée par la méthode getCrossReference dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getCrossReference est spécifiée par la méthode getCrossReference dans l’interface java. Sql. DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getCrossReference contient les informations suivantes :  
   

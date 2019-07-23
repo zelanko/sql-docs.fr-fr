@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 96a17c186c5eb39765d94d88310b1c77d73633b4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994600"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Utiliser des paramètres table (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +32,9 @@ ms.locfileid: "66791053"
   
 -   Utilisation des propriétés de paramètre personnalisées à l'aide de ISSCommandWithParameters.  
   
--   Illustre la gestion des erreurs pour les erreurs MSOLEDBSQL.  
+-   Affiche la gestion des erreurs pour les erreurs de MSOLEDBSQL.  
   
- Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;OLE DB Driver pour SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
+ Pour plus d’informations sur les paramètres table, consultez [paramètres &#40;table OLE DB pilote pour SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md).  
   
 ## <a name="example"></a>Exemple  
  La première liste de code ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) crée la base de données utilisée par l'exemple.  

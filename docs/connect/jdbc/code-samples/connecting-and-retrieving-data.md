@@ -1,5 +1,5 @@
 ---
-title: Connexion et l’extraction de données | Microsoft Docs
+title: Connexion et récupération de données | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c87089b59855ef2c68a9e3b1051ed39850d7b17e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 310c66f6951a467b368fc44e1933bc6c8b6b36b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957278"
 ---
 # <a name="connecting-and-retrieving-data"></a>Connexion et extraction de données
 
@@ -25,7 +24,7 @@ ms.locfileid: "66770064"
 Lorsque vous travaillez avec le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], il existe deux méthodes principales pour établir une connexion à une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La première méthode consiste à définir les propriétés de connexion de l'URL de connexion, puis à appeler la méthode getConnection de la classe DriverManager pour retourner un objet [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
 > [!NOTE]  
-> Pour obtenir la liste des propriétés de connexion pris en charge par le pilote JDBC, consultez [définissant les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md).  
+> Pour obtenir la liste des propriétés de connexion prises en charge par le pilote JDBC, consultez [définition des propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md).  
   
 La seconde méthode implique de définir les propriétés de connexion grâce aux méthodes setter de la classe [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md), puis d'appeler la méthode [getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) pour retourner un objet SQLServerConnection.  
   

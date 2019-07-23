@@ -1,5 +1,5 @@
 ---
-title: À l’aide des Types de base de données | Microsoft Docs
+title: Utilisation des types de données de base | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2018
 ms.prod: sql
@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916358"
 ---
 # <a name="using-basic-data-types"></a>Utilisation des types de données de base
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] utilise les types de données de base JDBC pour convertir les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un format compréhensible par le langage de programmation Java et inversement. Le pilote JDBC fournit la prise en charge de l’API JDBC 4.0, qui inclut le **SQLXML** type de données et les types de données nationaux (Unicode), tel que **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**, et **NCLOB**.  
+Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] utilise les types de données de base JDBC pour convertir les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un format compréhensible par le langage de programmation Java et inversement. Le pilote JDBC prend en charge l’API JDBC 4,0, qui inclut le type de données **SQLXML** et les types de données nationaux (Unicode), tels que **nchar**, **nvarchar**, **LONGNVARCHAR**et **NCLOB**.  
   
 ## <a name="data-type-mappings"></a>Mappages de type de données
 
@@ -69,7 +68,7 @@ Le tableau suivant répertorie les mappages par défaut entre les types de donn�
   
 (1) pour utiliser java.sql.Time avec le type d’heure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez affecter à la propriété de connexion **sendTimeAsDatetime** la valeur False.  
   
-(2) vous pouvez accéder par programmation aux valeurs de **datetimeoffset** avec [classe DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
+(2) vous pouvez accéder par programmation aux valeurs de **DateTimeOffset** avec la [classe DateTimeOffset](../../connect/jdbc/reference/datetimeoffset-class.md).  
   
 Les sections suivantes proposent des exemples d'utilisation du pilote JDBC et des types de données de base. Pour obtenir un exemple plus détaillé sur l’utilisation des types de données de base dans une application Java, consultez [Exemple de types de données de base](../../connect/jdbc/basic-data-types-sample.md).  
   
@@ -86,11 +85,11 @@ Si vous devez récupérer des données d’une source de données et que vous co
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
-> Le getUnicodeStream getBigDecimal avec des méthodes de mise à l’échelle sont déconseillés et ne sont pas pris en charge par le pilote JDBC.
+> Les méthodes de mise à l’échelle getUnicodeStream et getBigDecimal sont déconseillées et ne sont pas prises en charge par le pilote JDBC.
 
 ## <a name="updating-data-by-data-type"></a>Mise à jour des données par type de données
 
-Si vous devez mettre à jour la valeur d’un champ dans une source de données, utilisez une de la mise à jour\<Type > méthodes de la classe SQLServerResultSet. Dans l’exemple suivant, la méthode [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) est appliquée conjointement avec la méthode [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) pour mettre à jour les données dans la source de données :  
+Si vous devez mettre à jour la valeur d’un champ dans une source de données, utilisez l’une\<des méthodes de type de mise à jour > de la classe SQLServerResultSet. Dans l’exemple suivant, la méthode [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) est appliquée conjointement avec la méthode [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) pour mettre à jour les données dans la source de données :  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -103,7 +102,7 @@ Si vous devez mettre à jour des données dans une source de données en utilisa
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
-Pour plus d’informations sur les requêtes paramétrables, consultez [à l’aide d’une instruction SQL avec des paramètres](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
+Pour plus d’informations sur les requêtes paramétrables, consultez [utilisation d’une instruction SQL avec des paramètres](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>Transmission de paramètres à une procédure stockée
 
@@ -114,7 +113,7 @@ Si vous devez transmettre des paramètres typés dans une procédure stockée, v
 > [!NOTE]  
 > Dans cet exemple, un jeu de résultats est retourné avec les résultats de l'exécution de la procédure stockée.
 
-Pour plus d’informations sur l’utilisation du pilote JDBC avec les procédures stockées et les paramètres d’entrée, consultez [à l’aide d’une procédure stockée avec des paramètres d’entrée](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+Pour plus d’informations sur l’utilisation du pilote JDBC avec les procédures stockées et les paramètres d’entrée, consultez [utilisation d’une procédure stockée avec des paramètres d’entrée](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>Extraction de paramètres d'une procédure stockée
 
@@ -125,7 +124,7 @@ Si vous devez récupérer des paramètres d’une procédure stockée, vous deve
 > [!NOTE]  
 > Outre le paramètre OUT retourné, un jeu de résultats peut également être retourné avec les résultats de l'exécution de la procédure stockée.  
   
-Pour plus d’informations sur l’utilisation du pilote JDBC avec les procédures stockées et les paramètres de sortie, consultez [à l’aide d’une procédure stockée avec paramètres de sortie](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
+Pour plus d’informations sur l’utilisation du pilote JDBC avec les procédures stockées et les paramètres de sortie, consultez [utilisation d’une procédure stockée avec des paramètres de sortie](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
 ## <a name="see-also"></a>Voir aussi
 

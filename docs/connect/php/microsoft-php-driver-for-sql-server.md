@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9dc380ea7eab9876980dfc9ee1ee050ff77fa237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8fcc4a39edfaafd7ae66990a2f1161d781d1219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936345"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Pilotes Microsoft SQL Server pour PHP
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Le Microsoft Drivers for PHP for SQL Server activer l’intégration avec SQL Server pour les applications PHP. Les pilotes sont des extensions PHP qui permettent la lecture et l’écriture des données de SQL Server à partir de scripts PHP. Les pilotes fournissent des interfaces pour l’accès aux données dans les bases de données SQL Azure et dans toutes les éditions de SQL Server 2005 et version ultérieure (y compris les éditions Express). Les pilotes bénéficier des fonctionnalités PHP, y compris les flux de données PHP, pour lire et écrire des objets.  
+Les pilotes Microsoft pour PHP pour SQL Server permettent l’intégration avec SQL Server pour les applications PHP. Les pilotes sont des extensions PHP qui permettent la lecture et l’écriture de données SQL Serveres à partir de scripts PHP. Les pilotes fournissent des interfaces pour accéder aux données dans les bases de données SQL Azure et dans toutes les éditions de SQL Server 2005 et versions ultérieures (y compris les éditions Express). Les pilotes utilisent les fonctionnalités PHP, y compris les flux PHP, pour lire et écrire des objets volumineux.  
   
 ## <a name="getting-started"></a>Mise en route  
 * [Étape 1 : configurer l’environnement de développement pour le développement PHP](step-1-configure-development-environment-for-php-development.md)  
@@ -40,12 +39,12 @@ Le Microsoft Drivers for PHP for SQL Server activer l’intégration avec SQL Se
 * [Ressources de support sur les pilotes Microsoft pour PHP pour SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## <a name="download"></a>Télécharger  
-* ![Téléchargement-bas encerclé](../../ssdt/media/download.png)[à télécharger des pilotes pour PHP pour SQL](download-drivers-php-sql-server.md)
+* ![Télécharger-DownArrow-cercle](../../ssdt/media/download.png)[pour télécharger les pilotes pour PHP pour SQL](download-drivers-php-sql-server.md)
   
 ## <a name="samples"></a>Exemples  
 * [Exemples de code pour les pilotes Microsoft pour PHP pour SQL Server](code-samples-for-php-sql-driver.md)
-* [Mise en route avec PHP sur Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
-* [Bien démarrer avec PHP sur macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
-* [Mise en route avec PHP sur Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
-* [Mise en route avec PHP sur Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
-* [Mise en route avec PHP sur SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)
+* [Prise en main avec PHP sur Windows](https://www.microsoft.com/sql-server/developer-get-started/php/windows/)
+* [Prise en main avec PHP sur macOS](https://www.microsoft.com/sql-server/developer-get-started/php/mac/)
+* [Prise en main avec PHP sur Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/php/ubuntu/)
+* [Prise en main avec PHP sur Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/php/rhel/)
+* [Prise en main avec PHP sur SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/php/sles/)

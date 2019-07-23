@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0c513265-cd0c-4b38-9494-94458c17a16d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ef12c6d5967adc66833146b07e9c8fa071e32a9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a4a271e07dea5a533dcb19b098a3e3de29e535e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973184"
 ---
 # <a name="setquerytimeout-method-sqlserverstatement"></a>setQueryTimeout, méthode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public final void setQueryTimeout(int seconds)
 #### <a name="parameters"></a>Paramètres  
  *secondes*  
   
- Un **int** qui indique le nombre de secondes à attendre, ou 0 s’il n’existe aucune limite.  
+ **Entier** qui indique le nombre de secondes à attendre, ou 0 s’il n’y a aucune limite.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setQueryTimeout est spécifiée par la méthode setQueryTimeout dans l’interface java.sql.Statement.  
+ Cette méthode setQueryTimeout est spécifiée par la méthode setQueryTimeout dans l’interface java. Sql. Statement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

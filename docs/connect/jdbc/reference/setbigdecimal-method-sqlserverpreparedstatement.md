@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 860f86db-d840-401a-a5c2-cd22e8cc1e4e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d232b5c103c43d9a8856982fd084e460bb521c6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8af0ef075e40444daec1b6e141294d85a74fe3ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975238"
 ---
 # <a name="setbigdecimal-method-sqlserverpreparedstatement"></a>setBigDecimal, méthode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,17 +38,17 @@ public final void setBigDecimal(int n,
 #### <a name="parameters"></a>Paramètres  
  *n*  
   
- Un **int** qui indique le numéro de paramètre.  
+ **Entier** qui indique le numéro du paramètre.  
   
  *x*  
   
- Un objet BigDecimal.  
+ Objet BigDecimal.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setBigDecimal est spécifiée par la méthode setBigDecimal dans l’interface java.sql.PreparedStatement.  
+ Cette méthode setBigDecimal est spécifiée par la méthode setBigDecimal dans l’interface java. Sql. PreparedStatement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

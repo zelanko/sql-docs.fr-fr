@@ -10,37 +10,36 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 62b84b7be01389cffd45175003066283ac14a7a8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cfd79f0cd7470ea94be1c77e5bc27016531909ad
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800796"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265395"
 ---
 # <a name="sql-data-developer"></a>Développeur de données SQL
-Plateforme de données SQL de Microsoft permet de créer des solutions orientées données sur des appareils mobiles et postes de travail pour les serveurs web, serveurs d’entreprise et le cloud.  
+Utilisez la plateforme de données SQL de Microsoft pour créer des solutions orientées données sur les appareils mobiles et les ordinateurs de bureau pour les serveurs Web, les serveurs d’entreprise et le Cloud.  
 
 ## <a name="sql-data-storage"></a>Stockage de données SQL
-* [Moteur de base de données SQL Server](../database-engine/configure-windows/sql-server-database-engine.md): utiliser le moteur de base de données SQL Server pour créer des bases de données relationnelles pour le traitement transactionnel en ligne ou les données de traitement analytique en ligne. 
-* [SQL Azure](https://docs.microsoft.com/azure/sql-database/): utilisez SQL Azure pour déplacer votre base de données vers le cloud 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876): SQL Server Compact pour générer des applications autonomes et occasionnellement connectées pour les appareils mobiles, postes de travail et les clients Web.
-* [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): utilisez base de données locale pendant le développement pour écrire et tester le code Transact-SQL sans avoir à gérer une instance de serveur complète de SQL Server.
+* [SQL Server moteur de base de données](../database-engine/configure-windows/sql-server-database-engine.md): utilisez le moteur de base de données SQL Server pour créer des bases de données relationnelles pour le traitement des transactions en ligne ou les données de traitement analytique en ligne. 
+* [SQL Azure](https://docs.microsoft.com/azure/sql-database/): utiliser SQL Azure pour déplacer votre base de données vers le Cloud 
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=17876): SQL Server Compact pour créer des applications autonomes et occasionnellement connectées pour des appareils mobiles, des ordinateurs de bureau et des clients Web.
+* Base de données [locale: utilisez](../database-engine/configure-windows/sql-server-2016-express-localdb.md)la base de données locale pendant le développement pour écrire et tester du code Transact-SQL sans avoir à gérer une instance de serveur complète de SQL Server.
 
 ## <a name="sql-data-tools"></a>Outils de données SQL
-* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : signale de SSDT d’utilisation pour la génération de bases de données relationnelles, bases de données SQL Azure, des packages Integration Services, les modèles de données Analysis Services et Reporting Services.
-* [Outils d’administration SQL Server](../ssms/download-sql-server-management-studio-ssms.md): utiliser SSMS configurer, surveiller et administrer les instances de SQL Server.
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : utilisez SSDT pour créer des bases de données relationnelles, des bases de données SQL Azure, des packages Integration Services, des modèles de données Analysis Services et des rapports Reporting Services.
+* [Outils d’administration SQL Server](../ssms/download-sql-server-management-studio-ssms.md): utilisez SSMS pour configurer, surveiller et administrer des instances de SQL Server.
 
-## <a name="sql-data-access"></a>Accès aux données de SQL
-* [Les pilotes clients SQL](sql-connection-libraries.md): pilotes Use SQL pour vous connecter, interroger, mettre à jour, insérer ou supprimer des données à partir d’une base de données SQL.
-* [Entity Framework](https://msdn.microsoft.com/library/gg696172.aspx): utiliser Entity Framework pour accéder facilement aux bases de données à l’aide de LINQ, avec un accès direct à SQL Server et l’option pour contrôler le mappage entre un modèle EDM (Entity Data Model) et des structures relationnelles brutes. 
-* [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/dd456779.aspx): utiliser les Services de données pour une solution quasi clés en main pour facilement créer et consommer des services OData sur le web et l’intranet
-* [Sync Framework](https://msdn.microsoft.com/library/jj839436.aspx): Sync Framework permet d’activer l’accès hors connexion à n’importe quel type de données, n’importe quel magasin de données, n’importe quel protocole de transfert et n’importe quelle topologie de réseau.
-* [Extensions réactives](https://msdn.microsoft.com/library/hh242985.aspx): utiliser les Extensions réactives (Rx) pour effectuer la programmation de flux d’événements et de simplifier la programmation asynchrone à l’aide de séquences observables et les opérateurs de requête de style LINQ.  Utilisez les Extensions réactives pour JavaScript (RxJS) pour simplifier la programmation asynchrone en fonction de rappel et événementiel sur le web à l’aide de séquences observables.
+## <a name="sql-data-access"></a>Accès aux données SQL
+* [Pilotes clients SQL](sql-connection-libraries.md): utilisez des pilotes SQL pour vous connecter, interroger, mettre à jour, insérer ou supprimer des données d’une base de données SQL.
+* [Entity Framework](https://msdn.microsoft.com/library/gg696172.aspx): utilisez la Entity Framework pour accéder facilement aux bases de données à l’aide de LINQ, avec un accès direct à SQL Server et l’option permettant de contrôler le mappage entre une Entity Data Model (EDM) et des structures relationnelles brutes. 
+* [Windows Communication Foundation (WCF)](https://msdn.microsoft.com/library/dd456779.aspx): utilisez Data Services pour une solution presque clé en main afin de créer et de consommer facilement des services OData sur le Web et sur l’intranet.
+* [Sync Framework](https://msdn.microsoft.com/library/jj839436.aspx): utilisez Sync Framework pour activer l’accès hors connexion à n’importe quel type de données, n’importe quel magasin de données, n’importe quel protocole de transfert et n’importe quelle topologie de réseau.
+* [Extensions](https://msdn.microsoft.com/library/hh242985.aspx)réactives: utilisez les extensions réactives (RX) pour exécuter la programmation de flux d’événements et simplifier la programmation asynchrone à l’aide de séquences observables et d’opérateurs de requête de style LINQ.  Utilisez les extensions réactives pour JavaScript (RxJS) pour simplifier la programmation asynchrone basée sur les rappels et pilotés par les événements sur le Web à l’aide de séquences observables.
 * [Intégration CLR](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md) : utilisez l’intégration CLR pour écrire des procédures stockées, des déclencheurs, des types, fonctions et des agrégats définis par l’utilisateur et des fonctions table de diffusion en continu, avec n’importe quel langage .NET Framework, notamment Microsoft Visual Basic .NET ou Microsoft Visual C#. 
-* [SQLXML 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): utilisation de SQLXML 4.0 pour exporter des données relationnelles au format XML.
+* [Sqlxml 4,0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): utilisez SQLXML 4,0 pour exporter des données relationnelles au format XML.
 
-## <a name="data-collection-processing-and-visualization"></a>Visualisation, le traitement et la collecte de données
+## <a name="data-collection-processing-and-visualization"></a>Collecte, traitement et visualisation des données
 * [Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
 * [Integration Services](../integration-services/integration-services-developer-documentation.md)  
 * [Master Data Services](../master-data-services/develop/master-data-services-developer-documentation.md)

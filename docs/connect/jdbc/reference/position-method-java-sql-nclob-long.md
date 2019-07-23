@@ -1,5 +1,5 @@
 ---
-title: Méthode position (java.sql.NClob, long) | Microsoft Docs
+title: position, méthode (Java. Sql. NClob, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 35d8a3903cc18ce371b2d6c333747710ac6efc7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea868190b635a9471bfad424d6fc74572970799b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976364"
 ---
 # <a name="position-method-javasqlnclob-long"></a>Méthode position (java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère la position de caractère à laquelle spécifié **NClob** objet *searchstr* s’affiche dans ce **NClob** objet.  
+  Récupère la position de caractère à laquelle l’objet **NCLOB** spécifié *searchstr* apparaît dans cet objet **NCLOB** .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,10 +46,10 @@ long position(java.sql.NClob searchstr,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode de position est spécifiée par la méthode de position dans l’interface java.sql.NClob.  
+ Cette méthode de position est spécifiée par la méthode position dans l’interface java. Sql. NClob.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthode position &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
+ [position, &#40;méthode SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   
  [SQLServerNClob, méthodes](../../../connect/jdbc/reference/sqlservernclob-methods.md)   
  [SQLServerNClob, membres](../../../connect/jdbc/reference/sqlservernclob-members.md)   
  [SQLServerNClob, classe](../../../connect/jdbc/reference/sqlservernclob-class.md)  

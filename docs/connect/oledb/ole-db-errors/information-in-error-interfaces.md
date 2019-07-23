@@ -1,5 +1,5 @@
 ---
-title: Informations dans les Interfaces d’erreur | Microsoft Docs
+title: Informations dans les interfaces d’erreur | Microsoft Docs
 description: Informations dans les interfaces d’erreur
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - errors [OLE DB], error interfaces
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 7b87011fc8d95d617562bb72ce6a3a6ee49ae0c5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4ff18864e37575f78d129abb1569b0ffe83d4685
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994933"
 ---
 # <a name="information-in-error-interfaces"></a>Informations dans les interfaces d'erreur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "66798124"
 
   Le pilote OLE DB pour SQL Server signale certaines informations d’erreur et d’état dans les interfaces d’erreur **IErrorInfo**, **IErrorRecords** et **ISQLErrorInfo** définies par OLE DB.  
   
- Le pilote OLE DB pour SQL Server prend en charge **IErrorInfo** membre fonctionne comme suit.  
+ Le pilote OLE DB pour SQL Server prend en charge les fonctions membres **IErrorInfo** comme suit.  
   
 |Fonction membre|Description|  
 |---------------------|-----------------|  
@@ -42,7 +41,7 @@ ms.locfileid: "66798124"
 |**GetHelpFile**|Non pris en charge. Retourne toujours la valeur Null.|  
 |**GetSource**|Chaîne « Pilote Microsoft OLE DB pour SQL Server »|  
   
- Le pilote OLE DB pour SQL Server prend en charge disponibles de consommateur **IErrorRecords** membre fonctionne comme suit.  
+ Le pilote OLE DB pour SQL Server prend en charge les fonctions membres **IErrorRecords** disponibles à l’utilisateur, comme suit.  
   
 |Fonction membre|Description|  
 |---------------------|-----------------|  
@@ -52,12 +51,12 @@ ms.locfileid: "66798124"
 |**GetErrorParameters**|Le pilote OLE DB pour SQL Server ne retourne pas de paramètres au consommateur via **GetErrorParameters**.|  
 |**GetRecordCount**|Nombre d'enregistrements d'erreur disponibles.|  
   
- Le pilote OLE DB pour SQL Server prend en charge **ISQLErrorInfo::GetSQLInfo** paramètres comme suit.  
+ Le pilote OLE DB pour SQL Server prend en charge les paramètres **ISQLErrorInfo:: GetSQLInfo** comme suit.  
   
 |Paramètre|Description|  
 |---------------|-----------------|  
-|*pbstrSQLState*|Retourne une valeur SQLSTATE pour l'erreur. Les valeurs SQLSTATE sont définies dans les spécifications SQL-92, ODBC et ISO SQL, et API. Ni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ni le pilote OLE DB pour SQL Server définie par les valeurs SQLSTATE spécifiques à l’implémentation.|  
-|*plNativeError*|Retourne le numéro d’erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de **master.dbo.sysmessages** s’il est disponible. Erreurs natives sont disponibles après une tentative d’initialiser un pilote OLE DB pour la source de données SQL Server. Avant la tentative, le pilote OLE DB pour SQL Server retourne toujours zéro.|  
+|*pbstrSQLState*|Retourne une valeur SQLSTATE pour l'erreur. Les valeurs SQLSTATE sont définies dans les spécifications SQL-92, ODBC et ISO SQL, et API. Ni [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ni le pilote OLE DB pour SQL Server défini des valeurs SQLSTATE spécifiques à l’implémentation.|  
+|*plNativeError*|Retourne le numéro d’erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de **master.dbo.sysmessages** s’il est disponible. Des erreurs natives sont disponibles après la réussite d’une tentative d’initialisation d’un pilote OLE DB pour SQL Server source de données. Avant la tentative, le pilote OLE DB pour SQL Server retourne toujours zéro.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Erreurs](../../oledb/ole-db-errors/errors.md)  

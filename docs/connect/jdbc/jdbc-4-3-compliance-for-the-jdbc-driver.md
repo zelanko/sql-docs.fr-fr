@@ -1,5 +1,5 @@
 ---
-title: JDBC 4.3 conformité pour le pilote JDBC | Microsoft Docs
+title: Compatibilité JDBC 4,3 pour le pilote JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 02aef28bb40c4d4f48b28630d1752c9e5f88c3e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 20cefb029a126b0a262d86a2dc0a0791959085bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956366"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>Conformité à JDBC 4.3 pour le pilote JDBC
 
@@ -25,11 +24,11 @@ ms.locfileid: "66781544"
 > [!NOTE]  
 > Les versions antérieures à Microsoft JDBC Driver 6.4 pour SQL Server sont conformes uniquement aux spécifications de l’API Java Database Connectivity (JDBC) 4.2. Cette section ne s’applique pas aux versions qui contiennent la version 6.4 et antérieures à celle-ci.
 
-Depuis la version 6.4, Microsoft JDBC Driver pour SQL Server JAVA 9 n’est compatible et lève `SQLFeatureNotSupportedException` pour les nouvelles API 4.3 JDBC qui ont non implémenté des méthodes.
+Depuis la version 6,4, le pilote JDBC Microsoft pour SQL Server est compatible avec Java 9 et `SQLFeatureNotSupportedException` lève une nouvelle API JDBC 4,3 qui a des méthodes non implémentées.
 
-Microsoft JDBC Driver 7.0 relatives à la version de SQL Server, le pilote est désormais JAVA 10 compatible, et prend en charge ci-dessous mentionné API. Le pilote lève `SQLFeatureNotSupportedException` pour d’autres méthodes non implémentées à partir de spécifications de JDBC 4.3.
+Avec le pilote Microsoft JDBC 7,0 pour la version SQL Server, le pilote est désormais compatible avec JAVA 10 et prend en charge les API mentionnées ci-dessous. Le pilote lève une `SQLFeatureNotSupportedException` exception pour d’autres méthodes non implémentées des spécifications JDBC 4,3.
 
 |Nouvelle API|Description|Implémentation intéressante|  
 |-----------------|-----------------|-------------------------------|  
-|void java.sql.connection.beginRequest()|Indicateurs pour le pilote qu’une demande, une unité de travail, indépendante commence sur cette connexion. Pour plus d'informations, voir [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Enregistre les valeurs des champs de connexion qui sont modifiables par le biais des méthodes API publiques : `databaseAutoCommitMode`, `transactionIsolationLevel`, `networkTimeout`, `holdability`, `sendTimeAsDatetime`, `statementPoolingCacheSize`, `disableStatementPooling`, `serverPreparedStatementDiscardThreshold`, `enablePrepareOnFirstPreparedStatementCall`, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
-|void java.sql.connection.endRequest()|Indicateurs pour le pilote d’une requête, une unité de travail, indépendante est terminée. Pour plus d'informations, voir [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--).|Ferme les instructions qui sont créées lors de l’unité de travail et restaure toutes les transactions ouvertes. La méthode rétablit également les modifications apportées aux champs de connexion qui sont répertoriés ci-dessus.|
+|void java.sql.connection.beginRequest()|Indications sur le pilote qu’une demande, une unité de travail indépendante, commence sur cette connexion. Pour plus d'informations, voir [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--).|Enregistre les valeurs des champs de connexion qui peuvent être modifiés par le biais de méthodes `databaseAutoCommitMode`d’API publiques: `sendTimeAsDatetime`, `statementPoolingCacheSize` `transactionIsolationLevel`, `disableStatementPooling` `networkTimeout`, `serverPreparedStatementDiscardThreshold` `holdability`, `enablePrepareOnFirstPreparedStatementCall`,,,,, `catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
+|void java.sql.connection.endRequest()|Indications sur le pilote qu’une demande, une unité de travail indépendante, est terminée. Pour plus d'informations, voir [java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--).|Ferme les instructions créées pendant l’unité de travail et restaure toutes les transactions ouvertes. La méthode rétablit également les modifications apportées aux champs de connexion répertoriés ci-dessus.|

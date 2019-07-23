@@ -1,5 +1,5 @@
 ---
-title: Rubriques de procédures OLE DB | Microsoft Docs
+title: Rubriques "Comment" relatives aux OLE DB | Microsoft Docs
 description: Rubriques de procédures OLE DB
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - OLE DB, how-to topics
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 829ced1eb0fc37a773f67e4fea9834d9c22205de
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5e1a6ea1debfb4a432ef63395e3e8b7fd476d891
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015617"
 ---
 # <a name="ole-db-how-to-topics"></a>Rubriques de procédures OLE DB
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "66791420"
   
 -   [Rubriques de procédures relatives au traitement des résultats &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [Définir des données volumineuses &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
+-   [Définir des OLE DB &#40;de données volumineuses&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [Énumérer des sources de données OLE DB &#40;OLE DB&#41;](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66791420"
   
 -   [Envoyer des données BLOB vers SQL SERVER en utilisant IROWSETFASTLOAD et ISEQUENTIALSTREAM &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [Utiliser des UDT CLR &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [Utilisez des UDT &#40;CLR de grande taille OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
 -   [Afficher les métadonnées de colonne et de catalogue pour les colonnes éparses (OLE DB)](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Exécution d’opérations de traitement par lots | Microsoft Docs
+title: Exécution d’opérations par lots | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4923354c5f6dc013d9fee0284279bb5b6b887556
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 244c20b2fb7721d117557581068791e1a2d99d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956224"
 ---
 # <a name="performing-batch-operations"></a>Exécution d'opérations par lot
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66801816"
   
  Les classes [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) et [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) sont toutes utilisables pour soumettre des mises à jour par lot. La méthode [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) permet d'ajouter une commande, la méthode [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) d'effacer la liste des commandes et la méthode [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) de soumettre toutes les commandes pour traitement. Seules des instructions DDL (Data Definition Language, langage de définition de données) et DML (Data Manipulation Language, langage de manipulation de données) qui retournent un seul nombre de mises à jour peuvent être exécutées dans un lot.  
   
- La méthode executeBatch retourne un tableau de valeurs **int** correspondant au nombre de mises à jour de chaque commande. Si une des commandes échoue, une BatchUpdateException est levée, et vous devez utiliser la méthode getUpdateCounts de la classe BatchUpdateException pour récupérer le tableau de nombres de mise à jour. En cas d'échec d'une commande, le pilote continue à traiter les commandes restantes. Toutefois, si une commande contient une erreur de syntaxe, les instructions contenues dans le lot échouent.  
+ La méthode executeBatch retourne un tableau de valeurs **int** correspondant au nombre de mises à jour de chaque commande. Si l’une des commandes échoue, une BatchUpdateException est levée et vous devez utiliser la méthode getUpdateCounts de la classe BatchUpdateException pour récupérer le tableau de nombres de mises à jour. En cas d'échec d'une commande, le pilote continue à traiter les commandes restantes. Toutefois, si une commande contient une erreur de syntaxe, les instructions contenues dans le lot échouent.  
   
 > [!NOTE]  
 >  Si vous n’avez pas besoin d’utiliser les nombres de mises à jour, vous pouvez commencer par émettre une instruction SET NOCOUNT ON auprès de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ceci réduira le trafic réseau et améliorera les performances de votre application.  

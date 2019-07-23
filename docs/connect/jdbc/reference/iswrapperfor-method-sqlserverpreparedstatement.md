@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b0e591b1-73e2-4f90-967f-5555eadfc3f1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 53ee00067de656065884f6b7a1da900fc59afeed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ca21e48e1cd4d28337339a1aecc17b92bb259c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977057"
 ---
 # <a name="iswrapperfor-method-sqlserverpreparedstatement"></a>Méthode isWrapperFor (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +32,7 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>Paramètres  
  *iface*  
   
- Un **classe** définissant une interface.  
+ **Classe** définissant une interface.  
   
 ## <a name="return-value"></a>Valeur retournée  
  **true** si cet objet implémente l’interface ou encapsule un objet qui implémente l’interface. Dans le cas contraire, la valeur est **false**.  
@@ -46,7 +45,7 @@ public boolean isWrapperFor(Class iface)
   
  Si cette méthode retourne la valeur True, l’appel de [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md) avec le même argument réussit.  
   
- Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Pour plus d’informations, consultez [wrappers et interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [unwrap, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverpreparedstatement.md)   

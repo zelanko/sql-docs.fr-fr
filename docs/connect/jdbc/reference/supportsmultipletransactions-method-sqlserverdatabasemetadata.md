@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 34ff8dcb-5487-46d1-a4c1-25e33eb3eee4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d984d5cf52ad0bc5b5b58df6914d00ef7722b8a4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e16b4f5590057424cfe67491cf4943399d54c01c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969188"
 ---
 # <a name="supportsmultipletransactions-method-sqlserverdatabasemetadata"></a>Méthode supportsMultipleTransactions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsMultipleTransactions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode supportsMultipleTransactions est spécifiée par la méthode supportsMultipleTransactions dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode supportsMultipleTransactions est spécifiée par la méthode supportsMultipleTransactions dans l’interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

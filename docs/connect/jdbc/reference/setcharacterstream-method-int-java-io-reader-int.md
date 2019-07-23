@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18e05d4707977499cff3864cef34e39f1bd45feb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3002c3375f14eb4c33554c960c567e4a3d8526b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974772"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>Méthode setCharacterStream (int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,11 +39,11 @@ public final void setCharacterStream(int n,
 #### <a name="parameters"></a>Paramètres  
  *n*  
   
- Un **int** qui indique le numéro de paramètre.  
+ **Entier** qui indique le numéro du paramètre.  
   
  *reader*  
   
- Un objet de lecteur.  
+ Objet lecteur.  
   
  *length*  
   
@@ -54,7 +53,7 @@ public final void setCharacterStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setCharacterStream est spécifiée par la méthode setCharacterStream dans l’interface java.sql.PreparedStatement.  
+ Cette méthode setCharacterStream est spécifiée par la méthode setCharacterStream dans l’interface java. Sql. PreparedStatement.  
   
  Si la longueur du flux diffère de celle spécifiée dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   

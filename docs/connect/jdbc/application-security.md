@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 832cb6991ad095ba13226f80408fbd919db00623
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aa7681890b09647cb554ef6c80e8646fb69c9f42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957468"
 ---
 # <a name="application-security"></a>Sécurité des applications
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
