@@ -1,6 +1,6 @@
 ---
-title: À l’aide des Types définis par l’utilisateur | Microsoft Docs
-description: À l’aide des Types définis par l’utilisateur avec OLE DB Driver pour SQL Server
+title: Utilisation de types définis par l’utilisateur | Microsoft Docs
+description: Utilisation de types définis par l’utilisateur avec OLE DB pilote pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: efc2c82f047beca82f1daeda6318f16803499f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 731e00fdf4c9f073348389f537fa812e10bcbab5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988798"
 ---
 # <a name="using-user-defined-types"></a>Utilisation des types définis par l'utilisateur
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,18 +44,18 @@ ms.locfileid: "66802860"
 >  La méthode **IRowsetFind::FindNextRow** ne fonctionne pas avec le type de données UDT. DB_E_BADCOMPAREOP est retourné si l'UDT est utilisé comme type de colonne de recherche.  
   
 ### <a name="data-bindings-and-coercions"></a>Liaisons de données et forçages de type  
- Le tableau suivant décrit la liaison et le forçage de type survenant lorsque vous utilisez les types de données répertoriés avec un UDT [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Colonnes UDT sont exposées via OLE DB Driver pour SQL Server sous la forme DBTYPE_UDT. Vous pouvez obtenir les métadonnées par le biais des ensembles de lignes de schéma appropriés et ainsi gérer en tant qu'objets vos propres types définis.  
+ Le tableau suivant décrit la liaison et le forçage de type survenant lorsque vous utilisez les types de données répertoriés avec un UDT [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les colonnes UDT sont exposées via le pilote OLE DB pour SQL Server en tant que DBTYPE_UDT. Vous pouvez obtenir les métadonnées par le biais des ensembles de lignes de schéma appropriés et ainsi gérer en tant qu'objets vos propres types définis.  
   
 |Type de données|Vers le serveur<br /><br /> **UDT**|Vers le serveur<br /><br /> **Non-UDT**|Depuis le serveur<br /><br /> **UDT**|Depuis le serveur<br /><br /> **Non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_UDT|Prise en charge<sup>6</sup>|Erreur<sup>1</sup>|Prise en charge<sup>6</sup>|Erreur<sup>5</sup>|  
-|DBTYPE_BYTES|Prise en charge<sup>6</sup>|N/A<sup>2</sup>|Prise en charge<sup>6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_WSTR|Prise en charge<sup>3,6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4.6</sup>|N/A<sup>2</sup>|  
-|DBTYPE_BSTR|Prise en charge<sup>3,6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_STR|Prise en charge<sup>3,6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4.6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_UDT|Pris en charge<sup>6</sup>|Erreur<sup>1</sup>|Pris en charge<sup>6</sup>|Erreur<sup>5</sup>|  
+|DBTYPE_BYTES|Pris en charge<sup>6</sup>|N/A<sup>2</sup>|Pris en charge<sup>6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_WSTR|Pris en charge<sup>: 3, 6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4.6</sup>|N/A<sup>2</sup>|  
+|DBTYPE_BSTR|Pris en charge<sup>: 3, 6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_STR|Pris en charge<sup>: 3, 6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4.6</sup>|N/A<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|Non pris en charge|N/A<sup>2</sup>|Non pris en charge|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Prise en charge<sup>6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4</sup>|N/A<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Prise en charge<sup>3,6</sup>|N/A<sup>2</sup>|Néant|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pris en charge<sup>6</sup>|N/A<sup>2</sup>|Pris en charge<sup>4</sup>|N/A<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Pris en charge<sup>: 3, 6</sup>|N/A<sup>2</sup>|Néant|N/A<sup>2</sup>|  
   
  <sup>1</sup>Si un type de serveur autre que DBTYPE_UDT est spécifié avec **ICommandWithParameters::SetParameterInfo** et si le type d’accesseur est DBTYPE_UDT, une erreur se produit lors de l’exécution de l’instruction (DB_E_ERRORSOCCURRED, l’état du paramètre est DBSTATUS_E_BADACCESSOR). Sinon, les données sont envoyées au serveur, mais le serveur retourne une erreur indiquant qu'il n'existe pas de conversion implicite entre l'UDT et le type de données du paramètre.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66802860"
  Les conversions de données fournies par les services principaux d’OLE DB (**IDataConvert**) ne s’appliquent pas à DBTYPE_UDT. Aucune autre liaison n'est prise en charge.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>Ajout et modifications dans les ensembles de lignes OLE DB  
- OLE DB Driver pour SQL Server ajoute de nouvelles valeurs ou modifie à la plupart des principaux ensembles de lignes de schéma OLE DB.  
+ OLE DB pilote pour SQL Server ajoute de nouvelles valeurs ou des modifications à un grand nombre d’ensembles de lignes de schéma OLE DB principaux.  
   
 #### <a name="the-procedureparameters-schema-rowset"></a>Ensemble de lignes de schéma PROCEDURE_PARAMETERS  
  Les ajouts suivants ont été effectués dans l'ensemble de lignes de schéma PROCEDURE_PARAMETERS.  
@@ -137,7 +136,7 @@ ms.locfileid: "66802860"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|Le nom de type complet (AQN) inclut le nom de type précédé, le cas échéant, de l'espace de noms.|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>Ajouts et modifications effectués dans le jeu de propriétés OLE DB  
- OLE DB Driver pour SQL Server ajoute de nouvelles valeurs ou modifie à la plupart de la propriété OLE DB core jeux.  
+ OLE DB pilote pour SQL Server ajoute de nouvelles valeurs ou des modifications à un grand nombre de jeux de propriétés de OLE DB principaux.  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>Jeu de propriétés DBPROPSET_SQLSERVERPARAMETER  
  Pour permettre la prise en charge des types UDT via OLE DB, OLE DB Driver pour SQL Server implémente le nouveau jeu de propriétés DBPROPSET_SQLSERVERPARAMETER qui contient les valeurs suivantes :  
@@ -173,7 +172,7 @@ ms.locfileid: "66802860"
  Si la définition du type défini par l'utilisateur (UDT) se trouve dans une base de données différente, SSPROP_COL_UDT_CATALOGNAME et SSPROP_COL_UDT_SCHEMANAME doivent être spécifiés.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>Ajout et modifications dans l'interface OLE DB  
- OLE DB Driver pour SQL Server ajoute de nouvelles valeurs ou modifie à la plupart des principales qu'interfaces OLE DB.  
+ OLE DB pilote pour SQL Server ajoute de nouvelles valeurs ou des modifications à la plupart des interfaces OLE DB principales.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>Interface ISSCommandWithParameters  
  Pour prendre en charge les types UDT via OLE DB, OLE DB Driver pour SQL Server implémente plusieurs modifications, notamment l’ajout de l’interface **ISSCommandWithParameters**. Cette nouvelle interface hérite de l’interface OLE DB **ICommandWithParameters** principale. Outre les trois méthodes héritées **d’ICommandWithParameters** (**GetParameterInfo**, **MapParameterNames** et **SetParameterInfo**), **ISSCommandWithParameters** fournit les méthodes **GetParameterProperties** et **SetParameterProperties** employées pour la gestion des types de données spécifiques au serveur.  

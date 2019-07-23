@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c6f0113072c99872236273e4e0fde5e368b48b26
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 8155524f6e5d8172092630c04dbb0540514b56ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099569"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>Propriétés de la base de données (page Envoi des journaux de transactions)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "51350453"
 > [!IMPORTANT]  
 >  Avant de créer un script des paramètres pour une base de données secondaire, vous devez appeler la boîte de dialogue **Paramètres de base de données secondaire** . L'appel de cette boîte de dialogue vous connecte au serveur secondaire et récupère les paramètres actuels de la base de données secondaire, nécessaires pour générer le script.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Procédures stockées de copie des journaux de transaction &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/log-shipping-stored-procedures-transact-sql.md)   
  [Tables de copie des journaux de transaction &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)  
   

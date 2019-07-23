@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c0c75d1bbeb25dade2bb8e333067fb244d8248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075500"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>Utiliser les tables inserted et deleted
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47830997"
 > [!NOTE]  
 >  Si les actions du déclencheur dépendent du nombre de lignes affectées par une modification de données, utilisez les tests (comme l’examen de @@ROWCOUNT) pour les modifications de données multilignes (une instruction INSERT, DELETE ou UPDATE basée sur une instruction SELECT), puis effectuez les opérations appropriées.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] n’autorise pas les références aux colonnes de type **text**, **ntext**ou **image** dans les tables inserted et deleted pour les déclencheurs AFTER. Cependant, ces types de données sont inclus à des fins de compatibilité ascendante uniquement. Pour le stockage des données volumineuses, il est préférable d’utiliser les types de données **varchar(max)**, **nvarchar(max)** et **varbinary(max)** . Les déclencheurs AFTER et INSTEAD OF prennent en charge les données **varchar(max)**, **nvarchar(max)** et **varbinary(max)** dans les tables inserted et deleted. Pour plus d’informations, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] n’autorise pas les références aux colonnes de type **text**, **ntext**ou **image** dans les tables inserted et deleted pour les déclencheurs AFTER. Cependant, ces types de données sont inclus à des fins de compatibilité ascendante uniquement. Pour le stockage des données volumineuses, il est préférable d’utiliser les types de données **varchar(max)** , **nvarchar(max)** et **varbinary(max)** . Les déclencheurs AFTER et INSTEAD OF prennent en charge les données **varchar(max)** , **nvarchar(max)** et **varbinary(max)** dans les tables inserted et deleted. Pour plus d’informations, consultez [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md).  
   
  **Exemple de l'utilisation de la table insérée dans un déclencheur pour imposer des règles d'entreprise**  
   
@@ -76,7 +75,7 @@ ms.locfileid: "47830997"
   
  Lorsqu'une instruction INSERT, UPDATE ou DELETE fait référence à une vue possédant un déclencheur INSTEAD OF, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] appelle le déclencheur au lieu d'effectuer une opération directe sur une table. Le déclencheur doit utiliser les informations présentées dans les tables inserted et deleted pour élaborer toute instruction nécessaire à l'implémentation de l'action requise dans les tables de base, même si le format des informations contenues dans les tables inserted et deleted conçues pour la vue diffère de celui des données stockées dans les tables de base.  
   
- Le format des tables inserted et deleted passées à un déclencheur INSTEAD OF défini sur une vue correspond à la liste de sélection de l'instruction SELECT définie pour la vue. Exemple :  
+ Le format des tables inserted et deleted passées à un déclencheur INSTEAD OF défini sur une vue correspond à la liste de sélection de l'instruction SELECT définie pour la vue. Par exemple :  
   
 ```  
 USE AdventureWorks2012;  

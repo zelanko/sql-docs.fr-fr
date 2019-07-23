@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c1e21c1e936b9da10fd1adfcc5afab901b0027bc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 201314f5869b9b1aab52b2f101f2396656448f79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994789"
 ---
 # <a name="retrieve-data-from-a-filestream-column-using-isequentialstream-ole-db"></a>Récupérer des données d'une colonne FILESTREAM à l'aide d'ISequentialStream (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66791474"
 
   Cet exemple montre comment utiliser une interface ISequentialStream dans une interface ICommandText pour récupérer un enregistrement unique d'une colonne Filestream.  
   
- Pour plus d’informations sur la fonctionnalité filestream, consultez [prise en charge FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Pour plus d’informations sur la fonctionnalité FileStream, consultez [prise en charge de FileStream](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Exemple  
  Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  

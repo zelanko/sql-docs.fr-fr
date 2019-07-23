@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ec90c3ca632a917bd0905063d2fee94f4c0dfa32
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: cbfc9ffa9ba188506e887201ca17ef630f1d04ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065937"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
 > [!WARNING]  
 >  Ne passez jamais des valeurs de clé CEK en texte clair dans cette instruction. Cela compromet l’avantage de cette fonctionnalité.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  En général, une clé de chiffrement de colonne est créée avec une seule valeur chiffrée. Quand une clé principale de colonne doit être permutée (c’est-à-dire quand la clé principale de colonne actuelle doit être remplacée par la nouvelle clé principale de colonne), vous pouvez ajouter une nouvelle valeur de la clé de chiffrement de colonne, chiffrée avec la nouvelle clé principale de colonne. Ce workflow vous permet de garantir que les applications clientes peuvent accéder aux données chiffrées avec la clé de chiffrement de colonne, tandis que la nouvelle clé principale de colonne est mise à la disposition des applications clientes. Un pilote avec Always Encrypted dans une application cliente qui n’a pas accès à la nouvelle clé principale peut utiliser la valeur de la clé de chiffrement de colonne chiffrée avec l’ancienne clé principale de colonne pour accéder aux données sensibles. Les algorithmes de chiffrement pris en charge par Always Encrypted exigent que la valeur de texte en clair comporte 256 bits. Une valeur chiffrée doit être générée à l’aide d’un fournisseur de magasin de clés qui encapsule le magasin de clés contenant la clé principale de colonne.  
 
  Les clés principales de colonne sont permutées pour les raisons suivantes :
@@ -73,7 +72,7 @@ ALTER COLUMN ENCRYPTION KEY key_name
 
 Pour afficher des informations sur les clés de chiffrement de colonne, utilisez [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md) et [sys.column_encryption_key_values &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Exige l’autorisation **ALTER ANY COLUMN ENCRYPTION KEY** sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -93,7 +92,7 @@ GO
   
 ```  
   
-### <a name="b-dropping-a-column-encryption-key-value"></a>b. Suppression d’une valeur de clé de chiffrement de colonne  
+### <a name="b-dropping-a-column-encryption-key-value"></a>B. Suppression d’une valeur de clé de chiffrement de colonne  
  L’exemple suivant modifie une clé de chiffrement de colonne nommée `MyCEK` en supprimant une valeur.  
   
 ```  
@@ -105,7 +104,7 @@ DROP VALUE
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-encryption-key-transact-sql.md)   
  [DROP COLUMN ENCRYPTION KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-column-encryption-key-transact-sql.md)   
  [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-column-master-key-transact-sql.md)   

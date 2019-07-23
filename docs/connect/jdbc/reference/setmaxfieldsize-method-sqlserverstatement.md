@@ -1,5 +1,5 @@
 ---
-title: setmaxfieldsize, méthode (SQLServerStatement) | Microsoft Docs
+title: Méthode setMaxFieldSize (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 38f7fc1d-acad-4d10-9fc8-3c0669d93b07
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 373af1b789843ca698bde40c4b4603eb7dbc500f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8958ffe76adbea75959dd15f87db58f28f0893b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973996"
 ---
 # <a name="setmaxfieldsize-method-sqlserverstatement"></a>setMaxFieldSize, méthode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public final void setMaxFieldSize(int max)
 #### <a name="parameters"></a>Paramètres  
  *max*  
   
- Un **int** qui indique le nombre maximal d’octets.  
+ **Entier** qui indique le nombre maximal d’octets.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setMaxFieldSize est spécifiée par la méthode setMaxFieldSize dans l’interface java.sql.Statement.  
+ Cette méthode setMaxFieldSize est spécifiée par la méthode setMaxFieldSize dans l’interface java. Sql. Statement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

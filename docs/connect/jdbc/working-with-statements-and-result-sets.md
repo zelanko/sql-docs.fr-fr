@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 16def64ceaf9f6387dacc0486bd125f6999df6e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fb6d545a3a7f8c3b29e5bc372aa4fdadf95edd52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003790"
 ---
 # <a name="working-with-statements-and-result-sets"></a>Travail sur des instructions et des jeux de résultats
 
@@ -28,9 +27,9 @@ Quand vous travaillez avec le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnovers
 
 Quand vous utilisez l’un des objets Statement du pilote JDBC, par exemple l’objet [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) ou [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md), vérifiez que vous utilisez l’objet approprié pour la tâche.
 
-- Si vous n’avez pas les paramètres de sortie, il est inutile d’utiliser l’objet SQLServerCallableStatement. Au lieu de cela, utilisez la SQLServerStatement ou l’objet SQLServerPreparedStatement.
+- Si vous n’avez pas de paramètres de sortie, vous n’avez pas besoin d’utiliser l’objet SQLServerCallableStatement. Au lieu de cela, utilisez l’objet SQLServerStatement ou SQLServerPreparedStatement.
 
-- Si vous ne souhaitez pas exécuter l’instruction plusieurs fois, ou que vous n’avez pas IN ou OUT, il est inutile d’utiliser l’objet SQLServerPreparedStatement ou SQLServerCallableStatement. Au lieu de cela, utilisez l’objet SQLServerStatement.
+- Si vous n’envisagez pas d’exécuter l’instruction plusieurs fois, ou si vous n’avez pas de paramètres IN ou OUT, vous n’avez pas besoin d’utiliser l’objet SQLServerCallableStatement ou SQLServerPreparedStatement. Utilisez plutôt l’objet SQLServerStatement.
 
 ## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>Utilisez l'accès simultané approprié aux objets ResultSet
 
@@ -38,7 +37,7 @@ Ne demandez pas d'accès simultané pouvant être mis à jour lorsque vous crée
 
 ## <a name="limit-the-size-of-your-result-sets"></a>Limitez la taille de vos jeux de résultats
 
-Utilisez la méthode [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) (ou la syntaxe SET ROWCOUNT ou SELECT TOP N SQL) pour limiter le nombre de lignes retournées par des jeux de résultats potentiellement volumineux. Si vous devez gérer des jeux de résultats volumineux, songez à utiliser une mise en mémoire tampon adaptative des réponses en définissant la propriété de chaîne de connexion responseBuffering=adaptive, qui est le mode par défaut. Cette approche permet à l'application de traiter des jeux de résultats volumineux sans nécessiter de curseurs côté serveur ; par ailleurs, elle réduit l'utilisation de la mémoire de l'application. Pour plus d’informations, consultez [à l’aide de mise en mémoire tampon adaptative](../../connect/jdbc/using-adaptive-buffering.md).
+Utilisez la méthode [setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) (ou la syntaxe SET ROWCOUNT ou SELECT TOP N SQL) pour limiter le nombre de lignes retournées par des jeux de résultats potentiellement volumineux. Si vous devez gérer des jeux de résultats volumineux, songez à utiliser une mise en mémoire tampon adaptative des réponses en définissant la propriété de chaîne de connexion responseBuffering=adaptive, qui est le mode par défaut. Cette approche permet à l'application de traiter des jeux de résultats volumineux sans nécessiter de curseurs côté serveur ; par ailleurs, elle réduit l'utilisation de la mémoire de l'application. Pour plus d’informations, consultez Utilisation de la [mise en mémoire tampon adaptative](../../connect/jdbc/using-adaptive-buffering.md).
 
 ## <a name="use-the-appropriate-fetch-size"></a>Utilisez la taille d'extraction appropriée
 

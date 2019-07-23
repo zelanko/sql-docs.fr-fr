@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6732a431-cdef-4f1e-9262-4ac3b77c275e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 95d7af5f6b5c0d1b6a0f162d09cb64b954ce5d09
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 54e2ce24f4fd0b0d94344029cd2f56e378e579dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067356"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Déplacer une base de données à l'aide de la méthode de détachement et d'attachement (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "53591503"
   
 3.  Attachez les fichiers copiés. Pour plus d’informations, consultez [Attach a Database](../../relational-databases/databases/attach-a-database.md).  
   
-## <a name="example"></a> Exemple  
+## <a name="example"></a>Exemple  
  L'exemple suivant crée une copie de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] nommée `MyAdventureWorks`. Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] sont exécutées dans une fenêtre d'éditeur de requêtes connectée à l'instance de serveur concernée par l'attachement.  
   
 1.  Détachez la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en exécutant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes :  
@@ -64,7 +63,7 @@ ms.locfileid: "53591503"
     > [!IMPORTANT]  
     >  Dans le cas d'une base de données de production, placez la base de données et le journal des transactions sur des disques distincts.  
   
-     Pour copier des fichiers via le réseau sur le disque d'un ordinateur distant, utilisez le nom UNC (Universal Naming Convention) de l'emplacement distant. Un nom UNC se présente sous la forme **\\\\**_Servername_**\\**_Sharename_**\\**_Path_**\\**_Filename_. Comme lors de l'écriture de fichiers sur le disque dur local, les autorisations appropriées nécessaires à la lecture et à l'écriture d'un fichier sur le disque distant doivent être accordées au compte d'utilisateur utilisé par l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Pour copier des fichiers via le réseau sur le disque d'un ordinateur distant, utilisez le nom UNC (Universal Naming Convention) de l'emplacement distant. Un nom UNC se présente sous la forme **\\\\** _Servername_ **\\** _Sharename_ **\\** _Path_ **\\** _Filename_. Comme lors de l'écriture de fichiers sur le disque dur local, les autorisations appropriées nécessaires à la lecture et à l'écriture d'un fichier sur le disque distant doivent être accordées au compte d'utilisateur utilisé par l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 3.  Attachez la base de données déplacée et si vous le souhaitez, son journal, en exécutant les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] suivantes :  
   
@@ -80,7 +79,7 @@ ms.locfileid: "53591503"
   
      Dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], une base de données nouvellement attachée n'est pas immédiatement visible dans l'Explorateur d'objets. Pour visualiser la base de données, dans l'Explorateur d'objets, cliquez sur **Affichage** puis sur **Actualiser**. Si le nœud **Bases de données** est développé dans l'Explorateur d'objets, la base de données récemment attachée apparaît dans la liste des bases de données.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Attacher et détacher une base de données &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  
   
   

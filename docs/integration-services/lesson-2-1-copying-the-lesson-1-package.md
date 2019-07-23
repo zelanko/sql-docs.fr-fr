@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 66077bac6ef3ce7f52b03eb5a439aa24a89449a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 421655cb190ac175b7e6c65cf6b296279efe25ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086606"
 ---
 # <a name="lesson-2-1-copy-the-lesson-1-package"></a>Leçon 2-1 : Copier le package de la leçon 1
 
@@ -46,7 +45,7 @@ Utilisez cette procédure si vous copiez la leçon 1 effectuée.  Pour copier l
   
 7.  Dans la fenêtre **Propriétés**, définissez la propriété **Nom** sur **Leçon 2**.  
   
-8.  Sélectionnez la zone de la propriété **ID**, la flèche déroulante, puis **\<Générer un nouvel ID>**.  
+8.  Sélectionnez la zone de la propriété **ID**, la flèche déroulante, puis **\<Générer un nouvel ID>** .  
   
 ## <a name="use-the-sample-lesson-1-package"></a>Utiliser l’exemple de package de la leçon 1  
   
@@ -56,7 +55,7 @@ Utilisez cette procédure si vous copiez la leçon 1 effectuée.  Pour copier l
   
 3.  Dans la boîte de dialogue **Ajouter une copie des packages existants**, sous **Emplacement du package**, sélectionnez **Système de fichiers**.  
   
-4.  Sélectionnez le bouton de navigation **(...)**, accédez à **Lesson 1.dtsx** sur votre ordinateur, puis sélectionnez **Ouvrir**.  
+4.  Sélectionnez le bouton de navigation **(...)** , accédez à **Lesson 1.dtsx** sur votre ordinateur, puis sélectionnez **Ouvrir**.  
   
 5.  Copiez et collez le package de la leçon 1 selon les étapes 3 à 8 décrites dans la section précédente.  
   

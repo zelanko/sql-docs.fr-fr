@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 4046df811a872bd07e7c49d0f5947aeee37847de
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7720324915ea147cf5cac938c196957a6cb04c51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57684976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116461"
 ---
 # <a name="dbcc-proccache-transact-sql"></a>DBCC PROCCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ DBCC PROCCACHE [ WITH NO_INFOMSGS ]
  NO_INFOMSGS  
  Supprime tous les messages d'information dont le niveau de gravité est compris entre 0 et 10.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Le cache de procédure permet de mettre en cache les plans compilés et exécutables afin d'accélérer l'exécution des traitements. Les entrées d'un cache de procédure sont situées à un niveau de traitement. Le cache de procédure comporte les entrées suivantes :
 -   Plans compilés  
 -   Plans d'exécution  
@@ -68,10 +67,10 @@ Le tableau suivant décrit les colonnes du jeu de résultats.
 |**proc cache used**|Nombre total d'entrées en cours d'utilisation.|  
 |**proc cache active**|Pour compatibilité descendante uniquement. Nombre total d'entrées en cours d'utilisation.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
   
   

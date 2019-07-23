@@ -1,5 +1,5 @@
 ---
-title: Méthode getBestRowIdentifier (SQLServerDatabaseMetaData) | Microsoft Docs
+title: Méthode getBestRowIdentifier, (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c19e9ca6-2a53-4a0c-91ab-80090c3f7229
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b08c8ffed61f90260617395f3c4df89b64dd6e0e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9a19bd01a8ebf54eb3e819bd4a82400b8107e382
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954025"
 ---
 # <a name="getbestrowidentifier-method-sqlserverdatabasemetadata"></a>Méthode getBestRowIdentifier (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
 #### <a name="parameters"></a>Paramètres  
  *catalog*  
   
- Un **chaîne** qui contient le nom du catalogue.  
+ **Chaîne** qui contient le nom du catalogue.  
   
  *schema*  
   
@@ -54,7 +53,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  *portée*  
   
- Un **int** qui indique la portée d’intérêt. Quelques valeurs possibles :  
+ **Entier** qui indique l’étendue de l’intérêt. Quelques valeurs possibles :  
   
  bestRowTemporary (0)  
   
@@ -64,7 +63,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
   
  *nullable*  
   
- **true** pour inclure des colonnes de type nullable. Dans le cas contraire, la valeur est **false**.  
+ **true** pour inclure les colonnes Nullable. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
@@ -73,7 +72,7 @@ public java.sql.ResultSet getBestRowIdentifier(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getBestRowIdentifier est spécifiée par la méthode getBestRowIdentifier dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getBestRowIdentifier, est spécifiée par la méthode getBestRowIdentifier, dans l’interface java. Sql. DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getBestRowIdentifier contient les informations suivantes :  
   

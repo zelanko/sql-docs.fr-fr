@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f0ebb2f-de10-482d-9806-1a5de5b312b8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 29cfdc2d38612ee91f73d117bce862d16b975cf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ebc4f10802f7a90dc828bab4b6f2aa1d01d6ccd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058622"
 ---
 # <a name="logon-triggers"></a>Déclencheurs de connexion
 [!INCLUDE[tsql-appliesto-ss2008-appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ END;
 |Décrit comment retourner des informations sur les déclencheurs de connexion.|[sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)<br /><br /> [sys.server_trigger_events &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-trigger-events-transact-sql.md)|  
 |Décrit comment capturer les données d'événement de déclencheur de connexion.||  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Déclencheurs DDL](../../relational-databases/triggers/ddl-triggers.md)  
   
   

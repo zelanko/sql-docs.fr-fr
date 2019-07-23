@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 111703695a1ed2452456125ccf872bf31a12d968
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57d0edaed1d26de79813939c9606b9934646e5f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223650"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Arguments  
  *multilinestring_tagged_text*  
- Représentation WKT de l’instance **geographyMultiLineString** à retourner. *multilinestring_tagged_text* est une expression **nvarchar(max)**.  
+ Représentation WKT de l’instance **geographyMultiLineString** à retourner. *multilinestring_tagged_text* est une expression **nvarchar(max)** .  
   
  *SRID*  
  Expression **int** qui représente le SRID (ID de référence spatiale) de l’instance **geographyMultiLineString** à retourner.  
@@ -51,7 +50,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
   
  Type OGC : **MultiLineString**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Cette méthode lève **FormatException** si l’entrée n’est pas au format approprié.  
   
 ## <a name="examples"></a>Exemples  
@@ -63,7 +62,7 @@ SET @g = geography::STMLineFromText('MULTILINESTRING ((-122.358 47.653, -122.348
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes geography statiques de l’OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

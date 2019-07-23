@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 8efd6bf4ca5ec7cf4a1ab1699bf1cae5ce33cb08
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7372051d8dfb23430f834ca159125822c6892956
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116529"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ DBCC INDEXDEFRAG
  WITH NO_INFOMSGS  
  Supprime tous les messages d'information dont les niveaux de gravité sont compris entre 0 et 10.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 DBCC INDEXDEFRAG défragmente un index au niveau feuille afin que l'ordre physique des pages corresponde à l'ordre logique (de gauche à droite) des nœuds feuilles, améliorant ainsi les performances d'analyse de l'index.
   
 > [!NOTE]  
@@ -109,7 +108,7 @@ Pages Scanned Pages Moved Pages Removed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 L’appelant doit être propriétaire de la table ou être membre du rôle serveur fixe **sysadmin**, du rôle de base de données fixe **db_owner** ou du rôle de base de données fixe **db_ddladmin**.
   
 ## <a name="examples"></a>Exemples  
@@ -121,7 +120,7 @@ DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID
 GO  
 ```  
   
-### <a name="b-using-dbcc-showcontig-and-dbcc-indexdefrag-to-defragment-the-indexes-in-a-database"></a>b. Utilisation de DBCC SHOWCONTIG et de DBCC INDEXDEFRAG pour défragmenter les index d'une base de données  
+### <a name="b-using-dbcc-showcontig-and-dbcc-indexdefrag-to-defragment-the-indexes-in-a-database"></a>B. Utilisation de DBCC SHOWCONTIG et de DBCC INDEXDEFRAG pour défragmenter les index d'une base de données  
  L'exemple suivant illustre une méthode simple de défragmentation de tous les index d'une base de données fragmentés au-delà d'un seuil déclaré.  
   
 ```sql  
@@ -228,7 +227,7 @@ DROP TABLE #fraglist;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)  
 [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)  

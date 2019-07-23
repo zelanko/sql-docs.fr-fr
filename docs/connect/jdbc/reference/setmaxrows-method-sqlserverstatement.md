@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 693214651211a74ccefa49429b7aa81dd65e48cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1ff4ab9e1db2415c92d42012d45b04c57ac30b67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973982"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>Méthode setMaxRows (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public final void setMaxRows(int max)
 #### <a name="parameters"></a>Paramètres  
  *max*  
   
- Un **int** qui indique le nombre maximal de lignes, ou 0 s’il n’existe aucune limite.  
+ **Entier** qui indique le nombre maximal de lignes, ou 0 s’il n’y a aucune limite.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setMaxRows est spécifiée par la méthode setMaxRows dans l’interface java.sql.Statement.  
+ Cette méthode setMaxRows est spécifiée par la méthode setMaxRows dans l’interface java. Sql. Statement.  
   
  Cette méthode setMaxRows n’a pas d’effet sur les curseurs dynamiques avec défilement. L'application doit utiliser la syntaxe SQL SELECT TOP N pour limiter le nombre de lignes retournées à partir de jeux de résultats potentiellement importants.  
   

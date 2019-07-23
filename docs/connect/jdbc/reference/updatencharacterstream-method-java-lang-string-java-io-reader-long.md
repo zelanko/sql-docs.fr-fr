@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7285f091a933ebbcfa4796da338e34c6795105fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee869c9d9bdcc707456f1cb04b5dcacdacee89a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998691"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>Méthode updateNCharacterStream (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateNCharacterStream(java.lang.String columnLabel,
   
  *reader*  
   
- Un objet de lecteur.  
+ Objet lecteur.  
   
  *length*  
   
@@ -49,9 +48,9 @@ public void updateNCharacterStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateNCharacterStream est spécifiée par la méthode updateNCharacterStream dans l’interface java.sql.ResultSet.  
+ Cette méthode updateNCharacterStream est spécifiée par la méthode updateNCharacterStream dans l’interface java. Sql. ResultSet.  
   
- Cette méthode passe les caractères Unicode à partir d’un objet lecteur sélectionné **nchar**, **nvarchar (max)** , **ntext**, et **xml** colonnes. L'utilisation de cette méthode sur d'autres colonnes de type de données lève une exception.  
+ Cette méthode passe les caractères Unicode d’un objet lecteur aux colonnes **nchar**, **nvarchar (max)** , **ntext**et **XML** sélectionnées. L'utilisation de cette méthode sur d'autres colonnes de type de données lève une exception.  
   
  Si la longueur du flux diffère de ce qui est spécifié dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   

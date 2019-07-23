@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: bde57da2-dd47-412f-9df7-9224968b2448
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7cdfa3b20751ad721ee063e5e851acf4f2a6b784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edcd8f68fbd35867a1c733304e67d0b0d7992bd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085882"
 ---
 # <a name="article-issues"></a>Problèmes liés aux articles
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47628520"
 |Des tables référencées par des vues sont nécessaires.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessite que toutes les tables référencées par des vues publiées, indexées ou non, soient disponibles sur l’Abonné. Si les tables référencées ne sont pas publiées en tant qu'articles dans cette publication, elles doivent être créées manuellement sur l'abonné.|Utilisez le bouton **Précédent** pour vous rendre à la page **Articles** . Ajoutez ensuite tout objet nécessaire.|  
 |Des objets référencés par des procédures stockées sont nécessaires.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] impose que tous les objets référencés par des procédures stockées publiées, tels que des tables et des fonctions définies par l'utilisateur soient disponibles pour l'Abonné. Si les objets référencés ne sont pas publiés en tant qu'articles dans cette publication, ils doivent être créés manuellement sur l'abonné.|Utilisez le bouton **Précédent** pour vous rendre à la page **Articles** . Ajoutez ensuite tout objet nécessaire.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)  
   

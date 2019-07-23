@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7e4137d61fcb223f4fa4fc943314ecaa50965c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7311828e42ffbd73e53e82ab3f87fb6e7b0925d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086681"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ DROP EXTERNAL RESOURCE POOL pool_name
  *pool_name*  
  Nom du pool de ressources externes à supprimer.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Vous ne pouvez pas supprimer un pool de ressources externes qui contient des groupes de charges de travail.  
   
  Vous ne pouvez pas supprimer les pools par défaut ou interne du gouverneur de ressources.  
@@ -51,7 +50,7 @@ DROP EXTERNAL RESOURCE POOL pool_name
   
  Lorsque vous exécutez des instructions DDL, nous vous recommandons de connaître les états du gouverneur de ressources. Pour plus d’informations, consultez [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `CONTROL SERVER`.  
   
 ## <a name="examples"></a>Exemples  
@@ -64,7 +63,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [external scripts enabled (option de configuration de serveur)](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   
  [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)   
  [Problèmes connus pour SQL Server R Services](../../advanced-analytics/r-services/known-issues-for-sql-server-r-services.md)   

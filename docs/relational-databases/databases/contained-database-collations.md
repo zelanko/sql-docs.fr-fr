@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4b44f6b9-2359-452f-8bb1-5520f2528483
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c62934d6ffe221acd483d316461e0b2c72cc0c46
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1850f5d85baf418e0ce872f641a920514156101f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137379"
 ---
 # <a name="contained-database-collations"></a>Classements de base de données autonome
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -280,7 +279,7 @@ GO
 ## <a name="conclusion"></a>Conclusion  
  Le comportement du classement des bases de données autonomes diffère légèrement de celui des bases de données non autonomes. Ce comportement est généralement bénéfique, car il apporte une indépendance par rapport à l'instance et de la simplicité. Certains utilisateurs peuvent avoir des problèmes, en particulier lorsqu'une session accède à la fois à des bases de données autonomes et non autonomes.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)  
   
   

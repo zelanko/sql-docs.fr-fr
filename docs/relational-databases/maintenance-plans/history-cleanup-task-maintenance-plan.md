@@ -13,13 +13,12 @@ ms.assetid: 66bb6c39-958c-4053-a27f-b1118d2567f5
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-manager: craigg
-ms.openlocfilehash: 8cb1126f851bf9499aac845a29786e6b55f73604
-ms.sourcegitcommit: 5861b7b0cd9bf6d43cefad5d0356f5821bd17d4a
+ms.openlocfilehash: 37841e848aab5ff991741e5d460500834c9185e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "56411918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115794"
 ---
 # <a name="history-cleanup-task-maintenance-plan"></a>Tâche de nettoyage d'historique (Plan de maintenance)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "56411918"
  **Mot de passe**  
  Fournit un mot de passe à utiliser pour l'authentification. Cette option n'est pas disponible.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [sp_delete_backuphistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md)  
   

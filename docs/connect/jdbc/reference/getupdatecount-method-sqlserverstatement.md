@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e9570228-4500-44b6-b2f1-84ac050b5112
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6f05796220e305a0d6e06e15a58f780048d49a53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e319f5f924fc82b3b7dfac31d5d64d8ea15ee3ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978395"
 ---
 # <a name="getupdatecount-method-sqlserverstatement"></a>getUpdateCount, méthode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public final int getUpdateCount()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui contient le nombre de mises à jour. Si le résultat retourné est un objet de jeu de résultats ou s'il n'y a plus de résultat, -1 est retourné.  
+ **Entier** qui contient le nombre de mises à jour. Si le résultat retourné est un objet de jeu de résultats ou s'il n'y a plus de résultat, -1 est retourné.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getUpdateCount est spécifiée par la méthode getUpdateCount dans l’interface java.sql.Statement.  
+ Cette méthode getUpdateCount est spécifiée par la méthode getUpdateCount dans l’interface java. Sql. Statement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

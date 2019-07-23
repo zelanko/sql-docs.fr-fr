@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: c3c8e4e2617e3bf1cd7f5f3627aab0c9a4cf0be4
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: bf9207498575a52c5d9c2c1a6076110260c1f588
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102011"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -131,7 +130,7 @@ MAXDOP
  > [!NOTE]  
  > Si MAXDOP est défini avec la valeur zéro, le serveur choisit le degré maximal de parallélisme.  
     
-## <a name="remarks"></a>Notes     
+## <a name="remarks"></a>Notes    
     
 > [!NOTE]    
 > Pour exécuter DBCC CHECKTABLE sur chaque table de la base de données, vous devez utiliser [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md).    
@@ -217,7 +216,7 @@ Estimated TEMPDB space needed for CHECKTABLES (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.    
 ```    
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>Autorisations    
 L’utilisateur doit être propriétaire de la table ou être membre du rôle serveur fixe sysadmin, du rôle de base de données fixe db_owner ou du rôle de base de données fixe db_ddladmin.    
     
 ## <a name="examples"></a>Exemples    
@@ -230,7 +229,7 @@ DBCC CHECKTABLE ('HumanResources.Employee');
 GO    
 ```    
     
-### <a name="b-performing-a-low-overhead-check-of-the-table"></a>b. Exécution d'une vérification à faible charge d'une table    
+### <a name="b-performing-a-low-overhead-check-of-the-table"></a>B. Exécution d'une vérification à faible charge d'une table    
  L’exemple suivant effectue une vérification de faible charge de la table `Employee` dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].    
     
 ```sql    
@@ -250,7 +249,7 @@ SET @indid = (SELECT index_id
 DBCC CHECKTABLE ('Production.Product',@indid);    
 ```    
     
-## <a name="see-also"></a> Voir aussi    
+## <a name="see-also"></a>Voir aussi    
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)     
 [DBCC CHECKDB &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)    
     

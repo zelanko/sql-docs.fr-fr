@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8e101334a5957349beaf7fcac9e8355ee17acdc6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cce8533a1ac74feb95577d28f73cb6f87c15aa31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223601"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,14 +56,14 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
  *rule*  
  Règle à supprimer. Le nom des règles doit respecter les conventions se rapportant aux [identificateurs](../../relational-databases/databases/database-identifiers.md). Vous n'êtes pas obligé de spécifier le nom du schéma de la règle.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Pour supprimer une règle, vous devez tout d'abord la dissocier si celle-ci est liée à une colonne ou à un type de données d'alias. Pour dissocier la règle, utilisez **sp_unbindrule**. Si la règle est liée lorsque vous tentez de la supprimer, un message d'erreur s'affiche et l'instruction DROP RULE est annulée.  
   
  Après la suppression d'une règle, les nouvelles données sont entrées sans les contraintes de la règle dans les colonnes gouvernées au préalable par celle-ci. Les données existantes ne sont pas affectées.  
   
  L'instruction DROP RULE ne s'applique pas aux contraintes CHECK. Pour plus d’informations sur la suppression des contraintes CHECK, consultez [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter DROP RULE, un utilisateur doit, au minimum, posséder l'autorisation ALTER sur le schéma auquel la règle appartient.  
   
 ## <a name="examples"></a>Exemples  
@@ -76,7 +75,7 @@ DROP RULE VendorID_rule
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [sp_bindrule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

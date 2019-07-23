@@ -1,5 +1,5 @@
 ---
-title: 'Comment : envoyer et récupérer des données ASCII dans Linux et macOS (SQL) | Microsoft Docs'
+title: 'Procédure: envoyer et récupérer des données ASCII dans Linux et macOS (SQL) | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/16/2018
 ms.prod: sql
@@ -13,35 +13,35 @@ helpviewer_keywords:
 - macOS
 author: yitam
 ms.author: v-yitam
-manager: mbarwin
-ms.openlocfilehash: 2fe78cc80cd7ca77f09465fb7d3e92482da7d008
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 9edd73f5ef01d1d3f22db78400cc3c204efe1379
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181157"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68251905"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Guide pratique pour envoyer et récupérer des données ASCII dans Linux et macOS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Cet article suppose que les paramètres régionaux ASCII (UTF-8) ont été générés ou installés dans vos systèmes Linux ou macOS. 
+Cet article suppose que les paramètres régionaux ASCII (non UTF-8) ont été générés ou installés sur vos systèmes Linux ou macOS. 
 
-Pour envoyer ou récupérer des jeux de caractères ASCII pour le serveur :  
+Pour envoyer ou récupérer des jeux de caractères ASCII sur le serveur:  
 
-1.  Si les paramètres régionaux de votre choix ne sont pas la valeur par défaut dans votre environnement de système, assurez-vous que vous appelez `setlocale(LC_ALL, $locale)` avant d’effectuer la première connexion. La fonction de setlocale() PHP modifie les paramètres régionaux uniquement pour le script en cours, et si elle est appelée après avoir établi la première connexion, il peut être ignoré.
+1.  Si les paramètres régionaux souhaités ne sont pas la valeur par défaut dans votre environnement système, `setlocale(LC_ALL, $locale)` veillez à appeler avant d’établir la première connexion. La fonction PHP setlocale () modifie les paramètres régionaux uniquement pour le script en cours et, si elle est appelée après avoir effectué la première connexion, elle peut être ignorée.
  
-2.  Lorsque vous utilisez le pilote SQLSRV, vous pouvez spécifier `'CharacterSet' => SQLSRV_ENC_CHAR` en tant que connexion option, mais cette étape est facultative car il s’agit de la valeur par défaut de codage.
+2.  Lorsque vous utilisez le pilote sqlsrv, vous pouvez `'CharacterSet' => SQLSRV_ENC_CHAR` spécifier en tant qu’option de connexion, mais cette étape est facultative, car il s’agit de l’encodage par défaut.
 
-3.  Lorsque vous utilisez le pilote PDO_SQLSRV, il existe deux façons. Tout d’abord, lors de la connexion, définissez `PDO::SQLSRV_ATTR_ENCODING` à `PDO::SQLSRV_ENCODING_SYSTEM` (pour obtenir un exemple de définition d’une option de connexion, consultez [PDO::__construct](../../connect/php/pdo-construct.md)). Vous pouvez également, une fois connecté, ajoutez cette ligne `$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
+3.  Lorsque vous utilisez le pilote PDO_SQLSRV, il existe deux façons de procéder. Tout d’abord, lorsque vous établissez `PDO::SQLSRV_ATTR_ENCODING` la `PDO::SQLSRV_ENCODING_SYSTEM` connexion, affectez à la valeur (pour obtenir un exemple de définition d’une option de connexion, consultez [PDO:: __construct](../../connect/php/pdo-construct.md)). Vous pouvez également ajouter cette ligne après la connexion réussie.`$conn->setAttribute(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ENCODING_SYSTEM);` 
   
-Lorsque vous spécifiez le codage d’une ressource de connexion (en SQLSRV) ou un objet de connexion (PDO_SQLSRV), le pilote part du principe que les autres chaînes de connexion utilisent ce même encodage. Les chaînes de nom de serveur et de requête sont également supposées utiliser le même jeu de caractères.  
+Lorsque vous spécifiez l’encodage d’une ressource de connexion (dans SQLSRV) ou d’un objet de connexion (PDO_SQLSRV), le pilote part du principe que les autres chaînes d’option de connexion utilisent ce même encodage. Les chaînes de nom de serveur et de requête sont également supposées utiliser le même jeu de caractères.  
   
-L’encodage pour le pilote PDO_SQLSRV par défaut est UTF-8 (PDO::SQLSRV_ENCODING_UTF8), à la différence du pilote SQLSRV. Pour plus d’informations sur ces constantes, consultez [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
+L’encodage par défaut pour le pilote PDO_SQLSRV est UTF-8 (PDO:: SQLSRV_ENCODING_UTF8), contrairement au pilote SQLSRV. Pour plus d’informations sur ces constantes, consultez [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md). 
   
 ## <a name="example"></a>Exemple  
-Les exemples suivants montrent comment envoyer et récupérer des données ASCII utilisant les pilotes PHP pour SQL Server en spécifiant des paramètres régionaux spécifiques avant d’établir la connexion. Les paramètres régionaux dans les différentes plateformes Linux peuvent être nommés différemment à partir des mêmes paramètres régionaux dans macOS. Par exemple, les paramètres régionaux nous ISO-8859-1 (Latin 1) sont `en_US.ISO-8859-1` dans Linux, alors que dans macOS est le nom `en_US.ISO8859-1`.
+Les exemples suivants montrent comment envoyer et récupérer des données ASCII à l’aide des pilotes PHP pour SQL Server en spécifiant des paramètres régionaux particuliers avant d’établir la connexion. Les paramètres régionaux de différentes plateformes Linux peuvent être nommés différemment des mêmes paramètres régionaux dans macOS. Par exemple, les paramètres régionaux ISO-8859-1 (latin 1) des États `en_US.ISO-8859-1` -Unis sont dans Linux tandis que `en_US.ISO8859-1`dans MacOS le nom est.
   
-Les exemples supposent que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé sur un serveur. Toutes les sorties sont écrites dans le navigateur quand les exemples sont exécutés à partir du navigateur.  
+Les exemples partent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du principe que est installé sur un serveur. Toutes les sorties sont écrites dans le navigateur quand les exemples sont exécutés à partir du navigateur.  
   
 ```  
 <?php  
@@ -166,8 +166,8 @@ try {
 
 ## <a name="see-also"></a>Voir aussi  
 [Récupération de données](../../connect/php/retrieving-data.md)  
-[Utilisation des données UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
-[mise à jour des données &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
+[Utilisation des](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
+données de mise à jour des données UTF-8[ &#40;Microsoft drivers&#41; for PHP for SQL Server](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  
 [Informations de référence sur l’API du pilote SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  
 [Exemple d’application &#40;pilote SQLSRV&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

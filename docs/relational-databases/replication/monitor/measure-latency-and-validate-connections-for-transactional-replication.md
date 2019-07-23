@@ -16,17 +16,16 @@ helpviewer_keywords:
 ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36db42ae91837a8a003558878f4b59801e3059af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8593dc13115815792bb7912a220e2ad88c15fa3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083056"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Mesurer la latence et valider les connexions pour la réplication transactionnelle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Cette rubrique explique comment mesurer la latence et valider les connexions pour la réplication transactionnelle dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide du Moniteur de réplication, de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). La réplication transactionnelle offre la fonctionnalité de jeton de suivi, moyen facile de mesurer la latence dans les topologies de réplication transactionnelle et de valider les connexions entre le serveur de publication, le serveur de distribution et les Abonnés. Un jeton (une petite quantité de données) est écrit dans le journal des transactions de la base de données de publication et est marqué comme s'il s'agissait d'une transaction standard répliquée, puis est envoyé dans le système, permettant ainsi le calcul :  
+  Cette rubrique explique comment mesurer la latence et valider les connexions pour la réplication transactionnelle dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide du Moniteur de réplication, de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). La réplication transactionnelle offre la fonctionnalité de jeton de suivi, moyen facile de mesurer la latence dans les topologies de réplication transactionnelle et de valider les connexions entre le serveur de publication, le serveur de distribution et les Abonnés. Un jeton (une petite quantité de données) est écrit dans le journal des transactions de la base de données de publication et est marqué comme s'il s'agissait d'une transaction standard répliquée, puis est envoyé dans le système, permettant ainsi le calcul :  
   
 -   du temps écoulé entre la validation d'une transaction par le serveur de publication et l'insertion de la commande qui en découle dans la base de données de distribution sur le serveur de distribution ;  
   
@@ -90,7 +89,7 @@ ms.locfileid: "47640887"
   
 3.  Cliquez sur **Insérer un suivi**.  
   
-4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l'Abonné**et **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
+4.  Affichez la durée calendaire pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l’Abonné**, **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
   
 #### <a name="to-view-information-on-a-tracer-token-inserted-previously"></a>Pour afficher les informations d'un jeton de suivi inséré précédemment  
   
@@ -100,7 +99,7 @@ ms.locfileid: "47640887"
   
 3.  Sélectionnez une heure dans la liste déroulante **Heure de l'insertion** .  
   
-4.  Affichez le temps écoulé pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l'Abonné**et **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
+4.  Affichez la durée calendaire pour le jeton de suivi dans les colonnes suivantes : **Du serveur de publication vers le serveur de distribution**, **Du serveur de distribution vers l’Abonné**, **Latence totale**. Une valeur **En attente** indique que le jeton n'a pas atteint un point donné.  
   
     > [!NOTE]  
     >  Les informations de jeton de suivi sont conservées pour la même durée que toute autre donnée d'historique, elles-mêmes étant régies par la période de rétention des historiques définie dans la base de données de distribution. Pour plus d’informations sur la modification des propriétés de base de données de distribution, consultez [Afficher et modifier les propriétés d’un serveur de distribution ou d’un serveur de publication](../../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md).  
@@ -113,21 +112,21 @@ ms.locfileid: "47640887"
   
 2.  (Facultatif) Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md). Vérifiez que l'abonnement existe et que l'état est actif.  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), en spécifiant **@publication**. Notez la valeur du paramètre de sortie **@tracer_token_id** .  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_posttracertoken &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql.md), en spécifiant **@publication** . Notez la valeur du paramètre de sortie **@tracer_token_id** .  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Pour déterminer la latence et valider les connexions d'une publication transactionnelle  
   
 1.  Publiez un jeton de suivi sur la publication à l'aide de la procédure précédente.  
   
-2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), en spécifiant **@publication**. La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez le **tracer_id** désiré dans le jeu de résultats.  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), en spécifiant **@publication** . La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez le **tracer_id** désiré dans le jeu de résultats.  
   
-3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), en spécifiant **@publication** et l’ID du jeton de suivi obtenu à l’étape 2 pour **@tracer_id**. Les informations de latence pour le jeton de suivi sélectionné sont ainsi retournées.  
+3.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md), en spécifiant **@publication** et l’ID du jeton de suivi obtenu à l’étape 2 pour **@tracer_id** . Les informations de latence pour le jeton de suivi sélectionné sont ainsi retournées.  
   
 #### <a name="to-remove-tracer-tokens"></a>Pour supprimer les jetons de suivi  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), en spécifiant **@publication**. La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez **tracer_id** pour le jeton de suivi à supprimer dans le jeu de résultats.  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md), en spécifiant **@publication** . La liste de tous les jetons de suivi publiés sur la publication est ainsi retournée. Notez **tracer_id** pour le jeton de suivi à supprimer dans le jeu de résultats.  
   
-2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), en spécifiant **@publication** et l’ID du jeton de suivi à supprimer obtenu à l’étape 2 pour **@tracer_id**.  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md), en spécifiant **@publication** et l’ID du jeton de suivi à supprimer obtenu à l’étape 2 pour **@tracer_id** .  
   
 ###  <a name="TsqlExample"></a> Exemple (Transact-SQL)  
  Cet exemple publie un enregistrement de jeton de suivi et utilise l'ID retourné du jeton de suivi publié pour consulter les informations de latence.  

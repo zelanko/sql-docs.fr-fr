@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: a7380ef0-c9d7-49e4-b6de-fad34752b9f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ea1371abfc033c6a19f27d005c3b97f97e6d504
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: daa05543715f81511aa0faa8467fc78819999404
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075888"
 ---
 # <a name="supported-data-types-for-in-memory-oltp"></a>Types de données pris en charge pour l’OLTP en mémoire
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Cet article répertorie les types de données non pris en charge pour les fonctionnalités OLTP en mémoire des éléments suivants :  
+  Cet article répertorie les types de données non pris en charge pour les fonctionnalités OLTP en mémoire des éléments suivants :  
   
 -   Tables optimisées en mémoire  
   
@@ -38,7 +37,7 @@ ms.locfileid: "47657567"
 |[sql_variant &#40;Transact-SQL&#41;](../../t-sql/data-types/sql-variant-transact-sql.md)|Types définis par l'utilisateur|.|  
   
 ## <a name="notable-supported-data-types"></a>Types de données remarquables pris en charge  
- La plupart des types de données sont pris en charge par les fonctionnalités de l’OLTP en mémoire. Les quelques éléments suivants sont particulièrement intéressants :  
+ La plupart des types de données sont pris en charge par les fonctionnalités de l’OLTP en mémoire. Les quelques éléments suivants sont particulièrement intéressants :  
   
 |Types binaires et de chaîne|Informations supplémentaires|  
 |-----------------------------|--------------------------|  
@@ -86,7 +85,7 @@ SELECT
 |-----------------|--------------------------|  
 |types de tables|[Variables de table optimisée en mémoire](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Prise en charge d'OLTP en mémoire par Transact-SQL](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
  [Implémentation de SQL_VARIANT dans un tableau mémoire optimisé](../../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md)  
  [Taille de la table et des lignes dans une table à mémoire optimisée](../../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)  

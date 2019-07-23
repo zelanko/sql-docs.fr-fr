@@ -22,24 +22,23 @@ helpviewer_keywords:
 ms.assetid: 08ea66b7-624e-4d8b-86bc-750ff76cdfc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf461a516371b78a74989ac26f6b79ebbe4853b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9811fdb3f7199e3a4cf10053f0f8c2f850a57845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086755"
 ---
 # <a name="float-and-real-transact-sql"></a>float et real (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Types de données approximatives à utiliser avec des données numériques à virgule flottante. Les données à virgule flottante sont approximatives ; il n'est donc pas possible de représenter précisément toutes les valeurs de ce type de données. Le synonyme ISO de **real** est **float(24)**.
+Types de données approximatives à utiliser avec des données numériques à virgule flottante. Les données à virgule flottante sont approximatives ; il n'est donc pas possible de représenter précisément toutes les valeurs de ce type de données. Le synonyme ISO de **real** est **float(24)** .
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
-**float** [ **(**_n_**)** ] Où *n* est le nombre de bits utilisés pour stocker la mantisse du nombre de type **float** en notation scientifique et indique par conséquent le niveau de précision et la taille de stockage. Si *n* est spécifié, sa valeur doit être comprise entre **1** et **53**. La valeur par défaut de *n* est **53**.
+**float** [ **(** _n_ **)** ] Où *n* est le nombre de bits utilisés pour stocker la mantisse du nombre de type **float** en notation scientifique et indique par conséquent le niveau de précision et la taille de stockage. Si *n* est spécifié, sa valeur doit être comprise entre **1** et **53**. La valeur par défaut de *n* est **53**.
   
 |Valeur *n*|Précision|Taille de stockage|  
 |---|---|---|
@@ -49,9 +48,9 @@ Types de données approximatives à utiliser avec des données numériques à vi
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] considère *n* comme l’une des deux valeurs possibles. Si **1**<=n<=**24**, *n* est considéré comme égal à **24**. Si **25**<=n<=**53**, *n* est considéré comme égal à **53**.  
   
-Le type de données **float**[**(n)**] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est conforme à la norme ISO pour toutes les valeurs de *n* comprises entre **1** et **53**. Le synonyme de **double precision** est **float(53)**.
+Le type de données **float**[ **(n)** ] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est conforme à la norme ISO pour toutes les valeurs de *n* comprises entre **1** et **53**. Le synonyme de **double precision** est **float(53)** .
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 |Type de données|Plage|Stockage|  
 |---|---|---|

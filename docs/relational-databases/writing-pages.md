@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 409c8753-03c4-436d-839c-6a5879971551
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c24fd65d4292cdee4c0ba2c0ce5d944b0e4e24c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9eea6c5cbc995cd73a9f799124772d2be396a9f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095484"
 ---
 # <a name="writing-pages"></a>Écritures de pages
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,6 +55,6 @@ Une page de modifications est écrite sur le disque selon trois méthodes :
 
 Les processus de l'écriture différée, de l'écriture anticipée et des points de contrôle n'attendent pas la fin de l'opération d'E/S. Ils utilisent toujours les E/S asynchrones (ou chevauchées) et poursuivent d'autres tâches, et vérifient le bon fonctionnement de l'E/S ultérieurement. De cette manière, SQL Server peut optimiser son utilisation des ressources d’E/S et d’UC pour les tâches appropriées.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 [Guide d’architecture des pages et des étendues](../relational-databases/pages-and-extents-architecture-guide.md)   
  [Lecture de pages](../relational-databases/reading-pages.md)

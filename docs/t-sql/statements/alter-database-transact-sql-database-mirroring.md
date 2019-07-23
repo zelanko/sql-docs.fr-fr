@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8cdded8444f4778ec7ad46c8b677e6ebb496847b
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 32cc95fa56d909602ab66d3ddad403bf4ceacebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065821"
 ---
 # <a name="alter-database-transact-sql-database-mirroring"></a>Mise en miroir de bases de données ALTER DATABASE (Transact-SQL)
 
@@ -88,11 +87,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
 **'** _partner_server_ **'** spécifie l’adresse réseau de serveur d’une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionnée comme partenaire de basculement dans une nouvelle session de mise en miroir de bases de données. Chaque session requiert deux serveurs partenaires : l'un démarre comme serveur principal et l'autre démarre comme serveur miroir. Les deux serveurs partenaires doivent de préférence résider sur des ordinateurs différents.
 
-Cette option est spécifiée une seule fois par session sur chaque serveur partenaire. L’initialisation d’une session de mise en miroir de bases de données nécessite deux instructions ALTER DATABASE *database* SET PARTNER **='**_partner_server_**'**. Leur ordre est important. Commencez par vous connecter au serveur miroir et spécifiez l’instance de serveur principal *partner_server* (SET PARTNER **='**_principal_server_**'**). Ensuite, connectez-vous au serveur principal et spécifiez l’instance de serveur miroir *partner_server* (SET PARTNER **='**_mirror_server_**'**). Ceci démarre une session de mise en miroir de bases de données entre ces deux serveurs partenaires. Pour plus d’informations, consultez [Configuration de la mise en miroir d’une base de données](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
+Cette option est spécifiée une seule fois par session sur chaque serveur partenaire. L’initialisation d’une session de mise en miroir de bases de données nécessite deux instructions ALTER DATABASE *database* SET PARTNER **='** _partner_server_ **'** . Leur ordre est important. Commencez par vous connecter au serveur miroir et spécifiez l’instance de serveur principal *partner_server* (SET PARTNER **='** _principal_server_ **'** ). Ensuite, connectez-vous au serveur principal et spécifiez l’instance de serveur miroir *partner_server* (SET PARTNER **='** _mirror_server_ **'** ). Ceci démarre une session de mise en miroir de bases de données entre ces deux serveurs partenaires. Pour plus d’informations, consultez [Configuration de la mise en miroir d’une base de données](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 
 La valeur de *partner_server* est une adresse réseau de serveur. La syntaxe est la suivante :
 
-TCP **://**_\<adresse-système>_**:**_\<port>_
+TCP **://** _\<adresse-système>_ **:** _\<port>_
 
 où
 
@@ -101,7 +100,7 @@ où
 
 Pour plus d’informations, consultez [Spécifier une adresse réseau de serveur (mise en miroir de bases de données)](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).
 
-L’exemple suivant illustre la clause SET PARTNER **='**_partner_server_**'**  :
+L’exemple suivant illustre la clause SET PARTNER **='** _partner_server_ **'**  :
 
 ```
 'TCP://MYSERVER.mydomain.Adventure-Works.com:7777'
@@ -182,11 +181,11 @@ SELECT role_desc, state_desc FROM sys.database_mirroring_endpoints
 
  **'** _witness_server_ **'** spécifie une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui doit servir de serveur témoin pour une session de mise en miroir de bases de données. Vous ne pouvez spécifier d'instructions SET WITNESS que sur le serveur principal.
 
-Dans une instruction SET WITNESS **='**_witness_server_**'**, la syntaxe de *witness_server* est identique à celle de *partner_server*.
+Dans une instruction SET WITNESS **='** _witness_server_ **'** , la syntaxe de *witness_server* est identique à celle de *partner_server*.
 
 OFF supprime le témoin d’une session de mise en miroir de bases de données. Si le témoin a la valeur OFF, le basculement automatique est désactivé. Lorsque la base de données est configurée avec l'option FULL SAFETY et le témoin avec la valeur OFF, une défaillance du serveur miroir conduit le serveur principal à rendre la base de données inaccessible.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 ## <a name="examples"></a>Exemples
 
@@ -194,7 +193,7 @@ OFF supprime le témoin d’une session de mise en miroir de bases de données. 
 
 Pour configurer la mise en miroir de bases de données avec un témoin, vous devez configurer la sécurité, préparer la base de données miroir et utiliser ALTER DATABASE pour définir les serveurs partenaires. Pour obtenir un exemple illustrant la procédure d’installation complète, consultez [Configuration de la mise en miroir de bases de données](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).
 
-### <a name="b-manually-failing-over-a-database-mirroring-session"></a>b. Basculement manuel d'une session de mise en miroir de bases de données
+### <a name="b-manually-failing-over-a-database-mirroring-session"></a>B. Basculement manuel d'une session de mise en miroir de bases de données
 
 Le basculement manuel peut être débuté par l'un ou l'autre des serveurs partenaires de mise en miroir de bases de données. Avant le basculement, assurez-vous que le serveur considéré comme serveur principal est effectivement le serveur principal. Par exemple, pour la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], sur l'instance de serveur représentant, selon vous, le serveur principal, exécutez la requête suivante :
 
@@ -230,7 +229,7 @@ L'exemple suivant suppose que le serveur est le principal actuel.
     ```
   La valeur actuelle de `mirroring_role_desc` est désormais `Mirror`.
 
-## <a name="see-also"></a> Voir aussi
+## <a name="see-also"></a>Voir aussi
 
 - [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?view=sql-server-2017)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)

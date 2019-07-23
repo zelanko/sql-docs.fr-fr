@@ -1,5 +1,5 @@
 ---
-title: Types définis par l’utilisateur CLR volumineux (OLE DB) | Microsoft Docs
+title: Types CLR volumineux définis par l’utilisateur (OLE DB) | Microsoft Docs
 description: Types CLR volumineux définis par l'utilisateur (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2af61fea9909597736769eb3d28fda43753a800b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 228054b56d6b26bf4439c01363d6cad24422f938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015224"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Types CLR volumineux définis par l'utilisateur (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66795976"
 
   Cette rubrique traite des modifications apportées au pilote OLE DB pour SQL Server pour prendre en charge les types volumineux définis par l’utilisateur du CLR (Common Language Runtime).  
   
- Pour plus d’informations sur la prise en charge pour les UDT volumineux du CLR dans OLE DB Driver pour SQL Server, consultez [Large CLR User-Defined Types](../../oledb/features/large-clr-user-defined-types.md). Pour obtenir un exemple, consultez [les CLR UDT volumineux utilisation &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md).  
+ Pour plus d’informations sur la prise en charge des types CLR volumineux dans OLE DB pilote pour la SQL Server, consultez [types CLR volumineux définis par l’utilisateur](../../oledb/features/large-clr-user-defined-types.md). Pour obtenir un exemple, consultez [utiliser des UDT &#40;CLR&#41;de grande taille OLE DB](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md).  
   
 ## <a name="data-format"></a>Format de données  
  Le pilote OLE DB pour SQL Server utilise ~0 pour représenter la longueur des valeurs qui sont de taille illimitée pour les types volumineux. ~0 représente également la taille des types UDT du CLR supérieurs à 8 000 octets.  
@@ -140,7 +139,7 @@ ms.locfileid: "66795976"
 |3|Les données sont converties données binaires en chaîne hexadécimale.|  
 |4|La validation peut se produire lors de l’utilisation de **CreateAccessor** ou de **GetNextRows**. L'erreur est DB_E_ERRORSOCCURRED. L'état de liaison a la valeur DBBINDSTATUS_UNSUPPORTEDCONVERSION.|  
 |5|BY_REF peut être utilisé.|  
-|6|Les paramètres UDT peuvent être liés en tant que DBTYPE_IUNKNOWN dans le DBBINDING. La liaison à DBTYPE_IUNKNOWN indique que l’application veut traiter les données en tant que flux avec l’interface ISequentialStream. Lorsqu’un consommateur spécifie *wType* dans une liaison en tant que type DBTYPE_IUNKNOWN et la colonne correspondante ou de sortie, le paramètre de la procédure stockée est un UDT, OLE DB Driver pour SQL Server retournera ISequentialStream. Pour un paramètre d’entrée, OLE DB Driver pour SQL Server recherchera le pour l’interface ISequentialStream.<br /><br /> Vous pouvez choisir de ne pas lier la longueur de données UDT à l'aide de la liaison DBTYPE_IUNKNOWN en cas types UDT volumineux. Toutefois, la longueur doit être liée pour de petits types UDT. Un paramètre DBTYPE_UDT peut être spécifié en tant que type UDT volumineux si une ou plusieurs des conditions suivantes sont réunies :<br />*ulParamParamSize* est ~ 0.<br />DBPARAMFLAGS_ISLONG est défini dans le struct DBPARAMBINDINFO.<br /><br /> Pour les données de ligne, la liaison DBTYPE_IUNKNOWN est uniquement autorisée pour les types UDT volumineux. Vous pouvez déterminer si une colonne est un type UDT volumineux à l’aide de la méthode IColumnsInfo::GetColumnInfo sur un ensemble de lignes ou l’interface IColumnsInfo de l’objet de commande. Une colonne DBTYPE_UDT est une colonne UDT volumineuse si une ou plusieurs des conditions suivantes sont réunies :<br />L’indicateur DBCOLUMNFLAGS_ISLONG est défini sur le membre *dwFlags* de la structure DBCOLUMNINFO. <br />*ulColumnSize* membre de DBCOLUMNINFO est ~ 0.|  
+|6|Les paramètres UDT peuvent être liés en tant que DBTYPE_IUNKNOWN dans le DBBINDING. La liaison à DBTYPE_IUNKNOWN indique que l’application veut traiter les données en tant que flux avec l’interface ISequentialStream. Lorsqu’un consommateur spécifie *wType* dans une liaison en tant que type DBTYPE_IUNKNOWN, et que la colonne ou le paramètre de sortie correspondant de la procédure stockée est un type défini par l’utilisateur, OLE DB pilote pour SQL Server retourne ISequentialStream. Pour un paramètre d’entrée, OLE DB pilote pour SQL Server interroge le pour l’interface ISequentialStream.<br /><br /> Vous pouvez choisir de ne pas lier la longueur de données UDT à l'aide de la liaison DBTYPE_IUNKNOWN en cas types UDT volumineux. Toutefois, la longueur doit être liée pour de petits types UDT. Un paramètre DBTYPE_UDT peut être spécifié en tant que type UDT volumineux si une ou plusieurs des conditions suivantes sont réunies :<br />*ulParamParamSize* est ~ 0.<br />DBPARAMFLAGS_ISLONG est défini dans le struct DBPARAMBINDINFO.<br /><br /> Pour les données de ligne, la liaison DBTYPE_IUNKNOWN est uniquement autorisée pour les types UDT volumineux. Vous pouvez déterminer si une colonne est un type UDT volumineux à l’aide de la méthode IColumnsInfo:: GetColumnInfo sur l’interface IColumnsInfo d’un ensemble de lignes ou d’un objet de commande. Une colonne DBTYPE_UDT est une colonne UDT volumineuse si une ou plusieurs des conditions suivantes sont réunies :<br />L’indicateur DBCOLUMNFLAGS_ISLONG est défini sur le membre *dwFlags* de la structure DBCOLUMNINFO. <br />le membre *ulColumnSize* de DBCOLUMNINFO est ~ 0.|  
   
  DBTYPE_NULL et DBTYPE_EMPTY peuvent être liés pour des paramètres d'entrée, mais pas pour des résultats ou des paramètres de sortie. S'ils sont liés pour des paramètres d'entrée, l'état doit avoir la valeur DBSTATUS_S_ISNULL pour DBTYPE_NULL ou DBSTATUS_S_DEFAULT pour DBTYPE_EMPTY. DBTYPE_BYREF ne peut pas être utilisé avec DBTYPE_NULL ou DBTYPE_EMPTY.  
   

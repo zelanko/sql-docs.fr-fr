@@ -7,13 +7,12 @@ ms.topic: conceptual
 ms.assetid: 70485e74-2e25-4e7e-be6c-9dd1780a42e3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 87199dc69a19f5328df495cc31276e6f16c8e0bd
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: fb91bbf75b64123719c4b580dd31977363842feb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136145"
 ---
 # <a name="extended-events-for-stretch-database"></a>Événements étendus pour Stretch Database
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,6 +79,6 @@ stretch_table_unprovision_completed|Indique la fin de la suppression de ressourc
 stretch_table_validation_error|Indique la fin de la validation d’une table quand l’utilisateur active l’extension.  
 stretch_unprovision_table_start|Indique le début de l’annulation de l’approvisionnement de la table d’extension.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Gérer Stretch Database et résoudre ses problèmes](../../sql-server/stretch-database/manage-and-troubleshoot-stretch-database.md)  
 

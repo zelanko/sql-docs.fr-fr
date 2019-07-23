@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2272183b648d22db604d63326974c1b3c4686c0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 708982797ef56d05325969711fe1edfa14167ed0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120643"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Leçon 2-1 : Génération de l’utilitaire de déploiement
 
@@ -68,7 +67,7 @@ Avant de générer l'utilitaire de déploiement, vous devez modifier les propri�
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
 [Étape 2 : Vérification de l'application de déploiement](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Créer un utilitaire de déploiement](../integration-services/packages/create-a-deployment-utility.md)  
   
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4255b78991e557ab36d7d0f97ab9be0fed5194a3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023769"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +117,7 @@ ms.locfileid: "67732107"
   
  Les paramètres de configuration de la relecture sont spécifiés dans les éléments XML qui sont enfants des éléments `<ReplayOptions>` et `<OutputOptions>` du fichier de configuration de relecture.  
   
-### <a name="replayoptions-element"></a>\<ReplayOptions > élément  
+### <a name="replayoptions-element"></a>\<ReplayOptions >, élément  
  Les paramètres spécifiés par le fichier de configuration de relecture dans l'élément `<ReplayOptions>` incluent les éléments suivants :  
   
 |Paramètre|Élément XML|Description|Valeurs autorisées|Requis|  
@@ -133,7 +132,7 @@ ms.locfileid: "67732107"
 |Délai de requête|`<QueryTimeout>`|Spécifie la valeur du délai de requête, en secondes. Cette valeur n'est effective que jusqu'à ce que la première ligne soit retournée.|Entier >= 1<br /><br /> (`-1` pour désactiver)|Non. Par défaut, la valeur est `3600`.|  
 |Threads par client|`<ThreadsPerClient>`|Spécifie le nombre de threads de relecture à utiliser pour chaque client de relecture.|Entier compris entre `1` et `512`.|Non. Si non spécifié, Distributed Replay utilise une valeur de `255`.|  
   
-### <a name="outputoptions-element"></a>\<OutputOptions > élément  
+### <a name="outputoptions-element"></a>\<OutputOptions >, élément  
  Les paramètres spécifiés par le fichier de configuration de relecture dans l'élément `<OutputOptions>` incluent les éléments suivants :  
   
 |Paramètre|Élément XML|Description|Valeurs autorisées|Requis|  
@@ -165,20 +164,20 @@ ms.locfileid: "67732107"
 </Options>  
 ```  
 
-### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Problème possible lors de l’exécution avec la synchronisation en Mode de séquencement
- Vous pouvez rencontrer un problème dans lequel la fonctionnalité de relecture semble se « blocage », ou les événements de relectures très lentement. Ce phénomène peut se produire si la cours de relecture de trace s’appuie sur les données et/ou les événements qui n’existent pas dans la base de données restaurée. 
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>Problème possible lors de l’exécution avec le mode de séquencement de synchronisation
+ Vous pouvez rencontrer un symptôme dans lequel la fonctionnalité de relecture semble «bloquer», ou relire les événements très lentement. Ce phénomène peut se produire si la trace en cours de relecture s’appuie sur des données et/ou des événements qui n’existent pas dans la base de données cible restaurée. 
  
- Par exemple, une charge de travail capturée utilise WAITFOR, comme dans l’instruction WAITFOR de réception de Service service Broker. Lorsque vous utilisez le mode de séquencement de synchronisation, les lots sont relus en série. Si une instruction INSERT portant sur la base de données source après la sauvegarde de base de données, mais avant la capture de la relecture de trace est démarrée, la réception WAITFOR émis lors de la relecture peut devoir attendre la durée totale de WAITFOR. Événements configurés pour être relus après que la réception de WAITFOR sera bloquée. Cela peut entraîner le compteur de moniteur de performances de requêtes Batch/s pour la relecture de base de données cible quand vous avez déposé à zéro jusqu'à ce que WAITFOR soit terminée. 
+ Un exemple est une charge de travail capturée qui utilise WAITFOR, par exemple dans l’instruction WAITFOR RECEIVE de Service Broker. Lors de l’utilisation du mode de séquencement de synchronisation, les lots sont relus en série. Si une insertion se produit sur la base de données source après la sauvegarde de la base de données, mais avant le démarrage de la trace de capture de relecture, la réception WAITFOR émise lors de la relecture peut être amenée à attendre toute la durée du WAITFOR. Événements définis pour être relus après le blocage de la réception WAITFOR. Cela peut entraîner l’affichage du compteur de l’analyseur de performances requêtes de lots/s pour la cible de la base de données de relecture jusqu’à zéro jusqu’à la fin de WAITFOR. 
  
- Si vous avez besoin d’utiliser le mode de synchronisation et souhaits afin d’éviter ce comportement, vous devez procédez comme suit :
+ Si vous devez utiliser le mode de synchronisation et que vous souhaitez éviter ce comportement, vous devez effectuer les opérations suivantes:
  
-1.  Suspendre les bases de données que vous utiliserez en tant que cibles de la relecture.
+1.  Suspendez les bases de données que vous utiliserez comme cibles de relecture.
 
-2.  Autoriser tous les en attente de l’activité à terminer.
+2.  Autoriser l’achèvement de toutes les activités en attente.
 
-3.  Sauvegarder les bases de données et autoriser les sauvegardes à terminer.
+3.  Sauvegardez les bases de données et autorisez la fin des sauvegardes.
 
-4.  Démarrez la capture de trace de relecture distribuée et reprendre la charge de travail normal. 
+4.  Démarrez la capture de trace de la relecture distribuée et reprenez la charge de travail normale. 
  
  
 ## <a name="see-also"></a>Voir aussi  

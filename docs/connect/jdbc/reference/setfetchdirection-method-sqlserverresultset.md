@@ -1,5 +1,5 @@
 ---
-title: setfetchdirection, méthode (SQLServerResultSet) | Microsoft Docs
+title: Méthode setFetchDirection (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4ee82290-508d-4bff-a5c5-8a56338deef8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31315b70f770d2f95e97d34b2064152234cae248
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d801a0184259ae22f86ea5ec23391ef78b23ce38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974269"
 ---
 # <a name="setfetchdirection-method-sqlserverresultset"></a>Méthode setFetchDirection (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public void setFetchDirection(int direction)
 #### <a name="parameters"></a>Paramètres  
  *direction*  
   
- Un **int** qui indique la direction d’extraction suggérée. Il peut s'agir de l'une des valeurs suivantes :  
+ **Entier** qui indique le sens d’extraction suggéré. Il peut s'agir de l'une des valeurs suivantes :  
   
  ResultSet.FETCH_FORWARD  
   
@@ -53,7 +52,7 @@ public void setFetchDirection(int direction)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setFetchDirection est spécifiée par la méthode setFetchDirection dans l’interface java.sql.ResultSet.  
+ Cette méthode setFetchDirection est spécifiée par la méthode setFetchDirection dans l’interface java. Sql. ResultSet.  
   
  La valeur initiale de cette méthode est déterminée par l’objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) qui a produit cet objet SQLServerResultSet. La direction d'extraction peut être modifiée à tout moment.  
   

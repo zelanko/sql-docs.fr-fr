@@ -13,13 +13,12 @@ helpviewer_keywords:
 - stored procedures [SQL Server], RPC syntax
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 4a0691795bdca0ec24b307362c6b2137c5741362
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 749a406a071c549f47ea41ead9fdf21574e0b523
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994726"
 ---
 # <a name="execute-stored-procedure-with-rpc-and-process-output"></a>Exécuter une procédure stockée avec RPC et traiter la sortie
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "66791268"
   
 3.  Créez un jeu de liaisons (une pour chaque fabricant de paramètre) en utilisant un tableau de structures DBBINDING.  
   
-4.  Créez un accesseur pour les paramètres définis à l’aide de la **IAccessor::CreateAccessor** (méthode). **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
+4.  Créez un accesseur pour les paramètres définis à l’aide de la méthode **IAccessor:: CreateAccessor** . **CreateAccessor** crée un accesseur à partir d’un jeu de liaisons.  
   
 5.  Remplissez la structure DBPARAMS.  
   
 6.  Appelez la commande **Execute** (dans ce cas, un appel à une procédure stockée).  
   
-7.  Traiter l’ensemble de lignes et libérez-le à l’aide du **IRowset::Release** (méthode).  
+7.  Traitez l’ensemble de lignes et libérez-le à l’aide de la méthode **IRowset:: Release** .  
   
 8.  Traitez les valeurs de codes de retour et de paramètres de sortie reçues à partir de la procédure stockée.  
   

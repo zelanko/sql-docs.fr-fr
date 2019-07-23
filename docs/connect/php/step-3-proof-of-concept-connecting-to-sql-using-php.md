@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f4828be81914eddbbb5c26b5a6f65cd8b81d85df
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8d685c15b4cc30dc093a47b37e6bfc29368e91f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014803"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Étape 3 : preuve de concept pour la connexion à SQL via PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-## <a name="step-1--connect"></a>Étape 1 : se connecter  
+## <a name="step-1--connect"></a>Étape 1: se connecter  
   
   
-Cela **OpenConnection** fonction est appelée au début dans toutes les fonctions qui suivent.  
+Cette fonction **OpenConnection** est appelée vers le haut dans toutes les fonctions qui suivent.  
   
   
 ```php 
@@ -46,9 +45,9 @@ Cela **OpenConnection** fonction est appelée au début dans toutes les fonction
     }  
 ```  
   
-## <a name="step-2--execute-query"></a>Étape 2 : Exécution de requête  
+## <a name="step-2--execute-query"></a>Étape 2: exécuter la requête  
   
-Le [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) fonction peut être utilisée pour récupérer un jeu de résultats d’une requête par rapport à la base de données SQL. Essentiellement, cette fonction accepte n’importe quelle requête et l’objet de connexion et retourne un jeu de résultats qui peut être itéré à l’utilisation de [sqlsrv_fetch_array()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
+La fonction [sqlsrv_query ()](https://php.net/manual/en/function.sqlsrv-query.php) peut être utilisée pour récupérer un jeu de résultats à partir d’une requête sur SQL Database. Cette fonction accepte essentiellement toute requête et l’objet de connexion et retourne un jeu de résultats qui peut être itéré avec l’utilisation de [sqlsrv_fetch_array ()](https://php.net/manual/en/function.sqlsrv-fetch-array.php).  
   
 ```php  
     function ReadData()  
@@ -78,9 +77,9 @@ Le [sqlsrv_query()](https://php.net/manual/en/function.sqlsrv-query.php) fonctio
 ```  
   
   
-## <a name="step-3--insert-a-row"></a>Étape 3 : Insérer une ligne  
+## <a name="step-3--insert-a-row"></a>Étape 3: insérer une ligne  
   
-Dans cet exemple, vous verrez comment exécuter un [insérer](../../t-sql/statements/insert-transact-sql.md) instruction en toute sécurité, passer des paramètres pour protéger votre application à partir de [injection SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) valeur.    
+Dans cet exemple, vous allez apprendre à exécuter une instruction [Insert](../../t-sql/statements/insert-transact-sql.md) en toute sécurité, à transmettre des paramètres qui protègent votre application de la valeur d' [injection SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) .    
   
   
 ```php 
@@ -110,16 +109,16 @@ Dans cet exemple, vous verrez comment exécuter un [insérer](../../t-sql/statem
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Étape 4 : Restaurer une transaction  
+## <a name="step-4--rollback-a-transaction"></a>Étape 4: restaurer une transaction  
   
   
-Cet exemple de code illustre l’utilisation de transactions dans lesquelles vous :  
+Cet exemple de code illustre l’utilisation de transactions dans lesquelles vous:  
   
--Commencez une transaction  
+-Commencer une transaction  
   
--Insérez une ligne de données, mettre à jour d’une autre ligne de données  
+-Insérer une ligne de données, mettre à jour une autre ligne de données  
   
--Validez votre transaction si l’insertion et la mise à jour ont réussi et la restauration de la transaction si un d’eux n’était pas  
+-Valider votre transaction si l’insertion et la mise à jour ont réussi et annuler la transaction si l’une d’elles n’a pas été  
   
   
 ```php 

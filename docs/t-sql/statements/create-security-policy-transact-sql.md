@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f5732c63ae381c0ca9c120b64aef3915dc6db926
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117293"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -89,12 +88,12 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  Table cible à laquelle sera appliqué le prédicat de sécurité. Plusieurs stratégies de sécurité désactivées peuvent cibler une même table, mais une seule peut être activée à un moment donné.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Quand vous utilisez des fonctions de prédicat avec des tables optimisées en mémoire, vous devez inclure **SCHEMABINDING** et utiliser l’indicateur de compilation **WITH NATIVE_COMPILATION**.  
   
  Les prédicats BLOCK sont évalués après l’exécution de l’opération DML correspondante. Par conséquent, une requête READ UNCOMMITTED peut voir les valeurs temporaires qui seront restaurées.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY SECURITY POLICY et l'autorisation ALTER sur le schéma.  
   
  En outre, les autorisations suivantes sont requises pour chaque prédicat ajouté :  
@@ -117,7 +116,7 @@ ADD FILTER PREDICATE [rls].[fn_securitypredicate]([CustomerId])
 ON [dbo].[Customer];  
 ```  
   
-### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>b. Création d'une stratégie qui affecte plusieurs tables  
+### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>B. Création d'une stratégie qui affecte plusieurs tables  
  La syntaxe suivante crée une stratégie de sécurité avec trois prédicats de filtre sur trois tables différentes et active la stratégie de sécurité.  
   
 ```  
@@ -140,7 +139,7 @@ CREATE SECURITY POLICY rls.SecPol
     ADD BLOCK PREDICATE rls.tenantAccessPredicate(TenantId) ON dbo.Sales AFTER INSERT;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sécurité au niveau des lignes](../../relational-databases/security/row-level-security.md)   
  [ALTER SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-security-policy-transact-sql.md)   
  [DROP SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-security-policy-transact-sql.md)   

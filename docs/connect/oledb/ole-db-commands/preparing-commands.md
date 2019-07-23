@@ -1,6 +1,6 @@
 ---
 title: Préparation des commandes | Microsoft Docs
-description: Préparation des commandes à l’aide de OLE DB Driver pour SQL Server
+description: Préparation des commandes à l’aide du pilote OLE DB pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - command preparation [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 139af9e2710ffabd3eda40553779f76979683841
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d4242f987820b384ab5bfed1bd74066a54fc09ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016051"
 ---
 # <a name="preparing-commands"></a>Préparation des commandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

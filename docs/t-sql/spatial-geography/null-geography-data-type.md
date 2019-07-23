@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bb464b06-86e0-4b8b-ad78-04bd33b6069c
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 34d9b73b050d40e6ae83637f69f2f7aa2ec6f7b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 775410c9a57d9bf030f34f84640522b766f0cf23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127380"
 ---
 # <a name="null-geography-data-type"></a>Null (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ Null
   
  Type CLR : **SqlGeography**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant extrait une instance `geography` Null.  
@@ -55,7 +54,7 @@ SET @g = geography::[Null];
 SELECT @g  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Méthodes geography statiques étendues](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

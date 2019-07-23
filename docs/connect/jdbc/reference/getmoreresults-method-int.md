@@ -1,5 +1,5 @@
 ---
-title: getmoreresults, méthode (int) | Microsoft Docs
+title: Méthode getMoreResults (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad7363db0cb1de986273e59d698e2f1b00d50deb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981774"
 ---
 # <a name="getmoreresults-method-int"></a>Méthode getMoreResults (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public final boolean getMoreResults(int mode)
 #### <a name="parameters"></a>Paramètres  
  *mode*  
   
- Un **int** qui indique comment gérer des objets du jeu de résultats actuellement ouverts. Il doit s’agir de l’une des constantes suivantes :  
+ **Entier** qui indique comment gérer les objets de jeu de résultats actuellement ouverts. Il doit s’agir de l’une des constantes suivantes :  
   
  CLOSE_CURRENT_RESULT  
   
@@ -53,7 +52,7 @@ public final boolean getMoreResults(int mode)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getMoreResults est spécifiée par la méthode getMoreResults dans l’interface java.sql.Statement.  
+ Cette méthode getMoreResults est spécifiée par la méthode getMoreResults dans l’interface java. Sql. Statement.  
   
  Si la méthode getMoreResults est appelée avant la récupération des résultats, elle se comporte comme spécifié par l’argument *mode* et passe au résultat suivant.  
   

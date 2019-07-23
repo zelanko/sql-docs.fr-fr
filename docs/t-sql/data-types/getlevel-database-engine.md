@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 527c08a55fca49f2545c0757091f67442b3a495f
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: f05c80a78417a8b5153345466eadcd49fa810228
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077991"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ SqlInt16 GetLevel ( )
   
 **Type de retour CLR : SqlInt16**
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 Sert à déterminer le niveau d'un ou plusieurs nœuds ou à filtrer les nœuds afin d'obtenir les membres d'un niveau spécifié. La racine de la hiérarchie est le niveau 0.
   
 GetLevel est utile pour les index de recherche à largeur prioritaire. Pour plus d’informations, consultez [Données hiérarchiques &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
@@ -63,7 +62,7 @@ OrgNode.GetLevel() AS EmpLevel, *
 FROM HumanResources.EmployeeDemo;  
 ```  
   
-### <a name="b-returning-all-members-of-a-hierarchy-level"></a>b. Retour de tous les membres d'un niveau hiérarchique  
+### <a name="b-returning-all-members-of-a-hierarchy-level"></a>B. Retour de tous les membres d'un niveau hiérarchique  
 L'exemple suivant retourne toutes les lignes de la table au niveau hiérarchique 2 :
   
 ```sql

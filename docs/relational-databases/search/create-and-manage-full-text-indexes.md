@@ -12,14 +12,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5798c0048d10e074f0aa64c3d50ce14027865e4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082932"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Créer et gérer des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -166,7 +165,7 @@ GO
  Cet exemple retourne une colonne de jeu de résultats appelée `Unique Key Column`, qui contient une seule ligne indiquant le nom de la colonne clé unique de la table Document, DocumentID. Notez que, si cette requête contenait un nom d'index non valide, si le nom d'index ne correspondait pas à la table, si la table n'existait pas, etc., une valeur NULL serait retournée.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Colonnes varbinary(max) et xml d’index  
- Si une colonne **varbinary(max)**, **varbinary**ou **xml** est indexée en texte intégral, elle peut faire l’objet d’une requête à l’aide des prédicats de texte intégral (CONTAINS et FREETEXT) et des fonctions de texte intégral (CONTAINSTABLE et FREETEXTTABLE), au même titre que n’importe quelle autre colonne indexée en texte intégral.
+ Si une colonne **varbinary(max)** , **varbinary**ou **xml** est indexée en texte intégral, elle peut faire l’objet d’une requête à l’aide des prédicats de texte intégral (CONTAINS et FREETEXT) et des fonctions de texte intégral (CONTAINSTABLE et FREETEXTTABLE), au même titre que n’importe quelle autre colonne indexée en texte intégral.
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>Données varbinary(max) ou varbinary d’index  
  Une seule colonne **varbinary(max)** ou **varbinary** peut stocker de nombreux types de documents. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge tout type de document pour lequel un filtre est installé et disponible dans le système d'exploitation. Le type d'un document est identifié par l'extension de fichier de celui-ci. Par exemple, pour une extension de fichier .doc, la recherche en texte intégral utilise le filtre qui prend en charge les documents Microsoft Word. Pour obtenir la liste des types de documents disponibles, interrogez l’affichage catalogue [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) .  

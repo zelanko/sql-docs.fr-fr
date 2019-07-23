@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c557e37d-319e-4adb-a0c1-94189b15d2ac
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2ba0a8ac8f1e008c4adc2e8206b900e53689ea9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d37918c0ca2be62c2e620faa8034548df2b4592
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940825"
 ---
 # <a name="backup-device-general-page"></a>Unité de sauvegarde (page Général)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "47618927"
     > [!IMPORTANT]  
     >  Étant donné que la sauvegarde de données sur un réseau peut faire l'objet d'erreurs réseau, nous vous recommandons de vérifier l'opération de sauvegarde lorsqu'elle est terminée. Pour plus d’informations, consultez [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les sauvegardes sur un jeu comprenant une ou plusieurs unités de sauvegarde constituent un seul jeu de supports. Un *support de sauvegarde* est un ensemble ordonné de supports de sauvegarde (bandes ou fichiers disques) sur lequel une ou plusieurs opérations de sauvegarde ont été écrites en utilisant un type et un nombre fixes d'unités de sauvegarde. Pour plus d’informations sur les supports de sauvegarde, consultez [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md).  
   
  L'unité physique de sauvegarde correspondant à une unité logique de sauvegarde est initialisée lorsque la première sauvegarde sur support de sauvegarde est écrite sur l'unité logique de sauvegarde. Si l'unité physique de sauvegarde est un fichier qui n'existe pas déjà, il est créé à ce moment-là.  
@@ -79,7 +78,7 @@ ms.locfileid: "47618927"
   
 -   [Restaurer une sauvegarde à partir d’une unité &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-backup-from-a-device-sql-server.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Unités de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Jeux de supports, familles de supports et jeux de sauvegarde &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

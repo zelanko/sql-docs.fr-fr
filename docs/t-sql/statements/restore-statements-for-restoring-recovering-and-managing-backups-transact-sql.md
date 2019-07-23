@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: d094b8540609810d134c52fb5755b21db4fc0f6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62be9d06e64e3ce986da0d96c4d04238d5f9ca3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082553"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>Instructions RESTORE pour la restauration, la récupération et la gestion des sauvegardes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]
@@ -50,7 +49,7 @@ ms.locfileid: "65947116"
 |[RESTORE REWINDONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)|Décrit l'instruction RESTORE REWINDONLY de Transact-SQL, qui est utilisée pour rembobiner et fermer les périphériques à bandes laissés ouverts par les instructions BACKUP ou RESTORE qui ont été exécutées par l'intermédiaire de l'option NOREWIND.|  
 |[RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)|Décrit l'instruction RESTORE VERIFYONLY de Transact-SQL, qui est utilisée d'une part pour vérifier la sauvegarde sans toutefois la restaurer, et d'autre part pour vérifier que le jeu de sauvegarde est complet et que l'ensemble de la sauvegarde est lisible ; elle ne tente pas de vérifier la structure des données.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sauvegarde et restauration des bases de données SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)  
   
   

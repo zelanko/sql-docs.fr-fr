@@ -1,5 +1,5 @@
 ---
-title: À l’aide des API de copie en bloc pour l’opération d’insertion de lot pour le pilote JDBC de MSSQL | Microsoft Docs
+title: Utilisation de l’API de copie en bloc pour l’opération d’insertion de lot pour le pilote MSSQL JDBC | Microsoft Docs
 ms.custom: ''
 ms.date: 01/21/2019
 ms.prod: sql
@@ -10,68 +10,67 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 347ce28dc28016f95de2795bd2f5e491dd29e2d8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 028caf1bf69c7e361ea7e4445c192c1fc1adf437
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004136"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Utilisation de l’API de copie en bloc pour l’opération d’insertion par lot
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver 7.0 pour prend en charge de SQL Server à l’aide des API de copie en bloc pour les opérations d’insertion de lot d’Azure Data Warehouse. Cette fonctionnalité permet aux utilisateurs d’activer le pilote à effectuer l’opération de copie en bloc en dessous de l’exécution de lot lorsque les opérations d’insertion. Les objectifs du pilote pour améliorer les performances lors de l’insertion les mêmes données que le pilote aurait avec batch régulière l’opération d’insertion. Le pilote analyse la requête SQL de l’utilisateur, en tirant parti de l’API de copie en bloc à la place de l’opération d’insertion de lot habituel. Voici les différentes manières d’activer l’API de copie en bloc pour le traitement par lots insèrent la fonctionnalité, ainsi que la liste de ses limites. Cette page contient également un petit exemple de code qui illustre une utilisation et l’augmentation des performances.
+Le pilote Microsoft JDBC 7,0 pour SQL Server prend en charge l’utilisation de l’API de copie en bloc pour les opérations d’insertion de lot pour Azure Data Warehouse. Cette fonctionnalité permet aux utilisateurs d’autoriser le pilote à effectuer une opération de copie en bloc sous-jacente lors de l’exécution des opérations d’insertion de lot. Le pilote vise à améliorer les performances lors de l’insertion des mêmes données que celles que le pilote aurait avec l’opération d’insertion de lot normale. Le pilote analyse la requête SQL de l’utilisateur, en tirant parti de l’API de copie en bloc au lieu de l’opération d’insertion de lot habituelle. Vous trouverez ci-dessous différentes façons d’activer l’API de copie en bloc pour la fonctionnalité d’insertion de lot, ainsi que la liste de ses limitations. Cette page contient également un petit exemple de code qui illustre une utilisation et l’augmentation des performances.
 
-Cette fonctionnalité s’applique uniquement aux PreparedStatement et de CallableStatement `executeBatch()`  &  `executeLargeBatch()` API.
+Cette fonctionnalité s’applique uniquement aux API de PreparedStatement et `executeBatch()` de  &  `executeLargeBatch()` CallableStatement.
 
 ## <a name="pre-requisites"></a>Prérequis
 
-Il existe deux conditions préalables pour activer l’API de copie en bloc pour l’insertion de lot.
+Il existe deux conditions préalables à l’activation de l’API de copie en bloc pour l’insertion de lot.
 
 * Le serveur doit être Azure Data Warehouse.
-* La requête doit être une requête insert (la requête peut contenir des commentaires, mais la requête doit commencer par le mot clé INSERT pour cette fonctionnalité entrent en vigueur).
+* La requête doit être une requête Insert (la requête peut contenir des commentaires, mais la requête doit commencer par le mot clé INSERT pour que cette fonctionnalité soit prise en compte).
 
-## <a name="enabling-bulk-copy-api-for-batch-insert"></a>L’activation de l’API de copie en bloc pour l’insertion de lot
+## <a name="enabling-bulk-copy-api-for-batch-insert"></a>Activation de l’API de copie en bloc pour l’insertion de lot
 
-Il existe trois façons d’activer les API de copie en bloc pour l’insertion de lot.
+Il existe trois façons d’activer l’API de copie en bloc pour l’insertion de lot.
 
-### <a name="1-enabling-with-connection-property"></a>1. Activation de la propriété de connexion
+### <a name="1-enabling-with-connection-property"></a>1. Activation avec la propriété de connexion
 
-Ajout de **useBulkCopyForBatchInsert = true ;** à la connexion chaîne Active cette fonctionnalité.
+L’ajout de **useBulkCopyForBatchInsert = true;** à la chaîne de connexion active cette fonctionnalité.
 
 ```java
 Connection connection = DriverManager.getConnection("jdbc:sqlserver://<server>:<port>;userName=<user>;password=<password>;database=<database>;useBulkCopyForBatchInsert=true;");
 ```
 
-### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2. Activation de la méthode setUseBulkCopyForBatchInsert() à partir de l’objet SQLServerConnection
+### <a name="2-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverconnection-object"></a>2. Activation avec la méthode setUseBulkCopyForBatchInsert () à partir de l’objet SQLServerConnection
 
-Appel **SQLServerConnection.setUseBulkCopyForBatchInsert(true)** active cette fonctionnalité.
+L’appel **de SQLServerConnection. setUseBulkCopyForBatchInsert (true)** active cette fonctionnalité.
 
-**SQLServerConnection.getUseBulkCopyForBatchInsert()** récupère la valeur actuelle pour **useBulkCopyForBatchInsert** propriété de connexion.
+**SQLServerConnection. getUseBulkCopyForBatchInsert ()** récupère la valeur actuelle de la propriété de connexion **useBulkCopyForBatchInsert** .
 
-La valeur de **useBulkCopyForBatchInsert** reste constante pour chaque PreparedStatement au moment de son initialisation. Tous les appels suivants à **SQLServerConnection.setUseBulkCopyForBatchInsert()** n’affecteront pas la PreparedStatement déjà créée en ce qui concerne sa valeur.
+La valeur de **useBulkCopyForBatchInsert** reste constante pour chaque PreparedStatement au moment de son initialisation. Les appels suivants à **SQLServerConnection. setUseBulkCopyForBatchInsert ()** n’affecteront pas l’PreparedStatement déjà créé en ce qui concerne sa valeur.
 
-### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3. Activation de la méthode setUseBulkCopyForBatchInsert() à partir de l’objet SQLServerDataSource
+### <a name="3-enabling-with-setusebulkcopyforbatchinsert-method-from-sqlserverdatasource-object"></a>3. Activation avec la méthode setUseBulkCopyForBatchInsert () à partir de l’objet SQLServerDataSource
 
-Similaire à ci-dessus, mais à l’aide de SQLServerDataSource pour créer un objet SQLServerConnection. Les deux méthodes permettent d’obtenir le même résultat.
+Semblable à ci-dessus, mais à l’aide de SQLServerDataSource pour créer un objet SQLServerConnection. Les deux méthodes permettent d’obtenir le même résultat.
 
 ## <a name="known-limitations"></a>Limitations connues
 
-Il existe actuellement ces limitations s’appliquent à cette fonctionnalité.
+Ces limitations s’appliquent actuellement à cette fonctionnalité.
 
-* Insérer des requêtes qui contiennent des valeurs non paramétrées (par exemple, `INSERT INTO TABLE VALUES (?, 2`)), ne sont pas pris en charge. Les caractères génériques ( ?) sont les seuls paramètres pris en charge pour cette fonction.
-* Les requêtes qui contiennent des expressions de INSERT-SELECT Insert (par exemple, `INSERT INTO TABLE SELECT * FROM TABLE2`), ne sont pas pris en charge.
-* Insérer des requêtes qui contiennent plusieurs expressions de valeur (par exemple, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), ne sont pas pris en charge.
-* Requêtes INSERT qui sont suivies par la clause OPTION, jointe avec plusieurs tables ou suivies d’une autre requête, ne sont pas pris en charge.
-* En raison des limitations de l’API de copie en bloc, `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`, `DATETIMEOFFSET`, `SMALLDATETIME`, `TIME`, `GEOMETRY`, et `GEOGRAPHY` des types de données, ne sont actuellement pas pris en charge pour ce fonctionnalité.
+* Les requêtes INSERT qui contiennent des valeurs non paramétrables (par exemple `INSERT INTO TABLE VALUES (?, 2`,)) ne sont pas prises en charge. Les caractères génériques (?) sont les seuls paramètres pris en charge pour cette fonction.
+* Les requêtes INSERT qui contiennent des expressions Insert-Select (par `INSERT INTO TABLE SELECT * FROM TABLE2`exemple,) ne sont pas prises en charge.
+* Les requêtes INSERT qui contiennent plusieurs expressions de valeur (par `INSERT INTO TABLE VALUES (1, 2) (3, 4)`exemple,) ne sont pas prises en charge.
+* Les requêtes d’insertion qui sont suivies par la clause OPTION, jointes à plusieurs tables ou suivies d’une autre requête, ne sont pas prises en charge.
+* En raison des limitations de l’API de copie `MONEY`en `SMALLMONEY`bloc `DATE`, `DATETIME` `SMALLDATETIME` `DATETIMEOFFSET` `TIME`,,,,,, `GEOGRAPHY` ,, et des types de données, ne sont actuellement pas pris en charge pour ce `GEOMETRY` fonctionnalité.
 
-Si la requête échoue en raison de non erreurs concernant les « SQL server », le pilote enregistrera le message d’erreur et de secours à la logique d’origine pour l’insertion de lot.
+Si la requête échoue en raison d’erreurs liées à «SQL Server», le pilote consigne le message d’erreur et le fait revenir à la logique d’origine pour l’insertion de lot.
 
 ## <a name="example"></a>Exemple
 
-Voici un exemple de code qui illustre le cas d’utilisation pour une opération d’insertion par lots dans Azure DW un millier de lignes, pour les deux scénarios (régulière vs API de copie en bloc).
+Voici un exemple de code qui illustre le cas d’usage d’une opération d’insertion par lot sur Azure DW d’un millier de lignes, pour les deux scénarios (API de copie en bloc et standard).
 
 ```java
     public static void main(String[] args) throws Exception

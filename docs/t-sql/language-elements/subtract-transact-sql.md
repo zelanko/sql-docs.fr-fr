@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ad673ecb2e33d22b8fcc6edc64548b0754ccbac9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09d6eb369d7e4dd1678ea2c344686bb5b672a8c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121643"
 ---
 # <a name="--subtraction-transact-sql"></a>- (Soustraction) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +54,7 @@ expression - expression
 ### <a name="a-using-subtraction-in-a-select-statement"></a>A. Utilisation de la soustraction dans une instruction SELECT  
  L'exemple suivant calcule la différence de taux de taxe entre l'État ou la province ayant le taux de taxe le plus élevé et l'État ou la province ayant le taux de taxe le plus bas.  
   
- **S’applique à ** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
+ **S’applique à**  : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
 ```  
 -- Uses AdventureWorks  
@@ -103,7 +102,7 @@ SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference
 FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [-= &#40;Affectation après soustraction&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
  [Opérateurs composés &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
  [Opérateurs arithmétiques &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)   

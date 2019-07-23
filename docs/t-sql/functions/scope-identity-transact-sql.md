@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 83d1ad7e793e7072345ad0b4ada34162d039ed45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86afd9bb2036edb77934f6ae622fafe93bd2d5a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111331"
 ---
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ SCOPE_IDENTITY()
 ## <a name="return-types"></a>Types de retour  
  **numeric(38,0)**  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  SCOPE_IDENTITY, IDENT_CURRENT et @@IDENTITY sont des fonctions similaires car elles renvoient des valeurs insérées dans des colonnes d’identité.  
   
  IDENT_CURRENT n'est pas limitée par l'étendue et par la session ; elle est limitée à une table spécifiée. IDENT_CURRENT renvoie la valeur générée pour une table spécifique dans n'importe quelle session et n'importe quelle étendue. Pour plus d’informations, consultez [IDENT_CURRENT &#40;Transact-SQL&#41;](../../t-sql/functions/ident-current-transact-sql.md).  
@@ -133,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>b. Utilisation des fonctions @@IDENTITY et SCOPE_IDENTITY() avec la réplication  
+### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Utilisation des fonctions @@IDENTITY et SCOPE_IDENTITY() avec la réplication  
  Les exemples suivants indiquent comment utiliser `@@IDENTITY` et `SCOPE_IDENTITY()` pour des insertions dans une base de données qui est publiée pour la réplication de fusion. Les deux tables mentionnées à titre d'exemple appartiennent à la base de données exemple [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] : `Person.ContactType` n'est pas publiée et `Sales.Customer` est publiée. La réplication de fusion ajoute des déclencheurs aux tables qui sont publiées. Par conséquent, `@@IDENTITY` peut retourner la valeur de l'insertion dans une table système de réplication au lieu de l'insertion dans une table utilisateur.  
   
  La table `Person.ContactType` a une valeur d’identité maximale de 20. Si vous insérez une ligne dans la table, `@@IDENTITY` et `SCOPE_IDENTITY()` retournent la même valeur.  
@@ -176,7 +175,7 @@ GO
  89
  ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [@@IDENTITY &#40;Transact-SQL&#41;](../../t-sql/functions/identity-transact-sql.md)  
   
   

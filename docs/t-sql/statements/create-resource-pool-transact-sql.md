@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2f33399282eb92cd2fbdb2a0a57befcf362379d1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 42e114c1d3f884c40ce47edca84261c2582d8576
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117333"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ Attache le pool de ressources aux planificateurs spécifiques. La valeur par dé
   
 AFFINITY SCHEDULER = **(** \<scheduler_range_spec> **)** mappe le pool de ressources aux planifications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiées par les ID donnés. Ces ID correspondent aux valeurs de la colonne scheduler_id dans [sys.dm_os_schedulers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md). 
   
-Quand vous utilisez AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)**, le pool de ressources a une affinité avec les planificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui mappent aux UC physiques correspondant au nœud NUMA ou à la plage de nœuds donnée. Vous pouvez utiliser la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] ci-après pour découvrir le mappage entre la configuration NUMA physique et les ID du planificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+Quand vous utilisez AFFINITY NUMANODE = **(** \<NUMA_node_range_spec> **)** , le pool de ressources a une affinité avec les planificateurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui mappent aux UC physiques correspondant au nœud NUMA ou à la plage de nœuds donnée. Vous pouvez utiliser la requête [!INCLUDE[tsql](../../includes/tsql-md.md)] ci-après pour découvrir le mappage entre la configuration NUMA physique et les ID du planificateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
   
 ```sql  
 SELECT osn.memory_node_id AS [numa_node_id], sc.cpu_id, sc.scheduler_id  
@@ -112,7 +111,7 @@ Spécifie les opérations d'E/S maximales par seconde (IOPS) par volume disque �
   
 Si la valeur `MAX_IOPS_PER_VOLUME` d’un pool est égale à 0, ce pool n’est pas régi du tout et peut prendre toutes les E/S par seconde du système, même si MIN_IOPS_PER_VOLUME est défini sur d’autres pools. Dans ce cas, nous recommandons de définir la valeur `MAX_IOPS_PER_VOLUME` de ce pool sur un nombre élevé (par exemple, la valeur maximale 2^31-1) pour qu’il soit régi en matière d’E/S.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
 `MIN_IOPS_PER_VOLUME` et `MAX_IOPS_PER_VOLUME` spécifient le nombre minimal et maximal de lectures et d’écritures par seconde. Ces lectures ou écritures peuvent être de toute taille et n'indiquent pas un débit minimal ou maximal.  
   
 Les valeurs de `MAX_CPU_PERCENT` et `MAX_MEMORY_PERCENT` doivent être respectivement supérieures ou égales aux valeurs de `MIN_CPU_PERCENT` et `MIN_MEMORY_PERCENT`.  
@@ -168,7 +167,7 @@ WITH (
       );  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)     
  [DROP RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-resource-pool-transact-sql.md)     
  [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)     

@@ -1,5 +1,5 @@
 ---
-title: updatestring, méthode (int, java.lang.String) | Microsoft Docs
+title: Méthode updateString (int, Java. lang. String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f8d2f620-0cdf-4a3b-8af4-5e8c4462a42d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 508d83c4eec69e6fd41bfadb6d3f8810ff47eaee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ad0f00eb57bfcf417e45a99ab6b9210ff2277e78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998252"
 ---
 # <a name="updatestring-method-int-javalangstring"></a>Méthode updateString (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,17 +38,17 @@ public void updateString(int index,
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
  *x*  
   
- Un **chaîne** objet.  
+ Objet **String** .  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateString est spécifiée par la méthode updateString dans l’interface java.sql.ResultSet.  
+ Cette méthode updateString est spécifiée par la méthode updateString dans l’interface java. Sql. ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [updateString, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)   

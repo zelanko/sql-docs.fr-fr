@@ -13,20 +13,19 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, sessions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 873921a00392a9555c0fa33fe29a2df961128fdc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7bc2ae9c6908bfcd0bf28b4f05be757d22c55f75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015907"
 ---
 # <a name="session-properties---ole-db-driver-for-sql-server"></a>Propriétés de session - OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server interprète les propriétés de session OLE DB comme suit.  
+  Le pilote OLE DB pour SQL Server interprète OLE DB propriétés de session comme suit.  
   
 |ID de propriété|Description|  
 |-----------------|-----------------|  
@@ -41,6 +40,6 @@ ms.locfileid: "66768421"
 |SSPROP_ASYNCH_BULKCOPY|Pour utiliser le mode asynchrone, affectez la valeur VARIANT_TRUE à la propriété de session spécifique au fournisseur SSPROP_ASYNCH_BULKCOPY avant d'appeler la méthode BCPExec. Cette propriété est disponible dans le jeu de propriétés DBPROPSET_SQLSERVERSESSION.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets Source de données &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objets &#40;de source de données OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

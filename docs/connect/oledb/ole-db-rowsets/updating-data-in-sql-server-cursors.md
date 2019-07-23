@@ -1,5 +1,5 @@
 ---
-title: La mise à jour des données dans les curseurs SQL Server | Microsoft Docs
+title: Mise à jour des données dans les curseurs de SQL Server | Microsoft Docs
 description: Mise à jour des données dans les curseurs SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - data updates [SQL Server], OLE DB
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5cb6c20746746d3261593e13978be022af8938a6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e5ccf4831cf882eedd4b2b95894d44457402bb6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994160"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Mise à jour des données dans les curseurs SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66803820"
   
  Seules les lignes des curseurs [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] participent à un contrôle de simultanéité d'accès aux données. Lorsque le consommateur demande un ensemble de lignes modifiable, le contrôle de simultanéité est vérifié par DBPROP_LOCKMODE. Pour modifier le niveau de contrôle d'accès simultané, le consommateur définit la propriété DBPROP_LOCKMODE avant d'ouvrir l'ensemble de lignes.  
   
- Les niveaux d'isolation de la transaction peuvent provoquer des décalages significatifs dans la position des lignes si la conception de l'application cliente permet aux transactions de demeurer ouvertes sur une longue période de temps. Par défaut, le pilote OLE DB pour SQL Server utilise le niveau d’isolation Lecture validée spécifié par DBPROPVAL_TI_READCOMMITTED. Le pilote OLE DB pour SQL Server prend en charge l’isolation de lecture erronée lors de la concurrence de l’ensemble de lignes est en lecture seule. Par conséquent, le consommateur peut demander un niveau supérieur d'isolation dans un ensemble de lignes modifiable, mais il ne peut pas demander avec succès un niveau inférieur.  
+ Les niveaux d'isolation de la transaction peuvent provoquer des décalages significatifs dans la position des lignes si la conception de l'application cliente permet aux transactions de demeurer ouvertes sur une longue période de temps. Par défaut, le pilote OLE DB pour SQL Server utilise le niveau d’isolation Lecture validée spécifié par DBPROPVAL_TI_READCOMMITTED. Le pilote OLE DB pour SQL Server prend en charge l’isolation de lecture incorrecte lorsque l’accès concurrentiel de l’ensemble de lignes est en lecture seule. Par conséquent, le consommateur peut demander un niveau supérieur d'isolation dans un ensemble de lignes modifiable, mais il ne peut pas demander avec succès un niveau inférieur.  
   
 ## <a name="immediate-and-delayed-update-modes"></a>Modes de mises à jour immédiat et différé  
  En mode de mise à jour immédiate, chaque appel à **IRowsetChange::SetData** entraîne un aller-retour vers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si le consommateur apporte plusieurs modifications à une seule ligne, il est plus efficace de soumettre toutes les modifications avec un seul appel à **SetData**.  
@@ -43,7 +42,7 @@ ms.locfileid: "66803820"
   
  Dans l'un et l'autre mode, un aller-retour représente une transaction distincte quand aucun objet de transaction n'est ouvert pour l'ensemble de lignes.  
   
- Lorsque vous utilisez **IRowsetUpdate::Update**, le pilote OLE DB pour SQL Server tente de traiter chaque ligne indiquée. Une erreur liée à des données, des longueurs ou des valeurs d’état non valides n’interrompt pas le traitement du pilote OLE DB pour SQL Server. La totalité des autres lignes prenant part à la mise à jour peut être modifiée. Le consommateur doit examiner le tableau *prgRowStatus* retourné pour déterminer l’échec d’une ligne spécifique lorsque le pilote OLE DB pour SQL Server retourne DB_S_ERRORSOCCURRED.  
+ Lorsque vous utilisez **IRowsetUpdate:: Update**, le pilote OLE DB pour SQL Server tente de traiter chaque ligne indiquée. Une erreur liée à des données, des longueurs ou des valeurs d’état non valides n’interrompt pas le traitement du pilote OLE DB pour SQL Server. La totalité des autres lignes prenant part à la mise à jour peut être modifiée. Le consommateur doit examiner le tableau *prgRowStatus* retourné pour déterminer l’échec d’une ligne spécifique lorsque le pilote OLE DB pour SQL Server retourne DB_S_ERRORSOCCURRED.  
   
  Un consommateur ne doit pas présumer que les lignes sont traitées selon un ordre spécifique. Si un consommateur a besoin d'un traitement ordonné de la modification des données sur plusieurs lignes, le consommateur doit établir cet ordre dans la logique de l'application et ouvrir une transaction pour encadrer le processus.  
   

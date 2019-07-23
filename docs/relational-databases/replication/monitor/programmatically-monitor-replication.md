@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8f0c7e434fc4b47e332b9340cead5c24581b9ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 92ce5a70e6266434cd82cf933b33ba96cee55f19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111162"
 ---
 # <a name="programmatically-monitor-replication"></a>Surveiller la réplication par programmation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,47 +59,47 @@ ms.locfileid: "47841283"
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>Analyser les serveurs de publication, les publications et les abonnements du serveur de distribution.  
   
-1.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorhelppublisher](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md). Les informations d'analyse pour tous les serveurs de publication utilisant ce serveur de distribution sont ainsi retournées. Pour limiter le jeu de résultats à un seul serveur de publication, spécifiez **@publisher**.  
+1.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorhelppublisher](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md). Les informations d'analyse pour tous les serveurs de publication utilisant ce serveur de distribution sont ainsi retournées. Pour limiter le jeu de résultats à un seul serveur de publication, spécifiez **@publisher** .  
   
-2.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorhelppublication](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md). Les informations d'analyse pour tous les serveurs de publication utilisant ce serveur de distribution sont ainsi retournées. Pour limiter le jeu de résultats à un serveur de publication, une publication ou une base de données publiée, spécifiez respectivement **@publisher**, **@publication**ou **@publisher_db**.  
+2.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorhelppublication](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md). Les informations d'analyse pour tous les serveurs de publication utilisant ce serveur de distribution sont ainsi retournées. Pour limiter le jeu de résultats à un serveur de publication, une publication ou une base de données publiée, spécifiez respectivement **@publisher** , **@publication** ou **@publisher_db** .  
   
-3.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorhelpsubscription](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md). Les informations d'analyse pour tous les abonnements utilisant ce serveur de distribution sont ainsi retournées. Pour limiter le jeu de résultats aux abonnements appartenant à un serveur de publication, une publication ou une base de données publiée, spécifiez respectivement **@publisher**, **@publication**ou **@publisher_db**.  
+3.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorhelpsubscription](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md). Les informations d'analyse pour tous les abonnements utilisant ce serveur de distribution sont ainsi retournées. Pour limiter le jeu de résultats aux abonnements appartenant à un serveur de publication, une publication ou une base de données publiée, spécifiez respectivement **@publisher** , **@publication** ou **@publisher_db** .  
   
 #### <a name="to-monitor-transactional-commands-waiting-to-be-applied-at-the-subscriber"></a>Pour analyser les commandes transactionnelles en attente d'application sur l'Abonné  
   
-1.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorsubscriptionpendingcmds](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md). Les informations d'analyse pour toutes les commandes en attente de tous les abonnements utilisant ce serveur de distribution sont ainsi retournées. Pour limiter le jeu de résultats aux commandes en attente pour les abonnements appartenant à un serveur de publication, un Abonné, une publication ou une base de données publiée, spécifiez respectivement **@publisher**, **@subscriber**, **@publication**ou **@publisher_db**.  
+1.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorsubscriptionpendingcmds](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md). Les informations d'analyse pour toutes les commandes en attente de tous les abonnements utilisant ce serveur de distribution sont ainsi retournées. Pour limiter le jeu de résultats aux commandes en attente pour les abonnements appartenant à un serveur de publication, un Abonné, une publication ou une base de données publiée, spécifiez respectivement **@publisher** , **@subscriber** , **@publication** ou **@publisher_db** .  
   
 #### <a name="to-monitor-merge-changes-waiting-to-be-uploaded-or-downloaded"></a>Pour analyser les modifications de fusion en attente de chargement ou de téléchargement  
   
-1.  Dans la base de données de publication du serveur de publication, exécutez [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md). Retourne un jeu de résultats affichant des informations sur les modifications en attente de réplication sur les Abonnés. Pour limiter le jeu de résultats aux modifications qui appartiennent à une publication ou un article unique, spécifiez respectivement **@publication** ou **@article**.  
+1.  Dans la base de données de publication du serveur de publication, exécutez [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md). Retourne un jeu de résultats affichant des informations sur les modifications en attente de réplication sur les Abonnés. Pour limiter le jeu de résultats aux modifications qui appartiennent à une publication ou un article unique, spécifiez respectivement **@publication** ou **@article** .  
   
-2.  Sur un Abonné de la base de données d'abonnement, exécutez [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md). Retourne un jeu de résultats affichant des informations sur les modifications en attente de réplication sur le serveur de publication. Pour limiter le jeu de résultats aux modifications qui appartiennent à une publication ou un article unique, spécifiez respectivement **@publication** ou **@article**.  
+2.  Sur un Abonné de la base de données d'abonnement, exécutez [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md). Retourne un jeu de résultats affichant des informations sur les modifications en attente de réplication sur le serveur de publication. Pour limiter le jeu de résultats aux modifications qui appartiennent à une publication ou un article unique, spécifiez respectivement **@publication** ou **@article** .  
   
 #### <a name="to-monitor-merge-agent-sessions"></a>Pour analyser les sessions de l'Agent de fusion  
   
 1.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md). Cela retourne les informations d'analyse, y compris **Session_id**, sur toutes les sessions de l'Agent de fusion pour tous les abonnements utilisant ce serveur de distribution. Vous pouvez également obtenir **Session_id** en interrogeant la table système [MSmerge_sessions](../../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) .  
   
-2.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md). Spécifiez une valeur **Session_id** de l'étape 1 pour **@session_id**. Les informations d'analyse détaillées sur la session sont ainsi affichées.  
+2.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md). Spécifiez une valeur **Session_id** de l'étape 1 pour **@session_id** . Les informations d'analyse détaillées sur la session sont ainsi affichées.  
   
-3.  Répétez l'étape 2 pour chaque session digne d'intérêt.  
+3.  Répétez l'étape 2 pour chaque session digne d'intérêt.  
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>Pour analyser les sessions de l'Agent de fusion pour les abonnements par extraction de l'Abonné  
   
-1.  Sur l'Abonné de la base de données d'abonnement, exécutez [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md). Pour un abonnement donné, spécifiez **@publisher**, **@publication**et le nom de la base de données de publication pour **@publisher_db**. Cela retourne des informations d'analyse sur les cinq dernières sessions de l'Agent de fusion pour cet abonnement. Notez la valeur de la colonne **Session_id** pour toutes les sessions dignes d'intérêt dans le jeu de résultats.  
+1.  Sur l'Abonné de la base de données d'abonnement, exécutez [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md). Pour un abonnement donné, spécifiez **@publisher** , **@publication** et le nom de la base de données de publication pour **@publisher_db** . Cela retourne des informations d'analyse sur les cinq dernières sessions de l'Agent de fusion pour cet abonnement. Notez la valeur de la colonne **Session_id** pour toutes les sessions dignes d'intérêt dans le jeu de résultats.  
   
-2.  Sur l'Abonné de la base de données d'abonnement, exécutez [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md). Spécifiez une valeur **Session_id** de l'étape 1 pour **@session_id**. Les informations d'analyse détaillées sur la session sont ainsi affichées.  
+2.  Sur l'Abonné de la base de données d'abonnement, exécutez [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md). Spécifiez une valeur **Session_id** de l'étape 1 pour **@session_id** . Les informations d'analyse détaillées sur la session sont ainsi affichées.  
   
 3.  Répétez l'étape 2 pour chaque session digne d'intérêt.  
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>Pour afficher et modifier la métrique du seuil d'analyse pour une publication  
   
-1.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorhelppublicationthresholds](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md). Les seuils d'analyse définis pour toutes les publications utilisant ce serveur de distribution sont ainsi retournées. Pour limiter le jeu de résultats aux seuils d'analyse des publications appartenant à un serveur de publication, une publication ou une base de données publiée, spécifiez respectivement **@publisher**, **@publisher_db**ou **@publication**. Notez la valeur de **Metric_id** pour les seuils qui doivent être changés. Pour plus d’informations, voir [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
+1.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorhelppublicationthresholds](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md). Les seuils d'analyse définis pour toutes les publications utilisant ce serveur de distribution sont ainsi retournées. Pour limiter le jeu de résultats aux seuils d'analyse des publications appartenant à un serveur de publication, une publication ou une base de données publiée, spécifiez respectivement **@publisher** , **@publisher_db** ou **@publication** . Notez la valeur de **Metric_id** pour les seuils qui doivent être changés. Pour plus d’informations, voir [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md).  
   
 2.  Sur le serveur de distribution de la base de données de distribution, exécutez [sp_replmonitorchangepublicationthreshold](../../../relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql.md). Spécifiez les éléments suivants si nécessaire :  
   
-    -   La valeur **Metric_id** obtenue dans l'étape 1 pour **@metric_id**.  
+    -   La valeur **Metric_id** obtenue dans l'étape 1 pour **@metric_id** .  
   
-    -   Une nouvelle valeur pour le métrique du seuil d'analyse pour **@value**.  
+    -   Une nouvelle valeur pour le métrique du seuil d'analyse pour **@value** .  
   
     -   Une valeur de **1** pour **@shouldalert** pour une alerte à enregistrer lorsque ce seuil est atteint, ou une valeur de **0** si une alerte n'est pas nécessaire.  
   
@@ -114,7 +113,7 @@ ms.locfileid: "47841283"
   
 2.  Créez une instance de la classe <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor> et définissez les propriétés <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publisher%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.Publication%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.PublisherDB%2A>, <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.SubscriberDB%2A> de l'abonnement, puis attribuez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> la valeur <xref:Microsoft.SqlServer.Management.Common.ServerConnection> créée dans l'étape 1.  
   
-3.  Appelez l'une des méthodes suivantes pour retourner les informations sur les sessions de l'Agent de fusion de cet abonnement :  
+3.  Appelez l'une des méthodes suivantes pour retourner les informations sur les sessions de l'Agent de fusion de cet abonnement :  
   
     -   <xref:Microsoft.SqlServer.Replication.MergeSubscriberMonitor.GetSessionsSummary%2A> - retourne un tableau d'objets <xref:Microsoft.SqlServer.Replication.MergeSessionSummary> avec des informations sur les cinq dernières sessions au plus de l'Agent de fusion. Notez la valeur <xref:Microsoft.SqlServer.Replication.MergeSessionSummary.SessionId%2A> pour toutes les sessions dignes d'intérêt.  
   

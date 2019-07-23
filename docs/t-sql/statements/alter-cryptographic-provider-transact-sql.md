@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e9baa18550da37f0abe379b3842389fae7100287
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b27695eba9f1092b09d147c373877a9b44789497
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065903"
 ---
 # <a name="alter-cryptographic-provider-transact-sql"></a>ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
  ENABLE | DISABLE  
  Active ou désactive un fournisseur.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Si le fournisseur modifie le fichier .dll utilisé pour implémenter la gestion de clés extensible dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez utiliser l'instruction ALTER CRYPTOGRAPHIC PROVIDER.  
   
  Lorsque le chemin d'accès du fichier .dll est mis à jour à l'aide de l'instruction ALTER CRYPTOGRAPHIC PROVIDER, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue les actions suivantes :  
@@ -73,7 +72,7 @@ Lorsque le fichier d'en-tête utilisé pour créer la DLL de fournisseur EKM est
   
  `SQL Crypto API version '%02d.%02d' implemented by provider is not supported. Supported version is '%02d.%02d'.`  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation CONTROL sur le fournisseur de services de chiffrement.  
   
 ## <a name="examples"></a>Exemples  
@@ -100,7 +99,7 @@ ENABLE;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Gestion de clés extensible &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [CREATE CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/create-cryptographic-provider-transact-sql.md)   
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   

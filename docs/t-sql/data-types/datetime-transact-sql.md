@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 9bd1cc5b-227b-4032-95d6-7581ddcc9924
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b4b6b8e386ee8391ab40bf6152d3c8c3cf6e315f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 6567861c2150362e0d5b5cf386512daec6d758f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113722"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,7 +113,7 @@ SELECT @datetime AS '@datetime', @date AS '@date';
 --2016-12-21 00:00:00.000 2016-12-21  
 ```  
   
-Dans le cas d’une conversion à partir de **time(n)**, le composant heure est copié et le composant date est défini sur « 1900-01-01 ». Quand la précision de fraction de la valeur **time(n)** est supérieure à trois chiffres, la valeur est tronquée en conséquence. L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en valeur `datetime`.  
+Dans le cas d’une conversion à partir de **time(n)** , le composant heure est copié et le composant date est défini sur « 1900-01-01 ». Quand la précision de fraction de la valeur **time(n)** est supérieure à trois chiffres, la valeur est tronquée en conséquence. L'exemple suivant montre les résultats de la conversion d'une valeur `time(4)` en valeur `datetime`.  
   
 ```sql
 DECLARE @time time(4) = '12:10:05.1237';  
@@ -142,7 +141,7 @@ SELECT @datetime AS '@datetime', @smalldatetime AS '@smalldatetime';
 --2016-12-01 12:32:00.000 2016-12-01 12:32:00  
 ```  
   
-Dans le cas d’une conversion à partir de **datetimeoffset(n)**, les composants date et heure sont copiés. Le fuseau horaire est tronqué. Quand la précision de fraction de la valeur **datetimeoffset(n)** est supérieure à trois chiffres, la valeur est tronquée. L'exemple suivant montre les résultats de la conversion d'une valeur `datetimeoffset(4)` en valeur `datetime`.  
+Dans le cas d’une conversion à partir de **datetimeoffset(n)** , les composants date et heure sont copiés. Le fuseau horaire est tronqué. Quand la précision de fraction de la valeur **datetimeoffset(n)** est supérieure à trois chiffres, la valeur est tronquée. L'exemple suivant montre les résultats de la conversion d'une valeur `datetimeoffset(4)` en valeur `datetime`.  
   
 ```sql
 DECLARE @datetimeoffset datetimeoffset(4) = '1968-10-23 12:45:37.1234 +10:0';  
@@ -156,7 +155,7 @@ SELECT @datetime AS '@datetime', @datetimeoffset AS '@datetimeoffset';
 --1968-10-23 12:45:37.123 1968-10-23 12:45:37.1237 +01:0   
 ```  
   
-Dans le cas d’une conversion à partir de **datetime2(n)**, la date et l’heure sont copiées. Quand la précision de fraction de la valeur **datetime2(n)** est supérieure à trois chiffres, la valeur est tronquée. L'exemple suivant montre les résultats de la conversion d'une valeur `datetime2(4)` en valeur `datetime`.  
+Dans le cas d’une conversion à partir de **datetime2(n)** , la date et l’heure sont copiées. Quand la précision de fraction de la valeur **datetime2(n)** est supérieure à trois chiffres, la valeur est tronquée. L'exemple suivant montre les résultats de la conversion d'une valeur `datetime2(4)` en valeur `datetime`.  
   
 ```sql
 DECLARE @datetime2 datetime2(4) = '1968-10-23 12:45:37.1237';  
