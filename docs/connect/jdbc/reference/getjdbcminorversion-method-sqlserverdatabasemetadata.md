@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d9e153b5-51b7-4e44-b342-f147f04dbe19
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 094f95da8e99dffe2506898cfceee7d04a1568da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81c7c8e2014da4965222a9292c82ebcaed24ef24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982633"
 ---
 # <a name="getjdbcminorversion-method-sqlserverdatabasemetadata"></a>Méthode getJDBCMinorVersion (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public int getJDBCMinorVersion()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui indique la version mineure JDBC.  
+ **Entier** qui indique la version mineure de JDBC.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getJDBCMinorVersion est spécifiée par la méthode getJDBCMinorVersion dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getJDBCMinorVersion, est spécifiée par la méthode getJDBCMinorVersion, dans l’interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

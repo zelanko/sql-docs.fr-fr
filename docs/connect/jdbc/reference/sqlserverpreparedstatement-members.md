@@ -1,5 +1,5 @@
 ---
-title: Les membres de SQLServerPreparedStatement | Microsoft Docs
+title: Membres SQLServerPreparedStatement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2363902f-d4c6-4cd4-a5fc-86079eb9e418
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89b4d7bedb2572c0396c3de80f000fdccdd1a2cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d99bf6118af71981ad2f45b5c7b722b458cc158c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970751"
 ---
 # <a name="sqlserverpreparedstatement-members"></a>Membres de SQLServerPreparedStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -81,7 +80,7 @@ ms.locfileid: "66803006"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)|Définit le paramètre désigné selon l’objet Clob donné.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Affecte la chaîne spécifiée en tant que nom de curseur SQL en vue de son utilisation par les méthodes d'exécution suivantes.|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlserverpreparedstatement.md)|Définit le paramètre désigné selon la valeur de date spécifiée.|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|Définit la valeur de la colonne spécifiée selon le [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) valeur.|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)|Définit la valeur de la colonne spécifiée sur la valeur de la [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlserverpreparedstatement.md)|Définit le paramètre désigné selon la valeur **double** spécifiée.|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Définit le mode de traitement d'échappement.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Fournit un conseil au pilote JDBC concernant la direction de traitement des lignes du jeu de résultats.|  
@@ -96,7 +95,7 @@ ms.locfileid: "66803006"
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlserverpreparedstatement.md)|Définit le paramètre désigné avec une valeur Null, en fonction du type de paramètre à définir.|  
 |[setNString](../../../connect/jdbc/reference/setnstring-method-int-java-lang-string.md)|Définit le paramètre désigné selon l’objet **String** spécifié.|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)|Définit la valeur du paramètre désigné à l’aide de l’objet spécifique.|  
-|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Demande qu'une instruction soit regroupée ou non. Par défaut, un objet SQLServerPreparedStatement est regroupé.|  
+|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Demande qu'une instruction soit regroupée ou non. Par défaut, un objet SQLServerPreparedStatement est regroupable lors de sa création.|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Définit le nombre de secondes pendant lesquelles le pilote attend qu’un objet Statement s’exécute selon le nombre de secondes spécifié.|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|Définit le paramètre désigné selon l’objet Ref spécifié.|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Définit le mode de mise en mémoire tampon des réponses de cet objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) selon **String full** ou **adaptive**, sans respect de la casse.|  

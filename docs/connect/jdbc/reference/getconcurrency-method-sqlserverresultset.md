@@ -1,5 +1,5 @@
 ---
-title: getconcurrency, méthode (SQLServerResultSet) | Microsoft Docs
+title: Méthode getConcurrency (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 207e25f4-769c-4ff3-913c-3517b06208e4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7386a03b56b319f6299d6d52d0f1736b74a75565
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5d0d59186e15dc07d1d4e91ac673c456ec592d01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952825"
 ---
 # <a name="getconcurrency-method-sqlserverresultset"></a>getConcurrency, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public int getConcurrency()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui indique le type d’accès concurrentiel, qui peut prendre l’une des valeurs suivantes :  
+ **Entier** qui indique le type d’accès concurrentiel, qui peut prendre l’une des valeurs suivantes:  
   
  ResultSet.CONCUR_READ_ONLY  
   
@@ -46,7 +45,7 @@ public int getConcurrency()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getConcurrency est spécifiée par la méthode getConcurrency dans l’interface java.sql.ResultSet.  
+ Cette méthode getConcurrency est spécifiée par la méthode getConcurrency dans l’interface java. Sql. ResultSet.  
   
  La concurrence utilisée est déterminée par l’objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) qui a créé le jeu de résultats.  
   

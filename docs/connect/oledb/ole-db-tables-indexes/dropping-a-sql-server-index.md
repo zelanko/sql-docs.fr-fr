@@ -1,6 +1,6 @@
 ---
-title: Suppression d’un Index SQL Server | Microsoft Docs
-description: Suppression d’un index sql server à l’aide de OLE DB Driver pour SQL Server
+title: Suppression d’un index de SQL Server | Microsoft Docs
+description: Suppression d’un index SQL Server à l’aide d’OLE DB pilote pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,22 +17,21 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: a426352059f0ca400091aec14589742ec592ea97
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 708deecefe451115ca0fca97075f88311dec2f5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015256"
 ---
 # <a name="dropping-a-sql-server-index"></a>Suppression d'un index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server expose la **IIndexDefinition::DropIndex** (fonction). Cela permet aux consommateurs de supprimer un index d’une table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Le pilote OLE DB pour SQL Server expose la fonction **IIndexDefinition::D ropindex** . Cela permet aux consommateurs de supprimer un index d’une table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Le pilote OLE DB pour SQL Server expose certains [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des contraintes PRIMARY KEY et UNIQUE en tant qu’index. Le propriétaire de la table, le propriétaire de la base de données et certains membres munis de rôles d’administration peuvent modifier une table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en supprimant une contrainte. Par défaut, seul le propriétaire de la table peut supprimer un index existant. Le succès ou l’échec de la fonction **DropIndex** ne dépend pas uniquement des droits d’accès de l’utilisateur de l’application, mais également du type d’index indiqué.  
+ Le pilote OLE DB pour SQL Server expose certaines [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] contraintes de clé primaire et uniques en tant qu’index. Le propriétaire de la table, le propriétaire de la base de données et certains membres munis de rôles d’administration peuvent modifier une table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en supprimant une contrainte. Par défaut, seul le propriétaire de la table peut supprimer un index existant. Le succès ou l’échec de la fonction **DropIndex** ne dépend pas uniquement des droits d’accès de l’utilisateur de l’application, mais également du type d’index indiqué.  
   
  Les consommateurs spécifient le nom de table en tant que chaîne de caractères Unicode dans le membre *pwszName* de l’union *uName* dans le paramètre *pTableID*. Le membre *eKind* de *pTableID* doit être DBKIND_NAME.  
   

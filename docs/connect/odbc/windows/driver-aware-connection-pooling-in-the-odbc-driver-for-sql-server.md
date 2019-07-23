@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d920d15bb633828dd2ad614c6789f397e229f0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97ddd5aa4abf926ecd4e68e89bef63b8f25ce323
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009971"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Regroupement de connexions prenant en charge le pilote dans le pilote ODBC pour SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -25,12 +24,12 @@ ms.locfileid: "66797801"
   
 -   Quelles que soient les propriétés de connexion, les connexions qui utilisent `SQLDriverConnect` arrivent dans un pool différent des connexions qui utilisent `SQLConnect`.
 - Quand vous utilisez l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et le regroupement de connexions prenant en charge les pilotes, le pilote n’utilise pas le contexte de sécurité de l’utilisateur Windows pour le thread actuel afin de séparer les connexions dans le pool. Autrement dit, si les paramètres des connexions sont équivalents pour les scénarios d’emprunt d’identité Windows avec l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et qu’elles utilisent les mêmes informations d’identification pour l’authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour se connecter au serveur principal, différents utilisateurs Windows peuvent utiliser le même regroupement de connexions. Quand vous utilisez l’authentification Windows et le regroupement de connexions prenant en charge les pilotes, le pilote utilise le contexte de sécurité de l’utilisateur Windows actuel pour séparer les connexions dans le regroupement. Autrement dit, pour les scénarios d’emprunt d’identité Windows, les différents utilisateurs Windows ne partagent pas les connexions même si celles-ci utilisent les mêmes paramètres.
-- Lorsque vous utilisez Azure Active Directory et le regroupement de connexions prenant en charge les pilotes, le pilote utilise également la valeur de l’authentification pour déterminer l’appartenance dans le pool de connexions.
+- Lorsque vous utilisez Azure Active Directory et le regroupement de connexions prenant en charge les pilotes, le pilote utilise également la valeur d’authentification pour déterminer l’appartenance au pool de connexions.
   
 -   Le regroupement de connexions prenant en charge les pilotes empêche une mauvaise connexion d’être retournée à partir du regroupement.  
   
--   Le regroupement de connexions prenant en charge les pilotes reconnaît les attributs de connexion spécifiques du pilote. Par conséquent, si une connexion utilise `SQL_COPT_SS_APPLICATION_INTENT` défini en lecture seule, elle obtient son propre pool de connexions.
--   Définition de la `SQL_COPT_SS_ACCESS_TOKEN` attribut entraîne une connexion à regroupés séparément 
+-   Le regroupement de connexions prenant en charge les pilotes reconnaît les attributs de connexion spécifiques du pilote. Ainsi, si une connexion utilise `SQL_COPT_SS_APPLICATION_INTENT` la valeur en lecture seule, cette connexion obtient son propre pool de connexions.
+-   La définition `SQL_COPT_SS_ACCESS_TOKEN` de l’attribut entraîne le regroupement séparé d’une connexion 
   
 Si l’un des ID d’attribut de connexion ou des mots clés de chaîne de connexion suivants est différent entre votre chaîne de connexion et la chaîne de connexion regroupée, le pilote utilise une connexion regroupée. Toutefois, les performances sont meilleures si tous les ID d’attribut de connexion ou mots clés de chaîne de connexion correspondent. (Pour faire correspondre une connexion dans le regroupement, le pilote réinitialise l’attribut.) Les performances diminuent, car la réinitialisation des paramètres suivants nécessite un appel réseau supplémentaire.  
   

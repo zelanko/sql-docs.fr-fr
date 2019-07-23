@@ -1,5 +1,5 @@
 ---
-title: setasciistream, méthode de flux octets - int d’entrée | Microsoft Docs
+title: Méthode setAsciiStream pour les octets du flux d’entrée-int | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6ea23386-201f-41af-8232-225de3476765
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2da554800f8700cf6b35e43db215f2bfa32149c0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f4ebed9ebad158ea445e726e8d0dbe0b60f57930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975498"
 ---
 # <a name="setasciistream-method--javalangstring-javaioinputstream-int"></a>Méthode setAsciiStream (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,17 +43,17 @@ public void setAsciiStream(java.lang.String parameterName,
   
  *value*  
   
- Un objet InputStream.  
+ Objet InputStream.  
   
  *length*  
   
- Un **int** qui indique la longueur en octets.  
+ **Entier** qui indique la longueur en nombre d’octets.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setAsciiStream est spécifiée par la méthode setAsciiStream dans l’interface java.sql.CallableStatement.  
+ Cette méthode setAsciiStream est spécifiée par la méthode setAsciiStream dans l’interface java. Sql. CallableStatement.  
   
  Si la longueur du flux diffère de celle spécifiée dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   

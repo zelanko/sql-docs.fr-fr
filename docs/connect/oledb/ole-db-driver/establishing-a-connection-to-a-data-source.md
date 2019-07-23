@@ -1,6 +1,6 @@
 ---
-title: Établir une connexion à une Source de données | Microsoft Docs
-description: Établir une connexion à une source de données à l’aide de OLE DB Driver pour SQL Server
+title: Établissement d’une connexion à une source de données | Microsoft Docs
+description: Établissement d’une connexion à une source de données à l’aide d’OLE DB pilote pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - OLE DB data sources [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d4a01b560c5612df2db873728747fa2481a2760f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 268c81f98a46174aa09df80e8459529e0f854bfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769193"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994995"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>Établissement d'une connexion à une source de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Pour accéder au pilote OLE DB pour SQL Server, le consommateur doit d’abord créer une instance d’un objet de source de données en appelant la méthode **CoCreateInstance**. Un identificateur de classe unique (CLSID) identifie chaque fournisseur OLE DB. Pour le pilote OLE DB pour SQL Server, l’identificateur de classe est CLSID_MSOLEDBSQL. Vous pouvez également utiliser le symbole MSOLEDBSQL_CLSID qui sera converti en pilote OLE DB pour SQL Server qui est utilisé dans le msoledbsql.h que vous référencez.  
+  Pour accéder au pilote OLE DB pour SQL Server, le consommateur doit d’abord créer une instance d’un objet de source de données en appelant la méthode **CoCreateInstance**. Un identificateur de classe unique (CLSID) identifie chaque fournisseur OLE DB. Pour le pilote OLE DB pour SQL Server, l’identificateur de classe est CLSID_MSOLEDBSQL. Vous pouvez également utiliser le symbole MSOLEDBSQL_CLSID qui sera résolu en OLE DB pilote pour SQL Server utilisé dans le MSOLEDBSQL. h que vous référencez.  
   
  L’objet de source de données expose l’interface **IDBProperties**, que le consommateur utilise pour fournir les informations d’authentification de base, comme le nom du serveur, le nom de la base de données, l’ID d’utilisateur et le mot de passe. La méthode **IDBProperties::SetProperties** est appelée pour définir ces propriétés.  
   

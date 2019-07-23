@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d7e07cff-6fc4-4c9c-8e8f-838c77734bc5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b32d98e6be6297bd2bfab2953648be4fca07f6a9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f340a182da1cd232aab70e61c268ba6ec58633db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977532"
 ---
 # <a name="isnullable-method-sqlserverparametermetadata"></a>Méthode isNullable (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ public int isNullable(int param)
 #### <a name="parameters"></a>Paramètres  
  *param*  
   
- Un **int** qui indique l’index de paramètre.  
+ **Entier** qui indique un index de paramètre.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui indique la possibilité de valeur du paramètre désigné, qui peut être une des valeurs suivantes :  
+ **Entier** qui indique la possibilité de valeur null du paramètre désigné, qui peut prendre l’une des valeurs suivantes:  
   
  ParameterMetaData.parameterNoNulls  
   
@@ -53,7 +52,7 @@ public int isNullable(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode isNullable est spécifiée par la méthode isNullable dans l’interface java.sql.ParameterMetaData.  
+ Cette méthode isNullable est spécifiée par la méthode isNullable dans l’interface java. Sql. ParameterMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerParameterMetaData, méthodes](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

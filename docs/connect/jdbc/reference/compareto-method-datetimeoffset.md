@@ -1,5 +1,5 @@
 ---
-title: Méthode compareTo (DateTimeOffset) | Microsoft Docs
+title: compareTo, méthode (DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb06138639be09378baa8dfe94d110c0ded41223
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3f70413a7624b9bbd380a664fbf61b9a33f8989b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955515"
 ---
 # <a name="compareto-method-datetimeoffset"></a>Méthode compareTo (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Compare cette **DateTimeOffset** objet vers un autre **DateTimeOffset** objet basé sur l’heure à GMT.  
+  Compare cet objet **DateTimeOffset** à un autre objet **DateTimeOffset** en fonction de l’heure à l’heure GMT.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,9 +37,9 @@ public int compareTo(DateTimeOffset other)
   
 |Valeur retournée|Description|  
 |------------------|-----------------|  
-|0|Les deux **DateTimeOffset** objets représentent le même point dans le temps.|  
-|nombre négatif|Cela **DateTimeOffset** objet représente un point dans le temps qui se trouve avant *autres*.|  
-|nombre positif|Cela **DateTimeOffset** objet représente un point dans le temps qui se trouve après *autres*.|  
+|0|Les deux objets **DateTimeOffset** représentent le même point dans le temps.|  
+|nombre négatif|Cet objet **DateTimeOffset** représente un point dans le temps antérieur à *other*.|  
+|nombre positif|Cet objet **DateTimeOffset** représente un point dans le temps qui est après *other*.|  
   
 ## <a name="remarks"></a>Notes  
  Lorsque deux objets **DateTimeOffset** ont la même heure GMT, ils ne sont pas triés en fonction du décalage.  

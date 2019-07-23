@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd4958db78e2e35d29bcc47428295db50f7e5678
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6c25349d6fbf9495647ae73773d984dfcd269f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982961"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>Méthode getFunctionColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 #### <a name="parameters"></a>Paramètres  
  *catalog*  
   
- Un **chaîne** qui contient le nom du catalogue. Si la chaîne est vide « », le résultat inclut les fonctions sans catalogue. Si elle est **null**, le nom du catalogue n’est pas utilisé pour la recherche.  
+ **Chaîne** qui contient le nom du catalogue. Si la chaîne est vide « », le résultat inclut les fonctions sans catalogue. Si elle est **null**, le nom du catalogue n’est pas utilisé pour la recherche.  
   
  *schemaPattern*  
   
@@ -73,17 +72,17 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |DATA_TYPE|**smallint**|Type de données SQL de Java.sql.Types.|  
 |TYPE_NAME|**String**|Nom du type de données.|  
 |PRECISION|**Int**|Nombre total de chiffres significatifs.|  
-|LENGTH|**Int**|La longueur des données en octets.|  
+|LENGTH|**Int**|Longueur des données en octets.|  
 |SCALE|**short**|Nombre de chiffres à droite de la virgule décimale.|  
 |RADIX|**short**|Base des types numériques.|  
 |NULLABLE|**short**|Indique si le paramètre ou la valeur de retour peut contenir une valeur **null**.<br /><br /> **Il peut avoir une des valeurs suivantes :**<br /><br /> functionNoNulls (0) : la valeur NULL n'est pas autorisée.<br /><br /> functionNullable (1) : la valeur NULL est autorisée.<br /><br /> functionNullableUnknown (2) : inconnue.|  
 |REMARKS|**String**|Commentaires sur une colonne ou un paramètre.|  
 |COLUMN_DEF|**String**|Valeur par défaut de la colonne.<br /><br /> **Remarque :** Ces informations sont disponibles avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et sont spécifiques au pilote JDBC.|  
 |SQL_DATA_TYPE|**smallint**|Cette colonne est la même que la colonne **DATA_TYPE**, excepté pour les types de données **datetime** et **interval** ISO.<br /><br /> **Remarque :** Ces informations sont disponibles avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et sont spécifiques au pilote JDBC.|  
-|SQL_DATETIME_SUB|**smallint**|Le sous-code **interval** ISO de **datetime** si la valeur de **SQL_DATA_TYPE** est **SQL_DATETIME** ou **SQL_INTERVAL**. Pour les données de types autres que **datetime** et ISO **intervalle**, cette colonne est NULL.<br /><br /> **Remarque :** Ces informations sont disponibles avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et sont spécifiques au pilote JDBC.|  
+|SQL_DATETIME_SUB|**smallint**|Le sous-code **interval** ISO de **datetime** si la valeur de **SQL_DATA_TYPE** est **SQL_DATETIME** ou **SQL_INTERVAL**. Pour les types de données autres que **DateTime** et **Interval**ISO, cette colonne a la valeur null.<br /><br /> **Remarque :** Ces informations sont disponibles avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et sont spécifiques au pilote JDBC.|  
 |CHAR_OCTET_LENGTH|**Int**|Longueur maximale des paramètres ou colonnes binaires et basés sur des caractères. Pour les autres types de données, il s'agit de la valeur NULL.|  
 |ORDINAL_POSITION|**Int**|Pour les paramètres d'entrée et de sortie, elle représente la position commençant à 1.<br /><br /> Pour les colonnes de jeux de résultats, il s'agit de la position de la colonne dans le jeu de résultats commençant à 1.<br /><br /> Pour la valeur de retour, il s'agit de la valeur 0.|  
-|IS_NULLABLE|**String**|Détermine l'acceptation des valeurs NULL par un paramètre ou une colonne.<br /><br /> Il peut avoir une des valeurs suivantes :<br /><br /> **Oui**: le paramètre ou une colonne peut inclure des valeurs NULL.<br /><br /> **NE**: le paramètre ou une colonne ne peut pas inclure des valeurs NULL.<br /><br /> Chaîne vide (« ») : inconnue.|  
+|IS_NULLABLE|**String**|Détermine l'acceptation des valeurs NULL par un paramètre ou une colonne.<br /><br /> Il peut avoir une des valeurs suivantes :<br /><br /> **Oui**: le paramètre ou la colonne peut inclure des valeurs NULL.<br /><br /> **Non**: le paramètre ou la colonne ne peut pas inclure de valeurs NULL.<br /><br /> Chaîne vide (« ») : inconnue.|  
 |SS_TYPE_CATALOG_NAME|**String**|Nom du catalogue qui contient le type défini par l'utilisateur (UDT).|  
 |SS_TYPE_SCHEMA_NAME|**String**|Nom du schéma qui contient le type défini par l'utilisateur (UDT).|  
 |SS_UDT_CATALOG_NAME|**String**|Type défini par l'utilisateur (UDT) du nom complet.|  

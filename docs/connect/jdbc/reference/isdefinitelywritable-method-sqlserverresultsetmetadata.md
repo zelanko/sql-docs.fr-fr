@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ab19ad0c8b02d8a2c1d931b2986f16afcfce45ff
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 49ca65fc7fd2c7768db81460e331d960bad1c5ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977640"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>Méthode isDefinitelyWritable (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,16 +37,16 @@ public boolean isDefinitelyWritable(int column)
 #### <a name="parameters"></a>Paramètres  
  *column*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
 ## <a name="return-value"></a>Valeur retournée  
- **true** si l’écriture de la colonne réussira. Dans le cas contraire, la valeur est **false**.  
+ **true** si l’écriture de la colonne réussit. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode isDefinitelyWritable est spécifiée par la méthode isDefinitelyWritable dans l’interface java.sql.ResultSetMetaData.  
+ Cette méthode isDefinitelyWritable est spécifiée par la méthode isDefinitelyWritable dans l’interface java. Sql. ResultSetMetaData.  
   
 > [!NOTE]  
 >  Lors de l’utilisation du [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] avec une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], cette méthode retourne toujours la valeur False.  

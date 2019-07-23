@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f84cfbe6-ebab-4357-8770-f1db34ecb04f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1b610372ddf3d435b34ec065b26a35de5f18a000
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 68d5d5e3183530dfcbb3071bd0998b077b73bbf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985353"
 ---
 # <a name="updatebinarystream-method-int-javaioinputstream-long"></a>Méthode updateBinaryStream (int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,21 +34,21 @@ public void updateBinaryStream(int columnIndex,
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
  *x*  
   
- Un objet InputStream.  
+ Objet InputStream.  
   
  *length*  
   
- Un **long** qui indique la longueur du flux.  
+ **Valeur de type long** qui indique la longueur du flux.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateBinaryStream est spécifiée par la méthode updateBinaryStream dans l’interface java.sql.ResultSet.  
+ Cette méthode updateBinaryStream est spécifiée par la méthode updateBinaryStream dans l’interface java. Sql. ResultSet.  
   
  Cette méthode passe les octets à partir d’un objet InputStream à des colonnes binaires [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sélectionnées, telles que binary, varbinary, varbinary(max), image, xml et udt. La mise à jour de colonnes de caractères n'est pas prise en charge avec cette méthode. Pour mettre à jour des colonnes de caractères avec InputStream, utilisez la méthode [updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md).  
   

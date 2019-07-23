@@ -1,5 +1,5 @@
 ---
-title: getfetchsize, méthode (SQLServerStatement) | Microsoft Docs
+title: Méthode getFetchSize (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 54869f3c689b0c493cdaf19b86f5d95a43835929
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 22ba06688fb402fdbcd5e9afd951a668ef9c440d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983212"
 ---
 # <a name="getfetchsize-method-sqlserverstatement"></a>getFetchSize, méthode (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public final int getFetchSize()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui indique la taille d’extraction, qui est spécifiée par le [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md) (méthode).  
+ **Entier** qui indique la taille de l’extraction, spécifiée par la méthode [setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverstatement.md) .  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getFetchSize est spécifiée par la méthode getFetchSize dans l’interface java.sql.Statement.  
+ Cette méthode getFetchSize est spécifiée par la méthode getFetchSize dans l’interface java. Sql. Statement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

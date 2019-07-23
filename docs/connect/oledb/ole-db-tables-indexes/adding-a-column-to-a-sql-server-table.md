@@ -1,6 +1,6 @@
 ---
-title: Ajout d’une colonne à une Table SQL Server | Microsoft Docs
-description: Ajout d’une colonne à une table SQL Server à l’aide de OLE DB Driver pour SQL Server
+title: Ajout d’une colonne à une table SQL Server | Microsoft Docs
+description: Ajout d’une colonne à une table SQL Server à l’aide d’OLE DB pilote pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,22 +15,21 @@ helpviewer_keywords:
 - adding columns
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 282166444597245ad70be565ce6db9f01533a227
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994103"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>Ajout d'une colonne à une table SQL Server.
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server expose la **ITableDefinition::AddColumn** (fonction). Cela permet aux consommateurs d’ajouter une colonne à une table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Le pilote OLE DB pour SQL Server expose la fonction **ITableDefinition:: AddColumn** . Cela permet aux consommateurs d’ajouter une colonne à une table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Lorsque vous ajoutez une colonne à une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de table, le pilote OLE DB pour le consommateur SQL Server est limité comme suit :  
+ Lorsque vous ajoutez une colonne à une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table, le pilote OLE DB pour SQL Server consommateur est restreint comme suit:  
   
 -   Si DBPROP_COL_AUTOINCREMENT est VARIANT_TRUE, DBPROP_COL_NULLABLE doit être VARIANT_FALSE.  
   

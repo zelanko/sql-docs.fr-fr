@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 158be08f-387d-4c5b-b567-a1fe590d6f16
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d755c53cc49b0d1d92b49a0e1662025aa91e99cc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1c5c0ac339c60b4e88138d18a1f66798b4c66d8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969132"
 ---
 # <a name="supportsnamedparameters-method-sqlserverdatabasemetadata"></a>Méthode supportsNamedParameters (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsNamedParameters()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode supportsNamedParameters est spécifiée par la méthode supportsNamedParameters dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode supportsNamedParameters est spécifiée par la méthode supportsNamedParameters dans l’interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

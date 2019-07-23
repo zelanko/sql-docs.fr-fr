@@ -1,5 +1,5 @@
 ---
-title: iswrapperfor, méthode (SQLServerStatement) | Microsoft Docs
+title: Méthode isWrapperFor (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53f3291f-d43a-476b-a656-d86168dacf6c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 34ead896ef4ba8ae6fc5d8ca57c1623a00aa5165
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c35cad678ce4f9b6008b656302d4767bad9b1244
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796275"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977058"
 ---
 # <a name="iswrapperfor-method-sqlserverstatement"></a>Méthode isWrapperFor (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +32,7 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>Paramètres  
  *iface*  
   
- Un **classe** définissant une interface.  
+ **Classe** définissant une interface.  
   
 ## <a name="return-value"></a>Valeur retournée  
  **true** si cet objet implémente l’interface ou encapsule un objet qui implémente l’interface. Dans le cas contraire, la valeur est **false**.  
@@ -46,12 +45,12 @@ public boolean isWrapperFor(Class iface)
   
  Si cette méthode retourne la valeur True, l’appel de [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) avec le même argument réussit.  
   
- Pour un exemple de code, consultez [la mise à jour des exemples de données volumineux](../../../connect/jdbc/updating-large-data-sample.md).  
+ Pour obtenir un exemple de code, consultez [mise à jour](../../../connect/jdbc/updating-large-data-sample.md)d’un exemple de données volumineuses.  
   
- Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Pour plus d’informations, consultez [wrappers et interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthode Unwrap &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)   
+ [Unwrap, &#40;méthode SQLServerStatement&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)   
  [SQLServerStatement, membres](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [SQLServerStatement, classe](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

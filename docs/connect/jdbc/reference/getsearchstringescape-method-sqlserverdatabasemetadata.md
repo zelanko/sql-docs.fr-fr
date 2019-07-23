@@ -1,5 +1,5 @@
 ---
-title: Méthode getSearchStringEscape (SQLServerDatabaseMetaData) | Microsoft Docs
+title: Méthode getSearchStringEscape, (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ea0f95d0-0238-4dc8-9f26-7ff9b65f30c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 715787197357f6d10f0d116359155c86edb07187
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1b65281fbe6ba1f758bdd4e12ae834cee3347842
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980053"
 ---
 # <a name="getsearchstringescape-method-sqlserverdatabasemetadata"></a>Méthode getSearchStringEscape (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public java.lang.String getSearchStringEscape()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **chaîne** qui contient la chaîne de caractères génériques d’échappement.  
+ **Chaîne** qui contient la chaîne de caractères génériques d’échappement.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getSearchStringEscape est spécifiée par la méthode getSearchStringEscape dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getSearchStringEscape, est spécifiée par la méthode getSearchStringEscape, dans l’interface java. Sql. DatabaseMetaData.  
   
  Cette méthode est utilisée uniquement pour les recherches de modèles de métadonnées. Elle retourne « \\ ». Un modèle de recherche **String** peut placer des caractères génériques (« % » et « _ ») dans une séquence d’échappement et les fournir sous forme de littéraux en ajoutant en préfixe une barre oblique inverse. Cela permet de traduire « \\% » en « [%] » et « \\\_ » en « [\_] ».  
   

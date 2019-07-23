@@ -1,5 +1,5 @@
 ---
-title: OLE DB Driver pour SQL Server fonctionnalités | Microsoft Docs
+title: OLE DB du pilote pour les fonctionnalités de SQL Server | Microsoft Docs
 description: Fonctionnalités OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 02/11/2019
@@ -14,13 +14,12 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], features
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 445345d39d5612fb543466900cee97d64a567d87
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 46f7de1e57686a0f54368407580d90236152d147
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989048"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Fonctionnalités OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,10 +36,10 @@ ms.locfileid: "66800864"
  Explique comment OLE DB Driver pour SQL Server prend en charge les opérations asynchrones, à savoir la capacité d’un retour immédiat sans blocage sur le thread appelant.  
 
 [Utilisation d’Azure Active Directory](using-azure-active-directory.md)  
-Décrit les nouvelles méthodes d’authentification introduites dans le pilote OLE DB 18.2.1 qui ont des paramètres par défaut plus sécurisées et autoriser la connexion à une instance de base de données SQL Azure à l’aide d’une identité fédérée.
+Présente les nouvelles méthodes d’authentification introduites dans OLE DB 18.2.1 de pilote qui ont des paramètres par défaut plus sécurisés et qui permettent la connexion à une instance de Azure SQL Database à l’aide d’une identité fédérée.
 
  [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../oledb/features/using-multiple-active-result-sets-mars.md)  
- Explique comment OLE DB Driver pour SQL Server prend en charge les jeux de résultats actifs multiples (MARS). MARS permet d'exécuter et de recevoir plusieurs jeux de résultats à l'aide d'une seule connexion de base de données.  
+ Explique comment OLE DB pilote pour SQL Server prend en charge MARS (Multiple Active Result Sets). MARS permet d'exécuter et de recevoir plusieurs jeux de résultats à l'aide d'une seule connexion de base de données.  
   
  [Utilisation de types de données XML](../../oledb/features/using-xml-data-types.md)  
  Explique comment OLE DB Driver pour SQL Server prend en charge le type de données XML, qui peut être utilisé comme type de colonne, type de variable, type de paramètre ou type de retour de fonction.  
@@ -49,7 +48,7 @@ Décrit les nouvelles méthodes d’authentification introduites dans le pilote 
  Explique comment OLE DB Driver pour SQL Server prend en charge UDT, qui étend le système de types SQL en permettant de stocker les objets et les structures de données personnalisées dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Utilisation de types de valeur élevée](../../oledb/features/using-large-value-types.md)  
- Explique comment OLE DB Driver pour SQL Server prend en charge les types de données de valeur élevée, qui sont des types de données objet volumineux (LOB).  
+ Explique comment OLE DB pilote pour SQL Server prend en charge les types de données de valeur élevée, qui sont des types de données d’objets volumineux (LOB).  
   
  [Changement des mots de passe par programmation](../../oledb/features/changing-passwords-programmatically.md)  
  Explique comment OLE DB Driver pour SQL Server prend en charge la gestion des mots de passe périmés afin que les mots de passe puissent désormais être modifiés sur le client sans intervention de l’administrateur.  
@@ -58,31 +57,31 @@ Décrit les nouvelles méthodes d’authentification introduites dans le pilote 
  Explique comment OLE DB Driver pour SQL Server prend en charge l’amélioration apportée au contrôle de version de ligne qui optimise les performances de la base de données en évitant les scénarios de blocage du lecteur/enregistreur.  
   
  [Utilisation de notifications de requêtes](../../oledb/features/working-with-query-notifications.md)  
- Explique comment OLE DB Driver pour SQL Server prend en charge la notification des consommateurs sur la modification de l’ensemble de lignes.  
+ Explique comment OLE DB pilote pour SQL Server prend en charge la notification du consommateur sur la modification de l’ensemble de lignes.  
   
  [Exécution d'opérations de copie en bloc](../../oledb/features/performing-bulk-copy-operations.md)  
  Explique comment OLE DB Driver pour SQL Server prend en charge les opérations de copie en bloc qui autorisent le transfert d’importantes quantités de données vers ou depuis une table ou une vue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  [Utilisation du chiffrement sans validation](../../oledb/features/using-encryption-without-validation.md)  
- Explique comment utiliser OLE DB Driver pour SQL Server pour chiffrer les données envoyées au serveur sans validation du certificat.  
+ Explique comment utiliser OLE DB pilote pour SQL Server pour chiffrer les données envoyées au serveur sans valider le certificat.  
   
  [Paramètres table &#40;OLE DB Driver pour SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)  
- Traite le pilote OLE DB pour la prise en charge de SQL Server pour les paramètres table.  
+ Décrit OLE DB pilote pour la prise en charge de SQL Server pour les paramètres table.  
   
  [Types CLR volumineux définis par l’utilisateur](../../oledb/features/large-clr-user-defined-types.md)  
  Explique la prise en charge des types UDT volumineux du CLR.  
   
  [Prise en charge de FILESTREAM](../../oledb/features/filestream-support.md)  
- Décrit le pilote OLE DB pour la prise en charge de SQL Server pour la fonctionnalité FILESTREAM améliorée.  
+ Décrit OLE DB pilote pour la prise en charge de SQL Server pour la fonctionnalité FILESTREAM améliorée.  
   
  [Prise en charge des noms de principal du service &#40;SPN&#41; dans les connexions clientes](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)  
  Explique comment la prise en charge des noms de principaux du service a été étendue pour permettre l'authentification mutuelle à travers l'ensemble des protocoles.  
   
  [Prise en charge des colonnes éparses dans OLE DB Driver pour SQL Server](../../oledb/features/sparse-columns-support-in-oledb-driver-for-sql-server.md)  
- Décrit le pilote OLE DB pour la prise en charge de SQL Server pour les colonnes éparses.  
+ Décrit OLE DB pilote pour la prise en charge des colonnes éparses par SQL Server.  
   
  [Améliorations des types de données date et heure](../../oledb/features/date-and-time-improvements.md)  
- Décrit la prise en charge par OLE DB Driver pour SQL Server pour les types de données de date et d’heure.  
+ Décrit la prise en charge ajoutée à OLE DB pilote pour SQL Server pour les types de données de date et d’heure.  
   
  [Détection des métadonnées](../../oledb/features/metadata-discovery.md)  
  Décrit les améliorations apportées à la découverte des métadonnées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
@@ -91,7 +90,7 @@ Décrit les nouvelles méthodes d’authentification introduites dans le pilote 
  Décrit un changement de comportement introduit dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Si vous fournissez une mémoire tampon de longueur fixe lors de la liaison d’un résultat de colonne ou d’un paramètre de sortie et que le caractère **wchar** écrit dans la mémoire tampon avant le caractère de fin est un point de code de substitut étendu d’une paire de substitution, et si le caractère **wchar** suivant est un point de code de substitut faible, OLE DB Driver pour SQL Server n’ajoutera pas le point de code de substitut étendu à la mémoire tampon.  
  
  [Prise en charge d’UTF-8 dans OLE DB Driver pour SQL Server](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
- Décrit la prise en charge de UTF-8 server encodage et la configuration des précautions les utilisateurs doivent prendre lorsque vous travaillez avec des données UTF-8.
+ Décrit la prise en charge de l’encodage et de la configuration du serveur UTF-8 que les utilisateurs doivent effectuer lors de l’utilisation de données encodées en UTF-8.
   
  [Prise en charge de la récupération d’urgence et de la haute disponibilité par OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  Explique comment votre application peut être configurée pour tirer parti des fonctionnalités de récupération d'urgence haute disponibilité, ajoutées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
@@ -100,7 +99,7 @@ Décrit les nouvelles méthodes d’authentification introduites dans le pilote 
  Présente les améliorations apportées à OLE DB Driver pour SQL Server et au suivi de données qui vous donne accès aux informations de diagnostic dans la mémoire tampon en anneau et le journal XEvents.  
   
  [Prise en charge de la base de données locale par OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
- Décrit le pilote OLE DB pour la prise en charge de SQL Server pour la fonctionnalité de base de données locale.  
+ Décrit OLE DB pilote pour la prise en charge d’SQL Server pour la fonctionnalité de base de données locale.  
   
 ## <a name="see-also"></a>Voir aussi  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      

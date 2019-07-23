@@ -1,5 +1,5 @@
 ---
-title: Méthode setNCharacterStream à l’objet de lecteur - int | Microsoft Docs
+title: Méthode setNCharacterStream pour lire l’objet-int | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7732746b-eda5-469e-8567-e8546c4d81cd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a871bbbb7135d22771b3cd769a6ef0e5eb1bbe9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01e501bbe9ae68b35c4e9b8373b0dfe1f55d9f6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66768758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973911"
 ---
 # <a name="setncharacterstream-method-int-javaioreader"></a>Méthode setNCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,7 +33,7 @@ public final void setNCharacterStream(int parameterIndex,
 #### <a name="parameters"></a>Paramètres  
  *parameterIndex*  
   
- Un **int** qui indique l’index de paramètre.  
+ **Entier** qui indique l’index du paramètre.  
   
  *value*  
   
@@ -44,9 +43,9 @@ public final void setNCharacterStream(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setNCharacterStream est spécifiée par la méthode setNCharacterStream dans l’interface java.sql.PreparedStatement.  
+ Cette méthode setNCharacterStream est spécifiée par la méthode setNCharacterStream dans l’interface java. Sql. PreparedStatement.  
   
- Cette méthode doit être utilisée pour **NCHAR**, **NVARCHAR**, **NTEXT**, et **XML** types de données.  
+ Cette méthode doit être utilisée pour les types de données **nchar**, **nvarchar**, **ntext**et **XML** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [setNCharacterStream, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   

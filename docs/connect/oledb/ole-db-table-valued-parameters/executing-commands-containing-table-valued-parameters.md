@@ -12,13 +12,12 @@ helpviewer_keywords:
 - table-valued parameters, executing commands containing
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9a32de76937a0029b0cef2e490a107ee4a741696
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 320a66b84c6a5b904e98941251801c7ee5927087
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994154"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Exécution de commandes contenant des paramètres table
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,12 +33,12 @@ ms.locfileid: "66801164"
 ## <a name="table-valued-parameter-specification"></a>Spécification des paramètres table  
  Le consommateur peut spécifier le type du paramètre table. Ces informations incluent le nom du type du paramètre table. Elles incluent aussi le nom du schéma et indiquent si le type de table défini par l’utilisateur pour le paramètre table ne figure pas dans l’actuel schéma par défaut de la connexion. En fonction de la prise en charge du serveur, le consommateur peut également spécifier des informations de métadonnées facultatives, telles que la classification des colonnes, et indiquer que toutes les lignes de colonnes particulières ont des valeurs par défaut.  
   
- Pour spécifier un paramètre table, le consommateur appelle ISSCommandWithParameter::SetParameterInfo et appelle éventuellement ISSCommandWithParameters::SetParameterProperties. Pour un paramètre table, le champ *pwszDataSourceType* de la structure DBPARAMBINDINFO a la valeur DBTYPE_TABLE. Le champ *ulParamSize* est défini avec la valeur ~0 pour indiquer que la longueur est inconnue. Propriétés particulières des paramètres table, telles que le nom de schéma, un nom de type, ordre des colonnes et les colonnes par défaut, peuvent être définies via ISSCommandWithParameters::SetParameterProperties.  
+ Pour spécifier un paramètre table, le consommateur appelle ISSCommandWithParameter:: SetParameterInfo, et appelle éventuellement ISSCommandWithParameters:: SetParameterProperties. Pour un paramètre table, le champ *pwszDataSourceType* de la structure DBPARAMBINDINFO a la valeur DBTYPE_TABLE. Le champ *ulParamSize* est défini avec la valeur ~0 pour indiquer que la longueur est inconnue. Les propriétés particulières des paramètres table, telles que le nom de schéma, le nom de type, l’ordre des colonnes et les colonnes par défaut, peuvent être définies via ISSCommandWithParameters:: SetParameterProperties.  
   
 ## <a name="table-valued-parameter-binding"></a>Liaison de paramètre table  
  Un paramètre table peut être n'importe quel objet d'ensemble de lignes. Le fournisseur effectue la lecture à partir de cet objet tout en envoyant les paramètres table au serveur pendant l'exécution.  
   
- Pour lier le paramètre table, le consommateur appelle IAccessor::CreateAccessor. Le champ *wType* de la structure DBBINDING du paramètre table est défini avec la valeur DBTYPE_TABLE. Le membre *pObject* de la structure DBBINDING n’est pas Null et le membre *iid* de *pObject* est défini avec la valeur IID_IRowset ou autre interface d’objets d’ensemble de lignes de paramètres table. Les champs restants de la structure DBBINDING doivent être définis de la même façon qu’ils le sont pour les BLOB transmis en continu.  
+ Pour lier le paramètre table, le consommateur appelle IAccessor:: CreateAccessor. Le champ *wType* de la structure DBBINDING du paramètre table est défini avec la valeur DBTYPE_TABLE. Le membre *pObject* de la structure DBBINDING n’est pas Null et le membre *iid* de *pObject* est défini avec la valeur IID_IRowset ou autre interface d’objets d’ensemble de lignes de paramètres table. Les champs restants de la structure DBBINDING doivent être définis de la même façon qu’ils le sont pour les BLOB transmis en continu.  
   
  Dans les liaisons du paramètre table et de l'objet d'ensemble de lignes associé à un paramètre table, les restrictions suivantes s'appliquent :  
   

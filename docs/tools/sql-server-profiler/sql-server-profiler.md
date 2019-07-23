@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 3ad5f33d-559e-41a4-bde6-bb98792f7f1a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1395cef2b706cc9e37610686ebae6561f2f22396
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 928901caae5ed500913f59f138499a03f73f5439
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059734"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ Le tableau suivant indique les fonctionnalités que nous vous conseillons d’ut
 ||||  
 |-|-|-|  
 |**Fonctionnalité/Charge de travail cible**|**Moteur relationnel**|**Analysis Services**|  
-|**Capture de trace**|[Événements étendus](../../relational-databases/extended-events/extended-events.md) interface graphique utilisateur [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
+|**Capture de trace**|Interface utilisateur graphique des [événements étendus](../../relational-databases/extended-events/extended-events.md) dans[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
 |**Relecture de trace**|[Distributed Replay](../distributed-replay/sql-server-distributed-replay.md)|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]|  
   
 ## <a name="sql-server-profiler"></a>SQL Server Profiler  
@@ -77,7 +76,7 @@ Le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] est une interfa
 Pour utiliser le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], vous devez comprendre les termes qui décrivent le fonctionnement de l'outil.  
   
 > [!NOTE]
-> Bien comprendre Trace SQL s’avère très utile lorsque vous travaillez avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Pour en savoir plus, voir [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).  
+> La compréhension de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]trace SQL s’avère vraiment utile quand vous utilisez. Pour en savoir plus, voir [SQL Trace](../../relational-databases/sql-trace/sql-trace.md).  
   
  **Événement**  
  Un événement est une action générée dans une instance de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. En voici quelques exemples :  
@@ -128,7 +127,7 @@ Toutes les données générées par un événement sont affichées dans une mêm
 |Description de la tâche|Rubrique|  
 |----------------------|-----------|  
 |Répertorie les modèles prédéfinis que SQL Server fournit pour surveiller certains types d'événements, et les autorisations requises à utiliser pour relire les traces.|[Modèles et autorisations du générateur de SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)|  
-|Décrit comment exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler.|[Autorisations nécessaires pour exécuter SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
+|Décrit comment exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le profileur.|[Autorisations nécessaires pour exécuter SQL Server Profiler](../../tools/sql-server-profiler/permissions-required-to-run-sql-server-profiler.md)|  
 |Décrit comment créer une trace.|[Créer une trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)|  
 |Décrit comment spécifier les événements et les colonnes de données d'un fichier de trace.|[Spécifier les événements et les colonnes de données d’un fichier de trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)|  
 |Explique comment enregistrer les résultats de trace dans un fichier.|[Enregistrer des résultats d’une trace dans un fichier &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/save-trace-results-to-a-file-sql-server-profiler.md)|  
@@ -175,11 +174,11 @@ Toutes les données générées par un événement sont affichées dans une mêm
 |Explique comment modifier les modèles de trace.|[Modifier des modèles de trace](../../tools/sql-server-profiler/modify-trace-templates.md)|  
 |Explique comment corréler une trace avec les données du journal de performances Windows.|[Mettre en corrélation une trace avec les données du journal de performances Windows](../../tools/sql-server-profiler/correlate-a-trace-with-windows-performance-log-data.md)|  
 |Décrit comment afficher et analyser des traces avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Afficher et analyser des traces avec SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md)|  
-|Décrit comment analyser des blocages avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Analyser des blocages à l'aide de SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
+|Décrit comment analyser les blocages avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Analyser des blocages à l'aide de SQL Server Profiler](../../tools/sql-server-profiler/analyze-deadlocks-with-sql-server-profiler.md)|  
 |Décrit comment analyser des requêtes avec des résultats SHOWPLAN dans le Générateur de profils SQL Server.|[Analyser des requêtes avec des résultats SHOWPLAN dans SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md)|  
 |Décrit comment filtrer des traces avec [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Filtrer des traces avec SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|  
 |Décrit comment utiliser les fonctionnalités de relecture du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Relire des traces](../../tools/sql-server-profiler/replay-traces.md)|  
-|Répertorie les rubriques d’aide contextuelles [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Aide (F1) du Générateur de profils SQL](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
+|Répertorie les rubriques d’aide contextuelle pour [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|[Aide (F1) du Générateur de profils SQL](../../tools/sql-server-profiler/sql-server-profiler-f1-help.md)|  
 |Répertorie les procédures stockées système utilisées par le [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour contrôler l'activité et les performances.|[Procédures stockées de SQL Server Profiler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql.md)|  
   
 ## <a name="see-also"></a>Voir aussi  

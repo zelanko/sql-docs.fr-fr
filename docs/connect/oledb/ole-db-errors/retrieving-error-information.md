@@ -1,6 +1,6 @@
 ---
 title: Récupération des informations d’erreur | Microsoft Docs
-description: Récupération des informations d’erreur à l’aide de OLE DB Driver pour SQL Server
+description: Récupération des informations d’erreur à l’aide du pilote OLE DB pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - OLE DB error handling, examples
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: aa354694c0b74412dc28bd6dd7a1a367398ca60c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: eed37b2452ca833c0f2c840aed1294a8957b927f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015668"
 ---
 # <a name="retrieving-error-information"></a>Extraction des informations sur les erreurs
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

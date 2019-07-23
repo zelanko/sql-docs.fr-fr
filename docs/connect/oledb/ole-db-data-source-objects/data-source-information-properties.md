@@ -1,5 +1,5 @@
 ---
-title: Propriétés d’informations sur la Source de données | Microsoft Docs
+title: Propriétés des informations de la source de données | Microsoft Docs
 description: Propriétés des informations de la source de données
 ms.custom: ''
 ms.date: 06/14/2018
@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB data source properties [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 18518e92896223201c24982c6b6f0955ea81aa6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba9fa21f0c22c342922946a43124216a25ba09ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66768617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016036"
 ---
 # <a name="data-source-information-properties"></a>Propriétés des informations de la source de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,6 +43,6 @@ ms.locfileid: "66768617"
 |SSPROP_STREAM_XMLROOT|Type : VT_BSTR R/W: Read/Write (Lecture/écriture)<br /><br /> Description : le résultat d'une requête FOR XML ne peut pas être un document bien formé. Lorsque cette propriété est spécifiée, le résultat d'une requête 'select... for XML' est encapsulée dans la balise racine fournie par la propriété pour retourner un document XML bien formé. Si la requête est exécutée dans le navigateur, il se peut que le navigateur affiche les erreurs de l'analyseur lors du chargement du résultat. Pour éviter l'erreur, SQL ISAPI prend en charge le mot clé ROOT. Ce mot clé est mappé avec la propriété SSPROP_STREAM_XMLROOT.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets Source de données &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objets &#40;de source de données OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

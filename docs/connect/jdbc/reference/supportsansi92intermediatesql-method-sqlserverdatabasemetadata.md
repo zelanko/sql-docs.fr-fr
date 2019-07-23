@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4d6e8301-0633-4565-91c6-a80910954461
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 636400a77c634652db12aff815941d69bc35434a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fab9580485a4eab7ebb4967b4f8461c7dbc098e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969796"
 ---
 # <a name="supportsansi92intermediatesql-method-sqlserverdatabasemetadata"></a>Méthode supportsANSI92IntermediateSQL (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsANSI92IntermediateSQL()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode supportsANSI92IntermediateSQL est spécifiée par la méthode supportsANSI92IntermediateSQL dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode supportsANSI92IntermediateSQL est spécifiée par la méthode supportsANSI92IntermediateSQL dans l’interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

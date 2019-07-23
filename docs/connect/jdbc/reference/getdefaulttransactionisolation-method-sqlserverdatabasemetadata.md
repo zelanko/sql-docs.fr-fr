@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85b867ed-de5a-4879-b3f8-bce897879077
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0329f097e51ce3e2e725a6d652265349ffc7c1b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2e2349dbe193834385869f86f87fe4284a967284
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983692"
 ---
 # <a name="getdefaulttransactionisolation-method-sqlserverdatabasemetadata"></a>Méthode getDefaultTransactionIsolation (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public int getDefaultTransactionIsolation()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui indique le niveau d’isolation de transaction par défaut.  
+ **Entier** qui indique le niveau d’isolation de la transaction par défaut.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getDefaultTransactionIsolation est spécifiée par la méthode getDefaultTransactionIsolation dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getDefaultTransactionIsolation est spécifiée par la méthode getDefaultTransactionIsolation dans l’interface java. Sql. DatabaseMetaData.  
   
  Quand vous utilisez le [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] avec une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], cette méthode retourne une valeur de TRANSACTION_READ_COMMITTED ou la valeur **int** 2.  
   

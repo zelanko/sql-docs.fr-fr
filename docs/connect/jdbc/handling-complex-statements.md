@@ -1,5 +1,5 @@
 ---
-title: Gestion d’instructions complexes | Microsoft Docs
+title: Gestion des instructions complexes | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b2b6dd6bb5fb3a0d7b2e9b78dee87f90f05147df
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7adee47147a8aad153bc323470f1711426d92350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956548"
 ---
 # <a name="handling-complex-statements"></a>Gestion d'instructions complexes
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] peut amener à gérer des instructions complexes, notamment des instructions générées de façon dynamique à l’exécution. Les instructions complexes effectuent souvent une série de tâches, telles que des mises à jour, des insertions et des suppressions. Ces types d'instructions peuvent également retourner plusieurs jeux de résultats et paramètres de sortie. Dans ce cas, le code Java exécutant les instructions pourrait ne pas connaître à l'avance les types et le nombre d'objets, ainsi que les données retournées.  
   
- Pour traiter efficacement des instructions complexes, le pilote JDBC offre plusieurs méthodes permettant d'interroger les objets et les données retournées, de façon à ce que votre application puisse les traiter correctement. La clé pour traiter des instructions complexes est la méthode [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) de la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Cette méthode retourne un **booléenne** valeur. Si la valeur est « true », le premier résultat retourné par les instructions est un jeu de résultats. Si la valeur est « false », le premier résultat retourné est un nombre de mises à jour.  
+ Pour traiter efficacement des instructions complexes, le pilote JDBC offre plusieurs méthodes permettant d'interroger les objets et les données retournées, de façon à ce que votre application puisse les traiter correctement. La clé pour traiter des instructions complexes est la méthode [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) de la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Cette méthode retourne une valeur **booléenne** . Si la valeur est « true », le premier résultat retourné par les instructions est un jeu de résultats. Si la valeur est « false », le premier résultat retourné est un nombre de mises à jour.  
   
  Si vous connaissez le type d’objet ou de données retourné, vous pouvez utiliser la méthode [getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) ou la méthode [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) pour traiter ces données. Pour traiter l’objet ou les données suivants parmi ceux qui ont été retournés par l’instruction complexe, vous pouvez appeler la méthode [getMoreResults](../../connect/jdbc/reference/getmoreresults-method.md).  
   

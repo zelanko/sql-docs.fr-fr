@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4dddf885-0482-4776-8e9a-69f6c6270931
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f27f2eadeb1c9743a83ef3ae78b011da5edf13c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b08a6574f16159e5eebb9a95af7483b2ce7b0c84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996759"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader"></a>Méthode updateCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,21 +33,21 @@ public void updateCharacterStream(int columnIndex,
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
  *x*  
   
- Un objet de lecteur.  
+ Objet lecteur.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateCharacterStream est spécifiée par la méthode updateCharacterStream dans l’interface java.sql.ResultSet.  
+ Cette méthode updateCharacterStream est spécifiée par la méthode updateCharacterStream dans l’interface java. Sql. ResultSet.  
   
  Cette méthode passe les caractères Unicode à partir d’un objet Reader à des colonnes de texte et binaires sélectionnées. Cela inclut toutes les colonnes de texte et les colonnes **binary**, **varbinary**, **varbinary(max)** , **image** et **xml**, mais pas les colonnes **udt**.  
   
- À l’aide de cette méthode pour le **image**, **texte**, et **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] types de données peuvent affecter les performances.  
+ L’utilisation de cette méthode pour les types de données **image**, **Text**et **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut avoir un impact sur les performances.  
   
 ## <a name="see-also"></a>Voir aussi  
  [updateCharacterStream, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

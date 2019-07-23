@@ -1,5 +1,5 @@
 ---
-title: Présentation des Transactions | Microsoft Docs
+title: Fonctionnement des transactions | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad6ccc7f65d6d4c65fb1bb63b58e0b13269ea351
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 090597e3afcf335aba674cd11e603067892819b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916585"
 ---
 # <a name="understanding-transactions"></a>Présentation des transactions
 
@@ -24,7 +23,7 @@ ms.locfileid: "66788391"
 
 Les transactions sont des groupes d'opérations combinés en unités logiques de travail. Elles sont utilisées pour contrôler et maintenir la cohérence et l'intégrité de chaque action dans une transaction, malgré les erreurs pouvant se produire dans le système.
 
-Avec le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], les transactions peuvent être locales ou distribuées. Les transactions peuvent également utiliser des niveaux d'isolation. Pour plus d’informations sur les niveaux d’isolation pris en charge par le pilote JDBC, consultez [présentation des niveaux d’Isolation](../../connect/jdbc/understanding-isolation-levels.md).
+Avec le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], les transactions peuvent être locales ou distribuées. Les transactions peuvent également utiliser des niveaux d'isolation. Pour plus d’informations sur les niveaux d’isolation pris en charge par le pilote JDBC, consultez [Présentation des niveaux d’isolement](../../connect/jdbc/understanding-isolation-levels.md).
 
 Les applications doivent contrôler les transactions en utilisant des instructions Transact-SQL ou les méthodes fournies par le pilote JDBC, mais pas les deux. L'utilisation des instructions Transact-SQL et des méthodes de l'API JDBC sur la même transaction peut entraîner des problèmes, par exemple une transaction qui ne peut pas être validée comme prévu, une transaction qui est validée ou restaurée, et une nouvelle qui démarre de façon inattendue, ou des exceptions de type « Le serveur n'a pas pu reprendre la transaction ».
 
@@ -42,7 +41,7 @@ Une transaction distribuée met à jour les données sur au moins deux bases de 
 
 Le pilote JDBC est intégré de manière transparente à MS DTC ([!INCLUDE[msCoName](../../includes/msconame_md.md)] Distributed Transaction Coordinator) pour offrir une véritable prise en charge des transactions distribuées avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. MS DTC est une fonctionnalité de transactions distribuées fournie par [!INCLUDE[msCoName](../../includes/msconame_md.md)] pour les systèmes d'exploitation [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows. MS DTC utilise l'excellente technologie [!INCLUDE[msCoName](../../includes/msconame_md.md)] de traitement des transactions pour prendre en charge les caractéristiques XA, telles que le protocole de validation distribué complet à deux phases et la récupération des transactions distribuées.
 
-Pour plus d’informations sur l’utilisation des transactions distribuées, consultez [présentation des Transactions XA](../../connect/jdbc/understanding-xa-transactions.md).
+Pour plus d’informations sur l’utilisation des transactions distribuées, consultez [Présentation des transactions XA](../../connect/jdbc/understanding-xa-transactions.md).
 
 ## <a name="see-also"></a>Voir aussi
 

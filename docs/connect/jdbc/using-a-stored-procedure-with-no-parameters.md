@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d766423b4ee2c1db4b7515c87edfa96b4b84b416
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3dade70a033ddf2a9e20ffc09930a27e26d9a579
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916507"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>Utilisation d'une procédure stockée sans paramètres
 
@@ -29,7 +28,7 @@ Quand vous utilisez le pilote JDBC pour appeler une procédure stockée sans par
 `{call procedure-name}`
 
 > [!NOTE]  
-> Pour plus d’informations sur les séquences d’échappement SQL, consultez [à l’aide les séquences d’échappement SQL](../../connect/jdbc/using-sql-escape-sequences.md).
+> Pour plus d’informations sur les séquences d’échappement SQL, consultez Utilisation de séquences d' [échappement SQL](../../connect/jdbc/using-sql-escape-sequences.md).
 
 Par exemple, créez la procédure stockée suivante dans l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] :
 

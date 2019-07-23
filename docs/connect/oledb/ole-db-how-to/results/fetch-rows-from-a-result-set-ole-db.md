@@ -1,6 +1,6 @@
 ---
 title: Extraire des lignes d’un jeu de résultats (OLE DB) | Microsoft Docs
-description: Extraire des lignes d’un résultat défini à l’aide de OLE DB Driver pour SQL Server
+description: Extraire des lignes d’un jeu de résultats à l’aide d’OLE DB pilote pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: cd3369e685b495fa775a350a9b5fc7dcae2a5f57
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8aed6ce5eb93c68f22217667fe01306e28d9910e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791336"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015552"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>Extraire des lignes à partir d'un jeu de résultats (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

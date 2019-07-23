@@ -1,5 +1,5 @@
 ---
-title: Les membres de SQLServerCallableStatement | Microsoft Docs
+title: Membres SQLServerCallableStatement | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,13 +11,12 @@ apitype: Assembly
 ms.assetid: 5ebdc186-e50f-4d14-bbf4-95af5051e4a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9c6f0ab616be75d9ccd71bd5b191fde3c76098d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69a12437e3b1e611cf9e48d60c9fd77cd02f63bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971869"
 ---
 # <a name="sqlservercallablestatement-members"></a>Membres de SQLServerCallableStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,14 +50,14 @@ ms.locfileid: "66772970"
 |[executeQuery](../../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Exécute la requête SQL dans cet objet CallableStatement, puis retourne l’objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) généré par la requête.|  
 |[executeUpdate](../../../connect/jdbc/reference/executeupdate-method-sqlserverpreparedstatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Exécute l’instruction SQL dans cet objet CallableStatement, qui doit être une instruction SQL INSERT, UPDATE, MERGE ou DELETE, ou une instruction SQL qui ne retourne rien, comme une instruction DDL.|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Récupère l’objet [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) qui a produit cet objet CallableStatement.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Récupère la valeur de la colonne spécifiée comme un [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) objet.|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Récupère la valeur de la colonne spécifiée sous la forme d’un objet de [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Récupère la direction d’extraction des lignes dans des tables de base de données. C’est la méthode par défaut pour les jeux de résultats générés à partir de cet objet CallableStatement.|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Récupère le nombre de lignes du jeu de résultats. C’est la taille d’extraction par défaut pour les objets du jeu de résultats générés à partir de cet objet CallableStatement.|  
 |[getGeneratedKeys](../../../connect/jdbc/reference/getgeneratedkeys-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Récupère toutes les clés générées automatiquement du fait de l’exécution de cet objet CallableStatement.|  
 |[getMaxFieldSize](../../../connect/jdbc/reference/getmaxfieldsize-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Récupère le nombre maximal d’octets pouvant être retournés pour des valeurs de colonne de caractères ou binaire dans un objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) produit par cet objet CallableStatement.|  
 |[getMaxRows](../../../connect/jdbc/reference/getmaxrows-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Récupère le nombre maximal de lignes que peut contenir un objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) produit par cet objet CallableStatement.|  
 |[getMetaData](../../../connect/jdbc/reference/getmetadata-method-sqlserverpreparedstatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Récupère un objet [SQLServerResultSetMetaData Class](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) contenant des informations sur les colonnes de l’objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) retourné à l’exécution de cet objet CallableStatement.|  
-|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Passe au résultat suivant de cet objet de CallableStatement.|  
+|[getMoreResults](../../../connect/jdbc/reference/getmoreresults-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Passe au résultat suivant de cet objet CallableStatement.|  
 |[getParameterMetaData](../../../connect/jdbc/reference/getparametermetadata-method-sqlserverpreparedstatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Récupère le nombre, les types et les propriétés des paramètres de cet objet CallableStatement.|  
 |[getArray](../../../connect/jdbc/reference/getarray-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre désigné sous forme d’objet Array.|  
 |[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre désigné sous forme de flux de caractères **ASCII**.|  
@@ -71,14 +70,14 @@ ms.locfileid: "66772970"
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre désigné en tant qu'objet java.io.Reader.|  
 |[getClob](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre Blob JDBC désigné sous forme d’objet Clob dans le langage de programmation Java.|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre désigné en tant qu'objet java.sql.Date dans le langage de programmation Java.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Récupère la valeur de la colonne spécifiée comme un[classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) objet.|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)|Récupère la valeur de la colonne spécifiée sous la forme d’un objet de[classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre désigné sous forme d’objet **double** dans le langage de programmation Java.|  
 |[getFloat](../../../connect/jdbc/reference/getfloat-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre désigné sous forme d’objet **float** dans le langage de programmation Java.|  
 |[getInt](../../../connect/jdbc/reference/getint-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre désigné sous forme **d’int** dans le langage de programmation Java.|  
 |[getLong](../../../connect/jdbc/reference/getlong-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre désigné sous forme d’objet **long** dans le langage de programmation Java.|  
 |[getNCharacterStream](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre désigné sous forme d’objet Reader.|  
 |[getNClob](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre **NCLOB** JDBC désigné sous forme d’objet **NClob** dans le langage de programmation Java.|  
-|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|Récupère la valeur de l’élément désigné **NCHAR**, **NVARCHAR** ou **LONGNVARCHAR** paramètre sous forme de chaîne dans le Java en langage de programmation.|  
+|[getNString](../../../connect/jdbc/reference/getnstring-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre **nchar**, **nvarchar** ou **LONGNVARCHAR** désigné sous la forme d’une chaîne dans le langage de programmation Java.|  
 |[getObject](../../../connect/jdbc/reference/getobject-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre désigné en tant qu'objet dans le langage de programmation Java.|  
 |[getQueryTimeout](../../../connect/jdbc/reference/getquerytimeout-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Récupère le nombre de secondes pendant lesquelles [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] attend que cet objet CallableStatement s’exécute.|  
 |[getRef](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)|Récupère la valeur du paramètre désigné sous forme d’objet Ref dans le langage de programmation Java.|  
@@ -111,7 +110,7 @@ ms.locfileid: "66772970"
 |[setClob](../../../connect/jdbc/reference/setclob-method-sqlservercallablestatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Définit le paramètre désigné selon l'objet spécifié.|  
 |[setCursorName](../../../connect/jdbc/reference/setcursorname-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Définit le nom de curseur SQL selon la chaîne donnée, qui est exécutée par les méthodes d'exécution suivantes.|  
 |[setDate](../../../connect/jdbc/reference/setdate-method-sqlservercallablestatement.md)|Définit le paramètre désigné selon la valeur de date donnée.|  
-|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|Définit la valeur de la colonne spécifiée selon le [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) valeur.|  
+|[setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md)|Définit la valeur de la colonne spécifiée sur la valeur de la [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .|  
 |[setDouble](../../../connect/jdbc/reference/setdouble-method-sqlservercallablestatement.md)|Définit le paramètre désigné selon la valeur **double** donnée.|  
 |[setEscapeProcessing](../../../connect/jdbc/reference/setescapeprocessing-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Définit le mode de traitement d'échappement.|  
 |[setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Fournit un conseil au pilote JDBC concernant la direction de traitement des lignes du jeu de résultats.|  
@@ -126,7 +125,7 @@ ms.locfileid: "66772970"
 |[setNString](../../../connect/jdbc/reference/setnstring-method-sqlservercallablestatement.md)|Définit le paramètre désigné selon l’objet String spécifié.|  
 |[setNull](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)|Définit le paramètre désigné avec une valeur Null, en fonction du type de paramètre à définir.|  
 |[setObject](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)|Définit la valeur du paramètre désigné à l’aide de l’objet spécifique.|  
-|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Demande qu'une instruction soit regroupée ou non. Par défaut, un objet SQLServerCallableStatement est regroupé.|  
+|[setPoolable](../../../connect/jdbc/reference/setpoolable-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Demande qu'une instruction soit regroupée ou non. Par défaut, un objet SQLServerCallableStatement est regroupable lors de sa création.|  
 |[setQueryTimeout](../../../connect/jdbc/reference/setquerytimeout-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Définit le nombre de secondes pendant lesquelles le pilote attend qu’un objet CallableStatement s’exécute selon le nombre de secondes spécifié.|  
 |[setRef](../../../connect/jdbc/reference/setref-method-sqlserverpreparedstatement.md)|(Héritée de [SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md).) Définit le paramètre désigné selon l’objet Ref spécifié.|  
 |[setResponseBuffering](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)|(Hérité de [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).) Définit le mode de mise en mémoire tampon des réponses de cet objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) selon **String full** ou **adaptive**, sans respect de la casse.|  

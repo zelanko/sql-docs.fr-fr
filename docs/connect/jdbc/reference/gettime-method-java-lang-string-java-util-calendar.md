@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3d4c67c2-a3c8-4a26-a159-89c5d63fda0b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6b9d74778d3ff1fc62b5549fbea7e0f97bf1e477
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6b8f6239fbc229af009fc9745b0f19ed27e7ee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979054"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar"></a>Méthode getTime (java.lang.String, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,10 +42,10 @@ public java.sql.Time getTime(java.lang.String sCol,
   
  *cal*  
   
- Un objet de calendrier.  
+ Objet de calendrier.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet de temps.  
+ Objet d’heure.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -54,7 +53,7 @@ public java.sql.Time getTime(java.lang.String sCol,
 ## <a name="remarks"></a>Notes  
  Cette méthode getTime est spécifiée par la méthode getTime de l’interface java.sql.CallableStatement.  
   
- Consultez le graphique intitulé « Conversions de méthode d’accesseur get » dans [Conversions de types de données de présentation](../../../connect/jdbc/understanding-data-type-conversions.md) pour voir quelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les types de données peuvent être récupérés avec cette méthode.  
+ Consultez le graphique intitulé «conversions de méthode Getter» pour [comprendre](../../../connect/jdbc/understanding-data-type-conversions.md) les conversions de types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour voir quels types de données peuvent être récupérés avec cette méthode.  
   
 ## <a name="see-also"></a>Voir aussi  
  [getTime, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

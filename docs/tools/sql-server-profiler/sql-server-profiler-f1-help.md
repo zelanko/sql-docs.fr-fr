@@ -41,13 +41,12 @@ helpviewer_keywords:
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e042e9d81d389a323e092b2f370b03cb66c2921c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 32cc19df636f6e0fa98dca0ab45dd8142d9db54f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059701"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>Boîtes de dialogue SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ Utilisez l'onglet **Sélection des événements** de la boîte de dialogue **Pro
 |**Organiser les colonnes**|Modifie l'ordre des colonnes dans la trace et regroupe les résultats suivant une ou plusieurs colonnes.  
 
 ## <a name="trace-template-properties"></a>Propriétés du modèle de trace 
-### <a name="new-general-tab"></a>Nouveau (onglet Général)
+### <a name="new-general-tab"></a>Nouveau (onglet général)
 Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour créer de nouveaux modèles de trace à l'aide des options suivantes. Pour accéder à cette boîte de dialogue, dans le menu **Fichier** de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)], pointez sur **Modèles**, puis cliquez sur **Nouveau**.
 
 |Élément|Description
@@ -97,7 +96,7 @@ Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modè
 |**Baser le nouveau modèle sur un modèle existant**|Choisissez l'un des modèles de la liste pour servir de base à ce modèle. Tous les événements sélectionnés, colonnes de données et filtres correspondent initialement à ceux du modèle existant et peuvent ensuite être modifiés en fonction des besoins.  
 |**Utiliser comme modèle par défaut pour le type de serveur sélectionné**|Utilisez ce modèle par défaut pour les traces créées pour ce type de serveur.  
 
-### <a name="edit-general-tab"></a>Modifier (onglet Général)
+### <a name="edit-general-tab"></a>Modifier (onglet général)
  Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour consulter ou modifier les modèles de trace existants en utilisant les options suivantes. Pour accéder à cette boîte de dialogue, dans le menu [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **de** , pointez sur **Modèles**, puis cliquez sur **Modifier le modèle**.  
 
 |Élément|Description
@@ -171,7 +170,7 @@ La boîte de dialogue **Limite des compteurs de performances** est remplie avec 
 2.  Activez les compteurs que vous souhaitez corréler avec le fichier de trace du [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] .  
 
 Si vous souhaitez sélectionner tous les compteurs pour un objet de performance, activez la case à cocher adjacente à celui-ci. L'activation du nœud de premier niveau, qui indique l'ordinateur, entraîne la sélection de tous les objets et compteurs de performances contenus dans le fichier journal de performances. 
-## <a name="toolsoptions-general-options-page"></a>Outils/options (page options générales)
+## <a name="toolsoptions-general-options-page"></a>Outils/options (page Options générales)
 Utilisez la boîte de dialogue **Options générales** pour afficher ou spécifier les options ci-après.  
 ### <a name="display-options"></a>Options d’affichage  
 

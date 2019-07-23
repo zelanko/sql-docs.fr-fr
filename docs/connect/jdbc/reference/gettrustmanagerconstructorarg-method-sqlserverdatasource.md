@@ -1,5 +1,5 @@
 ---
-title: gettrustmanagerconstructorarg, méthode (SQLServerDataSource) | Microsoft Docs
+title: Méthode getTrustManagerConstructorArg (SQLServerDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 24efba087c6e2f988e25517ceffb61463b0ec935
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8f3af347e41f3ba90b283b56d8cb2c1550b69006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978597"
 ---
 # <a name="gettrustmanagerconstructorarg-method-sqlserverdatasource"></a>getTrustManagerConstructorArg, méthode (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +35,10 @@ public java.lang.String getTrustManagerConstructorArg()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **chaîne** qui contient la valeur de la propriété de connexion TrustManagerConstructorArg, ou null si aucune valeur n’est définie.  
+ **Chaîne** qui contient la valeur de la propriété de connexion TrustManagerConstructorArg, ou null si aucune valeur n’est définie.  
   
 ## <a name="remarks"></a>Notes  
- Si la propriété TrustManagerClass n’est pas définie, le [getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md) méthode retourne la valeur null.  
+ Si la propriété TrustManagerClass n’est pas définie, la méthode [getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md) retourne la valeur null.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDataSource, membres](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

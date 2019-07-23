@@ -15,22 +15,21 @@ helpviewer_keywords:
 - GetErrorInfo method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6a43a5882529353a05b41a111ead20d0dd148078
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015439"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Retourne un pointeur vers un pilote OLE DB pour SQL Server SSERRORINFO structure contenant le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] détails de l’erreur.  
+  Retourne un pointeur vers un pilote OLE DB pour SQL Server structure SSERRORINFO contenant les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] détails de l’erreur.  
   
- Le pilote OLE DB pour SQL Server définit le **ISQLServerErrorInfo** interface d’erreur. Cette interface retourne les détails d’une erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], notamment sa gravité et son état.  
+ Le pilote OLE DB pour SQL Server définit l’interface d’erreur **ISQLServerErrorInfo** . Cette interface retourne les détails d’une erreur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], notamment sa gravité et son état.  
 
   
 ## <a name="syntax"></a>Syntaxe  
@@ -54,7 +53,7 @@ HRESULT GetErrorInfo(
  S_OK  
   
  E_INVALIDARG  
- Soit le *ppSSErrorInfo* ou *ppErrorStrings* argument était NULL.  
+ L’argument *ppSSErrorInfo* ou *ppErrorStrings* a la valeur null.  
   
  E_OUTOFMEMORY  
  Le pilote OLE DB pour SQL Server n’a pas pu allouer suffisamment de mémoire pour terminer la demande.  

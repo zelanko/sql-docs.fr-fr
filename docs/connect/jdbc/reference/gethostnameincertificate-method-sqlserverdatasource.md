@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 45ea04e2-9ea5-4171-9136-d09f8a95e128
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1bdd2e849654c78fab2fdff8b409c204a1298834
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 67978d2597a5167d3930c85ee453dc6d985f021e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982898"
 ---
 # <a name="gethostnameincertificate-method-sqlserverdatasource"></a>Méthode getHostNameInCertificate (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.lang.String getHostNameInCertificate()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **chaîne** qui contient l’hôte de nom, ou null si aucune valeur n’est définie.  
+ **Chaîne** qui contient le nom d’hôte, ou null si aucune valeur n’est définie.  
   
 ## <a name="remarks"></a>Notes  
  Le nom d'hôte sert à valider la valeur du certificat SSL SQL Server lorsque la couche de communication est chiffrée à l'aide du protocole SSL.  

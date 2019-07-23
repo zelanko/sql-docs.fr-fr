@@ -1,5 +1,5 @@
 ---
-title: 'Comment : effectuer des Transactions | Microsoft Docs'
+title: 'Procédure: effectuer des transactions | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ee3e77677a3ae52fb112ae8a280e91086a483875
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 26ca7fbe56a17e1bf2a7c69b9e8c2dcd63073f87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936438"
 ---
 # <a name="how-to-perform-transactions"></a>Procédure : effectuer des transactions
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -151,7 +150,7 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>Commentaires  
-Pour mieux mettre l’accent sur le comportement de la transaction, aucune recommandation en matière de gestion des erreurs n’est donnée dans l’exemple précédent. Pour une application de production, nous recommandons de vérifier tout appel à une **sqlsrv** fonctionner pour les erreurs et les gérer en conséquence.
+Pour mieux mettre l’accent sur le comportement de la transaction, aucune recommandation en matière de gestion des erreurs n’est donnée dans l’exemple précédent. Pour une application de production, nous vous recommandons de vérifier les erreurs dans un appel à une fonction **sqlsrv** et de les gérer en conséquence.
   
 ## <a name="see-also"></a>Voir aussi  
 [Mise à jour des données &#40;pilotes Microsoft SQL Server pour PHP&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)

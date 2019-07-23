@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 61f19faa-3006-4a1c-974c-55951e3b3000
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aaf2b256329c66b6169593f71f4e85439aff21ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e4ab210a30080472a777d151695a04ec49ff1041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973380"
 ---
 # <a name="setobject-method-int-javalangobject"></a>Méthode setObject (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void setObject(int index,
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- Un **int** qui indique le numéro de paramètre.  
+ **Entier** qui indique le numéro du paramètre.  
   
  *obj*  
   
@@ -57,15 +56,15 @@ public final void setObject(int index,
   
 -   Les méthodes setNull de la classe SQLServerPreparedStatement ou de la classe SQLServerCallableStatement  
   
--   Le [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) méthode de la classe SQLServerCallableStatement  
+-   Méthode [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) de la classe SQLServerCallableStatement  
   
  Dans ce cas, le type du paramètre est défini automatiquement. Si l’application appelle cette méthode setObject avec une valeur obj définie sur Null, le pilote suppose que le type du paramètre correspond à celui défini par la méthode appelée précédemment.  
   
  Si la valeur de obj est Null et qu’aucune information de type ne peut être déterminée pour ce paramètre, cette méthode setObject convertit le paramètre spécifié en type CHAR avant de l’envoyer à la base de données.  
   
- À partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 3.0 du pilote JDBC, le comportement de cette méthode est modifié par le **sendTimeAsDatetime** propriété de connexion ([définissant les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et [ SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ À [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] partir du pilote JDBC 3,0, le comportement de cette méthode est modifié par la propriété de connexion **sendTimeAsDatetime** (en[définissant les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et [SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Pour plus d’informations, consultez [java.sql.Time configurer comment les valeurs sont envoyées au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Pour plus d’informations, consultez [configuration de la façon dont les valeurs Java. Sql. Time sont envoyées au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [setObject, méthode &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   

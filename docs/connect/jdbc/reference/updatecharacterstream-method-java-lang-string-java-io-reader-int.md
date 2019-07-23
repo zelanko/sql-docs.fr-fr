@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 08cfc4e0-83f0-4f2f-ac55-b381f34fe67f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e50f69e169604822a11b8386c470d3fe1f245219
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20249faca3338a5f085de0e0071b20206b13dee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996746"
 ---
 # <a name="updatecharacterstream-method-javalangstring-javaioreader-int"></a>Méthode updateCharacterStream (java.lang.String, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,17 +43,17 @@ public void updateCharacterStream(java.lang.String columnName,
   
  *readerValue*  
   
- Un objet de lecteur.  
+ Objet lecteur.  
   
  *length*  
   
- Un **int** qui indique la longueur du flux.  
+ **Entier** qui indique la longueur du flux.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateCharacterStream est spécifiée par la méthode updateCharacterStream dans l’interface java.sql.ResultSet.  
+ Cette méthode updateCharacterStream est spécifiée par la méthode updateCharacterStream dans l’interface java. Sql. ResultSet.  
   
  Cette méthode passe les caractères Unicode à partir d’un objet Reader à des colonnes de texte et binaires sélectionnées. Cela inclut toutes les colonnes de texte et les colonnes **binary**, **varbinary**, **varbinary(max)** , **image** et **xml**, mais pas les colonnes **udt**.  
   

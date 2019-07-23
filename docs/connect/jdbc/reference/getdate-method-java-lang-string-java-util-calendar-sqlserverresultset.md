@@ -1,5 +1,5 @@
 ---
-title: colonne de méthode (java.util.Calendar) getDate | Microsoft Docs
+title: getDate, méthode (Java. util. Calendar), colonne | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3fa2a72a-7499-44ec-8f76-a8e646e0190c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13104a29fe8568ade732faf9ed05a05a42b4d093
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36c1a84fe690760d6eeda6b43fb59a5d0268696c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983997"
 ---
 # <a name="getdate-method-javalangstring-javautilcalendar-sqlserverresultset"></a>getDate, méthode (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,10 +42,10 @@ public java.sql.Date getDate(java.lang.String colName,
   
  *cal*  
   
- Un objet de calendrier.  
+ Objet de calendrier.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet Date.  
+ Objet date.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

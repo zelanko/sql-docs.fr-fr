@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a9a0c802-7851-4826-b173-87b0c0acb3a0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5191714532304bd97b2dc30d8d0e1f18a60b938e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d680bc3ee42be70ec8f8445967599550ebbec2d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973352"
 ---
 # <a name="setobject-method-javalangstring-javalangobject-int"></a>Méthode setObject (java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public void setObject(java.lang.String sCol,
   
  *n*  
   
- Un **int** qui indique le type de cible, tel que défini dans java.sql.Types.  
+ **Entier** qui indique le type de cible tel que défini dans Java. Sql. types.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -56,9 +55,9 @@ public void setObject(java.lang.String sCol,
 ## <a name="remarks"></a>Notes  
  Cette méthode setObject est spécifiée par la méthode setObject dans l’interface java.sql.CallableStatement.  
   
- À partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 3.0 du pilote JDBC, le comportement de cette méthode est modifié par le **sendTimeAsDatetime** propriété de connexion ([définissant les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et [ SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ À [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] partir du pilote JDBC 3,0, le comportement de cette méthode est modifié par la propriété de connexion **sendTimeAsDatetime** (en[définissant les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et [SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Pour plus d’informations, consultez [java.sql.Time configurer comment les valeurs sont envoyées au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Pour plus d’informations, consultez [configuration de la façon dont les valeurs Java. Sql. Time sont envoyées au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [setObject, méthode (SQLServerCallableStatement)](../../../connect/jdbc/reference/setobject-method-sqlservercallablestatement.md)   

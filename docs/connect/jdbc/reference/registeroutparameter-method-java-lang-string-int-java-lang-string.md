@@ -1,5 +1,5 @@
 ---
-title: registeroutparameter, méthode au type et nom | Microsoft Docs
+title: Méthode registerOutParameter à taper et à nommer | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f962c912-2475-4e1f-a384-579be2d17f37
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5c0fb7eb2f50aabb2bcc2a51085f0afdd94cf419
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18c7dad22a4f5314a0bc920c650bcdf0ecd32d52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975919"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-javalangstring"></a>Méthode registerOutParameter (java.lang.String, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public void registerOutParameter(java.lang.String s,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode registerOutParameter est spécifiée par la méthode registerOutParameter dans l’interface java.sql.CallableStatement.  
+ Cette méthode registerOutParameter est spécifiée par la méthode registerOutParameter dans l’interface java. Sql. CallableStatement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [registerOutParameter, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   

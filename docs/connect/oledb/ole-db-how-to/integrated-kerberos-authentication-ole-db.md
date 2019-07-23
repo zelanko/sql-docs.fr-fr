@@ -1,5 +1,5 @@
 ---
-title: L’authentification Kerberos (OLE DB) intégrée | Microsoft Docs
+title: Authentification Kerberos intégrée (OLE DB) | Microsoft Docs
 description: Authentification Kerberos intégrée (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -10,20 +10,19 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c85b34035d81657a7cbfff3808bb30e46d900618
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9829c7857ec86c7a1f623691c04b0dd0ac62bafe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994766"
 ---
 # <a name="integrated-kerberos-authentication-ole-db"></a>Authentification Kerberos intégrée (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Cet exemple montre comment obtenir une authentification mutuelle Kerberos en utilisant OLE DB dans OLE DB Driver pour SQL Server. Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure.  
+  Cet exemple montre comment obtenir une authentification Kerberos mutuelle à l’aide de OLE DB dans OLE DB pilote pour SQL Server. Cet exemple fonctionne avec [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] ou version ultérieure.  
   
  Pour plus d’informations sur les noms de principaux du service et l’authentification Kerberos, consultez [Prise en charge du nom de principaux du service dans les connexions clientes](../../oledb/features/service-principal-name-spn-support-in-client-connections.md).  
   

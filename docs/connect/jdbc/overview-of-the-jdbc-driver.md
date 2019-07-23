@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9e9e7c7c6c29847fef54ac3e484e7ed7b1821f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 770352acd95fd2fb947e29f79230dedab575602b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956236"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>Présentation du pilote JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "66801800"
 |[Redistribution du pilote Microsoft JDBC](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Décrit comment s’inscrire pour redistribuer le pilote Microsoft JDBC.|  
 |[Recherche d’informations supplémentaires sur le pilote JDBC](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|Indique où trouver des ressources supplémentaires sur le pilote Microsoft JDBC, en fournissant notamment des liens vers des ressources externes.|  
 |[Matrice de prise en charge de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Matrice de support et politique de support pour Microsoft JDBC Driver pour SQL Server.|  
-|[Forum aux Questions &#40;FAQ&#41; pour le pilote JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Forum aux questions sur le pilote Microsoft JDBC.|  
+|[FAQ&#41; sur les &#40;questions fréquemment posées sur le pilote JDBC](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Forum aux questions sur le pilote Microsoft JDBC.|  
 |[Dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server.|
 
 ## <a name="see-also"></a>Voir aussi  

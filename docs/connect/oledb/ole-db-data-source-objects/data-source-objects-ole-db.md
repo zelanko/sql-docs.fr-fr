@@ -1,5 +1,5 @@
 ---
-title: Objets (OLE DB) Source de données | Microsoft Docs
+title: Objets de source de données (OLE DB) | Microsoft Docs
 description: Objets source de données (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -18,28 +18,27 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0394c5fd3b72c538904c9b8cf946316e76e6650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015925"
 ---
 # <a name="data-source-objects-ole-db"></a>Objets source de données (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server utilise le terme « source de données » pour l’ensemble des interfaces OLE DB utilisées pour établir un lien vers une banque de données, comme [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Création d’une instance de l’objet de source de données du fournisseur est la première tâche d’un pilote OLE DB pour le consommateur de SQL Server.  
+  Le pilote OLE DB pour SQL Server utilise le terme « source de données » pour l’ensemble des interfaces OLE DB utilisées pour établir un lien vers une banque de données, comme [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La création d’une instance de l’objet source de données du fournisseur est la première tâche d’un pilote OLE DB pour SQL Server consommateur.  
   
- Chaque fournisseur OLE DB déclare un identificateur de classe (CLSID) pour lui-même. Le CLSID pour le pilote OLE DB pour SQL Server est le C /C++ GUID CLSID_MSOLEDBSQL (le symbole MSOLEDBSQL_CLSID résoudra correct progid dans le fichier msoledbsql.h que vous référencez). Avec le CLSID, le consommateur utilise la fonction OLE **CoCreateInstance** pour fabriquer une instance de l’objet source de données.  
+ Chaque fournisseur OLE DB déclare un identificateur de classe (CLSID) pour lui-même. Le CLSID du pilote OLE DB pour SQL Server est le CLSID_MSOLEDBSQL C/C++ GUID (le symbole MSOLEDBSQL_CLSID est résolu en ProgID correct dans le fichier MSOLEDBSQL. h que vous référencez). Avec le CLSID, le consommateur utilise la fonction OLE **CoCreateInstance** pour fabriquer une instance de l’objet source de données.  
   
- OLE DB Driver pour SQL Server est un serveur in-process. Les instances du pilote OLE DB pour SQL Server sont créées avec la macro CLSCTX_INPROC_SERVER pour indiquer le contexte exécutable.  
+ OLE DB pilote pour SQL Server est un serveur in-process. Les instances du pilote OLE DB pour SQL Server sont créées avec la macro CLSCTX_INPROC_SERVER pour indiquer le contexte exécutable.  
   
  L’objet source de données du pilote OLE DB pour SQL Server expose les interfaces d’initialisation OLE DB qui permettent au consommateur de se connecter à des bases de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existantes.  
   
- Chaque connexion établie via le pilote OLE DB pour SQL Server définit automatiquement les options suivantes :  
+ Chaque connexion effectuée via le pilote OLE DB pour SQL Server définit automatiquement ces options:  
   
 -   SET ANSI_WARNINGS ON  
   

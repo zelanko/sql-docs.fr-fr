@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05a8e57b4d531d05cdf14cb57ab164851d0c1800
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7bfb8eee85e9eede4dcf3e47ad4ecbe13a08d2ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004235"
 ---
 # <a name="troubleshooting-connectivity"></a>Résolution des problèmes de connectivité
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66798248"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé, mais TCP/IP n’a pas été installé en tant que protocole réseau pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de l’utilitaire réseau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] ou du gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et ultérieur.  
   
-    -   Le protocole TCP/IP est installé en tant que protocole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais il n’écoute pas sur le port spécifié dans l’URL de connexion de JDBC. Le port par défaut est 1433, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être configuré lors de l’installation du produit pour écouter sur n’importe quel port. Vérifiez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute sur le port 1433. Autrement, si le port a été modifié, assurez-vous que celui spécifié dans l'URL de connexion de JDBC correspond au port modifié. Pour plus d’informations sur les URL de connexion de JDBC, consultez [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).  
+    -   Le protocole TCP/IP est installé en tant que protocole [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais il n’écoute pas sur le port spécifié dans l’URL de connexion de JDBC. Le port par défaut est 1433, mais [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être configuré lors de l’installation du produit pour écouter sur n’importe quel port. Vérifiez que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] écoute sur le port 1433. Autrement, si le port a été modifié, assurez-vous que celui spécifié dans l'URL de connexion de JDBC correspond au port modifié. Pour plus d’informations sur les URL de connexion JDBC, consultez [génération de l’URL de connexion](../../connect/jdbc/building-the-connection-url.md).  
   
     -   L’adresse de l’ordinateur spécifiée dans l’URL de connexion de JDBC ne renvoie pas à un serveur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé et démarré.  
   

@@ -1,6 +1,6 @@
 ---
-title: Supprimer une colonne d’une Table SQL Server | Microsoft Docs
-description: Supprimer une colonne d’une table SQL Server à l’aide de OLE DB Driver pour SQL Server
+title: Suppression d’une colonne d’une table SQL Server | Microsoft Docs
+description: Suppression d’une colonne d’une table SQL Server à l’aide d’OLE DB pilote pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,24 +15,23 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, columns
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5c7df54441d2777a7799660f8e28c9248ae2620b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7e367c1b0664b0b43007db3a465dcbec0ffa90d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993990"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Suppression d'une colonne d'une table SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server expose la **ITableDefinition::DropColumn** (fonction). Cela permet aux consommateurs de supprimer une colonne d’une table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Le pilote OLE DB pour SQL Server expose la fonction **ITableDefinition::D ropcolumn** . Cela permet aux consommateurs de supprimer une colonne d’une table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Les consommateurs spécifient le nom de table en tant que chaîne de caractères Unicode dans le membre *pwszName* de l’union *uName* dans le paramètre *pTableID*. Le membre *eKind* de *pTableID* doit être DBKIND_NAME.  
   
- Le consommateur indique un nom de colonne dans la *pwszName*membre de la *uName* union dans le *pColumnID* paramètre. Le nom de colonne est une chaîne de caractères Unicode. Le membre *eKind* de *pColumnID* doit être DBKIND_NAME.  
+ Le consommateur indique un nom de colonne dans le membre *pwszName*de l’Union *uname* dans le paramètre *pColumnID* . Le nom de colonne est une chaîne de caractères Unicode. Le membre *eKind* de *pColumnID* doit être DBKIND_NAME.  
   
 ## <a name="example"></a>Exemple  
   

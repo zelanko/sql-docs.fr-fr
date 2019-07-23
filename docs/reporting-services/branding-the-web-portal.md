@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 description: Dans cet article, vous découvrez comment changer l’apparence du portail web en le personnalisant pour votre entreprise via un package de marque. Le package de marque est conçu pour vous permettre de le créer même si vous n’avez pas les connaissances approfondies nécessaires en matière de feuille de style en cascade (CSS).
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2303ae2f21f9bbdc9c15c2d60f62d10f65b5a624
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506506"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221735"
 ---
 # <a name="branding-the-web-portal"></a>Personnalisation du portail web
 

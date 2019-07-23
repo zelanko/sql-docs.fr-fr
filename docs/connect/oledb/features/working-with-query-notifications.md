@@ -1,6 +1,6 @@
 ---
-title: Utilisation de Notifications de requête | Microsoft Docs
-description: Utilisation de notifications de requête dans OLE DB Driver pour SQL Server
+title: Utilisation des notifications de requête | Microsoft Docs
+description: Utilisation des notifications de requête dans OLE DB Driver pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 20860d018e8971089ee1eb80ec0303bdc63ef211
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.openlocfilehash: 5b563099b161fa9b55a72820edd3411a4c72b4fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67208344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988732"
 ---
 # <a name="working-with-query-notifications"></a>Utilisation de notifications de requêtes
 
@@ -35,7 +34,7 @@ ms.locfileid: "67208344"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-Notifications de requête ont été introduites dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] et OLE DB Driver pour SQL Server. Basées sur l'infrastructure de Service Broker introduite dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], les notifications de requêtes permettent aux applications d'être notifiées en cas de modification des données. Cette fonctionnalité est particulièrement utile pour les applications qui fournissent un cache d'informations à partir d'une base de données, par exemple une application Web, et qui doivent être notifiées en cas de modification des données sources.
+Les notifications de requêtes [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ont été introduites dans et OLE DB pilote pour SQL Server. Basées sur l'infrastructure de Service Broker introduite dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], les notifications de requêtes permettent aux applications d'être notifiées en cas de modification des données. Cette fonctionnalité est particulièrement utile pour les applications qui fournissent un cache d'informations à partir d'une base de données, par exemple une application Web, et qui doivent être notifiées en cas de modification des données sources.
 
 Les notifications de requêtes vous permettent de demander une notification dans un délai d'attente spécifié lorsque les données sous-jacentes d'une requête sont modifiées. La demande de notification spécifie les options de notification, notamment le nom du service, le texte du message et la valeur du délai d'attente au serveur. Les notifications sont remises par l'intermédiaire d'une file d'attente Service Broker qui peut être interrogée par les applications pour détecter les notifications disponibles.
 
@@ -71,7 +70,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver pour SQL Server
 
-Le pilote OLE DB pour SQL Server prend en charge la notification des consommateurs sur la modification de l’ensemble de lignes. Le consommateur reçoit la notification à chaque phase de la modification de l'ensemble de lignes et à chaque tentative de modification.
+Le pilote OLE DB pour SQL Server prend en charge la notification du consommateur sur la modification de l’ensemble de lignes. Le consommateur reçoit la notification à chaque phase de la modification de l'ensemble de lignes et à chaque tentative de modification.
 
 > [!NOTE]
 > Le passage d’une requête de notifications au serveur avec **ICommand::Execute** est la seule méthode valide pour s’abonner à des notifications de requête avec OLE DB Driver pour SQL Server.
@@ -110,7 +109,7 @@ L'initialisation d'un abonnement ne garantit pas que les messages suivants soien
 > [!NOTE]
 > La préparation d'instructions ne provoque jamais l'initialisation de l'abonnement ; seule l'exécution d'instructions peut y parvenir et les notifications de requêtes ne sont pas concernées par l'utilisation des services principaux OLE DB.
 
-Pour plus d’informations sur le jeu de propriétés DBPROPSET_SQLSERVERROWSET, consultez [propriétés et comportements](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md).
+Pour plus d’informations sur le jeu de propriétés DBPROPSET_SQLSERVERROWSET, consultez [Propriétés et comportements](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)de l’ensemble de lignes.
 
 ## <a name="see-also"></a>Voir aussi
 

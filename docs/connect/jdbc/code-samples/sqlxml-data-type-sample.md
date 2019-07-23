@@ -1,5 +1,5 @@
 ---
-title: Exemple de Type de données SQLXML | Microsoft Docs
+title: Exemple de type de données SQLXML | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a2060defebee30d7f31d33fa8ada069095780c39
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8775c93afaa84570c5f4da51672bbec6379a927f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957055"
 ---
 # <a name="sqlxml-data-type-sample"></a>Exemple de type de données SQLXML
 

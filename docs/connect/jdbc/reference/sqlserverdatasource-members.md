@@ -1,5 +1,5 @@
 ---
-title: SQLServerDataSource, membres | Microsoft Docs
+title: Membres SQLServerDataSource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 74dea806465d8f1d011f5318eb4ed1571a6ba734
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 800f87c82987396743ec4c0c278444c4ba61d49b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971408"
 ---
 # <a name="sqlserverdatasource-members"></a>Membres de SQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,12 +38,12 @@ ms.locfileid: "66800511"
   
 |Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
-|[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|Retourne la valeur de la **applicationIntent** propriété de connexion.|  
+|[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|Retourne la valeur de la propriété de connexion **applicationIntent** .|  
 |[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|Renvoie le nom de l'application.|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)|Tente d’établir une connexion avec la source de données représentée par cet objet [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).|  
 |[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|Retourne le nom de la base de données.|  
-|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|Retourne la valeur de **disableStatementPooling** propriété de connexion. Ce paramètre contrôle si le regroupement d’instructions est activé ou non pour cette connexion.|  
-|[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|Retourne la valeur de **enablePrepareOnFirstPreparedStatementCall** propriété de connexion.|  
+|[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|Retourne la valeur de la propriété de connexion **disableStatementPooling** . Ce paramètre contrôle si le regroupement d’instructions est activé ou non pour cette connexion.|  
+|[getEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/getenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|Retourne la valeur de la propriété de connexion **enablePrepareOnFirstPreparedStatementCall** .|  
 |[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|Retourne une valeur **booléenne** indiquant si la propriété encrypt est activée.|  
 |[getDescription](../../../connect/jdbc/reference/getdescription-method-sqlserverdatasource.md)|Retourne une description de la source de données.|  
 |[getFailoverPartner](../../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md)|Retourne le nom du serveur de basculement utilisé dans la configuration de la mise en miroir de bases de données.|  
@@ -54,17 +53,17 @@ ms.locfileid: "66800511"
 |[getLockTimeout](../../../connect/jdbc/reference/getlocktimeout-method-sqlserverdatasource.md)|Retourne une valeur **int** indiquant le nombre de millisecondes qu’attend la base de données avant de signaler l’expiration du délai d’un verrou.|  
 |[getLoginTimeout](../../../connect/jdbc/reference/getlogintimeout-method-sqlserverdatasource.md)|Retourne le nombre de secondes pendant lesquelles cet objet [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) attend lors de la tentative de connexion.|  
 |[getLogWriter](../../../connect/jdbc/reference/getlogwriter-method-sqlserverdatasource.md)|Retourne un flux de sortie de caractères à utiliser pour tous les messages de journalisation et de suivi.|  
-|[getMultiSubnetFailover](../../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)|Retourne la valeur de la **multiSubnetFailover** propriété de connexion.|  
+|[getMultiSubnetFailover](../../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)|Retourne la valeur de la propriété de connexion **multiSubnetFailover** .|  
 |[getPacketSize](../../../connect/jdbc/reference/getpacketsize-method-sqlserverdatasource.md)|Retourne la taille actuelle des paquets réseau utilisée pour communiquer avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], spécifiée en octets.|  
 |[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)|Retourne le numéro de port actuel utilisé pour communiquer avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverdatasource.md)|Retourne une référence à cet objet [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).|  
 |[getResponseBuffering](../../../connect/jdbc/reference/getresponsebuffering-method-sqlserverdatasource.md)|Retourne le mode de mise en mémoire tampon des réponses pour cet objet [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).|  
 |[getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md)|Retourne le type de curseur par défaut utilisé pour tous les jeux de résultats créés avec cet objet [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md).|  
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|Retourne une valeur **booléenne** indiquant si l’envoi de paramètres de chaîne au serveur au format UNICODE est activé.|  
-|[getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md)|Retourne le paramètre de la **SendTimeAsDatetime** propriété de connexion.|  
+|[getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md)|Retourne le paramètre de la propriété de connexion **SendTimeAsDatetime** .|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|Retourne le nom de l’ordinateur exécutant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|Retourne la valeur de **serverPreparedStatementDiscardThreshold** propriété de connexion.|  
-|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverdatasource.md)|Retourne la taille du cache d’instruction préparée pour cette connexion.|  
+|[getServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/getserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|Retourne la valeur de la propriété de connexion **serverPreparedStatementDiscardThreshold** .|  
+|[getStatementPoolingCacheSize](../../../connect/jdbc/reference/getstatementpoolingcachesize-method-sqlserverdatasource.md)|Retourne la taille du cache d’instructions préparé pour cette connexion.|  
 |[getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)|Retourne la valeur de chaîne de la propriété de connexion TrustManagerClass.|  
 |[getTrustManagerConstructorArg](../../../connect/jdbc/reference/gettrustmanagerconstructorarg-method-sqlserverdatasource.md)|Retourne la valeur de chaîne de la propriété de connexion TrustManagerConstructorArg.|  
 |[getTrustServerCertificate](../../../connect/jdbc/reference/gettrustservercertificate-method-sqlserverdatasource.md)|Retourne une valeur **booléenne** indiquant si la propriété trustServerCertificate est activée.|  
@@ -75,13 +74,13 @@ ms.locfileid: "66800511"
 |[getWorkstationID](../../../connect/jdbc/reference/getworkstationid-method-sqlserverdatasource.md)|Retourne le nom de l’ordinateur client utilisé pour la connexion à la source de données.|  
 |[getXopenStates](../../../connect/jdbc/reference/getxopenstates-method-sqlserverdatasource.md)|Retourne une valeur **booléenne** indiquant si la conversion d’états SQL en états conformes à XOPEN est activée.|  
 |[isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)|Indique si cet objet de source de données est un wrapper pour l'interface spécifiée.|  
-|[setApplicationIntent](../../../connect/jdbc/reference/setapplicationintent-method-sqlserverdatasource.md)|Définit la valeur de la **applicationIntent** propriété de connexion.|  
+|[setApplicationIntent](../../../connect/jdbc/reference/setapplicationintent-method-sqlserverdatasource.md)|Définit la valeur de la propriété de connexion **applicationIntent** .|  
 |[setApplicationName](../../../connect/jdbc/reference/setapplicationname-method-sqlserverdatasource.md)|Définit le nom de l'application.|  
 |[setAuthenticationScheme](../../../connect/jdbc/reference/setauthenticationscheme-sqlserverdatasource.md)|Indique le genre de sécurité intégrée que votre application doit utiliser.|  
 |[setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md)|Définit le nom de la base de données à laquelle se connecter.|  
 |[setDescription](../../../connect/jdbc/reference/setdescription-method-sqlserverdatasource.md)|Définit la description de la source de données.|  
-|[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverdatasource.md)|Définit le regroupement d’instructions à true ou false.|  
-|[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|Spécifie la nouvelle valeur de la **enablePrepareOnFirstPreparedStatementCall** propriété de connexion.|  
+|[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverdatasource.md)|Définit le regroupement des instructions sur true ou false.|  
+|[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|Spécifie la nouvelle valeur de la propriété de connexion **enablePrepareOnFirstPreparedStatementCall** .|  
 |[setEncrypt](../../../connect/jdbc/reference/setencrypt-method-sqlserverdatasource.md)|Définit une valeur **booléenne** indiquant si la propriété encrypt est activée.|  
 |[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)|Définit le nom du serveur de basculement utilisé dans la configuration de la mise en miroir de bases de données.|  
 |[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|Définit le nom d'hôte à utiliser pour valider le certificat SSL (Secure Sockets Layer) SQL Server.|  
@@ -91,7 +90,7 @@ ms.locfileid: "66800511"
 |[setLockTimeout](../../../connect/jdbc/reference/setlocktimeout-method-sqlserverdatasource.md)|Définit une valeur **int** indiquant le nombre de millisecondes qu’attend la base de données avant de signaler l’expiration du délai d’un verrou.|  
 |[setLoginTimeout](../../../connect/jdbc/reference/setlogintimeout-method-sqlserverdatasource.md)|Définit le nombre de secondes pendant lesquelles cet objet [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) attend lors de la tentative de connexion.|  
 |[setLogWriter](../../../connect/jdbc/reference/setlogwriter-method-sqlserverdatasource.md)|Définit un flux de sortie de caractères à utiliser pour tous les messages de journalisation et de suivi.|  
-|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|Définit la valeur de la **multiSubnetFailover** propriété de connexion.|  
+|[setMultiSubnetFailover](../../../connect/jdbc/reference/setmultisubnetfailover-method-sqlserverdatasource.md)|Définit la valeur de la propriété de connexion **multiSubnetFailover** .|  
 |[setPacketSize](../../../connect/jdbc/reference/setpacketsize-method-sqlserverdatasource.md)|Définit la taille de paquet réseau actuelle utilisée pour communiquer avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], spécifiée en octets.|  
 |[setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md)|Définit le mot de passe utilisé pour la connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |[setPortNumber](../../../connect/jdbc/reference/setportnumber-method-sqlserverdatasource.md)|Définit le numéro de port actuel utilisé pour communiquer avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
@@ -100,8 +99,8 @@ ms.locfileid: "66800511"
 |[setSendStringParametersAsUnicode](../../../connect/jdbc/reference/setsendstringparametersasunicode-method-sqlserverdatasource.md)|Définit une valeur **booléenne** indiquant si l’envoi de paramètres de chaîne au serveur au format UNICODE est activé.|  
 |[setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)|Spécifie comment envoyer des valeurs java.sql.Time au serveur.|  
 |[setServerName](../../../connect/jdbc/reference/setservername-method-sqlserverdatasource.md)|Définit le nom de l’ordinateur exécutant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
-|[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|Définit la nouvelle valeur de la **serverPreparedStatementDiscardThreshold** propriété de connexion.|  
-|[setStatementPoolingCacheSize](../../../connect/jdbc/reference/setstatementpoolingcachesize-method-sqlserverdatasource.md)|Définit la taille du cache d’instruction préparée pour cette connexion.|  
+|[setServerPreparedStatementDiscardThreshold](../../../connect/jdbc/reference/setserverpreparedstatementdiscardthreshold-method-sqlserverdatasource.md)|Définit la nouvelle valeur de la propriété de connexion **serverPreparedStatementDiscardThreshold** .|  
+|[setStatementPoolingCacheSize](../../../connect/jdbc/reference/setstatementpoolingcachesize-method-sqlserverdatasource.md)|Définit la taille du cache d’instructions préparé pour cette connexion.|  
 |[setTrustManagerClass](../../../connect/jdbc/reference/settrustmanagerclass-method-sqlserverdatasource.md)|Définit la valeur de chaîne de la propriété de connexion TrustManagerClass.|  
 |[setTrustManagerConstructorArg](../../../connect/jdbc/reference/settrustmanagerconstructorarg-method-sqlserverdatasource.md)|Définit la valeur de chaîne de la propriété de connexion TrustManagerConstructorArg.|  
 |[setTrustServerCertificate](../../../connect/jdbc/reference/settrustservercertificate-method-sqlserverdatasource.md)|Définit une valeur **booléenne** indiquant si la propriété trustServerCertificate est activée.|  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 43c428df-ef91-4f55-81c3-49a4db3379cc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 115458efa339633c3e69e7d4bc91166337a4e192
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ce02a3d3944480d5c00fa4a3b0369aed38c6d59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66792774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982204"
 ---
 # <a name="getmaxcolumnsinselect-method-sqlserverdatabasemetadata"></a>Méthode getMaxColumnsInSelect (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public int getMaxColumnsInSelect()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui indique le nombre maximal de colonnes autorisé.  
+ **Entier** qui indique le nombre maximal de colonnes autorisées.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getMaxColumnsInSelect est spécifiée par la méthode getMaxColumnsInSelect dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getMaxColumnsInSelect est spécifiée par la méthode getMaxColumnsInSelect dans l’interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,19 +1,18 @@
 ---
 title: Utilisation des indicateurs de performance clés dans Reporting Services | Microsoft Docs
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: 4e6a5bbf2d744475ca49e3917f6539e81e6439ea
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572802"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329365"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Utilisation des indicateurs de performance clés dans Reporting Services
 
@@ -27,8 +26,11 @@ En utilisant les indicateurs de performance clés dans SQL Server Reporting Serv
   
 - Quelle est mon avance ou quel est mon retard ?  
   
-- Quelles sont les quantités minimales que j’ai terminé ?  
-  
+- Quels sont les montants minimaux que j’ai effectués?  
+
+> [!NOTE]
+> Les indicateurs de performance clés sont accessibles uniquement dans les éditions Enterprise (Developer) du portail SSRS.
+
 ## <a name="creating-a-dataset"></a>Création d’un dataset
 
 Un indicateur de performance clé utilise uniquement la première ligne de données issue d’un dataset partagé. Assurez-vous que les données que vous souhaitez utiliser se trouvent sur cette première ligne. Pour créer un dataset partagé, vous pouvez utiliser le Générateur de rapports ou SQL Server Data Tools.  
@@ -57,7 +59,7 @@ Vous pouvez assigner des valeurs statiques ou utiliser les données issues d’u
 | Objectif | Utilisé en comparaison à une valeur numérique et présenté sous forme de différence de pourcentage. |
 | État | Valeur numérique utilisée pour déterminer la couleur de vignette de l’indicateur de performance clé. Les valeurs valides sont 1 (vert), 0 (orange) et -1 (rouge). |
 | Ensemble de tendances | Valeurs numériques séparées par des virgules utilisées pour la visualisation de graphique. Ceci peut également être défini sur une colonne d’un dataset avec des valeurs qui représentent la tendance. |
-| Contenu connexe | La possibilité de définir un lien d’extraction. Ce lien peut s’agir d’un rapport mobile publié sur le portail ou une URL personnalisée. |
+| Contenu connexe | Possibilité de définir un lien d’extraction. Ce lien peut être un rapport mobile publié sur le portail ou une URL personnalisée. |
   
 > **Avertissement**: bien que vous pouvez utiliser la valeur texte pour le champ **État** au moment de la conception, vous devez utiliser la valeur numérique en cas d’actualisation d’un dataset. Si vous actualisez un dataset avec la valeur texte, au lieu de la valeur numérique, cela peut endommager les indicateurs de performance clés sur votre serveur.  
 >
@@ -87,21 +89,21 @@ Vous pouvez procéder comme suit pour utiliser les données d’un jeu de donné
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)
 
-## <a name="configuring-related-content"></a>Configuration de contenu associé
+## <a name="configuring-related-content"></a>Configuration du contenu associé
 
-Lorsque vous choisissez **rapport Mobile**, vous pouvez choisir la destination dans une boîte de dialogue.
+Lorsque vous choisissez **rapport mobile**, vous pouvez choisir la destination dans une boîte de dialogue.
 
    ![Rapport mobile](media/rscreatekpi-related-content-mobile-report.png)
 
-Lorsque vous cliquez sur l’indicateur de performance clé dans le portail, une miniature du rapport mobile s’affiche sous la liste déroulante de contenu associée. En cliquant sur cette miniature peut vous accédez directement à ce rapport.
+Quand vous cliquez maintenant sur l’indicateur de performance clé dans le portail, une miniature du rapport mobile s’affiche sous la liste déroulante contenu associé. Cliquez sur cette miniature pour accéder directement à ce rapport.
 
-Vous pouvez également spécifier une URL personnalisée. Cette tâche peut être quelconque : un site Web, un site SharePoint, une URL vers un rapport SSRS (ce qui vous permettrait à transmettre les paramètres codés en dur).
+Vous pouvez également spécifier une URL personnalisée. Cette tâche peut être n’importe quoi: un site Web, un site SharePoint, une URL vers un rapport SSRS (ce qui vous permet de transmettre des paramètres codés en dur).
 
 ![URL personnalisée](media/rscreatekpi-related-content-custom-url.png)
 
-Lorsque vous cliquez sur l’indicateur de performance clé, l’URL s’affiche sous le contenu associé.
+Lorsque vous cliquez à présent sur l’indicateur de performance clé, l’URL s’affiche sous contenu associé.
 
-Il est uniquement possible d’ajouter un rapport mobile ou une URL personnalisée.
+Il n’est possible d’ajouter qu’un seul rapport mobile ou une seule URL personnalisée.
   
 ## <a name="removing-a-kpi"></a>Suppression d’un indicateur de performance clé  
   

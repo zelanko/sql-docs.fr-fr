@@ -1,5 +1,5 @@
 ---
-title: Méthode setClientInfo (java.util.Properties) | Microsoft Docs
+title: Méthode setClientInfo (Java. util. Properties) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b2a8ec0b-40a2-44d1-90d9-a810d4132e56
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e09d4cba23c87bdcaaa0503dffe73e65dfaf82b3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a332f42c8193c851a33036af214ac31366986023
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974742"
 ---
 # <a name="setclientinfo-method-javautilproperties"></a>Méthode setClientInfo (java.util.Properties)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void setClientInfo (java.util.Properties properties)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setClientInfo est spécifiée par la méthode setClientInfo dans l’interface java.sql.Connection.  
+ Cette méthode setClientInfo est spécifiée par la méthode setClientInfo dans l’interface java. Sql. Connection.  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] ne prend en charge aucune propriété d’informations client. Cette méthode génère des avertissements si le paramètre d’entrée *properties* ne fait pas référence à un jeu de propriétés vide. En d'autres termes, cette méthode génère des avertissements pour les propriétés que l'application souhaite définir. Les applications doivent utiliser la méthode [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) pour récupérer chaque avertissement.  
   

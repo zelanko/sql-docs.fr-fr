@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 72b5c4a5-1382-4b2c-80a0-47c97c5f52d3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11ff6a1b5c919f44bfc9cfd56e1e94ac57b673e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81623f6495540e70ae44755228b0c309df957b4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976137"
 ---
 # <a name="preparestatement-method-javalangstring-int"></a>Méthode prepareStatement (java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,20 +38,20 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
 #### <a name="parameters"></a>Paramètres  
  *sql*  
   
- Un **chaîne** qui contient une instruction SQL.  
+ **Chaîne** qui contient une instruction SQL.  
   
  *columnIndexes*  
   
  Un tableau d'entiers.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet PreparedStatement.  
+ Objet PreparedStatement.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode prepareStatement est spécifiée par la méthode prepareStatement dans l’interface java.sql.Connection.  
+ Cette méthode prepareStatement est spécifiée par la méthode prepareStatement dans l’interface java. Sql. Connection.  
   
 ## <a name="see-also"></a>Voir aussi  
  [prepareStatement, méthode &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   

@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: efeae71efacdf7a47bbdde6f1eeca2cb2e63d99f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1dffc95e50ffb1e7e2cba68700a26ade0a72da6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015573"
 ---
 # <a name="send-data-to-a-filestream-column-using-irowsetfastupload-ole-db"></a>Envoyer des données à une colonne FILESTREAM à l'aide d'IRowsetFastUpload (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,10 +24,10 @@ ms.locfileid: "66791463"
 
   Cet exemple utilise l'interface IRowsetFastUpload pour envoyer entre 4 Mo et 4 Go de données à une colonne Filestream.  
   
- Pour plus d’informations sur la fonctionnalité filestream, consultez [prise en charge FILESTREAM](../../../oledb/features/filestream-support.md).  
+ Pour plus d’informations sur la fonctionnalité FileStream, consultez [prise en charge de FileStream](../../../oledb/features/filestream-support.md).  
   
 ## <a name="example"></a>Exemple  
- Avant de compiler et exécuter cet exemple, activer la prise en charge FILESTREAM ([activer et configurer FILESTREAM](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
+ Avant de compiler et d’exécuter cet exemple, activez la prise en charge FILESTREAM ([activer et configurer FileStream](../../../../relational-databases/blob/enable-and-configure-filestream.md)).  
   
  Vérifiez que votre variable d’environnement INCLUDE inclut le répertoire qui contient msoledbsql.h.  
   

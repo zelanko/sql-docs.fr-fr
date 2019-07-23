@@ -1,5 +1,5 @@
 ---
-title: getbinarystream, méthode (int) | Microsoft Docs
+title: Méthode getBinaryStream (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: de22a6c4-1ba3-4ed0-91a2-bf235c2ceec3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d45d0ce6b5d6509ffd7b561352a41c69592f86b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0add171861f2ea9e021b9f9342968baf1601557
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953700"
 ---
 # <a name="getbinarystream-method-int"></a>Méthode getBinaryStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,16 +37,16 @@ public java.io.InputStream getBinaryStream(int columnIndex)
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet InputStream.  
+ Objet InputStream.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getBinaryStream est spécifiée par la méthode getBinaryStream dans l’interface java.sql.ResultSet.  
+ Cette méthode getBinaryStream est spécifiée par la méthode getBinaryStream dans l’interface java. Sql. ResultSet.  
   
  Cette méthode peut être utilisée seulement avec des types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] binary, varbinary, varbinary(max) et image. Si vous essayez de l'utiliser avec d'autres types de données, une exception est levée.  
   

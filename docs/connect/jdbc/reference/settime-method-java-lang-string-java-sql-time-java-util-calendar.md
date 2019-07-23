@@ -1,5 +1,5 @@
 ---
-title: Méthode setTime aux valeurs d’heure et de calendrier | Microsoft Docs
+title: Méthode setTime pour les valeurs d’heure et de calendrier | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ca08fea8-ee1a-49e4-a973-2923d325df79
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8c05d1558faaf8edce91a8383159abd04b6bf05d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e0a493492c581150809fee6e3707cf770960462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972534"
 ---
 # <a name="settime-method-javalangstring-javasqltime-javautilcalendar"></a>Méthode setTime (java.lang.String, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,11 +43,11 @@ public void setTime(java.lang.String sCol,
   
  *x*  
   
- Un objet de temps.  
+ Objet d’heure.  
   
  *c*  
   
- Un objet de calendrier.  
+ Objet de calendrier.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -56,9 +55,9 @@ public void setTime(java.lang.String sCol,
 ## <a name="remarks"></a>Notes  
  Cette méthode setTime est spécifiée par la méthode setTime de l’interface java.sql.CallableStatement.  
   
- À partir de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 3.0 du pilote JDBC, le comportement de cette méthode est modifié par le **sendTimeAsDatetime** propriété de connexion ([définissant les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et [ SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
+ À [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] partir du pilote JDBC 3,0, le comportement de cette méthode est modifié par la propriété de connexion **sendTimeAsDatetime** (en[définissant les propriétés de connexion](../../../connect/jdbc/setting-the-connection-properties.md)) et [SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- Pour plus d’informations, consultez [java.sql.Time configurer comment les valeurs sont envoyées au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
+ Pour plus d’informations, consultez [configuration de la façon dont les valeurs Java. Sql. Time sont envoyées au serveur](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [setTime, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/settime-method-sqlservercallablestatement.md)   

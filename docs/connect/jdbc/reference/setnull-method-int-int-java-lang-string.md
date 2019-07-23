@@ -1,5 +1,5 @@
 ---
-title: SetNull, méthode (int, int, java.lang.String) | Microsoft Docs
+title: Méthode setNull (int, int, Java. lang. String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 43c74e06-2858-49ba-bae7-b88808e5fff4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 62f91e694ea655fe29c7306aeea9471ba432072d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e59b32581d25370fa86da417fd71c1eb7b67b33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973578"
 ---
 # <a name="setnull-method-int-int-javalangstring"></a>Méthode setNull (int, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ public final void setNull(int paramIndex,
 #### <a name="parameters"></a>Paramètres  
  *paramIndex*  
   
- Un **int** qui indique le numéro de paramètre.  
+ **Entier** qui indique le numéro du paramètre.  
   
  *sqlType*  
   
@@ -48,7 +47,7 @@ public final void setNull(int paramIndex,
   
  *typeName*  
   
- Un **chaîne** qui indique le nom qualifié complet du paramètre qui est défini.  
+ **Chaîne** qui indique le nom qualifié complet du paramètre en cours de définition.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

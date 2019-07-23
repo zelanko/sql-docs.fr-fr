@@ -15,13 +15,12 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d22bc6d19aa4593d400b62c19f72c9fbe3745005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994376"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,10 +44,10 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>Arguments  
  *hChapter*[in]  
- Handle du chapitre. Si l’objet interrogée n’est pas un objet rowset ou l’opération ne s’applique pas à un chapitre, il doit être défini à la valeur DB_NULL_HCHAPTER, qui est ignorée par le fournisseur.  
+ Handle du chapitre. Si l’objet interrogé n’est pas un objet d’ensemble de lignes ou que l’opération ne s’applique pas à un chapitre, il doit être défini sur DB_NULL_HCHAPTER, ce qui est ignoré par le fournisseur.  
   
  *eOperation*[in]  
- L'opération pour laquelle l'état asynchrone est demandé. La valeur suivante doit être utilisée :  
+ L'opération pour laquelle l'état asynchrone est demandé. La valeur suivante doit être utilisée:  
   
  DBASYNCHOP_OPEN : le consommateur demande des informations sur l'ouverture ou le remplissage asynchrone d'un ensemble de lignes ou sur l'initialisation asynchrone d'un objet source de données. Si le fournisseur est un fournisseur conforme à OLE DB 2.5 qui prend en charge la liaison d'URL directe, le consommateur demande des informations sur l'initialisation ou le remplissage asynchrone d'une source de données, d'un ensemble de lignes, d'une ligne ou d'un objet de flux.  
   

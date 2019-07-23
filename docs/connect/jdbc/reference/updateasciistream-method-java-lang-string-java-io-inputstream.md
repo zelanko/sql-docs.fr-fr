@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 747b0308-1ce6-4eba-bdfc-af29c21c18cf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a9fbb5f5c74a549a84e54980d585b7b5c30f61a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d800d385d1df3b9cea8c8c0f4eccb29b90f64147
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985459"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream"></a>Méthode updateAsciiStream (java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,17 +37,17 @@ public void updateAsciiStream(java.lang.String columnLabel,
   
  *x*  
   
- Un objet InputStream.  
+ Objet InputStream.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateAsciiStream est spécifiée par la méthode updateAsciiStream dans l’interface java.sql.ResultSet.  
+ Cette méthode updateAsciiStream est spécifiée par la méthode updateAsciiStream dans l’interface java. Sql. ResultSet.  
   
  Cette méthode passe les caractères ASCII (octets) à partir d’un objet InputStream vers des colonnes de caractères convertibles, qui correspondent à la plage ASCII [0x00 - 0x7F] Unicode et aux pages de codes 874, 932, 936, 949, 950 et 1250 jusqu’à 1258. Cette méthode effectue une conversion de la page de classement de destination. La tentative de mise à jour d'une colonne de destination non convertible entraîne la levée d'une exception. Pour les colonnes binaires, des octets bruts sont passés.  
   
- À l’aide de cette méthode pour le **image**, **texte**, et **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] types de données peuvent affecter les performances.  
+ L’utilisation de cette méthode pour les types de données **image**, **Text**et **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut avoir un impact sur les performances.  
   
 ## <a name="see-also"></a>Voir aussi  
  [updateAsciiStream, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)   
