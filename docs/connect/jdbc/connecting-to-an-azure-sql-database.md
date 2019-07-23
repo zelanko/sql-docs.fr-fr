@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956856"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connexion à une base de données SQL Azure
 
@@ -32,8 +31,8 @@ Cet article aborde les problèmes rencontrés lors de l’utilisation de [!INCLU
   
 ## <a name="details"></a>Détails
 
-Lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez vous connecter à la base de données master pour appeler **SQLServerDatabaseMetaData.getCatalogs**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ne prend pas en charge le retour de l’ensemble complet de catalogues d’une base de données utilisateur. **SQLServerDatabaseMetaData.getCatalogs** utiliser la vue sys.databases pour obtenir les catalogues. Reportez-vous à la section autorisations dans [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) pour comprendre **SQLServerDatabaseMetaData.getCatalogs** comportement sur un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+Lors de la connexion [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]à un, vous devez vous connecter à la base de données Master pour appeler **SQLServerDatabaseMetaData. getCatalogs**.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] ne prend pas en charge le retour de l’ensemble complet de catalogues d’une base de données utilisateur. **SQLServerDatabaseMetaData. getCatalogs** utilisez la vue sys. databases pour obtenir les catalogues. Reportez-vous à la discussion sur les autorisations dans [sys. databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) pour comprendre le comportement [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]de **SQLServerDatabaseMetaData. getCatalogs** sur un.  
   
 ## <a name="connections-dropped"></a>Connexions supprimées
 
@@ -47,9 +46,9 @@ Pour éviter la suppression des connexions inactives par un composant réseau, l
   
 |Paramètre de Registre|Valeur recommandée|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ paramètres \ KeepAliveTime|30 000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ paramètres \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ paramètres \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ services \ tcpip \ Parameters \ KeepAliveTime|30 000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ services \ tcpip \ Parameters \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ services \ tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Redémarrez l’ordinateur pour appliquer les paramètres du Registre.  
 
@@ -81,7 +80,7 @@ Avant la version 4.0 du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Utilisation du chiffrement, nécessitant la définition d'un hostNameInCertificate
 
-Avant la version 7.2 du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez spécifier **hostNameInCertificate** si vous spécifiez **chiffrer = true** (si le nom de serveur dans la connexion la chaîne est *shortName*. *domainName*, définissez le **hostNameInCertificate** propriété \*. *domainName*.). Cette propriété est facultative à partir de la version 7.2 du pilote.
+Avant la version [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7,2 de, lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez spécifier **hostNameInCertificate** si vous spécifiez **encrypt = true** (si le nom du serveur dans la chaîne de connexion est *ShortName*. *domainName*, affectez à la propriété **hostNameInCertificate** la valeur\*. *nom_domaine*.). Cette propriété est facultative depuis la version 7,2 du pilote.
 
 Par exemple :
 

@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 504c05882d1e7c690b8ddbd46c331073f63bbb7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d06e1b4ea0302bc8da4d7ad7a95927593c199d40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049409"
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-   **Data Streaming Destination** est un composant de destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) qui permet au **fournisseur OLE DB pour SSIS** de consommer la sortie d’un package SSIS sous la forme d’un jeu de résultats tabulaire. Vous pouvez créer un serveur lié qui utilise le fournisseur OLE DB pour SSIS, puis exécuter une requête SQL sur le serveur lié pour afficher les données retournées par le package SSIS.  
+  **Data Streaming Destination** est un composant de destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] (SSIS) qui permet au **fournisseur OLE DB pour SSIS** de consommer la sortie d’un package SSIS sous la forme d’un jeu de résultats tabulaire. Vous pouvez créer un serveur lié qui utilise le fournisseur OLE DB pour SSIS, puis exécuter une requête SQL sur le serveur lié pour afficher les données retournées par le package SSIS.  
   
  Dans l’exemple suivant, la requête suivante retourne une sortie du package Package.dtsx dans le projet SSISPackagePublishing dans le dossier Power BI du catalogue SSIS. Cette requête utilise le serveur lié nommé [serveur lié par défaut pour Integration Services] qui à son tour utilise le nouveau fournisseur OLE DB pour SSIS. La requête inclut le nom du dossier, le nom du projet et le nom du package dans le catalogue SSIS. Le fournisseur OLE DB pour SSIS exécute le package que vous avez spécifié dans la requête et retourne le jeu de résultats tabulaire.  
   

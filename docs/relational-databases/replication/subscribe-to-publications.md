@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 139bcebb2f4e92d3cc9e25a3460a6283a93fc4f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a15256be44ace579c6dcc9aa74bf55fdc319e7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129930"
 ---
 # <a name="subscribe-to-publications"></a>S'abonner à des publications
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,14 +74,14 @@ ms.locfileid: "47635547"
   
  **Pour supprimer un abonnement par envoi de données**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Supprimer un abonnement par émission de données](../../relational-databases/replication/delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Supprimer un abonnement par émission (push)](../../relational-databases/replication/delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  La suppression d'un abonnement n'entraîne pas la suppression des objets publiés sur l'Abonné.  
   
  **Pour créer un abonnement par extraction de données**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Créer un abonnement par extraction (pull)](../../relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Créer un abonnement par extraction de données (pull)](../../relational-databases/replication/create-a-pull-subscription.md)  
   
  **Pour afficher ou modifier les propriétés d'un abonnement extrait**  
   
@@ -92,7 +91,7 @@ ms.locfileid: "47635547"
   
  [Supprimer un abonnement par extraction](../../relational-databases/replication/delete-a-pull-subscription.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Sécuriser l’abonné](../../relational-databases/replication/security/secure-the-subscriber.md)   
  [Expiration et désactivation des abonnements](../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   
