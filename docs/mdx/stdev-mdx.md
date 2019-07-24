@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a1ef1d720928298e8a44e075f45937903d178ef6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40af02ce74363fb1df2ae142e7665be8714d181e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036865"
 ---
 # <a name="stdev-mdx"></a>Stdev (MDX)
 
@@ -32,7 +31,7 @@ Stdev(Set_Expression [ ,Numeric_Expression ] )
  *Set_Expression*  
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
- *Numeric_Expression*  
+ *Numeric_expression*  
  Expression numérique valide qui correspond généralement à une expression MDX (Multidimensional Expressions) des coordonnées des cellules qui retournent un nombre.  
   
 ## <a name="remarks"></a>Notes  

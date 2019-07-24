@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6447f9a8a8504539400154c29c34d7340fcdb2d8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7b60f4929bd537089c05211cc3ecc548b82b6307
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943498"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,16 +46,16 @@ sp_helpfile [ [ @filename= ] 'name' ]
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom**|**sysname**|Nom de fichier logique.|  
+|**name**|**sysname**|Nom de fichier logique.|  
 |**fileid**|**smallint**|Identificateur numérique du fichier. N’est pas renvoyée si *nom* est spécifié *.*|  
 |**filename**|**nchar(260)**|Nom de fichier physique.|  
 |**filegroup**|**sysname**|Groupe de fichiers auquel le fichier appartient.<br /><br /> NULL = Le fichier est un fichier journal. Ils ne font jamais partie d'un groupe de fichiers.|  
 |**size**|**nvarchar(15)**|Taille du fichier en kilo-octets.|  
 |**maxsize**|**nvarchar(15)**|Taille maximale du fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
 |**growth**|**nvarchar(15)**|Incrément de croissance du fichier. Cela indique la quantité d’espace ajoutée au fichier chaque fois que ce nouvel espace est nécessaire.<br /><br /> 0 = La taille du fichier est fixe et n'augmente pas.|  
-|**usage**|**varchar(9)**|Pour le fichier de données, la valeur est **'données uniquement'** et pour le fichier journal est la valeur **journal uniquement**.|  
+|**Utilisation**|**varchar(9)**|Pour le fichier de données, la valeur est **'données uniquement'** et pour le fichier journal est la valeur **journal uniquement**.|  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  

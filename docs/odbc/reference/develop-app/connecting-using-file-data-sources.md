@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa340c64f6eb92d803d8918bc99ecf112b19f1e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083114"
 ---
 # <a name="connecting-using-file-data-sources"></a>Connexion à l’aide de sources de données de fichier
 Les informations de connexion pour une source de données de fichier sont stockées dans un fichier .dsn. Par conséquent, la chaîne de connexion peut être utilisée à plusieurs reprises par un utilisateur unique ou partagée par plusieurs utilisateurs s’ils ont le pilote approprié installé. Le fichier contient un nom de pilote (ou un autre nom de source de données dans le cas d’une source de données fichier partageable) et si vous le souhaitez, une chaîne de connexion qui peut être utilisée par **SQLDriverConnect**. Le Gestionnaire de pilotes génère la chaîne de connexion pour l’appel à **SQLDriverConnect** dans les mots clés dans le fichier .dsn.  

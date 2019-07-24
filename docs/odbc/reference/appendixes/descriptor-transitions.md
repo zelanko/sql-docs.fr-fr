@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 027b711c5c1a2cb2d35e65efdc2b00f441841d8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44e9d92c7371451d6bfdd2e1513c3f8fdac8447b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129997"
 ---
 # <a name="descriptor-transitions"></a>Transitions de descripteur
 Descripteurs ODBC ont trois états suivants.  
@@ -55,7 +54,7 @@ Descripteurs ODBC ont trois états suivants.
 |D0<br /><br /> Non alloué|D1i<br /><br /> Implicite|D1e<br /><br /> Explicite|  
 |------------------------|----------------------|----------------------|  
 |--[1]|D0|--|  
-|(IH)[2]|(HY017)|D0|  
+|(IH) [2]|(HY017)|D0|  
   
  [1] cette ligne affiche les transitions quand *HandleType* a été SQL_HANDLE_STMT.  
   

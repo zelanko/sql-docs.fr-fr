@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 251e5f79c03c02499aec9f3c0f90f42902d32474
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7081d96d996d33bbabedd13201d7b0fa2547563
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078676"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51656608"
  Contient une ligne pour chaque point de terminaison du serveur qui supporte une charge utile de type SOAP. Pour chaque ligne dans cette vue, il existe une ligne correspondante avec le même **endpoint_id** dans le **sys.http_endpoints** affichage catalogue qui contient les métadonnées de configuration de HTTP.  
   
  
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**< colonnes héritées >**||Pour obtenir la liste des colonnes qui hérite de cette vue, consultez [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md).|  
 |**is_sql_language_enabled**|**bit**|1 = TRAITEMENTS = L'option ENABLED a été spécifiée, ce qui signifie que les traitements SQL ad-hoc sont autorisées sur le point de terminaison.|  
@@ -50,7 +49,7 @@ ms.locfileid: "51656608"
 |**login_type**|**nvarchar(60)**|Type d'authentification autorisé sur ce point de terminaison.<br /><br /> WINDOWS<br /><br /> MIXED|  
 |**header_limit**|**Int**|Taille maximale pouvant être autorisée pour l'en-tête SOAP.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

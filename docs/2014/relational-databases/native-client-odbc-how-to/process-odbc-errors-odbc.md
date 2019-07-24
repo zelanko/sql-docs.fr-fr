@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: deab0fc5535b188016d018c34587995c65356fb3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354727"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206792"
 ---
 # <a name="process-odbc-errors-odbc"></a>Traiter les erreurs ODBC (ODBC)
   Deux appels de fonction ODBC peuvent être utilisés pour récupérer les messages ODBC : [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) et [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Pour obtenir les informations ODBC de base dans les champs de diagnostic **SQLState**, **pfNative** et **ErrorMessage**, appelez [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) jusqu’à ce que SQL_NO_DATA soit retourné. Pour chaque enregistrement de diagnostic, [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) peut être appelé pour extraire les champs individuels. Tous les champs spécifiques au pilote doivent être extraits à l'aide de `SQLGetDiagField`.  

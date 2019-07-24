@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ff428306-0ef4-49a3-b536-07ccdf6e2196
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b11ff11d3d5ea8ea98bee18738a7c60450693ef
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 04ad122f6fc999aa285513d41e71bfc347dbfb82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139801"
 ---
 # <a name="mssubscriberschedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,21 +32,21 @@ ms.locfileid: "53202018"
 > [!NOTE]
 >  Cette table système a été déconseillée et est maintenue pour prendre en charge les versions antérieures de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Nom de colonne|Type de données|Description|  
+|Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**publisher** (serveur de publication)|**sysname**|Le nom du serveur de publication.|  
 |**subscriber** (Abonné)|**sysname**|Nom de l'Abonné.|  
 |**agent_type**|**smallint**|Type d'Agent:<br /><br /> 0 = Agent de distribution.<br /><br /> 1 = Agent de fusion.|  
 |**frequency_type**|**Int**|Fréquence de planification de l'Agent de distribution :<br /><br /> **1** = une fois.<br /><br /> **2** = à la demande.<br /><br /> **4** = quotidienne.<br /><br /> **8** = hebdomadaire.<br /><br /> **16** = mensuelle.<br /><br /> **32** = fréquence mensuelle relative.<br /><br /> **64** = démarrage automatique.<br /><br /> **128** = périodique.|  
-|**frequency_interval**|**Int**|La valeur à appliquer à la fréquence définie par **frequency_type**.|  
+|**frequency_interval**|**int**|La valeur à appliquer à la fréquence définie par **frequency_type**.|  
 |**frequency_relative_interval**|**Int**|Date de l'Agent de distribution :<br /><br /> **1** = premier.<br /><br /> **2** = seconde.<br /><br /> **4** = troisième.<br /><br /> **8** = quatrième.<br /><br /> **16** = dernier.|  
 |**frequency_recurrence_factor**|**Int**|Facteur de récurrence utilisé par **frequency_type**.|  
 |**frequency_subday**|**Int**|Fréquence de replanification nécessaire pendant la période définie :<br /><br /> **1** = une fois.<br /><br /> **2** = seconde.<br /><br /> **4** = minute.<br /><br /> **8** = heure.|  
-|**frequency_subday_interval**|**Int**|L’intervalle pour **frequency_subday**.|  
-|**active_start_time_of_day**|**Int**|Heure de première planification de l'Agent de distribution, au format HHMMSS.|  
-|**active_end_time_of_day**|**Int**|Heure d'arrêt de la planification de l'Agent de distribution, au format HHMMSS.|  
+|**frequency_subday_interval**|**int**|L’intervalle pour **frequency_subday**.|  
+|**active_start_time_of_day**|**int**|Heure de première planification de l'Agent de distribution, au format HHMMSS.|  
+|**active_end_time_of_day**|**int**|Heure d'arrêt de la planification de l'Agent de distribution, au format HHMMSS.|  
 |**active_start_date**|**Int**|Date de première planification de l'Agent de distribution, au format AAAAMMJJ.|  
-|**active_end_date**|**Int**|Date d'arrêt de la planification de l'Agent de distribution, au format AAAAMMJJ.|  
+|**active_end_date**|**int**|Date d'arrêt de la planification de l'Agent de distribution, au format AAAAMMJJ.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

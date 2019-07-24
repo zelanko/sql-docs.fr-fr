@@ -1,5 +1,5 @@
 ---
-title: Propriétés du modèle d’exploration de données | Documents Microsoft
+title: Propriétés du modèle d’exploration de données | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ba834b497950357b83a4ec052654b5a4998b928
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015806"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209794"
 ---
 # <a name="mining-model-properties"></a>Propriétés du modèle d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34015806"
 |--------------|-----------------|  
 |**Algorithm**|Définit le type d'algorithme pour le modèle d'exploration de données.|  
 |**AlgorithmParameters**|Définit les valeurs pour les paramètres d'algorithme disponibles pour chaque type d'algorithme.|  
-|**Filtre**|Définit un filtre qui s'applique aux données utilisées pour former et tester le modèle d'exploration de données. La définition de filtre est stockée avec le modèle et peut être utilisée facultativement lorsque vous créez des requêtes de prédiction ou lorsque vous testez la précision du modèle.<br /><br /> Le filtre de modèle n'est pas facultatif lors de la formation du modèle.|  
+|**Filtrer**|Définit un filtre qui s'applique aux données utilisées pour former et tester le modèle d'exploration de données. La définition de filtre est stockée avec le modèle et peut être utilisée facultativement lorsque vous créez des requêtes de prédiction ou lorsque vous testez la précision du modèle.<br /><br /> Le filtre de modèle n'est pas facultatif lors de la formation du modèle.|  
 |**Nom**|Définit le nom du modèle d'exploration de données.|  
 |**AllowDrillThrough**|Spécifie si l'extraction est activée sur le modèle d'exploration de données.|  
   
@@ -53,12 +53,12 @@ ms.locfileid: "34015806"
 |**Utilisation**|Définit comment la colonne sera utilisée par le modèle d'exploration de données.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Colonnes du modèle d’exploration de données](../../analysis-services/data-mining/mining-model-columns.md)   
- [Les Structures d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Tâches liées aux modèles d’exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Modifier les propriétés d’un modèle d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
- [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
- [Créer une Structure d’exploration de données relationnelles](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
- [Créer un Alias pour une colonne de modèle](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
+ [Colonnes d'un modèle d'exploration de données](../../analysis-services/data-mining/mining-model-columns.md)   
+ [Structures d’exploration &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Tâches du modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Modifier les propriétés d'un modèle d'exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
+ [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Créer une structure d'exploration de données relationnelle](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
+ [Créer un alias pour une colonne du modèle](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
   

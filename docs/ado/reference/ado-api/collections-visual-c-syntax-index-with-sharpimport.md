@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f761a0d65954e104be0849f10c786cc709085a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 77a45203c50555168d2cd163c8b97406b8377694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919895"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Collections (Index de la syntaxe Visual C++ avec #import)
 Il est utile de savoir que les collections héritent certaines méthodes et propriétés communes.  
@@ -99,6 +98,6 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
   
 ## <a name="see-also"></a>Voir aussi  
  [Collection d’erreurs (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Collection de paramètres (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Properties, collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
