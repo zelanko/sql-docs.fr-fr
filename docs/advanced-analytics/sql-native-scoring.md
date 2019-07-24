@@ -1,50 +1,50 @@
 ---
-title: Notation native à l’aide de la déclaration de prédire le T-SQL - SQL Server Machine Learning Services
-description: Générer des prédictions à l’aide de la fonction de prédire le T-SQL, notation entrées dta par rapport à un modèle préentraîné écrites en R ou Python sur SQL Server.
+title: Notation Native utilisant l’instruction T-SQL PREDICT
+description: Générez des prédictions à l’aide de la fonction T-SQL PREDICT, en évaluant les entrées DTA par rapport à un modèle pré-formé écrit en R ou python sur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 65a7954aa18f9e8dbdfd814a6b0d189683e4606f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b148bd1ca51a7121ae043e2b616100e295c008aa
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962310"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344755"
 ---
-# <a name="native-scoring-using-the-predict-t-sql-function"></a>Notation native à l’aide de la fonction de prédire le T-SQL
+# <a name="native-scoring-using-the-predict-t-sql-function"></a>Notation native à l’aide de la fonction T-SQL PREDICT
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Natif notation utilise [fonction T-SQL prédire](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) et les fonctionnalités d’extension natifs C++ dans SQL Server 2017 pour générer des valeurs de prédiction ou *scores* pour les nouvelles entrées de données quasiment en temps réel. Cette méthodologie offre la plus rapide possible vitesse de traitement de prévision et de prédiction des charges de travail, mais il est fourni avec les exigences de plate-forme et de la bibliothèque : seuls les fonctions RevoScaleR et revoscalepy ont des implémentations C++.
+Le score natif utilise la fonction de prédiction [T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) et les fonctionnalités d’Extension natives C++ dans SQL Server 2017 pour générer des valeurs de prédiction ou des *scores* pour les nouvelles entrées de données en temps quasi-réel. Cette méthodologie offre la vitesse de traitement la plus rapide possible des prévisions et des charges de travail de prédiction, mais est fournie avec les exigences de la plateforme et C++ de la bibliothèque: seules les fonctions de RevoScaleR et revoscalepy ont des implémentations.
 
-Notation native nécessite que vous disposez d’un modèle déjà formé. Dans SQL Server 2017 Windows ou Linux, ou dans la base de données SQL Azure, vous pouvez appeler la fonction PREDICT dans Transact-SQL pour appeler native de score à de nouvelles données que vous fournissez comme paramètre d’entrée. La fonction PREDICT retourne les scores sur les entrées de données que vous fournissez.
+La notation Native nécessite que vous disposiez d’un modèle déjà formé. Dans 2017 SQL Server Windows ou Linux, ou dans Azure SQL Database, vous pouvez appeler la fonction PREDICT dans Transact-SQL pour appeler le score natif sur les nouvelles données que vous fournissez en tant que paramètre d’entrée. La fonction PREDICT retourne les scores sur les entrées de données que vous fournissez.
 
-## <a name="how-native-scoring-works"></a>Comment native notation fonctionne
+## <a name="how-native-scoring-works"></a>Fonctionnement de la notation Native
 
-Notation utilise native C++ bibliothèques natives à partir de Microsoft qui peut lire un modèle déjà formé, précédemment stockées dans un format binaire spécial ou enregistré sur le disque en tant que flux d’octets bruts et générer des scores pour nouvelles entrées de données que vous fournissez. Étant donné que le modèle est formé, publiées et stockées, il peut être utilisé pour calculer les scores sans avoir à appeler l’interpréteur R ou Python. Par conséquent, la surcharge de plusieurs des interactions de processus est réduite, ce qui entraîne des performances de prédiction beaucoup plus rapide dans les scénarios de production d’entreprise.
+Le score natif utilise C++ des bibliothèques natives de Microsoft capables de lire un modèle déjà formé, précédemment stocké dans un format binaire spécial ou enregistré sur le disque en tant que flux d’octets bruts, et de générer des scores pour les nouvelles entrées de données que vous fournissez. Étant donné que le modèle est formé, publié et stocké, il peut être utilisé pour le calcul de score sans avoir à appeler l’interpréteur R ou python. Par conséquent, la surcharge liée à l’interaction de plusieurs processus est réduite, ce qui entraîne des performances de prédiction beaucoup plus rapides dans les scénarios de production d’entreprise.
 
-Pour utiliser la notation native, appelez la fonction T-SQL prédire et passer les entrées requises suivantes :
+Pour utiliser le score natif, appelez la fonction T-SQL PREDICT et transmettez les entrées requises suivantes:
 
-+ Un modèle compatible basé sur un algorithme pris en charge.
-+ Données d’entrée, généralement définies comme une requête SQL.
++ Modèle compatible basé sur un algorithme pris en charge.
++ Données d’entrée, généralement définies en tant que requête SQL.
 
-La fonction renvoie des prédictions pour les données d’entrée, ainsi que toutes les colonnes de données source que vous souhaitez passer.
+La fonction retourne des prédictions pour les données d’entrée, ainsi que toutes les colonnes de données sources que vous souhaitez transmettre.
 
 ## <a name="prerequisites"></a>Prérequis
 
-PRÉDIRE est disponible sur toutes les éditions du moteur de base de données SQL Server 2017 et activé par défaut, y compris SQL Server 2017 Machine Learning Services sur Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) ou base de données SQL Azure. Vous n’avez pas besoin installer R, Python, ou activer des fonctionnalités supplémentaires.
+PREDICT est disponible dans toutes les éditions du moteur de base de données SQL Server 2017 et activé par défaut, y compris SQL Server 2017 Machine Learning Services sur Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) ou Azure SQL Database. Vous n’avez pas besoin d’installer R, Python ou d’activer des fonctionnalités supplémentaires.
 
-+ Le modèle doit être formé à l’avance à l’aide d’une des prises en charge **rx** algorithmes répertoriés ci-dessous.
++ Le modèle doit être formé à l’avance à l’aide de l’un des algorithmes **RX** pris en charge listés ci-dessous.
 
-+ Sérialiser le modèle à l’aide [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) pour R, et [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) pour Python. Ces fonctions de sérialisation ont été optimisées pour prendre en charge rapide de notation.
++ Sérialisez le modèle à l’aide de [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) pour R et [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) pour Python. Ces fonctions de sérialisation ont été optimisées pour prendre en charge la notation rapide.
 
 <a name="bkmk_native_supported_algos"></a> 
 
 ## <a name="supported-algorithms"></a>Algorithmes pris en charge
 
-+ modèles de revoscalepy
++ modèles revoscalepy
 
   + [rx_lin_mod](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-lin-mod)
   + [rx_logit](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-logit) 
@@ -52,7 +52,7 @@ PRÉDIRE est disponible sur toutes les éditions du moteur de base de données S
   + [rx_dtree](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dtree) 
   + [rx_dforest](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-dforest) 
 
-+ Modèles de RevoScaleR
++ Modèles RevoScaleR
 
   + [rxLinMod](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit)
@@ -60,22 +60,22 @@ PRÉDIRE est disponible sur toutes les éditions du moteur de base de données S
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
   + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
-Si vous avez besoin d’utiliser des modèles à partir de MicrosoftML ou microsoftml, utilisez [notation en temps réel avec sp_rxPredict](real-time-scoring.md).
+Si vous devez utiliser des modèles à partir de MicrosoftML ou MicrosoftML, utilisez [le score en temps réel avec sp_rxPredict](real-time-scoring.md).
 
-Types de modèles non pris en charge sont les suivants :
+Les types de modèles non pris en charge sont les suivants:
 
 + Modèles contenant d’autres transformations
-+ Modèles à l’aide de la `rxGlm` ou `rxNaiveBayes` algorithmes dans RevoScaleR ou revoscalepy équivalents
++ Modèles utilisant les `rxGlm` algorithmes ou `rxNaiveBayes` dans les équivalents de RevoScaleR ou revoscalepy
 + Modèles PMML
-+ Modèles créés à l’aide d’autres bibliothèques open source ou tierces
++ Modèles créés à l’aide d’autres bibliothèques Open source ou tierces
 
-## <a name="example-predict-t-sql"></a>Exemple : PRÉDIRE (T-SQL)
+## <a name="example-predict-t-sql"></a>Exemple : PREDICT (T-SQL)
 
-Dans cet exemple, vous créez un modèle et puis appelez la fonction de prédiction en temps réel à partir de T-SQL.
+Dans cet exemple, vous créez un modèle, puis appelez la fonction de prédiction en temps réel à partir de T-SQL.
 
 ### <a name="step-1-prepare-and-save-the-model"></a>Étape 1. Préparer et enregistrer le modèle
 
-Exécutez le code suivant pour créer la base de données exemple et les tables requises.
+Exécutez le code suivant pour créer l’exemple de base de données et les tables requises.
 
 ```sql
 CREATE DATABASE NativeScoringTest;
@@ -92,7 +92,7 @@ CREATE TABLE iris_rx_data (
 GO
 ```
 
-Utilisez l’instruction suivante pour remplir la table de données avec des données à partir de la **iris** jeu de données.
+Utilisez l’instruction suivante pour remplir la table de données avec les données du jeu de données **Iris** .
 
 ```sql
 INSERT INTO iris_rx_data ("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Width" , "Species")
@@ -104,7 +104,7 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-Maintenant, créez une table pour stocker les modèles.
+À présent, créez une table pour le stockage des modèles.
 
 ```sql
 DROP TABLE IF EXISTS ml_models;
@@ -115,7 +115,7 @@ CREATE TABLE ml_models ( model_name nvarchar(100) not null primary key
 GO
 ```
 
-Le code suivant crée un modèle basé sur le **iris** jeu de données et l’enregistre dans la table nommée **modèles**.
+Le code suivant crée un modèle basé sur le jeu de données **Iris** et l’enregistre dans la table nommée Models.
 
 ```sql
 DECLARE @model varbinary(max);
@@ -133,18 +133,18 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE] 
-> Veillez à utiliser le [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) fonction à partir de RevoScaleR pour enregistrer le modèle. Le standard de R `serialize` fonction ne peut pas générer le format requis.
+> Veillez à utiliser la fonction [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) à partir de RevoScaleR pour enregistrer le modèle. La fonction R `serialize` standard ne peut pas générer le format requis.
 
-Vous pouvez exécuter une instruction telle que la suivante pour afficher le modèle stocké au format binaire :
+Vous pouvez exécuter une instruction telle que la suivante pour afficher le modèle stocké au format binaire:
 
 ```sql
 SELECT *, datalength(native_model_object)/1024. as model_size_kb
 FROM ml_models;
 ```
 
-### <a name="step-2-run-predict-on-the-model"></a>Étape 2. Exécutez PREDICT sur le modèle
+### <a name="step-2-run-predict-on-the-model"></a>Étape 2. Exécuter la prédiction sur le modèle
 
-L’instruction PREDICT simple suivante obtient une classification du modèle d’arborescence de décision à l’aide du **notation native** (fonction). Il prévoit l’espèce iris en fonction des attributs fournis, la longueur des pétales et la largeur.
+L’instruction PREDICT simple suivante obtient une classification du modèle d’arbre de décision à l’aide de la fonction de **notation Native** . Il prédit les espèces d’iris en fonction des attributs que vous fournissez, de la longueur et de la largeur des pétales.
 
 ```sql
 DECLARE @model varbinary(max) = (
@@ -158,14 +158,14 @@ SELECT d.*, p.*
 go
 ```
 
-Si vous obtenez l’erreur, « erreur s’est produite pendant l’exécution de la fonction PREDICT. Modèle est endommagé ou non valide », cela signifie généralement que votre requête n’a pas retourné d’un modèle. Vérifiez si vous avez correctement tapé le nom du modèle, ou si la table de modèles est vide.
+Si vous recevez l’erreur «une erreur s’est produite lors de l’exécution de la fonction PREDICT. Le modèle est endommagé ou non valide. il signifie généralement que votre requête n’a pas retourné de modèle. Vérifiez si vous avez tapé correctement le nom du modèle ou si la table des modèles est vide.
 
 > [!NOTE]
-> Étant donné que les colonnes et les valeurs retournées par **PREDICT** peut varier selon le type de modèle, vous devez définir le schéma des données retournées à l’aide un **WITH** clause.
+> Étant donné que les colonnes et les valeurs retournées par **Predict** peuvent varier selon le type de modèle, vous devez définir le schéma des données retournées à l’aide d’une clause **with** .
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour une solution complète qui inclut la notation native, consultez ces exemples à partir de l’équipe de développement SQL Server :
+Pour obtenir une solution complète incluant une notation native, consultez les exemples suivants de l’équipe de développement SQL Server:
 
-+ Déployer votre script ML : [À l’aide d’un modèle Python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
-+ Déployer votre script ML : [À l’aide d’un modèle R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
++ Déployez votre script ML: [Utilisation d’un modèle python](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/step/3.html)
++ Déployez votre script ML: [Utilisation d’un modèle R](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/step/3.html)
