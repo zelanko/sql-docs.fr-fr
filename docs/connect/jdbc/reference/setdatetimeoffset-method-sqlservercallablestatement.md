@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: 9383e14d-c83e-43c5-980c-50a3e0bedc31
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 423061bf167e85a276fee0bec5a1b4c49c7ecff9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 264de7ac150aca7494a380fbbd4f5b490607c5c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974640"
 ---
 # <a name="setdatetimeoffset-method-sqlservercallablestatement"></a>Méthode setDateTimeOffset (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Cette méthode a été ajoutée dans [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0.  
   
- Définit la valeur de la colonne spécifiée selon le [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) valeur.  
+ Définit la valeur de la colonne spécifiée sur la valeur de la [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +38,7 @@ public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)
   
  *t*  
   
- Le [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) objet.  
+ Objet de [classe DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) .  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -47,7 +46,7 @@ public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)
 ## <a name="remarks"></a>Notes  
  Vous pouvez récupérer une valeur [DateTimeOffset Class](../../../connect/jdbc/reference/datetimeoffset-class.md) avec [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md).  
   
- [setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md) prend l’ordinal de la colonne.  
+ [SetDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md) prend l’ordinal de la colonne.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerCallableStatement, membres](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

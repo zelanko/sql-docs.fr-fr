@@ -1,5 +1,5 @@
 ---
-title: Date / heure et ensembles de lignes de schéma | Microsoft Docs
+title: Ensembles de lignes de date et d’heure et de schéma | Microsoft Docs
 description: Date et heure et ensembles de lignes de schéma
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: e9ac734cbc11492074c322c21a9e7127249223a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19524bbd935335cc0568dc499f95a794580df476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015691"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>Métadonnées - Date et heure et ensembles de lignes de schéma
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,6 +95,6 @@ ms.locfileid: "66800685"
  Comme OLE DB ne définit MINIMUM_SCALE et MAXIMUM_SCALE que pour les types numériques et décimaux, l’utilisation de ces colonnes par le pilote OLE DB pour SQL Server pour les types time, datetime2 et datetimeoffset n’est pas standard.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Métadonnées &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ [OLE DB &#40;de métadonnées&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
   
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3efeec0dee1f1bd66e64b3a1449bbaf1bf08722e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fe44efec59b78fe025cd08207c2026e658466554
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003829"
 ---
 # <a name="working-with-result-sets"></a>Travail sur des jeux de résultats
 
@@ -27,7 +26,7 @@ Quand vous travaillez sur les données contenues dans une base de données [!INC
 En outre, l’objet SQLServerResultSet fournit des méthodes de navigation dans ses lignes de données, d’obtention ou de définition des données qu’il contient et d’établissement de plusieurs niveaux de sensibilité aux modifications apportées à la base de données sous-jacente.  
   
 > [!NOTE]  
-> Pour plus d’informations sur la gestion des jeux de résultats, y compris leur sensibilité aux modifications, consultez [la gestion des jeux de résultats avec le pilote JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
+> Pour plus d’informations sur la gestion des jeux de résultats, y compris leur sensibilité aux modifications, consultez [gestion des jeux de résultats avec le pilote JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).  
   
 Les rubriques de cette section décrivent différentes façons d’utiliser un jeu de résultats pour manipuler les données contenues dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -1,5 +1,5 @@
 ---
-title: Exemple de Types de données spatiales | Microsoft Docs
+title: Exemple de types de données spatiales | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -9,19 +9,18 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 81c61834b69062875e4b2df733213883cdff4be6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aeefc0c8dec0e05402fa6143e11213e069e4f1eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957062"
 ---
 # <a name="spatial-data-types-sample"></a>Exemple de types de données spatiales
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-Cela [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] exemple d’application montre comment créer, insérer et récupérer des types de données spatiales (géométrie et géographie).
+Cet [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] exemple d’application montre comment créer, insérer et récupérer des types de données spatiales (Geometry et Geography).
   
 Le fichier de code de cet exemple, SpatialDataTypes.java, se trouve à l’emplacement suivant :  
 
@@ -38,11 +37,11 @@ Pour exécuter cet exemple d’application, définissez le classpath de façon �
   
 ## <a name="example"></a>Exemple
 
-Dans l’exemple suivant, l’exemple de code crée une table appelée SpatialDataTypesTable_JDBC_Sample qui contient les colonnes « Geometry » et 'Geography'.
+Dans l’exemple suivant, l’exemple de code crée une table appelée SpatialDataTypesTable_JDBC_Sample qui contient les colonnes «Geometry» et «geography».
 
-L’exemple crée tout d’abord les objets 'Geometry' et 'Geography' à partir d’un bien-Known-texte WKT () qui représente un POINT. Il utilise un SQLServerPreparedStatement avec une requête paramétrée pour mapper les données à chaque colonne en conséquence.
+L’exemple crée d’abord des objets «Geometry» et «Geography» à partir d’un texte bien connu (WKT) représentant un POINT. Elle utilise un SQLServerPreparedStatement avec une requête paramétrable pour mapper les données à chaque colonne en conséquence.
 
-Enfin, l’exemple insère les données dans la table et il les récupère. Les données sont affichées sous la forme de WKT.
+Enfin, l’exemple insère les données dans la table et les récupère. Les données sont affichées sous la forme de WKT.
 
 ```java
 import java.sql.Connection;

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5ed49a53-ed61-4e95-ad67-45957aaabb6a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad4c6fc3ed97eec086f7b3919ef1332ce662396b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bbc0a0493498f3d216c9e1395f651d8afec70711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981856"
 ---
 # <a name="getmetadata-method-sqlserverpreparedstatement"></a>getMetaData, méthode (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public final java.sql.ResultSetMetaData getMetaData()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet ResultSetMetaData.  
+ Objet ResultSetMetaData.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getMetaData est spécifiée par la méthode getMetaData dans l’interface java.sql.PreparedStatement.  
+ Cette méthode getMetaData est spécifiée par la méthode getMetaData dans l’interface java. Sql. PreparedStatement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerPreparedStatement, membres](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

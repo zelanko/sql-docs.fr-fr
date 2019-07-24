@@ -1,5 +1,5 @@
 ---
-title: Propriétés (OLE DB) la Source de données | Microsoft Docs
+title: Propriétés de la source de données (OLE DB) | Microsoft Docs
 description: Propriétés de la source de données (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - OLE DB data source properties [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c97c85eaeafd7d811b3f513f7f9cccc30c873b71
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13dd6afde96d42ac1fcc82b6fb24c721997b951d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015934"
 ---
 # <a name="data-source-properties-ole-db"></a>Propriétés de la source de données (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Le pilote OLE DB pour SQL Server implémente des propriétés de source de données comme suit.  
+  Le pilote OLE DB pour SQL Server implémente les propriétés de la source de données comme suit.  
   
 |ID de propriété|Description|  
 |-----------------|-----------------|  
@@ -43,6 +42,6 @@ ms.locfileid: "66768650"
 |SSPROP_ENABLEBULKCOPY|R/W : lecture/écriture Par défaut : VARIANT_FALSE<br /><br /> Description : pour permettre la copie en bloc à partir de fichiers, la propriété SSPROP_ENABLEBULKCOPY doit avoir la valeur VARIANT_TRUE. Avec cette propriété définie sur la source de données, l'accès du consommateur à l'interface IBCPSession est disponible sous le même niveau que Sessions.<br /><br /> SSPROP_IRowsetFastLoad doit également être défini avec la valeur VARIANT_TRUE.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets Source de données &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objets &#40;de source de données OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

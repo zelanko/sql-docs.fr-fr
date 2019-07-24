@@ -15,13 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1906ad25e9bb170b8979f44757ec5742ad9ec6c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989238"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Utilisation d’ADO avec OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,12 +29,12 @@ ms.locfileid: "66778047"
 
   Pour tirer parti des nouvelles fonctionnalités introduites dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], telles que MARS (Multiple Active Result Sets), les notifications de requête, les types définis par l’utilisateur (UDT) ou le nouveau type de données **xml**, les applications existantes qui utilisent ADO (ActiveX Data Objects) doivent utiliser OLE DB Driver pour SQL Server comme fournisseur d’accès aux données.  
   
- Pour permettre à ADO d’utiliser les nouvelles fonctionnalités des récentes versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], certaines améliorations ont été apportées à OLE DB Driver pour SQL Server afin d’étendre les fonctionnalités principales d’OLE DB. Ces améliorations permettent aux applications ADO d’utiliser les fonctionnalités [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les plus récentes et de consommer deux types de données introduits dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] : **xml** et **udt**. Ces améliorations exploitent également des optimisations apportées aux types de données **varchar**, **nvarchar** et **varbinary**. OLE DB Driver pour SQL Server ajoute la propriété d’initialisation SSPROP_INIT_DATATYPECOMPATIBILITY au jeu de propriétés DBPROPSET_SQLSERVERDBINIT pour une utilisation par les applications ADO afin que les nouveaux types de données soient exposés d’une manière compatible avec ADO. En outre, le pilote OLE DB pour SQL Server définit également un mot-clé de chaîne de connexion nommé **DataTypeCompatibility** qui est définie dans la chaîne de connexion.  
+ Pour permettre à ADO d’utiliser les nouvelles fonctionnalités des récentes versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], certaines améliorations ont été apportées à OLE DB Driver pour SQL Server afin d’étendre les fonctionnalités principales d’OLE DB. Ces améliorations permettent aux applications ADO d’utiliser les fonctionnalités [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les plus récentes et de consommer deux types de données introduits dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] : **xml** et **udt**. Ces améliorations exploitent également des optimisations apportées aux types de données **varchar**, **nvarchar** et **varbinary**. OLE DB Driver pour SQL Server ajoute la propriété d’initialisation SSPROP_INIT_DATATYPECOMPATIBILITY au jeu de propriétés DBPROPSET_SQLSERVERDBINIT pour une utilisation par les applications ADO afin que les nouveaux types de données soient exposés d’une manière compatible avec ADO. En outre, le pilote OLE DB pour SQL Server définit également un nouveau mot clé de chaîne de connexion appelé **DataTypeCompatibility** qui est défini dans la chaîne de connexion.  
 
 > [!NOTE]  
->  Les applications ADO existantes peuvent accéder et mettre à jour des valeurs de champ binaire et texte XML, UDT et de grande valeur à l'aide du fournisseur SQLOLEDB. Les nouveaux types de données plus grands **varchar(max)** , **nvarchar(max)** et **varbinary(max)** sont retournés respectivement en tant que types ADO **adLongVarChar**, **adLongVarWChar** et **adLongVarBinary**. Les colonnes XML sont retournées comme **adLongVarChar** et les colonnes UDT sont retournées comme **adVarBinary**. Toutefois, si vous utilisez le pilote OLE DB pour SQL Server (MSOLEDBSQL) au lieu de SQLOLEDB, vous devez vous assurer d’affecter le **DataTypeCompatibility** mot clé « 80 » afin que les nouveaux types de données mappent correctement aux types de données ADO.  
+>  Les applications ADO existantes peuvent accéder et mettre à jour des valeurs de champ binaire et texte XML, UDT et de grande valeur à l'aide du fournisseur SQLOLEDB. Les nouveaux types de données plus grands **varchar(max)** , **nvarchar(max)** et **varbinary(max)** sont retournés respectivement en tant que types ADO **adLongVarChar**, **adLongVarWChar** et **adLongVarBinary**. Les colonnes XML sont retournées comme **adLongVarChar** et les colonnes UDT sont retournées comme **adVarBinary**. Toutefois, si vous utilisez le pilote OLE DB pour SQL Server (MSOLEDBSQL) au lieu de SQLOLEDB, vous devez veiller à définir le mot clé **DataTypeCompatibility** sur «80» afin que les nouveaux types de données soient mappés correctement aux types de données ADO.  
 
-## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>Activation de OLE DB Driver pour SQL Server à partir d’ADO  
+## <a name="enabling-ole-db-driver-for-sql-server-from-ado"></a>Activation du pilote OLE DB pour SQL Server à partir d’ADO  
  Pour activer l’utilisation d’OLE DB Driver pour SQL Server, les applications ADO doivent implémenter les mots clés suivants dans leurs chaînes de connexion :  
 
 -   `Provider=MSOLEDBSQL`  
@@ -59,7 +58,7 @@ con.Open
 ```  
 
 ## <a name="examples"></a>Exemples  
- Les sections suivantes fournissent des exemples de la façon dont vous pouvez utiliser ADO avec OLE DB Driver pour SQL Server.  
+ Les sections suivantes fournissent des exemples de la façon dont vous pouvez utiliser ADO avec le pilote OLE DB pour SQL Server.  
 
 ### <a name="retrieving-xml-column-data"></a>Extraction de données de colonnes XML  
  Dans cet exemple, un recordset est utilisé pour récupérer et afficher les données d’une colonne XML dans l’exemple de base de données **AdventureWorks** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

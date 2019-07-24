@@ -1,6 +1,6 @@
 ---
 title: Tables et index | Microsoft Docs
-description: Création, modification et droping des tables et index à l’aide de OLE DB Driver pour SQL Server
+description: Création, modification et suppression de tables et d’index à l’aide d’OLE DB pilote pour SQL Server
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 - indexes [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 8fd98f67a35985474d73225db7991aeeafb9119e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0fc8aeed348f64c17894fa3432a7a81274ffbea4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015239"
 ---
 # <a name="tables-and-indexes"></a>Tables et index
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "66801588"
   
  La possibilité de créer ou de supprimer des tables et des index dépend des droits d'accès [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de l'utilisateur de l'application consommateur. La suppression d'une table peut être également limitée par la présence de contraintes d'intégrité référentielle déclarative ou d'autres facteurs.  
   
- La plupart des applications qui ciblent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utiliser SQL-DMO au lieu de ces pilotes OLE DB pour les interfaces de SQL Server. SQL-DMO est une collection d'objets OLE Automation qui prennent en charge toutes les fonctions d'administration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les applications ciblant plusieurs fournisseurs OLE DB utilisent ces interfaces OLE DB génériques qui sont prises en charge par les différents fournisseurs OLE DB.  
+ La plupart des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] applications ciblant utilisent SQL-DMO au lieu de ces OLE DB pilote pour les interfaces SQL Server. SQL-DMO est une collection d'objets OLE Automation qui prennent en charge toutes les fonctions d'administration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les applications ciblant plusieurs fournisseurs OLE DB utilisent ces interfaces OLE DB génériques qui sont prises en charge par les différents fournisseurs OLE DB.  
   
  Dans le jeu de propriétés spécifique au fournisseur DBPROPSET_SQLSERVERCOLUMN, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] définit la propriété suivante.  
   

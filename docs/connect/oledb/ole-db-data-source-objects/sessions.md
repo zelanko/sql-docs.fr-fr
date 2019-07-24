@@ -13,28 +13,27 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, sessions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: a2768acd897d996ec3076864a0586be74f22dbdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc162e77a7a0dd015f108f6d1fd675a8b78b1ecf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66768440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995192"
 ---
 # <a name="sessions"></a>Sessions
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Un pilote OLE DB pour la session SQL Server représente une seule connexion à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Un pilote OLE DB pour SQL Server session représente une connexion unique à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- Le pilote OLE DB pour SQL Server nécessite que les sessions délimitent l’espace de transaction pour une source de données. Tous les objets de commande créés à partir d'un objet session spécifique participent à la transaction locale ou distribuée de l'objet session.  
+ Le pilote OLE DB pour SQL Server requiert que les sessions délimitent l’espace de transaction pour une source de données. Tous les objets de commande créés à partir d'un objet session spécifique participent à la transaction locale ou distribuée de l'objet session.  
   
  Le premier objet session créé sur la source de données initialisée reçoit la connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] établie au moment de l'initialisation. Lorsque toutes les références sur les interfaces de l'objet session sont libérées, la connexion à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est accessible à un autre objet session créé sur la source de données.  
   
  Un objet session supplémentaire créé sur la source de données établit sa propre connexion à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] comme spécifié par la source de données. La connexion à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est abandonnée lorsque l'application libère toutes les références aux objets créés au cours de cette session.  
   
- L’exemple suivant montre comment utiliser le pilote OLE DB pour SQL Server pour se connecter à un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données :  
+ L’exemple suivant montre comment utiliser le pilote OLE DB pour SQL Server pour se connecter à une [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données:  
   
 ```  
 int main()  
@@ -183,7 +182,7 @@ EXIT:
 }  
 ```  
   
- Le fait de connecter des objets session du pilote OLE DB pour SQL Server à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut générer une surcharge importante pour les applications qui créent et publient de façon continue des objets session. La surcharge peut être réduite en gérant efficacement les pilote OLE DB pour les objets de session SQL Server. Les applications du pilote OLE DB pour SQL Server peuvent garder active la connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’un objet session en conservant une référence sur au moins une interface de l’objet.  
+ Le fait de connecter des objets session du pilote OLE DB pour SQL Server à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut générer une surcharge importante pour les applications qui créent et publient de façon continue des objets session. La surcharge peut être réduite en gérant OLE DB pilote des objets de session SQL Server de manière efficace. Les applications du pilote OLE DB pour SQL Server peuvent garder active la connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d’un objet session en conservant une référence sur au moins une interface de l’objet.  
   
  Par exemple, la gestion d'un pool de références d'objet de création de commande maintient des connexions actives pour ces objets session dans le pool. Les objets session étant obligatoires, le code de gestion du pool passe un pointeur d’interface **IDBCreateCommand** valide à la méthode d’application nécessitant la session. Lorsque la méthode d'application ne requiert plus la session, la méthode retourne le pointeur d'interface au code de gestion du pool plutôt que de libérer la référence de l'application à l'objet de création de commande.  
   
@@ -191,6 +190,6 @@ EXIT:
 >  Dans l’exemple précédent, l’interface **IDBCreateCommand** est utilisée, car l’interface **ICommand** implémente la méthode **GetDBSession**, la seule méthode dans l’étendue de la commande ou de l’ensemble de lignes qui permet à un objet de déterminer la session au cours de laquelle il a été créé. Par conséquent, un objet commande, et uniquement un objet commande, permet à une application de récupérer un pointeur d'objet source de données à partir duquel des sessions supplémentaires peuvent être créées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets Source de données &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [Objets &#40;de source de données OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

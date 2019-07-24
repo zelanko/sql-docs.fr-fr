@@ -1,5 +1,5 @@
 ---
-title: Suivi du fonctionnement du pilote | Microsoft Docs
+title: Fonctionnement du pilote de suivi | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d19cd119ca2d0832f3e3b7fe261245a2a55987a8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916685"
 ---
 # <a name="tracing-driver-operation"></a>Suivi du fonctionnement du pilote
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66798259"
 > [!NOTE]  
 >  Pour le composant natif (sqljdbc_xa.dll) fourni avec le pilote JDBC, le suivi est activé par le système de diagnostic intégré BID (Built-In Diagnostics). Pour obtenir des informations sur le système de diagnostic intégré BID, consultez [Data Access Tracing in SQL Server (Suivi de l’accès aux données dans SQL Server)](https://go.microsoft.com/fwlink/?LinkId=70042).  
   
- Quand vous développez votre application, vous pouvez appeler des objets Logger, qui à leur tour créent des objets LogRecord, lesquels sont ensuite transmis aux objets Handler pour traitement. Enregistreur d’événements et le Gestionnaire d’objets utilisent des niveaux de journalisation, et éventuellement des filtres de journalisation pour réguler les LogRecords sont traitées. Une fois les opérations de journalisation terminées, les objets Handler peuvent éventuellement utiliser des objets Formatter pour publier les informations du journal.  
+ Quand vous développez votre application, vous pouvez appeler des objets Logger, qui à leur tour créent des objets LogRecord, lesquels sont ensuite transmis aux objets Handler pour traitement. Les objets Logger et Handler utilisent tous deux des niveaux de journalisation, et éventuellement des filtres de journalisation, pour réguler les LogRecords traités. Une fois les opérations de journalisation terminées, les objets Handler peuvent éventuellement utiliser des objets Formatter pour publier les informations du journal.  
   
  Par défaut, le système java.util.logging écrit sa sortie dans un fichier. Ce fichier journal de sortie doit disposer des autorisations d'écriture dans le contexte dans lequel le pilote JDBC s'exécute.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66798259"
   
 |Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
-|AuthenticationJNI|Messages des journaux concernant le Windows intégré des problèmes d’authentification (lorsque le **authenticationScheme** propriété de connexion est implicitement ou explicitement définie sur **NativeAuthentication**).<br /><br /> Les applications peuvent affecter le niveau de journalisation FINEST et FINE.|  
+|AuthenticationJNI|Journalise les messages relatifs aux problèmes d’authentification intégrée de Windows (lorsque la propriété de connexion **AuthenticationScheme** est implicitement ou explicitement définie sur **NativeAuthentication**).<br /><br /> Les applications peuvent affecter le niveau de journalisation FINEST et FINE.|  
 |SQLServerConnection|Journalise les messages dans la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md). Les applications peuvent affecter le niveau de journalisation FINE et FINER.|  
 |SQLServerDataSource|Journalise les messages dans les classes [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) et [SQLServerPooledConnection](../../connect/jdbc/reference/sqlserverpooledconnection-class.md).<br /><br /> Les applications peuvent affecter le niveau de journalisation FINER.|  
 |InputStream|Journalise les messages concernant les types de données suivants : java.io.InputStream, java.io.Reader et ceux qui ont un spécificateur max, tel que varchar, nvarchar ainsi que les types de données varbinary.<br /><br /> Les applications peuvent affecter le niveau de journalisation FINER.|  
@@ -88,7 +87,7 @@ ms.locfileid: "66798259"
 |SQLServerResultSet|Journalise les messages dans la classe [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md). Les applications peuvent affecter le niveau de journalisation FINE, FINER et FINEST.|  
 |SQLServerStatement|Journalise les messages dans la classe [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md). Les applications peuvent affecter le niveau de journalisation FINE, FINER et FINEST.|  
 |XA|Journalise les messages relatifs à toutes les transactions XA dans la classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md). Les applications peuvent affecter le niveau de journalisation FINE et FINER.|  
-|KerbAuthentication|Journalise les messages concernant l’authentification Kerberos type 4 (lorsque le **authenticationScheme** a la valeur de propriété de connexion **Java Kerberos**). L'application peut définir le niveau de journalisation sur FINE ou FINER.|  
+|KerbAuthentication|Journalise les messages relatifs à l’authentification Kerberos de type 4 (lorsque la propriété de connexion **AuthenticationScheme** a la valeur **JavaKerberos**). L'application peut définir le niveau de journalisation sur FINE ou FINER.|  
 |TDS.DATA|Journalise les messages contenant la conversation au niveau du protocole TDS entre le pilote et SQL Server. Le contenu détaillé de chaque paquet TDS envoyé et reçu est journalisé au format ASCII et hexadécimal. Les informations d'identification de connexion (noms d'utilisateur et mots de passe) ne sont pas consignées. Toutes les autres données sont journalisées.<br /><br /> Cette catégorie génère des messages clairs et très détaillés et ne peut être activée que lorsque le niveau de journalisation est défini sur FINEST.|  
 |TDS.Channel|Cette catégorie effectue le suivi des actions du canal de communication TCP avec SQL Server. Les messages journalisés incluent l'ouverture et la fermeture de sockets ainsi que les lectures et écritures. Elle effectue également le suivi des messages relatifs à l'établissement d'une connexion SSL (Secure Sockets Layer) à SQL Server.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINE, FINER ou FINEST.|  
 |TDS.Writer|Cette catégorie effectue le suivi des écritures dans le canal TDS. À noter que seule la longueur des écritures, et non le contenu, fait l'objet d'un suivi. Cette catégorie effectue également le suivi des problèmes lorsqu'un signal d'avertissement est envoyé au serveur pour annuler l'exécution d'une instruction.<br /><br /> Cette catégorie peut uniquement être activée en affectant le niveau de journalisation FINEST.|  
@@ -100,7 +99,7 @@ ms.locfileid: "66798259"
 |SQLServerParameterMetaData|Journalise les messages dans la classe [SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md). Les applications peuvent affecter le niveau de journalisation FINE.|  
 |SQLServerBlob|Journalise les messages dans la classe [SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md). Les applications peuvent affecter le niveau de journalisation FINE.|  
 |SQLServerClob|Journalise les messages dans la classe [SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md). Les applications peuvent affecter le niveau de journalisation FINE.|  
-|SQLServerSQLXML|Journalise les messages dans la classe SQLServerSQLXML interne. Les applications peuvent affecter le niveau de journalisation FINE.|  
+|SQLServerSQLXML|Journalise les messages dans la classe interne SQLServerSQLXML. Les applications peuvent affecter le niveau de journalisation FINE.|  
 |SQLServerDriver|Journalise les messages dans la classe [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md). Les applications peuvent affecter le niveau de journalisation FINE.|  
 |SQLServerNClob|Journalise les messages dans la classe [SQLServerNClob](../../connect/jdbc/reference/sqlservernclob-class.md). Les applications peuvent affecter le niveau de journalisation FINE.|  
   

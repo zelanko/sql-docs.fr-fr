@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4f0df8fe-3cd6-46e4-ae3c-dc23c35676b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8c71218c709921cd9180bff2b9a6b5997ae7450c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1767519cc2f36bac4a70da84efeb8da9e2a1ec3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980752"
 ---
 # <a name="getprocedurecolumns-method-sqlserverdatabasemetadata"></a>Méthode getProcedureColumns (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 #### <a name="parameters"></a>Paramètres  
  *sCatalog*  
   
- Un **chaîne** qui contient le nom du catalogue. La spécification d'une valeur Null pour ce paramètre indique que le nom du catalogue n'a pas besoin d'être utilisé.  
+ **Chaîne** qui contient le nom du catalogue. La spécification d'une valeur Null pour ce paramètre indique que le nom du catalogue n'a pas besoin d'être utilisé.  
   
  *sSchema*  
   
@@ -49,7 +48,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
   
  *proc*  
   
- Un **chaîne** qui contient le modèle de nom de procédure.  
+ **Chaîne** qui contient le modèle de nom de procédure.  
   
  *col*  
   
@@ -62,7 +61,7 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getProcedureColumns est spécifiée par la méthode getProcedureColumns dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getProcedureColumns est spécifiée par la méthode getProcedureColumns dans l’interface java. Sql. DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getProcedureColumns contient les informations suivantes :  
   
@@ -76,14 +75,14 @@ public java.sql.ResultSet getProcedureColumns(java.lang.String sCatalog,
 |DATA_TYPE|**smallint**|Type de données SQL de java.sql.Types.|  
 |TYPE_NAME|**String**|Nom du type de données.|  
 |PRECISION|**Int**|Nombre total de chiffres significatifs.|  
-|LENGTH|**Int**|La longueur des données en octets.|  
+|LENGTH|**Int**|Longueur des données en octets.|  
 |SCALE|**short**|Nombre de chiffres à droite de la virgule décimale.|  
 |RADIX|**short**|Base des types numériques.|  
 |NULLABLE|**short**|Indique si la colonne peut contenir une valeur Null. Il peut avoir une des valeurs suivantes :<br /><br /> procedureNoNulls (0)<br /><br /> procedureNullable (1)<br /><br /> procedureNullableUnknown (2)|  
 |REMARKS|**String**|Description de la colonne de procédure.<br /><br /> <br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
 |COLUMN_DEF|**String**|Valeur par défaut de la colonne.|  
 |SQL_DATA_TYPE|**smallint**|Cette colonne est la même que la colonne **DATA_TYPE**, excepté pour les types de données **datetime** et **interval** ISO.|  
-|SQL_DATETIME_SUB|**smallint**|Le sous-code **interval** ISO de **datetime** si la valeur de **SQL_DATA_TYPE** est **SQL_DATETIME** ou **SQL_INTERVAL**. Pour les données de types autres que **datetime** et ISO **intervalle**, cette colonne est NULL.|  
+|SQL_DATETIME_SUB|**smallint**|Le sous-code **interval** ISO de **datetime** si la valeur de **SQL_DATA_TYPE** est **SQL_DATETIME** ou **SQL_INTERVAL**. Pour les types de données autres que **DateTime** et **Interval**ISO, cette colonne a la valeur null.|  
 |CHAR_OCTET_LENGTH|**Int**|Nombre maximal d'octets dans la colonne.|  
 |ORDINAL_POSITION|**Int**|Index de la colonne dans la table.|  
 |IS_NULLABLE|**String**|Indique si la colonne autorise les valeurs Null.|  

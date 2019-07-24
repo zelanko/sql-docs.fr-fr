@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 337646527cfaabfb3b803f37088f398cfd63808e
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 0a45b7977d19603387e51b9ed824d9e8a4d759b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997673"
 ---
 # <a name="back-up-a-database-master-key"></a>Sauvegarder une clé primaire de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "53997511"
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>Autorisations
 Requiert l'autorisation CONTROL sur la base de données.  
   
 ## <a name="using-sql-server-management-studio-with-transact-sql"></a>Utilisation de SQL Server Management Studio avec Transact-SQL  

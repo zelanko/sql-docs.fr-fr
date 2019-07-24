@@ -1,6 +1,6 @@
 ---
-title: À l’aide de la mise en miroir de base de données | Microsoft Docs
-description: À l’aide de la base de données mise en miroir avec OLE DB Driver pour SQL Server
+title: Utilisation de la mise en miroir de bases de données | Microsoft Docs
+description: Utilisation de la mise en miroir de bases de données avec OLE DB pilote pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, database mirroring
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: eba70e8a4ee641b4bccb54f67f37015a0edbd434
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9d61dfe1441029cfa1b742e3b56021e55764d4eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988867"
 ---
 # <a name="using-database-mirroring"></a>Utilisation de la mise en miroir de bases de données
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "66802897"
  Il est possible d'utiliser un alias lors de la spécification du nom d'une base de données miroir.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les tentatives de connexion initiale et les tentatives de reconnexion à une base de données mise en miroir, consultez [connecter des Clients à une Session de mise en miroir de base de données &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  Pour plus d’informations sur les tentatives de connexion initiale et les tentatives de reconnexion à une base de données mise en miroir, consultez [connecter des clients à une &#40;session de mise en miroir de bases de données SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ## <a name="programming-considerations"></a>Éléments de programmation à prendre en considération  
  Lorsque le serveur de la base de données principale échoue, l'application cliente reçoit des erreurs en réponse aux appels d'API, erreurs qui signifient que la connexion à la base de données a été perdue. Lorsque cela se produit, toutes les modifications apportées à la base de données qui n'ont pas été validées sont perdues et la transaction en cours est annulée. Si cela se produit, l'application doit fermer la connexion (ou libérer l'objet source de données) et la rouvrir. La connexion est redirigée de façon transparente vers la base de données miroir, qui fait désormais office de serveur principal.  
@@ -55,18 +54,18 @@ ms.locfileid: "66802897"
  Lorsqu'une connexion est établie, le serveur principal envoie au client l'identité de son partenaire de basculement à utiliser en cas de basculement. Si une application a essayé d'établir une connexion après un échec du serveur principal, le client ne connaît pas l'identité du partenaire de basculement. Afin que les clients puissent faire face à ce scénario, une propriété d'initialisation et un mot clé de chaîne de connexion associé permettent au client de spécifier l'identité du partenaire de basculement. L'attribut client est utilisé uniquement dans ce scénario ; si le serveur principal est disponible, il n'est pas utilisé. Si le partenaire de basculement fourni par le client ne fait pas référence à un serveur agissant comme partenaire de basculement, la connexion est refusée par le serveur. Pour permettre aux applications de s'adapter aux modifications de configuration, l'identité du partenaire de basculement peut être déterminée en examinant l'attribut après que la connexion a été établie. Si possible, mettez en cache les informations sur le serveur partenaire pour mettre à jour la chaîne de connexion ou imaginer une stratégie de nouvelle tentative au cas où la première tentative d'établissement de la connexion échouerait.  
   
 > [!NOTE]  
->  Vous devez spécifier explicitement la base de données utilisée par une connexion si vous souhaitez recourir à cette fonctionnalité dans un DSN, une chaîne de connexion ou une propriété (ou un attribut) de connexion. OLE DB Driver pour SQL Server ne tente pas de basculement vers la base de données partenaire si cela n’est pas fait.  
+>  Vous devez spécifier explicitement la base de données utilisée par une connexion si vous souhaitez recourir à cette fonctionnalité dans un DSN, une chaîne de connexion ou une propriété (ou un attribut) de connexion. OLE DB pilote pour SQL Server ne tente pas de basculer vers la base de données partenaire si cela n’est pas fait.  
 >   
 >  La mise en miroir est une fonctionnalité de la base de données. Il se peut que les applications qui utilisent plusieurs bases de données ne puissent pas exploiter cette fonctionnalité.  
 >   
 >  De plus, les noms de serveur ne respectent pas la casse, contrairement aux noms de base de données. Par conséquent, vous devez vous assurer que vous utilisez la même casse dans les DSN et les chaînes de connexion.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver pour SQL Server  
- OLE DB Driver pour SQL Server prend en charge la mise en miroir de bases de données via les attributs de connexion et de chaîne de connexion. La propriété SSPROP_INIT_FAILOVERPARTNER a été ajoutée au jeu de propriétés DBPROPSET_SQLSERVERDBINIT et le mot clé **FailoverPartner** est un nouvel attribut de chaîne de connexion de DBPROP_INIT_PROVIDERSTRING. Pour plus d’informations, consultez [à l’aide de mots clés de chaîne de connexion avec OLE DB Driver pour SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ OLE DB Driver pour SQL Server prend en charge la mise en miroir de bases de données via les attributs de connexion et de chaîne de connexion. La propriété SSPROP_INIT_FAILOVERPARTNER a été ajoutée au jeu de propriétés DBPROPSET_SQLSERVERDBINIT et le mot clé **FailoverPartner** est un nouvel attribut de chaîne de connexion de DBPROP_INIT_PROVIDERSTRING. Pour plus d’informations, consultez [utilisation de mots clés de chaîne de connexion avec OLE DB pilote pour SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
   
  Le cache de basculement est conservé tant que le fournisseur est chargé, autrement dit jusqu’à ce que **CoUninitialize** soit appelé, ou tant que l’application détient une référence à un objet géré par OLE DB Driver pour SQL Server (objet source de données, par exemple).  
   
- Pour plus d’informations sur le pilote OLE DB pour la prise en charge de SQL Server pour la mise en miroir de base de données, consultez [propriétés d’initialisation et d’autorisation](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
+ Pour plus d’informations sur OLE DB pilote SQL Server pour la prise en charge de la mise en miroir de bases de données, consultez [propriétés d’initialisation et d’autorisation](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md).  
  
   
 ## <a name="see-also"></a>Voir aussi  

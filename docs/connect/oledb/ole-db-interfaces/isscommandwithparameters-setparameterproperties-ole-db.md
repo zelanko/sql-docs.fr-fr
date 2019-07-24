@@ -1,5 +1,5 @@
 ---
-title: ISSCommandWithParameters::SetParameterProperties (OLE DB) | Microsoft Docs
+title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) | Microsoft Docs'
 description: ISSCommandWithParameters::SetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - SetParameterProperties method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1dd2184a859f3bb6c0b961ac8596cdbea48d2d25
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b9f5a3251b05453d01b2ef984c6a9ea7bde1c115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015389"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +73,7 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- Améliorations du moteur de base de données en commençant par [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] autoriser ISSCommandWithParameters::SetParameterProperties obtenir des descriptions plus exactes des résultats attendus. Ces résultats plus exacts peuvent différer des valeurs retournées par ISSCommandWithParameters::SetParameterProperties dans les versions précédentes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Découverte des métadonnées](../../oledb/features/metadata-discovery.md).  
+ Les améliorations du moteur de base de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] données commencent par allow ISSCommandWithParameters:: SetParameterProperties pour obtenir des descriptions plus précises des résultats attendus. Ces résultats plus précis peuvent différer des valeurs retournées par ISSCommandWithParameters:: SetParameterProperties dans les [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]versions précédentes de. Pour plus d’informations, consultez [Découverte des métadonnées](../../oledb/features/metadata-discovery.md).  
   
 |Membre|Description|  
 |------------|-----------------|  

@@ -27,20 +27,19 @@ helpviewer_keywords:
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 53f25408fd487e265647eb2464aebacf8338ebbe
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 612132eec023e3497344c01bd34947bb49195385
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010431"
 ---
 # <a name="bcp-utility"></a>Utilitaire bcp
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> Pour l’utilisation de bcp sur Linux, consultez [installer sqlcmd et bcp sur Linux](../linux/sql-server-linux-setup-tools.md).
+> Pour utiliser BCP sur Linux, consultez [installer sqlcmd et BCP sur Linux](../linux/sql-server-linux-setup-tools.md).
 >
 > Pour plus d’informations sur l’utilisation de bcp avec Azure SQL Data Warehouse, consultez [charger des données avec bcp](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp).
 
@@ -51,12 +50,12 @@ ms.locfileid: "67727796"
 > [!NOTE]
 > Si vous utilisez **bcp** pour sauvegarder vos données, créez un fichier de format pour enregistrer le format de données. Les fichiers de données**bcp**  **n’incluent pas** de schéma ni d’informations de format, ce qui fait que si une table ou une vue est supprimée et si vous n’avez pas de fichier de format, il se peut que vous ne soyez pas en mesure d’importer les données.
 
-## <a name="download-the-latest-version-of-bcp-utility"></a>Téléchargez la dernière version de l’utilitaire bcp
+## <a name="download-the-latest-version-of-bcp-utility"></a>Télécharger la dernière version de l’utilitaire bcp
 
 **[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15.0 pour SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![télécharger](../ssdt/media/download.png) Télécharger les utilitaires de ligne de commande Microsoft 15.0 pour SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
-Les outils de ligne de commande sont la disponibilité générale (GA), mais ils sont publiés avec le package d’installation [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+Les outils en ligne de commande sont la disponibilité générale (GA), mais ils sont publiés avec le package [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]d’installation de.
 
 **Informations sur la version**
 
@@ -64,12 +63,12 @@ Numéro de version : 15.0 <br>
 Numéro de build : 15.0.1000.34<br>
 Date de publication : 18 octobre 2018
 
-La nouvelle version de SQLCMD prend en charge l’authentification Azure AD, y compris la prise en charge de l’authentification multifacteur (MFA) pour les fonctionnalités de base de données SQL, SQL Data Warehouse et toujours chiffrés.
-Le nouveau BCP prend en charge l’authentification Azure AD, y compris la prise en charge de l’authentification multifacteur (MFA) pour SQL Database et SQL Data Warehouse.
+La nouvelle version de SQLCMD prend en charge l’authentification Azure AD, y compris la prise en charge de l’authentification multifacteur (MFA) pour les fonctionnalités de SQL Database, SQL Data Warehouse et Always Encrypted.
+Le nouveau BCP prend en charge l’authentification Azure AD, y compris la prise en charge de l’authentification multifacteur (MFA) pour les SQL Database et les SQL Data Warehouse.
 
-**Configuration système requise** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 ce composant requiert [programme d’installation de Windows 4.5](https://www.microsoft.com/download/details.aspx?id=8483) et [Microsoft ODBC Driver 17.3 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+**Configuration système requise** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2 ce composant requiert [Windows Installer 4,5](https://www.microsoft.com/download/details.aspx?id=8483) et [Microsoft ODBC Driver 17,3 pour SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
 
-Pour vérifier la version BCP exécuter `bcp /v` commande et confirmer que 15.0.1000.34 ou version ultérieure est en cours d’utilisation.
+Pour vérifier la commande bcp version `bcp /v` Execute et vérifiez que 15.0.1000.34 ou une version ultérieure est en cours d’utilisation.
 
 <table><th>Syntaxe</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -203,25 +202,25 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* peut être un entier positif avec une valeur maximale de 2^63-1. **-F** *first_row* is 1-based.  
 
 **-G**<a name="G"></a>  
- Ce commutateur est utilisé par le client lors de la connexion à Azure SQL Database ou à Azure SQL Data Warehouse, pour indiquer que l’utilisateur doit être authentifié avec l’authentification Azure Active Directory. Le commutateur-G nécessite [version 14.0.3008.27 ou version ultérieure](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez bcp -v. Pour plus d’informations, consultez [utilisez authentification Azure Active Directory pour l’authentification avec SQL Database ou SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
+ Ce commutateur est utilisé par le client lors de la connexion à Azure SQL Database ou à Azure SQL Data Warehouse, pour indiquer que l’utilisateur doit être authentifié avec l’authentification Azure Active Directory. Le commutateur-G requiert la [version 14.0.3008.27 ou ultérieure](https://go.microsoft.com/fwlink/?LinkID=825643). Pour déterminer votre version, exécutez bcp -v. Pour plus d’informations, consultez [utiliser l’authentification Azure Active Directory pour l’authentification avec SQL Database ou SQL Data Warehouse](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication). 
 
 > [!IMPORTANT]
 > L’option **-G** s’applique uniquement à Azure SQL Database et à Azure Data Warehouse.
-> AAD intégrée et l’authentification Interactive n'est pas actuellement pris en charge Linux ou macOS.
+> L’authentification intégrée et interactive AAD n’est actuellement pas prise en charge sur Linux ou macOS.
 
 > [!TIP]
->  Pour vérifier si votre version de l’utilitaire bcp inclut la prise en charge pour le type d’authentification Azure Active Directory (AAD) **bcp--** (bcp\<espace >\<dash >\<dash >) et vérifiez que vous voyez : Password-g dans la liste des arguments disponibles.
+>  Pour vérifier si votre version de BCP comprend la prise en charge de l’authentification Azure Active Directory (AAD), tapez **BCP--** (\<espace BCP\<>\<tiret > Dash >) et vérifiez que vous voyez-G dans la liste des arguments disponibles.
 
 - **Nom d’utilisateur et mot de passe Azure Active Directory :** 
 
     Lorsque vous souhaitez utiliser un nom d’utilisateur Azure Active Directory et le mot de passe, vous pouvez fournir l’option **- G** et utiliser également le nom d’utilisateur et le mot de passe en fournissant les options **-U** et **-P** . 
 
-    L’exemple suivant exporte les données à l’aide du nom d’utilisateur de Azure AD et le mot de passe où utilisateur et mot de passe est une information d’identification AAD. L’exemple exporte la table `bcptest` à partir de la base de données `testdb` à partir du serveur Azure `aadserver.database.windows.net` et stocke les données dans le fichier `c:\last\data1.dat`:
+    L’exemple suivant exporte des données à l’aide d’Azure AD nom d’utilisateur et mot de passe, où utilisateur et mot de passe sont des informations d’identification AAD. L’exemple exporte `bcptest` la table `testdb` de la base `aadserver.database.windows.net` de données à partir du serveur `c:\last\data1.dat`Azure et stocke les données dans le fichier:
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    L’exemple suivant importe des données à l’aide du nom d’utilisateur de Azure AD et le mot de passe où utilisateur et mot de passe est une information d’identification AAD. L’exemple importe les données à partir du fichier `c:\last\data1.dat` dans table `bcptest` pour la base de données `testdb` sur le serveur Azure `aadserver.database.windows.net` à l’aide d’Azure AD utilisateur/mot de passe :
+    L’exemple suivant importe des données à l’aide d’Azure AD nom d’utilisateur et mot de passe, où utilisateur et mot de passe sont des informations d’identification AAD. L’exemple importe des données à `c:\last\data1.dat` partir du `bcptest` fichier dans `testdb` la table pour `aadserver.database.windows.net` la base de données sur le serveur Azure à l’aide de Azure ad utilisateur/mot de passe:
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -230,15 +229,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Intégrée à Azure Active Directory** 
  
-    Pour l’authentification intégrée à Azure Active Directory, spécifiez l’option **-G** sans nom d’utilisateur ni mot de passe. Cette configuration suppose que le compte d’utilisateur Windows actuel (le compte de la commande bcp est en cours d’exécution sous) est fédéré avec Azure AD : 
+    Pour l’authentification intégrée à Azure Active Directory, spécifiez l’option **-G** sans nom d’utilisateur ni mot de passe. Cette configuration suppose que le compte d’utilisateur Windows actuel (le compte sous lequel s’exécute la commande bcp) est fédéré avec Azure AD: 
 
-    L’exemple suivant exporte les données à l’aide de compte intégré d’Azure AD. L’exemple exporte la table `bcptest` à partir de la base de données `testdb` à l’aide d’Azure AD Integrated, à partir du serveur Azure `aadserver.database.windows.net` et stocke les données dans le fichier `c:\last\data2.dat`:
+    L’exemple suivant exporte des données à l’aide d’Azure AD compte intégré. L’exemple exporte `bcptest` la table `testdb` de la base de données à `aadserver.database.windows.net` l’aide d’Azure ad intégrée à `c:\last\data2.dat`partir du serveur Azure et stocke les données dans le fichier:
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    L’exemple suivant importe des données à l’aide d’AUTH. intégré à Azure AD L’exemple importe les données à partir du fichier `c:\last\data2.txt` dans table `bcptest` pour la base de données `testdb` sur le serveur Azure `aadserver.database.windows.net` à l’aide de l’authentification intégrée Azure AD :
+    L’exemple suivant importe des données à l’aide d’Azure AD authentification intégrée. L’exemple importe les données du `c:\last\data2.txt` fichier dans `bcptest` la table `testdb` pour la base `aadserver.database.windows.net` de données sur le serveur Azure à l’aide d’Azure ad authentification intégrée:
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -246,29 +245,29 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory Interactive**  
 
-   L’authentification Interactive d’Azure AD pour Azure SQL Database et SQL Data Warehouse, vous permet d’utiliser une méthode interactive prenant en charge l’authentification multifacteur. Pour plus d’informations, consultez [authentification Interactive Active Directory](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
+   La Azure AD l’authentification interactive pour Azure SQL Database et SQL Data Warehouse, vous permet d’utiliser une méthode interactive qui prend en charge l’authentification multifacteur. Pour plus d’informations, consultez [Active Directory l’authentification interactive](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
-   Azure AD interactif nécessite **bcp** [version 15.0.1000.34](#download-the-latest-version-of-bcp-utility) ou version ultérieure ainsi que [ODBC version 17.2 ou ultérieure](https://www.microsoft.com/download/details.aspx?id=56567).  
+   Azure AD interactive requiert **BCP** [version 15.0.1000.34](#download-the-latest-version-of-bcp-utility) ou ultérieure, ainsi que [ODBC version 17,2 ou ultérieure](https://www.microsoft.com/download/details.aspx?id=56567).  
 
-   Pour activer l’authentification interactive, fournissez l’option -G avec le nom d’utilisateur (-U) uniquement, sans mot de passe.   
+   Pour activer l’authentification interactive, fournissez l’option-G avec le nom d’utilisateur (-U) uniquement, sans mot de passe.   
 
-   L’exemple suivant exporte les données à l’aide de mode interactif Azure AD indiquant le nom d’utilisateur où utilisateur représente un compte AAD. Il s’agit du même exemple que celui utilisé dans la section précédente : *Azure Active Directory Username et Password*.  
+   L’exemple suivant exporte des données à l’aide d’Azure AD mode interactif indiquant le nom d’utilisateur où l’utilisateur représente un compte AAD. Il s’agit du même exemple que celui utilisé dans la section précédente: *Azure Active Directory nom d’utilisateur et mot de passe*.  
 
-   Mode interactif nécessite un mot de passe doit être entré manuellement, ou pour des comptes avec l’authentification multifacteur est activée, terminer votre méthode d’authentification Multifacteur configurée. 
+   Le mode interactif nécessite que vous entriez un mot de passe manuellement ou, pour les comptes pour lesquels l’authentification multifacteur est activée, effectuez votre méthode d’authentification MFA configurée. 
 
    ``` 
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
    ``` 
 
-   Au cas où un utilisateur Azure AD est un domaine fédéré à un à l’aide de compte de Windows, le nom d’utilisateur requis dans la ligne de commande contient son compte de domaine (par exemple, joe@contoso.com voir ci-dessous) :   
+   Si un utilisateur Azure AD est un domaine fédéré à l’aide d’un compte Windows, le nom d’utilisateur requis sur la ligne de commande contient son compte de domaine joe@contoso.com (par exemple, voir ci-dessous):   
 
    ```
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
    ```
 
-   Si les utilisateurs invités dans un annuaire Azure AD spécifique et font partie d’un groupe qui existent dans la base de données SQL qui dispose des autorisations de base de données pour exécuter la commande bcp, leurs alias de l’utilisateur invité est utilisé (par exemple, *keith0@adventureworks.com* ).
+   Si des utilisateurs invités existent dans un Azure AD spécifique et font partie d’un groupe qui existe dans la base de données SQL et qui dispose d’autorisations de base de données pour exécuter la commande bcp, leur *keith0@adventureworks.com* alias d’utilisateur invité est utilisé (par exemple,).
   
-**-h** _ **"load hints**_ [ ,... *n*] **"** <a name="h"></a> Spécifie le ou les indicateurs à utiliser lors de l’importation en bloc de données vers une table ou une vue.  
+**-h** _**"load hints**_ [ ,... *n*] **"** <a name="h"></a> Spécifie le ou les indicateurs à utiliser lors de l’importation en bloc de données vers une table ou une vue.  
   
 * **ORDER**( **_colonne_[ASC | DESC] [** , **..._n_])**  
 Ordre de tri des données dans le fichier de données. Les performances de l'importation en bloc sont améliorées si les données importées sont triées en fonction de l'index cluster de la table, le cas échéant. Si le fichier de données est trié dans un ordre différent, c'est-à-dire dans un ordre autre que celui d'une clé d'index cluster, ou s'il n'existe pas d'index cluster dans la table, l'option ORDER est ignorée. Les noms de colonnes fournis doivent être des noms de colonnes valides dans la table de destination. Par défaut, **bcp** considère que le fichier de données n’est pas ordonné. Pour une importation en bloc optimisée, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] valide également le fait que les données importées sont triées.  
@@ -548,7 +547,7 @@ L’utilitaire bcp peut également être téléchargé séparément depuis le [M
 
 ### <a name="example-test-conditions"></a>**Exemples de conditions de test**
 
-Les exemples ci-dessous utilisent l’exemple de base de données `WideWorldImporters` pour SQL Server (à partir de 2016) et Azure SQL Database.  `WideWorldImporters` peut être téléchargé à partir de [ https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0 ](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0).  Consultez [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) pour que la syntaxe restaure la base de données.  Sauf mention spécifique contraire, ces exemples partent du principe que vous utilisez l’authentification Windows et que vous disposez d’une connexion approuvée à l’instance du serveur sur laquelle vous exécutez la commande **bcp** .  Un répertoire nommé `D:\BCP` sera utilisé dans de nombreux exemples.
+Les exemples ci-dessous utilisent l’exemple de base de données `WideWorldImporters` pour SQL Server (à partir de 2016) et Azure SQL Database.  `WideWorldImporters`peut être téléchargé à [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)partir de.  Consultez [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) pour que la syntaxe restaure la base de données.  Sauf mention spécifique contraire, ces exemples partent du principe que vous utilisez l’authentification Windows et que vous disposez d’une connexion approuvée à l’instance du serveur sur laquelle vous exécutez la commande **bcp** .  Un répertoire nommé `D:\BCP` sera utilisé dans de nombreux exemples.
 
 Le script ci-dessous crée une copie vide de la table `WideWorldImporters.Warehouse.StockItemTransactions`, puis ajoute une contrainte de clé primaire.  Exécuter le script T-SQL suivant dans SQL Server Management Studio (SSMS)
 

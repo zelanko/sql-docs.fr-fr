@@ -1,5 +1,5 @@
 ---
-title: Présentation de contrôle d’accès concurrentiel | Microsoft Docs
+title: Fonctionnement du contrôle d’accès concurrentiel | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cf4d64d7a7f02e487c969e80a3a0578498f9b507
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b178b0c38b5891d4a3dc13ef620a217bf3ddb186
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004197"
 ---
 # <a name="understanding-concurrency-control"></a>Fonctionnement du contrôle concurrentiel
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "66798266"
 ## <a name="result-sets-that-are-not-updateable"></a>Jeux de résultats qui ne peuvent pas être mis à jour  
  Un jeu de résultats pouvant être mis à jour est un jeu de résultats dans lequel des lignes peuvent être insérées, mises à jour et supprimées. Dans les cas suivants, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas créer de curseur pouvant être mis à jour. L'exception générée est « Le jeu de résultat ne peut pas être mis à jour ».  
   
-|Cause|Description|Remedy|  
+|Cause|Description|Corriger|  
 |-----------|-----------------|------------|  
 |L'instruction n'est pas créée à l'aide de la syntaxe JDBC 2.0 (ou ultérieure)|JDBC 2.0 introduit de nouvelles méthodes pour créer des instructions. Si la syntaxe JDBC 1.0 est utilisée, le jeu de résultats est par défaut en lecture seule.|Spécifiez le type de jeu de résultats et l'accès simultané lors de la création de l'instruction.|  
 |L'instruction est créée à l'aide de TYPE_SCROLL_INSENSITIVE|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un curseur instantané statique. Celui-ci est déconnecté des lignes de table sous-jacentes afin d'aider à protéger le curseur contre les mises à jour de ligne par d'autres utilisateurs.|Utilisez TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC ou TYPE_FORWARD_ONLY avec CONCUR_UPDATABLE pour éviter de créer un curseur statique.|  

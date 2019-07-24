@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6ff97d37-befc-47b1-8092-505917216a41
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8b9f662302aaad344bc75272a1360898d2d5efa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46f8df147dda25a7b3d8dac33121a25622962950
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976634"
 ---
 # <a name="nullsaresortedhigh-method-sqlserverdatabasemetadata"></a>Méthode nullsAreSortedHigh (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean nullsAreSortedHigh()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- **true** si les valeurs sont triées par ordre croissant. Dans le cas contraire, la valeur est **false**.  
+ **true** si les valeurs sont triées en haut. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode nullsAreSortedHigh est spécifiée par la méthode nullsAreSortedHigh dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode nullsAreSortedHigh est spécifiée par la méthode nullsAreSortedHigh dans l’interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9d33571b-4887-49d3-96df-8abda7b5a904
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 919bbe1714af10a608a1489b2d629b4c7ce390cc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8da1c92b4687fa743c104d8fd47d1ce33760cd00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998476"
 ---
 # <a name="updateobject-method-int-javalangobject-int"></a>Méthode updateObject (int, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ public void updateObject(int index,
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
  *obj*  
   

@@ -39,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872215"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418876"
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
   Cette rubrique explique comment activer et configurer la messagerie de base de données à l'aide de l'Assistant Configuration de la messagerie de base de données, et créer un script de configuration de la messagerie de base de données à l'aide de modèles.  
@@ -67,7 +67,7 @@ ms.locfileid: "62872215"
   
 2.  Développez le nœud **Gestion** .  
   
-3.  Clic étroite **Database Mail**, puis cliquez sur **configurer la messagerie de base de données**.  
+3.  Cliquez avec le bouton droit sur **Messagerie de base de données**, puis cliquez sur **Configurer la messagerie de base de données**.  
   
 4.  Renseignez les boîtes de dialogue de l'Assistant  
   
@@ -90,7 +90,7 @@ ms.locfileid: "62872215"
  Chaque fois que vous utilisez l'Assistant, utilisez la page **Sélectionner une tâche de configuration** pour indiquer quelle tâche vous allez réaliser. Si vous changez d'avis avant d'avoir terminé l'Assistant, utilisez le bouton **Précédent** pour retourner à cette page et sélectionner une autre tâche.  
   
 > [!NOTE]  
->  Si la messagerie de base de données n’a pas été activée, vous recevrez le message : **La fonctionnalité de messagerie de base de données n’est pas disponible.  Voulez-vous activer ce composant ?** Répondre **Oui**équivaut à activer la messagerie de base de données à l’aide de l’option [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la procédure stockée système **sp_configure** .  
+>  Si la messagerie de base de données n'a pas été activée, vous recevrez le message : **Le composant de messagerie de base de données n'est pas disponible.  Voulez-vous activer ce composant ?** Répondre **Oui**équivaut à activer la messagerie de base de données à l’aide de l’option [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la procédure stockée système **sp_configure** .  
   
  **Configurer la messagerie de base de données en effectuant les tâches suivantes**  
  Permet d'exécuter toutes les tâches nécessaires pour configurer la messagerie de base de données pour la première fois. Cette option inclut l'ensemble des trois autres options.  
@@ -129,7 +129,7 @@ ms.locfileid: "62872215"
  Tapez l'adresse de messagerie à utiliser pour les réponses aux messages électroniques envoyés à partir de ce compte. L'adresse Répondre au courrier est facultative. Par exemple, les réponses envoyées vers un compte du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peuvent être adressées à l’administrateur de base de données, dont l’adresse est danw@Adventure-Works.com.  
   
  **Nom du serveur**  
- Tapez le nom ou l'adresse IP du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, il s’agit dans un format similaire à `smtp.` *< votre_société >* `.com`. Pour plus d'informations, contactez l'administrateur de messagerie.  
+ Tapez le nom ou l'adresse IP du serveur SMTP utilisé par le compte pour envoyer du courrier électronique. En général, son format est semblable à `smtp.` *< YOUR_COMPANY >* `.com`. Pour plus d'informations, contactez l'administrateur de messagerie.  
   
  **Numéro de port**  
  Tapez le numéro de port du serveur SMTP de ce compte. La plupart des serveurs SMTP utilisent le port 25.  
@@ -373,7 +373,7 @@ ms.locfileid: "62872215"
  Durée minimale (en secondes) pendant laquelle le processus de messagerie externe reste actif. Le processus demeure actif aussi longtemps qu'il reste des messages dans la file d'attente de la messagerie de base de données. Ce paramètre spécifie le délai pendant lequel le processus demeure actif s'il n'y a pas de messages à traiter.  
   
  **Niveau de journalisation**  
- Spécifiez quels messages sont enregistrés dans le journal de la messagerie de base de données. Les valeurs possibles sont :  
+ Spécifiez quels messages sont enregistrés dans le journal de la messagerie de base de données. Les valeurs possibles sont les suivantes :  
   
 -   Normal : ne journalise que les erreurs  
   

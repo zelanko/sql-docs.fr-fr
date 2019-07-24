@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bf755ccfe5a1a6816129173dcb6ad5050ea5e114
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213320"
+---
 
 ## <a name="add-a-database-to-the-availability-group"></a>Ajouter une base de données au groupe de disponibilité
 
@@ -7,7 +15,7 @@ Vérifiez que la base de données que vous ajoutez au groupe de disponibilité e
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1]
-   TO DISK = N'/var/opt/mssql/data/db1.bak';
+   TO DISK = N'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\db1.bak';
 ```
 
 Pour ajouter une base de données nommée `db1` à un groupe de disponibilité nommé `ag1`, exécutez le script Transact-SQL suivant sur le réplica SQL Server principal :

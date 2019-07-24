@@ -21,19 +21,19 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9a23f839fcb828d9c90198d8aadffb6a8cfe0ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 07d2e8032bb596faaac577194273760c59006645
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896440"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418854"
 ---
 # <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Permet de forcer un plan spécifique pour une requête particulière.  
+  Active le forçage d’un plan particulier pour une requête particulière.  
   
- Lorsqu’un plan est forcé pour une requête particulière, chaque fois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rencontre la requête, il tente de forcer le plan de l’optimiseur. Si le forçage de plan échoue, un XEvent est déclenché et l’optimiseur est tenue d’optimiser de façon normale.  
+ Lorsqu’un plan est forcé pour une requête donnée, chaque fois [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qu’il rencontre une requête, il tente de forcer le plan dans l’optimiseur. Si le forçage de plan échoue, un XEvent est déclenché et l’optimiseur est invité à optimiser de manière normale.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,9 +45,9 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @query_id = ] query_id` Est l’id de la requête. *query_id* est un **bigint**, sans valeur par défaut.  
+`[ @query_id = ] query_id`ID de la requête. *query_id* est de type **bigint**, sans valeur par défaut.  
   
-`[ @plan_id = ] plan_id` Est l’id du plan de requête à être forcé. *plan_id* est un **bigint**, sans valeur par défaut.  
+`[ @plan_id = ] plan_id`ID du plan de requête à forcer. *plan_id* est de type **bigint**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -55,7 +55,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite le **EXECUTE** autorisation sur la base de données, et **insérer**, **mise à jour**, et **supprimer** autorisation sur le catalogue de magasin de requête Affichage.  
+ Nécessite l’autorisation **ALTER** sur la base de données.
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant retourne des informations sur les requêtes dans le magasin de requêtes.  
@@ -69,7 +69,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Après avoir identifié le query_id et plan_id que vous souhaitez forcer, utilisez l’exemple suivant afin de forcer la requête à utiliser un plan.  
+ Après avoir identifié les query_id et plan_id que vous souhaitez forcer, utilisez l’exemple suivant pour forcer la requête à utiliser un plan.  
   
 ```  
 EXEC sp_query_store_force_plan 3, 3;  

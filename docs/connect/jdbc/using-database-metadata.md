@@ -1,5 +1,5 @@
 ---
-title: À l’aide de métadonnées de la base de données | Microsoft Docs
+title: Utilisation des métadonnées de base de données | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0bad06da093edd83b7df2e1c10f2b68bdca7a210
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fbe290c558dd8c64605bad0a977657904582c696
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916261"
 ---
 # <a name="using-database-metadata"></a>Utilisation des métadonnées de base de données
 
@@ -26,7 +25,7 @@ Pour interroger une base de données afin de recueillir des informations sur ce 
 
 Pour créer un objet SQLServerDatabaseMetaData, vous pouvez utiliser la méthode [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md) de la classe [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) pour obtenir des informations concernant la base de données.
 
-Dans l’exemple suivant, une connexion ouverte à la [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de données est transmise à la fonction, la méthode getMetaData de la classe SQLServerConnection est utilisée pour retourner un objet SQLServerDatabaseMetadata et puis diverses méthodes de la Objet SQLServerDatabaseMetaData sont utilisés pour afficher des informations sur la version de base de données, version du pilote, de nom de la base de données et pilote.
+Dans l’exemple suivant, une connexion ouverte à l' [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] exemple de base de données est transmise à la fonction, la méthode GetMetadata de la classe SQLServerConnection est utilisée pour retourner un objet SQLServerDatabaseMetaData, puis diverses méthodes de l’objet L’objet SQLServerDatabaseMetaData est utilisé pour afficher des informations sur le pilote, la version du pilote, le nom de la base de données et la version de la base de données.
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 

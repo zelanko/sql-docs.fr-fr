@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 803c1fccf0369497da75554842d34c72d4c5b95f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117128"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
  AUTHORIZATION *server_principal*  
  Compte de connexion qui détiendra le nouveau rôle de serveur. Si aucun compte de connexion n'est spécifié, le rôle de serveur appartient au compte qui exécute CREATE SERVER ROLE.  
   
-## <a name="remarks"></a>Notes   
+## <a name="remarks"></a>Notes  
  Les rôles de serveur sont des éléments sécurisables au niveau du serveur. Lorsque vous avez créé un rôle de serveur, configurez les autorisations au niveau serveur à l'aide des instructions GRANT, DENY et REVOKE. Pour supprimer ou ajouter des connexions à un rôle serveur, utilisez [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md). Pour supprimer un rôle serveur, utilisez [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md). Pour plus d’informations, consultez [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
  Vous pouvez consulter les rôles serveur en interrogeant les vues de catalogue [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) et [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
@@ -61,7 +60,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
  Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation CREATE SERVER ROLE ou l’appartenance au rôle serveur fixe sysadmin.  
   
  Requiert également IMPERSONATE sur *server_principal* pour les connexions, l’autorisation ALTER pour les rôles serveur utilisés comme *server_principal*ou l’appartenance à un groupe Windows utilisé comme server_principal.  
@@ -85,7 +84,7 @@ CREATE SERVER ROLE buyers AUTHORIZATION BenMiller;
 GO  
 ```  
   
-### <a name="b-creating-a-server-role-that-is-owned-by-a-fixed-server-role"></a>b. Création d'un rôle de serveur détenu par un rôle serveur fixe  
+### <a name="b-creating-a-server-role-that-is-owned-by-a-fixed-server-role"></a>B. Création d'un rôle de serveur détenu par un rôle serveur fixe  
  L'exemple suivant crée le rôle de serveur `auditors` détenu par le rôle serveur fixe `securityadmin`.  
   
 ```  
@@ -94,7 +93,7 @@ CREATE SERVER ROLE auditors AUTHORIZATION securityadmin;
 GO  
 ```  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)   
  [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   

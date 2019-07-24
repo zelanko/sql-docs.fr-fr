@@ -1,5 +1,5 @@
 ---
-title: setbinarystream, méthode de flux - entrant long | Microsoft Docs
+title: Méthode setBinaryStream pour le flux d’entrée-long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 567297bf-5bec-46ae-8264-29639b9b4a06
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7bc5c323cb87ab0b5033baf4616a96276c0de2c3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f2020b147b67557417b7c64cc05a053f9650d828
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975173"
 ---
 # <a name="setbinarystream-method--javalangstring-javaioinputstream-int"></a>Méthode setBinaryStream (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,17 +43,17 @@ public void setBinaryStream(java.lang.String parameterName,
   
  *value*  
   
- Un objet InputStream.  
+ Objet InputStream.  
   
  *length*  
   
- Un **int** qui indique la longueur en octets.  
+ **Entier** qui indique la longueur en nombre d’octets.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setBinaryStream est spécifiée par la méthode setBinaryStream dans l’interface java.sql.CallableStatement.  
+ Cette méthode setBinaryStream est spécifiée par la méthode setBinaryStream dans l’interface java. Sql. CallableStatement.  
   
  Si la longueur du flux diffère de ce qui est spécifié dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   

@@ -1,5 +1,5 @@
 ---
-title: Exemple de Types de données de base | Microsoft Docs
+title: Exemple de types de données de base | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1fc817ba5964ab1278a329520fc895ec06815baf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d995dc6fb4b58249abd4fc2d3fc879adc66b5b0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957399"
 ---
 # <a name="basic-data-types-sample"></a>Exemple de types de données de base
 
@@ -34,7 +33,7 @@ Le fichier de code de cet exemple, BasicDT.java, se trouve à l’emplacement su
 
 Pour exécuter cet exemple d’application, définissez le classpath de façon à inclure le fichier jar mssql-jdbc. L’accès à l’exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] est également nécessaire. Pour plus d’informations sur la façon de définir l’instruction classpath, consultez [à l’aide du pilote JDBC](../../connect/jdbc/using-the-jdbc-driver.md).
 
-L’exemple crée la table requise et insérer des données d’exemple dans le [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] base de données exemple :
+L’exemple crée la table requise et insère des exemples de données dans [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] l’exemple de base de données:
 
 > [!NOTE]  
 > Le [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] fournit les fichiers bibliothèques de classes mssql-jdbc à utiliser en fonction des paramètres JRE (Java Runtime Environment) choisis. Pour plus d’informations sur le fichier JAR à choisir, voir [Configuration requise pour le pilote JDBC](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).

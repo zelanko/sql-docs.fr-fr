@@ -21,17 +21,17 @@ ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb65ba60dc99be491cffcd70a0eb442bfe61d580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c87dc88db41e6699e1ce39e924b017c11bf5621e
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896399"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418911"
 ---
 # <a name="spquerystoreremovequery-transact-sql"></a>sp_query_store_remove_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Supprime la requête, ainsi que tous les plans et les statistiques d’exécution à partir du magasin de requête.  
+  Supprime la requête, ainsi que tous les plans et statistiques d’exécution associés du magasin de requêtes.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @query_id = ] query_id` Est l’id de la requête doit être supprimé du magasin de requête. *query_id* est un **bigint**, sans valeur par défaut.  
+`[ @query_id = ] query_id`ID de la requête à supprimer du magasin de requêtes. *query_id* est de type **bigint**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -51,7 +51,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite le **EXECUTE** autorisation sur la base de données, et **supprimer** autorisation sur les affichages catalogue du magasin de requête.  
+ Nécessite l’autorisation **ALTER** sur la base de données.
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant retourne des informations sur les requêtes dans le magasin de requêtes.  
@@ -65,7 +65,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Après avoir identifié le query_id que vous souhaitez supprimer, utilisez l’exemple suivant pour supprimer la requête.  
+ Après avoir identifié les query_id que vous souhaitez supprimer, utilisez l’exemple suivant pour supprimer la requête.  
   
  L'exemple suivant.  
   

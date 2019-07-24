@@ -1,5 +1,5 @@
 ---
-title: Sys.resource_stats (Azure SQL Database) | Microsoft Docs
+title: sys. resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/13/2018
 ms.service: sql-database
@@ -19,19 +19,19 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 06e3a3e632473c33a3f4652b2f4169ce3c7ca1e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f151d62a03cebf931c58f37b1e126a7331cefae9
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097050"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418869"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Renvoie les données de stockage et l’utilisation d’UC pour une base de données Azure SQL Database. Les données sont collectées et agrégées par intervalles de cinq minutes. Pour chaque base de données utilisateur, il existe une ligne pour chaque fenêtre de rapports de cinq minutes au cours desquels survient une modification de la consommation de ressources. Les données retournées incluent l’utilisation du processeur, changement de taille de stockage et base de données de modification de la référence. Bases de données inactives sans aucune modification ne peuvent pas avoir de lignes pour chaque intervalle de cinq minutes. Les données historiques sont conservées pendant environ 14 jours.  
+  Renvoie les données de stockage et l’utilisation d’UC pour une base de données Azure SQL Database. Les données sont collectées et agrégées par intervalles de cinq minutes. Pour chaque base de données utilisateur, il existe une ligne pour chaque fenêtre de rapports de cinq minutes dans laquelle il y a une modification de la consommation des ressources. Les données retournées incluent l’utilisation du processeur, la modification de la taille du stockage et la modification des références SKU de base de données. Les bases de données inactives sans modification peuvent ne pas avoir de lignes pour chaque intervalle de cinq minutes. Les données historiques sont conservées pendant environ 14 jours.  
   
- Le **sys.resource_stats** vue a des définitions différentes selon la version du serveur de base de données SQL Azure qui est associé à la base de données. Tenez compte de ces différences et des modifications requises par votre application lors de la mise à niveau vers une nouvelle version de serveur.  
+ La vue **sys. resource_stats** a des définitions différentes selon la version du serveur Azure SQL Database auquel la base de données est associée. Tenez compte de ces différences et des modifications requises par votre application lors de la mise à niveau vers une nouvelle version de serveur.  
   
  Le tableau suivant décrit les colonnes disponibles dans un serveur v12 :  
   
@@ -39,29 +39,29 @@ ms.locfileid: "68097050"
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime**|Heure UTC indiquant le début de l’intervalle de création de rapports de cinq minutes.|  
 |end_time|**datetime**|Heure UTC indiquant la fin de l’intervalle de création de rapports de cinq minutes.|  
-|database_name|**varchar**|Nom de la base de données utilisateur.|  
-|sku|**varchar**|Niveau de service de la base de données. Les valeurs possibles sont les suivantes :<br /><br /> De base<br /><br /> standard<br /><br /> Premium<br /><br />Usage général<br /><br />Critique pour l’entreprise|  
-|storage_in_megabytes|**float**|Taille de stockage maximale en mégaoctets pour la période de temps, y compris la base de données, les index, les procédures stockées et les métadonnées.|  
-|avg_cpu_percent|**numeric**|Utilisation moyenne du calcul en pourcentage de la limite de la couche de service.|  
-|avg_data_io_percent|**numeric**|Utilisation moyenne des E-S en pourcentage en fonction de la limite du niveau de service.|  
-|avg_log_write_percent|**numeric**|Utilisation moyenne de la ressource d'écriture en pourcentage de la limite de la couche de service.|  
-|max_worker_percent|**decimal(5,2)**|Nombre maximal d’ouvriers simultanés (demandes) en pourcentage de la limite de niveau de service de la base de données.<br /><br /> Valeur maximale est actuellement calculée pour l’intervalle de cinq minutes basée sur les échantillons de 15 secondes des nombres de travail simultanés.|  
-|max_session_percent|**decimal(5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite de niveau de service de la base de données.<br /><br /> Valeur maximale est actuellement calculée pour l’intervalle de cinq minutes basée sur les échantillons de 15 secondes du nombre de sessions simultanées.|  
-|dtu_limit|**int**|Base de données max DTU paramètre actuel de cette base de données pendant cet intervalle. |  
-|allocated_storage_in_megabytes|**float**|La quantité de mise en forme d’espace de fichier en Mo mis à disposition pour stocker les données de la base de données. Espace du fichier de mise en forme est également appelée espace de données alloué.  Pour plus d'informations, consultez : [Gestion de l’espace fichier dans la base de données SQL](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|database_name|**nvarchar(128)**|Nom de la base de données utilisateur.|  
+|sku|**nvarchar(128)**|Niveau de service de la base de données. Les valeurs possibles sont les suivantes :<br /><br /> De base<br /><br /> standard<br /><br /> Premium<br /><br />Usage général<br /><br />Critique pour l’entreprise|  
+|storage_in_megabytes|**float**|Taille de stockage maximale en mégaoctets pour la période, y compris les données, les index, les procédures stockées et les métadonnées de la base de données.|  
+|avg_cpu_percent|**decimal(5,2)**|Utilisation moyenne du calcul en pourcentage de la limite de la couche de service.|  
+|avg_data_io_percent|**decimal(5,2)**|Utilisation moyenne des E-S en pourcentage en fonction de la limite du niveau de service.|  
+|avg_log_write_percent|**decimal(5,2)**|Utilisation moyenne de la ressource d'écriture en pourcentage de la limite de la couche de service.|  
+|max_worker_percent|**decimal(5,2)**|Nombre maximal de threads de travail simultanés (demandes) en pourcentage en fonction de la limite du niveau de service de la base de données.<br /><br /> Le nombre maximal est actuellement calculé pour l’intervalle de cinq minutes en fonction des exemples de 15 secondes de nombres de Worker simultanés.|  
+|max_session_percent|**decimal(5,2)**|Nombre maximal de sessions simultanées en pourcentage en fonction de la limite du niveau de service de la base de données.<br /><br /> Le maximum est actuellement calculé pour l’intervalle de cinq minutes en fonction des exemples de 15 secondes de nombres de sessions simultanées.|  
+|dtu_limit|**int**|Paramètre DTU maximal de la base de données actuelle pour cette base de données au cours de cet intervalle. |   
+|allocated_storage_in_megabytes|**float**|Quantité d’espace de fichier mise en forme, en Mo, disponible pour le stockage des données de la base de données. L’espace de fichier formaté est également appelé espace de données alloué.  Pour plus d'informations, consultez : [Gestion de l’espace de fichier dans SQL DB](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
->  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [niveaux de Service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  
+>  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [niveaux de service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  
     
 ## <a name="permissions"></a>Autorisations  
- Cette vue est disponible pour tous les rôles d’utilisateur avec des autorisations pour se connecter à virtuel **master** base de données.  
+ Cette vue est disponible pour tous les rôles d’utilisateur disposant d’autorisations pour se connecter à la base de données **Master** virtuelle.  
   
 ## <a name="remarks"></a>Notes  
- Les données retournées par **sys.resource_stats** est exprimée en pourcentage de la valeur maximale autorisée des limites pour le niveau de performances/au niveau de service qui vous sont en cours d’exécution.  
+ Les données retournées par **sys. resource_stats** sont exprimées sous la forme d’un pourcentage des limites maximales autorisées pour le niveau de service/niveau de performances que vous exécutez.  
   
- Lorsqu’une base de données est membre d’un pool élastique, statistiques des ressources présentées sous forme de valeurs de pourcentage sont exprimées en tant que le pourcentage de la limite maximale pour les bases de données, comme défini dans la configuration de pool élastique.  
+ Lorsqu’une base de données est membre d’un pool élastique, les statistiques de ressources présentées sous forme de pourcentages sont exprimées en pourcentage de la limite maximale pour les bases de données définies dans la configuration du pool élastique.  
   
- Pour obtenir une vue plus granulaire de ces données, utilisez **sys.dm_db_resource_stats** vue de gestion dynamique dans une base de données utilisateur. Cette vue capture des données toutes les 15 secondes et conserve 1 heure d'historique des données.  Pour plus d’informations, consultez [sys.dm_db_resource_stats &#40;base de données SQL Azure&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
+ Pour obtenir une vue plus granulaire de ces données, utilisez la vue de gestion dynamique **sys. DM _db_resource_stats** dans une base de données utilisateur. Cette vue capture des données toutes les 15 secondes et conserve 1 heure d'historique des données.  Pour plus d’informations, consultez [sys. DM &#40;_db_resource_stats&#41;Azure SQL Database](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md).  
 
 ## <a name="examples"></a>Exemples  
  L'exemple suivant retourne toutes les bases de données dont la moyenne s'établit à au moins 80 % de l'utilisation du calcul au cours de la dernière semaine.  
@@ -80,6 +80,6 @@ HAVING AVG(avg_cpu_percent) >= 80
     
 ## <a name="see-also"></a>Voir aussi  
  [Niveaux de service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [Limites et les capacités de niveau de Service](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
+ [Capacités et limites du niveau de service](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   
   

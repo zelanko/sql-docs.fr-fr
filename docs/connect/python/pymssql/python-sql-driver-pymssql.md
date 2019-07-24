@@ -1,5 +1,5 @@
 ---
-title: Pilote Python SQL - pymssql | Microsoft Docs
+title: Pilote SQL python-pymssql | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 34edf89e-4335-4ef6-827a-54b7af9cc9fd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 79d067c9221e889fdfb65f77ca18daa96a0900d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3cce0d9a3a488824cf1a3ef686b508157e029363
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992539"
 ---
 # <a name="python-sql-driver---pymssql"></a>Pilote Python SQL - pymssql
 [!INCLUDE[Driver_Python_Download](../../../includes/driver_python_download.md)]

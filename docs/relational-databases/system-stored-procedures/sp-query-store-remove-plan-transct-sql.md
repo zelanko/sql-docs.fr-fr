@@ -21,17 +21,17 @@ ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 027dbe78c663f2aa218ac46b3ad6e54b681a9369
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef04dee7a7384141aab820c2c65343a18b605ad0
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896427"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418938"
 ---
 # <a name="spquerystoreremoveplan-transct-sql"></a>sp_query_store_remove_plan (Transct-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Supprime un plan unique à partir du magasin de requête.  
+  Supprime un seul plan du magasin de requêtes.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @plan_id = ] plan_id` Est l’id du plan de requête à supprimer. *plan_id* est un **bigint**, sans valeur par défaut.  
+`[ @plan_id = ] plan_id`ID du plan de requête à supprimer. *plan_id* est de type **bigint**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -51,7 +51,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite le **EXECUTE** autorisation sur la base de données, et **supprimer** autorisation sur les affichages catalogue du magasin de requête.  
+ Nécessite l’autorisation **ALTER** sur la base de données.
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant retourne des informations sur les requêtes dans le magasin de requêtes.  
@@ -65,7 +65,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Après avoir identifié le plan_id que vous souhaitez supprimer, utilisez l’exemple suivant pour supprimer un plan de requête.  
+ Après avoir identifié l’plan_id que vous souhaitez supprimer, utilisez l’exemple suivant pour supprimer un plan de requête.  
   
 ```  
 EXEC sp_query_store_remove_plan 3;  

@@ -1,6 +1,6 @@
 ---
 title: Exécution d’opérations de copie en bloc | Microsoft Docs
-description: Exécution d’opérations de copie en bloc à l’aide de OLE DB Driver pour SQL Server
+description: Exécution d’opérations de copie en bloc à l’aide d’OLE DB pilote pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, bulk copy operations
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: e071e632015bc86e2743f3935ee92d5e1da9c611
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c6b1d33f4a0a768d33ebe9613c0c0cb97c5e77c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988981"
 ---
 # <a name="performing-bulk-copy-operations"></a>Exécution d'opérations de copie en bloc
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66802950"
 
   La fonction de copie en bloc de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge le transfert de quantités importantes de données vers ou depuis une table ou une vue [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les données peuvent également être transférées en spécifiant une instruction SELECT. Les données peuvent être déplacées entre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et un fichier de données du système d'exploitation, par exemple un fichier ASCII. Le fichier de données peut avoir différents formats ; le format est défini pour effectuer la copie en bloc dans un fichier de format. Facultativement, les données peuvent être chargées dans des variables de programme et transférées vers [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à l'aide de fonctions et de méthodes de copie en bloc.  
   
- Pour un exemple d’application qui illustre cette fonctionnalité, consultez [en bloc copie de données en bloc avec IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md).  
+ Pour obtenir un exemple d’application qui illustre cette fonctionnalité, consultez [Bulk copier des données &#40;à&#41;l’aide de IRowsetFastLoad OLE DB](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md).  
   
  Une application utilise en général la copie en bloc de l'une des manières suivantes :  
   
@@ -50,7 +49,7 @@ ms.locfileid: "66802950"
   
  Il n'est pas nécessaire que les fichiers de données utilisés par les fonctions de copie en bloc soient créés par un autre programme de copie en bloc. Tout autre système peut générer un fichier de données et un fichier de format conformément aux définitions de la copie en bloc ; ces fichiers peuvent ensuite être utilisés avec un programme de copie en bloc [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour importer des données dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par exemple, vous pouvez exporter des données à partir d'une feuille de calcul dans un fichier délimité par des tabulations, générer un fichier de format décrivant le fichier délimité par des tabulations, puis utilisez un programme de copie en bloc pour importer rapidement les données dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les fichiers de données générés par la copie en bloc peuvent également être importés dans d'autres applications. Par exemple, vous pouvez utiliser des fonctions de copie en bloc pour exporter les données d'une table ou d'une vue dans un fichier délimité par des tabulations que vous pouvez ensuite charger dans une feuille de calcul.  
   
- Les programmeurs qui codent des applications pour utiliser les fonctions de copie en bloc doivent respecter les règles générales pour obtenir de bonnes performances en matière de copie en bloc. Pour plus d’informations sur la prise en charge des opérations de copie en bloc dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [importation et exportation de données &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Les programmeurs qui codent des applications pour utiliser les fonctions de copie en bloc doivent respecter les règles générales pour obtenir de bonnes performances en matière de copie en bloc. Pour plus d’informations sur la prise en charge des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]opérations de copie en bloc dans, consultez [importation et exportation en bloc de &#40;données SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Un type CLR défini par l'utilisateur (UDT) doit être lié en tant que données binaires. Même si un fichier de format spécifie SQLCHAR en tant que type de données pour une colonne UDT cible, l'utilitaire BCP traite les données en tant que données binaires.  
@@ -58,18 +57,18 @@ ms.locfileid: "66802950"
  N'utilisez pas SET FMTONLY OFF avec des opérations de copie en bloc. SET FMTONLY OFF peut entraîner l'échec de votre opération de copie en bloc ou générer des résultats inattendus.  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver pour SQL Server 
- Le pilote OLE DB pour SQL Server implémente deux méthodes pour effectuer des opérations de copie en bloc avec un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de données. La première méthode implique l’utilisation de l’interface [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) pour les opérations de copie en bloc basées sur la mémoire, tandis que la seconde implique l’utilisation de l’interface [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) pour les opérations de copie en bloc basées sur le fichier.  
+ Le pilote OLE DB pour SQL Server implémente deux méthodes pour effectuer des opérations de copie en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bloc avec une base de données. La première méthode implique l’utilisation de l’interface [IRowsetFastLoad](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md) pour les opérations de copie en bloc basées sur la mémoire, tandis que la seconde implique l’utilisation de l’interface [IBCPSession](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md) pour les opérations de copie en bloc basées sur le fichier.  
   
 ### <a name="using-memory-based-bulk-copy-operations"></a>Utilisation d'opérations de copie en bloc basées sur la mémoire  
  OLE DB Driver pour SQL Server implémente l’interface **IRowsetFastLoad** pour exposer la prise en charge des opérations de copie en bloc basées sur la mémoire [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. L’interface **IRowsetFastLoad** implémente les méthodes [IRowsetFastLoad::Commit](../../oledb/ole-db-interfaces/irowsetfastload-commit-ole-db.md) et [IRowsetFastLoad::InsertRow](../../oledb/ole-db-interfaces/irowsetfastload-insertrow-ole-db.md).  
   
 #### <a name="enabling-a-session-for-irowsetfastload"></a>Activation d'une session pour IRowsetFastLoad  
- Le consommateur notifie le pilote OLE DB pour SQL Server de son besoin de copie en bloc en définissant le pilote OLE DB pour la propriété de source de données spécifiques à SQL Server SSPROP_ENABLEFASTLOAD avec la valeur VARIANT_TRUE. Avec la propriété définie sur la source de données, le consommateur crée un pilote OLE DB pour la session de SQL Server. La nouvelle session permet au consommateur d’accéder à l’interface **IRowsetFastLoad**.  
+ Le consommateur informe le pilote OLE DB pour SQL Server de son besoin de copie en bloc en définissant le pilote OLE DB pour la propriété de source de données spécifique à SQL Server SSPROP_ENABLEFASTLOAD sur VARIANT_TRUE. Avec la propriété définie sur la source de données, le consommateur crée un pilote OLE DB pour SQL Server session. La nouvelle session permet au consommateur d’accéder à l’interface **IRowsetFastLoad**.  
   
 > [!NOTE]  
 >  Si l’interface **IDataInitialize** est utilisée pour initialiser la source de données, vous devez définir la propriété SSPROP_IRowsetFastLoad dans le paramètre *rgPropertySets* de la méthode **IOpenRowset::OpenRowset** ; sinon, l’appel à la méthode **OpenRowset** retourne E_NOINTERFACE.  
   
- Activation d’une session de copie en bloc contraint le pilote OLE DB pour la prise en charge de SQL Server pour les interfaces sur la session. Une session compatible avec la copie en bloc expose uniquement les interfaces suivantes :  
+ L’activation d’une session pour la copie en bloc limite le pilote OLE DB pour la prise en charge SQL Server des interfaces de la session. Une session compatible avec la copie en bloc expose uniquement les interfaces suivantes :  
   
 -   **IDBSchemaRowset**  
   
@@ -84,7 +83,7 @@ ms.locfileid: "66802950"
  Pour désactiver la création d’ensembles de lignes compatibles avec la copie en bloc et forcer la session OLE DB Driver pour SQL Server à rétablir le traitement standard, attribuez la valeur VARIANT_FALSE à SSPROP_ENABLEFASTLOAD.  
   
 #### <a name="irowsetfastload-rowsets"></a>Ensembles de lignes IRowsetFastLoad  
- Les ensembles de lignes de copie en bloc d’OLE DB Driver pour SQL Server sont en écriture seule, mais ils exposent des interfaces qui permettent au consommateur de déterminer la structure d’une table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les interfaces suivantes sont exposées sur un bloc compatible avec la copie pilote OLE DB pour l’ensemble de lignes de SQL Server :  
+ Les ensembles de lignes de copie en bloc d’OLE DB Driver pour SQL Server sont en écriture seule, mais ils exposent des interfaces qui permettent au consommateur de déterminer la structure d’une table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Les interfaces suivantes sont exposées sur un pilote de OLE DB avec copie en bloc pour SQL Server ensemble de lignes:  
   
 -   **IAccessor**  
   
@@ -104,7 +103,7 @@ ms.locfileid: "66802950"
   
 |ID de propriété|Description|  
 |-----------------|-----------------|  
-|SSPROP_FASTLOADKEEPIDENTITY|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Maintient les valeurs d'identité fournies par le consommateur.<br /><br /> VARIANT_FALSE : les valeurs pour une colonne d'identité dans la table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont générées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Toute valeur liée pour la colonne est ignorée par le pilote OLE DB pour SQL Server.<br /><br /> VARIANT_TRUE : le consommateur lie un accesseur qui fournit une valeur pour une colonne d'identité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La propriété d’identité n’étant pas disponible sur les colonnes qui acceptent Null, le consommateur fournit une valeur unique sur chaque appel de **IRowsetFastLoad::Insert**.|  
+|SSPROP_FASTLOADKEEPIDENTITY|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : Maintient les valeurs d'identité fournies par le consommateur.<br /><br /> VARIANT_FALSE : les valeurs pour une colonne d'identité dans la table [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont générées par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Toute valeur liée à la colonne est ignorée par le pilote OLE DB pour SQL Server.<br /><br /> VARIANT_TRUE : le consommateur lie un accesseur qui fournit une valeur pour une colonne d'identité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La propriété d’identité n’étant pas disponible sur les colonnes qui acceptent Null, le consommateur fournit une valeur unique sur chaque appel de **IRowsetFastLoad::Insert**.|  
 |SSPROP_FASTLOADKEEPNULLS|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BOOL<br /><br /> Valeur par défaut : VARIANT_FALSE<br /><br /> Description : maintient la valeur NULL pour les colonnes avec une contrainte DEFAULT. Affecte uniquement les colonnes [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui acceptent NULL et auxquelles une contrainte DEFAULT est appliquée.<br /><br /> VARIANT_FALSE : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] insère la valeur par défaut pour la colonne quand le consommateur d’OLE DB Driver pour SQL Server insère une ligne contenant Null pour la colonne.<br /><br /> VARIANT_TRUE : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] insère la valeur Null comme valeur de colonne quand le consommateur d’OLE DB Driver pour SQL Server insère une ligne contenant Null pour la colonne.|  
 |SSPROP_FASTLOADOPTIONS|Colonne : non<br /><br /> R/W : lecture/écriture<br /><br /> Type : VT_BSTR<br /><br /> Valeur par défaut : aucune<br /><br /> Description : cette propriété équivaut à l’option **-h** "*hint*[,...*n*]" de l’utilitaire **bcp**. La ou les chaînes suivantes peuvent être utilisées en tant qu'options pour la copie en bloc de données dans une table.<br /><br /> **ORDER**(*column*[**ASC** &#124; **DESC**][,...*n*]) : ordre de tri des données dans le fichier de données. Les performances de la copie en bloc peuvent être améliorées si le fichier de données à charger est trié conformément à l'index cluster de la table.<br /><br /> **ROWS_PER_BATCH** = *bb* : nombre de lignes de données par lot (*bb*). Le serveur optimise le chargement en masse en fonction de la valeur de *bb*. Par défaut, **ROWS_PER_BATCH** est inconnu.<br /><br /> **KILOBYTES_PER_BATCH** = *cc* : nombre de kilo-octets (Ko) de données par lot (cc). Par défaut, **KILOBYTES_PER_BATCH** est inconnu.<br /><br /> **TABLOCK** : un verrou de niveau table est acquis pour la durée de l’opération de copie en bloc. Cette option augmente sensiblement les performances car le maintien d'un verrou uniquement pour la durée de la seule opération de copie en bloc réduit la contention de verrou sur la table. Une table peut être chargée simultanément par plusieurs clients si elle ne comporte pas d’index et si **TABLOCK** est spécifié. Par défaut, le comportement de verrouillage est déterminé par l’option de table **table lock on bulk load**.<br /><br /> **CHECK_CONSTRAINTS** : toutes les contraintes sur *table_name* sont vérifiées pendant l’opération de copie en bloc. Par défaut, les contraintes sont ignorées.<br /><br /> **FIRE_TRIGGER** : [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise le contrôle de version de ligne pour les déclencheurs et stocke les versions des lignes dans le magasin de versions de la base de données **tempdb**. Par conséquent, les optimisations de journalisation en bloc sont disponibles même lorsque les déclencheurs sont activés. Avant de procéder à l’importation en bloc d’un lot comptant un nombre important de lignes avec les déclencheurs activés, vous devrez peut-être augmenter la taille de **tempdb**.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Méthode setNCharacterStream à l’objet de lecteur - long | Microsoft Docs
+title: Méthode setNCharacterStream pour lire l’objet-long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: af9a1ba8-7980-43fa-88e5-14f6cc5e897c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 770717283a7a24d91218a2da0eebc0382072548e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 73bd7fe7d3da0745f66e0a6d883d7024a318c95f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800476"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973888"
 ---
 # <a name="setncharacterstream-method-javalangstring-javaioreader-long"></a>Méthode setNCharacterStream (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,23 +34,23 @@ public final void setNCharacterStream(java.lang.String parameterName,
 #### <a name="parameters"></a>Paramètres  
  *parameterName*  
   
- Un **chaîne** qui indique le nom du paramètre.  
+ **Chaîne** qui indique le nom du paramètre.  
   
  *value*  
   
- Un objet de lecteur.  
+ Objet lecteur.  
   
  *length*  
   
- Un **long** qui indique le nombre de caractères dans le flux.  
+ **Valeur de type long** qui indique le nombre de caractères dans le flux.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setNCharacterStream est spécifiée par la méthode setNCharacterStream dans l’interface java.sql.CallableStatement.  
+ Cette méthode setNCharacterStream est spécifiée par la méthode setNCharacterStream dans l’interface java. Sql. CallableStatement.  
   
- Cette méthode doit être utilisée pour **NCHAR**, **NVARCHAR**, **NTEXT**, et **XML** types de données.  
+ Cette méthode doit être utilisée pour les types de données **nchar**, **nvarchar**, **ntext**et **XML** .  
   
  Si la longueur du flux diffère de ce qui est spécifié dans le paramètre *length*, le pilote JDBC lève une exception lors de la mise à jour ou de l’insertion de la ligne.  
   

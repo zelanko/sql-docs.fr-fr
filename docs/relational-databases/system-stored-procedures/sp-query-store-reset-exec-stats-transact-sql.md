@@ -21,17 +21,17 @@ ms.assetid: 899df1ff-e871-44df-9361-f3b87ac3ea31
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b865a0252b4a5f817d879dc2fd3318cfc11ecdd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f20c4740868e0256ceb88c604b5a3eb021d367e5
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990409"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418926"
 ---
 # <a name="spquerystoreresetexecstats-transact-sql"></a>sp_query_store_reset_exec_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Efface les statistiques d’exécution pour un plan de requête spécifique à partir du magasin de requête.  
+  Efface les statistiques d’exécution d’un plan de requête spécifique du magasin de requêtes.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @plan_id = ] plan_id` Est l’id du plan de requête à effacer. *plan_id* est un **bigint**, sans valeur par défaut.  
+`[ @plan_id = ] plan_id`ID du plan de requête à effacer. *plan_id* est de type **bigint**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -51,7 +51,7 @@ sp_query_store_reset_exec_stats [ @plan_id = ] plan_id [;]
 ## <a name="remarks"></a>Notes  
   
 ## <a name="permissions"></a>Autorisations  
- Nécessite le **EXECUTE** autorisation sur la base de données, et **supprimer** autorisation sur les affichages catalogue du magasin de requête.  
+ Nécessite l’autorisation **ALTER** sur la base de données. 
   
 ## <a name="examples"></a>Exemples  
  L’exemple suivant retourne des informations sur les requêtes dans le magasin de requêtes.  
@@ -65,7 +65,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- Après avoir identifié le plan_id que vous souhaitez effacer les statistiques, utilisez l’exemple suivant pour supprimer les statistiques d’exécution pour un plan de requête spécifique. Cet exemple supprime les statistiques d’exécution pour le nombre de plan 3.  
+ Après avoir identifié l’plan_id dont vous souhaitez effacer les statistiques, utilisez l’exemple suivant pour supprimer les statistiques d’exécution d’un plan de requête spécifique. Cet exemple supprime les statistiques d’exécution du plan numéro 3.  
   
 ```  
 EXEC sp_query_store_reset_exec_stats 3;  
