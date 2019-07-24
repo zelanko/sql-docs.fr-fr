@@ -1,29 +1,29 @@
 ---
-title: Quel est le déploiement d’applications ?
+title: Qu’est-ce que le déploiement d’applications?
 titleSuffix: SQL Server 2019 big data clusters
-description: Cet article décrit le déploiement d’applications sur un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
+description: Cet article décrit le déploiement d’applications sur un cluster SQL Server 2019 Big Data (version préliminaire).
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 03/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 43d65ce9b9335d22b453114139f7032613ac5359
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8cc44862af21c54bdbd0e4adbb35db912c3f7c9
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958825"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419409"
 ---
-# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>Qu’est le déploiement d’applications sur un cluster de données volumineuses de SQL Server 2019 ?
+# <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>Qu’est-ce que le déploiement d’application sur un cluster SQL Server 2019 Big Data?
 
-Déploiement d’applications permet le déploiement d’applications sur le cluster de données volumineuses en fournissant des interfaces pour créer, gérer et exécuter des applications. Les applications déployées sur le cluster de données volumineuses bénéficient de la puissance de calcul du cluster et peuvent accéder aux données qui sont disponibles sur le cluster. Cela augmente l’évolutivité et les performances des applications, tout en gérant les applications où les données résident.
-Les sections suivantes décrivent l’architecture et les fonctionnalités de déploiement de l’Application.
+Le déploiement d’applications permet le déploiement d’applications sur le cluster Big Data en fournissant des interfaces pour créer, gérer et exécuter des applications. Les applications déployées sur le cluster Big Data bénéficient de la puissance de calcul du cluster et peuvent accéder aux données disponibles sur le cluster. Cela augmente l’évolutivité et les performances des applications, tout en gérant les applications où résident les données.
+Les sections suivantes décrivent l’architecture et les fonctionnalités du déploiement d’applications.
 
-## <a name="application-deployment-architecture"></a>Architecture de déploiement d’application
+## <a name="application-deployment-architecture"></a>Architecture du déploiement d’applications
 
-Déploiement de l’application se compose d’un contrôleur et des gestionnaires de runtime d’application. Lors de la création d’une application, un fichier de spécification (`spec.yaml`) est fourni. Cela `spec.yaml` fichier contient tout ce que le contrôleur a besoin pour déployer correctement l’application. Voici un exemple du contenu pour `spec.yaml`:
+Le déploiement d’applications se compose d’un contrôleur et de gestionnaires d’exécution d’application. Lors de la création d’une application, un`spec.yaml`fichier de spécification () est fourni. Ce `spec.yaml` fichier contient tout ce que le contrôleur a besoin de savoir pour déployer correctement l’application. Voici un exemple du contenu de `spec.yaml`:
 
 ```yaml
 #spec.yaml
@@ -41,32 +41,32 @@ output: #output parameter the app expects and the type
   result: int
 ```
 
-Inspecte le contrôleur le `runtime` spécifié dans le `spec.yaml` de fichiers et appelle le Gestionnaire de runtime correspondant. Le Gestionnaire de runtime crée l’application. Tout d’abord, un Kubernetes ReplicaSet est créé contenant un ou plusieurs pods, chacun d’eux contient l’application à déployer. Le nombre de pods est défini par le `replicas` paramètre défini le `spec.yaml` fichier pour l’application. Chaque bloc peut avoir un des pools plus. Le nombre de pools est défini par le `poolsize` paramètre défini le `spec.yaml` fichier.
+Le contrôleur inspecte le `runtime` spécifié dans le `spec.yaml` fichier et appelle le gestionnaire d’exécution correspondant. Le gestionnaire d’exécution crée l’application. Tout d’abord, un ReplicaSet Kubernetes est créé contenant un ou plusieurs Pod, chacun contenant l’application à déployer. Le nombre de Pod est défini par le `replicas` jeu de paramètres dans `spec.yaml` le fichier de l’application. Chaque Pod peut avoir un ou plusieurs pools. Le nombre de pools est défini par `poolsize` le jeu de paramètres `spec.yaml` dans le fichier.
 
-Ces paramètres ont un impact sur le nombre de demandes que le déploiement peut gérer en parallèle. Le nombre maximal de demandes à un moment donné est égal à `replicas` fois `poolsize`. Si vous avez 5 réplicas et 2 pools par réplica le déploiement peut gérer 10 requêtes en parallèle. Voir l’image ci-dessous pour obtenir une représentation graphique de `replicas` et `poolsize`:
+Ces paramètres ont un impact sur la quantité de requêtes que le déploiement peut traiter en parallèle. Le nombre maximal de demandes à un moment donné est égal à `replicas` plusieurs fois. `poolsize` Si vous avez 5 réplicas et 2 pools par réplica, le déploiement peut gérer 10 demandes en parallèle. Reportez-vous à l’image ci `replicas` - `poolsize`dessous pour obtenir une représentation graphique de et:
 
-![Taiile_pool et réplicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
+![Regrouper et réplicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
-Après le ReplicaSet a été créé et les pods ont démarré, un travail cron est créé si un `schedule` a été défini dans le `spec.yaml` fichier. Enfin, un Kubernetes Service est créé qui peut être utilisé pour gérer et exécuter l’application (voir ci-dessous).
+Une fois le ReplicaSet créé et les Pod démarrés, un travail cron est créé si un `schedule` a été défini dans le `spec.yaml` fichier. Enfin, un service Kubernetes est créé et peut être utilisé pour gérer et exécuter l’application (voir ci-dessous).
 
-Quand une application est exécutée, le service Kubernetes pour les proxys d’application les demandes à un réplica et renvoie les résultats.
+Lorsqu’une application est exécutée, le service Kubernetes pour l’application transmet les demandes à un réplica et retourne les résultats.
 
-## <a name="how-to-work-with-application-deployment"></a>Comment travailler avec le déploiement d’applications
+## <a name="how-to-work-with-application-deployment"></a>Comment utiliser le déploiement d’applications
 
-Les deux interfaces principales pour le déploiement d’Application sont : 
-- [Interface de ligne de commande `mssqlctl`](big-data-cluster-create-apps.md)
-- [Visual Studio Code et Azure Data Studio l’extension](app-deployment-extension.md)
+Les deux interfaces principales pour le déploiement d’applications sont les suivantes: 
+- [Interface de ligne de commande`azdata`](big-data-cluster-create-apps.md)
+- [Extension Visual Studio Code et Azure Data Studio](app-deployment-extension.md)
 
-Il est également possible pour une application doit être exécuté à l’aide d’un service web RESTful. Pour plus d’informations, consultez [consommer des applications sur des clusters de données volumineuses](big-data-cluster-consume-apps.md).
+Une application peut également être exécutée à l’aide d’un service Web RESTful. Pour plus d’informations, consultez [utiliser des applications sur des clusters Big Data](big-data-cluster-consume-apps.md).
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur la façon de créer et exécuter des applications sur des clusters de données volumineuses de SQL Server, consultez les rubriques suivantes :
+Pour en savoir plus sur la création et l’exécution d’applications sur SQL Server Clusters Big Data, consultez les rubriques suivantes:
 
-- [Déployer des applications à l’aide de mssqlctl](big-data-cluster-create-apps.md)
-- [Déployer des applications à l’aide de l’extension de l’application déployée](app-deployment-extension.md)
-- [Utiliser les applications sur les clusters de données volumineuses](big-data-cluster-consume-apps.md)
+- [Déployer des applications à l’aide de azdata](big-data-cluster-create-apps.md)
+- [Déployer des applications à l’aide de l’extension App deploy](app-deployment-extension.md)
+- [Utiliser des applications sur des clusters Big Data](big-data-cluster-consume-apps.md)
 
-Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez la présentation suivante :
+Pour en savoir plus sur les clusters Big Data SQL Server, consultez la vue d’ensemble suivante:
 
-- [Quelles sont les clusters SQL Server 2019 big data ?](big-data-cluster-overview.md)
+- [Que sont les clusters SQL Server 2019 Big Data?](big-data-cluster-overview.md)

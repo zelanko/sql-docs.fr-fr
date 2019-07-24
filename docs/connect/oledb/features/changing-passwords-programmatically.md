@@ -1,6 +1,6 @@
 ---
 title: Modification des mots de passe par programmation | Microsoft Docs
-description: Modification des mots de passe par programmation à l’aide de OLE DB Driver pour SQL Server
+description: Modification des mots de passe par programme à l’aide d’OLE DB pilote pour SQL Server
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,20 +20,19 @@ helpviewer_keywords:
 - modifying passwords
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fdf5afb7cc9eea9beed43726d3c107c9fde9b6e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989134"
 ---
 # <a name="changing-passwords-programmatically"></a>Modification des mots de passe par programme
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], lorsque le mot de passe d'un utilisateur expirait, seul un administrateur pouvait le réinitialiser. À partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], OLE DB Driver pour SQL Server prend en charge la gestion d’expiration de mot de passe par programmation via le pilote OLE DB et via les modifications du **connexion à SQL Server** boîtes de dialogue.  
+  Avant [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], lorsque le mot de passe d'un utilisateur expirait, seul un administrateur pouvait le réinitialiser. À partir de, OLE DB pilote pour SQL Server prend en charge la gestion de l’expiration du mot de passe par programmation via OLE DB pilote et par le biais des modifications apportées aux boîtes de dialogue de **SQL Server connexion**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
   
 > [!NOTE]  
 >  Si possible, demandez aux utilisateurs de saisir leurs informations d'identification au moment de l'exécution et éviter de les stocker leurs références dans un format permanent. Si vous devez conserver les informations d’identification, chiffrez-les avec [l’API de chiffrement Win32](https://go.microsoft.com/fwlink/?LinkId=64532). Pour plus d’informations sur l’utilisation des mots de passe, consultez [Mots de passe forts](../../../relational-databases/security/strong-passwords.md).  

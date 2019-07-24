@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03931adbcd8de462f9562cc35083f080aabd7e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fe907a62279c819c227772d70008ee96d172e229
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127888"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialiser un abonnement transactionnel sans instantané
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47719937"
   
  Pour initialiser un abonnement avec une sauvegarde, vous devez d'abord activer l'option lorsque vous créez une publication, puis spécifier des valeurs pour plusieurs options lorsque vous créez un abonnement. Les publications peuvent être activées par le biais de l'Assistant Nouvelle publication ou par programme. Cependant, les valeurs requises pour les options d'abonnement ne peuvent être spécifiées que par programme.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] : [Activer l’initialisation avec une sauvegarde pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Activer l’initialisation avec une sauvegarde pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md)  
   
 -   Programmation Transact-SQL de la réplication : [Initialiser un abonnement transactionnel à partir d’une sauvegarde &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md)  
   
@@ -76,7 +75,7 @@ ms.locfileid: "47719937"
   
  Pour initialiser un abonnement avec une méthode de remplacement, consultez [Initialize a Subscription Manually](../../relational-databases/replication/initialize-a-subscription-manually.md).  
   
-## <a name="see-also"></a> Voir aussi  
- [Initialiser un abonnement](../../relational-databases/replication/initialize-a-subscription.md)  
+## <a name="see-also"></a>Voir aussi  
+ [Initialize a Subscription](../../relational-databases/replication/initialize-a-subscription.md)  
   
   

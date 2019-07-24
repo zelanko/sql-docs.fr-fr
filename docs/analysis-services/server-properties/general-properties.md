@@ -1,6 +1,6 @@
 ---
-title: Les propriétés générales Analysis Services | Microsoft Docs
-ms.date: 04/04/2019
+title: Analysis Services les propriétés générales | Microsoft Docs
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0d2a1fd8a83c4b181dfc182f5fb5630e29c9efb
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714686"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419519"
 ---
 # <a name="general-properties"></a>Propriétés générales
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur répertoriées dans les tableaux suivants. Cette rubrique décrit les propriétés de serveur qui se trouvent dans le fichier msmdsrv.ini et qui ne font pas l'objet d'une section spécifique, traitant par exemple de la sécurité, du réseau ou de ThreadPool. Pour plus d’informations sur les autres propriétés de serveur et sur la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
- **S’applique à :** Mode serveur multidimensionnel et tabulaire, sauf indication contraire  
+ Ces propriétés s’appliquent au mode serveur multidimensionnel et tabulaire, sauf indication contraire.  
   
 ## <a name="non-specific-category"></a>Catégorie non spécifique  
  **AdminTimeout**  
@@ -33,11 +33,11 @@ ms.locfileid: "62714686"
  Propriété de type chaîne qui spécifie dans une liste délimitée les dossiers qui peuvent être parcourus en enregistrant, en ouvrant, puis en recherchant les fichiers dans les boîtes de dialogue Analysis Services. Le compte de service Analysis Services doit disposer d'autorisations de lecture et d'écriture sur tous les dossiers que vous ajoutez à la liste.  
   
  **BackupDir**  
- Une propriété de chaîne qui définit le nom du répertoire où les fichiers de sauvegarde sont stockés par défaut, lorsqu’un chemin d’accès n’est pas spécifié dans le cadre de la commande Backup.  
+ Propriété de type chaîne qui identifie le nom du répertoire dans lequel les fichiers de sauvegarde sont stockés par défaut, dans le cas où aucun chemin d’accès n’est spécifié dans le cadre de la commande de sauvegarde.  
  
-**ClientCacheRefreshPolicy** s’applique à Azure Analysis Services uniquement. Remplace le **actualisation du cache planifiée** configuration pour tous les jeux de données Power BI. Tous les rapports de Live Connect observera le paramètre au niveau du serveur, quel que soit le paramètre de niveau de jeu de données, ou quel espace de travail qu’elles se trouvent sur.
+**ClientCacheRefreshPolicy** Pour les modèles tabulaires dans SSAS et Azure Analysis Services, cette propriété remplace le paramètre d' **actualisation du cache planifié** pour tous les jeux de données Power bi. Tous les rapports Live Connect observent le paramètre de niveau serveur, quel que soit le paramètre au niveau du jeu de données, ou l’espace de travail sur lequel ils se trouvent.
 
-La valeur par défaut de cette propriété est -1, ce qui permet à que tout le cache en arrière-plan actualise tel que spécifié dans l’actualisation du cache planifiée définition pour le jeu de données. Pour empêcher tout le cache en arrière-plan actualise, spécifiez zéro (0).
+La valeur par défaut de cette propriété est-1, ce qui permet l’actualisation de cache en arrière-plan comme spécifié dans le paramètre d’actualisation du cache planifié pour le jeu de données. Pour dissuader toutes les actualisations du cache en arrière-plan, spécifiez zéro (0).
 
   
  **CollationName**  
@@ -69,7 +69,7 @@ La valeur par défaut de cette propriété est -1, ce qui permet à que tout le 
  Propriété de type chaîne qui spécifie le nom du répertoire où les données sont stockées.  
   
  **DeploymentMode**  
- Détermine le contexte opérationnel d'une instance de serveur Analysis Services. Cette propriété est appelée « mode serveur » dans la documentation, les messages et les boîtes de dialogue. Cette propriété est configurée par le programme d'installation de SQL Server selon le mode serveur que vous avez sélectionné en installant Analysis Services. Cette propriété doit être considérée uniquement comme une propriété interne, toujours à l'aide de la valeur spécifiée par le programme d'installation.  
+ Détermine le contexte opérationnel d'une instance de serveur Analysis Services. Cette propriété est appelée «mode serveur» dans les boîtes de dialogue, les messages et la documentation. Cette propriété est configurée par le programme d'installation de SQL Server selon le mode serveur que vous avez sélectionné en installant Analysis Services. Cette propriété doit être considérée uniquement comme une propriété interne, toujours à l'aide de la valeur spécifiée par le programme d'installation.  
   
  Les valeurs valides pour cette propriété sont les suivantes :  
   

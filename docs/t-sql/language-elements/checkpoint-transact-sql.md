@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 3fc30986de5a7629771b05b7fd6df8dc12ea158b
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: d662eb333ae932370c09847319cb69a5deb4773e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950339"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ CHECKPOINT [ checkpoint_duration ]
 ### <a name="permissions"></a>Autorisations  
  Les autorisations de CHECKPOINT sont accordées par défaut aux membres du rôle serveur fixe **sysadmin** et aux membres des rôles de base de données fixes **db_owner** et **db_backupoperator** ; elles ne sont pas transférables.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md)   
  [Configurer l’option de configuration de serveur d’intervalle de récupération](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)   

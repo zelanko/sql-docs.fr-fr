@@ -1,108 +1,112 @@
 ---
-title: Quelles sont les clusters de données volumineuses ?
+title: Que sont les clusters Big Data?
 titleSuffix: SQL Server big data clusters
-description: En savoir plus sur les clusters de données volumineuses de SQL Server 2019 (version préliminaire) qui s’exécute sur Kubernetes et options de montée en puissance pour relationnelles et les données HDFS.
+description: En savoir plus sur les clusters SQL Server 2019 Big Data (version préliminaire) qui s’exécutent sur Kubernetes et fournissent des options de montée en charge pour les données relationnelles et HDFS.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 166fa1d5b736720b8bab7dff6a8ea56c63a702fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0beb4ea57ba6c2591e5b2c06a7775fc2d7e8b26c
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958853"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419499"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>Que sont les clusters de Big Data SQL Server ?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-En commençant par [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], clusters de données volumineuses de SQL Server que vous puissiez déployer des clusters SCALABLES de SQL Server, Spark et HDFS conteneurs s’exécutant sur Kubernetes. Ces composants sont en cours d’exécution côte à côte pour vous permettre de lire, écrire et traiter le big data à partir de Transact-SQL ou Spark, qui vous permet de facilement combiner et analyser vos données relationnelles de valeur élevée avec d’importants volumes de données volumineuses.
+À partir de, SQL Server Clusters Big Data vous permettent de déployer des clusters évolutifs de conteneurs SQL Server, Spark et HDFS s’exécutant sur Kubernetes. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Ces composants sont exécutés côte à côte pour vous permettre de lire, écrire et traiter des Big Data à partir de Transact-SQL ou Spark, ce qui vous permet de combiner et d’analyser facilement vos données relationnelles de grande valeur avec des Big Data de volume élevé.
 
-Pour plus d’informations sur les nouvelles fonctionnalités et les problèmes connus pour la version la plus récente, consultez le [notes de version](release-notes-big-data-cluster.md).
+Pour plus d’informations sur les nouvelles fonctionnalités et les problèmes connus pour la dernière version, consultez les [notes de publication](release-notes-big-data-cluster.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="scenarios"></a>Scénarios
 
-Clusters de données volumineuses de SQL Server offrent la flexibilité dans la façon dont vous interagissez avec vos données Big Data. Vous pouvez interroger des sources de données externes, le stockage de big data dans HDFS gérés par SQL Server, ou interroger des données à partir de plusieurs sources de données externes via le cluster. Vous pouvez ensuite utiliser les données pour l’intelligence artificielle, apprentissage automatique et autres tâches d’analyse. Les sections suivantes fournissent plus d’informations sur ces scénarios.
+SQL Server les clusters Big Data offrent une certaine flexibilité dans la façon dont vous interagissez avec votre Big Data. Vous pouvez interroger des sources de données externes, stocker des Big Data dans HDFS géré par SQL Server ou interroger des données à partir de plusieurs sources de données externes via le cluster. Vous pouvez ensuite utiliser les données de l’intelligence artificielle, du Machine Learning et d’autres tâches d’analyse. Les sections suivantes fournissent plus d’informations sur ces scénarios.
 
 ### <a name="data-virtualization"></a>Virtualisation de données
 
-En tirant parti de [SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md), clusters de données volumineuses de SQL Server peuvent interroger les sources de données externes sans déplacement ou copie des données. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] introduit de nouveaux connecteurs à des sources de données.
+En tirant parti de [SQL Server Polybase](../relational-databases/polybase/polybase-guide.md), SQL Server les clusters Big Data peuvent interroger des sources de données externes sans déplacer ou copier les données. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]introduit de nouveaux connecteurs dans les sources de données.
 
 ![Virtualisation de données](media/big-data-cluster-overview/data-virtualization.png)
 
-### <a name="data-lake"></a>Lac de données
+### <a name="data-lake"></a>Data Lake
 
-Un cluster de données volumineux de SQL Server inclut un HDFS évolutif *pool de stockage*. Cela peut être utilisé pour stocker des données volumineuses, potentiellement provenir de plusieurs sources externes. Une fois que les données volumineuses sont stockées dans HDFS dans le cluster de données volumineux, vous pouvez analyser et interroger les données et les associer à vos données relationnelles.
+Un cluster SQL Server Big Data comprend un pool de *stockage*HDFS évolutif. Cela peut être utilisé pour stocker des Big Data, potentiellement ingérées à partir de plusieurs sources externes. Une fois que le Big Data est stocké dans HDFS dans le cluster Big Data, vous pouvez analyser et interroger les données et les combiner avec vos données relationnelles.
 
-![Lac de données](media/big-data-cluster-overview/data-lake.png)
+![Data Lake](media/big-data-cluster-overview/data-lake.png)
 
-### <a name="scale-out-data-mart"></a>Montée en puissance Datamart
+### <a name="scale-out-data-mart"></a>Mini-Data Warehouse avec montée en puissance parallèle
 
-Les clusters de données volumineuses de SQL Server fournissent calcul de montée en puissance et de stockage pour améliorer les performances de l’analyse des données. Données à partir de différentes sources peuvent être ingérées et réparties sur *pool de données* nœuds en tant que cache pour une analyse plus approfondie.
+Les clusters de SQL Server Big Data fournissent un calcul et un stockage avec montée en puissance parallèle pour améliorer les performances d’analyse des données. Les données provenant de diverses sources peuvent être ingérées et réparties entre les nœuds du *pool de données* en tant que cache pour une analyse plus poussée.
 
-![mini-Data Warehouse](media/big-data-cluster-overview/data-mart.png)
+![Mini-Data Warehouse](media/big-data-cluster-overview/data-mart.png)
 
-### <a name="integrated-ai-and-machine-learning"></a>Intelligence artificielle intégrée et l’apprentissage
+### <a name="integrated-ai-and-machine-learning"></a>IA et Machine Learning intégrés
 
-Les clusters de données volumineuses de SQL Server autorisent intelligence artificielle et tâches sur les données stockées dans des pools de stockage HDFS et les pools de données d’apprentissage. Vous pouvez utiliser Spark, ainsi que des outils d’intelligence artificielle intégrés dans SQL Server, à l’aide de R, Python, Scala ou Java.
+SQL Server les clusters Big Data activent les tâches AI et Machine Learning sur les données stockées dans les pools de stockage HDFS et les pools de données. Vous pouvez utiliser Spark ainsi que des outils AI intégrés dans SQL Server, à l’aide de R, Python, Scala ou Java.
 
-![Intelligence artificielle et ML](media/big-data-cluster-overview/ai-ml-spark.png)
+![IA et ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
 ### <a name="management-and-monitoring"></a>Gestion et surveillance
 
-Gestion et surveillance sont fournies via une combinaison d’outils de ligne de commande, les API, les portails et les vues de gestion dynamique.
+La gestion et la surveillance sont fournies par le biais d’une combinaison d’outils en ligne de commande, d’API, de portails et de vues de gestion dynamique.
 
-Vous pouvez utiliser Azure Data Studio pour effectuer diverses tâches sur le cluster de données volumineuses. Cette option est activée par la nouvelle **2019 Extension (version préliminaire) de SQL Server**. Cette extension fournit :
+Vous pouvez utiliser Azure Data Studio pour effectuer diverses tâches sur le cluster Big Data. Cette option est activée par la nouvelle **Extension SQL Server 2019 (version préliminaire)** . Cette extension fournit les éléments suivants:
 
 - Extraits de code intégrés pour les tâches de gestion courantes.
-- Possibilité de parcourir HDFS, télécharger des fichiers, afficher un aperçu des fichiers et créer des répertoires.
-- Possibilité de créer, ouvrir et exécuter les blocs-notes Jupyter compatibles.
-- Assistant de virtualisation des données pour simplifier la création de sources de données externes.
+- Possibilité de parcourir les HDFS, de télécharger des fichiers, de prévisualiser des fichiers et de créer des répertoires.
+- Possibilité de créer, d’ouvrir et d’exécuter des blocs-notes compatibles Jupyter.
+- Assistant virtualisation des données pour simplifier la création de sources de données externes.
 
-## <a id="architecture"></a> Architecture
+## <a id="architecture"></a>SOA
 
-Un cluster de données volumineux de SQL Server est un cluster de conteneurs Linux orchestrés par [Kubernetes](https://kubernetes.io/docs/concepts/).
+Un cluster SQL Server Big Data est un cluster de conteneurs Linux orchestrés par [Kubernetes](https://kubernetes.io/docs/concepts/).
 
-### <a name="kubernetes-concepts"></a>Concepts de Kubernetes
+### <a name="kubernetes-concepts"></a>Concepts Kubernetes
 
-Kubernetes est un orchestrateur de conteneur open source, ce qui peut mettre à l’échelle des déploiements de conteneurs en fonction de besoins. Le tableau suivant définit certains termes Kubernetes important :
+Kubernetes est un conteneur d’Orchestrator Open source, qui peut mettre à l’échelle des déploiements de conteneurs en fonction des besoins. Le tableau suivant définit une terminologie importante pour les Kubernetes:
 
 |||
 |:--|:--|
-| **Cluster** | Un cluster Kubernetes est un ensemble d’ordinateurs, appelés nœuds. Un nœud de contrôle du cluster et il est le nœud principal ; les nœuds restants sont des nœuds de travail. Le maître de Kubernetes est chargé de distribuer le travail entre les workers et pour surveiller l’intégrité du cluster. |
-| **Nœud** | Un nœud exécute des applications en conteneur. Il peut être un ordinateur physique ou une machine virtuelle. Un cluster Kubernetes peut contenir un mélange de nœuds de machine virtuelle et de la machine physiques. |
-| **Pod** | Un pod est l’unité atomique de déploiement de Kubernetes. Un pod est un groupe logique d’un ou plusieurs conteneurs- et associé les ressources nécessaires pour exécuter une application. Chaque pod s’exécute sur un nœud ; un nœud peut exécuter une ou plusieurs pods. Le maître de Kubernetes affecte automatiquement des pods aux nœuds du cluster. |
+| **Cluster** | Un cluster Kubernetes est un ensemble d’ordinateurs, appelés nœuds. Un nœud contrôle le cluster et est désigné comme nœud principal; les nœuds restants sont des nœuds Worker. Le maître Kubernetes est chargé de la distribution du travail entre les Workers et de la surveillance de l’intégrité du cluster. |
+| **Nœud** | Un nœud exécute des applications en conteneur. Il peut s’agir d’un ordinateur physique ou d’une machine virtuelle. Un cluster Kubernetes peut contenir un mélange d’ordinateurs physiques et de nœuds de machines virtuelles. |
+| **Pod** | Une Pod est l’unité de déploiement atomique de Kubernetes. Un Pod est un groupe logique d’un ou de plusieurs conteneurs, et les ressources associées, nécessaires pour exécuter une application. Chaque POD s’exécute sur un nœud; un nœud peut exécuter un ou plusieurs pod. Le maître Kubernetes affecte automatiquement des Pod aux nœuds du cluster. |
 | &nbsp; ||
 
-Dans les clusters de données volumineuses de SQL Server, Kubernetes est responsable de l’état des clusters de données volumineuses de SQL Server ; Kubernetes génère et configure les nœuds de cluster, affecte des pods à nœuds et surveille l’intégrité du cluster.
+Dans SQL Server Clusters Big Data, Kubernetes est responsable de l’état des clusters Big Data SQL Server. Kubernetes crée et configure les nœuds de cluster, assigne des Pod aux nœuds et analyse l’intégrité du cluster.
 
-### <a name="big-data-clusters-architecture"></a>architecture de clusters Big data
+### <a name="big-data-clusters-architecture"></a>Architecture des clusters Big Data
 
-Nœuds du cluster sont organisées en trois plans logiques : le plan de contrôle, le plan de calcul et le plan de données. Chaque plan a différentes responsabilités dans le cluster. Tous les nœuds Kubernetes dans un cluster de données volumineux de SQL Server héberge pods pour les composants au moins un plan.
+Le diagramme suivant montre les composants d’un cluster Big Data pour SQL Server.
 
-![Vue d’ensemble de l’architecture](media/big-data-cluster-overview/architecture-diagram-planes.png)
+![Vue d’ensemble de l’architecture](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> Plan de contrôle
+### <a id="controlplane"></a>SideWinder
 
-Le plan de contrôle fournit la gestion et la sécurité pour le cluster. Il contient le serveur maître de Kubernetes, le *instance principale de SQL Server*et d’autres services de niveau de cluster telles que le Metastore Hive et le pilote Spark.
+Le contrôleur assure la gestion et la sécurité du cluster. Il contient le service cntrol, le magasin de configuration et d’autres services de niveau cluster tels que Kibana, Grafana et la recherche élastique.
 
-### <a id="computeplane"></a> Plan de calcul
+### <a id="computeplane"></a>Pool de calcul
 
-Le plan de calcul fournit des ressources de calcul au cluster. Il contient des nœuds exécutant SQL Server sur Linux pods. Le nombre de pods dans le plan de calcul est divisées en *pools de calcul* pour spécifique des tâches de traitement. Un pool de calcul peut agir comme un [PolyBase](../relational-databases/polybase/polybase-guide.md) groupe de scale-out pour les requêtes distribuées sur différentes données sources, tels que HDFS, Oracle, MongoDB ou Teradata.
+Le pool de calcul fournit des ressources de calcul au cluster. Il contient des nœuds exécutant des blocs de SQL Server sur Linux. Les gousses du pool de calcul sont divisées en *instances de calcul SQL* pour des tâches de traitement spécifiques. 
 
-### <a id="dataplane"></a> Plan de données
+### <a id="dataplane"></a>Pool de données
 
-Le plan de données est utilisé pour la persistance des données et la mise en cache. Il contient le pool de données SQL et le pool de stockage.  Le pool de données SQL se compose d’un ou plusieurs pods exécutant SQL Server sur Linux. Il est utilisé pour recevoir les données à partir de requêtes SQL ou de travaux Spark. Données volumineuses de SQL Server cluster mini-Data Warehouses sont conservés dans le pool de données des données. Le pool de stockage se compose de pods de pool de stockage constitués de SQL Server sur Linux, Spark et HDFS. Tous les nœuds de stockage dans un cluster de données volumineux de SQL Server sont membres d’un cluster HDFS.
+Le pool de données est utilisé pour la persistance et la mise en cache des données. Le pool de données est constitué d’un ou plusieurs pod en cours d’exécution SQL Server sur Linux. Il est utilisé pour ingérer des données à partir de requêtes SQL ou de travaux Spark. SQL Server Big Data les mini-Data Warehouses de cluster sont conservés dans le pool de données. 
+
+### <a name="storage-pool"></a>Pool de stockage
+
+Le pool de stockage est constitué de modules de pool de stockage constitués de SQL Server sur Linux, Spark et HDFS. Tous les nœuds de stockage d’un cluster SQL Server Big Data sont membres d’un cluster HDFS.
 
 > [!TIP]
-> Pour obtenir une présentation détaillée dans l’architecture de cluster big data et l’installation, consultez [atelier : Architecture de clusters de données volumineuses de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
+> Pour une analyse approfondie de l’architecture et de l’installation de Big Data cluster [, consultez l’atelier: Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)des clusters de Big Data Microsoft SQL Server.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Clusters de données volumineuses de SQL Server est disponible en version préliminaire publique limitée par le biais du programme d’Adoption anticipée de SQL Server 2019. Pour demander l’accès, vous devez inscrire [ici](https://aka.ms/eapsignup)et spécifiez votre intérêt pour essayer les clusters de données volumineuses. Microsoft trier toutes les demandes et répondre dès que possible.
+SQL Server Clusters Big Data est tout d’abord disponible en version préliminaire publique limitée par le biais du programme d’adoption précoce de SQL Server 2019. Pour demander l’accès, inscrivez-vous [ici](https://aka.ms/eapsignup)et spécifiez votre intérêt pour essayer Big Data clusters. Microsoft triera toutes les demandes et répondra dès que possible.

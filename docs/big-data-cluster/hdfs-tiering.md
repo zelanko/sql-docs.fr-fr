@@ -1,75 +1,79 @@
 ---
 title: Configurer la hiérarchisation HDFS
 titleSuffix: SQL Server big data clusters
-description: Cet article explique comment configurer HDFS la hiérarchisation pour monter un système de fichiers externe Azure Data Lake Storage dans HDFS sur un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
+description: Cet article explique comment configurer la hiérarchisation HDFS pour monter un système de fichiers Azure Data Lake Storage externe dans HDFS sur un cluster SQL Server 2019 Big Data (version préliminaire).
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 04/23/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0397b0a27b98bb43a7513e0552124bba0972dfdf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17eedf9f0797a0adb5eda6ca8ee090fc762e1491
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958317"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419376"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurer HDFS hiérarchisation sur les clusters de données volumineuses de SQL Server
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurer la hiérarchisation HDFS sur les clusters Big Data SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-La hiérarchisation HDFS fournit la capacité à monter externe, le système de fichiers compatible HDFS dans HDFS. Cet article explique comment configurer HDFS réduits pour les clusters de données volumineuses de SQL Server 2019 (version préliminaire). À ce stade, nous prenons en charge de connexion à Azure Data Lake Storage Gen2 et Amazon S3. 
+La hiérarchisation HDFS offre la possibilité de monter un système de fichiers externe et compatible HDFS dans HDFS. Cet article explique comment configurer la hiérarchisation HDFS pour les clusters SQL Server 2019 Big Data (version préliminaire). À ce stade, nous prenons en charge la connexion à Azure Data Lake Storage Gen2 et Amazon S3. 
 
 ## <a name="hdfs-tiering-overview"></a>Vue d’ensemble de la hiérarchisation HDFS
 
-Avec une hiérarchisation, les applications peuvent accéder en toute transparence les données dans un large éventail de magasins externes comme si les données résident dans le stockage HDFS local. Le montage est une opération de métadonnées, où les métadonnées qui décrivent l’espace de noms sur le système de fichiers externe sont copiée dans votre stockage HDFS local. Ces métadonnées incluent des informations sur les répertoires externes et les fichiers, ainsi que leurs autorisations et les ACL. Les données correspondantes sont uniquement copié à la demande, lorsque les données lui-même sont accessible via par exemple une requête. Les données de système de fichiers externe sont maintenant accessible à partir du cluster de données volumineuses de SQL Server. Vous pouvez exécuter Spark travaux et des requêtes SQL sur ces données dans la même façon que les exécuter sur toutes les données locales stockées dans HDFS sur le cluster.
+Avec la hiérarchisation, les applications peuvent accéder en toute transparence aux données d’un grand nombre de magasins externes comme si les données se trouvent dans le HDFS local. Le montage est une opération de métadonnées, où les métadonnées qui décrivent l’espace de noms sur le système de fichiers externe sont copiées sur votre HDFS local. Ces métadonnées incluent des informations sur les répertoires et les fichiers externes, ainsi que leurs autorisations et listes de contrôle d’accès. Les données correspondantes sont copiées uniquement à la demande, lors de l’accès aux données par l’intermédiaire d’un exemple de requête. Vous pouvez désormais accéder aux données du système de fichiers externe à partir du cluster SQL Server Big Data. Vous pouvez exécuter des travaux Spark et des requêtes SQL sur ces données de la même façon que vous les exécutez sur toutes les données locales stockées dans HDFS sur le cluster.
 
 ### <a name="caching"></a>Mise en cache
-Aujourd'hui, par défaut, 1 % du stockage HDFS total est réservée pour la mise en cache de données montés. La mise en cache est un paramètre global entre les montages.
+Aujourd’hui, par défaut, 1% du stockage HDFS total sera réservé à la mise en cache des données montées. La mise en cache est un paramètre global sur les montages.
 
 > [!NOTE]
-> HDFS la hiérarchisation est une fonctionnalité développée par Microsoft, et une version antérieure de celui-ci a été publiée dans le cadre de la distribution d’Apache Hadoop 3.1. Pour plus d’informations, consultez [ https://issues.apache.org/jira/browse/HDFS-9806 ](https://issues.apache.org/jira/browse/HDFS-9806) pour plus d’informations.
+> La hiérarchisation HDFS est une fonctionnalité développée par Microsoft, et une version antérieure de celle-ci a été publiée dans le cadre de la distribution de Apache Hadoop 3,1. Pour plus d’informations, [https://issues.apache.org/jira/browse/HDFS-9806](https://issues.apache.org/jira/browse/HDFS-9806) consultez pour plus d’informations.
 
-Les sections suivantes fournissent un exemple de configuration HDFS la hiérarchisation avec une source de données Azure Data Lake Storage Gen2.
+Les sections suivantes fournissent un exemple de configuration de la hiérarchisation HDFS avec une source de données Azure Data Lake Storage Gen2.
+
+## <a name="refresh"></a>Actualiser
+
+La hiérarchisation HDFS prend en charge l’actualisation. Actualisez un montage existant pour la dernière capture instantanée des données distantes.
 
 ## <a name="prerequisites"></a>Prérequis
 
-- [Cluster de données volumineux déployé](deployment-guidance.md)
-- [Outils de données volumineuses](deploy-big-data-tools.md)
-  - **mssqlctl**
+- [Cluster Big Data déployé](deployment-guidance.md)
+- [Outils Big Data](deploy-big-data-tools.md)
+  - **azdata**
   - **kubectl**
 
 ## <a name="mounting-instructions"></a>Instructions de montage
 
-Nous prenons en charge la connexion à Azure Data Lake Storage Gen2 et Amazon S3. Vous trouverez des instructions sur la procédure de montage par rapport à ces types de stockage dans les articles suivants :
+Nous prenons en charge la connexion à Azure Data Lake Storage Gen2 et Amazon S3. Vous trouverez des instructions sur la façon de procéder à un montage sur ces types de stockage dans les articles suivants:
 
-- [Comment Gen2 ADLS de montage de fichiers HDFS la hiérarchisation d’un cluster de données volumineuses](hdfs-tiering-mount-adlsgen2.md)
-- [Comment S3 de montage de fichiers HDFS la hiérarchisation d’un cluster de données volumineuses](hdfs-tiering-mount-s3.md)
+- [Comment monter ADLS Gen2 pour la hiérarchisation HDFS dans un cluster Big Data](hdfs-tiering-mount-adlsgen2.md)
+- [Comment monter la hiérarchisation S3 pour HDFS dans un cluster Big Data](hdfs-tiering-mount-s3.md)
 
 ## <a id="issues"></a> Problèmes connus et limitations
 
-La liste suivante fournit les problèmes connus et limitations actuelles lors de l’utilisation de HDFS la hiérarchisation dans les clusters de données volumineuses de SQL Server :
+La liste suivante répertorie les problèmes connus et les limitations actuelles lors de l’utilisation de la hiérarchisation HDFS dans SQL Server Big Data clusters:
 
-- Si le montage est bloqué dans un `CREATING` état pendant une longue période, il a probablement échoué. Dans ce cas, annuler la commande et supprimer le montage si nécessaire. Vérifiez que vos paramètres et les informations d’identification sont correctes avant de réessayer.
+- Si le montage est bloqué dans un `CREATING` État pendant une longue période, il a probablement échoué. Dans ce cas, annulez la commande et supprimez le montage si nécessaire. Vérifiez que vos paramètres et vos informations d’identification sont corrects avant de réessayer.
 
-- Montages ne peut pas être créés dans les répertoires existants.
+- Les montages ne peuvent pas être créés sur des répertoires existants.
 
-- Impossible de créer les montages au sein de montages existants.
+- Les montages ne peuvent pas être créés dans des montages existants.
 
-- Si un des ancêtres du point de montage n’existent pas, ils seront créés avec les autorisations par défaut la valeur r-xr-xr-x (555).
+- Si l’un des ancêtres du point de montage n’existe pas, ceux-ci sont créés avec les autorisations par défaut r-xr-xr-x (555).
 
-- La création de montage peut prendre un certain temps selon le nombre et la taille des fichiers qui est monté. Pendant ce processus, les fichiers sous le montage ne sont pas visibles aux utilisateurs. Pendant la création, le montage tous les fichiers seront ajoutés à un chemin d’accès temporaire, qui utilise par défaut `/_temporary/_mounts/<mount-location>`.
+- La création du montage peut prendre un certain temps en fonction du nombre et de la taille des fichiers montés. Pendant ce processus, les fichiers sous le montage ne sont pas visibles par les utilisateurs. Pendant la création du montage, tous les fichiers sont ajoutés à un chemin d’accès temporaire, qui prend `/_temporary/_mounts/<mount-location>`par défaut la valeur.
 
-- La commande de création de montage est asynchrone. Une fois que la commande est exécutée, l’état de montage peut être vérifié à comprendre l’état du montage.
+- La commande de création de montage est asynchrone. Une fois la commande exécutée, l’état du montage peut être vérifié pour comprendre l’état du montage.
 
-- Lorsque vous créez le montage, l’argument utilisé pour **--chemin de montage** est essentiellement un identificateur unique du montage. La même chaîne (y compris la « / » en fin de compte, le cas échéant) doit être utilisée dans les commandes suivantes.
+- Lors de la création du montage, l’argument utilisé pour **--Mount-Path** est essentiellement un identificateur unique du montage. La même chaîne (y compris le «/» dans la fin, le cas échéant) doit être utilisée dans les commandes suivantes.
 
-- Les montages sont en lecture seule. Impossible de créer les répertoires ou les fichiers sous un montage.
+- Les montages sont en lecture seule. Vous ne pouvez pas créer des répertoires ou des fichiers sous un montage.
 
-- Nous ne recommandons pas de fichiers et répertoires de montage qui peuvent changer. Une fois le montage est créé, les modifications ou les mises à jour vers l’emplacement distant seront répercutées dans le montage dans HDFS. Si les modifications se produisent dans l’emplacement distant, vous pouvez choisir de supprimer et recréer le montage pour refléter l’état mis à jour.
+- Nous vous déconseillons de monter des répertoires et des fichiers qui peuvent changer. Une fois le montage créé, les modifications ou mises à jour apportées à l’emplacement distant ne sont pas reflétées dans le montage dans HDFS. Si des modifications se produisent dans l’emplacement distant, vous pouvez choisir de supprimer et de recréer le montage pour refléter l’État mis à jour.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour plus d’informations sur les clusters de données volumineuses de SQL Server 2019, consultez [que sont les clusters de données volumineuses de SQL Server 2019 ?](big-data-cluster-overview.md).
+Pour plus d’informations sur les clusters SQL Server 2019 Big Data, consultez [que sont les clusters SQL Server 2019 Big Data?](big-data-cluster-overview.md).
