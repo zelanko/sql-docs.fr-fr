@@ -72,7 +72,7 @@ ms.locfileid: "66077463"
         > [!NOTE]  
         >  Les actions propriétaires ne sont pas retournées au serveur, sauf si l’application cliente restreint explicitement l’ensemble de lignes du schéma afin de retourner uniquement les actions qui correspondent au nom spécifié dans **Application**.  
   
-    -   Dans **contenu d’Action**, si vous utilisez le type d’URL, placez l’adresse Internet entre guillemets, par exemple, « http://www.adventure-works.com ».  
+    -   Dans **contenu d’Action**, si vous utilisez le type d’URL, placez l’adresse Internet entre guillemets, par exemple, "http://www.adventure-works.com".  
   
     -   Dans **Description**, tapez la description de l'action.  
   
