@@ -10,12 +10,12 @@ author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2185c40562e6ad7102ebde10cacb34c56d36f714
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5a3d66d95907c8ddbc4efd33fe58ee4ddbbb9423
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399971"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476003"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "67399971"
 Inscrit les extensions de langage externe dans la base de données à partir du flux d’octets ou du chemin de fichier spécifié. Cette instruction sert de mécanisme générique permettant à l’administrateur de base de données d’inscrire de nouvelles extensions de langage externe sur toute plateforme de système d’exploitation prise en charge par SQL Server. Pour plus d’informations, consultez [Extensions de langage](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 
 > [!NOTE]
-> Actuellement, **Java** est le seul langage externe pris en charge. **R** et **Python** étant des noms réservés, aucun langage externe ne peut être créé avec ces derniers. Pour plus d’informations sur l’utilisation de **R** et de **Python**, consultez [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/sql-server-machine-learning-services).
+> Actuellement, **Java** est le seul langage externe pris en charge. **R** et **Python** étant des noms réservés, aucun langage externe ne peut être créé avec ces derniers. Pour plus d’informations sur l’utilisation de **R** et de **Python**, consultez [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/).
 
 ## <a name="syntax"></a>Syntaxe
 
