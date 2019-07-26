@@ -75,7 +75,7 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: Déploiements hors connexion
               href: big-data-cluster/deploy-offline.md
-            - name: Cibles de déploiement
+            - name: Clusters Kubernetes
               items:
                 - name: Azure Kubernetes Service
                   href: big-data-cluster/deploy-on-aks.md
@@ -85,9 +85,11 @@
                   href: big-data-cluster/deploy-on-minikube.md
             - name: Scripts de déploiement
               items:
-                - name: Azure Kubernetes Service
+                - name: Script Python AKS
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
-                - name: Déployer avec des notebooks Azure Data Studio
+                - name: Script kubeadm mononœud
+                  href: big-data-cluster/deployment-script-single-node-kubeadm.md
+                - name: Déployer avec des notebooks
                   href: big-data-cluster/deploy-notebooks.md
     - name: Concepts
       items:
@@ -6670,6 +6672,8 @@
                   href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
         - name: Utilitaire SQL Server
           href: relational-databases/manage/sql-server-utility-features-and-tasks.md
+        - name: "API d’évaluation\_SQL"
+          href: sql-assessment-api/sql-assessment-api-overview.md
           items:
             - name: Considérations sur l’exécution de jeux d’éléments de collecte de l’utilitaire et non-utilitaire sur la même instance de SQL Server
               href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -7500,7 +7504,7 @@
 - name: Création de rapports et analytique
   items:
     - name: Analytique avancée et Machine Learning >>
-      href: advanced-analytics/index.md
+      href: advanced-analytics/
     - name: Analytics Platform System >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
