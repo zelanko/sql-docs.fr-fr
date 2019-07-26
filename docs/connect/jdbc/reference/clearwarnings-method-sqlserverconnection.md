@@ -1,5 +1,5 @@
 ---
-title: clearwarnings, méthode (SQLServerConnection) | Microsoft Docs
+title: Méthode clearWarnings (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cb911adf-4691-4e57-8fb3-bdd11bef7a2e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 47c3d8362f555f1663c98b6394ed887fbfcb91dd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f0ba102c6afe398ac2680595e4a21c249358ebe4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955758"
 ---
 # <a name="clearwarnings-method-sqlserverconnection"></a>clearWarnings, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void clearWarnings()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode clearWarnings est spécifiée par la méthode clearWarnings dans l’interface java.sql.Connection.  
+ Cette méthode clearWarnings, est spécifiée par la méthode clearWarnings, dans l’interface java. Sql. Connection.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

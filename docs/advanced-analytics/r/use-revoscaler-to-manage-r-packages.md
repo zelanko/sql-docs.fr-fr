@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: dafbe12c6304866dc36dde6fffec44da441e582f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: e5cd2f55559671b1e3f3d2004c4865b8bac8aa42
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344825"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469888"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>Comment utiliser les fonctions RevoScaleR pour rechercher ou installer des packages R sur SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 RevoScaleR 9.0.1 et versions ultérieures incluent des fonctions de gestion des packages R SQL Server un contexte de calcul. Ces fonctions peuvent être utilisées par des non-administrateurs distants pour installer des packages sur SQL Server sans accès direct au serveur.
 

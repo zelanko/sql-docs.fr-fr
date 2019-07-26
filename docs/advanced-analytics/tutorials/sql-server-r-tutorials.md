@@ -7,15 +7,15 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a020478cc59ceb1688f2c93f64c69685ab74972f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: cd03837644ec1cd4d818615bb8a17728c58a1f17
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345942"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470584"
 ---
 # <a name="sql-server-r-language-tutorials"></a>Didacticiels sur le langage R SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Cet article décrit les didacticiels de langage R pour l’analyse en base de données sur [SQL Server 2016 R services](../install/sql-r-services-windows-install.md) ou [SQL Server 2017 machine learning services](../install/sql-machine-learning-services-windows-install.md).
 

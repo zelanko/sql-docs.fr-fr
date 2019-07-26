@@ -7,15 +7,15 @@ ms.date: 12/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 043a27cc53c2dca955eb0bea1ed07433bc9183b8
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 8aea7e67f6560aa750e67601b5b6a41f7d68b47d
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345506"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470337"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Mappages de types de données entre Python et SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Pour les solutions Python qui s’exécutent sur la fonctionnalité d’intégration python dans SQL Server Machine Learning Services, passez en revue la liste des types de données non pris en charge, ainsi que les conversions de types de données qui peuvent être effectuées implicitement lorsque les données sont transmises entre Python et SQL Server.
 
@@ -40,7 +40,7 @@ Ce tableau répertorie les conversions implicites qui sont fournies. Les autres 
 |**bit**|`bool`|
 |**char**|`str`|
 |**float**|`float64`|
-|**Int**|`int32`|
+|**int**|`int32`|
 |**nchar**|`str`|
 |**nvarchar**|`str`|
 |**nvarchar(max)**|`str`|

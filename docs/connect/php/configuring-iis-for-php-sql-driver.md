@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d2dc75d3-9bf7-481c-85f2-8b6310b21461
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3c4fb297ed31c801c8326307ab5b7dfd4e694e2f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 150addd664870e5441c888b6bc357f8fb4d92b20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015159"
 ---
 # <a name="configuring-iis-for-the-microsoft-drivers-for-php-for-sql-server"></a>Configuration d’IIS pour les pilotes Microsoft pour PHP pour SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

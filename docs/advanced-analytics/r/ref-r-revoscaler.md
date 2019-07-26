@@ -7,16 +7,16 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 24c751051ff09fa80e738fc4723a00722b6b2e12
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: d73399522966a132b025244a1739afa01a194116
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344528"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470011"
 ---
 # <a name="revoscaler-r-library-in-sql-server"></a>RevoScaleR (bibliothèque R dans SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **RevoScaleR** est une bibliothèque de fonctions de science des données hautes performances de Microsoft. Les fonctions prennent en charge l’importation des données, la transformation des données, le résumé, la visualisation et l’analyse.
 

@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2045d6611d5f418a9ed102a1d776080973c08659
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f89e638b6b9486b17974a04af6076e6c7154fa88
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344971"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470349"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installer des modèles de Machine Learning pré-formés sur SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Cet article explique comment utiliser PowerShell pour ajouter des modèles de Machine Learning pré-formés gratuits pour l' *analyse des sentiments* et des *caractérisation d’images* à une instance SQL Server avec intégration de R ou python. Les modèles préformés sont générés par Microsoft et prêts à être utilisés, ajoutés à une instance en tant que tâche après l’installation. Pour plus d’informations sur ces modèles, consultez la section [ressources](#bkmk_resources) de cet article.
 

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 50846aa8-e4e5-4fc3-a638-0e5fa8b597be
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 73b9541904e833d47be1e458aa9ee4cddeb2aa6f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8d5a22e4fa9a3bd27da1862b0157324e3fbe9098
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977011"
 ---
 # <a name="iswritable-method-sqlserverresultsetmetadata"></a>Méthode isWritable (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,16 +37,16 @@ public boolean isWritable(int column)
 #### <a name="parameters"></a>Paramètres  
  *column*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
 ## <a name="return-value"></a>Valeur retournée  
- **true** si écritures réussira sur la colonne. Dans le cas contraire, la valeur est **false**.  
+ **true** si les écritures échouent sur la colonne. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode isWritable est spécifiée par la méthode isWritable dans l’interface java.sql.ResultSetMetaData.  
+ Cette méthode isWritable est spécifiée par la méthode isWritable dans l’interface java. Sql. ResultSetMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSetMetaData, méthodes](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

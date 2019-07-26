@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3f3f717f-ef07-4300-8286-1cfe73619a5e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3bd9fe65cd1632c2f631ea7a2573162ca7da0d43
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 147a54a1f8b3b647e64e95b22c60095c67f8ac35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983465"
 ---
 # <a name="getdrivermajorversion-method-sqlserverdatabasemetadata"></a>Méthode getDriverMajorVersion (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public int getDriverMajorVersion()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui indique la version majeure du pilote JDBC.  
+ **Entier** qui indique la version principale du pilote JDBC.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getDriverMajorVersion est spécifiée par la méthode getDriverMajorVersion dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getDriverMajorVersion est spécifiée par la méthode getDriverMajorVersion dans l’interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

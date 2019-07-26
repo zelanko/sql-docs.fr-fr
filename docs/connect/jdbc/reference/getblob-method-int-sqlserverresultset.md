@@ -1,5 +1,5 @@
 ---
-title: GetBlob, méthode (int) (SQLServerResultSet) | Microsoft Docs
+title: Méthode getBlob (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a00275cb-0299-4a21-a518-2640598a5bbf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ee489b856dc75bc2fbd09b843de77f42cefbef0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70f0faaa9babb4ddaa1512fd18cbbd1f5f34d337
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953601"
 ---
 # <a name="getblob-method-int-sqlserverresultset"></a>getBlob, méthode (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ public java.sql.Blob getBlob(int i)
 #### <a name="parameters"></a>Paramètres  
  *i*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet Blob.  
+ Objet BLOB.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

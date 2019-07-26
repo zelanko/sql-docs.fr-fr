@@ -1,5 +1,5 @@
 ---
-title: IsLast, méthode (SQLServerResultSet) | Microsoft Docs
+title: Méthode isLast (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85d4451f-6392-470e-ab21-78a495b45792
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dab78e0f48f2bb7debcf5d993dfb128388a42506
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 840d1183794a5d69ad108aef8eee9ef7aedffe4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977611"
 ---
 # <a name="islast-method-sqlserverresultset"></a>isLast, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean isLast()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- **true** si le curseur se trouve sur la dernière ligne. **false** si le curseur se trouve à un emplacement quelconque ou si le jeu de résultats ne contient aucune ligne.  
+ **true** si le curseur se trouve sur la dernière ligne. **false** si le curseur se trouve à une autre position ou si le jeu de résultats ne contient aucune ligne.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

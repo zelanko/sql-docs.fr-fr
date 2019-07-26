@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_resource_stats (base de données Azure SQL) | Microsoft Docs
+title: sys. DM _db_resource_stats (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/21/2019
 ms.service: sql-database
@@ -19,12 +19,12 @@ ms.assetid: 6e76b39f-236e-4bbf-b0b5-38be190d81e8
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d78e3aa24f6e73d624eec1f33fbebb62108bcc65
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 71efbc5abad150c599a674ea66409207fc2bf628
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68096293"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471085"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de données Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -35,34 +35,34 @@ ms.locfileid: "68096293"
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Heure UTC indiquant la fin de l'intervalle de rapports actuel.|  
 |avg_cpu_percent|**decimal (5,2)**|Utilisation moyenne du calcul en pourcentage de la limite de la couche de service.|  
-|avg_data_io_percent|**decimal (5,2)**|Utilisation d’e/s en pourcentage de la limite du niveau de service de données moyen.|  
-|avg_log_write_percent|**decimal (5,2)**|Les écritures de journaux de transaction moyen (en Mbits/s) en tant que pourcentage de la limite de niveau de service.|  
-|avg_memory_usage_percent|**decimal (5,2)**|Utilisation moyenne de la mémoire en pourcentage de la limite de la couche de service.<br /><br /> Cela inclut la mémoire utilisée pour les pages de pool de mémoire tampon et de stockage d’objets de l’OLTP en mémoire.|  
-|xtp_storage_percent|**decimal (5,2)**|Utilisation du stockage pour l’OLTP en mémoire en pourcentage de la limite du niveau de service (à la fin de la période de rapport). Cela inclut la mémoire utilisée pour le stockage des objets OLTP en mémoire suivants : tables optimisées en mémoire, les index et les variables de table. Il inclut également la mémoire utilisée pour le traitement des opérations ALTER TABLE.<br /><br /> Retourne 0 si l’OLTP en mémoire n’est pas utilisé dans la base de données.|  
-|max_worker_percent|**decimal (5,2)**|Nombre maximal d’ouvriers simultanés (demandes) en pourcentage de la limite de niveau de service de la base de données.|  
-|max_session_percent|**decimal (5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite de niveau de service de la base de données.|  
-|dtu_limit|**Int**|Base de données max DTU paramètre actuel de cette base de données pendant cet intervalle. Pour les bases de données à l’aide du modèle VCORE, cette colonne est NULL.|
-|cpu_limit|**decimal (5,2)**|Nombre de vCores pour cette base de données pendant cet intervalle. Pour les bases de données à l’aide du modèle dtu, cette colonne est NULL.|
-|avg_instance_cpu_percent|**decimal (5,2)**|Base de données l’utilisation du processeur en pourcentage moyen.|
-|avg_instance_memory_percent|**decimal (5,2)**|Utilisation moyenne de base de données de mémoire en pourcentage.|
+|avg_data_io_percent|**decimal (5,2)**|Utilisation moyenne des e/s de données en pourcentage de la limite du niveau de service.|  
+|avg_log_write_percent|**decimal (5,2)**|Moyenne des écritures du journal des transactions (en Mbits/s) en pourcentage de la limite du niveau de service.|  
+|avg_memory_usage_percent|**decimal (5,2)**|Utilisation moyenne de la mémoire en pourcentage de la limite de la couche de service.<br /><br /> Cela comprend la mémoire utilisée pour les pages du pool de mémoires tampons et le stockage des objets OLTP en mémoire.|  
+|xtp_storage_percent|**decimal (5,2)**|Utilisation du stockage pour l’OLTP en mémoire en pourcentage de la limite du niveau de service (à la fin de l’intervalle de création de rapports). Cela comprend la mémoire utilisée pour le stockage des objets OLTP en mémoire suivants: les tables optimisées en mémoire, les index et les variables de table. Il comprend également la mémoire utilisée pour le traitement des opérations ALTER TABLE.<br /><br /> Retourne 0 si l’OLTP en mémoire n’est pas utilisé dans la base de données.|  
+|max_worker_percent|**decimal (5,2)**|Nombre maximal de threads de travail simultanés (demandes) en pourcentage de la limite du niveau de service de la base de données.|  
+|max_session_percent|**decimal (5,2)**|Nombre maximal de sessions simultanées en pourcentage de la limite du niveau de service de la base de données.|  
+|dtu_limit|**int**|Paramètre DTU maximal de la base de données actuelle pour cette base de données au cours de cet intervalle. Pour les bases de données utilisant le modèle vCore, cette colonne a la valeur NULL.|
+|cpu_limit|**decimal (5,2)**|Nombre de vCores pour cette base de données au cours de cet intervalle. Pour les bases de données utilisant le modèle basé sur DTU, cette colonne a la valeur NULL.|
+|avg_instance_cpu_percent|**decimal (5,2)**|Utilisation moyenne du processeur de base de données en pourcentage du processus de base de données SQL.|
+|avg_instance_memory_percent|**decimal (5,2)**|Utilisation moyenne de la mémoire de la base de données en pourcentage du processus de base de données SQL.|
 |avg_login_rate_percent|**decimal (5,2)**|Identifié à titre d'information uniquement. Non pris en charge. La compatibilité future n'est pas garantie.|
-|replica_role|**int**|Représente le rôle du réplica en cours avec 0 comme principal, 1 en tant que base de données secondaire et 2 en tant que redirecteur (principal de géo-secondaire). Vous voyez « 1 », cas de connexion avec intention en lecture seule à toutes les bases de données secondaires. Si vous vous connectez à une base de données géo-secondaire sans spécifier l’intention en lecture seule, vous devez voir « 2 » (connexion au redirecteur).|
+|replica_role|**int**|Représente le rôle du réplica actuel avec 0 comme principal, 1 comme secondaire et 2 comme redirecteur (principal de géo-secondaire). La valeur «1» s’affiche lorsque vous êtes connecté avec l’intention de lecture seule pour tous les réplicas secondaires lisibles. Si vous vous connectez à une géo-secondaire sans spécifier d’intention en lecture seule, vous devez voir «2» (connexion au redirecteur).|
 |||
   
 > [!TIP]  
->  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [niveaux de Service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) et [capacités et limites de Service](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
+>  Pour plus d’informations sur ces limites et les niveaux de service, consultez les rubriques [niveaux de service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) et [limites et fonctionnalités de niveau de service](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
   
 ## <a name="permissions"></a>Autorisations  
  Cette vue nécessite l'autorisation VIEW DATABASE STATE.  
   
 ## <a name="remarks"></a>Notes  
- Les données retournées par **sys.dm_db_resource_stats** est exprimée en pourcentage de la valeur maximale autorisée des limites pour le niveau de performances/au niveau de service qui vous sont en cours d’exécution.
+ Les données retournées par **sys. DM _db_resource_stats** sont exprimées sous la forme d’un pourcentage des limites maximales autorisées pour le niveau de service/niveau de performances que vous exécutez.
  
  Si la base de données a basculé vers un autre serveur lors des 60 dernières minutes, l’affichage retourne uniquement les données pour le temps durant lequel elle est la base de données primaire, depuis ce basculement.  
   
- Pour obtenir un affichage moins granulaire de ces données, utilisez **sys.resource_stats** vue de catalogue le **master** base de données. Cette vue capture des données toutes les 5 minutes et conserve 14 jours d'historique des données.  Pour plus d’informations, consultez [sys.resource_stats &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
+ Pour obtenir une vue moins granulaire de ces données, utilisez l’affichage catalogue **sys. resource_stats** dans la base de données **Master** . Cette vue capture des données toutes les 5 minutes et conserve 14 jours d'historique des données.  Pour plus d’informations, consultez [sys. &#40;resource_stats&#41;Azure SQL Database](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
- Lorsqu’une base de données est membre d’un pool élastique, statistiques des ressources présentées sous forme de valeurs de pourcentage sont exprimées en tant que le pourcentage de la limite maximale pour les bases de données, comme défini dans la configuration de pool élastique.  
+ Lorsqu’une base de données est membre d’un pool élastique, les statistiques de ressources présentées sous forme de pourcentages sont exprimées en pourcentage de la limite maximale pour les bases de données définies dans la configuration du pool élastique.  
   
 ## <a name="example"></a>Exemple  
   
@@ -101,8 +101,8 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sys.resource_stats &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
+ [sys. resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
  [Niveaux de service](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [Limites et les capacités de niveau de Service](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
+ [Capacités et limites du niveau de service](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_external_script_requests | Microsoft Docs
+title: sys. DM _external_script_requests | Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2018
 ms.prod: sql
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7cc6b6b42f7e9fa743724a414aa5b53435d7b0ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 33a7b546b9479add67a05f9bb7537f953fa2e9f9
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086834"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476278"
 ---
 # <a name="sysdmexternalscriptrequests"></a>Sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,11 @@ Renvoie une ligne pour chaque compte de travail actif qui exécute un script ext
   
 > [!NOTE] 
 >  
-> Cette vue de gestion dynamique (DMV) est disponible uniquement si vous avez installé et activé la fonctionnalité qui prend en charge l’exécution du script externe. Pour plus d’informations, consultez [R Services dans SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) et [Machine Learning Services (R, Python) dans SQL Server 2017](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
+> Cette vue de gestion dynamique (DMV) est disponible uniquement si vous avez installé et activé la fonctionnalité qui prend en charge l’exécution de scripts externes. Pour plus d’informations, consultez [R services dans SQL Server 2016](../../advanced-analytics/r/sql-server-r-services.md) et [machine learning services (r, Python) dans SQL Server 2017 et versions ultérieures](../../advanced-analytics/what-is-sql-server-machine-learning.md).  
   
 |Nom de la colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|external_script_request_id|**Identificateur unique**|ID du processus qui a envoyé la demande de script externe. Cela correspond à l’ID de processus, comme reçu par [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
+|external_script_request_id|**identificateur unique**|ID du processus qui a envoyé la demande de script externe. Cela correspond à l’ID de processus tel qu’il a été reçu par[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |langage|**nvarchar**|Mot clé qui représente un langage de script pris en charge. |  
 |degree_of_parallelism|**int**|Nombre indiquant le nombre de traitements parallèles qui ont été créés. Cette valeur peut être différente du nombre de traitements parallèles qui ont été demandés.|  
 |external_user_name|**nvarchar**|Le compte de travail Windows sous lequel le script a été exécuté.|  
@@ -52,7 +52,7 @@ Renvoie une ligne pour chaque compte de travail actif qui exécute un script ext
 
 Cette vue peut être filtrée à l’aide de l’identificateur de langage de script.
 
-La vue renvoie également le compte de travail sous lequel le script est en cours d’exécution. Pour plus d’informations sur les comptes de travail utilisés par les scripts externes, consultez les identités utilisées dans le traitement de la section (SQLRUserGroup) dans [vue d’ensemble de la sécurité pour l’infrastructure d’extensibilité dans SQL Server Machine Learning Services](../../advanced-analytics/concepts/security.md#sqlrusergroup).
+La vue renvoie également le compte de travail sous lequel le script est en cours d’exécution. Pour plus d’informations sur les comptes de travail utilisés par les scripts externes, voir la section identités utilisées en traitement (SQLRUserGroup) dans [vue d’ensemble de la sécurité de l’infrastructure d’extensibilité dans SQL Server machine learning services](../../advanced-analytics/concepts/security.md#sqlrusergroup).
 
 Le GUID renvoyé dans le champ **external_script_request_id** représente également le nom de fichier du répertoire sécurisé où sont stockés les fichiers temporaires. Chaque compte de travail, tel que MSSQLSERVER01 représente une connexion SQL unique ou un utilisateur Windows et peut être utilisé pour exécuter plusieurs demandes de script. Par défaut, ces fichiers temporaires sont nettoyés après l’achèvement du script demandé.
  

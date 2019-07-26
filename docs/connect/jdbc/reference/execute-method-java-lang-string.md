@@ -1,5 +1,5 @@
 ---
-title: Execute, méthode (java.lang.String) | Microsoft Docs
+title: Méthode execute (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d3ffb7c175c21d56467899bba9de7c110e324d1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09adea323a5a2930e9c636a1b2e1b00567dbd9ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954958"
 ---
 # <a name="execute-method-javalangstring"></a>Méthode execute (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ public final boolean execute(java.lang.String sql)
 #### <a name="parameters"></a>Paramètres  
  *sql*  
   
- Un **chaîne** qui contient une instruction SQL.  
+ **Chaîne** qui contient une instruction SQL.  
   
 ## <a name="return-value"></a>Valeur retournée  
- **true** si l’instruction retourne un jeu de résultats. **false** s’il retourne un nombre de mise à jour ou aucun résultat.  
+ **true** si l’instruction retourne un jeu de résultats. **false** si elle retourne un nombre de mises à jour ou aucun résultat.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -7,15 +7,15 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2e9c9353acdc0a2641203788c8e4883a9accb021
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345680"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469968"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Notation en temps réel avec sp_rxPredict dans SQL Server Machine Learning
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 La notation en temps réel utilise la procédure stockée système [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) et les fonctionnalités d’extension CLR dans SQL Server pour les prédictions hautes performances ou les scores dans les charges de travail de prévision. La notation en temps réel est indépendante du langage et s’exécute sans dépendances sur les temps d’exécution R ou python. En supposant qu’un modèle a été créé et formé à l’aide des fonctions Microsoft, puis sérialisé au format binaire dans SQL Server, vous pouvez utiliser le score en temps réel pour générer des résultats prédits sur de nouvelles entrées de données sur des instances de SQL Server qui n’ont pas le module complémentaire R ou python ordinateur.
 

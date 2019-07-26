@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cf67692c-24aa-49e6-8e88-a47d4e8c021c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 16ebb1fe51cb811fd912044f7194ccb8555bb914
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9784c4aa2dd892473e4ac0ef46f0e8f62d359c5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952956"
 ---
 # <a name="getcolumnlabel-method-sqlserverresultsetmetadata"></a>Méthode getColumnLabel (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public java.lang.String getColumnLabel(int column)
 #### <a name="parameters"></a>Paramètres  
  *column*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
 ## <a name="return-value"></a>Valeur retournée  
  **String** contenant le titre de la colonne.  
@@ -47,7 +46,7 @@ public java.lang.String getColumnLabel(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getColumnLabel est spécifiée par la méthode getColumnLabel dans l’interface java.sql.ResultSetMetaData.  
+ Cette méthode getColumnLabel, est spécifiée par la méthode getColumnLabel, dans l’interface java. Sql. ResultSetMetaData.  
   
  Cette méthode retourne le nom d'alias de la colonne. S'il n'est pas disponible, cette méthode retourne le nom de la colonne.  
   

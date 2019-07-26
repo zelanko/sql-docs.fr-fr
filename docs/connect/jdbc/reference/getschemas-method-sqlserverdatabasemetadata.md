@@ -1,5 +1,5 @@
 ---
-title: GetSchemas, méthode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: Méthode getSchemas (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d26ea46d-a9f5-40ed-af56-2b10a0364882
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 033eeac3d9f0bf14a587d3248899bf0ac4284efa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e08958772ce1c67bbbe9cb3bdad9d290746a9e71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980126"
 ---
 # <a name="getschemas-method-sqlserverdatabasemetadata"></a>Méthode getSchemas (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66792167"
 |Créer une vue d’abonnement|Description|  
 |----------|-----------------|  
 |[getSchemas, méthode &#40;&#41;](../../../connect/jdbc/reference/getschemas-method.md)|Récupère les noms de schémas disponibles dans la base de données actuelle.|  
-|[Méthode getSchemas &#40;String, String&#41;](../../../connect/jdbc/reference/getschemas-method-string-string.md)|Récupère les noms de schémas disponibles dans la base de données actuelle à l'aide du nom de catalogue spécifié et du nom de schéma.|  
+|[chaîne de &#40;méthode getSchemas, chaîne&#41;](../../../connect/jdbc/reference/getschemas-method-string-string.md)|Récupère les noms de schémas disponibles dans la base de données actuelle à l'aide du nom de catalogue spécifié et du nom de schéma.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

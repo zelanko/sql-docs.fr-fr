@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a11104fa44b4a40d849193bd229b7186ef5b9dc5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6fa534b756084f74606e9d40a8c1c69934b240d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916051"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Pilote Node.js pour SQL Server
 
-![Téléchargement-bas encerclé](../../ssdt/media/download.png)[pour télécharger le pilote Node.js SQL](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Télécharger-DownArrow-cercled](../../ssdt/media/download.png)[pour télécharger le pilote SQL node. js](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Le module tedious est une implémentation JavaScript du protocole TDS, qui est pris en charge par toutes les versions récentes de SQL Server. Le pilote est un projet open source, disponible sur Github.  
+Le module tedious est une implémentation JavaScript du protocole TDS, qui est pris en charge par toutes les versions récentes de SQL Server. Le pilote est un projet open source, disponible sur GitHub.  
   
-Vous pouvez vous connecter à une base de données SQL à l’aide de Node.js sur Windows, Linux ou Mac.  
+Vous pouvez vous connecter à un SQL Database à l’aide de node. js sur Windows, Linux ou Mac.  
   
 ## <a name="getting-started"></a>Prise en main  
 * [Étape 1 : Configurer l’environnement de développement pour le développement Node.js](step-1-configure-development-environment-for-node-js-development.md)  
@@ -33,15 +32,15 @@ Vous pouvez vous connecter à une base de données SQL à l’aide de Node.js su
   
 ## <a name="documentation"></a>Documentation  
   
-[Documentation du module fastidieux sur Github](https://tediousjs.github.io/tedious/)  
+[Documentation du module fastidieux sur GitHub](https://tediousjs.github.io/tedious/)  
   
 ## <a name="community"></a>Communauté  
-* [Centre de développement Node.js Azure](https://azure.microsoft.com/develop/nodejs/)  
-* [Être impliqué au nodejs.org](https://nodejs.org/en/get-involved/)
+* [Centre de développement Azure node. js](https://azure.microsoft.com/develop/nodejs/)  
+* [Participez à nodejs.org](https://nodejs.org/en/get-involved/)
 
 ## <a name="code-examples"></a>Exemples de code
-* [Prise en main Node.js sur Windows](https://www.microsoft.com/sql-server/developer-get-started/node/windows/)
-* [Bien démarrer avec Node.js sur macOS](https://www.microsoft.com/sql-server/developer-get-started/node/mac/)
-* [Prise en main Node.js sur Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/)
-* [Prise en main Node.js sur Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/node/rhel/)
-* [Prise en main Node.js sur SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/node/sles/)
+* [Prise en main avec node. js sur Windows](https://www.microsoft.com/sql-server/developer-get-started/node/windows/)
+* [Prise en main avec node. js sur macOS](https://www.microsoft.com/sql-server/developer-get-started/node/mac/)
+* [Prise en main avec node. js sur Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/node/ubuntu/)
+* [Prise en main avec node. js sur Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/node/rhel/)
+* [Prise en main avec node. js sur SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/node/sles/)

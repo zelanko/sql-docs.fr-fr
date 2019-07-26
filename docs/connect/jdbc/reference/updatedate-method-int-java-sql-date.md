@@ -1,5 +1,5 @@
 ---
-title: updatedate, méthode (int, java.sql.Date) | Microsoft Docs
+title: Méthode de mise à jour (int, Java. Sql. date) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c5fb1292-a5cf-4cdd-8c4a-d1679944a6d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13a8ed675e63d19d3c21dddf54751073593ae156
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3318bc5ebd8eb6496262cc9992a4e516aeebf9fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999156"
 ---
 # <a name="updatedate-method-int-javasqldate"></a>Méthode updateDate (int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateDate(int index,
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
  *x*  
   

@@ -1,5 +1,5 @@
 ---
-title: Classe PDOStatement | Microsoft Docs
+title: PDOStatement, classe | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ef2db0b3-b10e-4898-8bfc-d5e4baca18ef
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f2db1c408693b02812db0cd431d139014c2244b1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 160d28aae240179173949ccd67639746225b7c15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936085"
 ---
 # <a name="pdostatement-class"></a>Classe PDOStatement
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

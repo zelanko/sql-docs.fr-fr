@@ -1,5 +1,5 @@
 ---
-title: insertRow, méthode (SQLServerResultSet) | Microsoft Docs
+title: Méthode insertRow (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 363d1008-1396-4fc0-8e27-c9ba2499e7f1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cf6b427cfaaf736fb7ea3862554bde172f2a0247
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0f2e6148572d6ec6c7e9b52a704d79e8a9124ccf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977882"
 ---
 # <a name="insertrow-method-sqlserverresultset"></a>insertRow, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void insertRow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode insertRow est spécifiée par la méthode insertRow dans l’interface java.sql.ResultSet.  
+ Cette méthode insertRow est spécifiée par la méthode insertRow dans l’interface java. Sql. ResultSet.  
   
  Le curseur doit se trouver sur la ligne d'insertion lorsque cette méthode est appelée. Après l'appel de cette méthode, le curseur reste sur la ligne d'insertion et le jeu de résultats demeure en mode insertion.  
   

@@ -6,15 +6,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d8768532e3891183d82cbb2273ded8dcc378b1fc
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: effcfe458fc004fd8fb44bb58095e91a2fb56b8d
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345295"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470068"
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Surveiller Machine Learning Services à l’aide de rapports personnalisés dans Management Studio
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Pour faciliter la gestion de l’instance utilisée pour Machine Learning, l’équipe de produit a fourni un certain nombre d’exemples de rapports personnalisés que vous pouvez ajouter à SQL Server Management Studio. Dans ces rapports, vous pouvez afficher des détails tels que:
 

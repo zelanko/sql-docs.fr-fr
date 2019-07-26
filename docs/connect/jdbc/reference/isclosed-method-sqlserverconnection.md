@@ -1,5 +1,5 @@
 ---
-title: IsClosed, méthode (SQLServerConnection) | Microsoft Docs
+title: Méthode isClosed (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3560ab18-4350-4d02-9716-439f0c2f7142
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 509de1454b2f86aa52028fdd6921fb02fedf5f27
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 45e56a0a5ddb7cf8aece6813d421b7ebb1685408
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977716"
 ---
 # <a name="isclosed-method-sqlserverconnection"></a>isClosed, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,15 +35,15 @@ public boolean isClosed()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- **true** si la connexion est proche, **false** si elle n’est pas.  
+ **true** si la connexion est fermée, **false** dans le cas contraire.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode isClosed est spécifiée par la méthode isClosed dans l’interface java.sql.Connection.  
+ Cette méthode isClosed est spécifiée par la méthode isClosed dans l’interface java. Sql. Connection.  
   
- Vérifie l’état de l’objet SQLServerConnection appelé. Une connexion est fermée si la méthode [close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md) a été appelée dessus, ou si certaines erreurs fatales se sont produites. Cette méthode ne retourne **true** que si elle est appelée après la méthode close.  
+ Vérifie l’état de l’objet appelé SQLServerConnection. Une connexion est fermée si la méthode [close](../../../connect/jdbc/reference/close-method-sqlserverconnection.md) a été appelée dessus, ou si certaines erreurs fatales se sont produites. Cette méthode ne retourne **true** que si elle est appelée après la méthode close.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

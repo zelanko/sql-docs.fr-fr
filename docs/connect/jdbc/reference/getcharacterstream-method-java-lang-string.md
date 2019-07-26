@@ -1,5 +1,5 @@
 ---
-title: getcharacterstream, méthode (java.lang.String) | Microsoft Docs
+title: Méthode getCharacterStream (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cdddc572-05c1-480d-b3e5-28270001575c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a818783c51f2629464f650c2985eb20d5f320c95
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 174deb24d78821e30d69dc899c5657909241ad3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953282"
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>Méthode getCharacterStream (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,13 +40,13 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
  Valeur **String** qui contient le nom de la colonne.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet de lecteur.  
+ Objet lecteur.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getCharacterStream est spécifiée par la méthode getCharacterStream dans l’interface java.sql.ResultSet.  
+ Cette méthode getCharacterStream est spécifiée par la méthode getCharacterStream dans l’interface java. Sql. ResultSet.  
   
  Cette méthode lit uniquement les types de données de caractères Unicode [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], comme nchar, nvarchar, nvarchar(max) et ntext. Tous les autres types de données, dont les types de caractères ASCII, entraînent la levée d'une exception. Pour lire les types de données ASCII, utilisez la méthode [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md).  
   

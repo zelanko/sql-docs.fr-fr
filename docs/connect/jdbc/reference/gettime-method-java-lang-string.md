@@ -1,5 +1,5 @@
 ---
-title: getTime, méthode (java.lang.String) | Microsoft Docs
+title: Méthode getTime (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ca0a3b29-30d1-4d20-bc8d-d3d9ed19ff50
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6fe0152d23bcf71e371ad778a961dedb9c6ee739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fba716696627f29127d64c07843e6d9dcf2b3ce0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978977"
 ---
 # <a name="gettime-method-javalangstring"></a>Méthode getTime (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Time getTime(java.lang.String sCol)
  Valeur **chaîne** qui contient le nom du paramètre.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet de temps.  
+ Objet d’heure.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -49,7 +48,7 @@ public java.sql.Time getTime(java.lang.String sCol)
 ## <a name="remarks"></a>Notes  
  Cette méthode getTime est spécifiée par la méthode getTime de l’interface java.sql.CallableStatement.  
   
- Consultez le graphique intitulé « Conversions de méthode d’accesseur get » dans [Conversions de types de données de présentation](../../../connect/jdbc/understanding-data-type-conversions.md) pour voir quelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] les types de données peuvent être récupérés avec cette méthode.  
+ Consultez le graphique intitulé «conversions de méthode Getter» pour [comprendre](../../../connect/jdbc/understanding-data-type-conversions.md) les conversions de types de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour voir quels types de données peuvent être récupérés avec cette méthode.  
   
 ## <a name="see-also"></a>Voir aussi  
  [getTime, méthode &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

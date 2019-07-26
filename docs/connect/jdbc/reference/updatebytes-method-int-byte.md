@@ -1,5 +1,5 @@
 ---
-title: updatebytes, méthode (int, byte) | Microsoft Docs
+title: Méthode updateBytes (int, Byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 625f48ba-53d0-45a6-8fcb-643f1e0cbe8a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ac97844b24c2948949e682aba6b9b8b989aecff3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 60de0b0fd051ed67a2f2804443e419d454c2cb5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996908"
 ---
 # <a name="updatebytes-method-int-byte"></a>updateBytes, méthode (int, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,17 +38,17 @@ public void updateBytes(int index,
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
  *x*  
   
- Un tableau de **octets** valeurs.  
+ Tableau de valeurs d' **octets** .  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateBytes est spécifiée par la méthode updateBytes dans l’interface java.sql.ResultSet.  
+ Cette méthode updateBytes est spécifiée par la méthode updateBytes de l’interface java.sql.ResultSet.  
   
  Dans la version précédente de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], vous pouviez utiliser SQLServerResultSet.updateBytes pour convertir des valeurs entre des tableaux d’octets et le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **date**, **time**, **datetime2** ou **datetimeoffset**. À présent, l'utilisation de cette méthode avec ces types de données lève une exception indiquant que la conversion n'est pas prise en charge.  
   

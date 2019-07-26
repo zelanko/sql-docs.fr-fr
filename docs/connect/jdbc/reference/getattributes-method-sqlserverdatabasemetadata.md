@@ -1,5 +1,5 @@
 ---
-title: GetAttributes, méthode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: Méthode getAttributes (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4dc784ed-4699-4197-9af5-6e03da80d14c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fcd33cbb39286c03b5b809b847a8d8a2b8b609f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36543107ba8acd635f0e71fde903cab2576a7b17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954070"
 ---
 # <a name="getattributes-method-sqlserverdatabasemetadata"></a>Méthode getAttributes (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
 #### <a name="parameters"></a>Paramètres  
  *catalog*  
   
- Un **chaîne** qui contient le nom du catalogue.  
+ **Chaîne** qui contient le nom du catalogue.  
   
  *schemaPattern*  
   
@@ -56,7 +55,7 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
   
  *attributePattern*  
   
- Un **chaîne** qui contient le modèle de nom d’attribut.  
+ **Chaîne** qui contient le modèle de nom d’attribut.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
@@ -65,7 +64,7 @@ public java.sql.ResultSet getAttributes(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getAttributes est spécifiée par la méthode getAttributes dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getAttributes est spécifiée par la méthode getAttributes dans l’interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

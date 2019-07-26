@@ -1,5 +1,5 @@
 ---
-title: Considérations sur la sécurité pour les pilotes Microsoft pour PHP pour SQL Server | Microsoft Docs
+title: Considérations relatives à la sécurité pour les pilotes Microsoft pour PHP pour SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992887"
 ---
-# <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Considérations sur la sécurité pour les pilotes Microsoft pour PHP pour SQL Server
+# <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Considérations relatives à la sécurité pour les pilotes Microsoft pour PHP pour SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Cette rubrique décrit les considérations de sécurité propres au développement, au déploiement et à l’exécution d’applications qui utilisent le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations sur la sécurité de SQL Server, consultez [vue d’ensemble de la sécurité SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
+Cette rubrique décrit les considérations de sécurité propres au développement, au déploiement et à l’exécution d’applications qui utilisent le [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. Pour plus d’informations sur la sécurité des SQL Server, consultez [vue d’ensemble de la sécurité des SQL Server](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security).  
   
 ## <a name="connect-using-windows-authentication"></a>Se connecter avec l’authentification Windows  
 Vous devez utiliser l’authentification Windows pour la connexion à SQL Server dans la mesure du possible pour les raisons suivantes :  

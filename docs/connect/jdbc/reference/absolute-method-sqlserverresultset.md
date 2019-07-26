@@ -1,5 +1,5 @@
 ---
-title: Absolute, méthode (SQLServerResultSet) | Microsoft Docs
+title: Méthode absolute (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 638e8148-8ca0-4e1f-9ec2-04a11bc9809b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b0572ed756bd8b347c01e05168873ac543a0ea7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66bdbfa417077e70be7969b28ae851a0244e54ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956064"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>absolute, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,10 +37,10 @@ public boolean absolute(int row)
 #### <a name="parameters"></a>Paramètres  
  *row*  
   
- Un **int** qui indique le numéro de ligne à atteindre. Il peut être égal à 0 ou avoir une valeur positive ou négative.  
+ **Entier** qui indique le numéro de ligne vers lequel se déplacer. Il peut être égal à 0 ou avoir une valeur positive ou négative.  
   
 ## <a name="return-value"></a>Valeur retournée  
- **true** si le curseur est déplacé vers la position donnée. **false** s’il s’agit avant la première ligne ou après la dernière ligne.  
+ **true** si le curseur est déplacé vers la position donnée. **false** s’il se trouve avant la première ligne ou après la dernière ligne.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

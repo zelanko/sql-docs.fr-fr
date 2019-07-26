@@ -30,12 +30,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: af52376ae4749d42c8d746a64518632e6a047591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2de93079289ffda8ff6287ad09aa4dea150932d7
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63036207"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475957"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Réorganiser et reconstruire des index
   Cette rubrique explique comment réorganiser ou reconstruire un index fragmenté dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] gère automatiquement des index lorsque des opérations d'insertion, de mise à jour ou de suppression sont effectuées sur les données sous-jacentes. Au fil des modifications, les informations figurant dans l'index sont éparpillées dans la base de données (fragmentée). La fragmentation intervient lorsque des index possèdent des pages dans lesquelles l'organisation logique (reposant sur la valeur de la clé) ne correspond pas à l'organisation physique dans le fichier de données. Une fragmentation importante des index peut diminuer les performances des requêtes et ralentir la vitesse de réponse de votre application.  
@@ -81,26 +81,48 @@ ms.locfileid: "63036207"
   
 |Valeur**avg_fragmentation_in_percent**|Instruction corrective|  
 |-----------------------------------------------|--------------------------|  
-|> 5 % et \< = 30 %|ALTER INDEX REORGANIZE|  
-|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON)*|  
+|> 5% et \< = 30%|ALTER INDEX REORGANIZE|  
+|> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
+
+<sup>1</sup> La reconstruction d’un index peut être exécutée en ligne ou hors connexion. La réorganisation d'un index s'effectue toujours en ligne. Pour obtenir le même niveau de disponibilité qu'avec l'option de réorganisation, vous devez reconstruire les index en ligne.  
   
- \* La reconstruction d’un index peut être exécutée en ligne ou hors connexion. La réorganisation d'un index s'effectue toujours en ligne. Pour obtenir le même niveau de disponibilité qu'avec l'option de réorganisation, vous devez reconstruire les index en ligne.  
-  
- Ces valeurs fournissent des directives grossières pour déterminer le point auquel vous devez basculer entre ALTER INDEX REORGANIZE et ALTER INDEX REBUILD. Toutefois, les valeurs réelles peuvent varier d'un cas à l'autre. Il est important que vous fassiez des essais pour déterminer le meilleur seuil pour votre environnement. Des niveaux très bas de fragmentation (inférieurs à 5 %) ne doivent pas être pris en compte par ces commandes, car l'avantage de la suppression d'un volume de fragmentation aussi réduit est quasiment toujours largement compensé par le coût de la réorganisation ou de la reconstruction de l'index.  
-  
-> [!NOTE]  
->  En général, la fragmentation sur les petits index n'est pas contrôlable. Les pages des petits index sont stockées sur des extensions mixtes. Les extensions mixtes sont partagées par huit objets maximum ; par conséquent, la fragmentation dans un petit index peut ne pas être réduite après la réorganisation ou la reconstruction de l'index.  
+> [!TIP]
+> Ces valeurs fournissent des directives approximatives pour déterminer le point auquel vous devez basculer entre `ALTER INDEX REORGANIZE` et `ALTER INDEX REBUILD`. Toutefois, les valeurs réelles peuvent varier d'un cas à l'autre. Il est important que vous fassiez des essais pour déterminer le meilleur seuil pour votre environnement. Par exemple, si un index donné est principalement utilisé pour les opérations d’analyse, la suppression de la fragmentation peut améliorer les performances de ces opérations. L’avantage en matière de performances est moins perceptible pour les index utilisés principalement pour les opérations de recherche. De même, la suppression de la fragmentation dans un segment de mémoire (une table sans index cluster) est particulièrement utile pour les opérations d’analyse d’index non cluster, mais n’a que peu d’effet dans les opérations de recherche.
+
+Des niveaux très bas de fragmentation (inférieurs à 5 %) ne doivent pas être pris en compte par ces commandes, car l’avantage de la suppression d’un volume de fragmentation aussi réduit est quasiment toujours largement contrebalancé par le coût de la réorganisation ou de la reconstruction de l’index. 
+
+> [!NOTE]
+> Bien souvent, la reconstruction ou la réorganisation de petits index ne réduit pas la fragmentation. Les pages de petits index sont parfois stockées sur des extensions mixtes. Les extensions mixtes sont partagées par huit objets maximum ; par conséquent, la fragmentation dans un petit index peut ne pas être réduite après sa réorganisation ou sa reconstruction.
+
+### <a name="index-defragmentation-considerations"></a>Considérations sur la défragmentation d’index
+Dans certaines conditions, la reconstruction d’un index cluster recrée automatiquement tout index non-cluster qui fait référence à la clé de clustering, si les identificateurs physiques ou logiques contenus dans les enregistrements d’index non cluster doivent être modifiés.
+
+Scénarios qui forcent la reconstruction automatique de tous les index non cluster sur une table:
+
+-  Création d’un index cluster sur une table
+-  Suppression d’un index cluster, provoquant le stockage de la table en tant que segment de mémoire
+-  Modification de la clé de clustering pour inclure ou exclure des colonnes
+
+Les scénarios qui ne nécessitent pas tous les index non cluster doivent être reconstruits automatiquement sur une table:
+
+-  Reconstruction d’un index cluster unique
+-  Reconstruction d’un index cluster non unique
+-  Modification du schéma d’index, telle que l’application d’un schéma de partitionnement à un index cluster ou le déplacement de l’index cluster vers un autre groupe de fichiers
   
 ###  <a name="Restrictions"></a> Limitations et restrictions  
   
--   Les index possédant plus de 128 extensions sont reconstruits en deux phases distinctes : une phase logique et une phase physique. Dans la phase logique, les unités d'allocation utilisées par l'index sont signalées comme devant être désallouées, les lignes de données sont copiées et triées, puis elles sont déplacées vers les nouvelles unités d'allocation ayant été créées pour stocker l'index reconstruit. Dans la phase physique, les unités d'allocation préalablement signalées pour être désallouées sont supprimées physiquement dans des transactions courtes qui interviennent en arrière-plan et nécessitent peu de verrous.  
-  
--   Vous ne pouvez pas spécifier des options d'index lors de la réorganisation d'un index.  
+Les index possédant plus de 128 extensions sont reconstruits en deux phases distinctes : une phase logique et une phase physique. Dans la phase logique, les unités d'allocation utilisées par l'index sont signalées comme devant être désallouées, les lignes de données sont copiées et triées, puis elles sont déplacées vers les nouvelles unités d'allocation ayant été créées pour stocker l'index reconstruit. Dans la phase physique, les unités d'allocation préalablement signalées pour être désallouées sont supprimées physiquement dans des transactions courtes qui interviennent en arrière-plan et nécessitent peu de verrous. Pour plus d’informations sur les étendues, consultez [Guide d’architecture des pages et des étendues](https://docs.microsoft.com/sql/relational-databases/pages-and-extents-architecture-guide).
+
+L’instruction `ALTER INDEX REORGANIZE` a besoin du fichier de données contenant l’index pour disposer d’espace, car l’opération peut uniquement allouer des pages de travail temporaires à un même fichier, mais pas à un autre fichier du groupe de fichiers. De ce fait, même si le groupe de fichiers a des pages libres, l’utilisateur peut toujours rencontrer l’erreur 1105 : `Could not allocate space for object '###' in database '###' because the '###' filegroup is full. Create disk space by deleting unneeded files, dropping objects in the filegroup, adding additional files to the filegroup, or setting autogrowth on for existing files in the filegroup.`
+
+Il est possible de créer et de reconstruire des index non alignés sur une table constituée de plus de 1 000 partitions, mais cela n’est pas recommandé. Ces opérations peuvent entraîner une dégradation des performances ou une consommation de mémoire excessive.
+
+Un index ne peut pas être réorganisé ou reconstruit si le groupe de fichiers dans lequel il se trouve est hors connexion ou en lecture seule. Si le mot clé `ALL` est spécifié et qu’un ou plusieurs index se trouvent dans un groupe de fichiers hors connexion ou en lecture seule, l’instruction échoue.
   
 ###  <a name="Security"></a> Sécurité  
   
 ####  <a name="Permissions"></a> Autorisations  
- Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
+ Nécessite l’autorisation `ALTER` sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ##  <a name="SSMSProcedureFrag"></a> Utilisation de SQL Server Management Studio  
   
@@ -231,7 +253,7 @@ ms.locfileid: "63036207"
   
 6.  Cochez la case **Compacter les données de la colonne d’objets volumineux** pour indiquer que toutes les pages qui contiennent des données LOB seront aussi compactées.  
   
-7.  Cliquez sur **OK.**  
+7.  Cliquez sur **OK**.  
   
 #### <a name="to-rebuild-an-index"></a>Pour reconstruire un index  
   

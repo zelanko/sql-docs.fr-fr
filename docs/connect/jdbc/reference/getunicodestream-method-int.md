@@ -1,5 +1,5 @@
 ---
-title: getunicodestream, méthode (int) | Microsoft Docs
+title: Méthode getUnicodeStream (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0de79b65-a25e-4028-9cc2-7ac02340115b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe3352ef2bffaed6151e163d5054b03a05c53418
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a3ee382716201c5e24b9ff7b23ae4f923ae18b77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978436"
 ---
 # <a name="getunicodestream-method-int"></a>Méthode getUnicodeStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,16 +40,16 @@ public java.io.InputStream getUnicodeStream(int columnIndex)
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet InputStream.  
+ Objet InputStream.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getUnicodeString est spécifiée par la méthode getUnicodeString dans l’interface java.sql.ResultSet.  
+ Cette méthode getUnicodeString est spécifiée par la méthode getUnicodeString de l’interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [getUnicodeStream, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getunicodestream-method-sqlserverresultset.md)   

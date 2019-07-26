@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 47a894b93a0228782e48116dc3bcc2272e4264c2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 789fec0bd9299f4d436c664306d380bb9a7da153
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015145"
 ---
 # <a name="connecting-to-the-server"></a>Connexion au serveur
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +30,7 @@ Les rubriques de cette section décrivent les options et les procédures de conn
 |---------|---------------|  
 |[Procédure : se connecter avec l’authentification Windows](../../connect/php/how-to-connect-using-windows-authentication.md)|Décrit comment établir une connexion à l’aide de l’authentification Windows.|  
 |[Procédure : se connecter à l’aide de l’authentification SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)|Décrit comment établir une connexion à l’aide de l’authentification SQL Server.|  
-|[Guide pratique pour se connecter à l’aide de l’authentification Azure Active Directory](../../connect/php/azure-active-directory.md)|Décrit comment définir le mode d’authentification et de se connecter à l’aide d’identités Azure Active Directory.|  
+|[Guide pratique pour se connecter à l’aide de l’authentification Azure Active Directory](../../connect/php/azure-active-directory.md)|Décrit comment définir le mode d’authentification et se connecter à l’aide de Azure Active Directory identités.|  
 |[Guide pratique pour se connecter sur un port spécifié](../../connect/php/how-to-connect-on-a-specified-port.md)|Décrit comment se connecter au serveur sur un port spécifique.|  
 |[Regroupement de connexions](../../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md)|Fournit des informations sur le regroupement de connexions dans le pilote.|  
 |[Guide pratique pour désactiver MARS (Multiple Active Result Set)](../../connect/php/how-to-disable-multiple-active-resultsets-mars.md)|Décrit comment désactiver la fonctionnalité MARS pendant une connexion.|  

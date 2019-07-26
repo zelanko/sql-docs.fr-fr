@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 225fe78a84da986120ce23f2a1f16fae244e26e4
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0f8cc5aaa10beeb5b91b27111e15013cc705ed20
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345057"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469958"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>Configurer un client de science des données pour le développement R sur SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 L’intégration de r est disponible dans SQL Server 2016 ou ultérieur lorsque vous incluez l’option de langage R dans une installation [SQL Server 2016 R services](../install/sql-r-services-windows-install.md) ou [SQL Server 2017 machine learning services (en base de données)](../install/sql-machine-learning-services-windows-install.md) . 
 

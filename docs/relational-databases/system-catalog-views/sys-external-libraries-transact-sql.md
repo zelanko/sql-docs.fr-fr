@@ -1,10 +1,10 @@
 ---
 title: sys.external_libraries (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: system-objects
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - external_libraries
@@ -19,32 +19,32 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d56d0c69b9e3bae87dda9b55d241a1c040210ca9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78923a0eb1404c1437c6e1144888261e542ebc5a
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62637468"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471102"
 ---
-# <a name="sysexternallibraries-transact-sql"></a>sys.external_libraries (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+# <a name="sysexternallibraries-transact-sql"></a>sys. external_libraries (Transact-SQL)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Prend en charge la gestion des bibliothèques de package liés aux runtimes externes tels que R, Python et Java.
+Prend en charge la gestion des bibliothèques de packages relatives aux runtimes externes tels que R, Python et Java.
 
 > [!NOTE]
 > Dans SQL Server 2017, le langage R et la plateforme Windows sont pris en charge. R, Python et Java sur les plateformes Windows et Linux sont pris en charge dans SQL Server 2019 CTP 2.4.
 
 ## <a name="sysexternallibraries"></a>sys.external_libraries
 
-Le sys.external_libraries de vue de catalogue répertorie une ligne pour chaque bibliothèque externe qui a été téléchargé dans la base de données.
+L’affichage catalogue sys. external_libraries répertorie une ligne pour chaque bibliothèque externe qui a été chargée dans la base de données.
 
-|Nom de colonne |Type de données | Description|
+|Nom de la colonne |Type de données | Description|
 |------|------|------|
-|external_library_id |INT | ID de l’objet de bibliothèque externe. |
-|name |sysname |Nom de la bibliothèque externe. Est unique au sein de la base de données par le propriétaire.|
-|principal_id |INT |ID du principal qui possède cette bibliothèque externe. |
-|langage | sysname | Nom de la langue ou le runtime qui prend en charge de la bibliothèque externe. Les valeurs valides sont « R », « Python » et « Java ». Runtimes supplémentaires peuvent être ajoutées dans les futures.|
-|portée |INT |0 pour une étendue publique ; 1 pour l’étendue privée |  
+|external_library_id |int | ID de l’objet de bibliothèque externe. |
+|name |sysname |Nom de la bibliothèque externe. Est unique dans la base de données par propriétaire.|
+|principal_id |int |ID du principal propriétaire de cette bibliothèque externe. |
+|langage | sysname | Nom de la langue ou du runtime qui prend en charge la bibliothèque externe. Les valeurs valides sont «R», «Python» et «Java». Des runtimes supplémentaires peuvent être ajoutés à l’avenir.|
+|scope |int |0 pour l’étendue publique; 1 pour l’étendue privée |  
 |scope_desc |varchar(7) |Indique si le package est public ou privé|
 
 ## <a name="see-also"></a>Voir aussi  

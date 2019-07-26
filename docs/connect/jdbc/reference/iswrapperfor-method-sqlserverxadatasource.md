@@ -1,5 +1,5 @@
 ---
-title: iswrapperfor, méthode (SQLServerXADataSource) | Microsoft Docs
+title: Méthode isWrapperFor (SQLServerXADataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d612461d-4c3f-46db-b968-ff4c80b2aa7c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 920e47391cbaaeb1e78c8a7a4f440880edab60fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e32cbf975d156aae723dfbff105fe51e039dc1b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977027"
 ---
 # <a name="iswrapperfor-method-sqlserverxadatasource"></a>Méthode isWrapperFor (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +32,7 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>Paramètres  
  *iface*  
   
- Un **classe** définissant une interface.  
+ **Classe** définissant une interface.  
   
 ## <a name="return-value"></a>Valeur retournée  
  **true** si cet objet implémente l’interface ou encapsule un objet qui implémente l’interface. Dans le cas contraire, la valeur est **false**.  
@@ -46,10 +45,10 @@ public boolean isWrapperFor(Class iface)
   
  Si cette méthode retourne la valeur True, l’appel de [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md) avec le même argument réussit.  
   
- Pour plus d’informations, consultez [Wrappers et Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
+ Pour plus d’informations, consultez [wrappers et interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthode Unwrap &#40;SQLServerXADataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)   
+ [Unwrap, &#40;méthode SQLServerXADataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)   
  [SQLServerXADataSource, méthodes](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
  [SQLServerXADataSource, membres](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [SQLServerXADataSource, classe](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  

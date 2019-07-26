@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fbd40c6edb2e4b623f0e2fbf7e00ad91dc683a04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18827d05bc5567b4566eaa006d88c249874132cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66766872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971076"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>Constructeur SQLServerException (java.lang.String, java.lang.String, int, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Initialise une nouvelle instance de la [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) classe en fonction d’un **chaîne** objet, un **chaîne** objet, un **int**et un **levable** objet.
+  Initialise une nouvelle instance de la classe [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) en fonction d’un objet **String** , d’un objet **String** , d’un **entier**et d’un objet **levant** .
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -39,7 +38,7 @@ public SQLServerException(java.lang.String errText,
 #### <a name="parameters"></a>Paramètres  
  *errText*  
   
- Chaîne contenant le texte d’erreur.
+ Chaîne contenant le texte de l’erreur.
   
  *errState*  
   
@@ -47,11 +46,11 @@ public SQLServerException(java.lang.String errText,
  
  *errNum*  
   
- Entier qui contient le code d’erreur pour l’exception.
+ Entier qui contient le code d’erreur de l’exception.
  
  *cause*  
   
- Un objet levable qui contient la cause de l’exception.
+ Objet pouvant être levé qui contient la cause de l’exception.
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerException, constructeurs](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

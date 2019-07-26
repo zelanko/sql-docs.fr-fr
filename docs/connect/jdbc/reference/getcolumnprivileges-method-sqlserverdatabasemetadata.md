@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 934a230e295532231f52ac3ed787b6a4de366d54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae80a8c33f68ad2f3d2c85b1343a5cc0f2b423c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66763382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952877"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>Méthode getColumnPrivileges (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 #### <a name="parameters"></a>Paramètres  
  *catalog*  
   
- Un **chaîne** qui contient le nom du catalogue.  
+ **Chaîne** qui contient le nom du catalogue.  
   
  *schema*  
   
@@ -62,7 +61,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getColumnPrivileges est spécifiée par la méthode getColumnPrivileges dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getColumnPrivileges est spécifiée par la méthode getColumnPrivileges de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getColumnPrivileges contiendra les informations suivantes :  
   
@@ -70,7 +69,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Nom du catalogue.|  
 |TABLE_SCHEM|**String**|Le nom du schéma de la table.|  
-|TABLE_NAME|**String**|Le nom de la table.|  
+|TABLE_NAME|**String**|Nom de la table.|  
 |COLUMN_NAME|**String**|Nom de la colonne.|  
 |GRANTOR|**String**|Objet octroyant l'accès.|  
 |GRANTEE|**String**|Objet bénéficiant de l'accès.|  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 66c9a8b0-dc4c-4cbb-8004-c7157368cab4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e374dd44d25a40953662cada81f6cc3d949f97c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 054ce4f6f646f873d4aff05fbe1d31aa9903ded9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980738"
 ---
 # <a name="getprocedures-method-sqlserverdatabasemetadata"></a>Méthode getProcedures (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
 #### <a name="parameters"></a>Paramètres  
  *sCatalog*  
   
- Un **chaîne** qui contient le nom du catalogue. La spécification d'une valeur Null pour ce paramètre indique que le nom du catalogue n'a pas besoin d'être utilisé.  
+ **Chaîne** qui contient le nom du catalogue. La spécification d'une valeur Null pour ce paramètre indique que le nom du catalogue n'a pas besoin d'être utilisé.  
   
  *sSchema*  
   
@@ -48,7 +47,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
   
  *proc*  
   
- Un **chaîne** qui contient le modèle de nom de procédure.  
+ **Chaîne** qui contient le modèle de nom de procédure.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
@@ -57,7 +56,7 @@ public java.sql.ResultSet getProcedures(java.lang.String sCatalog,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getProcedures est spécifiée par la méthode getProcedures dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getProcedures est spécifiée par la méthode getProcedures dans l’interface java. Sql. DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getProcedures contient les informations suivantes :  
   

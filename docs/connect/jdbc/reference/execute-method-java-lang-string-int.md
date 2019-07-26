@@ -1,5 +1,5 @@
 ---
-title: Execute, méthode (java.lang.String, int[]) | Microsoft Docs
+title: Méthode execute (java.lang.String, int[]) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4ae744a27156a59c926f2181ca9aec1146e8cd7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e96e0c9c957522db6a766b3491d394b7337d7b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954983"
 ---
 # <a name="execute-method-javalangstring-int"></a>Méthode execute (java.lang.String, int[])
 
@@ -38,7 +37,7 @@ public final boolean execute(
 #### <a name="parameters"></a>Paramètres
 *sql*
 
-Un **chaîne** qui contient une instruction SQL.
+**Chaîne** qui contient une instruction SQL.
 
 *columnIndexes*
 
@@ -55,7 +54,7 @@ Cette méthode execute est spécifiée par la méthode execute de l’interface 
 
 ## <a name="see-also"></a>Voir aussi
 
-[exécuter la méthode &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
+[Execute &#40;, méthode SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
 
 [SQLServerStatement, membres](./sqlserverstatement-members.md)
 

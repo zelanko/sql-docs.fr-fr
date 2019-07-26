@@ -1,9 +1,9 @@
 ---
-title: Sys.external_library_files (Transact-SQL) | Microsoft Docs
+title: sys. external_library_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/05/2017
+ms.date: 07/24/2019
 ms.prod: sql
-ms.technology: system-objects
+ms.technology: machine-learning
 ms.topic: language-reference
 f1_keywords:
 - external_library_files
@@ -14,31 +14,31 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.external_library_files catalog view
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9666b58132feb79876c4e8074dc530440c05b2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7af0a7fcb639ae3beab6216e77f9b7b95a398da
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68220344"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471093"
 ---
-# <a name="sysexternallibraryfiles-transact-sql"></a>Sys.external_library_files (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+# <a name="sysexternallibraryfiles-transact-sql"></a>sys. external_library_files (Transact-SQL)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Répertorie une ligne pour chaque fichier qui compose une bibliothèque externe.
 
 |Nom de la colonne |Type de données |Description|
 |------|------|-----|
 |external_library_id | int |ID de l’objet de bibliothèque externe. |
-|content |varbinary(max) |Contenu de l’artefact de fichier de bibliothèque externe. |
-|plateforme |tinyint |ID de la plateforme hôte sur lequel SQL Server est installé. |
-|platform_desc | nvarchar(60) |Nom de la plateforme hôte. Les valeurs valides sont « WINDOWS », « LINUX ». |
+|content |varbinary(max) |Contenu de l’artefact du fichier de bibliothèque externe. |
+|plateforme |tinyint |ID de la plateforme hôte sur laquelle SQL Server est installé. |
+|platform_desc | nvarchar(60) |Nom de la plateforme hôte. Les valeurs valides sont «WINDOWS», «LINUX». |
 
 ### <a name="see-also"></a>Voir aussi  
 
 [sys.external_libraries](sys-external-libraries-transact-sql.md)  
 [CRÉER UNE BIBLIOTHÈQUE EXTERNE](../../t-sql/statements/create-external-library-transact-sql.md)  
-[Gestion des packages pour le Service SQL Server Machine Learning](../../advanced-analytics/r/installing-and-managing-r-packages.md)  
+[Gestion des packages pour SQL Server Service Machine Learning](../../advanced-analytics/r/installing-and-managing-r-packages.md)  

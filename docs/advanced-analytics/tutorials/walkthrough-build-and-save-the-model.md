@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: eec6d165b8e3aa4130246aae6d4aaf5b4102fc0f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: ecff1f32d129b71a014038fa681e76b9a2f44554
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345824"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470530"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Créer un modèle R et l’enregistrer dans SQL Server (procédure pas à pas)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dans cette étape, vous allez apprendre à créer un modèle de Machine Learning et à enregistrer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]le modèle dans. En enregistrant un modèle, vous pouvez l’appeler directement [!INCLUDE[tsql](../../includes/tsql-md.md)] à partir du code, à l’aide de la procédure stockée système [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) ou de la [fonction Predict (T-SQL)](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql).
 

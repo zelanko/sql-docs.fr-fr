@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e6d204b7f0e2ab0207b22a5e61e1e266a813f195
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 34b7fee6b5eef1503f56dd72c6d8ff10911bbdc1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345164"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470214"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Créer un référentiel de packages R local à l’aide de miniCRAN
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 le package [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) , créé par [andre de Vries](https://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html), identifie et télécharge les packages et les dépendances dans un dossier unique, que vous pouvez copier sur d’autres ordinateurs pour une installation de package R hors connexion.
 

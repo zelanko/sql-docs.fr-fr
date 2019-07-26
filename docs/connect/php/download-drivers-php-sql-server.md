@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5442e564d7b085c144ffe98a4b67eb74499bf975
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13da9b638f117bc84700b044c6c2e8e70ada8518
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015096"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Télécharger Microsoft Drivers for PHP for SQL Server
 
@@ -23,7 +22,7 @@ ms.locfileid: "66796213"
 
 ## <a name="windows"></a>Windows
 
-Les versions suivantes des pilotes pour PHP sur Windows sont disponibles pour téléchargement :
+Les versions suivantes des pilotes pour PHP sur Windows sont disponibles au téléchargement:
 
 - [Pilotes Microsoft 5.6 PHP pour SQL Server](https://www.microsoft.com/download/details.aspx?id=57916)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
@@ -33,7 +32,7 @@ Les versions suivantes des pilotes pour PHP sur Windows sont disponibles pour t�
 
 ## <a name="linux-and-macos"></a>Linux et macOS
 
-Les pilotes pour PHP sont facilement téléchargés et installés à l’aide de PECL sur Linux et macOS. Consultez le [didacticiel d’installation de Linux et macOS](installation-tutorial-linux-mac.md) pour plus d’informations. Si vous avez besoin installer les pilotes pour PHP sur Linux et macOS manuellement, les versions suivantes sont disponibles pour téléchargement :
+Les pilotes pour PHP sont facilement téléchargés et installés à l’aide de PECL sur Linux et macOS. Pour plus d’informations, consultez le didacticiel sur l' [installation de Linux et MacOS](installation-tutorial-linux-mac.md) . Si vous devez installer manuellement les pilotes pour PHP sur Linux et macOS, les versions suivantes sont disponibles au téléchargement:
 
 - [Pilotes Microsoft 5.6 PHP pour SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)

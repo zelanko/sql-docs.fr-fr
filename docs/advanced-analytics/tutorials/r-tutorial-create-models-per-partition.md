@@ -9,15 +9,15 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ceba61f4bdc22b4049453ed27245f09efe080b1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 024ddc72ae2b0a2c443546148a66d0fa85060cb6
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345960"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469198"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutoriel : Créer des modèles basés sur des partitions dans R sur SQL Server
-[!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dans SQL Server 2019, la modélisation basée sur les partitions est la possibilité de créer et d’effectuer l’apprentissage de modèles sur des données partitionnées. Pour les données stratifiées qui se segmentent naturellement dans un schéma de classification donné, telles que les régions géographiques, la date et l’heure, l’âge ou le sexe, vous pouvez exécuter un script sur l’ensemble du jeu de données, avec la possibilité de modéliser, de former et de noter les partitions qui restent intactes. sur toutes ces opérations. 
 

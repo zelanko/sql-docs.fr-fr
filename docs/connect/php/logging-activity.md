@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8612874b351af1cfd9370b8ef29dae4a0c4235e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993329"
 ---
 # <a name="logging-activity"></a>Journalisation de l’activité
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,9 +40,9 @@ pdo_sqlsrv.log_severity = <number>
 |---------|---------------|  
 |0|La journalisation est désactivée (valeur par défaut si rien n’est défini).|  
 |-1|Spécifie que les erreurs, les avertissements et les notifications doivent être enregistrés.|  
-|1|Spécifie que les erreurs sont enregistrées.|  
+|1|Spécifie que les erreurs sont journalisées.|  
 |2|Spécifie que les avertissements sont enregistrés.|  
-|4|Spécifie que les notifications sont enregistrées.|  
+|4|Spécifie que les notifications sont journalisées.|  
   
 Les informations de journalisation seront ajoutées au fichier phperrors.log.  
   
@@ -96,9 +95,9 @@ Le tableau suivant décrit les constantes que vous pouvez utiliser comme valeur 
 |Valeur (entier équivalent entre parenthèses)|Description|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL (-1)|Spécifie que les erreurs, les avertissements et les notifications doivent être enregistrés.|  
-|SQLSRV_LOG_SEVERITY_ERROR (1)|Spécifie que les erreurs sont enregistrées. Il s'agit du paramètre par défaut.|  
+|SQLSRV_LOG_SEVERITY_ERROR (1)|Spécifie que les erreurs sont journalisées. Il s'agit du paramètre par défaut.|  
 |SQLSRV_LOG_SEVERITY_WARNING (2)|Spécifie que les avertissements sont enregistrés.|  
-|SQLSRV_LOG_SEVERITY_NOTICE (4)|Spécifie que les notifications sont enregistrées.|  
+|SQLSRV_LOG_SEVERITY_NOTICE (4)|Spécifie que les notifications sont journalisées.|  
   
 Vous pouvez définir plusieurs valeurs à la fois pour le paramètre **LogSeverity** à l’aide de l’opérateur logique OR (|). Par exemple, la ligne de code suivante spécifie que les erreurs et les avertissements doivent être enregistrés :  
   

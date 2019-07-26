@@ -1,5 +1,5 @@
 ---
-title: GetType, méthode (SQLServerResultSet) | Microsoft Docs
+title: Méthode getType (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ffbc4a02-e851-431c-bc1a-7ab381d982bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 38cc11c791666ebefadf71a412ea5a5858c03f34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 521f44a5a9e33903177d05ae6d2a49d023db013e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978552"
 ---
 # <a name="gettype-method-sqlserverresultset"></a>getType, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public int getType()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui indique le type de curseur en cours, ce qui peut prendre l’une des valeurs suivantes :  
+ **Entier** qui indique le type de curseur actuel, qui peut prendre l’une des valeurs suivantes:  
   
  ResultSet.TYPE_FORWARD_ONLY  
   

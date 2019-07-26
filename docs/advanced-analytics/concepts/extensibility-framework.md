@@ -7,15 +7,15 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4ee27fd68563be336f5bc98bb5b51b200f1dff71
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: a5c49172ed23867f95e383878f792092bd762177
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345131"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470458"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>Architecture d’extensibilité dans SQL Server Machine Learning Services 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server a un Framework d’extensibilité pour l’exécution de scripts externes tels que R ou python sur le serveur. Le script s’exécute dans un environnement de Runtime de langage en tant qu’extension du moteur de base de données principal. 
 

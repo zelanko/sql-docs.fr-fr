@@ -1,5 +1,5 @@
 ---
-title: setFetchSize, méthode (SQLServerResultSet) | Microsoft Docs
+title: Méthode setFetchSize (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 233bf4f8-4758-42d0-a80b-33e34fa78027
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c5d0bd8714714a479f9370ed2c60b626006e1964
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b253ad989593fa88b2281d933387dfe38fee1732
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974246"
 ---
 # <a name="setfetchsize-method-sqlserverresultset"></a>setFetchSize, méthode (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public void setFetchSize(int rows)
 #### <a name="parameters"></a>Paramètres  
  *rows*  
   
- Un **int** indiquant le nombre de lignes à extraire.  
+ **Entier** indiquant le nombre de lignes à extraire.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setFetchSize est spécifiée par la méthode setFetchSize de l’interface java.sql.ResultSet.  
+ Cette méthode setFetchSize est spécifiée par la méthode setFetchSize dans l’interface java. Sql. ResultSet.  
   
  Si la taille d'extraction spécifiée est de zéro, le pilote JDBC ignore la valeur et procède à une estimation de ce que devrait être la taille d'extraction. La valeur par défaut est définie par l’objet [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) qui a créé le jeu de résultats. La taille d'extraction peut être modifiée à tout moment.  
   

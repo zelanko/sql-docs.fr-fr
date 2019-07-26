@@ -7,15 +7,15 @@ ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 361093be372e77a869996e6ffb67a6bd6e701c44
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b4218a1b30aedacdab73d08c7b76e3e19d17511c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345088"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469947"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (bibliothèque R dans SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Le package **sqlrutils** fournit un mécanisme permettant aux utilisateurs de R de placer leurs scripts R dans une procédure stockée T-SQL, d’inscrire cette procédure auprès d’une base de données, et d’exécuter la procédure stockée à partir d’un environnement de développement R. 
 

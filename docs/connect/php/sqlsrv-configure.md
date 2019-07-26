@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ae32c7693b724deec25c8d923e02cdf929e893ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b98533dcc1589e07bc8ae37562bf6734077a78f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935806"
 ---
 # <a name="sqlsrvconfigure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +36,7 @@ sqlsrv_configure( string $setting, mixed $value )
 ```  
   
 #### <a name="parameters"></a>Paramètres  
-*$setting*: nom du paramètre à configurer. Consultez le tableau ci-dessous pour obtenir la liste de paramètres.  
+*$setting*: nom du paramètre à configurer. Consultez le tableau ci-dessous pour obtenir la liste des paramètres.  
   
 *$value*: valeur à appliquer au paramètre spécifié dans le paramètre *$setting* . Les valeurs possibles pour ce paramètre dépendent du paramètre spécifié. Le tableau suivant répertorie les combinaisons possibles :  
   

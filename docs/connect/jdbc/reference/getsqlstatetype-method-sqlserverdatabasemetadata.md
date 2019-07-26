@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ee4d6751-68a3-4d04-831c-e6d704c59e63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 55079e30c2f8908153cc708aca699e77aef41261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76faa3bcaccac4f75d95dc49276c669a5631b5a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979732"
 ---
 # <a name="getsqlstatetype-method-sqlserverdatabasemetadata"></a>Méthode getSQLStateType (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,17 +35,17 @@ public int getSQLStateType()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui indique le type de SQLSTATE, qui peut être une des valeurs suivantes :  
+ **Entier** qui indique le type de SQLSTATE, qui peut prendre l’une des valeurs suivantes:  
   
--   Pour Java Runtime Environment version 5.0 : si le **xopenStates** a la valeur de propriété de connexion **true**, cette méthode retourne DatabaseMetaData.sqlStateXOpen. Sinon, DatabaseMetaData.sqlStateSQL99.  
+-   Pour Java Runtime Environment version 5,0: si la propriété de connexion **xopenStates** a la valeur **true**, cette méthode retourne DatabaseMetaData. sqlStateXOpen. Sinon, DatabaseMetaData.sqlStateSQL99.  
   
--   Pour Java Runtime Environment version 6.0 : si le **xopenStates** a la valeur de propriété de connexion **true**, cette méthode retourne DatabaseMetaData.sqlStateXOpen. Sinon, DatabaseMetaData.sqlStateSQL.  
+-   Pour Java Runtime Environment version 6,0: si la propriété de connexion **xopenStates** a la valeur **true**, cette méthode retourne DatabaseMetaData. sqlStateXOpen. Sinon, DatabaseMetaData.sqlStateSQL.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getSQLStateType est spécifiée par la méthode getSQLStateType dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getSQLStateType est spécifiée par la méthode getSQLStateType dans l’interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

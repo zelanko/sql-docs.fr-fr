@@ -7,15 +7,15 @@ ms.date: 03/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b106607a535adc074a241ecee0b2db66e137c687
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1ac89b23d9b027c8f5fd02daa28a4246cddf48f1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345329"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470135"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>Rendre le code R opérationnel à l’aide de procédures stockées dans SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Lorsque vous utilisez les fonctionnalités R et Python dans SQL Server Machine Learning Services, l’approche la plus courante pour déplacer des solutions vers un environnement de production consiste à incorporer du code dans des procédures stockées. Cet article résume les points clés que le développeur SQL peut prendre en compte lors de la prise en compte du code R à l’aide de SQL Server.
 

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 10cf54f9-ef42-475e-8397-790306934573
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2365f1562ab927a041a714a519f5c295ffd4f401
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4e875e7b9a3866ffcb165610c4225a63f28dfa4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977274"
 ---
 # <a name="issearchable-method-sqlserverresultsetmetadata"></a>Méthode isSearchable (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,16 +37,16 @@ public boolean isSearchable(int column)
 #### <a name="parameters"></a>Paramètres  
  *column*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
 ## <a name="return-value"></a>Valeur retournée  
- **true** si la colonne de la colonne peut être utilisée dans une clause WHERE. Dans le cas contraire, la valeur est **false**.  
+ **true** si la colonne peut être utilisée dans une clause WHERE. Dans le cas contraire, la valeur est **false**.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode isSearchable est spécifiée par la méthode isSearchable dans l’interface java.sql.ResultSetMetaData.  
+ Cette méthode isSearchable est spécifiée par la méthode isSearchable dans l’interface java. Sql. ResultSetMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerResultSetMetaData, méthodes](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

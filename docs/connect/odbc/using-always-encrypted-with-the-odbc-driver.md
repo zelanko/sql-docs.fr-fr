@@ -7,14 +7,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: jroth
 author: MightyPen
-ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9d85cee931774da3efd0956ae259bd6eecb42eed
+ms.sourcegitcommit: b57d445d73a0133c7998653f2b72cf09ee83a208
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680083"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68231854"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation d’Always Encrypted avec ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,12 +57,12 @@ Notez que l’activation d’Always Encrypted ne suffit pas à la réussite du c
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Récupération et modification des données dans des colonnes chiffrées
 
-Une fois que vous activez Always Encrypted sur une connexion, vous pouvez utiliser les API ODBC standard. Les API ODBC peut récupérer ou modifier des données dans les colonnes de base de données chiffrée. Les éléments suivants de la documentation peuvent vous aider à cela :
+Une fois que vous avez activé Always Encrypted sur une connexion, vous pouvez utiliser les API ODBC standard. Les API ODBC peuvent récupérer ou modifier des données dans des colonnes de base de données chiffrées. Les éléments de documentation suivants peuvent vous aider:
 
 - [Exemple de code ODBC](cpp-code-example-app-connect-access-sql-db.md)
 - [Guide de référence du programmeur ODBC](../../odbc/reference/odbc-programmer-s-reference.md)
 
-Votre application doit disposer des autorisations de base de données requis et doit être en mesure d’accéder à la clé principale de colonne. Ensuite, le pilote chiffre tous les paramètres de requête qui ciblent des colonnes chiffrées. Le pilote déchiffre également les données extraites des colonnes chiffrées. Le pilote effectue tout ce chiffrement et déchiffrement sans assistance à partir de votre code source. Il est à votre programme, comme si les colonnes ne sont pas chiffrés.
+Votre application doit disposer des autorisations de base de données requises, et doit être en mesure d’accéder à la clé principale de colonne. Ensuite, le pilote chiffre tous les paramètres de requête qui ciblent des colonnes chiffrées. Le pilote déchiffre également les données récupérées à partir des colonnes chiffrées. Le pilote effectue tout ce chiffrement et déchiffrement sans aucune assistance de votre code source. Pour votre programme, c’est comme si les colonnes ne sont pas chiffrées.
 
 Si Always Encrypted n’est pas activé, les requêtes ayant des paramètres qui ciblent des colonnes chiffrées échouent. Les données peuvent toujours être récupérées à partir des colonnes chiffrées, tant que la requête n’a aucun paramètre qui cible des colonnes chiffrées. Toutefois, le pilote ne tentera aucun déchiffrement et l’application recevra les données chiffrées binaires (sous la forme de tableaux d’octets).
 
@@ -363,9 +362,10 @@ ODBC Driver for SQL Server est fourni avec les fournisseurs de magasins de clés
 
 ### <a name="using-the-azure-key-vault-provider"></a>Utilisation d’Azure Key Vault Provider
 
-Azure Key Vault est un outil est très pratique qui permet de stocker et de gérer des clés principales de colonne Always Encrypted, en particulier si vos applications sont hébergées dans Azure. ODBC Driver for SQL Server sur Linux, macOS et Windows inclut un fournisseur de magasin de clés principales de colonne intégré pour Azure Key Vault. Pour plus d’informations sur la configuration d’un coffre de clés Azure pour Always Encrypted, consultez [Azure Key Vault – Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Qu’est-ce qu’Azure Key Vault ?](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) et [Créer et stocker des clés principales de colonne (Azure Key Vault)](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).
+Azure Key Vault (AKV) est un outil est très pratique qui permet de stocker et de gérer des clés principales de colonne Always Encrypted, en particulier si vos applications sont hébergées dans Azure. ODBC Driver for SQL Server sur Linux, macOS et Windows inclut un fournisseur de magasin de clés principales de colonne intégré pour Azure Key Vault. Pour plus d’informations sur la configuration d’un coffre de clés Azure pour Always Encrypted, consultez [Azure Key Vault – Step by Step](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Qu’est-ce qu’Azure Key Vault ?](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) et [Créer et stocker des clés principales de colonne (Azure Key Vault)](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2).
 
 > [!NOTE]
+> Le pilote ODBC ne prend pas en charge Services ADFS pour l’authentification AKV. Si vous utilisez l’authentification Azure Active Directory sur AKV et que votre configuration de Active Directory comprend des services fédérés, l’authentification peut échouer.
 > Sur Linux et macOS, pour les versions 17.2 et ultérieures du pilote, `libcurl` est nécessaire pour utiliser ce fournisseur, mais n’est pas une dépendance explicite dans la mesure où les autres opérations avec le pilote n’en ont pas besoin. Si vous rencontrez une erreur concernant `libcurl`, vérifiez qu’il est installé.
 
 Le pilote prend en charge l’authentification auprès d’Azure Key Vault avec les types d’informations d’identification suivants :

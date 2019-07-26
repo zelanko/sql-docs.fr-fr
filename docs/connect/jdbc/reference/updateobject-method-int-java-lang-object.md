@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4993dfe1-2232-4b3c-b931-dfdb35dd225a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99a6b4c7ba565b9a77400f3ccb4e887367030a7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 796a31238a8340b5604797bbb8e38e7ebd1b4237
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998727"
 ---
 # <a name="updateobject-method-int-javalangobject"></a>Méthode updateObject (int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void updateObject(int index,
 #### <a name="parameters"></a>Paramètres  
  *index*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
  *obj*  
   
@@ -49,7 +48,7 @@ public void updateObject(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateObject est spécifiée par la méthode updateObject dans l’interface java.sql.ResultSet.  
+ Cette méthode updateObject est spécifiée par la méthode updateObject de l’interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [updateObject, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   

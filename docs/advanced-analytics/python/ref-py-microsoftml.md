@@ -7,15 +7,15 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 298328db563cac8183b14b47e5c75c850c782d58
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: c2d27b295df6b29d69ce90a7c70c135a197b68b0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345454"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470223"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (module python dans SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **microsoftml** est un module compatible Python35 de Microsoft fournissant des algorithmes de machine learning hautes performances. Il comprend des fonctions de formation et de transformations, de notation, d’analyse de texte et d’image, et d’extraction de fonctionnalités pour dériver des valeurs de données existantes.
 

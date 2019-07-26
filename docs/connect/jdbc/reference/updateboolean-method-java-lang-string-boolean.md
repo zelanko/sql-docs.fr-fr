@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5fed9ebb-d9a3-4d1a-9212-1057a603c4e5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 488d79e4b3d82bc20d7046efd09621fb0d08e707
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a7fcdbd273af8d4b3ddddbdebcfea3d2740eb480
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996954"
 ---
 # <a name="updateboolean-method-javalangstring-boolean"></a>Méthode updateBoolean (java.lang.String, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateBoolean(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateBoolean est spécifiée par la méthode updateBoolean dans l’interface java.sql.ResultSet.  
+ Cette méthode updateBoolean est spécifiée par la méthode updateBoolean de l’interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [updateBoolean, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)   

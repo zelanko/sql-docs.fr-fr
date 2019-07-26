@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-ms.openlocfilehash: 71a6149f1d89a4a1df114f376c250c203a8721cf
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0ee8902dad88cc148481585aaa9e1e083e536d0f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344909"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469898"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>FAQ sur la mise à niveau et l’installation de SQL Server Machine Learning ou R Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Cette rubrique fournit des réponses à certaines questions courantes sur l’installation des fonctionnalités de Machine Learning dans SQL Server. Elle traite également des questions courantes sur les mises à niveau.
 

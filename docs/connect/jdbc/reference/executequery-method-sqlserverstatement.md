@@ -1,5 +1,5 @@
 ---
-title: executeQuery, méthode (SQLServerStatement) | Microsoft Docs
+title: Méthode executeQuery (SQLServerStatement) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 599cf463-e19f-4baa-bacb-513cad7c6cd8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8755695a805684338378efa4427c24c333c3da08
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d66ceda5c9afee28240de5af9fe833acd4e25bbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954777"
 ---
 # <a name="executequery-method-sqlserverstatement"></a>Méthode executeQuery (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 #### <a name="parameters"></a>Paramètres  
  *sql*  
   
- Un **chaîne** qui contient une instruction SQL.  
+ **Chaîne** qui contient une instruction SQL.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Objet SQLServerResultSet.  
@@ -47,7 +46,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode executeQuery est spécifiée par la méthode executeQuery dans l’interface java.sql.Statement.  
+ Cette méthode executeQuery est spécifiée par la méthode executeQuery de l’interface java.sql.Statement.  
   
  Une exception [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) est levée si l’instruction SQL donnée produit autre chose qu’un objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) unique.  
   

@@ -7,15 +7,15 @@ ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1b0eea71105cb22cce81ac482c8ad6df50e63fa0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5d5d74090713666a2da6058d9eccee1e33e4d7cb
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343434"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469744"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Données de démonstration sur le taxi de New York pour SQL Server didacticiels Python et R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Cet article explique comment configurer un exemple de base de données qui se compose de données publiques à partir des taxis de [New York et de limousines Commission](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml). Ces données sont utilisées dans plusieurs didacticiels R et Python pour l’analyse dans la base de données sur SQL Server. Pour accélérer l’exécution de l’exemple de code, nous avons créé un échantillon représentatif de 1% des données. Sur votre système, le fichier de sauvegarde de la base de données est légèrement supérieur à 90 Mo, ce qui fournit 1,7 million lignes dans la table de données principale.
 

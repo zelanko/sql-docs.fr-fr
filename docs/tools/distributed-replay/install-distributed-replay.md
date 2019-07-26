@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ea1171da-f50e-4f16-bedc-5e468a46477f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 10762f3d10aa8e90d8bf2d86663a19a9222db42c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4aa2cc0859972f980e26d67e054dba3c955527c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950037"
 ---
 # <a name="install-distributed-replay"></a>Installer Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "52516006"
   
  En supposant que vous utilisez les emplacements de fichiers et l'installation par défaut, le répertoire de base se trouve dans C:\Program Files\Microsoft SQL Server. Dans ce répertoire, les emplacements d'installation des binaires et des assemblys sont les suivants :  
   
--   Sur un système 32 bits :  
+-   Sur un système 32 bits :  
   
      [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Outils  
   
@@ -86,7 +85,7 @@ ms.locfileid: "52516006"
   
 5.  Dans la page **Fichiers de support du programme d'installation** , cliquez sur **Installer** pour installer ou mettre à jour les fichiers de support du programme d'installation pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-6.  Dans la page **Rôle d’installation**, sélectionnez **Installation de fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, puis cliquez sur **Suivant** pour passer à la page **Sélection des fonctionnalités**.  
+6.  Dans la page **Rôle d’installation**, sélectionnez **Installation de fonctionnalités [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , puis cliquez sur **Suivant** pour passer à la page **Sélection des fonctionnalités**.  
   
 7.  Dans la page **Sélection de fonctionnalités** , configurez les fonctionnalités à installer.  
   
@@ -110,7 +109,7 @@ ms.locfileid: "52516006"
   
      Les comptes de groupe (locaux ou de domaine) et autres comptes intégrés (comme Tout le monde) ne sont pas acceptés.  
   
-8.  Éventuellement, cliquez sur le bouton de sélection (…) pour modifier le chemin d'accès au répertoire des fonctionnalités partagées.  
+8.  Éventuellement, cliquez sur le bouton de sélection (...) pour modifier le chemin du répertoire des fonctionnalités partagées.  
   
     1.  Sur les ordinateurs 32 bits, le chemin d’installation par défaut est **C:\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\**  
   
@@ -156,16 +155,16 @@ ms.locfileid: "52516006"
   
 |Paramètre|Description|Valeurs prises en charge|  
 |---------------|-----------------|----------------------|  
-|/CTLRSVCACCOUNT<br /><br /> **Ce paramètre est facultatif**|Compte de service Distributed Replay Controller.|Vérifie le compte et le mot de passe|  
-|/CTLRSVCPASSWORD<br /><br /> **Ce paramètre est facultatif**|Mot de passe du compte de service Distributed Replay Controller.|Vérifie le compte et le mot de passe|  
+|/CTLRSVCACCOUNT<br /><br /> **Facultatif**|Compte de service Distributed Replay Controller.|Vérifie le compte et le mot de passe|  
+|/CTLRSVCPASSWORD<br /><br /> **Facultatif**|Mot de passe du compte de service Distributed Replay Controller.|Vérifie le compte et le mot de passe|  
 |/CTLRSTARTUPTYPE<br /><br /> **Ce paramètre est facultatif**|Type de démarrage pour le compte de service Distributed Replay Controller.|Automatic<br /><br /> Désactivé<br /><br /> Manuel|  
-|/CTLRUSERS<br /><br /> **Ce paramètre est facultatif**|Spécifiez les utilisateurs qui disposent d'autorisations pour le service Distributed Replay Controller.|Ensemble de chaînes de compte d'utilisateur utilisant «   » (espace) comme séparateur<br /><br /> **Important**: lorsque vous configurez le service Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :<br /><br /> Compte d'utilisateur de domaine<br /><br /> Compte d'utilisateur local créé par l'utilisateur<br /><br /> Administrateur<br /><br /> Administrateur<br /><br /> Compte virtuel et Compte de service administré (MSA)<br /><br /> Services réseau, Services locaux et Système<br /><br /> <br /><br /> Remarque : les comptes de groupe (locaux ou de domaine) et autres comptes intégrés (comme Tout le monde) ne sont pas acceptés.|  
-|/CLTSVCACCOUNT<br /><br /> **Ce paramètre est facultatif**|Compte de service Distributed Replay Client.|Vérifie le compte et le mot de passe|  
-|/CLTSVCPASSWORD<br /><br /> **Ce paramètre est facultatif**|Mot de passe du compte du service Distributed Replay Client.|Vérifie le compte et le mot de passe|  
-|/CLTSTARTUPTYPE<br /><br /> **Ce paramètre est facultatif**|Type de démarrage du compte du service Distributed Replay Client.|Automatic<br /><br /> Désactivé<br /><br /> Manuel|  
-|/CLTCTLRNAME<br /><br /> **Ce paramètre est facultatif**|Nom de l'ordinateur avec lequel le client communique pour le service Distributed Replay Controller.||  
-|/CLTWORKINGDIR<br /><br /> **Ce paramètre est facultatif**|Répertoire de travail du service Distributed Replay Client.|Chemin d'accès valide|  
-|/CLTRESULTDIR<br /><br /> **Ce paramètre est facultatif**|Répertoire des résultats du service Distributed Replay Client.|Chemin d'accès valide|  
+|/CTLRUSERS<br /><br /> **Facultatif**|Spécifiez les utilisateurs qui disposent d'autorisations pour le service Distributed Replay Controller.|Ensemble de chaînes de compte d'utilisateur utilisant «   » (espace) comme séparateur<br /><br /> **Important**: lorsque vous configurez le service Distributed Replay Controller, vous pouvez spécifier un ou plusieurs comptes d'utilisateurs qui seront utilisés pour exécuter les services Distributed Replay Client. Vous trouverez ci-dessous la liste des comptes pris en charge :<br /><br /> Compte d'utilisateur de domaine<br /><br /> Compte d'utilisateur local créé par l'utilisateur<br /><br /> Administrateur<br /><br /> Administrateur<br /><br /> Compte virtuel et Compte de service administré (MSA)<br /><br /> Services réseau, Services locaux et Système<br /><br /> <br /><br /> Remarque : les comptes de groupe (locaux ou de domaine) et autres comptes intégrés (comme Tout le monde) ne sont pas acceptés.|  
+|/CLTSVCACCOUNT<br /><br /> **Facultatif**|Compte de service Distributed Replay Client.|Vérifie le compte et le mot de passe|  
+|/CLTSVCPASSWORD<br /><br /> **Facultatif**|Mot de passe du compte du service Distributed Replay Client.|Vérifie le compte et le mot de passe|  
+|/CLTSTARTUPTYPE<br /><br /> **Facultatif**|Type de démarrage du compte du service Distributed Replay Client.|Automatic<br /><br /> Désactivé<br /><br /> Manuel|  
+|/CLTCTLRNAME<br /><br /> **Facultatif**|Nom de l'ordinateur avec lequel le client communique pour le service Distributed Replay Controller.||  
+|/CLTWORKINGDIR<br /><br /> **Facultatif**|Répertoire de travail du service Distributed Replay Client.|Chemin d'accès valide|  
+|/CLTRESULTDIR<br /><br /> **Facultatif**|Répertoire des résultats du service Distributed Replay Client.|Chemin d'accès valide|  
   
 ### <a name="sample-syntax"></a>Exemple de syntaxe :  
  **Pour installer le composant contrôleur de Distributed Replay**  
@@ -215,7 +214,7 @@ Setup.exe /CTLRSVCPASSWORD="ctlrsvcpswd" /CLTSVCPASSWORD="cltsvcpswd" / Configur
 > [!NOTE]  
 >  Vous devez spécifier les deux mots de passe dans la ligne de commande car il n'est pas possible de les configurer dans le fichier de configuration.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)   
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Distributed Replay Requirements](../../tools/distributed-replay/distributed-replay-requirements.md)   

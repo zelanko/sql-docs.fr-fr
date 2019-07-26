@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: edebe0f57ed09acbf9faa338355314e0bc6199d2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2418bd5e62f00e46ddc329c1c7ba987505fb5a7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982828"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>Méthode getImportedKeys (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -40,7 +39,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
 #### <a name="parameters"></a>Paramètres  
  *cat*  
   
- Un **chaîne** qui contient le nom du catalogue.  
+ **Chaîne** qui contient le nom du catalogue.  
   
  *schema*  
   
@@ -57,7 +56,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getImportedKeys est spécifiée par la méthode getImportedKeys dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getImportedKeys est spécifiée par la méthode getImportedKeys dans l’interface java. Sql. DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getImportedKeys contient les informations suivantes :  
   

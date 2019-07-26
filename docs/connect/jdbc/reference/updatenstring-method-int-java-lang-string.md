@@ -1,5 +1,5 @@
 ---
-title: updatenstring, méthode (int, java.lang.String) | Microsoft Docs
+title: Méthode updateNString (int, Java. lang. String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1bb909f1-4a96-4be1-adea-36c8d9703112
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c00621a2fedce7d9fba4d65f248b412627ee6233
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90aa44eda2af60ffdc73a65e01b3ae12b949d79f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998795"
 ---
 # <a name="updatenstring-method-int-javalangstring"></a>Méthode updateNString (int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -34,19 +33,19 @@ public void updateNString(int columnIndex,
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
  *nString*  
   
- Un **chaîne** objet.  
+ Objet **String** .  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateNString est spécifiée par la méthode updateNString dans l’interface java.sql.ResultSet.  
+ Cette méthode updateNString est spécifiée par la méthode updateNString de l’interface java.sql.ResultSet.  
   
- Cette méthode passe Java **chaîne** à la sélection **nchar**, **nvarchar (max)** , **ntext**, et **xml** colonnes. L'utilisation de cette méthode sur d'autres colonnes de type de données lève une exception.  
+ Cette méthode passe la **chaîne** Java à des colonnes **nchar**, **nvarchar (max)** , **ntext**et **XML** sélectionnées. L'utilisation de cette méthode sur d'autres colonnes de type de données lève une exception.  
   
 ## <a name="see-also"></a>Voir aussi  
  [updateNString, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   

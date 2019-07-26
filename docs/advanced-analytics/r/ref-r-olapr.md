@@ -7,15 +7,15 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2363b9ba69f914f828d7445a88d6ee1c784bb096
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 674e4ed4d1967452093e81e7bb4f5518d9237cf6
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344876"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469979"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapr (bibliothèque R dans SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **olapr** est une bibliothèque Microsoft de fonctions R utilisées pour les requêtes MDX sur un cube SQL Server Analysis Services OLAP. Les fonctions ne prennent pas en charge toutes les opérations MDX, mais vous pouvez créer des requêtes qui découpent les dimensions, les dés, les descente, les cumuls et les tableaux croisés dynamiques. 
 

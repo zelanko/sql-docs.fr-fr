@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 30860c07-e84b-428a-922a-ba63c070cd9c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 26bef53cbfa004ce0284aae5f0f4e1fb495fc3b1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 783247bda92e4a7dd3d89c6276be6457487f0bd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984200"
 ---
 # <a name="getdatabasemajorversion-method-sqlserverdatabasemetadata"></a>Méthode getDatabaseMajorVersion (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public int getDatabaseMajorVersion()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui indique la version principale de base de données.  
+ **Entier** qui indique la version principale de la base de données.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getDatabaseMajorVersion est spécifiée par la méthode getDatabaseMajorVersion dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getDatabaseMajorVersion est spécifiée par la méthode getDatabaseMajorVersion dans l’interface java. Sql. DatabaseMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerDatabaseMetaData, méthodes](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

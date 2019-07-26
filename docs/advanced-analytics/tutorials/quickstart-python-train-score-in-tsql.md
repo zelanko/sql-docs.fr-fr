@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c2c36c5aa81da098064885fd5b006d78494cd962
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 47ee23d945ded9fac97fe3eddc2137eeead00ae1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345765"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469510"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>Démarrage rapide : Créer, former et utiliser un modèle Python avec des procédures stockées dans SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dans ce guide de démarrage rapide à l’aide de Python, vous allez créer et exécuter deux procédures stockées. La première utilise le jeu de données de la fleur Iris classique et génère un modèle Naïve Bayes pour prédire une espèce iris en fonction des caractéristiques de la fleur. La deuxième procédure concerne la notation. Elle appelle le modèle généré dans la première procédure pour générer un ensemble de prédictions. En plaçant le code dans une procédure stockée, les opérations sont contenues, réutilisables et pouvant être appelées par d’autres procédures stockées et applications clientes. 
 

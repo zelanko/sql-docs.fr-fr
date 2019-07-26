@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 64995cc5de7bb3609f1923b7755be9b33b55e764
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1257cc3f3d0b3ed07bc879f5bc3337d62bc1b3a0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345901"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470574"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutoriel : Analyse des données R pour les développeurs SQL
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dans ce didacticiel pour les programmeurs SQL, découvrez l’intégration de R en créant et en déployant une solution de Machine Learning basée sur R à l’aide d’une base de données [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) sur SQL Server. Vous allez utiliser T-SQL, SQL Server Management Studio et une instance du moteur de base de données avec [Machine Learning Services] ([machine learning services](../install/sql-machine-learning-services-windows-install.md) et la prise en charge du langage R
 

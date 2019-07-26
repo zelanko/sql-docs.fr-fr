@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2f44a689-65c8-4c94-9574-e9c08ea7918e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11cbfbbe9e703867c2030c902ace6eedab38d77d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5c905c11d76f6f9928cb621ce5a35caa4dd1419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954749"
 ---
 # <a name="executeupdate-method-javalangstring-javalangstring"></a>executeUpdate, méthode (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,20 +38,20 @@ public final int executeUpdate(java.lang.String sql,
 #### <a name="parameters"></a>Paramètres  
  *sql*  
   
- Un **chaîne** qui contient une instruction SQL.  
+ **Chaîne** qui contient une instruction SQL.  
   
  *columnNames*  
   
  Tableau de type **String** indiquant quels noms de colonnes des clés générées automatiquement doivent être disponibles.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui indique le nombre de lignes affectées, 0 si vous utilisez une instruction DDL.  
+ **Entier** qui indique le nombre de lignes affectées, 0 si vous utilisez une instruction DDL.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode executeUpdate est spécifiée par la méthode executeUpdate dans l’interface java.sql.Statement.  
+ Cette méthode executeUpdate est spécifiée par la méthode executeUpdate de l’interface java.sql.Statement.  
   
  Si l’exécution d’une procédure stockée aboutit à plusieurs mises à jour, ou si cela génère plusieurs jeux de résultats, utilisez la méthode [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) pour exécuter la procédure stockée.  
   

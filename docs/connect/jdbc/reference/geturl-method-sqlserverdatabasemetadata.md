@@ -1,5 +1,5 @@
 ---
-title: getURL, méthode (SQLServerDatabaseMetaData) | Microsoft Docs
+title: Méthode getURL (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fcb66851-db5f-4ae8-b728-d129480b6f42
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f170e15ec0096d02fd98acb16e15a6ac05257f31
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4aa608851ddbe00c8d7c09523c0f3b8f9ec95ff6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978217"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>Méthode getURL (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public java.lang.String getURL()
   
 -   Valeur URL de « jdbc:sqlserver:// »  
   
--   Propriétés de connexion facultatifs, tels que **nom_serveur**, **instanceName**, et **numéro_port**  
+-   Propriétés de connexion facultatives, telles que **ServerName**, **InstanceName**et **numéro_port**  
   
 -   Autres propriétés de connexion définies par l’utilisateur et toutes les propriétés de connexion avec des valeurs par défaut de pilote non vides et non Null, à l’exception de **userName**, **password** et **integratedSecurity**.  
   

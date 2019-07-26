@@ -7,15 +7,15 @@ ms.date: 10/29/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 70c409af4e8cbca3d4005f54a0772a0fd4917381
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: d6b1772effd2ca1b35e547dc1f474dbe355aa86b
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345220"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470611"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Surveiller SQL Server Machine Learning Services à l’aide de vues de gestion dynamique (DMV)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Utilisez les vues de gestion dynamique (DMV) pour surveiller l’exécution de scripts externes (R et Python), les ressources utilisées, diagnostiquer les problèmes et optimiser les performances dans SQL Server Machine Learning Services.
 

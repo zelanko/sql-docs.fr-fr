@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 638aca05-63e4-4d73-a9c8-e0442f775720
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 130489258d13d801a973e510042463440479f6b8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bd9252827e7c7bec70636937bc89dd5390e68519
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980956"
 ---
 # <a name="getparametertype-method-sqlserverparametermetadata"></a>Méthode getParameterType (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,16 +37,16 @@ public int getParameterType(int param)
 #### <a name="parameters"></a>Paramètres  
  *param*  
   
- Un **int** qui indique l’index de paramètre.  
+ **Entier** qui indique un index de paramètre.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui indique le code de type JDBC comme défini dans java.sql.Types.  
+ **Entier** qui indique le code de type JDBC tel que défini dans Java. Sql. types.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getParameterType est spécifiée par la méthode getParameterType dans l’interface java.sql.ParameterMetaData.  
+ Cette méthode getParameterType est spécifiée par la méthode getParameterType dans l’interface java. Sql. ParameterMetaData.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerParameterMetaData, méthodes](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

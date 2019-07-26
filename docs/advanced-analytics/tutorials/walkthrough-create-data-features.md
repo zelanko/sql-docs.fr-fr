@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a7d62004745f8b77bbc26b4d924e2e3948cf2f9e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: e799b1ccba38d7716f2987112573a1d2d07203cd
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345832"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468466"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>Créer des fonctionnalités de données à l’aide de R et SQL Server (procédure pas à pas)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 L’ingénierie des données est un aspect important du Machine Learning. Les données doivent souvent être transformées avant de pouvoir être utilisées pour la modélisation prédictive. Si les données n’ont pas les caractéristiques dont vous avez besoin, vous pouvez les créer à partir de valeurs existantes.
 

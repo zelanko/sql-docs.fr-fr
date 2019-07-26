@@ -1,5 +1,5 @@
 ---
-title: 'Comment : se connecter sur un Port spécifié | Microsoft Docs'
+title: 'Procédure: se connecter sur un port spécifié | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 340cedae8ee5c205e3bc6ea8942151dd4beca168
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: af055a73904bb8feec92fb2afe93df064a09ab23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015053"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>Procédure : se connecter sur un port spécifié
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

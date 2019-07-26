@@ -10,12 +10,12 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ee47da3e97240ec4573303700e9793ee482821c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513044"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475984"
 ---
 # <a name="sql-server-index-design-guide"></a>Guide de conception d'index SQL Server
 
@@ -25,11 +25,11 @@ ms.locfileid: "62513044"
   
  Ce guide suppose que le lecteur connaît les types d'index disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir description générale des types d'index, consultez [Types d'index](../relational-databases/indexes/indexes.md).  
   
-##  <a name="Top"></a> Dans ce Guide  
+##  <a name="Top"></a>Dans ce guide  
 
- [Principes fondamentaux de conception de index](#Basics)  
+ [Concepts de base de la conception d’index](#Basics)  
   
- [Instructions de conception d’Index général](#General_Design)  
+ [Règles générales de conception d’index](#General_Design)  
   
  [Indications pour la conception d’index cluster](#Clustered)  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62513044"
 
  La stratégie de conception d'index que nous recommandons est constituée des tâches suivantes :  
   
-1.  Comprendre les caractéristiques de la base de données elle-même. Par exemple, s'agit-il d'une base de données de traitement transactionnel en ligne (OLTP) dont les données sont souvent modifiées, ou d'une base de données d'aide à la décision (DSS) ou d'entreposage de données (OLAP) contenant essentiellement des données en lecture seule et devant traiter des jeux de données volumineux rapidement ? Dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], les index *columnstore optimisés en mémoire xVelocity* sont particulièrement adaptés aux jeux de données d'entrepôts de données classiques. Les index columnstore peuvent transformer l'expérience utilisateur des entrepôts de données en améliorant considérablement les performances des requêtes communes liées aux entrepôts de données, par exemple en matière de filtrage, d'agrégation, de regroupement et de jointure en étoile. Pour plus d’informations, consultez [index Columnstore décrits](../relational-databases/indexes/columnstore-indexes-described.md).  
+1.  Comprendre les caractéristiques de la base de données elle-même. Par exemple, s'agit-il d'une base de données de traitement transactionnel en ligne (OLTP) dont les données sont souvent modifiées, ou d'une base de données d'aide à la décision (DSS) ou d'entreposage de données (OLAP) contenant essentiellement des données en lecture seule et devant traiter des jeux de données volumineux rapidement ? Dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], les index *columnstore optimisés en mémoire xVelocity* sont particulièrement adaptés aux jeux de données d'entrepôts de données classiques. Les index columnstore peuvent transformer l'expérience utilisateur des entrepôts de données en améliorant considérablement les performances des requêtes communes liées aux entrepôts de données, par exemple en matière de filtrage, d'agrégation, de regroupement et de jointure en étoile. Pour plus d’informations, consultez [index ColumnStore décrits](../relational-databases/indexes/columnstore-indexes-described.md).  
   
 2.  Comprendre les caractéristiques des requêtes les plus fréquemment utilisées. Par exemple, si vous savez qu'une requête fréquemment utilisée crée une jointure entre deux tables ou plus, vous serez plus à même de choisir le type d'index le mieux adapté.  
   
@@ -180,7 +180,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  Le plan d'exécution ci-dessous pour cette requête montre que l'optimiseur de requête a utilisé un opérateur SORT pour retourner l'ensemble de résultats dans l'ordre spécifié par la clause ORDER BY.  
   
- ![Plan d’exécution indique un opérateur SORT est utilisé. ](media/indexsort1.gif "Plan d’exécution indique un opérateur SORT est utilisé.")  
+ ![Plan d’exécution indique qu’un opérateur de tri est utilisé.](media/indexsort1.gif "Plan d’exécution indique qu’un opérateur de tri est utilisé.")  
   
  Si un index est créé avec les colonnes clés correspondant à celles de la clause ORDER BY de la requête, l'opérateur SORT peut être supprimé du plan de requête, ce qui rend celui-ci plus efficace.  
   
@@ -192,13 +192,13 @@ ON Purchasing.PurchaseOrderDetail
   
  Une fois la requête réexécutée, le plan d'exécution ci-dessous montre que l'opérateur SORT a été supprimé et que l'index non-cluster nouvellement créé est utilisé.  
   
- ![Plan d’exécution indique un tri opérateur n’est pas utilisé](media/insertsort2.gif "plan d’exécution indique un tri opérateur n’est pas utilisé.")  
+ ![Le plan d’exécution affiche un opérateur de tri non utilisé](media/insertsort2.gif "Le plan d’exécution affiche un opérateur de tri non utilisé")  
   
  Le [!INCLUDE[ssDE](../includes/ssde-md.md)] peut parcourir les données aussi efficacement dans un sens que dans l'autre. Un index défini sous la forme `(RejectedQty DESC, ProductID ASC)` peut néanmoins être utilisé pour une requête dont la clause ORDER BY inverse le sens du tri des colonnes. Par exemple, une requête possédant la clause ORDER BY `ORDER BY RejectedQty ASC, ProductID DESC` peut utiliser l'index.  
   
  L'ordre de tri ne peut être spécifié que pour les colonnes clés. L’affichage catalogue [sys.index_columns](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql) et la fonction INDEXKEY_PROPERTY indiquent si une colonne d’index est stockée dans l’ordre croissant ou décroissant.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien retour au début") [Dans ce guide](#Top)  
   
 ##  <a name="Clustered"></a> Indications pour la conception d'index cluster  
 
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   utilisables dans les requêtes de plage.  
   
- Si l'index cluster n'est pas créé avec la propriété UNIQUE, le [!INCLUDE[ssDE](../includes/ssde-md.md)] ajoute automatiquement une colonne d'indicateur d'unicité de 4 octets à la table. Si nécessaire, le [!INCLUDE[ssDE](../includes/ssde-md.md)] ajoute automatiquement une valeur d'indicateur d'unicité une ligne pour que chaque clé soit unique. Cette colonne et ses valeurs sont utilisées en interne et ne sont ni affichables, ni accessibles par les utilisateurs.  
+ Si l’index cluster n’est pas créé avec la propriété unique, le [!INCLUDE[ssDE](../includes/ssde-md.md)] ajoute automatiquement une colonne uniquifier de 4 octets à la table. Lorsqu’il est requis, le [!INCLUDE[ssDE](../includes/ssde-md.md)] ajoute automatiquement une valeur uniquifier à une ligne pour que chaque clé soit unique. Cette colonne et ses valeurs sont utilisées en interne et ne sont ni affichables, ni accessibles par les utilisateurs.  
   
 ### <a name="clustered-index-architecture"></a>Architecture des index cluster  
 
@@ -227,7 +227,7 @@ ON Purchasing.PurchaseOrderDetail
   
  L'illustration suivante montre la structure d'un index cluster dans une partition unique.  
   
- ![Niveaux d’un index cluster](media/bokind2.gif "niveaux d’un index cluster")  
+ ![Niveaux d’un index cluster](media/bokind2.gif "Niveaux d’un index cluster")  
   
 ### <a name="query-considerations"></a>Remarques sur les requêtes  
 
@@ -273,7 +273,7 @@ ON Purchasing.PurchaseOrderDetail
   
      Les clés étendues sont composées de plusieurs colonnes ou plusieurs colonnes de grande taille. Les valeurs de clé de l'index cluster sont utilisées par tous les index non-cluster comme clés de recherche. Tous les index non-cluster définis sur la même table sont considérablement plus grands car leurs entrées contiennent la clé de cluster et aussi les colonnes clés définies pour cet index non-cluster.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien retour au début") [Dans ce guide](#Top)  
   
 ##  <a name="Nonclustered"></a> Indications pour la conception d'index non-cluster  
 
@@ -301,7 +301,7 @@ ON Purchasing.PurchaseOrderDetail
   
  L'illustration suivante montre la structure d'un index non-cluster avec une seule partition.  
   
- ![Niveaux d’un index non-cluster](media/bokind1.gif "niveaux d’un index non-cluster")  
+ ![Niveaux d’un index non-cluster](media/bokind1.gif "Niveaux d’un index non-cluster")  
   
 ### <a name="database-considerations"></a>Remarques sur la base de données  
 
@@ -453,7 +453,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
  Vous devez déterminer si les gains de performances des requêtes compensent la dégradation des performances lors de la modification des données et la quantité d'espace disque supplémentaire nécessaire.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien retour au début") [Dans ce guide](#Top)  
   
 ##  <a name="Unique"></a> Instructions de conception d'index uniques  
 
@@ -479,7 +479,7 @@ INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
   
 -   Un index non cluster unique peut contenir des colonnes non-clés incluses. Pour plus d'informations, consultez [Index avec colonnes incluses](#Included_Columns).  
   
- ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien retour au début") [Dans ce guide](#Top)  
   
 ##  <a name="Filtered"></a> Instructions de conception d'index filtrés  
 
@@ -626,7 +626,7 @@ WHERE b = CONVERT(Varbinary(4), 1);
   
  Le fait de déplacer la conversion de données de la gauche vers la droite d'un opérateur de comparaison peut modifier la signification de la conversion. Dans l'exemple ci-dessus, lorsque l'opérateur CONVERT a été ajouté à droite, la comparaison de type integer est devenue une comparaison de type `varbinary`.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans ce Guide](#Top)  
+ ![Icône de flèche utilisée avec le lien retour au début](media/uparrow16x16.gif "Icône de flèche utilisée avec le lien retour au début") [Dans ce guide](#Top)  
   
 ##  <a name="Additional_Reading"></a> Lecture supplémentaire  
 

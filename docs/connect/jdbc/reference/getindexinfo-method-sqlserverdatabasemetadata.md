@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 22414058b0763f32c2b991487e006b8de8e50611
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982790"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>Méthode getIndexInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 #### <a name="parameters"></a>Paramètres  
  *cat*  
   
- Un **chaîne** qui contient le nom du catalogue.  
+ **Chaîne** qui contient le nom du catalogue.  
   
  *schema*  
   
@@ -54,11 +53,11 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *unique*  
   
- **true** si seuls les index pour les valeurs uniques sont retournés. **false** si tous les index sont retournés.  
+ **true** si seuls les index des valeurs uniques sont retournés. **false** si tous les index sont retournés.  
   
  *approximate*  
   
- **true** si les résultats reflètent les valeurs approximatives ou obsolètes. **false** si les résultats sont exactes.  
+ **true** si les résultats correspondent à des valeurs approximatives ou obsolètes. **false** si les résultats sont exacts.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md).  
@@ -67,7 +66,7 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode getIndexInfo est spécifiée par la méthode getIndexInfo dans l’interface java.sql.DatabaseMetaData.  
+ Cette méthode getIndexInfo est spécifiée par la méthode getIndexInfo de l’interface java.sql.DatabaseMetaData.  
   
  Le jeu de résultats retourné par la méthode getIndexInfo contient les informations suivantes :  
   

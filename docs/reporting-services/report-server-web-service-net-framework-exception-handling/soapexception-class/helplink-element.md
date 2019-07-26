@@ -11,17 +11,17 @@ helpviewer_keywords:
 ms.assetid: a4489103-a874-44c2-8f75-95cb238928ed
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4c7df237a967b2601667ccf8b4849bfa146c6103
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ed62c34095adc2e9c039d1780f616530679b601
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62991673"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307576"
 ---
 # <a name="helplink-element"></a>Élément HelpLink
   L’élément **HelpLink** de la propriété **Detail** est une chaîne d’URL générée par le serveur de rapports. L'URL cible une page Web gérée par le centre d'Aide et de support [!INCLUDE[msCoName](../../../includes/msconame-md.md)] et fournit une aide et des articles de base de connaissances supplémentaires sur les erreurs spécifiques qui se produisent dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. La syntaxe de l'URL est la suivante :  
   
- **https://** www.microsoft.com **/** produits **/** ee **/** transform.aspx **?EvtSrc**=v_alue_ **&EvtID**=_valeur_ **&ProdName**=_valeur_ **&ProdVer**=*valeur*  
+ **https://** www\.microsoft.com **/** produits **/** ee **/** transform.aspx **?EvtSrc**=v_alue_ **&EvtID**=_valeur_ **&ProdName**=_valeur_ **&ProdVer**=*valeur*  
   
  Le tableau suivant répertorie les arguments de l’URL **HelpLink**.  
   

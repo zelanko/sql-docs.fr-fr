@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a7514673-3457-4541-9560-28a8284ad9e3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 81cb6429cbf1c3f1dd1d97a0aee9458fff637f15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8dfd7f14d6006f5a41a7cd2a9b0cae4933804fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979214"
 ---
 # <a name="gettables-method-sqlserverdatabasemetadata"></a>Méthode getTables (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 #### <a name="parameters"></a>Paramètres  
  *catalog*  
   
- Un **chaîne** qui contient le nom du catalogue. La spécification d'une valeur Null pour ce paramètre indique que le nom du catalogue n'a pas besoin d'être utilisé.  
+ **Chaîne** qui contient le nom du catalogue. La spécification d'une valeur Null pour ce paramètre indique que le nom du catalogue n'a pas besoin d'être utilisé.  
   
  *schema*  
   
@@ -70,7 +69,7 @@ public java.sql.ResultSet getTables(java.lang.String catalog,
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Nom de la base de données qui contient la table spécifiée.|  
 |TABLE_SCHEM|**String**|Le nom du schéma de la table.|  
-|TABLE_NAME|**String**|Le nom de la table.|  
+|TABLE_NAME|**String**|Nom de la table.|  
 |TABLE_TYPE|**String**|Le type de table.|  
 |REMARKS|**String**|Description de la table.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
 |TYPE_CAT|**String**|Non pris en charge par le pilote JDBC.|  

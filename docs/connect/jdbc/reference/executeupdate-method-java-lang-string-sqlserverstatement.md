@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85e7c3a2-f2da-49bf-9d90-5fd246fd60e1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 91d9b9d3a50bf038e201ce0468f1da0e784c35b6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5adfcb9127e6bc073bda7385387edf0946a96021
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954715"
 ---
 # <a name="executeupdate-method-javalangstring-sqlserverstatement"></a>Méthode executeUpdate (java.lang.String) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,16 +37,16 @@ public int executeUpdate(java.lang.String sql)
 #### <a name="parameters"></a>Paramètres  
  *sql*  
   
- Un **chaîne** qui contient l’instruction SQL.  
+ **Chaîne** qui contient l’instruction SQL.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un **int** qui indique le nombre de lignes affectées ou 0 si vous utilisez une instruction DDL.  
+ **Entier** qui indique le nombre de lignes affectées, ou 0 si vous utilisez une instruction DDL.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode executeUpdate est spécifiée par la méthode executeUpdate dans l’interface java.sql.Statement.  
+ Cette méthode executeUpdate est spécifiée par la méthode executeUpdate de l’interface java.sql.Statement.  
   
  Si l’exécution d’une procédure stockée aboutit à plusieurs mises à jour, ou si cela génère plusieurs jeux de résultats, utilisez la méthode [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) pour exécuter la procédure stockée.  
   

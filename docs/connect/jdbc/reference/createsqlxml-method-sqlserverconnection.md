@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: cf5bfcdd-bc03-4c5b-b554-d8a8a4067e93
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f44520d6d6a060bb323436d23fa7335e25551883
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0d1265a48fbe07bdf59616026a069fda05723f10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955333"
 ---
 # <a name="createsqlxml-method-sqlserverconnection"></a>Méthode createSQLXML (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Crée un **SQLXML** objet sans aucune donnée.  
+  Crée un objet **SQLXML** sans aucune donnée.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -31,13 +30,13 @@ public java.sql.SQLXML createSQLXML()
 ```  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet SQLXML.  
+ Objet SQLXML.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode createSQLXML est spécifiée par la méthode createSQLXML dans l’interface java.sql.Connection.  
+ Cette méthode createSQLXML est spécifiée par la méthode createSQLXML dans l’interface java. Sql. Connection.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

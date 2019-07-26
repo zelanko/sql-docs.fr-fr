@@ -7,15 +7,15 @@ ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 255342113a17b0fb2af58eb6bc173cb6c50aac6d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5606997e26aa006e102a2cc60f5635702500e53f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344928"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470061"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Mappages de types de données entre R et SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Pour les solutions R qui s’exécutent sur la fonctionnalité d’intégration R de SQL Server Machine Learning Services, passez en revue la liste des types de données non pris en charge, ainsi que les conversions de types de données qui peuvent être effectuées implicitement lorsque les données sont transmises entre les bibliothèques R et les SQL Server.
 

@@ -1,5 +1,5 @@
 ---
-title: setasciistream, méthode (SQLServerClob) | Microsoft Docs
+title: Méthode setAsciiStream (SQLServerClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76d58f43e1caded32ac03e2c8f96ee5b9365bb72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fff312217f9191e6752f8eb753096ff7499a0496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975435"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>Méthode setAsciiStream (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.OutputStream setAsciiStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setAsciiStream est spécifiée par la méthode setAsciiStream dans l’interface java.sql.Clob.  
+ Cette méthode setAsciiStream est spécifiée par la méthode setAsciiStream dans l’interface java. Sql. CLOB.  
   
  Les données de caractères dans l'objet CLOB sont remplacées par le flux de sortie en commençant à la position donnée et elles peuvent dépasser la longueur initiale de l'objet CLOB. La spécification d'une valeur position+1 permet d'ajouter des caractères ASCII. La spécification d'une valeur position+2 ou supérieure (ou de zéro ou d'une valeur inférieure) génère une erreur de position.  
   

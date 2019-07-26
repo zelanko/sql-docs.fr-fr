@@ -1,5 +1,5 @@
 ---
-title: updatebytes, méthode (java.lang.String, byte) | Microsoft Docs
+title: Méthode updateBytes (Java. lang. String, Byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4fb9de2b-61bc-4c96-89a5-c07cd7ee201a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 80fca41da217b3f13d7aadc688f96c7ca6ffa360
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 19ebdfb5b13cd528e5690fe2eeae9bec35e2134d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996895"
 ---
 # <a name="updatebytes-method-javalangstring-byte"></a>updateBytes, méthode (java.lang.String, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateBytes(java.lang.String columnName,
   
  *x*  
   
- Un tableau de **octets** valeurs.  
+ Tableau de valeurs d' **octets** .  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateBytes est spécifiée par la méthode updateBytes dans l’interface java.sql.ResultSet.  
+ Cette méthode updateBytes est spécifiée par la méthode updateBytes de l’interface java.sql.ResultSet.  
   
  Dans la version précédente de [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)], vous pouviez utiliser SQLServerResultSet.updateBytes pour convertir des valeurs entre des tableaux d’octets et le type de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **date**, **time**, **datetime2** ou **datetimeoffset**. À présent, l'utilisation de cette méthode avec ces types de données lève une exception indiquant que la conversion n'est pas prise en charge.  
   

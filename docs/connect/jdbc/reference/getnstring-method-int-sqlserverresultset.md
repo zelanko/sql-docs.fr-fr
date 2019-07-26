@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c8cc4636-01e9-4dc8-a40c-728337ca08f5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b52d434f3add9cfe2590519e90267bbfb93e160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 336192ffefd750ba3e817ba1b961fd3726d9a6e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981415"
 ---
 # <a name="getnstring-method-int-sqlserverresultset"></a>Méthode getNString (int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,10 +32,10 @@ public java.lang.String getNString(int columnIndex)
 #### <a name="parameters"></a>Paramètres  
  *columnIndex*  
   
- Un **int** qui indique l’index de colonne.  
+ **Entier** qui indique l’index de colonne.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Un objet String.  
+ Objet String.  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -44,7 +43,7 @@ public java.lang.String getNString(int columnIndex)
 ## <a name="remarks"></a>Notes  
  Cette méthode getNString est spécifiée par la méthode getNString de l’interface java.sql.SQLServerResultSet.  
   
- Cette méthode peut être utilisée pour récupérer la valeur d’un **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**, ou **xml** colonne dans la ligne actuelle de ce [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) objet. Si vous essayez d'utiliser cette méthode pour récupérer les valeurs d'autres types de données, une exception est levée.  
+ Cette méthode peut être utilisée pour récupérer la valeur d’une colonne **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**ou **XML** dans la ligne actuelle de cet objet [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) . Si vous essayez d'utiliser cette méthode pour récupérer les valeurs d'autres types de données, une exception est levée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [getNString, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

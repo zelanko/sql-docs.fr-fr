@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: b351e999-85bf-498b-915a-f91d89134bce
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d99c9bf56a6856d953f30f7bd094b205d18bde8e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2d9362a41e5a48400c1b63d52b2ff89095d119d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981399"
 ---
 # <a name="getnstring-method-javalangstring"></a>Méthode getNString (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Récupère la valeur de l’élément désigné **NCHAR**, **NVARCHAR**, ou **LONGNVARCHAR** paramètre sous forme de chaîne dans le Java en langage de programmation.  
+  Récupère la valeur du paramètre **nchar**, **nvarchar**ou **LONGNVARCHAR** désigné sous la forme d’une chaîne dans le langage de programmation Java.  
   
 ## <a name="syntax"></a>Syntaxe  
   

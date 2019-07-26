@@ -1,5 +1,5 @@
 ---
-title: updatefloat, méthode (java.lang.String, float) | Microsoft Docs
+title: Méthode updateFloat, (Java. lang. String, float) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 19a6164f-f560-4304-8466-e55f0667a3d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e348f9c51b68063867a13b9d9bfe6db3e7053645
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 74df5537849daddf09d9edbb10f1baa4d8808e41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998945"
 ---
 # <a name="updatefloat-method-javalangstring-float"></a>Méthode updateFloat (java.lang.String, float)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateFloat(java.lang.String columnName,
   
  *x*  
   
- Un **float** valeur.  
+ Valeur de **type float** .  
   
 ## <a name="exceptions"></a>Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode updateFloat est spécifiée par la méthode updateFloat dans l’interface java.sql.ResultSet.  
+ Cette méthode updateFloat est spécifiée par la méthode updateFloat de l’interface java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [updateFloat, méthode &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)   

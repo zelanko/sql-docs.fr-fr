@@ -1,0 +1,69 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Documentation SQL Server Machine Learning Services (R et Python)
+metadata:
+  title: 'Documentation de SQL Server Machine Learning Services (R, Python)-didacticiels, Démarrages rapides et guides d’installation | Microsoft Docs'
+  titleSuffix: ''
+  description: 'Découvrez comment utiliser SQL Server Machine Learning Services pour exécuter des scripts R et Python sur des données relationnelles. Des didacticiels, des exemples de code, des guides d’installation et d’autres documents vous montrent comment procéder.'
+  ms.prod: sql
+  ms.technology: machine-learning
+  ms.topic: landing-page
+  author: dphansen
+  ms.author: davidph
+  ms.date: 06/22/2019
+abstract:
+  description: 'Découvrez comment utiliser SQL Server Machine Learning Services pour exécuter des scripts R et Python sur des données relationnelles. Des didacticiels, des exemples de code, des guides d’installation et d’autres documents vous montrent comment procéder.'
+  aside:
+    image:
+      alt: null
+      height: 124
+      src: media/index/video.png
+      width: 250
+    title: 'Regarder la vidéo (3:00)'
+    href: 'https://www.youtube.com/watch?v=ACejZ9optCQ'
+    width: 250
+sections:
+  - title: "Démarrages en 5\_minutes"
+    items:
+      - type: paragraph
+        text: 'Après avoir <a href="install/sql-machine-learning-services-windows-install">installé SQL Server machine learning services</a>, vous pouvez commencer à utiliser ces Démarrages rapides:'
+      - type: list
+        style: unordered
+        items:
+          - html: Exécuter un script «Hello World» <a href="tutorials/quickstart-r-run-using-tsql">dans R</a> ou <a href="tutorials/quickstart-python-run-using-t-sql">python</a>
+          - html: Créer un modèle prédictif <a href="tutorials/quickstart-r-create-predictive-model">dans R</a> ou <a href="tutorials/quickstart-python-train-score-in-tsql">python</a>
+  - title: Tutoriels pas à pas
+    items:
+      - type: paragraph
+        text: 'Apprenez à explorer les données, à effectuer des tâches d’ingénierie, à former et à déployer des modèles et à faire des prédictions:'
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">Utilisez R dans T-SQL</a>: Explorez les données, effectuez l’ingénierie des caractéristiques, formez et déployez des modèles, puis faites des prédictions (série de cinq parties)'
+          - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">Utilisez machine learning services dans les outils R</a>: Explorez les données, créez des graphiques et des tracés, effectuez l’ingénierie des caractéristiques, formez et déployez des modèles, puis Élaborez des prédictions (série en six parties)'
+          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">Utilisation de Python dans T-SQL</a>: Explorez les</a>données, effectuez l’ingénierie des caractéristiques, formez et déployez des modèles, puis faites des prédictions (série de cinq parties)'
+  - title: Solutions
+    items:
+      - type: paragraph
+        text: Trouvez des <a href="tutorials/data-science-scenarios-and-solution-templates">modèles pour vous aider à créer des solutions machine learning</a> sur SQL Server.
+  - title: Référence
+    items:
+      - type: paragraph
+        text: SQL Server Machine Learning Services a plusieurs packages pour R et Python.
+      - type: list
+        style: unordered
+        items:
+          - html: '<a href="r/ref-r-revoscaler">RevoScaleR dans R</a>: Traitement distribué et parallèle pour les tâches R : transformation des données, exploration, visualisation, analytique statistique et prédictive.'
+          - html: '<a href="r/ref-r-microsoftml">MicrosoftML dans r</a>: fonctions basées sur les algorithmes d’intelligence artificielle Microsoft, adaptés pour R'
+          - html: '<a href="r/ref-r-olapr">olapr dans R</a>: Importe des données à partir de cubes OLAP'
+          - html: '<a href="r/ref-r-sqlrutils">sqlRUtils dans R</a>: Fonctions d’assistance pour l’encapsulation de R et de T-SQL'
+          - html: '<a href="python/ref-py-revoscalepy">revoscalepy dans python</a>: Traitement distribué et parallèle pour les tâches Python: transformation des données, exploration, visualisation, statistiques et analyse prédictive'
+          - html: '<a href="python/ref-py-microsoftml">microsoftml dans python</a>: Fonctions basées sur les algorithmes d’intelligence artificielle Microsoft, adaptées pour Python'
+  - title: Autres technologies de Machine Learning
+    items:
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/azure/sql-database/sql-database-machine-learning-services-overview">Azure SQL Database Machine Learning Services<a>
+          - html: <a href="/azure/machine-learning/">Azure Machine Learning</a>
+          - html: <a href="/dotnet/machine-learning/">ML.NET</a>

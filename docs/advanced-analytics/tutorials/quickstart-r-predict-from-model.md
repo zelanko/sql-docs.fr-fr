@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e81731683fb71b074ed754ab6ab4eaab40d08c20
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: aa3a65020f2900bc4d9e0b5c5fd5a200f3334435
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345404"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469337"
 ---
 # <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>Démarrage rapide : Prédire du modèle à l’aide de R dans SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Dans ce guide de démarrage rapide, utilisez le modèle que vous avez créé dans le démarrage rapide précédent pour noter les prédictions par rapport aux nouvelles données. Pour effectuer un calcul de _score_ à l’aide de nouvelles données, récupérez l’un des modèles formés à partir de la table, puis appelez un nouvel ensemble de données sur lequel baser les prédictions. Le calcul de score est un terme parfois utilisé dans la science des données pour générer des prédictions, des probabilités ou d’autres valeurs en fonction de nouvelles données introduites dans un modèle formé.
 

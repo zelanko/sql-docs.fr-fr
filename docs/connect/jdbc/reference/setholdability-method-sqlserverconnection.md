@@ -1,5 +1,5 @@
 ---
-title: setholdability, méthode (SQLServerConnection) | Microsoft Docs
+title: Méthode setHoldability (SQLServerConnection) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 552eebd0-4c38-43f0-961f-35244f99109b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 60d46f8f8792eacd7f1f67a67b2fc9fc56bf5a8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe53c38e1b3f1633be27f4c82a9c2edfe9820495
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213669"
 ---
 # <a name="setholdability-method-sqlserverconnection"></a>setHoldability, méthode (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public void setHoldability(int nNewHold)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notes  
- Cette méthode setHoldability est spécifiée par la méthode setHoldability dans l’interface java.sql.Connection.  
+ Cette méthode setHoldability est spécifiée par la méthode setHoldability dans l’interface java. Sql. Connection.  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQLServerConnection, membres](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

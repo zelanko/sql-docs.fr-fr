@@ -6,15 +6,15 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: feb59ac529b0a66603d9e8b901e9755588ac0379
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 88d9a5098752b0c5f0935b400c400c2ae2ff97af
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344852"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469915"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuration SQL Server pour une utilisation avec R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Cet article est le deuxième d’une série qui décrit l’optimisation des performances pour R services sur la base de deux études de cas.  Cet article fournit des conseils sur la configuration matérielle et réseau de l’ordinateur utilisé pour exécuter SQL Server R Services. Elle contient également des informations sur les méthodes de configuration de l’instance SQL Server, de la base de données ou des tables utilisées dans une solution. Étant donné que l’utilisation de NUMA dans SQL Server atténue la ligne entre les optimisations matérielles et de bases de données, une troisième section décrit en détail les affinitization et la gouvernance des ressources du processeur.
 

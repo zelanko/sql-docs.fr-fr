@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3786ab3ee17bbbc0b54e439e3466236af098ffd3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 84c7c8f10c6a5b0da69d24389e12633df3774ffb
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345172"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470482"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problèmes courants liés au service Launchpad et à l’exécution de scripts externes dans SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  SQL Server Service Launchpad approuvé prend en charge l’exécution de scripts externes pour R et Python. Sur SQL Server 2016 R services, SP1 fournit le service. SQL Server 2017 comprend le service Launchpad dans le cadre de l’installation initiale.
 
