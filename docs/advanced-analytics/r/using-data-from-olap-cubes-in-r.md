@@ -6,15 +6,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3063758e1186dc81e5ce9e70891403e7afd3a89f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
-ms.translationtype: HT
+ms.openlocfilehash: c8ac0827ba6bfbb2c35e594967925d16d4730915
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345114"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469862"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>Utilisation de données de cubes OLAP dans R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Le  package olapr est un package R, fourni par Microsoft pour une utilisation avec Machine Learning Server et SQL Server, qui vous permet d’exécuter des requêtes MDX pour obtenir des données à partir de cubes OLAP. Avec ce package, vous n’avez pas besoin de créer des serveurs liés ou de nettoyer des ensembles de lignes aplatis. vous pouvez accéder aux données OLAP directement à partir de R.
 
