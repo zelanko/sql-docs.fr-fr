@@ -9,16 +9,16 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
-ms.openlocfilehash: 456dd8e4e232f77e7cc7709a997fdd8ae5ef0e5b
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413003"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661280"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>Exemples d'expressions (Générateur de rapports et SSRS)
 
-Les expressions sont fréquemment utilisées dans les rapports pour en contrôler le contenu et l'apparence. Les expressions sont écrites [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]et peuvent utiliser de code personnalisé de fonctions intégrées, rapport et des variables de groupe et des variables définies par l’utilisateur. Les expressions commencent par un signe égal (=). Pour plus d’informations sur l’éditeur d’expressions et les types de références que vous pouvez inclure, consultez [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md), et [Ajouter une expression &#40;Générateur de rapports et SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
+Les expressions sont fréquemment utilisées dans les rapports pour en contrôler le contenu et l'apparence. Les expressions sont écrites [!INCLUDE[msCoName](../../includes/msconame-md.md)] dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]et peuvent utiliser des fonctions intégrées du code personnalisé, des variables de rapport et de groupe, et des variables définies par l’utilisateur. Les expressions commencent par un signe égal (=). Pour plus d’informations sur l’éditeur d’expressions et les types de références que vous pouvez inclure, consultez [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md), et [Ajouter une expression &#40;Générateur de rapports et SSRS&#41;](add-an-expression-report-builder-and-ssrs.md).  
 
 > [!IMPORTANT]  
 >  Lorsque le sandboxing RDL est activé, seuls certains types et membres peuvent être utilisés dans le texte de l'expression au moment de la publication des rapports. Pour plus d’informations, consultez [Enable and Disable RDL Sandboxing](../enable-and-disable-rdl-sandboxing.md).  
@@ -51,7 +51,7 @@ Pour plus d’informations sur les expressions simples et complexes, l’endroit
 
 Pour apprendre à écrire des expressions qui utilisent plusieurs fonctions et opérateurs également utilisés par les exemples d'expressions de cette rubrique, mais dans le contexte de la rédaction d'un rapport, consultez [Tutoriel : Introduction aux expressions](../tutorial-introducing-expressions.md).  
 
-L'éditeur d'expressions inclut une vue hiérarchique des fonctions intégrées. Lorsque vous sélectionnez la fonction, un exemple de code apparaît dans le volet Valeurs. Pour plus d’informations, consultez le [boîte de dialogue Expression](../expression-dialog-box.md) ou [boîte de dialogue Expression &#40;Générateur de rapports&#41;](../expression-dialog-box-report-builder.md).  
+L'éditeur d'expressions inclut une vue hiérarchique des fonctions intégrées. Lorsque vous sélectionnez la fonction, un exemple de code apparaît dans le volet Valeurs. Pour plus d’informations, consultez la boîte de dialogue [expression](../expression-dialog-box.md) ou la boîte de [dialogue Expression &#40;générateur de rapports&#41;](../expression-dialog-box-report-builder.md).  
 
 ## <a name="functions"></a>Fonctions  
 
@@ -176,9 +176,9 @@ L'exemple suivant affiche la date de début de l'année en cours
 =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
 ```  
 
-Si la zone de texte contient uniquement une date ou un chiffre, vous devez utiliser la propriété Format de la zone de texte pour appliquer la mise en forme au lieu du `Format` fonction au sein de la zone de texte.  
+Si la zone de texte contient uniquement une date ou un nombre, vous devez utiliser la propriété format de la zone de texte pour appliquer la mise `Format` en forme au lieu de la fonction dans la zone de texte.  
 
--   Le `Right`, `Len`, et `InStr` fonctions sont utiles pour renvoyer une sous-chaîne, par exemple, en réduisant *domaine*\\*nom d’utilisateur* pour le nom d’utilisateur. L’expression suivante retourne la partie de la chaîne à droite de la barre oblique inverse (\\) à partir d’un paramètre nommé *User*:  
+-   Les `Right`fonctions `Len`,\\et `InStr` sont utiles pour retourner une sous-chaîne, par exemple en découpant le nom*d'* utilisateur de *domaine*en nom d’utilisateur uniquement. L’expression suivante retourne la partie de la chaîne à droite de la barre oblique inverse (\\) à partir d’un paramètre nommé *User*:  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -190,7 +190,7 @@ L’expression suivante retourne la même valeur que précédemment, en utilisan
 =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
 ```  
 
--   Vous pouvez afficher les valeurs sélectionnées à partir d'un paramètre à valeurs multiples. L’exemple suivant utilise le `Join` (fonction) pour concaténer les valeurs sélectionnées du paramètre *MySelection* en une chaîne unique qui peut être définie comme une expression de la valeur d’une zone de texte dans un élément de rapport :  
+-   Vous pouvez afficher les valeurs sélectionnées à partir d'un paramètre à valeurs multiples. L’exemple suivant utilise la `Join` fonction pour concaténer les valeurs sélectionnées du paramètre *MySelection* en une chaîne unique qui peut être définie en tant qu’expression pour la valeur d’une zone de texte dans un élément de rapport:  
 
 ```  
 = Join(Parameters!MySelection.Value)  
@@ -203,7 +203,7 @@ L'exemple suivant donne le même résultat que l'exemple ci-dessus et affiche un
 
 ```  
 
--   Le `Regex` fonctions à partir de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions> sont utiles pour la modification du format de chaînes existantes, par exemple, mise en forme d’un numéro de téléphone. L’expression suivante utilise la `Replace` (fonction) pour modifier le format d’un numéro de téléphone à dix chiffres dans un champ à partir de «*nnn*-*nnn*-*nnnn* » à « (*nnn*) *nnn*-*nnnn*» :  
+-   Les `Regex` fonctions [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] desontutilespourmodifierleformatdeschaînesexistantes,parexemplelamiseenformed’un<xref:System.Text.RegularExpressions> numéro de téléphone. L’expression suivante utilise la `Replace` fonction pour modifier le format d’un numéro de téléphone à dix chiffres dans un champ de "*nnn*-*nnn*-*nnnn*" en "(*nnn*) *nnn* - *nnnn*":  
 
 ```  
 =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -217,7 +217,7 @@ L'exemple suivant donne le même résultat que l'exemple ci-dessus et affiche un
 -   En spécifiant un champ clé, vous pouvez utiliser la fonction `Lookup` pour récupérer une valeur à partir d'un dataset pour une relation un-à-un, par exemple une paire clé-valeur. L’expression suivante affiche le nom de produit d’un dataset (« Product »), compte tenu de l’identificateur de produit qui doit être mis en correspondance :  
 
 ```  
-=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
 ```  
 
 #### <a name="lookupset"></a>LookupSet  
@@ -433,7 +433,7 @@ Vous pouvez également afficher et masquer des éléments dans un rapport en uti
 =IIF(CountRows()>12,false,true)  
 ```  
 
--   L’expression suivante, lorsque la valeur le `Hidden` propriété d’une colonne, affiche la colonne uniquement si le champ existe dans le dataset du rapport une fois que les données sont récupérées à partir de la source de données :  
+-   L’expression suivante, lorsqu’elle est définie `Hidden` dans la propriété d’une colonne, affiche la colonne uniquement si le champ existe dans le DataSet du rapport après que les données ont été récupérées à partir de la source de données:  
 
 ```  
 =IIF(Fields!Column_1.IsMissing, true, false)  

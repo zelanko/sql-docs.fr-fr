@@ -1,5 +1,5 @@
 ---
-title: Spécifiez les propriétés de réplication de fusion | Microsoft Docs
+title: Spécifier les propriétés de réplication de fusion | Microsoft Docs
 ms.custom: ''
 ms.date: 11/29/2018
 ms.prod: sql-server-2014
@@ -13,19 +13,19 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 22460851ce3136301beaf5d94e7b0a3b39f8217c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 033999701141387ee63712a8a9ce055ad3f55cb1
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68199295"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661308"
 ---
-# <a name="specify-merge-replication-properties"></a>Spécifiez les propriétés de réplication de fusion
+# <a name="specify-merge-replication-properties"></a>Spécifier les propriétés de réplication de fusion
 Cette rubrique explique comment spécifier différentes propriétés pour votre réplication de fusion. 
 
 
-## <a name="download-only"></a>Téléchargement seul
-  Cette section explique comment spécifier qu’un article de table de fusion est en téléchargement seul dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Les articles en téléchargement uniquement sont conçus pour les applications dont les données ne sont pas mises à jour au niveau des Abonnés. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
+## <a name="download-only"></a>Téléchargement uniquement
+  Cette section décrit comment spécifier qu’un article de table de fusion est en téléchargement seul [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] dans à [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] l' [!INCLUDE[tsql](../../../includes/tsql-md.md)]aide de ou de. Les articles en téléchargement uniquement sont conçus pour les applications dont les données ne sont pas mises à jour au niveau des Abonnés. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec les articles en téléchargement seul](../merge/optimize-merge-replication-performance-with-download-only-articles.md).  
  
   
 ###  <a name="limitations-and-restrictions"></a>Limitations et restrictions  
@@ -52,19 +52,19 @@ Cette rubrique explique comment spécifier différentes propriétés pour votre 
 ###  <a name="using-transact-sql"></a>Utilisation de Transact-SQL  
   
 #### <a name="to-specify-that-a-new-merge-table-article-is-download-only"></a>Pour spécifier qu'une nouvelle table de fusion est en téléchargement uniquement    
-1.  Exécutez [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), en affectant la valeur **1** ou de **2** au paramètre **@subscriber_upload_options** . Ces chiffres correspondent aux comportements suivants :  
+1.  Exécutez [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), en affectant la valeur **1** ou **2** au paramètre  **\@subscriber_upload_options**. Ces chiffres correspondent aux comportements suivants :  
   
     -   **0** - aucune restriction (valeur par défaut). Les modifications sur l'abonné sont téléchargées par le serveur de publication.    
     -   **1** -  modifications autorisées au niveau de l'Abonné, mais elles ne sont pas téléchargées sur le serveur de publication.    
     -   **2** - modifications interdites au niveau de l'Abonné.  
   
         > [!NOTE]  
-        >  Si la table source d'un article est déjà publiée dans une autre publication, la valeur de **@subscriber_upload_options** doit être la même pour les deux articles.  
+        >  Si la table source d’un article est déjà publiée dans une autre publication, la valeur de  **\@subscriber_upload_options** doit être la même pour les deux articles.  
   
 #### <a name="to-modify-an-existing-merge-table-article-to-be-download-only"></a>Pour modifier un article de table fusion existant en article en téléchargement uniquement  
   
 1.  Pour déterminer si un article est en téléchargement uniquement, exécutez [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql). Notez la valeur de **upload_options** pour l'article dans le jeu de résultats.    
-2.  Si la valeur retournée à l'étape 1 est **0**, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), en affectant la valeur **subscriber_upload_options** à **@property** , la valeur **1** à **@force_invalidate_snapshot** et **@force_reinit_subscription** , et la valeur **1** ou de **2** à **@value** , qui correspondent aux comportements suivants :  
+2.  Si la valeur retournée à l’étape 1 est **0**, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), en spécifiant la  **\@** valeur **subscriber_upload_options** pour la propriété, la valeur **1** pour  **\@force_invalidate_ Snapshot**  **et\@force_reinit_subscription**, et la valeur **1** ou **2** pour  **\@value**, qui correspond au comportement suivant:  
   
     -   **1** -  modifications autorisées au niveau de l'Abonné, mais elles ne sont pas téléchargées sur le serveur de publication.    
     -   **2** - modifications interdites au niveau de l'Abonné.  
@@ -72,7 +72,7 @@ Cette rubrique explique comment spécifier différentes propriétés pour votre 
         > [!NOTE]  
         >  Si la table source d'un article est déjà publiée dans une autre publication, les deux articles doivent être en téléchargement uniquement ou ne pas l'être.  
  
-## <a name="interactive-conflict-resolution">Résolution de conflits interactive</a>
+## <a name="interactive-conflict-resolution">Résolution interactive des conflits</a>
 La réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propose un programme de résolution interactif qui vous permet de résoudre manuellement des conflits au cours d'une synchronisation à la demande dans le Gestionnaire de synchronisation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Quand la résolution de conflits est activée, résolvez les conflits de façon interactive au cours de la synchronisation, à l'aide du résolveur interactif. Le résolveur interactif est disponible via le Gestionnaire de synchronisation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Pour plus d’informations, consultez [Synchroniser un abonnement à l’aide du Gestionnaire de synchronisation Windows &#40;Windows Synchronization Manager&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
     
@@ -101,23 +101,23 @@ La réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[
   
 #### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Créer un abonnement de fusion par extraction qui utilise l’outil de résolution interactif  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), en spécifiant **@publication** . Notez la valeur de **allow_interactive_resolver** pour chaque article du jeu de résultats pour lequel le programme de résolution interactif sera utilisé.    
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), en spécifiant  **\@publication**. Notez la valeur de **allow_interactive_resolver** pour chaque article du jeu de résultats pour lequel le programme de résolution interactif sera utilisé.    
     -   Si cette valeur est **1**, le programme de résolution interactif sera utilisé.    
-    -   Si cette valeur est **0**, vous devez tout d'abord activer le programme de résolution interactif pour chaque article. Pour cela, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), en spécifiant **@publication** , **@article** , en affectant la valeur **allow_interactive_resolver** à **@property** la valeur **true** à **@value** .    
+    -   Si cette valeur est **0**, vous devez tout d'abord activer le programme de résolution interactif pour chaque article. Pour ce faire, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), en spécifiant  **\@publication**,  **\@article**, la valeur **allow_interactive_resolver** pour  **\@propriété**et la valeur **true**  **pour lavaleur\@** .    
 2.  Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Pour plus d’informations, consultez [Créer un abonnement par extraction de données (pull)](../create-a-pull-subscription.md).    
 3.  Dans la base de données d'abonnement de l'Abonné, exécutez [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql), en spécifiant les paramètres suivants :  
   
-    -   **@publisher** , **@publisher_db** (la base de données publiée) et **@publication** .    
-    -   La valeur **true** à **@enabled_for_syncmgr** .    
-    -   La valeur **true** à **@use_interactive_resolver** .    
+    -   Publisher **, publisher_db\@** (la base de données publiée) et  **\@publication**.  **\@**    
+    -   Valeur **true** pour  **\@enabled_for_syncmgr**.    
+    -   Valeur **true** pour  **\@use_interactive_resolver**.    
     -   Les informations de compte de sécurité requises par l'Agent de fusion. Pour plus d’informations, consultez [Create a Pull Subscription](../create-a-pull-subscription.md).    
 4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql).  
   
 #### <a name="define-an-article-that-supports-the-interactive-resolver"></a>Définir un article qui prend en charge l’outil de résolution interactif  
   
-Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Spécifiez le nom de la publication à laquelle l'article appartient pour **@publication** , le nom de l'article pour **@article** , l'objet de base de données qui est publié pour **@source_object** la valeur **true** à **@allow_interactive_resolver** . Pour plus d'informations, voir [Define an Article](define-an-article.md).  
+Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Spécifiez le nom de la publication à laquelle l’article appartient  **\@** pour la publication, le nom de l’article pour  **\@l’article, l'** objet de base de données qui est publié pour  **\@source_object**et une valeur. de **true** pour  **\@allow_interactive_resolver**. Pour plus d'informations, voir [Define an Article](define-an-article.md).  
 
-## <a name="specify-the-conflict-tracking-and-resolution-level"></a>Spécifier le niveau de résolution et le suivi des conflits 
+## <a name="specify-the-conflict-tracking-and-resolution-level"></a>Spécifier le niveau de suivi et de résolution des conflits 
 Lorsqu'un abonnement à une publication de fusion est synchronisé, la réplication vérifie la présence de conflits faisant suite à de la modification des mêmes données au niveau du serveur de publication et de l'Abonné. Vous pouvez spécifier si les conflits sont détectés au niveau de la ligne, auquel cas toute modification apportée à la ligne est considérée comme un conflit, ou au niveau de la colonne, auquel cas seules les modifications apportées aux mêmes ligne et colonne sont considérées comme un conflit. La résolution des conflits pour les articles est réalisée au niveau de la ligne. Pour plus d'informations sur la détection et la résolution des conflits avec des enregistrements logiques, consultez [Detecting and Resolving Conflicts in Logical Records](../merge/advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
 
@@ -139,9 +139,9 @@ Lorsqu'un abonnement à une publication de fusion est synchronisé, la réplicat
   
 ###  <a name="using-transact-sql"></a>Utilisation de Transact-SQL  
   
-#### <a name="specify-conflict-tracking-options-for-a-new-merge-article"></a>Spécifier des options pour un nouvel article de fusion de suivi des conflits  
+#### <a name="specify-conflict-tracking-options-for-a-new-merge-article"></a>Spécifier les options de suivi des conflits pour un nouvel article de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) et spécifiez l'une des valeurs suivantes pour **@column_tracking** :  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) et spécifiez l’une des valeurs suivantes pour  **\@column_tracking**:  
   
     -   **true** - utiliser le suivi au niveau des colonnes pour l'article.    
     -   **false** - utiliser le suivi au niveau des lignes, qui est la valeur par défaut.  
@@ -149,13 +149,13 @@ Lorsqu'un abonnement à une publication de fusion est synchronisé, la réplicat
 #### <a name="change-conflict-tracking-options-for-a-merge-article"></a>Changer les options de suivi des conflits pour un article de fusion  
   
 1.  Pour déterminer les options de suivi des conflits pour un article de fusion, exécutez [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql). Notez la valeur de l'option **column_tracking** dans le jeu de résultats de l'article. La valeur **1** indique que le suivi au niveau des colonnes est utilisé, tandis que la valeur **0** indique que le suivi au niveau des lignes est utilisé.    
-2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Affectez la valeur **column_tracking** à **@property** et l'une des valeurs suivantes à **@value** :
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Spécifiez la valeur **column_tracking** pour  **\@propriété** et l’une des valeurs suivantes pour  **\@valeur**:
     -   **true** - utiliser le suivi au niveau des colonnes pour l'article.
     -   **false** - utiliser le suivi au niveau des lignes, qui est la valeur par défaut.  
   
-     Affectez la valeur **1** à **@force_invalidate_snapshot** et **@force_reinit_subscription** .  
+     Affectez la valeur **1** à  **\@force_invalidate_snapshot** et  **\@à force_reinit_subscription**.  
 
-## <a name="tracking-deletes"></a>Le suivi des suppressions
+## <a name="tracking-deletes"></a>Suivi des suppressions
 
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
@@ -167,7 +167,7 @@ Lorsqu'un abonnement à une publication de fusion est synchronisé, la réplicat
   
 ### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>Spécifier que les suppressions doivent être ignorées pour un nouvel article de fusion  
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Spécifiez la valeur `false` pour **@delete_tracking** . Pour plus d'informations, voir [Define an Article](../publish/define-an-article.md).  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Spécifiez une valeur `false` pour  **\@delete_tracking**. Pour plus d'informations, voir [Define an Article](../publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Si la table source d'un article est déjà publiée dans une autre publication, la valeur de **delete_tracking** doit être la même pour les deux articles.  
@@ -175,7 +175,7 @@ Lorsqu'un abonnement à une publication de fusion est synchronisé, la réplicat
 ### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>Spécifier que les suppressions doivent être ignorées pour un article de fusion existant  
   
 1.  Pour déterminer si la compensation d’erreur est activée pour un article, exécutez [sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) et notez la valeur de **delete_tracking** dans le jeu de résultats. Si cette valeur est **0**, les suppressions sont déjà ignorées.    
-2.  Si la valeur à l’étape 1 est **1**, exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) sur la base de données de publication au niveau du serveur de publication. Spécifiez la valeur **delete_tracking** pour **@property** et la valeur `false` pour **@value** .  
+2.  Si la valeur à l’étape 1 est **1**, exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) sur la base de données de publication au niveau du serveur de publication. Spécifiez la valeur **delete_tracking** pour  **\@propriété**et la `false` valeur pour  **\@valeur**.  
   
     > [!NOTE]  
     >  Si la table source d'un article est déjà publiée dans une autre publication, la valeur de **delete_tracking** doit être la même pour les deux articles.  
@@ -194,18 +194,18 @@ Lorsqu'un abonnement à une publication de fusion est synchronisé, la réplicat
   
  Quand l'intégrité référentielle est gérée via des déclencheurs ou au niveau de l'application, vous devez spécifier l'ordre dans lequel les articles doivent être traités. Dans l'exemple avec les déclencheurs, vous pouvez spécifier que la table **SalesOrderHeader** doit être traitée avant **SalesOrderDetail**, car l'ordre des articles est basé sur l'ordre d'insertion. La réplication de fusion inverse automatiquement l'ordre pour les suppressions. La réplication de fusion n'échoue pas s'il n'y a pas d'ordre pour les articles, car l'Agent de fusion continue à traiter les articles si une violation de contrainte se produit ; il essaye ensuite à nouveau toutes les opérations qui ont échoué, après le traitement des autres articles. La spécification de l'ordre des articles évite simplement les nouveaux essais et le temps de traitement supplémentaire qui y est associé. Si vous spécifiez un ordre incorrect (par exemple un ordre tel que les enregistrements de détail soient traités avant les enregistrements d'en-tête), la réplication de fusion essaye à nouveau le traitement jusqu'à ce qu'il réussisse.  
 
-### <a name="new-article"></a>Nouvel Article
+### <a name="new-article"></a>Nouvel article
   
-1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Spécifiez une valeur entière qui représente l'ordre de traitement de l'article pour **@processing_order** . Pour plus d'informations, voir [Define an Article](define-an-article.md).  
+1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Spécifiez une valeur entière qui représente l’ordre de traitement de l’article pour  **\@processing_order**. Pour plus d'informations, voir [Define an Article](define-an-article.md).  
   
     > [!NOTE]  
-    >  Lorsque vous créez des articles ordonnés, vous devez laisser des intervalles entre les valeurs d'ordre des articles. Cela permet de définir facilement de nouvelles valeurs dans le futur. Par exemple, si vous avez trois articles pour lesquels vous devez spécifier un ordre de traitement fixe, affectez à **@processing_order** les valeurs 10, 20 et 30 plutôt que 1, 2 et 3, respectivement.  
+    >  Lorsque vous créez des articles ordonnés, vous devez laisser des intervalles entre les valeurs d'ordre des articles. Cela permet de définir facilement de nouvelles valeurs dans le futur. Par exemple, si vous avez trois articles pour lesquels vous devez spécifier un ordre de traitement fixe, affectez à  **\@processing_order** la valeur 10, 20 et 30 plutôt que 1, 2 et 3, respectivement.  
   
 ### <a name="existing-article"></a>Article existant
   
 1.  Pour déterminer l’ordre de traitement d’un article, exécutez [sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) et notez la valeur de **processing_order** dans le jeu de résultats.  
   
-2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Spécifiez une valeur de **processing_order** pour **@property** et une valeur entière qui représente l'ordre de traitement pour **@value** .  
+2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Spécifiez la valeur **processing_order** pour  **\@la propriété** et une valeur entière qui représente l’ordre de  **\@** traitement de la valeur.  
 
 
 

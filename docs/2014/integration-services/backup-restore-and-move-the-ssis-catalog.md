@@ -10,12 +10,12 @@ ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 625e090ab65eff7a912785e3ddef2de3e7d83b0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061268"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670507"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Sauvegarder, restaurer et déplacer le catalogue SSIS
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] comprend la base de données SSISDB. Interrogez les vues de la base de données SSISDB pour inspecter les objets, les paramètres et les données opérationnelles stockés dans le catalogue **SSISDB** . Cette rubrique fournit des instructions sur la sauvegarde et la restauration de la base de données.  
@@ -38,7 +38,7 @@ ms.locfileid: "66061268"
   
     ```  
   
-3.  Sauvegardez la base de données SSISDB à l’aide de la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Procédure : sauvegarder une base de données (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Sauvegardez la base de données SSISDB à l’aide de la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, voir [Procédure : sauvegarder une base de données (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Générez le script CREATE LOGIN pour ##MS_SSISServerCleanupJobLogin## en procédant comme suit. Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66061268"
   
 5.  Si vous devez restaurer la base de données SSISDB sur une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] où le catalogue SSISDB n’a jamais été créé, générez le script CREATE PROCEDURE pour sp_ssis_startup en effectuant les opérations suivantes. Pour plus d’informations, consultez [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql).  
   
-    1.  Dans l’Explorateur d’objets, développez le nœud **Bases de données**, puis le nœud **Clé principale** > **Programmabilité** > **Procédures stockées**.  
+    1.  Dans l’Explorateur d’objets, développez le nœud **bases de données** , puis développez le nœud >  **bases de données système de**la**programmabilité** > **principale** > **procédures stockées** .  
   
     2.  Cliquez avec le bouton droit sur **dbo.sp_ssis_startup**, puis cliquez sur **Générer un script de la procédure stockée en tant que** > **CREATE To** > **Nouvelle fenêtre d’éditeur de requête**.  
   

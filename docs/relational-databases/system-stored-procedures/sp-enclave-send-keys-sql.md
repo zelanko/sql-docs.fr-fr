@@ -19,17 +19,17 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b3d5ed50ac407beebfb54370cf91f0f3b8ba3101
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4ced2feee2227ba1db492f721f57907069c5d99
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124691"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661357"
 ---
 # <a name="spenclavesendkeys----transact-sql"></a>sp_enclave_send_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Envoie toutes les enclave prenant en charge la colonne clés de chiffrement dans la base de données à l’enclave utilisé par [Always Encrypted avec enclaves sécurisés &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Envoie toutes les clés de chiffrement de colonne compatibles avec les enclaves dans la base de données à l’enclave utilisée par [Always Encrypted avec les enclaves sécurisées &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,26 +40,26 @@ sp_enclave_send_keys
 
 ## <a name="arguments"></a>Arguments
 
-Cette procédure stockée n’a aucun argument.
+Cette procédure stockée n’a pas d’arguments.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Cette procédure stockée n’a aucune valeur de retour.
+Cette procédure stockée n’a pas de valeur de retour.
   
 ## <a name="result-sets"></a>Jeux de résultats
 
-Cette procédure stockée n’a aucun jeu de résultats.
+Cette procédure stockée n’a pas de jeu de résultats.
   
 ## <a name="remarks"></a>Notes
 
-**sp_enclave_send_keys** envoie les clés de chiffrement de colonne prenant en charge l’enclave à l’enclave si toutes les conditions suivantes sont remplies :
+**sp_enclave_send_keys** envoie des clés de chiffrement de colonne avec enclave à l’enclave si toutes les conditions suivantes sont remplies:
 
-- L’enclave est activée dans l’instance de SQL Server.
-- **sp_enclave_send_keys** a été appelée à partir d’une application en utilisant un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote du client, prise en charge d’Always Encrypted avec enclaves sécurisés à l’aide d’une connexion de base de données présentant des calculs Always Encrypted et de l’enclave activés.
+- L’enclave est activée dans l’instance SQL Server.
+- **sp_enclave_send_keys** a été appelé à partir d’une application à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’aide d’un pilote client, prenant en charge Always Encrypted avec des enclaves sécurisées à l’aide d’une connexion de base de données pour laquelle les calculs Always Encrypted et enclave sont activés.
 
 ## <a name="permissions"></a>Autorisations
 
- Exiger le **VIEW ANY COLUMN ENCRYPTION KEY DEFINITION** et **VIEW ANY COLUMN MASTER KEY DEFINITION** autorisations dans la base de données.  
+ Exigez les autorisations **afficher une définition de clé** de chiffrement de colonne et **afficher toutes les définitions de clé principale de colonne** dans la base de données.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -69,8 +69,8 @@ EXEC sp_enclave_send_keys;
 
 ## <a name="see-also"></a>Voir aussi
 
- [Always Encrypted avec enclaves sécurisés &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [Always Encrypted avec des enclaves &#40;sécurisées moteur de base de données&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
  [Tutoriel : Création et utilisation d’index sur des colonnes de l’enclave à l’aide d’un chiffrement aléatoire](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
  [Appeler des opérations d’indexation à l’aide de clés de chiffrement de colonne mises en cache](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)   
- [Index sur des colonnes de l’Enclave à l’aide du chiffrement aléatoire](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
- [Considérations relatives à AlwaysOn et de Migration de base de données](../security/encryption/always-encrypted-enclaves.md#considerations-for-alwayson-and-database-migration)
+ [Index sur les colonnes de l’enclave utilisant le chiffrement aléatoire](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
+ [Considérations relatives à la migration de bases de données et AlwaysOn](../security/encryption/always-encrypted-enclaves.md#anchorname-1-considerations-availability-groups-db-migration)
