@@ -113,7 +113,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 ### <a name="behavior-of-the-disabled-objects"></a>Comportement des objets désactivés  
  **Index**  
   
- Si l’index cluster est désactivé, ou si un index non cluster est forcé, l’erreur suivante est générée : « Le processeur de requêtes ne peut pas créer de plan car l’index ' %. \*%.*ls sur la table ou la vue ' %. \*%.*ls est désactivé. » Pour réactiver ces objets, reconstruisez les index après mise à niveau en appelant **ALTER INDEX ON... REBUILD**.  
+ Si l’index cluster est désactivé, ou si un index non cluster est forcé, l’erreur suivante est générée : « Le processeur de requêtes ne peut pas créer de plan car l’index ' %. \*%.ls sur la table ou la vue ' %. \*%.ls est désactivé. » Pour réactiver ces objets, reconstruisez les index après mise à niveau en appelant **ALTER INDEX ON... REBUILD**.  
   
  **Segments de mémoire**  
   

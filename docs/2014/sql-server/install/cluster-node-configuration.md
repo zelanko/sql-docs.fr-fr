@@ -24,7 +24,7 @@ ms.locfileid: "66096431"
   Utilisez la page Configuration du nœud de clusters pour ajouter ou supprimer des nœuds d'une instance de cluster de basculement. Pour installer ou mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez exécuter le programme d'installation sur chaque nœud du cluster de basculement. Pour ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existant, vous devez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le nœud destiné à être ajouté à l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Options  
- **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ** - Utilisez la liste déroulante pour sélectionner l’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à modifier.  
+ **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** - Utilisez la liste déroulante pour sélectionner l’instance de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à modifier.  
   
  **Nom de ce nœud** - Ce champ contiendra le nom de l’ordinateur qui exécute le programme d’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Il s'agit du nœud de cluster de basculement qui sera ajouté ou supprimé de l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   

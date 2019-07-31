@@ -128,14 +128,14 @@ ms.locfileid: "66011262"
   
 |Plateforme|Estimation des besoins de mémoire de fdhost.exe en Mo -*F*<sup>1</sup>|Formule de calcul de mémoire maximum du serveur -*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ ** = ** _nombre de plages d’analyse_ ** &#42; ** 50|_M_ **= minimum (** _T_ **,** 2000 **)-* `F` * - ** 500|  
-|x64|_F_ ** = ** _nombre de plages d’analyse_ ** &#42; ** 10 ** &#42; ** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
+|x86|_F_ **=** _nombre de plages d’analyse_ **&#42;** 50|_M_ **= minimum (** _T_ **,** 2000 **)- *`F`* -**  500|  
+|x64|_F_ **=** _nombre de plages d’analyse_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> si plusieurs alimentations complètes sont en cours, calculez les besoins en mémoire de chaque fdhost.exe séparément, en tant que *F1*, *F2*, et ainsi de suite. Ensuite, calculez *M* comme _T_**-** sigma **(**_F_i **)**.  
+ <sup>1</sup> si plusieurs alimentations complètes sont en cours, calculez les besoins en mémoire de chaque fdhost.exe séparément, en tant que *F1*, *F2*, et ainsi de suite. Ensuite, calculez *M* comme _T_ **-** sigma **(** _F_i **)** .  
   
  <sup>2</sup> 500 Mo est une estimation de la mémoire requise par d’autres processus dans le système. Si le système effectue un travail supplémentaire, augmentez cette valeur en conséquence.  
   
- <sup>3</sup> .* ism_size* est censé pour être de 8 Mo pour x64 plateformes.  
+ <sup>3</sup> . *ism_size* est censé pour être de 8 Mo pour x64 plateformes.  
   
  **Exemple : Estimation des besoins en mémoire de fdhost.exe**  
   
