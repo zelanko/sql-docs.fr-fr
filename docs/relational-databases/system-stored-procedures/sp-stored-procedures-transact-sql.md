@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9d670c1dbfc94e80394cf34733b8a91aeb6cb056
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032704"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702783"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Renvoie la liste des procédures stockées dans l'environnement actuel.  
   
@@ -42,9 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
-`[ @sp_name = ] 'name'` Est le nom de la procédure utilisée pour retourner des informations de catalogue. *nom* est **390**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
+`[ @sp_name = ] 'name'`Nom de la procédure utilisée pour retourner les informations de catalogue. *Name* est de type **nvarchar (390)** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
-`[ @sp_owner = ] 'schema'` Est le nom du schéma auquel appartient la procédure. *schéma* est **nvarchar (384)** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité de procédure par défaut du SGBD sous-jacent s’appliquent.  
+`[ @sp_owner = ] 'schema'`Nom du schéma auquel appartient la procédure. *Schema* est de type **nvarchar (384)** , avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *owner* n’est pas spécifié, les règles de visibilité des procédures par défaut du SGBD sous-jacent s’appliquent.  
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si le schéma actif contient une procédure avec le nom spécifié, celle-ci est renvoyée. Si une procédure stockée non qualifiée est spécifiée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] la recherche dans l'ordre suivant :  
   
@@ -54,13 +55,13 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Schéma **dbo** dans la base de données active.  
   
-`[ @qualifier = ] 'qualifier'` Est le nom du qualificateur de procédure. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables dans le formulaire (_qualificateur_ **.** _schéma_ **.** _nom_. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificateur* représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+`[ @qualifier = ] 'qualifier'`Nom du qualificateur de la procédure. *qualifier* est de **type sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge les noms de tables en trois parties dans le formulaire (_qualificateur_ **.** _schéma_ **.** _nom_. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le *qualificateur* représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
-`[ @fUsePattern = ] 'fUsePattern'` Détermine si le trait de soulignement (_), pourcentage (%) ou crochets []) sont interprétés comme des caractères génériques. *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
+`[ @fUsePattern = ] 'fUsePattern'`Détermine si le trait de soulignement (_), le pourcentage (%) ou les crochets []) sont interprétés comme des caractères génériques. *fUsePattern* est de **bits**, avec 1 comme valeur par défaut.  
   
- **0** = la recherche de correspondance est désactivée.  
+ **0** = les critères spéciaux sont désactivés.  
   
- **1** = la recherche de correspondance est sur.  
+ **1** = les critères spéciaux sont activés.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Aucun  
@@ -72,18 +73,18 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**PROCEDURE_QUALIFIER**|**sysname**|Nom du qualificateur de procédure. Cette colonne peut être NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nom du propriétaire de la procédure. Cette colonne renvoie toujours une valeur.|  
 |**PROCEDURE_NAME**|**nvarchar(134)**|Nom de la procédure. Cette colonne renvoie toujours une valeur.|  
-|**NUM_INPUT_PARAMS**|**int**|Réservé pour un usage ultérieur.|  
+|**NUM_INPUT_PARAMS**|**Int**|Réservé pour un usage ultérieur.|  
 |**NUM_OUTPUT_PARAMS**|**int**|Réservé pour un usage ultérieur.|  
-|**NUM_RESULT_SETS**|**int**|Réservé pour un usage ultérieur.|  
-|**REMARQUES**|**varchar(254)**|Description de la procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
-|**PROCEDURE_TYPE**|**smallint**|Type de procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours 2.0. Cette valeur peut être une des opérations suivantes :<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
+|**NUM_RESULT_SETS**|**Int**|Réservé pour un usage ultérieur.|  
+|**CONCERNANT**|**varchar(254)**|Description de la procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur pour cette colonne.|  
+|**PROCEDURE_TYPE**|**smallint**|Type de procédure. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours 2.0. Cette valeur peut être l’une des suivantes:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>Notes  
  Pour une interopérabilité maximale, le client de la passerelle doit utiliser seulement les recherches de correspondance avec des caractères génériques de SQL (caractères génériques % et _).  
   
- Les informations d'autorisations relatives à l'exécution par l'utilisateur actuel d'une procédure stockée particulière ne sont pas nécessairement vérifiées ; l'accès n'est donc pas garanti. Notez que la dénomination en trois parties est utilisée. Cela signifie que seules les procédures stockées locales, et non pas les procédures stockées distantes (qui utilisent la dénomination en quatre parties), sont renvoyées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l’attribut de serveur ACCESSIBLE_SPROC est Y dans le jeu de résultats pour **sp_server_info**, uniquement les procédures stockées qui peuvent être exécutées par l’utilisateur actuel sont renvoyées.  
+ Les informations d'autorisations relatives à l'exécution par l'utilisateur actuel d'une procédure stockée particulière ne sont pas nécessairement vérifiées ; l'accès n'est donc pas garanti. Notez que la dénomination en trois parties est utilisée. Cela signifie que seules les procédures stockées locales, et non pas les procédures stockées distantes (qui utilisent la dénomination en quatre parties), sont renvoyées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si l’attribut de serveur ACCESSIBLE_SPROC est Y dans le jeu de résultats pour **sp_server_info**, seules les procédures stockées qui peuvent être exécutées par l’utilisateur actuel sont retournées.  
   
- **sp_stored_procedures** équivaut à **SQLProcedures** dans ODBC. Les résultats obtenus sont triés par **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**, et **nom_procédure**.  
+ **sp_stored_procedures** est équivalent à **SQLProcedures** dans ODBC. Les résultats retournés sont triés par **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**et **PROCEDURE_NAME**.  
   
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
@@ -109,7 +110,7 @@ sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Procédures stockées du catalogue &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [Procédures &#40;stockées de catalogue Transact-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
